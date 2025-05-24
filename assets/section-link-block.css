@@ -2,6 +2,7 @@
   width: 100%;
   padding-top: 12rem;
   background-color: #F2F1ED;
+  box-sizing: border-box;
 }
 
 .link_block .link_block_title {
@@ -38,6 +39,7 @@
   width: calc((100% - 3.2rem) / 2);
   height: 43rem;
   position: relative;
+  overflow: hidden;
 }
 
 .link_block .link_block_contain_item::before {
@@ -46,6 +48,7 @@
   height: 100%;
   background: linear-gradient(180deg, rgba(255, 255, 255, 0) 52%, rgba(0, 0, 0, 0.73) 100%);
   position: absolute;
+  z-index: 1;
 }
 
 .link_block .link_block_contain_item img {
@@ -60,6 +63,7 @@
   position: absolute;
   left: 3rem;
   bottom: 3rem;
+  z-index: 2;
 }
 
 .link_block .link_block_contain_item_info_title {
