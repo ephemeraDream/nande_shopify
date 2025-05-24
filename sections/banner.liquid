@@ -44,10 +44,12 @@
         <div class="section_banner_info section_banner_info_{{ block.settings.file_position }}">
           <div class="section_banner_info_title">{{ block.settings.title }}</div>
           <div class="section_banner_info_text">{{ block.settings.text }}</div>
-          <div class="section_banner_info_btn">
-            {{ block.settings.btn_text }}
-            {{ 'icon-right-arrow.svg' | inline_asset_content }}
-          </div>
+          {% if block.settings.btn_text != blank %}
+            <div class="section_banner_info_btn">
+              {{ block.settings.btn_text }}
+              {{ 'icon-right-arrow.svg' | inline_asset_content }}
+            </div>
+          {% endif %}
         </div>
       </div>
     {% endfor %}
@@ -58,7 +60,7 @@
 <script>
   new Swiper('.section_banner', {
     loop: true,
-    autoplay: true,
+    {% comment %} autoplay: true, {% endcomment %}
     spaceBetween: 0,
   });
 </script>
