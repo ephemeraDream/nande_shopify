@@ -1,0 +1,128 @@
+{{ 'section-banner.css' | asset_url | stylesheet_tag }}
+
+<div class="section_banner"></div>
+
+{% schema %}
+{
+  "name": "banner",
+  "tag": "section",
+  "class": "section",
+  "disabled_on": {
+    "groups": ["header", "footer"]
+  },
+  "settings": [],
+  "blocks": [
+    {
+      "type": "banner_item",
+      "name": "swiper",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "title"
+        },
+        {
+          "type": "richtext",
+          "id": "text",
+          "label": "text"
+        },
+        {
+          "type": "text",
+          "id": "btn_text",
+          "label": "button text"
+        },
+        {
+          "type": "select",
+          "id": "file_position",
+          "label": "file position",
+          "options": [
+            {
+              "value": "top_left",
+              "label": "top left"
+            },
+            {
+              "value": "top_center",
+              "label": "top center"
+            },
+            {
+              "value": "top_right",
+              "label": "top right"
+            },
+            {
+              "value": "middle_left",
+              "label": "middle left"
+            },
+            {
+              "value": "middle_center",
+              "label": "middle center"
+            },
+            {
+              "value": "middle_right",
+              "label": "middle right"
+            },
+            {
+              "value": "bottom_left",
+              "label": "bottom left"
+            },
+            {
+              "value": "bottom_center",
+              "label": "bottom center"
+            },
+            {
+              "value": "bottom_right",
+              "label": "bottom right"
+            }
+          ],
+          "default": "middle_left"
+        },
+        {
+          "type": "radio",
+          "id": "file_type",
+          "label": "file type",
+          "default": "image",
+          "options": [
+            {
+              "value": "image",
+              "label": "image"
+            },
+            {
+              "value": "video",
+              "label": "video"
+            }
+          ]
+        },
+        {
+          "type": "image_picker",
+          "id": "file_image",
+          "label": "file image"
+        },
+        {
+          "type": "image_picker",
+          "id": "cover_image",
+          "label": "video cover image"
+        },
+        {
+          "type": "text",
+          "id": "video_url",
+          "label": "video url"
+        },
+        {
+          "type": "video",
+          "id": "url_upload",
+          "label": "video upload"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "banner",
+      "blocks": [
+        {
+          "type": "heading"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
