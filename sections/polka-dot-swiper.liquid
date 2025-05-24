@@ -1,6 +1,44 @@
 {{ 'section-polka-dot-swiper.css' | asset_url | stylesheet_tag }}
 
-<div class="polka_dot_swiper"></div>
+<div class="polka_dot_swiper">
+  <div class="polka_dot_swiper_title">{{ section.settings.title }}</div>
+  <div class="polka_dot_swiper_text">{{ section.settings.text }}</div>
+  <div class="swiper">
+    <div class="swiper-wrapper">
+      {% for block in section.blocks %}
+        <div class="swiper-slide">
+          {{-
+            block.settings.image
+            | image_url: width: block.settings.image.width
+            | image_tag: alt: block.settings.title, class: 'polka_dot_swiper_img'
+          -}}
+          <div class="polka_dot_swiper_info">
+            <div>
+              <div class="polka_dot_swiper_info_title">{{ block.settings.title }}</div>
+              <div class="polka_dot_swiper_info_text">{{ block.settings.text }}</div>
+            </div>
+            {% if block.settings.btn_text != blank %}
+              <a class="polka_dot_swiper_info_btn" href="{{ block.settings.link }}">
+                {{ block.settings.btn_text }}
+                {{ 'icon-right-arrow.svg' | inline_asset_content }}
+              </a>
+            {% endif %}
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+
+<script>
+  new Swiper('.polka_dot_swiper .swiper', {
+    loop: true,
+    {% comment %} autoplay: true, {% endcomment %}
+    slidesPerView: 'auto',
+    spaceBetween: 60,
+    initialSlide: 1,
+  });
+</script>
 
 {% schema %}
 {
