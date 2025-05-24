@@ -164,7 +164,7 @@
   bottom: 0;
   transform: translateX(100%) translateY(100%);
   display: flex;
-  align-items: flex-end;
+  align-items: stretch;
 }
 
 .polka_dot_swiper .polka_dot_swiper_product_img {
@@ -190,6 +190,9 @@
   min-width: 23rem;
   flex: 0 0 auto;
   height: 8.8rem;
+  position: relative;
+  left: -0.1rem;
+  margin-top: 2.4rem;
 }
 
 .polka_dot_swiper .polka_dot_swiper_product_info_title {
