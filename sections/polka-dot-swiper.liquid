@@ -31,11 +31,10 @@
               {{- 'icon-plus.svg' | inline_asset_content -}}
               <div class="polka_dot_swiper_product">
                 <div class="polka_dot_swiper_product_img">
-                  {{-
-                    block.settings.select_product.feature_image
-                    | image_url: width: block.settings.select_product.feature_image.width
-                    | image_tag: alt: block.settings.select_product.title
-                  -}}
+                  <img
+                    src="{{ block.settings.select_product.feature_image | image_url }}"
+                    alt="{{ block.settings.select_product.title }}"
+                  >
                 </div>
                 <div class="polka_dot_swiper_product_info">
                   <div class="polka_dot_swiper_product_info_title">{{ block.settings.select_product.title }}</div>
