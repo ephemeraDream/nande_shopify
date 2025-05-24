@@ -45,10 +45,10 @@
           <div class="section_banner_info_title">{{ block.settings.title }}</div>
           <div class="section_banner_info_text">{{ block.settings.text }}</div>
           {% if block.settings.btn_text != blank %}
-            <div class="section_banner_info_btn">
+            <a class="section_banner_info_btn" href="{{ block.settings.link }}">
               {{ block.settings.btn_text }}
               {{ 'icon-right-arrow.svg' | inline_asset_content }}
-            </div>
+            </a>
           {% endif %}
         </div>
       </div>
@@ -93,6 +93,11 @@
           "type": "text",
           "id": "btn_text",
           "label": "button text"
+        },
+        {
+          "type": "url",
+          "id": "link",
+          "label": "link"
         },
         {
           "type": "select",

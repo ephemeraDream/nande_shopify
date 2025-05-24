@@ -3618,6 +3618,11 @@ a {
   text-decoration: none;
 }
 
+.padding-sider {
+  padding-left: 12.5vw;
+  padding-right: 12.5vw;
+}
+
 @media screen and (max-width: 1600px) {
   .padding-sider {
     padding-left: 6rem;
