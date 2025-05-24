@@ -134,7 +134,7 @@
           "type": "swiper",
           "settings": {
             "title": "Eleganter Arbeitsbereich",
-            "text": "<p>Schaffe einen funktionalen und stilvollen Arbeitsplatz mit unserem klassischen Schreibtisch</p>",
+            "text": "<p>Schaffe einen funktionalen und stilvollen Arbeitsplatz mit </p><p>unserem klassischen Schreibtisch</p>",
             "btn_text": "En savoir plus",
             "image": "shopify://shop_images/polka_dot_swiper-1.webp",
             "link": "",
