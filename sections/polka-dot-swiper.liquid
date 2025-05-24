@@ -32,15 +32,15 @@
               <div class="polka_dot_swiper_product">
                 <div class="polka_dot_swiper_product_img">
                   {{-
-                    block.settings.select_product.value.feature_image
-                    | image_url: width: block.settings.select_product.value.feature_image.width
-                    | image_tag: alt: block.settings.select_product.value.title
+                    block.settings.select_product.feature_image
+                    | image_url: width: block.settings.select_product.feature_image.width
+                    | image_tag: alt: block.settings.select_product.title
                   -}}
                 </div>
                 <div class="polka_dot_swiper_product_info">
-                  <div class="polka_dot_swiper_product_info_title">{{ block.settings.select_product.value.title }}</div>
+                  <div class="polka_dot_swiper_product_info_title">{{ block.settings.select_product.title }}</div>
                   <div class="polka_dot_swiper_product_info_price">
-                    {{ block.settings.select_product.value.price | money_without_trailing_zeros }}
+                    {{ block.settings.select_product.price | money_without_trailing_zeros }}
                     {{- 'icon-shopping-cart.svg' | inline_asset_content -}}
                   </div>
                 </div>
