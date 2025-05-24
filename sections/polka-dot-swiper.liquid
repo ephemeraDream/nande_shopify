@@ -1,8 +1,10 @@
 {{ 'section-polka-dot-swiper.css' | asset_url | stylesheet_tag }}
 
 <div class="polka_dot_swiper">
-  <div class="polka_dot_swiper_title">{{ section.settings.title }}</div>
-  <div class="polka_dot_swiper_text">{{ section.settings.text }}</div>
+  <div class="padding-sider">
+    <div class="polka_dot_swiper_title">{{ section.settings.title }}</div>
+    <div class="polka_dot_swiper_text">{{ section.settings.text }}</div>
+  </div>
   <div class="swiper">
     <div class="swiper-wrapper">
       {% for block in section.blocks %}
@@ -37,6 +39,7 @@
     slidesPerView: 'auto',
     spaceBetween: 60,
     initialSlide: 1,
+    centeredSlides: true,
   });
 </script>
 

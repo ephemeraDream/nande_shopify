@@ -59,6 +59,7 @@
   display: flex;
   align-items: flex-end;
   justify-content: space-between;
+  box-sizing: border-box;
 }
 
 .polka_dot_swiper .polka_dot_swiper_info_title {
