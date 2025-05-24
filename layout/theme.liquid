@@ -253,6 +253,14 @@
           font-size: 1.6rem;
         }
       }
+
+      @font-face {
+        font-family: "PP Right Grotesk";
+        src: url("https://cdn.shopify.com/s/files/1/0574/9728/8897/files/RightGroteskText-Regular.woff2?v=1748067051")
+            format("woff2"),
+          url("https://cdn.shopify.com/s/files/1/0574/9728/8897/files/RightGroteskText-Regular.woff?v=1748067050")
+            format("woff");
+      }
     {% endstyle %}
 
     {{ 'base.css' | asset_url | stylesheet_tag }}
