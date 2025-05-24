@@ -14,7 +14,7 @@
         {% else %}
           {% assign poster_image = blank %}
           {% if block.settings.cover_image != blank %}
-            {% assign poster_image = block.settings.cover_image | image_url: block.settings.cover_image.width %}
+            {% assign poster_image = block.settings.cover_image | image_url: width: block.settings.cover_image.width %}
           {% endif %}
           {% if block.settings.video_url != blank %}
             <video
