@@ -127,7 +127,9 @@
             "btn_text": "En savoir plus",
             "image": "shopify://shop_images/polka_dot_swiper-2.webp",
             "link": "",
-            "select_product": "maidesite-hohenverstellbar-schreibtisch-t2-pro-plus-140-160-180-cm"
+            "select_product": "maidesite-hohenverstellbar-schreibtisch-t2-pro-plus-140-160-180-cm",
+            "product_X": 0,
+            "product_Y": 0
           }
         },
         "swiper_RR3AVA": {
@@ -138,7 +140,9 @@
             "btn_text": "En savoir plus",
             "image": "shopify://shop_images/polka_dot_swiper-1.webp",
             "link": "",
-            "select_product": "maidesite-th2-pro-plus-tischgestell-elektrisch-hohenverstellbar"
+            "select_product": "maidesite-th2-pro-plus-tischgestell-elektrisch-hohenverstellbar",
+            "product_X": 52,
+            "product_Y": 45
           }
         },
         "swiper_xwgRwF": {
@@ -149,7 +153,9 @@
             "btn_text": "En savoir plus",
             "image": "shopify://shop_images/polka_dot_swiper-2.webp",
             "link": "",
-            "select_product": "maidesite-sc1-pro-elektrisch-schreibtisch-hohenverstellbar"
+            "select_product": "maidesite-sc1-pro-elektrisch-schreibtisch-hohenverstellbar",
+            "product_X": 22,
+            "product_Y": 40
           }
         }
       },
