@@ -1,0 +1,74 @@
+{{ 'section-polka-dot-swiper.css' | asset_url | stylesheet_tag }}
+
+<div class="polka_dot_swiper"></div>
+
+{% schema %}
+{
+  "name": "polka dot swiper",
+  "tag": "section",
+  "class": "section",
+  "disabled_on": {
+    "groups": ["header", "footer"]
+  },
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "title"
+    },
+    {
+      "type": "richtext",
+      "id": "text",
+      "label": "text"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "swiper",
+      "name": "swiper",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "title"
+        },
+        {
+          "type": "richtext",
+          "id": "text",
+          "label": "text"
+        },
+        {
+          "type": "text",
+          "id": "btn_text",
+          "label": "button text"
+        },
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "image"
+        },
+        {
+          "type": "url",
+          "id": "link",
+          "label": "link"
+        },
+        {
+          "type": "product",
+          "id": "product",
+          "label": "product"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "polka dot swiper",
+      "blocks": [
+        {
+          "type": "swiper"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
