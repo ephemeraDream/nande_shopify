@@ -18,6 +18,7 @@
             "title": "",
             "text": "",
             "btn_text": "",
+            "link": "",
             "file_position": "middle_left",
             "file_type": "image",
             "file_image": "shopify://shop_images/banner-1.webp",
@@ -30,6 +31,7 @@
             "title": "Maidesite Spaces",
             "text": "<p>Lassen Sie sich inspirieren und gestalten Sie Ihren perfekten Maidesite-Arbeitsplatz <br/>mit unseren sorgfältig kuratierten Räumen.</p>",
             "btn_text": "En savoir plus",
+            "link": "",
             "file_position": "middle_left",
             "file_type": "image",
             "file_image": "shopify://shop_images/banner-2.webp",
@@ -42,6 +44,7 @@
             "title": "Nahtloses Design Trifft Auf FunktionalitäT",
             "text": "<p>Ein durchdachtes, einheitliches Design, das Ästhetik und Funktion kombiniert – für einen </p><p>modernen Arbeitsplatz, der sich nahtlos in Ihr Zuhause einfügt</p>",
             "btn_text": "En savoir plus",
+            "link": "",
             "file_position": "middle_left",
             "file_type": "image",
             "file_image": "shopify://shop_images/banner-3.webp",
@@ -112,10 +115,59 @@
         "title": "Stelle Deinen Schreibtisch Zusammen",
         "text": "<p>Gestalte deinen Maidesite-Arbeitsbereich mit unseren </p><p>inspirierten Räumen und Produkten</p>"
       }
+    },
+    "polka_dot_swiper_4yRfwn": {
+      "type": "polka-dot-swiper",
+      "blocks": {
+        "swiper_74yt3y": {
+          "type": "swiper",
+          "settings": {
+            "title": "Eleganter Arbeitsbereich",
+            "text": "<p>Schaffe einen funktionalen und stilvollen Arbeitsplatz mit unserem klassischen Schreibtisch</p>",
+            "btn_text": "En savoir plus",
+            "image": "shopify://shop_images/polka_dot_swiper-2.webp",
+            "link": "",
+            "product": "maidesite-th2-pro-plus-tischgestell-elektrisch-hohenverstellbar"
+          }
+        },
+        "swiper_RR3AVA": {
+          "type": "swiper",
+          "settings": {
+            "title": "Eleganter Arbeitsbereich",
+            "text": "<p>Schaffe einen funktionalen und stilvollen Arbeitsplatz mit unserem klassischen Schreibtisch</p>",
+            "btn_text": "En savoir plus",
+            "image": "shopify://shop_images/polka_dot_swiper-1.webp",
+            "link": "",
+            "product": "maidesite-hohenverstellbar-schreibtisch-t2-pro-plus-140-160-180-cm"
+          }
+        },
+        "swiper_xwgRwF": {
+          "type": "swiper",
+          "settings": {
+            "title": "Eleganter Arbeitsbereich",
+            "text": "<p>Schaffe einen funktionalen und stilvollen Arbeitsplatz mit unserem klassischen Schreibtisch</p>",
+            "btn_text": "En savoir plus",
+            "image": "shopify://shop_images/polka_dot_swiper-2.webp",
+            "link": "",
+            "product": "maidesite-sc1-pro-elektrisch-schreibtisch-hohenverstellbar"
+          }
+        }
+      },
+      "block_order": [
+        "swiper_74yt3y",
+        "swiper_RR3AVA",
+        "swiper_xwgRwF"
+      ],
+      "name": "polka dot swiper",
+      "settings": {
+        "title": "Entdecke Deinen Stil Und Lass Dich Inspirieren",
+        "text": "<p>Gestalte deinen Maidesite-Arbeitsbereich mit unseren inspirierten Räumen und Produkten</p>"
+      }
     }
   },
   "order": [
     "banner_8A7fgF",
-    "link_block_ygbQVD"
+    "link_block_ygbQVD",
+    "polka_dot_swiper_4yRfwn"
   ]
 }
