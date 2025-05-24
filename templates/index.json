@@ -127,7 +127,7 @@
             "btn_text": "En savoir plus",
             "image": "shopify://shop_images/polka_dot_swiper-2.webp",
             "link": "",
-            "product": "maidesite-th2-pro-plus-tischgestell-elektrisch-hohenverstellbar"
+            "select_product": "maidesite-hohenverstellbar-schreibtisch-t2-pro-plus-140-160-180-cm"
           }
         },
         "swiper_RR3AVA": {
@@ -138,7 +138,7 @@
             "btn_text": "En savoir plus",
             "image": "shopify://shop_images/polka_dot_swiper-1.webp",
             "link": "",
-            "product": "maidesite-hohenverstellbar-schreibtisch-t2-pro-plus-140-160-180-cm"
+            "select_product": "maidesite-th2-pro-plus-tischgestell-elektrisch-hohenverstellbar"
           }
         },
         "swiper_xwgRwF": {
@@ -149,7 +149,7 @@
             "btn_text": "En savoir plus",
             "image": "shopify://shop_images/polka_dot_swiper-2.webp",
             "link": "",
-            "product": "maidesite-sc1-pro-elektrisch-schreibtisch-hohenverstellbar"
+            "select_product": "maidesite-sc1-pro-elektrisch-schreibtisch-hohenverstellbar"
           }
         }
       },
@@ -160,7 +160,7 @@
       ],
       "name": "polka dot swiper",
       "settings": {
-        "title": "Entdecke Deinen Stil Und Lass Dich <br>Inspirieren",
+        "title": "Entdecke Deinen Stil Und Lass Dich Inspirieren",
         "text": "<p>Gestalte deinen Maidesite-Arbeitsbereich mit unseren </p><p>inspirierten Räumen und Produkten</p>"
       }
     }
