@@ -106,7 +106,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  bottom: -3.1rem;
+  bottom: 0;
 }
 
 .polka_dot_swiper .swiper-pagination-bullet {
@@ -115,8 +115,9 @@
   background: #7F7E75;
   border-radius: 0;
   opacity: 1;
-  margin: 0 0.8rem;
+  margin: 0 0.8rem !important;
   border: 0.2rem solid #7F7E75;
+  box-sizing: border-box;
 }
 
 .polka_dot_swiper .swiper-pagination-bullet-active {
