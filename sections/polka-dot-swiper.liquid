@@ -29,6 +29,8 @@
         </div>
       {% endfor %}
     </div>
+    <div class="polka_dot_swiper_prev">{{- 'swiper-left.svg' | inline_asset_content -}}</div>
+    <div class="polka_dot_swiper_next">{{- 'swiper-right.svg' | inline_asset_content -}}</div>
   </div>
   <div class="swiper-pagination"></div>
 </div>
@@ -42,6 +44,10 @@
     pagination: {
       el: '.polka_dot_swiper .swiper-pagination',
       clickable: true,
+    },
+    navigation: {
+      nextEl: '.polka_dot_swiper_next',
+      prevEl: '.polka_dot_swiper_prev',
     },
   });
 </script>

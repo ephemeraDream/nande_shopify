@@ -77,7 +77,7 @@
 .polka_dot_swiper .polka_dot_swiper_info_text {
   font-family: "PP Right Grotesk";
   font-size: 2rem;
-  font-weight: bold;
+  font-weight: 500;
   line-height: 94%;
   letter-spacing: 0px;
   font-variation-settings: "opsz" auto;
@@ -122,4 +122,25 @@
 
 .polka_dot_swiper .swiper-pagination-bullet-active {
   background: #BDFF00;
+}
+
+.polka_dot_swiper .polka_dot_swiper_prev,
+.polka_dot_swiper .polka_dot_swiper_next {
+  width: 6rem;
+  height: 6rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(255, 255, 255, 0.6);
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.polka_dot_swiper .polka_dot_swiper_prev {
+  left: 3.90625vw;
+}
+
+.polka_dot_swiper .polka_dot_swiper_next {
+  right: 3.90625vw;
 }
