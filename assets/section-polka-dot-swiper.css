@@ -1,7 +1,9 @@
 .polka_dot_swiper {
   width: 100%;
   padding-top: 12rem;
+  padding-bottom: 3.1rem;
   background-color: #F2F1ED;
+  position: relative;
 }
 
 .polka_dot_swiper .polka_dot_swiper_title {
@@ -98,4 +100,25 @@
   letter-spacing: 0px;
   font-variation-settings: "opsz" auto;
   color: #1F1F1F;
+}
+
+.polka_dot_swiper .swiper-pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  bottom: -3.1rem;
+}
+
+.polka_dot_swiper .swiper-pagination-bullet {
+  width: 1.6rem;
+  height: 1.6rem;
+  background: #7F7E75;
+  border-radius: 0;
+  opacity: 1;
+  margin: 0 0.8rem;
+  border: 0.2rem solid #7F7E75;
+}
+
+.polka_dot_swiper .swiper-pagination-bullet-active {
+  background: #BDFF00;
 }
