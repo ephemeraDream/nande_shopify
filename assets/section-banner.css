@@ -38,7 +38,7 @@
 }
 
 .section_banner .section_banner_info_btn {
-  display: flex;
+  display: inline-flex;
   align-items: center;
   gap: 0.8rem;
   height: 6.7rem;
@@ -57,18 +57,18 @@
 
 .section_banner .section_banner_info_top_left {
   left: 12.5vw;
-  top: 60px;
+  top: 6rem;
 }
 
 .section_banner .section_banner_info_top_center {
   left: 50%;
   transform: translateX(-50%);
-  top: 60px;
+  top: 6rem;
 }
 
 .section_banner .section_banner_info_top_right {
   right: 12.5vw;
-  top: 60px;
+  top: 6rem;
 }
 
 .section_banner .section_banner_info_middle_left {
@@ -92,16 +92,16 @@
 
 .section_banner .section_banner_info_bottom_left {
   left: 12.5vw;
-  bottom: 60px;
+  bottom: 6rem;
 }
 
 .section_banner .section_banner_info_bottom_center {
   left: 50%;
   transform: translateX(-50%);
-  bottom: 60px;
+  bottom: 6rem;
 }
 
 .section_banner .section_banner_info_bottom_right {
   right: 12.5vw;
-  bottom: 60px;
+  bottom: 6rem;
 }
