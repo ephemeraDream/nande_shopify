@@ -27,9 +27,12 @@
             {% endif %}
           </div>
           {% if block.settings.select_product != blank %}
-            <div class="polka_dot_swiper_contain">
+            <div
+              class="polka_dot_swiper_contain"
+              style="top: {{ block.settings.product_Y }}%;left: {{ block.settings.product_X }}%"
+            >
               {{- 'icon-plus.svg' | inline_asset_content -}}
-              <div class="polka_dot_swiper_product">
+              <a class="polka_dot_swiper_product" href="{{ block.settings.select_product.url }}">
                 <div class="polka_dot_swiper_product_img">
                   {{-
                     block.settings.select_product.featured_media
@@ -41,10 +44,12 @@
                   <div class="polka_dot_swiper_product_info_title">{{ block.settings.select_product.title }}</div>
                   <div class="polka_dot_swiper_product_info_price">
                     {{ block.settings.select_product.price | money_without_trailing_zeros }}
-                    {{- 'icon-shopping-cart.svg' | inline_asset_content -}}
+                    <a href="{{ block.settings.select_product.url }}">
+                      {{- 'icon-shopping-cart.svg' | inline_asset_content -}}
+                    </a>
                   </div>
                 </div>
-              </div>
+              </a>
             </div>
           {% endif %}
         </div>
@@ -127,6 +132,26 @@
           "type": "product",
           "id": "select_product",
           "label": "product"
+        },
+        {
+          "type": "range",
+          "id": "product_X",
+          "min": 0,
+          "max": 100,
+          "step": 1,
+          "unit": "%",
+          "label": "product_X",
+          "default": 0
+        },
+        {
+          "type": "range",
+          "id": "product_Y",
+          "min": 0,
+          "max": 100,
+          "step": 1,
+          "unit": "%",
+          "label": "product_Y",
+          "default": 0
         }
       ]
     }
