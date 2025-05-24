@@ -64,7 +64,7 @@
           "type": "item",
           "settings": {
             "title": "Schreibtische",
-            "text": "<p>Höhenverstellbare Schreibtische für dein Büro</p>",
+            "text": "<p>Höhenverstellbare Schreibtische für </p><p>dein Büro</p>",
             "btn_text": "Erkunden",
             "image": "shopify://shop_images/link-block-1.webp",
             "link": ""
@@ -84,7 +84,7 @@
           "type": "item",
           "settings": {
             "title": "Zubehör",
-            "text": "<p>Funktionales Zubehör für deinen Arbeitsplatz</p>",
+            "text": "<p>Funktionales Zubehör für deinen </p><p>Arbeitsplatz</p>",
             "btn_text": "Erkunden",
             "image": "shopify://shop_images/link-block-3.webp",
             "link": ""
@@ -110,7 +110,7 @@
       "name": "link block",
       "settings": {
         "title": "Stelle Deinen Schreibtisch Zusammen",
-        "text": "<p>Gestalte deinen Maidesite-Arbeitsbereich mit unseren inspirierten Räumen und Produkten</p>"
+        "text": "<p>Gestalte deinen Maidesite-Arbeitsbereich mit unseren </p><p>inspirierten Räumen und Produkten</p>"
       }
     }
   },
