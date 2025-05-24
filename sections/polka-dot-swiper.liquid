@@ -29,17 +29,19 @@
         </div>
       {% endfor %}
     </div>
+    <div class="swiper-pagination"></div>
   </div>
 </div>
 
 <script>
   new Swiper('.polka_dot_swiper .swiper', {
-    {% comment %} loop: true, {% endcomment %}
-    {% comment %} autoplay: true, {% endcomment %}
     slidesPerView: 'auto',
     spaceBetween: 60,
     initialSlide: 1,
     centeredSlides: true,
+    pagination: {
+      el: '.polka_dot_swiper .swiper-pagination',
+    },
   });
 </script>
 
