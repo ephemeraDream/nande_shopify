@@ -31,15 +31,15 @@
             <div class="polka_dot_swiper_product">
               <div class="polka_dot_swiper_product_img">
                 {{-
-                  block.settings.product.feature_image
-                  | image_url: width: block.settings.product.feature_image.width
-                  | image_tag: alt: block.settings.product.title
+                  block.settings.select_product.feature_image
+                  | image_url: width: block.settings.select_product.feature_image.width
+                  | image_tag: alt: block.settings.select_product.title
                 -}}
               </div>
               <div class="polka_dot_swiper_product_info">
-                <div class="polka_dot_swiper_product_info_title">{{ block.settings.product.title }}</div>
+                <div class="polka_dot_swiper_product_info_title">{{ block.settings.select_product.title }}</div>
                 <div class="polka_dot_swiper_product_info_price">
-                  {{ block.settings.product.price | money_without_trailing_zeros }}
+                  {{ block.settings.select_product.price | money_without_trailing_zeros }}
                   {{- 'icon-shopping-cart.svg' | inline_asset_content -}}
                 </div>
               </div>
@@ -123,7 +123,7 @@
         },
         {
           "type": "product",
-          "id": "product",
+          "id": "select_product",
           "label": "product"
         }
       ]
