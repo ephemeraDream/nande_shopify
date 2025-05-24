@@ -135,6 +135,8 @@
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
+  z-index: 1;
+  cursor: pointer;
 }
 
 .polka_dot_swiper .polka_dot_swiper_prev {
@@ -143,4 +145,65 @@
 
 .polka_dot_swiper .polka_dot_swiper_next {
   right: 3.90625vw;
+}
+
+.polka_dot_swiper .polka_dot_swiper_contain {
+  position: absolute;
+  width: 4rem;
+  height: 4rem;
+  background-color: #BDFF00;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+}
+
+.polka_dot_swiper .polka_dot_swiper_product {
+  position: absolute;
+}
+
+.polka_dot_swiper .polka_dot_swiper_product_img {
+  background-color: #fff;
+  width: 11.7rem;
+  height: 11.2rem;
+  box-sizing: border-box;
+  padding: 1.2rem 1.2rem 0.8rem 1.2rem;
+}
+
+.polka_dot_swiper .polka_dot_swiper_product_img img {
+  width: 100%;
+  height: 100%;
+  background-color: #FAFAFA;
+  object-fit: contain;
+  object-position: center center;
+}
+
+.polka_dot_swiper .polka_dot_swiper_product_info {
+  padding: 1.6rem 0.8rem 0.8rem 0;
+  background-color: #fff;
+  width: 23rem;
+}
+
+.polka_dot_swiper .polka_dot_swiper_product_info_title {
+  font-family: "PP Right Grotesk";
+  font-size: 3rem;
+  font-weight: 500;
+  line-height: 94%;
+  letter-spacing: 0px;
+  font-variation-settings: "opsz" auto;
+  color: #000000;
+}
+
+.polka_dot_swiper .polka_dot_swiper_product_info_price {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 1.2rem;
+  font-family: "PP Right Grotesk";
+  font-size: 2rem;
+  font-weight: normal;
+  line-height: 130%;
+  letter-spacing: 0px;
+  font-variation-settings: "opsz" auto;
+  color: #000000;
 }
