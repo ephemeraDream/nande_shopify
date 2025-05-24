@@ -44,9 +44,7 @@
                   <div class="polka_dot_swiper_product_info_title">{{ block.settings.select_product.title }}</div>
                   <div class="polka_dot_swiper_product_info_price">
                     {{ block.settings.select_product.price | money_without_trailing_zeros }}
-                    <a href="{{ block.settings.select_product.url }}">
-                      {{- 'icon-shopping-cart.svg' | inline_asset_content -}}
-                    </a>
+                    {{- 'icon-shopping-cart.svg' | inline_asset_content -}}
                   </div>
                 </div>
               </a>
