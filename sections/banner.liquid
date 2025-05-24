@@ -55,6 +55,12 @@
 </div>
 
 <script src="{{ 'swiper-bundle.min.js' | asset_url }}"></script>
+<script>
+  new Swiper('.section_banner', {
+    loop: true,
+    spaceBetween: 0,
+  });
+</script>
 
 {% schema %}
 {
