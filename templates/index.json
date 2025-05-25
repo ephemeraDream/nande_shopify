@@ -28,7 +28,7 @@
         "banner_item_ykwd4B": {
           "type": "banner_item",
           "settings": {
-            "title": "Maidesite Spaces",
+            "title": "<p>Maidesite Spaces</p>",
             "text": "<p>Lassen Sie sich inspirieren und gestalten Sie Ihren perfekten Maidesite-Arbeitsplatz <br/>mit unseren sorgfältig kuratierten Räumen.</p>",
             "btn_text": "En savoir plus",
             "link": "",
@@ -41,7 +41,7 @@
         "banner_item_e7J8AA": {
           "type": "banner_item",
           "settings": {
-            "title": "Nahtloses Design Trifft Auf FunktionalitäT",
+            "title": "<p>Nahtloses Design Trifft Auf FunktionalitäT</p>",
             "text": "<p>Ein durchdachtes, einheitliches Design, das Ästhetik und Funktion kombiniert – für einen </p><p>modernen Arbeitsplatz, der sich nahtlos in Ihr Zuhause einfügt</p>",
             "btn_text": "En savoir plus",
             "link": "",
@@ -66,7 +66,7 @@
         "item_FzLRBi": {
           "type": "item",
           "settings": {
-            "title": "Schreibtische",
+            "title": "<p>Schreibtische</p>",
             "text": "<p>Höhenverstellbare Schreibtische für </p><p>dein Büro</p>",
             "btn_text": "Erkunden",
             "image": "shopify://shop_images/link-block-1.webp",
@@ -76,7 +76,7 @@
         "item_K7NCmg": {
           "type": "item",
           "settings": {
-            "title": "Stühle",
+            "title": "<p>Stühle</p>",
             "text": "<p>Komfortable und stilvolle Bürostühle</p>",
             "btn_text": "Erkunden",
             "image": "shopify://shop_images/link-block-2.webp",
@@ -86,7 +86,7 @@
         "item_jEQh9H": {
           "type": "item",
           "settings": {
-            "title": "Zubehör",
+            "title": "<p>Zubehör</p>",
             "text": "<p>Funktionales Zubehör für deinen </p><p>Arbeitsplatz</p>",
             "btn_text": "Erkunden",
             "image": "shopify://shop_images/link-block-3.webp",
@@ -96,7 +96,7 @@
         "item_3EWnyb": {
           "type": "item",
           "settings": {
-            "title": "Pakete",
+            "title": "<p>Pakete</p>",
             "text": "<p>Ideal kombinierte Sets für dein Büro</p>",
             "btn_text": "Erkunden",
             "image": "shopify://shop_images/link-block-4.webp",
@@ -112,7 +112,7 @@
       ],
       "name": "link block",
       "settings": {
-        "title": "Stelle Deinen Schreibtisch Zusammen",
+        "title": "<p>Stelle Deinen Schreibtisch Zusammen</p>",
         "text": "<p>Gestalte deinen Maidesite-Arbeitsbereich mit unseren </p><p>inspirierten Räumen und Produkten</p>"
       }
     },
@@ -122,7 +122,7 @@
         "swiper_74yt3y": {
           "type": "swiper",
           "settings": {
-            "title": "Eleganter Arbeitsbereich",
+            "title": "<p>Eleganter Arbeitsbereich</p>",
             "text": "<p>Schaffe einen funktionalen und stilvollen Arbeitsplatz mit unserem klassischen Schreibtisch</p>",
             "btn_text": "En savoir plus",
             "image": "shopify://shop_images/polka_dot_swiper-2.webp",
@@ -135,7 +135,7 @@
         "swiper_RR3AVA": {
           "type": "swiper",
           "settings": {
-            "title": "Eleganter Arbeitsbereich",
+            "title": "<p>Eleganter Arbeitsbereich</p>",
             "text": "<p>Schaffe einen funktionalen und stilvollen Arbeitsplatz mit </p><p>unserem klassischen Schreibtisch</p>",
             "btn_text": "En savoir plus",
             "image": "shopify://shop_images/polka_dot_swiper-1.webp",
@@ -148,7 +148,7 @@
         "swiper_xwgRwF": {
           "type": "swiper",
           "settings": {
-            "title": "Eleganter Arbeitsbereich",
+            "title": "<p>Eleganter Arbeitsbereich</p>",
             "text": "<p>Schaffe einen funktionalen und stilvollen Arbeitsplatz mit unserem klassischen Schreibtisch</p>",
             "btn_text": "En savoir plus",
             "image": "shopify://shop_images/polka_dot_swiper-2.webp",
@@ -166,7 +166,7 @@
       ],
       "name": "polka dot swiper",
       "settings": {
-        "title": "Entdecke Deinen Stil Und Lass Dich <br>Inspirieren",
+        "title": "<p>Entdecke Deinen Stil Und Lass Dich </p><p>Inspirieren</p>",
         "text": "<p>Gestalte deinen Maidesite-Arbeitsbereich mit unseren </p><p>inspirierten Räumen und Produkten</p>"
       }
     }
