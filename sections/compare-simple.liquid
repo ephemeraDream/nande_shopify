@@ -34,18 +34,15 @@
             </div>
           </div>
           <div class="compare_simple_item_color">
-            {% for color in block.settings.select_product.metafields.custom.product_color %}
+            {% for color in block.settings.select_product.metafields.custom.product_color.value %}
               <div class="compare_simple_item_color_circle" style="background-color: {{ color.value }}"></div>
             {%- endfor %}
           </div>
           <div class="compare_simple_item_price">
-            {{
-              'products.product.price.from_price_html'
-              | t: price: block.settings.select_product.price
-              | money_without_trailing_zeros
-            }}
+            {% assign price = block.settings.select_product.price | money_without_trailing_zeros %}
+            {{ 'products.product.price.from_price_html' | t: price: price }}
           </div>
-          {% for item in block.settings.select_product.metafields.custom.compare_simple.data %}
+          {% for item in block.settings.select_product.metafields.custom.compare_simple.value.data %}
             <div class="compare_simple_item_line">
               <div class="compare_simple_item_line_label">{{ item.label }}</div>
               <div class="compare_simple_item_line_value">{{ item.value }}</div>
