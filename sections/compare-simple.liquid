@@ -22,11 +22,10 @@
                   {%- when 'Farbe Gestel' -%}
                     {% for value in option.values %}
                       <div class="swiper-slide">
-                        {{-
-                          value.variant.featured_image
-                          | image_url: value.variant.featured_image.width
-                          | image_tag: alt: value.variant.title
-                        -}}
+                        <img
+                          src="{{ value.variant.featured_image | image_url }}"
+                          alt="{{ value.variant.title }}"
+                        >
                       </div>
                     {%- endfor %}
                 {%- endcase -%}
