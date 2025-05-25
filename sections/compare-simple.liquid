@@ -1,0 +1,54 @@
+{{ 'section-compare-simple.css' | asset_url | stylesheet_tag }}
+
+<div class="compare_simple"></div>
+
+{% schema %}
+{
+  "name": "compare simple",
+  "tag": "section",
+  "class": "section",
+  "disabled_on": {
+    "groups": ["header", "footer"]
+  },
+  "settings": [
+    {
+      "type": "richtext",
+      "id": "title",
+      "label": "title"
+    },
+    {
+      "type": "richtext",
+      "id": "text",
+      "label": "text"
+    },
+    {
+      "type": "text",
+      "id": "link_text",
+      "label": "link text"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "item",
+      "name": "swiper",
+      "settings": [
+        {
+          "type": "product",
+          "id": "select_product",
+          "label": "product"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "compare simple",
+      "blocks": [
+        {
+          "type": "item"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
