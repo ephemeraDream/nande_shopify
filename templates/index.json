@@ -169,11 +169,53 @@
         "title": "<p>Entdecke Deinen Stil Und Lass Dich </p><p>Inspirieren</p>",
         "text": "<p>Gestalte deinen Maidesite-Arbeitsbereich mit unseren </p><p>inspirierten Räumen und Produkten</p>"
       }
+    },
+    "compare_simple_8gK3g4": {
+      "type": "compare-simple",
+      "blocks": {
+        "item_6kCRQ4": {
+          "type": "item",
+          "settings": {
+            "select_product": "maidesite-th2-pro-plus-tischgestell-elektrisch-hohenverstellbar"
+          }
+        },
+        "item_7Mki7y": {
+          "type": "item",
+          "settings": {
+            "select_product": "maidesite-th2-pro-plus-tischgestell-elektrisch-hohenverstellbar"
+          }
+        },
+        "item_AUDwj4": {
+          "type": "item",
+          "settings": {
+            "select_product": "maidesite-th2-pro-plus-tischgestell-elektrisch-hohenverstellbar"
+          }
+        },
+        "item_xLaUwa": {
+          "type": "item",
+          "settings": {
+            "select_product": "maidesite-th2-pro-plus-tischgestell-elektrisch-hohenverstellbar"
+          }
+        }
+      },
+      "block_order": [
+        "item_6kCRQ4",
+        "item_7Mki7y",
+        "item_AUDwj4",
+        "item_xLaUwa"
+      ],
+      "name": "compare simple",
+      "settings": {
+        "title": "<p>Finde Deinen </p><p>Passenden Schreibtisch</p>",
+        "text": "<p>Maidesite bietet anpassbare höhenverstellbare </p><p>Schreibtische für Deine Bedürfnisse.</p>",
+        "link_text": "Mehr erfahren"
+      }
     }
   },
   "order": [
     "banner_8A7fgF",
     "link_block_ygbQVD",
-    "polka_dot_swiper_4yRfwn"
+    "polka_dot_swiper_4yRfwn",
+    "compare_simple_8gK3g4"
   ]
 }
