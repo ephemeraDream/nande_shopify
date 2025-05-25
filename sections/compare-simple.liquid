@@ -57,6 +57,7 @@
 <script>
   const swiper_list = document.querySelectorAll('[class^="compare_simple_item_swiper_"]');
   swiper_list.forEach((item) => {
+    console.log(item)
     const compare_simple_item_swiper = new Swiper(item, {
       slidesPerView: 1,
       spaceBetween: 0,

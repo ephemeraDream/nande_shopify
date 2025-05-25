@@ -110,7 +110,7 @@
   position: absolute;
   top: 0;
   left: 0;
-  transform: translateY(-100%);
+  transform: translateY(calc(-100% + 0.1rem));
 }
 
 .compare_simple .compare_simple_item_color {
