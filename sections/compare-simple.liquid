@@ -62,6 +62,12 @@
       spaceBetween: 0,
       allowTouchMove: false,
     });
+
+    item.querySelectorAll('.compare_simple_item_color_circle').forEach((circle, index) => {
+      circle.addEventListener('click', function () {
+        compare_simple_item_swiper.slideTo(index);
+      });
+    });
   });
 </script>
 
