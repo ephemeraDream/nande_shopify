@@ -1,6 +1,57 @@
 {{ 'section-compare-simple.css' | asset_url | stylesheet_tag }}
 
-<div class="compare_simple"></div>
+<div class="compare_simple">
+  <div class="compare_simple_contain">
+    <div class="compare_simple_contain_head">
+      <div>
+        <div class="compare_simple_contain_head_title">{{ section.settings.title }}</div>
+        <div class="compare_simple_contain_head_text">{{ section.settings.text }}</div>
+      </div>
+      <div class="compare_simple_contain_head_link">
+        {{ section.settings.link_text }}
+        {{ 'icon-right-arrow.svg' | inline_asset_content }}
+      </div>
+    </div>
+    <div class="compare_simple_contain_body">
+      {% for block in section.blocks -%}
+        <div class="compare_simple_item">
+          <div class="swiper">
+            <div class="swiper-wrapper">
+              {% for option in product.options_with_values %}
+                {%- case option.name -%}
+                  {%- when 'Farbe Gestel' -%}
+                    {% for value in option.values %}
+                      <div class="swiper-slide">
+                        {{-
+                          value.variant.featured_media
+                          | image_url: value.variant.featured_media.width
+                          | image_tag: alt: value.variant.title
+                        -}}
+                      </div>
+                    {%- endfor %}
+                {%- endcase -%}
+              {%- endfor %}
+            </div>
+          </div>
+          <div class="compare_simple_item_color">
+            {% for color in product.metafields.custom.product_color %}
+              <div class="compare_simple_item_color_circle" style="background-color: {{ color.value }}"></div>
+            {%- endfor %}
+          </div>
+          <div class="compare_simple_item_price">
+            {{ 'products.product.price.from_price_html' | t: price: product.price }}
+          </div>
+          {% for item in product.metafields.custom.compare_simple %}
+            <div class="compare_simple_item_line">
+              <div class="compare_simple_item_line_label">{{ item.label }}</div>
+              <div class="compare_simple_item_line_value">{{ item.value }}</div>
+            </div>
+          {%- endfor %}
+        </div>
+      {%- endfor %}
+    </div>
+  </div>
+</div>
 
 {% schema %}
 {
@@ -30,7 +81,7 @@
   "blocks": [
     {
       "type": "item",
-      "name": "swiper",
+      "name": "item",
       "settings": [
         {
           "type": "product",
