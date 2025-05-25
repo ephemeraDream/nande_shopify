@@ -42,7 +42,7 @@
             {% assign price = block.settings.select_product.price | money_without_trailing_zeros %}
             {{ 'products.product.price.from_price_html' | t: price: price }}
           </div>
-          {% for item in block.settings.select_product.metafields.custom.compare_simple.value.data %}
+          {% for item in block.settings.select_product.metafields.custom.compare_simple.data.value %}
             <div class="compare_simple_item_line">
               <div class="compare_simple_item_line_label">{{ item.label }}</div>
               <div class="compare_simple_item_line_value">{{ item.value }}</div>
