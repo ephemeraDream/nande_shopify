@@ -70,6 +70,7 @@
 
 .compare_simple .compare_simple_item {
   flex: 1;
+  width: 0;
 }
 
 .compare_simple .compare_simple_item .swiper {
