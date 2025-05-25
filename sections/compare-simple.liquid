@@ -26,12 +26,12 @@
                           src="{{ value.variant.featured_image | image_url }}"
                           alt="{{ value.variant.title }}"
                         >
-                        <div class="compare_simple_item_title">{{ value.variant.title }}</div>
                       </div>
                     {%- endfor %}
                 {%- endcase -%}
               {%- endfor %}
             </div>
+            <div class="compare_simple_item_title">{{ block.settings.select_product.title }}</div>
           </div>
           <div class="compare_simple_item_color">
             {% for color in block.settings.select_product.metafields.custom.product_color.value %}
