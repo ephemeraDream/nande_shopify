@@ -26,6 +26,7 @@
                           src="{{ value.variant.featured_image | image_url }}"
                           alt="{{ value.variant.title }}"
                         >
+                        <div class="compare_simple_item_title">{{ value.variant.title }}</div>
                       </div>
                     {%- endfor %}
                 {%- endcase -%}

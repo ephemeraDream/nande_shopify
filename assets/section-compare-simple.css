@@ -65,3 +65,98 @@
   align-items: stretch;
   gap: 1.2rem;
 }
+
+.compare_simple .compare_simple_item {
+  flex: 1;
+}
+
+.compare_simple .compare_simple_item .swiper {
+  width: 100%;
+  height: 37rem;
+  background-color: #FAFAFA;
+}
+
+.compare_simple .compare_simple_item .swiper .swiper-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center center;
+}
+
+.compare_simple .compare_simple_item_title {
+  width: 100%;
+  min-height: 4rem;
+  background-color: #BDFF00;
+  padding: 0 1.6rem;
+  position: absolute;
+  bottom: 0;
+  font-family: "PP Right Grotesk";
+  font-size: 3rem;
+  font-weight: 500;
+  line-height: 94%;
+  letter-spacing: 0px;
+  font-variation-settings: "opsz" auto;
+  color: #1F1F1F;
+}
+
+.compare_simple .compare_simple_item_title::before {
+  content: "";
+  width: 50%;
+  height: 2.4rem;
+  background-color: #BDFF00;
+  position: absolute;
+  top: 0;
+  transform: translateY(-100%);
+}
+
+.compare_simple .compare_simple_item_color {
+  display: flex;
+  gap: 2rem;
+  padding: 1.6rem;
+  border-bottom: 0.1rem solid #F3F3F3;
+}
+
+.compare_simple .compare_simple_item_color_circle {
+  display: block;
+  width: 2.4rem;
+  height: 2.4rem;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.compare_simple .compare_simple_item_price {
+  padding: 1rem 1.6rem;
+  font-family: "PP Right Grotesk";
+  font-size: 2.4rem;
+  font-weight: 500;
+  line-height: 94%;
+  letter-spacing: 0px;
+  font-variation-settings: "opsz" auto;
+  color: #1F1F1F;
+  border-bottom: 0.1rem solid #F3F3F3;
+}
+
+.compare_simple .compare_simple_item_line {
+  padding: 1rem 1.6rem;
+  border-bottom: 0.1rem solid #F3F3F3;
+}
+
+.compare_simple .compare_simple_item_line_label {
+  font-family: "PP Right Grotesk";
+  font-size: 1.6rem;
+  font-weight: normal;
+  line-height: 130%;
+  letter-spacing: 0px;
+  font-variation-settings: "opsz" auto;
+  color: #7F7E75;
+}
+
+.compare_simple .compare_simple_item_line_value {
+  font-family: PP Right Grotesk;
+  font-size: 2.4rem;
+  font-weight: 500;
+  line-height: 94%;
+  letter-spacing: 0px;
+  font-variation-settings: "opsz" auto;
+  color: #1F1F1F;
+}
