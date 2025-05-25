@@ -176,33 +176,33 @@
         "item_6kCRQ4": {
           "type": "item",
           "settings": {
-            "select_product": "maidesite-th2-pro-plus-tischgestell-elektrisch-hohenverstellbar"
+            "select_product": "maidesite-el2-plus-art-tischgestell-elektrisch-hohenverstellbar-副本"
           }
         },
-        "item_7Mki7y": {
+        "item_ggJazh": {
           "type": "item",
           "settings": {
-            "select_product": "maidesite-th2-pro-plus-tischgestell-elektrisch-hohenverstellbar"
+            "select_product": "maidesite-el2-plus-art-tischgestell-elektrisch-hohenverstellbar-副本"
           }
         },
-        "item_AUDwj4": {
+        "item_9ya33j": {
           "type": "item",
           "settings": {
-            "select_product": "maidesite-th2-pro-plus-tischgestell-elektrisch-hohenverstellbar"
+            "select_product": "maidesite-el2-plus-art-tischgestell-elektrisch-hohenverstellbar-副本"
           }
         },
-        "item_xLaUwa": {
+        "item_FKk4XR": {
           "type": "item",
           "settings": {
-            "select_product": "maidesite-th2-pro-plus-tischgestell-elektrisch-hohenverstellbar"
+            "select_product": "maidesite-el2-plus-art-tischgestell-elektrisch-hohenverstellbar-副本"
           }
         }
       },
       "block_order": [
         "item_6kCRQ4",
-        "item_7Mki7y",
-        "item_AUDwj4",
-        "item_xLaUwa"
+        "item_ggJazh",
+        "item_9ya33j",
+        "item_FKk4XR"
       ],
       "name": "compare simple",
       "settings": {
