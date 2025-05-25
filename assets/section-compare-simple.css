@@ -49,6 +49,7 @@
   letter-spacing: 0px;
   font-variation-settings: "opsz" auto;
   color: #7F7E75;
+  cursor: pointer;
 }
 
 .compare_simple .compare_simple_contain_head_link svg {
@@ -64,6 +65,7 @@
   display: flex;
   align-items: stretch;
   gap: 1.2rem;
+  margin-top: 4.4rem;
 }
 
 .compare_simple .compare_simple_item {
@@ -97,6 +99,7 @@
   letter-spacing: 0px;
   font-variation-settings: "opsz" auto;
   color: #1F1F1F;
+  padding-bottom: 1rem;
 }
 
 .compare_simple .compare_simple_item_title::before {
@@ -106,6 +109,7 @@
   background-color: #BDFF00;
   position: absolute;
   top: 0;
+  left: 0;
   transform: translateY(-100%);
 }
 
@@ -122,6 +126,7 @@
   height: 2.4rem;
   border-radius: 50%;
   cursor: pointer;
+  box-shadow: 0 0 0px 0.1rem rgba(0, 0, 0, .1);
 }
 
 .compare_simple .compare_simple_item_price {
