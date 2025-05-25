@@ -2,6 +2,7 @@
   position: relative;
   height: 77rem;
   overflow: hidden;
+  margin-top: 12rem;
 }
 
 .image-comparison .image-wrapper {
@@ -45,7 +46,7 @@
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  left: -2.3rem;
+  left: -2.1rem;
 }
 
 @media screen and (max-width: 767px) {
