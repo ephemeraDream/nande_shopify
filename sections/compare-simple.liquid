@@ -17,7 +17,7 @@
         <div class="compare_simple_item">
           <div class="swiper">
             <div class="swiper-wrapper">
-              {% for option in product.options_with_values %}
+              {% for option in block.settings.product.options_with_values %}
                 {%- case option.name -%}
                   {%- when 'Farbe Gestel' -%}
                     {% for value in option.values %}
@@ -34,14 +34,14 @@
             </div>
           </div>
           <div class="compare_simple_item_color">
-            {% for color in product.metafields.custom.product_color %}
+            {% for color in block.settings.product.metafields.custom.product_color %}
               <div class="compare_simple_item_color_circle" style="background-color: {{ color.value }}"></div>
             {%- endfor %}
           </div>
           <div class="compare_simple_item_price">
-            {{ 'products.product.price.from_price_html' | t: price: product.price }}
+            {{ 'products.product.price.from_price_html' | t: price: block.settings.product.price }}
           </div>
-          {% for item in product.metafields.custom.compare_simple %}
+          {% for item in block.settings.product.metafields.custom.compare_simple %}
             <div class="compare_simple_item_line">
               <div class="compare_simple_item_line_label">{{ item.label }}</div>
               <div class="compare_simple_item_line_value">{{ item.value }}</div>
