@@ -15,7 +15,7 @@
     <div class="compare_simple_contain_body">
       {% for block in section.blocks -%}
         <div class="compare_simple_item">
-          <div class="swiper compare_simple_item_swiper_{{ block.settings.select_product.id }}">
+          <div class="swiper">
             <div class="swiper-wrapper">
               {% for option in block.settings.select_product.options_with_values %}
                 {%- case option.name -%}
@@ -55,10 +55,9 @@
 </div>
 
 <script>
-  const swiper_list = document.querySelectorAll('[class^="compare_simple_item_swiper_"]');
-  swiper_list.forEach((item) => {
-    console.log(item)
-    const compare_simple_item_swiper = new Swiper(item, {
+  const compare_simple_item_list = document.querySelectorAll('.compare_simple_item');
+  compare_simple_item_list.forEach((item) => {
+    const compare_simple_item_swiper = new Swiper(item.querySelector('.swiper'), {
       slidesPerView: 1,
       spaceBetween: 0,
       allowTouchMove: false,
