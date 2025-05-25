@@ -210,12 +210,21 @@
         "text": "<p>Maidesite bietet anpassbare höhenverstellbare </p><p>Schreibtische für Deine Bedürfnisse.</p>",
         "link_text": "Mehr erfahren"
       }
+    },
+    "image_comparison_JHgace": {
+      "type": "image-comparison",
+      "name": "Image Comparison",
+      "settings": {
+        "left_image": "shopify://shop_images/img-comparison.webp",
+        "right_image": "shopify://shop_images/img-comparison.webp"
+      }
     }
   },
   "order": [
     "banner_8A7fgF",
     "link_block_ygbQVD",
     "polka_dot_swiper_4yRfwn",
-    "compare_simple_8gK3g4"
+    "compare_simple_8gK3g4",
+    "image_comparison_JHgace"
   ]
 }
