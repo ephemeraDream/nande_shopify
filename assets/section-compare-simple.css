@@ -101,6 +101,7 @@
   font-variation-settings: "opsz" auto;
   color: #1F1F1F;
   padding-bottom: 1rem;
+  z-index: 1;
 }
 
 .compare_simple .compare_simple_item_title::before {
