@@ -1,0 +1,75 @@
+{{ 'section-boxgrid-simple.css' | asset_url | stylesheet_tag }}
+
+<div class="boxgrid_simple"></div>
+
+{% schema %}
+{
+  "name": "boxgrid simple",
+  "tag": "section",
+  "class": "section",
+  "disabled_on": {
+    "groups": ["header", "footer"]
+  },
+  "settings": [
+    {
+      "type": "richtext",
+      "id": "title",
+      "label": "title"
+    },
+    {
+      "type": "richtext",
+      "id": "text",
+      "label": "text"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "item",
+      "name": "item",
+      "settings": [
+        {
+          "type": "richtext",
+          "id": "title",
+          "label": "title"
+        },
+        {
+          "type": "richtext",
+          "id": "text",
+          "label": "text"
+        },
+        {
+          "type": "textarea",
+          "id": "icon",
+          "label": "icon"
+        },
+        {
+          "type": "radio",
+          "id": "active",
+          "label": "active type",
+          "default": "false",
+          "options": [
+            {
+              "value": "false",
+              "label": "false"
+            },
+            {
+              "value": "true",
+              "label": "true"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "boxgrid simple",
+      "blocks": [
+        {
+          "type": "item"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
