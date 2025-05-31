@@ -218,6 +218,15 @@
         "left_image": "shopify://shop_images/img-comparison.webp",
         "right_image": "shopify://shop_images/img-comparison.webp"
       }
+    },
+    "bundle_simple_WFrNiX": {
+      "type": "bundle-simple",
+      "name": "bundle simple",
+      "settings": {
+        "title": "<p>Stelle Deinen Schreibtisch Zusammen</p>",
+        "text": "<p>Gestalte deinen Maidesite-Arbeitsbereich mit unseren </p><p>inspirierten Räumen und Produkten</p>",
+        "product_list": []
+      }
     }
   },
   "order": [
@@ -225,6 +234,7 @@
     "link_block_ygbQVD",
     "polka_dot_swiper_4yRfwn",
     "compare_simple_8gK3g4",
-    "image_comparison_JHgace"
+    "image_comparison_JHgace",
+    "bundle_simple_WFrNiX"
   ]
 }
