@@ -1,0 +1,81 @@
+.boxgrid_simple {
+  width: 100%;
+  padding-top: 12rem;
+  background-color: #F2F1ED;
+  box-sizing: border-box;
+}
+
+.boxgrid_simple .boxgrid_simple_title {
+  font-family: "PP Right Grotesk";
+  font-size: 6rem;
+  font-weight: 500;
+  line-height: 94%;
+  text-transform: capitalize;
+  letter-spacing: 0px;
+  font-variation-settings: "opsz" auto;
+  color: #1F1F1F;
+}
+
+.boxgrid_simple .boxgrid_simple_text {
+  font-family: "PP Right Grotesk";
+  font-size: 3rem;
+  font-weight: 500;
+  line-height: 94%;
+  letter-spacing: 0px;
+  font-variation-settings: "opsz" auto;
+  color: #1F1F1F;
+  margin-top: 3rem;
+}
+
+.boxgrid_simple .boxgrid_simple_contain {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 6rem;
+  gap: 2rem;
+}
+
+.boxgrid_simple .boxgrid_simple_item {
+  flex: 0 0 auto;
+  width: calc((100% - 8rem) / 4);
+  height: 25.4rem;
+  background-color: #fff;
+  padding: 1.5rem 2rem auto 2.4rem;
+  position: relative;
+}
+
+.boxgrid_simple .boxgrid_simple_item.first_line {
+  height: 34.5rem;
+  padding-top: 2.5rem;
+}
+
+.boxgrid_simple .boxgrid_simple_item.active {
+  background-color: #BDFF00;
+  width: calc((100% - 2rem) / 2);
+}
+
+.boxgrid_simple .boxgrid_simple_item_title {
+  font-family: "PP Right Grotesk";
+  font-size: 4rem;
+  font-weight: 500;
+  line-height: 94%;
+  letter-spacing: 0px;
+  font-variation-settings: "opsz" auto;
+  color: #1F1F1F;
+}
+
+.boxgrid_simple .boxgrid_simple_item_text {
+  font-family: "PP Right Grotesk";
+  font-size: 2rem;
+  font-weight: normal;
+  line-height: 130%;
+  letter-spacing: 0px;
+  font-variation-settings: "opsz" auto;
+  color: #1F1F1F;
+  margin-top: 0.8rem;
+}
+
+.boxgrid_simple .boxgrid_simple_item svg {
+  position: absolute;
+  right: 3rem;
+  bottom: 2.5rem;
+}
