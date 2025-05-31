@@ -18,7 +18,7 @@
     <div class="maidesite_swiper_prev">{{- 'swiper-left.svg' | inline_asset_content -}}</div>
     <div class="maidesite_swiper_next">{{- 'swiper-right.svg' | inline_asset_content -}}</div>
   </div>
-  <div class="swiper maidesite_swiper_text">
+  <div class="swiper maidesite_swiper_desc">
     <div class="swiper-wrapper">
       {% for block in section.blocks %}
         <div class="swiper-slide">
@@ -30,7 +30,7 @@
 </div>
 
 <script>
-  const maidesite_swiper_text = new Swiper('.maidesite_swiper_text', {
+  const maidesite_swiper_text = new Swiper('.maidesite_swiper_desc', {
     spaceBetween: 0,
   });
 
