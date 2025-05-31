@@ -3616,6 +3616,7 @@ img {
 
 a {
   text-decoration: none;
+  cursor: pointer;
 }
 
 .padding-sider {

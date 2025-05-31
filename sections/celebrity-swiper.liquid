@@ -69,6 +69,28 @@
       prevEl: '.celebrity_swiper_prev',
     },
   });
+
+  const playIcons = document.querySelectorAll('.celebrity_swiper .celebrity_swiper_item_playicon');
+
+  playIcons.forEach((icon) => {
+    icon.addEventListener('click', () => {
+      const currentVideo = icon.closest('.celebrity_swiper_item').querySelector('video');
+
+      if (currentVideo) {
+        document.querySelectorAll('.celebrity_swiper_item video').forEach((video) => {
+          if (video !== currentVideo) {
+            video.pause();
+          }
+        });
+
+        if (currentVideo.paused) {
+          currentVideo.play();
+        } else {
+          currentVideo.pause();
+        }
+      }
+    });
+  });
 </script>
 
 {% schema %}
