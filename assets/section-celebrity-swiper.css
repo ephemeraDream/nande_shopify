@@ -33,7 +33,7 @@
 }
 
 .celebrity_swiper .celebrity_swiper_item {
-  width: 96vw;
+  flex: 1;
   height: 48rem;
   display: flex;
 }
@@ -81,6 +81,8 @@
 
 .celebrity_swiper .celebrity_swiper_item_right {
   position: relative;
+  flex: 0 0 auto;
+  width: 48vw;
 }
 
 .celebrity_swiper .celebrity_swiper_item_right video {
