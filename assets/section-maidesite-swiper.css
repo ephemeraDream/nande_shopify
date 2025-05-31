@@ -1,9 +1,7 @@
 .maidesite_swiper {
   width: 100%;
   padding-top: 12rem;
-  padding-bottom: 9rem;
   background-color: #FAFAFA;
-  border-bottom: 0.2rem solid #E2DED6;
 }
 
 .maidesite_swiper .maidesite_swiper_title {
@@ -40,6 +38,8 @@
 .maidesite_swiper .maidesite_swiper_desc {
   width: 100%;
   margin-top: 3.2rem;
+  padding-bottom: 9rem;
+  border-bottom: 0.2rem solid #E2DED6;
 }
 
 .maidesite_swiper .maidesite_swiper_image .swiper-slide {
