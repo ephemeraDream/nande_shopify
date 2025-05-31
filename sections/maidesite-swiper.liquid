@@ -29,6 +29,26 @@
   </div>
 </div>
 
+<script>
+  const maidesite_swiper_text = new Swiper('.maidesite_swiper_text', {
+    slidesPerView: 1,
+    spaceBetween: 0,
+  });
+  new Swiper('.maidesite_swiper_image', {
+    slidesPerView: 4,
+    spaceBetween: 24,
+    navigation: {
+      nextEl: '.maidesite_swiper_next',
+      prevEl: '.maidesite_swiper_prev',
+    },
+    on: {
+      slideChange: function () {
+        maidesite_swiper_text.slideTo(this.activeIndex);
+      },
+    },
+  });
+</script>
+
 {% schema %}
 {
   "name": "maidesite swiper",

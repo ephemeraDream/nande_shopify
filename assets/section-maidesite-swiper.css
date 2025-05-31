@@ -72,3 +72,14 @@
 .maidesite_swiper .maidesite_swiper_next {
   right: 3.90625vw;
 }
+
+.maidesite_swiper .maidesite_swiper_text .swiper-slide {
+  font-family: "PP Right Grotesk";
+  font-size: 2rem;
+  font-weight: normal;
+  line-height: 130%;
+  text-align: center;
+  letter-spacing: 0px;
+  font-variation-settings: "opsz" auto;
+  color: #1F1F1F;
+}
