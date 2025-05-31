@@ -70,24 +70,30 @@
     },
   });
 
-  const playIcons = document.querySelectorAll('.celebrity_swiper .celebrity_swiper_item_playicon');
+  const rightAreas = document.querySelectorAll('.celebrity_swiper_item_right');
 
-  playIcons.forEach((icon) => {
-    icon.addEventListener('click', () => {
-      const currentVideo = icon.closest('.celebrity_swiper_item').querySelector('video');
+  rightAreas.forEach((area) => {
+    area.addEventListener('click', () => {
+      const currentVideo = area.querySelector('video');
+      const currentPlayIcon = area.querySelector('.celebrity_swiper_item_playicon');
 
-      if (currentVideo) {
-        document.querySelectorAll('.celebrity_swiper_item video').forEach((video) => {
-          if (video !== currentVideo) {
-            video.pause();
-          }
-        });
+      if (!currentVideo) return;
 
-        if (currentVideo.paused) {
-          currentVideo.play();
-        } else {
-          currentVideo.pause();
+      document.querySelectorAll('.celebrity_swiper_item_right').forEach((otherArea) => {
+        const video = otherArea.querySelector('video');
+        const playIcon = otherArea.querySelector('.celebrity_swiper_item_playicon');
+        if (video && video !== currentVideo) {
+          video.pause();
+          if (playIcon) playIcon.style.display = 'block';
         }
+      });
+
+      if (currentVideo.paused) {
+        currentVideo.play();
+        if (currentPlayIcon) currentPlayIcon.style.display = 'none';
+      } else {
+        currentVideo.pause();
+        if (currentPlayIcon) currentPlayIcon.style.display = 'block';
       }
     });
   });
