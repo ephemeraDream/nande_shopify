@@ -34,23 +34,32 @@
 <script>
   const maidesite_swiper_text = new Swiper('.maidesite_swiper_desc', {
     spaceBetween: 0,
+    {% comment %} loop: true, {% endcomment %}
   });
 
-  new Swiper('.maidesite_swiper_image', {
-    autoplay: true,
-    loop: true,
+  const maidesite_swiper_image = new Swiper('.maidesite_swiper_image', {
+    {% comment %} autoplay: true,
+    loop: true, {% endcomment %}
     slidesPerView: 4,
     spaceBetween: 24,
-    navigation: {
+    {% comment %} navigation: {
       nextEl: '.maidesite_swiper_next',
       prevEl: '.maidesite_swiper_prev',
-    },
+    }, {% endcomment %}
     on: {
       slideChange: function () {
-        maidesite_swiper_text.slideTo(this.activeIndex);
+        maidesite_swiper_text.slideTo(this.realIndex);
       },
     },
   });
+
+  setInterval(() => {
+    maidesite_swiper_image.slideTo((maidesite_swiper_image.realIndex + 1) % maidesite_swiper_image.slides.length);
+  }, 2000);
+
+  document.querySelector(".maidesite_swiper_prev").addEventListener("click", () => {
+
+  })
 </script>
 
 {% schema %}

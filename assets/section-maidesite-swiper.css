@@ -32,12 +32,13 @@
   position: relative;
 }
 
-.maidesite_swiper .maidesite_swiper_image,
-.maidesite_swiper .maidesite_swiper_desc {
+.maidesite_swiper .maidesite_swiper_image {
   width: 100%;
+  margin-top: 6rem;
 }
 
 .maidesite_swiper .maidesite_swiper_desc {
+  width: 100%;
   margin-top: 5rem;
 }
 
