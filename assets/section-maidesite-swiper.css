@@ -52,8 +52,8 @@
 
 .maidesite_swiper .maidesite_swiper_prev,
 .maidesite_swiper .maidesite_swiper_next {
-  width: 6rem;
-  height: 6rem;
+  width: 6.6rem;
+  height: 6.6rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -66,11 +66,11 @@
 }
 
 .maidesite_swiper .maidesite_swiper_prev {
-  left: 3.90625vw;
+  left: -8.1rem;
 }
 
 .maidesite_swiper .maidesite_swiper_next {
-  right: 3.90625vw;
+  right: -8.1rem;
 }
 
 .maidesite_swiper .maidesite_swiper_text .swiper-slide {
