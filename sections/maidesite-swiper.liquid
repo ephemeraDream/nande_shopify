@@ -45,7 +45,7 @@
   const maidesite_swiper_image_slides = maidesite_swiper_image.slides;
   const totalSlides = maidesite_swiper_image_slides.length;
 
-  let maidesite_swiper_timer = setInterval(nextSlide, 2000);
+  let maidesite_swiper_timer = setInterval(nextSlide, 5000);
 
   function updateSlideClasses(index) {
     maidesite_swiper_image_slides.forEach((slide) => slide.classList.remove('swiper-slide-active'));
