@@ -1,0 +1,54 @@
+{{ 'section-maidesite-swiper.css' | asset_url | stylesheet_tag }}
+
+<div class="maidesite_swiper"></div>
+
+{% schema %}
+{
+  "name": "maidesite swiper",
+  "tag": "section",
+  "class": "section",
+  "disabled_on": {
+    "groups": ["header", "footer"]
+  },
+  "settings": [
+    {
+      "type": "richtext",
+      "id": "title",
+      "label": "title"
+    },
+    {
+      "type": "richtext",
+      "id": "text",
+      "label": "text"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "swiper",
+      "name": "swiper",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "image"
+        },
+        {
+          "type": "richtext",
+          "id": "text",
+          "label": "text"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "maidesite swiper",
+      "blocks": [
+        {
+          "type": "swiper"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
