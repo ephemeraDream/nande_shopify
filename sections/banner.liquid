@@ -8,7 +8,12 @@
           {{-
             block.settings.file_image
             | image_url: width: block.settings.file_image.width
-            | image_tag: alt: block.settings.file_image.alt
+            | image_tag: alt: block.settings.file_image.alt, class: 'swiper-slide_img_pc'
+          -}}
+          {{-
+            block.settings.file_image_pe
+            | image_url: width: block.settings.file_image_pe.width
+            | image_tag: alt: block.settings.file_image_pe.alt, class: 'swiper-slide_img_pe'
           -}}
         {% else %}
           {% assign poster_image = blank %}
@@ -161,6 +166,11 @@
           "type": "image_picker",
           "id": "file_image",
           "label": "file image"
+        },
+        {
+          "type": "image_picker",
+          "id": "file_image_pe",
+          "label": "file image mobile"
         },
         {
           "type": "image_picker",

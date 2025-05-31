@@ -1,0 +1,36 @@
+{{ 'section-bundle-simple.css' | asset_url | stylesheet_tag }}
+
+<div class="bundle_simple"></div>
+
+{% schema %}
+{
+  "name": "bundle simple",
+  "tag": "section",
+  "class": "section",
+  "disabled_on": {
+    "groups": ["header", "footer"]
+  },
+  "settings": [
+    {
+      "type": "richtext",
+      "id": "title",
+      "label": "title"
+    },
+    {
+      "type": "richtext",
+      "id": "text",
+      "label": "text"
+    },
+    {
+      "type": "product_list",
+      "id": "product_list",
+      "label": "product list"
+    }
+  ],
+  "presets": [
+    {
+      "name": "bundle simple"
+    }
+  ]
+}
+{% endschema %}

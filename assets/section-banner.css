@@ -10,6 +10,14 @@
   object-position: center center;
 }
 
+.section_banner .swiper-slide_img_pc {
+  display: block;
+}
+
+.section_banner .swiper-slide_img_pe {
+  display: none;
+}
+
 .section_banner .section_banner_info {
   position: absolute;
   z-index: 9;
