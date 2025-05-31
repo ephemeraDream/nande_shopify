@@ -1,0 +1,79 @@
+{{ 'section-celebrity-swiper.css' | asset_url | stylesheet_tag }}
+
+<div class="celebrity_swiper"></div>
+
+{% schema %}
+{
+  "name": "celebrity swiper",
+  "tag": "section",
+  "class": "section",
+  "disabled_on": {
+    "groups": ["header", "footer"]
+  },
+  "settings": [
+    {
+      "type": "richtext",
+      "id": "title",
+      "label": "title"
+    },
+    {
+      "type": "richtext",
+      "id": "text",
+      "label": "text"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "swiper",
+      "name": "swiper",
+      "settings": [
+        {
+          "type": "text",
+          "id": "name",
+          "label": "name"
+        },
+        {
+          "type": "richtext",
+          "id": "introduce",
+          "label": "introduce"
+        },
+        {
+          "type": "richtext",
+          "id": "description",
+          "label": "description"
+        },
+        {
+          "type": "text",
+          "id": "link",
+          "label": "link"
+        },
+        {
+          "type": "image_picker",
+          "id": "cover_image",
+          "label": "video cover image"
+        },
+        {
+          "type": "text",
+          "id": "video_url",
+          "label": "video url"
+        },
+        {
+          "type": "video",
+          "id": "url_upload",
+          "label": "video upload"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "celebrity swiper",
+      "blocks": [
+        {
+          "type": "swiper"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
