@@ -51,6 +51,15 @@
   justify-content: center;
 }
 
+.maidesite_swiper .maidesite_swiper_image .swiper-slide-active::before {
+  content: "";
+  width: 100%;
+  height: 0.2rem;
+  background-color: #BDFF00;
+  position: absolute;
+  bottom: 1.8rem;
+}
+
 .maidesite_swiper .maidesite_swiper_image .swiper-slide img {
   width: 20rem;
   height: 5rem;
