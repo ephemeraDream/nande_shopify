@@ -39,7 +39,7 @@
 
 .maidesite_swiper .maidesite_swiper_desc {
   width: 100%;
-  margin-top: 5rem;
+  margin-top: 3.2rem;
 }
 
 .maidesite_swiper .maidesite_swiper_image .swiper-slide {
@@ -49,6 +49,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-bottom: 1.8rem;
 }
 
 .maidesite_swiper .maidesite_swiper_image .swiper-slide-active::before {
@@ -57,7 +58,7 @@
   height: 0.2rem;
   background-color: #BDFF00;
   position: absolute;
-  bottom: 1.8rem;
+  bottom: -1.8rem;
 }
 
 .maidesite_swiper .maidesite_swiper_image .swiper-slide img {
@@ -89,7 +90,7 @@
   right: -8.1rem;
 }
 
-.maidesite_swiper .maidesite_swiper_text .swiper-slide {
+.maidesite_swiper .maidesite_swiper_desc .swiper-slide {
   font-family: "PP Right Grotesk";
   font-size: 2rem;
   font-weight: normal;

@@ -34,38 +34,45 @@
 <script>
   const maidesite_swiper_text = new Swiper('.maidesite_swiper_desc', {
     spaceBetween: 0,
-    {% comment %} loop: true, {% endcomment %}
   });
 
   const maidesite_swiper_image = new Swiper('.maidesite_swiper_image', {
-    {% comment %} autoplay: true,
-    loop: true, {% endcomment %}
     slidesPerView: 4,
     spaceBetween: 24,
-    {% comment %} navigation: {
-      nextEl: '.maidesite_swiper_next',
-      prevEl: '.maidesite_swiper_prev',
-    }, {% endcomment %}
-    on: {
-      slideChange: function () {
-        maidesite_swiper_text.slideTo(this.realIndex);
-      },
-    },
   });
 
-  const maidesite_swiper_image_slides = maidesite_swiper_image.slides;
   let maidesite_swiper_index = 0;
+  const maidesite_swiper_image_slides = maidesite_swiper_image.slides;
+  const totalSlides = maidesite_swiper_image_slides.length;
 
-  setInterval(() => {
-    maidesite_swiper_image_slides.forEach(slide => slide.classList.remove('swiper-slide-active'));
-    maidesite_swiper_image_slides[maidesite_swiper_index].classList.add('swiper-slide-active');
-    maidesite_swiper_index = (maidesite_swiper_index + 1) % maidesite_swiper_image_slides.length;
-    maidesite_swiper_image.slideTo(maidesite_swiper_index)
-  }, 2000);
+  let maidesite_swiper_timer = setInterval(nextSlide, 2000);
 
-  document.querySelector(".maidesite_swiper_prev").addEventListener("click", () => {
+  function updateSlideClasses(index) {
+    maidesite_swiper_image_slides.forEach((slide) => slide.classList.remove('swiper-slide-active'));
+    maidesite_swiper_image_slides[index].classList.add('swiper-slide-active');
+  }
 
-  })
+  function nextSlide() {
+    maidesite_swiper_index = (maidesite_swiper_index + 1) % totalSlides;
+    maidesite_swiper_image.slideTo(maidesite_swiper_index);
+    maidesite_swiper_text.slideTo(maidesite_swiper_index);
+    updateSlideClasses(maidesite_swiper_index);
+  }
+
+  function prevSlide() {
+    maidesite_swiper_index = (maidesite_swiper_index - 1 + totalSlides) % totalSlides;
+    maidesite_swiper_image.slideTo(maidesite_swiper_index);
+    maidesite_swiper_text.slideTo(maidesite_swiper_index);
+    updateSlideClasses(maidesite_swiper_index);
+  }
+
+  document.querySelector('.maidesite_swiper_prev').addEventListener('click', () => {
+    prevSlide();
+  });
+
+  document.querySelector('.maidesite_swiper_next').addEventListener('click', () => {
+    nextSlide();
+  });
 </script>
 
 {% schema %}
