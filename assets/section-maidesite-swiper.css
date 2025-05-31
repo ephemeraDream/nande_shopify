@@ -28,6 +28,10 @@
   margin-top: 3rem;
 }
 
+.maidesite_swiper .maidesite_swiper_image_contain {
+  position: relative;
+}
+
 .maidesite_swiper .maidesite_swiper_image,
 .maidesite_swiper .maidesite_swiper_text {
   width: 100%;
@@ -59,8 +63,6 @@
   justify-content: center;
   background-color: rgba(255, 255, 255, 0.6);
   position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
   z-index: 1;
   cursor: pointer;
 }
