@@ -321,35 +321,28 @@
           "type": "swiper",
           "settings": {
             "image": "shopify://shop_images/maidesite-logo-1.webp",
-            "text": "<p>“Ich persönlich bin sehr angetan von der guten Produktqualität, dem zusätzlichen und <br/>gut erreichbaren USB-A-Anschluss am Bedienpanel sowie dem schnellen und leisen Motor, <br/>der einen fixen Wechsel zwischen Sitz- und Stehposition ermöglicht.”</p>"
+            "text": "<p>“Ich persönlich bin sehr angetan von der guten Produktqualität, dem zusätzlichen und gut erreichbaren USB-A-Anschluss am Bedienpanel sowie dem schnellen und leisen Motor, der einen fixen Wechsel zwischen Sitz- und Stehposition ermöglicht.”</p>"
           }
         },
         "swiper_EgbVj6": {
           "type": "swiper",
           "settings": {
             "image": "shopify://shop_images/maidesite-logo-2.webp",
-            "text": "<p>“Ich persönlich bin sehr angetan von der guten Produktqualität, dem zusätzlichen und <br/>gut erreichbaren USB-A-Anschluss am Bedienpanel sowie dem schnellen und leisen Motor, <br/>der einen fixen Wechsel zwischen Sitz- und Stehposition ermöglicht.”</p>"
+            "text": "<p>“Ich persönlich bin sehr angetan von der guten Produktqualität, dem zusätzlichen und gut erreichbaren USB-A-Anschluss am Bedienpanel sowie dem schnellen und leisen Motor, der einen fixen Wechsel zwischen Sitz- und Stehposition ermöglicht.”</p>"
           }
         },
         "swiper_8GRnUF": {
           "type": "swiper",
           "settings": {
             "image": "shopify://shop_images/maidesite-logo-3.webp",
-            "text": "<p>“Ich persönlich bin sehr angetan von der guten Produktqualität, dem zusätzlichen und <br/>gut erreichbaren USB-A-Anschluss am Bedienpanel sowie dem schnellen und leisen Motor, <br/>der einen fixen Wechsel zwischen Sitz- und Stehposition ermöglicht.”</p>"
+            "text": "<p>“Ich persönlich bin sehr angetan von der guten Produktqualität, dem zusätzlichen und gut erreichbaren USB-A-Anschluss am Bedienpanel sowie dem schnellen und leisen Motor, der einen fixen Wechsel zwischen Sitz- und Stehposition ermöglicht.”</p>"
           }
         },
         "swiper_GwFmWX": {
           "type": "swiper",
           "settings": {
             "image": "shopify://shop_images/maidesite-logo-4.webp",
-            "text": "<p>“Ich persönlich bin sehr angetan von der guten Produktqualität, dem zusätzlichen und <br/>gut erreichbaren USB-A-Anschluss am Bedienpanel sowie dem schnellen und leisen Motor, <br/>der einen fixen Wechsel zwischen Sitz- und Stehposition ermöglicht.”</p>"
-          }
-        },
-        "swiper_QKU4mP": {
-          "type": "swiper",
-          "settings": {
-            "image": "shopify://shop_images/maidesite-logo-4.webp",
-            "text": "<p>“Ich persönlich bin sehr angetan von der guten Produktqualität, dem zusätzlichen und <br/>gut erreichbaren USB-A-Anschluss am Bedienpanel sowie dem schnellen und leisen Motor, <br/>der einen fixen Wechsel zwischen Sitz- und Stehposition ermöglicht.”</p>"
+            "text": "<p>“Ich persönlich bin sehr angetan von der guten Produktqualität, dem zusätzlichen und gut erreichbaren USB-A-Anschluss am Bedienpanel sowie dem schnellen und leisen Motor, der einen fixen Wechsel zwischen Sitz- und Stehposition ermöglicht.”</p>"
           }
         }
       },
@@ -357,8 +350,7 @@
         "swiper_9PWqTc",
         "swiper_EgbVj6",
         "swiper_8GRnUF",
-        "swiper_GwFmWX",
-        "swiper_QKU4mP"
+        "swiper_GwFmWX"
       ],
       "name": "maidesite swiper",
       "settings": {
