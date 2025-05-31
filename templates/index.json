@@ -357,6 +357,44 @@
         "title": "<p>Die Presse Liebt Maidesite</p>",
         "text": ""
       }
+    },
+    "celebrity_swiper_EQie6E": {
+      "type": "celebrity-swiper",
+      "blocks": {
+        "swiper_R8cQdW": {
+          "type": "swiper",
+          "settings": {
+            "name": "@Suli-Man",
+            "introduce": "<p>17.1 Million YouTube Followers</p>",
+            "description": "<p>\" I really liked it, and it looks really cool. It's just perfect for long workdays or gaming sessions where comfort and ergonomics are important.\"</p>",
+            "link": "",
+            "cover_image": "shopify://shop_images/celebrity-img-1.webp",
+            "video_url": "",
+            "url_upload": "shopify://files/videos/TO1-Pro-spine-healthy-mode_a586d928-0c0c-459d-99a8-75d2ab5cc36d.mp4"
+          }
+        },
+        "swiper_qRmjCc": {
+          "type": "swiper",
+          "settings": {
+            "name": "@EFRALINK",
+            "introduce": "<p>17.1 Million YouTube Followers</p>",
+            "description": "<p>\" Here is my new minimalist desk setup as a photographer and content creator for long editing sessions.\"</p>",
+            "link": "",
+            "cover_image": "shopify://shop_images/celebrity-img-2.webp",
+            "video_url": "",
+            "url_upload": "shopify://files/videos/TO1-Pro-spine-healthy-mode_a586d928-0c0c-459d-99a8-75d2ab5cc36d.mp4"
+          }
+        }
+      },
+      "block_order": [
+        "swiper_R8cQdW",
+        "swiper_qRmjCc"
+      ],
+      "name": "celebrity swiper",
+      "settings": {
+        "title": "<p>Empfehlen Von</p>",
+        "text": ""
+      }
     }
   },
   "order": [
@@ -367,6 +405,7 @@
     "image_comparison_JHgace",
     "bundle_simple_WFrNiX",
     "boxgrid_simple_mJENCJ",
-    "maidesite_swiper_PzMRtf"
+    "maidesite_swiper_PzMRtf",
+    "celebrity_swiper_EQie6E"
   ]
 }
