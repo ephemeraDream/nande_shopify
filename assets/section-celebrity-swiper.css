@@ -1,0 +1,102 @@
+.celebrity_swiper {
+  width: 100%;
+  padding-top: 12rem;
+  background-color: #FAFAFA;
+  position: relative;
+}
+
+.celebrity_swiper .celebrity_swiper_title {
+  font-family: "PP Right Grotesk";
+  font-size: 6rem;
+  font-weight: 500;
+  line-height: 94%;
+  text-transform: capitalize;
+  letter-spacing: 0px;
+  font-variation-settings: "opsz" auto;
+  color: #1F1F1F;
+}
+
+.celebrity_swiper .celebrity_swiper_text {
+  font-family: "PP Right Grotesk";
+  font-size: 3rem;
+  font-weight: 500;
+  line-height: 94%;
+  letter-spacing: 0px;
+  font-variation-settings: "opsz" auto;
+  color: #1F1F1F;
+  margin-top: 3rem;
+}
+
+.celebrity_swiper .swiper {
+  margin-top: 6rem;
+  padding-left: 12.5vw;
+}
+
+.celebrity_swiper .celebrity_swiper_item {
+  width: 96vw;
+  height: 48rem;
+  display: flex;
+}
+
+.celebrity_swiper .celebrity_swiper_item_left {
+  flex: 0 0 auto;
+  width: 32rem;
+  padding: 6rem 1.8rem 2rem 2.4rem;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+}
+
+.celebrity_swiper .celebrity_swiper_item_name {
+  font-family: "PP Right Grotesk";
+  font-size: 4rem;
+  font-weight: 500;
+  line-height: 94%;
+  letter-spacing: 0px;
+  font-variation-settings: "opsz" auto;
+  color: #1F1F1F;
+}
+
+.celebrity_swiper .celebrity_swiper_item_intro {
+  font-family: "PP Right Grotesk";
+  font-size: 2rem;
+  font-weight: normal;
+  line-height: 130%;
+  letter-spacing: 0px;
+  font-variation-settings: "opsz" auto;
+  color: #7F7E75;
+  margin-top: 1.2rem;
+}
+
+.celebrity_swiper .celebrity_swiper_item_desc {
+  font-family: "PP Right Grotesk";
+  font-size: 2rem;
+  font-weight: normal;
+  line-height: 130%;
+  letter-spacing: 0px;
+  font-variation-settings: "opsz" auto;
+  color: #1F1F1F;
+  margin-top: 10.2rem;
+}
+
+.celebrity_swiper .celebrity_swiper_item_right {
+  flex: 1;
+  position: relative;
+}
+
+.celebrity_swiper .celebrity_swiper_item_right video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center center;
+}
+
+.celebrity_swiper .celebrity_swiper_item_playicon {
+  width: 7rem;
+  height: 7rem;
+  position: absolute;
+  bottom: 2.4rem;
+  right: 3.4rem;
+  z-index: 2;
+  cursor: pointer;
+}
