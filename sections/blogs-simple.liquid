@@ -1,6 +1,33 @@
 {{ 'section-blogs-simple.css' | asset_url | stylesheet_tag }}
 
-<div class="blogs_simple"></div>
+<div class="blogs_simple">
+  <div class="padding-sider">
+    <div class="blogs_simple_title">{{ section.settings.title }}</div>
+    <div class="blogs_simple_text">{{ section.settings.text }}</div>
+  </div>
+  <div class="swiper">
+    <div class="swiper-wrapper">
+      {% for block in section.blocks %}
+        <div class="swiper-slide blogs_simple_item">
+          <a href="{{ block.settings.article.url }}">
+            {{-
+              block.settings.article.image
+              | image_url: width: block.settings.article.image.width
+              | image_tag: alt: block.settings.article.title
+            -}}
+            <div class="blogs_simple_item_info">
+              <div class="blogs_simple_item_info_tag">{{ 'common.neueste' | t }}</div>
+              <div class="blogs_simple_item_info_title">{{ block.settings.article.title }}</div>
+              <div class="blogs_simple_item_info_date">{{ block.settings.article.updated_at }}</div>
+            </div>
+          </a>
+        </div>
+      {% endfor %}
+    </div>
+    <div class="blogs_simple_prev">{{- 'swiper-left.svg' | inline_asset_content -}}</div>
+    <div class="blogs_simple_next">{{- 'swiper-right.svg' | inline_asset_content -}}</div>
+  </div>
+</div>
 
 {% schema %}
 {

@@ -1,0 +1,96 @@
+.blogs_simple {
+  width: 100%;
+  padding-top: 12rem;
+  padding-bottom: 12rem;
+  background-color: #F2F1ED;
+  position: relative;
+}
+
+.blogs_simple .blogs_simple_title {
+  font-family: "PP Right Grotesk";
+  font-size: 6rem;
+  font-weight: 500;
+  line-height: 94%;
+  text-transform: capitalize;
+  letter-spacing: 0px;
+  font-variation-settings: "opsz" auto;
+  color: #1F1F1F;
+}
+
+.blogs_simple .blogs_simple_text {
+  font-family: "PP Right Grotesk";
+  font-size: 3rem;
+  font-weight: 500;
+  line-height: 94%;
+  letter-spacing: 0px;
+  font-variation-settings: "opsz" auto;
+  color: #1F1F1F;
+  margin-top: 3rem;
+}
+
+.blogs_simple .swiper {
+  margin-top: 6rem;
+  padding-left: 12.5vw;
+}
+
+.blogs_simple .blogs_simple_item {
+  width: 70rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.blogs_simple .blogs_simple_item img {
+  width: 100%;
+  height: 45rem;
+  object-fit: cover;
+  object-position: center center;
+}
+
+.blogs_simple .blogs_simple_item_info {
+  min-height: 12rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 3rem;
+  background-color: #fff;
+  position: relative;
+}
+
+.blogs_simple .blogs_simple_item_info_title {
+  font-family: "PP Right Grotesk";
+  font-size: 3rem;
+  font-weight: 500;
+  line-height: 94%;
+  letter-spacing: 0px;
+  font-variation-settings: "opsz" auto;
+  color: #1F1F1F;
+}
+
+.blogs_simple .blogs_simple_item_info_date {
+  font-family: "PP Right Grotesk";
+  font-size: 2rem;
+  font-weight: normal;
+  line-height: 112%;
+  letter-spacing: 0px;
+  font-variation-settings: "opsz" auto;
+  color: #7F7E75;
+}
+
+.blogs_simple .blogs_simple_item_info_tag {
+  width: 13.4rem;
+  height: 5rem;
+  position: absolute;
+  left: 0;
+  top: 0;
+  transform: translateY(-100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "PP Right Grotesk";
+  font-size: 2.4rem;
+  font-weight: 500;
+  line-height: 94%;
+  letter-spacing: 0px;
+  font-variation-settings: "opsz" auto;
+  color: #7F7E75;
+}
