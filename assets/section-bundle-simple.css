@@ -12,7 +12,7 @@
   text-transform: capitalize;
   letter-spacing: 0px;
   font-variation-settings: "opsz" auto;
-  color: #7F7E75;
+  color: #1F1F1F;
 }
 
 .bundle_simple .bundle_simple_text {
@@ -22,7 +22,7 @@
   line-height: 94%;
   letter-spacing: 0px;
   font-variation-settings: "opsz" auto;
-  color: #7F7E75;
+  color: #1F1F1F;
   margin-top: 3rem;
 }
 
@@ -30,6 +30,7 @@
   margin-top: 3rem;
   display: flex;
   gap: 2rem;
+  align-items: flex-start;
 }
 
 .bundle_simple .bundle_simple_contain_left {
@@ -139,6 +140,7 @@
   width: 100%;
   padding-bottom: 100%;
   position: relative;
+  background: #FAFAFA;
 }
 
 .bundle_simple .bundle_simple_product_img img {
@@ -162,6 +164,28 @@
   font-size: 2.4rem;
   font-weight: 500;
   line-height: 112%;
+  letter-spacing: 0px;
+  font-variation-settings: "opsz" auto;
+  color: #1F1F1F;
+  cursor: pointer;
+}
+
+.bundle_simple .bundle_simple_product_title {
+  padding: 1.4rem;
+  font-family: "PP Right Grotesk";
+  font-size: 3rem;
+  font-weight: 500;
+  line-height: 94%;
+  letter-spacing: 0px;
+  font-variation-settings: "opsz" auto;
+  color: #1F1F1F;
+}
+
+.bundle_simple .bundle_simple_product_price {
+  font-family: "PP Right Grotesk";
+  font-size: 3rem;
+  font-weight: 500;
+  line-height: 94%;
   letter-spacing: 0px;
   font-variation-settings: "opsz" auto;
   color: #1F1F1F;
