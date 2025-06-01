@@ -29,6 +29,17 @@
   </div>
 </div>
 
+<script>
+  new Swiper('.blogs_simple .swiper', {
+    slidesPerView: 'auto',
+    spaceBetween: 20,
+    navigation: {
+      nextEl: '.blogs_simple_next',
+      prevEl: '.blogs_simple_prev',
+    },
+  });
+</script>
+
 {% schema %}
 {
   "name": "blogs simple",
