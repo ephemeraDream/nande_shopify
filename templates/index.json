@@ -431,6 +431,22 @@
         "title": "<p>User Feedback</p>",
         "text": ""
       }
+    },
+    "video_my9bVj": {
+      "type": "video",
+      "name": "t:sections.video.presets.name",
+      "settings": {
+        "heading": "",
+        "heading_size": "h1",
+        "enable_video_looping": false,
+        "video_url": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
+        "cover_image": "shopify://shop_images/celebrity-img-1.webp",
+        "description": "",
+        "full_width": true,
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
     }
   },
   "order": [
@@ -443,6 +459,7 @@
     "boxgrid_simple_mJENCJ",
     "maidesite_swiper_PzMRtf",
     "celebrity_swiper_EQie6E",
-    "user_feedback_teEaMB"
+    "user_feedback_teEaMB",
+    "video_my9bVj"
   ]
 }
