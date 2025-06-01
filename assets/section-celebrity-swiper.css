@@ -83,6 +83,7 @@
   position: relative;
   flex: 0 0 auto;
   width: 48vw;
+  cursor: pointer;
 }
 
 .celebrity_swiper .celebrity_swiper_item_right video {

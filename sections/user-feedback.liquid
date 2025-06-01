@@ -1,0 +1,36 @@
+{{ 'section-user-feedback.css' | asset_url | stylesheet_tag }}
+
+<div class="user_feedback"></div>
+
+{% schema %}
+{
+  "name": "user feedback",
+  "tag": "section",
+  "class": "section",
+  "disabled_on": {
+    "groups": ["header", "footer"]
+  },
+  "settings": [
+    {
+      "type": "richtext",
+      "id": "title",
+      "label": "title"
+    },
+    {
+      "type": "richtext",
+      "id": "text",
+      "label": "text"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "@app"
+    }
+  ],
+  "presets": [
+    {
+      "name": "user feedback"
+    }
+  ]
+}
+{% endschema %}
