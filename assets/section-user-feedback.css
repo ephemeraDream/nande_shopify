@@ -57,3 +57,7 @@
   letter-spacing: 0px;
   font-variation-settings: "opsz" auto;
 }
+
+.user_feedback .loox-v2-carousel-app .loox-review-rating ul {
+  gap: 10px !important;
+}
