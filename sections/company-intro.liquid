@@ -1,6 +1,45 @@
 {{ 'section-company-intro.css' | asset_url | stylesheet_tag }}
 
-<div class="company_intro"></div>
+<div class="company_intro">
+  <div class="company_intro_video">
+    {% assign poster_image = blank %}
+    {% if section.settings.cover_image != blank %}
+      {% assign poster_image = section.settings.cover_image | image_url: width: section.settings.cover_image.width %}
+    {% endif %}
+    {% if section.settings.video_url != blank %}
+      <video
+        loop
+        playsinline
+        preload="auto"
+        {% if poster_image != blank %}
+          poster="{{ poster_image }}"
+        {% endif %}
+        src="{{ section.settings.video_url }}"
+      ></video>
+    {% else %}
+      {{
+        section.settings.url_upload
+        | video_tag: autoplay: false, loop: true, muted: false, playsinline: true, preload: 'auto', poster: poster_image
+      }}
+    {% endif %}
+    <div class="company_intro_playicon">{{- 'icon-play.svg' | inline_asset_content -}}</div>
+  </div>
+  <div class="padding-sider company_intro_contain">
+    <div class="company_intro_contain_left">
+      <div class="company_intro_title">{{ section.settings.title }}</div>
+      <a
+        {% if section.settings.link != blank %}
+          href="{{ section.settings.link }}"
+        {% endif %}
+        class="company_intro_btn"
+      >
+        {{- section.settings.link_text -}}
+        {{ 'icon-right-arrow.svg' | inline_asset_content }}
+      </a>
+    </div>
+    <div class="company_intro_contain_right">{{ section.settings.introduce }}</div>
+  </div>
+</div>
 
 {% schema %}
 {
