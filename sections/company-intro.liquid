@@ -1,0 +1,56 @@
+{{ 'section-company-intro.css' | asset_url | stylesheet_tag }}
+
+<div class="company_intro"></div>
+
+{% schema %}
+{
+  "name": "company intro",
+  "tag": "section",
+  "class": "section",
+  "disabled_on": {
+    "groups": ["header", "footer"]
+  },
+  "settings": [
+    {
+      "type": "richtext",
+      "id": "title",
+      "label": "title"
+    },
+    {
+      "type": "richtext",
+      "id": "introduce",
+      "label": "introduce"
+    },
+    {
+      "type": "text",
+      "id": "link_text",
+      "label": "link text"
+    },
+    {
+      "type": "url",
+      "id": "link",
+      "label": "link"
+    },
+    {
+      "type": "image_picker",
+      "id": "cover_image",
+      "label": "video cover image"
+    },
+    {
+      "type": "text",
+      "id": "video_url",
+      "label": "video url"
+    },
+    {
+      "type": "video",
+      "id": "url_upload",
+      "label": "video upload"
+    }
+  ],
+  "presets": [
+    {
+      "name": "company intro"
+    }
+  ]
+}
+{% endschema %}
