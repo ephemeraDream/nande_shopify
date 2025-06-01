@@ -432,20 +432,17 @@
         "text": ""
       }
     },
-    "video_my9bVj": {
-      "type": "video",
-      "name": "t:sections.video.presets.name",
+    "company_intro_TkncCr": {
+      "type": "company-intro",
+      "name": "company intro",
       "settings": {
-        "heading": "",
-        "heading_size": "h1",
-        "enable_video_looping": false,
-        "video_url": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
-        "cover_image": "shopify://shop_images/celebrity-img-1.webp",
-        "description": "",
-        "full_width": true,
-        "color_scheme": "",
-        "padding_top": 0,
-        "padding_bottom": 0
+        "title": "<p>Now Maidesite</p><p>Future Defined</p>",
+        "introduce": "<p>Maidesite, through its products of height-adjustable desk which feature functional integration, scenario versatility,and personalization, helps you easily switch to various home activity modes that require a desktop assistant.This allows enthusiasts of modern smart home living to more conveniently and effortlesslyimmerse themselves in their diverse lifestyle forms.<br/><br/>Maidesite bietet durch seine produkten von hohenverstellbaren Schreibtischen, die Funktionsintegration,Szenenvielfalt und Personalisierung bieten, lhnen die Möglichkeit. einfach zwischen verschiedenen Heimat-Aktivitatsmodizuwechseln, die eine Desktop-Assistenten erfordern. Dies ermoglicht Anhängern des modernen intelligenten Heimlebens. sich noch beguemer und müheloser in ihre vielfaltigen Lebensstile einzuleben.</p>",
+        "link_text": "Erkunden",
+        "link": "",
+        "cover_image": "shopify://shop_images/company-video-cover.webp",
+        "video_url": "",
+        "url_upload": "shopify://files/videos/TO1-Pro-spine-healthy-mode_a586d928-0c0c-459d-99a8-75d2ab5cc36d.mp4"
       }
     }
   },
@@ -460,6 +457,6 @@
     "maidesite_swiper_PzMRtf",
     "celebrity_swiper_EQie6E",
     "user_feedback_teEaMB",
-    "video_my9bVj"
+    "company_intro_TkncCr"
   ]
 }
