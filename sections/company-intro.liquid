@@ -41,6 +41,23 @@
   </div>
 </div>
 
+<script>
+  document.querySelector('.company_intro_video').addEventListener('click', (event) => {
+    const currentVideo = event.target.querySelector('video');
+    const currentPlayIcon = event.target.querySelector('.company_intro_playicon');
+
+    if (!currentVideo) return;
+
+    if (currentVideo.paused) {
+      currentVideo.play();
+      if (currentPlayIcon) currentPlayIcon.style.display = 'none';
+    } else {
+      currentVideo.pause();
+      if (currentPlayIcon) currentPlayIcon.style.display = 'block';
+    }
+  });
+</script>
+
 {% schema %}
 {
   "name": "company intro",
