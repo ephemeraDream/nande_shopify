@@ -444,6 +444,53 @@
         "video_url": "",
         "url_upload": "shopify://files/videos/TO1-Pro-spine-healthy-mode_a586d928-0c0c-459d-99a8-75d2ab5cc36d.mp4"
       }
+    },
+    "blogs_simple_wk9zqm": {
+      "type": "blogs-simple",
+      "blocks": {
+        "blog_YzcWXz": {
+          "type": "blog",
+          "settings": {
+            "article": "maidesite-blog/top-10-hohenverstellbar-schreibtischgestelle-bis-400"
+          }
+        },
+        "blog_NP9Ntd": {
+          "type": "blog",
+          "settings": {
+            "article": "maidesite-blog/perfekte-schreibtischgrosse-so-passt-der-tisch-zu-ihrem-beruf"
+          }
+        },
+        "blog_twTURf": {
+          "type": "blog",
+          "settings": {
+            "article": "maidesite-blog/wie-viel-kostet-ein-guter-hohenverstellbarer-schreibtische"
+          }
+        },
+        "blog_eNBTc4": {
+          "type": "blog",
+          "settings": {
+            "article": "maidesite-blog/so-erhalten-sie-ein-attest-vom-hausarzt-fur-einen-hohenverstallbaren-schreibtisch"
+          }
+        },
+        "blog_pjtFrj": {
+          "type": "blog",
+          "settings": {
+            "article": "maidesite-blog/hohenverstellbare-schreibtisch-im-job-wer-zahlt-eigentlich"
+          }
+        }
+      },
+      "block_order": [
+        "blog_YzcWXz",
+        "blog_NP9Ntd",
+        "blog_twTURf",
+        "blog_eNBTc4",
+        "blog_pjtFrj"
+      ],
+      "name": "blogs simple",
+      "settings": {
+        "title": "<p>Blogs</p>",
+        "text": ""
+      }
     }
   },
   "order": [
@@ -457,6 +504,7 @@
     "maidesite_swiper_PzMRtf",
     "celebrity_swiper_EQie6E",
     "user_feedback_teEaMB",
-    "company_intro_TkncCr"
+    "company_intro_TkncCr",
+    "blogs_simple_wk9zqm"
   ]
 }
