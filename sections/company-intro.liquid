@@ -45,7 +45,7 @@
   document.querySelector('.company_intro_video').addEventListener('click', (event) => {
     const currentVideo = event.target.querySelector('video');
     const currentPlayIcon = event.target.querySelector('.company_intro_playicon');
-
+    console.log(event, currentVideo, currentPlayIcon)
     if (!currentVideo) return;
 
     if (currentVideo.paused) {
