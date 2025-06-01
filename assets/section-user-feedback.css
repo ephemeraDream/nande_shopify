@@ -1,0 +1,28 @@
+.user_feedback {
+  width: 100%;
+  padding-top: 12rem;
+  background-color: #FAFAFA;
+  position: relative;
+}
+
+.user_feedback .user_feedback_title {
+  font-family: "PP Right Grotesk";
+  font-size: 6rem;
+  font-weight: 500;
+  line-height: 94%;
+  text-transform: capitalize;
+  letter-spacing: 0px;
+  font-variation-settings: "opsz" auto;
+  color: #1F1F1F;
+}
+
+.user_feedback .user_feedback_text {
+  font-family: "PP Right Grotesk";
+  font-size: 3rem;
+  font-weight: 500;
+  line-height: 94%;
+  letter-spacing: 0px;
+  font-variation-settings: "opsz" auto;
+  color: #1F1F1F;
+  margin-top: 3rem;
+}

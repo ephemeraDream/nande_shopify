@@ -1,6 +1,19 @@
 {{ 'section-user-feedback.css' | asset_url | stylesheet_tag }}
 
-<div class="user_feedback"></div>
+<div class="user_feedback">
+  <div class="padding-sider">
+    <div class="user_feedback_title">{{ section.settings.title }}</div>
+    <div class="user_feedback_text">{{ section.settings.text }}</div>
+  </div>
+  <div>
+    {%- for block in section.blocks -%}
+      {%- case block.type -%}
+        {%- when '@app' -%}
+          {% render block %}
+      {%- endcase -%}
+    {%- endfor -%}
+  </div>
+</div>
 
 {% schema %}
 {
