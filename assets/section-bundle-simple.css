@@ -138,6 +138,7 @@
 .bundle_simple .bundle_simple_product_img {
   width: 100%;
   padding-bottom: 100%;
+  position: relative;
 }
 
 .bundle_simple .bundle_simple_product_img img {
