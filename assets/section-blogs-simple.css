@@ -37,6 +37,7 @@
   width: 70rem;
   display: flex;
   flex-direction: column;
+  overflow: hidden;
 }
 
 .blogs_simple .blogs_simple_item img {
