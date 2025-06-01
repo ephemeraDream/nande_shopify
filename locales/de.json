@@ -524,5 +524,8 @@
       "expanded": "Formular für den Empfänger des Gutscheins erweitert",
       "collapsed": "Formular für den Empfänger des Gutscheins minimiert"
     }
+  },
+  "common": {
+    "neueste": "Neueste"
   }
 }
