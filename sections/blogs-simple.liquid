@@ -18,7 +18,9 @@
             <div class="blogs_simple_item_info">
               <div class="blogs_simple_item_info_tag">{{ 'common.neueste' | t }}</div>
               <div class="blogs_simple_item_info_title">{{ block.settings.article.title }}</div>
-              <div class="blogs_simple_item_info_date">{{ block.settings.article.updated_at }}</div>
+              <div class="blogs_simple_item_info_date">
+                {{ block.settings.article.updated_at | date: '%-d %B. %Y' }}
+              </div>
             </div>
           </a>
         </div>
