@@ -132,6 +132,8 @@
 .bundle_simple .bundle_simple_product {
   width: calc((100% - 2.8rem) / 3);
   background-color: #fff;
+  display: flex;
+  flex-direction: column;
 }
 
 .bundle_simple .bundle_simple_product_img {
@@ -155,6 +157,8 @@
   flex-direction: column;
   justify-content: space-between;
   padding: 1.4rem 0.9rem 1.4rem 1.4rem;
+  flex: 1;
+  gap: 1.4rem;
 }
 
 .bundle_simple .bundle_simple_product_btn {
