@@ -1,0 +1,49 @@
+{{ 'section-blogs-simple.css' | asset_url | stylesheet_tag }}
+
+<div class="blogs_simple"></div>
+
+{% schema %}
+{
+  "name": "blogs simple",
+  "tag": "section",
+  "class": "section",
+  "disabled_on": {
+    "groups": ["header", "footer"]
+  },
+  "settings": [
+    {
+      "type": "richtext",
+      "id": "title",
+      "label": "title"
+    },
+    {
+      "type": "richtext",
+      "id": "text",
+      "label": "text"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "blog",
+      "name": "blog",
+      "settings": [
+        {
+          "type": "article",
+          "id": "article",
+          "label": "article"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "blogs simple",
+      "blocks": [
+        {
+          "type": "blog"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
