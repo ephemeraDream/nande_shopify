@@ -33,11 +33,8 @@ product_items.forEach(item => {
             return opt.getAttribute("data-value") === variant.options[selectorIndex];
           });
 
-          if (optionEl) {
+          if (optionEl && variant.available) {
             optionEl.classList.remove("hidden");
-            if (!variant.available) {
-              optionEl.classList.add("hidden");
-            }
           }
         }
       });
@@ -85,7 +82,7 @@ product_items.forEach(item => {
       }
       if (!currVariant && curr_options.length === 3) {
         currVariant = product.variants.find(
-          (v) => v.option1 === curr_options[0] && v.option2 === curr_options[1]
+          (v) => v.option1 === curr_options[0] && v.option2 === curr_options[1] && v.available
         );
 
         if (currVariant) {
