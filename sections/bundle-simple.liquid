@@ -8,9 +8,7 @@
   <div class="bundle_simple_contain">
     <div class="bundle_simple_contain_left">
       {% for product in section.settings.product_list %}
-        <div class="bundle_simple_product">
-          <input type="hidden" name="product" value="{'product': {{ product | json }}}">
-          <input type="hidden" name="variant" value="{{ product.selected_or_first_available_variant | json }}">
+        <div class="bundle_simple_product" data-id="{{ product.id }}">
           <div class="bundle_simple_product_img">
             {{-
               product.selected_or_first_available_variant.featured_image
@@ -86,8 +84,15 @@
   </div>
 </div>
 
-<script>
-  const product_list = {{ section.settings.product_list | json }}
+<script type="application/json" id="bundle_simple_data">
+  {
+    {% for product in section.settings.product_list %}
+      "{{ product.id }}": {
+        "product": {{- product | json -}},
+        "variant": {{ product.selected_or_first_available_variant | json }}
+      }
+    {% endfor %}
+  }
 </script>
 <script src="{{ 'bundle-simple.js' | asset_url }}"></script>
 
