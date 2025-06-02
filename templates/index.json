@@ -176,33 +176,33 @@
         "item_6kCRQ4": {
           "type": "item",
           "settings": {
-            "select_product": "maidesite-th2-pro-plus-tischgestell-elektrisch-hohenverstellbar"
+            "select_product": "maidesite-el2-plus-art-tischgestell-elektrisch-hohenverstellbar-fur-mydealz"
           }
         },
-        "item_BrqRFC": {
+        "item_mgqRNf": {
           "type": "item",
           "settings": {
-            "select_product": "maidesite-th2-pro-plus-tischgestell-elektrisch-hohenverstellbar"
+            "select_product": "maidesite-el2-plus-art-tischgestell-elektrisch-hohenverstellbar-fur-mydealz"
           }
         },
-        "item_7ermBR": {
+        "item_wtnaqX": {
           "type": "item",
           "settings": {
-            "select_product": "maidesite-th2-pro-plus-tischgestell-elektrisch-hohenverstellbar"
+            "select_product": "maidesite-el2-plus-art-tischgestell-elektrisch-hohenverstellbar-fur-mydealz"
           }
         },
-        "item_8K8ARc": {
+        "item_hrmkBQ": {
           "type": "item",
           "settings": {
-            "select_product": "maidesite-th2-pro-plus-tischgestell-elektrisch-hohenverstellbar"
+            "select_product": "maidesite-el2-plus-art-tischgestell-elektrisch-hohenverstellbar-fur-mydealz"
           }
         }
       },
       "block_order": [
         "item_6kCRQ4",
-        "item_BrqRFC",
-        "item_7ermBR",
-        "item_8K8ARc"
+        "item_mgqRNf",
+        "item_wtnaqX",
+        "item_hrmkBQ"
       ],
       "name": "compare simple",
       "settings": {
