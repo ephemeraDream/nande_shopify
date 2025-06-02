@@ -89,6 +89,7 @@
   letter-spacing: 0px;
   font-variation-settings: "opsz" auto;
   color: #1F1F1F;
+  margin-bottom: 0.8rem;
 }
 
 .bundle_simple .bundle_simple_box_body_price {
@@ -282,7 +283,8 @@
 }
 
 .bundle_simple .bundle_simple_box_body_list_item_right {
-  flex: 1;
+  flex: 0 0 auto;
+  width: calc(100% - 9.8rem);
 }
 
 .bundle_simple .bundle_simple_box_body_list_item_right_head {
@@ -324,4 +326,28 @@
 .bundle_simple .bundle_simple_box_body_list_item_btn {
   text-decoration: underline;
   cursor: pointer;
+}
+
+.bundle_simple .bundle_simple_box_body_list_item_input_box {
+  flex: 0 0 auto;
+  width: 7.2rem;
+  height: 3.2rem;
+  background-color: #FFFFFF;
+  position: relative;
+}
+
+.bundle_simple .bundle_simple_box_body_list_item_input_up,
+.bundle_simple .bundle_simple_box_body_list_item_input_down {
+  width: 1rem;
+  height: 1rem;
+  position: absolute;
+  right: 1rem;
+}
+
+.bundle_simple .bundle_simple_box_body_list_item_input_up {
+  top: 0.3rem;
+}
+
+.bundle_simple .bundle_simple_box_body_list_item_input_down {
+  bottom: 0.6rem;
 }
