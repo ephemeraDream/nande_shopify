@@ -32,6 +32,12 @@
                   <div class="bundle_simple_option_select">
                     {%- for value in option.values -%}
                       {% if color_label contains option.name %}
+                        {% for color_item in product.metafields.custom.color_option %}
+                          {% if color_item.name == value %}
+                            {% assign color = color_item.value %}
+                          {% endif %}
+                        {% endfor %}
+                        <div class="bundle_simple_option_select_color" style="background-color: {{ color }}"></div>
                       {% else %}
                         <div class="bundle_simple_option_select_item">{{ value }}</div>
                       {% endif %}
