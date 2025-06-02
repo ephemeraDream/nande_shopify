@@ -2,6 +2,7 @@ const product_items = document.querySelectorAll(".bundle_simple .bundle_simple_p
 const bundle_simple_data = JSON.parse(document.getElementById('bundle_simple_data').textContent);
 const bundle_simple_box = document.querySelector(".bundle_simple .bundle_simple_box_body_list")
 const totalPriceEl = document.querySelector('.bundle_simple .bundle_simple_box_body_price_item');
+const add_to_cart = document.querySelector(".bundle_simple .bundle_simple_box_body_btn")
 
 product_items.forEach(item => {
   const product = bundle_simple_data[item.getAttribute("data-id")].product
@@ -181,4 +182,34 @@ product_items.forEach(item => {
     bundle_simple_box.appendChild(container);
     updateTotalPrice()
   })
+})
+
+add_to_cart.addEventListener("click", async () => {
+  const items = [];
+
+  bundle_simple_box.querySelectorAll(".bundle_simple_box_body_list_item").forEach(item => {
+    const variantId = item.dataset.id;
+    const quantity = parseInt(item.querySelector(".bundle_simple_box_body_list_item_input").value, 10);
+
+    if (variantId && quantity > 0) {
+      items.push({
+        id: parseInt(variantId, 10),
+        quantity: quantity
+      });
+    }
+  });
+
+  if (items.length === 0) {
+    return;
+  }
+
+  const cartFormData = { items };
+  try {
+    await fetch(window.Shopify.routes.root + "cart/add.js", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(cartFormData),
+    });
+  } finally {
+  }
 })
