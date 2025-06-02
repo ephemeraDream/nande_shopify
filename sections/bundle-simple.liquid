@@ -29,7 +29,10 @@
               {%- for option in product.options_with_values -%}
                 <div class="bundle_simple_option_item">
                   <div class="bundle_simple_option_label">{{ option.name }}</div>
-                  <div class="bundle_simple_option_select">
+                  <div
+                    class="bundle_simple_option_select"
+                    select-type="{% if color_label contains option.name %}circle{% else %}box{% endif %}"
+                  >
                     {%- for value in option.values -%}
                       {% if color_label contains option.name %}
                         {% assign color = '' %}
@@ -39,13 +42,15 @@
                           {% endif %}
                         {% endfor %}
                         <div
-                          class="bundle_simple_option_select_color{% if color == '' %} bundle_simple_option_select_color_none{% endif %}"
+                          class="bundle_simple_option_select_color{% if color == '' %} bundle_simple_option_select_color_none{% endif %}{% if value.selected %} bundle_simple_option_select_color_select{% endif %}"
                           {% if color != '' %}
                             style="background-color: {{ color }}"
                           {% endif %}
                         ></div>
                       {% else %}
-                        <div class="bundle_simple_option_select_item">{{ value }}</div>
+                        <div class="bundle_simple_option_select_item{% if value.selected %} bundle_simple_option_select_item_select{% endif %}">
+                          {{ value }}
+                        </div>
                       {% endif %}
                     {% endfor %}
                   </div>

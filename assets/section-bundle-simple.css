@@ -233,12 +233,18 @@
   cursor: pointer;
 }
 
+.bundle_simple .bundle_simple_option_select_item_select {
+  border-color: #BDFF00;
+}
+
 .bundle_simple .bundle_simple_option_select_color {
   width: 2.4rem;
   height: 2.4rem;
   border-radius: 50%;
   border: 0.1rem solid #7F7E75;
   position: relative;
+  overflow: hidden;
+  cursor: pointer;
 }
 
 .bundle_simple .bundle_simple_option_select_color_none::before {
@@ -251,4 +257,8 @@
   background-color: red;
   transform: translate(-50%, -50%) rotate(-45deg);
   transform-origin: center;
+}
+
+.bundle_simple .bundle_simple_option_select_color_select {
+  border: 0.2rem solid #BDFF00;
 }
