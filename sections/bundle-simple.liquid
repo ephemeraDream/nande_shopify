@@ -9,7 +9,7 @@
     <div class="bundle_simple_contain_left">
       {% for product in section.settings.product_list %}
         <div class="bundle_simple_product">
-          <input type="hidden" name="product" value="{{ product | json }}">
+          <input type="hidden" name="product" value="{'product': {{ product | json }}}">
           <input type="hidden" name="variant" value="{{ product.selected_or_first_available_variant | json }}">
           <div class="bundle_simple_product_img">
             {{-
