@@ -8,6 +8,7 @@ product_items.forEach(item => {
   const img_contain = item.querySelector(".bundle_simple_product_img img")
   const price_contain = item.querySelector(".bundle_simple_product_price")
   const select_option = item.querySelectorAll(".bundle_simple_option_select")
+  const select_item = item.querySelectorAll(".bundle_simple_option_select_item")
 
   const setVariantOption = () => {
     select_option.forEach((selector, selectorIndex) => {
@@ -39,4 +40,10 @@ product_items.forEach(item => {
   };
 
   setVariantOption()
+
+  select_item.forEach(item => {
+    item.addEventListener("click", (event) => {
+      console.log(event.target)
+    })
+  })
 })
