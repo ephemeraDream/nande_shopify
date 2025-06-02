@@ -42,6 +42,7 @@
                           {% endif %}
                         {% endfor %}
                         <div
+                          data-value="{{ value }}"
                           class="bundle_simple_option_select_item{% if color == '' %} bundle_simple_option_select_item_none{% endif %}{% if value.selected %} bundle_simple_option_select_item_select{% endif %}"
                           {% if color != '' %}
                             style="background-color: {{ color }}"
@@ -49,7 +50,10 @@
                           title="{{ value }}"
                         ></div>
                       {% else %}
-                        <div class="bundle_simple_option_select_item{% if value.selected %} bundle_simple_option_select_item_select{% endif %}">
+                        <div
+                          class="bundle_simple_option_select_item{% if value.selected %} bundle_simple_option_select_item_select{% endif %}"
+                          data-value="{{ value }}"
+                        >
                           {{ value }}
                         </div>
                       {% endif %}

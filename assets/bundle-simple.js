@@ -26,7 +26,7 @@ product_items.forEach(item => {
         if (matchCount === currVariant.options.length - 1) {
           const options = selector.querySelectorAll('.bundle_simple_option_select_item');
           const optionEl = Array.from(options).find((opt) => {
-            return opt.value === variant.options[selectorIndex];
+            return opt.getAttribute("data-value") === variant.options[selectorIndex];
           });
 
           if (optionEl) {
