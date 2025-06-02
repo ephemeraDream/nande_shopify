@@ -32,14 +32,18 @@
                   <div class="bundle_simple_option_select">
                     {%- for value in option.values -%}
                       {% if color_label contains option.name %}
-                        {{ product.metafields.custom.color_option.value | json }}
+                        {% assign color = '' %}
                         {% for color_item in product.metafields.custom.color_option.value %}
-                          {{ color_item.value.name.value }}
                           {% if color_item.name == value.name %}
                             {% assign color = color_item.value %}
                           {% endif %}
                         {% endfor %}
-                        <div class="bundle_simple_option_select_color" style="background-color: {{ color }}"></div>
+                        <div
+                          class="bundle_simple_option_select_color{% if color == '' %} bundle_simple_option_select_color_none{% endif %}"
+                          {% if color != '' %}
+                            style="background-color: {{ color }}"
+                          {% endif %}
+                        ></div>
                       {% else %}
                         <div class="bundle_simple_option_select_item">{{ value }}</div>
                       {% endif %}
