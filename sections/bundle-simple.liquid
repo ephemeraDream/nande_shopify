@@ -1,5 +1,7 @@
 {{ 'section-bundle-simple.css' | asset_url | stylesheet_tag }}
 
+{% assign color_label = section.settings.color_label %}
+
 <div class="bundle_simple padding-sider">
   <div class="bundle_simple_title">{{ section.settings.title }}</div>
   <div class="bundle_simple_text">{{ section.settings.text }}</div>
@@ -24,6 +26,19 @@
                   {{ product.selected_or_first_available_variant.price | money_without_trailing_zeros }}
                 {% endif %}
               </div>
+              {%- for option in product.options_with_values -%}
+                <div class="bundle_simple_option_item">
+                  <div class="bundle_simple_option_label">{{ option.name }}</div>
+                  <div class="bundle_simple_option_select">
+                    {%- for value in option.values -%}
+                      {% if color_label contains option.name %}
+                      {% else %}
+                        <div class="bundle_simple_option_select_item">{{ value }}</div>
+                      {% endif %}
+                    {% endfor %}
+                  </div>
+                </div>
+              {% endfor %}
             </div>
             <div class="bundle_simple_product_btn">
               {{ section.settings.product_link_text }}
