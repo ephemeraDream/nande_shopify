@@ -76,7 +76,7 @@ product_items.forEach(item => {
       curr_options[parent.getAttribute("data-index")] = target.getAttribute("data-value")
       currVariant = product.variants.find(el => areArraysEqual(curr_options, el.options))
       if (currVariant) {
-        img_contain.src = `https:${currVariant.featured_image.src}`;
+        img_contain.src = currVariant.featured_image.src
         price_contain.innerHTML = moneyWithoutTrailingZeros(currVariant.price)
         setVariantOption()
       }
@@ -94,7 +94,7 @@ product_items.forEach(item => {
               el.classList.remove('bundle_simple_option_select_item_select')
             }
           });
-          img_contain.src = `https:${currVariant.featured_image.src}`;
+          img_contain.src = currVariant.featured_image.src
           price_contain.innerHTML = moneyWithoutTrailingZeros(currVariant.price)
           setVariantOption()
         }

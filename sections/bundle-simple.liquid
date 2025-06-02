@@ -10,11 +10,7 @@
       {% for product in section.settings.product_list %}
         <div class="bundle_simple_product" data-id="{{ product.id }}">
           <div class="bundle_simple_product_img">
-            {{-
-              product.selected_or_first_available_variant.featured_image
-              | image_url: width: product.selected_or_first_available_variant.featured_image.width
-              | image_tag: alt: product.title
-            -}}
+            <img src="{{product.selected_or_first_available_variant.featured_image}}" alt="{{ product.title }}">
           </div>
           <div class="bundle_simple_product_info">
             <div>
