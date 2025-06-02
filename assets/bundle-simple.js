@@ -35,6 +35,9 @@ product_items.forEach(item => {
 
           if (optionEl) {
             optionEl.classList.remove("hidden");
+            if (!variant.available) {
+              optionEl.classList.add("hidden");
+            }
           }
         }
       });
