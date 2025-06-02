@@ -73,7 +73,7 @@
         <div class="bundle_simple_box_body_list"></div>
         <div class="bundle_simple_box_body_price">
           <span>{{ 'common.total' | t }}</span>
-          <span class="bundle_simple_box_body_price_item"></span>
+          <span class="bundle_simple_box_body_price_item">{{ 0 | money_without_trailing_zeros }}</span>
         </div>
         <div class="bundle_simple_box_body_btn">
           {{ section.settings.bundle_link_text }}

@@ -1,6 +1,7 @@
 const product_items = document.querySelectorAll(".bundle_simple .bundle_simple_product")
 const bundle_simple_data = JSON.parse(document.getElementById('bundle_simple_data').textContent);
 const bundle_simple_box = document.querySelector(".bundle_simple .bundle_simple_box_body_list")
+const totalPriceEl = document.querySelector('.bundle_simple .bundle_simple_box_body_price_item');
 
 product_items.forEach(item => {
   const product = bundle_simple_data[item.getAttribute("data-id")].product
