@@ -369,8 +369,3 @@
   border: none;
   padding-left: 12px;
 }
-
-.bundle_simple .bundle_simple_box_body_list_item_input:focus,
-.bundle_simple .bundle_simple_box_body_list_item_input:active {
-  border: none;
-}
