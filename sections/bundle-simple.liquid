@@ -11,7 +11,7 @@
         <div class="bundle_simple_product" data-id="{{ product.id }}">
           <div class="bundle_simple_product_img">
             <img
-              src="{{ product.selected_or_first_available_variant.featured_image | image_url }}"
+              src="{{ product.selected_or_first_available_variant.featured_image.src | image_url }}"
               alt="{{ product.title }}"
             >
           </div>
