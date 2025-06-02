@@ -97,7 +97,7 @@
       "{{ product.id }}": {
         "product": {{- product | json -}},
         "variant": {{ product.selected_or_first_available_variant | json }},
-        "currency_symbol": {{ currency_symbol }}
+        "symbol": {{ currency_symbol }}
       }
     {% endfor %}
   }

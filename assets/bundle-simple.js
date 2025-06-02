@@ -4,7 +4,7 @@ const bundle_simple_data = JSON.parse(document.getElementById('bundle_simple_dat
 product_items.forEach(item => {
   const product = bundle_simple_data[item.getAttribute("data-id")].product
   const currVariant = bundle_simple_data[item.getAttribute("data-id")].variant
-  const currency_symbol = bundle_simple_data[item.getAttribute("data-id")].currency_symbol
+  const symbol = bundle_simple_data[item.getAttribute("data-id")].symbol
   const curr_options = [...currVariant.options]
   console.log(product, currVariant)
   const img_contain = item.querySelector(".bundle_simple_product_img img")
@@ -63,7 +63,7 @@ product_items.forEach(item => {
 
     const final = formatted.replace(/\.0+$/, '').replace(/(\.\d*[1-9])0+$/, '$1');
 
-    return `${currency_symbol}${final}`;
+    return `${symbol}${final}`;
   }
 
   select_item.forEach(item => {
