@@ -4,7 +4,7 @@ const bundle_simple_data = JSON.parse(document.getElementById('bundle_simple_dat
 product_items.forEach(item => {
   const product = bundle_simple_data[item.getAttribute("data-id")].product
   const currVariant = bundle_simple_data[item.getAttribute("data-id")].variant
-  console.log(product, variant)
+  console.log(product, currVariant)
   const img_contain = item.querySelector(".bundle_simple_product_img img")
   const price_contain = item.querySelector(".bundle_simple_product_price")
   const select_option = item.querySelectorAll(".bundle_simple_option_select")
