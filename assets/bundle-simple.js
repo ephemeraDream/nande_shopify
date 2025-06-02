@@ -11,7 +11,7 @@ product_items.forEach(item => {
 
   const setVariantOption = () => {
     select_option.forEach((selector, selectorIndex) => {
-      if (selectorIndex < 3) return
+      if (selectorIndex < 2) return
       const options = selector.querySelectorAll('.bundle_simple_option_select_item');
 
       options.forEach(opt => opt.classList.add('hidden'));
