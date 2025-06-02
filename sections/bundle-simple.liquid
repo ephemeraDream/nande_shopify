@@ -70,7 +70,30 @@
       <div class="bundle_simple_box_head">{{ section.settings.bundle_title }}</div>
       <div class="bundle_simple_box_body">
         <div class="bundle_simple_box_body_text">{{ section.settings.bundle_text }}</div>
-        <div class="bundle_simple_box_body_list"></div>
+        <div class="bundle_simple_box_body_list">
+          {% assign product = section.settings.product_list | first %}
+          <div class="bundle_simple_box_body_list_item" data-id="{{ product.id }}">
+            <img
+              src="{{ product.selected_or_first_available_variant.featured_image.src | image_url }}"
+              alt="{{ product.title }}"
+            >
+            <div class="bundle_simple_box_body_list_item_right">
+              <div class="bundle_simple_box_body_list_item_right_head">
+                <div>
+                  <div class="bundle_simple_box_body_list_item_product_title">{{ product.title }}</div>
+                  <div class="bundle_simple_box_body_list_item_product_option">
+                    {{ product.selected_or_first_available_variant.options | join: ' | ' }}
+                  </div>
+                </div>
+                <input type="number" min="1" value="1">
+              </div>
+              <div class="bundle_simple_box_body_list_item_right_footer">
+                <div class="bundle_simple_box_body_list_item_product_price">{{ product.price }}</div>
+                <div class="bundle_simple_box_body_list_item_btn">{{ 'common.remove' | t }}</div>
+              </div>
+            </div>
+          </div>
+        </div>
         <div class="bundle_simple_box_body_price">
           <span>{{ 'common.total' | t }}</span>
           <span class="bundle_simple_box_body_price_item"></span>
