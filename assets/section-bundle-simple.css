@@ -328,6 +328,11 @@
   cursor: pointer;
 }
 
+.bundle_simple .bundle_simple_box_body_list_item_right_head_left {
+  flex: 0 0 auto;
+  width: calc(100% - 7.6rem);
+}
+
 .bundle_simple .bundle_simple_box_body_list_item_input_box {
   flex: 0 0 auto;
   width: 7.2rem;
@@ -342,6 +347,7 @@
   height: 1rem;
   position: absolute;
   right: 1rem;
+  cursor: pointer;
 }
 
 .bundle_simple .bundle_simple_box_body_list_item_input_up {
@@ -350,4 +356,21 @@
 
 .bundle_simple .bundle_simple_box_body_list_item_input_down {
   bottom: 0.6rem;
+}
+
+.bundle_simple .bundle_simple_box_body_list_item_input_up svg,
+.bundle_simple .bundle_simple_box_body_list_item_input_down svg {
+  position: absolute;
+}
+
+.bundle_simple .bundle_simple_box_body_list_item_input {
+  width: 100%;
+  height: 100%;
+  border: none;
+  padding-left: 12px;
+}
+
+.bundle_simple .bundle_simple_box_body_list_item_input:focus,
+.bundle_simple .bundle_simple_box_body_list_item_input:active {
+  border: none;
 }
