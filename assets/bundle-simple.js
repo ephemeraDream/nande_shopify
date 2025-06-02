@@ -30,7 +30,7 @@ product_items.forEach(item => {
           });
 
           if (optionEl) {
-            optionEl.classList.add("hidden")
+            optionEl.classList.remove("hidden")
           }
         }
       });
