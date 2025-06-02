@@ -4,6 +4,8 @@ const bundle_simple_data = JSON.parse(document.getElementById('bundle_simple_dat
 product_items.forEach(item => {
   const product = bundle_simple_data[item.getAttribute("data-id")].product
   const currVariant = bundle_simple_data[item.getAttribute("data-id")].variant
+  const currency_symbol = bundle_simple_data[item.getAttribute("data-id")].currency_symbol
+  const curr_options = [...currVariant.options]
   console.log(product, currVariant)
   const img_contain = item.querySelector(".bundle_simple_product_img img")
   const price_contain = item.querySelector(".bundle_simple_product_price")
@@ -41,9 +43,43 @@ product_items.forEach(item => {
 
   setVariantOption()
 
+  const areArraysEqual = (arr1, arr2) => {
+    if (arr1.length !== arr2.length) {
+      return false;
+    }
+
+    for (let i = 0; i < arr1.length; i++) {
+      if (arr1[i] !== arr2[i]) {
+        return false;
+      }
+    }
+
+    return true;
+  }
+
+  const moneyWithoutTrailingZeros = (cents) => {
+    const amount = cents / 100;
+    const formatted = amount.toFixed(2);
+
+    const final = formatted.replace(/\.0+$/, '').replace(/(\.\d*[1-9])0+$/, '$1');
+
+    return `${currency_symbol}${final}`;
+  }
+
   select_item.forEach(item => {
     item.addEventListener("click", (event) => {
-      console.log(event.target)
+      const target = event.target
+      if (target.classList.contains("bundle_simple_option_select_item_select")) return
+      const parent = target.closest(".bundle_simple_option_select")
+      parent.querySelector('.bundle_simple_option_select_item_select').classList.remove('bundle_simple_option_select_item_select')
+      target.classList.add('bundle_simple_option_select_item_select')
+      curr_options[parent.getAttribute("data-index")] = target.getAttribute("data-value")
+      currVariant = product.variants.find(el => areArraysEqual(curr_options, el.options))
+      if (currVariant) {
+        img_contain.src = currVariant.featured_image.src
+        price_contain.innerHTML = moneyWithoutTrailingZeros(currVariant.price)
+        setVariantOption()
+      }
     })
   })
 })

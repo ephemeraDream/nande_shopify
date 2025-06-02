@@ -28,6 +28,7 @@
                   <div
                     class="bundle_simple_option_select"
                     select-type="{% if color_label contains option.name %}circle{% else %}box{% endif %}"
+                    data-index="{{ forloop.index0 }}"
                   >
                     {%- for value in option.values -%}
                       {% if color_label contains option.name %}
@@ -85,11 +86,18 @@
 </div>
 
 <script type="application/json" id="bundle_simple_data">
+  {% for currency in shop.enabled_currencies %}
+    {% if currency.iso_code == shop.currency %}
+      {%- assign currency_symbol = currency.symbol -%}
+      {% break %}
+    {% endif %}
+  {% endfor %}
   {
     {% for product in section.settings.product_list %}
       "{{ product.id }}": {
         "product": {{- product | json -}},
-        "variant": {{ product.selected_or_first_available_variant | json }}
+        "variant": {{ product.selected_or_first_available_variant | json }},
+        "currency_symbol": {{ currency_symbol }}
       }
     {% endfor %}
   }
