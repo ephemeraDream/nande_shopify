@@ -10,10 +10,11 @@ product_items.forEach(item => {
   const select_option = item.querySelectorAll(".bundle_simple_option_select")
 
   const setVariantOption = () => {
-    item.querySelectorAll(".bundle_simple_option_select_item").forEach(select_item => {
-      select_item.classList.add("hidden")
-    })
     select_option.forEach((selector, selectorIndex) => {
+      const options = selector.querySelectorAll('.bundle_simple_option_select_item');
+
+      options.forEach(opt => opt.classList.add('hidden'));
+
       product.variants.forEach((variant) => {
         let matchCount = 0;
 
@@ -24,18 +25,17 @@ product_items.forEach(item => {
         });
 
         if (matchCount === currVariant.options.length - 1) {
-          const options = selector.querySelectorAll('.bundle_simple_option_select_item');
           const optionEl = Array.from(options).find((opt) => {
             return opt.getAttribute("data-value") === variant.options[selectorIndex];
           });
 
           if (optionEl) {
-            optionEl.classList.remove("hidden")
+            optionEl.classList.remove("hidden");
           }
         }
       });
     });
-  }
+  };
 
   setVariantOption()
 })

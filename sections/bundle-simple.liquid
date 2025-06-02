@@ -20,11 +20,7 @@
             <div>
               <div class="bundle_simple_product_title">{{ product.title }}</div>
               <div class="bundle_simple_product_price">
-                {% if product.selected_or_first_available_variant.compare_at_price != blank %}
-                  {{ product.selected_or_first_available_variant.compare_at_price | money_without_trailing_zeros }}
-                {% else %}
-                  {{ product.selected_or_first_available_variant.price | money_without_trailing_zeros }}
-                {% endif %}
+                {{ product.selected_or_first_available_variant.price | money_without_trailing_zeros }}
               </div>
               {%- for option in product.options_with_values -%}
                 <div class="bundle_simple_option_item">
