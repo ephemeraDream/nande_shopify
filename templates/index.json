@@ -176,33 +176,33 @@
         "item_6kCRQ4": {
           "type": "item",
           "settings": {
-            "select_product": "maidesite-el2-plus-art-tischgestell-elektrisch-hohenverstellbar-副本"
+            "select_product": "maidesite-th2-pro-plus-tischgestell-elektrisch-hohenverstellbar"
           }
         },
-        "item_ggJazh": {
+        "item_BrqRFC": {
           "type": "item",
           "settings": {
-            "select_product": "maidesite-el2-plus-art-tischgestell-elektrisch-hohenverstellbar-副本"
+            "select_product": "maidesite-th2-pro-plus-tischgestell-elektrisch-hohenverstellbar"
           }
         },
-        "item_9ya33j": {
+        "item_7ermBR": {
           "type": "item",
           "settings": {
-            "select_product": "maidesite-el2-plus-art-tischgestell-elektrisch-hohenverstellbar-副本"
+            "select_product": "maidesite-th2-pro-plus-tischgestell-elektrisch-hohenverstellbar"
           }
         },
-        "item_FKk4XR": {
+        "item_8K8ARc": {
           "type": "item",
           "settings": {
-            "select_product": "maidesite-el2-plus-art-tischgestell-elektrisch-hohenverstellbar-副本"
+            "select_product": "maidesite-th2-pro-plus-tischgestell-elektrisch-hohenverstellbar"
           }
         }
       },
       "block_order": [
         "item_6kCRQ4",
-        "item_ggJazh",
-        "item_9ya33j",
-        "item_FKk4XR"
+        "item_BrqRFC",
+        "item_7ermBR",
+        "item_8K8ARc"
       ],
       "name": "compare simple",
       "settings": {
@@ -226,7 +226,12 @@
         "title": "<p>Stelle Deinen Schreibtisch Zusammen</p>",
         "text": "<p>Gestalte deinen Maidesite-Arbeitsbereich mit unseren </p><p>inspirierten Räumen und Produkten</p>",
         "product_list": [
-          "maidesite-el2-plus-art-tischgestell-elektrisch-hohenverstellbar-fur-mydealz"
+          "maidesite-el2-plus-art-tischgestell-elektrisch-hohenverstellbar-fur-mydealz",
+          "maidesite-el2-pro-art-tischgestell-elektrisch-hohenverstellbar",
+          "maidesite-to1-pro-elektrisch-hohenverstellbarer-schreibtisch",
+          "maidesite-elektrisch-hohenverstellbarer-schreibtisch-120x60-cm-s1-basic",
+          "maidesite-elektrisch-hohenverstellbarer-schreibtisch-120x60-140x70-cm-s2-pro",
+          "maidesite-elektrisch-hohenverstellbarer-schreibtisch-140x70-cm-s2-pro-plus"
         ],
         "product_link_text": "En savoir plus",
         "bundle_title": "<p>Collocation</p>",
