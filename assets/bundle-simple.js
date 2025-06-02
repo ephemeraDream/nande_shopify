@@ -104,6 +104,19 @@ product_items.forEach(item => {
     })
   })
 
+  const updateTotalPrice = () => {
+    let totalCents = 0;
+    bundle_simple_box.querySelectorAll('.bundle_simple_box_body_list_item').forEach(item => {
+      const input = item.querySelector('.bundle_simple_box_body_list_item_input');
+      const quantity = parseInt(input.value, 10);
+      const price = parseInt(item.getAttribute("data-price"), 10);
+
+      totalCents += quantity * price;
+    });
+
+    totalPriceEl.textContent = moneyWithoutTrailingZeros(totalCents);
+  }
+
   add_btn.addEventListener("click", () => {
     const exist_item = Array.from(bundle_simple_box.querySelectorAll(".bundle_simple_box_body_list_item")).find(el => el.getAttribute("data-id") == currVariant.id)
     if (exist_item) return
@@ -111,6 +124,7 @@ product_items.forEach(item => {
     const container = document.createElement('div');
     container.className = 'bundle_simple_box_body_list_item';
     container.dataset.id = currVariant.id;
+    container.dataset.price = currVariant.price;
 
     container.innerHTML = `
       <img
@@ -147,6 +161,7 @@ product_items.forEach(item => {
       let value = parseInt(input.value, 10);
       if (value < 10) value++;
       input.value = value.toString().padStart(2, "0");
+      updateTotalPrice()
     });
 
     container.querySelector(".bundle_simple_box_body_list_item_input_down").addEventListener("click", () => {
@@ -154,12 +169,15 @@ product_items.forEach(item => {
       let value = parseInt(input.value, 10);
       if (value > 1) value--;
       input.value = value.toString().padStart(2, "0");
+      updateTotalPrice()
     });
 
     container.querySelector(".bundle_simple_box_body_list_item_btn").addEventListener("click", () => {
       container.remove();
+      updateTotalPrice()
     });
 
     bundle_simple_box.appendChild(container);
+    updateTotalPrice()
   })
 })
