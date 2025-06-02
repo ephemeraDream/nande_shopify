@@ -86,6 +86,7 @@ product_items.forEach(item => {
         );
 
         if (currVariant) {
+          curr_options[2] = currVariant.option3
           item.querySelectorAll(`.bundle_simple_option_select[data-index="2"] .bundle_simple_option_select_item`).forEach(el => {
             if (el.getAttribute("data-value") === currVariant.option3) {
               el.classList.add('bundle_simple_option_select_item_select')
