@@ -33,7 +33,7 @@
                     {%- for value in option.values -%}
                       {% if color_label contains option.name %}
                         {% for color_item in product.metafields.custom.color_option.value %}
-                          {{ color_item.value.name }}
+                          {{ color_item.value.name.value }}
                           {% if color_item.name == value.name %}
                             {% assign color = color_item.value %}
                           {% endif %}
