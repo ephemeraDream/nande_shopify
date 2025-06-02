@@ -42,7 +42,7 @@
                           {% endif %}
                         {% endfor %}
                         <div
-                          class="bundle_simple_option_select_color{% if color == '' %} bundle_simple_option_select_color_none{% endif %}{% if value.selected %} bundle_simple_option_select_color_select{% endif %}"
+                          class="bundle_simple_option_select_item{% if color == '' %} bundle_simple_option_select_item_none{% endif %}{% if value.selected %} bundle_simple_option_select_item_select{% endif %}"
                           {% if color != '' %}
                             style="background-color: {{ color }}"
                           {% endif %}
