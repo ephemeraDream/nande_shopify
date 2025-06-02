@@ -74,7 +74,7 @@ product_items.forEach(item => {
       parent.querySelector('.bundle_simple_option_select_item_select').classList.remove('bundle_simple_option_select_item_select')
       target.classList.add('bundle_simple_option_select_item_select')
       curr_options[parent.getAttribute("data-index")] = target.getAttribute("data-value")
-      currVariant = product.variants.find(el => areArraysEqual(curr_options, el.options))
+      currVariant = product.variants.find(el => areArraysEqual(curr_options, el.options) && el.available)
       if (currVariant) {
         img_contain.src = currVariant.featured_image.src
         price_contain.innerHTML = moneyWithoutTrailingZeros(currVariant.price)
