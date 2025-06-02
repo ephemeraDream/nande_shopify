@@ -3,7 +3,7 @@ const bundle_simple_data = JSON.parse(document.getElementById('bundle_simple_dat
 
 product_items.forEach(item => {
   const product = bundle_simple_data[item.getAttribute("data-id")].product
-  const currVariant = bundle_simple_data[item.getAttribute("data-id")].variant
+  let currVariant = bundle_simple_data[item.getAttribute("data-id")].variant
   const symbol = bundle_simple_data[item.getAttribute("data-id")].symbol
   const curr_options = [...currVariant.options]
   console.log(product, currVariant)
