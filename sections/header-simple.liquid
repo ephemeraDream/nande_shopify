@@ -2,7 +2,7 @@
 
 <div class="header_simple_section padding-sider">
   <div class="header_simple">
-    <a href="{{ routes.root_url }}">
+    <a href="{{ routes.root_url }}" class="header_simple_logo">
       <div class="header__heading-logo-wrapper">
         {%- assign logo_alt = settings.logo.alt | default: shop.name | escape -%}
         {%- assign logo_height = settings.logo_width | divided_by: settings.logo.aspect_ratio -%}
@@ -72,8 +72,25 @@
     </div>
     <div class="header_simple_icon_box">
       <a class="header_simple_icon_item">{{ 'icon-customer-service.svg' | inline_asset_content }}</a>
-      <a class="header_simple_icon_item">{{ 'icon-account.svg' | inline_asset_content }}</a>
-      <a class="header_simple_icon_item">{{ 'icon-cart-empty.svg' | inline_asset_content }}</a>
+      {%- if shop.customer_accounts_enabled -%}
+        <a
+          href="{%- if customer -%}{{ routes.account_url }}{%- else -%}{{ routes.account_login_url }}{%- endif -%}"
+          class="header_simple_icon_item"
+        >
+          {{ 'icon-account.svg' | inline_asset_content }}
+        </a>
+      {%- endif -%}
+      <a href="{{ routes.cart_url }}" class="header_simple_icon_item" id="cart-icon-bubble">
+        {{ 'icon-cart-empty.svg' | inline_asset_content }}
+        {%- if cart != empty -%}
+          <div class="cart-count-bubble">
+            {%- if cart.item_count < 100 -%}
+              <span aria-hidden="true">{{ cart.item_count }}</span>
+            {%- endif -%}
+            <span class="visually-hidden">{{ 'sections.header.cart_count' | t: count: cart.item_count }}</span>
+          </div>
+        {%- endif -%}
+      </a>
       <a class="header_simple_icon_item">{{ 'icon-message.svg' | inline_asset_content }}</a>
     </div>
   </div>
