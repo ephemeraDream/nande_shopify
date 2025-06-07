@@ -24,6 +24,7 @@
         },
         "img_with_text_QJDYxJ": {
           "type": "img_with_text",
+          "disabled": true,
           "settings": {
             "text": "<p>Up to 52% Off</p><p>Amazing Eco-Powered Deals for Every Journey !</p>",
             "image": "shopify://shop_images/announcement-bar-img.webp",
@@ -32,7 +33,6 @@
         },
         "countdown_77kmfi": {
           "type": "countdown",
-          "disabled": true,
           "settings": {
             "text": "<p>Rabatt TH30 30 Rabatt fur T2 Pro Plus</p>",
             "countdown_handle": "summer-sale",
