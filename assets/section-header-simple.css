@@ -23,4 +23,9 @@
   height: 3.7rem;
   background-color: #F3F3F3;
   border: none;
+  margin: 0;
+}
+
+.field:after {
+  box-shadow: none;
 }
