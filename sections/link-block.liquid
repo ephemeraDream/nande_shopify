@@ -1,28 +1,30 @@
 {{ 'section-link-block.css' | asset_url | stylesheet_tag }}
 
-<div class="link_block padding-sider">
-  <div class="link_block_title">{{ section.settings.title }}</div>
-  <div class="link_block_text">{{ section.settings.text }}</div>
-  <div class="link_block_contain">
-    {% for block in section.blocks %}
-      <a href="{{ block.settings.link }}" class="link_block_contain_item">
-        {{-
-          block.settings.image
-          | image_url: width: block.settings.image.width
-          | image_tag: alt: block.settings.title
-        -}}
-        <div class="link_block_contain_item_info">
-          <div class="link_block_contain_item_info_title">{{ block.settings.title }}</div>
-          <div class="link_block_contain_item_info_text">{{ block.settings.text }}</div>
-          {% if block.settings.btn_text != blank %}
-            <div class="link_block_contain_item_info_btn">
-              {{ block.settings.btn_text }}
-              {{ 'icon-right-arrow.svg' | inline_asset_content }}
-            </div>
-          {% endif %}
-        </div>
-      </a>
-    {% endfor %}
+<div class="link_block_section padding-sider">
+  <div class="link_block">
+    <div class="link_block_title">{{ section.settings.title }}</div>
+    <div class="link_block_text">{{ section.settings.text }}</div>
+    <div class="link_block_contain">
+      {% for block in section.blocks %}
+        <a href="{{ block.settings.link }}" class="link_block_contain_item">
+          {{-
+            block.settings.image
+            | image_url: width: block.settings.image.width
+            | image_tag: alt: block.settings.title
+          -}}
+          <div class="link_block_contain_item_info">
+            <div class="link_block_contain_item_info_title">{{ block.settings.title }}</div>
+            <div class="link_block_contain_item_info_text">{{ block.settings.text }}</div>
+            {% if block.settings.btn_text != blank %}
+              <div class="link_block_contain_item_info_btn">
+                {{ block.settings.btn_text }}
+                {{ 'icon-right-arrow.svg' | inline_asset_content }}
+              </div>
+            {% endif %}
+          </div>
+        </a>
+      {% endfor %}
+    </div>
   </div>
 </div>
 
