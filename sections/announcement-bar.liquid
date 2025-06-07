@@ -111,34 +111,103 @@
             data-speed="{{ section.settings.change_slides_speed }}"
           >
             {%- for block in section.blocks -%}
-              <div
-                class="slideshow__slide slider__slide grid__item grid--1-col"
-                id="Slide-{{ section.id }}-{{ forloop.index }}"
-                {{ block.shopify_attributes }}
-                role="group"
-                aria-roledescription="{{ 'sections.announcements.announcement' | t }}"
-                aria-label="{{ forloop.index }} {{ 'general.slider.of' | t }} {{ forloop.length }}"
-                tabindex="-1"
-              >
-                <div
-                  class="announcement-bar__announcement"
-                  role="region"
-                  aria-label="{{ 'sections.header.announcement' | t }}"
-                >
-                  {%- if block.settings.text != blank -%}
-                    {%- if block.settings.link != blank -%}
+              {%- case block.type -%}
+                {%- when 'announcement' -%}
+                  <div
+                    class="slideshow__slide slider__slide grid__item grid--1-col"
+                    id="Slide-{{ section.id }}-{{ forloop.index }}"
+                    {{ block.shopify_attributes }}
+                    role="group"
+                    aria-roledescription="{{ 'sections.announcements.announcement' | t }}"
+                    aria-label="{{ forloop.index }} {{ 'general.slider.of' | t }} {{ forloop.length }}"
+                    tabindex="-1"
+                  >
+                    <div
+                      class="announcement-bar__announcement"
+                      role="region"
+                      aria-label="{{ 'sections.header.announcement' | t }}"
+                    >
+                      {%- if block.settings.text != blank -%}
+                        {%- if block.settings.link != blank -%}
+                          <a
+                            href="{{ block.settings.link }}"
+                            class="announcement-bar__link link link--text focus-inset animate-arrow"
+                          >
+                        {%- endif -%}
+                        <div class="announcement_bar_text">{{ section.blocks.first.settings.text | escape }}</div>
+                        {%- if block.settings.link != blank -%}
+                          </a>
+                        {%- endif -%}
+                      {%- endif -%}
+                    </div>
+                  </div>
+                {%- when 'img_with_text' -%}
+                  <div
+                    class="slideshow__slide slider__slide grid__item grid--1-col"
+                    id="Slide-{{ section.id }}-{{ forloop.index }}"
+                    {{ block.shopify_attributes }}
+                    role="group"
+                    aria-roledescription="{{ 'sections.announcements.announcement' | t }}"
+                    aria-label="{{ forloop.index }} {{ 'general.slider.of' | t }} {{ forloop.length }}"
+                    tabindex="-1"
+                  >
+                    <div
+                      class="announcement-bar__announcement"
+                      role="region"
+                      aria-label="{{ 'sections.header.announcement' | t }}"
+                    >
                       <a
-                        href="{{ block.settings.link }}"
-                        class="announcement-bar__link link link--text focus-inset animate-arrow"
+                        class="announcement_bar_imgwithtext"
+                        {%- if section.blocks.first.settings.link != blank -%}
+                          href="{{ section.blocks.first.settings.link }}"
+                        {%- endif -%}
                       >
-                    {%- endif -%}
-                    <div class="announcement_bar_text">{{ section.blocks.first.settings.text | escape }}</div>
-                    {%- if block.settings.link != blank -%}
+                        <div class="announcement_bar_text">{{ section.blocks.first.settings.text }}</div>
+                        <img src="{{ section.blocks.first.settings.image | image_url }}">
                       </a>
-                    {%- endif -%}
-                  {%- endif -%}
-                </div>
-              </div>
+                    </div>
+                  </div>
+                {%- when 'countdown' -%}
+                  <div
+                    class="slideshow__slide slider__slide grid__item grid--1-col"
+                    id="Slide-{{ section.id }}-{{ forloop.index }}"
+                    {{ block.shopify_attributes }}
+                    role="group"
+                    aria-roledescription="{{ 'sections.announcements.announcement' | t }}"
+                    aria-label="{{ forloop.index }} {{ 'general.slider.of' | t }} {{ forloop.length }}"
+                    tabindex="-1"
+                  >
+                    <div
+                      class="announcement-bar__announcement"
+                      role="region"
+                      aria-label="{{ 'sections.header.announcement' | t }}"
+                    >
+                      {% assign countdown_handle = section.blocks.first.settings.countdown_handle %}
+                      {%- assign countdown = shop.metaobjects.countdown_date_time[countdown_handle] -%}
+                      <a
+                        class="announcement_bar_countdown"
+                        {%- if section.blocks.first.settings.link != blank -%}
+                          href="{{ section.blocks.first.settings.link }}"
+                        {%- endif -%}
+                      >
+                        <div class="announcement_bar_text">{{ section.blocks.first.settings.text }}</div>
+                        <div
+                          class="announcement_bar_countdown_box"
+                          data-end-date="{{ countdown.datetime | date: "%Y-%m-%dT%H:%M:%SZ" }}"
+                        >
+                          <span class="announcement_bar_countdown_box_text">{{ 'common.ends_in' | t }}</span>
+                          <div class="announcement_bar_countdown_box_item" data-type="day"></div>
+                          <span>:</span>
+                          <div class="announcement_bar_countdown_box_item" data-type="hour"></div>
+                          <span>:</span>
+                          <div class="announcement_bar_countdown_box_item" data-type="minute"></div>
+                          <span>:</span>
+                          <div class="announcement_bar_countdown_box_item" data-type="second"></div>
+                        </div>
+                      </a>
+                    </div>
+                  </div>
+              {%- endcase -%}
             {%- endfor -%}
           </div>
           <button
