@@ -12,3 +12,9 @@
   display: flex;
   align-items: flex-end;
 }
+
+.header_simple_search {
+  margin-left: 4.6rem;
+  max-width: 92rem;
+  flex: 1;
+}

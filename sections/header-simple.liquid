@@ -2,7 +2,7 @@
 
 <div class="header_simple_section padding-sider">
   <div class="header_simple">
-    <a href="{{ routes.root_url }}" class="header__heading-link link link--text focus-inset">
+    <a href="{{ routes.root_url }}">
       <div class="header__heading-logo-wrapper">
         {%- assign logo_alt = settings.logo.alt | default: shop.name | escape -%}
         {%- assign logo_height = settings.logo_width | divided_by: settings.logo.aspect_ratio -%}
@@ -22,13 +22,13 @@
         }}
       </div>
     </a>
-    <div>
+    <div class="header_simple_search">
       <predictive-search class="search-modal__form" data-loading-text="{{ 'accessibility.loading' | t }}">
         <form action="{{ routes.search_url }}" method="get" role="search" class="search search-modal__form">
           <div class="field">
             <input
               class="search__input field__input"
-              id="Search-In-Modal"
+              id="Search-In-Out"
               type="search"
               name="q"
               value="{{ search.terms | escape }}"
@@ -44,7 +44,7 @@
               autocapitalize="off"
               spellcheck="false"
             >
-            <label class="field__label" for="Search-In-Modal">{{ 'general.search.search' | t }}</label>
+            <label class="field__label" for="Search-In-Out">{{ 'general.search.search' | t }}</label>
             <input type="hidden" name="options[prefix]" value="last">
             <button
               type="reset"
