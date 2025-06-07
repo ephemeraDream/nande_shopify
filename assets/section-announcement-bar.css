@@ -3,6 +3,11 @@
   background-color: #7F7E75;
 }
 
+.utility-bar .page-width {
+  width: 100%;
+  height: 100%;
+}
+
 .announcement_bar_text {
   font-family: "PP Right Grotesk";
   font-size: 1.6rem;
