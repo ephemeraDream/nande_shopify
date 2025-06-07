@@ -16,7 +16,6 @@
       "blocks": {
         "announcement-bar-0": {
           "type": "announcement",
-          "disabled": true,
           "settings": {
             "text": "Welcome to our store",
             "link": ""
@@ -24,7 +23,6 @@
         },
         "img_with_text_QJDYxJ": {
           "type": "img_with_text",
-          "disabled": true,
           "settings": {
             "text": "<p>Up to 52% Off</p><p>Amazing Eco-Powered Deals for Every Journey !</p>",
             "image": "shopify://shop_images/announcement-bar-img.webp",
