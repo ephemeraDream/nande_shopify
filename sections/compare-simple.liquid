@@ -23,6 +23,8 @@
                     {% assign index = 'option' | append: forloop.index %}
                     {% for value in option.values %}
                       {% assign first_variant = block.settings.select_product.variants | where: index, value %}
+                      {{ block.settings.select_product.variants | json }}
+                      {{ first_variant | json }}
                       <div class="swiper-slide">
                         <img
                           src="{{ first_variant.featured_image | image_url }}"
