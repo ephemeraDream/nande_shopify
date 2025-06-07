@@ -6,6 +6,11 @@
   position: relative;
 }
 
+.blogs_simple .blogs_simple_header {
+  max-width: 144rem;
+  margin: 0 auto;
+}
+
 .blogs_simple .blogs_simple_title {
   font-family: "PP Right Grotesk";
   font-size: 6rem;
@@ -30,7 +35,7 @@
 
 .blogs_simple .swiper {
   margin-top: 6rem;
-  padding-left: 12.5vw;
+  padding-left: calc((100% - 144rem)/2);
 }
 
 .blogs_simple .blogs_simple_item {
