@@ -21,9 +21,11 @@
                 {%- case option.name -%}
                   {%- when 'Farbe Tischplatte' -%}
                     {% for value in option.values %}
-                      <div class="swiper-slide" data-id="{{ value.variant }}">
+                      {% assign index = 'option' | append: forloop.index %}
+                      {% assign first_variant = block.variants | where: index, value %}
+                      <div class="swiper-slide">
                         <img
-                          src="{{ value.variant.featured_image | image_url }}"
+                          src="{{ first_variant.featured_image | image_url }}"
                           alt="{{ value.variant.title }}"
                         >
                       </div>
