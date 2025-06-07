@@ -1,7 +1,12 @@
-.maidesite_swiper {
+.maidesite_swiper_section {
   width: 100%;
   padding-top: 12rem;
   background-color: #FAFAFA;
+}
+
+.maidesite_swiper {
+  max-width: 144rem;
+  margin: 0 auto;
 }
 
 .maidesite_swiper .maidesite_swiper_title {
