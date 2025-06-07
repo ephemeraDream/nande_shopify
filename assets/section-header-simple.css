@@ -18,3 +18,9 @@
   max-width: 92rem;
   flex: 1;
 }
+
+.search__input.field__input {
+  height: 3.7rem;
+  background-color: #F3F3F3;
+  border: none;
+}
