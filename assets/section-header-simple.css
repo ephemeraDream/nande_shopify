@@ -47,7 +47,7 @@
   transform: translateY(-50%);
 }
 
-.field__label {
+.field__input:not(:placeholder-shown)~.field__label {
   left: 66.5rem;
   top: 50%;
   transform: translateY(-50%);
@@ -59,13 +59,13 @@
 }
 
 .reset__button:not(:focus):after {
-  border: none;
+  border: none !important;
 }
 
 .reset__button.field__button {
   width: 2.4rem;
   height: 2.4rem;
-  left: 1.4rem;
+  right: 1.4rem;
   top: 50%;
   transform: translateY(-50%);
 }
