@@ -32,6 +32,7 @@
         },
         "countdown_77kmfi": {
           "type": "countdown",
+          "disabled": true,
           "settings": {
             "text": "<p>Rabatt TH30 30 Rabatt fur T2 Pro Plus</p>",
             "countdown_handle": "summer-sale",
