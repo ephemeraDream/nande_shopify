@@ -58,6 +58,7 @@
 }
 
 .field__input:focus~.field__label {
+  left: 6.5rem;
   top: 0.2rem;
   transform: none;
 }
