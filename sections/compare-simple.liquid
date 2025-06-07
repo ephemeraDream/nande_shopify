@@ -23,7 +23,7 @@
                     {% for value in option.values %}
                       <div class="swiper-slide">
                         <img
-                          src="{{ value.variant.featured_image | image_url }}"
+                          src="{{ value.variant.featured_image.src | image_url }}"
                           alt="{{ value.variant.title }}"
                         >
                       </div>
