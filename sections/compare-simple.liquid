@@ -22,6 +22,7 @@
                   {%- when 'Farbe Tischplatte' -%}
                     {% for value in option.values %}
                       <div class="swiper-slide">
+                        {{ value.variant.featured_image.src  }}
                         <img
                           src="{{ value.variant.featured_image.src | image_url }}"
                           alt="{{ value.variant.title }}"
