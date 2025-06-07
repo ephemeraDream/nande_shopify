@@ -2,86 +2,88 @@
 
 {% assign color_label = section.settings.color_label %}
 
-<div class="bundle_simple padding-sider">
-  <div class="bundle_simple_title">{{ section.settings.title }}</div>
-  <div class="bundle_simple_text">{{ section.settings.text }}</div>
-  <div class="bundle_simple_contain">
-    <div class="bundle_simple_contain_left">
-      {% for product in section.settings.product_list %}
-        <div class="bundle_simple_product" data-id="{{ product.id }}">
-          <div class="bundle_simple_product_img">
-            <img
-              src="{{ product.selected_or_first_available_variant.featured_image.src | image_url }}"
-              alt="{{ product.title }}"
-            >
-          </div>
-          <div class="bundle_simple_product_info">
-            <div>
-              <div class="bundle_simple_product_title">{{ product.title }}</div>
-              <div class="bundle_simple_product_price">
-                {{ product.selected_or_first_available_variant.price | money_without_trailing_zeros }}
-              </div>
-              {%- for option in product.options_with_values -%}
-                <div class="bundle_simple_option_item">
-                  <div class="bundle_simple_option_label">{{ option.name }}</div>
-                  <div
-                    class="bundle_simple_option_select"
-                    select-type="{% if color_label contains option.name %}circle{% else %}box{% endif %}"
-                    data-index="{{ forloop.index0 }}"
-                  >
-                    {% assign index = 'option' | append: forloop.index %}
-                    {%- for value in option.values -%}
-                      {% assign available_variant = product.variants | where: index, value | where: 'available' %}
-                      {% if available_variant.size > 0 %}
-                        {% if color_label contains option.name %}
-                          {% assign color = '' %}
-                          {% for color_item in product.metafields.custom.color_option.value %}
-                            {% if color_item.name == value.name %}
-                              {% assign color = color_item.value %}
-                            {% endif %}
-                          {% endfor %}
-                          <div
-                            data-value="{{ value }}"
-                            class="bundle_simple_option_select_item{% if color == '' %} bundle_simple_option_select_item_none{% endif %}{% if value.selected %} bundle_simple_option_select_item_select{% endif %}"
-                            {% if color != '' %}
-                              style="background-color: {{ color }}"
-                            {% endif %}
-                            title="{{ value }}"
-                          ></div>
-                        {% else %}
-                          <div
-                            class="bundle_simple_option_select_item{% if value.selected %} bundle_simple_option_select_item_select{% endif %}"
-                            data-value="{{ value }}"
-                          >
-                            {{ value }}
-                          </div>
-                        {% endif %}
-                      {% endif %}
-                    {% endfor %}
-                  </div>
+<div class="bundle_simple_section padding-sider">
+  <div class="bundle_simple">
+    <div class="bundle_simple_title">{{ section.settings.title }}</div>
+    <div class="bundle_simple_text">{{ section.settings.text }}</div>
+    <div class="bundle_simple_contain">
+      <div class="bundle_simple_contain_left">
+        {% for product in section.settings.product_list %}
+          <div class="bundle_simple_product" data-id="{{ product.id }}">
+            <div class="bundle_simple_product_img">
+              <img
+                src="{{ product.selected_or_first_available_variant.featured_image.src | image_url }}"
+                alt="{{ product.title }}"
+              >
+            </div>
+            <div class="bundle_simple_product_info">
+              <div>
+                <div class="bundle_simple_product_title">{{ product.title }}</div>
+                <div class="bundle_simple_product_price">
+                  {{ product.selected_or_first_available_variant.price | money_without_trailing_zeros }}
                 </div>
-              {% endfor %}
-            </div>
-            <div class="bundle_simple_product_btn">
-              {{ section.settings.product_link_text }}
-              {{ 'icon-right-arrow.svg' | inline_asset_content }}
+                {%- for option in product.options_with_values -%}
+                  <div class="bundle_simple_option_item">
+                    <div class="bundle_simple_option_label">{{ option.name }}</div>
+                    <div
+                      class="bundle_simple_option_select"
+                      select-type="{% if color_label contains option.name %}circle{% else %}box{% endif %}"
+                      data-index="{{ forloop.index0 }}"
+                    >
+                      {% assign index = 'option' | append: forloop.index %}
+                      {%- for value in option.values -%}
+                        {% assign available_variant = product.variants | where: index, value | where: 'available' %}
+                        {% if available_variant.size > 0 %}
+                          {% if color_label contains option.name %}
+                            {% assign color = '' %}
+                            {% for color_item in product.metafields.custom.color_option.value %}
+                              {% if color_item.name == value.name %}
+                                {% assign color = color_item.value %}
+                              {% endif %}
+                            {% endfor %}
+                            <div
+                              data-value="{{ value }}"
+                              class="bundle_simple_option_select_item{% if color == '' %} bundle_simple_option_select_item_none{% endif %}{% if value.selected %} bundle_simple_option_select_item_select{% endif %}"
+                              {% if color != '' %}
+                                style="background-color: {{ color }}"
+                              {% endif %}
+                              title="{{ value }}"
+                            ></div>
+                          {% else %}
+                            <div
+                              class="bundle_simple_option_select_item{% if value.selected %} bundle_simple_option_select_item_select{% endif %}"
+                              data-value="{{ value }}"
+                            >
+                              {{ value }}
+                            </div>
+                          {% endif %}
+                        {% endif %}
+                      {% endfor %}
+                    </div>
+                  </div>
+                {% endfor %}
+              </div>
+              <div class="bundle_simple_product_btn">
+                {{ section.settings.product_link_text }}
+                {{ 'icon-right-arrow.svg' | inline_asset_content }}
+              </div>
             </div>
           </div>
-        </div>
-      {% endfor %}
-    </div>
-    <div class="bundle_simple_contain_right">
-      <div class="bundle_simple_box_head">{{ section.settings.bundle_title }}</div>
-      <div class="bundle_simple_box_body">
-        <div class="bundle_simple_box_body_text">{{ section.settings.bundle_text }}</div>
-        <div class="bundle_simple_box_body_list"></div>
-        <div class="bundle_simple_box_body_price">
-          <span>{{ 'common.total' | t }}</span>
-          <span class="bundle_simple_box_body_price_item">{{ 0 | money_without_trailing_zeros }}</span>
-        </div>
-        <div class="bundle_simple_box_body_btn">
-          {{ section.settings.bundle_link_text }}
-          {{ 'icon-right-arrow.svg' | inline_asset_content }}
+        {% endfor %}
+      </div>
+      <div class="bundle_simple_contain_right">
+        <div class="bundle_simple_box_head">{{ section.settings.bundle_title }}</div>
+        <div class="bundle_simple_box_body">
+          <div class="bundle_simple_box_body_text">{{ section.settings.bundle_text }}</div>
+          <div class="bundle_simple_box_body_list"></div>
+          <div class="bundle_simple_box_body_price">
+            <span>{{ 'common.total' | t }}</span>
+            <span class="bundle_simple_box_body_price_item">{{ 0 | money_without_trailing_zeros }}</span>
+          </div>
+          <div class="bundle_simple_box_body_btn">
+            {{ section.settings.bundle_link_text }}
+            {{ 'icon-right-arrow.svg' | inline_asset_content }}
+          </div>
         </div>
       </div>
     </div>

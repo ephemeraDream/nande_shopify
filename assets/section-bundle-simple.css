@@ -1,7 +1,12 @@
-.bundle_simple {
+.bundle_simple_section {
   width: 100%;
   padding-top: 12rem;
   background-color: #f2f1ed;
+}
+
+.bundle_simple {
+  max-width: 144rem;
+  margin: 0 auto;
 }
 
 .bundle_simple .bundle_simple_title {
