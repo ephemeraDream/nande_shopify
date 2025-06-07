@@ -6,6 +6,11 @@
   position: relative;
 }
 
+.user_feedback .user_feedback_header {
+  max-width: 144rem;
+  margin: 0 auto;
+}
+
 .user_feedback .user_feedback_title {
   font-family: "PP Right Grotesk";
   font-size: 6rem;

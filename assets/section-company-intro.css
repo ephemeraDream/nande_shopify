@@ -35,7 +35,8 @@
 .company_intro .company_intro_contain {
   display: flex;
   justify-content: space-between;
-  margin-top: 12rem;
+  margin: 12rem auto 0 auto;
+  max-width: 144rem;
 }
 
 .company_intro .company_intro_contain_left {

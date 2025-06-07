@@ -7,6 +7,7 @@
 
 .celebrity_swiper .celebrity_swiper_header {
   max-width: 144rem;
+  margin: 0 auto;
 }
 
 .celebrity_swiper .celebrity_swiper_title {
