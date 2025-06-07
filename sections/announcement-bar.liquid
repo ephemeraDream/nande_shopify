@@ -54,8 +54,8 @@
               {%- endif -%}
               class="announcement_bar_imgwithtext"
             >
-              <div class="announcement_bar_text">{{ section.blocks.first.settings.text | escape }}</div>
-              <img src="{{ section.blocks.first.settings.image | iamge_url }}">
+              <div class="announcement_bar_text">{{ section.blocks.first.settings.text }}</div>
+              <img src="{{ section.blocks.first.settings.image | image_url }}">
             </a>
           {%- when 'countdown' -%}
         {%- endcase -%}
