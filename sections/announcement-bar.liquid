@@ -200,10 +200,12 @@
       const endDate = new Date(endDateStr);
 
       const updateCountdownInnerHTML = (days, hours, minutes, seconds) => {
-        item.querySelector(".announcement_bar_countdown_box_item[data-type='day']").innerHTML = String(days).padStart(
-          2,
-          '0'
-        );
+        if (days > 0) {
+          item.querySelector(".announcement_bar_countdown_box_item[data-type='day']").innerHTML = String(days).padStart(
+            2,
+            '0'
+          );
+        }
         item.querySelector(".announcement_bar_countdown_box_item[data-type='hour']").innerHTML = String(hours).padStart(
           2,
           '0'
