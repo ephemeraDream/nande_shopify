@@ -35,10 +35,11 @@
 
 .polka_dot_swiper .swiper {
   margin-top: 3rem;
+  width: 100%;
 }
 
 .polka_dot_swiper .swiper-slide {
-  width: 144rem;
+  max-width: 144rem;
   height: 70rem;
 }
 
