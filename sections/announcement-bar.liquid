@@ -158,12 +158,12 @@
                     >
                       <a
                         class="announcement_bar_imgwithtext"
-                        {%- if section.blocks.first.settings.link != blank -%}
-                          href="{{ section.blocks.first.settings.link }}"
+                        {%- if block.settings.link != blank -%}
+                          href="{{ block.settings.link }}"
                         {%- endif -%}
                       >
-                        <div class="announcement_bar_text">{{ section.blocks.first.settings.text }}</div>
-                        <img src="{{ section.blocks.first.settings.image | image_url }}">
+                        <div class="announcement_bar_text">{{ block.settings.text }}</div>
+                        <img src="{{ block.settings.image | image_url }}">
                       </a>
                     </div>
                   </div>
@@ -182,15 +182,15 @@
                       role="region"
                       aria-label="{{ 'sections.header.announcement' | t }}"
                     >
-                      {% assign countdown_handle = section.blocks.first.settings.countdown_handle %}
+                      {% assign countdown_handle = block.settings.countdown_handle %}
                       {%- assign countdown = shop.metaobjects.countdown_date_time[countdown_handle] -%}
                       <a
                         class="announcement_bar_countdown"
-                        {%- if section.blocks.first.settings.link != blank -%}
-                          href="{{ section.blocks.first.settings.link }}"
+                        {%- if block.settings.link != blank -%}
+                          href="{{ block.settings.link }}"
                         {%- endif -%}
                       >
-                        <div class="announcement_bar_text">{{ section.blocks.first.settings.text }}</div>
+                        <div class="announcement_bar_text">{{ block.settings.text }}</div>
                         <div
                           class="announcement_bar_countdown_box"
                           data-end-date="{{ countdown.datetime | date: "%Y-%m-%dT%H:%M:%SZ" }}"
