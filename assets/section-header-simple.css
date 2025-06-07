@@ -17,6 +17,7 @@
   margin-left: 4.6rem;
   max-width: 92rem;
   flex: 1;
+  position: relative;
 }
 
 .search__input.field__input {
@@ -24,8 +25,47 @@
   background-color: #F3F3F3;
   border: none;
   margin: 0;
+  font-family: "PP Right Grotesk";
+  font-size: 1.8rem;
+  font-weight: normal;
+  line-height: 2.6rem;
+  letter-spacing: 0px;
+  font-variation-settings: "opsz" auto;
+  color: #AAAAAA;
+  padding-left: 6.5rem;
 }
 
 .field:after {
   box-shadow: none;
+}
+
+.field__button.search__button {
+  width: 2.4rem;
+  height: 2.4rem;
+  left: 1.4rem;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.field__label {
+  left: 66.5rem;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.field__input:focus~.field__label {
+  top: 0.2rem;
+  transform: none;
+}
+
+.reset__button:not(:focus):after {
+  border: none;
+}
+
+.reset__button.field__button {
+  width: 2.4rem;
+  height: 2.4rem;
+  left: 1.4rem;
+  top: 50%;
+  transform: translateY(-50%);
 }
