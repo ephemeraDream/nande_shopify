@@ -39,6 +39,22 @@
   color: #AAAAAA;
 }
 
+.search__input.field__input::-webkit-input-placeholder {
+  color: #AAAAAA;
+}
+
+.search__input.field__input:-moz-placeholder {
+  color: #AAAAAA;
+}
+
+.search__input.field__input::-moz-placeholder {
+  color: #AAAAAA;
+}
+
+.search__input.field__input:-ms-input-placeholder {
+  color: #AAAAAA;
+}
+
 .field:after {
   box-shadow: none;
 }
@@ -51,7 +67,8 @@
   transform: translateY(-50%);
 }
 
-.field__label {
+.field__label,
+.field__input:not(:placeholder-shown)~.field__label {
   left: 6.5rem;
 }
 
