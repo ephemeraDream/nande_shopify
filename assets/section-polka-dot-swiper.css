@@ -6,6 +6,11 @@
   position: relative;
 }
 
+.polka_dot_swiper .polka_dot_swiper_header {
+  max-width: 144rem;
+  margin: 0 auto;
+}
+
 .polka_dot_swiper .polka_dot_swiper_title {
   font-family: "PP Right Grotesk";
   font-size: 6rem;
@@ -33,7 +38,7 @@
 }
 
 .polka_dot_swiper .swiper-slide {
-  width: 75vw;
+  width: 144rem;
   height: 70rem;
 }
 
