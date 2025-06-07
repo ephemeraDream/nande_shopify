@@ -1,0 +1,23 @@
+{{ 'section-header-simple.css' | asset_url | stylesheet_tag }}
+
+<div class="header_simple_section padding-sider">
+  <div class="header_simple"></div>
+</div>
+
+{% schema %}
+{
+  "name": "header simple",
+  "tag": "section",
+  "class": "section",
+  "disabled_on": {
+    "groups": ["footer"],
+    "templates": ["*"]
+  },
+  "settings": [],
+  "presets": [
+    {
+      "name": "header simple"
+    }
+  ]
+}
+{% endschema %}
