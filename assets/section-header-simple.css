@@ -31,8 +31,12 @@
   line-height: 2.6rem;
   letter-spacing: 0px;
   font-variation-settings: "opsz" auto;
-  color: #AAAAAA;
+  color: #1f1f1f;
   padding-left: 6.5rem;
+}
+
+.search__input.field__input::placeholder {
+  color: #AAAAAA;
 }
 
 .field:after {
