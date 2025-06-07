@@ -49,10 +49,10 @@
             {%- endif -%}
           {%- when 'img_with_text' -%}
             <a
+              class="announcement_bar_imgwithtext"
               {%- if section.blocks.first.settings.link != blank -%}
                 href="{{ section.blocks.first.settings.link }}"
               {%- endif -%}
-               class="announcement_bar_imgwithtext"
             >
               <div class="announcement_bar_text">{{ section.blocks.first.settings.text }}</div>
               <img src="{{ section.blocks.first.settings.image | image_url }}">
