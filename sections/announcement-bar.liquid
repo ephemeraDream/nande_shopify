@@ -215,7 +215,7 @@
           seconds
         ).padStart(2, '0');
 
-        if ((days = 0)) {
+        if (days == 0) {
           item.querySelector(".announcement_bar_countdown_box_item[data-type='day'] + span").remove();
           item.querySelector(".announcement_bar_countdown_box_item[data-type='day']").remove();
         }
