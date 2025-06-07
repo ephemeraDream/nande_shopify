@@ -58,6 +58,19 @@
               <img src="{{ section.blocks.first.settings.image | image_url }}">
             </a>
           {%- when 'countdown' -%}
+            {% assign countdown_handle = section.blocks.first.settings.countdown_handle %}
+            {%- assign countdown = shop.metaobjects.countdown_date_time[countdown_handle] -%}
+            <a
+              class="announcement_bar_countdown"
+              {%- if section.blocks.first.settings.link != blank -%}
+                href="{{ section.blocks.first.settings.link }}"
+              {%- endif -%}
+            >
+              <div class="announcement_bar_text">{{ section.blocks.first.settings.text }}</div>
+              <div data-end-date="{{ countdown.datetime | date: "%Y-%m-%dT%H:%M:%SZ" }}">
+                <span>{{ 'common.ends_in' | t }}</span>
+              </div>
+            </a>
         {%- endcase -%}
       </div>
     {%- elsif section.blocks.size > 1 -%}

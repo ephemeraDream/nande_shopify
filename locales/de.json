@@ -537,6 +537,7 @@
   "common": {
     "neueste": "Neueste",
     "total": "Total",
-    "remove": "Remove"
+    "remove": "Remove",
+    "ends_in": "Ends in"
   }
 }
