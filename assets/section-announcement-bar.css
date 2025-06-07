@@ -17,3 +17,18 @@
   font-variation-settings: "opsz" auto;
   color: #BDFF00;
 }
+
+.announcement-bar .slider-button {
+  display: none;
+}
+
+.announcement_bar_imgwithtext {
+  display: flex;
+  align-items: center;
+  gap: 12rem
+}
+
+.announcement_bar_imgwithtext img {
+  width: 23rem;
+  height: 5rem
+}

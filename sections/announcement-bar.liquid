@@ -48,6 +48,15 @@
               {%- endif -%}
             {%- endif -%}
           {%- when 'img_with_text' -%}
+            <a
+              {%- if section.blocks.first.settings.link != blank -%}
+                href="{{ section.blocks.first.settings.link }}"
+              {%- endif -%}
+              class="announcement_bar_imgwithtext"
+            >
+              <div class="announcement_bar_text">{{ section.blocks.first.settings.text | escape }}</div>
+              <img src="{{ section.blocks.first.settings.image | iamge_url }}">
+            </a>
           {%- when 'countdown' -%}
         {%- endcase -%}
       </div>
