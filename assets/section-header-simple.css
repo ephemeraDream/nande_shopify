@@ -51,12 +51,6 @@
   left: 6.5rem;
 }
 
-.field__input:not(:placeholder-shown)~.field__label {
-  left: 6.5rem;
-  top: 50%;
-  transform: translateY(-50%);
-}
-
 .field__input:focus~.field__label {
   left: 6.5rem;
   top: 0.2rem;
