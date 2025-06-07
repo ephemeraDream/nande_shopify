@@ -33,23 +33,23 @@
         aria-label="{{ 'sections.header.announcement' | t }}"
         {{ section.blocks.first.shopify_attributes }}
       >
-        {%- if section.blocks.first.settings.text != blank -%}
-          {%- if section.blocks.first.settings.link != blank -%}
-            <a
-              href="{{ section.blocks.first.settings.link }}"
-              class="announcement-bar__link link link--text focus-inset animate-arrow"
-            >
-          {%- endif -%}
-          <p class="announcement-bar__message h5">
-            <span>{{ section.blocks.first.settings.text | escape }}</span>
-            {%- if section.blocks.first.settings.link != blank -%}
-              {{- 'icon-arrow.svg' | inline_asset_content -}}
+        {%- case section.blocks.first.type -%}
+          {%- when 'announcement' -%}
+            {%- if section.blocks.first.settings.text != blank -%}
+              {%- if section.blocks.first.settings.link != blank -%}
+                <a
+                  href="{{ section.blocks.first.settings.link }}"
+                  class="announcement-bar__link link link--text focus-inset animate-arrow"
+                >
+              {%- endif -%}
+              <div class="announcement_bar_text">{{ section.blocks.first.settings.text | escape }}</div>
+              {%- if section.blocks.first.settings.link != blank -%}
+                </a>
+              {%- endif -%}
             {%- endif -%}
-          </p>
-          {%- if section.blocks.first.settings.link != blank -%}
-            </a>
-          {%- endif -%}
-        {%- endif -%}
+          {%- when 'img_with_text' -%}
+          {%- when 'countdown' -%}
+        {%- endcase -%}
       </div>
     {%- elsif section.blocks.size > 1 -%}
       <slideshow-component
