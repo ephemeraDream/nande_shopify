@@ -31,7 +31,7 @@
                   >
                     {% assign index = 'option' | append: forloop.index %}
                     {%- for value in option.values -%}
-                      {% assign available_variant = product.variants | where: index, value | where: available %}
+                      {% assign available_variant = product.variants | where: index, value | where: 'available' %}
                       {% if available_variant.size > 0 %}
                         {% if color_label contains option.name %}
                           {% assign color = '' %}
