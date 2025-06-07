@@ -48,7 +48,7 @@
 }
 
 .field__input:not(:placeholder-shown)~.field__label {
-  left: 66.5rem;
+  left: 6.5rem;
   top: 50%;
   transform: translateY(-50%);
 }
