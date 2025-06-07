@@ -72,6 +72,8 @@
                 data-end-date="{{ countdown.datetime | date: "%Y-%m-%dT%H:%M:%SZ" }}"
               >
                 <span class="announcement_bar_countdown_box_text">{{ 'common.ends_in' | t }}</span>
+                <div class="announcement_bar_countdown_box_item" data-type="day"></div>
+                <span>:</span>
                 <div class="announcement_bar_countdown_box_item" data-type="hour"></div>
                 <span>:</span>
                 <div class="announcement_bar_countdown_box_item" data-type="minute"></div>
@@ -197,30 +199,11 @@
       const endDateStr = item.getAttribute('data-end-date');
       const endDate = new Date(endDateStr);
 
-      function updateCountdown() {
-        const now = new Date();
-        const diff = endDate - now;
-        let hours = 0,
-          minutes = 0,
-          seconds = 0;
-
-        if (diff <= 0) {
-          item.querySelector(".announcement_bar_countdown_box_item[data-type='hour']").innerHTML = String(
-            hours
-          ).padStart(2, '0');
-          item.querySelector(".announcement_bar_countdown_box_item[data-type='minute']").innerHTML = String(
-            minutes
-          ).padStart(2, '0');
-          item.querySelector(".announcement_bar_countdown_box_item[data-type='second']").innerHTML = String(
-            seconds
-          ).padStart(2, '0');
-          return;
-        }
-
-        hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
-        minutes = Math.floor((diff / (1000 * 60)) % 60);
-        seconds = Math.floor((diff / 1000) % 60);
-
+      const updateCountdownInnerHTML = (days, hours, minutes, seconds) => {
+        item.querySelector(".announcement_bar_countdown_box_item[data-type='day']").innerHTML = String(days).padStart(
+          2,
+          '0'
+        );
         item.querySelector(".announcement_bar_countdown_box_item[data-type='hour']").innerHTML = String(hours).padStart(
           2,
           '0'
@@ -231,6 +214,32 @@
         item.querySelector(".announcement_bar_countdown_box_item[data-type='second']").innerHTML = String(
           seconds
         ).padStart(2, '0');
+
+        if ((days = 0)) {
+          item.querySelector(".announcement_bar_countdown_box_item[data-type='day'] + span").remove();
+          item.querySelector(".announcement_bar_countdown_box_item[data-type='day']").remove();
+        }
+      };
+
+      function updateCountdown() {
+        const now = new Date();
+        const diff = endDate - now;
+        let days = 0,
+          hours = 0,
+          minutes = 0,
+          seconds = 0;
+
+        if (diff <= 0) {
+          updateCountdownInnerHTML(days, hours, minutes, seconds);
+          return;
+        }
+
+        days = Math.floor(diff / (1000 * 60 * 60 * 24));
+        hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
+        minutes = Math.floor((diff / (1000 * 60)) % 60);
+        seconds = Math.floor((diff / 1000) % 60);
+
+        updateCountdownInnerHTML(days, hours, minutes, seconds);
       }
 
       updateCountdown();
