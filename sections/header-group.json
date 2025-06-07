@@ -53,6 +53,11 @@
         "enable_language_selector": false
       }
     },
+    "header_simple_ULLndz": {
+      "type": "header-simple",
+      "name": "header simple",
+      "settings": {}
+    },
     "header": {
       "type": "header",
       "settings": {
@@ -75,6 +80,7 @@
   },
   "order": [
     "announcement-bar",
+    "header_simple_ULLndz",
     "header"
   ]
 }
