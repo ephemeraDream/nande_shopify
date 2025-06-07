@@ -67,8 +67,16 @@
               {%- endif -%}
             >
               <div class="announcement_bar_text">{{ section.blocks.first.settings.text }}</div>
-              <div data-end-date="{{ countdown.datetime | date: "%Y-%m-%dT%H:%M:%SZ" }}">
-                <span>{{ 'common.ends_in' | t }}</span>
+              <div
+                class="announcement_bar_countdown_box"
+                data-end-date="{{ countdown.datetime | date: "%Y-%m-%dT%H:%M:%SZ" }}"
+              >
+                <span class="announcement_bar_countdown_box_text">{{ 'common.ends_in' | t }}</span>
+                <div class="announcement_bar_countdown_box_item" data-type="hour"></div>
+                <span>:</span>
+                <div class="announcement_bar_countdown_box_item" data-type="minute"></div>
+                <span>:</span>
+                <div class="announcement_bar_countdown_box_item" data-type="second"></div>
               </div>
             </a>
         {%- endcase -%}
@@ -179,6 +187,57 @@
     </div>
   </div>
 </div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const countdownEl = document.querySelectorAll('.announcement_bar_countdown_box');
+    if (!countdownEl.length) return;
+
+    countdownEl.forEach((item) => {
+      const endDateStr = item.getAttribute('data-end-date');
+      const endDate = new Date(endDateStr);
+
+      function updateCountdown() {
+        const now = new Date();
+        const diff = endDate - now;
+        let hours = 0,
+          minutes = 0,
+          seconds = 0;
+
+        if (diff <= 0) {
+          item.querySelector(".announcement_bar_countdown_box_item[data-type='hour']").innerHTML = String(
+            hours
+          ).padStart(2, '0');
+          item.querySelector(".announcement_bar_countdown_box_item[data-type='minutes']").innerHTML = String(
+            minutes
+          ).padStart(2, '0');
+          item.querySelector(".announcement_bar_countdown_box_item[data-type='second']").innerHTML = String(
+            seconds
+          ).padStart(2, '0');
+          return;
+        }
+
+        hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
+        minutes = Math.floor((diff / (1000 * 60)) % 60);
+        seconds = Math.floor((diff / 1000) % 60);
+
+        item.querySelector(".announcement_bar_countdown_box_item[data-type='hour']").innerHTML = String(hours).padStart(
+          2,
+          '0'
+        );
+        item.querySelector(".announcement_bar_countdown_box_item[data-type='minutes']").innerHTML = String(
+          minutes
+        ).padStart(2, '0');
+        item.querySelector(".announcement_bar_countdown_box_item[data-type='second']").innerHTML = String(
+          seconds
+        ).padStart(2, '0');
+      }
+
+      updateCountdown();
+      setInterval(updateCountdown, 1000);
+    });
+  });
+</script>
 
 {% schema %}
 {

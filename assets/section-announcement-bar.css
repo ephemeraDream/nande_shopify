@@ -32,3 +32,35 @@
   width: 23rem;
   height: 5rem
 }
+
+.announcement_bar_countdown {
+  display: flex;
+  align-items: center;
+  gap: 1.6rem;
+}
+
+.announcement_bar_countdown_box {
+  display: flex;
+  align-items: center;
+  font-family: "PP Right Grotesk";
+  font-size: 2rem;
+  font-weight: normal;
+  line-height: 130%;
+  letter-spacing: 0px;
+  font-variation-settings: "opsz" auto;
+  color: #FFFFFF;
+}
+
+.announcement_bar_countdown_box_text {
+  font-size: 1.6rem;
+}
+
+.announcement_bar_countdown_box_item {
+  width: 3rem;
+  height: 3rem;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #FF7500;
+}
