@@ -99,10 +99,42 @@
                     <div class="header_menu_item_submenu_info_desc">{{ block.settings.info_text }}</div>
                   </div>
                 </div>
-                <div class="header_menu_item_submenu_contain_right"></div>
-                {% comment %}
+                <div class="header_menu_item_submenu_contain_right">
                   {%- if block.settings.collection_list != blank -%}
                     {%- for item in block.settings.collection_list -%}
+                      <div class="swiper header_menu_item_submenu_tabcontent" data-id="{{ item.handle }}">
+                        <div class="swiper-wrapper">
+                          {% for product in item.products %}
+                            {% assign show_info = product.metafields.custom.header_menu_info.value %}
+                            <div class="swiper-slide">
+                              <div class="header_menu_item_submenu_product_img">
+                                <img src="{{ product.featured_image | image_url }}">
+                                {% if show_info.tag.value != blank %}
+                                  <div class="header_menu_item_submenu_product_tag">{{ show_info.tag.value }}</div>
+                                {% endif %}
+                              </div>
+                              <div class="header_menu_item_submenu_product_info">
+                                <div class="header_menu_item_submenu_product_title">
+                                  {% if show_info.title.value != blank %}
+                                    {{ show_info.title.value }}
+                                  {% else %}
+                                    {{ product.title }}
+                                  {% endif %}
+                                </div>
+                                {% if show_info.description.value != blank %}
+                                  <div class="header_menu_item_submenu_product_desc">
+                                    {{ show_info.description.value }}
+                                  </div>
+                                {% endif %}
+                                {% render 'product-rating', product: product %}
+                                <div class="header_menu_item_submenu_product_price">
+                                  {{ product.price | money_without_trailing_zeros }}
+                                </div>
+                              </div>
+                            </div>
+                          {% endfor %}
+                        </div>
+                      </div>
                       <a
                         href="{{ item.url }}"
                         class="header_menu_item_submenu_item"
@@ -116,7 +148,7 @@
                       </a>
                     {%- endfor -%}
                   {%- endif -%}
-                {% endcomment %}
+                </div>
               </div>
             </div>
           </div>
