@@ -119,6 +119,7 @@
   width: 100%;
   height: 28rem;
   overflow: hidden;
+  position: relative;
 }
 
 .header_menu .header_menu_item[data-type="img_width_text"] .header_menu_item_submenu_item_img img {
@@ -127,6 +128,13 @@
   object-fit: cover;
   object-position: center center;
   transition: transform .3s ease-in-out;
+}
+
+.header_menu .header_menu_item[data-type="img_width_text"] .header_menu_item_submenu_item_img svg {
+  position: absolute;
+  right: 1.2rem;
+  bottom: 1.2rem;
+  display: none;
 }
 
 .header_menu .header_menu_item[data-type="img_width_text"] .header_menu_item_submenu_item_title {
@@ -150,4 +158,12 @@
   font-feature-settings: "kern" on;
   color: #3D3D3D;
   margin-top: 0.8rem;
+}
+
+.header_menu .header_menu_item[data-type="img_width_text"] .header_menu_item_submenu_item:hover .header_menu_item_submenu_item_img img {
+  transform: scale(1.2);
+}
+
+.header_menu .header_menu_item[data-type="img_width_text"] .header_menu_item_submenu_item:hover .header_menu_item_submenu_item_img svg {
+  display: block;
 }
