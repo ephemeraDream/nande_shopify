@@ -1,0 +1,229 @@
+{{ 'section-header-menu.css' | asset_url | stylesheet_tag }}
+
+<div class="header_menu_section">
+  <div class="header_menu"></div>
+</div>
+
+{% schema %}
+{
+  "name": "header menu",
+  "tag": "section",
+  "class": "section",
+  "disabled_on": {
+    "groups": ["footer"],
+    "templates": ["*"]
+  },
+  "settings": [],
+  "blocks": [
+    {
+      "type": "single_link",
+      "name": "single link",
+      "settings": [
+        {
+          "type": "text",
+          "id": "name",
+          "label": "name"
+        },
+        {
+          "type": "url",
+          "id": "link",
+          "label": "link"
+        }
+      ]
+    },
+    {
+      "type": "img_width_text",
+      "name": "img width text",
+      "settings": [
+        {
+          "type": "text",
+          "id": "name",
+          "label": "name"
+        },
+        {
+          "type": "url",
+          "id": "link",
+          "label": "link"
+        },
+        {
+          "type": "image_picker",
+          "id": "image_one",
+          "label": "image one"
+        },
+        {
+          "type": "text",
+          "id": "title_one",
+          "label": "title one"
+        },
+        {
+          "type": "richtext",
+          "id": "text_one",
+          "label": "text one"
+        },
+        {
+          "type": "url",
+          "id": "link_one",
+          "label": "link one"
+        },
+        {
+          "type": "image_picker",
+          "id": "image_two",
+          "label": "image two"
+        },
+        {
+          "type": "text",
+          "id": "title_two",
+          "label": "title two"
+        },
+        {
+          "type": "richtext",
+          "id": "text_two",
+          "label": "text two"
+        },
+        {
+          "type": "url",
+          "id": "link_two",
+          "label": "link two"
+        },
+        {
+          "type": "image_picker",
+          "id": "image_thr",
+          "label": "image thr"
+        },
+        {
+          "type": "text",
+          "id": "title_thr",
+          "label": "title thr"
+        },
+        {
+          "type": "richtext",
+          "id": "text_thr",
+          "label": "text thr"
+        },
+        {
+          "type": "url",
+          "id": "link_thr",
+          "label": "link thr"
+        },
+        {
+          "type": "image_picker",
+          "id": "image_four",
+          "label": "image four"
+        },
+        {
+          "type": "text",
+          "id": "title_four",
+          "label": "title four"
+        },
+        {
+          "type": "richtext",
+          "id": "text_four",
+          "label": "text four"
+        },
+        {
+          "type": "url",
+          "id": "link_four",
+          "label": "link four"
+        },
+        {
+          "type": "image_picker",
+          "id": "image_five",
+          "label": "image five"
+        },
+        {
+          "type": "text",
+          "id": "title_five",
+          "label": "title five"
+        },
+        {
+          "type": "richtext",
+          "id": "text_five",
+          "label": "text five"
+        },
+        {
+          "type": "url",
+          "id": "link_five",
+          "label": "link five"
+        },
+        {
+          "type": "image_picker",
+          "id": "image_six",
+          "label": "image six"
+        },
+        {
+          "type": "text",
+          "id": "title_six",
+          "label": "title six"
+        },
+        {
+          "type": "richtext",
+          "id": "text_six",
+          "label": "text six"
+        },
+        {
+          "type": "url",
+          "id": "link_six",
+          "label": "link six"
+        }
+      ]
+    },
+    {
+      "type": "link_list",
+      "name": "link list",
+      "settings": [
+        {
+          "type": "text",
+          "id": "name",
+          "label": "name"
+        },
+        {
+          "type": "url",
+          "id": "link",
+          "label": "link"
+        },
+        {
+          "type": "link_list",
+          "id": "menu",
+          "label": "menu"
+        }
+      ]
+    },
+    {
+      "type": "product_collection",
+      "name": "product collection",
+      "settings": [
+        {
+          "type": "text",
+          "id": "name",
+          "label": "name"
+        },
+        {
+          "type": "url",
+          "id": "link",
+          "label": "link"
+        },
+        {
+          "type": "collection_list",
+          "id": "collection_list",
+          "label": "collection list"
+        },
+        {
+          "type": "richtext",
+          "id": "info_title",
+          "label": "info title"
+        },
+        {
+          "type": "richtext",
+          "id": "info_text",
+          "label": "info text"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "header menu"
+    }
+  ]
+}
+{% endschema %}

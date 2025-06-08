@@ -1,0 +1,14 @@
+.header_menu_section {
+  width: 100%;
+  height: 3.6rem;
+  background-color: #fff;
+}
+
+.header_menu_section .header_menu {
+  max-width: var(--page-width);
+  margin: 0 auto;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding-top: 0.7rem;
+}
