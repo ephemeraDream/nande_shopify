@@ -58,8 +58,66 @@
       "name": "header simple",
       "settings": {}
     },
+    "header_menu_KJeiwA": {
+      "type": "header-menu",
+      "blocks": {
+        "img_width_text_Dh6yzR": {
+          "type": "img_width_text",
+          "settings": {
+            "name": "Featured Spaces",
+            "link": "",
+            "image_one": "shopify://shop_images/featured-spaces-1.webp",
+            "title_one": "YOGA",
+            "text_one": "<p>Die erste Wahl für Yoga-Enthusiasten</p>",
+            "link_one": "",
+            "image_two": "shopify://shop_images/featured-spaces-2.webp",
+            "title_two": "PetDesk",
+            "text_two": "<p>Der Tisch für Ihre Haustiere</p>",
+            "link_two": "",
+            "image_thr": "shopify://shop_images/featured-spaces-3.webp",
+            "title_thr": "Regenbogentisch",
+            "text_thr": "<p>Arbeit und Spiel in einem</p>",
+            "link_thr": "",
+            "image_four": "shopify://shop_images/featured-spaces-4.webp",
+            "title_four": "WorkFit Pro",
+            "text_four": "<p>Arbeiten und Gesundheit im Einklang</p>",
+            "link_four": "",
+            "image_five": "shopify://shop_images/featured-spaces-5.webp",
+            "title_five": "FlexiDesk",
+            "text_five": "<p>Maximale Flexibilität</p>",
+            "link_five": "",
+            "image_six": "shopify://shop_images/featured-spaces-6.webp",
+            "title_six": "FamilyDesk",
+            "text_six": "<p>Intelligenter Tisch für die ganze Familie</p>",
+            "link_six": ""
+          }
+        },
+        "product_collection_eEzYM8": {
+          "type": "product_collection",
+          "settings": {
+            "name": "Standing Desk",
+            "link": "",
+            "collection_list": [
+              "maidesite-burozubehor",
+              "schreibtisch-home-office",
+              "burotisch-hohenverstellbar",
+              "maidesite-produkt"
+            ],
+            "info_title": "<p>Furnishing for your team?</p>",
+            "info_text": "<p>Wisit <a href=\"/pages/maidesite-faq\" title=\"FAQs\">Branch Business</a> to learn how Branchtakes the work out of creating an inspiringworkplace.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "img_width_text_Dh6yzR",
+        "product_collection_eEzYM8"
+      ],
+      "name": "header menu",
+      "settings": {}
+    },
     "header": {
       "type": "header",
+      "disabled": true,
       "settings": {
         "logo_position": "middle-left",
         "mobile_logo_position": "center",
@@ -81,6 +139,7 @@
   "order": [
     "announcement-bar",
     "header_simple_ULLndz",
+    "header_menu_KJeiwA",
     "header"
   ]
 }
