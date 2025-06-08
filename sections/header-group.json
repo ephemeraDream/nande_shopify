@@ -66,30 +66,14 @@
           "settings": {
             "name": "Featured Spaces",
             "link": "",
-            "image_one": "shopify://shop_images/featured-spaces-1.webp",
-            "title_one": "YOGA",
-            "text_one": "<p>Die erste Wahl für Yoga-Enthusiasten</p>",
-            "link_one": "",
-            "image_two": "shopify://shop_images/featured-spaces-2.webp",
-            "title_two": "PetDesk",
-            "text_two": "<p>Der Tisch für Ihre Haustiere</p>",
-            "link_two": "",
-            "image_thr": "shopify://shop_images/featured-spaces-3.webp",
-            "title_thr": "Regenbogentisch",
-            "text_thr": "<p>Arbeit und Spiel in einem</p>",
-            "link_thr": "",
-            "image_four": "shopify://shop_images/featured-spaces-4.webp",
-            "title_four": "WorkFit Pro",
-            "text_four": "<p>Arbeiten und Gesundheit im Einklang</p>",
-            "link_four": "",
-            "image_five": "shopify://shop_images/featured-spaces-5.webp",
-            "title_five": "FlexiDesk",
-            "text_five": "<p>Maximale Flexibilität</p>",
-            "link_five": "",
-            "image_six": "shopify://shop_images/featured-spaces-6.webp",
-            "title_six": "FamilyDesk",
-            "text_six": "<p>Intelligenter Tisch für die ganze Familie</p>",
-            "link_six": ""
+            "collection_list": [
+              "yoga",
+              "petdesk",
+              "regenbogentisch",
+              "workfit-pro",
+              "flexidesk",
+              "familydesk"
+            ]
           }
         },
         "product_collection_eEzYM8": {
