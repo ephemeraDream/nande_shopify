@@ -98,6 +98,11 @@
   color: #7F7E75;
 }
 
+.footer_simple .footer_simple_footer a {
+  color: #7F7E75;
+  padding: 0 0.2rem;
+}
+
 .footer_simple .footer_simple_footer a:hover {
   color: #fff;
 }
