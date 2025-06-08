@@ -35,6 +35,7 @@
 .subscribe_emails .newsletter-form,
 .subscribe_emails .newsletter-form__field-wrapper {
   max-width: 87.4rem;
+  margin: 0;
 }
 
 .subscribe_emails .field__input {
@@ -118,4 +119,17 @@
 
 .subscribe_emails .field__input:-ms-input-placeholder {
   color: #E2DED6;
+}
+
+.subscribe_emails .list-social__link {
+  padding: 0;
+}
+
+.subscribe_emails .list-social {
+  gap: 2.2rem;
+}
+
+.subscribe_emails .svg-wrapper {
+  width: 3.4rem;
+  height: 3.4rem;
 }
