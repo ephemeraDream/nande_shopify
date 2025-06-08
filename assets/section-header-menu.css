@@ -266,7 +266,7 @@
 }
 
 .header_menu .header_menu_item[data-type="product_collection"] .header_menu_item_submenu_tabcontent {
-  width: ;
+  width: calc((100% - 16.6rem) / 3);
 }
 
 .header_menu .header_menu_item[data-type="product_collection"] .header_menu_item_submenu_product_img {
