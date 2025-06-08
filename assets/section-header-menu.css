@@ -28,7 +28,7 @@
 }
 
 .header_menu .header_menu_item_title_active,
-.header_menu .header_menu .header_menu_item:hover .header_menu_item_title {
+.header_menu .header_menu_item:hover .header_menu_item_title {
   text-decoration: underline;
   text-decoration-color: #BDFF00;
   text-decoration-thickness: 0.2rem;
@@ -44,8 +44,18 @@
   background-color: #F2F1ED;
   padding: 0.5rem 1.3rem 1rem 2.4rem;
   position: absolute;
-  transform: translateX(-50%);
   left: 50%;
+  visibility: hidden;
+  transform: translateX(-50%) translateY(-10px);
+  opacity: 0;
+  transition: transform .3s, opacity .2s, visibility .3s;
+}
+
+.header_menu .header_menu_item[data-type="link_list"]:hover .header_menu_item_submenu {
+  transform: translateX(-50%) translateY(0);
+  opacity: 1;
+  visibility: visible;
+  transition-delay: 0s;
 }
 
 .header_menu .header_menu_item[data-type="link_list"] .header_menu_item_submenu_item {
