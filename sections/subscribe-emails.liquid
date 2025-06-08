@@ -1,0 +1,37 @@
+{{ 'section-subscribe-emails.css' | asset_url | stylesheet_tag }}
+
+<div class="subscribe_emails"></div>
+
+{% schema %}
+{
+  "name": "subscribe emails",
+  "tag": "section",
+  "class": "section",
+  "disabled_on": {
+    "groups": ["header"],
+    "templates": ["*"]
+  },
+  "settings": [
+    {
+      "type": "richtext",
+      "id": "title",
+      "label": "title"
+    },
+    {
+      "type": "text",
+      "id": "btn_text",
+      "label": "btn text"
+    },
+    {
+      "type": "text",
+      "id": "confirm_text",
+      "label": "confirm text"
+    }
+  ],
+  "presets": [
+    {
+      "name": "subscribe emails"
+    }
+  ]
+}
+{% endschema %}
