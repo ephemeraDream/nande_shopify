@@ -34,3 +34,32 @@
   text-decoration-thickness: 0.2rem;
   text-underline-offset: 0.7rem;
 }
+
+.header_menu .header_menu_item_submenu[data-type="link_list"] {
+  min-width: 21.7rem;
+  background-color: #F2F1ED;
+  padding: 0.5rem 1.3rem 1rem 2.4rem;
+}
+
+.header_menu .header_menu_item_submenu[data-type="link_list"] .header_menu_item_submenu_item {
+  font-family: "PP Right Grotesk";
+  font-size: 1.8rem;
+  font-weight: bold;
+  line-height: 350%;
+  letter-spacing: 0px;
+  font-variation-settings: "opsz" auto;
+  color: #7F7E75;
+  display: block;
+}
+
+.header_menu .header_menu_item_submenu[data-type="link_list"] .header_menu_item_submenu_item:hover {
+  color: #000000;
+}
+
+.header_menu .header_menu_item_submenu[data-type="link_list"] .header_menu_item_submenu_item_active {
+  color: #000000;
+  text-decoration: underline;
+  text-decoration-color: #BDFF00;
+  text-decoration-thickness: 0.2rem;
+  text-underline-offset: 0.6rem;
+}

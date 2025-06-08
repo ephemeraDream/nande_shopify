@@ -36,6 +36,18 @@
             >
               {{- block.settings.name -}}
             </a>
+            <div class="header_menu_item_submenu" data-type="link_list">
+              {%- if block.settings.menu != blank -%}
+                {%- for link in block.settings.menu.links -%}
+                  <a
+                    href="{{ link.url }}"
+                    class="header_menu_item_submenu_item{% if link.active %} header_menu_item_submenu_item_active{% endif %}"
+                  >
+                    {{ link.title | escape }}
+                  </a>
+                {%- endfor -%}
+              {%- endif -%}
+            </div>
           </div>
         {%- when 'product_collection' -%}
           <div class="header_menu_item">
