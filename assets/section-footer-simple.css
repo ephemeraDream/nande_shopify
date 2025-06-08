@@ -72,11 +72,8 @@
   display: block;
 }
 
+.footer_simple .footer_simple_link_list_item_active,
 .footer_simple .footer_simple_link_list_item:hover {
-  color: #fff;
-}
-
-.footer_simple .footer_simple_link_list_item_active {
   color: #fff;
   text-decoration: underline;
   text-decoration-color: #BDFF00;

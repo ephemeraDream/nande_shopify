@@ -69,11 +69,8 @@
   display: block;
 }
 
+.header_menu .header_menu_item[data-type="link_list"] .header_menu_item_submenu_item_active,
 .header_menu .header_menu_item[data-type="link_list"] .header_menu_item_submenu_item:hover {
-  color: #000000;
-}
-
-.header_menu .header_menu_item[data-type="link_list"] .header_menu_item_submenu_item_active {
   color: #000000;
   text-decoration: underline;
   text-decoration-color: #BDFF00;
@@ -166,4 +163,86 @@
 
 .header_menu .header_menu_item[data-type="img_width_text"] .header_menu_item_submenu_item:hover .header_menu_item_submenu_item_img svg {
   display: block;
+}
+
+.header_menu .header_menu_item[data-type="product_collection"] .header_menu_item_submenu {
+  width: 100%;
+  position: absolute;
+  left: 0;
+  background-color: #F2F1ED;
+  padding: 7rem 0 5rem 0;
+  visibility: hidden;
+  transform: translateY(-10px);
+  opacity: 0;
+  transition: transform .3s, opacity .2s, visibility .3s;
+}
+
+.header_menu .header_menu_item[data-type="product_collection"]:hover .header_menu_item_submenu {
+  transform: translateY(0);
+  opacity: 1;
+  visibility: visible;
+  transition-delay: 0s;
+}
+
+.header_menu .header_menu_item[data-type="product_collection"] .header_menu_item_submenu_contain {
+  max-width: var(--page-width);
+  margin: 0 auto;
+  display: flex;
+  align-items: stretch;
+}
+
+.header_menu .header_menu_item[data-type="product_collection"] .header_menu_item_submenu_contain_left {
+  flex: 0 0 auto;
+  width: 22.8rem;
+  padding: 0 3rem 0 0.8rem;
+  border-right: 0.1rem solid #E2DED6;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.header_menu .header_menu_item[data-type="product_collection"] .header_menu_item_submenu_item {
+  font-family: "PP Right Grotesk";
+  font-size: 1.8rem;
+  font-weight: bold;
+  line-height: 350%;
+  letter-spacing: 0px;
+  font-variation-settings: "opsz" auto;
+  color: #7F7E75;
+}
+
+.header_menu .header_menu_item[data-type="product_collection"] .header_menu_item_submenu_item_active,
+.header_menu .header_menu_item[data-type="product_collection"] .header_menu_item_submenu_item:hover {
+  color: #000000;
+  text-decoration: underline;
+  text-decoration-color: #BDFF00;
+  text-decoration-thickness: 0.2rem;
+  text-underline-offset: 0.6rem;
+}
+
+.header_menu .header_menu_item[data-type="product_collection"] .header_menu_item_submenu_info {
+  padding: 3rem 0 2.4rem 0;
+  border-top: 0.1rem solid #E2DED6;
+}
+
+.header_menu .header_menu_item[data-type="product_collection"] .header_menu_item_submenu_info_title {
+  font-family: "PP Right Grotesk";
+  font-size: 1.8rem;
+  font-weight: 500;
+  line-height: 112%;
+  letter-spacing: 0px;
+  font-variation-settings: "opsz" auto;
+  color: #000000;
+}
+
+.header_menu .header_menu_item[data-type="product_collection"] .header_menu_item_submenu_info_desc {
+  font-family: "PP Right Grotesk";
+  font-size: 2rem;
+  font-weight: normal;
+  line-height: 112%;
+  letter-spacing: 0px;
+  text-decoration: underline;
+  font-variation-settings: "opsz" auto;
+  color: #7F7E75;
+  margin-top: 1.2rem;
 }
