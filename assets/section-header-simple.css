@@ -68,6 +68,10 @@
   transform: translateY(-50%);
 }
 
+.header_simple .field__label {
+  color: #AAAAAA;
+}
+
 .header_simple .field__label,
 .header_simple .field__input:not(:placeholder-shown)~.field__label {
   left: 6.5rem;

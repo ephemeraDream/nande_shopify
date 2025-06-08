@@ -92,3 +92,27 @@
   height: 1.4rem;
   margin-right: 0.6rem;
 }
+
+.subscribe_emails .field__input::placeholder {
+  opacity: 1;
+}
+
+.subscribe_emails .field__input::placeholder {
+  color: #E2DED6;
+}
+
+.subscribe_emails .field__input::-webkit-input-placeholder {
+  color: #E2DED6;
+}
+
+.subscribe_emails .field__input:-moz-placeholder {
+  color: #E2DED6;
+}
+
+.subscribe_emails .field__input::-moz-placeholder {
+  color: #E2DED6;
+}
+
+.subscribe_emails .field__input:-ms-input-placeholder {
+  color: #E2DED6;
+}
