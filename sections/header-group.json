@@ -90,11 +90,52 @@
             "info_title": "<p>Furnishing for your team?</p>",
             "info_text": "<p>Wisit <a href=\"/pages/maidesite-faq\" title=\"FAQs\">Branch Business</a> to learn how Branchtakes the work out of creating an inspiringworkplace.</p>"
           }
+        },
+        "single_link_LwNt6r": {
+          "type": "single_link",
+          "settings": {
+            "name": "Chair",
+            "link": ""
+          }
+        },
+        "single_link_RWXnMF": {
+          "type": "single_link",
+          "settings": {
+            "name": "Accesories",
+            "link": ""
+          }
+        },
+        "single_link_nU48XR": {
+          "type": "single_link",
+          "settings": {
+            "name": "Deal",
+            "link": ""
+          }
+        },
+        "single_link_hjwkXN": {
+          "type": "single_link",
+          "settings": {
+            "name": "Bulk Order",
+            "link": ""
+          }
+        },
+        "link_list_yBG8wE": {
+          "type": "link_list",
+          "settings": {
+            "name": "Support",
+            "link": "",
+            "menu": "support-1"
+          }
         }
       },
       "block_order": [
         "img_width_text_Dh6yzR",
-        "product_collection_eEzYM8"
+        "product_collection_eEzYM8",
+        "single_link_LwNt6r",
+        "single_link_RWXnMF",
+        "single_link_nU48XR",
+        "single_link_hjwkXN",
+        "link_list_yBG8wE"
       ],
       "name": "header menu",
       "settings": {}
