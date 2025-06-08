@@ -22,12 +22,13 @@
   letter-spacing: 0px;
   font-variation-settings: "opsz" auto;
   color: #BDFF00;
+  flex: 0 0 auto;
+  margin-right: 3rem;
 }
 
 .subscribe_emails .subscribe_emails_body {
   flex: 1;
   max-width: 87.4rem;
-  margin-left: 3rem;
   display: flex;
   align-items: center;
 }
