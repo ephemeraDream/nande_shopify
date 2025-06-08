@@ -28,14 +28,13 @@
 
 .subscribe_emails .subscribe_emails_body {
   flex: 1;
-  max-width: 87.4rem;
   display: flex;
   align-items: center;
 }
 
 .subscribe_emails .newsletter-form,
 .subscribe_emails .newsletter-form__field-wrapper {
-  max-width: 100%;
+  max-width: 87.4rem;
 }
 
 .subscribe_emails .field__input {
