@@ -5,7 +5,7 @@
     {% for block in section.blocks %}
       {%- case block.type -%}
         {%- when 'single_link' -%}
-          <div class="header_menu_item">
+          <div class="header_menu_item" data-type="single_link">
             <a
               class="header_menu_item_title{% if block.settings.link.active %} header_menu_item_title_active{% endif %}"
               {% if block.settings.link != blank %}
@@ -16,7 +16,7 @@
             </a>
           </div>
         {%- when 'img_width_text' -%}
-          <div class="header_menu_item">
+          <div class="header_menu_item" data-type="img_width_text">
             <a
               class="header_menu_item_title{% if block.settings.link.active %} header_menu_item_title_active{% endif %}"
               {% if block.settings.link != blank %}
@@ -25,6 +25,24 @@
             >
               {{- block.settings.name -}}
             </a>
+            <div class="header_menu_item_submenu">
+              <div class="header_menu_item_submenu_contain">
+                {%- if block.settings.collection_list != blank -%}
+                  {%- for item in block.settings.collection_list -%}
+                    <a
+                      href="{{ item.url }}"
+                      class="header_menu_item_submenu_item"
+                    >
+                      <div class="header_menu_item_submenu_item_img">
+                        <img src="{{ item.featured_image | image_url }}">
+                      </div>
+                      <div class="header_menu_item_submenu_item_title">{{ item.title }}</div>
+                      <div class="header_menu_item_submenu_item_desc">{{ item.description }}</div>
+                    </a>
+                  {%- endfor -%}
+                {%- endif -%}
+              </div>
+            </div>
           </div>
         {%- when 'link_list' -%}
           <div class="header_menu_item" data-type="link_list">
@@ -50,7 +68,7 @@
             </div>
           </div>
         {%- when 'product_collection' -%}
-          <div class="header_menu_item">
+          <div class="header_menu_item" data-type="product_collection">
             <a
               class="header_menu_item_title{% if block.settings.link.active %} header_menu_item_title_active{% endif %}"
               {% if block.settings.link != blank %}
