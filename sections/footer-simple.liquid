@@ -59,6 +59,15 @@
         {%- endcase -%}
       {% endfor %}
     </div>
+    <div class="footer_simple_footer">
+      <span>&copy; {{ 'now' | date: '%Y' }}, {{ shop.name | link_to: routes.root_url -}}</span>
+      {{ powered_by_link }}
+      {%- for policy in shop.policies -%}
+        {%- if policy != blank -%}
+          <a href="{{ policy.url }}">{{ policy.title | escape }}</a>
+        {%- endif -%}
+      {%- endfor -%}
+    </div>
   </div>
 </div>
 
