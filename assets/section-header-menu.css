@@ -81,7 +81,7 @@
   text-underline-offset: 0.6rem;
 }
 
-.header_menu .header_menu_item[data-type="img_width_text"] {
+.header_menu .header_menu_item[data-type="img_width_text"] .header_menu_item_submenu {
   width: 100%;
   position: absolute;
   left: 0;
