@@ -44,6 +44,7 @@
   font-variation-settings: "opsz" auto;
   color: #1F1F1F;
   margin: 0;
+  padding-right: 32.5rem;
 }
 
 .subscribe_emails .field:after {
@@ -53,6 +54,7 @@
 .subscribe_emails .field__input:focus,
 .subscribe_emails .field__input:not(:placeholder-shown) {
   padding: 1.5rem;
+  padding-right: 32.5rem;
 }
 
 .subscribe_emails .newsletter-form__button {
