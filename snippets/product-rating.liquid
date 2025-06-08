@@ -20,5 +20,5 @@
   {% for i in (1..rating) %}
     {{- 'icon-star-new.svg' | inline_asset_content -}}
   {% endfor %}
-  <Span>({{ product.metafields.loox.avg_rating }}){{ product.metafields.loox.num_reviews }}</Span>
+  <Span>{{ product.metafields.loox.avg_rating }}({{ product.metafields.loox.num_reviews }})</Span>
 </div>
