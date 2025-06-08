@@ -81,6 +81,7 @@
   text-decoration: underline;
   text-decoration-color: #BDFF00;
   text-decoration-thickness: 0.2rem;
+  text-underline-offset: 0.6rem;
 }
 
 .footer_simple .footer_simple_footer {
