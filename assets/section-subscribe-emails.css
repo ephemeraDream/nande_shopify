@@ -71,6 +71,7 @@
   letter-spacing: 0px;
   font-variation-settings: "opsz" auto;
   color: #1F1F1F;
+  right: 0;
 }
 
 .subscribe_emails .newsletter-form__button:not(:focus-visible):not(.focused) {

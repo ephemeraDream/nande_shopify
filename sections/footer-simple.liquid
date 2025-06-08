@@ -1,0 +1,95 @@
+{{ 'section-footer-simple.css' | asset_url | stylesheet_tag }}
+
+<div class="footer_simple"></div>
+
+{% schema %}
+{
+  "name": "footer simple",
+  "tag": "section",
+  "class": "section",
+  "disabled_on": {
+    "groups": ["header"],
+    "templates": ["*"]
+  },
+  "settings": [],
+  "blocks": [
+    {
+      "type": "company_info",
+      "name": "company info",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "logo"
+        },
+        {
+          "type": "textarea",
+          "id": "icon_one",
+          "label": "icon one"
+        },
+        {
+          "type": "richtext",
+          "id": "text_one",
+          "label": "text one"
+        },
+        {
+          "type": "url",
+          "id": "link_one",
+          "label": "link one"
+        },
+        {
+          "type": "textarea",
+          "id": "icon_two",
+          "label": "icon two"
+        },
+        {
+          "type": "richtext",
+          "id": "text_two",
+          "label": "text two"
+        },
+        {
+          "type": "url",
+          "id": "link_two",
+          "label": "link two"
+        },
+        {
+          "type": "textarea",
+          "id": "icon_thr",
+          "label": "icon thr"
+        },
+        {
+          "type": "richtext",
+          "id": "text_thr",
+          "label": "text thr"
+        },
+        {
+          "type": "url",
+          "id": "link_thr",
+          "label": "link thr"
+        }
+      ]
+    },
+    {
+      "type": "link_list",
+      "name": "link list",
+      "settings": [
+        {
+          "type": "richtext",
+          "id": "heading",
+          "label": "heading"
+        },
+        {
+          "type": "link_list",
+          "id": "menu",
+          "label": "menu"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "footer simple"
+    }
+  ]
+}
+{% endschema %}
