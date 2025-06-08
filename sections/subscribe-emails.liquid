@@ -2,8 +2,8 @@
 
 <div class="subscribe_emails_section">
   <div class="subscribe_emails">
-    <div class="subscribe_emails_title">{{ section.settings.title }}</div>
     <div class="subscribe_emails_body">
+      <div class="subscribe_emails_title">{{ section.settings.title }}</div>
       {%- form 'customer', id: 'ContactFooter', class: 'footer__newsletter newsletter-form' -%}
         <input type="hidden" name="contact[tags]" value="newsletter">
         <div class="newsletter-form__field-wrapper">
