@@ -12,3 +12,21 @@
   justify-content: space-between;
   padding-top: 0.7rem;
 }
+
+.header_menu .header_menu_item_title {
+  font-family: "PP Right Grotesk";
+  font-size: 2rem;
+  font-weight: 500;
+  line-height: 94%;
+  letter-spacing: 0px;
+  font-variation-settings: "opsz" auto;
+  color: #000000;
+}
+
+.header_menu .header_menu_item_title_active,
+.header_menu .header_menu_item_title:hover {
+  text-decoration: underline;
+  text-decoration-color: #BDFF00;
+  text-decoration-thickness: 0.2rem;
+  text-underline-offset: 0.6rem;
+}
