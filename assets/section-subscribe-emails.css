@@ -10,6 +10,7 @@
   display: flex;
   align-items: center;
   border-bottom: 0.1rem solid #7F7E75;
+  height: 100%;
 }
 
 .subscribe_emails .subscribe_emails_title {
@@ -25,6 +26,7 @@
 .subscribe_emails .subscribe_emails_body {
   flex: 1;
   max-width: 87.4rem;
+  margin-left: 3rem;
 }
 
 .subscribe_emails .newsletter-form,
@@ -43,7 +45,8 @@
   color: #1F1F1F;
 }
 
-.subscribe_emails .field__input:focus {
+.subscribe_emails .field__input:focus,
+.subscribe_emails .field__input:not(:placeholder-shown) {
   padding: 1.5rem;
 }
 
@@ -57,6 +60,10 @@
   letter-spacing: 0px;
   font-variation-settings: "opsz" auto;
   color: #1F1F1F;
+}
+
+.subscribe_emails .newsletter-form__button:not(:focus-visible):not(.focused) {
+  background-color: #BDFF00;
 }
 
 .subscribe_emails .subscribe_emails_confirm {
@@ -76,4 +83,5 @@
 .subscribe_emails .subscribe_emails_confirm_checkbox {
   width: 1.4rem;
   height: 1.4rem;
+  margin-right: 0.6rem;
 }
