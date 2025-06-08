@@ -13,6 +13,10 @@
   padding-top: 0.7rem;
 }
 
+.header_menu .header_menu_item {
+  flex: 0 0 auto;
+}
+
 .header_menu .header_menu_item_title {
   font-family: "PP Right Grotesk";
   font-size: 2rem;
@@ -28,5 +32,5 @@
   text-decoration: underline;
   text-decoration-color: #BDFF00;
   text-decoration-thickness: 0.2rem;
-  text-underline-offset: 0.6rem;
+  text-underline-offset: 0.7rem;
 }
