@@ -27,7 +27,7 @@
             </a>
           </div>
         {%- when 'link_list' -%}
-          <div class="header_menu_item">
+          <div class="header_menu_item" data-type="link_list">
             <a
               class="header_menu_item_title{% if block.settings.link.active %} header_menu_item_title_active{% endif %}"
               {% if block.settings.link != blank %}
@@ -36,7 +36,7 @@
             >
               {{- block.settings.name -}}
             </a>
-            <div class="header_menu_item_submenu" data-type="link_list">
+            <div class="header_menu_item_submenu">
               {%- if block.settings.menu != blank -%}
                 {%- for link in block.settings.menu.links -%}
                   <a
