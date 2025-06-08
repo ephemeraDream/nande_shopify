@@ -1,0 +1,82 @@
+.footer_simple_section {
+  width: 100%;
+  background-color: #1F1F1F;
+}
+
+.footer_simple {
+  max-width: var(--page-width);
+  margin: 0 auto;
+}
+
+.footer_simple .footer_simple_body {
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  border-bottom: 0.1rem solid rgba(216, 216, 216, .2);
+}
+
+.footer_simple .footer_simple_company_info {
+  padding-top: 2.5rem;
+  flex: 0 0 auto
+}
+
+.footer_simple .footer_simple_company_info_logo {
+  width: 35.2rem;
+  height: 6.7rem;
+  object-fit: contain;
+  object-position: center center;
+  position: relative;
+  left: -0.8rem;
+}
+
+.footer_simple .footer_simple_company_info_item {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.8rem;
+  font-family: "PP Right Grotesk";
+  font-size: 2rem;
+  font-weight: normal;
+  line-height: 130%;
+  letter-spacing: 0px;
+  font-variation-settings: "opsz" auto;
+  color: #FFFFFF;
+  margin-top: 3rem;
+}
+
+.footer_simple .footer_simple_link_list {
+  flex: 1;
+  padding-top: 6rem;
+}
+
+.footer_simple .footer_simple_link_list_title {
+  font-family: "PP Right Grotesk";
+  font-size: 3rem;
+  font-weight: 500;
+  line-height: 94%;
+  letter-spacing: 0px;
+  font-variation-settings: "opsz" auto;
+  color: #FFFFFF;
+  margin-bottom: 1.8rem;
+}
+
+.footer_simple .footer_simple_link_list_item {
+  font-family: "PP Right Grotesk";
+  font-size: 2rem;
+  font-weight: bold;
+  line-height: 200%;
+  letter-spacing: 0px;
+  font-variation-settings: "opsz" auto;
+  color: rgba(127, 126, 117, .8);
+}
+
+.footer_simple .footer_simple_link_list_item:hover {
+  color: #fff;
+}
+
+.footer_simple .footer_simple_link_list_item_active {
+  color: #fff;
+  text-decoration: underline;
+  text-decoration-color: #BDFF00;
+  text-decoration-thickness: 0.2rem;
+}

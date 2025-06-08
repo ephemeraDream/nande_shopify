@@ -1,6 +1,66 @@
 {{ 'section-footer-simple.css' | asset_url | stylesheet_tag }}
 
-<div class="footer_simple"></div>
+<div class="footer_simple_section">
+  <div class="footer_simple">
+    <div class="footer_simple_body">
+      {% for block in section.blocks %}
+        {%- case block.type -%}
+          {%- when 'company_info' -%}
+            <div class="footer_simple_company_info">
+              <img src="{{ block.settings.image | image_url }}" class="footer_simple_company_info_logo">
+              {% if block.settings.text_one != blank %}
+                <a
+                  class="footer_simple_company_info_item"
+                  {% if block.settings.link_one != blank %}
+                    href="{{ block.settings.link_one }}"
+                  {% endif %}
+                >
+                  {{ block.settings.icon_one }}
+                  <div>{{ block.settings.text_one }}</div>
+                </a>
+              {% endif %}
+              {% if block.settings.text_two != blank %}
+                <a
+                  class="footer_simple_company_info_item"
+                  {% if block.settings.link_two != blank %}
+                    href="{{ block.settings.link_two }}"
+                  {% endif %}
+                >
+                  {{ block.settings.icon_two }}
+                  <div>{{ block.settings.text_two }}</div>
+                </a>
+              {% endif %}
+              {% if block.settings.text_thr != blank %}
+                <a
+                  class="footer_simple_company_info_item"
+                  {% if block.settings.link_thr != blank %}
+                    href="{{ block.settings.link_thr }}"
+                  {% endif %}
+                >
+                  {{ block.settings.icon_thr }}
+                  <div>{{ block.settings.text_thr }}</div>
+                </a>
+              {% endif %}
+            </div>
+          {%- when 'link_list' -%}
+            <div class="footer_simple_link_list">
+              <div class="footer_simple_link_list_title">{{ block.settings.heading }}</div>
+              {%- if block.settings.menu != blank -%}
+                {%- for link in block.settings.menu.links -%}
+                  <a
+                    href="{{ link.url }}"
+                    class="footer_simple_link_list_item{% if link.active %} footer_simple_link_list_item_active{% endif %}"
+                  >
+                    {{ link.title | escape }}
+                  </a>
+                {%- endfor -%}
+              {%- endif -%}
+            </div>
+        {%- endcase -%}
+      {% endfor %}
+    </div>
+  </div>
+</div>
 
 {% schema %}
 {

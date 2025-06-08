@@ -36,6 +36,7 @@
 .subscribe_emails .newsletter-form__field-wrapper {
   max-width: 87.4rem;
   margin: 0;
+  width: 100%;
 }
 
 .subscribe_emails .field__input {
@@ -72,6 +73,7 @@
   font-variation-settings: "opsz" auto;
   color: #1F1F1F;
   right: 0;
+  height: 100%;
 }
 
 .subscribe_emails .newsletter-form__button:not(:focus-visible):not(.focused) {
