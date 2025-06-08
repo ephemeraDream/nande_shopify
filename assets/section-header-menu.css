@@ -87,6 +87,17 @@
   left: 0;
   background-color: #F2F1ED;
   padding: 3rem 0 4.5rem 0;
+  visibility: hidden;
+  transform: translateY(-10px);
+  opacity: 0;
+  transition: transform .3s, opacity .2s, visibility .3s;
+}
+
+.header_menu .header_menu_item[data-type="img_width_text"]:hover .header_menu_item_submenu {
+  transform: translateY(0);
+  opacity: 1;
+  visibility: visible;
+  transition-delay: 0s;
 }
 
 .header_menu .header_menu_item[data-type="img_width_text"] .header_menu_item_submenu_contain {
