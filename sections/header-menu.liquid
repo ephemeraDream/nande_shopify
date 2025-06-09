@@ -102,51 +102,53 @@
                 <div class="header_menu_item_submenu_contain_right">
                   {%- if block.settings.collection_list != blank -%}
                     {%- for item in block.settings.collection_list -%}
-                      <div
-                        class="swiper header_menu_item_submenu_tabcontent{% if forloop.first %} show{% endif %}"
-                        data-id="{{ item.handle }}"
-                      >
-                        <div class="swiper-wrapper">
-                          {% for product in item.products %}
-                            {% assign show_info = product.metafields.custom.header_menu_info.value %}
-                            <a class="swiper-slide" href="{{ product.url }}">
-                              <div class="header_menu_item_submenu_product_img">
-                                <img src="{{ product.featured_image | image_url }}">
-                                {% if show_info.tag.value != blank %}
-                                  <div class="header_menu_item_submenu_product_tag">{{ show_info.tag.value }}</div>
-                                {% endif %}
-                              </div>
-                              <div class="header_menu_item_submenu_product_info">
-                                <div>
-                                  <div class="header_menu_item_submenu_product_title">
-                                    {% if show_info.title.value != blank %}
-                                      {{ show_info.title.value }}
-                                    {% else %}
-                                      {{ product.title }}
-                                    {% endif %}
-                                  </div>
-                                  {% if show_info.description.value != blank %}
-                                    <div class="header_menu_item_submenu_product_desc">
-                                      {{ show_info.description.value }}
-                                    </div>
+                      <div class="header_menu_item_submenu_tabcontent{% if forloop.first %} show{% endif %}">
+                        <div
+                          class="swiper"
+                          data-id="{{ item.handle }}"
+                        >
+                          <div class="swiper-wrapper">
+                            {% for product in item.products %}
+                              {% assign show_info = product.metafields.custom.header_menu_info.value %}
+                              <a class="swiper-slide" href="{{ product.url }}">
+                                <div class="header_menu_item_submenu_product_img">
+                                  <img src="{{ product.featured_image | image_url }}">
+                                  {% if show_info.tag.value != blank %}
+                                    <div class="header_menu_item_submenu_product_tag">{{ show_info.tag.value }}</div>
                                   {% endif %}
                                 </div>
-                                <div>
-                                  {% render 'product-rating', product: product %}
-                                  <div class="header_menu_item_submenu_product_price">
-                                    {{ product.price | money_without_trailing_zeros }}
+                                <div class="header_menu_item_submenu_product_info">
+                                  <div>
+                                    <div class="header_menu_item_submenu_product_title">
+                                      {% if show_info.title.value != blank %}
+                                        {{ show_info.title.value }}
+                                      {% else %}
+                                        {{ product.title }}
+                                      {% endif %}
+                                    </div>
+                                    {% if show_info.description.value != blank %}
+                                      <div class="header_menu_item_submenu_product_desc">
+                                        {{ show_info.description.value }}
+                                      </div>
+                                    {% endif %}
+                                  </div>
+                                  <div>
+                                    {% render 'product-rating', product: product %}
+                                    <div class="header_menu_item_submenu_product_price">
+                                      {{ product.price | money_without_trailing_zeros }}
+                                    </div>
                                   </div>
                                 </div>
-                              </div>
-                            </a>
-                          {% endfor %}
+                              </a>
+                            {% endfor %}
+                          </div>
                         </div>
-                      </div>
-                      <div class="header_menu_item_submenu_swiper_prev">
-                        {{ 'header-swiper-left.svg' | inline_asset_content }}
-                      </div>
-                      <div class="header_menu_item_submenu_swiper_next">
-                        {{ 'header-swiper-right.svg' | inline_asset_content }}
+                        <div class="header_menu_item_submenu_swiper_prev">
+                          {{ 'header-swiper-left.svg' | inline_asset_content }}
+                        </div>
+                        <div class="header_menu_item_submenu_swiper_next">
+                          {{ 'header-swiper-right.svg' | inline_asset_content }}
+                        </div>
                       </div>
                     {%- endfor -%}
                   {%- endif -%}
@@ -164,16 +166,15 @@
   product_collection_menus.forEach((menu) => {
     const product_collections = menu.querySelectorAll('.header_menu_item_submenu_tabcontent');
     product_collections.forEach((item) => {
-      const parent = item.closest('.header_menu_item_submenu_contain_right');
-      new Swiper(item, {
+      new Swiper(item.querySelector('.swiper'), {
         slidesPerView: 3,
         spaceBetween: 30,
         slidesPerGroup: 3,
         loop: true,
         loopFillGroupWithBlank: true,
         navigation: {
-          nextEl: parent.querySelector('.header_menu_item_submenu_swiper_next'),
-          prevEl: parent.querySelector('.header_menu_item_submenu_swiper_prev'),
+          nextEl: item.querySelector('.header_menu_item_submenu_swiper_next'),
+          prevEl: item.querySelector('.header_menu_item_submenu_swiper_prev'),
         },
         observer: true,
       });
