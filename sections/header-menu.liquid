@@ -128,7 +128,7 @@
                                     </div>
                                     {% if show_info.description.value != blank %}
                                       <div class="header_menu_item_submenu_product_desc">
-                                        {{ show_info.description.value }}
+                                        {{ show_info.description | metafield_tag }}
                                       </div>
                                     {% endif %}
                                   </div>
