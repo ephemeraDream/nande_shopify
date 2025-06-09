@@ -318,6 +318,11 @@
   min-height: 12.5rem;
   background-color: #7F7E75;
   padding: 0 1.2rem 1.2rem 1.2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex: 1;
+
 }
 
 .header_menu .header_menu_item[data-type="product_collection"] .header_menu_item_submenu_product_info::before {
