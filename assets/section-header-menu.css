@@ -344,6 +344,7 @@
   font-variation-settings: "opsz" auto;
   color: #FFFFFF;
   margin-top: -2.4rem;
+  position: relative;
 }
 
 .header_menu .header_menu_item[data-type="product_collection"] .header_menu_item_submenu_product_desc {
@@ -355,7 +356,6 @@
   font-variation-settings: "opsz" auto;
   color: #FFFFFF;
   margin-top: 1.2rem;
-  margin-bottom: 1.6rem;
 }
 
 .header_menu .header_menu_item[data-type="product_collection"] .header_menu_item_submenu_product_price {
