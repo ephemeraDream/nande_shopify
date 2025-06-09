@@ -188,7 +188,7 @@
           .classList.remove('header_menu_item_submenu_item_active');
         item.classList.add('header_menu_item_submenu_item_active');
         const dataId = item.getAttribute('data-id');
-        product_collections.querySelector('.show').classList.remove('show');
+        menu.querySelector('.header_menu_item_submenu_tabcontent.show').classList.remove('show');
         menu.querySelector(`.header_menu_item_submenu_tabcontent[data-id="${dataId}"]`).classList.add('show');
       });
     });
