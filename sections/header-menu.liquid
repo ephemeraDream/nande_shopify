@@ -179,6 +179,19 @@
         observer: true,
       });
     });
+
+    const tabs_item = menu.querySelectorAll('.header_menu_item_submenu_item');
+    tabs_item.forEach((item) => {
+      item.addEventListener('mouseenter', () => {
+        tabs_item
+          .querySelector('.header_menu_item_submenu_item_active')
+          .classList.remove('header_menu_item_submenu_item_active');
+        item.classList.add('header_menu_item_submenu_item_active');
+        const dataId = item.getAttribute('data-id');
+        product_collections.querySelector('.show').classList.remove('show');
+        menu.querySelector(`.header_menu_item_submenu_tabcontent[data-id="${dataId}"]`).classList.add('show');
+      });
+    });
   });
 </script>
 
