@@ -102,10 +102,12 @@
                 <div class="header_menu_item_submenu_contain_right">
                   {%- if block.settings.collection_list != blank -%}
                     {%- for item in block.settings.collection_list -%}
-                      <div class="header_menu_item_submenu_tabcontent{% if forloop.first %} show{% endif %}">
+                      <div
+                        class="header_menu_item_submenu_tabcontent{% if forloop.first %} show{% endif %}"
+                        data-id="{{ item.handle }}"
+                      >
                         <div
                           class="swiper"
-                          data-id="{{ item.handle }}"
                         >
                           <div class="swiper-wrapper">
                             {% for product in item.products %}
