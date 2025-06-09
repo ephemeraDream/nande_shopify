@@ -1,25 +1,11 @@
-<style>
-  .product_rating {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-    font-family: 'PP Right Grotesk';
-    font-size: 1.6rem;
-    font-weight: normal;
-    line-height: 130%;
-    letter-spacing: 0px;
-    font-variation-settings: 'opsz' auto;
-    color: #fafafa;
-    margin-top: 1.6rem;
-  }
-</style>
-
-<div class="product_rating">
-  {% liquid
-    assign rating = product.metafields.loox.avg_rating | times: 1 | floor
-  %}
-  {% for i in (1..rating) %}
-    {{- 'icon-star-new.svg' | inline_asset_content -}}
-  {% endfor %}
-  <Span>{{ product.metafields.loox.avg_rating }}({{ product.metafields.loox.num_reviews }})</Span>
-</div>
+{% if product.metafields.loox.avg_rating != blank %}
+  <div class="product_rating">
+    {% liquid
+      assign rating = product.metafields.loox.avg_rating | times: 1 | floor
+    %}
+    {% for i in (1..rating) %}
+      {{- 'icon-star-new.svg' | inline_asset_content -}}
+    {% endfor %}
+    <Span>{{ product.metafields.loox.avg_rating }}({{ product.metafields.loox.num_reviews }})</Span>
+  </div>
+{% endif %}
