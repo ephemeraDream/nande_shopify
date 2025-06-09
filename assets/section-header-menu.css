@@ -267,7 +267,7 @@
   position: relative;
 }
 
-.header_menu .header_menu_item[data-type="product_collection"] .header_menu_item_submenu_tabcontent .swiper {
+.header_menu .header_menu_item[data-type="product_collection"] .header_menu_item_submenu_tabcontent {
   display: none;
 }
 
