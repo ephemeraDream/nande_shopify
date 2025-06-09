@@ -109,7 +109,7 @@
                         <div class="swiper-wrapper">
                           {% for product in item.products %}
                             {% assign show_info = product.metafields.custom.header_menu_info.value %}
-                            <div class="swiper-slide">
+                            <a class="swiper-slide" href="{{ product.url }}">
                               <div class="header_menu_item_submenu_product_img">
                                 <img src="{{ product.featured_image | image_url }}">
                                 {% if show_info.tag.value != blank %}
@@ -138,7 +138,7 @@
                                   </div>
                                 </div>
                               </div>
-                            </div>
+                            </a>
                           {% endfor %}
                         </div>
                       </div>
@@ -158,6 +158,24 @@
     {% endfor %}
   </div>
 </div>
+
+<script>
+  const product_collection_menus = document.querySelectorAll(".header_menu_item[data-type='product_collection']");
+  product_collection_menus.forEach((menu) => {
+    const product_collections = menu.querySelectorAll('.header_menu_item_submenu_tabcontent');
+    product_collections.forEach((swiper) => {
+      new Swiper(swiper, {
+        slidesPerView: 3,
+        spaceBetween: 30,
+        navigation: {
+          nextEl: swiper.querySelector('.header_menu_item_submenu_swiper_next'),
+          prevEl: swiper.querySelector('.header_menu_item_submenu_swiper_prev'),
+        },
+        observer: true,
+      });
+    });
+  });
+</script>
 
 {% schema %}
 {
