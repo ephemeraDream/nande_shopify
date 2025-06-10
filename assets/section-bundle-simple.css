@@ -205,6 +205,14 @@
   margin-top: 1rem;
 }
 
+.bundle_simple .bundle_simple_option_item+.bundle_simple_option_item {
+  display: none;
+}
+
+.bundle_simple .bundle_simple_product:hover .bundle_simple_option_item+.bundle_simple_option_item {
+  display: block;
+}
+
 .bundle_simple .bundle_simple_option_label {
   font-family: "PP Right Grotesk";
   font-size: 2rem;
