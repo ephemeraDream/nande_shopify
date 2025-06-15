@@ -254,6 +254,7 @@
   width: 100%;
   height: 36rem;
   background-color: #FAFAFA;
+  position: relative;
 }
 
 .collection_compare .collection_compare_product_img img {
@@ -325,4 +326,14 @@
   font-variation-settings: "opsz" auto;
   color: #1F1F1F;
   margin-top: 2rem;
+}
+
+.collection_compare .collection_compare_product_select {
+  width: 2rem;
+  height: 2rem;
+  border: 1px solid #1F1F1F;
+  background: #E2DED6;
+  position: absolute;
+  top: 1.4rem;
+  right: 1.6rem;
 }
