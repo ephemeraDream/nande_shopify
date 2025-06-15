@@ -1,0 +1,26 @@
+{{ 'section-collection-compare.css' | asset_url | stylesheet_tag }}
+
+<div class="collection_compare"></div>
+
+{% schema %}
+{
+  "name": "collection compare",
+  "tag": "section",
+  "class": "section",
+  "disabled_on": {
+    "groups": ["header", "footer"]
+  },
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "banner image"
+    }
+  ],
+  "presets": [
+    {
+      "name": "collection compare"
+    }
+  ]
+}
+{% endschema %}
