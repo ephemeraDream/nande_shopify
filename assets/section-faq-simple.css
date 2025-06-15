@@ -45,6 +45,7 @@
   align-items: center;
   justify-content: space-between;
   padding: 5.4rem 0 4.7rem 0;
+  cursor: pointer;
 }
 
 .faq_simple .faq_simple_question {
