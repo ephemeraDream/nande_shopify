@@ -123,6 +123,7 @@
   align-items: center;
   gap: 0.8rem;
   cursor: pointer;
+  margin-left: 3.9rem;
 }
 
 .collection_compare .collection_compare_contain_sort_label {
@@ -138,7 +139,7 @@
 .collection_compare .collection_compare_contain_sort_select {
   position: absolute;
   z-index: 100;
-  top: 0.5rem;
+  top: -1rem;
   left: -0.5rem;
   overflow-y: auto;
   border: 0.1rem solid #000;
@@ -155,4 +156,10 @@
   letter-spacing: 0px;
   font-variation-settings: "opsz" auto;
   color: #7F7E75;
+  white-space: nowrap;
+}
+
+.collection_compare .collection_compare_contain_sort_select_item:hover {
+  color: #1F1F1F;
+  background-color: #f2f1ed;
 }
