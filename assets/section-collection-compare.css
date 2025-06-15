@@ -200,10 +200,13 @@
 }
 
 .collection_compare .collection_compare_contain_showtype {
-  width: 1.6rem;
-  height: 1.6rem;
+  width: 1.7rem;
+  height: 1.7rem;
   cursor: pointer;
   margin-left: 1.6rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .collection_compare .collection_compare_contain_showtype+.collection_compare_contain_showtype {
