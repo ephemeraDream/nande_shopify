@@ -539,6 +539,11 @@
     "total": "Total",
     "remove": "Remove",
     "ends_in": "Ends in",
-    "jetzt_konfigurieren": "Jetzt konfigurieren"
+    "jetzt_konfigurieren": "Jetzt konfigurieren",
+    "filter": "Filter",
+    "sortieren_nach": "Sortieren nach",
+    "ausgewahlt": "Ausgewahlt",
+    "vergleichen": "Vergleichen",
+    "ansicht_als": "Ansicht als"
   }
 }
