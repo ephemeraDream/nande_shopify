@@ -45,6 +45,82 @@
   </div>
 </div>
 
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    let currentType = 'all';
+
+    function bindPaginationLinks() {
+      document.querySelectorAll('.ajax_pagination.page').forEach(function (link) {
+        link.addEventListener('click', function (event) {
+          event.preventDefault();
+          const page = this.getAttribute('data-page');
+
+          let url = `/collections/all?page=${page}`;
+          if (currentType !== 'all') {
+            url = `/collections/types?q=${currentType}&page=${page}`;
+          }
+
+          fetchProducts(url);
+        });
+      });
+
+      document.querySelectorAll('.ajax_pagination.prev, .ajax_pagination.next').forEach(function (btn) {
+        btn.addEventListener('click', function (event) {
+          event.preventDefault();
+          const url = this.getAttribute('href');
+          fetchProducts(url);
+        });
+      });
+    }
+
+    function fetchProducts(url) {
+      fetch(url)
+        .then((response) => response.text())
+        .then((data) => {
+          const parser = new DOMParser();
+          const html = parser.parseFromString(data, 'text/html');
+
+          document.querySelector('.collection_default_contain').innerHTML = html.querySelector('.collection_default_contain')?.innerHTML || '';
+          document.querySelector('.custom_pagination').innerHTML =
+            html.querySelector('.custom_pagination')?.innerHTML || '';
+
+          bindPaginationLinks();
+
+          document.querySelectorAll('.ajax_pagination.page').forEach(function (link) {
+            let page = link.getAttribute('data-page');
+            let newHref = `/collections/all?page=${page}`;
+            if (currentType !== 'all') {
+              newHref = `/collections/types?q=${currentType}&page=${page}`;
+            }
+            link.setAttribute('href', newHref);
+          });
+        });
+    }
+
+    {% comment %} function bindCategoryFilters() {
+      document.querySelectorAll('.categorize-group-btn').forEach(function (btn) {
+        btn.addEventListener('click', function (event) {
+          event.preventDefault();
+
+          document.querySelectorAll('.categorize-group-btn').forEach((el) => el.classList.remove('active'));
+          this.classList.add('active');
+
+          currentType = this.getAttribute('data-type');
+
+          let url = '/collections/all?page=1';
+          if (currentType !== 'all') {
+            url = `/collections/types?q=${currentType}&page=1`;
+          }
+
+          fetchProducts(url);
+        });
+      });
+    }
+
+    bindPaginationLinks(); {% endcomment %}
+  });
+</script>
+
 {% schema %}
 {
   "name": "collection default",

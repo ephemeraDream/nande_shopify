@@ -3684,6 +3684,11 @@ a {
   color: #1F1F1F;
 }
 
+.custom_pagination .ajax_pagination svg {
+  width: 3.6rem;
+  height: 3.6rem;
+}
+
 .custom_pagination .ajax_pagination:hover svg path {
   fill: #1F1F1F;
 }
