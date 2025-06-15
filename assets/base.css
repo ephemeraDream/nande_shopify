@@ -3653,3 +3653,37 @@ a {
   color: #fafafa;
   margin-top: 1.6rem;
 }
+
+.custom_pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 6rem;
+  gap: 3rem;
+}
+
+.custom_pagination .ajax_pagination {
+  width: 6rem;
+  height: 6rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "PP Right Grotesk";
+  font-size: 3.6rem;
+  font-weight: 500;
+  line-height: 112%;
+  text-align: center;
+  letter-spacing: 0px;
+  font-variation-settings: "opsz" auto;
+  color: #7F7E75;
+}
+
+.custom_pagination .current_page,
+.custom_pagination .ajax_pagination:hover {
+  background-color: #BDFF00;
+  color: #1F1F1F;
+}
+
+.custom_pagination .ajax_pagination:hover svg path {
+  fill: #1F1F1F;
+}

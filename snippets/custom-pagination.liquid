@@ -1,0 +1,29 @@
+{% if paginate.pages > 1 %}
+  <div class="custom_pagination">
+    {% if paginate.previous %}
+      <a href="{{ paginate.previous.url }}" class="ajax_pagination prev">
+        {{- 'pagination-left.svg' | inline_asset_content -}}
+      </a>
+    {% endif %}
+
+    {% for i in (1..paginate.pages) %}
+      {% if i == paginate.current_page %}
+        <span class="ajax_pagination current_page page">{{ i }}</span>
+      {% else %}
+        <a
+          href="{{ request.path }}?page={{ i }}"
+          class="ajax_pagination page"
+          data-page="{{ i }}"
+        >
+          {{ i }}
+        </a>
+      {% endif %}
+    {% endfor %}
+
+    {% if paginate.next %}
+      <a href="{{ paginate.next.url }}" class="ajax_pagination next">
+        {{- 'pagination-right.svg' | inline_asset_content -}}
+      </a>
+    {% endif %}
+  </div>
+{% endif %}

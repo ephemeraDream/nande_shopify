@@ -40,35 +40,7 @@
         {% endfor %}
       </div>
 
-      {% if paginate.pages > 1 %}
-        <div class="custom-pagination">
-          {% if paginate.previous %}
-            <a href="{{ paginate.previous.url }}" class="ajax-pagination prev">
-              {{- 'arrow-left.svg' | inline_asset_content -}}
-            </a>
-          {% endif %}
-
-          {% for i in (1..paginate.pages) %}
-            {% if i == paginate.current_page %}
-              <span class="current-page page">{{ i }}</span>
-            {% else %}
-              <a
-                href="{{ request.path }}?page={{ i }}"
-                class="ajax-pagination page"
-                data-page="{{ i }}"
-              >
-                {{ i }}
-              </a>
-            {% endif %}
-          {% endfor %}
-
-          {% if paginate.next %}
-            <a href="{{ paginate.next.url }}" class="ajax-pagination next">
-              {{- 'arrow-right.svg' | inline_asset_content -}}
-            </a>
-          {% endif %}
-        </div>
-      {% endif %}
+      {% render 'custom-pagination', paginate: paginate %}
     {% endpaginate %}
   </div>
 </div>
