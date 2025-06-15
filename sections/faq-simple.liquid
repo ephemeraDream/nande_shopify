@@ -25,18 +25,13 @@
 
     faqItems.forEach((item) => {
       const faqItem = item.querySelector('.faq_simple_item_head');
-      const answer = item.querySelector('.faq_simple_answer');
 
       faqItem.addEventListener('click', function () {
-        const isActive = item.classList.contains('active');
-
         document.querySelectorAll('.faq_simple_item').forEach((i) => {
           i.classList.remove('active');
         });
 
-        if (!isActive) {
-          item.classList.add('active');
-        }
+        item.classList.toggle('active');
       });
     });
   });
