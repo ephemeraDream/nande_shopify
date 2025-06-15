@@ -171,10 +171,11 @@
 
 .collection_compare .collection_compare_contain_select_switch {
   width: 3rem;
-  height: 1.6rem;
+  height: 1.8rem;
   background-color: #7F7E75;
   position: relative;
   margin-left: 2.2rem;
+  border-radius: 0.9rem;
 }
 
 .collection_compare .collection_compare_contain_select_switch::before {
@@ -184,5 +185,15 @@
   background-color: #fff;
   border-radius: 50%;
   position: absolute;
-  left: 0;
+  left: 0.1rem;
+  top: 0.1rem;
+  transition: left .4s ease-in-out;
+}
+
+.collection_compare .collection_compare_contain_select_switch.active {
+  background-color: #1F1F1F;
+}
+
+.collection_compare .collection_compare_contain_select_switch.active::before {
+  left: calc(100% - 0.1rem);
 }
