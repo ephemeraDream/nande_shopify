@@ -80,11 +80,39 @@
         "file_image": "shopify://shop_images/Vergleichen_Sie_Maidesite-Modelle_img_1.webp",
         "video_url": ""
       }
+    },
+    "img_with_text_simplicity_dDeThj": {
+      "type": "img-with-text-simplicity",
+      "name": "img with text simplicity",
+      "settings": {
+        "title": "<p>Vergleichen Sie </p><p>Maidesite-Modelle</p>",
+        "sub_title": "",
+        "description": "<p>Vergleichen Sie die verschiedenen Maidesite-Modelle und finden Sie den </p><p>perfekten höhenverstellbaren Schreibtisch für Ihre Bedürfnisse.</p>",
+        "file_position": "left",
+        "file_type": "image",
+        "file_image": "shopify://shop_images/Vergleichen_Sie_Maidesite-Modelle_img_2.webp",
+        "video_url": ""
+      }
+    },
+    "img_with_text_simplicity_CehiJc": {
+      "type": "img-with-text-simplicity",
+      "name": "img with text simplicity",
+      "settings": {
+        "title": "<p>Vergleichen Sie </p><p>Maidesite-Modelle</p>",
+        "sub_title": "",
+        "description": "<p>Vergleichen Sie die verschiedenen Maidesite-Modelle und finden Sie den </p><p>perfekten höhenverstellbaren Schreibtisch für Ihre Bedürfnisse.</p>",
+        "file_position": "right",
+        "file_type": "image",
+        "file_image": "shopify://shop_images/Vergleichen_Sie_Maidesite-Modelle_img_3.webp",
+        "video_url": ""
+      }
     }
   },
   "order": [
     "collection_compare_khmbzE",
     "compare_simple_YrUqUG",
-    "img_with_text_simplicity_URDzRN"
+    "img_with_text_simplicity_URDzRN",
+    "img_with_text_simplicity_dDeThj",
+    "img_with_text_simplicity_CehiJc"
   ]
 }
