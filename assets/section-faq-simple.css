@@ -81,9 +81,18 @@
   color: #1F1F1F;
 }
 
-.faq_simple .faq-item.active .faq-answer {
+.faq_simple .faq_simple_item.active .faq_simple_answer {
   padding-bottom: 4.7rem;
   max-height: 50rem;
   opacity: 1;
   visibility: visible;
+}
+
+.faq_simple .faq_simple_item .faq_simple_icon[data-type="open"],
+.faq_simple .faq_simple_item.active .faq_simple_icon[data-type="close"] {
+  display: none;
+}
+
+.faq_simple .faq_simple_item.active .faq_simple_icon[data-type="open"] {
+  display: flex;
 }
