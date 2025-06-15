@@ -37,6 +37,7 @@
   align-items: center;
   flex-wrap: wrap;
   gap: 2.4rem;
+  margin-top: 3rem;
 }
 
 .collection_default .collection_default_head_item {
@@ -112,6 +113,7 @@
 
 .collection_default .product_rating {
   margin: 0;
+  color: #7F7E75;
 }
 
 .collection_default .collection_default_product_price {
@@ -140,7 +142,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 3, 5rem;
+  height: 3.5rem;
   padding: 0 0.8rem;
   background-color: #BDFF00;
   font-family: "PP Right Grotesk";
