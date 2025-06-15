@@ -20,22 +20,36 @@
   {% endif %}
   <div class="collection_compare_contain padding-sider">
     <div class="collection_compare_contain_head">
-      <div class="collection_compare_contain_head_left">
+      <div class="collection_compare_contain_switchfilter">
         <span>{{ 'common.filter' | t }}</span>
         {{- 'icon-filter.svg' | inline_asset_content -}}
       </div>
       <div class="collection_compare_contain_head_right">
         <div class="flex_center">
-          <span>{{ 'common.sortieren_nach' | t }}</span>
-          <div>
-            <span>{{ 'common.ausgewahlt' | t }}</span>
+          <span class="collection_compare_contain_head_label">{{ 'common.sortieren_nach' | t }}</span>
+          <div class="collection_compare_contain_sort">
+            <span class="collection_compare_contain_sort_label">{{ 'common.ausgewahlt' | t }}</span>
             {{- 'icon-select-down.svg' | inline_asset_content -}}
+            <div class="collection_compare_contain_sort_select">
+              {%- assign sort_by = collection.sort_by | default: collection.default_sort_by -%}
+              {%- for option in collection.sort_options %}
+                <div
+                  value="{{ option.value }}"
+                  {%- if option.value == sort_by %}
+                    selected="selected"
+                  {%- endif %}
+                  class="collection_compare_contain_sort_select_item"
+                >
+                  {{ option.name }}
+                </div>
+              {% endfor -%}
+            </div>
           </div>
         </div>
         <div class="flex_center">
-          <span>{{ 'common.vergleichen' | t }}</span>
+          <span class="collection_compare_contain_head_label">{{ 'common.vergleichen' | t }}</span>
           <div></div>
-          <span>{{ 'common.ansicht_als' | t }}</span>
+          <span class="collection_compare_contain_head_label">{{ 'common.ansicht_als' | t }}</span>
           <div class="collection_compare_contain_showtype">{{- 'icon-list.svg' | inline_asset_content -}}</div>
           <div class="collection_compare_contain_showtype active">{{- 'icon-grid.svg' | inline_asset_content -}}</div>
         </div>
