@@ -12,7 +12,9 @@
     "collection_compare_khmbzE": {
       "type": "collection-compare",
       "name": "collection compare",
-      "settings": {}
+      "settings": {
+        "image": "shopify://shop_images/desk-category-banner.webp"
+      }
     }
   },
   "order": [
