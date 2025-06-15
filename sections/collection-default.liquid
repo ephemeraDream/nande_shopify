@@ -1,0 +1,36 @@
+{{ 'section-collection-default.css' | asset_url | stylesheet_tag }}
+
+<div class="collection_default"></div>
+
+{% schema %}
+{
+  "name": "collection default",
+  "tag": "section",
+  "class": "section",
+  "disabled_on": {
+    "groups": ["header", "footer"]
+  },
+  "settings": [
+    {
+      "type": "richtext",
+      "id": "title",
+      "label": "title"
+    },
+    {
+      "type": "richtext",
+      "id": "text",
+      "label": "text"
+    },
+    {
+      "type": "collection_list",
+      "id": "collection_list",
+      "label": "collection list"
+    }
+  ],
+  "presets": [
+    {
+      "name": "collection default"
+    }
+  ]
+}
+{% endschema %}
