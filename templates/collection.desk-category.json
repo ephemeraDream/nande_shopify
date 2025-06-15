@@ -13,6 +13,7 @@
       "type": "collection-compare",
       "name": "collection compare",
       "settings": {
+        "show_banner": true,
         "image": "shopify://shop_images/desk-category-banner.webp"
       }
     },
@@ -63,10 +64,24 @@
         "text": "<p>Maidesite bietet anpassbare höhenverstellbare </p><p>Schreibtische für Deine Bedürfnisse.</p>",
         "link_text": "Mehr erfahren"
       }
+    },
+    "img_with_text_simplicity_URDzRN": {
+      "type": "img-with-text-simplicity",
+      "name": "img with text simplicity",
+      "settings": {
+        "title": "<p>Vergleichen Sie </p><p>Maidesite-Modelle</p>",
+        "sub_title": "",
+        "description": "<p>Vergleichen Sie die verschiedenen Maidesite-Modelle und finden Sie den </p><p>perfekten höhenverstellbaren Schreibtisch für Ihre Bedürfnisse.</p>",
+        "file_position": "right",
+        "file_type": "image",
+        "file_image": "shopify://shop_images/Vergleichen_Sie_Maidesite-Modelle_img_1.webp",
+        "video_url": ""
+      }
     }
   },
   "order": [
     "collection_compare_khmbzE",
-    "compare_simple_YrUqUG"
+    "compare_simple_YrUqUG",
+    "img_with_text_simplicity_URDzRN"
   ]
 }
