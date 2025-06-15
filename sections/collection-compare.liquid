@@ -28,10 +28,10 @@
         <div class="flex_center">
           <span class="collection_compare_contain_head_label">{{ 'common.sortieren_nach' | t }}</span>
           <div class="collection_compare_contain_sort">
-            <span class="collection_compare_contain_sort_label">{{ 'common.ausgewahlt' | t }}</span>
+            {%- assign sort_by = collection.sort_by | default: collection.default_sort_by -%}
+            <span class="collection_compare_contain_sort_label">{{ sort_by }}</span>
             {{- 'icon-select-down.svg' | inline_asset_content -}}
             <div class="collection_compare_contain_sort_select">
-              {%- assign sort_by = collection.sort_by | default: collection.default_sort_by -%}
               {%- for option in collection.sort_options %}
                 <div
                   value="{{ option.value }}"
