@@ -1,0 +1,174 @@
+{{ 'section-img-with-text-simplicity.css' | asset_url | stylesheet_tag }}
+
+<div class="img_with_text_simplicity_section">
+  <div
+    class="img_with_text_simplicity img_with_text_simplicity_{{ section.settings.file_position }}"
+    id="{{ section.id }}"
+  >
+    <div class="img_with_text_simplicity_info">
+      {% if section.settings.sub_title != blank %}
+        <div class="img_with_text_simplicity_subtitle">{{ section.settings.sub_title }}</div>
+      {% endif %}
+      <div class="img_with_text_simplicity_title">{{ section.settings.title }}</div>
+      <div class="img_with_text_simplicity_desc">{{ section.settings.description }}</div>
+
+      {% for item in section.blocks %}
+        <div class="img_with_text_simplicity_append">
+          <div class="img_with_text_simplicity_append_title">{{ item.settings.subtitle }}</div>
+          <div class="img_with_text_simplicity_append_desc">{{ item.settings.text }}</div>
+        </div>
+      {% endfor %}
+    </div>
+    <div class="img_with_text_simplicity_filebox">
+      {% if section.settings.file_type == 'image' %}
+        {{-
+          section.settings.file_image
+          | image_url: width: section.settings.file_image.width
+          | image_tag: alt: section.settings.title, class: 'img_with_text_simplicity_filebox_image'
+        -}}
+      {% else %}
+        {% assign poster_image = blank %}
+        {% if section.settings.cover_image != blank %}
+          {% assign poster_image = section.settings.cover_image | image_url %}
+        {% endif %}
+        {% if section.settings.video_url != blank %}
+          <video
+            autoplay
+            loop
+            muted
+            playsinline
+            preload="none"
+            class="img_with_text_simplicity_filebox_video"
+            {% if poster_image != blank %}
+              poster="{{ poster_image }}"
+            {% endif %}
+            src="{{ section.settings.video_url }}"
+          ></video>
+        {% else %}
+          {{
+            section.settings.url_upload
+            | video_tag:
+              class: 'img_with_text_simplicity_filebox_video',
+              autoplay: true,
+              loop: true,
+              muted: true,
+              playsinline: true,
+              preload: 'none',
+              poster: poster_image
+          }}
+        {% endif %}
+      {% endif %}
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "img with text simplicity",
+  "tag": "section",
+  "class": "section",
+  "disabled_on": {
+    "groups": ["header", "footer"]
+  },
+  "settings": [
+    {
+      "type": "richtext",
+      "id": "title",
+      "label": "title"
+    },
+    {
+      "type": "richtext",
+      "id": "sub_title",
+      "label": "sub title"
+    },
+    {
+      "type": "richtext",
+      "id": "description",
+      "label": "description"
+    },
+    {
+      "type": "select",
+      "id": "file_position",
+      "label": "file position",
+      "options": [
+        {
+          "value": "left",
+          "label": "left"
+        },
+        {
+          "value": "bottom",
+          "label": "bottom"
+        },
+        {
+          "value": "right",
+          "label": "right"
+        },
+        {
+          "value": "top",
+          "label": "top"
+        }
+      ],
+      "default": "right"
+    },
+    {
+      "type": "radio",
+      "id": "file_type",
+      "label": "file type",
+      "default": "image",
+      "options": [
+        {
+          "value": "image",
+          "label": "image"
+        },
+        {
+          "value": "video",
+          "label": "video"
+        }
+      ]
+    },
+    {
+      "type": "image_picker",
+      "id": "file_image",
+      "label": "file image"
+    },
+    {
+      "type": "image_picker",
+      "id": "cover_image",
+      "label": "cover image"
+    },
+    {
+      "type": "text",
+      "id": "video_url",
+      "label": "video url"
+    },
+    {
+      "type": "video",
+      "id": "url_upload",
+      "label": "video upload"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "appendInfo",
+      "name": "append Info",
+      "settings": [
+        {
+          "type": "richtext",
+          "id": "subtitle",
+          "label": "subtitle"
+        },
+        {
+          "type": "richtext",
+          "id": "text",
+          "label": "text"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "img with text simplicity"
+    }
+  ]
+}
+{% endschema %}
