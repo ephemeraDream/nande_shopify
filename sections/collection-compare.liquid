@@ -1,6 +1,14 @@
 {{ 'section-collection-compare.css' | asset_url | stylesheet_tag }}
 
-<div class="collection_compare"></div>
+<div class="collection_compare">
+  <div class="collection_compare_banner padding-sider">
+    <img src="{{ section.settings.image | image_url }}" alt="{{ collection.title }}">
+    <div class="collection_compare_banner_contain">
+      <div class="collection_compare_banner_title">{{ collection.title }}</div>
+      <div class="collection_compare_banner_text">{{ collection.description }}</div>
+    </div>
+  </div>
+</div>
 
 {% schema %}
 {
