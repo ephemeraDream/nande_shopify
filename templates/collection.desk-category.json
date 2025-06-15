@@ -67,6 +67,9 @@
     },
     "img_with_text_simplicity_URDzRN": {
       "type": "img-with-text-simplicity",
+      "custom_css": [
+        ".img_with_text_simplicity_section {margin-top: 12rem;}"
+      ],
       "name": "img with text simplicity",
       "settings": {
         "title": "<p>Vergleichen Sie </p><p>Maidesite-Modelle</p>",
