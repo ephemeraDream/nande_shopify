@@ -27,11 +27,15 @@
       const faqItem = item.querySelector('.faq_simple_item_head');
 
       faqItem.addEventListener('click', function () {
+        const isActive = item.classList.contains('active');
+
         document.querySelectorAll('.faq_simple_item').forEach((i) => {
           i.classList.remove('active');
         });
 
-        item.classList.toggle('active');
+        if (!isActive) {
+          item.classList.add('active');
+        }
       });
     });
   });
