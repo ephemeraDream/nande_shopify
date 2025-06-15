@@ -109,6 +109,50 @@
         "file_image": "shopify://shop_images/Vergleichen_Sie_Maidesite-Modelle_img_3.webp",
         "video_url": ""
       }
+    },
+    "faq_simple_MFhhga": {
+      "type": "faq-simple",
+      "blocks": {
+        "faq_777AmP": {
+          "type": "faq",
+          "settings": {
+            "question": "<p>Kann ich meine Bestellung stornieren?</p>",
+            "answer": "<p>Maidesite bietet durch seine produkten von höhenverstellbaren Schreibtischen, die Funktionsintegration, Szenenvielfalt und Personalisierung bieten, Ihnen die Möglichkeit, einfach zwischen verschiedenen Heimat-Aktivitätsmodi zu wechseln, die eine Desktop-Assistenten erfordern. <br/><br/>Dies ermöglicht Anhängern des modernen intelligenten Heimlebens, sich noch bequemer und müheloser in ihre vielfältigen Lebensstile einzuleben.<br/></p>"
+          }
+        },
+        "faq_mhXwKg": {
+          "type": "faq",
+          "settings": {
+            "question": "<p>Was ist, wenn ich mit jemandem sprechen mochte?</p>",
+            "answer": "<p>Maidesite bietet durch seine produkten von höhenverstellbaren Schreibtischen, die Funktionsintegration, Szenenvielfalt und Personalisierung bieten, Ihnen die Möglichkeit, einfach zwischen verschiedenen Heimat-Aktivitätsmodi zu wechseln, die eine Desktop-Assistenten erfordern. <br/><br/>Dies ermöglicht Anhängern des modernen intelligenten Heimlebens, sich noch bequemer und müheloser in ihre vielfältigen Lebensstile einzuleben.<br/></p>"
+          }
+        },
+        "faq_9xFbr6": {
+          "type": "faq",
+          "settings": {
+            "question": "<p>Ist das Bestellen im Internet sicher? Was passiert mit meinen Daten?</p>",
+            "answer": "<p>Maidesite bietet durch seine produkten von höhenverstellbaren Schreibtischen, die Funktionsintegration, Szenenvielfalt und Personalisierung bieten, Ihnen die Möglichkeit, einfach zwischen verschiedenen Heimat-Aktivitätsmodi zu wechseln, die eine Desktop-Assistenten erfordern. <br/><br/>Dies ermöglicht Anhängern des modernen intelligenten Heimlebens, sich noch bequemer und müheloser in ihre vielfältigen Lebensstile einzuleben.<br/></p>"
+          }
+        },
+        "faq_6CNjpw": {
+          "type": "faq",
+          "settings": {
+            "question": "<p>Welche Moglichkeiten habe ich, um meine Bestellung zu bezahlen?</p>",
+            "answer": "<p>Maidesite bietet durch seine produkten von höhenverstellbaren Schreibtischen, die Funktionsintegration, Szenenvielfalt und Personalisierung bieten, Ihnen die Möglichkeit, einfach zwischen verschiedenen Heimat-Aktivitätsmodi zu wechseln, die eine Desktop-Assistenten erfordern. <br/><br/>Dies ermöglicht Anhängern des modernen intelligenten Heimlebens, sich noch bequemer und müheloser in ihre vielfältigen Lebensstile einzuleben.<br/></p>"
+          }
+        }
+      },
+      "block_order": [
+        "faq_777AmP",
+        "faq_mhXwKg",
+        "faq_9xFbr6",
+        "faq_6CNjpw"
+      ],
+      "name": "faq simple",
+      "settings": {
+        "heading": "<p>FAQ</p>",
+        "text": "<p>Häufig gestellte Fragen</p>"
+      }
     }
   },
   "order": [
@@ -116,6 +160,7 @@
     "compare_simple_YrUqUG",
     "img_with_text_simplicity_URDzRN",
     "img_with_text_simplicity_dDeThj",
-    "img_with_text_simplicity_CehiJc"
+    "img_with_text_simplicity_CehiJc",
+    "faq_simple_MFhhga"
   ]
 }
