@@ -9,22 +9,13 @@
  */
 {
   "sections": {
-    "collection_default_9JCNJx": {
-      "type": "collection-default",
-      "name": "collection default",
-      "settings": {
-        "title": "<p>Alle Produkte Im üBerblick</p>",
-        "text": "<p>Entdecken Sie unsere gesamte Produktpalette – von Schreibtischen bis zu Zubehör, alles an einem Ort für Ihren </p><p>Arbeitskomfort.</p>",
-        "collection_list": [
-          "burotisch-hohenverstellbar",
-          "schreibtisch-home-office",
-          "maidesite-burozubehor",
-          "sie-konnen-auch-mogen"
-        ]
-      }
+    "collection_compare_khmbzE": {
+      "type": "collection-compare",
+      "name": "collection compare",
+      "settings": {}
     }
   },
   "order": [
-    "collection_default_9JCNJx"
+    "collection_compare_khmbzE"
   ]
 }
