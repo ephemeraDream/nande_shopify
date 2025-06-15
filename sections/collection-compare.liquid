@@ -29,7 +29,12 @@
           <span class="collection_compare_contain_head_label">{{ 'common.sortieren_nach' | t }}</span>
           <div class="collection_compare_contain_sort">
             {%- assign sort_by = collection.sort_by | default: collection.default_sort_by -%}
-            <span class="collection_compare_contain_sort_label">{{ sort_by }}</span>
+            {%- for option in collection.sort_options %}
+              {%- if option.value == sort_by %}
+                {% assign sort_by_name = option.name %}
+              {%- endif %}
+            {% endfor -%}
+            <span class="collection_compare_contain_sort_label">{{ sort_by_name }}</span>
             {{- 'icon-select-down.svg' | inline_asset_content -}}
             <div class="collection_compare_contain_sort_select">
               {%- for option in collection.sort_options %}
