@@ -60,6 +60,42 @@
         </div>
       </div>
     </div>
+    <div class="collection_compare_contain_body">
+      <div class="collection_compare_contain_body_left"></div>
+      {% paginate collection.products by 6 %}
+        <div class="collection_compare_contain_body_right">
+          {% for product in collection.products %}
+            <a class="collection_compare_product" data-type="{{ product.type | handleize }}" href="{{ product.url }}">
+              <div class="collection_compare_product_img">
+                <img src="{{ product.featured_media | image_url }}" alt="{{ product.title }}">
+              </div>
+              <div class="collection_compare_product_info">
+                <div class="collection_compare_product_title">{{ product.title }}</div>
+                <div>
+                  {% render 'product-rating', product: product %}
+                  <div class="collection_compare_product_price">
+                    <div>
+                      {{ product.price | money_without_trailing_zeros }}
+                    </div>
+                    {% if product.compare_at_price != blank %}
+                      <div class="collection_compare_product_price_cap">
+                        {{ product.compare_at_price | money_without_trailing_zeros }}
+                      </div>
+                    {% endif %}
+                  </div>
+                  <div class="collection_compare_product_btn">
+                    {{ 'common.jetzt_konfigurieren' | t }}
+                    {{ 'icon-right-arrow.svg' | inline_asset_content }}
+                  </div>
+                </div>
+              </div>
+            </a>
+          {% endfor %}
+        </div>
+
+        {% render 'custom-pagination', paginate: paginate %}
+      {% endpaginate %}
+    </div>
   </div>
 </div>
 
