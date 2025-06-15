@@ -1,5 +1,5 @@
 .img_with_text_simplicity {
-  max-width: 144vw;
+  max-width: 144rem;
   margin: 0 auto;
   position: relative;
 }
@@ -61,6 +61,7 @@
 .img_with_text_simplicity_right .img_with_text_simplicity_filebox {
   width: 50%;
   flex: 0 0 auto;
+  margin: 0;
 }
 
 .img_with_text_simplicity_right {
@@ -90,7 +91,7 @@
   letter-spacing: 0px;
   font-variation-settings: "opsz" auto;
   color: #1F1F1F;
-  margin-top: 3vw;
+  margin-top: 3rem;
 }
 
 @media screen and (max-width: 768px) {
