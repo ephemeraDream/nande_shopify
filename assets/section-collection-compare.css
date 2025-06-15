@@ -145,6 +145,7 @@
   border: 0.1rem solid #000;
   background-color: #fff;
   box-shadow: 0 0.5rem 1rem #00000026;
+  display: none;
 }
 
 .collection_compare .collection_compare_contain_sort_select_item {
@@ -162,4 +163,8 @@
 .collection_compare .collection_compare_contain_sort_select_item:hover {
   color: #1F1F1F;
   background-color: #f2f1ed;
+}
+
+.collection_compare .collection_compare_contain_sort:hover .collection_compare_contain_sort_select {
+  display: block;
 }
