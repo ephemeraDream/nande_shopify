@@ -176,6 +176,7 @@
   position: relative;
   margin-left: 2.2rem;
   border-radius: 0.9rem;
+  cursor: pointer;
 }
 
 .collection_compare .collection_compare_contain_select_switch::before {
@@ -195,5 +196,20 @@
 }
 
 .collection_compare .collection_compare_contain_select_switch.active::before {
-  left: calc(100% - 0.1rem);
+  left: calc(100% - 1.7rem);
+}
+
+.collection_compare .collection_compare_contain_showtype {
+  width: 1.6rem;
+  height: 1.6rem;
+  cursor: pointer;
+  margin-left: 1.6rem;
+}
+
+.collection_compare .collection_compare_contain_showtype+.collection_compare_contain_showtype {
+  margin-left: 1.1rem;
+}
+
+.collection_compare .collection_compare_contain_showtype.active svg path {
+  fill: #1F1F1F;
 }
