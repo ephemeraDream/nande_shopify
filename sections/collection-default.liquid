@@ -94,6 +94,8 @@
             }
             link.setAttribute('href', newHref);
           });
+
+          window.history.replaceState(null, "", url.toString());
         });
     }
 
