@@ -15,9 +15,58 @@
       "settings": {
         "image": "shopify://shop_images/desk-category-banner.webp"
       }
+    },
+    "compare_simple_YrUqUG": {
+      "type": "compare-simple",
+      "blocks": {
+        "item_3yir6V": {
+          "type": "item",
+          "settings": {
+            "select_product": "maidesite-hohenverstellbar-schreibtisch-t2-pro-plus-140-160-180-cm"
+          }
+        },
+        "item_gyexDX": {
+          "type": "item",
+          "settings": {
+            "select_product": "maidesite-hohenverstellbarer-schreibtisch-elektrisch-t1-basic-100-120-140-160-cm"
+          }
+        },
+        "item_AHnCzP": {
+          "type": "item",
+          "settings": {
+            "select_product": "maidesite-th2-pro-plus-tischgestell-elektrisch-hohenverstellbar"
+          }
+        },
+        "item_EEUjdz": {
+          "type": "item",
+          "settings": {
+            "select_product": "maidesite-el2-plus-art-tischgestell-elektrisch-hohenverstellbar-fur-mydealz"
+          }
+        },
+        "item_z9X7dd": {
+          "type": "item",
+          "settings": {
+            "select_product": "maidesite-to1-pro-elektrisch-hohenverstellbarer-schreibtisch"
+          }
+        }
+      },
+      "block_order": [
+        "item_3yir6V",
+        "item_gyexDX",
+        "item_AHnCzP",
+        "item_EEUjdz",
+        "item_z9X7dd"
+      ],
+      "name": "compare simple",
+      "settings": {
+        "title": "<p>Finde Deinen Passenden HöHenverstellbar </p><p>Schreibtisch</p>",
+        "text": "<p>Maidesite bietet anpassbare höhenverstellbare </p><p>Schreibtische für Deine Bedürfnisse.</p>",
+        "link_text": "Mehr erfahren"
+      }
     }
   },
   "order": [
-    "collection_compare_khmbzE"
+    "collection_compare_khmbzE",
+    "compare_simple_YrUqUG"
   ]
 }
