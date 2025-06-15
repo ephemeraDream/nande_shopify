@@ -96,6 +96,9 @@
     },
     "img_with_text_simplicity_CehiJc": {
       "type": "img-with-text-simplicity",
+      "custom_css": [
+        ".img_with_text_simplicity_section {margin-bottom: 12rem;}"
+      ],
       "name": "img with text simplicity",
       "settings": {
         "title": "<p>Vergleichen Sie </p><p>Maidesite-Modelle</p>",
