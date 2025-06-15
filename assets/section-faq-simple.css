@@ -1,0 +1,89 @@
+.faq_simple_section {
+  width: 100%;
+  background-color: #f2f1ed;
+  padding-top: 12rem;
+  padding-bottom: 7rem;
+}
+
+.faq_simple {
+  max-width: 144rem;
+  margin: 0 auto;
+}
+
+.faq_simple .faq_simple_heading {
+  font-family: "PP Right Grotesk";
+  font-size: 8rem;
+  font-weight: 500;
+  line-height: 94%;
+  letter-spacing: 0px;
+  font-variation-settings: "opsz" auto;
+  color: #1F1F1F;
+}
+
+.faq_simple .faq_simple_text {
+  font-family: "PP Right Grotesk";
+  font-size: 3rem;
+  font-weight: 500;
+  line-height: 94%;
+  letter-spacing: 0px;
+  font-variation-settings: "opsz" auto;
+  color: #1F1F1F;
+  margin-top: 3rem;
+}
+
+.faq_simple .faq_simple_list {
+  margin-top: 0.6rem;
+}
+
+.faq_simple .faq_simple_item {
+
+  border-bottom: 0.1rem solid #D8D8D8;
+}
+
+.faq_simple .faq_simple_item_head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5.4rem 0 4.7rem 0;
+}
+
+.faq_simple .faq_simple_question {
+  font-family: "PP Right Grotesk";
+  font-size: 4rem;
+  font-weight: 500;
+  line-height: 94%;
+  letter-spacing: 0px;
+  font-variation-settings: "opsz" auto;
+  color: #1F1F1F;
+}
+
+.faq_simple .faq_simple_icon {
+  width: 4rem;
+  height: 4rem;
+  display: flex;
+}
+
+.faq_simple .faq_simple_answer {
+  max-height: 0;
+  overflow: hidden;
+  padding: 0;
+  margin: 0;
+  opacity: 0;
+  visibility: hidden;
+  transition: max-height 0.3s ease-in-out, opacity 0.3s ease,
+    visibility 0.3s ease;
+  font-family: "PP Right Grotesk";
+  font-size: 2rem;
+  font-weight: normal;
+  line-height: 130%;
+  letter-spacing: 0px;
+  font-variation-settings: "opsz" auto;
+  color: #1F1F1F;
+}
+
+.faq_simple .faq-item.active .faq-answer {
+  padding-bottom: 4.7rem;
+  max-height: 50rem;
+  opacity: 1;
+  visibility: visible;
+}

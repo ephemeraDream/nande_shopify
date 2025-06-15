@@ -1,0 +1,94 @@
+{{ 'section-faq-simple.css' | asset_url | stylesheet_tag }}
+
+<div id="section-{{ section.id }}" class="faq_simple_section padding-sider">
+  <div class="faq_simple">
+    <div class="faq_simple_heading">{{ section.settings.heading }}</div>
+    <div class="faq_simple_text">{{ section.settings.text }}</div>
+    <div class="faq_simple_list">
+      {% for block in section.blocks %}
+        <div class="faq_simple_item">
+          <div class="faq_simple_item_head">
+            <div class="faq_simple_question">{{ block.settings.question }}</div>
+            <div class="faq_simple_icon" data-type="close">{{- 'icon-faq-close.svg' | inline_asset_content -}}</div>
+            <div class="faq_simple_icon" data-type="open">{{- 'icon-faq-open.svg' | inline_asset_content -}}</div>
+          </div>
+          <div class="faq_simple_answer">{{ block.settings.answer }}</div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const faqItems = document.querySelectorAll('.faq-item');
+
+    faqItems.forEach((item) => {
+      const faqItem = item.querySelector('.flex-start');
+      const answer = item.querySelector('.faq-answer');
+
+      faqItem.addEventListener('click', function () {
+        const isActive = item.classList.contains('active');
+
+        document.querySelectorAll('.faq-item').forEach((i) => {
+          i.classList.remove('active');
+        });
+
+        if (!isActive) {
+          item.classList.add('active');
+        }
+      });
+    });
+  });
+</script>
+
+{% schema %}
+{
+  "name": "faq simple",
+  "tag": "section",
+  "class": "section",
+  "disabled_on": {
+    "groups": ["header", "footer"]
+  },
+  "settings": [
+    {
+      "type": "richtext",
+      "id": "heading",
+      "label": "heading"
+    },
+    {
+      "type": "richtext",
+      "id": "text",
+      "label": "text"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "faq",
+      "name": "FAQ Item",
+      "settings": [
+        {
+          "type": "richtext",
+          "id": "question",
+          "label": "Question"
+        },
+        {
+          "type": "richtext",
+          "id": "answer",
+          "label": "Answer"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "faq simple",
+      "blocks": [
+        {
+          "type": "faq"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
