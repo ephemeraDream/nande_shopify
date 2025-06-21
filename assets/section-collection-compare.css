@@ -378,7 +378,7 @@
 .collection_compare .collection_compare_select_btn {
   width: 35rem;
   height: 10rem;
-  display: flex;
+  display: none;
   align-items: center;
   justify-content: center;
   gap: 1.2rem;
@@ -395,6 +395,10 @@
   transform: rotate(-90deg);
   right: -12.5rem;
   cursor: pointer;
+}
+
+.collection_compare .collection_compare_select_btn.show {
+  display: flex;
 }
 
 .collection_compare .collection_compare_select[open] {
@@ -415,12 +419,13 @@
   width: 0;
   position: absolute;
   right: 0;
-  transition: width .3s ease-in-out;
   transform: translateY(-50%);
   top: 50%;
+  overflow: hidden;
 }
 
 .collection_compare .collection_compare_select[open] .collection_compare_select_contain {
+  transition: width .3s ease-in-out;
   width: 58.6rem;
 }
 

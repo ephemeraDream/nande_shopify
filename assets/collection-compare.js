@@ -14,6 +14,7 @@ const select_switch = document.querySelector(".collection_compare_contain_select
 select_switch.addEventListener("click", () => {
   select_switch.querySelector(".collection_compare_contain_select_switch").classList.toggle("active")
   document.querySelector(".collection_compare_contain_body_right").classList.toggle("show_select")
+  document.querySelector(".collection_compare_select_btn").classList.toggle("show")
 })
 
 const show_types = document.querySelectorAll(".collection_compare_contain_showtype")
