@@ -200,14 +200,17 @@
                 id="Details-{{ filter.param_name | escape }}-{{ section.id }}"
                 class="facets__disclosure-vertical js-filter"
                 data-index="{{ forloop.index }}"
-                {% if filter_type == 'vertical' and forloop.index == 1 %}
-                  open
-                {% endif %}
+                open
               >
                 <summary class="facets__summary caption-large focus-offset">
-                  <div>
-                    <span>{{ filter.label | escape }}</span>
-                    {{- 'icon-caret.svg' | inline_asset_content -}}
+                  <span class="facets__summary-label">
+                    {{- filter.label | escape }}
+                  </span>
+                  <div class="facets__summary-icon" data-type="close">
+                    {{- 'icon-filters-close.svg' | inline_asset_content -}}
+                  </div>
+                  <div class="facets__summary-icon" data-type="open">
+                    {{- 'icon-plus.svg' | inline_asset_content -}}
                   </div>
                 </summary>
                 <div
@@ -219,13 +222,6 @@
                     <span class="facets__selected">
                       {{- 'products.facets.max_price' | t: price: max_price_amount -}}
                     </span>
-                    {%- if filter_type != 'vertical' -%}
-                      <facet-remove>
-                        <a href="{{ filter.url_to_remove }}" class="facets__reset link underlined-link">
-                          {{ 'products.facets.reset' | t }}
-                        </a>
-                      </facet-remove>
-                    {%- endif -%}
                   </div>
                   <price-range class="facets__price">
                     {% render 'price-facet', filter: filter, id_prefix: 'Filter-', filter_type: filter_type %}
