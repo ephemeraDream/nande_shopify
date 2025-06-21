@@ -220,6 +220,7 @@
 .collection_compare .collection_compare_contain_body {
   padding-top: 4rem;
   display: flex;
+  align-items: flex-start;
   width: 100%;
   gap: 3.6rem;
 }

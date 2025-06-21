@@ -432,7 +432,6 @@
 }
 
 .facet-checkbox {
-  padding: 1rem 2rem 1rem 0;
   flex-grow: 1;
   position: relative;
   display: flex;
@@ -525,7 +524,7 @@
   height: 0.7rem;
 }
 
-.facet-checkbox>input[type='checkbox']:checked~.svg-wrapper>.icon-checkmark {
+.facet-checkbox>input[type='checkbox']:checked~.svg-wrapper {
   visibility: visible;
 }
 
@@ -1140,6 +1139,7 @@ input.mobile-facets__checkbox {
   .facets__disclosure-vertical {
     border-top: 0.1rem solid #7F7E75;
     margin-right: 0;
+    padding-left: 0.8rem;
   }
 
   .facets__disclosure-vertical:first-child {
