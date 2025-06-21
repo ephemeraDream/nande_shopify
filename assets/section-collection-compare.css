@@ -337,6 +337,10 @@
   margin-top: 2rem;
 }
 
+.collection_compare .collection_compare_contain_select_switch_box {
+  cursor: pointer;
+}
+
 .collection_compare .collection_compare_product_select {
   width: 2rem;
   height: 2rem;
@@ -345,6 +349,10 @@
   position: absolute;
   top: 1.4rem;
   right: 1.6rem;
+  display: none;
+}
+
+.collection_compare .collection_compare_product_select svg {
   display: none;
 }
 
