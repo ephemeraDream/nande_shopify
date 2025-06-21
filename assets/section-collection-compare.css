@@ -389,9 +389,9 @@
   letter-spacing: 0px;
   font-variation-settings: "opsz" auto;
   color: #000000;
-  position: absolute;
+  position: fixed;
   background: #BDFF00;
-  top: 555px;
+  top: 50%;
   transform: rotate(-90deg);
   right: -12.5rem;
   cursor: pointer;
@@ -416,6 +416,8 @@
   position: absolute;
   right: 0;
   transition: width .3s ease-in-out;
+  transform: translateY(-50%);
+  top: 50%;
 }
 
 .collection_compare .collection_compare_select[open] .collection_compare_select_contain {

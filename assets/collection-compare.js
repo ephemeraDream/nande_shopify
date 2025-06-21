@@ -31,6 +31,14 @@ show_types.forEach(item => {
   })
 })
 
+const collection_compare_select = document.querySelector(".collection_compare_select")
 document.querySelector(".collection_compare_select_btn").addEventListener("click", () => {
-  document.querySelector(".collection_compare_select").setAttribute("open", true)
+  collection_compare_select.setAttribute("open", true)
+  document.body.style.overflowY = "hidden";
 })
+collection_compare_select.addEventListener("click", (e) => {
+  if (e.target === collection_compare_select) {
+    collection_compare_select.removeAttribute("open")
+    document.body.style.overflowY = "auto";
+  }
+});
