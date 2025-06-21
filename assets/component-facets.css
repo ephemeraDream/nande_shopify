@@ -195,7 +195,7 @@
   font-family: "PP Right Grotesk";
   font-size: 2.4rem;
   font-weight: 500;
-  line-height: 250%;
+  line-height: 150%;
   letter-spacing: 0px;
   font-variation-settings: "opsz" auto;
   color: #000000;
@@ -1147,9 +1147,9 @@ input.mobile-facets__checkbox {
   }
 
   .facets-vertical .facets__summary {
-    padding-top: 1.5rem;
+    padding-top: 1.2rem;
     margin-bottom: 0;
-    padding-bottom: 1.5rem;
+    padding-bottom: 1.2rem;
   }
 
   .facets__heading--vertical {
@@ -1198,7 +1198,7 @@ input.mobile-facets__checkbox {
   }
 
   .facets-vertical .facets__price {
-    padding: 0.5rem 0.5rem 0.5rem 0;
+    padding: 2rem 0;
   }
 
   .facets-vertical .facets__price .field:last-of-type {
