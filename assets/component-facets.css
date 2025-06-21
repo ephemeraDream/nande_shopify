@@ -520,11 +520,11 @@
   left: 0.3rem;
   z-index: 5;
   top: 1.4rem;
-  width: 2em;
+  width: 2rem;
   height: 2rem;
 }
 
-.facet-checkbox>input[type='checkbox']:checked~.svg-wrapper svg {
+.facet-checkbox>input[type='checkbox']:checked~.svg-wrapper {
   visibility: visible;
 }
 
