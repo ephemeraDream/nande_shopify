@@ -64,3 +64,29 @@ document.querySelectorAll(".collection_compare_product_select").forEach(item => 
     collection_compare_select_num.forEach(el => el.innerHTML = select_num)
   })
 })
+//加载更多
+initLoadMore()
+function initLoadMore() {
+  const loadMoreButton = document.querySelector(".collection_compare_pagination_contain_btn")
+  loadMoreButton.addEventListener("click", async (e) => {
+    e.preventDefault();
+    const response = await fetch(loadMoreButton.href);
+    const tmpl = document.createElement('template');
+    tmpl.innerHTML = await response.text();
+    const items = document.querySelectorAll(".collection_compare_product")
+    const lastItem = items[items.length - 1];
+    let newResultsHtml = '';
+    tmpl.content.querySelectorAll('.collection_compare_product').forEach((result) => {
+      newResultsHtml += result.outerHTML;
+    });
+    lastItem.insertAdjacentHTML('afterend', newResultsHtml);
+    const oldPagination = document.querySelector('.collection_compare_pagination');
+    const newPagination = tmpl.content.querySelector('.collection_compare_pagination');
+    if (newPagination.dataset.isMoreResults) {
+      oldPagination.innerHTML = newPagination.innerHTML;
+      initLoadMore()
+    } else {
+      oldPagination.remove();
+    }
+  })
+}

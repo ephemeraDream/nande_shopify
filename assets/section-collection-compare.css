@@ -537,7 +537,7 @@
 .collection_compare .collection_compare_pagination_contain_bar {
   width: 25rem;
   height: 0.2rem;
-  background-color: #7F7E75;
+  background-color: rgb(127, 126, 117, .3);
   margin-top: 1.6rem;
   position: relative;
 }
@@ -554,11 +554,10 @@
 }
 
 .collection_compare .collection_compare_pagination_contain_btn {
-  display: inline-block;
-  display: flex;
+  display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 15rem;
+  width: 18rem;
   height: 6.7rem;
   background-color: #BDFF00;
   font-family: "PP Right Grotesk";
