@@ -26,9 +26,11 @@ show_types.forEach(item => {
   })
 })
 //对比选择
+let select_num = 0
 const select_switch = document.querySelector(".collection_compare_contain_select_switch_box")
 const collection_compare_select_btn = document.querySelector(".collection_compare_select_btn")
 const collection_compare_select = document.querySelector(".collection_compare_select")
+const collection_compare_select_num = document.querySelectorAll(".collection_compare_select_num")
 select_switch.addEventListener("click", () => {
   select_switch.querySelector(".collection_compare_contain_select_switch").classList.toggle("active")
   document.querySelector(".collection_compare_contain_body_right").classList.toggle("show_select")
@@ -54,5 +56,7 @@ document.querySelectorAll(".collection_compare_product_select").forEach(item => 
     event.stopPropagation()
     const parent = event.target.closest(".collection_compare_product")
     parent.classList.toggle("selected")
+    parent.classList.contains("selected") ? select_num++ : select_num--
+    collection_compare_select_num.forEach(el => el.innerHTML = select_num)
   })
 })
