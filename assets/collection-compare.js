@@ -50,8 +50,9 @@ document.querySelector(".collection_compare_select_contain_body_list_tip_close")
 });
 document.querySelectorAll(".collection_compare_product_select").forEach(item => {
   item.addEventListener("click", (event) => {
+    event.preventDefault();
     event.stopPropagation()
-    const parent = e.target.closest(".collection_compare_product")
+    const parent = event.target.closest(".collection_compare_product")
     parent.classList.toggle("selected")
   })
 })
