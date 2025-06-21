@@ -570,3 +570,7 @@
   margin-top: 3.2rem;
   position: relative;
 }
+
+.collection_compare .collection_compare_pagination_contain_btn.is-loading {
+  font-size: 0;
+}
