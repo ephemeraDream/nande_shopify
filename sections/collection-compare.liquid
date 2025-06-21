@@ -57,8 +57,12 @@
             <div class="collection_compare_contain_select_switch"></div>
           </div>
           <span class="collection_compare_contain_head_label">{{ 'common.ansicht_als' | t }}</span>
-          <div class="collection_compare_contain_showtype">{{- 'icon-list.svg' | inline_asset_content -}}</div>
-          <div class="collection_compare_contain_showtype active">{{- 'icon-grid.svg' | inline_asset_content -}}</div>
+          <div class="collection_compare_contain_showtype" data-type="list">
+            {{- 'icon-list.svg' | inline_asset_content -}}
+          </div>
+          <div class="collection_compare_contain_showtype active" data-type="grid">
+            {{- 'icon-grid.svg' | inline_asset_content -}}
+          </div>
         </div>
       </div>
     </div>

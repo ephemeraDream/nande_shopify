@@ -217,6 +217,10 @@
   align-items: center;
 }
 
+.collection_compare .collection_compare_contain_showtype svg path {
+  fill: #7F7E75;
+}
+
 .collection_compare .collection_compare_contain_showtype+.collection_compare_contain_showtype {
   margin-left: 1.1rem;
 }
@@ -357,5 +361,15 @@
 }
 
 .collection_compare .collection_compare_contain_body_right.show_select .collection_compare_product_select {
-  display: block;
+  display: flex;
+}
+
+.collection_compare .collection_compare_contain_body_right_list .collection_compare_product {
+  width: 100%;
+  flex-direction: row;
+}
+
+.collection_compare .collection_compare_contain_body_right_list .collection_compare .collection_compare_product_img {
+  width: 48rem;
+  height: 100%;
 }
