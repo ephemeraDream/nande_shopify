@@ -61,7 +61,9 @@
       </div>
     </div>
     <div class="collection_compare_contain_body">
-      <div class="collection_compare_contain_body_left"></div>
+      <div class="collection_compare_contain_body_left">
+        {% render 'facet-filters', results: collection %}
+      </div>
       <div class="collection_compare_contain_body_right">
         {% paginate collection.products by 6 %}
           <div class="collection_compare_product_contain">
