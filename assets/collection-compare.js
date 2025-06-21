@@ -54,6 +54,10 @@ document.querySelectorAll(".collection_compare_product_select").forEach(item => 
   item.addEventListener("click", (event) => {
     event.preventDefault();
     event.stopPropagation()
+    if (select_num === 8) {
+      alert("Sie können nur 8 Produkte vergleichen.")
+      return
+    }
     const parent = event.target.closest(".collection_compare_product")
     parent.classList.toggle("selected")
     parent.classList.contains("selected") ? select_num++ : select_num--

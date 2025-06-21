@@ -110,7 +110,28 @@
             {% endfor %}
           </div>
 
-          {% render 'custom-pagination', paginate: paginate %}
+          {%- if paginate.pages > 1 -%}
+            <div
+              class="pagination--modern ml-auto mr-auto w-full text-center{% unless paginate.next.is_link %} hidden{% endunless %}"
+              data-is-more-results="{{ paginate.next.is_link }}"
+            >
+              {%- liquid
+                assign visible_results = paginate.current_page | times: paginate.page_size | at_most: paginate.items
+                assign total_items_float = paginate.items | plus: 0.0
+                assign pagination_percent = 100 | divided_by: total_items_float | times: visible_results | round: 1
+              -%}
+              <span class="js-pagination-message">
+                {{- 'common.position_results' | t: visible_results: visible_results, total_results: paginate.items -}}
+              </span>
+              <div
+                class="pagination__bar relative mt-4 js-pagination-bar"
+                style="--pagination-percent: {{ pagination_percent }}%;"
+              ></div>
+              <a href="{{ paginate.next.url }}" class="btn btn--secondary mt-8 js-pagination-load-more">
+                {{ 'common.show_more' | t }}
+              </a>
+            </div>
+          {% endif %}
         {% endpaginate %}
       </div>
     </div>

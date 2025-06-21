@@ -548,6 +548,8 @@
     "en_savoir_plus": "En savoir plus",
     "jetzt_vergleichen": "Jetzt vergleichen",
     "compare_select_tip": "Wählen Sie mindestens zwei Produkte zum Vergleich aus.",
-    "compare_select_tip_close": "Schließen, um fortzufahren."
+    "compare_select_tip_close": "Schließen, um fortzufahren.",
+    "position_results": "{{ visible_results }} von {{ total_results }} wird angezeigt",
+    "show_more": "Mehr anzeigen"
   }
 }
