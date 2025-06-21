@@ -1,6 +1,7 @@
 .collection_compare {
   width: 100%;
   background-color: #f2f1ed;
+  position: relative;
 }
 
 .collection_compare_banner {
@@ -372,4 +373,21 @@
 .collection_compare .collection_compare_contain_body_right_list .collection_compare_product_img {
   width: 48rem;
   height: 100%;
+}
+
+.collection_compare .collection_compare_select_btn {
+  width: 35rem;
+  height: 10rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.2rem;
+  font-family: "PP Right Grotesk";
+  font-size: 3rem;
+  font-weight: 500;
+  line-height: 94%;
+  letter-spacing: 0px;
+  font-variation-settings: "opsz" auto;
+  color: #000000;
+  position: absolute;
 }
