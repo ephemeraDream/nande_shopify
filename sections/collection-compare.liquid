@@ -61,11 +61,17 @@
       </div>
     </div>
     <div class="collection_compare_contain_body">
-      <div class="collection_compare_contain_body_left">
-        {% render 'facet-filters', results: collection %}
-      </div>
-      <div class="collection_compare_contain_body_right">
-        {% paginate collection.products by 6 %}
+      {% paginate collection.products by 6 %}
+        <div class="collection_compare_contain_body_left">
+          {% render 'facets',
+            results: collection,
+            enable_filtering: true,
+            enable_sorting: true,
+            filter_type: 'vertical',
+            paginate: paginate
+          %}
+        </div>
+        <div class="collection_compare_contain_body_right">
           <div class="collection_compare_product_contain">
             {% for product in collection.products %}
               <a class="collection_compare_product" data-type="{{ product.type | handleize }}" href="{{ product.url }}">
@@ -98,8 +104,8 @@
           </div>
 
           {% render 'custom-pagination', paginate: paginate %}
-        {% endpaginate %}
-      </div>
+        </div>
+      {% endpaginate %}
     </div>
   </div>
 </div>
