@@ -3692,3 +3692,33 @@ a {
 .custom_pagination .ajax_pagination:hover svg path {
   fill: #1F1F1F;
 }
+
+.is-loading::after {
+  content: "";
+  position: absolute;
+  top: calc(50% - 10px);
+  right: calc(50% - 10px);
+  width: 20px;
+  height: 20px;
+  transition: opacity 0.2s;
+  animation: spinner 0.6s linear infinite;
+  border: 2px solid;
+  border-radius: 50%;
+  border-color: rgb(var(--text-color));
+  border-top-color: transparent;
+}
+
+.is-loading::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 10px;
+  height: 20px;
+  margin-top: -2px;
+  transform: scaleX(-1) rotate(135deg) translateX(-50%) translateY(-50%);
+  transform-origin: left top;
+  border-top: 2px solid rgb(var(--text-color));
+  opacity: 0;
+  border-inline-end: 2px solid rgb(var(--text-color));
+}

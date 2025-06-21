@@ -70,6 +70,7 @@ function initLoadMore() {
   const loadMoreButton = document.querySelector(".collection_compare_pagination_contain_btn")
   loadMoreButton.addEventListener("click", async (e) => {
     e.preventDefault();
+    loadMoreButton.classList.add("is-loading")
     const response = await fetch(loadMoreButton.href);
     const tmpl = document.createElement('template');
     tmpl.innerHTML = await response.text();
@@ -88,5 +89,6 @@ function initLoadMore() {
     } else {
       oldPagination.remove();
     }
+    loadMoreButton.classList.remove("is-loading")
   })
 }
