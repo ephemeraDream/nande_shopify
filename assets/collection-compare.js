@@ -43,3 +43,7 @@ collection_compare_select.addEventListener("click", (e) => {
     document.body.style.overflowY = "auto";
   }
 });
+document.querySelector(".collection_compare_select_contain_body_list_tip_close").addEventListener("click", (e) => {
+  collection_compare_select.removeAttribute("open")
+  document.body.style.overflowY = "auto";
+});

@@ -489,3 +489,15 @@
   background-color: rgba(255, 255, 255, .6);
   cursor: not-allowed;
 }
+
+.collection_compare .collection_compare_select_contain_body_list_tip {
+  border: 0.1rem dashed #7F7E75;
+  font-family: "PP Right Grotesk";
+  font-size: 2rem;
+  font-weight: normal;
+  line-height: 130%;
+  letter-spacing: 0px;
+  font-variation-settings: "opsz" auto;
+  color: #1F1F1F;
+  padding: 1.6rem;
+}

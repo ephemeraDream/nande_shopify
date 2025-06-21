@@ -8,7 +8,14 @@
       {{ 'common.vergleichen' | t }} (<span class="collection_compare_select_num">0</span>)
     </div>
     <div class="collection_compare_select_contain_body">
-      <div class="collection_compare_select_contain_body_list"></div>
+      <div class="collection_compare_select_contain_body_list">
+        <div class="collection_compare_select_contain_body_list_tip">
+          <p>{{ 'common.compare_select_tip' | t }}</p>
+          <a class="collection_compare_select_contain_body_list_tip_close">
+            {{- 'common.compare_select_tip_close' | t -}}
+          </a>
+        </div>
+      </div>
       <div class="collection_compare_select_contain_body_btn" disable>
         {{ 'common.jetzt_vergleichen' | t }}
         {{ 'icon-right-arrow.svg' | inline_asset_content }}
