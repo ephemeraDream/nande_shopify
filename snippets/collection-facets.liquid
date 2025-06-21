@@ -103,15 +103,9 @@
                     <legend class="visually-hidden">{{ filter.label | escape }}</legend>
                     {%- liquid
                       assign sorted_values = filter.values
-                      # Keep the selected values grouped together when operator is AND
-                      if filter.operator == 'AND'
-                        assign active_filter_values = filter.values | where: 'active', true
-                        assign inactive_filter_values = filter.values | where: 'active', false
-                        assign sorted_values = active_filter_values | concat: inactive_filter_values
-                      endif
                     -%}
                     <ul
-                      class="{{ visual_layout_class }} facets__list--vertical list-unstyled"
+                      class="facets__list--vertical list-unstyled"
                       role="list"
                     >
                       {%- for value in sorted_values -%}
@@ -128,7 +122,7 @@
 
                         {%- capture text_value -%}
                               <span class="facet-checkbox__text" aria-hidden="true">
-                                <span class="facet-checkbox__text-label">{{- value.label | escape }}</span> ({{- value.count -}})
+                                <span class="facet-checkbox__text-label">{{- value.label | escape }}</span>
                               </span>
                               <span class="visually-hidden">
                                 {{- value.label | escape }} (
@@ -188,7 +182,7 @@
                                 {{- 'square.svg' | inline_asset_content -}}
 
                                 <div class="svg-wrapper">
-                                  {{- 'icon-checkmark.svg' | inline_asset_content -}}
+                                  {{- 'icon-selected.svg' | inline_asset_content -}}
                                 </div>
                               {%- endif -%}
 
