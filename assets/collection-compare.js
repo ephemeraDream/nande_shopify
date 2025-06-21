@@ -49,8 +49,8 @@ document.querySelector(".collection_compare_select_contain_body_list_tip_close")
   document.body.style.overflowY = "auto";
 });
 document.querySelectorAll(".collection_compare_product_select").forEach(item => {
-  item.addEventListener("click", (e) => {
-    e.stopPropagation()
+  item.addEventListener("click", (event) => {
+    event.stopPropagation()
     const parent = e.target.closest(".collection_compare_product")
     parent.classList.toggle("selected")
   })
