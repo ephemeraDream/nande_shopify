@@ -345,4 +345,9 @@
   position: absolute;
   top: 1.4rem;
   right: 1.6rem;
+  display: none;
+}
+
+.collection_compare .collection_compare_contain_body_right.show_select .collection_compare_product_select {
+  display: block;
 }
