@@ -515,17 +515,17 @@
 }
 
 .facet-checkbox .svg-wrapper {
-  visibility: hidden;
+  display: none;
   position: absolute;
-  left: 0.3rem;
   z-index: 5;
-  top: 1.4rem;
+  top: 2rem;
   width: 2rem;
   height: 2rem;
 }
 
 .facet-checkbox>input[type='checkbox']:checked~.svg-wrapper {
   visibility: visible;
+  display: flex;
 }
 
 @media screen and (forced-colors: active) {
