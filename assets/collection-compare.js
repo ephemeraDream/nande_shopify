@@ -30,3 +30,7 @@ show_types.forEach(item => {
     }
   })
 })
+
+document.querySelector(".collection_compare_select_btn").addEventListener("click", () => {
+  document.querySelector(".collection_compare_select").setAttribute("open", true)
+})

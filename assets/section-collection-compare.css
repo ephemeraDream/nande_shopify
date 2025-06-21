@@ -407,9 +407,19 @@
   z-index: 90;
 }
 
+.collection_compare .collection_compare_select[open] .collection_compare_select_btn {
+  display: none;
+}
+
 .collection_compare .collection_compare_select_contain {
+  width: 0;
   position: absolute;
   right: 0;
+  transition: width .3s ease-in-out;
+}
+
+.collection_compare .collection_compare_select[open] .collection_compare_select_contain {
+  width: 58.6rem;
 }
 
 .collection_compare .collection_compare_select_contain_head {
@@ -441,7 +451,6 @@
 }
 
 .collection_compare .collection_compare_select_contain_body {
-  width: 58.6rem;
   background-color: #fff;
   padding: 1.8rem 3.3rem;
 }
@@ -460,6 +469,7 @@
   color: #1F1F1F;
   background-color: #BDFF00;
   position: relative;
+  height: 6.7rem;
 }
 
 .collection_compare .collection_compare_select_contain_body_btn[disable]::before {
