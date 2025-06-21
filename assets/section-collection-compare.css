@@ -92,6 +92,14 @@
   cursor: pointer;
 }
 
+.collection_compare .collection_compare_contain_switchfilter svg path {
+  fill: #7F7E75;
+}
+
+.collection_compare .collection_compare_contain_switchfilter[data-type="open"] svg path {
+  fill: #000;
+}
+
 .collection_compare .collection_compare_contain_head_right {
   display: flex;
   align-items: center;

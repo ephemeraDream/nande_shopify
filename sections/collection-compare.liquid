@@ -20,7 +20,7 @@
   {% endif %}
   <div class="collection_compare_contain padding-sider">
     <div class="collection_compare_contain_head">
-      <div class="collection_compare_contain_switchfilter">
+      <div class="collection_compare_contain_switchfilter" data-type="open">
         <span>{{ 'common.filter' | t }}</span>
         {{- 'icon-filter.svg' | inline_asset_content -}}
       </div>
@@ -103,6 +103,8 @@
     </div>
   </div>
 </div>
+
+<script src="{{ 'collection-compare.js' | asset_url }}" defer="defer"></script>
 
 {% schema %}
 {
