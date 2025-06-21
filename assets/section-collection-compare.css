@@ -513,3 +513,60 @@
   max-height: 67.5rem;
   overflow: auto;
 }
+
+.collection_compare .collection_compare_pagination {
+  display: flex;
+  justify-content: center;
+  margin-top: 6rem;
+}
+
+.collection_compare .collection_compare_pagination_contain {
+  text-align: center;
+}
+
+.collection_compare .collection_compare_pagination_contain_message {
+  font-family: "PP Right Grotesk";
+  font-size: 2.4rem;
+  font-weight: 500;
+  line-height: 112%;
+  letter-spacing: 0px;
+  font-variation-settings: "opsz" auto;
+  color: #1f1f1f;
+}
+
+.collection_compare .collection_compare_pagination_contain_bar {
+  width: 25rem;
+  height: 0.2rem;
+  background-color: #7F7E75;
+  margin-top: 1.6rem;
+  position: relative;
+}
+
+.collection_compare .collection_compare_pagination_contain_bar::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: var(--pagination-percent);
+  height: 2px;
+  transition: width .3s;
+  background-color: #1F1F1F;
+}
+
+.collection_compare .collection_compare_pagination_contain_btn {
+  display: inline-block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 15rem;
+  height: 6.7rem;
+  background-color: #BDFF00;
+  font-family: "PP Right Grotesk";
+  font-size: 2.4rem;
+  font-weight: 500;
+  line-height: 112%;
+  letter-spacing: 0px;
+  font-variation-settings: "opsz" auto;
+  color: #1F1F1F;
+  margin-top: 3.2rem;
+}
