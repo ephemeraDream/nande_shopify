@@ -574,3 +574,8 @@
 .collection_compare .collection_compare_pagination_contain_btn.is-loading {
   font-size: 0;
 }
+
+.collection_compare .collection_compare_select_contain_body_list_tip_close {
+  text-decoration: underline;
+  text-underline-offset: .4rem;
+}

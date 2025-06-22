@@ -62,6 +62,12 @@ document.querySelectorAll(".collection_compare_product_select").forEach(item => 
     parent.classList.toggle("selected")
     parent.classList.contains("selected") ? select_num++ : select_num--
     collection_compare_select_num.forEach(el => el.innerHTML = select_num)
+    const collection_compare_select_contain_body_list_tip = document.querySelector(".collection_compare_select_contain_body_list_tip")
+    if (select_num > 2) {
+      collection_compare_select_contain_body_list_tip.style.display = "none"
+    } else {
+      collection_compare_select_contain_body_list_tip.style.display = "block"
+    }
   })
 })
 //加载更多
