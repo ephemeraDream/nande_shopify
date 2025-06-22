@@ -113,16 +113,82 @@
         "description": ""
       }
     },
-    "img_with_text_simplicity_ABE78f": {
-      "type": "img-with-text-simplicity",
-      "name": "img with text simplicity",
+    "img_with_text_box_simplicity_qrzG6W": {
+      "type": "img-with-text-box-simplicity",
+      "blocks": {
+        "file_with_text_McHwGa": {
+          "type": "file_with_text",
+          "settings": {
+            "title": "<p>Kostenloser und Schneller Versand</p>",
+            "description": "<p>Normalerweise beträgt die optimale Schreibtischhöhe im Sitzen Ihre Körpergröße x 0,4 und im Stehen Ihre Körpergröße x 0,62. Höhenverstellbarer Schreibtisch mit 2 stufigen Säulen ist nur für die Körpergröße von 1,75-1,95 m geeignet. </p>",
+            "file_type": "image",
+            "file_image": "shopify://shop_images/featured-spaces-5.webp",
+            "video_url": ""
+          }
+        },
+        "file_with_text_Q8tJKk": {
+          "type": "file_with_text",
+          "settings": {
+            "title": "<p>Kostenloser und Schneller Versand</p>",
+            "description": "<p>Normalerweise beträgt die optimale Schreibtischhöhe im Sitzen Ihre Körpergröße x 0,4 und im Stehen Ihre Körpergröße x 0,62. Höhenverstellbarer Schreibtisch mit 2 stufigen Säulen ist nur für die Körpergröße von 1,75-1,95 m geeignet. </p>",
+            "file_type": "image",
+            "file_image": "shopify://shop_images/featured-spaces-5.webp",
+            "video_url": ""
+          }
+        },
+        "file_with_text_f9yPAD": {
+          "type": "file_with_text",
+          "settings": {
+            "title": "<p>Kostenloser und Schneller Versand</p>",
+            "description": "<p>Normalerweise beträgt die optimale Schreibtischhöhe im Sitzen Ihre Körpergröße x 0,4 und im Stehen Ihre Körpergröße x 0,62. Höhenverstellbarer Schreibtisch mit 2 stufigen Säulen ist nur für die Körpergröße von 1,75-1,95 m geeignet. </p>",
+            "file_type": "image",
+            "file_image": "shopify://shop_images/featured-spaces-5.webp",
+            "video_url": ""
+          }
+        },
+        "file_with_text_B39ehq": {
+          "type": "file_with_text",
+          "settings": {
+            "title": "<p>Kostenloser und Schneller Versand</p>",
+            "description": "<p>Normalerweise beträgt die optimale Schreibtischhöhe im Sitzen Ihre Körpergröße x 0,4 und im Stehen Ihre Körpergröße x 0,62. Höhenverstellbarer Schreibtisch mit 2 stufigen Säulen ist nur für die Körpergröße von 1,75-1,95 m geeignet. </p>",
+            "file_type": "image",
+            "file_image": "shopify://shop_images/featured-spaces-5.webp",
+            "video_url": ""
+          }
+        },
+        "file_with_text_JJXCp8": {
+          "type": "file_with_text",
+          "settings": {
+            "title": "<p>Kostenloser und Schneller Versand</p>",
+            "description": "<p>Normalerweise beträgt die optimale Schreibtischhöhe im Sitzen Ihre Körpergröße x 0,4 und im Stehen Ihre Körpergröße x 0,62. Höhenverstellbarer Schreibtisch mit 2 stufigen Säulen ist nur für die Körpergröße von 1,75-1,95 m geeignet. </p>",
+            "file_type": "image",
+            "file_image": "shopify://shop_images/featured-spaces-5.webp",
+            "video_url": ""
+          }
+        },
+        "file_with_text_THJTyK": {
+          "type": "file_with_text",
+          "settings": {
+            "title": "<p>Kostenloser und Schneller Versand</p>",
+            "description": "<p>Normalerweise beträgt die optimale Schreibtischhöhe im Sitzen Ihre Körpergröße x 0,4 und im Stehen Ihre Körpergröße x 0,62. Höhenverstellbarer Schreibtisch mit 2 stufigen Säulen ist nur für die Körpergröße von 1,75-1,95 m geeignet. </p>",
+            "file_type": "image",
+            "file_image": "shopify://shop_images/featured-spaces-5.webp",
+            "video_url": ""
+          }
+        }
+      },
+      "block_order": [
+        "file_with_text_McHwGa",
+        "file_with_text_Q8tJKk",
+        "file_with_text_f9yPAD",
+        "file_with_text_B39ehq",
+        "file_with_text_JJXCp8",
+        "file_with_text_THJTyK"
+      ],
+      "name": "file box simplicity",
       "settings": {
-        "title": "",
-        "sub_title": "",
-        "description": "",
-        "file_position": "right",
-        "file_type": "image",
-        "video_url": ""
+        "main_title": "<p>64-129cm Hohenverstellbar</p>",
+        "row_num": 3
       }
     }
   },
@@ -130,6 +196,6 @@
     "main",
     "related-products",
     "video_simplicity_zX8daC",
-    "img_with_text_simplicity_ABE78f"
+    "img_with_text_box_simplicity_qrzG6W"
   ]
 }
