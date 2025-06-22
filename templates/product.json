@@ -187,6 +187,7 @@
       ],
       "name": "file box simplicity",
       "settings": {
+        "spec_id": "",
         "main_title": "<p>64-129cm Hohenverstellbar</p>",
         "row_num": 3
       }
@@ -260,6 +261,43 @@
         "file_image": "shopify://shop_images/product_info_demo_img_1.webp",
         "video_url": ""
       }
+    },
+    "img_with_foldtext_RcBrkw": {
+      "type": "img-with-foldtext",
+      "blocks": {
+        "foldtext_HQhGDk": {
+          "type": "foldtext",
+          "settings": {
+            "title": "<p>64-129cm hohenverstellbar</p>",
+            "description": "<p>Normalerweise beträgt die optimale Schreibtischhöhe im Sitzen Ihre Körpergröße x 0,4 und im Stehen Ihre Körpergröße x 0,62. <br/>Höhenverstellbarer Schreibtisch mit 2 stufigen Säulen ist nur für die Körpergröße von 1,75-1,95 m geeignet. <br/>Vernal-Schreibtisch passt für Personen mit einer Körpergröße von 1,55-2,05 m.</p>"
+          }
+        },
+        "foldtext_HWP39G": {
+          "type": "foldtext",
+          "settings": {
+            "title": "<p>64-129cm hohenverstellbar</p>",
+            "description": "<p>Normalerweise beträgt die optimale Schreibtischhöhe im Sitzen Ihre Körpergröße x 0,4 und im Stehen Ihre Körpergröße x 0,62. <br/>Höhenverstellbarer Schreibtisch mit 2 stufigen Säulen ist nur für die Körpergröße von 1,75-1,95 m geeignet. <br/>Vernal-Schreibtisch passt für Personen mit einer Körpergröße von 1,55-2,05 m.</p>"
+          }
+        },
+        "foldtext_iGWkAX": {
+          "type": "foldtext",
+          "settings": {
+            "title": "<p>64-129cm hohenverstellbar</p>",
+            "description": "<p>Normalerweise beträgt die optimale Schreibtischhöhe im Sitzen Ihre Körpergröße x 0,4 und im Stehen Ihre Körpergröße x 0,62. <br/>Höhenverstellbarer Schreibtisch mit 2 stufigen Säulen ist nur für die Körpergröße von 1,75-1,95 m geeignet. <br/>Vernal-Schreibtisch passt für Personen mit einer Körpergröße von 1,55-2,05 m.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "foldtext_HQhGDk",
+        "foldtext_HWP39G",
+        "foldtext_iGWkAX"
+      ],
+      "name": "img with foldtext",
+      "settings": {
+        "spec_id": "",
+        "title": "<p>Title Title</p>",
+        "image": "shopify://shop_images/featured-spaces-5.webp"
+      }
     }
   },
   "order": [
@@ -270,6 +308,7 @@
     "img_with_text_simplicity_R8thEq",
     "img_with_text_simplicity_nJFALq",
     "img_with_text_simplicity_YLCpmN",
-    "img_with_text_simplicity_JRCJ4f"
+    "img_with_text_simplicity_JRCJ4f",
+    "img_with_foldtext_RcBrkw"
   ]
 }
