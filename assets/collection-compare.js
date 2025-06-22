@@ -82,7 +82,7 @@ document.querySelectorAll(".collection_compare_product_select").forEach(item => 
 
       container.innerHTML = `
         <img
-          src="${product.featured_image.src}"
+          src="${product.featured_image}"
           alt="${product.title}"
         >
         <div class="collection_compare_select_contain_body_list_item_right">
