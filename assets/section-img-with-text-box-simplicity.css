@@ -46,7 +46,7 @@
 
 .img_with_text_box_simplicity .img_with_text_box_simplicity_filebox {
   position: relative;
-  padding-bottom: 150%;
+  padding-bottom: 66.5%;
 }
 
 .img_with_text_box_simplicity .img_with_text_box_simplicity_filebox_video,
@@ -64,6 +64,7 @@
   align-items: stretch;
   flex-wrap: wrap;
   gap: 3rem;
+  margin-top: 6rem;
 }
 
 .img_with_text_box_simplicity .img_with_text_box_simplicity_contain_item_2 {
