@@ -70,7 +70,7 @@ document.querySelectorAll(".collection_compare_product_select").forEach(item => 
       collection_compare_select_contain_body_btn.removeAttribute("disable")
     } else {
       collection_compare_select_contain_body_list_tip.style.display = "block"
-      collection_compare_select_contain_body_btn.setAttribute("disable")
+      collection_compare_select_contain_body_btn.setAttribute("disable", true)
     }
     const id = parent.getAttribute("data-id")
     const product = collection_compare_data[id]
