@@ -95,6 +95,13 @@ document.querySelectorAll(".collection_compare_product_select").forEach(item => 
         </div>
       `;
 
+      container.querySelector(".collection_compare_select_contain_body_list_item_close").addEventListener("click", (e) => {
+        const item = e.target.closest(".collection_compare_select_contain_body_list_item")
+        const id = item.getAttribute("data-id")
+        item.remove()
+        parent.classList.toggle("selected")
+      })
+
       collection_compare_select_contain_body_list.appendChild(container);
     } else {
 
