@@ -102,10 +102,8 @@ document.querySelectorAll(".collection_compare_contain_sort_select_item").forEac
     const input = document.querySelector(`input[name="sort_by"][value="${value}"]`);
     if (input) {
       input.checked = true;
-
-      // 触发 change 事件（如果监听器依赖此事件来更新页面）
-      // const event = new Event('change', { bubbles: true });
-      // input.dispatchEvent(event);
+      const event = new Event('change', { bubbles: true });
+      input.dispatchEvent(event);
     }
   })
 })
