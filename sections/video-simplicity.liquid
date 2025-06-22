@@ -1,6 +1,6 @@
 {{ 'section-video-simplicity.css' | asset_url | stylesheet_tag }}
 
-<div class="video_simplicity_section padding-sider">
+<div class="video_simplicity_section padding-sider" id="{{ section.settings.spec_id }}">
   <div class="video_simplicity">
     <div class="video_simplicity_info">
       {% if section.settings.title != blank %}
@@ -76,6 +76,11 @@
   },
   "settings": [
     {
+      "type": "text",
+      "id": "spec_id",
+      "label": "specId"
+    },
+    {
       "type": "radio",
       "id": "show_playicon",
       "label": "show playicon",
@@ -107,12 +112,12 @@
       "label": "video upload"
     },
     {
-      "type": "text",
+      "type": "richtext",
       "id": "title",
       "label": "title"
     },
     {
-      "type": "text",
+      "type": "richtext",
       "id": "description",
       "label": "description"
     }
