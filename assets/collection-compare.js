@@ -114,7 +114,6 @@ document.querySelectorAll(".collection_compare_product_select").forEach(item => 
         const itemId = item.getAttribute("data-id")
         if (id == itemId) {
           item.remove()
-          select_num--
           selectChangeLink()
         }
       })
