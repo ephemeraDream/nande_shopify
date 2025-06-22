@@ -1,5 +1,6 @@
 {{ 'section-collection-compare.css' | asset_url | stylesheet_tag }}
 
+{% assign product_list = collection.products %}
 <div class="collection_compare">
   {% if section.settings.show_banner %}
     <div class="collection_compare_banner padding-sider">
@@ -149,7 +150,7 @@
     {% endif %}
   {% endfor %}
   {
-    {% for product in collection.products %}
+    {% for product in product_list %}
       "{{ product.id }}": {
         "product": {{- product | json -}},
         "symbol": {{ currency_symbol | json }}
