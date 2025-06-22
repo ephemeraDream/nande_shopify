@@ -190,12 +190,26 @@
         "main_title": "<p>64-129cm Hohenverstellbar</p>",
         "row_num": 3
       }
+    },
+    "img_with_text_simplicity_R8thEq": {
+      "type": "img-with-text-simplicity",
+      "name": "img with text simplicity",
+      "settings": {
+        "title": "<p>Stabil Und Langlebig</p>",
+        "sub_title": "<p>Extrem stabiler </p>",
+        "description": "<p>Dreiecksunterstützungsstruktur ist extrem stabil im Vergleich zu anderen Schreibtischdesigns.<br/>Sie ist auch in der höchsten Höhe von ausgezeichneter Stabilität.Neben den strukturellen Verbesserungen trägt auch die präzise Verarbeitung und Konstruktion <br/>zur Stabilität bei.Der Spalt zwischen den Säulen beträgt weniger als 0,03 mm. Die dreiteiligen Säulen gleiten nahtlos ineinander, <br/>wodurch jegliches Wackeln verhindert wird.</p>",
+        "file_position": "right",
+        "file_type": "image",
+        "file_image": "shopify://shop_images/product_info_demo_img_1.webp",
+        "video_url": ""
+      }
     }
   },
   "order": [
     "main",
     "related-products",
     "video_simplicity_zX8daC",
-    "img_with_text_box_simplicity_qrzG6W"
+    "img_with_text_box_simplicity_qrzG6W",
+    "img_with_text_simplicity_R8thEq"
   ]
 }
