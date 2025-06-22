@@ -28,66 +28,70 @@ show_types.forEach(item => {
 })
 //对比选择
 let select_num = 0
-initSelectCompare()
-function initSelectCompare() {
-  const select_switch = document.querySelector(".collection_compare_contain_select_switch_box")
-  const collection_compare_select_btn = document.querySelector(".collection_compare_select_btn")
-  const collection_compare_select = document.querySelector(".collection_compare_select")
-  const collection_compare_select_num = document.querySelectorAll(".collection_compare_select_num")
-  select_switch.addEventListener("click", () => {
-    select_switch.querySelector(".collection_compare_contain_select_switch").classList.toggle("active")
-    document.querySelector(".collection_compare_contain_body_right").classList.toggle("show_select")
-    collection_compare_select_btn.classList.toggle("show")
-  })
-  collection_compare_select_btn.addEventListener("click", () => {
-    collection_compare_select.setAttribute("open", true)
-    document.body.style.overflowY = "hidden";
-  })
-  collection_compare_select.addEventListener("click", (e) => {
-    if (e.target === collection_compare_select) {
-      collection_compare_select.removeAttribute("open")
-      document.body.style.overflowY = "auto";
-    }
-  });
-  document.querySelector(".collection_compare_select_contain_body_list_tip_close").addEventListener("click", (e) => {
+const select_switch = document.querySelector(".collection_compare_contain_select_switch_box")
+const collection_compare_select_btn = document.querySelector(".collection_compare_select_btn")
+const collection_compare_select = document.querySelector(".collection_compare_select")
+select_switch.addEventListener("click", () => {
+  select_switch.querySelector(".collection_compare_contain_select_switch").classList.toggle("active")
+  document.querySelector(".collection_compare_contain_body_right").classList.toggle("show_select")
+  collection_compare_select_btn.classList.toggle("show")
+})
+collection_compare_select_btn.addEventListener("click", () => {
+  collection_compare_select.setAttribute("open", true)
+  document.body.style.overflowY = "hidden";
+})
+collection_compare_select.addEventListener("click", (e) => {
+  if (e.target === collection_compare_select) {
     collection_compare_select.removeAttribute("open")
     document.body.style.overflowY = "auto";
-  });
+  }
+});
+document.querySelector(".collection_compare_select_contain_body_list_tip_close").addEventListener("click", (e) => {
+  collection_compare_select.removeAttribute("open")
+  document.body.style.overflowY = "auto";
+});
+initSelectCompare()
+function initSelectCompare() {
   document.querySelectorAll(".collection_compare_product_select").forEach(item => {
-    item.addEventListener("click", (event) => {
-      event.preventDefault();
-      event.stopPropagation()
-      if (select_num === 8) {
-        alert("Sie können nur 8 Produkte vergleichen.")
-        return
-      }
-      const parent = event.target.closest(".collection_compare_product")
-      parent.classList.toggle("selected")
-      parent.classList.contains("selected") ? select_num++ : select_num--
+    item.removeEventListener("click", onProductSelectClick);
+    item.addEventListener("click", onProductSelectClick);
+  })
+}
+function onProductSelectClick(event) {
+  event.preventDefault();
+  event.stopPropagation()
+  if (select_num === 8) {
+    alert("Sie können nur 8 Produkte vergleichen.")
+    return
+  }
+  const collection_compare_select_num = document.querySelectorAll(".collection_compare_select_num")
+  const parent = event.target.closest(".collection_compare_product")
+  parent.classList.toggle("selected")
+  parent.classList.contains("selected") ? select_num++ : select_num--
 
-      const selectChangeLink = () => {
-        collection_compare_select_num.forEach(el => el.innerHTML = select_num)
-        const collection_compare_select_contain_body_list_tip = document.querySelector(".collection_compare_select_contain_body_list_tip")
-        const collection_compare_select_contain_body_btn = document.querySelector(".collection_compare_select_contain_body_btn")
-        if (select_num > 1) {
-          collection_compare_select_contain_body_list_tip.style.display = "none"
-          collection_compare_select_contain_body_btn.removeAttribute("disable")
-        } else {
-          collection_compare_select_contain_body_list_tip.style.display = "block"
-          collection_compare_select_contain_body_btn.setAttribute("disable", true)
-        }
-      }
+  const selectChangeLink = () => {
+    collection_compare_select_num.forEach(el => el.innerHTML = select_num)
+    const collection_compare_select_contain_body_list_tip = document.querySelector(".collection_compare_select_contain_body_list_tip")
+    const collection_compare_select_contain_body_btn = document.querySelector(".collection_compare_select_contain_body_btn")
+    if (select_num > 1) {
+      collection_compare_select_contain_body_list_tip.style.display = "none"
+      collection_compare_select_contain_body_btn.removeAttribute("disable")
+    } else {
+      collection_compare_select_contain_body_list_tip.style.display = "block"
+      collection_compare_select_contain_body_btn.setAttribute("disable", true)
+    }
+  }
 
-      selectChangeLink()
-      const id = parent.getAttribute("data-id")
-      const product = collection_compare_data[id].product
-      const collection_compare_select_contain_body_list = document.querySelector(".collection_compare_select_contain_body_list")
-      if (parent.classList.contains("selected")) {
-        const container = document.createElement('div');
-        container.className = 'collection_compare_select_contain_body_list_item';
-        container.dataset.id = product.id;
+  selectChangeLink()
+  const id = parent.getAttribute("data-id")
+  const product = collection_compare_data[id].product
+  const collection_compare_select_contain_body_list = document.querySelector(".collection_compare_select_contain_body_list")
+  if (parent.classList.contains("selected")) {
+    const container = document.createElement('div');
+    container.className = 'collection_compare_select_contain_body_list_item';
+    container.dataset.id = product.id;
 
-        container.innerHTML = `
+    container.innerHTML = `
         <img
           src="${product.featured_image}"
           alt="${product.title}"
@@ -102,28 +106,25 @@ function initSelectCompare() {
         </div>
       `;
 
-        container.querySelector(".collection_compare_select_contain_body_list_item_close").addEventListener("click", (e) => {
-          const item = e.target.closest(".collection_compare_select_contain_body_list_item")
-          item.remove()
-          parent.classList.toggle("selected")
-          select_num--
-          selectChangeLink()
-        })
+    container.querySelector(".collection_compare_select_contain_body_list_item_close").addEventListener("click", (e) => {
+      const item = e.target.closest(".collection_compare_select_contain_body_list_item")
+      item.remove()
+      parent.classList.toggle("selected")
+      select_num--
+      selectChangeLink()
+    })
 
-        collection_compare_select_contain_body_list.appendChild(container);
-      } else {
-        document.querySelectorAll(".collection_compare_select_contain_body_list_item").forEach(item => {
-          const itemId = item.getAttribute("data-id")
-          if (id == itemId) {
-            item.remove()
-            selectChangeLink()
-          }
-        })
+    collection_compare_select_contain_body_list.appendChild(container);
+  } else {
+    document.querySelectorAll(".collection_compare_select_contain_body_list_item").forEach(item => {
+      const itemId = item.getAttribute("data-id")
+      if (id == itemId) {
+        item.remove()
+        selectChangeLink()
       }
     })
-  })
+  }
 }
-
 //加载更多
 initLoadMore()
 function initLoadMore() {
