@@ -70,7 +70,7 @@
       <div class="collection_compare_contain_body_left facets-vertical">
         {% render 'collection-facets', results: collection, filter_type: 'vertical' %}
       </div>
-      <div class="collection_compare_contain_body_right">
+      <div class="collection_compare_contain_body_right" data-id="{{ section.id }}">
         {% paginate collection.products by 6 %}
           <div class="collection_compare_product_contain">
             {% for product in collection.products %}
