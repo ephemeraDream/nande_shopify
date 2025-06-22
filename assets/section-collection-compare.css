@@ -600,6 +600,7 @@
   padding-left: 2rem;
   display: flex;
   flex-direction: column;
+  justify-content: center;
 }
 
 .collection_compare .collection_compare_select_contain_body_list_item_product_title {

@@ -62,16 +62,21 @@ document.querySelectorAll(".collection_compare_product_select").forEach(item => 
     const parent = event.target.closest(".collection_compare_product")
     parent.classList.toggle("selected")
     parent.classList.contains("selected") ? select_num++ : select_num--
-    collection_compare_select_num.forEach(el => el.innerHTML = select_num)
-    const collection_compare_select_contain_body_list_tip = document.querySelector(".collection_compare_select_contain_body_list_tip")
-    const collection_compare_select_contain_body_btn = document.querySelector(".collection_compare_select_contain_body_btn")
-    if (select_num > 1) {
-      collection_compare_select_contain_body_list_tip.style.display = "none"
-      collection_compare_select_contain_body_btn.removeAttribute("disable")
-    } else {
-      collection_compare_select_contain_body_list_tip.style.display = "block"
-      collection_compare_select_contain_body_btn.setAttribute("disable", true)
+
+    const selectChangeLink = () => {
+      collection_compare_select_num.forEach(el => el.innerHTML = select_num)
+      const collection_compare_select_contain_body_list_tip = document.querySelector(".collection_compare_select_contain_body_list_tip")
+      const collection_compare_select_contain_body_btn = document.querySelector(".collection_compare_select_contain_body_btn")
+      if (select_num > 1) {
+        collection_compare_select_contain_body_list_tip.style.display = "none"
+        collection_compare_select_contain_body_btn.removeAttribute("disable")
+      } else {
+        collection_compare_select_contain_body_list_tip.style.display = "block"
+        collection_compare_select_contain_body_btn.setAttribute("disable", true)
+      }
     }
+
+    selectChangeLink()
     const id = parent.getAttribute("data-id")
     const product = collection_compare_data[id].product
     const collection_compare_select_contain_body_list = document.querySelector(".collection_compare_select_contain_body_list")
@@ -100,6 +105,8 @@ document.querySelectorAll(".collection_compare_product_select").forEach(item => 
         const id = item.getAttribute("data-id")
         item.remove()
         parent.classList.toggle("selected")
+        select_num--
+        selectChangeLink()
       })
 
       collection_compare_select_contain_body_list.appendChild(container);
