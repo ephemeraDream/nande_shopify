@@ -1,0 +1,120 @@
+.img_with_foldtext_section {
+  width: 100%;
+  background-color: #f2f1ed;
+  padding-top: 12rem;
+  padding-bottom: 12rem;
+}
+
+.img_with_foldtext {
+  max-width: 144rem;
+  margin: 0 auto;
+}
+
+.img_with_foldtext .img_with_foldtext_title {
+  font-family: "PP Right Grotesk";
+  font-size: 6rem;
+  font-weight: 500;
+  line-height: 94%;
+  text-align: center;
+  text-transform: capitalize;
+  letter-spacing: 0px;
+  font-variation-settings: "opsz" auto;
+  color: #1F1F1F;
+}
+
+.img_with_foldtext .img_with_foldtext_contain {
+  margin-top: 6rem;
+  display: flex;
+  align-items: center;
+}
+
+.img_with_foldtext .img_with_foldtext_contain img {
+  flex: 1;
+  height: 48rem;
+  object-fit: cover;
+  object-position: center center;
+}
+
+.img_with_foldtext .img_with_foldtext_contain_right {
+  flex: 1;
+}
+
+.img_with_foldtext .img_with_foldtext_item {
+  border-bottom: 0.1rem solid #D8D8D8;
+}
+
+.img_with_foldtext .img_with_foldtext_item_head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  font-family: "PP Right Grotesk";
+  font-size: 4rem;
+  font-weight: bold;
+  line-height: 150%;
+  letter-spacing: 0px;
+  font-variation-settings: "opsz" auto;
+  color: #7F7E75;
+  gap: 2rem;
+}
+
+.img_with_foldtext .img_with_foldtext_item.active .img_with_foldtext_answer {
+  padding-bottom: 6.6rem;
+  padding-top: 3rem;
+  border-top: 0.2rem solid #E2DED6;
+  max-height: 50rem;
+  opacity: 1;
+  visibility: visible;
+}
+
+.img_with_foldtext .img_with_foldtext_icon {
+  width: 2.6rem;
+  height: 2.6rem;
+  display: flex;
+}
+
+.img_with_foldtext .img_with_foldtext_icon svg path {
+  fill: #7F7E75;
+}
+
+.img_with_foldtext .img_with_foldtext_answer {
+  max-height: 0;
+  overflow: hidden;
+  padding: 0;
+  margin: 0;
+  opacity: 0;
+  visibility: hidden;
+  transition: max-height 0.3s ease-in-out, opacity 0.3s ease,
+    visibility 0.3s ease;
+  font-family: "PP Right Grotesk";
+  font-size: 2rem;
+  font-weight: normal;
+  line-height: 130%;
+  letter-spacing: 0px;
+  font-variation-settings: "opsz" auto;
+  color: #1F1F1F;
+}
+
+.img_with_foldtext .img_with_foldtext_item .img_with_foldtext_icon[open],
+.img_with_foldtext .img_with_foldtext_item.active .img_with_foldtext_icon[close] {
+  display: none;
+}
+
+.img_with_foldtext .img_with_foldtext_item.active .img_with_foldtext_icon[open] {
+  display: flex;
+}
+
+.img_with_foldtext .img_with_foldtext_item.active svg path {
+  fill: #1F1F1F;
+}
+
+.img_with_foldtext .img_with_foldtext_item.active .img_with_foldtext_item_head {
+  font-family: "PP Right Grotesk";
+  font-size: 6rem;
+  font-weight: 500;
+  line-height: 94%;
+  letter-spacing: 0px;
+  font-variation-settings: "opsz" auto;
+  color: #1F1F1F;
+  padding: 3rem 0;
+}

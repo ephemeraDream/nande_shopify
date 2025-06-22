@@ -73,6 +73,10 @@
   align-items: center;
 }
 
+.img_with_text_simplicity_right .img_with_text_simplicity_info {
+  padding-right: 2rem;
+}
+
 .img_with_text_simplicity_left .img_with_text_simplicity_info {
   padding-left: 8.2rem;
 }
