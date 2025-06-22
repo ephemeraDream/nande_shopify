@@ -74,6 +74,31 @@ document.querySelectorAll(".collection_compare_product_select").forEach(item => 
     }
     const id = parent.getAttribute("data-id")
     const product = collection_compare_data[id]
+    const collection_compare_select_contain_body_list = document.querySelector(".collection_compare_select_contain_body_list")
+    if (parent.classList.contains("selected")) {
+      const container = document.createElement('div');
+      container.className = 'collection_compare_select_contain_body_list_item';
+      container.dataset.id = product.id;
+
+      container.innerHTML = `
+        <img
+          src="${product.featured_image.src}"
+          alt="${product.title}"
+        >
+        <div class="collection_compare_select_contain_body_list_item_right">
+          <div class="collection_compare_select_contain_body_list_item_product_title">${product.title}</div>
+          <div class="collection_compare_select_contain_body_list_item_product_price">
+            ${moneyWithoutTrailingZeros(product.price)}
+            ${product.compare_at_price ? `<div class="collection_compare_select_contain_body_list_item_product_price_op">${moneyWithoutTrailingZeros(product.compare_at_price)}</div>` : ""}
+          </div>
+          <div class="collection_compare_select_contain_body_list_item_close"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="none" version="1.1" width="20" height="20" viewBox="0 0 20 20"><defs><clipPath id="master_svg0_558_008093/393_24441"><rect x="0" y="0" width="20" height="20" rx="0"/></clipPath></defs><g clip-path="url(#master_svg0_558_008093/393_24441)"><g><g><g><path d="M15.440799743652343,5.441168583984375L14.558799743652344,4.559173583984375L9.999799743652343,9.115133583984374L5.440794743652344,4.559173583984375L4.558799743652344,5.441168583984375L9.114759743652343,10.000173583984374L4.558799743652344,14.559173583984375L5.440794743652344,15.441173583984375L9.999799743652343,10.885203583984374L14.558799743652344,15.441173583984375L15.440799743652343,14.559173583984375L10.884829743652343,10.000173583984374L15.440799743652343,5.441168583984375Z" fill="#7F7E75" fill-opacity="1"/></g></g></g></g></svg></div>
+        </div>
+      `;
+
+      collection_compare_select_contain_body_list.appendChild(container);
+    } else {
+
+    }
     console.log(product)
   })
 })
@@ -120,3 +145,12 @@ document.querySelectorAll(".collection_compare_contain_sort_select_item").forEac
     }
   })
 })
+
+function moneyWithoutTrailingZeros(cents) {
+  const amount = cents / 100;
+  const formatted = amount.toFixed(2);
+
+  const final = formatted.replace(/\.0+$/, '').replace(/(\.\d*[1-9])0+$/, '$1');
+
+  return `${symbol}${final}`;
+}
