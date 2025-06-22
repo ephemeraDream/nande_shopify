@@ -80,28 +80,28 @@ class FacetFiltersForm extends HTMLElement {
   }
 
   static renderProductGridContainer(html) {
-    document.getElementById('ProductGridContainer').innerHTML = new DOMParser()
+    document.querySelector('.collection_compare_contain_body_right').innerHTML = new DOMParser()
       .parseFromString(html, 'text/html')
-      .getElementById('ProductGridContainer').innerHTML;
-
-    document
-      .getElementById('ProductGridContainer')
-      .querySelectorAll('.scroll-trigger')
-      .forEach((element) => {
-        element.classList.add('scroll-trigger--cancel');
-      });
+      .querySelector('.collection_compare_contain_body_right').innerHTML;
+    initLoadMore()
+    // document
+    //   .querySelector('.collection_compare_contain_body_right')
+    //   .querySelectorAll('.scroll-trigger')
+    //   .forEach((element) => {
+    //     element.classList.add('scroll-trigger--cancel');
+    //   });
   }
 
   static renderProductCount(html) {
     const count = new DOMParser().parseFromString(html, 'text/html').getElementById('ProductCount').innerHTML;
     const container = document.getElementById('ProductCount');
-    const containerDesktop = document.getElementById('ProductCountDesktop');
+    // const containerDesktop = document.getElementById('ProductCountDesktop');
     container.innerHTML = count;
     container.classList.remove('loading');
-    if (containerDesktop) {
-      containerDesktop.innerHTML = count;
-      containerDesktop.classList.remove('loading');
-    }
+    // if (containerDesktop) {
+    //   containerDesktop.innerHTML = count;
+    //   containerDesktop.classList.remove('loading');
+    // }
     const loadingSpinners = document.querySelectorAll(
       '.facets-container .loading__spinner, facet-filters-form .loading__spinner'
     );
