@@ -102,7 +102,6 @@ document.querySelectorAll(".collection_compare_product_select").forEach(item => 
 
       container.querySelector(".collection_compare_select_contain_body_list_item_close").addEventListener("click", (e) => {
         const item = e.target.closest(".collection_compare_select_contain_body_list_item")
-        const id = item.getAttribute("data-id")
         item.remove()
         parent.classList.toggle("selected")
         select_num--
@@ -111,9 +110,15 @@ document.querySelectorAll(".collection_compare_product_select").forEach(item => 
 
       collection_compare_select_contain_body_list.appendChild(container);
     } else {
-
+      document.querySelectorAll(".collection_compare_select_contain_body_list_item").forEach(item => {
+        const itemId = item.getAttribute("data-id")
+        if (id == itemId) {
+          item.remove()
+          select_num--
+          selectChangeLink()
+        }
+      })
     }
-    console.log(product)
   })
 })
 //加载更多
