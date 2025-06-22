@@ -1,3 +1,4 @@
+const collection_compare_data = JSON.parse(document.getElementById('collection_compare_data').textContent);
 //侧拉筛选
 const show_filter = document.querySelector(".collection_compare_contain_switchfilter")
 show_filter.addEventListener("click", () => {
@@ -63,11 +64,17 @@ document.querySelectorAll(".collection_compare_product_select").forEach(item => 
     parent.classList.contains("selected") ? select_num++ : select_num--
     collection_compare_select_num.forEach(el => el.innerHTML = select_num)
     const collection_compare_select_contain_body_list_tip = document.querySelector(".collection_compare_select_contain_body_list_tip")
-    if (select_num > 2) {
+    const collection_compare_select_contain_body_btn = document.querySelector(".collection_compare_select_contain_body_btn")
+    if (select_num > 1) {
       collection_compare_select_contain_body_list_tip.style.display = "none"
+      collection_compare_select_contain_body_btn.removeAttribute("disable")
     } else {
       collection_compare_select_contain_body_list_tip.style.display = "block"
+      collection_compare_select_contain_body_btn.setAttribute("disable")
     }
+    const id = parent.getAttribute("data-id")
+    const product = collection_compare_data[id]
+    console.log(product)
   })
 })
 //加载更多
