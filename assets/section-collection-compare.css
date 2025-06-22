@@ -483,6 +483,7 @@
   background-color: #BDFF00;
   position: relative;
   height: 6.7rem;
+  cursor: pointer;
 }
 
 .collection_compare .collection_compare_select_contain_body_btn[disable]::before {
