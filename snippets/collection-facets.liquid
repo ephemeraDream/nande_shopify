@@ -229,6 +229,62 @@
               </details>
           {% endcase %}
         {%- endfor -%}
+
+        <div
+          id="Details-sort_by-{{ section.id }}"
+          class="js-filter hidden"
+          data-index="{{ results.filters.size | plus: 1 }}"
+        >
+          <div
+            id="Facet-{{ results.filters.size | plus: 1 }}-{{ section.id }}"
+            class="parent-display facets__display-vertical"
+          >
+            <fieldset class="facets-wrap parent-wrap facets-wrap-vertical">
+              {%- assign sort_by = collection.sort_by | default: collection.default_sort_by -%}
+              <ul
+                class="facets__list--vertical list-unstyled"
+                role="list"
+              >
+                {%- for option in results.sort_options -%}
+                  {% liquid
+                    assign input_id = 'Filter-' | append: 'sort_by' | escape | append: '-' | append: forloop.index
+                  %}
+                  {%- capture label_class -%}
+                    facets__label facet-checkbox{% if option.value == sort_by %} active{% endif %}
+                  {%- endcapture -%}
+
+                  {%- capture text_value -%}
+                    <span class="facet-checkbox__text" aria-hidden="true">
+                      <span class="facet-checkbox__text-label">{{- option.name | escape }}</span>
+                    </span>
+                  {%- endcapture -%}
+
+                  <li class="list-menu__item facets__item">
+                    <label for="{{ input_id }}" class="{{ label_class }}">
+                      <input
+                        type="radio"
+                        name="sort_by"
+                        value="{{ option.value }}"
+                        id="{{ input_id }}"
+                        {% if option.value == sort_by %}
+                          checked
+                        {% endif %}
+                      >
+
+                      {{- 'square.svg' | inline_asset_content -}}
+
+                      <div class="svg-wrapper">
+                        {{- 'icon-selected.svg' | inline_asset_content -}}
+                      </div>
+
+                      {{ text_value }}
+                    </label>
+                  </li>
+                {%- endfor -%}
+              </ul>
+            </fieldset>
+          </div>
+        </div>
       </div>
 
       {% if results.current_vendor or results.current_type %}
