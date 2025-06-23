@@ -67,6 +67,39 @@
   </div>
 </div>
 
+<script>
+  (() => {
+    const tabItems = document.querySelectorAll('.img_with_text_tab_head_item');
+
+    const img_with_text_tab_swiper = new Swiper('.img_with_text_tab_section .swiper', {
+      slidesPerView: 1,
+      spaceBetween: 20,
+      navigation: {
+        nextEl: '.img_with_text_tab_swiper_next',
+        prevEl: '.img_with_text_tab_swiper_prev',
+      },
+      on: {
+        slideChange: function () {
+          tabItems.forEach((el, index) => {
+            el.classList.remove('active');
+            if (index === img_with_text_tab_swiper.realIndex) {
+              el.classList.add('active');
+            }
+          });
+        },
+      },
+    });
+
+    tabItems.forEach((item, index) => {
+      item.addEventListener('click', () => {
+        tabItems.forEach((el) => el.classList.remove('active'));
+        item.classList.add('active');
+        img_with_text_tab_swiper.slideTo(index);
+      });
+    });
+  })();
+</script>
+
 {% schema %}
 {
   "name": "img with text tab",

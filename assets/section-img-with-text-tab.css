@@ -124,7 +124,7 @@
 
 .img_with_text_tab .img_with_text_tab_swiper_prev:hover,
 .img_with_text_tab .img_with_text_tab_swiper_next:hover {
-  background-color: #1F1F1F;
+  background-color: rgba(31, 31, 31, .6);
 }
 
 .img_with_text_tab .img_with_text_tab_swiper_prev:hover svg path,
