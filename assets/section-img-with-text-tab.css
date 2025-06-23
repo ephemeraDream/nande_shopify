@@ -47,9 +47,11 @@
   font-variation-settings: "opsz" auto;
   color: #FFFFFF;
   background-color: #7F7E75;
+  cursor: pointer;
 }
 
-.img_with_text_tab .img_with_text_tab_head_item.active {
+.img_with_text_tab .img_with_text_tab_head_item.active,
+.img_with_text_tab .img_with_text_tab_head_item:hover {
   background-color: #1F1F1F;
   color: #BDFF00;
 }
@@ -113,6 +115,21 @@
   height: 6rem;
   position: absolute;
   bottom: 5rem;
+  background-color: #E2DED6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.img_with_text_tab .img_with_text_tab_swiper_prev:hover,
+.img_with_text_tab .img_with_text_tab_swiper_next:hover {
+  background-color: #1F1F1F;
+}
+
+.img_with_text_tab .img_with_text_tab_swiper_prev:hover svg path,
+.img_with_text_tab .img_with_text_tab_swiper_next:hover svg path {
+  fill: #BDFF00;
 }
 
 .img_with_text_tab .img_with_text_tab_swiper_prev {
