@@ -1,0 +1,155 @@
+{{ 'section-img-with-text-tab.css' | asset_url | stylesheet_tag }}
+
+<div class="img_with_text_tab_section padding-sider">
+  <div class="img_with_text_tab">
+    <div class="img_with_text_tab_title">{{ section.settings.title }}</div>
+    <div class="img_with_text_tab_head">
+      {% for item in section.blocks %}
+        <div class="img_with_text_tab_head_item{% if forloop.first %} active{% endif %}">
+          {{ item.settings.tabname }}
+        </div>
+      {% endfor %}
+    </div>
+    <div class="img_with_text_tab_contain swiper">
+      <div class="swiper-wrapper">
+        {% for block in section.blocks %}
+          <div class="swiper-slide">
+            <div class="img_with_text_tab_contain_filebox">
+              {% if block.settings.file_type == 'image' and block.settings.file_image != blank %}
+                {{-
+                  block.settings.file_image
+                  | image_url: width: block.settings.file_image.width
+                  | image_tag: alt: block.settings.title, class: 'img_with_text_tab_contain_filebox_image'
+                -}}
+              {% else %}
+                {% assign poster_image = blank %}
+                {% if block.settings.cover_image != blank %}
+                  {% assign poster_image = block.settings.cover_image | image_url: width: 353 %}
+                {% endif %}
+                {% if block.settings.video_url != blank %}
+                  <video
+                    autoplay
+                    loop
+                    muted
+                    playsinline
+                    preload="none"
+                    class="img_with_text_tab_contain_filebox_video"
+                    {% if poster_image != blank %}
+                      poster="{{ poster_image }}"
+                    {% endif %}
+                    src="{{ block.settings.video_url }}"
+                  ></video>
+                {% else %}
+                  {{
+                    block.settings.url_upload
+                    | video_tag:
+                      class: 'img_with_text_tab_contain_filebox_video',
+                      autoplay: true,
+                      loop: true,
+                      muted: true,
+                      playsinline: true,
+                      preload: 'none',
+                      poster: poster_image
+                  }}
+                {% endif %}
+              {% endif %}
+            </div>
+            <div class="img_with_text_tab_contain_info">
+              <div class="img_with_text_tab_contain_title">{{ block.settings.title }}</div>
+              <div class="img_with_text_tab_contain_desc">{{ block.settings.description }}</div>
+              <div class="img_with_text_tab_swiper_prev">{{- 'swiper-left.svg' | inline_asset_content -}}</div>
+              <div class="img_with_text_tab_swiper_next">{{- 'swiper-right.svg' | inline_asset_content -}}</div>
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "img with text tab",
+  "tag": "section",
+  "class": "section",
+  "disabled_on": {
+    "groups": ["header", "footer"]
+  },
+  "settings": [
+    {
+      "type": "text",
+      "id": "spec_id",
+      "label": "specId"
+    },
+    {
+      "type": "richtext",
+      "id": "title",
+      "label": "title"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "tab",
+      "name": "tab",
+      "settings": [
+        {
+          "type": "text",
+          "id": "tabname",
+          "label": "tabname"
+        },
+        {
+          "type": "richtext",
+          "id": "title",
+          "label": "title"
+        },
+        {
+          "type": "richtext",
+          "id": "description",
+          "label": "description"
+        },
+        {
+          "type": "radio",
+          "id": "file_type",
+          "label": "file type",
+          "default": "image",
+          "options": [
+            {
+              "value": "image",
+              "label": "image"
+            },
+            {
+              "value": "video",
+              "label": "video"
+            }
+          ]
+        },
+        {
+          "type": "image_picker",
+          "id": "file_image",
+          "label": "file image"
+        },
+        {
+          "type": "image_picker",
+          "id": "cover_image",
+          "label": "cover image"
+        },
+        {
+          "type": "text",
+          "id": "video_url",
+          "label": "video url"
+        },
+        {
+          "type": "video",
+          "id": "url_upload",
+          "label": "video upload"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "img with text tab"
+    }
+  ]
+}
+{% endschema %}
