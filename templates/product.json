@@ -275,14 +275,14 @@
         "foldtext_HWP39G": {
           "type": "foldtext",
           "settings": {
-            "title": "<p>64-129cm hohenverstellbar</p>",
+            "title": "<p>160 kg groBe Tragfahigkeit</p>",
             "description": "<p>Normalerweise beträgt die optimale Schreibtischhöhe im Sitzen Ihre Körpergröße x 0,4 und im Stehen Ihre Körpergröße x 0,62. <br/>Höhenverstellbarer Schreibtisch mit 2 stufigen Säulen ist nur für die Körpergröße von 1,75-1,95 m geeignet. <br/>Vernal-Schreibtisch passt für Personen mit einer Körpergröße von 1,55-2,05 m.</p>"
           }
         },
         "foldtext_iGWkAX": {
           "type": "foldtext",
           "settings": {
-            "title": "<p>64-129cm hohenverstellbar</p>",
+            "title": "<p>Flexible Einstellung und schnelle Reaktion</p>",
             "description": "<p>Normalerweise beträgt die optimale Schreibtischhöhe im Sitzen Ihre Körpergröße x 0,4 und im Stehen Ihre Körpergröße x 0,62. <br/>Höhenverstellbarer Schreibtisch mit 2 stufigen Säulen ist nur für die Körpergröße von 1,75-1,95 m geeignet. <br/>Vernal-Schreibtisch passt für Personen mit einer Körpergröße von 1,55-2,05 m.</p>"
           }
         }
@@ -298,6 +298,132 @@
         "title": "<p>Title Title</p>",
         "image": "shopify://shop_images/featured-spaces-5.webp"
       }
+    },
+    "maidesite_swiper_QhkQG8": {
+      "type": "maidesite-swiper",
+      "blocks": {
+        "swiper_bBWUrY": {
+          "type": "swiper",
+          "settings": {
+            "image": "shopify://shop_images/maidesite-logo-1.webp",
+            "text": "<p>“Ich persönlich bin sehr angetan von der guten Produktqualität, dem zusätzlichen und gut erreichbaren USB-A-Anschluss am Bedienpanel sowie dem schnellen und leisen Motor, der einen fixen Wechsel zwischen Sitz- und Stehposition ermöglicht.”</p>"
+          }
+        },
+        "swiper_BnDxkz": {
+          "type": "swiper",
+          "settings": {
+            "image": "shopify://shop_images/maidesite-logo-2.webp",
+            "text": "<p>“Ich persönlich bin sehr angetan von der guten Produktqualität, dem zusätzlichen und gut erreichbaren USB-A-Anschluss am Bedienpanel sowie dem schnellen und leisen Motor, der einen fixen Wechsel zwischen Sitz- und Stehposition ermöglicht.”</p>"
+          }
+        },
+        "swiper_EnDd8n": {
+          "type": "swiper",
+          "settings": {
+            "image": "shopify://shop_images/maidesite-logo-3.webp",
+            "text": "<p>“Ich persönlich bin sehr angetan von der guten Produktqualität, dem zusätzlichen und gut erreichbaren USB-A-Anschluss am Bedienpanel sowie dem schnellen und leisen Motor, der einen fixen Wechsel zwischen Sitz- und Stehposition ermöglicht.”</p>"
+          }
+        },
+        "swiper_4kYG3r": {
+          "type": "swiper",
+          "settings": {
+            "image": "shopify://shop_images/maidesite-logo-4.webp",
+            "text": "<p>“Ich persönlich bin sehr angetan von der guten Produktqualität, dem zusätzlichen und gut erreichbaren USB-A-Anschluss am Bedienpanel sowie dem schnellen und leisen Motor, der einen fixen Wechsel zwischen Sitz- und Stehposition ermöglicht.”</p>"
+          }
+        }
+      },
+      "block_order": [
+        "swiper_bBWUrY",
+        "swiper_BnDxkz",
+        "swiper_EnDd8n",
+        "swiper_4kYG3r"
+      ],
+      "name": "maidesite swiper",
+      "settings": {
+        "title": "<p>Die Presse Liebt Maidesite</p>",
+        "text": ""
+      }
+    },
+    "celebrity_swiper_aGymw9": {
+      "type": "celebrity-swiper",
+      "blocks": {
+        "swiper_mexwM6": {
+          "type": "swiper",
+          "settings": {
+            "name": "@Suli-Man",
+            "introduce": "<p>17.1 Million YouTube Followers</p>",
+            "description": "<p>\" I really liked it, and it looks really cool. It's just perfect for long workdays or gaming sessions where comfort and ergonomics are important.\"</p>",
+            "link": "",
+            "cover_image": "shopify://shop_images/celebrity-img-1.webp",
+            "video_url": "",
+            "url_upload": "shopify://files/videos/TO1-Pro-spine-healthy-mode_a586d928-0c0c-459d-99a8-75d2ab5cc36d.mp4"
+          }
+        },
+        "swiper_xWLxVC": {
+          "type": "swiper",
+          "settings": {
+            "name": "@EFRALINK",
+            "introduce": "<p>17.1 Million YouTube Followers</p>",
+            "description": "<p>\" Here is my new minimalist desk setup as a photographer and content creator for long editing sessions.\"</p>",
+            "link": "",
+            "cover_image": "shopify://shop_images/celebrity-img-2.webp",
+            "video_url": "",
+            "url_upload": "shopify://files/videos/TO1-Pro-spine-healthy-mode_a586d928-0c0c-459d-99a8-75d2ab5cc36d.mp4"
+          }
+        }
+      },
+      "block_order": [
+        "swiper_mexwM6",
+        "swiper_xWLxVC"
+      ],
+      "name": "celebrity swiper",
+      "settings": {
+        "title": "<p>Empfehlen Von</p>",
+        "text": ""
+      }
+    },
+    "faq_simple_kxTbhc": {
+      "type": "faq-simple",
+      "blocks": {
+        "faq_E4jP4F": {
+          "type": "faq",
+          "settings": {
+            "question": "<p>Kann ich meine Bestellung stornieren?</p>",
+            "answer": "<p>Maidesite bietet durch seine produkten von höhenverstellbaren Schreibtischen, die Funktionsintegration, Szenenvielfalt und Personalisierung bieten, Ihnen die Möglichkeit, einfach zwischen verschiedenen Heimat-Aktivitätsmodi zu wechseln, die eine Desktop-Assistenten erfordern. <br/><br/>Dies ermöglicht Anhängern des modernen intelligenten Heimlebens, sich noch bequemer und müheloser in ihre vielfältigen Lebensstile einzuleben.<br/></p>"
+          }
+        },
+        "faq_AXAcgA": {
+          "type": "faq",
+          "settings": {
+            "question": "<p>Was ist, wenn ich mit jemandem sprechen mochte?</p>",
+            "answer": "<p>Maidesite bietet durch seine produkten von höhenverstellbaren Schreibtischen, die Funktionsintegration, Szenenvielfalt und Personalisierung bieten, Ihnen die Möglichkeit, einfach zwischen verschiedenen Heimat-Aktivitätsmodi zu wechseln, die eine Desktop-Assistenten erfordern. <br/><br/>Dies ermöglicht Anhängern des modernen intelligenten Heimlebens, sich noch bequemer und müheloser in ihre vielfältigen Lebensstile einzuleben.<br/></p>"
+          }
+        },
+        "faq_W9Mzyn": {
+          "type": "faq",
+          "settings": {
+            "question": "<p>Ist das Bestellen im Internet sicher? Was passiert mit meinen Daten?</p>",
+            "answer": "<p>Maidesite bietet durch seine produkten von höhenverstellbaren Schreibtischen, die Funktionsintegration, Szenenvielfalt und Personalisierung bieten, Ihnen die Möglichkeit, einfach zwischen verschiedenen Heimat-Aktivitätsmodi zu wechseln, die eine Desktop-Assistenten erfordern. <br/><br/>Dies ermöglicht Anhängern des modernen intelligenten Heimlebens, sich noch bequemer und müheloser in ihre vielfältigen Lebensstile einzuleben.<br/></p>"
+          }
+        },
+        "faq_VQVPFn": {
+          "type": "faq",
+          "settings": {
+            "question": "<p>Welche Moglichkeiten habe ich, um meine Bestellung zu bezahlen?</p>",
+            "answer": "<p>Maidesite bietet durch seine produkten von höhenverstellbaren Schreibtischen, die Funktionsintegration, Szenenvielfalt und Personalisierung bieten, Ihnen die Möglichkeit, einfach zwischen verschiedenen Heimat-Aktivitätsmodi zu wechseln, die eine Desktop-Assistenten erfordern. <br/><br/>Dies ermöglicht Anhängern des modernen intelligenten Heimlebens, sich noch bequemer und müheloser in ihre vielfältigen Lebensstile einzuleben.<br/></p>"
+          }
+        }
+      },
+      "block_order": [
+        "faq_E4jP4F",
+        "faq_AXAcgA",
+        "faq_W9Mzyn",
+        "faq_VQVPFn"
+      ],
+      "name": "faq simple",
+      "settings": {
+        "heading": "<p>FAQ</p>",
+        "text": "<p>Häufig gestellte Fragen</p>"
+      }
     }
   },
   "order": [
@@ -309,6 +435,9 @@
     "img_with_text_simplicity_nJFALq",
     "img_with_text_simplicity_YLCpmN",
     "img_with_text_simplicity_JRCJ4f",
-    "img_with_foldtext_RcBrkw"
+    "img_with_foldtext_RcBrkw",
+    "maidesite_swiper_QhkQG8",
+    "celebrity_swiper_aGymw9",
+    "faq_simple_kxTbhc"
   ]
 }
