@@ -61,7 +61,7 @@
       show_learnmore_btn.toggleAttribute("open")
       if(show_learnmore_btn.hasAttribute("open")) {
         document.querySelectorAll(".faq_simple_item").forEach(item => item.classList.remove("hidden"))
-      }else{
+      } else {
         document.querySelectorAll(".faq_simple_item").forEach((item, index) => {
           if(index > 5) {
             item.classList.add("hidden")
