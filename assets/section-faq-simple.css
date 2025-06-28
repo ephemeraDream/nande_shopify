@@ -112,6 +112,7 @@
   letter-spacing: 0px;
   font-variation-settings: "opsz" auto;
   color: #1F1F1F;
+  cursor: pointer;
 }
 
 .faq_simple .faq_simple_learnmore {
