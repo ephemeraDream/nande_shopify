@@ -7,7 +7,7 @@
     <div class="technical_data_head">
       {% for item in technical_data %}
         <div class="technical_data_head_item{% if forloop.first %} active{% endif %}">
-          {{ item.title.value }}
+          {{ item.title }}
         </div>
       {% endfor %}
     </div>
@@ -16,7 +16,7 @@
         {% for item in technical_data %}
           <div class="swiper-slide">
             <div class="technical_data_contain_info">
-              {% for list in item.list.value %}
+              {% for list in item.list %}
                 <div class="technical_data_contain_info_item">
                   <div class="technical_data_contain_info_item_label">{{ list.label }}</div>
                   <div class="technical_data_contain_info_item_value">{{ list.value }}</div>
