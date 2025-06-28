@@ -490,7 +490,9 @@
       "name": "faq simple",
       "settings": {
         "heading": "<p>FAQ</p>",
-        "text": "<p>Häufig gestellte Fragen</p>"
+        "text": "<p>Häufig gestellte Fragen</p>",
+        "show_btn": true,
+        "learn_more": true
       }
     }
   },
