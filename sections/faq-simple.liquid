@@ -3,7 +3,15 @@
 <div id="section-{{ section.id }}" class="faq_simple_section padding-sider">
   <div class="faq_simple">
     <div class="faq_simple_heading">{{ section.settings.heading }}</div>
-    <div class="faq_simple_text">{{ section.settings.text }}</div>
+    <div class="faq_simple_text_contain">
+      <div class="faq_simple_text">{{ section.settings.text }}</div>
+      {% if section.settings.show_btn %}
+        <div class="faq_simple_more_btn">
+          {{ 'common.view_more_faqs' | t }}
+          {{ 'icon-right-arrow.svg' | inline_asset_content }}
+        </div>
+      {% endif %}
+    </div>
     <div class="faq_simple_list">
       {% for block in section.blocks %}
         <div class="faq_simple_item">
@@ -16,6 +24,12 @@
         </div>
       {% endfor %}
     </div>
+    {% if section.settings.learn_more %}
+      <div class="faq_simple_learnmore">
+        {{ 'common.learn_more' | t }}
+        {{ 'pagination-down.svg' | inline_asset_content }}
+      </div>
+    {% endif %}
   </div>
 </div>
 
@@ -59,6 +73,18 @@
       "type": "richtext",
       "id": "text",
       "label": "text"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_btn",
+      "label": "show more faqs",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "learn_more",
+      "label": "show learn more",
+      "default": false
     }
   ],
   "blocks": [

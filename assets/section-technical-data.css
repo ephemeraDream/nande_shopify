@@ -38,6 +38,7 @@
   letter-spacing: 0px;
   font-variation-settings: "opsz" auto;
   color: #7F7E75;
+  cursor: pointer;
 }
 
 .technical_data .technical_data_head_item.active {
