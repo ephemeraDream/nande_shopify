@@ -359,6 +359,14 @@
         "title": "<p>Title Title</p>"
       }
     },
+    "technical_data_L3gXUm": {
+      "type": "technical-data",
+      "name": "technical data",
+      "settings": {
+        "spec_id": "",
+        "title": "<p>Technische Daten Des HöHenverstellbaren </p><p>Schreibtisches-T2 Pro Plus</p>"
+      }
+    },
     "maidesite_swiper_QhkQG8": {
       "type": "maidesite-swiper",
       "blocks": {
@@ -497,6 +505,7 @@
     "img_with_text_simplicity_JRCJ4f",
     "img_with_foldtext_RcBrkw",
     "img_with_text_tab_emEWU8",
+    "technical_data_L3gXUm",
     "maidesite_swiper_QhkQG8",
     "celebrity_swiper_aGymw9",
     "faq_simple_kxTbhc"
