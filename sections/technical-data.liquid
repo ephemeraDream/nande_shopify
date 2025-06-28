@@ -1,6 +1,6 @@
 {{ 'section-technical-data.css' | asset_url | stylesheet_tag }}
 
-{% assign technical_data = product.metafields.custom.technical_data.data.value %}
+{% assign technical_data = product.metafields.custom.technical_data.value.data.value %}
 <div class="technical_data_section padding-sider">
   <div class="technical_data">
     <div class="technical_data_title">{{ section.settings.title }}</div>
