@@ -535,6 +535,9 @@
         "faq_mFDf3d",
         "faq_whBqrf"
       ],
+      "custom_css": [
+        ".faq_simple_section {background-color: #FAFAFA;}"
+      ],
       "name": "faq simple",
       "settings": {
         "heading": "<p>FAQ</p>",
