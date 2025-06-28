@@ -1,0 +1,103 @@
+.technical_data_section {
+  width: 100%;
+  background-color: #FFFFFF;
+  padding-top: 12rem;
+  padding-bottom: 12rem;
+}
+
+.technical_data {
+  max-width: 144rem;
+  margin: 0 auto;
+}
+
+.technical_data .technical_data_title {
+  font-family: "PP Right Grotesk";
+  font-size: 6rem;
+  font-weight: 500;
+  line-height: 94%;
+  text-transform: capitalize;
+  letter-spacing: 0px;
+  font-variation-settings: "opsz" auto;
+  color: #1F1F1F;
+}
+
+.technical_data .technical_data_head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 0.1rem solid #E2DED6;
+  padding-bottom: 0.9rem;
+  margin-top: 6rem;
+}
+
+.technical_data .technical_data_head_item {
+  font-family: "PP Right Grotesk";
+  font-size: 2.4rem;
+  font-weight: bold;
+  line-height: 94%;
+  letter-spacing: 0px;
+  font-variation-settings: "opsz" auto;
+  color: #7F7E75;
+}
+
+.technical_data .technical_data_head_item.active {
+  color: #1F1F1F;
+  text-decoration: underline;
+  text-decoration-color: #BDFF00;
+  text-decoration-thickness: 0.2rem;
+  text-underline-offset: 0.7rem;
+}
+
+.technical_data .technical_data_contain {
+  width: 100%;
+  margin-top: 3rem;
+  display: flex;
+  align-items: flex-start;
+  gap: 4.6rem;
+}
+
+.technical_data .technical_data_contain .swiper-slide {
+  display: flex;
+  align-items: flex-start;
+}
+
+.technical_data .technical_data_contain_filebox {
+  flex: 0 0 auto;
+  width: 72rem;
+  height: 60rem;
+}
+
+.technical_data .technical_data_contain_filebox img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center center;
+}
+
+.technical_data .technical_data_contain_info {
+  flex: 1;
+}
+
+.technical_data .technical_data_contain_info_item {
+  height: 43px;
+  display: flex;
+  align-items: center;
+  background-color: #F2F1ED;
+  font-family: "PP Right Grotesk";
+  font-size: 1.6rem;
+  font-weight: normal;
+  line-height: 130%;
+  letter-spacing: 0px;
+  font-variation-settings: "opsz" auto;
+  color: #1F1F1F;
+}
+
+.technical_data .technical_data_contain_info_item:nth-child(2n) {
+  background-color: #FFFFFF;
+}
+
+.technical_data .technical_data_contain_info_item_label {
+  color: #7F7E75;
+  padding-left: 2rem;
+  min-width: 30rem;
+}

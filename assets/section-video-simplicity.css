@@ -61,17 +61,6 @@
   color: #1F1F1F;
 }
 
-.video_simplicity .video_simplicity_info p {
-  font-family: "PP Right Grotesk";
-  font-size: 2rem;
-  font-weight: normal;
-  line-height: 130%;
-  letter-spacing: 0px;
-  font-variation-settings: "opsz" auto;
-  color: #1F1F1F;
-  margin-top: 3rem;
-}
-
 @media screen and (max-width: 768px) {
   
 }

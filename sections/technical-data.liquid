@@ -1,0 +1,91 @@
+{{ 'section-technical-data.css' | asset_url | stylesheet_tag }}
+
+{% assign technical_data = product.metafields.custom.technical_data.value %}
+<div class="technical_data_section padding-sider">
+  <div class="technical_data">
+    <div class="technical_data_title">{{ section.settings.title }}</div>
+    <div class="technical_data_head">
+      {% for item in technical_data %}
+        <div class="technical_data_head_item{% if forloop.first %} active{% endif %}">
+          {{ item.title }}
+        </div>
+      {% endfor %}
+    </div>
+    <div class="technical_data_contain swiper">
+      <div class="swiper-wrapper">
+        {% for item in technical_data %}
+          <div class="swiper-slide">
+            <div class="technical_data_contain_info">
+              {% for list in item.list %}
+                <div class="technical_data_contain_info_item">
+                  <div class="technical_data_contain_info_item_label">{{ list.label }}</div>
+                  <div class="technical_data_contain_info_item_value">{{ list.value }}</div>
+                </div>
+              {% endfor %}
+            </div>
+            <div class="technical_data_contain_filebox">
+              <img src="{{ item.image }}" alt="{{ item.title }}">
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  (() => {
+    const tabItems = document.querySelectorAll('.technical_data_head_item');
+
+    const technical_data_swiper = new Swiper('.technical_data_section .swiper', {
+      slidesPerView: 1,
+      spaceBetween: 20,
+      on: {
+        slideChange: function () {
+          tabItems.forEach((el, index) => {
+            el.classList.remove('active');
+            if (index === technical_data_swiper.realIndex) {
+              el.classList.add('active');
+            }
+          });
+        },
+      },
+    });
+
+    tabItems.forEach((item, index) => {
+      item.addEventListener('click', () => {
+        tabItems.forEach((el) => el.classList.remove('active'));
+        item.classList.add('active');
+        technical_data_swiper.slideTo(index);
+      });
+    });
+  })();
+</script>
+
+{% schema %}
+{
+  "name": "technical data",
+  "tag": "section",
+  "class": "section",
+  "disabled_on": {
+    "groups": ["header", "footer"]
+  },
+  "settings": [
+    {
+      "type": "text",
+      "id": "spec_id",
+      "label": "specId"
+    },
+    {
+      "type": "richtext",
+      "id": "title",
+      "label": "title"
+    }
+  ],
+  "presets": [
+    {
+      "name": "technical data"
+    }
+  ]
+}
+{% endschema %}
