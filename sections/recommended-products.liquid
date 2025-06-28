@@ -1,0 +1,75 @@
+{{ 'section-recommended-products.css' | asset_url | stylesheet_tag }}
+
+<div class="recommended_products_section padding-sider" id="{{ section.settings.spec_id }}">
+  <div class="recommended_products">
+    <div class="recommended_products_title">{{ section.settings.title }}</div>
+    <div class="recommended_products_contain swiper">
+      <div class="swiper-wrapper">
+        {% for product in section.settings.product_list %}
+          <div class="swiper-slide">
+            <div class="recommended_products_img">
+              <img src="{{ product.featured_image | image_url }}" alt="{{ product.title }}">
+            </div>
+            <div class="recommended_products_info">
+              <div class="recommended_products_info_title">{{ product.title }}</div>
+              <div class="recommended_products_info_price">
+                {{ product.price | money_without_trailing_zeros }}
+                {% if product.compare_at_price %}
+                  <span class="recommended_products_info_price_op">
+                    {{- product.compare_at_price | money_without_trailing_zeros -}}
+                  </span>
+                {% endif %}
+              </div>
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+    <div class="recommended_products_prev">{{- 'swiper-left.svg' | inline_asset_content -}}</div>
+    <div class="recommended_products_next">{{- 'swiper-right.svg' | inline_asset_content -}}</div>
+  </div>
+</div>
+
+<script>
+  new Swiper('.recommended_products_section .swiper', {
+    slidesPerView: 3,
+    spaceBetween: 46,
+    navigation: {
+      nextEl: '.recommended_products_next',
+      prevEl: '.recommended_products_prev',
+    },
+  });
+</script>
+
+{% schema %}
+{
+  "name": "recommended products",
+  "tag": "section",
+  "class": "section",
+  "disabled_on": {
+    "groups": ["header", "footer"]
+  },
+  "settings": [
+    {
+      "type": "text",
+      "id": "spec_id",
+      "label": "specId"
+    },
+    {
+      "type": "richtext",
+      "id": "title",
+      "label": "title"
+    },
+    {
+      "type": "product_list",
+      "id": "product_list",
+      "label": "product list"
+    }
+  ],
+  "presets": [
+    {
+      "name": "recommended products"
+    }
+  ]
+}
+{% endschema %}
