@@ -107,5 +107,5 @@
 }
 
 .recommended_products .recommended_products_next {
-  right: 12rem;
+  right: -12rem;
 }
