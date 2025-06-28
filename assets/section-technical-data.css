@@ -45,20 +45,18 @@
   text-decoration: underline;
   text-decoration-color: #BDFF00;
   text-decoration-thickness: 0.2rem;
-  text-underline-offset: 0.7rem;
+  text-underline-offset: 0.9rem;
 }
 
 .technical_data .technical_data_contain {
   width: 100%;
   margin-top: 3rem;
-  display: flex;
-  align-items: flex-start;
-  gap: 4.6rem;
 }
 
 .technical_data .technical_data_contain .swiper-slide {
   display: flex;
   align-items: flex-start;
+  gap: 4.6rem;
 }
 
 .technical_data .technical_data_contain_filebox {
