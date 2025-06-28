@@ -29,7 +29,6 @@
 .recommended_products .recommended_products_contain .swiper-slide {
   display: flex;
   flex-direction: column;
-  gap: 4.6rem;
   height: auto;
 }
 
@@ -99,4 +98,13 @@
   align-items: center;
   justify-content: center;
   background-color: #fff;
+  top: 50%;
+}
+
+.recommended_products .recommended_products_prev {
+  left: -12rem;
+}
+
+.recommended_products .recommended_products_next {
+  right: 12rem;
 }
