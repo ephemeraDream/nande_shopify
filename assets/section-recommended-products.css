@@ -8,6 +8,7 @@
 .recommended_products {
   max-width: 144rem;
   margin: 0 auto;
+  position: relative;
 }
 
 .recommended_products .recommended_products_title {
