@@ -136,6 +136,6 @@
 
 .faq_simple .faq_simple_text_contain {
   display: flex;
-  align-items: center;
+  align-items: baseline;
   justify-content: space-between;
 }
