@@ -14,7 +14,7 @@
     </div>
     <div class="faq_simple_list">
       {% for block in section.blocks %}
-        <div class="faq_simple_item">
+        <div class="faq_simple_item{% if section.settings.learn_more and forloop.index0 > 5 %} hidden{% endif %}">
           <div class="faq_simple_item_head">
             <div class="faq_simple_question">{{ block.settings.question }}</div>
             <div class="faq_simple_icon" data-type="close">{{- 'icon-faq-close.svg' | inline_asset_content -}}</div>
@@ -34,6 +34,7 @@
 </div>
 
 <script>
+  const show_learnmore = {{ section.settings.learn_more | json }}
   document.addEventListener('DOMContentLoaded', function () {
     const faqItems = document.querySelectorAll('.faq_simple_item');
 
@@ -53,6 +54,22 @@
       });
     });
   });
+
+  if(show_learnmore) {
+    const show_learnmore_btn = document.querySelector(".faq_simple_learnmore")
+    show_learnmore_btn.addEventListener("click", () => {
+      show_learnmore_btn.toggleAttribute("open")
+      if(show_learnmore_btn.hasAttribute("open")) {
+        document.querySelectorAll(".faq_simple_item").forEach(item => item.classList.remove("hidden"))
+      }else{
+        document.querySelectorAll(".faq_simple_item").forEach((item, index) => {
+          if(index > 5) {
+            item.classList.add("hidden"))
+          }
+        }
+      }
+    })
+  }
 </script>
 
 {% schema %}
