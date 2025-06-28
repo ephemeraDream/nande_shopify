@@ -536,7 +536,7 @@
         "faq_whBqrf"
       ],
       "custom_css": [
-        ".faq_simple_section {background-color: #FAFAFA;}"
+        ".faq_simple_section {background-color: #fafafa;}"
       ],
       "name": "faq simple",
       "settings": {
@@ -544,6 +544,30 @@
         "text": "<p>Häufig gestellte Fragen</p>",
         "show_btn": true,
         "learn_more": true
+      }
+    },
+    "product_comment_GV7BHg": {
+      "type": "product-comment",
+      "blocks": {
+        "loox_reviews_loox_dynamic_section_VMDChy": {
+          "type": "shopify://apps/loox-reviews/blocks/loox-dynamic-section/5c3b337f-fd14-4df5-b1d6-80ec13e6e28e",
+          "settings": {
+            "only_photos": false,
+            "aggregated": false,
+            "limit": 20,
+            "hide_thumbnails": false,
+            "maxwidth": 1440,
+            "is_sample": true
+          }
+        }
+      },
+      "block_order": [
+        "loox_reviews_loox_dynamic_section_VMDChy"
+      ],
+      "name": "product comment",
+      "settings": {
+        "spec_id": "",
+        "title": "<p>100%  Authentische Bewertungen</p>"
       }
     }
   },
@@ -561,6 +585,7 @@
     "technical_data_L3gXUm",
     "maidesite_swiper_QhkQG8",
     "celebrity_swiper_aGymw9",
-    "faq_simple_kxTbhc"
+    "faq_simple_kxTbhc",
+    "product_comment_GV7BHg"
   ]
 }
