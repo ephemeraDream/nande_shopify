@@ -100,6 +100,7 @@
   justify-content: center;
   background-color: #fff;
   top: 50%;
+  cursor: pointer;
 }
 
 .recommended_products .recommended_products_prev {
