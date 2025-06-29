@@ -7,8 +7,8 @@ function initSwiper() {
     spaceBetween: 8,
     slidesPerView: 4,
     navigation: {
-      nextEl: ".imgthumb_swiper .imgthumb_swiper_next",
-      prevEl: ".imgthumb_swiper .imgthumb_swiper_prev",
+      nextEl: ".imgthumb_swiper_box .imgthumb_swiper_next",
+      prevEl: ".imgthumb_swiper_box .imgthumb_swiper_prev",
     },
   });
   imgboxSwiper = new Swiper(".imgmain_swiper", {
@@ -19,8 +19,8 @@ function initSwiper() {
     },
     spaceBetween: 0,
     navigation: {
-      nextEl: ".imgthumb_swiper_box .imgmain_swiper_next",
-      prevEl: ".imgthumb_swiper_box .imgmain_swiper_prev",
+      nextEl: ".imgmain_swiper .imgmain_swiper_next",
+      prevEl: ".imgmain_swiper .imgmain_swiper_prev",
     },
     thumbs: {
       swiper: imgthumbSwiper,
