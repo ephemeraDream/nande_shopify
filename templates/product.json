@@ -585,9 +585,17 @@
           "maidesite-el2-pro-art-tischgestell-elektrisch-hohenverstellbar"
         ]
       }
+    },
+    "product_info_NXNt6g": {
+      "type": "product-info",
+      "name": "product info",
+      "settings": {
+        "media_ratio": "1.33"
+      }
     }
   },
   "order": [
+    "product_info_NXNt6g",
     "main",
     "related-products",
     "video_simplicity_zX8daC",
