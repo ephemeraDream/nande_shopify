@@ -54,7 +54,31 @@
         </div>
       </div>
     </div>
-    <div class="product_info_right"></div>
+    <div class="product_info_right">
+      <div class="product_info_title">{{ product.title }}</div>
+      {%- for block in section.blocks -%}
+        {%- case block.type -%}
+          {%- when '@app' -%}
+            {% render block %}
+        {%- endcase -%}
+      {%- endfor -%}
+      <div class="product_info_price">
+        {{ product.price | money_without_trailing_zeros }}
+        <div class="product_info_price_op">{{ product.compare_at_price | money_without_trailing_zeros }}</div>
+        {%- if section.settings.show_tax_and_shipping -%}
+          {%- if cart.taxes_included or shop.shipping_policy.body != blank -%}
+            <div class="product_info_policies">
+              {%- if cart.taxes_included -%}
+                {{ 'products.product.include_taxes' | t }}
+              {%- endif -%}
+              {%- if shop.shipping_policy.body != blank -%}
+                {{ 'products.product.shipping_policy_html' | t: link: shop.shipping_policy.url }}
+              {%- endif -%}
+            </div>
+          {%- endif -%}
+        {%- endif -%}
+      </div>
+    </div>
   </div>
 </div>
 
@@ -88,6 +112,17 @@
       ],
       "default": "1.33",
       "label": "Media aspect ratio"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_tax_and_shipping",
+      "label": "Show tax and shipping information",
+      "default": true
+    }
+  ],
+  "blocks": [
+    {
+      "type": "@app"
     }
   ],
   "presets": [
