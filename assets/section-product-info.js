@@ -83,19 +83,13 @@ if (sale_info_box) {
 
   document.querySelector(".product_info_saleinfo_btn").addEventListener('click', async (e) => {
     const code = e.target.getAttribute('data-code');
+    await navigator.clipboard.writeText(code);
 
-    try {
-      await navigator.clipboard.writeText(code);
+    const originalText = btn.innerHTML;
+    btn.innerHTML = 'Copied';
 
-      const originalText = btn.innerHTML;
-      btn.innerHTML = 'Copied';
-
-      setTimeout(() => {
-        btn.innerHTML = originalText;
-      }, 5000);
-
-    } catch (err) {
-      alert('Failed to copy code. Please try manually.');
-    }
+    setTimeout(() => {
+      btn.innerHTML = originalText;
+    }, 5000);
   });
 }
