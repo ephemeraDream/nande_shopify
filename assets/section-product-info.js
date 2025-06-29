@@ -85,11 +85,11 @@ if (sale_info_box) {
     const code = e.target.getAttribute('data-code');
     await navigator.clipboard.writeText(code);
 
-    const originalText = btn.innerHTML;
-    btn.innerHTML = 'Copied';
+    const originalText = e.target.innerHTML;
+    e.target.innerHTML = 'Copied';
 
     setTimeout(() => {
-      btn.innerHTML = originalText;
+      e.target.innerHTML = originalText;
     }, 5000);
   });
 }
