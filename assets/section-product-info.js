@@ -51,9 +51,9 @@ if (sale_info_box) {
       seconds
     ).padStart(2, '0');
 
-    if (days == 0 && sale_info_boxquerySelector(".product_info_saleinfo_countdown_item[data-type='day']")) {
-      sale_info_boxquerySelector(".product_info_saleinfo_countdown_item[data-type='day'] + span").remove();
-      sale_info_boxquerySelector(".product_info_saleinfo_countdown_item[data-type='day']").remove();
+    if (days == 0 && sale_info_box.querySelector(".product_info_saleinfo_countdown_item[data-type='day']")) {
+      sale_info_box.querySelector(".product_info_saleinfo_countdown_item[data-type='day'] + span").remove();
+      sale_info_box.querySelector(".product_info_saleinfo_countdown_item[data-type='day']").remove();
     }
   };
 

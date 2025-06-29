@@ -178,3 +178,56 @@ function moneyWithoutTrailingZeros(cents, symbol) {
 
   return `${symbol}${final}`;
 }
+
+document.querySelectorAll(".collection_compare_product_saleinfo_countdown").forEach(item => {
+  const endDateStr = item.getAttribute('data-end-date');
+  const endDate = new Date(endDateStr);
+
+  const updateCountdownInnerHTML = (days, hours, minutes, seconds) => {
+    if (days > 0) {
+      item.querySelector(".collection_compare_product_saleinfo_countdown_item[data-type='day']").innerHTML = String(days).padStart(
+        2,
+        '0'
+      );
+    }
+    item.querySelector(".collection_compare_product_saleinfo_countdown_item[data-type='hour']").innerHTML = String(hours).padStart(
+      2,
+      '0'
+    );
+    item.querySelector(".collection_compare_product_saleinfo_countdown_item[data-type='minute']").innerHTML = String(
+      minutes
+    ).padStart(2, '0');
+    item.querySelector(".collection_compare_product_saleinfo_countdown_item[data-type='second']").innerHTML = String(
+      seconds
+    ).padStart(2, '0');
+
+    if (days == 0 && item.querySelector(".collection_compare_product_saleinfo_countdown_item[data-type='day']")) {
+      item.querySelector(".collection_compare_product_saleinfo_countdown_item[data-type='day'] + span").remove();
+      item.querySelector(".collection_compare_product_saleinfo_countdown_item[data-type='day']").remove();
+    }
+  };
+
+  function updateCountdown() {
+    const now = new Date();
+    const diff = endDate - now;
+    let days = 0,
+      hours = 0,
+      minutes = 0,
+      seconds = 0;
+
+    if (diff <= 0) {
+      updateCountdownInnerHTML(days, hours, minutes, seconds);
+      return;
+    }
+
+    days = Math.floor(diff / (1000 * 60 * 60 * 24));
+    hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
+    minutes = Math.floor((diff / (1000 * 60)) % 60);
+    seconds = Math.floor((diff / 1000) % 60);
+
+    updateCountdownInnerHTML(days, hours, minutes, seconds);
+  }
+
+  updateCountdown();
+  setInterval(updateCountdown, 1000);
+})

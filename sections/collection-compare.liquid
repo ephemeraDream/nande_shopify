@@ -75,6 +75,7 @@
         {% paginate collection.products by 6 %}
           <div class="collection_compare_product_contain">
             {% for product in collection.products %}
+              {% assign sale_info = product.metafields.custom.sale_info.value %}
               <a
                 class="collection_compare_product"
                 data-type="{{ product.type | handleize }}"
@@ -86,6 +87,9 @@
                   <div class="collection_compare_product_select">
                     {{- 'icon-selected.svg' | inline_asset_content -}}
                   </div>
+                  {% if sale_info != blank %}
+                    <div class="collection_compare_product_saleinfo">{{ sale_info.name }}</div>
+                  {% endif %}
                 </div>
                 <div class="collection_compare_product_info">
                   <div class="collection_compare_product_title">{{ product.title }}</div>
@@ -107,6 +111,21 @@
                     </div>
                   </div>
                 </div>
+                {% if sale_info != blank %}
+                  <div
+                    class="collection_compare_product_saleinfo_countdown"
+                    data-end-date="{{ sale_info.datetime | date: "%Y-%m-%dT%H:%M:%SZ" }}"
+                  >
+                    <span class="collection_compare_product_saleinfo_countdown_text">{{ 'common.ends_in' | t }}</span>
+                    <div class="collection_compare_product_saleinfo_countdown_item" data-type="day"></div>
+                    <span>:</span>
+                    <div class="collection_compare_product_saleinfo_countdown_item" data-type="hour"></div>
+                    <span>:</span>
+                    <div class="collection_compare_product_saleinfo_countdown_item" data-type="minute"></div>
+                    <span>:</span>
+                    <div class="collection_compare_product_saleinfo_countdown_item" data-type="second"></div>
+                  </div>
+                {% endif %}
               </a>
             {% endfor %}
           </div>
