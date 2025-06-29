@@ -78,6 +78,11 @@
   cursor: pointer;
 }
 
+.product_info .imgthumb_swiper_prev svg,
+.product_info .imgthumb_swiper_next svg {
+  width: 0.7rem;
+}
+
 .product_info .imgthumb_swiper_box {
   flex: 0 0 auto;
   width: 31.6rem;
@@ -100,4 +105,33 @@
   height: 100%;
   object-fit: cover;
   object-position: center center;
+}
+
+.product_info .product_info_left_thumb_select {
+  flex: 1;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+
+.product_info .product_info_left_thumb_select_item {
+  width: 7.8rem;
+  height: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #7F7E75;
+  font-family: "PP Right Grotesk";
+  font-size: 1.6rem;
+  font-weight: normal;
+  line-height: 130%;
+  letter-spacing: 0px;
+  font-variation-settings: "opsz" auto;
+  color: #FFFFFF;
+  cursor: pointer;
+}
+
+.product_info .product_info_left_thumb_select_item.active {
+  background-color: #1F1F1F;
+  color: #BDFF00;
 }
