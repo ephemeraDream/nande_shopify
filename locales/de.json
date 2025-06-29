@@ -164,7 +164,7 @@
         "image_available": "Bild {{ index }} ist nun in der Galerieansicht verfügbar"
       },
       "view_full_details": "Vollständige Details anzeigen",
-      "shipping_policy_html": "<a href=\"{{ link }}\">Versand</a> wird beim Checkout berechnet",
+      "shipping_policy_html": "Kostenloser Versand in DE",
       "choose_options": "Optionen auswählen",
       "choose_product_options": "Optionen für {{ product_name }} auswählen",
       "value_unavailable": "{{ option_value }} – nicht verfügbar",
@@ -553,6 +553,7 @@
     "position_results": "{{ visible_results }} von {{ total_results }} wird angezeigt",
     "show_more": "Mehr anzeigen",
     "view_more_faqs": "View More FAQs",
-    "learn_more": "Learn More"
+    "learn_more": "Learn More",
+    "copy_and_use": "Copy & Use"
   }
 }

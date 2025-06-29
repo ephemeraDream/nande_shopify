@@ -188,3 +188,90 @@
   color: #7F7E75;
   margin-left: 1rem;
 }
+
+.product_info .product_info_saleinfo {
+  padding: 2rem 3.5rem;
+  background-color: #FF7500;
+  display: flex;
+}
+
+.product_info .product_info_saleinfo_name {
+  font-family: "PP Right Grotesk";
+  font-size: 4rem;
+  font-weight: 500;
+  line-height: 94%;
+  letter-spacing: 0px;
+  font-variation-settings: "opsz" auto;
+  color: #FFFFFF;
+  margin-bottom: 0.4rem;
+}
+
+.product_info .product_info_saleinfo_countdown {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-family: "PP Right Grotesk";
+  font-size: 1.4rem;
+  font-weight: 500;
+  line-height: 112%;
+  letter-spacing: 0px;
+  font-variation-settings: "opsz" auto;
+  color: #fff
+}
+
+.product_info .product_info_saleinfo_countdown_text {
+  font-family: "PP Right Grotesk";
+  font-size: 1.4rem;
+  font-weight: normal;
+  line-height: 130%;
+  letter-spacing: 0px;
+  font-variation-settings: "opsz" auto;
+  color: #FFFFFF;
+}
+
+.product_info .product_info_saleinfo_countdown_item {
+  width: 2rem;
+  height: 2rem;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #FF7500;
+}
+
+.product_info .product_info_saleinfo_left {
+  padding-right: 2.4rem;
+  border-right: 0.1rem dashed #FFFFFF;
+}
+
+.product_info .product_info_saleinfo_right {
+  padding-left: 2.4rem;
+}
+
+.product_info .product_info_saleinfo_code {
+  font-family: "PP Right Grotesk";
+  font-size: 1.6rem;
+  font-weight: normal;
+  line-height: 130%;
+  letter-spacing: 0px;
+  font-variation-settings: "opsz" auto;
+  color: #FFFFFF;
+  margin-bottom: 0.6rem;
+}
+
+.product_info .product_info_saleinfo_btn {
+  width: 11rem;
+  height: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+  font-family: "PP Right Grotesk";
+  font-size: 1.8rem;
+  font-weight: 500;
+  line-height: 112%;
+  letter-spacing: 0px;
+  font-variation-settings: "opsz" auto;
+  color: #1F1F1F;
+  cursor: pointer;
+}
