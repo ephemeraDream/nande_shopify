@@ -188,18 +188,18 @@ document.querySelectorAll(".collection_compare_product_saleinfo_countdown").forE
       item.querySelector(".collection_compare_product_saleinfo_countdown_item[data-type='day']").innerHTML = String(days).padStart(
         2,
         '0'
-      );
+      ) + "d";
     }
     item.querySelector(".collection_compare_product_saleinfo_countdown_item[data-type='hour']").innerHTML = String(hours).padStart(
       2,
       '0'
-    );
+    ) + "h";
     item.querySelector(".collection_compare_product_saleinfo_countdown_item[data-type='minute']").innerHTML = String(
       minutes
-    ).padStart(2, '0');
+    ).padStart(2, '0') + "m";
     item.querySelector(".collection_compare_product_saleinfo_countdown_item[data-type='second']").innerHTML = String(
       seconds
-    ).padStart(2, '0');
+    ).padStart(2, '0') + "s";
 
     if (days == 0 && item.querySelector(".collection_compare_product_saleinfo_countdown_item[data-type='day']")) {
       item.querySelector(".collection_compare_product_saleinfo_countdown_item[data-type='day'] + span").remove();
