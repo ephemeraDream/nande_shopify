@@ -19,8 +19,8 @@ function initSwiper() {
     },
     spaceBetween: 0,
     navigation: {
-      nextEl: ".imgmain_swiper .imgmain_swiper_next",
-      prevEl: ".imgmain_swiper .imgmain_swiper_prev",
+      nextEl: ".imgthumb_swiper_box .imgmain_swiper_next",
+      prevEl: ".imgthumb_swiper_box .imgmain_swiper_prev",
     },
     thumbs: {
       swiper: imgthumbSwiper,
