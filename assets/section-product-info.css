@@ -1,0 +1,66 @@
+.product_info_section {
+  width: 100%;
+  background-color: #f2f1ed;
+  padding-top: 3.7rem;
+  padding-bottom: 6rem;
+}
+
+.product_info {
+  max-width: 144rem;
+  margin: 0 auto;
+  display: flex;
+  gap: 6rem;
+}
+
+.product_info .product_info_left {
+  position: sticky;
+  top: 3rem;
+  max-width: 70rem;
+  min-width: 50rem;
+}
+
+.product_info .product_info_left_contain {
+  position: relative;
+  width: 100%;
+}
+
+.product_info .imgmain_swiper {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+
+.product_info .imgmain_swiper .swiper-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center center;
+}
+
+.imgmain_swiper .imgmain_swiper_prev,
+.imgmain_swiper .imgmain_swiper_next {
+  width: 6rem;
+  height: 6rem;
+  background-color: rgba(242, 241, 237, .6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.imgmain_swiper .imgmain_swiper_prev svg,
+.imgmain_swiper .imgmain_swiper_next svg {
+  width: 4rem;
+  height: 4rem;
+}
+
+.imgmain_swiper .imgmain_swiper_prev {
+  left: 2.6rem;
+}
+
+.imgmain_swiper .imgmain_swiper_next {
+  right: 2rem;
+}
