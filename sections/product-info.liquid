@@ -102,7 +102,9 @@
               {{ 'common.code' | t -}}
               {{- sale_info.code }}
             </div>
-            <div class="product_info_saleinfo_btn">{{ 'common.copy_and_use' | t }}</div>
+            <div class="product_info_saleinfo_btn" data-code="{{ sale_info.code }}">
+              {{ 'common.copy_and_use' | t }}
+            </div>
           </div>
         </div>
       {% endif %}
