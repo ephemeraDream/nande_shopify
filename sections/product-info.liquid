@@ -10,10 +10,7 @@
         <div class="swiper imgmain_swiper">
           <div class="swiper-wrapper">
             {%- if product.selected_or_first_available_variant != null -%}
-              {% assign show_images = product.selected_or_first_available_variant.metafields.custom.multiple_images.value
-                | default: product.images
-              %}
-              {% for image in show_images %}
+              {% for image in product.images %}
                 <div class="swiper-slide">
                   {{- image | image_url: width: image.width | image_tag: alt: product.title, preload: true -}}
                 </div>
@@ -25,6 +22,28 @@
           </div>
           <div class="imgmain_swiper_next">
             {{ 'header-swiper-right.svg' | inline_asset_content }}
+          </div>
+        </div>
+      </div>
+      <div class="product_info_left_thumb">
+        <div class="imgthumb_swiper_box">
+          <div class="imgthumb_swiper_prev">
+            {{ 'header-swiper-left.svg' | inline_asset_content }}
+          </div>
+          <div class="swiper imgthumb_swiper">
+            <div class="swiper-wrapper">
+              {% for image in product.images %}
+                <div class="swiper-slide">
+                  <img
+                    src="{{ image | image_url: width: 120 }}"
+                    alt="{{ product.title }}"
+                  >
+                </div>
+              {% endfor -%}
+            </div>
+            <div class="imgthumb_swiper_next">
+              {{ 'header-swiper-right.svg' | inline_asset_content }}
+            </div>
           </div>
         </div>
       </div>
