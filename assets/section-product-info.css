@@ -296,6 +296,8 @@
 
 .product_info .product_info_key_features svg {
   width: 0.7rem;
+  position: relative;
+  top: 0.2rem;
 }
 
 .product_info .product_info_key_features_desc {
