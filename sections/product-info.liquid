@@ -114,7 +114,7 @@
           {{ 'common.key_features' | t }}
           {{- 'swiper-right.svg' | inline_asset_content -}}
         </div>
-        <div class="product_info_key_features_desc">{{ key_features.description | metafield_tag }}</div>
+        <div class="product_info_key_features_desc">{{ key_features.description.value | metafield_tag }}</div>
       {% endif %}
     </div>
   </div>
