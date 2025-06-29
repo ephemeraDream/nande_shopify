@@ -115,6 +115,17 @@
           {{- 'swiper-right.svg' | inline_asset_content -}}
         </div>
         <div class="product_info_key_features_desc">{{ key_features.description.value | metafield_tag }}</div>
+        <div class="key_features_modal common_modal">
+          <div class="key_features_modal_contain common_modal_contain">
+            <div class="key_features_modal_head common_modal_head">
+              <span>{{ 'common.key_features' | t }}</span>
+              <div class="common_modal_close">{{- 'swiper-right.svg' | inline_asset_content -}}</div>
+            </div>
+            <div class="key_features_modal_body common_modal_body">
+              {{ key_features.modal_description.value | metafield_tag }}
+            </div>
+          </div>
+        </div>
       {% endif %}
     </div>
   </div>

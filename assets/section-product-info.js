@@ -93,3 +93,25 @@ if (sale_info_box) {
     }, 5000);
   });
 }
+// feature弹窗
+const key_features_modal = document.querySelector(".key_features_modal");
+if (key_features_modal) {
+  document
+    .querySelector(".product_info_key_features")
+    .addEventListener("click", () => {
+      key_features_modal.style.display = "block";
+      document.body.style.overflowY = "hidden";
+    });
+  key_features_modal
+    .querySelector(".common_modal_close")
+    .addEventListener("click", () => {
+      key_features_modal.style.display = "none";
+      document.body.style.overflowY = "auto";
+    });
+  key_features_modal.addEventListener("click", (e) => {
+    if (e.target === key_features_modal) {
+      key_features_modal.style.display = "none";
+      document.body.style.overflowY = "auto";
+    }
+  });
+}
