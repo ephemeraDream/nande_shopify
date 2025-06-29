@@ -192,8 +192,8 @@
 .product_info .product_info_saleinfo {
   padding: 2rem 3.5rem;
   background-color: #FF7500;
-  display: flex;
-  min-width: 41.3rem;
+  display: inline-flex;
+  margin-top: 2rem;
 }
 
 .product_info .product_info_saleinfo_name {
@@ -258,6 +258,7 @@
   font-variation-settings: "opsz" auto;
   color: #FFFFFF;
   margin-bottom: 0.6rem;
+  margin-top: 0.6rem;
 }
 
 .product_info .product_info_saleinfo_btn {
