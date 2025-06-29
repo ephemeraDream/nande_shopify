@@ -1,7 +1,7 @@
 // swiper相关
-let imgthumbSwiper, imgboxSwiper;
-let initialSlide = 0;
+initSwiper()
 function initSwiper() {
+  let imgthumbSwiper, imgboxSwiper;
   imgthumbSwiper = new Swiper(".imgthumb_swiper", {
     loop: true,
     spaceBetween: 8,
