@@ -366,6 +366,7 @@
   font-variation-settings: "opsz" auto;
   color: #1F1F1F;
   cursor: pointer;
+  background-color: #fff;
 }
 
 .product_info .product_info_option_select[select-type="box"] .product_info_option_select_item_select {
