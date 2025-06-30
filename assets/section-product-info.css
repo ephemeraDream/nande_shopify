@@ -315,33 +315,39 @@
   padding-left: 1.8rem;
 }
 
+.product_info .product_info_option_contain {
+  margin-top: 1.6rem;
+}
+
 .product_info .product_info_option_item {
-  margin-top: 1rem;
-}
-
-.product_info .product_info_option_item+.product_info_option_item {
-  display: none;
-}
-
-.product_info .product_info_product:hover .product_info_option_item+.product_info_option_item {
-  display: block;
+  margin-bottom: 3rem;
 }
 
 .product_info .product_info_option_label {
   font-family: "PP Right Grotesk";
   font-size: 2rem;
-  font-weight: 500;
-  line-height: 112%;
+  font-weight: normal;
+  line-height: 130%;
   letter-spacing: 0px;
   font-variation-settings: "opsz" auto;
-  color: #1F1F1F;
+  color: #7F7E75
+}
+
+.product_info .product_info_option_label_select {
+  color: #1F1F1F
 }
 
 .product_info .product_info_option_select {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.8rem;
-  margin-top: 0.8rem;
+  gap: 1.5rem;
+  margin-top: 1.2rem;
+}
+
+.product_info .product_info_option_select[select-type="circle"] {
+  gap: 3.2rem;
+  margin-top: 2rem;
+  padding-left: 0.7rem;
 }
 
 .product_info .product_info_option_select[select-type="box"] .product_info_option_select_item {
@@ -366,12 +372,11 @@
 }
 
 .product_info .product_info_option_select[select-type="circle"] .product_info_option_select_item {
-  width: 2.4rem;
-  height: 2.4rem;
+  width: 3.2rem;
+  height: 3.2rem;
   border-radius: 50%;
-  border: 0.1rem solid #7F7E75;
+  box-shadow: inset 0px 0.1rem 0.1rem 0px rgba(0, 0, 0, 0.2);
   position: relative;
-  overflow: hidden;
   cursor: pointer;
 }
 
@@ -387,6 +392,22 @@
   transform-origin: center;
 }
 
-.product_info .product_info_option_select[select-type="circle"] .product_info_option_select_item_select {
-  border: 0.2rem solid #BDFF00;
+.product_info .product_info_option_select[select-type="circle"] .product_info_option_select_item_select::before {
+  width: 4.6rem;
+  height: 4.6rem;
+  border-radius: 50%;
+  background-color: #BDFF00;
+  position: absolute;
+  left: -0.7rem;
+  top: -0.7rem;
+}
+
+.product_info .product_info_option_select[select-type="circle"] .product_info_option_select_item_select::after {
+  width: 4.2rem;
+  height: 4.2rem;
+  border-radius: 50%;
+  background-color: #fff;
+  position: absolute;
+  left: -0.5rem;
+  top: -0.5rem;
 }
