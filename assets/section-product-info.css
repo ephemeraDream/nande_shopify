@@ -393,6 +393,7 @@
 }
 
 .product_info .product_info_option_select[select-type="circle"] .product_info_option_select_item_select::before {
+  content: '';
   width: 4.6rem;
   height: 4.6rem;
   border-radius: 50%;
@@ -403,6 +404,7 @@
 }
 
 .product_info .product_info_option_select[select-type="circle"] .product_info_option_select_item_select::after {
+  content: '';
   width: 4.2rem;
   height: 4.2rem;
   border-radius: 50%;
