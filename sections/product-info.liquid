@@ -112,7 +112,7 @@
       {% if key_features != blank %}
         <div class="product_info_key_features">
           {{ 'common.key_features' | t }}
-          {{- 'swiper-right.svg' | inline_asset_content -}}
+          {{- 'icon-close.svg' | inline_asset_content -}}
         </div>
         <div class="product_info_key_features_desc">{{ key_features.description | metafield_tag }}</div>
         <div class="key_features_modal common_modal">
@@ -127,6 +127,46 @@
           </div>
         </div>
       {% endif %}
+      {%- for option in product.options_with_values -%}
+        <div class="bundle_simple_option_item">
+          <div class="bundle_simple_option_label">{{ option.name }}</div>
+          <div
+            class="bundle_simple_option_select"
+            select-type="{% if option.name | handle contains "farbe" %}circle{% else %}box{% endif %}"
+            data-index="{{ forloop.index0 }}"
+          >
+            {% assign index = 'option' | append: forloop.index %}
+            {%- for value in option.values -%}
+              {% assign available_variant = product.variants | where: index, value | where: 'available' %}
+              {% if available_variant.size > 0 %}
+                {% if option.name | handle contains "farbe" %}
+                  {% assign color = '' %}
+                  {% for color_item in product.metafields.custom.color_option.value %}
+                    {% if color_item.name == value.name %}
+                      {% assign color = color_item.value %}
+                    {% endif %}
+                  {% endfor %}
+                  <div
+                    data-value="{{ value }}"
+                    class="bundle_simple_option_select_item{% if color == '' %} bundle_simple_option_select_item_none{% endif %}{% if value.selected %} bundle_simple_option_select_item_select{% endif %}"
+                    {% if color != '' %}
+                      style="background-color: {{ color }}"
+                    {% endif %}
+                    title="{{ value }}"
+                  ></div>
+                {% else %}
+                  <div
+                    class="bundle_simple_option_select_item{% if value.selected %} bundle_simple_option_select_item_select{% endif %}"
+                    data-value="{{ value }}"
+                  >
+                    {{ value }}
+                  </div>
+                {% endif %}
+              {% endif %}
+            {% endfor %}
+          </div>
+        </div>
+      {% endfor %}
     </div>
   </div>
 </div>

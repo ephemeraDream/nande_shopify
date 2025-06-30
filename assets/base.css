@@ -3778,8 +3778,8 @@ a {
 }
 
 .common_modal_close {
-  width: 3.5rem;
-  height: 3.5rem;
+  width: 2rem;
+  height: 2rem;
   cursor: pointer;
   display: flex;
 }
