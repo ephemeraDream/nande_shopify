@@ -129,40 +129,43 @@
       {% endif %}
       {%- for option in product.options_with_values -%}
         {% assign option_hanlde = option.name | handle %}
-        <div class="bundle_simple_option_item">
-          <div class="bundle_simple_option_label">{{ option.name }}</div>
+        <div class="product_info_option_item">
+          <div class="product_info_option_label">
+            {{ option.name }}：
+            <span class="product_info_option_label_select">
+              {%- for value in option.values -%}
+                {%- if value.selected %}{{ value }}{% endif -%}
+              {% endfor %}
+            </span>
+          </div>
           <div
-            class="bundle_simple_option_select"
+            class="product_info_option_select"
             select-type="{% if option_hanlde contains "farbe" %}circle{% else %}box{% endif %}"
             data-index="{{ forloop.index0 }}"
           >
-            {% assign index = 'option' | append: forloop.index %}
             {%- for value in option.values -%}
-              {% assign available_variant = product.variants | where: index, value | where: 'available' %}
-              {% if available_variant.size > 0 %}
-                {% if option_hanlde contains 'farbe' %}
-                  {% assign color = '' %}
-                  {% for color_item in product.metafields.custom.color_option.value %}
-                    {% if color_item.name == value.name %}
-                      {% assign color = color_item.value %}
-                    {% endif %}
-                  {% endfor %}
-                  <div
-                    data-value="{{ value }}"
-                    class="bundle_simple_option_select_item{% if color == '' %} bundle_simple_option_select_item_none{% endif %}{% if value.selected %} bundle_simple_option_select_item_select{% endif %}"
-                    {% if color != '' %}
-                      style="background-color: {{ color }}"
-                    {% endif %}
-                    title="{{ value }}"
-                  ></div>
-                {% else %}
-                  <div
-                    class="bundle_simple_option_select_item{% if value.selected %} bundle_simple_option_select_item_select{% endif %}"
-                    data-value="{{ value }}"
-                  >
-                    {{ value }}
-                  </div>
-                {% endif %}
+              {% if option_hanlde contains 'farbe' %}
+                {% assign color = '' %}
+                {% for color_item in product.metafields.custom.color_option.value %}
+                  {% if color_item.name == value.name %}
+                    {% assign color = color_item.value %}
+                  {% endif %}
+                {% endfor %}
+                <div
+                  data-value="{{ value }}"
+                  class="product_info_option_select_item{% if color == '' %} product_info_option_select_item_none{% endif %}{% if value.selected %} product_info_option_select_item_select{% endif %}"
+                  {% if color != '' %}
+                    style="background-color: {{ color }}"
+                  {% endif %}
+                  title="{{ value }}"
+                ></div>
+              {% else %}
+                <div
+                  class="product_info_option_select_item{% if value.selected %} product_info_option_select_item_select{% endif %}"
+                  data-value="{{ value }}"
+                >
+                  {{ value }}
+                </div>
               {% endif %}
             {% endfor %}
           </div>
