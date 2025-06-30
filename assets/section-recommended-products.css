@@ -54,6 +54,18 @@
   gap: 2.6rem;
   background-color: #7F7E75;
   padding: 1.8rem 1.8rem 1.5rem 2rem;
+  position: relative;
+}
+
+.recommended_products .recommended_products_info::before {
+  content: "";
+  height: 5rem;
+  width: 17.8rem;
+  background-color: #7F7E75;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translateY(-100%);
 }
 
 .recommended_products .recommended_products_info_title {
