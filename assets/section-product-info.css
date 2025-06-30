@@ -314,3 +314,79 @@
   border-bottom: 0.1rem solid #E2DED6;
   padding-left: 1.8rem;
 }
+
+.product_info .product_info_option_item {
+  margin-top: 1rem;
+}
+
+.product_info .product_info_option_item+.product_info_option_item {
+  display: none;
+}
+
+.product_info .product_info_product:hover .product_info_option_item+.product_info_option_item {
+  display: block;
+}
+
+.product_info .product_info_option_label {
+  font-family: "PP Right Grotesk";
+  font-size: 2rem;
+  font-weight: 500;
+  line-height: 112%;
+  letter-spacing: 0px;
+  font-variation-settings: "opsz" auto;
+  color: #1F1F1F;
+}
+
+.product_info .product_info_option_select {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+  margin-top: 0.8rem;
+}
+
+.product_info .product_info_option_select[select-type="box"] .product_info_option_select_item {
+  height: 2.8rem;
+  padding: 0 2.4rem;
+  display: flex;
+  align-items: center;
+  border: 0.1rem solid #E2DED6;
+  font-family: "PP Right Grotesk";
+  font-size: 1.6rem;
+  font-weight: normal;
+  line-height: 130%;
+  text-align: center;
+  letter-spacing: 0px;
+  font-variation-settings: "opsz" auto;
+  color: #1F1F1F;
+  cursor: pointer;
+}
+
+.product_info .product_info_option_select[select-type="box"] .product_info_option_select_item_select {
+  border-color: #BDFF00;
+}
+
+.product_info .product_info_option_select[select-type="circle"] .product_info_option_select_item {
+  width: 2.4rem;
+  height: 2.4rem;
+  border-radius: 50%;
+  border: 0.1rem solid #7F7E75;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.product_info .product_info_option_select[select-type="circle"] .product_info_option_select_item_none::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 120%;
+  height: 0.2rem;
+  background-color: red;
+  transform: translate(-50%, -50%) rotate(-45deg);
+  transform-origin: center;
+}
+
+.product_info .product_info_option_select[select-type="circle"] .product_info_option_select_item_select {
+  border: 0.2rem solid #BDFF00;
+}
