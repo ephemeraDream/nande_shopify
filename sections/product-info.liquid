@@ -152,14 +152,16 @@
                       {% assign color = color_item.value %}
                     {% endif %}
                   {% endfor %}
-                  <div
-                    data-value="{{ value }}"
-                    class="product_info_option_select_item{% if color == '' %} product_info_option_select_item_none{% endif %}{% if value.selected %} product_info_option_select_item_select{% endif %}"
-                    {% if color != '' %}
-                      style="background-color: {{ color }}"
-                    {% endif %}
-                    title="{{ value }}"
-                  ></div>
+                  <div class="product_info_option_select_item_circle{% if value.selected %} product_info_option_select_item_select{% endif %}">
+                    <div
+                      data-value="{{ value }}"
+                      class="product_info_option_select_item{% if color == '' %} product_info_option_select_item_none{% endif %}"
+                      {% if color != '' %}
+                        style="background-color: {{ color }}"
+                      {% endif %}
+                      title="{{ value }}"
+                    ></div>
+                  </div>
                 {% else %}
                   <div
                     class="product_info_option_select_item{% if value.selected %} product_info_option_select_item_select{% endif %}"

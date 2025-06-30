@@ -367,10 +367,6 @@
   cursor: pointer;
 }
 
-.product_info .product_info_option_select[select-type="box"] .product_info_option_select_item_select {
-  border-color: #BDFF00;
-}
-
 .product_info .product_info_option_select[select-type="circle"] .product_info_option_select_item {
   width: 3.2rem;
   height: 3.2rem;
@@ -390,6 +386,10 @@
   background-color: red;
   transform: translate(-50%, -50%) rotate(-45deg);
   transform-origin: center;
+}
+
+.product_info .product_info_option_select[select-type="box"] .product_info_option_select_item_select {
+  position: relative;
 }
 
 .product_info .product_info_option_select[select-type="circle"] .product_info_option_select_item_select::before {
