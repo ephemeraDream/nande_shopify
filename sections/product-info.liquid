@@ -128,18 +128,19 @@
         </div>
       {% endif %}
       {%- for option in product.options_with_values -%}
+        {% assign option_hanlde = option.name | handle %}
         <div class="bundle_simple_option_item">
           <div class="bundle_simple_option_label">{{ option.name }}</div>
           <div
             class="bundle_simple_option_select"
-            select-type="{% if option.name | handle contains "farbe" %}circle{% else %}box{% endif %}"
+            select-type="{% if option_hanlde contains "farbe" %}circle{% else %}box{% endif %}"
             data-index="{{ forloop.index0 }}"
           >
             {% assign index = 'option' | append: forloop.index %}
             {%- for value in option.values -%}
               {% assign available_variant = product.variants | where: index, value | where: 'available' %}
               {% if available_variant.size > 0 %}
-                {% if option.name | handle contains "farbe" %}
+                {% if option_hanlde contains 'farbe' %}
                   {% assign color = '' %}
                   {% for color_item in product.metafields.custom.color_option.value %}
                     {% if color_item.name == value.name %}
