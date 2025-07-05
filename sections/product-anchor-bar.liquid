@@ -20,21 +20,7 @@
 </div>
 
 <script>
-  {% comment %} const stickyEl = document.querySelector('.product_anchor_bar_section').parentElement;
-  const sentinel = document.querySelector('.product_anchor_bar_section');
-
-  const observer = new IntersectionObserver(
-    ([entry]) => {
-      if (!entry.isIntersecting) {
-        stickyEl.classList.add('is-sticky');
-      } else {
-        stickyEl.classList.remove('is-sticky');
-      }
-    },
-    { root: null, threshold: 0.1 }
-  );
-
-  observer.observe(sentinel); {% endcomment %}
+  document.querySelector('.product_anchor_bar_section').parentElement.classList.add('is-sticky');
 </script>
 
 {% schema %}
