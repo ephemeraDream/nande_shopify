@@ -707,6 +707,12 @@
   color: #7F7E75;
 }
 
+.product_info_section .product_info_bottom_bar .product_info_bottom_bar_contain_right_buybox {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
 .product_info_section .product_info_bottom_bar .product_info_buybox_btns_btn {
   height: 4.4rem;
   display: flex;
@@ -721,6 +727,7 @@
   font-variation-settings: "opsz" auto;
   color: #1F1F1F;
   background-color: #fff;
+  cursor: pointer;
 }
 
 .product_info_section .product_info_bottom_bar .product_info_buybox_btns_btn:hover {
