@@ -657,7 +657,7 @@
   letter-spacing: 0px;
   font-variation-settings: "opsz" auto;
   color: #1F1F1F;
-  min-width: 51.6rem;
+  max-width: 51.6rem;
 }
 
 .product_info_section .product_info_bottom_bar_contain_right {
@@ -720,9 +720,19 @@
   letter-spacing: 0px;
   font-variation-settings: "opsz" auto;
   color: #1F1F1F;
+  background-color: #fff;
+}
+
+.product_info_section .product_info_bottom_bar .product_info_buybox_btns_btn:hover {
+  background: #BDFF00;
 }
 
 .product_info_section .product_info_bottom_bar .product_info_buybox_btns_btn[data-type="buy_it_now"] {
   background: #BDFF00;
   border: none;
+}
+
+.product_info_section .product_info_bottom_bar .product_info_buybox_btns_btn[data-type="buy_it_now"]:hover {
+  background: #1F1F1F;
+  color: #BDFF00;
 }
