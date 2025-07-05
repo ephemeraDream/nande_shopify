@@ -20,7 +20,7 @@
 </div>
 
 <script>
-  const stickyEl = document.querySelector('.product_anchor_bar_section').parentElement;
+  {% comment %} const stickyEl = document.querySelector('.product_anchor_bar_section').parentElement;
   const sentinel = document.querySelector('.product_anchor_bar_section');
 
   const observer = new IntersectionObserver(
@@ -34,7 +34,7 @@
     { root: null, threshold: 0.1 }
   );
 
-  observer.observe(sentinel);
+  observer.observe(sentinel); {% endcomment %}
 </script>
 
 {% schema %}
