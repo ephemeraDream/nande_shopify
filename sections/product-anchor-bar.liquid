@@ -30,7 +30,7 @@
       item.classList.add('active');
     });
   });
-  
+
   const sectionIds = Array.from(links).map((link) => link.getAttribute('data-watch'));
   let sectionsLoaded = 0;
   let sectionsObserver;
@@ -77,6 +77,24 @@
   }
 
   initializeObserver();
+
+  function waitForElement(selector, callback) {
+    const element = document.querySelector(selector);
+    if (element) {
+      callback(element);
+      return;
+    }
+
+    const observer = new MutationObserver((mutations, obs) => {
+      const element = document.querySelector(selector);
+      if (element) {
+        obs.disconnect();
+        callback(element);
+      }
+    });
+
+    observer.observe(document.body, { childList: true, subtree: true });
+  }
 </script>
 
 {% schema %}
