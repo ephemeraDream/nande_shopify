@@ -162,3 +162,21 @@ function toggleBottomBar() {
     initObserver(target, 0.4);
   });
 }
+// 等待元素dom加载
+function waitForElement(selector, callback) {
+  const element = document.querySelector(selector);
+  if (element) {
+    callback(element);
+    return;
+  }
+
+  const observer = new MutationObserver((mutations, obs) => {
+    const element = document.querySelector(selector);
+    if (element) {
+      obs.disconnect();
+      callback(element);
+    }
+  });
+
+  observer.observe(document.body, { childList: true, subtree: true });
+}
