@@ -3784,8 +3784,3 @@ a {
   cursor: pointer;
   display: flex;
 }
-
-.section {
-  position: relative;
-  z-index: -1;
-}
