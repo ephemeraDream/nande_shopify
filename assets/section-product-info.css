@@ -420,3 +420,23 @@
   left: -0.5rem;
   top: -0.5rem;
 }
+
+.product_info .product_info_buybox_contain {
+  display: flex;
+  align-items: center;
+  gap: 1.6rem;
+  margin-bottom: 1.4rem;
+}
+
+.product_info .product_info_buybox_quantity_box {
+  width: 11.8rem;
+  height: 6rem;
+  background-color: #FAFAFA;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.product_info .product_info_buybox_quantity_btn {
+  
+}

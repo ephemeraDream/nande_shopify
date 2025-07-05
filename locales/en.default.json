@@ -188,6 +188,7 @@
       "duties_and_taxes_included": "Duties and taxes included.",
       "shipping_policy_html": "<a href=\"{{ link }}\">Shipping</a> calculated at checkout.",
       "include_taxes": "Tax included",
+      "preorder": "Pre-order",
     },
     "modal": {
       "label": "Media gallery"
