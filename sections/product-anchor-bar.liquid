@@ -7,6 +7,7 @@
         <a
           class="product_anchor_bar_left_item{% if forloop.first %} active{% endif %}"
           href="#{{ block.settings.anchor_name }}"
+          data-watch="{{ block.settings.anchor_name }}"
         >
           {{- block.settings.title -}}
         </a>
@@ -20,14 +21,63 @@
 </div>
 
 <script>
+  const links = document.querySelectorAll('.product_anchor_bar_left_item'
   document.querySelector('.product_anchor_bar_section').parentElement.classList.add('is-sticky');
-  document.querySelectorAll('.product_anchor_bar_left_item').forEach((item) => {
+  links.forEach((item) => {
     item.addEventListener('click', () => {
       if (item.classList.contains('active')) return;
       document.querySelector('.product_anchor_bar_left_item.active').classList.remove('active');
       item.classList.add('active');
     });
   });
+  const sectionIds = Array.from(links).map((link) =>
+    link.getAttribute('data-watch')
+  );
+  let sectionsLoaded = 0;
+  let sectionsObserver;
+  let sections = [];
+
+  function initializeObserver() {
+    sectionIds.forEach((sectionId) => {
+      waitForElement(`#${sectionId}`, (element) => {
+        sections.push(element);
+        sectionsLoaded++;
+
+        if (sectionsLoaded === sectionIds.length) {
+          startIntersectionObserver(sections);
+        }
+      });
+    });
+  }
+
+  function startIntersectionObserver(sections) {
+    sectionsObserver = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          const targetSection = entry.target;
+          const correspondingLink = document.querySelector(
+            `.product_anchor_bar_left_item[data-watch="${targetSection.id}"]`
+          );
+          if (entry.isIntersecting) {
+            links.forEach((link) => link.classList.remove('active'));
+            if (correspondingLink) {
+              correspondingLink.classList.add('active');
+            }
+          }
+        });
+      },
+      {
+        root: null,
+        threshold: 0.1,
+      }
+    );
+
+    sections.forEach((section) => {
+      sectionsObserver.observe(section);
+    });
+  }
+
+  initializeObserver();
 </script>
 
 {% schema %}
