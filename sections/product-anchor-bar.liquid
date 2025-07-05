@@ -21,6 +21,13 @@
 
 <script>
   document.querySelector('.product_anchor_bar_section').parentElement.classList.add('is-sticky');
+  document.querySelectorAll('.product_anchor_bar_left_item').forEach((item) => {
+    item.addEventListener('click', () => {
+      if (item.classList.contains('active')) return;
+      document.querySelector('.product_anchor_bar_left_item.active').classList.remove('active');
+      item.classList.add('active');
+    });
+  });
 </script>
 
 {% schema %}
