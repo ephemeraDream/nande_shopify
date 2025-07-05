@@ -627,7 +627,7 @@
   padding: 0 2rem;
 }
 
-.product_info .product_info_bottom_bar {
+.product_info_section .product_info_bottom_bar {
   position: fixed;
   bottom: 0;
   left: 0;
@@ -640,14 +640,14 @@
   min-height: 6rem;
 }
 
-.product_info .product_info_bottom_bar_contain {
+.product_info_section .product_info_bottom_bar_contain {
   max-width: 144rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
-.product_info .product_infor_simplicity_right_select_title {
+.product_info_section .product_infor_simplicity_right_select_title {
   font-family: "PP Right Grotesk";
   font-size: 2.4rem;
   font-weight: 500;
@@ -657,7 +657,7 @@
   color: #1F1F1F;
 }
 
-.product_info .product_info_bottom_bar_contain_right {
+.product_info_section .product_info_bottom_bar_contain_right {
   display: flex;
   align-items: center;
   gap: 1.5rem;
