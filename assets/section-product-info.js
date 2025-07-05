@@ -180,3 +180,16 @@ function waitForElement(selector, callback) {
 
   observer.observe(document.body, { childList: true, subtree: true });
 }
+// 产品媒体切换
+document.querySelectorAll(".product_info_left_thumb_select_item").forEach(btn => {
+  btn.addEventListener("click", () => {
+    const type = btn.getAttribute("data-type");
+
+    document.querySelectorAll(".product_info_left_thumb_select_item").forEach(b => b.classList.remove("active"));
+    btn.classList.add("active");
+
+    document.querySelectorAll(".product_info_left_contain_group").forEach(group => {
+      group.dataset.type === type ? group.classList.add("show") : group.classList.remove("show");
+    });
+  });
+});

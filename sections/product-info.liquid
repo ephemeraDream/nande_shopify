@@ -7,7 +7,8 @@
         class="product_info_left_contain"
         style="padding-bottom: {{ 1 | divided_by: section.settings.media_ratio | times: 100 }}%;"
       >
-        <div class="swiper imgmain_swiper">
+        {% assign media_types = 'video,model' | split: ',' %}
+        <div class="swiper imgmain_swiper product_info_left_contain_group show" data-type="image">
           <div class="swiper-wrapper">
             {%- if product.selected_or_first_available_variant != null -%}
               {% for image in product.images %}
@@ -24,6 +25,20 @@
             {{- 'swiper-right.svg' | inline_asset_content -}}
           </div>
         </div>
+        {% for type in media_types %}
+          <div
+            class="product_info_left_contain_group"
+            data-type="{{ type }}"
+          >
+            {% for media in product.media %}
+              {% if media.media_type == type %}
+                <div class="product_info_left_contain_group_item">
+                  {{ media | media_tag }}
+                </div>
+              {% endif %}
+            {% endfor %}
+          </div>
+        {% endfor %}
       </div>
       <div class="product_info_left_thumb">
         <div class="imgthumb_swiper_box">
@@ -47,9 +62,9 @@
           </div>
         </div>
         <div class="product_info_left_thumb_select">
-          <div class="product_info_left_thumb_select_item active">Photos</div>
-          <div class="product_info_left_thumb_select_item">Video</div>
-          <div class="product_info_left_thumb_select_item">3D</div>
+          <div class="product_info_left_thumb_select_item active" data-type="image">Photos</div>
+          <div class="product_info_left_thumb_select_item" data-type="video">Video</div>
+          <div class="product_info_left_thumb_select_item" data-type="model">3D</div>
           <div class="product_info_left_thumb_select_item">Specs</div>
         </div>
       </div>

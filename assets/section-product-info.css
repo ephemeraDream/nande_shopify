@@ -749,3 +749,11 @@
 .product_info_section .product_info_bottom_bar .product_info_saleinfo_countdown_text {
   margin-right: 0.4rem;
 }
+
+.product_info_left_contain_group {
+  display: none;
+}
+
+.product_info_left_contain_group.show {
+  display: block;
+}
