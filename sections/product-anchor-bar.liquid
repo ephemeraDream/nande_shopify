@@ -1,0 +1,55 @@
+{{ 'section-product-anchor-bar.css' | asset_url | stylesheet_tag }}
+
+<div class="product_anchor_bar_section padding-sider">
+  <div class="product_anchor_bar">
+    <div class="product_anchor_bar_left">
+      {% for block in section.blocks %}
+        <a
+          class="product_anchor_bar_left_item{% if forloop.first %} active{% endif %}"
+          href="#{{ block.settings.anchor_name }}"
+        >
+          {{- block.settings.title -}}
+        </a>
+      {% endfor %}
+    </div>
+    <div class="product_anchor_bar_btn">
+      {{ 'common.jetzt_kaufen' | t }}
+      {{ 'icon-right-arrow.svg' | inline_asset_content }}
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "product anchor bar",
+  "tag": "section",
+  "class": "section",
+  "disabled_on": {
+    "groups": ["header", "footer"]
+  },
+  "settings": [],
+  "blocks": [
+    {
+      "type": "item",
+      "name": "item",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "title"
+        },
+        {
+          "type": "text",
+          "id": "anchor_name",
+          "label": "anchor name"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "product anchor bar"
+    }
+  ]
+}
+{% endschema %}
