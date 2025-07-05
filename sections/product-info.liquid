@@ -112,14 +112,14 @@
       {% if key_features != blank %}
         <div class="product_info_key_features">
           {{ 'common.key_features' | t }}
-          {{- 'icon-close.svg' | inline_asset_content -}}
+          {{- 'swiper-right.svg' | inline_asset_content -}}
         </div>
         <div class="product_info_key_features_desc">{{ key_features.description | metafield_tag }}</div>
         <div class="key_features_modal common_modal">
           <div class="key_features_modal_contain common_modal_contain">
             <div class="key_features_modal_head common_modal_head">
               <span>{{ 'common.key_features' | t }}</span>
-              <div class="common_modal_close">{{- 'swiper-right.svg' | inline_asset_content -}}</div>
+              <div class="common_modal_close">{{- 'icon-close.svg' | inline_asset_content -}}</div>
             </div>
             <div class="key_features_modal_body common_modal_body">
               {{ key_features.modal_description | metafield_tag }}
@@ -224,7 +224,19 @@
               {{ 'icon-cart-empty.svg' | inline_asset_content }}
             </button>
           </div>
-          {{ form | payment_button }}
+          <button
+            data-type="buy_it_now"
+            type="submit"
+            class="product_info_buybox_btns_btn"
+            {% if product.selected_or_first_available_variant.available == false
+              or product.selected_or_first_available_variant == null
+            %}
+              disabled
+            {% endif %}
+          >
+            {{ '{{ 'common.jetzt_kaufen' | t }}' | t }}
+          </button>
+          {% comment %} {{ form | payment_button }} {% endcomment %}
         {%- endform -%}
       </div>
     </div>
@@ -272,6 +284,27 @@
   "blocks": [
     {
       "type": "@app"
+    },
+    {
+      "type": "modal",
+      "name": "modal",
+      "settings": [
+        {
+          "type": "textarea",
+          "id": "text_one",
+          "label": "text one"
+        },
+        {
+          "type": "textarea",
+          "id": "text_two",
+          "label": "text two"
+        },
+        {
+          "type": "textarea",
+          "id": "text_thr",
+          "label": "text thr"
+        }
+      ]
     }
   ],
   "presets": [
