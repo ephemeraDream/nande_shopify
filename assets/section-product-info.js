@@ -190,9 +190,9 @@ document.querySelectorAll(".product_info_left_thumb_select_item").forEach(btn =>
 
     const imgthumb_swiper_box = document.querySelector(".imgthumb_swiper_box")
     if (type === "image") {
-      imgthumb_swiper_box.style.opacity = 0
-    } else {
       imgthumb_swiper_box.style.opacity = 1
+    } else {
+      imgthumb_swiper_box.style.opacity = 0
     }
 
     document.querySelectorAll(".product_info_left_contain_group").forEach(group => {
