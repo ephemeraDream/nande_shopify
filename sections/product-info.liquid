@@ -30,10 +30,12 @@
             class="product_info_left_contain_group"
             data-type="{{ type }}"
           >
+            {% assign is_first = false %}
             {% for media in product.media %}
-              {% if media.media_type == type %}
+              {% if media.media_type == type and is_first == false %}
+                {% assign is_first = true %}
                 <div class="product_info_left_contain_group_item">
-                  {{ media | media_tag }}
+                  {{ media | media_tag: class: 'product_info_left_contain_group_item_media' }}
                 </div>
               {% endif %}
             {% endfor %}
