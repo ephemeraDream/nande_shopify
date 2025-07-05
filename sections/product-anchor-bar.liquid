@@ -12,12 +12,30 @@
         </a>
       {% endfor %}
     </div>
-    <div class="product_anchor_bar_btn">
+    <a class="product_anchor_bar_btn" href="{{ product.url }}">
       {{ 'common.jetzt_kaufen' | t }}
       {{ 'icon-right-arrow.svg' | inline_asset_content }}
-    </div>
+    </a>
   </div>
 </div>
+
+<script>
+  const stickyEl = document.querySelector('.product_anchor_bar_section').parentElement;
+  const sentinel = document.querySelector('.product_anchor_bar_section');
+
+  const observer = new IntersectionObserver(
+    ([entry]) => {
+      if (!entry.isIntersecting) {
+        stickyEl.classList.add('is-sticky');
+      } else {
+        stickyEl.classList.remove('is-sticky');
+      }
+    },
+    { root: null, threshold: 0.1 }
+  );
+
+  observer.observe(sentinel);
+</script>
 
 {% schema %}
 {

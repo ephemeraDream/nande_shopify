@@ -19,6 +19,7 @@
   display: flex;
   align-items: center;
   gap: 8.5rem;
+  height: 100%;
 }
 
 .product_anchor_bar .product_anchor_bar_left_item {
@@ -54,4 +55,5 @@
   letter-spacing: 0px;
   font-variation-settings: "opsz" auto;
   color: #1F1F1F;
+  cursor: pointer;
 }
