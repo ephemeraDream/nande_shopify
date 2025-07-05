@@ -422,6 +422,10 @@
   top: -0.5rem;
 }
 
+.product_info .product_info_buybox {
+  margin-bottom: 2rem;
+}
+
 .product_info .product_info_buybox_contain {
   display: flex;
   align-items: center;
@@ -515,10 +519,16 @@
   font-variation-settings: "opsz" auto;
   color: #1F1F1F;
   cursor: pointer;
+  padding-right: 0.8rem;
 }
 
 .product_info .product_info_modal_item>div {
   display: flex;
   align-items: center;
   gap: 1.8rem;
+}
+
+.product_info .product_info_modal_item>div+svg {
+  width: 0.7rem;
+  height: 1.2rem;
 }

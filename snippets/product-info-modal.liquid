@@ -4,4 +4,16 @@
     <span class="product_info_modal_item_title">{{ title }}</span>
   </div>
   {{- 'swiper-right.svg' | inline_asset_content -}}
+
+  <div class="common_modal">
+    <div class="common_modal_contain">
+      <div class="common_modal_head">
+        <span>{{ 'common.key_features' | t }}</span>
+        <div class="common_modal_close">{{- 'icon-close.svg' | inline_asset_content -}}</div>
+      </div>
+      <div class="common_modal_body">
+        {{ content | metafield_tag }}
+      </div>
+    </div>
+  </div>
 </div>

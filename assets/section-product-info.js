@@ -115,3 +115,24 @@ if (key_features_modal) {
     }
   });
 }
+// 信息弹窗
+document.querySelectorAll(".product_info_modal_item").forEach(item => {
+  item.addEventListener("click", () => {
+    const modal = item.querySelector(".common_modal")
+    modal.style.display = "block";
+    document.body.style.overflowY = "hidden";
+
+    modal
+      .querySelector(".common_modal_close")
+      .addEventListener("click", () => {
+        modal.style.display = "none";
+        document.body.style.overflowY = "auto";
+      });
+    modal.addEventListener("click", (e) => {
+      if (e.target === modal) {
+        modal.style.display = "none";
+        document.body.style.overflowY = "auto";
+      }
+    });
+  })
+})
