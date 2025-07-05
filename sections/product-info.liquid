@@ -247,6 +247,14 @@
               title: block.settings.title,
               content: block.settings.content
             %}
+          {%- when 'payment_methods' -%}
+            <div class="product_info_payment">
+              <div class="product_info_payment_head">
+                {{ block.settings.icon }}
+                {{ block.settings.title }}
+              </div>
+              <img src="{{ block.settings.image | image_url }}">
+            </div>
         {%- endcase -%}
       {%- endfor -%}
     </div>
@@ -313,6 +321,27 @@
           "type": "richtext",
           "id": "content",
           "label": "content"
+        }
+      ]
+    },
+    {
+      "type": "payment_methods",
+      "name": "Payment Methods",
+      "settings": [
+        {
+          "type": "richtext",
+          "id": "title",
+          "label": "title"
+        },
+        {
+          "type": "textarea",
+          "id": "icon",
+          "label": "icon"
+        },
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "image"
         }
       ]
     }
