@@ -221,6 +221,7 @@
               {% else %}
                 {{ 'products.product.sold_out' | t }}
               {% endif %}
+              {{ 'icon-cart-empty.svg' | inline_asset_content }}
             </button>
           </div>
           {{ form | payment_button }}

@@ -435,8 +435,50 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  gap: 1rem;
 }
 
 .product_info .product_info_buybox_quantity_btn {
-  
+  width: 2.2rem;
+  height: 2rem;
+  display: flex;
+  cursor: pointer;
+}
+
+.product_info .product_info_buybox_quantity_input {
+  width: 4rem;
+  height: 100%;
+  text-align: center;
+  background-color: #fff;
+  border: none;
+  font-family: "PP Right Grotesk";
+  font-size: 2.4rem;
+  font-weight: 500;
+  line-height: 112%;
+  letter-spacing: 0px;
+  font-variation-settings: "opsz" auto;
+  color: #1F1F1F;
+  position: relative;
+}
+
+.product_info .product_info_buybox_btns_btn {
+  flex: 1;
+  height: 6rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 1.6rem;
+  font-family: "PP Right Grotesk";
+  font-size: 2.4rem;
+  font-weight: 500;
+  line-height: 112%;
+  letter-spacing: 0px;
+  font-variation-settings: "opsz" auto;
+  color: #1F1F1F;
+  cursor: pointer;
+}
+
+.product_info .product_info_buybox_btns_btn svg {
+  width: 2.8rem;
+  height: 2.8rem;
 }
