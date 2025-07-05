@@ -547,7 +547,7 @@
   color: #1F1F1F;
 }
 
-.product_info .product_info_payment_head img {
+.product_info .product_info_payment_head svg {
   width: 2.1rem;
 }
 
@@ -598,6 +598,13 @@
   border: 1px solid #E2DED6;
   margin-top: 2rem;
   padding: 0.8rem;
+  font-family: "PP Right Grotesk";
+  font-size: 1.6rem;
+  font-weight: normal;
+  line-height: 130%;
+  letter-spacing: 0px;
+  font-variation-settings: "opsz" auto;
+  color: #7F7E75;
 }
 
 .product_info .common_modal_body .contact-btn button {
@@ -618,4 +625,40 @@
   margin-top: 1.5rem;
   border: none;
   padding: 0 2rem;
+}
+
+.product_info .product_info_bottom_bar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  /* z-index: -1; */
+  background-color: #fff;
+  box-shadow: 0px -0.4rem 1rem 0px rgba(0, 0, 0, 0.1);
+  transition: all .3s ease-in-out;
+  /* opacity: 0; */
+  min-height: 6rem;
+}
+
+.product_info .product_info_bottom_bar_contain {
+  max-width: 144rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.product_info .product_infor_simplicity_right_select_title {
+  font-family: "PP Right Grotesk";
+  font-size: 2.4rem;
+  font-weight: 500;
+  line-height: 94%;
+  letter-spacing: 0px;
+  font-variation-settings: "opsz" auto;
+  color: #1F1F1F;
+}
+
+.product_info .product_info_bottom_bar_contain_right {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
 }

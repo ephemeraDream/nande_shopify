@@ -71,9 +71,11 @@
               {%- if cart.taxes_included -%}
                 {{ 'products.product.include_taxes' | t }}
               {%- endif -%}
-              {%- if shop.shipping_policy.body != blank -%}
-                {{ 'products.product.shipping_policy_html' | t: link: shop.shipping_policy.url }}
-              {%- endif -%}
+              {% comment %}
+                {%- if shop.shipping_policy.body != blank -%}
+                  {{ 'products.product.shipping_policy_html' | t: link: shop.shipping_policy.url }}
+                {%- endif -%}
+              {% endcomment %}
             </div>
           {%- endif -%}
         {%- endif -%}
@@ -265,6 +267,83 @@
             </div>
         {%- endcase -%}
       {%- endfor -%}
+    </div>
+  </div>
+
+  <div class="product_info_bottom_bar padding-sider">
+    <div class="product_info_bottom_bar_contain">
+      <div class="product_infor_simplicity_right_select_title">{{ product.title }}</div>
+      <div class="product_info_bottom_bar_contain_right">
+        <div>
+          {% if sale_info != blank %}
+            <div class="product_info_bottom_bar_saleinfo">
+              <span class="product_info_saleinfo_countdown_text">{{ 'common.ends_in' | t }}</span>
+              <div class="product_info_saleinfo_countdown_item" data-type="day"></div>
+              <span>:</span>
+              <div class="product_info_saleinfo_countdown_item" data-type="hour"></div>
+              <span>:</span>
+              <div class="product_info_saleinfo_countdown_item" data-type="minute"></div>
+              <span>:</span>
+              <div class="product_info_saleinfo_countdown_item" data-type="second"></div>
+            </div>
+          {% endif %}
+          <div class="product_info_price">
+            {{ product.price | money_without_trailing_zeros }}
+            <div class="product_info_price_op">{{ product.compare_at_price | money_without_trailing_zeros }}</div>
+            {%- if section.settings.show_tax_and_shipping -%}
+              {%- if cart.taxes_included or shop.shipping_policy.body != blank -%}
+                <div class="product_info_policies">
+                  {%- if cart.taxes_included -%}
+                    {{ 'products.product.include_taxes' | t }}
+                  {%- endif -%}
+                  {% comment %}
+                    {%- if shop.shipping_policy.body != blank -%}
+                      {{ 'products.product.shipping_policy_html' | t: link: shop.shipping_policy.url }}
+                    {%- endif -%}
+                  {% endcomment %}
+                </div>
+              {%- endif -%}
+            {%- endif -%}
+          </div>
+        </div>
+        <div class="product_info_bottom_bar_contain_right_buybox">
+          <button
+            class="product_info_buybox_btns_btn"
+            data-type="add_to_cart"
+            {% if product.selected_or_first_available_variant.available == false
+              or product.selected_or_first_available_variant == null
+            %}
+              disabled
+            {% endif %}
+          >
+            {%- capture add_to_cart_text -%}
+                {%- if product.template_suffix contains 'preorder' -%}
+                  {{- 'products.product.preorder' | t -}}
+                {%- else -%}
+                  {{- 'products.product.add_to_cart' | t -}}
+                {%- endif -%}
+              {%- endcapture -%}
+            {% if product.selected_or_first_available_variant.available %}
+              {{- add_to_cart_text -}}
+            {% else %}
+              {{ 'products.product.sold_out' | t }}
+            {% endif %}
+            {{ 'icon-cart-empty.svg' | inline_asset_content }}
+          </button>
+          <button
+            data-type="buy_it_now"
+            type="submit"
+            class="product_info_buybox_btns_btn"
+            {% if product.selected_or_first_available_variant.available == false
+              or product.selected_or_first_available_variant == null
+            %}
+              disabled
+            {% endif %}
+          >
+            {{ 'common.jetzt_kaufen' | t }}
+          </button>
+        </div>
+      </div>
     </div>
   </div>
 </div>
