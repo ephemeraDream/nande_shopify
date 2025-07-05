@@ -84,11 +84,52 @@
         "show_tax_and_shipping": true
       }
     },
+    "product_anchor_bar_atcVF4": {
+      "type": "product-anchor-bar",
+      "blocks": {
+        "item_q4KMRQ": {
+          "type": "item",
+          "settings": {
+            "title": "Produkt",
+            "anchor_name": "Produkt"
+          }
+        },
+        "item_qaC4iV": {
+          "type": "item",
+          "settings": {
+            "title": "Produktbeschreibung",
+            "anchor_name": "Produktbeschreibung"
+          }
+        },
+        "item_RrNzfE": {
+          "type": "item",
+          "settings": {
+            "title": "Technische Daten",
+            "anchor_name": "Technische_Daten"
+          }
+        },
+        "item_Vt9rJN": {
+          "type": "item",
+          "settings": {
+            "title": "Kundenbewertungen",
+            "anchor_name": "Kundenbewertungen"
+          }
+        }
+      },
+      "block_order": [
+        "item_q4KMRQ",
+        "item_qaC4iV",
+        "item_RrNzfE",
+        "item_Vt9rJN"
+      ],
+      "name": "product anchor bar",
+      "settings": {}
+    },
     "video_simplicity_zX8daC": {
       "type": "video-simplicity",
       "name": "video simplicity",
       "settings": {
-        "spec_id": "",
+        "spec_id": "Produkt",
         "show_playicon": "true",
         "cover_image": "shopify://shop_images/product_info_video_cover.webp",
         "video_url": "",
@@ -171,7 +212,7 @@
       ],
       "name": "file box simplicity",
       "settings": {
-        "spec_id": "",
+        "spec_id": "Produktbeschreibung",
         "main_title": "<p>64-129cm Hohenverstellbar</p>",
         "row_num": 3
       }
@@ -347,7 +388,7 @@
       "type": "technical-data",
       "name": "technical data",
       "settings": {
-        "spec_id": "",
+        "spec_id": "Technische_Daten",
         "title": "<p>Technische Daten Des HöHenverstellbaren </p><p>Schreibtisches-T2 Pro Plus</p>"
       }
     },
@@ -550,7 +591,7 @@
       ],
       "name": "product comment",
       "settings": {
-        "spec_id": "",
+        "spec_id": "Kundenbewertungen",
         "title": "<p>100%  Authentische Bewertungen</p>"
       }
     },
@@ -573,6 +614,7 @@
   },
   "order": [
     "product_info_NXNt6g",
+    "product_anchor_bar_atcVF4",
     "video_simplicity_zX8daC",
     "img_with_text_box_simplicity_qrzG6W",
     "img_with_text_simplicity_R8thEq",
