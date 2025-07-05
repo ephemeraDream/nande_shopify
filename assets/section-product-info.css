@@ -555,3 +555,68 @@
   margin-left: 4rem;
   width: 50rem;
 }
+
+.product_info .product_info_modal_title {
+  font-family: "PP Right Grotesk";
+  font-size: 6rem;
+  font-weight: 500;
+  line-height: 94%;
+  text-align: center;
+  text-transform: capitalize;
+  letter-spacing: 0px;
+  font-variation-settings: "opsz" auto;
+  color: #1F1F1F;
+}
+
+.product_info .product_info_modal_content {
+  font-family: "PP Right Grotesk";
+  font-size: 2rem;
+  font-weight: normal;
+  line-height: 112%;
+  text-align: center;
+  letter-spacing: 0px;
+  font-variation-settings: "opsz" auto;
+  color: #1F1F1F;
+}
+
+.product_info .product_info_modal_tip {
+  font-family: "PP Right Grotesk";
+  font-size: 1.4rem;
+  font-weight: normal;
+  line-height: 130%;
+  letter-spacing: 0px;
+  font-variation-settings: "opsz" auto;
+  color: #7F7E75;
+  margin-top: 1.2rem;
+}
+
+.product_info .contact_form_class {
+  display: flex;
+  flex-direction: column;
+}
+
+.product_info .contact_form_class .field-input {
+  width: 100%;
+  min-height: 4rem;
+  border-radius: 0;
+  border: 1px solid #E2DED6;
+  margin-top: 2rem;
+}
+
+.product_info .contact_form_class .contact-btn button {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 32.2rem;
+  height: 6.8rem;
+  background-color: #BDFF00;
+  font-family: "PP Right Grotesk";
+  font-size: 2.4rem;
+  font-weight: 500;
+  line-height: 112%;
+  letter-spacing: 0px;
+  font-variation-settings: "opsz" auto;
+  color: #1F1F1F;
+  cursor: pointer;
+  margin-top: 1.5rem;
+}

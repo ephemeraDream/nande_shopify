@@ -8,10 +8,11 @@
   <div class="common_modal">
     <div class="common_modal_contain">
       <div class="common_modal_head">
-        <span>{{ modal_title }}</span>
+        <span></span>
         <div class="common_modal_close">{{- 'icon-close.svg' | inline_asset_content -}}</div>
       </div>
       <div class="common_modal_body">
+        <div class="product_info_modal_title">{{ modal_title }}</div>
         <div class="product_info_modal_content">{{ modal_content }}</div>
         {%- form 'contact', id: 'ContactForm', class: contact_form_class -%}
           <input
@@ -49,7 +50,10 @@
             {{- form.body -}}
           </textarea>
           <div class="contact-btn">
-            <button type="submit" class="button">{{ 'common.absenden' | t }}</button>
+            <button type="submit">
+              {{ 'common.absenden' | t -}}
+              {{- 'icon-commit.svg' | inline_asset_content }}
+            </button>
           </div>
         {%- endform -%}
         <div class="product_info_modal_tip">{{ modal_tip }}</div>
