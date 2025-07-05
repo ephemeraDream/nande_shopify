@@ -493,9 +493,32 @@
   width: 100%;
   background: #BDFF00;
   justify-content: center;
+  border: none;
 }
 
 .product_info .product_info_buybox_btns_btn[data-type="buy_it_now"]:hover {
   background: #1F1F1F;
   color: #BDFF00;
+}
+
+.product_info .product_info_modal_item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 4.6rem;
+  border-bottom: 0.1rem solid #E2DED6;
+  font-family: "PP Right Grotesk";
+  font-size: 2rem;
+  font-weight: normal;
+  line-height: 130%;
+  letter-spacing: 0px;
+  font-variation-settings: "opsz" auto;
+  color: #1F1F1F;
+  cursor: pointer;
+}
+
+.product_info .product_info_modal_item>div {
+  display: flex;
+  align-items: center;
+  gap: 1.8rem;
 }

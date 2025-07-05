@@ -239,6 +239,16 @@
           {% comment %} {{ form | payment_button }} {% endcomment %}
         {%- endform -%}
       </div>
+      {%- for block in section.blocks -%}
+        {%- case block.type -%}
+          {%- when 'modal' -%}
+            {% render 'product-info-modal',
+              icon: block.settings.icon,
+              title: block.settings.title,
+              content: block.settings.content
+            %}
+        {%- endcase -%}
+      {%- endfor -%}
     </div>
   </div>
 </div>
@@ -290,19 +300,19 @@
       "name": "modal",
       "settings": [
         {
-          "type": "textarea",
-          "id": "text_one",
-          "label": "text one"
+          "type": "richtext",
+          "id": "title",
+          "label": "title"
         },
         {
           "type": "textarea",
-          "id": "text_two",
-          "label": "text two"
+          "id": "icon",
+          "label": "icon"
         },
         {
-          "type": "textarea",
-          "id": "text_thr",
-          "label": "text thr"
+          "type": "richtext",
+          "id": "content",
+          "label": "content"
         }
       ]
     }
