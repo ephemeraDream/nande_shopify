@@ -128,3 +128,37 @@ document.querySelectorAll(".product_info_modal_item").forEach(item => {
     });
   })
 })
+//底部悬浮窗展示监测判断
+toggleBottomBar();
+function toggleBottomBar() {
+  const targetSelector = ".product_info_section";
+  const bottomBar = document.querySelector(".product_info_bottom_bar");
+
+  if (!bottomBar) return;
+
+  function initObserver(target, threshold) {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            bottomBar.style.zIndex = -1;
+            bottomBar.style.opacity = 0;
+          } else {
+            bottomBar.style.zIndex = 99;
+            bottomBar.style.opacity = 1;
+          }
+        });
+      },
+      {
+        root: null,
+        threshold: threshold,
+      }
+    );
+
+    observer.observe(target);
+  }
+
+  waitForElement(targetSelector, (target) => {
+    initObserver(target, 0.4);
+  });
+}
