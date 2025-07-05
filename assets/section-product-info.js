@@ -35,25 +35,15 @@ if (sale_info_box) {
 
   const updateCountdownInnerHTML = (days, hours, minutes, seconds) => {
     if (days > 0) {
-      sale_info_box.querySelector(".product_info_saleinfo_countdown_item[data-type='day']").innerHTML = String(days).padStart(
-        2,
-        '0'
-      );
+      document.querySelectorAll(".product_info_saleinfo_countdown_item[data-type='day']").forEach(item => item.innerHTML = String(days).padStart(2, '0'))
     }
-    sale_info_box.querySelector(".product_info_saleinfo_countdown_item[data-type='hour']").innerHTML = String(hours).padStart(
-      2,
-      '0'
-    );
-    sale_info_box.querySelector(".product_info_saleinfo_countdown_item[data-type='minute']").innerHTML = String(
-      minutes
-    ).padStart(2, '0');
-    sale_info_box.querySelector(".product_info_saleinfo_countdown_item[data-type='second']").innerHTML = String(
-      seconds
-    ).padStart(2, '0');
+    document.querySelectorAll(".product_info_saleinfo_countdown_item[data-type='hour']").forEach(item => item.innerHTML = String(hours).padStart(2, '0'));
+    document.querySelectorAll(".product_info_saleinfo_countdown_item[data-type='minute']").forEach(item => item.innerHTML = String(minutes).padStart(2, '0'));
+    document.querySelectorAll(".product_info_saleinfo_countdown_item[data-type='second']").forEach(item => item.innerHTML = String(seconds).padStart(2, '0'));
 
-    if (days == 0 && sale_info_box.querySelector(".product_info_saleinfo_countdown_item[data-type='day']")) {
-      sale_info_box.querySelector(".product_info_saleinfo_countdown_item[data-type='day'] + span").remove();
-      sale_info_box.querySelector(".product_info_saleinfo_countdown_item[data-type='day']").remove();
+    if (days == 0 && document.querySelectorAll(".product_info_saleinfo_countdown_item[data-type='day']")) {
+      document.querySelectorAll(".product_info_saleinfo_countdown_item[data-type='day'] + span").forEach(item => item.remove());
+      document.querySelectorAll(".product_info_saleinfo_countdown_item[data-type='day']").forEach(item => item.remove());
     }
   };
 
