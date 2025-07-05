@@ -24,7 +24,7 @@
             autocapitalize="off"
             value="{% if form.email %}{{ form.email }}{% elsif customer %}{{ customer.email }}{% endif %}"
             placeholder="Emal*"
-            aria-required="true"
+            required
           >
           <input
             class="field-input"
