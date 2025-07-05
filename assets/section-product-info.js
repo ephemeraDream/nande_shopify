@@ -200,3 +200,79 @@ document.querySelectorAll(".product_info_left_thumb_select_item").forEach(btn =>
     });
   });
 });
+// 数量切换&加购和购买
+initBuybox();
+function initBuybox() {
+  // 数量切换
+  const quantityInput = document.querySelector(".product_info_buybox_quantity_input");
+  document
+    .querySelectorAll(".product_info_buybox_quantity_btn")
+    .forEach((btn) => {
+      btn.addEventListener("click", (event) => {
+        const type = btn.getAttribute("data-type");
+        const quantity = Number(quantityInput.value);
+        if (type === "minus" && quantity > 1) {
+          quantityInput.value = quantity - 1;
+        }
+        if (type === "plus" && quantity < 20) {
+          quantityInput.value = quantity + 1;
+        }
+      });
+    });
+  if (quantityInput) {
+    quantityInput.addEventListener("input", function (event) {
+      let value = quantityInput.value.replace(/\D/g, "");
+      if (value === "") {
+        quantityInput.value = value;
+        return;
+      }
+
+      value = Math.max(1, Math.min(10, parseInt(value, 20)));
+      quantityInput.value = value;
+    });
+
+    quantityInput.addEventListener("blur", function () {
+      let value = quantityInput.value.replace(/\D/g, "");
+      if (value == "") {
+        quantityInput.value = 1;
+      }
+    });
+  }
+
+  // 加购和购买
+  document
+    .querySelectorAll(".product_info_buybox_btns_btn")
+    .forEach((btn) => {
+      btn.addEventListener("click", async (event) => {
+        const type = btn.getAttribute("data-type");
+        const goods_id = document.querySelector("input[name='goods_id']").value;
+        const cartFormData = {
+          items: [{ id: goods_id, quantity: Number(quantityInput.value) }],
+        };
+        btn.classList.add("is-loading");
+        if (type === "add_to_cart") {
+          try {
+            await fetch(window.Shopify.routes.root + "cart/add.js", {
+              method: "POST",
+              headers: { "Content-Type": "application/json" },
+              body: JSON.stringify(cartFormData),
+            });
+          } finally {
+            btn.classList.remove("is-loading");
+          }
+        }
+        if (type === "buy_it_now") {
+          const buildCheckoutUrl = (items) => {
+            const cartParams = items
+              .map((item) => `${item.id}:${item.quantity}`)
+              .join(",");
+
+            return `/cart/${cartParams}?checkout`;
+          };
+
+          location.href = buildCheckoutUrl(cartFormData.items);
+          btn.classList.remove("is-loading");
+        }
+      });
+    });
+}
