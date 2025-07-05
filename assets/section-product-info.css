@@ -522,13 +522,13 @@
   padding-right: 0.8rem;
 }
 
-.product_info .product_info_modal_item>div {
+.product_info .product_info_modal_item .product_info_modal_item_left {
   display: flex;
   align-items: center;
   gap: 1.8rem;
 }
 
-.product_info .product_info_modal_item>div+svg {
+.product_info .product_info_modal_item .product_info_modal_item_left+svg {
   width: 0.7rem;
   height: 1.2rem;
 }
