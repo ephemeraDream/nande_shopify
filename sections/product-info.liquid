@@ -193,68 +193,59 @@
         {% endfor %}
       </div>
       <div class="product_info_buybox">
-        {% assign product_form_id = 'product-form-' | append: section.id %}
-        {%- form 'product',
-          product,
-          id: product_form_id,
-          class: 'form',
-          novalidate: 'novalidate',
-          data-type: 'add-to-cart-form'
-        -%}
-          <input type="hidden" name="goods_id" value="{{ product.selected_or_first_available_variant.id }}">
-          <div class="product_info_buybox_contain">
-            <div class="product_info_buybox_quantity_box">
-              <span class="product_info_buybox_quantity_btn" data-type="minus">
-                {{ 'quantity-minus.svg' | inline_asset_content }}
-              </span>
-              <input
-                class="product_info_buybox_quantity_input"
-                type="text"
-                name="quantity"
-                value="1"
-              >
-              <span class="product_info_buybox_quantity_btn" data-type="plus">
-                {{ 'quantity-plus.svg' | inline_asset_content }}
-              </span>
-            </div>
-            <button
-              class="product_info_buybox_btns_btn"
-              data-type="add_to_cart"
-              {% if product.selected_or_first_available_variant.available == false
-                or product.selected_or_first_available_variant == null
-              %}
-                disabled
-              {% endif %}
+        <input type="hidden" name="goods_id" value="{{ product.selected_or_first_available_variant.id }}">
+        <div class="product_info_buybox_contain">
+          <div class="product_info_buybox_quantity_box">
+            <span class="product_info_buybox_quantity_btn" data-type="minus">
+              {{ 'quantity-minus.svg' | inline_asset_content }}
+            </span>
+            <input
+              class="product_info_buybox_quantity_input"
+              type="text"
+              name="quantity"
+              value="1"
             >
-              {%- capture add_to_cart_text -%}
-                {%- if product.template_suffix contains 'preorder' -%}
-                  {{- 'products.product.preorder' | t -}}
-                {%- else -%}
-                  {{- 'products.product.add_to_cart' | t -}}
-                {%- endif -%}
-              {%- endcapture -%}
-              {% if product.selected_or_first_available_variant.available %}
-                {{- add_to_cart_text -}}
-              {% else %}
-                {{ 'products.product.sold_out' | t }}
-              {% endif %}
-              {{ 'icon-cart-empty.svg' | inline_asset_content }}
-            </button>
+            <span class="product_info_buybox_quantity_btn" data-type="plus">
+              {{ 'quantity-plus.svg' | inline_asset_content }}
+            </span>
           </div>
           <button
-            data-type="buy_it_now"
-            type="submit"
             class="product_info_buybox_btns_btn"
+            data-type="add_to_cart"
             {% if product.selected_or_first_available_variant.available == false
               or product.selected_or_first_available_variant == null
             %}
               disabled
             {% endif %}
           >
-            {{ 'common.jetzt_kaufen' | t }}
+            {%- capture add_to_cart_text -%}
+                {%- if product.template_suffix contains 'preorder' -%}
+                  {{- 'products.product.preorder' | t -}}
+                {%- else -%}
+                  {{- 'products.product.add_to_cart' | t -}}
+                {%- endif -%}
+              {%- endcapture -%}
+            {% if product.selected_or_first_available_variant.available %}
+              {{- add_to_cart_text -}}
+            {% else %}
+              {{ 'products.product.sold_out' | t }}
+            {% endif %}
+            {{ 'icon-cart-empty.svg' | inline_asset_content }}
           </button>
-          {% comment %} {{ form | payment_button }} {% endcomment %}
-        {%- endform -%}
+        </div>
+        <button
+          data-type="buy_it_now"
+          type="submit"
+          class="product_info_buybox_btns_btn"
+          {% if product.selected_or_first_available_variant.available == false
+            or product.selected_or_first_available_variant == null
+          %}
+            disabled
+          {% endif %}
+        >
+          {{ 'common.jetzt_kaufen' | t }}
+        </button>
+        {% comment %} {{ form | payment_button }} {% endcomment %}
       </div>
       {%- for block in section.blocks -%}
         {%- case block.type -%}
