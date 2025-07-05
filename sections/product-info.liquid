@@ -34,9 +34,7 @@
             {% for media in product.media %}
               {% if media.media_type == type and is_first == false %}
                 {% assign is_first = true %}
-                <div class="product_info_left_contain_group_item">
-                  {{ media | media_tag: class: 'product_info_left_contain_group_item_media' }}
-                </div>
+                {{ media | media_tag: class: 'product_info_left_contain_group_item' }}
               {% endif %}
             {% endfor %}
           </div>

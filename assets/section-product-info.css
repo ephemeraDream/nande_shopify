@@ -750,10 +750,20 @@
   margin-right: 0.4rem;
 }
 
-.product_info_left_contain_group {
+.product_info .product_info_left_contain_group {
   display: none;
+  width: 100%;
+  height: 100%;
+  position: absolute;
 }
 
-.product_info_left_contain_group.show {
+.product_info .product_info_left_contain_group.show {
   display: block;
+}
+
+.product_info .product_info_left_contain_group_item {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center center;
 }
