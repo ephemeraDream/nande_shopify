@@ -21,7 +21,7 @@
 </div>
 
 <script>
-  const links = document.querySelectorAll('.product_anchor_bar_left_item'
+  const links = document.querySelectorAll('.product_anchor_bar_left_item');
   document.querySelector('.product_anchor_bar_section').parentElement.classList.add('is-sticky');
   links.forEach((item) => {
     item.addEventListener('click', () => {
@@ -30,9 +30,7 @@
       item.classList.add('active');
     });
   });
-  const sectionIds = Array.from(links).map((link) =>
-    link.getAttribute('data-watch')
-  );
+  const sectionIds = Array.from(links).map((link) => link.getAttribute('data-watch'));
   let sectionsLoaded = 0;
   let sectionsObserver;
   let sections = [];
