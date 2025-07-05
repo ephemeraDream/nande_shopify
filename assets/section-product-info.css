@@ -577,6 +577,7 @@
   letter-spacing: 0px;
   font-variation-settings: "opsz" auto;
   color: #1F1F1F;
+  margin-top: 3rem;
 }
 
 .product_info .product_info_modal_tip {
@@ -596,6 +597,7 @@
   border-radius: 0;
   border: 1px solid #E2DED6;
   margin-top: 2rem;
+  padding: 0.8rem;
 }
 
 .product_info .common_modal_body .contact-btn button {
@@ -614,4 +616,6 @@
   color: #1F1F1F;
   cursor: pointer;
   margin-top: 1.5rem;
+  border: none;
+  padding: 0 2rem;
 }
