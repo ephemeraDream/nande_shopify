@@ -637,7 +637,6 @@
   box-shadow: 0px -0.4rem 1rem 0px rgba(0, 0, 0, 0.1);
   transition: all .3s ease-in-out;
   /* opacity: 0; */
-  min-height: 6rem;
 }
 
 .product_info_section .product_info_bottom_bar_contain {
@@ -664,6 +663,7 @@
   display: flex;
   align-items: center;
   gap: 1.5rem;
+  min-height: 6rem;
 }
 
 .product_info_section .product_info_bottom_bar_saleinfo {
@@ -710,7 +710,7 @@
 .product_info_section .product_info_bottom_bar .product_info_bottom_bar_contain_right_buybox {
   display: flex;
   align-items: center;
-  gap: 0.4rem;
+  gap: 1.5rem;
 }
 
 .product_info_section .product_info_bottom_bar .product_info_buybox_btns_btn {
