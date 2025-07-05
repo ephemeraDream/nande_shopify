@@ -590,12 +590,7 @@
   margin-top: 1.2rem;
 }
 
-.product_info .contact_form_class {
-  display: flex;
-  flex-direction: column;
-}
-
-.product_info .contact_form_class .field-input {
+.product_info .common_modal_body .field-input {
   width: 100%;
   min-height: 4rem;
   border-radius: 0;
@@ -603,7 +598,7 @@
   margin-top: 2rem;
 }
 
-.product_info .contact_form_class .contact-btn button {
+.product_info .common_modal_body .contact-btn button {
   display: flex;
   align-items: center;
   justify-content: space-between;
