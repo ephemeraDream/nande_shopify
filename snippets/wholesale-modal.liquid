@@ -1,0 +1,59 @@
+<div class="product_info_modal_item">
+  <div class="product_info_modal_item_left">
+    {{ icon }}
+    <span class="product_info_modal_item_title">{{ title }}</span>
+  </div>
+  {{- 'swiper-right.svg' | inline_asset_content -}}
+
+  <div class="common_modal">
+    <div class="common_modal_contain">
+      <div class="common_modal_head">
+        <span>{{ modal_title }}</span>
+        <div class="common_modal_close">{{- 'icon-close.svg' | inline_asset_content -}}</div>
+      </div>
+      <div class="common_modal_body">
+        <div class="product_info_modal_content">{{ modal_content }}</div>
+        {%- form 'contact', id: 'ContactForm', class: contact_form_class -%}
+          <input
+            autocomplete="email"
+            type="email"
+            class="field-input"
+            name="contact[email]"
+            spellcheck="false"
+            autocapitalize="off"
+            value="{% if form.email %}{{ form.email }}{% elsif customer %}{{ customer.email }}{% endif %}"
+            placeholder="Emal*"
+            aria-required="true"
+          >
+          <input
+            class="field-input"
+            type="text"
+            name="contact[Unternehmen]"
+            placeholder="Unternehmen (optional)"
+          >
+          <input
+            class="field-input"
+            autocomplete="name"
+            type="text"
+            name="contact[Name]"
+            value="{% if form.name %}{{ form.name }}{% elsif customer %}{{ customer.name }}{% endif %}"
+            placeholder="Name (optional)"
+          >
+          <textarea
+            rows="6"
+            id="ContactForm-body"
+            class="field-input"
+            name="contact[Nachricht]"
+            placeholder="Nachricht (optional)"
+          >
+            {{- form.body -}}
+          </textarea>
+          <div class="contact-btn">
+            <button type="submit" class="button">{{ 'common.absenden' | t }}</button>
+          </div>
+        {%- endform -%}
+        <div class="product_info_modal_tip">{{ modal_tip }}</div>
+      </div>
+    </div>
+  </div>
+</div>

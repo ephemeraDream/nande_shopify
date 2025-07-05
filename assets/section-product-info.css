@@ -547,6 +547,10 @@
   color: #1F1F1F;
 }
 
+.product_info .product_info_payment_head img {
+  width: 2.1rem;
+}
+
 .product_info .product_info_payment img {
   margin-left: 4rem;
   width: 50rem;

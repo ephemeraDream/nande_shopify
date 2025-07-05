@@ -241,6 +241,14 @@
       </div>
       {%- for block in section.blocks -%}
         {%- case block.type -%}
+          {%- when 'wholesale_modal' -%}
+            {% render 'wholesale-modal',
+              icon: block.settings.icon,
+              title: block.settings.title,
+              modal_tip: block.settings.modal_tip,
+              modal_title: block.settings.modal_title,
+              modal_content: block.settings.modal_content
+            %}
           {%- when 'modal' -%}
             {% render 'product-info-modal',
               icon: block.settings.icon,
@@ -342,6 +350,37 @@
           "type": "image_picker",
           "id": "image",
           "label": "image"
+        }
+      ]
+    },
+    {
+      "type": "wholesale_modal",
+      "name": "wholesale modal",
+      "settings": [
+        {
+          "type": "richtext",
+          "id": "title",
+          "label": "title"
+        },
+        {
+          "type": "textarea",
+          "id": "icon",
+          "label": "icon"
+        },
+        {
+          "type": "richtext",
+          "id": "modal_title",
+          "label": "modal title"
+        },
+        {
+          "type": "richtext",
+          "id": "modal_content",
+          "label": "modal content"
+        },
+        {
+          "type": "richtext",
+          "id": "modal_tip",
+          "label": "modal tip"
         }
       ]
     }
