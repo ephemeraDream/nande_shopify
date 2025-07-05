@@ -15,13 +15,13 @@
         "loox_reviews_loox_rating_qF3bkU": {
           "type": "shopify://apps/loox-reviews/blocks/loox-rating/5c3b337f-fd14-4df5-b1d6-80ec13e6e28e",
           "settings": {
-            "contentSize": 16,
+            "contentSize": 20,
             "pattern": "",
             "hideText": false,
             "alignment": "",
             "layout": "",
             "textColor": "",
-            "starColor": "",
+            "starColor": "#ff7500",
             "showAllReviews": false,
             "looxOpenFloatingWidget": false,
             "emptyRatingWidget": false
@@ -33,7 +33,8 @@
       ],
       "name": "product info",
       "settings": {
-        "media_ratio": "1.33"
+        "media_ratio": "1.33",
+        "show_tax_and_shipping": true
       }
     },
     "video_simplicity_zX8daC": {
