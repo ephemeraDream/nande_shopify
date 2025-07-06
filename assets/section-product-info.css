@@ -844,10 +844,18 @@
   color: #7F7E75;
 }
 
+.product_info_section .product_info_bundle_prevnext_btn svg path {
+  fill: #7F7E75;
+}
+
 .product_info_section .product_info_bundle_prevnext_btn[data-type="prev"] svg {
   transform: rotate(180deg);
 }
 
 .product_info_section .product_info_bundle_prevnext_btn.active {
   color: #1F1F1F;
+}
+
+.product_info_section .product_info_bundle_prevnext_btn.active svg path {
+  fill: #1F1F1F;
 }
