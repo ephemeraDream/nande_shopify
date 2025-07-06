@@ -47,5 +47,5 @@
             "settings": {}
         }
     },
-    "order": ["main"]
+    "order": ["banner_topic", "main"]
   }
