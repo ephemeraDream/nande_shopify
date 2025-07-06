@@ -106,6 +106,7 @@
 .header_simple .header_simple_icon_item {
   width: 2.4rem;
   height: 2.4rem;
+  position: relative;
 }
 
 .header_simple .header_simple_logo {
