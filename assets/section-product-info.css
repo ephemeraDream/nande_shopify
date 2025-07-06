@@ -996,3 +996,35 @@
   flex-direction: column;
   justify-content: space-between;
 }
+
+.product_info_section .product_info_steps_contain_item_title {
+  font-family: "PP Right Grotesk";
+  font-size: 2rem;
+  font-weight: normal;
+  line-height: 112%;
+  letter-spacing: 0px;
+  font-variation-settings: "opsz" auto;
+  color: #1F1F1F;
+  padding: 3rem 0 1.5rem 0;
+}
+
+.product_info_section .product_info_steps_contain_item_box {
+  background-color: #fff;
+  padding: 1rem 1.6rem;
+  padding-top: 0;
+}
+
+.product_info_section .product_info_steps_contain_item_box_line {
+  height: 4rem;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  border-bottom: 0.1rem solid #E2DED6;
+  font-family: "PP Right Grotesk";
+  font-size: 2rem;
+  font-weight: normal;
+  line-height: 180%;
+  letter-spacing: 0px;
+  font-variation-settings: "opsz" auto;
+  color: #7F7E75;
+}

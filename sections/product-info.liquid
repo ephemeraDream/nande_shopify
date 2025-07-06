@@ -272,7 +272,7 @@
         <div class="product_info_bundle_products_contain">
           {% for type in accessory_type_array %}
             {% unless type == '' %}
-              <div class="product_info_bundle_products_type">{{ type }}</div>
+              <div class="product_info_bundle_products_type">{{ type }}:</div>
               <div class="product_info_bundle_products_type_group">
                 {% for bundled_product in bundle_products %}
                   {% if bundled_product.metafields.custom.bundle_type.value.name == type %}
@@ -308,7 +308,40 @@
           {% endfor %}
         </div>
       </div>
-      <div class="product_info_steps_contain hidden" data-index="2"></div>
+      <div class="product_info_steps_contain hidden" data-index="2">
+        <div class="product_info_bundle_info">
+          <div class="product_info_bundle_info_title">{{ 'common.gesamtsumme' | t }}</div>
+          <div class="product_info_bundle_info_right">
+            <span class="product_info_bundle_info_total product_info_price_dp">
+              {{-
+                product.selected_or_first_available_variant.price
+                | default: product.price
+                | money_without_trailing_zeros
+              -}}
+            </span>
+            {%- if section.settings.show_tax_and_shipping -%}
+              {%- if cart.taxes_included or shop.shipping_policy.body != blank -%}
+                <div class="product_info_policies">
+                  {%- if cart.taxes_included -%}
+                    {{ 'products.product.include_taxes' | t }}
+                  {%- endif -%}
+                </div>
+              {%- endif -%}
+            {%- endif -%}
+          </div>
+        </div>
+        <div class="product_info_steps_contain_item_title">{{ product.title }}</div>
+        <div class="product_info_steps_contain_item_box" data-type="option">
+          {%- for option in product.options_with_values -%}
+            <div class="product_info_steps_contain_item_box_line">
+              <span>{{ option.name }}:</span>
+              <span class="product_info_steps_contain_item_box_line_value"></span>
+            </div>
+          {%- endfor -%}
+        </div>
+        <div class="product_info_steps_contain_item_title">{{ 'common.accesories' | t }}</div>
+        <div class="product_info_steps_contain_item_box" data-type="accesories"></div>
+      </div>
       <div class="product_info_buybox">
         <input type="hidden" name="goods_id" value="{{ product.selected_or_first_available_variant.id }}">
         <div class="product_info_buybox_contain">
