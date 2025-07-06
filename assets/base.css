@@ -3867,21 +3867,24 @@ a {
 }
 .polka_dot_contain .polka_dot_icon{
   cursor: pointer;
-  width: 4rem;
-  height: 4rem;
+  width: 2.4rem;
+  height: 2.4rem;
   background-color: #BDFF00;
   display: flex;
   align-items: center;
   justify-content: center;
   z-index: 2;
 }
+.polka_dot_contain .polka_dot_icon svg{
+  width: 14px;
+}
 @media only screen and (min-width: 1400px) {
   .polka_dot_contain .polka_dot_icon{
-    width: 3rem;
-    height: 3rem;
+    width: 4rem;
+    height: 4rem;
   }
   .polka_dot_contain .polka_dot_icon svg{
-    width: 14px;
+    width: 20px;
   }
 }
 
