@@ -784,3 +784,40 @@
   background-position: 0 100%;
   cursor: not-allowed;
 }
+
+.product_info_section .product_info_steps {
+  height: 6.8rem;
+  width: 100%;
+  display: flex;
+}
+
+.product_info_section .product_info_steps_item {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  font-family: "PP Right Grotesk";
+  font-size: 2rem;
+  font-weight: normal;
+  line-height: 100%;
+  letter-spacing: 0px;
+  font-variation-settings: "opsz" auto;
+  color: #7F7E75;
+  padding-top: 1.2rem;
+  position: relative;
+}
+
+.product_info_section .product_info_steps_item+.product_info_steps_item::before {
+  content: "";
+  width: 0.1rem;
+  height: 4rem;
+  background-color: #E2DED6;
+  position: absolute;
+  right: 0;
+  top: 1.2rem;
+}
+
+.product_info_section .product_info_steps_item.active {
+  background-color: #BDFF00;
+  color: #000;
+}
