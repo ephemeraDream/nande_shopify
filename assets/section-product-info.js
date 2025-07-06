@@ -313,12 +313,11 @@ function setVariantOption() {
 };
 document.querySelectorAll(".product_info_option_select_item").forEach(el => {
   el.addEventListener("click", (event) => {
-    const target = event.target
-    if (target.classList.contains("product_info_option_select_item_select") || target.closest(".product_info_option_select_item_circle").classList.contains("product_info_option_select_item_select")) return
+    const target = event.target.closest(".product_info_option_select_item")
+    if (target.classList.contains("product_info_option_select_item_select")) return
     const parent = target.closest(".product_info_option_select")
-    const type = parent.getAttribute("select-type")
     parent.querySelector('.product_info_option_select_item_select').classList.remove('product_info_option_select_item_select')
-    type === "circle" ? target.closest(".product_info_option_select_item_circle").classList.add('product_info_option_select_item_select') : target.classList.add('product_info_option_select_item_select')
+    target.classList.add('product_info_option_select_item_select')
     curr_options[parent.getAttribute("data-index")] = target.getAttribute("data-value")
     currVariant = product.variants.find(el => areArraysEqual(curr_options, el.options) && el.available)
     if (currVariant) {
@@ -335,9 +334,9 @@ document.querySelectorAll(".product_info_option_select_item").forEach(el => {
         curr_options[2] = currVariant.option3
         document.querySelectorAll(`.product_info_option_select[data-index="2"] .product_info_option_select_item`).forEach(el => {
           if (el.getAttribute("data-value") === currVariant.option3) {
-            type === "circle" ? el.closest(".product_info_option_select_item_circle").add('product_info_option_select_item_select') : el.classList.add('product_info_option_select_item_select')
+            el.classList.add('product_info_option_select_item_select')
           } else {
-            type === "circle" ? el.closest(".product_info_option_select_item_circle").remove('product_info_option_select_item_select') : el.classList.remove('product_info_option_select_item_select')
+            el.classList.remove('product_info_option_select_item_select')
           }
         });
         // img_contain.src = currVariant.featured_image.src
