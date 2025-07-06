@@ -3898,7 +3898,7 @@ a {
 }
 .polka_dot_product.left{
   left: 0;
-  right: auto;
+  transform: translateX(-100%) translateY(100%);
 }
 
 .polka_dot_product_img {
