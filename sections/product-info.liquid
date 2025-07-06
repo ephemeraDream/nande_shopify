@@ -3,6 +3,8 @@
 <div class="product_info_section padding-sider">
   <div class="product_info">
     <div class="product_info_left">
+      {% assign has_video = false %}
+      {% assign has_model = false %}
       <div
         class="product_info_left_contain"
         style="padding-bottom: {{ 1 | divided_by: section.settings.media_ratio | times: 100 }}%;"
@@ -33,6 +35,12 @@
             {% assign is_first = false %}
             {% for media in product.media %}
               {% if media.media_type == type and is_first == false %}
+                {% if type == 'video' %}
+                  {% assign has_video = true %}
+                {% endif %}
+                {% if type == 'model' %}
+                  {% assign has_model = true %}
+                {% endif %}
                 {% assign is_first = true %}
                 {{ media | media_tag: class: 'product_info_left_contain_group_item' }}
               {% endif %}
@@ -63,8 +71,12 @@
         </div>
         <div class="product_info_left_thumb_select">
           <div class="product_info_left_thumb_select_item active" data-type="image">Photos</div>
-          <div class="product_info_left_thumb_select_item" data-type="video">Video</div>
-          <div class="product_info_left_thumb_select_item" data-type="model">3D</div>
+          {% if has_video %}
+            <div class="product_info_left_thumb_select_item" data-type="video">Video</div>
+          {% endif %}
+          {% if has_model %}
+            <div class="product_info_left_thumb_select_item" data-type="model">3D</div>
+          {% endif %}
           <div class="product_info_left_thumb_select_item">Specs</div>
         </div>
       </div>
