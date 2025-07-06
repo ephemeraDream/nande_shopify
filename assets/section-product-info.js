@@ -336,7 +336,7 @@ document.querySelectorAll(".product_info_option_select_item").forEach(el => {
         document.querySelectorAll(`.product_info_option_select[data-index="2"] .product_info_option_select_item`).forEach(el => {
           if (el.getAttribute("data-value") === currVariant.option3) {
             el.classList.add('product_info_option_select_item_select')
-            document.querySelectorAll(`.product_info_option_select[data-index="2"] .product_info_option_select_item`).closest(".product_info_option_item").querySelector(".product_info_option_label_select").innerHTML = el.getAttribute("data-value")
+            document.querySelector('.product_info_option_select[data-index="2"]').closest(".product_info_option_item").querySelector(".product_info_option_label_select").innerHTML = el.getAttribute("data-value")
           } else {
             el.classList.remove('product_info_option_select_item_select')
           }
