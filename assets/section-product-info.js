@@ -422,9 +422,10 @@ let bundleStep = 0
 document.querySelectorAll(".product_info_steps_item").forEach((item, index) => {
   item.addEventListener("click", () => {
     if (item.classList.contains("active")) return
+    bundleStep = index
     document.querySelector(".product_info_steps_item.active").classList.remove("active")
     item.classList.add("active")
-    switchStep(index)
+    switchStep()
   })
 })
 document.querySelectorAll(".product_info_bundle_prevnext_btn").forEach(item => {
@@ -436,25 +437,25 @@ document.querySelectorAll(".product_info_bundle_prevnext_btn").forEach(item => {
       el.classList.remove("active")
       if (bundleStep === el_index) el.classList.add("active")
     })
-    switchStep(bundleStep)
+    switchStep()
   })
 })
-function switchStep(index) {
+function switchStep() {
   document.querySelectorAll(".product_info_steps_contain").forEach((el, el_index) => {
     el.classList.add("hidden")
-    if (index === el_index) el.classList.remove("hidden")
+    if (bundleStep === el_index) el.classList.remove("hidden")
   })
   const prevBtn = document.querySelector(".product_info_bundle_prevnext_btn[data-type='prev']")
   const nextBtn = document.querySelector(".product_info_bundle_prevnext_btn[data-type='next']")
-  if (index === 0) {
+  if (bundleStep === 0) {
     prevBtn.classList.remove("active")
     nextBtn.classList.add("active")
   }
-  if (index === 1) {
+  if (bundleStep === 1) {
     prevBtn.classList.add("active")
     nextBtn.classList.add("active")
   }
-  if (index === 2) {
+  if (bundleStep === 2) {
     nextBtn.classList.remove("active")
     prevBtn.classList.add("active")
   }
