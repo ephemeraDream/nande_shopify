@@ -805,6 +805,7 @@
   color: #7F7E75;
   padding-top: 1.2rem;
   position: relative;
+  background-color: #fff;
 }
 
 .product_info_section .product_info_steps_item+.product_info_steps_item::before {
