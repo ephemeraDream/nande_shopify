@@ -418,8 +418,8 @@ function updateUrl() {
   window.history.replaceState(null, "", url.toString());
 }
 // 捆绑步骤切换
-document.querySelectorAll(".product_info_steps_item").forEach(item => {
-  item.addEventListener("click", (_, index) => {
+document.querySelectorAll(".product_info_steps_item").forEach((item, index) => {
+  item.addEventListener("click", () => {
     if (item.classList.contains("active")) return
     document.querySelector(".product_info_steps_item.active").classList.remove("active")
     item.classList.add("active")
