@@ -810,6 +810,10 @@
   cursor: pointer;
 }
 
+.product_info_section .product_info_steps_item:first-child span:first-child {
+  margin-left: -4rem;
+}
+
 .product_info_section .product_info_steps_item span:last-child {
   width: 8rem;
 }
@@ -1019,7 +1023,7 @@
 }
 
 .product_info_section .product_info_steps_contain_item_box_line {
-  height: 4rem;
+  min-height: 4rem;
   display: flex;
   align-items: flex-end;
   justify-content: space-between;

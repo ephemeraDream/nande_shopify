@@ -249,6 +249,13 @@ function initBuybox() {
         const cartFormData = {
           items: [{ id: goods_id, quantity: Number(quantityInput.value) }],
         };
+        const selectedAddsonItems = document.querySelectorAll(".product_info_bundle_product.selected");
+        if (selectedAddsonItems.length) {
+          selectedAddsonItems.forEach((item) => {
+            const id = item.getAttribute("data-id");
+            cartFormData.items.push({ id: id, quantity: 1 });
+          });
+        }
         btn.classList.add("is-loading");
         if (type === "add_to_cart") {
           try {
