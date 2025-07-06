@@ -353,6 +353,19 @@
   </div>
 </div>
 
+<script type="application/json" id="product_info_data">
+  {% for currency in shop.enabled_currencies %}
+    {% if currency.iso_code == shop.currency %}
+      {%- assign currency_symbol = currency.symbol -%}
+      {% break %}
+    {% endif %}
+  {% endfor %}
+  {
+    "product": {{- product | json -}},
+    "variant": {{ product.selected_or_first_available_variant | json }},
+    "symbol": {{ currency_symbol | json }}
+  }
+</script>
 <script src="{{ 'section-product-info.js' | asset_url  }}" defer></script>
 
 {% schema %}

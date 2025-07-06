@@ -278,6 +278,11 @@ function initBuybox() {
 }
 // 变体切换
 setVariantOption()
+const product_data = JSON.parse(document.getElementById('product_info_data').textContent);
+const product = product_data[item.getAttribute("data-id")].product
+let currVariant = product_data[item.getAttribute("data-id")].variant
+const symbol = product_data[item.getAttribute("data-id")].symbol
+const curr_options = [...currVariant.options]
 function setVariantOption() {
   document.querySelectorAll(".product_info_option_select").forEach((selector, selectorIndex) => {
     if (selectorIndex < 2) return
