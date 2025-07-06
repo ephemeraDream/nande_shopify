@@ -418,26 +418,44 @@ function updateUrl() {
   window.history.replaceState(null, "", url.toString());
 }
 // 捆绑步骤切换
+let bundleStep = 0
 document.querySelectorAll(".product_info_steps_item").forEach((item, index) => {
   item.addEventListener("click", () => {
     if (item.classList.contains("active")) return
     document.querySelector(".product_info_steps_item.active").classList.remove("active")
     item.classList.add("active")
-    document.querySelectorAll(".product_info_steps_contain").forEach((el, el_index) => {
-      el.classList.add("hidden")
-      if (index === el_index) el.classList.remove("hidden")
-    })
-    const prevBtn = document.querySelector(".product_info_bundle_prevnext_btn[data-type='prev']")
-    const nextBtn = document.querySelector(".product_info_bundle_prevnext_btn[data-type='next']")
-    if (index === 0) {
-      prevBtn.classList.remove("active")
-    }
-    if (index === 1) {
-      prevBtn.classList.add("active")
-      nextBtn.classList.add("active")
-    }
-    if (index === 2) {
-      nextBtn.classList.remove("active")
-    }
+    switchStep(index)
   })
 })
+document.querySelectorAll(".product_info_bundle_prevnext_btn").forEach(item => {
+  item.addEventListener("click", () => {
+    const type = item.getAttribute("data-type")
+    if ((bundleStep === 0 && type === "prev") || (bundleStep === 2 && type === "next")) return
+    type === "prev" ? bundleStep-- : bundleStep++
+    document.querySelectorAll(".product_info_steps_item").forEach((el, el_index) => {
+      el.classList.remove("active")
+      if (bundleStep === el_index) el.classList.add("active")
+    })
+    switchStep(bundleStep)
+  })
+})
+function switchStep(index) {
+  document.querySelectorAll(".product_info_steps_contain").forEach((el, el_index) => {
+    el.classList.add("hidden")
+    if (index === el_index) el.classList.remove("hidden")
+  })
+  const prevBtn = document.querySelector(".product_info_bundle_prevnext_btn[data-type='prev']")
+  const nextBtn = document.querySelector(".product_info_bundle_prevnext_btn[data-type='next']")
+  if (index === 0) {
+    prevBtn.classList.remove("active")
+    nextBtn.classList.add("active")
+  }
+  if (index === 1) {
+    prevBtn.classList.add("active")
+    nextBtn.classList.add("active")
+  }
+  if (index === 2) {
+    nextBtn.classList.remove("active")
+    prevBtn.classList.add("active")
+  }
+}
