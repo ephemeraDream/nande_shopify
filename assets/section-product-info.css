@@ -814,7 +814,7 @@
   height: 4rem;
   background-color: #E2DED6;
   position: absolute;
-  right: 0;
+  right: left;
   top: 1.2rem;
 }
 
