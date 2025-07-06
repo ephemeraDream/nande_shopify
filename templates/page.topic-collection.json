@@ -1,84 +1,98 @@
 /*
  * ------------------------------------------------------------
- * fxypooh 专题聚合页
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
  * ------------------------------------------------------------
  */
 {
-    "sections": {
-        "banner_topic": {
-        "type": "banner",
-        "blocks": {
-            "banner_item_f7J8AA": {
-                "type": "banner_item",
-                "settings": {
-                    "title": "<p>Maidesite Spaces</p>",
-                    "text": "<p>Lassen Sie sich inspirieren und gestalten Sie Ihren perfekten Maidesite-Arbeitsplatz <br/>mit unseren sorgfältig kuratierten Räumen.</p>",
-                    "btn_text": "En savoir plus",
-                    "link": "",
-                    "file_position": "middle_left",
-                    "file_type": "image",
-                    "file_image": "shopify://shop_images/banner-2.webp",
-                    "video_url": ""
-                }
-            },
-            "banner_item_ckwd4B": {
-                "type": "banner_item",
-                "settings": {
-                    "title": "<p>Nahtloses Design Trifft Auf FunktionalitäT</p>",
-                    "text": "<p>Ein durchdachtes, einheitliches Design, das Ästhetik und Funktion kombiniert – für einen </p><p>modernen Arbeitsplatz, der sich nahtlos in Ihr Zuhause einfügt</p>",
-                    "btn_text": "En savoir plus",
-                    "link": "",
-                    "file_position": "middle_left",
-                    "file_type": "image",
-                    "file_image": "shopify://shop_images/banner-3.webp",
-                    "video_url": ""
-                }
-            },
+  "sections": {
+    "banner_topic": {
+      "type": "banner",
+      "blocks": {
+        "banner_item_f7J8AA": {
+          "type": "banner_item",
+          "settings": {
+            "title": "<p>Maidesite Spaces</p>",
+            "text": "<p>Lassen Sie sich inspirieren und gestalten Sie Ihren perfekten Maidesite-Arbeitsplatz <br/>mit unseren sorgfältig kuratierten Räumen.</p>",
+            "btn_text": "En savoir plus",
+            "link": "",
+            "file_position": "middle_left",
+            "file_type": "image",
+            "file_image": "shopify://shop_images/banner-2.webp",
+            "video_url": ""
+          }
         },
-        "block_order": [
-            "banner_item_f7J8AA",
-            "banner_item_ckwd4B"
-        ],
-        "name": "banner",
-        "settings": {}
-        },
-        "image_with_text_polka_dot": {
-            "type": "image-with-text-polka-dot",
-            "settings": {
-                "small_title": "Maidesite SPACES",
-                "title": "Yoga HöHenverstellbare Schreibtische",
-                "text": "<p>Die beste Wahl für alle Yoga-Enthusiasten, die Komfort und Qualität schätzen. <br/>Diese hochwertigen Schreibtische sind ideal für Yoga- und Meditationen-Tätigkeiten.</p>",
-                "image": "shopify://shop_images/polka_dot_img01.webp",
-                "btn_text": "En savoir plus",
-                "link": ""
-            },
-            "blocks": {
-                "product_block_1": {
-                "type": "product_item",
-                "settings": {
-                    "select_product": "maidesite-tischgestell-elektrisch-hohenverstellbar-t2-pro-plus",
-                    "product_X": 31,
-                    "product_Y": 37
-                }
-                },
-                "product_block_2": {
-                "type": "product_item",
-                "settings": {
-                    "select_product": "maidesite-th2-pro-plus-tischgestell-elektrisch-hohenverstellbar",
-                    "product_X": 52,
-                    "product_Y": 45
-                }
-                }
-            },
-            "block_order": [
-                "product_block_1",
-                "product_block_2"
-            ]
-        },
-        "main": {
-            "type": "main-page",
-            "settings": {}
+        "banner_item_ckwd4B": {
+          "type": "banner_item",
+          "settings": {
+            "title": "<p>Nahtloses Design Trifft Auf FunktionalitäT</p>",
+            "text": "<p>Ein durchdachtes, einheitliches Design, das Ästhetik und Funktion kombiniert – für einen </p><p>modernen Arbeitsplatz, der sich nahtlos in Ihr Zuhause einfügt</p>",
+            "btn_text": "En savoir plus",
+            "link": "",
+            "file_position": "middle_left",
+            "file_type": "image",
+            "file_image": "shopify://shop_images/banner-3.webp",
+            "video_url": ""
+          }
         }
+      },
+      "block_order": [
+        "banner_item_f7J8AA",
+        "banner_item_ckwd4B"
+      ],
+      "name": "banner",
+      "settings": {}
     },
-    "order": ["banner_topic","image_with_text_polka_dot", "main"]
-  }
+    "image_with_text_polka_dot": {
+      "type": "image-with-text-polka-dot",
+      "blocks": {
+        "product_block_1": {
+          "type": "product_item",
+          "settings": {
+            "select_product": "maidesite-tischgestell-elektrisch-hohenverstellbar-t2-pro-plus",
+            "product_X": 31,
+            "product_Y": 37
+          }
+        },
+        "product_block_2": {
+          "type": "product_item",
+          "settings": {
+            "select_product": "maidesite-th2-pro-plus-tischgestell-elektrisch-hohenverstellbar",
+            "product_X": 52,
+            "product_Y": 45
+          }
+        }
+      },
+      "block_order": [
+        "product_block_1",
+        "product_block_2"
+      ],
+      "settings": {
+        "small_title": "Maidesite SPACES",
+        "title": "Yoga HöHenverstellbare Schreibtische",
+        "text": "<p>Die beste Wahl für alle Yoga-Enthusiasten, die Komfort und Qualität schätzen. <br/>Diese hochwertigen Schreibtische sind ideal für Yoga- und Meditationen-Tätigkeiten.</p>",
+        "btn_text": "En savoir plus",
+        "image": "shopify://shop_images/polka_dot_img01.webp",
+        "link": "",
+        "select_product": "maidesite-3-fach-tischsteckdose-mit-usb-c-und-a-1-8m-kabel-steckdosenleiste",
+        "product_X": 0,
+        "product_Y": 0
+      }
+    },
+    "main": {
+      "type": "main-page",
+      "settings": {
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    }
+  },
+  "order": [
+    "banner_topic",
+    "image_with_text_polka_dot",
+    "main"
+  ]
+}
