@@ -9,11 +9,11 @@
           -}}
     </div>
     <div class="polka_dot_img_with_text_text">
-        <div class="polka_dot_img_with_text_text_small_title">{{ section.settings.small_title }}</div>
+        <h4 class="polka_dot_img_with_text_text_small_title">{{ section.settings.small_title }}</h4>
         <h2 class="polka_dot_img_with_text_text_title">{{ section.settings.title }}</h2>
         <div class="polka_dot_img_with_text_text_content">{{ section.settings.text }}</div>
         {% if section.settings.btn_text != blank %}
-        <a class="polka_dot_swiper_info_btn" href="{{ section.settings.link }}">
+        <a class="nd-btn" href="{{ section.settings.link }}">
             {{ section.settings.btn_text }}
             {{ 'icon-right-arrow.svg' | inline_asset_content }}
         </a>

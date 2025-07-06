@@ -4,6 +4,7 @@
     justify-content: center;
     gap: 32px;
 }
+
 .polka_dot_img_with_text_img {
     width: 50%;
     height: auto;
@@ -23,12 +24,12 @@
     justify-content: center;
     gap: 30px;
 }
-
-@media (max-width: 900px) {
+@media only screen and (max-width: 1100px) {
     .polka_dot_img_with_text {
-        flex-direction: column;
         gap: 20px;
     }
+}
+@media (max-width: 750px) {
     .polka_dot_img_with_text_img,
     .polka_dot_img_with_text_text {
         width: 100%;
