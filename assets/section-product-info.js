@@ -472,7 +472,7 @@ document.querySelectorAll(".product_info_bundle_product").forEach(item => {
   item.addEventListener("click", () => {
     const total_price_el = document.querySelector(".product_info_bundle_info_total")
     const price = Number(item.getAttribute("data-price"))
-    let total_price = moneyStringToCents(total_price_el)
+    let total_price = moneyStringToCents(total_price_el.innerHTML)
     item.classList.toggle("selected")
     if (item.classList.contains("selected")) {
       total_price = total_price + price

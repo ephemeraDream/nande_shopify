@@ -940,6 +940,10 @@
   border-color: #1F1F1F;
 }
 
+.product_info_section .product_info_bundle_product.selected {
+  border: 0.2rem solid #BDFF00;
+}
+
 .product_info_section .product_info_bundle_product_img {
   width: 100%;
   height: 13.2rem;
