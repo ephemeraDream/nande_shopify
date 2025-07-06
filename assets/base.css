@@ -239,13 +239,23 @@ body:has(.section-header .drawer-menu) .announcement-bar-section .page-width {
 }
 
 .text-body {
-  font-size: 1.5rem;
+  font-size: 1.4rem;
   letter-spacing: 0.06rem;
-  line-height: calc(1 + 0.8 / var(--font-body-scale));
+  line-height: calc(1 + 0.3 / var(--font-body-scale));
   /* font-family: var(--font-body-family); */
   font-style: var(--font-body-style);
   font-weight: var(--font-body-weight);
   font-family: "PP Right Grotesk";
+}
+@media only screen and (min-width: 750px) {
+  .text-body {
+    font-size: 1.6rem;
+  }
+}
+@media only screen and (min-width: 1400px) {
+  .text-body {
+    font-size: 2rem;
+  }
 }
 
 h1,
@@ -348,7 +358,7 @@ h3,
 
 h4,
 .h4 {
-  font-size: calc(var(--font-heading-scale) * 1.4rem);
+  font-size: calc(var(--font-heading-scale) * 1.6rem);
 }
 @media only screen and (min-width: 750px) {
   h4,
@@ -381,6 +391,32 @@ h6,
   color: rgba(var(--color-foreground), 0.75);
   margin-block-start: 1.67em;
   margin-block-end: 1.67em;
+}
+.nd-btn{
+  height: 2.4rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  background-color: #BDFF00;
+  padding: 0 0.8rem;
+  margin-top: 1rem;
+  font-family: "PP Right Grotesk";
+  font-size: 1.8rem;
+  font-weight: 500;
+  line-height: 112%;
+  letter-spacing: 0px;
+  font-variation-settings: "opsz" auto;
+  color: #1F1F1F;
+}
+@media only screen and (min-width: 1400px) {
+  .nd-btn{
+    height: 3.5rem;
+    gap: 0.8rem;
+    padding: 0 0.8rem;
+    margin-top: 3rem;
+    font-size: 2.4rem;
+    line-height: 112%;
+  }
 }
 
 blockquote {
