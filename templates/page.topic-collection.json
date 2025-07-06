@@ -42,6 +42,17 @@
         "name": "banner",
         "settings": {}
         },
+        "image_with_text_polka_dot": {
+            "type": "image_with_text_polka_dot",
+            "settings": {
+                "small_title": "Maidesite Spaces",
+                "title": "Maidesite Spaces",
+                "text": "Lassen Sie sich inspirieren und gestalten Sie Ihren perfekten Maidesite-Arbeitsplatz mit unseren sorgfältig kuratierten Räumen.",
+                "image": "shopify://shop_images/polka_dot_img01.webp",
+                "btn_text": "En savoir plus",
+                "link": ""
+            }
+        },
         "main": {
             "type": "main-page",
             "settings": {}
