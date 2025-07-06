@@ -135,10 +135,10 @@
           contain.querySelectorAll('.polka_dot_product')
                  .forEach(el => el.style.display = '');
         });
-        icon.addEventListener('mouseleave', () => {
+        {% comment %} icon.addEventListener('mouseleave', () => {
           section.querySelectorAll('.polka_dot_product')
                  .forEach(el => el.style.display = 'none');
-        });
+        }); {% endcomment %}
       });
     
     });
