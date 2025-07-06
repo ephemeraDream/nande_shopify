@@ -810,6 +810,10 @@
   cursor: pointer;
 }
 
+.product_info_section .product_info_steps_item span:last-child {
+  width: 8rem;
+}
+
 .product_info_section .product_info_steps_item+.product_info_steps_item::before {
   content: "";
   width: 0.1rem;
