@@ -484,6 +484,7 @@
   color: #1F1F1F;
   background: #F2F1ED;
   cursor: pointer;
+  position: relative;
 }
 
 .product_info .product_info_buybox_btns_btn svg {
@@ -730,6 +731,7 @@
   color: #1F1F1F;
   background-color: #fff;
   cursor: pointer;
+  position: relative;
 }
 
 .product_info_section .product_info_bottom_bar .product_info_buybox_btns_btn:hover {

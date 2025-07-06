@@ -276,3 +276,33 @@ function initBuybox() {
       });
     });
 }
+// 变体切换
+setVariantOption()
+function setVariantOption() {
+  document.querySelectorAll(".product_info_option_select").forEach((selector, selectorIndex) => {
+    if (selectorIndex < 2) return
+    const options = selector.querySelectorAll('.product_info_option_select_item');
+
+    options.forEach(opt => opt.classList.add('hidden'));
+
+    product.variants.forEach((variant) => {
+      let matchCount = 0;
+
+      variant.options.forEach((option, optionIndex) => {
+        if (option === currVariant.options[optionIndex] && optionIndex !== selectorIndex) {
+          matchCount += 1;
+        }
+      });
+
+      if (matchCount === currVariant.options.length - 1) {
+        const optionEl = Array.from(options).find((opt) => {
+          return opt.getAttribute("data-value") === variant.options[selectorIndex];
+        });
+
+        if (optionEl && variant.available) {
+          optionEl.classList.remove("hidden");
+        }
+      }
+    });
+  });
+};
