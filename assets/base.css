@@ -3897,7 +3897,7 @@ a {
   align-items: stretch;
 }
 .polka_dot_product.left{
-  transform: translateX(-100%) translateY(100%);
+  transform: translate(0%) translateY(82%);
 }
 
 .polka_dot_product_img {

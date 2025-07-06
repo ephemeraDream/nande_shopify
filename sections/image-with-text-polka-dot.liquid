@@ -14,7 +14,7 @@
               style="top: {{ block.settings.product_Y }}%;left: {{ block.settings.product_X }}%"
             >
               <div class="polka_dot_icon">{{- 'icon-plus.svg' | inline_asset_content -}}</div>
-              <a class="polka_dot_product {% if block.settings.product_X > 60 %} left{% endif %}" href="{{ block.settings.select_product.url }}">
+              <a class="polka_dot_product {% if block.settings.product_X > 60 %} left{% endif %}" href="{{ block.settings.select_product.url }}" style="display: none;">
                 <div class="polka_dot_product_img">
                   {{-
                     block.settings.select_product.featured_media
