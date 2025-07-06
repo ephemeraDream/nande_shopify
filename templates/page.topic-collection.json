@@ -51,7 +51,29 @@
                 "image": "shopify://shop_images/polka_dot_img01.webp",
                 "btn_text": "En savoir plus",
                 "link": ""
-            }
+            },
+            "blocks": {
+                "product_block_1": {
+                "type": "product_item",
+                "settings": {
+                    "select_product": "maidesite-tischgestell-elektrisch-hohenverstellbar-t2-pro-plus",
+                    "product_X": 31,
+                    "product_Y": 37
+                }
+                },
+                "product_block_2": {
+                "type": "product_item",
+                "settings": {
+                    "select_product": "maidesite-th2-pro-plus-tischgestell-elektrisch-hohenverstellbar",
+                    "product_X": 52,
+                    "product_Y": 45
+                }
+                }
+            },
+            "block_order": [
+                "product_block_1",
+                "product_block_2"
+            ]
         },
         "main": {
             "type": "main-page",

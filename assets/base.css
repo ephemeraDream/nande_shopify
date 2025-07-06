@@ -323,6 +323,7 @@ h1,
 h2,
 .h2 {
   font-size: calc(var(--font-heading-scale) * 2.4rem);
+  line-height: 1em;
 }
 
 @media only screen and (min-width: 750px) {
@@ -335,7 +336,7 @@ h2,
   h2,
   .h2 {
     font-size: calc(var(--font-heading-scale) * 6rem);
-    line-height: 56px;
+    
   }
 }
 
@@ -3857,4 +3858,65 @@ a {
   position: sticky;
   top: 0;
   z-index: 9;
+}
+
+/* polka_dot */
+.polka_dot_contain {
+  position: absolute;
+  width: 4rem;
+  height: 4rem;
+  background-color: #BDFF00;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+}
+
+.polka_dot_product {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  transform: translateX(100%) translateY(100%);
+  display: flex;
+  align-items: stretch;
+}
+
+.polka_dot_product_img {
+  background-color: #fff;
+  width: 11.7rem;
+  box-sizing: border-box;
+  padding: 1.2rem 1.2rem 0.8rem 1.2rem;
+  flex: 0 0 auto;
+}
+
+.polka_dot_product_img img {
+  width: 100%;
+  height: 100%;
+  background-color: #FAFAFA;
+  object-fit: contain;
+  object-position: center center;
+}
+
+.polka_dot_product_info {
+  padding: 1.6rem 0.8rem 0.8rem 0;
+  background-color: #fff;
+  width: 23rem;
+  flex: 0 0 auto;
+  min-height: 8.8rem;
+  position: relative;
+  left: -0.1rem;
+  margin-top: 2.4rem;
+}
+
+.polka_dot_product_info_title {
+  color: #000000;
+}
+
+.polka_dot_product_info_price {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 1.2rem;
+  line-height: 1.3em;
+  color: #000000;
 }

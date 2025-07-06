@@ -7,6 +7,32 @@
             | image_url: width: section.settings.image.width
             | image_tag: alt: section.settings.title
           -}}
+        {% for block in section.blocks %}
+        {%- if block.type == 'product' -%}
+            <div
+              class="polka_dot_contain"
+              style="top: {{ block.settings.product_Y }}%;left: {{ block.settings.product_X }}%"
+            >
+              {{- 'icon-plus.svg' | inline_asset_content -}}
+              <a class="polka_dot_product" href="{{ block.settings.select_product.url }}">
+                <div class="polka_dot_product_img">
+                  {{-
+                    block.settings.select_product.featured_media
+                    | image_url: width: block.settings.select_product.featured_media.width
+                    | image_tag: alt: block.settings.select_product.title
+                  -}}
+                </div>
+                <div class="polka_dot_product_info">
+                  <h4 class="polka_dot_product_info_title">{{ block.settings.select_product.title }}</h4>
+                  <div class="polka_dot_product_info_price text-body">
+                    {{ block.settings.select_product.price | money_without_trailing_zeros }}
+                    {{- 'icon-shopping-cart.svg' | inline_asset_content -}}
+                  </div>
+                </div>
+              </a>
+            </div>
+        {%- endif -%}
+        {% endfor %}
     </div>
     <div class="polka_dot_img_with_text_text">
         <h4 class="polka_dot_img_with_text_text_small_title">{{ section.settings.small_title }}</h4>
@@ -41,25 +67,27 @@
         "label": "title"
     },
     {
-    "type": "richtext",
-    "id": "text",
-    "label": "text"
+        "type": "richtext",
+        "id": "text",
+        "label": "text"
     },
     {
-    "type": "text",
-    "id": "btn_text",
-    "label": "button text"
+        "type": "text",
+        "id": "btn_text",
+        "label": "button text"
     },
     {
-    "type": "image_picker",
-    "id": "image",
-    "label": "image"
+        "type": "image_picker",
+        "id": "image",
+        "label": "image"
     },
     {
-    "type": "url",
-    "id": "link",
-    "label": "link"
+        "type": "url",
+        "id": "link",
+        "label": "link"
     },
+    
+
     {
     "type": "product",
     "id": "select_product",
@@ -85,6 +113,39 @@
     "label": "product_Y",
     "default": 0
     }
-  ]
+  ],
+  "blocks": [
+    {
+        "type": "product_item",
+        "name": "产品选择",
+        "settings": [
+        {
+            "type": "product",
+            "id": "select_product",
+            "label": "选择产品"
+        },
+        {
+            "type": "range",
+            "id": "product_X",
+            "label": "X坐标",
+            "default": 0,
+            "min": 0,
+            "max": 100,
+            "step": 1,
+            "unit": "%"
+        },
+        {
+            "type": "range",
+            "id": "product_Y",
+            "label": "Y坐标",
+            "default": 0,
+            "min": 0,
+            "max": 100,
+            "step": 1,
+            "unit": "%"
+        }
+        ]
+    }
+    ]
 }
 {% endschema %}
