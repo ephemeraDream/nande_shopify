@@ -96,130 +96,134 @@
           <span>{{ 'common.confirm_selection' | t }}</span>
         </div>
       </div>
-      <div class="product_info_title">{{ product.title }}</div>
-      {%- for block in section.blocks -%}
-        {%- case block.type -%}
-          {%- when '@app' -%}
-            {% render block %}
-        {%- endcase -%}
-      {%- endfor -%}
-      <div class="product_info_price">
-        <div class="product_info_price_dp">{{ product.price | money_without_trailing_zeros }}</div>
-        <div class="product_info_price_op">{{ product.compare_at_price | money_without_trailing_zeros }}</div>
-        {%- if section.settings.show_tax_and_shipping -%}
-          {%- if cart.taxes_included or shop.shipping_policy.body != blank -%}
-            <div class="product_info_policies">
-              {%- if cart.taxes_included -%}
-                {{ 'products.product.include_taxes' | t }}
-              {%- endif -%}
-              {% comment %}
-                {%- if shop.shipping_policy.body != blank -%}
-                  {{ 'products.product.shipping_policy_html' | t: link: shop.shipping_policy.url }}
+      <div class="product_info_steps_contain" data-index="0">
+        <div class="product_info_title">{{ product.title }}</div>
+        {%- for block in section.blocks -%}
+          {%- case block.type -%}
+            {%- when '@app' -%}
+              {% render block %}
+          {%- endcase -%}
+        {%- endfor -%}
+        <div class="product_info_price">
+          <div class="product_info_price_dp">{{ product.price | money_without_trailing_zeros }}</div>
+          <div class="product_info_price_op">{{ product.compare_at_price | money_without_trailing_zeros }}</div>
+          {%- if section.settings.show_tax_and_shipping -%}
+            {%- if cart.taxes_included or shop.shipping_policy.body != blank -%}
+              <div class="product_info_policies">
+                {%- if cart.taxes_included -%}
+                  {{ 'products.product.include_taxes' | t }}
                 {%- endif -%}
-              {% endcomment %}
-            </div>
+                {% comment %}
+                  {%- if shop.shipping_policy.body != blank -%}
+                    {{ 'products.product.shipping_policy_html' | t: link: shop.shipping_policy.url }}
+                  {%- endif -%}
+                {% endcomment %}
+              </div>
+            {%- endif -%}
           {%- endif -%}
-        {%- endif -%}
-      </div>
-      {% assign sale_info = product.metafields.custom.sale_info.value %}
-      {% if sale_info != blank %}
-        <div class="product_info_saleinfo">
-          <div class="product_info_saleinfo_left">
-            <div class="product_info_saleinfo_name">{{ sale_info.name }}</div>
-            <div
-              class="product_info_saleinfo_countdown"
-              data-end-date="{{ sale_info.datetime | date: "%Y-%m-%dT%H:%M:%SZ" }}"
-            >
-              <span class="product_info_saleinfo_countdown_text">{{ 'common.ends_in' | t }}</span>
-              <div class="product_info_saleinfo_countdown_item" data-type="day"></div>
-              <span>:</span>
-              <div class="product_info_saleinfo_countdown_item" data-type="hour"></div>
-              <span>:</span>
-              <div class="product_info_saleinfo_countdown_item" data-type="minute"></div>
-              <span>:</span>
-              <div class="product_info_saleinfo_countdown_item" data-type="second"></div>
+        </div>
+        {% assign sale_info = product.metafields.custom.sale_info.value %}
+        {% if sale_info != blank %}
+          <div class="product_info_saleinfo">
+            <div class="product_info_saleinfo_left">
+              <div class="product_info_saleinfo_name">{{ sale_info.name }}</div>
+              <div
+                class="product_info_saleinfo_countdown"
+                data-end-date="{{ sale_info.datetime | date: "%Y-%m-%dT%H:%M:%SZ" }}"
+              >
+                <span class="product_info_saleinfo_countdown_text">{{ 'common.ends_in' | t }}</span>
+                <div class="product_info_saleinfo_countdown_item" data-type="day"></div>
+                <span>:</span>
+                <div class="product_info_saleinfo_countdown_item" data-type="hour"></div>
+                <span>:</span>
+                <div class="product_info_saleinfo_countdown_item" data-type="minute"></div>
+                <span>:</span>
+                <div class="product_info_saleinfo_countdown_item" data-type="second"></div>
+              </div>
+            </div>
+            <div class="product_info_saleinfo_right">
+              <div class="product_info_saleinfo_code">
+                {{ 'common.code' | t -}}
+                {{- sale_info.code }}
+              </div>
+              <div class="product_info_saleinfo_btn" data-code="{{ sale_info.code }}">
+                {{ 'common.copy_and_use' | t }}
+              </div>
             </div>
           </div>
-          <div class="product_info_saleinfo_right">
-            <div class="product_info_saleinfo_code">
-              {{ 'common.code' | t -}}
-              {{- sale_info.code }}
-            </div>
-            <div class="product_info_saleinfo_btn" data-code="{{ sale_info.code }}">
-              {{ 'common.copy_and_use' | t }}
+        {% endif %}
+        {% assign key_features = product.metafields.custom.key_features.value %}
+        {% if key_features != blank %}
+          <div class="product_info_key_features">
+            {{ 'common.key_features' | t }}
+            {{- 'swiper-right.svg' | inline_asset_content -}}
+          </div>
+          <div class="product_info_key_features_desc">{{ key_features.description | metafield_tag }}</div>
+          <div class="key_features_modal common_modal">
+            <div class="key_features_modal_contain common_modal_contain">
+              <div class="key_features_modal_head common_modal_head">
+                <span>{{ 'common.key_features' | t }}</span>
+                <div class="common_modal_close">{{- 'icon-close.svg' | inline_asset_content -}}</div>
+              </div>
+              <div class="key_features_modal_body common_modal_body">
+                {{ key_features.modal_description | metafield_tag }}
+              </div>
             </div>
           </div>
-        </div>
-      {% endif %}
-      {% assign key_features = product.metafields.custom.key_features.value %}
-      {% if key_features != blank %}
-        <div class="product_info_key_features">
-          {{ 'common.key_features' | t }}
-          {{- 'swiper-right.svg' | inline_asset_content -}}
-        </div>
-        <div class="product_info_key_features_desc">{{ key_features.description | metafield_tag }}</div>
-        <div class="key_features_modal common_modal">
-          <div class="key_features_modal_contain common_modal_contain">
-            <div class="key_features_modal_head common_modal_head">
-              <span>{{ 'common.key_features' | t }}</span>
-              <div class="common_modal_close">{{- 'icon-close.svg' | inline_asset_content -}}</div>
-            </div>
-            <div class="key_features_modal_body common_modal_body">
-              {{ key_features.modal_description | metafield_tag }}
-            </div>
-          </div>
-        </div>
-      {% endif %}
-      <div class="product_info_option_contain">
-        {%- for option in product.options_with_values -%}
-          {% assign option_hanlde = option.name | handle %}
-          <div class="product_info_option_item">
-            <div class="product_info_option_label">
-              {{ option.name }}：
-              <span class="product_info_option_label_select">
-                {%- for value in option.values -%}
-                  {%- if value.selected %}{{ value }}{% endif -%}
-                {% endfor %}
-              </span>
-            </div>
-            <div
-              class="product_info_option_select"
-              select-type="{% if option_hanlde contains "farbe" %}circle{% else %}box{% endif %}"
-              data-index="{{ forloop.index0 }}"
-            >
-              {%- for value in option.values -%}
-                {% if option_hanlde contains 'farbe' %}
-                  {% assign color = '' %}
-                  {% for color_item in product.metafields.custom.color_option.value %}
-                    {% if color_item.name == value.name %}
-                      {% assign color = color_item.value %}
-                    {% endif %}
+        {% endif %}
+        <div class="product_info_option_contain">
+          {%- for option in product.options_with_values -%}
+            {% assign option_hanlde = option.name | handle %}
+            <div class="product_info_option_item">
+              <div class="product_info_option_label">
+                {{ option.name }}：
+                <span class="product_info_option_label_select">
+                  {%- for value in option.values -%}
+                    {%- if value.selected %}{{ value }}{% endif -%}
                   {% endfor %}
-                  <div
-                    data-value="{{ value }}"
-                    class="product_info_option_select_item{% if value.selected %} product_info_option_select_item_select{% endif %}"
-                    title="{{ value }}"
-                  >
-                    <div
-                      class="product_info_option_select_item_circle{% if color == '' %} product_info_option_select_item_none{% endif %}"
-                      {% if color != '' %}
-                        style="background-color: {{ color }}"
+                </span>
+              </div>
+              <div
+                class="product_info_option_select"
+                select-type="{% if option_hanlde contains "farbe" %}circle{% else %}box{% endif %}"
+                data-index="{{ forloop.index0 }}"
+              >
+                {%- for value in option.values -%}
+                  {% if option_hanlde contains 'farbe' %}
+                    {% assign color = '' %}
+                    {% for color_item in product.metafields.custom.color_option.value %}
+                      {% if color_item.name == value.name %}
+                        {% assign color = color_item.value %}
                       {% endif %}
-                    ></div>
-                  </div>
-                {% else %}
-                  <div
-                    class="product_info_option_select_item{% if value.selected %} product_info_option_select_item_select{% endif %}"
-                    data-value="{{ value }}"
-                  >
-                    {{ value }}
-                  </div>
-                {% endif %}
-              {% endfor %}
+                    {% endfor %}
+                    <div
+                      data-value="{{ value }}"
+                      class="product_info_option_select_item{% if value.selected %} product_info_option_select_item_select{% endif %}"
+                      title="{{ value }}"
+                    >
+                      <div
+                        class="product_info_option_select_item_circle{% if color == '' %} product_info_option_select_item_none{% endif %}"
+                        {% if color != '' %}
+                          style="background-color: {{ color }}"
+                        {% endif %}
+                      ></div>
+                    </div>
+                  {% else %}
+                    <div
+                      class="product_info_option_select_item{% if value.selected %} product_info_option_select_item_select{% endif %}"
+                      data-value="{{ value }}"
+                    >
+                      {{ value }}
+                    </div>
+                  {% endif %}
+                {% endfor %}
+              </div>
             </div>
-          </div>
-        {% endfor %}
+          {% endfor %}
+        </div>
       </div>
+      <div class="product_info_steps_contain hidden" data-index="1"></div>
+      <div class="product_info_steps_contain hidden" data-index="2"></div>
       <div class="product_info_buybox">
         <input type="hidden" name="goods_id" value="{{ product.selected_or_first_available_variant.id }}">
         <div class="product_info_buybox_contain">

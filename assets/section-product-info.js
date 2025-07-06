@@ -417,3 +417,27 @@ function updateUrl() {
   url.searchParams.set("variant", currVariant.id);
   window.history.replaceState(null, "", url.toString());
 }
+// 捆绑步骤切换
+document.querySelectorAll(".product_info_steps_item").forEach(item => {
+  item.addEventListener("click", (_, index) => {
+    if (item.classList.contains("active")) return
+    document.querySelectorAll(".product_info_steps_item.active").classList.remove("active")
+    item.classList.add("active")
+    document.querySelectorAll(".product_info_steps_contain").forEach((el, el_index) => {
+      el.classList.add("hidden")
+      if (index === el_index) el.classList.remove("hidden")
+    })
+    const prevBtn = document.querySelector(".product_info_bundle_prevnext_btn[data-type='prev']")
+    const nextBtn = document.querySelector(".product_info_bundle_prevnext_btn[data-type='next']")
+    if (index === 0) {
+      prevBtn.classList.remove("active")
+    }
+    if (index === 1) {
+      prevBtn.classList.add("active")
+      nextBtn.classList.add("active")
+    }
+    if (index === 2) {
+      nextBtn.classList.remove("active")
+    }
+  })
+})
