@@ -259,6 +259,9 @@ function initBuybox() {
             });
           } finally {
             btn.classList.remove("is-loading");
+            document.body.dispatchEvent(new CustomEvent('cart:refresh', {
+              bubbles: true
+            }));
           }
         }
         if (type === "buy_it_now") {
@@ -343,6 +346,7 @@ document.querySelectorAll(".product_info_option_select_item").forEach(el => {
         });
       }
     }
+    document.querySelector("input[name='goods_id']").value = currVariant.id
     setVariantOption()
     updateVariantPrice()
     updateBuyBtns()
