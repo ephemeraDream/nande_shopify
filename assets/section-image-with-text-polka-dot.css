@@ -4,6 +4,9 @@
     justify-content: center;
     margin-top: 60px;
 }
+.polka_dot_img_with_text:last-child{
+    margin-bottom: 60px;
+}
 .polka_dot_img_with_text.right {
     flex-direction: row-reverse;
 }
