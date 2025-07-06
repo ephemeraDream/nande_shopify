@@ -1014,6 +1014,10 @@
   padding-top: 0;
 }
 
+.product_info_section .product_info_steps_contain[data-index="2"] {
+  margin-bottom: 2rem;
+}
+
 .product_info_section .product_info_steps_contain_item_box_line {
   height: 4rem;
   display: flex;
