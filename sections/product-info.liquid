@@ -223,6 +223,16 @@
       <div class="product_info_buybox">
         <input type="hidden" name="goods_id" value="{{ product.selected_or_first_available_variant.id }}">
         <div class="product_info_buybox_contain">
+          <div class="product_info_bundle_prevnext">
+            <div class="product_info_bundle_prevnext_btn" data-type="prev">
+              {{ 'common.zuruck' | t }}
+              {{ 'icon-right-arrow.svg' | inline_asset_content }}
+            </div>
+            <div class="product_info_bundle_prevnext_btn active" data-type="next">
+              {{ 'common.weiter' | t }}
+              {{ 'icon-right-arrow.svg' | inline_asset_content }}
+            </div>
+          </div>
           <div class="product_info_buybox_quantity_box">
             <span class="product_info_buybox_quantity_btn" data-type="minus">
               {{ 'quantity-minus.svg' | inline_asset_content }}
