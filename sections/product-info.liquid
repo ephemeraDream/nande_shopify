@@ -9,7 +9,6 @@
     {% assign accessory_types = accessory_types | append: type | append: ',' %}
   {% endunless %}
 {% endfor %}
-{{ accessory_types }}
 {%- assign accessory_type_array = accessory_types | split: ',' | uniq -%}
 
 <div class="product_info_section padding-sider">
@@ -258,7 +257,7 @@
               <div class="product_info_bundle_products_type">{{ type }}</div>
               <div class="product_info_bundle_products_type_group">
                 {% for bundled_product in bundle_products %}
-                  {% if bundled_product.metafields.custom.bundle_type.value == type %}
+                  {% if bundled_product.metafields.custom.bundle_type.value.name == type %}
                     <div class="product_info_bundle_product">
                       <div class="product_info_bundle_product_img">
                         <img src="{{ product.featured_media | image_url }}" alt="{{ product.title }}">
