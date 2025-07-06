@@ -3897,7 +3897,6 @@ a {
   align-items: stretch;
 }
 .polka_dot_product.left{
-  left: 0;
   transform: translateX(-100%) translateY(100%);
 }
 
