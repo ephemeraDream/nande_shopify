@@ -361,7 +361,7 @@ function areArraysEqual(arr1, arr2) {
 function updateVariantPrice() {
   const price = moneyWithoutTrailingZeros(currVariant.price)
   document.querySelectorAll(".product_info_price_dp").forEach(item => item.innerHTML = price)
-  if (currVariant.compare_at_price) {
+  if (currVariant.compare_at_price && currVariant.compare_at_price > currVariant.price) {
     const compare_at_price = moneyWithoutTrailingZeros(currVariant.compare_at_price)
     document.querySelectorAll(".product_info_price_op").forEach(item => {
       item.innerHTML = compare_at_price
