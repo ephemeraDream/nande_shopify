@@ -29,7 +29,9 @@
     padding: 20px 60px;
 }
 .polka_dot_img_with_text.right .polka_dot_img_with_text_text {
-   padding-left: 20%;
+    padding-left: 10%;
+    padding-right: 10%;
+    text-align: left;
 }
 
 @media (max-width: 1024px) {

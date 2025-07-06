@@ -106,21 +106,82 @@
       ],
       "settings": {
         "small_title": "Maidesite SPACES",
-        "title": "Yoga HöHenverstellbare Schreibtische",
-        "text": "<p>Die beste Wahl für alle Yoga-Enthusiasten, die Komfort und Qualität schätzen. <br/>Diese hochwertigen Schreibtische sind ideal für Yoga- und Meditationen-Tätigkeiten.</p>",
+        "title": "Petdesk",
+        "text": "<p>Der ideale Tisch für Ihre Haustiere – stabil, komfortabel und perfekt für ihren Bedarf.</p>",
         "btn_text": "En savoir plus",
         "image": "shopify://shop_images/polka_dot_img01.webp",
         "link": "",
         "layout": "image-right"
       }
     },
-    "main": {
-      "type": "main-page",
+    "image_with_text_polka_dot_2": {
+      "type": "image-with-text-polka-dot",
+      "blocks": {
+        "product_block_1": {
+          "type": "product_item",
+          "settings": {
+            "select_product": "maidesite-tischgestell-elektrisch-hohenverstellbar-t2-pro-plus",
+            "product_X": 34,
+            "product_Y": 48
+          }
+        },
+        "product_block_2": {
+          "type": "product_item",
+          "settings": {
+            "select_product": "maidesite-th2-pro-plus-tischgestell-elektrisch-hohenverstellbar",
+            "product_X": 79,
+            "product_Y": 63
+          }
+        }
+      },
+      "block_order": [
+        "product_block_1",
+        "product_block_2"
+      ],
       "settings": {
-        "padding_top": 36,
-        "padding_bottom": 36
+        "small_title": "Maidesite SPACES",
+        "title": "Familydesk",
+        "text": "<p>Ein intelligenter Tisch für die ganze Familie – vielseitig, ergonomisch und perfekt für den Alltag.</p>",
+        "btn_text": "En savoir plus",
+        "image": "shopify://shop_images/polka_dot_img01.webp",
+        "link": "",
+        "layout": "image-left"
       }
-    }
+    },
+    "image_with_text_polka_dot_right_2": {
+      "type": "image-with-text-polka-dot",
+      "blocks": {
+        "product_block_1": {
+          "type": "product_item",
+          "settings": {
+            "select_product": "maidesite-tischgestell-elektrisch-hohenverstellbar-t2-pro-plus",
+            "product_X": 34,
+            "product_Y": 48
+          }
+        },
+        "product_block_2": {
+          "type": "product_item",
+          "settings": {
+            "select_product": "maidesite-th2-pro-plus-tischgestell-elektrisch-hohenverstellbar",
+            "product_X": 79,
+            "product_Y": 63
+          }
+        }
+      },
+      "block_order": [
+        "product_block_1",
+        "product_block_2"
+      ],
+      "settings": {
+        "small_title": "Maidesite SPACES",
+        "title": "Workfit Pro",
+        "text": "<p>Produktives Arbeiten und gesundes Sitzen in perfektem Einklang.</p>",
+        "btn_text": "En savoir plus",
+        "image": "shopify://shop_images/polka_dot_img01.webp",
+        "link": "",
+        "layout": "image-right"
+      }
+    },
   },
   "order": [
     "banner_topic",
