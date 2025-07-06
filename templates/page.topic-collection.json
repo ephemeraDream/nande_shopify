@@ -42,10 +42,21 @@
         "name": "banner",
         "settings": {}
         },
+        "image_with_text_polka_dot": {
+            "type": "image-with-text-polka-dot",
+            "settings": {
+                "small_title": "Maidesite SPACES",
+                "title": "Yoga HöHenverstellbare Schreibtische",
+                "text": "Die beste Wahl für alle Yoga-Enthusiasten, die Komfort und Qualität schätzen.",
+                "image": "shopify://shop_images/polka_dot_img01.webp",
+                "btn_text": "En savoir plus",
+                "link": ""
+            }
+        },
         "main": {
             "type": "main-page",
             "settings": {}
         }
     },
-    "order": ["banner_topic", "main"]
+    "order": ["banner_topic","image_with_text_polka_dot", "main"]
   }
