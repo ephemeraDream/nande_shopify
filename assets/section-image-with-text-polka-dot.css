@@ -1,12 +1,12 @@
+
 .polka_dot_img_with_text {
     display: flex;
     align-items: center;
     justify-content: center;
     margin-top: 60px;
-}
-#MainContent section:last-child{
     margin-bottom: 60px;
 }
+
 .polka_dot_img_with_text.right {
     flex-direction: row-reverse;
 }

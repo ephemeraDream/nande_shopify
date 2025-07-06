@@ -3861,7 +3861,69 @@ a {
   z-index: 9;
 }
 
-/* polka_dot */
+
+
+/********************** image-with-text-polka-dot **********************/
+
+.polka_dot_img_with_text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 60px;
+  margin-bottom: 60px;
+}
+
+.polka_dot_img_with_text.right {
+  flex-direction: row-reverse;
+}
+
+.polka_dot_img_with_text_img {
+  width: 50%;
+  height: auto;
+  position: relative;
+}
+.polka_dot_img_with_text_img img{
+  width:100%;
+  height:auto;
+  display:block;
+  object-fit:contain;
+}
+
+.polka_dot_img_with_text_text {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 30px;
+  padding: 20px 60px;
+}
+.polka_dot_img_with_text.right .polka_dot_img_with_text_text {
+  padding-left: 10%;
+  padding-right: 10%;
+  text-align: left;
+}
+
+@media (max-width: 1024px) {
+  .polka_dot_img_with_text_img,
+  .polka_dot_img_with_text_text {
+      width: 100%;
+  }
+  .polka_dot_img_with_text {
+      margin-top: 30px;
+      flex-direction: column;
+  }
+  .polka_dot_img_with_text_text {
+      width: 50%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 20px;
+      padding: 20px;
+  }
+}
+/********************** image-with-text-polka-dot end**********************/
+
+/**************** polka_dot *************************/
 .polka_dot_contain {
   position: absolute;
 }
@@ -3940,8 +4002,9 @@ a {
   line-height: 1.3em;
   color: #000000;
 }
+/***************************** polka-dot end **********************/
 
-/* text... */
+/***************************** text truncate... /*****************************/
 .truncate-3-lines {
   display: -webkit-box;
   display: -moz-box;
@@ -3978,3 +4041,4 @@ a {
   max-height: 1em; 
   line-height: 1em;
 }
+/***************************** text truncate end *****************************/
