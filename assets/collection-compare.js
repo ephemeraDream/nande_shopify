@@ -183,7 +183,7 @@ function moneyWithoutTrailingZeros(cents, symbol) {
   integerPart = integerPart.replace(/\B(?=(\d{3})+(?!\d))/g, '.');
   const final = decimalPart ? `${integerPart},${decimalPart}` : integerPart;
 
-  return `${final} ${symbol}`;
+  return `${symbol}${final}`;
 }
 
 document.querySelectorAll(".collection_compare_product_saleinfo_countdown").forEach(item => {

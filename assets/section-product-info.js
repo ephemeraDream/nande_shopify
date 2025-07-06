@@ -345,6 +345,8 @@ document.querySelectorAll(".product_info_option_select_item").forEach(el => {
     const target = event.target.closest(".product_info_option_select_item")
     if (target.classList.contains("product_info_option_select_item_select")) return
     const parent = target.closest(".product_info_option_select")
+    const parent_index = parent.getAttribute("data-index")
+    document.querySelectorAll(".product_info_steps_contain_item_box[data-type='option'] .product_info_steps_contain_item_box_line")[parent_index].querySelector(".product_info_steps_contain_item_box_line_value").innerHTML = target.getAttribute("data-value")
     parent.querySelector('.product_info_option_select_item_select').classList.remove('product_info_option_select_item_select')
     target.classList.add('product_info_option_select_item_select')
     target.closest(".product_info_option_item").querySelector(".product_info_option_label_select").innerHTML = target.getAttribute("data-value")
@@ -361,6 +363,7 @@ document.querySelectorAll(".product_info_option_select_item").forEach(el => {
           if (el.getAttribute("data-value") === currVariant.option3) {
             el.classList.add('product_info_option_select_item_select')
             document.querySelector('.product_info_option_select[data-index="2"]').closest(".product_info_option_item").querySelector(".product_info_option_label_select").innerHTML = el.getAttribute("data-value")
+            document.querySelectorAll(".product_info_steps_contain_item_box[data-type='option'] .product_info_steps_contain_item_box_line")[2].querySelector(".product_info_steps_contain_item_box_line_value").innerHTML = el.getAttribute("data-value")
           } else {
             el.classList.remove('product_info_option_select_item_select')
           }
@@ -413,7 +416,7 @@ function moneyWithoutTrailingZeros(cents) {
   integerPart = integerPart.replace(/\B(?=(\d{3})+(?!\d))/g, '.');
   const final = decimalPart ? `${integerPart},${decimalPart}` : integerPart;
 
-  return `${final} ${symbol}`;
+  return `${symbol}${final}`;
 }
 function updateBuyBtns() {
   const btns = document.querySelectorAll(".product_info_buybox_btns_btn")
@@ -470,16 +473,16 @@ function switchStep() {
 // 捆绑产品选择
 document.querySelectorAll(".product_info_bundle_product").forEach(item => {
   item.addEventListener("click", () => {
-    const total_price_el = document.querySelector(".product_info_bundle_info_total")
+    const total_price_el = document.querySelectorAll(".product_info_bundle_info_total")
     const price = Number(item.getAttribute("data-price"))
-    let total_price = moneyStringToCents(total_price_el.innerHTML)
+    let total_price = moneyStringToCents(total_price_el[0].innerHTML)
     item.classList.toggle("selected")
     if (item.classList.contains("selected")) {
       total_price = total_price + price
     } else {
       total_price = total_price - price
     }
-    total_price_el.innerHTML = moneyWithoutTrailingZeros(total_price)
+    total_price_el.forEach(el => el.innerHTML = moneyWithoutTrailingZeros(total_price))
   })
 })
 function moneyStringToCents(moneyStr) {

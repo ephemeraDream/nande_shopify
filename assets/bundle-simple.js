@@ -74,7 +74,7 @@ product_items.forEach(item => {
     integerPart = integerPart.replace(/\B(?=(\d{3})+(?!\d))/g, '.');
     const final = decimalPart ? `${integerPart},${decimalPart}` : integerPart;
 
-    return `${final} ${symbol}`;
+    return `${symbol}${final}`;
   }
 
   select_item.forEach(el => {
