@@ -277,7 +277,6 @@ function initBuybox() {
     });
 }
 // 变体切换
-
 const product_data = JSON.parse(document.getElementById('product_info_data').textContent);
 const product = product_data.product
 let currVariant = product_data.variant
