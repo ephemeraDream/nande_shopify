@@ -123,20 +123,24 @@
 }
 {% endschema %}
 <script>
-    jQuery(function ($) {
-        $('.polka_dot_contain .polka_dot_icon').on('mouseenter', function () {
-          const $section = $(this).closest('section');          
-          $section.find('.polka_dot_product').hide();           
-          $(this)                                            
-            .closest('.polka_dot_contain')
-            .find('.polka_dot_product')
-            .show();
+    document.addEventListener('DOMContentLoaded', () => {
+      const icons = document.querySelectorAll('.polka_dot_contain .polka_dot_icon');
+    
+      icons.forEach(icon => {
+        const section = icon.closest('section');
+        const contain = icon.closest('.polka_dot_contain');
+        icon.addEventListener('mouseenter', () => {
+          section.querySelectorAll('.polka_dot_product')
+                 .forEach(el => el.style.display = 'none');
+          contain.querySelectorAll('.polka_dot_product')
+                 .forEach(el => el.style.display = '');
         });
-        $('.polka_dot_contain .polka_dot_icon').on('mouseleave', function () {
-          const $section = $(this).closest('section');
-          $section.find('.polka_dot_product').hide();           
+        icon.addEventListener('mouseleave', () => {
+          section.querySelectorAll('.polka_dot_product')
+                 .forEach(el => el.style.display = none');
         });
-      
       });
-      
-</script>
+    
+    });
+    </script>
+    
