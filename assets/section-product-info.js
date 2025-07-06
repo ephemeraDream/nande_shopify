@@ -323,7 +323,7 @@ document.querySelectorAll(".product_info_option_select_item").forEach(el => {
     const parent = target.closest(".product_info_option_select")
     parent.querySelector('.product_info_option_select_item_select').classList.remove('product_info_option_select_item_select')
     target.classList.add('product_info_option_select_item_select')
-    parent.querySelector(".product_info_option_label_select").innerHTML = target.getAttribute("data-value")
+    target.closest(".product_info_option_item").querySelector(".product_info_option_label_select").innerHTML = target.getAttribute("data-value")
     curr_options[parent.getAttribute("data-index")] = target.getAttribute("data-value")
     currVariant = product.variants.find(el => areArraysEqual(curr_options, el.options))
     if (!currVariant && curr_options.length === 3) {
