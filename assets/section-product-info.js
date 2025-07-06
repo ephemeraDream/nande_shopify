@@ -343,6 +343,7 @@ document.querySelectorAll(".product_info_option_select_item").forEach(el => {
     }
     setVariantOption()
     updateVariantPrice()
+    updateBuyBtns()
   })
 })
 function areArraysEqual(arr1, arr2) {
@@ -378,4 +379,12 @@ function moneyWithoutTrailingZeros(cents) {
   const final = formatted.replace(/\.0+$/, '').replace(/(\.\d*[1-9])0+$/, '$1');
 
   return `${symbol}${final}`;
+}
+function updateBuyBtns() {
+  const btns = document.querySelectorAll(".product_info_buybox_btns_btn")
+  if (currVariant.available) {
+    btns.forEach(item => item.classList.remove("disabled"))
+  } else {
+    btns.forEach(item => item.classList.add("disabled"))
+  }
 }

@@ -56,4 +56,11 @@
   font-variation-settings: "opsz" auto;
   color: #1F1F1F;
   cursor: pointer;
+  transition: opacity .6s ease, color .6s ease, background-position .4s ease-out;
+}
+
+.product_anchor_bar .product_anchor_bar_btn[disabled] {
+  opacity: .4;
+  background-position: 0 100%;
+  cursor: not-allowed;
 }
