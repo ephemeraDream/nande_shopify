@@ -475,12 +475,31 @@ document.querySelectorAll(".product_info_bundle_product").forEach(item => {
   item.addEventListener("click", () => {
     const total_price_el = document.querySelectorAll(".product_info_bundle_info_total")
     const price = Number(item.getAttribute("data-price"))
+    const id = item.getAttribute("data-id")
+    const accesories_box = document.querySelector(".product_info_steps_contain_item_box[data-type='accesories']")
+    const accesories_box_title = document.querySelector(".product_info_steps_contain_item_title[data-type='accesories']")
+    const title = item.querySelector(".product_info_bundle_product_title").innerHTML
     let total_price = moneyStringToCents(total_price_el[0].innerHTML)
     item.classList.toggle("selected")
     if (item.classList.contains("selected")) {
       total_price = total_price + price
+
+      const container = document.createElement('div');
+      container.className = 'product_info_steps_contain_item_box_line';
+      container.dataset.id = id;
+
+      container.innerHTML = `<span>${title}</span><span>${moneyWithoutTrailingZeros(price)}</span>`;
+      accesories_box.appendChild(container);
+      accesories_box.classList.remove("hidden")
+      accesories_box_title.classList.remove("hidden")
     } else {
       total_price = total_price - price
+
+      document.querySelector(`.product_info_steps_contain_item_box_line[data-id="${id}"]`).remove()
+      if (accesories_box.children.length === 0) {
+        accesories_box.classList.add("hidden")
+        accesories_box_title.classList.add("hidden")
+      }
     }
     total_price_el.forEach(el => el.innerHTML = moneyWithoutTrailingZeros(total_price))
   })

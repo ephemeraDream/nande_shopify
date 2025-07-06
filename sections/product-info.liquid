@@ -279,6 +279,7 @@
                     <div
                       class="product_info_bundle_product"
                       data-price="{{ bundled_product.selected_or_first_available_variant.price | default: bundled_product.price }}"
+                      data-id="{{ bundled_product.selected_or_first_available_variant.id | default: bundled_product.id }}"
                     >
                       <div class="product_info_bundle_product_img">
                         <img
@@ -343,11 +344,17 @@
             </div>
           {%- endfor -%}
         </div>
-        <div class="product_info_steps_contain_item_title" data-type="accesories">{{ 'common.accesories' | t }}</div>
-        <div class="product_info_steps_contain_item_box" data-type="accesories"></div>
+        <div class="product_info_steps_contain_item_title hidden" data-type="accesories">
+          {{ 'common.accesories' | t }}
+        </div>
+        <div class="product_info_steps_contain_item_box hidden" data-type="accesories"></div>
       </div>
       <div class="product_info_buybox">
-        <input type="hidden" name="goods_id" value="{{ product.selected_or_first_available_variant.id }}">
+        <input
+          type="hidden"
+          name="goods_id"
+          value="{{ product.selected_or_first_available_variant.id | default: product.id }}"
+        >
         <div class="product_info_buybox_contain">
           {% if bundle_products != blank %}
             <div class="product_info_bundle_prevnext">
