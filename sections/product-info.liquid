@@ -118,8 +118,20 @@
           {%- endcase -%}
         {%- endfor -%}
         <div class="product_info_price">
-          <div class="product_info_price_dp">{{ product.price | money_without_trailing_zeros }}</div>
-          <div class="product_info_price_op">{{ product.compare_at_price | money_without_trailing_zeros }}</div>
+          <div class="product_info_price_dp">
+            {{
+              product.selected_or_first_available_variant.price
+              | default: product.price
+              | money_without_trailing_zeros
+            }}
+          </div>
+          <div class="product_info_price_op">
+            {{
+              product.selected_or_first_available_variant.compare_at_price
+              | default: product.compare_at_price
+              | money_without_trailing_zeros
+            }}
+          </div>
           {%- if section.settings.show_tax_and_shipping -%}
             {%- if cart.taxes_included or shop.shipping_policy.body != blank -%}
               <div class="product_info_policies">
@@ -260,7 +272,10 @@
                   {% if bundled_product.metafields.custom.bundle_type.value.name == type %}
                     <div class="product_info_bundle_product">
                       <div class="product_info_bundle_product_img">
-                        <img src="{{ bundled_product.featured_media | image_url }}" alt="{{ bundled_product.title }}">
+                        <img
+                          src="{{ bundled_product.selected_or_first_available_variant.featured_media | default: bundled_product.featured_media | image_url }}"
+                          alt="{{ bundled_product.title }}"
+                        >
                         <div class="product_info_bundle_product_viewdetail">
                           {{- 'view-detail.svg' | inline_asset_content -}}
                         </div>

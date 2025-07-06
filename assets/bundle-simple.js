@@ -65,7 +65,11 @@ product_items.forEach(item => {
     const amount = cents / 100;
     const formatted = amount.toFixed(2);
 
-    const final = formatted.replace(/\.0+$/, '').replace(/(\.\d*[1-9])0+$/, '$1');
+    const trimmed = formatted
+      .replace(/\.0+$/, '')
+      .replace(/(\.\d*[1-9])0+$/, '$1');
+
+    const final = trimmed.replace('.', ',');
 
     return `${symbol}${final}`;
   }
