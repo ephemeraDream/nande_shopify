@@ -561,8 +561,8 @@
     "jetzt_kaufen": "Jetzt kaufen",
     "absenden": "Absenden",
     "schreibtisch_konfigurieren": "Schreibtisch konfigurieren",
-    "zubehör_wählen": "Zubehör wählen",
-    "auswahl_bestätigen": "Auswahl bestätigen",
+    "accessories_select": "Zubehör wählen",
+    "confirm_selection": "Auswahl bestätigen",
     "zuruck": "Zuruck",
     "weiter": "Weiter"
   }
