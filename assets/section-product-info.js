@@ -325,11 +325,6 @@ document.querySelectorAll(".product_info_option_select_item").forEach(el => {
     target.classList.add('product_info_option_select_item_select')
     curr_options[parent.getAttribute("data-index")] = target.getAttribute("data-value")
     currVariant = product.variants.find(el => areArraysEqual(curr_options, el.options))
-    if (currVariant) {
-      // img_contain.src = currVariant.featured_image.src
-      // price_contain.innerHTML = moneyWithoutTrailingZeros(currVariant.price)
-      setVariantOption()
-    }
     if (!currVariant && curr_options.length === 3) {
       currVariant = product.variants.find(
         (v) => v.option1 === curr_options[0] && v.option2 === curr_options[1]
@@ -344,11 +339,10 @@ document.querySelectorAll(".product_info_option_select_item").forEach(el => {
             el.classList.remove('product_info_option_select_item_select')
           }
         });
-        // img_contain.src = currVariant.featured_image.src
-        // price_contain.innerHTML = moneyWithoutTrailingZeros(currVariant.price)
-        setVariantOption()
       }
     }
+    setVariantOption()
+    updateVariantPrice()
   })
 })
 function areArraysEqual(arr1, arr2) {
@@ -363,4 +357,25 @@ function areArraysEqual(arr1, arr2) {
   }
 
   return true;
+}
+function updateVariantPrice() {
+  const price = moneyWithoutTrailingZeros(currVariant.price)
+  document.querySelectorAll(".product_info_price_dp").forEach(item => item.innerHTML = price)
+  if (currVariant.compare_at_price) {
+    const compare_at_price = moneyWithoutTrailingZeros(currVariant.compare_at_price)
+    document.querySelectorAll(".product_info_price_op").forEach(item => {
+      item.innerHTML = compare_at_price
+      item.classList.remove("hidden")
+    })
+  } else {
+    document.querySelectorAll(".product_info_price_op").forEach(item => item.classList.add("hidden"))
+  }
+}
+function moneyWithoutTrailingZeros(cents) {
+  const amount = cents / 100;
+  const formatted = amount.toFixed(2);
+
+  const final = formatted.replace(/\.0+$/, '').replace(/(\.\d*[1-9])0+$/, '$1');
+
+  return `${symbol}${final}`;
 }
