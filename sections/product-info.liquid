@@ -265,9 +265,11 @@
                           {{- 'view-detail.svg' | inline_asset_content -}}
                         </div>
                       </div>
-                      <div class="product_info_bundle_product_title">{{ bundled_product.title }}</div>
-                      <div class="product_info_bundle_product_price">
-                        +{{ bundled_product.price | money_without_trailing_zeros }}
+                      <div class="product_info_bundle_product_info">
+                        <div class="product_info_bundle_product_title">{{ bundled_product.title }}</div>
+                        <div class="product_info_bundle_product_price">
+                          +{{ bundled_product.price | money_without_trailing_zeros }}
+                        </div>
                       </div>
                     </div>
                   {% endif %}

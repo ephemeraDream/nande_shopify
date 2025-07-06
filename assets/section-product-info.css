@@ -904,8 +904,9 @@
 }
 
 .product_info_section .product_info_bundle_products_contain {
-  max-height: 77rem;
+  max-height: 75rem;
   overflow: auto;
+  margin-bottom: 2rem;
 }
 
 .product_info_section .product_info_bundle_products_type {
@@ -979,4 +980,10 @@
   color: #1F1F1F;
   padding: 0.6rem;
   padding-top: 0;
+}
+
+.product_info_section .product_info_bundle_product_info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
