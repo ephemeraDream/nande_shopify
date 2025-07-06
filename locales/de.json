@@ -560,9 +560,9 @@
     "key_features": "Key Features",
     "jetzt_kaufen": "Jetzt kaufen",
     "absenden": "Absenden",
-    "schreibtisch_konfigurieren": "Schreibtisch konfigurieren",
-    "accessories_select": "Zubehör wählen",
-    "confirm_selection": "Auswahl bestätigen",
+    "schreibtisch_konfigurieren": "Schreibtisch <br>konfigurieren",
+    "accessories_select": "Zubehör <br>wählen",
+    "confirm_selection": "Auswahl <br>bestätigen",
     "zuruck": "Zuruck",
     "weiter": "Weiter"
   }
