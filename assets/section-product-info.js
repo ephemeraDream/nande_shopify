@@ -333,7 +333,7 @@ document.querySelectorAll(".product_info_option_select_item").forEach(el => {
 
       if (currVariant) {
         curr_options[2] = currVariant.option3
-        item.querySelectorAll(`.product_info_option_select[data-index="2"] .product_info_option_select_item`).forEach(el => {
+        document.querySelectorAll(`.product_info_option_select[data-index="2"] .product_info_option_select_item`).forEach(el => {
           if (el.getAttribute("data-value") === currVariant.option3) {
             type === "circle" ? el.closest(".product_info_option_select_item_circle").add('bundle_simple_option_select_item_select') : el.classList.add('bundle_simple_option_select_item_select')
           } else {
