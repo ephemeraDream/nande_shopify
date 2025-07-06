@@ -311,3 +311,52 @@ function setVariantOption() {
     });
   });
 };
+document.querySelectorAll(".product_info_option_select_item").forEach(el => {
+  el.addEventListener("click", (event) => {
+    const target = event.target
+    if (target.classList.contains("product_info_option_select_item_select") || target.closest(".product_info_option_select_item_circle").classList.contains("product_info_option_select_item_select")) return
+    const parent = target.closest(".product_info_option_select")
+    const type = parent.getAttribute("select-type")
+    parent.querySelector('.product_info_option_select_item_select').classList.remove('product_info_option_select_item_select')
+    type === "circle" ? target.closest(".product_info_option_select_item_circle").classList.add('product_info_option_select_item_select') : target.classList.add('product_info_option_select_item_select')
+    curr_options[parent.getAttribute("data-index")] = target.getAttribute("data-value")
+    currVariant = product.variants.find(el => areArraysEqual(curr_options, el.options) && el.available)
+    if (currVariant) {
+      // img_contain.src = currVariant.featured_image.src
+      // price_contain.innerHTML = moneyWithoutTrailingZeros(currVariant.price)
+      setVariantOption()
+    }
+    if (!currVariant && curr_options.length === 3) {
+      currVariant = product.variants.find(
+        (v) => v.option1 === curr_options[0] && v.option2 === curr_options[1] && v.available
+      );
+
+      if (currVariant) {
+        curr_options[2] = currVariant.option3
+        item.querySelectorAll(`.product_info_option_select[data-index="2"] .product_info_option_select_item`).forEach(el => {
+          if (el.getAttribute("data-value") === currVariant.option3) {
+            type === "circle" ? el.closest(".product_info_option_select_item_circle").add('bundle_simple_option_select_item_select') : el.classList.add('bundle_simple_option_select_item_select')
+          } else {
+            type === "circle" ? el.closest(".product_info_option_select_item_circle").remove('bundle_simple_option_select_item_select') : el.classList.remove('bundle_simple_option_select_item_select')
+          }
+        });
+        // img_contain.src = currVariant.featured_image.src
+        // price_contain.innerHTML = moneyWithoutTrailingZeros(currVariant.price)
+        setVariantOption()
+      }
+    }
+  })
+})
+function areArraysEqual(arr1, arr2) {
+  if (arr1.length !== arr2.length) {
+    return false;
+  }
+
+  for (let i = 0; i < arr1.length; i++) {
+    if (arr1[i] !== arr2[i]) {
+      return false;
+    }
+  }
+
+  return true;
+}
