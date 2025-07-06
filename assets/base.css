@@ -398,7 +398,7 @@ h6,
   height: 2.4rem;
   display: inline-flex;
   align-items: center;
-  gap: 0.4rem;
+  padding: 0rem .6rem .3rem;
   background-color: #BDFF00;
   padding: 0 0.8rem;
   margin-top: 1rem;
@@ -417,7 +417,7 @@ h6,
   .nd-btn{
     height: 3.5rem;
     gap: 0.8rem;
-    padding: 0 0.8rem;
+    padding: 0rem .8rem .5rem;
     margin-top: 3rem;
     font-size: 2.4rem;
     line-height: 3rem;
@@ -3863,6 +3863,9 @@ a {
 /* polka_dot */
 .polka_dot_contain {
   position: absolute;
+}
+.polka_dot_contain .polka_dot_icon{
+  cursor: pointer;
   width: 4rem;
   height: 4rem;
   background-color: #BDFF00;
@@ -3870,6 +3873,15 @@ a {
   align-items: center;
   justify-content: center;
   z-index: 2;
+}
+@media only screen and (min-width: 1400px) {
+  .polka_dot_contain .polka_dot_icon{
+    width: 3rem;
+    height: 3rem;
+  }
+  .polka_dot_contain .polka_dot_icon svg{
+    width: 14px;
+  }
 }
 
 .polka_dot_product {
@@ -3919,4 +3931,27 @@ a {
   margin-top: 1.2rem;
   line-height: 1.3em;
   color: #000000;
+}
+
+/* text... */
+.truncate-3-lines {
+  display: -webkit-box;
+  line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.truncate-2-lines {
+  display: -webkit-box;
+  line-clamp: 2;  
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.truncate-1-lines {
+  display: -webkit-box;
+  line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }

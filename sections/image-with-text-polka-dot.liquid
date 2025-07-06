@@ -13,7 +13,7 @@
               class="polka_dot_contain"
               style="top: {{ block.settings.product_Y }}%;left: {{ block.settings.product_X }}%"
             >
-              {{- 'icon-plus.svg' | inline_asset_content -}}
+              <div class="polka_dot_icon">{{- 'icon-plus.svg' | inline_asset_content -}}</div>
               <a class="polka_dot_product" href="{{ block.settings.select_product.url }}">
                 <div class="polka_dot_product_img">
                   {{-
@@ -23,7 +23,7 @@
                   -}}
                 </div>
                 <div class="polka_dot_product_info">
-                  <h4 class="polka_dot_product_info_title">{{ block.settings.select_product.title }}</h4>
+                  <h4 class="truncate-2-lines">{{ block.settings.select_product.title }}</h4>
                   <div class="polka_dot_product_info_price text-body">
                     {{ block.settings.select_product.price | money_without_trailing_zeros }}
                     {{- 'icon-shopping-cart.svg' | inline_asset_content -}}
@@ -85,33 +85,6 @@
         "type": "url",
         "id": "link",
         "label": "link"
-    },
-    
-
-    {
-    "type": "product",
-    "id": "select_product",
-    "label": "product"
-    },
-    {
-    "type": "range",
-    "id": "product_X",
-    "min": 0,
-    "max": 100,
-    "step": 1,
-    "unit": "%",
-    "label": "product_X",
-    "default": 0
-    },
-    {
-    "type": "range",
-    "id": "product_Y",
-    "min": 0,
-    "max": 100,
-    "step": 1,
-    "unit": "%",
-    "label": "product_Y",
-    "default": 0
     }
   ],
   "blocks": [
@@ -149,3 +122,21 @@
     ]
 }
 {% endschema %}
+<script>
+    jQuery(function ($) {
+        $('.polka_dot_contain .polka_dot_icon').on('mouseenter', function () {
+          const $section = $(this).closest('section');          
+          $section.find('.polka_dot_product').hide();           
+          $(this)                                            
+            .closest('.polka_dot_contain')
+            .find('.polka_dot_product')
+            .show();
+        });
+        $('.polka_dot_contain .polka_dot_icon').on('mouseleave', function () {
+          const $section = $(this).closest('section');
+          $section.find('.polka_dot_product').hide();           
+        });
+      
+      });
+      
+</script>

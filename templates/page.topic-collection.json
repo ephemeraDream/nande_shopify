@@ -53,8 +53,8 @@
           "type": "product_item",
           "settings": {
             "select_product": "maidesite-tischgestell-elektrisch-hohenverstellbar-t2-pro-plus",
-            "product_X": 31,
-            "product_Y": 37
+            "product_X": 28,
+            "product_Y": 42
           }
         },
         "product_block_2": {
@@ -77,9 +77,6 @@
         "btn_text": "En savoir plus",
         "image": "shopify://shop_images/polka_dot_img01.webp",
         "link": "",
-        "select_product": "maidesite-3-fach-tischsteckdose-mit-usb-c-und-a-1-8m-kabel-steckdosenleiste",
-        "product_X": 0,
-        "product_Y": 0
       }
     },
     "main": {
