@@ -58,5 +58,5 @@
             "settings": {}
         }
     },
-    "order": ["banner_topic", "main"]
+    "order": ["banner_topic","image_with_text_polka_dot", "main"]
   }
