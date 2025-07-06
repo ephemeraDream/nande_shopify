@@ -289,7 +289,10 @@ function setVariantOption() {
     if (selectorIndex < 2) return
     const options = selector.querySelectorAll('.product_info_option_select_item');
 
-    options.forEach(opt => opt.classList.add('hidden'));
+    options.forEach(opt => {
+      opt.classList.add('hidden')
+      // opt.classList.remove('product_info_option_select_item_unavailable')
+    });
 
     product.variants.forEach((variant) => {
       let matchCount = 0;
@@ -305,8 +308,9 @@ function setVariantOption() {
           return opt.getAttribute("data-value") === variant.options[selectorIndex];
         });
 
-        if (optionEl && variant.available) {
+        if (optionEl) {
           optionEl.classList.remove("hidden");
+          // if (!variant.available) optionEl.classList.add("product_info_option_select_item_unavailable");
         }
       }
     });
@@ -320,7 +324,7 @@ document.querySelectorAll(".product_info_option_select_item").forEach(el => {
     parent.querySelector('.product_info_option_select_item_select').classList.remove('product_info_option_select_item_select')
     target.classList.add('product_info_option_select_item_select')
     curr_options[parent.getAttribute("data-index")] = target.getAttribute("data-value")
-    currVariant = product.variants.find(el => areArraysEqual(curr_options, el.options) && el.available)
+    currVariant = product.variants.find(el => areArraysEqual(curr_options, el.options))
     if (currVariant) {
       // img_contain.src = currVariant.featured_image.src
       // price_contain.innerHTML = moneyWithoutTrailingZeros(currVariant.price)
@@ -328,7 +332,7 @@ document.querySelectorAll(".product_info_option_select_item").forEach(el => {
     }
     if (!currVariant && curr_options.length === 3) {
       currVariant = product.variants.find(
-        (v) => v.option1 === curr_options[0] && v.option2 === curr_options[1] && v.available
+        (v) => v.option1 === curr_options[0] && v.option2 === curr_options[1]
       );
 
       if (currVariant) {
