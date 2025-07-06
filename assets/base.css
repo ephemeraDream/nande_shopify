@@ -3865,7 +3865,7 @@ a {
 
 /********************** image-with-text-polka-dot **********************/
 
-.polka_dot_img_with_text {
+/* .polka_dot_img_with_text {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -3920,7 +3920,7 @@ a {
       gap: 20px;
       padding: 20px;
   }
-}
+} */
 /********************** image-with-text-polka-dot end**********************/
 
 /**************** polka_dot *************************/
