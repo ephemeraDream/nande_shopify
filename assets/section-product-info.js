@@ -344,6 +344,7 @@ document.querySelectorAll(".product_info_option_select_item").forEach(el => {
     setVariantOption()
     updateVariantPrice()
     updateBuyBtns()
+    updateUrl()
   })
 })
 function areArraysEqual(arr1, arr2) {
@@ -383,4 +384,9 @@ function moneyWithoutTrailingZeros(cents) {
 function updateBuyBtns() {
   const btns = document.querySelectorAll(".product_info_buybox_btns_btn")
   btns.forEach(item => item.toggleAttribute("disabled", !currVariant.available))
+}
+function updateUrl() {
+  const url = new URL(window.location.href);
+  url.searchParams.set("variant", currVariant.id);
+  window.history.replaceState(null, "", url.toString());
 }
