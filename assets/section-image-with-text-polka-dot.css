@@ -46,7 +46,10 @@
         margin-top: 30px;
         flex-direction: column;
     }
-    .polka_dot_img_with_text_text {
+    .polka_dot_img_with_text.right {
+        flex-direction: column;
+    }
+    .polka_dot_img_with_text_text,.polka_dot_img_with_text.right .polka_dot_img_with_text_text {
         flex-direction: column;
         justify-content: center;
         gap: 20px;
