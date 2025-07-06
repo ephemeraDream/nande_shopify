@@ -407,10 +407,13 @@ function moneyWithoutTrailingZeros(cents) {
   const trimmed = formatted
     .replace(/\.0+$/, '')
     .replace(/(\.\d*[1-9])0+$/, '$1');
+  const parts = trimmed.split('.');
+  let integerPart = parts[0];
+  const decimalPart = parts[1] || '';
+  integerPart = integerPart.replace(/\B(?=(\d{3})+(?!\d))/g, '.');
+  const final = decimalPart ? `${integerPart},${decimalPart}` : integerPart;
 
-  const final = trimmed.replace('.', ',');
-
-  return `${symbol}${final}`;
+  return `${final} ${symbol}`;
 }
 function updateBuyBtns() {
   const btns = document.querySelectorAll(".product_info_buybox_btns_btn")
@@ -463,4 +466,29 @@ function switchStep() {
     nextBtn.classList.remove("active")
     prevBtn.classList.add("active")
   }
+}
+// 捆绑产品选择
+document.querySelectorAll(".product_info_bundle_product").forEach(item => {
+  item.addEventListener("click", () => {
+    const total_price_el = document.querySelector(".product_info_bundle_info_total")
+    const price = Number(item.getAttribute("data-price"))
+    let total_price = moneyStringToCents(total_price_el.innerHTML)
+    item.classList.toggle("selected")
+    if (item.classList.contains("selected")) {
+      total_price = total_price + price
+    } else {
+      total_price = total_price - price
+    }
+    total_price_el.innerHTML = moneyWithoutTrailingZeros(total_price)
+  })
+})
+function moneyStringToCents(moneyStr) {
+  let clean = moneyStr.replace(/[^\d,.-]/g, '');
+  clean = clean.replace(/\./g, '');
+  clean = clean.replace(',', '.');
+  const amount = parseFloat(clean);
+
+  if (isNaN(amount)) return null;
+
+  return Math.round(amount * 100);
 }

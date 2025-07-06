@@ -251,7 +251,13 @@
         <div class="product_info_bundle_info">
           <div class="product_info_bundle_info_title">{{ 'common.gesamtsumme' | t }}</div>
           <div class="product_info_bundle_info_right">
-            <span class="product_info_bundle_info_total">{{ product.price | money_without_trailing_zeros }}</span>
+            <span class="product_info_bundle_info_total product_info_price_dp">
+              {{-
+                product.selected_or_first_available_variant.price
+                | default: product.price
+                | money_without_trailing_zeros
+              -}}
+            </span>
             {%- if section.settings.show_tax_and_shipping -%}
               {%- if cart.taxes_included or shop.shipping_policy.body != blank -%}
                 <div class="product_info_policies">
@@ -270,7 +276,10 @@
               <div class="product_info_bundle_products_type_group">
                 {% for bundled_product in bundle_products %}
                   {% if bundled_product.metafields.custom.bundle_type.value.name == type %}
-                    <div class="product_info_bundle_product">
+                    <div
+                      class="product_info_bundle_product"
+                      data-price="{{ bundled_product.selected_or_first_available_variant.price | default: bundled_product.price }}"
+                    >
                       <div class="product_info_bundle_product_img">
                         <img
                           src="{{ bundled_product.selected_or_first_available_variant.featured_media | default: bundled_product.featured_media | image_url }}"
@@ -283,7 +292,12 @@
                       <div class="product_info_bundle_product_info">
                         <div class="product_info_bundle_product_title">{{ bundled_product.title }}</div>
                         <div class="product_info_bundle_product_price">
-                          +{{ bundled_product.price | money_without_trailing_zeros }}
+                          +
+                          {{-
+                            bundled_product.selected_or_first_available_variant.price
+                            | default: bundled_product.price
+                            | money_without_trailing_zeros
+                          }}
                         </div>
                       </div>
                     </div>
@@ -409,8 +423,20 @@
             </div>
           {% endif %}
           <div class="product_info_price">
-            <div class="product_info_price_dp">{{ product.price | money_without_trailing_zeros }}</div>
-            <div class="product_info_price_op">{{ product.compare_at_price | money_without_trailing_zeros }}</div>
+            <div class="product_info_price_dp">
+              {{
+                product.selected_or_first_available_variant.price
+                | default: product.price
+                | money_without_trailing_zeros
+              }}
+            </div>
+            <div class="product_info_price_op">
+              {{
+                product.selected_or_first_available_variant.compare_at_price
+                | default: product.compare_at_price
+                | money_without_trailing_zeros
+              }}
+            </div>
             {%- if section.settings.show_tax_and_shipping -%}
               {%- if cart.taxes_included or shop.shipping_policy.body != blank -%}
                 <div class="product_info_policies">

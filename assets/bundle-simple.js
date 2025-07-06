@@ -68,10 +68,13 @@ product_items.forEach(item => {
     const trimmed = formatted
       .replace(/\.0+$/, '')
       .replace(/(\.\d*[1-9])0+$/, '$1');
+    const parts = trimmed.split('.');
+    let integerPart = parts[0];
+    const decimalPart = parts[1] || '';
+    integerPart = integerPart.replace(/\B(?=(\d{3})+(?!\d))/g, '.');
+    const final = decimalPart ? `${integerPart},${decimalPart}` : integerPart;
 
-    const final = trimmed.replace('.', ',');
-
-    return `${symbol}${final}`;
+    return `${final} ${symbol}`;
   }
 
   select_item.forEach(el => {
