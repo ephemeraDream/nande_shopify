@@ -386,6 +386,11 @@
   z-index: 1;
 }
 
+.product_info .product_info_option_select[select-type="circle"] .product_info_option_select_item_none {
+  display: block;
+  position: relative;
+}
+
 .product_info .product_info_option_select[select-type="circle"] .product_info_option_select_item_none::before {
   content: '';
   position: absolute;
