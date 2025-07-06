@@ -77,6 +77,41 @@
         "btn_text": "En savoir plus",
         "image": "shopify://shop_images/polka_dot_img01.webp",
         "link": "",
+        "layout": "image-left"
+      }
+    },
+    "image_with_text_polka_dot_right": {
+      "type": "image-with-text-polka-dot",
+      "blocks": {
+        "product_block_1": {
+          "type": "product_item",
+          "settings": {
+            "select_product": "maidesite-tischgestell-elektrisch-hohenverstellbar-t2-pro-plus",
+            "product_X": 34,
+            "product_Y": 48
+          }
+        },
+        "product_block_2": {
+          "type": "product_item",
+          "settings": {
+            "select_product": "maidesite-th2-pro-plus-tischgestell-elektrisch-hohenverstellbar",
+            "product_X": 79,
+            "product_Y": 63
+          }
+        }
+      },
+      "block_order": [
+        "product_block_1",
+        "product_block_2"
+      ],
+      "settings": {
+        "small_title": "Maidesite SPACES",
+        "title": "Yoga HöHenverstellbare Schreibtische",
+        "text": "<p>Die beste Wahl für alle Yoga-Enthusiasten, die Komfort und Qualität schätzen. <br/>Diese hochwertigen Schreibtische sind ideal für Yoga- und Meditationen-Tätigkeiten.</p>",
+        "btn_text": "En savoir plus",
+        "image": "shopify://shop_images/polka_dot_img01.webp",
+        "link": "",
+        "layout": "image-right"
       }
     },
     "main": {
