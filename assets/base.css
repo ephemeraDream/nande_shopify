@@ -3896,6 +3896,10 @@ a {
   display: flex;
   align-items: stretch;
 }
+.polka_dot_product.left{
+  left: 0;
+  right: auto;
+}
 
 .polka_dot_product_img {
   background-color: #fff;
