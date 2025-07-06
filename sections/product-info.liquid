@@ -172,12 +172,14 @@
                   <div
                     data-value="{{ value }}"
                     class="product_info_option_select_item{% if value.selected %} product_info_option_select_item_select{% endif %}"
-                    {% if color != '' %}
-                      style="background-color: {{ color }}"
-                    {% endif %}
                     title="{{ value }}"
                   >
-                    {% if color == '' %}<div class="product_info_option_select_item_none"></div>{% endif %}
+                    <div
+                      class="product_info_option_select_item_circle{% if color == '' %} product_info_option_select_item_none{% endif %}"
+                      {% if color != '' %}
+                        style="background-color: {{ color }}"
+                      {% endif %}
+                    ></div>
                   </div>
                 {% else %}
                   <div

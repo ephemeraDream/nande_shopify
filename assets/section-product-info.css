@@ -403,10 +403,6 @@
   transform-origin: center;
 }
 
-.product_info .product_info_option_select[select-type="circle"] .product_info_option_select_item_select {
-  position: relative;
-}
-
 .product_info .product_info_option_select[select-type="circle"] .product_info_option_select_item_select::before {
   content: '';
   width: 4.6rem;
