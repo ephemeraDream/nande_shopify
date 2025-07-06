@@ -277,12 +277,13 @@ function initBuybox() {
     });
 }
 // 变体切换
-setVariantOption()
+
 const product_data = JSON.parse(document.getElementById('product_info_data').textContent);
 const product = product_data.product
 let currVariant = product_data.variant
 const symbol = product_data.symbol
 const curr_options = [...currVariant.options]
+setVariantOption()
 function setVariantOption() {
   document.querySelectorAll(".product_info_option_select").forEach((selector, selectorIndex) => {
     if (selectorIndex < 2) return
