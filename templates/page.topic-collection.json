@@ -53,16 +53,16 @@
           "type": "product_item",
           "settings": {
             "select_product": "maidesite-tischgestell-elektrisch-hohenverstellbar-t2-pro-plus",
-            "product_X": 28,
-            "product_Y": 42
+            "product_X": 34,
+            "product_Y": 48
           }
         },
         "product_block_2": {
           "type": "product_item",
           "settings": {
             "select_product": "maidesite-th2-pro-plus-tischgestell-elektrisch-hohenverstellbar",
-            "product_X": 52,
-            "product_Y": 45
+            "product_X": 79,
+            "product_Y": 63
           }
         }
       },
