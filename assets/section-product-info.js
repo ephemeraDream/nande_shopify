@@ -256,31 +256,45 @@ function initBuybox() {
               method: "POST",
               headers: { "Content-Type": "application/json" },
               body: JSON.stringify(cartFormData),
-            });
+            }).then(() => fetch('/cart.js'))
+              .then(res => res.json())
+              .then(cart => {
+                return fetch(window.location.pathname + '?sections=cart-drawer,cart-icon-bubble')
+                  .then(res => res.json())
+                  .then((parsedState) => {
+                    const cartDrawerEl = document.querySelector('cart-drawer');
+                    if (cartDrawerEl && typeof cartDrawerEl.renderContents === 'function') {
+                      cartDrawerEl.renderContents({
+                        id: cart.token,
+                        sections: parsedState
+                      });
+                    }
+                  });
+              });
           } finally {
             btn.classList.remove("is-loading");
 
-            fetch(`${routes.cart_url}?sections=cart-drawer`)
-              .then((response) => response.json())
-              .then((sections) => {
-                const sectionIds = ['cart-drawer'];
-                for (const sectionId of sectionIds) {
-                  const htmlString = sections[sectionId];
-                  const html = new DOMParser().parseFromString(htmlString, 'text/html');
-                  const sourceElement = html.querySelector(`${sectionId}`);
-                  const targetElement = document.querySelector(`${sectionId}`);
-                  if (targetElement && sourceElement) {
-                    targetElement.replaceWith(sourceElement);
-                  }
-                }
-                document.body.classList.add('overflow-hidden');
-                const theme_cart = document.querySelector('cart-notification') || document.querySelector('cart-drawer');
-                if (theme_cart && theme_cart.classList.contains('is-empty')) theme_cart.classList.remove('is-empty');
-                theme_cart.classList.add('animate', 'active');
-              })
-              .catch((e) => {
-                console.error('Error updating cart sections:', e);
-              });
+            // fetch(`${routes.cart_url}?sections=cart-drawer`)
+            //   .then((response) => response.json())
+            //   .then((sections) => {
+            //     const sectionIds = ['cart-drawer'];
+            //     for (const sectionId of sectionIds) {
+            //       const htmlString = sections[sectionId];
+            //       const html = new DOMParser().parseFromString(htmlString, 'text/html');
+            //       const sourceElement = html.querySelector(`${sectionId}`);
+            //       const targetElement = document.querySelector(`${sectionId}`);
+            //       if (targetElement && sourceElement) {
+            //         targetElement.replaceWith(sourceElement);
+            //       }
+            //     }
+            //     document.body.classList.add('overflow-hidden');
+            //     const theme_cart = document.querySelector('cart-notification') || document.querySelector('cart-drawer');
+            //     if (theme_cart && theme_cart.classList.contains('is-empty')) theme_cart.classList.remove('is-empty');
+            //     theme_cart.classList.add('animate', 'active');
+            //   })
+            //   .catch((e) => {
+            //     console.error('Error updating cart sections:', e);
+            //   });
           }
         }
         if (type === "buy_it_now") {
