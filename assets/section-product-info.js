@@ -335,9 +335,9 @@ document.querySelectorAll(".product_info_option_select_item").forEach(el => {
         curr_options[2] = currVariant.option3
         document.querySelectorAll(`.product_info_option_select[data-index="2"] .product_info_option_select_item`).forEach(el => {
           if (el.getAttribute("data-value") === currVariant.option3) {
-            type === "circle" ? el.closest(".product_info_option_select_item_circle").add('bundle_simple_option_select_item_select') : el.classList.add('bundle_simple_option_select_item_select')
+            type === "circle" ? el.closest(".product_info_option_select_item_circle").add('product_info_option_select_item_select') : el.classList.add('product_info_option_select_item_select')
           } else {
-            type === "circle" ? el.closest(".product_info_option_select_item_circle").remove('bundle_simple_option_select_item_select') : el.classList.remove('bundle_simple_option_select_item_select')
+            type === "circle" ? el.closest(".product_info_option_select_item_circle").remove('product_info_option_select_item_select') : el.classList.remove('product_info_option_select_item_select')
           }
         });
         // img_contain.src = currVariant.featured_image.src
