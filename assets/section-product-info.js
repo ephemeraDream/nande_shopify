@@ -382,9 +382,5 @@ function moneyWithoutTrailingZeros(cents) {
 }
 function updateBuyBtns() {
   const btns = document.querySelectorAll(".product_info_buybox_btns_btn")
-  if (currVariant.available) {
-    btns.forEach(item => item.classList.remove("disabled"))
-  } else {
-    btns.forEach(item => item.classList.add("disabled"))
-  }
+  btns.forEach(item => item.toggleAttribute("disabled", !currVariant.available))
 }
