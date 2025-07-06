@@ -1,4 +1,16 @@
 {{ 'section-product-info.css' | asset_url | stylesheet_tag }}
+{% assign bundle_products = product.metafields.custom.bundle_products.value %}
+{% assign accessory_types = '' %}
+
+{% for bundled_product in bundle_products %}
+  {% assign type = bundled_product.metafields.custom.bundle_type.value | strip %}
+
+  {% unless accessory_types contains type %}
+    {% assign accessory_types = accessory_types | append: type | append: ',' %}
+  {% endunless %}
+{% endfor %}
+
+{%- assign accessory_type_array = accessory_types | split: ',' | uniq -%}
 
 <div class="product_info_section padding-sider">
   <div class="product_info">
@@ -82,20 +94,22 @@
       </div>
     </div>
     <div class="product_info_right">
-      <div class="product_info_steps">
-        <div class="product_info_steps_item active">
-          <span>1.</span>
-          <span>{{ 'common.schreibtisch_konfigurieren' | t }}</span>
+      {% if bundle_products != blank %}
+        <div class="product_info_steps">
+          <div class="product_info_steps_item active">
+            <span>1.</span>
+            <span>{{ 'common.schreibtisch_konfigurieren' | t }}</span>
+          </div>
+          <div class="product_info_steps_item">
+            <span>2.</span>
+            <span>{{ 'common.accessories_select' | t }}</span>
+          </div>
+          <div class="product_info_steps_item">
+            <span>3.</span>
+            <span>{{ 'common.confirm_selection' | t }}</span>
+          </div>
         </div>
-        <div class="product_info_steps_item">
-          <span>2.</span>
-          <span>{{ 'common.accessories_select' | t }}</span>
-        </div>
-        <div class="product_info_steps_item">
-          <span>3.</span>
-          <span>{{ 'common.confirm_selection' | t }}</span>
-        </div>
-      </div>
+      {% endif %}
       <div class="product_info_steps_contain" data-index="0">
         <div class="product_info_title">{{ product.title }}</div>
         {%- for block in section.blocks -%}
@@ -222,21 +236,64 @@
           {% endfor %}
         </div>
       </div>
-      <div class="product_info_steps_contain hidden" data-index="1"></div>
+      <div class="product_info_steps_contain hidden" data-index="1">
+        <div class="product_info_bundle_info">
+          <div class="product_info_bundle_info_title">{{ 'common.gesamtsumme' | t }}</div>
+          <div class="product_info_bundle_info_right">
+            <span class="product_info_bundle_info_total">{{ product.price | money_without_trailing_zeros }}</span>
+            {%- if section.settings.show_tax_and_shipping -%}
+              {%- if cart.taxes_included or shop.shipping_policy.body != blank -%}
+                <div class="product_info_policies">
+                  {%- if cart.taxes_included -%}
+                    {{ 'products.product.include_taxes' | t }}
+                  {%- endif -%}
+                </div>
+              {%- endif -%}
+            {%- endif -%}
+          </div>
+        </div>
+        <div class="product_info_bundle_products_contain">
+          {% for type in accessory_type_array %}
+            {% unless type == '' %}
+              <div class="product_info_bundle_products_type">{{ type }}</div>
+              <div class="product_info_bundle_products_type_group">
+                {% for bundled_product in bundle_products %}
+                  {% if bundled_product.metafields.custom.bundle_type.value == type %}
+                    <div class="product_info_bundle_product">
+                      <div class="product_info_bundle_product_img">
+                        <img src="{{ product.featured_media | image_url }}" alt="{{ product.title }}">
+                        <div class="product_info_bundle_product_viewdetail">
+                          {{- 'view-detail.svg' | inline_asset_content -}}
+                        </div>
+                      </div>
+                      <div class="product_info_bundle_product_title">{{ product.title }}</div>
+                      <div class="product_info_bundle_product_price">
+                        +{{ product.price | money_without_trailing_zeros }}
+                      </div>
+                    </div>
+                  {% endif %}
+                {% endfor %}
+              </div>
+            {% endunless %}
+          {% endfor %}
+        </div>
+      </div>
       <div class="product_info_steps_contain hidden" data-index="2"></div>
       <div class="product_info_buybox">
         <input type="hidden" name="goods_id" value="{{ product.selected_or_first_available_variant.id }}">
         <div class="product_info_buybox_contain">
-          <div class="product_info_bundle_prevnext">
-            <div class="product_info_bundle_prevnext_btn" data-type="prev">
-              {{ 'icon-right-arrow.svg' | inline_asset_content }}
-              {{ 'common.zuruck' | t }}
+          {% if bundle_products != blank %}
+            <div class="product_info_bundle_prevnext">
+              <div class="product_info_bundle_prevnext_btn" data-type="prev">
+                {{ 'icon-right-arrow.svg' | inline_asset_content }}
+                {{ 'common.zuruck' | t }}
+              </div>
+              <div class="product_info_bundle_prevnext_btn active" data-type="next">
+                {{ 'common.weiter' | t }}
+                {{ 'icon-right-arrow.svg' | inline_asset_content }}
+              </div>
             </div>
-            <div class="product_info_bundle_prevnext_btn active" data-type="next">
-              {{ 'common.weiter' | t }}
-              {{ 'icon-right-arrow.svg' | inline_asset_content }}
-            </div>
-          </div>
+          {% endif %}
           <div class="product_info_buybox_quantity_box">
             <span class="product_info_buybox_quantity_btn" data-type="minus">
               {{ 'quantity-minus.svg' | inline_asset_content }}
