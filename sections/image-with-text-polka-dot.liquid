@@ -8,7 +8,7 @@
             | image_tag: alt: section.settings.title
           -}}
         {% for block in section.blocks %}
-        {%- if block.type == 'product' -%}
+        {%- if block.type == 'product_item' -%}
             <div
               class="polka_dot_contain"
               style="top: {{ block.settings.product_Y }}%;left: {{ block.settings.product_X }}%"
