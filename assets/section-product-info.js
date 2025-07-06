@@ -421,7 +421,7 @@ function updateUrl() {
 document.querySelectorAll(".product_info_steps_item").forEach(item => {
   item.addEventListener("click", (_, index) => {
     if (item.classList.contains("active")) return
-    document.querySelectorAll(".product_info_steps_item.active").classList.remove("active")
+    document.querySelector(".product_info_steps_item.active").classList.remove("active")
     item.classList.add("active")
     document.querySelectorAll(".product_info_steps_contain").forEach((el, el_index) => {
       el.classList.add("hidden")
