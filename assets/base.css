@@ -361,6 +361,7 @@ h3,
 h4,
 .h4 {
   font-size: calc(var(--font-heading-scale) * 1.6rem);
+  line-height: 1em;
 }
 @media only screen and (min-width: 750px) {
   h4,
@@ -3921,6 +3922,7 @@ a {
 }
 
 .polka_dot_product_info_title {
+  font-size: 2.4rem;
   color: #000000;
 }
 
