@@ -380,10 +380,21 @@
   width: 3.2rem;
   height: 3.2rem;
   border-radius: 50%;
-  box-shadow: inset 0px 0.1rem 0.1rem 0px rgba(0, 0, 0, 0.2);
   position: relative;
   cursor: pointer;
+}
+
+.product_info .product_info_option_select[select-type="circle"] .product_info_option_select_item_circle {
+  box-shadow: inset 0px 0.1rem 0.1rem 0px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
   z-index: 1;
+  position: relative;
+}
+
+.product_info .product_info_option_select[select-type="circle"] .product_info_option_select_item_none {
+  background-color: #f2f1ed;
 }
 
 .product_info .product_info_option_select[select-type="circle"] .product_info_option_select_item_none::before {
@@ -396,10 +407,6 @@
   background-color: red;
   transform: translate(-50%, -50%) rotate(-45deg);
   transform-origin: center;
-}
-
-.product_info .product_info_option_select[select-type="circle"] .product_info_option_select_item_select {
-  position: relative;
 }
 
 .product_info .product_info_option_select[select-type="circle"] .product_info_option_select_item_select::before {
@@ -484,6 +491,8 @@
   color: #1F1F1F;
   background: #F2F1ED;
   cursor: pointer;
+  position: relative;
+  transition: opacity .6s ease, color .6s ease, background-position .4s ease-out;
 }
 
 .product_info .product_info_buybox_btns_btn svg {
@@ -730,6 +739,8 @@
   color: #1F1F1F;
   background-color: #fff;
   cursor: pointer;
+  position: relative;
+  transition: opacity .6s ease, color .6s ease, background-position .4s ease-out;
 }
 
 .product_info_section .product_info_bottom_bar .product_info_buybox_btns_btn:hover {
@@ -766,4 +777,10 @@
   height: 100%;
   object-fit: cover;
   object-position: center center;
+}
+
+.product_info_section .product_info_buybox_btns_btn[disabled] {
+  opacity: .4;
+  background-position: 0 100%;
+  cursor: not-allowed;
 }

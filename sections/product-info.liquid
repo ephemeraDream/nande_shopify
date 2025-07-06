@@ -78,7 +78,7 @@
         {%- endcase -%}
       {%- endfor -%}
       <div class="product_info_price">
-        {{ product.price | money_without_trailing_zeros }}
+        <div class="product_info_price_dp">{{ product.price | money_without_trailing_zeros }}</div>
         <div class="product_info_price_op">{{ product.compare_at_price | money_without_trailing_zeros }}</div>
         {%- if section.settings.show_tax_and_shipping -%}
           {%- if cart.taxes_included or shop.shipping_policy.body != blank -%}
@@ -169,14 +169,16 @@
                       {% assign color = color_item.value %}
                     {% endif %}
                   {% endfor %}
-                  <div class="product_info_option_select_item_circle{% if value.selected %} product_info_option_select_item_select{% endif %}">
+                  <div
+                    data-value="{{ value }}"
+                    class="product_info_option_select_item{% if value.selected %} product_info_option_select_item_select{% endif %}"
+                    title="{{ value }}"
+                  >
                     <div
-                      data-value="{{ value }}"
-                      class="product_info_option_select_item{% if color == '' %} product_info_option_select_item_none{% endif %}"
+                      class="product_info_option_select_item_circle{% if color == '' %} product_info_option_select_item_none{% endif %}"
                       {% if color != '' %}
                         style="background-color: {{ color }}"
                       {% endif %}
-                      title="{{ value }}"
                     ></div>
                   </div>
                 {% else %}
@@ -294,7 +296,7 @@
             </div>
           {% endif %}
           <div class="product_info_price">
-            {{ product.price | money_without_trailing_zeros }}
+            <div class="product_info_price_dp">{{ product.price | money_without_trailing_zeros }}</div>
             <div class="product_info_price_op">{{ product.compare_at_price | money_without_trailing_zeros }}</div>
             {%- if section.settings.show_tax_and_shipping -%}
               {%- if cart.taxes_included or shop.shipping_policy.body != blank -%}
@@ -353,6 +355,19 @@
   </div>
 </div>
 
+<script type="application/json" id="product_info_data">
+  {% for currency in shop.enabled_currencies %}
+    {% if currency.iso_code == shop.currency %}
+      {%- assign currency_symbol = currency.symbol -%}
+      {% break %}
+    {% endif %}
+  {% endfor %}
+  {
+    "product": {{- product | json -}},
+    "variant": {{ product.selected_or_first_available_variant | json }},
+    "symbol": {{ currency_symbol | json }}
+  }
+</script>
 <script src="{{ 'section-product-info.js' | asset_url  }}" defer></script>
 
 {% schema %}
