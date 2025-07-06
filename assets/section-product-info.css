@@ -904,8 +904,9 @@
 }
 
 .product_info_section .product_info_bundle_products_contain {
-  max-height: 77rem;
+  max-height: 75rem;
   overflow: auto;
+  margin-bottom: 2rem;
 }
 
 .product_info_section .product_info_bundle_products_type {
@@ -916,7 +917,7 @@
   letter-spacing: 0px;
   font-variation-settings: "opsz" auto;
   color: #7F7E75;
-  padding: 0 1.6rem;
+  padding: 1.6rem 0;
 }
 
 .product_info_section .product_info_bundle_products_type_group {
@@ -932,6 +933,7 @@
   flex-direction: column;
   background-color: #FFF;
   border: 0.1rem solid #E2DED6;
+  cursor: pointer;
 }
 
 .product_info_section .product_info_bundle_product_img {
@@ -978,4 +980,10 @@
   color: #1F1F1F;
   padding: 0.6rem;
   padding-top: 0;
+}
+
+.product_info_section .product_info_bundle_product_info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
