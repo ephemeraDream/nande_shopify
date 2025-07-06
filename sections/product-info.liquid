@@ -3,7 +3,7 @@
 {% assign accessory_types = '' %}
 
 {% for bundled_product in bundle_products %}
-  {% assign type = bundled_product.metafields.custom.bundle_type.value | strip %}
+  {% assign type = bundled_product.metafields.custom.bundle_type.value.name | strip %}
 
   {% unless accessory_types contains type %}
     {% assign accessory_types = accessory_types | append: type | append: ',' %}
