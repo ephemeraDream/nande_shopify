@@ -31,63 +31,63 @@
     <!-- Tab 面板 -->
     {% assign last_index = tab_index | minus: 1 %}
     {% for i in (0..last_index) %}
-        <div class="tab-panel{% unless forloop.first %} hidden{% endunless %}" data-tab-panel="{{ i }}">
-        <div class="swiper swiper-{{ i }}">
-            <div class="swiper-wrapper">
-            {%- for block in section.blocks -%}
-                {%- assign i_str = i | append: '' -%}
-                {%- if block.type == 'slide' and block.settings.belong_tab == i_str -%}
-                <div class="swiper-slide" {{ block.shopify_attributes }}>
-                    {{-
-                        block.settings.image
-                        | image_url: width: block.settings.image.width
-                        | image_tag: alt: block.settings.title, class: 'polka_dot_swiper_img'
-                        -}}
-                    <div class="polka_dot_swiper_info">
-                        <div>
-                        <div class="polka_dot_swiper_info_title">{{ block.settings.title }}</div>
-                        <div class="polka_dot_swiper_info_text">{{ block.settings.text }}</div>
-                        </div>
-                        {% if block.settings.btn_text != blank %}
-                        <a class="polka_dot_swiper_info_btn" href="{{ block.settings.link }}">
-                            {{ block.settings.btn_text }}
-                            {{ 'icon-right-arrow.svg' | inline_asset_content }}
-                        </a>
-                        {% endif %}
+    <div class="tab-panel{% unless forloop.first %} hidden{% endunless %}" data-tab-panel="{{ i }}">
+    <div class="swiper swiper-{{ i }}">
+        <div class="swiper-wrapper">
+        {%- for block in section.blocks -%}
+            {%- assign i_str = i | append: '' -%}
+            {%- if block.type == 'slide' and block.settings.belong_tab == i_str -%}
+            <div class="swiper-slide" {{ block.shopify_attributes }}>
+                {{-
+                    block.settings.image
+                    | image_url: width: block.settings.image.width
+                    | image_tag: alt: block.settings.title, class: 'polka_dot_swiper_img'
+                    -}}
+                <div class="polka_dot_swiper_info">
+                    <div>
+                    <div class="polka_dot_swiper_info_title">{{ block.settings.title }}</div>
+                    <div class="polka_dot_swiper_info_text">{{ block.settings.text }}</div>
                     </div>
-                    {% if block.settings.select_product != blank %}
-                        <div
-                            class="polka_dot_swiper_contain"
-                            style="top: {{ block.settings.product_Y }}%;left: {{ block.settings.product_X }}%"
-                        >
-                            {{- 'icon-plus.svg' | inline_asset_content -}}
-                            <a class="polka_dot_swiper_product" href="{{ block.settings.select_product.url }}">
-                            <div class="polka_dot_swiper_product_img">
-                                {{-
-                                block.settings.select_product.featured_media
-                                | image_url: width: block.settings.select_product.featured_media.width
-                                | image_tag: alt: block.settings.select_product.title
-                                -}}
-                            </div>
-                            <div class="polka_dot_swiper_product_info">
-                                <h4 class="polka_dot_swiper_product_info_title">{{ block.settings.select_product.title }}</h4>
-                                <div class="polka_dot_swiper_product_info_price">
-                                {{ block.settings.select_product.price | money_without_trailing_zeros }}
-                                {{- 'icon-shopping-cart.svg' | inline_asset_content -}}
-                                </div>
-                            </div>
-                            </a>
-                        </div>
-                        {% endif %}
+                    {% if block.settings.btn_text != blank %}
+                    <a class="polka_dot_swiper_info_btn" href="{{ block.settings.link }}">
+                        {{ block.settings.btn_text }}
+                        {{ 'icon-right-arrow.svg' | inline_asset_content }}
+                    </a>
+                    {% endif %}
                 </div>
-                {%- endif -%}
-            {%- endfor -%}
+                {% if block.settings.select_product != blank %}
+                    <div
+                        class="polka_dot_swiper_contain"
+                        style="top: {{ block.settings.product_Y }}%;left: {{ block.settings.product_X }}%"
+                    >
+                        {{- 'icon-plus.svg' | inline_asset_content -}}
+                        <a class="polka_dot_swiper_product" href="{{ block.settings.select_product.url }}">
+                        <div class="polka_dot_swiper_product_img">
+                            {{-
+                            block.settings.select_product.featured_media
+                            | image_url: width: block.settings.select_product.featured_media.width
+                            | image_tag: alt: block.settings.select_product.title
+                            -}}
+                        </div>
+                        <div class="polka_dot_swiper_product_info">
+                            <h4 class="polka_dot_swiper_product_info_title">{{ block.settings.select_product.title }}</h4>
+                            <div class="polka_dot_swiper_product_info_price">
+                            {{ block.settings.select_product.price | money_without_trailing_zeros }}
+                            {{- 'icon-shopping-cart.svg' | inline_asset_content -}}
+                            </div>
+                        </div>
+                        </a>
+                    </div>
+                    {% endif %}
             </div>
-            <div class="polka_dot_swiper_prev">{{- 'swiper-left.svg' | inline_asset_content -}}</div>
-            <div class="polka_dot_swiper_next">{{- 'swiper-right.svg' | inline_asset_content -}}</div>
+            {%- endif -%}
+        {%- endfor -%}
         </div>
-        <div class="swiper-pagination"></div>
-        </div>
+        <div class="polka_dot_swiper_prev">{{- 'swiper-left.svg' | inline_asset_content -}}</div>
+        <div class="polka_dot_swiper_next">{{- 'swiper-right.svg' | inline_asset_content -}}</div>
+    </div>
+    <div class="swiper-pagination"></div>
+    </div>
     {% endfor %}
   </div>
 </div>
@@ -112,7 +112,7 @@
         initialSlide: 1,
         centeredSlides: true,
         pagination: {
-          el: '.polka_dot_swiper .swiper-pagination',
+          el: '.swiper-pagination',
           clickable: true,
         },
         navigation: {
