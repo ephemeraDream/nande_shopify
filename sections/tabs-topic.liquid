@@ -7,18 +7,51 @@
     </div>
     <div class="tabs">
         <ul class="tab-titles session-box">
-          {% for block in section.blocks %}
-            <li>{{ block.settings.tab_title }}</li>
-          {% endfor %}
+            {% assign tab_index = 0 %}
+            {% for block in section.blocks %}
+            {% if block.type == 'tab' %}
+                <li data-tab="{{ tab_index }}"
+                    onclick="switchTab({{ tab_index }})">
+                {{ block.settings.tab_title | escape }}
+                </li>
+                {% assign tab_index = tab_index | plus: 1 %}
+            {% endif %}
+            {% endfor %}
         </ul>
         <div class="tab-contents">
-          {% for block in section.blocks %}
-            <div class="tab-content">{{ block.settings.tab_content }}</div>
-          {% endfor %}
+            {% assign tab_count = tab_index %}
+            {% for i in (0..tab_count-1) %}
+                <div class="tab-panel{% unless forloop.first %} hidden{% endunless %}" data-tab-panel="{{ i }}">
+                <div class="swiper swiper-{{ i }}">
+                    <div class="swiper-wrapper">
+                    {% for block in section.blocks %}
+                        {% if block.type == 'slide' and block.settings.belong_tab == i %}
+                        <div class="swiper-slide" {{ block.shopify_attributes }}>
+                            {% if block.settings.image != blank %}
+                            <img src="{{ block.settings.image | image_url: width: 800 }}">
+                            {% endif %}
+                            {{ block.settings.caption }}
+                        </div>
+                        {% endif %}
+                    {% endfor %}
+                    </div>
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+                </div>
+                </div>
+            {% endfor %}
         </div>
     </div>
 </div>
 
+<script>
+    function switchTab(idx){
+      document.querySelectorAll('[data-tab-panel]').forEach(p=>p.classList.toggle('hidden', p.dataset.tabPanel != idx));
+    }
+    document.addEventListener('DOMContentLoaded', ()=>{
+      document.querySelectorAll('.swiper').forEach(el=>new Swiper(el,{loop:true}));
+    });
+</script>
 {% schema %}
 {
   "name": "tabs topic",
@@ -45,10 +78,24 @@
           "label": "Tab Title"
         },
         {
-          "type": "richtext",
-          "id": "tab_content",
+          "type": "text",
+          "id": "tab_content_id",
           "label": "Tab Content"
         }
+      ]
+    },
+    {
+      "type": "slide",
+      "name": "Slide",
+      "settings": [
+        { "type":"select","id":"belong_tab","label":"属于哪个 Tab","options":[
+            { "value":0,"label":"Tab 1"},
+            { "value":1,"label":"Tab 2"},
+            { "value":2,"label":"Tab 3"}
+          ],"default":0
+        },
+        { "type":"image_picker","id":"image","label":"图片" },
+        { "type":"text","id":"caption","label":"文字" }
       ]
     }
   ],
@@ -60,25 +107,84 @@
   ]
 }
 {% endschema %}
+
+{%#  ───────────────────────────────────
+    样式：Tabs + Swiper 轮播
+    放在 sections/tabs-carousel.liquid 最顶部
+─────────────────────────────────────── %}
 <style>
+/* ====== Layout 容器 ====== */
+.tabs-with-carousel { width: 100%; }
+
+/* ====== Tab 导航 ====== */
 .tabs_topic .tab-titles{
     display: flex;
     gap: 8%;
     border-bottom: 1px solid #E2DED6;
     list-style: none;
-    padding: 0;
 }
 .tabs_topic .tab-titles li{
     padding-bottom:10px;
     color:#7F7E75;
     font-size:2.4rem;
-    font-weight: 500;
+    font-weight: 700;
     border-bottom: 2px solid transparent;
     cursor: pointer;
     transition: all 0.3s ease-in-out;
+    font-variation-settings: "opsz" auto;
 }
 .tabs_topic .tab-titles li.active,.tabs_topic .tab-titles li:hover{
     color:#1F1F1F;
     border-bottom: 2px solid #BDFF00;
+}
+@media (max-width: 750px) {
+    .tabs_topic .tab-titles {
+        flex-direction: column;
+    }
+}
+
+/* ====== Tab 面板 ====== */
+.tabs-with-carousel .tab-panel { display: none; }
+.tabs-with-carousel .tab-panel:not(.hidden) { display: block; }
+
+/* ====== Swiper 外观微调 ====== */
+.tabs-with-carousel .swiper {
+ overflow: hidden;           /* 防止溢出 */
+}
+.tabs-with-carousel .swiper-slide img {
+ display: block;
+ width: 100%;
+ height: auto;
+}
+/* 箭头按钮美化 */
+.tabs-with-carousel .swiper-button-prev,
+.tabs-with-carousel .swiper-button-next {
+ top: 50%;
+ width: 42px;
+ height: 42px;
+ margin-top: -21px;          /* 垂直居中 */
+ background: rgba(255,255,255,.8);
+ border-radius: 50%;
+ color: #111;
+ box-shadow: 0 2px 6px rgba(0,0,0,.15);
+}
+.tabs-with-carousel .swiper-button-prev:hover,
+.tabs-with-carousel .swiper-button-next:hover {
+ background: #111;
+ color: #fff;
+}
+/* Swiper pagination（如果用到） */
+.tabs-with-carousel .swiper-pagination-bullet {
+ background: #999;
+ opacity: 1;
+}
+.tabs-with-carousel .swiper-pagination-bullet-active {
+ background: #111;
+}
+/* ====== 响应式：<640px 下隐藏箭头、增加 Tab 间距 ====== */
+@media (max-width: 639px) {
+ .tabs-with-carousel .tab-nav { gap: .75rem; overflow-x: auto; }
+ .tabs-with-carousel .swiper-button-prev,
+ .tabs-with-carousel .swiper-button-next { display: none; }
 }
 </style>

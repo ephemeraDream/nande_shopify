@@ -57,23 +57,74 @@
           "type": "tab",
           "settings": {
             "tab_title": "Innovation & Fortschritt",
-            "tab_content": "<p>This is the content of Tab 1.</p>"
+            "tab_content_id": "swiper_1"
+          }
+        },
+        /* 轮播图属于 Tab #1（belong_tab = 0） */
+        "slide1_1": {
+          "type": "slide",
+          "settings": {
+            "belong_tab": 0,                       
+            "image": "shopify://shop_images/polka_dot_swiper-1.webp",
+            "caption": "Slide 1 – Text"
+          }
+        },
+        "slide1_2": {
+          "type": "slide",
+          "settings": {
+            "belong_tab": 0,
+            "image": "shopify://shop_images/polka_dot_swiper-2.webp",
+            "caption": "Slide 2 – Text"
           }
         },
         "tab2": {
           "type": "tab",
           "settings": {
             "tab_title": "Kundenzentrierung",
-            "tab_content": "<p>This is the content of Tab 2.</p>"
+            "tab_content_id": "swiper_2"
+          }
+        },
+        /* 轮播图属于 Tab #2（belong_tab = 1） */
+        "slide2_1": {
+          "type": "slide",
+          "settings": {
+            "belong_tab": 1,                         
+            "image": "shopify://shop_images/polka_dot_swiper-2.webp",
+            "caption": "Slide 1 – Text"
+          }
+        },
+        "slide2_2": {
+          "type": "slide",
+          "settings": {
+            "belong_tab": 1,
+            "image": "shopify://shop_images/polka_dot_swiper-1.webp",
+            "caption": "Slide 2 – Text"
           }
         },
         "tab3": {
           "type": "tab",
           "settings": {
             "tab_title": "Teamgeist & Zusammenarbeit",
-            "tab_content": "<p>This is the content of Tab 3.</p>"
+            "tab_content_id": "swiper_3"
           }
-        }
+        },
+        /* 轮播图属于 Tab #3（belong_tab =2） */
+        "slide3_1": {
+          "type": "slide",
+          "settings": {
+            "belong_tab": 2,                        
+            "image": "shopify://shop_images/polka_dot_swiper-2.webp",
+            "caption": "Slide 1 – Text"
+          }
+        },
+        "slide3_2": {
+          "type": "slide",
+          "settings": {
+            "belong_tab": 2,
+            "image": "shopify://shop_images/polka_dot_swiper-1.webp",
+            "caption": "Slide 2 – Text"
+          }
+        },
       },
       "block_order": ["tab1", "tab2", "tab3"]
     }
