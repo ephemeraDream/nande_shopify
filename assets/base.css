@@ -237,7 +237,10 @@ body:has(.section-header .drawer-menu) .announcement-bar-section .page-width {
 ::selection {
   background-color: rgba(var(--color-foreground), 0.2);
 }
-
+li{
+  font-family: "PP Right Grotesk";
+  line-height: calc(1 + 0.3 / var(--font-body-scale));
+}
 .text-body {
   font-size: 1.4rem;
   letter-spacing: 0.06rem;
