@@ -1,12 +1,12 @@
 {% comment %} 专题详情页轮播tab {% endcomment %}
-<div class="padding-top-120">
-    <div class="session-box">
+<div class="padding-top-120 tabs_topic">
+    <div class="session-box padding-bottom-60">
         {% if section.settings.title != blank %}
             <h2>{{ settings.title }}</h2>
         {% endif %}
     </div>
     <div class="tabs">
-        <ul class="tab-titles">
+        <ul class="tab-titles session-box">
           {% for block in section.blocks %}
             <li>{{ block.settings.tab_title }}</li>
           {% endfor %}
@@ -60,3 +60,20 @@
   ]
 }
 {% endschema %}
+<style>
+.tabs_topic .tab-titles{
+    display: flex;
+    gap: 17rem;
+    border-bottom: 1px solid #E2DED6;
+}
+.tabs_topic .tab-titles li{
+    padding-bottom:10px;
+    border-bottom: 2px solid #BDFF00;
+    color:#7F7E75;
+    font-size:2.4rem;
+    font-weight: 500;
+}
+.tabs_topic .tab-titles li.active{
+    color:#1F1F1F;
+}
+</style>
