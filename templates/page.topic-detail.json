@@ -76,55 +76,11 @@
         }
       },
       "block_order": ["tab1", "tab2", "tab3"]
-    },
-    "topic_detail_image_with_text":{
-      "type":"topic-detail-image-with-text",
-      "settings": {
-        "bg_color": "#E2DED6"
-      },
-      "blocks":{
-        "item_FzLRBi1": {
-          "type": "item",
-          "settings": {
-            "title": "Ordnung Mit Cleverem Kabelmanagement",
-            "text": "<p>Der ideale Tisch für Ihre Haustiere – stabil, komfortabel und perfekt für ihren Bedarf.</p>",
-            "btn_text": "En savoir plus",
-            "image": "shopify://shop_images/link-block-1.webp",
-            "link": "",
-            "layout": "image-right"
-          }
-        },
-        "item_FzLRBi2": {
-          "type": "item",
-          "settings": {
-            "title": "Ordnung Mit Cleverem Kabelmanagement",
-            "text": "<p>Der ideale Tisch für Ihre Haustiere – stabil, komfortabel und perfekt für ihren Bedarf.</p>",
-            "btn_text": "En savoir plus",
-            "image": "shopify://shop_images/link-block-1.webp",
-            "link": "",
-            "layout": "image-left"
-          }
-        },
-        "item_FzLRBi3": {
-          "type": "item",
-          "settings": {
-            "title": "Ordnung Mit Cleverem Kabelmanagement",
-            "text": "<p>Der ideale Tisch für Ihre Haustiere – stabil, komfortabel und perfekt für ihren Bedarf.</p>",
-            "btn_text": "En savoir plus",
-            "image": "shopify://shop_images/link-block-1.webp",
-            "link": "",
-            "layout": "image-right"
-          }
-        },
-      },
-      "block_order": ["item_FzLRBi1", "item_FzLRBi2", "item_FzLRBi3"]
-    },
-    
+    }
     
   },
   "order": [
     "banner_topic",
-    "tabs_topic",
-    "topic_detail_image_with_text",
+    "tabs_topic"
   ]
 }
