@@ -396,17 +396,17 @@ h6,
   margin-block-end: 1.67em;
 }
 .nd-btn{
-  height: 2.4rem;
+  height: 3rem;
   display: inline-flex;
   align-items: center;
-  padding: 0rem .6rem .3rem;
+  padding: 0rem .8rem .5rem;
   background-color: #BDFF00;
   padding: 0 0.8rem;
   margin-top: 1rem;
   font-family: "PP Right Grotesk";
-  font-size: 1.8rem;
+  font-size: 2.4rem;
+  line-height: 3rem;
   font-weight: 500;
-  line-height: 2rem;
   letter-spacing: 0px;
   font-variation-settings: "opsz" auto;
   color: #1F1F1F;
@@ -3861,68 +3861,6 @@ a {
   z-index: 9;
 }
 
-
-
-/********************** image-with-text-polka-dot **********************/
-
-/* .polka_dot_img_with_text {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-top: 60px;
-  margin-bottom: 60px;
-}
-
-.polka_dot_img_with_text.right {
-  flex-direction: row-reverse;
-}
-
-.polka_dot_img_with_text_img {
-  width: 50%;
-  height: auto;
-  position: relative;
-}
-.polka_dot_img_with_text_img img{
-  width:100%;
-  height:auto;
-  display:block;
-  object-fit:contain;
-}
-
-.polka_dot_img_with_text_text {
-  width: 50%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  gap: 30px;
-  padding: 20px 60px;
-}
-.polka_dot_img_with_text.right .polka_dot_img_with_text_text {
-  padding-left: 10%;
-  padding-right: 10%;
-  text-align: left;
-}
-
-@media (max-width: 1024px) {
-  .polka_dot_img_with_text_img,
-  .polka_dot_img_with_text_text {
-      width: 100%;
-  }
-  .polka_dot_img_with_text {
-      margin-top: 30px;
-      flex-direction: column;
-  }
-  .polka_dot_img_with_text_text {
-      width: 50%;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      gap: 20px;
-      padding: 20px;
-  }
-} */
-/********************** image-with-text-polka-dot end**********************/
-
 /**************** polka_dot *************************/
 .polka_dot_contain {
   position: absolute;
@@ -4042,3 +3980,56 @@ a {
   line-height: 1em;
 }
 /***************************** text truncate end *****************************/
+
+/*****************************  session *****************************/
+.session-box {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+@media only screen and (min-width: 750px) {
+  .session-box {
+    padding: 0 4rem;
+  }
+}
+@media only screen and (min-width: 1400px) {
+  .session-box {
+    max-width: 144rem;
+    padding: 0 6rem;
+  }
+}
+/*****************************  session end *****************************/
+
+/*****************************  padding  *****************************/
+.padding-60 {
+  padding: 6rem 0;
+}
+.padding-top-60 {
+  padding-top: 6rem;
+}
+.padding-bottom-60 {
+  padding-bottom: 6rem;
+}
+.padding-horizontal-60 {
+  padding: 0 6rem;
+}
+.padding-vertically-60{
+  padding: 6rem 0;
+}
+
+.padding-120 {
+  padding: 12rem 0;
+}
+.padding-top-120 {
+  padding-top: 12rem;
+}
+.padding-bottom-120 {
+  padding-bottom: 12rem;
+}
+.padding-horizontal-120 {
+  padding: 0 12rem;
+}
+.padding-vertically-120{
+  padding: 12rem 0;
+}
+/*****************************  padding  end *****************************/

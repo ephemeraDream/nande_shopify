@@ -1,0 +1,129 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "banner_topic": {
+      "type": "banner",
+      "blocks": {
+        "banner_item_f7J8AA": {
+          "type": "banner_item",
+          "settings": {
+            "title": "<p>Maidesite Spaces</p>",
+            "text": "<p>Lassen Sie sich inspirieren und gestalten Sie Ihren perfekten Maidesite-Arbeitsplatz <br/>mit unseren sorgfältig kuratierten Räumen.</p>",
+            "btn_text": "En savoir plus",
+            "link": "",
+            "file_position": "middle_left",
+            "file_type": "image",
+            "file_image": "shopify://shop_images/banner-2.webp",
+            "video_url": ""
+          }
+        },
+        "banner_item_ckwd4B": {
+          "type": "banner_item",
+          "settings": {
+            "title": "<p>Nahtloses Design Trifft Auf FunktionalitäT</p>",
+            "text": "<p>Ein durchdachtes, einheitliches Design, das Ästhetik und Funktion kombiniert – für einen </p><p>modernen Arbeitsplatz, der sich nahtlos in Ihr Zuhause einfügt</p>",
+            "btn_text": "En savoir plus",
+            "link": "",
+            "file_position": "middle_left",
+            "file_type": "image",
+            "file_image": "shopify://shop_images/banner-3.webp",
+            "video_url": ""
+          }
+        }
+      },
+      "block_order": [
+        "banner_item_f7J8AA",
+        "banner_item_ckwd4B"
+      ],
+      "name": "banner",
+      "settings": {}
+    },
+    "tabs_topic": {
+      "type": "tabs-topic",
+      "name": "tabs",
+      "settings": {
+        "title": "Yoga & Ergonomie Im Perfekten Einklang"
+      },
+      "blocks": {
+        "tab1": {
+          "type": "tab",
+          "settings": {
+            "tab_title": "Innovation & Fortschritt",
+            "tab_content": "<p>This is the content of Tab 1.</p>"
+          }
+        },
+        "tab2": {
+          "type": "tab",
+          "settings": {
+            "tab_title": "Kundenzentrierung",
+            "tab_content": "<p>This is the content of Tab 2.</p>"
+          }
+        },
+        "tab3": {
+          "type": "tab",
+          "settings": {
+            "tab_title": "Teamgeist & Zusammenarbeit",
+            "tab_content": "<p>This is the content of Tab 3.</p>"
+          }
+        }
+      },
+      "block_order": ["tab1", "tab2", "tab3"]
+    },
+    "topic_detail_image_with_text":{
+      "type":"topic-detail-image-with-text",
+      "settings": {
+        "bg_color": "#E2DED6"
+      },
+      "blocks":{
+        "item_FzLRBi1": {
+          "type": "item",
+          "settings": {
+            "title": "Ordnung Mit Cleverem Kabelmanagement",
+            "text": "<p>Der ideale Tisch für Ihre Haustiere – stabil, komfortabel und perfekt für ihren Bedarf.</p>",
+            "btn_text": "En savoir plus",
+            "image": "shopify://shop_images/link-block-1.webp",
+            "link": "",
+            "layout": "image-right"
+          }
+        },
+        "item_FzLRBi2": {
+          "type": "item",
+          "settings": {
+            "title": "Ordnung Mit Cleverem Kabelmanagement",
+            "text": "<p>Der ideale Tisch für Ihre Haustiere – stabil, komfortabel und perfekt für ihren Bedarf.</p>",
+            "btn_text": "En savoir plus",
+            "image": "shopify://shop_images/link-block-1.webp",
+            "link": "",
+            "layout": "image-left"
+          }
+        },
+        "item_FzLRBi3": {
+          "type": "item",
+          "settings": {
+            "title": "Ordnung Mit Cleverem Kabelmanagement",
+            "text": "<p>Der ideale Tisch für Ihre Haustiere – stabil, komfortabel und perfekt für ihren Bedarf.</p>",
+            "btn_text": "En savoir plus",
+            "image": "shopify://shop_images/link-block-1.webp",
+            "link": "",
+            "layout": "image-right"
+          }
+        },
+      }
+    },
+    
+    
+  },
+  "order": [
+    "banner_topic",
+    "tabs_topic",
+    "topic_detail_image_with_text",
+  ]
+}

@@ -1,0 +1,62 @@
+{% comment %} 专题详情页轮播tab {% endcomment %}
+<div class="padding-top-120">
+    <div class="session-box">
+        {% if section.settings.title != blank %}
+            <h2>{{ settings.title }}</h2>
+        {% endif %}
+    </div>
+    <div class="tabs">
+        <ul class="tab-titles">
+          {% for block in section.blocks %}
+            <li>{{ block.settings.tab_title }}</li>
+          {% endfor %}
+        </ul>
+        <div class="tab-contents">
+          {% for block in section.blocks %}
+            <div class="tab-content">{{ block.settings.tab_content }}</div>
+          {% endfor %}
+        </div>
+    </div>
+</div>
+
+{% schema %}
+{
+  "name": "tabs topic",
+  "tag": "section",
+  "class": "section",
+  "disabled_on": {
+    "groups": ["header", "footer"]
+  },
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "title"
+    },
+  ],
+  "blocks": [
+    {
+      "type": "tab",
+      "name": "Tab",
+      "settings": [
+        {
+          "type": "text",
+          "id": "tab_title",
+          "label": "Tab Title"
+        },
+        {
+          "type": "richtext",
+          "id": "tab_content",
+          "label": "Tab Content"
+        }
+      ]
+    }
+  ],
+  "max_blocks": 4,
+  "presets": [
+    {
+      "name": "Tabs"
+    }
+  ]
+}
+{% endschema %}
