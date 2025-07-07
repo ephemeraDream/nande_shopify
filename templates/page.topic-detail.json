@@ -60,11 +60,10 @@
             "tab_content_id": "swiper_1"
           }
         },
-        /* 轮播图属于 Tab #1（belong_tab = 0） */
         "slide1_1": {
           "type": "slide",
           "settings": {
-            "belong_tab": 0,                       
+            "belong_tab": 0,
             "image": "shopify://shop_images/polka_dot_swiper-1.webp",
             "caption": "Slide 1 – Text"
           }
@@ -84,11 +83,10 @@
             "tab_content_id": "swiper_2"
           }
         },
-        /* 轮播图属于 Tab #2（belong_tab = 1） */
         "slide2_1": {
           "type": "slide",
           "settings": {
-            "belong_tab": 1,                         
+            "belong_tab": 1,
             "image": "shopify://shop_images/polka_dot_swiper-2.webp",
             "caption": "Slide 1 – Text"
           }
@@ -108,11 +106,10 @@
             "tab_content_id": "swiper_3"
           }
         },
-        /* 轮播图属于 Tab #3（belong_tab =2） */
         "slide3_1": {
           "type": "slide",
           "settings": {
-            "belong_tab": 2,                        
+            "belong_tab": 2,
             "image": "shopify://shop_images/polka_dot_swiper-2.webp",
             "caption": "Slide 1 – Text"
           }
@@ -124,10 +121,15 @@
             "image": "shopify://shop_images/polka_dot_swiper-1.webp",
             "caption": "Slide 2 – Text"
           }
-        },
+        }
       },
-      "block_order": ["tab1", "tab2", "tab3"]
+      "block_order": [
+        "tab1", "slide1_1", "slide1_2",
+        "tab2", "slide2_1", "slide2_2",
+        "tab3", "slide3_1", "slide3_2"
+      ]
     }
+
     
   },
   "order": [
