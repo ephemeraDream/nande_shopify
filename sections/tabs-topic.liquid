@@ -105,22 +105,28 @@
   }
 
   document.addEventListener('DOMContentLoaded', () => {
-    document.querySelectorAll('.tabs_topic .swiper').forEach(el=>{
-      new Swiper(el, {
-        slidesPerView: 'auto',
-        spaceBetween: 60,
-        initialSlide: 1,
-        centeredSlides: true,
-        pagination: {
-          el: '.swiper-pagination',
-          clickable: true,
-        },
-        navigation: {
-          nextEl: '.polka_dot_swiper_next',
-          prevEl: '.polka_dot_swiper_prev',
-        },
+    document.querySelectorAll('.tabs_topic .tab-panel').forEach(panel => {
+        const swiperEl   = panel.querySelector('.swiper');
+        const pagination = panel.querySelector('.swiper-pagination');
+        const nextBtn    = panel.querySelector('.polka_dot_swiper_next');
+        const prevBtn    = panel.querySelector('.polka_dot_swiper_prev');
+      
+        new Swiper(swiperEl, {
+          slidesPerView: 'auto',
+          spaceBetween: 60,
+          initialSlide: 1,
+          centeredSlides: true,
+          pagination: {
+            el: pagination,
+            clickable: true,
+          },
+          navigation: {
+            nextEl: nextBtn,
+            prevEl: prevBtn,
+          },
+        });
       });
-    });
+      
   });
 </script>
 
