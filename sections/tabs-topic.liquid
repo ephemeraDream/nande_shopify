@@ -56,31 +56,31 @@
                             </a>
                             {% endif %}
                         </div>
+                        {% if block.settings.select_product != blank %}
+                            <div
+                              class="polka_dot_swiper_contain"
+                              style="top: {{ block.settings.product_Y }}%;left: {{ block.settings.product_X }}%"
+                            >
+                              {{- 'icon-plus.svg' | inline_asset_content -}}
+                              <a class="polka_dot_swiper_product" href="{{ block.settings.select_product.url }}">
+                                <div class="polka_dot_swiper_product_img">
+                                  {{-
+                                    block.settings.select_product.featured_media
+                                    | image_url: width: block.settings.select_product.featured_media.width
+                                    | image_tag: alt: block.settings.select_product.title
+                                  -}}
+                                </div>
+                                <div class="polka_dot_swiper_product_info">
+                                  <div class="polka_dot_swiper_product_info_title">{{ block.settings.select_product.title }}</div>
+                                  <div class="polka_dot_swiper_product_info_price">
+                                    {{ block.settings.select_product.price | money_without_trailing_zeros }}
+                                    {{- 'icon-shopping-cart.svg' | inline_asset_content -}}
+                                  </div>
+                                </div>
+                              </a>
+                            </div>
+                          {% endif %}
                     </div>
-                    {% if block.settings.select_product != blank %}
-                        <div
-                          class="polka_dot_swiper_contain"
-                          style="top: {{ block.settings.product_Y }}%;left: {{ block.settings.product_X }}%"
-                        >
-                          {{- 'icon-plus.svg' | inline_asset_content -}}
-                          <a class="polka_dot_swiper_product" href="{{ block.settings.select_product.url }}">
-                            <div class="polka_dot_swiper_product_img">
-                              {{-
-                                block.settings.select_product.featured_media
-                                | image_url: width: block.settings.select_product.featured_media.width
-                                | image_tag: alt: block.settings.select_product.title
-                              -}}
-                            </div>
-                            <div class="polka_dot_swiper_product_info">
-                              <div class="polka_dot_swiper_product_info_title">{{ block.settings.select_product.title }}</div>
-                              <div class="polka_dot_swiper_product_info_price">
-                                {{ block.settings.select_product.price | money_without_trailing_zeros }}
-                                {{- 'icon-shopping-cart.svg' | inline_asset_content -}}
-                              </div>
-                            </div>
-                          </a>
-                        </div>
-                      {% endif %}
                   {%- endif -%}
                 {%- endfor -%}
               </div>
@@ -158,6 +158,7 @@
   .tabs_topic .swiper-slide {
     max-width: 144rem;
     height: 70rem;
+    position: relative;
   }
   
   .tabs_topic .swiper-slide::before {
