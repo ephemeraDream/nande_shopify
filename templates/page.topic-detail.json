@@ -65,7 +65,13 @@
           "settings": {
             "belong_tab": "0",
             "image": "shopify://shop_images/polka_dot_swiper-1.webp",
-            "caption": "Slide 1 – Text"
+            "title": "",
+            "text": "",
+            "btn_text": "",
+            "link": "",
+            "select_product": "maidesite-th2-pro-plus-tischgestell-elektrisch-hohenverstellbar",
+            "product_X": 52,
+            "product_Y": 45
           }
         },
         "slide1_2": {
@@ -73,7 +79,13 @@
           "settings": {
             "belong_tab": "0",
             "image": "shopify://shop_images/polka_dot_swiper-2.webp",
-            "caption": "Slide 2 – Text"
+            "title": "",
+            "text": "",
+            "btn_text": "",
+            "link": "",
+            "select_product": "maidesite-tischgestell-elektrisch-hohenverstellbar-t2-pro-plus",
+            "product_X": 31,
+            "product_Y": 37
           }
         },
         "tab2": {
@@ -88,7 +100,13 @@
           "settings": {
             "belong_tab": "1",
             "image": "shopify://shop_images/polka_dot_swiper-2.webp",
-            "caption": "Slide 1 – Text"
+            "title": "",
+            "text": "",
+            "btn_text": "",
+            "link": "",
+            "select_product": "maidesite-tischgestell-elektrisch-hohenverstellbar-t2-pro-plus",
+            "product_X": 31,
+            "product_Y": 37
           }
         },
         "slide2_2": {
@@ -96,7 +114,13 @@
           "settings": {
             "belong_tab": "1",
             "image": "shopify://shop_images/polka_dot_swiper-1.webp",
-            "caption": "Slide 2 – Text"
+            "title": "",
+            "text": "",
+            "btn_text": "",
+            "link": "",
+            "select_product": "maidesite-tischgestell-elektrisch-hohenverstellbar-t2-pro-plus",
+            "product_X": 31,
+            "product_Y": 37
           }
         },
         "tab3": {
@@ -111,7 +135,13 @@
           "settings": {
             "belong_tab": "2",
             "image": "shopify://shop_images/polka_dot_swiper-2.webp",
-            "caption": "Slide 1 – Text"
+            "title": "",
+            "text": "",
+            "btn_text": "",
+            "link": "",
+            "select_product": "maidesite-th2-pro-plus-tischgestell-elektrisch-hohenverstellbar",
+            "product_X": 52,
+            "product_Y": 45
           }
         },
         "slide3_2": {
@@ -119,7 +149,13 @@
           "settings": {
             "belong_tab": "2",
             "image": "shopify://shop_images/polka_dot_swiper-1.webp",
-            "caption": "Slide 2 – Text"
+            "title": "",
+            "text": "",
+            "btn_text": "",
+            "link": "",
+            "select_product": "maidesite-th2-pro-plus-tischgestell-elektrisch-hohenverstellbar",
+            "product_X": 52,
+            "product_Y": 45
           }
         }
       },

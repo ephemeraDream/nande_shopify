@@ -39,18 +39,53 @@
                   {%- assign i_str = i | append: '' -%}
                   {%- if block.type == 'slide' and block.settings.belong_tab == i_str -%}
                     <div class="swiper-slide" {{ block.shopify_attributes }}>
-                      {% unless block.settings.image == blank %}
-                        <img src="{{ block.settings.image | image_url: width: 800 }}" alt="{{ block.settings.caption | escape }}">
-                      {% endunless %}
-                      {% unless block.settings.caption == blank %}
-                        <p>{{ block.settings.caption }}</p>
-                      {% endunless %}
+                        {{-
+                            block.settings.image
+                            | image_url: width: block.settings.image.width
+                            | image_tag: alt: block.settings.title, class: 'polka_dot_swiper_img'
+                          -}}
+                        <div class="polka_dot_swiper_info">
+                            <div>
+                            <div class="polka_dot_swiper_info_title">{{ block.settings.title }}</div>
+                            <div class="polka_dot_swiper_info_text">{{ block.settings.text }}</div>
+                            </div>
+                            {% if block.settings.btn_text != blank %}
+                            <a class="polka_dot_swiper_info_btn" href="{{ block.settings.link }}">
+                                {{ block.settings.btn_text }}
+                                {{ 'icon-right-arrow.svg' | inline_asset_content }}
+                            </a>
+                            {% endif %}
+                        </div>
                     </div>
+                    {% if block.settings.select_product != blank %}
+                        <div
+                          class="polka_dot_swiper_contain"
+                          style="top: {{ block.settings.product_Y }}%;left: {{ block.settings.product_X }}%"
+                        >
+                          {{- 'icon-plus.svg' | inline_asset_content -}}
+                          <a class="polka_dot_swiper_product" href="{{ block.settings.select_product.url }}">
+                            <div class="polka_dot_swiper_product_img">
+                              {{-
+                                block.settings.select_product.featured_media
+                                | image_url: width: block.settings.select_product.featured_media.width
+                                | image_tag: alt: block.settings.select_product.title
+                              -}}
+                            </div>
+                            <div class="polka_dot_swiper_product_info">
+                              <div class="polka_dot_swiper_product_info_title">{{ block.settings.select_product.title }}</div>
+                              <div class="polka_dot_swiper_product_info_price">
+                                {{ block.settings.select_product.price | money_without_trailing_zeros }}
+                                {{- 'icon-shopping-cart.svg' | inline_asset_content -}}
+                              </div>
+                            </div>
+                          </a>
+                        </div>
+                      {% endif %}
                   {%- endif -%}
                 {%- endfor -%}
               </div>
-              <div class="swiper-button-prev"></div>
-              <div class="swiper-button-next"></div>
+              <div class="polka_dot_swiper_prev">{{- 'swiper-left.svg' | inline_asset_content -}}</div>
+              <div class="polka_dot_swiper_next">{{- 'swiper-right.svg' | inline_asset_content -}}</div>
             </div>
           </div>
         {% endfor %}
@@ -73,11 +108,18 @@
   document.addEventListener('DOMContentLoaded', () => {
     document.querySelectorAll('.tabs_topic .swiper').forEach(el=>{
       new Swiper(el, {
-        loop: true,
+        slidesPerView: 'auto',
+        spaceBetween: 60,
+        initialSlide: 1,
+        centeredSlides: true,
+        pagination: {
+          el: '.polka_dot_swiper .swiper-pagination',
+          clickable: true,
+        },
         navigation: {
-          nextEl: el.querySelector('.swiper-button-next'),
-          prevEl: el.querySelector('.swiper-button-prev')
-        }
+          nextEl: '.polka_dot_swiper_next',
+          prevEl: '.polka_dot_swiper_prev',
+        },
       });
     });
   });
@@ -107,20 +149,231 @@
 .tab-panel.hidden{display:none}
 
 /* Swiper 调整（可按需继续细调） */
-.tabs_topic .swiper-slide img{display:block;width:100%;height:auto}
-.tabs_topic .swiper-button-prev,
-.tabs_topic .swiper-button-next{
-  top:50%;width:42px;height:42px;margin-top:-21px;border-radius:50%;
-  background:rgba(255,255,255,.8);color:#111;box-shadow:0 2px 6px rgba(0,0,0,.15)
-}
-.tabs_topic .swiper-button-prev:hover,
-.tabs_topic .swiper-button-next:hover{
-  background:#111;color:#fff
-}
-@media(max-width:639px){
-  .tabs_topic .swiper-button-prev,
-  .tabs_topic .swiper-button-next{display:none}
-}
+.polka_dot_swiper {
+    width: 100%;
+    padding-top: 12rem;
+    padding-bottom: 3.1rem;
+    background-color: #F2F1ED;
+    position: relative;
+  }
+  
+  .polka_dot_swiper .polka_dot_swiper_header {
+    max-width: 144rem;
+    margin: 0 auto;
+  }
+  
+  .polka_dot_swiper .polka_dot_swiper_title {
+    font-family: "PP Right Grotesk";
+    font-size: 6rem;
+    font-weight: 500;
+    line-height: 94%;
+    text-transform: capitalize;
+    letter-spacing: 0px;
+    font-variation-settings: "opsz" auto;
+    color: #1F1F1F;
+  }
+  
+  .polka_dot_swiper .polka_dot_swiper_text {
+    font-family: "PP Right Grotesk";
+    font-size: 3rem;
+    font-weight: 500;
+    line-height: 94%;
+    letter-spacing: 0px;
+    font-variation-settings: "opsz" auto;
+    color: #1F1F1F;
+    margin-top: 3rem;
+  }
+  
+  .polka_dot_swiper .swiper {
+    margin-top: 3rem;
+    width: 100%;
+  }
+  
+  .polka_dot_swiper .swiper-slide {
+    max-width: 144rem;
+    height: 70rem;
+  }
+  
+  .polka_dot_swiper .swiper-slide::before {
+    content: "";
+    width: 100%;
+    height: 18rem;
+    background: linear-gradient(360deg, #000000 -2%, rgba(255, 255, 255, 0) 108%);
+    position: absolute;
+    bottom: 0;
+  }
+  
+  .polka_dot_swiper .polka_dot_swiper_img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center center;
+  }
+  
+  .polka_dot_swiper .polka_dot_swiper_info {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    padding: 0 3.3rem 3rem 3rem;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    box-sizing: border-box;
+  }
+  
+  .polka_dot_swiper .polka_dot_swiper_info_title {
+    font-family: "PP Right Grotesk";
+    font-size: 4rem;
+    font-weight: 500;
+    line-height: 94%;
+    letter-spacing: 0px;
+    font-variation-settings: "opsz" auto;
+    color: #FFFFFF;
+  }
+  
+  .polka_dot_swiper .polka_dot_swiper_info_text {
+    font-family: "PP Right Grotesk";
+    font-size: 2rem;
+    font-weight: 500;
+    line-height: 94%;
+    letter-spacing: 0px;
+    font-variation-settings: "opsz" auto;
+    color: #FFFFFF;
+    margin-top: 1.5rem;
+  }
+  
+  .polka_dot_swiper .polka_dot_swiper_info_btn {
+    height: 3.5rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.8rem;
+    background-color: #BDFF00;
+    padding: 0 0.8rem;
+    margin-top: 4.6rem;
+    font-family: "PP Right Grotesk";
+    font-size: 2.4rem;
+    font-weight: 500;
+    line-height: 112%;
+    letter-spacing: 0px;
+    font-variation-settings: "opsz" auto;
+    color: #1F1F1F;
+  }
+  
+  .polka_dot_swiper .swiper-pagination {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    bottom: 0;
+  }
+  
+  .polka_dot_swiper .swiper-pagination-bullet {
+    width: 1.6rem;
+    height: 1.6rem;
+    background: #7F7E75;
+    border-radius: 0;
+    opacity: 1;
+    margin: 0 0.8rem !important;
+    border: 0.2rem solid #7F7E75;
+    box-sizing: border-box;
+  }
+  
+  .polka_dot_swiper .swiper-pagination-bullet-active {
+    background: #BDFF00;
+  }
+  
+  .polka_dot_swiper .polka_dot_swiper_prev,
+  .polka_dot_swiper .polka_dot_swiper_next {
+    width: 6rem;
+    height: 6rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, 0.6);
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1;
+    cursor: pointer;
+  }
+  
+  .polka_dot_swiper .polka_dot_swiper_prev {
+    left: 3.90625vw;
+  }
+  
+  .polka_dot_swiper .polka_dot_swiper_next {
+    right: 3.90625vw;
+  }
+  
+  .polka_dot_swiper .polka_dot_swiper_contain {
+    position: absolute;
+    width: 4rem;
+    height: 4rem;
+    background-color: #BDFF00;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+  }
+  
+  .polka_dot_swiper .polka_dot_swiper_product {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    transform: translateX(100%) translateY(100%);
+    display: flex;
+    align-items: stretch;
+  }
+  
+  .polka_dot_swiper .polka_dot_swiper_product_img {
+    background-color: #fff;
+    width: 11.7rem;
+    box-sizing: border-box;
+    padding: 1.2rem 1.2rem 0.8rem 1.2rem;
+    flex: 0 0 auto;
+  }
+  
+  .polka_dot_swiper .polka_dot_swiper_product_img img {
+    width: 100%;
+    height: 100%;
+    background-color: #FAFAFA;
+    object-fit: contain;
+    object-position: center center;
+  }
+  
+  .polka_dot_swiper .polka_dot_swiper_product_info {
+    padding: 1.6rem 0.8rem 0.8rem 0;
+    background-color: #fff;
+    width: 23rem;
+    flex: 0 0 auto;
+    min-height: 8.8rem;
+    position: relative;
+    left: -0.1rem;
+    margin-top: 2.4rem;
+  }
+  
+  .polka_dot_swiper .polka_dot_swiper_product_info_title {
+    font-family: "PP Right Grotesk";
+    font-size: 3rem;
+    font-weight: 500;
+    line-height: 94%;
+    letter-spacing: 0px;
+    font-variation-settings: "opsz" auto;
+    color: #000000;
+  }
+  
+  .polka_dot_swiper .polka_dot_swiper_product_info_price {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 1.2rem;
+    font-family: "PP Right Grotesk";
+    font-size: 2rem;
+    font-weight: normal;
+    line-height: 130%;
+    letter-spacing: 0px;
+    font-variation-settings: "opsz" auto;
+    color: #000000;
+  }
 </style>
 
 {% schema %}
@@ -160,7 +413,51 @@
           "default": "0"
         },
         { "type": "image_picker", "id": "image", "label": "Image" },
-        { "type": "text", "id": "caption", "label": "Caption" }
+        {
+            "type": "text",
+            "id": "title",
+            "label": "title"
+          },
+          {
+            "type": "text",
+            "id": "text",
+            "label": "text"
+          },
+          {
+            "type": "text",
+            "id": "btn_text",
+            "label": "button text"
+          },
+          {
+            "type": "url",
+            "id": "link",
+            "label": "link"
+          },
+          {
+            "type": "product",
+            "id": "select_product",
+            "label": "product"
+          },
+          {
+            "type": "range",
+            "id": "product_X",
+            "min": 0,
+            "max": 100,
+            "step": 1,
+            "unit": "%",
+            "label": "product_X",
+            "default": 0
+          },
+          {
+            "type": "range",
+            "id": "product_Y",
+            "min": 0,
+            "max": 100,
+            "step": 1,
+            "unit": "%",
+            "label": "product_Y",
+            "default": 0
+          }
       ]
     }
   ],
