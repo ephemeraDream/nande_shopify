@@ -35,18 +35,20 @@
         <div class="tab-panel{% unless forloop.first %} hidden{% endunless %}" data-tab-panel="{{ i }}">
           <div class="swiper swiper-{{ i }}">
             <div class="swiper-wrapper">
-              {% for block in section.blocks %}
-                {% if block.type == 'slide' and block.settings.belong_tab | plus: 0 == i %}
-                  <div class="swiper-slide" {{ block.shopify_attributes }}>
-                    {% unless block.settings.image == blank %}
-                      <img src="{{ block.settings.image | image_url: width: 800 }}" alt="{{ block.settings.caption | escape }}">
-                    {% endunless %}
-                    {% unless block.settings.caption == blank %}
-                      <p>{{ block.settings.caption }}</p>
-                    {% endunless %}
-                  </div>
-                {% endif %}
-              {% endfor %}
+                {% for block in section.blocks %}
+                    {% assign belong_num = block.settings.belong_tab | plus: 0 %}
+                    {% if block.type == 'slide' and belong_num == i %}
+                      <div class="swiper-slide" {{ block.shopify_attributes }}>
+                        {% unless block.settings.image == blank %}
+                          <img src="{{ block.settings.image | image_url: width: 800 }}" alt="{{ block.settings.caption | escape }}">
+                        {% endunless %}
+                        {% unless block.settings.caption == blank %}
+                          <p>{{ block.settings.caption }}</p>
+                        {% endunless %}
+                      </div>
+                    {% endif %}
+                  {% endfor %}
+                  
             </div>
             <div class="swiper-button-prev"></div>
             <div class="swiper-button-next"></div>
