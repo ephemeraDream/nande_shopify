@@ -63,7 +63,7 @@
         "slide1_1": {
           "type": "slide",
           "settings": {
-            "belong_tab": 0,
+            "belong_tab": "0",
             "image": "shopify://shop_images/polka_dot_swiper-1.webp",
             "caption": "Slide 1 – Text"
           }
@@ -71,7 +71,7 @@
         "slide1_2": {
           "type": "slide",
           "settings": {
-            "belong_tab": 0,
+            "belong_tab": "0",
             "image": "shopify://shop_images/polka_dot_swiper-2.webp",
             "caption": "Slide 2 – Text"
           }
@@ -86,7 +86,7 @@
         "slide2_1": {
           "type": "slide",
           "settings": {
-            "belong_tab": 1,
+            "belong_tab": "1",
             "image": "shopify://shop_images/polka_dot_swiper-2.webp",
             "caption": "Slide 1 – Text"
           }
@@ -94,7 +94,7 @@
         "slide2_2": {
           "type": "slide",
           "settings": {
-            "belong_tab": 1,
+            "belong_tab": "1",
             "image": "shopify://shop_images/polka_dot_swiper-1.webp",
             "caption": "Slide 2 – Text"
           }
@@ -109,7 +109,7 @@
         "slide3_1": {
           "type": "slide",
           "settings": {
-            "belong_tab": 2,
+            "belong_tab": "2",
             "image": "shopify://shop_images/polka_dot_swiper-2.webp",
             "caption": "Slide 1 – Text"
           }
@@ -117,7 +117,7 @@
         "slide3_2": {
           "type": "slide",
           "settings": {
-            "belong_tab": 2,
+            "belong_tab": "2",
             "image": "shopify://shop_images/polka_dot_swiper-1.webp",
             "caption": "Slide 2 – Text"
           }
