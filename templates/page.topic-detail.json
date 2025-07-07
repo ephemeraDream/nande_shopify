@@ -48,16 +48,11 @@
     },
     "tabs_topic": {
       "type": "tabs-topic",
-      "name": "tabs",
-      "settings": {
-        "title": "Yoga & Ergonomie Im Perfekten Einklang"
-      },
       "blocks": {
         "tab1": {
           "type": "tab",
           "settings": {
-            "tab_title": "Innovation & Fortschritt",
-            "tab_content_id": "swiper_1"
+            "tab_title": "Innovation & Fortschritt"
           }
         },
         "slide1_1": {
@@ -91,8 +86,7 @@
         "tab2": {
           "type": "tab",
           "settings": {
-            "tab_title": "Kundenzentrierung",
-            "tab_content_id": "swiper_2"
+            "tab_title": "Kundenzentrierung"
           }
         },
         "slide2_1": {
@@ -126,8 +120,7 @@
         "tab3": {
           "type": "tab",
           "settings": {
-            "tab_title": "Teamgeist & Zusammenarbeit",
-            "tab_content_id": "swiper_3"
+            "tab_title": "Teamgeist & Zusammenarbeit"
           }
         },
         "slide3_1": {
@@ -160,13 +153,21 @@
         }
       },
       "block_order": [
-        "tab1", "slide1_1", "slide1_2",
-        "tab2", "slide2_1", "slide2_2",
-        "tab3", "slide3_1", "slide3_2"
-      ]
+        "tab1",
+        "slide1_1",
+        "slide1_2",
+        "tab2",
+        "slide2_1",
+        "slide2_2",
+        "tab3",
+        "slide3_1",
+        "slide3_2"
+      ],
+      "name": "tabs",
+      "settings": {
+        "title": "Yoga & Ergonomie Im Perfekten Einklang"
+      }
     }
-
-    
   },
   "order": [
     "banner_topic",

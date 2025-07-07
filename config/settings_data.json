@@ -145,7 +145,7 @@
     "color_schemes": {
       "scheme-1": {
         "settings": {
-          "background": "#ffffff",
+          "background": "#f2f1ed",
           "background_gradient": "",
           "text": "#121212",
           "button": "#121212",
@@ -391,5 +391,8 @@
         }
       }
     }
+  },
+  "platform_customizations": {
+    "custom_css": []
   }
 }
