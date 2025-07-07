@@ -11,7 +11,7 @@
     {% endunless %}
   </div>
 
-  <!-- Tab 导航 -->
+  <!-- Tab nav -->
   <div class="tabs">
     <ul class="tab-titles session-box">
       {% assign tab_index = 0 %}
@@ -28,7 +28,7 @@
       {% endfor %}
     </ul>
 
-    <!-- Tab 面板 -->
+    <!-- Tab pannel -->
     {% assign last_index = tab_index | minus: 1 %}
     {% for i in (0..last_index) %}
     <div class="tab-panel{% unless forloop.first %} hidden{% endunless %}" data-tab-panel="{{ i }}">
@@ -45,11 +45,11 @@
                     -}}
                 <div class="polka_dot_swiper_info">
                     <div>
-                    <div class="polka_dot_swiper_info_title">{{ block.settings.title }}</div>
-                    <div class="polka_dot_swiper_info_text">{{ block.settings.text }}</div>
+                    <h3 class="polka_dot_swiper_info_title">{{ block.settings.title }}</h3>
+                    <div class="text-body polka_dot_swiper_info_text">{{ block.settings.text }}</div>
                     </div>
                     {% if block.settings.btn_text != blank %}
-                    <a class="polka_dot_swiper_info_btn" href="{{ block.settings.link }}">
+                    <a class="nd-btn" href="{{ block.settings.link }}">
                         {{ block.settings.btn_text }}
                         {{ 'icon-right-arrow.svg' | inline_asset_content }}
                     </a>
@@ -94,11 +94,11 @@
 
 <script>
   function switchTab(idx) {
-    // 激活导航
+    // nav
     document.querySelectorAll('.tabs_topic .tab-titles li').forEach(li=>{
       li.classList.toggle('active', li.dataset.tab == idx);
     });
-    // 切换面板
+    // pannel
     document.querySelectorAll('.tabs_topic [data-tab-panel]').forEach(p=>{
       p.classList.toggle('hidden', p.dataset.tabPanel != idx);
     });
@@ -167,14 +167,14 @@
     position: relative;
   }
   
-  .tabs_topic .swiper-slide::before {
+  {% comment %} .tabs_topic .swiper-slide::before {
     content: "";
     width: 100%;
     height: 18rem;
     background: linear-gradient(360deg, #000000 -2%, rgba(255, 255, 255, 0) 108%);
     position: absolute;
     bottom: 0;
-  }
+  } {% endcomment %}
   
   .tabs_topic .polka_dot_swiper_img {
     width: 100%;
@@ -195,41 +195,12 @@
   }
   
   .tabs_topic .polka_dot_swiper_info_title {
-    font-family: "PP Right Grotesk";
-    font-size: 4rem;
-    font-weight: 500;
-    line-height: 94%;
-    letter-spacing: 0px;
-    font-variation-settings: "opsz" auto;
     color: #FFFFFF;
   }
   
   .tabs_topic .polka_dot_swiper_info_text {
-    font-family: "PP Right Grotesk";
-    font-size: 2rem;
-    font-weight: 500;
-    line-height: 94%;
-    letter-spacing: 0px;
-    font-variation-settings: "opsz" auto;
     color: #FFFFFF;
     margin-top: 1.5rem;
-  }
-  
-  .tabs_topic .polka_dot_swiper_info_btn {
-    height: 3.5rem;
-    display: inline-flex;
-    align-items: center;
-    gap: 0.8rem;
-    background-color: #BDFF00;
-    padding: 0 0.8rem;
-    margin-top: 4.6rem;
-    font-family: "PP Right Grotesk";
-    font-size: 2.4rem;
-    font-weight: 500;
-    line-height: 112%;
-    letter-spacing: 0px;
-    font-variation-settings: "opsz" auto;
-    color: #1F1F1F;
   }
   
   .tabs_topic .swiper-pagination {
@@ -323,16 +294,6 @@
     left: -0.1rem;
     margin-top: 2.4rem;
   }
-  
-  {% comment %} .tabs_topic .polka_dot_swiper_product_info_title {
-    font-family: "PP Right Grotesk";
-    font-size: 3rem;
-    font-weight: 500;
-    line-height: 94%;
-    letter-spacing: 0px;
-    font-variation-settings: "opsz" auto;
-    color: #000000;
-  } {% endcomment %}
   
   .tabs_topic .polka_dot_swiper_product_info_price {
     display: flex;

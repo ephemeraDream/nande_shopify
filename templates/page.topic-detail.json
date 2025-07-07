@@ -164,6 +164,56 @@
         "tab2", "slide2_1", "slide2_2",
         "tab3", "slide3_1", "slide3_2"
       ]
+    },
+    "topic_text_img":{
+      "type": "topic-text-img",
+      "settings": {
+        "title": "Nahtloses Design Trifft Auf FunktionalitäT",
+      },
+      "cards": [
+        {
+          "image": "",
+          "title": "GELD ZURÜCK GARANTIE",
+          "title_position": "bottom",
+          "box_type": "box_big"
+        },
+        {
+          "image": "",
+          "title": "GELD ZURÜCK GARANTIE",
+          "title_position": "bottom",
+          "box_type": "box_big"
+        },
+        {
+          "image": "",
+          "title": "GELD ZURÜCK GARANTIE",
+          "title_position": "top",
+          "box_type": "box_small"
+        },
+        {
+          "image": "",
+          "title": "GELD ZURÜCK GARANTIE",
+          "title_position": "top",
+          "box_type": "box_small"
+        },
+        {
+          "image": "",
+          "title": "GELD ZURÜCK GARANTIE",
+          "title_position": "top",
+          "box_type": "box_small"
+        },
+        {
+          "image": "",
+          "title": "GELD ZURÜCK GARANTIE",
+          "title_position": "top",
+          "box_type": "box_small"
+        },
+        {
+          "image": "",
+          "title": "GELD ZURÜCK GARANTIE",
+          "title_position": "bottom",
+          "box_type": "box_middle"
+        },
+      ]
     }
 
     
