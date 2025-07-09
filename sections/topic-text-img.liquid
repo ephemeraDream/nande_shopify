@@ -29,9 +29,11 @@
         {%- if block.settings.image != blank -%}
           <div class="topic-card__img_content">
             {{-
-              section.settings.file_image
-              | image_url: width: section.settings.file_image.width
-              | image_tag: alt: section.settings.title, class: 'card__img'
+              block.settings.image
+              | image_url: widths: [360, 720, 1080, 1440]
+              | image_tag:
+                  alt: block.settings.title,
+                  class: 'topic-card__img'
             -}}
           </div>
         {%- endif -%}
