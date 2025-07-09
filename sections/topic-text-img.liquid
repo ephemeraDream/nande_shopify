@@ -10,7 +10,7 @@
     <h2 class="padding-bottom-60 session-box-inner">{{ section.settings.title }}</h2>
   {% endunless %}
 
-  <div class="topic-text-img-grid session-box">
+  <div class="topic-text-img-grid session-box-inner">
     {%- for block in section.blocks -%}
       {%- assign type = block.settings.box_type -%}
       <div
