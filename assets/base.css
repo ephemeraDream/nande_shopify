@@ -403,7 +403,7 @@ h6,
   height: 3rem;
   display: inline-flex;
   align-items: center;
-  padding: 0rem .8rem .5rem;
+  padding: 0rem .8rem .3rem;
   background-color: #BDFF00;
   padding: 0 0.8rem;
   margin-top: 1rem;
@@ -418,11 +418,13 @@ h6,
   flex: 0 0 auto;
   width: fit-content;
 }
+.nd-btn svg{
+  margin-top: 0.3rem;
+}
 @media only screen and (min-width: 1400px) {
   .nd-btn{
     height: 3.5rem;
     gap: 0.8rem;
-    padding: 0rem .8rem .5rem;
     margin-top: 3rem;
     font-size: 2.4rem;
     line-height: 3rem;
