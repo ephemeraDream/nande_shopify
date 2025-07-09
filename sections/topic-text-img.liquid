@@ -5,7 +5,7 @@
 {% endcomment %}
 {{ 'section-topic-text-img.css' | asset_url | stylesheet_tag }}
 
-<div class="topic-text-img-section section--spacing">
+<div class="topic-text-img padding-top-30 padding-bottom-120 session-box">
   {% unless section.settings.title == blank %}
     <h2 class="topic-text-img-title">{{ section.settings.title }}</h2>
   {% endunless %}
