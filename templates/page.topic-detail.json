@@ -239,7 +239,7 @@
       "type": "img-with-text-simplicity",
       "custom_css": [
         ".img_with_text_simplicity_section {background-color: #e2ded6; padding-top: 12rem;}",
-        ".img_with_text_simplicity_filebox {height: 48rem;}"
+        ".img_with_text_simplicity_filebox {max-height: 48rem;height:auto}"
       ],
       "name": "img with text simplicity",
       "settings": {
@@ -258,7 +258,7 @@
       "type": "img-with-text-simplicity",
       "custom_css": [
         ".img_with_text_simplicity_section {background-color: #e2ded6; padding-top: 6rem;}",
-        ".img_with_text_simplicity_filebox {height: 48rem;}",
+        ".img_with_text_simplicity_filebox {max-height: 48rem;height:auto}",
         ".img_with_text_simplicity_info {padding-left: 3rem;}"
       ],
       "name": "img with text simplicity",
@@ -278,7 +278,7 @@
       "type": "img-with-text-simplicity",
       "custom_css": [
         ".img_with_text_simplicity_section {background-color: #e2ded6; padding-top: 6rem; padding-bottom: 12rem;}",
-        ".img_with_text_simplicity_filebox {height: 48rem;}"
+        ".img_with_text_simplicity_filebox {max-height: 48rem;height:auto}"
       ],
       "name": "img with text simplicity",
       "settings": {
