@@ -230,7 +230,12 @@
             "box_type": "box_middle"
           }
         }
-      }
+      },
+      "block_order": [
+        "card_1", "card_2", "card_3",
+        "card_4", "card_5", "card_6",
+        "card_7"
+      ]
     }
 
     
