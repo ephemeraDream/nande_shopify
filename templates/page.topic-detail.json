@@ -164,78 +164,9 @@
     "topic_text_img":{
       "type": "topic-text-img",
       "settings": {
-        "title": "Nahtloses Design Trifft Auf FunktionalitäT",
+        "title": "Nahtloses Design Trifft Auf FunktionalitäT 1111111",
       },
-      "blocks": {
-        "card_1": {
-          "type": "card",
-          "settings": {
-            "image": "",
-            "title": "GELD ZURÜCK GARANTIE",
-            "title_position": "bottom",
-            "box_type": "box_big"
-          }
-        },
-        "card_2": {
-          "type": "card",
-          "settings": {
-            "image": "",
-            "title": "GELD ZURÜCK GARANTIE",
-            "title_position": "bottom",
-            "box_type": "box_big"
-          }
-        },
-        "card_3": {
-          "type": "card",
-          "settings": {
-            "image": "",
-            "title": "GELD ZURÜCK GARANTIE",
-            "title_position": "top",
-            "box_type": "box_small"
-          }
-        },
-        "card_4": {
-          "type": "card",
-          "settings": {
-            "image": "",
-            "title": "GELD ZURÜCK GARANTIE",
-            "title_position": "top",
-            "box_type": "box_small"
-          }
-        },
-        "card_5": {
-          "type": "card",
-          "settings": {
-            "image": "",
-            "title": "GELD ZURÜCK GARANTIE",
-            "title_position": "top",
-            "box_type": "box_small"
-          }
-        },
-        "card_6": {
-          "type": "card",
-          "settings": {
-            "image": "",
-            "title": "GELD ZURÜCK GARANTIE",
-            "title_position": "top",
-            "box_type": "box_small"
-          }
-        },
-        "card_7": {
-          "type": "card",
-          "settings": {
-            "image": "",
-            "title": "GELD ZURÜCK GARANTIE",
-            "title_position": "bottom",
-            "box_type": "box_middle"
-          }
-        }
-      },
-      "block_order": [
-        "card_1", "card_2", "card_3",
-        "card_4", "card_5", "card_6",
-        "card_7"
-      ]
+      
     }
 
     
