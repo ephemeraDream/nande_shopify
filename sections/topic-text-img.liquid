@@ -5,9 +5,9 @@
 {% endcomment %}
 {{ 'section-topic-text-img.css' | asset_url | stylesheet_tag }}
 
-<div class="topic-text-img padding-top-30 padding-bottom-120">
+<div class="topic-text-img padding-top-30 padding-bottom-120 session-box-padding">
   {% unless section.settings.title == blank %}
-    <h2 class="padding-bottom-60 session-box">{{ section.settings.title }}</h2>
+    <h2 class="padding-bottom-60 session-box-inner">{{ section.settings.title }}</h2>
   {% endunless %}
 
   <div class="topic-text-img-grid session-box">

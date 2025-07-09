@@ -5,15 +5,16 @@
 {% endcomment %}
 
 <div class="padding-top-120 tabs_topic">
-  <div class="session-box padding-bottom-60">
+  <div class="session-box-padding padding-bottom-60">
     {% unless section.settings.title == blank %}
-      <h2>{{ section.settings.title }}</h2>
+      <h2 class="session-box-inner">{{ section.settings.title }}</h2>
     {% endunless %}
   </div>
 
   <!-- Tab nav -->
   <div class="tabs">
-    <ul class="tab-titles session-box">
+    <div class="session-box-padding">
+    <ul class="tab-titles session-box-inner">
       {% assign tab_index = 0 %}
       {% for block in section.blocks %}
         {% if block.type == 'tab' %}
@@ -27,6 +28,7 @@
         {% endif %}
       {% endfor %}
     </ul>
+    </div>
 
     <!-- Tab pannel -->
     {% assign last_index = tab_index | minus: 1 %}

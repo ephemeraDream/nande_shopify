@@ -3985,21 +3985,27 @@ a {
 /***************************** text truncate end *****************************/
 
 /*****************************  session *****************************/
-.session-box {
+.session-box-inner {
   width: 100%;
   margin: 0 auto;
-  padding: 0 2rem;
-  box-sizing: content-box;
+}
+.session-box-padding{
+  padding-left: 2rem;
+  padding-right: 2rem;
 }
 @media only screen and (min-width: 750px) {
-  .session-box {
-    padding: 0 4rem;
+  .session-box-padding{
+    padding-left: 4rem;
+    padding-right: 4rem;
   }
 }
 @media only screen and (min-width: 1400px) {
-  .session-box {
+  .session-box-inner {
     max-width: 144rem;
-    padding: 0 6rem;
+  }
+  .session-box-padding{
+    padding-left: 6rem;
+    padding-right: 6rem;
   }
 }
 /*****************************  session end *****************************/
