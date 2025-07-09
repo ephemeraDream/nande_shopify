@@ -48,6 +48,9 @@
     },
     "tabs_topic": {
       "type": "tabs-topic",
+      "settings": {
+        "title": "Yoga & Ergonomie Im Perfekten Einklang",
+      },
       "blocks": {
         "tab1": {
           "type": "tab",
