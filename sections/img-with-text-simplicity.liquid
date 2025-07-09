@@ -10,7 +10,13 @@
         <div class="img_with_text_simplicity_subtitle">{{ section.settings.sub_title }}</div>
       {% endif %}
       <h2 class="img_with_text_simplicity_title">{{ section.settings.title }}</h2>
-      <div class="img_with_text_simplicity_desc">{{ section.settings.description }}</div>
+      <div class="img_with_text_simplicity_desc text-body">{{ section.settings.description }}</div>
+      {% if section.settings.btn_text != blank %}
+        <a class="nd-btn" href="{{ section.settings.link }}">
+            {{ section.settings.btn_text }}
+            {{ 'icon-right-arrow.svg' | inline_asset_content }}
+        </a>
+      {% endif %}
 
       {% for item in section.blocks %}
         <div class="img_with_text_simplicity_append">
@@ -145,6 +151,16 @@
       "type": "video",
       "id": "url_upload",
       "label": "video upload"
+    },
+    {
+      "type": "text",
+      "id": "btn_text",
+      "label": "button text"
+    },
+    {
+      "type": "url",
+      "id": "link_url",
+      "label": "link_url"
     }
   ],
   "blocks": [
