@@ -245,7 +245,46 @@
       "settings": {
         "title": "<p>Ordnung Mit Cleverem Kabelmanagement</p>",
         "sub_title": "",
-        "description": "<p>Der ideale Tisch für Ihre Haustiere – stabil, komfortabel und perfekt für ihren Bedarf.</p>",
+        "description": "<p>Der ideale Tisch für Ihre Haustiere – stabil,<br/> komfortabel und perfekt für ihren Bedarf.</p>",
+        "file_position": "right",
+        "file_type": "image",
+        "file_image": "shopify://shop_images/product_info_demo_img_1.webp",
+        "video_url": "",
+        "link_url": "#",
+        "btn_text":"En savoir plus"
+      }
+    },
+    "img_with_text_simplicity_R8thEa": {
+      "type": "img-with-text-simplicity",
+      "custom_css": [
+        ".img_with_text_simplicity_section {background-color: #e2ded6; padding-top: 6rem;}",
+        ".img_with_text_simplicity_filebox {height: 48rem;}",
+        ".img_with_text_simplicity_info {padding-left: 3rem;}"
+      ],
+      "name": "img with text simplicity",
+      "settings": {
+        "title": "<p>Ordnung Mit Cleverem Kabelmanagement</p>",
+        "sub_title": "",
+        "description": "<p>Der ideale Tisch für Ihre Haustiere – stabil,<br/> komfortabel und perfekt für ihren Bedarf.</p>",
+        "file_position": "left",
+        "file_type": "image",
+        "file_image": "shopify://shop_images/product_info_demo_img_1.webp",
+        "video_url": "",
+        "link_url": "#",
+        "btn_text":"En savoir plus"
+      }
+    },
+    "img_with_text_simplicity_R8taEq": {
+      "type": "img-with-text-simplicity",
+      "custom_css": [
+        ".img_with_text_simplicity_section {background-color: #e2ded6; padding-top: 6rem; padding-bottom: 12rem;}",
+        ".img_with_text_simplicity_filebox {height: 48rem;}"
+      ],
+      "name": "img with text simplicity",
+      "settings": {
+        "title": "<p>Ordnung Mit Cleverem Kabelmanagement</p>",
+        "sub_title": "",
+        "description": "<p>Der ideale Tisch für Ihre Haustiere – stabil,<br/> komfortabel und perfekt für ihren Bedarf.</p>",
         "file_position": "right",
         "file_type": "image",
         "file_image": "shopify://shop_images/product_info_demo_img_1.webp",
