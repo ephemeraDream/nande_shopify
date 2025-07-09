@@ -170,7 +170,7 @@
         "card_1": {
           "type": "card",
           "settings": {
-            "image": "",
+            "image": "shopify://shop_images/polka_dot_swiper-1.webp",
             "title": "GELD ZURÜCK GARANTIE",
             "title_position": "bottom",
             "box_type": "box_big"

@@ -17,7 +17,7 @@
         class="
           topic-card
           topic-card--{{ type }}
-          topic-card--{{ forloop.index0 }}   {# ←用 index 绑定 grid-area #}
+          topic-card--{{ forloop.index0 }}
           {% if block.settings.title_position == 'top' %}
             topic-card--title-top
           {% else %}
@@ -32,12 +32,10 @@
             src="{{ block.settings.image | img_url: '900x' }}"
             alt="{{ block.settings.title | escape }}"
           >
-        {%- else -%}
-          <div class="topic-card__placeholder"></div>
         {%- endif -%}
 
         {%- unless block.settings.title == blank -%}
-          <span class="topic-card__title">{{ block.settings.title }}</span>
+          <h4 class="topic-card__title">{{ block.settings.title }}</h4>
         {%- endunless -%}
       </div>
     {%- endfor -%}
