@@ -72,7 +72,11 @@
       "small-4"
       "big-bottom";
   }
-
+  .topic-card--title-top    .topic-card__title { top: 2rem; }
+  .topic-card--title-bottom .topic-card__title { bottom: 2rem; }
   /* 16:9 */
   .topic-card--box_big { aspect-ratio: 16 / 9; }
+  .topic-card__title{
+    font-size: 2rem;
+  }
 }

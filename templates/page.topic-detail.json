@@ -234,7 +234,26 @@
       "block_order": [
         "card_1", "card_2", "card_3",  "card_4", "card_5", "card_6", "card_7"
       ]
-    }
+    },
+    "img_with_text_simplicity_R8thEq": {
+      "type": "img-with-text-simplicity",
+      "custom_css": [
+        ".img_with_text_simplicity_section {background-color: #e2ded6; padding-top: 12rem;}",
+        ".img_with_text_simplicity_filebox {height: 48rem;}"
+      ],
+      "name": "img with text simplicity",
+      "settings": {
+        "title": "<p>Ordnung Mit Cleverem Kabelmanagement</p>",
+        "sub_title": "",
+        "description": "<p>Der ideale Tisch für Ihre Haustiere – stabil, komfortabel und perfekt für ihren Bedarf.</p>",
+        "file_position": "right",
+        "file_type": "image",
+        "file_image": "shopify://shop_images/product_info_demo_img_1.webp",
+        "video_url": "",
+        "link_url": "",
+        "btn_text":"En savoir plus"
+      }
+    },
 
     
   },

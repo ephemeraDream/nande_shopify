@@ -28,7 +28,11 @@
       >
         {%- if block.settings.image != blank -%}
           <div class="topic-card__img_content">
-            <img class="topic-card__img" src="{{ block.settings.image | img_url: '900x' }}" alt="{{ block.settings.title | escape }}">
+            {{-
+              section.settings.file_image
+              | image_url: width: section.settings.file_image.width
+              | image_tag: alt: section.settings.title, class: 'card__img'
+            -}}
           </div>
         {%- endif -%}
 
