@@ -100,6 +100,7 @@
     padding: 0 5.33vw !important;
     display: flex;
     flex-direction: column-reverse;
+    align-items: flex-start;
   }
 
   .img_with_text_simplicity .img_with_text_simplicity_subtitle {

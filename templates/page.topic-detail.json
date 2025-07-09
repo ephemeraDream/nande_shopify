@@ -259,7 +259,8 @@
       "custom_css": [
         ".img_with_text_simplicity_section {background-color: #e2ded6; padding-top: 6rem;}",
         ".img_with_text_simplicity_filebox {max-height: 48rem;height:auto}",
-        ".img_with_text_simplicity_info {padding-left: 3rem;}"
+        ".img_with_text_simplicity_info {padding-left: 3rem;}",
+        "@media screen and (max-width: 768px) {.img_with_text_simplicity_info {padding-left: 0rem;}}"
       ],
       "name": "img with text simplicity",
       "settings": {
@@ -293,6 +294,38 @@
         "btn_text":"En savoir plus"
       }
     },
+    "accordion_gallery": {
+      "type": "accordion-gallery",
+      "settings": {
+        "title": "Nahtloses Design Trifft Auf FunktionalitäT",
+      },
+      "blocks": {
+        "item_1": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/polka_dot_swiper-1.webp",
+            "title": "GELD ZURÜCK GARANTIE",
+          }
+        },
+        "item_2": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/polka_dot_swiper-1.webp",
+            "title": "GELD ZURÜCK GARANTIE",
+          }
+        },
+        "item_3": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/polka_dot_swiper-1.webp",
+            "title": "GELD ZURÜCK GARANTIE",
+          }
+        }
+      },
+      "block_order": [
+        "item_1", "item_2", "item_3",
+      ]
+    },
 
     
   },
@@ -302,6 +335,7 @@
     "topic_text_img",
     "img_with_text_simplicity_R8thEq",
     "img_with_text_simplicity_R8thEa",
-    "img_with_text_simplicity_R8taEq"
+    "img_with_text_simplicity_R8taEq",
+    "accordion_gallery"
   ]
 }

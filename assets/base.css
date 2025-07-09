@@ -400,7 +400,7 @@ h6,
   margin-block-end: 1.67em;
 }
 .nd-btn{
-  height: 3rem;
+  height: 3.5rem;
   display: inline-flex;
   align-items: center;
   padding: 0rem .8rem .3rem;
@@ -408,7 +408,7 @@ h6,
   padding: 0 0.8rem;
   margin-top: 1rem;
   font-family: "PP Right Grotesk";
-  font-size: 2.4rem;
+  font-size: 2rem;
   line-height: 3rem;
   font-weight: 500;
   letter-spacing: 0px;
