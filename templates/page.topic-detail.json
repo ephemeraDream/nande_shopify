@@ -168,7 +168,7 @@
       },
       "blocks": {
         "card_1": {
-          "type": "text-img-card",
+          "type": "cards",
           "settings": {
             "image": "",
             "title": "GELD ZURÜCK GARANTIE",
@@ -177,7 +177,7 @@
           }
         },
         "card_2": {
-          "type": "card",
+          "type": "cards",
           "settings": {
             "image": "",
             "title": "GELD ZURÜCK GARANTIE",
@@ -186,7 +186,7 @@
           }
         },
         "card_3": {
-          "type": "card",
+          "type": "cards",
           "settings": {
             "image": "",
             "title": "GELD ZURÜCK GARANTIE",
@@ -195,7 +195,7 @@
           }
         },
         "card_4": {
-          "type": "card",
+          "type": "cards",
           "settings": {
             "image": "",
             "title": "GELD ZURÜCK GARANTIE",
@@ -204,7 +204,7 @@
           }
         },
         "card_5": {
-          "type": "card",
+          "type": "cards",
           "settings": {
             "image": "",
             "title": "GELD ZURÜCK GARANTIE",
@@ -213,7 +213,7 @@
           }
         },
         "card_6": {
-          "type": "card",
+          "type": "cards",
           "settings": {
             "image": "",
             "title": "GELD ZURÜCK GARANTIE",
@@ -222,7 +222,7 @@
           }
         },
         "card_7": {
-          "type": "card",
+          "type": "cards",
           "settings": {
             "image": "",
             "title": "GELD ZURÜCK GARANTIE",
