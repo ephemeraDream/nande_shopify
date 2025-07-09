@@ -1,7 +1,7 @@
 
 .topic-text-img-grid {
   display: grid;
-  gap: 24px;
+  gap: 30px;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: auto auto auto auto;
   grid-template-areas:
@@ -31,7 +31,7 @@
 }
 
 .topic-card__title {
-  position: absolute; left: 50%; transform: translateX(-50%);z-index: 9;
+  position: absolute; left: 50%; transform: translateX(-50%);z-index: 9;padding: 0 20px;text-align: center;
 }
 
 .topic-card--title-top    .topic-card__title { top: 42px; }
