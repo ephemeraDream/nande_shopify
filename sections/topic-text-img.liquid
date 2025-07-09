@@ -1,8 +1,103 @@
 {% comment %}
 ------------------------------------------------------------
-专题详情页：3种尺寸图文排列
+专题详情页：图文卡片 3‑种尺寸排布
 ------------------------------------------------------------
 {% endcomment %}
 {{ 'section-topic-text-img.css' | asset_url | stylesheet_tag }}
-<div class="padding-top-60 padding-bottom-60">
+
+<div class="topic-text-img-section section--spacing">
+  {% unless section.settings.title == blank %}
+    <h2 class="topic-text-img-title">{{ section.settings.title }}</h2>
+  {% endunless %}
+
+  <div class="topic-text-img-grid">
+    {%- for block in section.blocks -%}
+      {%- assign type = block.settings.box_type -%}
+      <div
+        class="
+          topic-card
+          topic-card--{{ type }}
+          topic-card--{{ forloop.index0 }}   {# ←用 index 绑定 grid-area #}
+          {% if block.settings.title_position == 'top' %}
+            topic-card--title-top
+          {% else %}
+            topic-card--title-bottom
+          {% endif %}
+        "
+        {{ block.shopify_attributes }}
+      >
+        {%- if block.settings.image != blank -%}
+          <img
+            class="topic-card__img"
+            src="{{ block.settings.image | img_url: '900x' }}"
+            alt="{{ block.settings.title | escape }}"
+          >
+        {%- else -%}
+          <div class="topic-card__placeholder"></div>
+        {%- endif -%}
+
+        {%- unless block.settings.title == blank -%}
+          <span class="topic-card__title">{{ block.settings.title }}</span>
+        {%- endunless -%}
+      </div>
+    {%- endfor -%}
+  </div>
 </div>
+
+{% schema %}
+{
+  "name": "Topic Text Img",
+  "tag": "section",
+  "class": "section",
+  "disabled_on": { "groups": ["header", "footer"] },
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "cards",
+      "name": "Card",
+      "settings": [
+        {
+          "type": "select",
+          "id": "box_type",
+          "label": "Box Type",
+          "options": [
+            { "value": "box_big",    "label": "Big (wide)"   },
+            { "value": "box_middle", "label": "Middle (sq)"  },
+            { "value": "box_small",  "label": "Small (sq)"   }
+          ],
+          "default": "box_big"
+        },
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Background Image"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title"
+        },
+        {
+          "type": "select",
+          "id": "title_position",
+          "label": "Title Position",
+          "options": [
+            { "value": "top",    "label": "Top"    },
+            { "value": "bottom", "label": "Bottom" }
+          ],
+          "default": "top"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    { "name": "Topic Text Img" }
+  ]
+}
+{% endschema %}

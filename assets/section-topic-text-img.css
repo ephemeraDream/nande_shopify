@@ -1,0 +1,65 @@
+/* 基础间距，可根据主题变量替换 */
+.section--spacing { padding: 30px 0 120px; }
+.topic-text-img-title { margin-bottom: 60px; text-transform: uppercase; }
+
+/* ---------- 网格布局 ---------- */
+.topic-text-img-grid {
+  --gap: 24px;
+  display: grid;
+  gap: var(--gap);
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto auto auto auto;
+  grid-template-areas:
+    "big-top    big-top    big-top"
+    "small-1    middle     small-2"
+    "small-3    middle     small-4"
+    "big-bottom big-bottom big-bottom";
+}
+
+/* 按 index（0‑based）将 7 张卡片放进对应区域 */
+.topic-card--0 { grid-area: big-top;    }
+.topic-card--1 { grid-area: big-bottom; }
+.topic-card--2 { grid-area: small-1;    }
+.topic-card--3 { grid-area: small-2;    }
+.topic-card--4 { grid-area: small-3;    }
+.topic-card--5 { grid-area: small-4;    }
+.topic-card--6 { grid-area: middle;     }
+
+/* ---------- 尺寸 & 比例 ---------- */
+.topic-card { position: relative; overflow: hidden; display: flex; }
+.topic-card--box_big    { aspect-ratio: 3 / 1; } /* 宽横幅 */
+.topic-card--box_middle { aspect-ratio: 1 / 1; } /* 正方形 */
+.topic-card--box_small  { aspect-ratio: 1 / 1; } /* 正方形 */
+
+.topic-card__img,
+.topic-card__placeholder {
+  width: 100%; height: 100%; object-fit: cover;
+  background: #f5f5f5;
+}
+
+.topic-card__title {
+  position: absolute; left: 50%; transform: translateX(-50%);
+  font-weight: 700; font-size: 12px; letter-spacing: .06em;
+  text-transform: uppercase; white-space: nowrap;
+}
+
+.topic-card--title-top    .topic-card__title { top: 12px; }
+.topic-card--title-bottom .topic-card__title { bottom: 12px; }
+
+/* ---------- 响应式（<768px 时改为单列） ---------- */
+@media (max-width: 767px) {
+  .topic-text-img-grid {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "big-top"
+      "middle"
+      "small-1"
+      "small-2"
+      "small-3"
+      "small-4"
+      "big-bottom";
+  }
+
+  /* 避免高度过高 – 手机端 big 改为 16:9 */
+  .topic-card--box_big { aspect-ratio: 16 / 9; }
+}

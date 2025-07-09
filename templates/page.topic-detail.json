@@ -220,6 +220,7 @@
   },
   "order": [
     "banner_topic",
-    "tabs_topic"
+    "tabs_topic",
+    "topic_text_img",
   ]
 }

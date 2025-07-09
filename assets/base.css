@@ -4005,6 +4005,22 @@ a {
 /*****************************  session end *****************************/
 
 /*****************************  padding  *****************************/
+.padding-30 {
+  padding: 3rem 0;
+}
+.padding-top-30 {
+  padding-top: 3rem;
+}
+.padding-bottom-30 {
+  padding-bottom: 3rem;
+}
+.padding-horizontal-30 {
+  padding: 0 3rem;
+}
+.padding-vertically-30{
+  padding: 3rem 0;
+}
+
 .padding-60 {
   padding: 6rem 0;
 }
