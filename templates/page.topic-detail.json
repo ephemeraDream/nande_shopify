@@ -168,7 +168,7 @@
       },
       "blocks": {
         "card_1": {
-          "type": "card",
+          "type": "text-img-card",
           "settings": {
             "image": "",
             "title": "GELD ZURÜCK GARANTIE",
