@@ -27,11 +27,9 @@
         {{ block.shopify_attributes }}
       >
         {%- if block.settings.image != blank -%}
-          <img
-            class="topic-card__img"
-            src="{{ block.settings.image | img_url: '900x' }}"
-            alt="{{ block.settings.title | escape }}"
-          >
+          <div class="topic-card__img_content">
+            <img class="topic-card__img" src="{{ block.settings.image | img_url: '900x' }}" alt="{{ block.settings.title | escape }}">
+          </div>
         {%- endif -%}
 
         {%- unless block.settings.title == blank -%}

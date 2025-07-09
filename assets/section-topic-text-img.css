@@ -26,16 +26,29 @@
 .topic-card--box_middle { aspect-ratio: 1 / 1; }  
 .topic-card--box_small  { aspect-ratio: 1 / 1; }  
 
+.topic-card__img_content::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
 .topic-card__img{
   width: 100%; height: 100%; object-fit: cover;
 }
 
 .topic-card__title {
-  position: absolute; left: 50%; transform: translateX(-50%);z-index: 9;padding: 0 20px;text-align: center;
+  position: absolute; left: 50%; transform: translateX(-50%);z-index: 9;text-align: center;
 }
 
-.topic-card--title-top    .topic-card__title { top: 42px; }
+.topic-card--title-top    .topic-card__title { top: 36px; }
 .topic-card--title-bottom .topic-card__title { bottom: 36px; }
+
+.topic-card--title-top .topic-card__img_content::after { background: linear-gradient(to top, rgba(255,255,255,0) 60%, rgba(255,255,255,1) 100%); }
+.topic-card--title-bottom .topic-card__img_content::after {   background: linear-gradient(to bottom, rgba(255,255,255,0) 80%, rgba(255,255,255,1) 100%); }
 
 /* ---------- <768px ---------- */
 @media (max-width: 767px) {
