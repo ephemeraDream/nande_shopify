@@ -3,6 +3,7 @@
   background-color: #F2F2F2;
   padding-top: 12rem;
   padding-bottom: 12rem;
+  overflow: hidden;
 }
 
 .img_with_text_tab {
@@ -138,4 +139,8 @@
 
 .img_with_text_tab .img_with_text_tab_swiper_next {
   left: 13rem;
+}
+
+@media only screen and (max-width: 767px) {
+  
 }
