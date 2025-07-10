@@ -14,7 +14,7 @@
               aria-label="{{ block.settings.title | escape }}"
             >
               <div class="accordion-item__content">
-                  <h3 class="accordion-item__title">{{ block.settings.title }}</h3>
+                  <h4 class="accordion-item__title">{{ block.settings.title }}</h4>
                   <div class="accordion-item__desc">{{ block.settings.content }}</div>
               </div>
             </div>
@@ -64,6 +64,9 @@
 .accordion-gallery-con .accordion-item.active .accordion-item__content {
   opacity: 1;
   visibility: visible;
+}
+.accordion-item__title{
+  color: #fff;
 }
 </style>
 <script>
