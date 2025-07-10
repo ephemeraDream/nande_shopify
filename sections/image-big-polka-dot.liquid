@@ -1,0 +1,145 @@
+{% comment %}
+------------------------------------------------------------
+专题详情页：大图带波点
+------------------------------------------------------------
+{% endcomment %}
+<div class="image-big-polka-dot">
+  
+  {% unless section.settings.title == blank %}
+  <div class="session-box-padding">
+    <h2 class="padding-bottom-60 session-box-inner">{{ section.settings.title }}</h2>
+  </div>
+  {% endunless %}
+  <div class="polka_dot_img_with_text_img">
+      {{-
+          section.settings.image
+          | image_url: width: section.settings.image.width
+          | image_tag: alt: section.settings.title
+        -}}
+      {% for block in section.blocks %}
+      {%- if block.type == 'product_item' -%}
+          <div
+            class="polka_dot_contain"
+            style="top: {{ block.settings.product_Y }}%;left: {{ block.settings.product_X }}%"
+          >
+            <div class="polka_dot_icon">{{- 'icon-plus.svg' | inline_asset_content -}}</div>
+            <a class="polka_dot_product {% if block.settings.product_X > 60 %} left{% endif %}" href="{{ block.settings.select_product.url }}" style="display: none;">
+              <div class="polka_dot_product_img">
+                {{-
+                  block.settings.select_product.featured_media
+                  | image_url: width: block.settings.select_product.featured_media.width
+                  | image_tag: alt: block.settings.select_product.title
+                -}}
+              </div>
+              <div class="polka_dot_product_info">
+                <h4 class="polka_dot_product_info_title truncate-2-lines">{{ block.settings.select_product.title }}</h4>
+                <div class="polka_dot_product_info_price text-body">
+                  {{ block.settings.select_product.price | money_without_trailing_zeros }}
+                  {{- 'icon-shopping-cart.svg' | inline_asset_content -}}
+                </div>
+              </div>
+            </a>
+          </div>
+      {%- endif -%}
+      {% endfor %}
+  </div>
+</div>
+<style>
+.image-big-polka-dot .polka_dot_img_with_text_img {
+    width: 100%;
+    height: auto;
+    position: relative;
+}
+.image-big-polka-dot .polka_dot_img_with_text_img img{
+    width:100%;
+    height:auto;
+    display:block;
+    object-fit:contain;
+}
+
+</style>
+{% schema %}
+{
+  "name": "image with text polka dot",
+  "tag": "section",
+  "class": "section",
+  "disabled_on": {
+    "groups": ["header", "footer"]
+  },
+  "settings": [
+    {
+        "type": "richtext",
+        "id": "title",
+        "label": "title"
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Image"
+    },
+  ],
+  "blocks": [
+    {
+        "type": "product_item",
+        "name": "产品选择",
+        "settings": [
+        {
+            "type": "product",
+            "id": "select_product",
+            "label": "选择产品"
+        },
+        {
+            "type": "range",
+            "id": "product_X",
+            "label": "X坐标",
+            "default": 0,
+            "min": 0,
+            "max": 100,
+            "step": 1,
+            "unit": "%"
+        },
+        {
+            "type": "range",
+            "id": "product_Y",
+            "label": "Y坐标",
+            "default": 0,
+            "min": 0,
+            "max": 100,
+            "step": 1,
+            "unit": "%"
+        }
+        ]
+    }
+    ]
+}
+{% endschema %}
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const icons = document.querySelectorAll('.polka_dot_contain .polka_dot_icon');
+    
+      icons.forEach(icon => {
+        const section = icon.closest('section');
+        const contain = icon.closest('.polka_dot_contain');
+        icon.addEventListener('mouseenter', () => {
+          section.querySelectorAll('.polka_dot_product')
+                 .forEach(el => el.style.display = 'none');
+          contain.querySelectorAll('.polka_dot_product')
+                 .forEach(el => el.style.display = '');
+        });
+        {% comment %} icon.addEventListener('mouseleave', () => {
+          section.querySelectorAll('.polka_dot_product')
+                 .forEach(el => el.style.display = 'none');
+        }); {% endcomment %}
+      });
+      document.querySelectorAll('.polka_dot_img_with_text_img').forEach(function(imgBox) {
+        imgBox.addEventListener('click', function() {
+          imgBox.parentElement.querySelectorAll('.polka_dot_product').forEach(function(el) {
+            el.style.display = 'none';
+          });
+        });
+      });
+    
+    });
+</script>
+
+    

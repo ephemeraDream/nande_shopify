@@ -429,7 +429,36 @@
         "title": "<p>Technische Daten Des HöHenverstellbaren </p><p>Schreibtisches-T2 Pro Plus</p>"
       }
     },
-//差一个波点大图
+    "image_big_polka_dot": {
+      "type": "image-big-polka-dot",
+      "blocks": {
+        "product_block_1": {
+          "type": "product_item",
+          "settings": {
+            "select_product": "maidesite-tischgestell-elektrisch-hohenverstellbar-t2-pro-plus",
+            "product_X": 34,
+            "product_Y": 48
+          }
+        },
+        "product_block_2": {
+          "type": "product_item",
+          "settings": {
+            "select_product": "maidesite-th2-pro-plus-tischgestell-elektrisch-hohenverstellbar",
+            "product_X": 79,
+            "product_Y": 63
+          }
+        }
+      },
+      "block_order": [
+        "product_block_1",
+        "product_block_2"
+      ],
+      "settings": {
+        "title": "<p>Die Ideale Wahl FüR Yoga-Enthusiasten, Die Komfort<br/> Und QualitäT SchäTzen.</p>",
+        "image": "shopify://shop_images/topic-detail02.webp",
+      },
+      "custom_css": [],
+    },
     "bundle_simple_WFrNiX": {
       "type": "bundle-simple",
       "name": "bundle simple",
@@ -535,7 +564,7 @@
         "faq_whBqrf"
       ],
       "custom_css": [
-        ".faq_simple_section {background-color: #fafafa;}"
+        ".faq_simple_section {background-color: transparent;}"
       ],
       "name": "faq simple",
       "settings": {
@@ -558,6 +587,7 @@
     "accordion_gallery_2",
     "img_with_text_tab_emEWU8",
     "technical_data_L3gXUm",
+    "image_big_polka_dot",
     "bundle_simple_WFrNiX",
     "faq_simple_kxTbhc"
   ]
