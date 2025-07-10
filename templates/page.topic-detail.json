@@ -421,6 +421,14 @@
         ".img_with_text_tab_section {background-color: #E2DED6;}"
       ],
     },
+    "technical_data_L3gXUm": {
+      "type": "technical-data",
+      "name": "technical data",
+      "settings": {
+        "spec_id": "Technische_Daten",
+        "title": "<p>Technische Daten Des HöHenverstellbaren </p><p>Schreibtisches-T2 Pro Plus</p>"
+      }
+    },
     
   },
   "order": [
@@ -432,6 +440,7 @@
     "img_with_text_simplicity_R8taEq",
     "accordion_gallery",
     "accordion_gallery_2",
-    "img_with_text_tab_emEWU8"
+    "img_with_text_tab_emEWU8",
+    "technical_data_L3gXUm"
   ]
 }
