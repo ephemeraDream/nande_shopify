@@ -3,7 +3,7 @@
 {% assign technical_data = product.metafields.custom.technical_data.value.data.value %}
 <div class="technical_data_section padding-sider" id="{{ section.settings.spec_id }}">
   <div class="technical_data">
-    <div class="technical_data_title">{{ section.settings.title }}</div>
+    <h2 class="technical_data_title">{{ section.settings.title }}</h2>
     <div class="technical_data_head">
       {% for item in technical_data %}
         <div class="technical_data_head_item{% if forloop.first %} active{% endif %}">

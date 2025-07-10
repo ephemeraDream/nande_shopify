@@ -4,7 +4,7 @@
 
 <div class="bundle_simple_section padding-sider">
   <div class="bundle_simple">
-    <div class="bundle_simple_title">{{ section.settings.title }}</div>
+    <h2 class="bundle_simple_title">{{ section.settings.title }}</h2>
     <div class="bundle_simple_text">{{ section.settings.text }}</div>
     <div class="bundle_simple_contain">
       <div class="bundle_simple_contain_left">
@@ -18,10 +18,10 @@
             </div>
             <div class="bundle_simple_product_info">
               <div>
-                <div class="bundle_simple_product_title">{{ product.title }}</div>
-                <div class="bundle_simple_product_price">
+                <h4 class="bundle_simple_product_title">{{ product.title }}</h4>
+                <h4 class="bundle_simple_product_price">
                   {{ product.selected_or_first_available_variant.price | money_without_trailing_zeros }}
-                </div>
+                </h4>
                 {%- for option in product.options_with_values -%}
                   <div class="bundle_simple_option_item">
                     <div class="bundle_simple_option_label">{{ option.name }}</div>
