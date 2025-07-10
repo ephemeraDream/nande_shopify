@@ -417,9 +417,30 @@ h6,
   display: inline-flex;
   flex: 0 0 auto;
   width: fit-content;
+  position: relative;
+  transition-duration: .2s;
+}
+.nd-btn:hover {
+  background-color: #88ff00;
+  transition-duration: .2s;
 }
 .nd-btn svg{
   margin-top: 0.3rem;
+}
+/* arrow animation */
+@keyframes slide-right {
+  0% {
+    transform: translateX(-10px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+.nd-btn:hover svg {
+  animation: slide-right 0.3s ease-in-out forwards;
 }
 @media only screen and (min-width: 1400px) {
   .nd-btn{

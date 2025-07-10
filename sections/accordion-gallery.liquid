@@ -7,20 +7,16 @@
     {% unless section.settings.title == blank %}
         <h2 class="padding-bottom-60 session-box-inner">{{ section.settings.title }}</h2>
     {% endunless %}
-    <div class="session-box-inner">
+    <div class="accordion-gallery-con session-box-inner">
         {%- for block in section.blocks -%}
-            <div class="accordion-item">
-                <div class="accordion-item__img">
-                    {{-
-                        block.settings.image
-                        | image_url: width: block.settings.image.width
-                        | image_tag: alt: block.settings.title, class: 'accordion-item__img'
-                    -}}
-                </div>
-                <div class="accordion-item__content">
-                    <h3 class="accordion-item__title">{{ block.settings.title }}</h3>
-                    <div class="accordion-item__desc">{{ block.settings.content }}</div>
-                </div>
+            <div class="accordion-item" 
+              style="background-image: url('{{ block.settings.image | image_url: width: block.settings.image.width }}'); background-size: cover; background-position: center;"
+              aria-label="{{ block.settings.title | escape }}"
+            >
+              <div class="accordion-item__content">
+                  <h3 class="accordion-item__title">{{ block.settings.title }}</h3>
+                  <div class="accordion-item__desc">{{ block.settings.content }}</div>
+              </div>
             </div>
         {%- endfor -%}
     </div>
@@ -30,7 +26,57 @@
 .accordion-gallery{
     margin:120px 0;
 }
+.accordion-gallery-con{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 2.4rem;
+}
+.accordion-gallery-con .accordion-item {
+  flex: 0 0 18%;
+  transition: all 0.3s ease;
+  min-height: 48rem;
+  background-position: bottom left;
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: hidden;
+}
+.accordion-item__content{
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+  padding: 3.5rem;
+  background:linear-gradient(to bottom, rgba(0,0,0,0) 70%, rgba(0,0,0,0.7) 100%);
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.4s ease;
+}
+.accordion-gallery-con .accordion-item.active {
+  flex: 0 0 64%;
+}
+.accordion-gallery-con .accordion-item.active .accordion-item__content {
+  opacity: 1;
+  visibility: visible;
+}
 </style>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    var items = document.querySelectorAll('.accordion-gallery-con .accordion-item');
+    items.forEach(function(item) {
+      item.addEventListener('mouseenter', function() {
+        items.forEach(function(i) { i.classList.remove('active'); });
+        item.classList.add('active');
+      });
+    });
+  });
+  </script>
 
 {% schema %}
 {
