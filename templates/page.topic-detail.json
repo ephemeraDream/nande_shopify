@@ -430,17 +430,22 @@
       }
     },
 
-    "company_intro_TkncCr": {
-      "type": "company-intro",
-      "name": "company intro",
+    "bundle_simple_WFrNiX": {
+      "type": "bundle-simple",
+      "name": "bundle simple",
       "settings": {
-        "title": "<p>Now Maidesite</p><p>Future Defined</p>",
-        "introduce": "<p>Maidesite, through its products of height-adjustable desk which feature functional integration, scenario versatility,and personalization, helps you easily switch to various home activity modes that require a desktop assistant.This allows enthusiasts of modern smart home living to more conveniently and effortlesslyimmerse themselves in their diverse lifestyle forms.<br/><br/>Maidesite bietet durch seine produkten von hohenverstellbaren Schreibtischen, die Funktionsintegration,Szenenvielfalt und Personalisierung bieten, lhnen die Möglichkeit. einfach zwischen verschiedenen Heimat-Aktivitatsmodizuwechseln, die eine Desktop-Assistenten erfordern. Dies ermoglicht Anhängern des modernen intelligenten Heimlebens. sich noch beguemer und müheloser in ihre vielfaltigen Lebensstile einzuleben.</p>",
-        "link_text": "Erkunden",
-        "link": "",
-        "cover_image": "shopify://shop_images/company-video-cover.webp",
-        "video_url": "",
-        "url_upload": "shopify://files/videos/TO1-Pro-spine-healthy-mode_a586d928-0c0c-459d-99a8-75d2ab5cc36d.mp4"
+        "title": "<p>Stelle Deinen Schreibtisch Zusammen</p>",
+        "text": "<p>Gestalte deinen Maidesite-Arbeitsbereich mit unseren </p><p>inspirierten Räumen und Produkten</p>",
+        "product_list": [
+          "maidesite-el2-pro-art-tischgestell-elektrisch-hohenverstellbar",
+          "maidesite-to1-pro-elektrisch-hohenverstellbarer-schreibtisch",
+          "maidesite-elektrisch-hohenverstellbarer-schreibtisch-120x60-140x70-cm-s2-pro"
+        ],
+        "product_link_text": "En savoir plus",
+        "bundle_title": "<p>Collocation</p>",
+        "bundle_text": "<p>Premium-GestellEleganter Schreibtisch mit ovalen Beinen</p>",
+        "bundle_link_text": "Add to bundle",
+        "color_label": "Farbe Gestel,Farbe Tischplatte,Farbe"
       }
     },
     "faq_simple_kxTbhc": {
@@ -553,7 +558,7 @@
     "accordion_gallery_2",
     "img_with_text_tab_emEWU8",
     "technical_data_L3gXUm",
-    "company_intro_TkncCr",
+    "bundle_simple_WFrNiX",
     "faq_simple_kxTbhc"
   ]
 }
