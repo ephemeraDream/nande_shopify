@@ -6,6 +6,7 @@
 .footer_simple {
   max-width: var(--page-width);
   margin: 0 auto;
+  flex-wrap: wrap;
 }
 
 .footer_simple .footer_simple_body {

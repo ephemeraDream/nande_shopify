@@ -4025,7 +4025,7 @@ a {
 }
 @media only screen and (min-width: 1400px) {
   .session-box-inner {
-    max-width: 144rem;
+    max-width: var(--page-width);
   }
   .session-box-padding{
     padding-left: 6rem;
