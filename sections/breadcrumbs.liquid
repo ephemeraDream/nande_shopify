@@ -1,0 +1,79 @@
+{% comment %}
+Breadcrumb Section - 自动/手动切换
+{% endcomment %}
+<div class="breadcrumb-con session-box-padding">
+{% if section.settings.custom_breadcrumb != blank %}
+    <nav class="breadcrumb session-box-inner" aria-label="Breadcrumb">
+      {{ section.settings.custom_breadcrumb }}
+    </nav>
+  {% else %}
+    <nav class="breadcrumb session-box-inner" aria-label="Breadcrumb">
+      <a href="{{ routes.root_url }}">Home</a>
+      {% if collection %}
+        <span> / </span>
+        <a href="{{ collection.url }}">{{ collection.title }}</a>
+      {% endif %}
+  
+      {% if product %}
+        <span> / </span>
+        <span>{{ product.title }}</span>
+      {% elsif article %}
+        <span> / </span>
+        <a href="{{ blog.url }}">{{ blog.title }}</a>
+        <span> / </span>
+        <span>{{ article.title }}</span>
+      {% elsif page %}
+        <span> / </span>
+        <span>{{ page.title }}</span>
+      {% endif %}
+    </nav>
+  {% endif %}
+ </div> 
+  <style>
+    .breadcrumb-con{
+      width: 100%;
+      position:absolute;
+      top: 0;
+      left: 0;
+      z-index: 100;
+    }
+    .breadcrumb {
+      font-size: 1.6rem;
+      margin: 10px 0 20px;
+      color:#fff;
+    }
+    .breadcrumb a {
+      text-decoration: none;
+    }
+    .breadcrumb a:hover {
+      color: #BDFF00;
+      text-decoration: underline;
+    }
+    .breadcrumb span {
+      color: #999;
+      margin: 0 5px;
+    }
+  </style>
+  
+  {% schema %}
+  {
+    "name": "Breadcrumb",
+    "tag": "section",
+    "class": "section-breadcrumb",
+    "settings": [
+      {
+        "type": "richtext",
+        "id": "custom_breadcrumb",
+        "label": "自定义面包屑内容（可选）",
+        "default": ""
+      }
+    ],
+    "presets": [
+      {
+        "name": "Breadcrumb",
+        "category": "Text"
+      }
+    ]
+  }
+  {% endschema %}
+  

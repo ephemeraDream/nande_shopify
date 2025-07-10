@@ -5,7 +5,7 @@
  * This file may be updated by the Shopify admin theme editor
  * or related systems. Please exercise caution as any changes
  * made to this file may be overwritten.
- * 专题页-专题集合页
+ * B2B页 B端页面
  * ------------------------------------------------------------
  */
 {
@@ -46,13 +46,6 @@
       ],
       "name": "banner",
       "settings": {}
-    },
-    "breadcrumb": {
-      "type": "breadcrumb",
-      "settings": {},
-      "custom_css": [
-        ".breadcrumb-con{width: 100%;position:absolute;top: 0;left: 0;z-index: 100;}"
-      ],
     },
     "image_with_text_polka_dot": {
       "type": "image-with-text-polka-dot",
