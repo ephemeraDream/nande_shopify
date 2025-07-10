@@ -12,7 +12,9 @@
   "sections": {
     "breadcrumb": {
       "type": "breadcrumb",
-      "settings": {},
+      "settings": {
+        "custom_breadcrumb": "",
+      },
       "custom_css": [
         ".breadcrumb-con{width: 100%;position:absolute;top: 0;left: 0;z-index: 100;}"
       ],
