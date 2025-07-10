@@ -193,6 +193,7 @@
   },
   "order": [
     "banner_topic",
+    "breadcrumb",
     "image_with_text_polka_dot",
     "image_with_text_polka_dot_right",
     "image_with_text_polka_dot_2",

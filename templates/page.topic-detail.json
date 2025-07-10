@@ -10,6 +10,13 @@
  */
 {
   "sections": {
+    "breadcrumb": {
+      "type": "breadcrumb",
+      "settings": {},
+      "custom_css": [
+        ".breadcrumb-con{width: 100%;position:absolute;top: 0;left: 0;z-index: 100;}"
+      ],
+    },
     "banner_topic": {
       "type": "banner",
       "blocks": {
@@ -578,6 +585,7 @@
     
   },
   "order": [
+    "breadcrumb",
     "banner_topic",
     "tabs_topic",
     "topic_text_img",
