@@ -41,6 +41,7 @@
   background-repeat: no-repeat;
   background-size: cover;
   overflow: hidden;
+  position: relative;
 }
 .accordion-item__content{
   height: 100%;
@@ -72,6 +73,9 @@
 <script>
   document.addEventListener('DOMContentLoaded', function() {
     var items = document.querySelectorAll('.accordion-gallery-con .accordion-item');
+    if(items.length > 0) {
+      items[0].classList.add('active');
+    }
     items.forEach(function(item) {
       item.addEventListener('mouseenter', function() {
         items.forEach(function(i) { i.classList.remove('active'); });
