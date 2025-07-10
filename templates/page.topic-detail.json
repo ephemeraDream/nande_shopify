@@ -11,7 +11,7 @@
 {
   "sections": {
     "breadcrumb": {
-      "type": "breadcrumb",
+      "type": "breadcrumbs",
       "settings": {
         "custom_breadcrumb": "",
       },
@@ -587,7 +587,7 @@
     
   },
   "order": [
-    "breadcrumb",
+    "breadcrumbs",
     "banner_topic",
     "tabs_topic",
     "topic_text_img",

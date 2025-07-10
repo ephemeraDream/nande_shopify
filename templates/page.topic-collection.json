@@ -48,7 +48,7 @@
       "settings": {}
     },
     "breadcrumb": {
-      "type": "breadcrumb",
+      "type": "breadcrumbs",
       "settings": {
         "custom_breadcrumb": "",
       },
@@ -195,7 +195,7 @@
   },
   "order": [
     "banner_topic",
-    "breadcrumb",
+    "breadcrumbs",
     "image_with_text_polka_dot",
     "image_with_text_polka_dot_right",
     "image_with_text_polka_dot_2",
