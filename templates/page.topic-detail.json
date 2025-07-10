@@ -421,7 +421,7 @@
         ".img_with_text_tab_section {background-color: #E2DED6;}"
       ],
     },
-    "technical_data_L3gXUm": {
+    "technical_data_L3gXUm": {//需要改造 原来是获取产品的设置
       "type": "technical-data",
       "name": "technical data",
       "settings": {
@@ -429,8 +429,25 @@
         "title": "<p>Technische Daten Des HöHenverstellbaren </p><p>Schreibtisches-T2 Pro Plus</p>"
       }
     },
-
-    
+//差一个波点大图
+    "bundle_simple_WFrNiX": {
+      "type": "bundle-simple",
+      "name": "bundle simple",
+      "settings": {
+        "title": "<p>Stelle Deinen Schreibtisch Zusammen</p>",
+        "text": "<p>Gestalte deinen Maidesite-Arbeitsbereich mit unseren </p><p>inspirierten Räumen und Produkten</p>",
+        "product_list": [
+          "maidesite-el2-pro-art-tischgestell-elektrisch-hohenverstellbar",
+          "maidesite-to1-pro-elektrisch-hohenverstellbarer-schreibtisch",
+          "maidesite-elektrisch-hohenverstellbarer-schreibtisch-120x60-140x70-cm-s2-pro"
+        ],
+        "product_link_text": "En savoir plus",
+        "bundle_title": "<p>Collocation</p>",
+        "bundle_text": "<p>Premium-GestellEleganter Schreibtisch mit ovalen Beinen</p>",
+        "bundle_link_text": "Add to bundle",
+        "color_label": "Farbe Gestel,Farbe Tischplatte,Farbe"
+      }
+    },
     "faq_simple_kxTbhc": {
       "type": "faq-simple",
       "blocks": {
@@ -541,6 +558,7 @@
     "accordion_gallery_2",
     "img_with_text_tab_emEWU8",
     "technical_data_L3gXUm",
+    "bundle_simple_WFrNiX",
     "faq_simple_kxTbhc"
   ]
 }
