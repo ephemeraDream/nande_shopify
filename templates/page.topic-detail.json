@@ -326,6 +326,38 @@
         "item_1", "item_2", "item_3",
       ]
     },
+    "accordion_gallery_2": {
+      "type": "accordion-gallery",
+      "settings": {
+        "title": "Nahtloses Design Trifft Auf FunktionalitäT",
+      },
+      "blocks": {
+        "item_1": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/polka_dot_swiper-1.webp",
+            "title": "Eleganter Arbeitsbereich",
+          }
+        },
+        "item_2": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/polka_dot_swiper-1.webp",
+            "title": "Eleganter Arbeitsbereich",
+          }
+        },
+        "item_3": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/polka_dot_swiper-1.webp",
+            "title": "Eleganter Arbeitsbereich",
+          }
+        }
+      },
+      "block_order": [
+        "item_1", "item_2", "item_3",
+      ]
+    },
 
     
   },
