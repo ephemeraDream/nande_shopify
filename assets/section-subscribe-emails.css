@@ -30,6 +30,7 @@
   flex: 1;
   display: flex;
   align-items: center;
+  margin-right: 3rem;
 }
 
 .subscribe_emails .newsletter-form,
@@ -63,7 +64,7 @@
 }
 
 .subscribe_emails .newsletter-form__button {
-  width: 31.1rem;
+  max-width: 31.1rem;
   background-color: #BDFF00;
   font-family: "PP Right Grotesk";
   font-size: 2.4rem;
@@ -74,6 +75,7 @@
   color: #1F1F1F;
   right: 0;
   height: 100%;
+  width: 40%;
 }
 
 .subscribe_emails .newsletter-form__button:not(:focus-visible):not(.focused) {
