@@ -142,5 +142,15 @@
 }
 
 @media only screen and (max-width: 767px) {
-  
+  .img_with_text_tab .img_with_text_tab_contain .swiper-slide{
+    align-items: flex-start;
+    flex-direction: column;
+  }
+  .img_with_text_tab .img_with_text_tab_contain_filebox{
+    width: 100%;
+    min-height: auto;
+  }
+  .img_with_text_tab .img_with_text_tab_contain_info{
+    width: 100%;
+  }
 }
