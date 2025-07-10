@@ -80,14 +80,17 @@
 </style>
 <script>
   document.addEventListener('DOMContentLoaded', function() {
-    var items = document.querySelectorAll('.accordion-gallery-con .accordion-item');
-    if(items.length > 0) {
-      items[0].classList.add('active');
-    }
-    items.forEach(function(item) {
-      item.addEventListener('mouseenter', function() {
-        items.forEach(function(i) { i.classList.remove('active'); });
-        item.classList.add('active');
+    var containers = document.querySelectorAll('.accordion-gallery-con');
+    containers.forEach(function(container) {
+      var items = container.querySelectorAll('.accordion-item');
+      if(items.length > 0) {
+        items[0].classList.add('active');
+      }
+      items.forEach(function(item) {
+        item.addEventListener('mouseenter', function() {
+          items.forEach(function(i) { i.classList.remove('active'); });
+          item.classList.add('active');
+        });
       });
     });
   });
