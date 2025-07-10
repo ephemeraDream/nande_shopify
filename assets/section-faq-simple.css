@@ -99,19 +99,6 @@
 }
 
 .faq_simple .faq_simple_more_btn {
-  height: 3.5rem;
-  padding: 0 0.8rem;
-  display: flex;
-  align-items: center;
-  gap: 0.8rem;
-  background-color: #BDFF00;
-  font-family: "PP Right Grotesk";
-  font-size: 2.4rem;
-  font-weight: 500;
-  line-height: 112%;
-  letter-spacing: 0px;
-  font-variation-settings: "opsz" auto;
-  color: #1F1F1F;
   cursor: pointer;
 }
 
@@ -139,4 +126,23 @@
   display: flex;
   align-items: baseline;
   justify-content: space-between;
+}
+@media only screen and (max-width: 1400px) {
+  .faq_simple .faq_simple_heading {
+    font-size: 6rem;
+  }
+  .faq_simple .faq_simple_question {
+    font-size: 3rem;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .faq_simple .faq_simple_heading {
+    font-size: 4rem;
+  }
+  .faq_simple .faq_simple_question {
+    font-size: 2rem;
+  }
+  .faq_simple .faq_simple_answer{
+    font-size: 1.6rem;
+  }
 }
