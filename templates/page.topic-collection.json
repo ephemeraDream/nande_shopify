@@ -47,7 +47,7 @@
       "name": "banner",
       "settings": {}
     },
-    "breadcrumb": {
+    "breadcrumbs": {
       "type": "breadcrumbs",
       "settings": {
         "custom_breadcrumb": "",
