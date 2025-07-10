@@ -138,3 +138,22 @@
   width: 3.4rem;
   height: 3.4rem;
 }
+@media only screen and (max-width: 1024px) {
+  .subscribe_emails{
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1rem 0;
+  }
+  .subscribe_emails_section{
+    height: auto;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .subscribe_emails .subscribe_emails_body{
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 0;
+    gap: 1rem;
+  }
+}
