@@ -164,6 +164,28 @@ aria-label="conatct"
     .contact-form-one .field__input::placeholder,.contact-form-one textarea.text-area::placeholder {
       color: #7F7E75;  
     }
+    /* 通用 placeholder 颜色 */
+.field__input::placeholder {
+  color: #888888; /* 你想要的颜色 */
+  opacity: 1;     /* 防止有些浏览器默认有透明度 */
+}
+
+/* Firefox */
+.field__input::-moz-placeholder {
+  color: #888888;
+  opacity: 1;
+}
+
+/* IE 10-11 */
+.field__input:-ms-input-placeholder {
+  color: #888888;
+}
+
+/* Microsoft Edge */
+.field__input::-ms-input-placeholder {
+  color: #888888;
+}
+
     
     .contact-form-one textarea.text-area {
       min-height: 120px;
