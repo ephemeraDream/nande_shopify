@@ -1,0 +1,67 @@
+{% comment %}
+------------------------------------------------------------
+Contact Form One Section - 联系表单 头部那种
+------------------------------------------------------------
+{% endcomment %}
+<div class="contact-form-one session-box-padding overflow-hidden" 
+style="background-image: url('{{ section.settings.image | image_url: width: section.settings.image.width }}'); "
+aria-label="conatct"
+>
+    <div class="contact-form-one__content session-box-inner">
+        <div class="form__content">
+            <h2 class="one__title">{{ section.settings.title }}</h2>
+            <h4 class="one__desc">{{ section.settings.desc }}</h4>
+        </div>
+    </div>
+</div>
+<style>
+    .contact-form-one{
+        background-size: cover; background-position: center;
+        min-height: 96rem;
+    }
+    .contact-form-one__content{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-end;
+    }
+    .contact-form-one .form__content{
+        display: flex;
+        gap:3rem;
+        width:72rem;
+    }
+    .contact-form-one .one__title,.contact-form-one .one__desc{
+        color: #fff;
+    }
+</style>
+
+{% schema %}
+{
+  "name": "Contact Form One",
+  "tag": "section",
+  "class": "section",
+  "disabled_on": { "groups": ["header", "footer"] },
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title"
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Background Image"
+    },
+    {
+        "type": "text",
+        "id": "desc",
+        "label": "desc"
+    }
+  ],
+  "blocks": [
+  ],
+  "presets": [
+    { "name": "Contact Form One" }
+  ]
+}
+{% endschema %}

@@ -10,7 +10,7 @@
     <div class="accordion-gallery-con session-box-inner">
         {%- for block in section.blocks -%}
             <div class="accordion-item" 
-              style="background-image: url('{{ block.settings.image | image_url: width: block.settings.image.width }}'); background-size: cover; background-position: center;"
+              style="background-image: url('{{ block.settings.image | image_url: width: block.settings.image.width }}');"
               aria-label="{{ block.settings.title | escape }}"
             >
               <div class="accordion-item__content">
@@ -38,7 +38,7 @@
   flex: 0 0 18%;
   transition: all 0.3s ease;
   min-height: 48rem;
-  background-position: bottom left;
+  background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   overflow: hidden;

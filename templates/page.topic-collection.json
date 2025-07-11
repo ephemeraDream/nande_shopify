@@ -10,6 +10,15 @@
  */
 {
   "sections": {
+    "breadcrumbs": {
+      "type": "breadcrumbs",
+      "settings": {
+        "custom_breadcrumb": "",
+      },
+      "custom_css": [
+        ".breadcrumb-con{width: 100%;position:absolute;top: 0;left: 0;z-index: 100;}"
+      ],
+    },
     "banner_topic": {
       "type": "banner",
       "blocks": {
@@ -46,15 +55,6 @@
       ],
       "name": "banner",
       "settings": {}
-    },
-    "breadcrumbs": {
-      "type": "breadcrumbs",
-      "settings": {
-        "custom_breadcrumb": "",
-      },
-      "custom_css": [
-        ".breadcrumb-con{width: 100%;position:absolute;top: 0;left: 0;z-index: 100;}"
-      ],
     },
     "image_with_text_polka_dot": {
       "type": "image-with-text-polka-dot",
@@ -194,8 +194,8 @@
     },
   },
   "order": [
-    "banner_topic",
     "breadcrumbs",
+    "banner_topic",
     "image_with_text_polka_dot",
     "image_with_text_polka_dot_right",
     "image_with_text_polka_dot_2",

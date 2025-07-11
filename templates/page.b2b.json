@@ -19,46 +19,18 @@
         ".breadcrumb-con{width: 100%;position:absolute;top: 0;left: 0;z-index: 100;}"
       ],
     },
-    "banner_topic": {
-      "type": "banner",
-      "blocks": {
-        "banner_item_f7J8AA": {
-          "type": "banner_item",
-          "settings": {
-            "title": "<p>Maidesite Spaces</p>",
-            "text": "<p>Lassen Sie sich inspirieren und gestalten Sie Ihren perfekten Maidesite-Arbeitsplatz <br/>mit unseren sorgfältig kuratierten Räumen.</p>",
-            "btn_text": "En savoir plus",
-            "link": "",
-            "file_position": "middle_left",
-            "file_type": "image",
-            "file_image": "shopify://shop_images/banner-2.webp",
-            "video_url": ""
-          }
-        },
-        "banner_item_ckwd4B": {
-          "type": "banner_item",
-          "settings": {
-            "title": "<p>Nahtloses Design Trifft Auf FunktionalitäT</p>",
-            "text": "<p>Ein durchdachtes, einheitliches Design, das Ästhetik und Funktion kombiniert – für einen </p><p>modernen Arbeitsplatz, der sich nahtlos in Ihr Zuhause einfügt</p>",
-            "btn_text": "En savoir plus",
-            "link": "",
-            "file_position": "middle_left",
-            "file_type": "image",
-            "file_image": "shopify://shop_images/banner-3.webp",
-            "video_url": ""
-          }
-        }
-      },
-      "block_order": [
-        "banner_item_f7J8AA",
-        "banner_item_ckwd4B"
-      ],
-      "name": "banner",
-      "settings": {}
+    "contact_form_one": {
+      "type": "contact-form-one",
+      "name": "contact_form_one",
+      "settings": {
+        "image": "shopify://shop_images/polka_dot_swiper-1.webp",
+        "title": "Optimieren Sie Ihr BüRo Mit Maidesite’S Ergonomischen LöSungen",
+        "desc":"Hinterlassen Sie Ihre E-Mail, senden Sie Ihre Anfrage und erhalten Sie innerhalb von 24 Stunden eine maßgeschneiderte Beratung!"
+      }
     },
   },
   "order": [
     "breadcrumbs",
-    "banner_topic"
+    "contact_form_one"
   ]
 }
