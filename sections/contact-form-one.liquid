@@ -24,7 +24,7 @@ aria-label="conatct"
               {%- endif -%}
           
               <div class="form-grid">
-                <div class="field field--with-error">
+                <div class="form-grid-field field--with-error">
                   <input
                     autocomplete="email"
                     type="email"
@@ -48,7 +48,7 @@ aria-label="conatct"
                   {%- endif -%}
                 </div>
           
-                <div class="field">
+                <div class="form-grid-field">
                   <input
                     type="text"
                     id="ContactForm-company"
@@ -58,7 +58,7 @@ aria-label="conatct"
                   >
                 </div>
           
-                <div class="field">
+                <div class="form-grid-field">
                   <input
                     type="text"
                     id="ContactForm-name"
@@ -70,7 +70,7 @@ aria-label="conatct"
                   >
                 </div>
           
-                <div class="field">
+                <div class="form-grid-field">
                   <input
                     type="tel"
                     id="ContactForm-phone"
@@ -83,7 +83,7 @@ aria-label="conatct"
                 </div>
               </div>
           
-              <div class="field">
+              <div class="form-grid-field">
                 <textarea
                   rows="6"
                   id="ContactForm-body"
@@ -147,7 +147,7 @@ aria-label="conatct"
       margin-bottom: 15px;
     }
     
-    .contact-form-one .form-grid .field {
+    .contact-form-one .form-grid .form-grid-field {
       flex: 1 1 calc(50% - 8px);
     }
     
@@ -160,6 +160,9 @@ aria-label="conatct"
       border-radius: 4px;
       background: #fff;
       color: #000;
+    }
+    .contact-form-one .field__input::placeholder,.contact-form-one textarea.text-area {
+      color: #7F7E75;  
     }
     
     .contact-form-one textarea.text-area {
