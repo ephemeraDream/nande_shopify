@@ -419,6 +419,7 @@ h6,
   width: fit-content;
   position: relative;
   transition-duration: .2s;
+  border-radius: 0;
 }
 .nd-btn:hover {
   background-color: #bbff00e3;
@@ -1352,8 +1353,8 @@ button.shopify-payment-button__button--unbranded {
   left: var(--buttons-border-width);
   z-index: 1;
   border-radius: var(--buttons-radius);
-  box-shadow: 0 0 0 calc(var(--buttons-border-width) + var(--border-offset)) rgba(var(--color-button-text), var(--border-opacity)),
-    0 0 0 var(--buttons-border-width) rgba(var(--color-button), var(--alpha-button-background));
+  /* box-shadow: 0 0 0 calc(var(--buttons-border-width) + var(--border-offset)) rgba(var(--color-button-text), var(--border-opacity)),
+    0 0 0 var(--buttons-border-width) rgba(var(--color-button), var(--alpha-button-background)); */
   transition: box-shadow var(--duration-short) ease;
 }
 

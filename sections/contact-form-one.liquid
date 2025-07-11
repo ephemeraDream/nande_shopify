@@ -85,7 +85,7 @@ aria-label="conatct"
           
               <div class="form-grid-field">
                 <textarea
-                  rows="6"
+                  rows="7"
                   id="ContactForm-body"
                   class="text-area field__input"
                   name="contact[body]"
@@ -93,11 +93,9 @@ aria-label="conatct"
                 >{{- form.body -}}</textarea>
               </div>
           
-              <div class="contact__button">
-                <button type="submit" class="button submit-button">
-                  Absenden <span>→</span>
-                </button>
-              </div>
+              <button type="submit" class="submit-button nd-btn">
+                Absenden
+              </button>
           
             {%- endform -%}
         </div>
@@ -200,23 +198,13 @@ aria-label="conatct"
     }
     
     .contact-form-one .submit-button {
-      background-color: #d0ff00;
-      color: #000;
       border: none;
       padding: 15px 30px;
-      font-size: 16px;
-      font-weight: bold;
-      border-radius: 4px;
-      cursor: pointer;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 6px;
     }
     
-    .contact-form-one .submit-button:hover {
+    {% comment %} .contact-form-one .submit-button:hover {
       background-color: #bfee00;
-    }
+    } {% endcomment %}
     
     .contact-form-one .form__message.success {
       color: #00ff66;
