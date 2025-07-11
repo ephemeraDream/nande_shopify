@@ -95,6 +95,7 @@ aria-label="conatct"
           
               <button type="submit" class="submit-button nd-btn">
                 Absenden
+                {{ 'icon-right-arrow.svg' | inline_asset_content }}
               </button>
           
             {%- endform -%}
@@ -199,7 +200,9 @@ aria-label="conatct"
     
     .contact-form-one .submit-button {
       border: none;
-      padding: 15px 30px;
+      padding: 2rem;
+      height: auto;
+      width: 50%;
     }
     
     {% comment %} .contact-form-one .submit-button:hover {
