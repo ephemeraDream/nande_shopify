@@ -11,6 +11,95 @@ aria-label="conatct"
         <div class="form__content">
             <h2 class="one__title">{{ section.settings.title }}</h2>
             <h4 class="one__desc">{{ section.settings.desc }}</h4>
+            {%- form 'contact', id: 'ContactFormOne', class: contact_form_class -%}
+
+              {%- if form.posted_successfully? -%}
+                <p class="form-status form__message success" tabindex="-1" autofocus>
+                  ✅ Ihre Nachricht wurde erfolgreich gesendet.
+                </p>
+              {%- elsif form.errors -%}
+                <div class="form__message error" role="alert" tabindex="-1" autofocus>
+                  ⚠️ Fehler beim Senden des Formulars. Bitte überprüfen Sie Ihre Eingaben.
+                </div>
+              {%- endif -%}
+          
+              <div class="form-grid">
+                <div class="field field--with-error">
+                  <input
+                    autocomplete="email"
+                    type="email"
+                    id="ContactForm-email"
+                    class="field__input"
+                    name="contact[email]"
+                    spellcheck="false"
+                    autocapitalize="off"
+                    required
+                    value="{% if form.email %}{{ form.email }}{% elsif customer %}{{ customer.email }}{% endif %}"
+                    {% if form.errors contains 'email' %}
+                      aria-invalid="true"
+                      aria-describedby="ContactForm-email-error"
+                    {% endif %}
+                    placeholder="E-Mail*"
+                  >
+                  {%- if form.errors contains 'email' -%}
+                    <small class="contact__field-error" id="ContactForm-email-error">
+                      {{ form.errors.messages.email }}
+                    </small>
+                  {%- endif -%}
+                </div>
+          
+                <div class="field">
+                  <input
+                    type="text"
+                    id="ContactForm-company"
+                    class="field__input"
+                    name="contact[company]"
+                    placeholder="Unternehmen (optional)"
+                  >
+                </div>
+          
+                <div class="field">
+                  <input
+                    type="text"
+                    id="ContactForm-name"
+                    class="field__input"
+                    name="contact[name]"
+                    autocomplete="name"
+                    value="{% if form.name %}{{ form.name }}{% elsif customer %}{{ customer.name }}{% endif %}"
+                    placeholder="Name (optional)"
+                  >
+                </div>
+          
+                <div class="field">
+                  <input
+                    type="tel"
+                    id="ContactForm-phone"
+                    class="field__input"
+                    name="contact[phone]"
+                    autocomplete="tel"
+                    value="{% if form.phone %}{{ form.phone }}{% elsif customer %}{{ customer.phone }}{% endif %}"
+                    placeholder="Telefon (optional)"
+                  >
+                </div>
+              </div>
+          
+              <div class="field">
+                <textarea
+                  rows="6"
+                  id="ContactForm-body"
+                  class="text-area field__input"
+                  name="contact[body]"
+                  placeholder="Nachricht (optional)"
+                >{{- form.body -}}</textarea>
+              </div>
+          
+              <div class="contact__button">
+                <button type="submit" class="button submit-button">
+                  Absenden <span>→</span>
+                </button>
+              </div>
+          
+            {%- endform -%}
         </div>
     </div>
 </div>
@@ -23,6 +112,7 @@ aria-label="conatct"
     width:100%;
     height:100%;
     background: linear-gradient(269deg, #000000 50%, rgba(255, 255, 255, 0) 98%);
+    opacity: 0.4;
   }
     .contact-form-one{
         background-size: cover; background-position: center;
@@ -47,6 +137,73 @@ aria-label="conatct"
     }
     .contact-form-one .one__title,.contact-form-one .one__desc{
         color: #fff;
+    }
+
+
+    .contact-form-one .form-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+      margin-bottom: 15px;
+    }
+    
+    .contact-form-one .form-grid .field {
+      flex: 1 1 calc(50% - 8px);
+    }
+    
+    .contact-form-one .field__input,
+    textarea.text-area {
+      width: 100%;
+      padding: 12px;
+      font-size: 14px;
+      border: none;
+      border-radius: 4px;
+      background: #fff;
+      color: #000;
+    }
+    
+    .contact-form-one textarea.text-area {
+      min-height: 120px;
+      resize: vertical;
+      margin-bottom: 15px;
+    }
+    
+    .contact-form-one .submit-button {
+      background-color: #d0ff00;
+      color: #000;
+      border: none;
+      padding: 15px 30px;
+      font-size: 16px;
+      font-weight: bold;
+      border-radius: 4px;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+    }
+    
+    .contact-form-one .submit-button:hover {
+      background-color: #bfee00;
+    }
+    
+    .contact-form-one .form__message.success {
+      color: #00ff66;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+    
+    .contact-form-one .form__message.error {
+      color: #ff4d4f;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+    
+    .contact-form-one .contact__field-error {
+      color: #ff4d4f;
+      font-size: 13px;
+      margin-top: 4px;
+      display: block;
     }
 </style>
 
