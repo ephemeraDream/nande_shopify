@@ -154,37 +154,38 @@ aria-label="conatct"
     .contact-form-one .field__input,
     textarea.text-area {
       width: 100%;
-      padding: 12px;
-      font-size: 14px;
+      padding: 10px 12px;
+      font-size: 2.4rem;
       border: none;
-      border-radius: 4px;
+      border-radius: 0px;
       background: #fff;
-      color: #000;
+      color: rgb(var(--color-foreground));
     }
     .contact-form-one .field__input::placeholder,.contact-form-one textarea.text-area::placeholder {
       color: #7F7E75;  
+      opacity: 1;
+      font-size: 2.4rem;
     }
-    /* 通用 placeholder 颜色 */
-.field__input::placeholder {
-  color: #888888; /* 你想要的颜色 */
-  opacity: 1;     /* 防止有些浏览器默认有透明度 */
-}
+    /* Firefox */
+    .field__input::-moz-placeholder,textarea::-moz-placeholder {
+      color: #7F7E75;
+      opacity: 1;
+      font-size: 2.4rem;
+    }
 
-/* Firefox */
-.field__input::-moz-placeholder {
-  color: #888888;
-  opacity: 1;
-}
+    /* IE 10-11 */
+    .field__input:-ms-input-placeholder,textarea::-moz-placeholder {
+      color: #7F7E75;
+      opacity: 1;
+      font-size: 2.4rem;
+    }
 
-/* IE 10-11 */
-.field__input:-ms-input-placeholder {
-  color: #888888;
-}
-
-/* Microsoft Edge */
-.field__input::-ms-input-placeholder {
-  color: #888888;
-}
+    /* Microsoft Edge */
+    .field__input::-ms-input-placeholder,textarea::-moz-placeholder {
+      color: #7F7E75;
+      opacity: 1;
+      font-size: 2.4rem;
+    }
 
     
     .contact-form-one textarea.text-area {
