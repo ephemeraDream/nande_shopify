@@ -15,11 +15,11 @@ aria-label="conatct"
 
               {%- if form.posted_successfully? -%}
                 <p class="form-status form__message success" tabindex="-1" autofocus>
-                  ✅ Ihre Nachricht wurde erfolgreich gesendet.
+                  Ihre Nachricht wurde erfolgreich gesendet.
                 </p>
               {%- elsif form.errors -%}
                 <div class="form__message error" role="alert" tabindex="-1" autofocus>
-                  ⚠️ Fehler beim Senden des Formulars. Bitte überprüfen Sie Ihre Eingaben.
+                  Fehler beim Senden des Formulars. Bitte überprüfen Sie Ihre Eingaben.
                 </div>
               {%- endif -%}
           
@@ -161,7 +161,7 @@ aria-label="conatct"
       background: #fff;
       color: #000;
     }
-    .contact-form-one .field__input::placeholder,.contact-form-one textarea.text-area {
+    .contact-form-one .field__input::placeholder,.contact-form-one textarea.text-area::placeholder {
       color: #7F7E75;  
     }
     
