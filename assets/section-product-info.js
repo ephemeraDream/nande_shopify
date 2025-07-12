@@ -3,7 +3,7 @@ let imgthumbSwiper, imgboxSwiper;
 initSwiper()
 function initSwiper() {
   imgthumbSwiper = new Swiper(".imgthumb_swiper", {
-    loop: true,
+    // loop: true,
     spaceBetween: 8,
     slidesPerView: 4,
     navigation: {
@@ -14,7 +14,7 @@ function initSwiper() {
     observer: true,
   });
   imgboxSwiper = new Swiper(".imgmain_swiper", {
-    loop: true,
+    // loop: true,
     effect: "fade",
     fadeEffect: {
       crossFade: true,
@@ -443,16 +443,8 @@ function updateUrl() {
 function updateImagesByVariantMedia() {
   const mediaId = currVariant.featured_media?.id;
 
-  document.querySelectorAll('.product_info_left .swiper-slide').forEach(slide => {
-    const slideMediaId = slide.dataset.mediaId;
-    const isCommon = slide.hasAttribute('data-common');
-
-    if (String(slideMediaId) === String(mediaId) || isCommon) {
-      slide.style.display = 'block';
-    } else {
-      slide.style.display = 'none';
-    }
-  });
+  findSlide('.imgmain_swiper .swiper-slide')
+  findSlide('.imgthumb_swiper .swiper-slide')
 
   if (imgthumbSwiper) {
     imgthumbSwiper.update();
@@ -460,6 +452,19 @@ function updateImagesByVariantMedia() {
 
   if (imgboxSwiper) {
     imgboxSwiper.update();
+  }
+
+  const findSlide = (domstr) => {
+    document.querySelectorAll(domstr).forEach(slide => {
+      const slideMediaId = slide.dataset.mediaId;
+      const isCommon = slide.hasAttribute('data-common');
+
+      if (String(slideMediaId) === String(mediaId) || isCommon) {
+        slide.style.display = 'block';
+      } else {
+        slide.style.display = 'none';
+      }
+    });
   }
 }
 // 捆绑步骤切换
