@@ -2,8 +2,10 @@
 
 <div class="polka_dot_swiper">
   <div class="polka_dot_swiper_header padding-sider">
-    <div class="polka_dot_swiper_title">{{ section.settings.title }}</div>
-    <div class="polka_dot_swiper_text">{{ section.settings.text }}</div>
+    <h2 class="polka_dot_swiper_title">{{ section.settings.title }}</h2>
+    {% if section.settings.text != blank %}
+    <h4 class="polka_dot_swiper_text">{{ section.settings.text }}</h4>
+    {% endif %}
   </div>
   <div class="swiper">
     <div class="swiper-wrapper">
@@ -20,7 +22,7 @@
               <div class="polka_dot_swiper_info_text">{{ block.settings.text }}</div>
             </div>
             {% if block.settings.btn_text != blank %}
-              <a class="polka_dot_swiper_info_btn" href="{{ block.settings.link }}">
+              <a class="nd-btn polka_dot_swiper_info_btn" href="{{ block.settings.link }}">
                 {{ block.settings.btn_text }}
                 {{ 'icon-right-arrow.svg' | inline_asset_content }}
               </a>
