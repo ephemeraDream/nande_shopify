@@ -536,7 +536,7 @@ function switchStep() {
 }
 // 捆绑产品选择
 document.querySelectorAll(".product_info_bundle_product").forEach(item => {
-  item.addEventListener("click", (e) => {
+  const handleProductSelect = (skipToggle = false) => {
     if (item.classList.contains("product_info_bundle_product_disabled")) return
     const total_price_el = document.querySelectorAll(".product_info_bundle_info_total")
     const price = Number(item.getAttribute("data-price"))
@@ -545,7 +545,7 @@ document.querySelectorAll(".product_info_bundle_product").forEach(item => {
     const accesories_box_title = document.querySelector(".product_info_steps_contain_item_title[data-type='accesories']")
     const title = item.querySelector(".product_info_bundle_product_title").innerHTML
     let total_price = moneyStringToCents(total_price_el[0].innerHTML)
-    if (e.detail && e.detail.skipToggle) {
+    if (skipToggle) {
       item.classList.add("selected")
     } {
       item.classList.toggle("selected")
@@ -571,7 +571,8 @@ document.querySelectorAll(".product_info_bundle_product").forEach(item => {
       }
     }
     total_price_el.forEach(el => el.innerHTML = moneyWithoutTrailingZeros(total_price))
-  })
+  }
+  item.addEventListener("click", handleProductSelect())
 
   const product = bundle_products_data[item.getAttribute("data-id")].product
   let currVariant = bundle_products_data[item.getAttribute("data-id")].variant
@@ -685,15 +686,11 @@ document.querySelectorAll(".product_info_bundle_product").forEach(item => {
   })
   // 捆绑弹窗确定
   const confirm_btn = item.querySelector(".product_info_bundle_modal_btn")
-  confirm_btn.addEventListener("click", () => {
+  confirm_btn.addEventListener("click", (e) => {
     item.querySelector(".product_info_bundle_product_img img").src = currVariant.featured_image.src
     item.querySelector(".product_info_bundle_product_price").innerHTML = `+${moneyWithoutTrailingZeros(currVariant.price)}`
     item.setAttribute("data-variant-id", currVariant.id)
-    item.dispatchEvent(new MouseEvent("click", {
-      bubbles: true,
-      cancelable: true,
-      detail: { skipToggle: true }
-    }));
+    handleProductSelect(true)
     modal.style.display = "none";
     document.body.style.overflowY = "auto";
   })
