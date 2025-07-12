@@ -577,7 +577,30 @@ function moneyStringToCents(moneyStr) {
 
   return Math.round(amount * 100);
 }
+document.querySelectorAll(".product_info_bundle_product .product_info_bundle_product_viewdetail").forEach(item => {
+  item.addEventListener("click", (e) => {
+    e.stopPropagation()
+    const parent = item.closest(".product_info_bundle_product")
+    const modal = parent.querySelector(".common_modal")
+    modal.style.display = "block";
+    document.body.style.overflowY = "hidden";
 
+    modal
+      .querySelector(".common_modal_close")
+      .addEventListener("click", (e) => {
+        e.stopPropagation()
+        modal.style.display = "none";
+        document.body.style.overflowY = "auto";
+      });
+    modal.addEventListener("click", (e) => {
+      e.stopPropagation()
+      if (e.target === modal) {
+        modal.style.display = "none";
+        document.body.style.overflowY = "auto";
+      }
+    });
+  })
+})
 // 主图hover局部放大跟随鼠标
 const container = document.querySelector('.product_info_left_contain');
 
