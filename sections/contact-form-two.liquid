@@ -141,7 +141,31 @@ aria-label="conatct"
     .contact-form-two .form_left{
       width:50%
     }
-    .text-body ul{
+    .contact-form-two .text-body{
+      margin-top: 1.5rem;
+    }
+    .contact-form-two .text-body ul{
+      list-style: none;
+      padding-left: 0;
+      margin-left: 0;
+    }
+    .contact-form-two .text-body ul li {
+      position: relative;
+      padding-left: 16px; 
+      margin-bottom: 6px;
+      font-size: 3rem;
+      font-weight: 300;
+      line-height: 3rem;
+    }
+    .contact-form-two .text-body ul li::before {
+      content: '';
+      position: absolute;
+      top: 0.6em; 
+      left: 0;
+      width: 4px;
+      height: 4px;
+      background-color: #1F1F1F;
+      border-radius: 50%;
     }
     .contact-form-two .form__content{
         display: flex;
