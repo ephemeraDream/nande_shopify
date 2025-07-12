@@ -12,7 +12,19 @@ function initSwiper() {
     },
     on: {
       click: function (swiper) {
-        imgboxSwiper.slideTo(swiper.clickedIndex)
+        const clickedSlide = swiper.slides[swiper.clickedIndex];
+        if (!clickedSlide || clickedSlide.style.display === 'none') return;
+
+        const mediaId = clickedSlide.dataset.mediaId;
+
+        const visibleSlides = Array.from(document.querySelectorAll('.imgmain_swiper .swiper-slide'))
+          .filter(slide => slide.style.display !== 'none');
+
+        const targetIndex = visibleSlides.findIndex(slide => slide.dataset.mediaId === mediaId);
+
+        if (targetIndex > -1) {
+          imgboxSwiper.slideTo(targetIndex);
+        }
       }
     },
   });
