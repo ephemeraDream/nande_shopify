@@ -10,6 +10,8 @@ function initSwiper() {
       nextEl: ".imgthumb_swiper_box .imgthumb_swiper_next",
       prevEl: ".imgthumb_swiper_box .imgthumb_swiper_prev",
     },
+    observeParents: true,
+    observer: true,
   });
   imgboxSwiper = new Swiper(".imgmain_swiper", {
     loop: true,
@@ -25,6 +27,8 @@ function initSwiper() {
     thumbs: {
       swiper: imgthumbSwiper,
     },
+    observeParents: true,
+    observer: true,
   });
 }
 // 优惠倒计时
@@ -315,7 +319,7 @@ let currVariant = product_data.variant
 const symbol = product_data.symbol
 const curr_options = [...currVariant.options]
 setVariantOption()
-updateImagesByVariant(currVariant.id)
+updateImagesByVariantMedia()
 function setVariantOption() {
   document.querySelectorAll(".product_info_option_select").forEach((selector, selectorIndex) => {
     if (selectorIndex < 2) return
@@ -383,7 +387,7 @@ document.querySelectorAll(".product_info_option_select_item").forEach(el => {
     updateVariantPrice()
     updateBuyBtns()
     updateUrl()
-    updateImagesByVariant(currVariant.id)
+    updateImagesByVariantMedia()
   })
 })
 function areArraysEqual(arr1, arr2) {
@@ -436,22 +440,23 @@ function updateUrl() {
   url.searchParams.set("variant", currVariant.id);
   window.history.replaceState(null, "", url.toString());
 }
-function updateImagesByVariant(variantId) {
-  document.querySelectorAll('.product_info_left .swiper-slide').forEach((slide) => {
-    const slideVariantId = slide.dataset.variantId;
+function updateImagesByVariantMedia() {
+  const mediaId = currVariant.featured_media?.id;
+
+  document.querySelectorAll('.product_info_left .swiper-slide').forEach(slide => {
+    const slideMediaId = slide.dataset.mediaId;
     const isCommon = slide.hasAttribute('data-common');
 
-    if (String(slideVariantId) === String(variantId) || isCommon) {
+    if (String(slideMediaId) === String(mediaId) || isCommon) {
       slide.style.display = 'block';
     } else {
       slide.style.display = 'none';
     }
   });
 
-  // 如果你用 swiper，需要更新
-  // if (window.mySwiper) {
-  //   window.mySwiper.update();
-  // }
+  if (window.mySwiper) {
+    window.mySwiper.update();
+  }
 }
 // 捆绑步骤切换
 let bundleStep = 0

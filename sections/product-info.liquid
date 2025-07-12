@@ -25,18 +25,18 @@
           <div class="swiper-wrapper">
             {% for media in product.media %}
               {% if media.media_type == 'image' %}
-                {% assign image_variant_id = '' %}
+                {% assign is_variant_img = false %}
 
                 {% for variant in product.variants %}
                   {% if variant.featured_media and variant.featured_media.id == media.id %}
-                    {% assign image_variant_id = variant.id %}
+                    {% assign is_variant_img = true %}
                   {% endif %}
                 {% endfor %}
 
                 <div
                   class="swiper-slide"
-                  {% if image_variant_id != '' %}
-                    data-variant-id="{{ image_variant_id }}"
+                  {% if is_variant_img %}
+                    data-media-id="{{ media.id }}"
                   {% else %}
                     data-common="true"
                   {% endif %}
@@ -83,18 +83,18 @@
             <div class="swiper-wrapper">
               {% for media in product.media %}
                 {% if media.media_type == 'image' %}
-                  {% assign image_variant_id = '' %}
+                  {% assign is_variant_img = false %}
 
                   {% for variant in product.variants %}
                     {% if variant.featured_media and variant.featured_media.id == media.id %}
-                      {% assign image_variant_id = variant.id %}
+                      {% assign is_variant_img = true %}
                     {% endif %}
                   {% endfor %}
 
                   <div
                     class="swiper-slide"
-                    {% if image_variant_id != '' %}
-                      data-variant-id="{{ image_variant_id }}"
+                    {% if is_variant_img %}
+                      data-media-id="{{ media.id }}"
                     {% else %}
                       data-common="true"
                     {% endif %}
