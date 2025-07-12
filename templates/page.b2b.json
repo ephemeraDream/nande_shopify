@@ -162,7 +162,7 @@
           "settings": {
             "tabname": "",
             "title": "<p>Lokale Logistik und Lagerhaltung</p>",
-            "description": "<p>Perfekt für zwei Familienmitglieder, um ihre individuelle Körpergröße anzupassen oder um zwei neue Höheneinstellungen <br/>für vielfältigere Körperhaltungen zu ermöglichen.Der Standard-USB-Ladeanschluss lädt deine digitalen Geräte zuverlässig auf, <br/>genau dann, wenn du es brauchst.</p>",
+            "description": "<p>Mit unseren regionalen Lagern und einem effizienten Logistiknetzwerk gewährleisten wir eine schnelle und zuverlässige Lieferung.</p>",
             "file_type": "image",
             "file_image": "shopify://shop_images/b2b_02.webp",
             "video_url": "",
@@ -175,7 +175,7 @@
           "settings": {
             "tabname": "",
             "title": "<p>Lokale Logistik und Lagerhaltung</p>",
-            "description": "<p>Perfekt für zwei Familienmitglieder, um ihre individuelle Körpergröße anzupassen oder um zwei neue Höheneinstellungen <br/>für vielfältigere Körperhaltungen zu ermöglichen.Der Standard-USB-Ladeanschluss lädt deine digitalen Geräte zuverlässig auf, <br/>genau dann, wenn du es brauchst.</p>",
+            "description": "<p>Mit unseren regionalen Lagern und einem effizienten Logistiknetzwerk gewährleisten wir eine schnelle und zuverlässige Lieferung.</p>",
             "file_type": "image",
             "file_image": "shopify://shop_images/b2b_02.webp",
             "video_url": "",
@@ -192,7 +192,7 @@
       "settings": {
         "spec_id": "",
         "title": "<p>Erstklassige Produkte & Erstklassiger Service</p>",
-        "show_tab_head":"false",
+        "show_tab_head":false,
         "layout":"image-right"
       }
     },
