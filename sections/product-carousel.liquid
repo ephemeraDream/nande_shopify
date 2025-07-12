@@ -8,6 +8,7 @@ Products Swiper Section - 选择产品进行轮播
       <h2 class="padding-bottom-60 session-box-inner">{{ section.settings.title }}</h2>
     {% endunless %}
     <div class="product-carousel-container session-box-inner">
+      <div class="product-carousel-c">
       <div class="swiper-wrapper">
         {% for block in section.blocks %}
           {% assign product = all_products[block.settings.select_product] %}
@@ -43,7 +44,7 @@ Products Swiper Section - 选择产品进行轮播
           {% endif %}
         {% endfor %}
       </div>
-    
+      </div>
       <!-- 导航箭头 -->
       <div class="product-button-prev">{{- 'swiper-left.svg' | inline_asset_content -}}</div>
       <div class="product-button-next">{{- 'swiper-right.svg' | inline_asset_content -}}</div>
@@ -55,8 +56,9 @@ Products Swiper Section - 选择产品进行轮播
     .product-carousel-container {
       margin: 2rem auto;
       position: relative;
-      overflow: hidden;
+      
     }
+    .product-carousel-c{width: 100%;overflow: hidden;}
     .product-card {
       background: #fff;
       padding: 2rem;
@@ -134,8 +136,8 @@ Products Swiper Section - 选择产品进行轮播
       spaceBetween: 20,
       loop: false,
       navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
+        nextEl: ".product-button-next",
+        prevEl: ".product-button-prev",
       },
       breakpoints: {
         0: {
