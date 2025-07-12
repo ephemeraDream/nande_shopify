@@ -45,8 +45,8 @@ Products Swiper Section - 选择产品进行轮播
       </div>
     
       <!-- 导航箭头 -->
-      <div class="swiper-button-prev"></div>
-      <div class="swiper-button-next"></div>
+      <div class="product-button-prev">{{- 'swiper-left.svg' | inline_asset_content -}}</div>
+      <div class="product-button-next">{{- 'swiper-right.svg' | inline_asset_content -}}</div>
     </div>
 </div>
 
@@ -55,6 +55,7 @@ Products Swiper Section - 选择产品进行轮播
     .product-carousel-container {
       margin: 2rem auto;
       position: relative;
+      overflow: hidden;
     }
     .product-card {
       background: #fff;
@@ -101,6 +102,26 @@ Products Swiper Section - 选择产品进行轮播
     .product-carousel .product_btn {
       width: 100%;
       margin-top: 2rem;
+    }
+    .product-carousel .product-button-prev, .product-carousel .product-button-next {
+      width: 6rem;
+      height: 6rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: #fff9;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      z-index: 1;
+      cursor: pointer;
+    }
+    .product-carousel .product-button-prev {
+      left: -2rem;
+    }
+    
+    .product-carousel .product-button-next {
+      right: -2rem;
     }
     
 </style>
