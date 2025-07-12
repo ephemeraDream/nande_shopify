@@ -7,54 +7,58 @@ Products Swiper Section - 选择产品进行轮播
     {% unless section.settings.title == blank %}
       <h2 class="padding-bottom-60 session-box-inner">{{ section.settings.title }}</h2>
     {% endunless %}
-    <div class="product-carousel-container session-box-inner">
-      <div class="swiper-wrapper">
-        {% for block in section.blocks %}
-          {% assign product = all_products[block.settings.select_product] %}
-          {% if product %}
-            <div class="swiper-slide product-card">
-              <a href="{{ product.url }}">
-                {{-
-                  product.featured_image
-                  | image_url: width: product.featured_image.width
-                  | image_tag: alt: product.title
-                -}}
-                <div class="product_info">
-                  <h4 class="product_title">{{ product.title }}</h4>
-                  <div>
-                    <div class="product_price">
-                      <div>{{ product.price | money_without_trailing_zeros }} </div>
-                      {% if product.compare_at_price != blank %}
-                        <div class="product_price_cap">
-                          {{ product.compare_at_price | money_without_trailing_zeros }}
-                        </div>
-                      {% endif %}
-                    </div>
-                    <div class="collection_compare_product_btn nd-btn">
-                      {{ 'common.en_savoir_plus' | t }}
-                      {{ 'icon-right-arrow.svg' | inline_asset_content }}
+    <div class="session-box-inner product-carousel-c">
+      <div class="product-carousel-container">
+        <div class="swiper-wrapper">
+          {% for block in section.blocks %}
+            {% assign product = all_products[block.settings.select_product] %}
+            {% if product %}
+              <div class="swiper-slide product-card">
+                <a href="{{ product.url }}">
+                  {{-
+                    product.featured_image
+                    | image_url: width: product.featured_image.width
+                    | image_tag: alt: product.title
+                  -}}
+                  <div class="product_info">
+                    <h4 class="product_title">{{ product.title }}</h4>
+                    <div>
+                      <div class="product_price">
+                        <div>{{ product.price | money_without_trailing_zeros }} </div>
+                        {% if product.compare_at_price != blank %}
+                          <div class="product_price_cap">
+                            {{ product.compare_at_price | money_without_trailing_zeros }}
+                          </div>
+                        {% endif %}
+                      </div>
+                      <div class="collection_compare_product_btn nd-btn">
+                        {{ 'common.en_savoir_plus' | t }}
+                        {{ 'icon-right-arrow.svg' | inline_asset_content }}
+                      </div>
                     </div>
                   </div>
-                </div>
-              </a>
-            </div>
-            
+                </a>
+              </div>
+              
 
-          {% endif %}
-        {% endfor %}
+            {% endif %}
+          {% endfor %}
+        </div>
+        
       </div>
-    
       <!-- 导航箭头 -->
-      <div class="swiper-button-prev"></div>
-      <div class="swiper-button-next"></div>
+      <div class="product-button-prev">{{- 'swiper-left.svg' | inline_asset_content -}}</div>
+      <div class="product-button-next">{{- 'swiper-right.svg' | inline_asset_content -}}</div>
     </div>
 </div>
 
 <style>
     .product-carousel{background-color: #E2DED6;}
+    .product-carousel-c{position: relative;}
     .product-carousel-container {
       margin: 2rem auto;
       position: relative;
+      overflow: hidden;
     }
     .product-card {
       background: #fff;
@@ -102,6 +106,26 @@ Products Swiper Section - 选择产品进行轮播
       width: 100%;
       margin-top: 2rem;
     }
+    .product-carousel .product-button-prev, .product-carousel .product-button-next {
+      width: 6rem;
+      height: 6rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: #fff9;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      z-index: 1;
+      cursor: pointer;
+    }
+    .product-carousel .product-button-prev {
+      left: -2rem;
+    }
+    
+    .product-carousel .product-button-next {
+      right: -2rem;
+    }
     
 </style>
 
@@ -113,8 +137,8 @@ Products Swiper Section - 选择产品进行轮播
       spaceBetween: 20,
       loop: false,
       navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
+        nextEl: ".product-button-next",
+        prevEl: ".product-button-prev",
       },
       breakpoints: {
         0: {
