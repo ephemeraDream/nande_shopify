@@ -362,21 +362,21 @@
                                   }}
                                 </div>
                               </div>
-                              
-                              <div class="product_info_option_contain">
+
+                              <div class="product_info_bundle_modal_contain">
                                 {%- for option in bundled_product.options_with_values -%}
                                   {% assign option_hanlde = option.name | handle %}
-                                  <div class="product_info_option_item">
-                                    <div class="product_info_option_label">
+                                  <div class="product_info_bundle_modal_item">
+                                    <div class="product_info_bundle_modal_label">
                                       {{ option.name }}：
-                                      <span class="product_info_option_label_select">
+                                      <span class="product_info_bundle_modal_label_select">
                                         {%- for value in option.values -%}
                                           {%- if value.selected %}{{ value }}{% endif -%}
                                         {% endfor %}
                                       </span>
                                     </div>
                                     <div
-                                      class="product_info_option_select"
+                                      class="product_info_bundle_modal_select"
                                       select-type="{% if option_hanlde contains "farbe" %}circle{% else %}box{% endif %}"
                                       data-index="{{ forloop.index0 }}"
                                     >
@@ -390,11 +390,11 @@
                                           {% endfor %}
                                           <div
                                             data-value="{{ value }}"
-                                            class="product_info_option_select_item{% if value.selected %} product_info_option_select_item_select{% endif %}"
+                                            class="product_info_bundle_modal_select_item{% if value.selected %} product_info_bundle_modal_select_item_select{% endif %}"
                                             title="{{ value }}"
                                           >
                                             <div
-                                              class="product_info_option_select_item_circle{% if color == '' %} product_info_option_select_item_none{% endif %}"
+                                              class="product_info_bundle_modal_select_item_circle{% if color == '' %} product_info_bundle_modal_select_item_none{% endif %}"
                                               {% if color != '' %}
                                                 style="background-color: {{ color }}"
                                               {% endif %}
@@ -402,7 +402,7 @@
                                           </div>
                                         {% else %}
                                           <div
-                                            class="product_info_option_select_item{% if value.selected %} product_info_option_select_item_select{% endif %}"
+                                            class="product_info_bundle_modal_select_item{% if value.selected %} product_info_bundle_modal_select_item_select{% endif %}"
                                             data-value="{{ value }}"
                                           >
                                             {{ value }}
