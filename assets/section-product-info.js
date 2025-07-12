@@ -537,6 +537,7 @@ function switchStep() {
 // 捆绑产品选择
 document.querySelectorAll(".product_info_bundle_product").forEach(item => {
   item.addEventListener("click", () => {
+    if (item.classList.contains("product_info_bundle_product_disabled")) return
     const total_price_el = document.querySelectorAll(".product_info_bundle_info_total")
     const price = Number(item.getAttribute("data-price"))
     const id = item.getAttribute("data-id")
