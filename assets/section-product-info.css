@@ -968,8 +968,9 @@
   position: absolute;
   left: 0;
   right: 0;
-  background-color: rgba(255, 255, 255, .4);
+  background-color: rgba(255, 255, 255, .1);
   cursor: not-allowed;
+  z-index: 1;
 }
 
 .product_info_section .product_info_bundle_product.selected {

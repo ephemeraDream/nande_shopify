@@ -274,7 +274,7 @@ function initBuybox() {
         const selectedAddsonItems = document.querySelectorAll(".product_info_bundle_product.selected");
         if (selectedAddsonItems.length) {
           selectedAddsonItems.forEach((item) => {
-            const id = item.getAttribute("data-id");
+            const id = item.getAttribute("data-variant-id");
             cartFormData.items.push({ id: id, quantity: 1 });
           });
         }
@@ -656,23 +656,11 @@ document.querySelectorAll(".product_info_bundle_product").forEach(item => {
       }
     })
   })
-})
-function moneyStringToCents(moneyStr) {
-  let clean = moneyStr.replace(/[^\d,.-]/g, '');
-  clean = clean.replace(/\./g, '');
-  clean = clean.replace(',', '.');
-  const amount = parseFloat(clean);
-
-  if (isNaN(amount)) return null;
-
-  return Math.round(amount * 100);
-}
-// 捆绑产品弹窗
-document.querySelectorAll(".product_info_bundle_product .product_info_bundle_product_viewdetail").forEach(item => {
-  item.addEventListener("click", (e) => {
+  // 捆绑产品弹窗
+  const viewdetail = item.querySelector(".product_info_bundle_product_viewdetail")
+  viewdetail.addEventListener("click", (e) => {
     e.stopPropagation()
-    const parent = item.closest(".product_info_bundle_product")
-    const modal = parent.querySelector(".common_modal")
+    const modal = item.querySelector(".common_modal")
     modal.style.display = "block";
     document.body.style.overflowY = "hidden";
 
@@ -691,7 +679,25 @@ document.querySelectorAll(".product_info_bundle_product .product_info_bundle_pro
       }
     });
   })
+  // 捆绑弹窗确定
+  const confirm_btn = item.querySelector(".product_info_bundle_modal_btn")
+  confirm_btn.addEventListener("click", () => {
+    item.querySelector(".product_info_bundle_product_img img").src = currVariant.featured_image.src
+    item.querySelector(".product_info_bundle_product_price").innerHTML = `+${moneyWithoutTrailingZeros(currVariant.price)}`
+    item.setAttribute("data-variant-id", currVariant.id)
+    item.classList.add("selected")
+  })
 })
+function moneyStringToCents(moneyStr) {
+  let clean = moneyStr.replace(/[^\d,.-]/g, '');
+  clean = clean.replace(/\./g, '');
+  clean = clean.replace(',', '.');
+  const amount = parseFloat(clean);
+
+  if (isNaN(amount)) return null;
+
+  return Math.round(amount * 100);
+}
 
 // 主图hover局部放大跟随鼠标
 const container = document.querySelector('.product_info_left_contain');
