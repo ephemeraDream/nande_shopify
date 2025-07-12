@@ -572,7 +572,6 @@ document.querySelectorAll(".product_info_bundle_product").forEach(item => {
     }
     total_price_el.forEach(el => el.innerHTML = moneyWithoutTrailingZeros(total_price))
   }
-
   item.addEventListener("click", handleProductSelect())
 
   const product = bundle_products_data[item.getAttribute("data-id")].product
