@@ -610,11 +610,12 @@ document.querySelectorAll(".product_info_bundle_product").forEach(item => {
 
   select_item.forEach(el => {
     el.addEventListener("click", (event) => {
-      const target = event.target
+      const target = event.target.closest(".product_info_bundle_modal_select_item")
       if (target.classList.contains("product_info_bundle_modal_select_item_select")) return
       const parent = target.closest(".product_info_bundle_modal_select")
       parent.querySelector('.product_info_bundle_modal_select_item_select').classList.remove('product_info_bundle_modal_select_item_select')
       target.classList.add('product_info_bundle_modal_select_item_select')
+      target.closest(".product_info_bundle_modal_item").querySelector(".product_info_bundle_modal_label_select").innerHTML = target.getAttribute("data-value")
       curr_options[parent.getAttribute("data-index")] = target.getAttribute("data-value")
       currVariant = product.variants.find(el => areArraysEqual(curr_options, el.options) && el.available)
       if (currVariant) {
