@@ -194,7 +194,10 @@
         "title": "<p>Erstklassige Produkte & Erstklassiger Service</p>",
         "show_tab_head":false,
         "layout":"image-right"
-      }
+      },
+      "custom_css": [
+        ".img_with_text_tab .img_with_text_tab_title {text-align: left;margin-bottom:6rem}"
+      ],
     },
 
   },
