@@ -9,9 +9,7 @@ function initSwiper() {
     navigation: {
       nextEl: ".imgthumb_swiper_box .imgthumb_swiper_next",
       prevEl: ".imgthumb_swiper_box .imgthumb_swiper_prev",
-    },
-    observeParents: true,
-    observer: true,
+    }
   });
   imgboxSwiper = new Swiper(".imgmain_swiper", {
     // loop: true,
@@ -26,9 +24,7 @@ function initSwiper() {
     },
     thumbs: {
       swiper: imgthumbSwiper,
-    },
-    observeParents: true,
-    observer: true,
+    }
   });
 }
 // 优惠倒计时
