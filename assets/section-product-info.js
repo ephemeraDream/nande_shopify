@@ -468,13 +468,9 @@ function updateImagesByVariantMedia() {
   findSlide('.imgmain_swiper .swiper-slide')
   findSlide('.imgthumb_swiper .swiper-slide')
 
-  if (imgthumbSwiper) {
-    imgthumbSwiper.slideTo(activeIndex);
-  }
-
-  if (imgboxSwiper) {
-    imgboxSwiper.slideTo(activeIndex);
-  }
+  imgthumbSwiper.update()
+  imgboxSwiper.update()
+  imgboxSwiper.slideTo(activeIndex);
 }
 // 捆绑步骤切换
 let bundleStep = 0
