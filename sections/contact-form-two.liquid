@@ -11,7 +11,7 @@ aria-label="conatct"
         <div class="form_left">
           <h2 class="padding-bottom-30">{{ section.settings.title }}</h2>
           <h4 class="">{{ section.settings.desc }}</h4>
-          <div class="text-body"></div>
+          <div class="text-body">{{ section.settings.text_content }}</div>
         </div>
         <div class="form__content">
             
@@ -140,6 +140,8 @@ aria-label="conatct"
     }
     .contact-form-two .form_left{
       width:50%
+    }
+    .text-body ul{
     }
     .contact-form-two .form__content{
         display: flex;
@@ -292,7 +294,12 @@ aria-label="conatct"
         "type": "text",
         "id": "desc",
         "label": "desc"
-    }
+    },
+    {
+      "type": "richtext",
+      "id": "text_content",
+      "label": "text_content"
+    },
   ],
   "blocks": [
   ],
