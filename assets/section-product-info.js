@@ -688,10 +688,11 @@ document.querySelectorAll(".product_info_bundle_product").forEach(item => {
   // 捆绑弹窗确定
   const confirm_btn = item.querySelector(".product_info_bundle_modal_btn")
   confirm_btn.addEventListener("click", (e) => {
-    item.querySelector(".product_info_bundle_product_img img").src = currVariant.featured_image.src
-    item.querySelector(".product_info_bundle_product_price").innerHTML = `+${moneyWithoutTrailingZeros(currVariant.price)}`
-    item.setAttribute("data-variant-id", currVariant.id)
-    handleProductSelect(item, true)()
+    const currentItem = e.currentTarget.closest(".product_info_bundle_product");
+    currentItem.querySelector(".product_info_bundle_product_img img").src = currVariant.featured_image.src
+    currentItem.querySelector(".product_info_bundle_product_price").innerHTML = `+${moneyWithoutTrailingZeros(currVariant.price)}`
+    currentItem.setAttribute("data-variant-id", currVariant.id)
+    handleProductSelect(currentItem, true)()
     modal.style.display = "none";
     document.body.style.overflowY = "auto";
   })
