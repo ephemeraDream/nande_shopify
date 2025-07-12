@@ -1,0 +1,89 @@
+{% comment %}
+------------------------------------------------------------
+B2B 特殊优惠 
+------------------------------------------------------------
+{% endcomment %}
+<div class="b2b-spezielle-rabatte  session-box-padding" >
+{% unless section.settings.title == blank %}
+    <h2 class="padding-bottom-60 session-box-inner">{{ section.settings.title }}</h2>
+{% endunless %}
+    <div class="b2b-spezielle-rabatte_con">
+        {% for block in section.blocks %}
+            <div class="rabatte_item">
+                <div class="rabatte_item_img">
+                    <img src="{{ block.settings.image }}" alt="">
+                </div>
+                <div class="rabatte_item_con">
+                    <h4 class="padding-bottom-20">{{ block.settings.title }}</h4>
+                    <h5 class="padding-bottom-20">{{ block.settings.sub_title }}</h5>
+                    <div class="text-body">{{ block.settings.description }}</div>
+                    <a href="{{ block.settings.link }}" class="nd-btn">{{ block.settings.btn_text }} {{ 'icon-right-arrow.svg' | inline_asset_content }}</a>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+</div>
+
+<style>
+    .b2b-spezielle-rabatte_con{display:flex;gap:20px;flax-wrap:no-wrap}
+    .b2b-spezielle-rabatte_con .rabatte_item{width:30%;}
+    .b2b-spezielle-rabatte_con .rabatte_item_img,.b2b-spezielle-rabatte_con .rabatte_item_img img{width:100%;}
+    .b2b-spezielle-rabatte_con .rabatte_item_con{padding:15px 20px;background:#fff;}
+</style>
+
+{% schema %}
+{
+  "name": "B2B Spezialrabatte",
+  "tag": "section",
+  "class": "section",
+  "disabled_on": { "groups": ["header", "footer"] },
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "item",
+      "name": "item",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title"
+        },
+        {
+            "type": "text",
+            "id": "sub_title",
+            "label": "sub_title"
+        },
+        {
+          "type": "richtext",
+          "id": "description",
+          "label": "description"
+        },
+        {
+          "type": "text",
+          "id": "btn_text",
+          "label": "btn_text"
+        },
+        {
+          "type": "url",
+          "id": "link",
+          "label": "link"
+        },
+      ]
+    }
+  ],
+  "presets": [
+    { "name": "Contact Form Two" }
+  ]
+}
+{% endschema %}

@@ -199,62 +199,51 @@
         ".img_with_text_tab .img_with_text_tab_title {text-align: left;margin-bottom:6rem}"
       ],
     },
-    //差1
-    "polka_dot_swiper_4yRfwn": {
-      "type": "polka-dot-swiper",
+    "b2b_spezielle_rabatte": {
+      "type": "b2b-spezielle-rabatte",
+      "name": "img with text tab",
+      "settings": {
+        "title": "Spezielle Rabatte Bei GroßEinkäUfen",
+      },
       "blocks": {
-        "swiper_74yt3y": {
-          "type": "swiper",
+        "item_fiwUXL": {
+          "type": "item",
           "settings": {
-            "title": "<p>Eleganter Arbeitsbereich</p>",
-            "text": "<p>Schaffe einen funktionalen und stilvollen Arbeitsplatz mit unserem klassischen Schreibtisch</p>",
-            "btn_text": "",
-            "image": "shopify://shop_images/polka_dot_swiper-2.webp",
-            "link": "",
-            "select_product": "",
-            "product_X": 0,
-            "product_Y": 0
+            "title": "11-30 Menschen",
+            "sub_title": "Bis zu 15%",
+            "description": "<ul><li> Immer auf Lager</li><li>Flexibler Versand</li><li> Kostenloser Versand</li><li>Zusatzliches kostenloses Zubehor</li></ul>",
+            "image": "shopify://shop_images/b2b_02.webp",
+            "btn_text": "Jetzt angebot anfordern",
+            "link": "#"
           }
         },
-        "swiper_RR3AVA": {
-          "type": "swiper",
+        "item_AUd88N": {
+          "type": "item",
           "settings": {
-            "title": "<p>Eleganter Arbeitsbereich</p>",
-            "text": "<p>Schaffe einen funktionalen und stilvollen Arbeitsplatz mit </p><p>unserem klassischen Schreibtisch</p>",
-            "btn_text": "",
-            "image": "shopify://shop_images/polka_dot_swiper-1.webp",
-            "link": "",
-            "select_product": "0",
-            "product_X": 0,
-            "product_Y": 0
+            "title": "31-50 Menschen",
+            "sub_title": "Bis zu 20%",
+            "description": "<ul><li> Mehrprodukt-Rabatte</li><li> Immer verfugbar</li><li> Flexible und kostenlose</li><li>Lieferung</li><li>Zusatzliche kostenlose Ergonomischer Stuhl</li></ul>",
+            "image": "shopify://shop_images/b2b_02.webp",
+            "btn_text": "Jetzt angebot anfordern",
+            "link": "#"
           }
         },
-        "swiper_xwgRwF": {
-          "type": "swiper",
+        "item_AUd88C": {
+          "type": "item",
           "settings": {
-            "title": "<p>Eleganter Arbeitsbereich</p>",
-            "text": "<p>Schaffe einen funktionalen und stilvollen Arbeitsplatz mit unserem klassischen Schreibtisch</p>",
-            "btn_text": "",
-            "image": "shopify://shop_images/polka_dot_swiper-2.webp",
-            "link": "",
-            "select_product": "0",
-            "product_X": 0,
-            "product_Y": 0
+            "title": ">50 Menschen",
+            "sub_title": "Bis zu 25%",
+            "description": "<ul><li> Mehrprodukt-Rabatte</li><li>Immer verfugbar</li><li>Flexible und kostenlose</li><li>Lieferung</li><li>Zusatzliche kostenlose Rahmen</li></ul>",
+            "image": "shopify://shop_images/b2b_02.webp",
+            "btn_text": "Jetzt angebot anfordern",
+            "link": "#"
           }
-        }
+        },
       },
       "block_order": [
-        "swiper_74yt3y",
-        "swiper_RR3AVA",
-        "swiper_xwgRwF"
-      ],
-      "name": "polka dot swiper",
-      "settings": {
-        "title": "<p>Ihr BüRo, Neu Definiert</p>",
-        "text": ""
-      },
-      "custom_css": [
-        ".polka_dot_swiper{padding-bottom:6rem}"
+        "item_fiwUXL",
+        "item_AUd88N",
+        "item_AUd88C"
       ],
     },
     //差2
@@ -322,7 +311,7 @@
     "img_with_text_box_simplicity_qrzG6W",
     "maidesite_swiper_QhkQG8",
     "img_with_text_tab_emEWU8",
-    //差1
+    "b2b_spezielle_rabatte",
     "polka_dot_swiper_4yRfwn",
     //差2
     "product_carousel", 
