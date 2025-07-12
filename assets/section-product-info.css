@@ -1243,8 +1243,8 @@
   border-radius: 50%;
   background-color: #BDFF00;
   position: absolute;
-  left: -0.7rem;
-  top: -0.7rem;
+  left: -0.5rem;
+  top: -0.5rem;
 }
 
 .product_info_bundle_modal .product_info_bundle_modal_select[select-type="circle"] .product_info_bundle_modal_select_item_select::after {
@@ -1254,6 +1254,6 @@
   border-radius: 50%;
   background-color: #fff;
   position: absolute;
-  left: -0.5rem;
-  top: -0.5rem;
+  left: -0.25rem;
+  top: -0.25rem;
 }
