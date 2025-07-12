@@ -315,6 +315,7 @@ let currVariant = product_data.variant
 const symbol = product_data.symbol
 const curr_options = [...currVariant.options]
 setVariantOption()
+updateImagesByVariant(currVariant.id)
 function setVariantOption() {
   document.querySelectorAll(".product_info_option_select").forEach((selector, selectorIndex) => {
     if (selectorIndex < 2) return
@@ -382,6 +383,7 @@ document.querySelectorAll(".product_info_option_select_item").forEach(el => {
     updateVariantPrice()
     updateBuyBtns()
     updateUrl()
+    updateImagesByVariant(currVariant.id)
   })
 })
 function areArraysEqual(arr1, arr2) {
@@ -433,6 +435,23 @@ function updateUrl() {
   const url = new URL(window.location.href);
   url.searchParams.set("variant", currVariant.id);
   window.history.replaceState(null, "", url.toString());
+}
+function updateImagesByVariant(variantId) {
+  document.querySelectorAll('.product_info_left .swiper-slide').forEach((slide) => {
+    const slideVariantId = slide.dataset.variantId;
+    const isCommon = slide.hasAttribute('data-common');
+
+    if (String(slideVariantId) === String(variantId) || isCommon) {
+      slide.style.display = 'block';
+    } else {
+      slide.style.display = 'none';
+    }
+  });
+
+  // 如果你用 swiper，需要更新
+  // if (window.mySwiper) {
+  //   window.mySwiper.update();
+  // }
 }
 // 捆绑步骤切换
 let bundleStep = 0

@@ -101,6 +101,7 @@
 .product_info .imgthumb_swiper .swiper-slide {
   width: 6rem;
   height: 6rem;
+  cursor: pointer;
 }
 
 .product_info .imgthumb_swiper .swiper-slide img {
