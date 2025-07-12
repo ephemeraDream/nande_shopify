@@ -1,7 +1,7 @@
 // swiper相关
+let imgthumbSwiper, imgboxSwiper;
 initSwiper()
 function initSwiper() {
-  let imgthumbSwiper, imgboxSwiper;
   imgthumbSwiper = new Swiper(".imgthumb_swiper", {
     loop: true,
     spaceBetween: 8,
@@ -454,8 +454,12 @@ function updateImagesByVariantMedia() {
     }
   });
 
-  if (window.mySwiper) {
-    window.mySwiper.update();
+  if (imgthumbSwiper) {
+    imgthumbSwiper.update();
+  }
+
+  if (imgboxSwiper) {
+    imgboxSwiper.update();
   }
 }
 // 捆绑步骤切换
