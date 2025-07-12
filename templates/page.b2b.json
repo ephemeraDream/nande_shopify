@@ -246,6 +246,63 @@
         "item_AUd88C"
       ],
     },
+    "polka_dot_swiper_4yRfwn": {
+      "type": "polka-dot-swiper",
+      "blocks": {
+        "swiper_74yt3y": {
+          "type": "swiper",
+          "settings": {
+            "title": "<p>Eleganter Arbeitsbereich</p>",
+            "text": "<p>Schaffe einen funktionalen und stilvollen Arbeitsplatz mit unserem klassischen Schreibtisch</p>",
+            "btn_text": "",
+            "image": "shopify://shop_images/polka_dot_swiper-2.webp",
+            "link": "",
+            "select_product": "",
+            "product_X": 0,
+            "product_Y": 0
+          }
+        },
+        "swiper_RR3AVA": {
+          "type": "swiper",
+          "settings": {
+            "title": "<p>Eleganter Arbeitsbereich</p>",
+            "text": "<p>Schaffe einen funktionalen und stilvollen Arbeitsplatz mit </p><p>unserem klassischen Schreibtisch</p>",
+            "btn_text": "",
+            "image": "shopify://shop_images/polka_dot_swiper-1.webp",
+            "link": "",
+            "select_product": "0",
+            "product_X": 0,
+            "product_Y": 0
+          }
+        },
+        "swiper_xwgRwF": {
+          "type": "swiper",
+          "settings": {
+            "title": "<p>Eleganter Arbeitsbereich</p>",
+            "text": "<p>Schaffe einen funktionalen und stilvollen Arbeitsplatz mit unserem klassischen Schreibtisch</p>",
+            "btn_text": "",
+            "image": "shopify://shop_images/polka_dot_swiper-2.webp",
+            "link": "",
+            "select_product": "0",
+            "product_X": 0,
+            "product_Y": 0
+          }
+        }
+      },
+      "block_order": [
+        "swiper_74yt3y",
+        "swiper_RR3AVA",
+        "swiper_xwgRwF"
+      ],
+      "name": "polka dot swiper",
+      "settings": {
+        "title": "<p>Ihr BüRo, Neu Definiert</p>",
+        "text": ""
+      },
+      "custom_css": [
+        ".polka_dot_swiper{padding-bottom:6rem}"
+      ],
+    },
     //差2
     "product_carousel":{
       "type": "product-carousel",
