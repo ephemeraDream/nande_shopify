@@ -9,7 +9,7 @@ Products Swiper Section - 选择产品进行轮播
       <h2 class="padding-bottom-60 session-box-inner">{{ section.settings.title }}</h2>
     </div>
     {% endunless %}
-    <div class="product-carousel-container">
+    <div class="product-carousel-container session-box-padding">
       <div class="swiper-wrapper">
         {% for block in section.blocks %}
           {% assign product = all_products[block.settings.select_product] %}
@@ -60,7 +60,7 @@ Products Swiper Section - 选择产品进行轮播
     }
     .product-card {
       background: #fff;
-      padding: 10px;
+      padding: 2rem;
     }
     .product-card img {
       width: 100%;
