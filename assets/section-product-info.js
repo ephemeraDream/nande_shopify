@@ -536,7 +536,7 @@ function switchStep() {
 }
 // 捆绑产品选择
 document.querySelectorAll(".product_info_bundle_product").forEach(item => {
-  const handleProductSelect = (skipToggle = false) => {
+  const handleProductSelect = (item, skipToggle = false) => {
     return function () {
       if (item.classList.contains("product_info_bundle_product_disabled")) return
       const total_price_el = document.querySelectorAll(".product_info_bundle_info_total")
@@ -574,7 +574,7 @@ document.querySelectorAll(".product_info_bundle_product").forEach(item => {
       total_price_el.forEach(el => el.innerHTML = moneyWithoutTrailingZeros(total_price))
     }
   }
-  item.addEventListener("click", handleProductSelect())
+  item.addEventListener("click", handleProductSelect(item))
 
   const product = bundle_products_data[item.getAttribute("data-id")].product
   let currVariant = bundle_products_data[item.getAttribute("data-id")].variant
@@ -691,7 +691,7 @@ document.querySelectorAll(".product_info_bundle_product").forEach(item => {
     item.querySelector(".product_info_bundle_product_img img").src = currVariant.featured_image.src
     item.querySelector(".product_info_bundle_product_price").innerHTML = `+${moneyWithoutTrailingZeros(currVariant.price)}`
     item.setAttribute("data-variant-id", currVariant.id)
-    handleProductSelect(true)()
+    handleProductSelect(item, true)()
     modal.style.display = "none";
     document.body.style.overflowY = "auto";
   })
