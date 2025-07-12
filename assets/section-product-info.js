@@ -707,7 +707,6 @@ function moneyStringToCents(moneyStr) {
 
   return Math.round(amount * 100);
 }
-
 // 主图hover局部放大跟随鼠标
 const container = document.querySelector('.product_info_left_contain');
 
