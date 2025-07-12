@@ -545,7 +545,9 @@ document.querySelectorAll(".product_info_bundle_product").forEach(item => {
     const accesories_box_title = document.querySelector(".product_info_steps_contain_item_title[data-type='accesories']")
     const title = item.querySelector(".product_info_bundle_product_title").innerHTML
     let total_price = moneyStringToCents(total_price_el[0].innerHTML)
-    if (!e.target.closest(".product_info_bundle_modal_btn")) {
+    if (e.detail && e.detail.skipToggle) {
+      item.classList.add("selected")
+    } {
       item.classList.toggle("selected")
     }
     if (item.classList.contains("selected")) {
@@ -687,8 +689,11 @@ document.querySelectorAll(".product_info_bundle_product").forEach(item => {
     item.querySelector(".product_info_bundle_product_img img").src = currVariant.featured_image.src
     item.querySelector(".product_info_bundle_product_price").innerHTML = `+${moneyWithoutTrailingZeros(currVariant.price)}`
     item.setAttribute("data-variant-id", currVariant.id)
-    item.classList.add("selected")
-    item.click()
+    item.dispatchEvent(new MouseEvent("click", {
+      bubbles: true,
+      cancelable: true,
+      detail: { skipToggle: true }
+    }));
     modal.style.display = "none";
     document.body.style.overflowY = "auto";
   })
