@@ -536,45 +536,43 @@ function switchStep() {
 }
 // 捆绑产品选择
 document.querySelectorAll(".product_info_bundle_product").forEach(item => {
-  const handleProductSelect = (item, skipToggle = false) => {
-    return function () {
-      if (item.classList.contains("product_info_bundle_product_disabled")) return
-      const total_price_el = document.querySelectorAll(".product_info_bundle_info_total")
-      const price = Number(item.getAttribute("data-price"))
-      const id = item.getAttribute("data-id")
-      const accesories_box = document.querySelector(".product_info_steps_contain_item_box[data-type='accesories']")
-      const accesories_box_title = document.querySelector(".product_info_steps_contain_item_title[data-type='accesories']")
-      const title = item.querySelector(".product_info_bundle_product_title").innerHTML
-      let total_price = moneyStringToCents(total_price_el[0].innerHTML)
-      if (skipToggle) {
-        item.classList.add("selected")
-      } {
-        item.classList.toggle("selected")
-      }
-      if (item.classList.contains("selected")) {
-        total_price = total_price + price
-
-        const container = document.createElement('div');
-        container.className = 'product_info_steps_contain_item_box_line';
-        container.dataset.id = id;
-
-        container.innerHTML = `<span>${title}</span><span>${moneyWithoutTrailingZeros(price)}</span>`;
-        accesories_box.appendChild(container);
-        accesories_box.classList.remove("hidden")
-        accesories_box_title.classList.remove("hidden")
-      } else {
-        total_price = total_price - price
-
-        document.querySelector(`.product_info_steps_contain_item_box_line[data-id="${id}"]`).remove()
-        if (accesories_box.children.length === 0) {
-          accesories_box.classList.add("hidden")
-          accesories_box_title.classList.add("hidden")
-        }
-      }
-      total_price_el.forEach(el => el.innerHTML = moneyWithoutTrailingZeros(total_price))
+  const handleProductClick = (skipToggle = false) => {
+    if (item.classList.contains("product_info_bundle_product_disabled")) return
+    const total_price_el = document.querySelectorAll(".product_info_bundle_info_total")
+    const price = Number(item.getAttribute("data-price"))
+    const id = item.getAttribute("data-id")
+    const accesories_box = document.querySelector(".product_info_steps_contain_item_box[data-type='accesories']")
+    const accesories_box_title = document.querySelector(".product_info_steps_contain_item_title[data-type='accesories']")
+    const title = item.querySelector(".product_info_bundle_product_title").innerHTML
+    let total_price = moneyStringToCents(total_price_el[0].innerHTML)
+    if (skipToggle) {
+      item.classList.add("selected")
+    } else {
+      item.classList.toggle("selected")
     }
+    if (item.classList.contains("selected")) {
+      total_price = total_price + price
+
+      const container = document.createElement('div');
+      container.className = 'product_info_steps_contain_item_box_line';
+      container.dataset.id = id;
+
+      container.innerHTML = `<span>${title}</span><span>${moneyWithoutTrailingZeros(price)}</span>`;
+      accesories_box.appendChild(container);
+      accesories_box.classList.remove("hidden")
+      accesories_box_title.classList.remove("hidden")
+    } else {
+      total_price = total_price - price
+
+      document.querySelector(`.product_info_steps_contain_item_box_line[data-id="${id}"]`).remove()
+      if (accesories_box.children.length === 0) {
+        accesories_box.classList.add("hidden")
+        accesories_box_title.classList.add("hidden")
+      }
+    }
+    total_price_el.forEach(el => el.innerHTML = moneyWithoutTrailingZeros(total_price))
   }
-  item.addEventListener("click", handleProductSelect(item))
+  item.addEventListener("click", () => handleProductClick())
 
   const product = bundle_products_data[item.getAttribute("data-id")].product
   let currVariant = bundle_products_data[item.getAttribute("data-id")].variant
@@ -612,6 +610,7 @@ document.querySelectorAll(".product_info_bundle_product").forEach(item => {
       });
     });
   };
+
   setVariantOption()
 
   select_item.forEach(el => {
@@ -687,12 +686,11 @@ document.querySelectorAll(".product_info_bundle_product").forEach(item => {
   })
   // 捆绑弹窗确定
   const confirm_btn = item.querySelector(".product_info_bundle_modal_btn")
-  confirm_btn.addEventListener("click", (e) => {
-    const currentItem = e.currentTarget.closest(".product_info_bundle_product");
-    currentItem.querySelector(".product_info_bundle_product_img img").src = currVariant.featured_image.src
-    currentItem.querySelector(".product_info_bundle_product_price").innerHTML = `+${moneyWithoutTrailingZeros(currVariant.price)}`
-    currentItem.setAttribute("data-variant-id", currVariant.id)
-    handleProductSelect(currentItem, true)()
+  confirm_btn.addEventListener("click", () => {
+    item.querySelector(".product_info_bundle_product_img img").src = currVariant.featured_image.src
+    item.querySelector(".product_info_bundle_product_price").innerHTML = `+${moneyWithoutTrailingZeros(currVariant.price)}`
+    item.setAttribute("data-variant-id", currVariant.id)
+    handleProductClick(true)
     modal.style.display = "none";
     document.body.style.overflowY = "auto";
   })
@@ -707,6 +705,7 @@ function moneyStringToCents(moneyStr) {
 
   return Math.round(amount * 100);
 }
+
 // 主图hover局部放大跟随鼠标
 const container = document.querySelector('.product_info_left_contain');
 
