@@ -309,7 +309,8 @@
                     <div
                       class="product_info_bundle_product"
                       data-price="{{ bundled_product.selected_or_first_available_variant.price | default: bundled_product.price }}"
-                      data-id="{{ bundled_product.selected_or_first_available_variant.id | default: bundled_product.id }}"
+                      data-id="{{ bundled_product.id }}"
+                      data-variant-id="{{ bundled_product.selected_or_first_available_variant.id  }}"
                     >
                       <div class="product_info_bundle_product_img">
                         <img
@@ -661,17 +662,28 @@
   </div>
 </div>
 
+{% for currency in shop.enabled_currencies %}
+  {% if currency.iso_code == shop.currency %}
+    {%- assign currency_symbol = currency.symbol -%}
+    {% break %}
+  {% endif %}
+{% endfor %}
 <script type="application/json" id="product_info_data">
-  {% for currency in shop.enabled_currencies %}
-    {% if currency.iso_code == shop.currency %}
-      {%- assign currency_symbol = currency.symbol -%}
-      {% break %}
-    {% endif %}
-  {% endfor %}
   {
     "product": {{- product | json -}},
     "variant": {{ product.selected_or_first_available_variant | json }},
     "symbol": {{ currency_symbol | json }}
+  }
+</script>
+<script type="application/json" id="bundle_products_data">
+  {
+    {% for product in bundle_products %}
+      "{{ product.id }}": {
+        "product": {{- product | json -}},
+        "variant": {{ product.selected_or_first_available_variant | json }},
+        "symbol": {{ currency_symbol | json }}
+      }{% unless forloop.last %},{% endunless %}
+    {% endfor %}
   }
 </script>
 <script src="{{ 'section-product-info.js' | asset_url  }}" defer></script>

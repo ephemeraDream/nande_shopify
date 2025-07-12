@@ -491,6 +491,7 @@ function updateImagesByVariantMedia() {
 }
 
 // 捆绑步骤切换
+const bundle_products_data = JSON.parse(document.getElementById('bundle_products_data').textContent);
 let bundleStep = 0
 document.querySelectorAll(".product_info_steps_item").forEach((item, index) => {
   item.addEventListener("click", () => {
@@ -566,6 +567,40 @@ document.querySelectorAll(".product_info_bundle_product").forEach(item => {
     }
     total_price_el.forEach(el => el.innerHTML = moneyWithoutTrailingZeros(total_price))
   })
+
+  const product = bundle_products_data[item.getAttribute("data-id")].product
+  let currVariant = bundle_products_data[item.getAttribute("data-id")].variant
+  const select_option = item.querySelectorAll(".product_info_bundle_modal_select")
+  const setVariantOption = () => {
+    select_option.forEach((selector, selectorIndex) => {
+      if (selectorIndex < 2) return
+      const options = selector.querySelectorAll('.product_info_bundle_modal_select_item');
+
+      options.forEach(opt => opt.classList.add('hidden'));
+
+      product.variants.forEach((variant) => {
+        let matchCount = 0;
+
+        variant.options.forEach((option, optionIndex) => {
+          if (option === currVariant.options[optionIndex] && optionIndex !== selectorIndex) {
+            matchCount += 1;
+          }
+        });
+
+        if (matchCount === currVariant.options.length - 1) {
+          const optionEl = Array.from(options).find((opt) => {
+            return opt.getAttribute("data-value") === variant.options[selectorIndex];
+          });
+
+          if (optionEl && variant.available) {
+            optionEl.classList.remove("hidden");
+          }
+        }
+      });
+    });
+  };
+
+  setVariantOption()
 })
 function moneyStringToCents(moneyStr) {
   let clean = moneyStr.replace(/[^\d,.-]/g, '');
@@ -577,6 +612,7 @@ function moneyStringToCents(moneyStr) {
 
   return Math.round(amount * 100);
 }
+// 捆绑产品弹窗
 document.querySelectorAll(".product_info_bundle_product .product_info_bundle_product_viewdetail").forEach(item => {
   item.addEventListener("click", (e) => {
     e.stopPropagation()
@@ -601,6 +637,7 @@ document.querySelectorAll(".product_info_bundle_product .product_info_bundle_pro
     });
   })
 })
+
 // 主图hover局部放大跟随鼠标
 const container = document.querySelector('.product_info_left_contain');
 
