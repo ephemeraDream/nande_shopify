@@ -15,7 +15,7 @@ aria-label="conatct"
         </div>
         <div class="form__content">
             
-            {%- form 'contact', id: 'ContactFormOne', class: contact_form_class -%}
+            {%- form 'contact', id: 'ContactFormTwo', class: contact_form_class -%}
 
               {%- if form.posted_successfully? -%}
                 <p class="form-status form__message success" tabindex="-1" autofocus>
@@ -32,7 +32,7 @@ aria-label="conatct"
                   <input
                     autocomplete="email"
                     type="email"
-                    id="ContactForm-email"
+                    id="ContactFormTwo-email"
                     class="field__input"
                     name="contact[email]"
                     spellcheck="false"
@@ -41,12 +41,12 @@ aria-label="conatct"
                     value="{% if form.email %}{{ form.email }}{% elsif customer %}{{ customer.email }}{% endif %}"
                     {% if form.errors contains 'email' %}
                       aria-invalid="true"
-                      aria-describedby="ContactForm-email-error"
+                      aria-describedby="ContactFormTwo-email-error"
                     {% endif %}
                     placeholder="E-Mail*"
                   >
                   {%- if form.errors contains 'email' -%}
-                    <small class="contact__field-error" id="ContactForm-email-error">
+                    <small class="contact__field-error" id="ContactFormTwo-email-error">
                       {{ form.errors.messages.email }}
                     </small>
                   {%- endif -%}
@@ -55,45 +55,57 @@ aria-label="conatct"
                 <div class="form-grid-field">
                   <input
                     type="text"
-                    id="ContactForm-company"
+                    id="ContactFormTwo-company"
                     class="field__input"
                     name="contact[company]"
-                    placeholder="Unternehmen (optional)"
+                    placeholder="Unternehmen"
+                  >
+                </div>
+
+                <div class="form-grid-field">
+                  <input
+                    type="tel"
+                    id="ContactFormTwo-phone"
+                    class="field__input"
+                    name="contact[phone]"
+                    autocomplete="tel"
+                    value="{% if form.phone %}{{ form.phone }}{% elsif customer %}{{ customer.phone }}{% endif %}"
+                    placeholder="Telefon"
                   >
                 </div>
           
                 <div class="form-grid-field">
                   <input
                     type="text"
-                    id="ContactForm-name"
+                    id="ContactFormTwo-name"
                     class="field__input"
                     name="contact[name]"
                     autocomplete="name"
                     value="{% if form.name %}{{ form.name }}{% elsif customer %}{{ customer.name }}{% endif %}"
-                    placeholder="Name (optional)"
+                    placeholder="Name"
                   >
                 </div>
-          
-                <div class="form-grid-field">
-                  <input
-                    type="tel"
-                    id="ContactForm-phone"
-                    class="field__input"
-                    name="contact[phone]"
-                    autocomplete="tel"
-                    value="{% if form.phone %}{{ form.phone }}{% elsif customer %}{{ customer.phone }}{% endif %}"
-                    placeholder="Telefon (optional)"
-                  >
-                </div>
+              </div>
+
+              <div class="form-grid-field">
+                <input
+                  type="text"
+                  id="ContactFormTwo-name"
+                  class="field__input"
+                  name="contact[name]"
+                  autocomplete="name"
+                  value="{% if form.name %}{{ form.name }}{% elsif customer %}{{ customer.name }}{% endif %}"
+                  placeholder="Menge"
+                >
               </div>
           
               <div class="form-grid-field">
                 <textarea
                   rows="7"
-                  id="ContactForm-body"
+                  id="ContactFormTwo-body"
                   class="text-area field__input"
                   name="contact[body]"
-                  placeholder="Nachricht (optional)"
+                  placeholder="Nachricht"
                 >{{- form.body -}}</textarea>
               </div>
           
@@ -135,6 +147,8 @@ aria-label="conatct"
         gap:3rem;
         width:66rem;
         flex-direction: column;
+        padding:4rem 5rem;
+        background-color: #1F1F1F;
     }
 
     .contact-form-two .form-grid {
@@ -142,6 +156,7 @@ aria-label="conatct"
       flex-wrap: wrap;
       gap: 15px;
       margin-bottom: 15px;
+      flex-direction: column;
     }
     
     .contact-form-two .form-grid .form-grid-field {
@@ -158,6 +173,7 @@ aria-label="conatct"
       background: #fff;
       color: rgb(var(--color-foreground));
       font-weight:400;
+      background-color:#fff;
     }
     .contact-form-two .field__input::placeholder,.contact-form-two textarea.text-area::placeholder {
       color: #7F7E75;  
