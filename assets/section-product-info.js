@@ -9,7 +9,12 @@ function initSwiper() {
     navigation: {
       nextEl: ".imgthumb_swiper_box .imgthumb_swiper_next",
       prevEl: ".imgthumb_swiper_box .imgthumb_swiper_prev",
-    }
+    },
+    on: {
+      slideChange: function (swiper) {
+        imgboxSwiper.slideTo(swiper.realIndex)
+      }
+    },
   });
   imgboxSwiper = new Swiper(".imgmain_swiper", {
     // loop: true,
@@ -22,9 +27,14 @@ function initSwiper() {
       nextEl: ".imgmain_swiper .imgmain_swiper_next",
       prevEl: ".imgmain_swiper .imgmain_swiper_prev",
     },
-    thumbs: {
-      swiper: imgthumbSwiper,
-    }
+    on: {
+      slideChange: function (swiper) {
+        imgthumbSwiper.slideTo(swiper.realIndex)
+      }
+    },
+    // thumbs: {
+    //   swiper: imgthumbSwiper,
+    // }
   });
 }
 // 优惠倒计时
