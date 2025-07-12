@@ -382,7 +382,7 @@
                                       {%- for value in option.values -%}
                                         {% if option_hanlde contains 'farbe' %}
                                           {% assign color = '' %}
-                                          {% for color_item in product.metafields.custom.color_option.value %}
+                                          {% for color_item in bundled_product.metafields.custom.color_option.value %}
                                             {% if color_item.name == value.name %}
                                               {% assign color = color_item.value %}
                                             {% endif %}
