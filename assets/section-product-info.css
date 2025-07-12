@@ -45,9 +45,6 @@
 
 .product_info .product_info_left_contain:hover .imgmain_swiper .swiper-slide img {
   transform: scale(2);
-}
-
-.product_info .product_info_left_contain:active .imgmain_swiper .swiper-slide img {
   cursor: zoom-in;
 }
 
