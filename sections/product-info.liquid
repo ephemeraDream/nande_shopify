@@ -23,13 +23,27 @@
         {% assign media_types = 'video,model' | split: ',' %}
         <div class="swiper imgmain_swiper product_info_left_contain_group show" data-type="image">
           <div class="swiper-wrapper">
-            {%- if product.selected_or_first_available_variant != null -%}
-              {% for image in product.images %}
-                <div class="swiper-slide">
-                  {{- image | image_url: width: image.width | image_tag: alt: product.title, preload: true -}}
+            {% for media in product.media %}
+              {% if media.media_type == 'image' %}
+                {% assign is_variant_img = false %}
+
+                {% for variant in product.variants %}
+                  {% if variant.featured_media and variant.featured_media.id == media.id %}
+                    {% assign is_variant_img = true %}
+                  {% endif %}
+                {% endfor %}
+
+                <div
+                  class="swiper-slide"
+                  data-media-id="{{ media.id }}"
+                  {% unless is_variant_img %}
+                    data-common="true"
+                  {% endunless %}
+                >
+                  {{ media.src | image_url: width: media.src.width | image_tag: alt: product.title, preload: true }}
                 </div>
-              {% endfor -%}
-            {%- endif -%}
+              {% endif %}
+            {% endfor %}
           </div>
           <div class="imgmain_swiper_prev">
             {{- 'swiper-left.svg' | inline_asset_content -}}
@@ -66,14 +80,30 @@
           </div>
           <div class="swiper imgthumb_swiper">
             <div class="swiper-wrapper">
-              {% for image in product.images %}
-                <div class="swiper-slide">
-                  <img
-                    src="{{ image | image_url: width: 120 }}"
-                    alt="{{ product.title }}"
+              {% for media in product.media %}
+                {% if media.media_type == 'image' %}
+                  {% assign is_variant_img = false %}
+
+                  {% for variant in product.variants %}
+                    {% if variant.featured_media and variant.featured_media.id == media.id %}
+                      {% assign is_variant_img = true %}
+                    {% endif %}
+                  {% endfor %}
+
+                  <div
+                    class="swiper-slide"
+                    data-media-id="{{ media.id }}"
+                    {% unless is_variant_img %}
+                      data-common="true"
+                    {% endunless %}
                   >
-                </div>
-              {% endfor -%}
+                    <img
+                      src="{{ media.src | image_url: width: 120 }}"
+                      alt="{{ product.title }}"
+                    >
+                  </div>
+                {% endif %}
+              {% endfor %}
             </div>
           </div>
           <div class="imgthumb_swiper_next">
@@ -442,7 +472,11 @@
                 {{ block.settings.icon }}
                 {{ block.settings.title }}
               </div>
-              <img src="{{ block.settings.image | image_url }}">
+              <div class="product_info_payment_contain">
+                {%- for type in shop.enabled_payment_types -%}
+                  {{ type | payment_type_svg_tag }}
+                {%- endfor -%}
+              </div>
             </div>
         {%- endcase -%}
       {%- endfor -%}
@@ -627,11 +661,6 @@
           "type": "textarea",
           "id": "icon",
           "label": "icon"
-        },
-        {
-          "type": "image_picker",
-          "id": "image",
-          "label": "image"
         }
       ]
     },

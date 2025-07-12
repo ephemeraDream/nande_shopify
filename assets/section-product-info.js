@@ -1,18 +1,35 @@
 // swiper相关
+let imgthumbSwiper, imgboxSwiper;
 initSwiper()
 function initSwiper() {
-  let imgthumbSwiper, imgboxSwiper;
   imgthumbSwiper = new Swiper(".imgthumb_swiper", {
-    loop: true,
+    // loop: true,
     spaceBetween: 8,
     slidesPerView: 4,
     navigation: {
       nextEl: ".imgthumb_swiper_box .imgthumb_swiper_next",
       prevEl: ".imgthumb_swiper_box .imgthumb_swiper_prev",
     },
+    on: {
+      click: function (swiper) {
+        const clickedSlide = swiper.slides[swiper.clickedIndex];
+        if (!clickedSlide || clickedSlide.style.display === 'none') return;
+
+        const mediaId = clickedSlide.dataset.mediaId;
+
+        const visibleSlides = Array.from(document.querySelectorAll('.imgmain_swiper .swiper-slide'))
+          .filter(slide => slide.style.display !== 'none');
+
+        const targetIndex = visibleSlides.findIndex(slide => slide.dataset.mediaId === mediaId);
+
+        if (targetIndex > -1) {
+          imgboxSwiper.slideTo(targetIndex);
+        }
+      }
+    },
   });
   imgboxSwiper = new Swiper(".imgmain_swiper", {
-    loop: true,
+    // loop: true,
     effect: "fade",
     fadeEffect: {
       crossFade: true,
@@ -22,9 +39,14 @@ function initSwiper() {
       nextEl: ".imgmain_swiper .imgmain_swiper_next",
       prevEl: ".imgmain_swiper .imgmain_swiper_prev",
     },
-    thumbs: {
-      swiper: imgthumbSwiper,
+    on: {
+      slideChange: function (swiper) {
+        imgthumbSwiper.slideTo(swiper.activeIndex)
+      }
     },
+    // thumbs: {
+    //   swiper: imgthumbSwiper,
+    // }
   });
 }
 // 优惠倒计时
@@ -315,6 +337,7 @@ let currVariant = product_data.variant
 const symbol = product_data.symbol
 const curr_options = [...currVariant.options]
 setVariantOption()
+updateImagesByVariantMedia()
 function setVariantOption() {
   document.querySelectorAll(".product_info_option_select").forEach((selector, selectorIndex) => {
     if (selectorIndex < 2) return
@@ -382,6 +405,7 @@ document.querySelectorAll(".product_info_option_select_item").forEach(el => {
     updateVariantPrice()
     updateBuyBtns()
     updateUrl()
+    updateImagesByVariantMedia()
   })
 })
 function areArraysEqual(arr1, arr2) {
@@ -434,6 +458,38 @@ function updateUrl() {
   url.searchParams.set("variant", currVariant.id);
   window.history.replaceState(null, "", url.toString());
 }
+function updateImagesByVariantMedia() {
+  const mediaId = currVariant.featured_media?.id;
+  let activeIndex = 0;
+  let count = 0;
+
+  const findSlide = (domstr, isMainSwiper = false) => {
+    document.querySelectorAll(domstr).forEach((slide) => {
+      const slideMediaId = slide.dataset.mediaId;
+      const isCommon = slide.hasAttribute('data-common');
+
+      if (String(slideMediaId) === String(mediaId) || isCommon) {
+        slide.style.display = 'block';
+
+        if (isMainSwiper && String(slideMediaId) === String(mediaId)) {
+          activeIndex = count;
+        }
+
+        count++;
+      } else {
+        slide.style.display = 'none';
+      }
+    });
+  };
+
+  findSlide('.imgmain_swiper .swiper-slide', true);
+  findSlide('.imgthumb_swiper .swiper-slide');
+
+  imgthumbSwiper.update();
+  imgboxSwiper.update();
+  imgboxSwiper.slideTo(activeIndex);
+}
+
 // 捆绑步骤切换
 let bundleStep = 0
 document.querySelectorAll(".product_info_steps_item").forEach((item, index) => {
@@ -521,3 +577,15 @@ function moneyStringToCents(moneyStr) {
 
   return Math.round(amount * 100);
 }
+
+// 主图hover局部放大跟随鼠标
+const container = document.querySelector('.product_info_left_contain');
+
+container.addEventListener('mousemove', (e) => {
+  const { left, top, width, height } = container.getBoundingClientRect();
+  container.querySelectorAll('img').forEach(item => {
+    const x = (e.clientX - left) / width * 100;
+    const y = (e.clientY - top) / height * 100;
+    item.style.transformOrigin = `${x}% ${y}%`;
+  });
+});
