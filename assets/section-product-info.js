@@ -536,7 +536,6 @@ function switchStep() {
 }
 // 捆绑产品选择
 document.querySelectorAll(".product_info_bundle_product").forEach(item => {
-  item.addEventListener("click", handleProductSelect())
   const handleProductSelect = (skipToggle = false) => {
     if (item.classList.contains("product_info_bundle_product_disabled")) return
     const total_price_el = document.querySelectorAll(".product_info_bundle_info_total")
@@ -573,6 +572,8 @@ document.querySelectorAll(".product_info_bundle_product").forEach(item => {
     }
     total_price_el.forEach(el => el.innerHTML = moneyWithoutTrailingZeros(total_price))
   }
+
+  item.addEventListener("click", handleProductSelect())
 
   const product = bundle_products_data[item.getAttribute("data-id")].product
   let currVariant = bundle_products_data[item.getAttribute("data-id")].variant
