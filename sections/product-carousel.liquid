@@ -1,0 +1,122 @@
+{% comment %}
+------------------------------------------------------------
+Products Swiper Section - 选择产品进行轮播
+------------------------------------------------------------
+{% endcomment %}
+<div class="product-carousel  padding-top-120 padding-bottom-120">
+    {% unless section.settings.title == blank %}
+    <div class="session-box-padding">
+      <h2 class="padding-bottom-60 session-box-inner">{{ section.settings.title }}</h2>
+    </div>
+    {% endunless %}
+    <div class="product-carousel-container">
+      <div class="swiper-wrapper">
+        {% for block in section.blocks %}
+          {% assign product = all_products[block.settings.product] %}
+          {% if product %}
+            <div class="swiper-slide product-card">
+              <a href="{{ product.url }}">
+                {{-
+                  product.featured_image
+                  | image_url: width: product.featured_image.width
+                  | image_tag: alt: product.title
+                -}}
+                <h3>{{ product.title }}</h3>
+                <p>{{ product.price | money }}</p>
+              </a>
+            </div>
+          {% endif %}
+        {% endfor %}
+      </div>
+    
+      <!-- 导航箭头 -->
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div>
+    </div>
+</div>
+
+<style>
+    .product-carousel{background-color: #E2DED6;}
+    .product-carousel-container {
+      margin: 2rem auto;
+      position: relative;
+    }
+    .product-card {
+      background: #fff;
+      border: 1px solid #eee;
+      padding: 10px;
+      text-align: center;
+    }
+    .product-card img {
+      width: 100%;
+      height: auto;
+    }
+    
+</style>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    new Swiper(".product-carousel-container", {
+      slidesPerView: 3,
+      slidesPerGroup: 1,
+      spaceBetween: 20,
+      loop: false,
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+      breakpoints: {
+        0: {
+          slidesPerView: 1
+        },
+        768: {
+          slidesPerView: 2
+        },
+        1025: {
+          slidesPerView: 3
+        }
+      }
+    });
+  });
+</script>
+
+{% schema %}
+{
+  "name": "product carousel",
+  "tag": "section",
+  "class": "section",
+  "disabled_on": {
+    "groups": ["header", "footer"]
+  },
+  "settings": [
+    {
+        "type": "text",
+        "id": "title",
+        "label": "title"
+    },
+  ],
+  "blocks": [
+    {
+      "type": "item",
+      "name": "item",
+      "settings": [
+        {
+          "type": "product",
+          "id": "select_product",
+          "label": "product"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "product carousel",
+      "blocks": [
+        {
+          "type": "item"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

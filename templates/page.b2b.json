@@ -254,6 +254,53 @@
         "text": ""
       }
     },
+    //差2
+    "product_carousel":{
+      "type": "product-carousel",
+      "name": "product_carousel",
+      "settings": {
+        "title": "Spezielle Rabatte Bei GroßEinkäUfen",
+      },
+      "blocks": {
+        "item_3yir6V": {
+          "type": "item",
+          "settings": {
+            "select_product": "maidesite-hohenverstellbar-schreibtisch-t2-pro-plus-140-160-180-cm"
+          }
+        },
+        "item_gyexDX": {
+          "type": "item",
+          "settings": {
+            "select_product": "maidesite-hohenverstellbarer-schreibtisch-elektrisch-t1-basic-100-120-140-160-cm"
+          }
+        },
+        "item_AHnCzP": {
+          "type": "item",
+          "settings": {
+            "select_product": "maidesite-th2-pro-plus-tischgestell-elektrisch-hohenverstellbar"
+          }
+        },
+        "item_EEUjdz": {
+          "type": "item",
+          "settings": {
+            "select_product": "maidesite-el2-plus-art-tischgestell-elektrisch-hohenverstellbar-fur-mydealz"
+          }
+        },
+        "item_z9X7dd": {
+          "type": "item",
+          "settings": {
+            "select_product": "maidesite-to1-pro-elektrisch-hohenverstellbarer-schreibtisch"
+          }
+        }
+      },
+      "block_order": [
+        "item_3yir6V",
+        "item_gyexDX",
+        "item_AHnCzP",
+        "item_EEUjdz",
+        "item_z9X7dd"
+      ]
+    }
 
   },
   "order": [
@@ -263,6 +310,9 @@
     "maidesite_swiper_QhkQG8",
     "img_with_text_tab_emEWU8",
     //差1
-    "polka_dot_swiper_4yRfwn"
+    "polka_dot_swiper_4yRfwn",
+    //差2
+    "product_carousel"
+
   ]
 }
