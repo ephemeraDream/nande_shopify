@@ -570,7 +570,12 @@ document.querySelectorAll(".product_info_bundle_product").forEach(item => {
 
   const product = bundle_products_data[item.getAttribute("data-id")].product
   let currVariant = bundle_products_data[item.getAttribute("data-id")].variant
+  const curr_options = [...currVariant.options]
   const select_option = item.querySelectorAll(".product_info_bundle_modal_select")
+  const select_item = item.querySelectorAll(".product_info_bundle_modal_select_item")
+  const img_contain = item.querySelector(".product_info_bundle_modal_img")
+  const dp_price_contain = item.querySelector(".product_info_bundle_modal_price_dp")
+  const op_price_contain = item.querySelector(".product_info_bundle_modal_price_op")
   const setVariantOption = () => {
     select_option.forEach((selector, selectorIndex) => {
       if (selectorIndex < 2) return
@@ -601,6 +606,54 @@ document.querySelectorAll(".product_info_bundle_product").forEach(item => {
   };
 
   setVariantOption()
+
+  select_item.forEach(el => {
+    el.addEventListener("click", (event) => {
+      const target = event.target
+      if (target.classList.contains("product_info_bundle_modal_select_item_select")) return
+      const parent = target.closest(".product_info_bundle_modal_select")
+      parent.querySelector('.product_info_bundle_modal_select_item_select').classList.remove('product_info_bundle_modal_select_item_select')
+      target.classList.add('product_info_bundle_modal_select_item_select')
+      curr_options[parent.getAttribute("data-index")] = target.getAttribute("data-value")
+      currVariant = product.variants.find(el => areArraysEqual(curr_options, el.options) && el.available)
+      if (currVariant) {
+        img_contain.src = currVariant.featured_image.src
+        dp_price_contain.innerHTML = moneyWithoutTrailingZeros(currVariant.price)
+        if (currVariant.compare_at_price) {
+          op_price_contain.innerHTML = moneyWithoutTrailingZeros(currVariant.compare_at_price)
+          op_price_contain.classList.remove("hidden")
+        } else {
+          op_price_contain.classList.add("hidden")
+        }
+        setVariantOption()
+      }
+      if (!currVariant && curr_options.length === 3) {
+        currVariant = product.variants.find(
+          (v) => v.option1 === curr_options[0] && v.option2 === curr_options[1] && v.available
+        );
+
+        if (currVariant) {
+          curr_options[2] = currVariant.option3
+          item.querySelectorAll(`.product_info_bundle_modal_select[data-index="2"] .product_info_bundle_modal_select_item`).forEach(el => {
+            if (el.getAttribute("data-value") === currVariant.option3) {
+              el.classList.add('product_info_bundle_modal_select_item_select')
+            } else {
+              el.classList.remove('product_info_bundle_modal_select_item_select')
+            }
+          });
+          img_contain.src = currVariant.featured_image.src
+          dp_price_contain.innerHTML = moneyWithoutTrailingZeros(currVariant.price)
+          if (currVariant.compare_at_price) {
+            op_price_contain.innerHTML = moneyWithoutTrailingZeros(currVariant.compare_at_price)
+            op_price_contain.classList.remove("hidden")
+          } else {
+            op_price_contain.classList.add("hidden")
+          }
+          setVariantOption()
+        }
+      }
+    })
+  })
 })
 function moneyStringToCents(moneyStr) {
   let clean = moneyStr.replace(/[^\d,.-]/g, '');
