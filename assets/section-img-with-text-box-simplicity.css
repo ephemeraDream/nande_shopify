@@ -11,35 +11,14 @@
 }
 
 .img_with_text_box_simplicity .img_with_text_box_simplicity_maintitle {
-  font-family: "PP Right Grotesk";
-  font-size: 6rem;
-  font-weight: 500;
-  line-height: 94%;
   text-align: center;
-  text-transform: capitalize;
-  letter-spacing: 0px;
-  font-variation-settings: "opsz" auto;
-  color: #1F1F1F;
 }
 
 .img_with_text_box_simplicity .img_with_text_box_simplicity_title {
-  font-family: "PP Right Grotesk";
-  font-size: 3rem;
-  font-weight: 500;
-  line-height: 94%;
-  letter-spacing: 0px;
-  font-variation-settings: "opsz" auto;
-  color: #1F1F1F;
   margin-top: 3rem;
 }
 
 .img_with_text_box_simplicity .img_with_text_box_simplicity_desc {
-  font-family: "PP Right Grotesk";
-  font-size: 2rem;
-  font-weight: normal;
-  line-height: 130%;
-  letter-spacing: 0px;
-  font-variation-settings: "opsz" auto;
   color: #1F1F1F;
   margin-top: 1.6rem;
 }
@@ -87,4 +66,13 @@
   width: calc((100% - 12rem) / 5);
 }
 
-@media screen and (max-width: 768px) {}
+@media only screen and (max-width: 767px) {
+  .img_with_text_box_simplicity .img_with_text_box_simplicity_contain {
+    display: flex;
+    flex-direction: column;
+  }
+  .img_with_text_box_simplicity .img_with_text_box_simplicity_contain_item_3 {
+    width: 100%;
+  }
+ 
+}

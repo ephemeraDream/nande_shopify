@@ -147,12 +147,72 @@
       ],
       "name": "maidesite swiper",
       "settings": {
-        "title": "<p>Erfahrungen Unserer GeschäFtskunden Mit Maidesite</p>",
+        "title": "<p>Erfahrungen Unserer GeschäFtskunden Mit<br/> Maidesite</p>",
         "text": ""
       },
       "custom_css": [
-        ".breadcrumb-con{width: 100%;position:absolute;top: 0;left: 0;z-index: 100;}"
+        ".maidesite_swiper_section{background-color: #E2DED6;}"
       ],
+    },
+    "img_with_text_tab_emEWU8": {
+      "type": "img-with-text-tab",
+      "blocks": {
+        "tab_fiwUXL": {
+          "type": "tab",
+          "settings": {
+            "tabname": "Sitzende Erinnerung",
+            "title": "<p>Fortschrittliche Technologie</p>",
+            "description": "<p>Perfekt für zwei Familienmitglieder, um ihre individuelle Körpergröße anzupassen oder um zwei neue Höheneinstellungen <br/>für vielfältigere Körperhaltungen zu ermöglichen.Der Standard-USB-Ladeanschluss lädt deine digitalen Geräte zuverlässig auf, <br/>genau dann, wenn du es brauchst.</p>",
+            "file_type": "image",
+            "file_image": "shopify://shop_images/006.jpg",
+            "video_url": ""
+          }
+        },
+        "tab_AUd88N": {
+          "type": "tab",
+          "settings": {
+            "tabname": "Sitzende Erinnerung",
+            "title": "<p>Fortschrittliche Technologie</p>",
+            "description": "<p>Perfekt für zwei Familienmitglieder, um ihre individuelle Körpergröße anzupassen oder um zwei neue Höheneinstellungen <br/>für vielfältigere Körperhaltungen zu ermöglichen.Der Standard-USB-Ladeanschluss lädt deine digitalen Geräte zuverlässig auf, <br/>genau dann, wenn du es brauchst.</p>",
+            "file_type": "image",
+            "file_image": "shopify://shop_images/006.jpg",
+            "video_url": ""
+          }
+        },
+        "tab_JyxzQm": {
+          "type": "tab",
+          "settings": {
+            "tabname": "Sitzende Erinnerung",
+            "title": "<p>Fortschrittliche Technologie</p>",
+            "description": "<p>Perfekt für zwei Familienmitglieder, um ihre individuelle Körpergröße anzupassen oder um zwei neue Höheneinstellungen <br/>für vielfältigere Körperhaltungen zu ermöglichen.Der Standard-USB-Ladeanschluss lädt deine digitalen Geräte zuverlässig auf, <br/>genau dann, wenn du es brauchst.</p>",
+            "file_type": "image",
+            "file_image": "shopify://shop_images/006.jpg",
+            "video_url": ""
+          }
+        },
+        "tab_LmGatL": {
+          "type": "tab",
+          "settings": {
+            "tabname": "Sitzende Erinnerung",
+            "title": "<p>Fortschrittliche Technologie</p>",
+            "description": "<p>Perfekt für zwei Familienmitglieder, um ihre individuelle Körpergröße anzupassen oder um zwei neue Höheneinstellungen <br/>für vielfältigere Körperhaltungen zu ermöglichen.Der Standard-USB-Ladeanschluss lädt deine digitalen Geräte zuverlässig auf, <br/>genau dann, wenn du es brauchst.</p>",
+            "file_type": "image",
+            "file_image": "shopify://shop_images/006.jpg",
+            "video_url": ""
+          }
+        }
+      },
+      "block_order": [
+        "tab_fiwUXL",
+        "tab_AUd88N",
+        "tab_JyxzQm",
+        "tab_LmGatL"
+      ],
+      "name": "img with text tab",
+      "settings": {
+        "spec_id": "",
+        "title": "<p>Erstklassige Produkte & Erstklassiger Service/p>"
+      }
     },
 
   },
@@ -160,6 +220,7 @@
     "breadcrumbs",
     "contact_form_one",
     "img_with_text_box_simplicity_qrzG6W",
-    "maidesite_swiper_QhkQG8"
+    "maidesite_swiper_QhkQG8",
+    "img_with_text_tab_emEWU8"
   ]
 }
