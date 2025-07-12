@@ -23,25 +23,27 @@
         {% assign media_types = 'video,model' | split: ',' %}
         <div class="swiper imgmain_swiper product_info_left_contain_group show" data-type="image">
           <div class="swiper-wrapper">
-            {% for image in product.images %}
-              {% assign image_variant_id = '' %}
+            {% for media in product.media %}
+              {% if media.media_type == 'image' %}
+                {% assign image_variant_id = '' %}
 
-              {% for variant in product.variants %}
-                {% if variant.image and variant.image.id == image.id %}
-                  {% assign image_variant_id = variant.id %}
-                {% endif %}
-              {% endfor %}
+                {% for variant in product.variants %}
+                  {% if variant.featured_image and variant.featured_image.id == media.id %}
+                    {% assign image_variant_id = variant.id %}
+                  {% endif %}
+                {% endfor %}
 
-              <div
-                class="swiper-slide"
-                {% if image_variant_id != '' %}
-                  data-variant-id="{{ image_variant_id }}"
-                {% else %}
-                  data-common="true"
-                {% endif %}
-              >
-                {{ image | image_url: width: image.width | image_tag: alt: product.title, preload: true }}
-              </div>
+                <div
+                  class="swiper-slide"
+                  {% if image_variant_id != '' %}
+                    data-variant-id="{{ image_variant_id }}"
+                  {% else %}
+                    data-common="true"
+                  {% endif %}
+                >
+                  {{ media.src | image_url: width: media.src.width | image_tag: alt: product.title, preload: true }}
+                </div>
+              {% endif %}
             {% endfor %}
           </div>
           <div class="imgmain_swiper_prev">
@@ -79,28 +81,30 @@
           </div>
           <div class="swiper imgthumb_swiper">
             <div class="swiper-wrapper">
-              {% for image in product.images %}
-                {% assign image_variant_id = '' %}
+              {% for media in product.media %}
+                {% if media.media_type == 'image' %}
+                  {% assign image_variant_id = '' %}
 
-                {% for variant in product.variants %}
-                  {% if variant.image and variant.image.id == image.id %}
-                    {% assign image_variant_id = variant.id %}
-                  {% endif %}
-                {% endfor %}
+                  {% for variant in product.variants %}
+                    {% if variant.featured_image and variant.featured_image.id == media.id %}
+                      {% assign image_variant_id = variant.id %}
+                    {% endif %}
+                  {% endfor %}
 
-                <div
-                  class="swiper-slide"
-                  {% if image_variant_id != '' %}
-                    data-variant-id="{{ image_variant_id }}"
-                  {% else %}
-                    data-common="true"
-                  {% endif %}
-                >
-                  <img
-                    src="{{ image | image_url: width: 120 }}"
-                    alt="{{ product.title }}"
+                  <div
+                    class="swiper-slide"
+                    {% if image_variant_id != '' %}
+                      data-variant-id="{{ image_variant_id }}"
+                    {% else %}
+                      data-common="true"
+                    {% endif %}
                   >
-                </div>
+                    <img
+                      src="{{ media.src | image_url: width: 120 }}"
+                      alt="{{ product.title }}"
+                    >
+                  </div>
+                {% endif %}
               {% endfor %}
             </div>
           </div>
