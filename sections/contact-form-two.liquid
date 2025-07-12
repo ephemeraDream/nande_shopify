@@ -1,0 +1,279 @@
+{% comment %}
+------------------------------------------------------------
+Contact Form One Section - 联系表单 b2b底部那种
+------------------------------------------------------------
+{% endcomment %}
+<div class="contact-form-two session-box-padding overflow-hidden" 
+style="background-image: url('{{ section.settings.image | image_url: width: section.settings.image.width }}'); "
+aria-label="conatct"
+>
+    <div class="contact-form-one__content session-box-inner">
+        <div class="form_left">
+          <h2 class="one__title">{{ section.settings.title }}</h2>
+          <h4 class="one__desc">{{ section.settings.desc }}</h4>
+        </div>
+        <div class="form__content">
+            
+            {%- form 'contact', id: 'ContactFormOne', class: contact_form_class -%}
+
+              {%- if form.posted_successfully? -%}
+                <p class="form-status form__message success" tabindex="-1" autofocus>
+                  Ihre Nachricht wurde erfolgreich gesendet.
+                </p>
+              {%- elsif form.errors -%}
+                <div class="form__message error" role="alert" tabindex="-1" autofocus>
+                  Fehler beim Senden des Formulars. Bitte überprüfen Sie Ihre Eingaben.
+                </div>
+              {%- endif -%}
+          
+              <div class="form-grid">
+                <div class="form-grid-field field--with-error">
+                  <input
+                    autocomplete="email"
+                    type="email"
+                    id="ContactForm-email"
+                    class="field__input"
+                    name="contact[email]"
+                    spellcheck="false"
+                    autocapitalize="off"
+                    required
+                    value="{% if form.email %}{{ form.email }}{% elsif customer %}{{ customer.email }}{% endif %}"
+                    {% if form.errors contains 'email' %}
+                      aria-invalid="true"
+                      aria-describedby="ContactForm-email-error"
+                    {% endif %}
+                    placeholder="E-Mail*"
+                  >
+                  {%- if form.errors contains 'email' -%}
+                    <small class="contact__field-error" id="ContactForm-email-error">
+                      {{ form.errors.messages.email }}
+                    </small>
+                  {%- endif -%}
+                </div>
+          
+                <div class="form-grid-field">
+                  <input
+                    type="text"
+                    id="ContactForm-company"
+                    class="field__input"
+                    name="contact[company]"
+                    placeholder="Unternehmen (optional)"
+                  >
+                </div>
+          
+                <div class="form-grid-field">
+                  <input
+                    type="text"
+                    id="ContactForm-name"
+                    class="field__input"
+                    name="contact[name]"
+                    autocomplete="name"
+                    value="{% if form.name %}{{ form.name }}{% elsif customer %}{{ customer.name }}{% endif %}"
+                    placeholder="Name (optional)"
+                  >
+                </div>
+          
+                <div class="form-grid-field">
+                  <input
+                    type="tel"
+                    id="ContactForm-phone"
+                    class="field__input"
+                    name="contact[phone]"
+                    autocomplete="tel"
+                    value="{% if form.phone %}{{ form.phone }}{% elsif customer %}{{ customer.phone }}{% endif %}"
+                    placeholder="Telefon (optional)"
+                  >
+                </div>
+              </div>
+          
+              <div class="form-grid-field">
+                <textarea
+                  rows="7"
+                  id="ContactForm-body"
+                  class="text-area field__input"
+                  name="contact[body]"
+                  placeholder="Nachricht (optional)"
+                >{{- form.body -}}</textarea>
+              </div>
+          
+              <button type="submit" class="submit-button nd-btn">
+                Absenden
+                {{ 'icon-right-arrow.svg' | inline_asset_content }}
+              </button>
+          
+            {%- endform -%}
+        </div>
+    </div>
+</div>
+<style>
+  
+    .contact-form-two{
+        background-size: cover; background-position: center;
+        padding-top: 12rem;
+        padding-bottom:12rem;
+        background-color: transparent;
+        display: flex;
+        align-items: center;
+        position: relative;
+    }
+    .contact-form-two__content{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-end;
+        position: relative;
+        z-index: 1;
+        gap:5rem;
+    }
+    .contact-form-two .form_left{
+      width:50%
+    }
+    .contact-form-two .form__content{
+        display: flex;
+        gap:3rem;
+        width:66rem;
+        flex-direction: column;
+    }
+    .contact-form-two .one__title,.contact-form-two .one__desc{
+        color: #fff;
+    }
+
+
+    .contact-form-two .form-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+      margin-bottom: 15px;
+    }
+    
+    .contact-form-two .form-grid .form-grid-field {
+      flex: 1 1 calc(50% - 8px);
+    }
+    
+    .contact-form-two .field__input,
+    textarea.text-area {
+      width: 100%;
+      padding: 10px 12px;
+      font-size: 2.4rem;
+      border: none;
+      border-radius: 0px;
+      background: #fff;
+      color: rgb(var(--color-foreground));
+      font-weight:400;
+    }
+    .contact-form-two .field__input::placeholder,.contact-form-two textarea.text-area::placeholder {
+      color: #7F7E75;  
+      opacity: 1;
+      font-size: 2.4rem;
+      font-weight:400;
+    }
+    /* Firefox */
+    .contact-form-two .field__input::-moz-placeholder,.contact-form-two textarea::-moz-placeholder {
+      color: #7F7E75;
+      opacity: 1;
+      font-size: 2.4rem;
+      font-weight:400;
+    }
+
+    /* IE 10-11 */
+    .contact-form-two .field__input:-ms-input-placeholder,.contact-form-two textarea::-moz-placeholder {
+      color: #7F7E75;
+      opacity: 1;
+      font-size: 2.4rem;
+      font-weight:400;
+    }
+
+    /* Microsoft Edge */
+    .contact-form-two .field__input::-ms-input-placeholder,.contact-form-two textarea::-moz-placeholder {
+      color: #7F7E75;
+      opacity: 1;
+      font-size: 2.4rem;
+      font-weight:400;
+    }
+
+    
+    .contact-form-two textarea.text-area {
+      min-height: 120px;
+      resize: vertical;
+      margin-bottom: 15px;
+    }
+    
+    .contact-form-two .submit-button {
+      border: none;
+      padding: 2rem;
+      height: auto;
+      width: 50%;
+      display: flex;
+      justify-content: space-between;
+      margin-top: 1rem;
+    }
+    
+    {% comment %} .contact-form-one .submit-button:hover {
+      background-color: #bfee00;
+    } {% endcomment %}
+    
+    .contact-form-two .form__message.success {
+      color: #00ff66;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+    
+    .contact-form-two .form__message.error {
+      color: #ff4d4f;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+    
+    .contact-form-two .contact__field-error {
+      color: #ff4d4f;
+      font-size: 13px;
+      margin-top: 4px;
+      display: block;
+    }
+    @media only screen and (max-width: 767px) {
+      .contact-form-two .form__content{
+        width:100%;
+      }
+      .contact-form-two .field__input,
+      textarea.text-area,.contact-form-two .field__input::placeholder,
+      .contact-form-two textarea.text-area::placeholder,
+      .contact-form-two .field__input::-moz-placeholder,textarea::-moz-placeholder, 
+      .contact-form-two .field__input:-ms-input-placeholder,textarea::-moz-placeholder,
+      .contact-form-two .field__input::-ms-input-placeholder,textarea::-moz-placeholder{
+        font-size: 1.8rem;
+      }
+     
+    }
+    
+</style>
+
+{% schema %}
+{
+  "name": "Contact Form Two",
+  "tag": "section",
+  "class": "section",
+  "disabled_on": { "groups": ["header", "footer"] },
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title"
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Background Image"
+    },
+    {
+        "type": "text",
+        "id": "desc",
+        "label": "desc"
+    }
+  ],
+  "blocks": [
+  ],
+  "presets": [
+    { "name": "Contact Form Two" }
+  ]
+}
+{% endschema %}
