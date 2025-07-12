@@ -350,15 +350,15 @@
                               <div class="product_info_bundle_modal_price">
                                 <div class="product_info_bundle_modal_price_dp">
                                   {{
-                                    product.selected_or_first_available_variant.price
-                                    | default: product.price
+                                    bundled_product.selected_or_first_available_variant.price
+                                    | default: bundled_product.price
                                     | money_without_trailing_zeros
                                   }}
                                 </div>
                                 <div class="product_info_bundle_modal_price_op">
                                   {{
-                                    product.selected_or_first_available_variant.compare_at_price
-                                    | default: product.compare_at_price
+                                    bundled_product.selected_or_first_available_variant.compare_at_price
+                                    | default: bundled_product.compare_at_price
                                     | money_without_trailing_zeros
                                   }}
                                 </div>
@@ -381,33 +381,40 @@
                                       select-type="{% if option_hanlde contains "farbe" %}circle{% else %}box{% endif %}"
                                       data-index="{{ forloop.index0 }}"
                                     >
+                                      {% assign index = 'option' | append: forloop.index %}
                                       {%- for value in option.values -%}
-                                        {% if option_hanlde contains 'farbe' %}
-                                          {% assign color = '' %}
-                                          {% for color_item in bundled_product.metafields.custom.color_option.value %}
-                                            {% if color_item.name == value.name %}
-                                              {% assign color = color_item.value %}
-                                            {% endif %}
-                                          {% endfor %}
-                                          <div
-                                            data-value="{{ value }}"
-                                            class="product_info_bundle_modal_select_item{% if value.selected %} product_info_bundle_modal_select_item_select{% endif %}"
-                                            title="{{ value }}"
-                                          >
-                                            <div
-                                              class="product_info_bundle_modal_select_item_circle{% if color == '' %} product_info_bundle_modal_select_item_none{% endif %}"
-                                              {% if color != '' %}
-                                                style="background-color: {{ color }}"
+                                        {% assign available_variant = product.variants
+                                          | where: index, value
+                                          | where: 'available'
+                                        %}
+                                        {% if available_variant.size > 0 %}
+                                          {% if option_hanlde contains 'farbe' %}
+                                            {% assign color = '' %}
+                                            {% for color_item in bundled_product.metafields.custom.color_option.value %}
+                                              {% if color_item.name == value.name %}
+                                                {% assign color = color_item.value %}
                                               {% endif %}
-                                            ></div>
-                                          </div>
-                                        {% else %}
-                                          <div
-                                            class="product_info_bundle_modal_select_item{% if value.selected %} product_info_bundle_modal_select_item_select{% endif %}"
-                                            data-value="{{ value }}"
-                                          >
-                                            {{ value }}
-                                          </div>
+                                            {% endfor %}
+                                            <div
+                                              data-value="{{ value }}"
+                                              class="product_info_bundle_modal_select_item{% if value.selected %} product_info_bundle_modal_select_item_select{% endif %}"
+                                              title="{{ value }}"
+                                            >
+                                              <div
+                                                class="product_info_bundle_modal_select_item_circle{% if color == '' %} product_info_bundle_modal_select_item_none{% endif %}"
+                                                {% if color != '' %}
+                                                  style="background-color: {{ color }}"
+                                                {% endif %}
+                                              ></div>
+                                            </div>
+                                          {% else %}
+                                            <div
+                                              class="product_info_bundle_modal_select_item{% if value.selected %} product_info_bundle_modal_select_item_select{% endif %}"
+                                              data-value="{{ value }}"
+                                            >
+                                              {{ value }}
+                                            </div>
+                                          {% endif %}
                                         {% endif %}
                                       {% endfor %}
                                     </div>
