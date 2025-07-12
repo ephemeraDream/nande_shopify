@@ -448,30 +448,36 @@ function updateUrl() {
 }
 function updateImagesByVariantMedia() {
   const mediaId = currVariant.featured_media?.id;
-  let activeIndex
-  const findSlide = (domstr) => {
-    document.querySelectorAll(domstr).forEach((slide, index) => {
+  let activeIndex = 0;
+  let count = 0;
+
+  const findSlide = (domstr, isMainSwiper = false) => {
+    document.querySelectorAll(domstr).forEach((slide) => {
       const slideMediaId = slide.dataset.mediaId;
       const isCommon = slide.hasAttribute('data-common');
 
       if (String(slideMediaId) === String(mediaId) || isCommon) {
         slide.style.display = 'block';
-        if (String(slideMediaId) === String(mediaId)) {
-          activeIndex = index
+
+        if (isMainSwiper && String(slideMediaId) === String(mediaId)) {
+          activeIndex = count;
         }
+
+        count++;
       } else {
         slide.style.display = 'none';
       }
     });
-  }
+  };
 
-  findSlide('.imgmain_swiper .swiper-slide')
-  findSlide('.imgthumb_swiper .swiper-slide')
+  findSlide('.imgmain_swiper .swiper-slide', true);
+  findSlide('.imgthumb_swiper .swiper-slide');
 
-  imgthumbSwiper.update()
-  imgboxSwiper.update()
+  imgthumbSwiper.update();
+  imgboxSwiper.update();
   imgboxSwiper.slideTo(activeIndex);
 }
+
 // 捆绑步骤切换
 let bundleStep = 0
 document.querySelectorAll(".product_info_steps_item").forEach((item, index) => {
