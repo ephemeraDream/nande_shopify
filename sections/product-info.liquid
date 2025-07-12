@@ -28,7 +28,7 @@
                 {% assign image_variant_id = '' %}
 
                 {% for variant in product.variants %}
-                  {% if variant.featured_image and variant.featured_image.id == media.id %}
+                  {% if variant.featured_media and variant.featured_media.id == media.id %}
                     {% assign image_variant_id = variant.id %}
                   {% endif %}
                 {% endfor %}
@@ -86,7 +86,7 @@
                   {% assign image_variant_id = '' %}
 
                   {% for variant in product.variants %}
-                    {% if variant.featured_image and variant.featured_image.id == media.id %}
+                    {% if variant.featured_media and variant.featured_media.id == media.id %}
                       {% assign image_variant_id = variant.id %}
                     {% endif %}
                   {% endfor %}
