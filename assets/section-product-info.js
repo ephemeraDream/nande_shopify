@@ -658,9 +658,9 @@ document.querySelectorAll(".product_info_bundle_product").forEach(item => {
   })
   // 捆绑产品弹窗
   const viewdetail = item.querySelector(".product_info_bundle_product_viewdetail")
+  const modal = item.querySelector(".common_modal")
   viewdetail.addEventListener("click", (e) => {
     e.stopPropagation()
-    const modal = item.querySelector(".common_modal")
     modal.style.display = "block";
     document.body.style.overflowY = "hidden";
 
@@ -686,6 +686,8 @@ document.querySelectorAll(".product_info_bundle_product").forEach(item => {
     item.querySelector(".product_info_bundle_product_price").innerHTML = `+${moneyWithoutTrailingZeros(currVariant.price)}`
     item.setAttribute("data-variant-id", currVariant.id)
     item.classList.add("selected")
+    modal.style.display = "none";
+    document.body.style.overflowY = "auto";
   })
 })
 function moneyStringToCents(moneyStr) {
