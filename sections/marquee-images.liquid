@@ -5,6 +5,11 @@ Marquee Images 图片无限滚动
 ------------------------------------------------------------
 {% endcomment %}
 <div class="marquee-wrapper">
+    <div class="session-box-padding">
+        {% unless section.settings.title == blank %}
+            <h2 class="padding-bottom-60 session-box-inner">{{ section.settings.title }}</h2>
+        {% endunless %}
+    </div>
     <div class="marquee-track">
       {% for block in section.blocks %}
         <div class="marquee-item">
