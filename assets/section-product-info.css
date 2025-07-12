@@ -43,9 +43,12 @@
   transform-origin: center center;
 }
 
+.product_info .product_info_left_contain:hover {
+  cursor: zoom-in;
+}
+
 .product_info .product_info_left_contain:hover .imgmain_swiper .swiper-slide img {
   transform: scale(2);
-  cursor: zoom-in;
 }
 
 .product_info .imgmain_swiper_prev,
@@ -63,8 +66,8 @@
   display: none;
 }
 
-.product_info .product_info_left_contain:hover .product_info .imgmain_swiper_prev,
-.product_info .product_info_left_contain:hover .product_info .imgmain_swiper_next {
+.product_info .product_info_left_contain:hover .imgmain_swiper_prev,
+.product_info .product_info_left_contain:hover .imgmain_swiper_next {
   display: flex;
 }
 
