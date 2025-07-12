@@ -43,7 +43,7 @@
   transform-origin: center center;
 }
 
-.product_info .product_info_left_contain:hover {
+.product_info .product_info_left_contain:hover .imgmain_swiper {
   cursor: zoom-in;
 }
 
