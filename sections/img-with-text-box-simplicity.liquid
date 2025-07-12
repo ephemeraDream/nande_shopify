@@ -5,7 +5,7 @@
   id="{{ section.settings.spec_id }}"
 >
   <div class="img_with_text_box_simplicity">
-    <div class="img_with_text_box_simplicity_maintitle">{{ section.settings.main_title }}</div>
+    <h2 class="img_with_text_box_simplicity_maintitle">{{ section.settings.main_title }}</h2>
     <div class="img_with_text_box_simplicity_contain">
       {% for block in section.blocks %}
         <div class="img_with_text_box_simplicity_contain_item img_with_text_box_simplicity_contain_item_{{ section.settings.row_num }}">
@@ -50,8 +50,8 @@
             {% endif %}
           </div>
           <div class="img_with_text_box_simplicity_info">
-            <div class="img_with_text_box_simplicity_title">{{ block.settings.title }}</div>
-            <div class="img_with_text_box_simplicity_desc">{{ block.settings.description }}</div>
+            <h4 class="img_with_text_box_simplicity_title">{{ block.settings.title }}</h4>
+            <div class="img_with_text_box_simplicity_desc text-body">{{ block.settings.description }}</div>
           </div>
         </div>
       {% endfor %}

@@ -230,6 +230,21 @@ aria-label="conatct"
       margin-top: 4px;
       display: block;
     }
+    @media only screen and (max-width: 767px) {
+      .contact-form-one .form__content{
+        width:100%;
+      }
+      .contact-form-one .field__input,
+      textarea.text-area,.contact-form-one .field__input::placeholder,
+      .contact-form-one textarea.text-area::placeholder,
+      .field__input::-moz-placeholder,textarea::-moz-placeholder, 
+      .field__input:-ms-input-placeholder,textarea::-moz-placeholder,
+      .field__input::-ms-input-placeholder,textarea::-moz-placeholder{
+        font-size: 1.8rem;
+      }
+     
+    }
+    
 </style>
 
 {% schema %}
