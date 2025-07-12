@@ -442,29 +442,30 @@ function updateUrl() {
 }
 function updateImagesByVariantMedia() {
   const mediaId = currVariant.featured_media?.id;
-
-  findSlide('.imgmain_swiper .swiper-slide')
-  findSlide('.imgthumb_swiper .swiper-slide')
-
-  if (imgthumbSwiper) {
-    imgthumbSwiper.update();
-  }
-
-  if (imgboxSwiper) {
-    imgboxSwiper.update();
-  }
-
+  let activeIndex
   const findSlide = (domstr) => {
-    document.querySelectorAll(domstr).forEach(slide => {
+    document.querySelectorAll(domstr).forEach((slide, index) => {
       const slideMediaId = slide.dataset.mediaId;
       const isCommon = slide.hasAttribute('data-common');
 
       if (String(slideMediaId) === String(mediaId) || isCommon) {
         slide.style.display = 'block';
+        activeIndex = index
       } else {
         slide.style.display = 'none';
       }
     });
+  }
+
+  findSlide('.imgmain_swiper .swiper-slide')
+  findSlide('.imgthumb_swiper .swiper-slide')
+
+  if (imgthumbSwiper) {
+    imgthumbSwiper.slideTo(activeIndex);
+  }
+
+  if (imgboxSwiper) {
+    imgboxSwiper.slideTo(activeIndex);
   }
 }
 // 捆绑步骤切换
