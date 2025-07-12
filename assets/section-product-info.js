@@ -12,7 +12,7 @@ function initSwiper() {
     },
     on: {
       click: function (swiper) {
-        imgboxSwiper.slideTo(swiper.realIndex)
+        imgboxSwiper.slideTo(swiper.clickedIndex)
       }
     },
   });
@@ -29,7 +29,7 @@ function initSwiper() {
     },
     on: {
       slideChange: function (swiper) {
-        imgthumbSwiper.slideTo(swiper.realIndex)
+        imgthumbSwiper.slideTo(swiper.activeIndex)
       }
     },
     // thumbs: {
