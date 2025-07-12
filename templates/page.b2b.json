@@ -162,7 +162,7 @@
           "settings": {
             "tabname": "",
             "title": "<p>Lokale Logistik und Lagerhaltung</p>",
-            "description": "<p>Perfekt für zwei Familienmitglieder, um ihre individuelle Körpergröße anzupassen oder um zwei neue Höheneinstellungen <br/>für vielfältigere Körperhaltungen zu ermöglichen.Der Standard-USB-Ladeanschluss lädt deine digitalen Geräte zuverlässig auf, <br/>genau dann, wenn du es brauchst.</p>",
+            "description": "<p>Mit unseren regionalen Lagern und einem effizienten Logistiknetzwerk gewährleisten wir eine schnelle und zuverlässige Lieferung.</p>",
             "file_type": "image",
             "file_image": "shopify://shop_images/b2b_02.webp",
             "video_url": "",
@@ -175,7 +175,7 @@
           "settings": {
             "tabname": "",
             "title": "<p>Lokale Logistik und Lagerhaltung</p>",
-            "description": "<p>Perfekt für zwei Familienmitglieder, um ihre individuelle Körpergröße anzupassen oder um zwei neue Höheneinstellungen <br/>für vielfältigere Körperhaltungen zu ermöglichen.Der Standard-USB-Ladeanschluss lädt deine digitalen Geräte zuverlässig auf, <br/>genau dann, wenn du es brauchst.</p>",
+            "description": "<p>Mit unseren regionalen Lagern und einem effizienten Logistiknetzwerk gewährleisten wir eine schnelle und zuverlässige Lieferung.</p>",
             "file_type": "image",
             "file_image": "shopify://shop_images/b2b_02.webp",
             "video_url": "",
@@ -192,8 +192,66 @@
       "settings": {
         "spec_id": "",
         "title": "<p>Erstklassige Produkte & Erstklassiger Service</p>",
-        "show_tab_head":"false",
+        "show_tab_head":false,
         "layout":"image-right"
+      },
+      "custom_css": [
+        ".img_with_text_tab .img_with_text_tab_title {text-align: left;margin-bottom:6rem}"
+      ],
+    },
+    //差1
+    "polka_dot_swiper_4yRfwn": {
+      "type": "polka-dot-swiper",
+      "blocks": {
+        "swiper_74yt3y": {
+          "type": "swiper",
+          "settings": {
+            "title": "<p>Eleganter Arbeitsbereich</p>",
+            "text": "<p>Schaffe einen funktionalen und stilvollen Arbeitsplatz mit unserem klassischen Schreibtisch</p>",
+            "btn_text": "",
+            "image": "shopify://shop_images/polka_dot_swiper-2.webp",
+            "link": "",
+            "select_product": "",
+            "product_X": 0,
+            "product_Y": 0
+          }
+        },
+        "swiper_RR3AVA": {
+          "type": "swiper",
+          "settings": {
+            "title": "<p>Eleganter Arbeitsbereich</p>",
+            "text": "<p>Schaffe einen funktionalen und stilvollen Arbeitsplatz mit </p><p>unserem klassischen Schreibtisch</p>",
+            "btn_text": "",
+            "image": "shopify://shop_images/polka_dot_swiper-1.webp",
+            "link": "",
+            "select_product": "0",
+            "product_X": 0,
+            "product_Y": 0
+          }
+        },
+        "swiper_xwgRwF": {
+          "type": "swiper",
+          "settings": {
+            "title": "<p>Eleganter Arbeitsbereich</p>",
+            "text": "<p>Schaffe einen funktionalen und stilvollen Arbeitsplatz mit unserem klassischen Schreibtisch</p>",
+            "btn_text": "",
+            "image": "shopify://shop_images/polka_dot_swiper-2.webp",
+            "link": "",
+            "select_product": "0",
+            "product_X": 0,
+            "product_Y": 0
+          }
+        }
+      },
+      "block_order": [
+        "swiper_74yt3y",
+        "swiper_RR3AVA",
+        "swiper_xwgRwF"
+      ],
+      "name": "polka dot swiper",
+      "settings": {
+        "title": "<p>Ihr BüRo, Neu Definiert</p>",
+        "text": ""
       }
     },
 
@@ -203,6 +261,8 @@
     "contact_form_one",
     "img_with_text_box_simplicity_qrzG6W",
     "maidesite_swiper_QhkQG8",
-    "img_with_text_tab_emEWU8"
+    "img_with_text_tab_emEWU8",
+    //差1
+    "polka_dot_swiper_4yRfwn"
   ]
 }
