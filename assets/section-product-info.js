@@ -537,7 +537,7 @@ function switchStep() {
 // 捆绑产品选择
 document.querySelectorAll(".product_info_bundle_product").forEach(item => {
   const handleProductClick = (skipToggle = false) => {
-    if (item.classList.contains("product_info_bundle_product_disabled")) return
+    if (item.classList.contains("product_info_bundle_product_disabled") || (skipToggle && item.classList.contains("selected"))) return
     const total_price_el = document.querySelectorAll(".product_info_bundle_info_total")
     const price = Number(item.getAttribute("data-price"))
     const id = item.getAttribute("data-id")
@@ -545,11 +545,7 @@ document.querySelectorAll(".product_info_bundle_product").forEach(item => {
     const accesories_box_title = document.querySelector(".product_info_steps_contain_item_title[data-type='accesories']")
     const title = item.querySelector(".product_info_bundle_product_title").innerHTML
     let total_price = moneyStringToCents(total_price_el[0].innerHTML)
-    if (skipToggle) {
-      item.classList.add("selected")
-    } else {
-      item.classList.toggle("selected")
-    }
+    item.classList.toggle("selected")
     if (item.classList.contains("selected")) {
       total_price = total_price + price
 
