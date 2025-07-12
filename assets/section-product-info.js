@@ -450,7 +450,9 @@ function updateImagesByVariantMedia() {
 
       if (String(slideMediaId) === String(mediaId) || isCommon) {
         slide.style.display = 'block';
-        activeIndex = index
+        if (String(slideMediaId) === String(mediaId)) {
+          activeIndex = index
+        }
       } else {
         slide.style.display = 'none';
       }
