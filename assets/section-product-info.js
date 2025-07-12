@@ -577,3 +577,15 @@ function moneyStringToCents(moneyStr) {
 
   return Math.round(amount * 100);
 }
+
+// 主图hover局部放大跟随鼠标
+const container = document.querySelector('.product_info_left_contain');
+
+container.addEventListener('mousemove', (e) => {
+  const { left, top, width, height } = container.getBoundingClientRect();
+  container.querySelectorAll('img').forEach(item => {
+    const x = (e.clientX - left) / width * 100;
+    const y = (e.clientY - top) / height * 100;
+    item.style.transformOrigin = `${x}% ${y}%`;
+  });
+});
