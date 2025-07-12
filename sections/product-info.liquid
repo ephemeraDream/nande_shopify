@@ -442,9 +442,11 @@
                 {{ block.settings.icon }}
                 {{ block.settings.title }}
               </div>
-              {%- for type in shop.enabled_payment_types -%}
-                {{ type | payment_type_svg_tag }}
-              {%- endfor -%}
+              <div class="product_info_payment_contain">
+                {%- for type in shop.enabled_payment_types -%}
+                  {{ type | payment_type_svg_tag }}
+                {%- endfor -%}
+              </div>
             </div>
         {%- endcase -%}
       {%- endfor -%}

@@ -562,9 +562,8 @@
   width: 2.1rem;
 }
 
-.product_info .product_info_payment img {
+.product_info .product_info_payment_contain {
   margin-left: 4rem;
-  width: 50rem;
 }
 
 .product_info .product_info_modal_title {
