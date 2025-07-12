@@ -612,7 +612,6 @@ document.querySelectorAll(".product_info_bundle_product").forEach(item => {
       });
     });
   };
-
   setVariantOption()
 
   select_item.forEach(el => {
