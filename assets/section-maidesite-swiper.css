@@ -55,7 +55,8 @@
 }
 
 .maidesite_swiper .maidesite_swiper_image .swiper-slide img {
-  width: 20rem;
+  max-width: 20rem;
+  width: 90%;
   height: 5rem;
   object-fit: contain;
   object-position: center center;
@@ -93,4 +94,9 @@
   font-variation-settings: "opsz" auto;
   color: #1F1F1F;
   padding: 0 25%;
+}
+@media only screen and (max-width: 767px) {
+.maidesite_swiper .maidesite_swiper_desc .swiper-slide {
+  padding: 0 10%;
+}
 }

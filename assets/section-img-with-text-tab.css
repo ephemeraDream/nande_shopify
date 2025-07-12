@@ -59,6 +59,9 @@
   display: flex;
   align-items: stretch;
 }
+.img_with_text_tab .img_with_text_tab_contain .swiper-slide.right {
+  flex-direction: row-reverse;
+}
 
 .img_with_text_tab .img_with_text_tab_contain_filebox {
   flex: 0 0 auto;

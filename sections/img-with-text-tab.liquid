@@ -3,17 +3,19 @@
 <div class="img_with_text_tab_section padding-sider">
   <div class="img_with_text_tab">
     <h2 class="img_with_text_tab_title">{{ section.settings.title }}</h2>
-    <div class="img_with_text_tab_head">
-      {% for item in section.blocks %}
-        <div class="img_with_text_tab_head_item{% if forloop.first %} active{% endif %}">
-          {{ item.settings.tabname }}
-        </div>
-      {% endfor %}
-    </div>
+    {% if section.settings.show_tab_head %}
+      <div class="img_with_text_tab_head">
+        {% for item in section.blocks %}
+          <div class="img_with_text_tab_head_item{% if forloop.first %} active{% endif %}">
+            {{ item.settings.tabname }}
+          </div>
+        {% endfor %}
+      </div>
+    {% endif %}
     <div class="img_with_text_tab_contain swiper">
       <div class="swiper-wrapper">
         {% for block in section.blocks %}
-          <div class="swiper-slide">
+          <div class="swiper-slide {% if section.settings.layout == 'image-right' %} right{% endif %}">
             <div class="img_with_text_tab_contain_filebox">
               {% if block.settings.file_type == 'image' and block.settings.file_image != blank %}
                 {{-
@@ -57,6 +59,12 @@
             <div class="img_with_text_tab_contain_info">
               <div class="img_with_text_tab_contain_title">{{ block.settings.title }}</div>
               <div class="img_with_text_tab_contain_desc">{{ block.settings.description }}</div>
+              {% if block.settings.btn_text != blank %}
+                <a class="nd-btn" href="{{ block.settings.link }}">
+                    {{ block.settings.btn_text }}
+                    {{ 'icon-right-arrow.svg' | inline_asset_content }}
+                </a>
+              {% endif %}
               <div class="img_with_text_tab_swiper_prev">{{- 'swiper-left.svg' | inline_asset_content -}}</div>
               <div class="img_with_text_tab_swiper_next">{{- 'swiper-right.svg' | inline_asset_content -}}</div>
             </div>
@@ -118,7 +126,29 @@
       "type": "richtext",
       "id": "title",
       "label": "title"
-    }
+    },
+    {
+      "type": "checkbox",
+      "id": "show_tab_head",
+      "label": "Is Show Tab Head",
+      "default": true
+    },
+    {
+      "type": "select",
+      "id": "layout",
+      "label": "Layout",
+      "options": [
+        {
+          "value": "image-left",
+          "label": "Image Left, Text Right"
+        },
+        {
+          "value": "image-right",
+          "label": "Text Left, Image Right"
+        }
+      ],
+      "default": "image-left"
+    },
   ],
   "blocks": [
     {
@@ -175,7 +205,17 @@
           "type": "video",
           "id": "url_upload",
           "label": "video upload"
-        }
+        },
+        {
+          "type": "text",
+          "id": "btn_text",
+          "label": "button text"
+        },
+        {
+          "type": "text",
+          "id": "link",
+          "label": "link"
+        },
       ]
     }
   ],
