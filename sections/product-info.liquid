@@ -307,7 +307,7 @@
                 {% for bundled_product in bundle_products %}
                   {% if bundled_product.metafields.custom.bundle_type.value.name == type %}
                     <div
-                      class="product_info_bundle_product"
+                      class="product_info_bundle_product{% unless product.available %} product_info_bundle_product_disabled{% endunless %}"
                       data-price="{{ bundled_product.selected_or_first_available_variant.price | default: bundled_product.price }}"
                       data-id="{{ bundled_product.id }}"
                       data-variant-id="{{ bundled_product.selected_or_first_available_variant.id  }}"

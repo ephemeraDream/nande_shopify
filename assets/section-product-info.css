@@ -956,8 +956,13 @@
   cursor: pointer;
 }
 
-.product_info_section .product_info_bundle_product:hover {
+.product_info_section .product_info_bundle_product:not(.product_info_bundle_product_disabled):hover {
   border-color: #1F1F1F;
+}
+
+.product_info_section .product_info_bundle_product_disabled {
+  opacity: .4;
+  cursor: not-allowed;
 }
 
 .product_info_section .product_info_bundle_product.selected {
