@@ -4,7 +4,7 @@
 Marquee Images 图片无限滚动
 ------------------------------------------------------------
 {% endcomment %}
-<div class="marquee-wrapper">
+<div class="marquee-wrapper padding-top-120 padding-bottom-120">
     <div class="session-box-padding">
         {% unless section.settings.title == blank %}
             <h2 class="padding-bottom-60 session-box-inner">{{ section.settings.title }}</h2>
@@ -41,6 +41,9 @@ Marquee Images 图片无限滚动
   .marquee-track {
     display: flex;
     animation: scroll-left 30s linear infinite;
+    flex-direction: row;
+    align-items: center;
+    gap: 2rem;
   }
   
   .marquee-track:hover {
@@ -49,7 +52,7 @@ Marquee Images 图片无限滚动
   
   .marquee-item {
     flex-shrink: 0;
-    width: calc((100% - 72) / 4);
+    width: calc((100% - 72) / 3);
     height: 6.6rem;
     background-color: #FFFFFF;
     display: flex;
