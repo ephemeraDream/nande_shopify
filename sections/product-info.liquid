@@ -35,11 +35,10 @@
 
                 <div
                   class="swiper-slide"
-                  {% if is_variant_img %}
-                    data-media-id="{{ media.id }}"
-                  {% else %}
+                  data-media-id="{{ media.id }}"
+                  {% unless is_variant_img %}
                     data-common="true"
-                  {% endif %}
+                  {% endunless %}
                 >
                   {{ media.src | image_url: width: media.src.width | image_tag: alt: product.title, preload: true }}
                 </div>
@@ -93,11 +92,10 @@
 
                   <div
                     class="swiper-slide"
-                    {% if is_variant_img %}
-                      data-media-id="{{ media.id }}"
-                    {% else %}
+                    data-media-id="{{ media.id }}"
+                    {% unless is_variant_img %}
                       data-common="true"
-                    {% endif %}
+                    {% endunless %}
                   >
                     <img
                       src="{{ media.src | image_url: width: 120 }}"
