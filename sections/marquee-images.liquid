@@ -1,0 +1,99 @@
+
+{% comment %}
+------------------------------------------------------------
+Marquee Images 图片无限滚动
+------------------------------------------------------------
+{% endcomment %}
+<div class="marquee-wrapper">
+    <div class="marquee-track">
+      {% for block in section.blocks %}
+        <div class="marquee-item">
+            {{-
+                block.settings.image
+                | image_url: width: block.settings.image.width
+                | image_tag: alt: block.settings.title
+              -}}
+        </div>
+      {% endfor %}
+      {% for block in section.blocks %}
+        <div class="marquee-item">
+            {{-
+                block.settings.image
+                | image_url: width: block.settings.image.width
+                | image_tag: alt: block.settings.title
+              -}}
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+  
+  <style>
+  .marquee-wrapper {
+    overflow: hidden;
+    width: 100%;
+  }
+  
+  .marquee-track {
+    display: flex;
+    animation: scroll-left 30s linear infinite;
+  }
+  
+  .marquee-track:hover {
+    animation-play-state: paused;
+  }
+  
+  .marquee-item {
+    flex-shrink: 0;
+    width: calc((100% - 72) / 4);
+    height: 6.6rem;
+    background-color: #FFFFFF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .marquee-item img {
+    max-width: 20rem;
+    width: 90%;
+    height: 5rem;
+    object-fit: contain;
+    object-position: center center;
+  }
+
+  @keyframes scroll-left {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+  </style>
+  
+  {% schema %}
+  {
+    "name": "滚动图片展示",
+    "max_blocks": 20,
+    "settings": [],
+    "blocks": [
+      {
+        "type": "image",
+        "name": "图片",
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "image",
+            "label": "上传图片"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "滚动图片轮播",
+        "category": "图片"
+      }
+    ]
+  }
+  {% endschema %}
+  

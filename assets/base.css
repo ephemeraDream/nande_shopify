@@ -423,7 +423,7 @@ h6,
   cursor: pointer;
 }
 .nd-btn:hover {
-  background-color: #bbff00e3;
+  background-color: #b1f100;
   transition-duration: .2s;
 }
 .nd-btn svg{

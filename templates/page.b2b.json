@@ -303,7 +303,37 @@
         ".polka_dot_swiper{padding-bottom:6rem}"
       ],
     },
-    //差2
+    "marquee_images":{
+      "type":"marquee-images",
+      "name": "marquee_images",
+      "settings": {
+        "title": "Kundenstimmen Zu Maidesite",
+      },
+      "blocks":{
+        "image_1": {
+          "type": "image",
+          "settings": {"image": "shopify://shop_images/maidesite-logo-1.webp"}
+        },
+        "image_2": {
+          "type": "image",
+          "settings": {"image": "shopify://shop_images/maidesite-logo-2.webp"}
+        },
+        "image_3": {
+          "type": "image",
+          "settings": {"image": "shopify://shop_images/maidesite-logo-3.webp"}
+        },
+        "image_4": {
+          "type": "image",
+          "settings": {"image": "shopify://shop_images/maidesite-logo-4.webp"}
+        },
+      },
+      "block_order": [
+        "image_1",
+        "image_2",
+        "image_3",
+        "image_4"
+      ]
+    },
     "product_carousel":{
       "type": "product-carousel",
       "name": "product_carousel",
@@ -370,7 +400,7 @@
     "img_with_text_tab_emEWU8",
     "b2b_spezielle_rabatte",
     "polka_dot_swiper_4yRfwn",
-    //差2
+    "marquee_images",
     "product_carousel", 
     "contact_form_two"
 
