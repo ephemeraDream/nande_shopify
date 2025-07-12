@@ -88,18 +88,6 @@ aria-label="conatct"
               </div>
 
               <div class="form-grid-field">
-                <input
-                  type="text"
-                  id="ContactFormTwo-name"
-                  class="field__input"
-                  name="contact[name]"
-                  autocomplete="name"
-                  value="{% if form.name %}{{ form.name }}{% elsif customer %}{{ customer.name }}{% endif %}"
-                  placeholder="Menge"
-                >
-              </div>
-
-              <div class="form-grid-field">
                 <select id="ContactFormTwo-menge" name="contact[menge]" class="field__input">
                   <option value="" disabled selected>Menge wählen</option>
                   <option value="1">1 Stück</option>
