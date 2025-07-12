@@ -11,7 +11,7 @@ function initSwiper() {
       prevEl: ".imgthumb_swiper_box .imgthumb_swiper_prev",
     },
     on: {
-      slideChange: function (swiper) {
+      click: function (swiper) {
         imgboxSwiper.slideTo(swiper.realIndex)
       }
     },
