@@ -28,9 +28,138 @@
         "desc":"Hinterlassen Sie Ihre E-Mail, senden Sie Ihre Anfrage und erhalten Sie innerhalb von 24 Stunden eine maßgeschneiderte Beratung!"
       }
     },
+    "img_with_text_box_simplicity_qrzG6W": {
+      "type": "img-with-text-box-simplicity",
+      "blocks": {
+        "file_with_text_McHwGa": {
+          "type": "file_with_text",
+          "settings": {
+            "title": "<p>Kostenloser und Schneller Versand</p>",
+            "description": "<p>Normalerweise beträgt die optimale Schreibtischhöhe im Sitzen Ihre Körpergröße x 0,4 und im Stehen Ihre Körpergröße x 0,62. Höhenverstellbarer Schreibtisch mit 2 stufigen Säulen ist nur für die Körpergröße von 1,75-1,95 m geeignet. </p>",
+            "file_type": "image",
+            "file_image": "shopify://shop_images/featured-spaces-5.webp",
+            "video_url": ""
+          }
+        },
+        "file_with_text_Q8tJKk": {
+          "type": "file_with_text",
+          "settings": {
+            "title": "<p>Kostenloser und Schneller Versand</p>",
+            "description": "<p>Normalerweise beträgt die optimale Schreibtischhöhe im Sitzen Ihre Körpergröße x 0,4 und im Stehen Ihre Körpergröße x 0,62. Höhenverstellbarer Schreibtisch mit 2 stufigen Säulen ist nur für die Körpergröße von 1,75-1,95 m geeignet. </p>",
+            "file_type": "image",
+            "file_image": "shopify://shop_images/featured-spaces-5.webp",
+            "video_url": ""
+          }
+        },
+        "file_with_text_f9yPAD": {
+          "type": "file_with_text",
+          "settings": {
+            "title": "<p>Kostenloser und Schneller Versand</p>",
+            "description": "<p>Normalerweise beträgt die optimale Schreibtischhöhe im Sitzen Ihre Körpergröße x 0,4 und im Stehen Ihre Körpergröße x 0,62. Höhenverstellbarer Schreibtisch mit 2 stufigen Säulen ist nur für die Körpergröße von 1,75-1,95 m geeignet. </p>",
+            "file_type": "image",
+            "file_image": "shopify://shop_images/featured-spaces-5.webp",
+            "video_url": ""
+          }
+        },
+        "file_with_text_B39ehq": {
+          "type": "file_with_text",
+          "settings": {
+            "title": "<p>Kostenloser und Schneller Versand</p>",
+            "description": "<p>Normalerweise beträgt die optimale Schreibtischhöhe im Sitzen Ihre Körpergröße x 0,4 und im Stehen Ihre Körpergröße x 0,62. Höhenverstellbarer Schreibtisch mit 2 stufigen Säulen ist nur für die Körpergröße von 1,75-1,95 m geeignet. </p>",
+            "file_type": "image",
+            "file_image": "shopify://shop_images/featured-spaces-5.webp",
+            "video_url": ""
+          }
+        },
+        "file_with_text_JJXCp8": {
+          "type": "file_with_text",
+          "settings": {
+            "title": "<p>Kostenloser und Schneller Versand</p>",
+            "description": "<p>Normalerweise beträgt die optimale Schreibtischhöhe im Sitzen Ihre Körpergröße x 0,4 und im Stehen Ihre Körpergröße x 0,62. Höhenverstellbarer Schreibtisch mit 2 stufigen Säulen ist nur für die Körpergröße von 1,75-1,95 m geeignet. </p>",
+            "file_type": "image",
+            "file_image": "shopify://shop_images/featured-spaces-5.webp",
+            "video_url": ""
+          }
+        },
+        "file_with_text_THJTyK": {
+          "type": "file_with_text",
+          "settings": {
+            "title": "<p>Kostenloser und Schneller Versand</p>",
+            "description": "<p>Normalerweise beträgt die optimale Schreibtischhöhe im Sitzen Ihre Körpergröße x 0,4 und im Stehen Ihre Körpergröße x 0,62. Höhenverstellbarer Schreibtisch mit 2 stufigen Säulen ist nur für die Körpergröße von 1,75-1,95 m geeignet. </p>",
+            "file_type": "image",
+            "file_image": "shopify://shop_images/featured-spaces-5.webp",
+            "video_url": ""
+          }
+        }
+      },
+      "block_order": [
+        "file_with_text_McHwGa",
+        "file_with_text_Q8tJKk",
+        "file_with_text_f9yPAD",
+        "file_with_text_B39ehq",
+        "file_with_text_JJXCp8",
+        "file_with_text_THJTyK"
+      ],
+      "name": "file box simplicity",
+      "settings": {
+        "spec_id": "Produktbeschreibung",
+        "main_title": "<p>64-129cm Hohenverstellbar</p>",
+        "row_num": 3
+      }
+    },
+    "maidesite_swiper_QhkQG8": {
+      "type": "maidesite-swiper",
+      "blocks": {
+        "swiper_bBWUrY": {
+          "type": "swiper",
+          "settings": {
+            "image": "shopify://shop_images/maidesite-logo-1.webp",
+            "text": "<p>“Ich persönlich bin sehr angetan von der guten Produktqualität, dem zusätzlichen und gut erreichbaren USB-A-Anschluss am Bedienpanel sowie dem schnellen und leisen Motor, der einen fixen Wechsel zwischen Sitz- und Stehposition ermöglicht.”</p>"
+          }
+        },
+        "swiper_BnDxkz": {
+          "type": "swiper",
+          "settings": {
+            "image": "shopify://shop_images/maidesite-logo-2.webp",
+            "text": "<p>“Ich persönlich bin sehr angetan von der guten Produktqualität, dem zusätzlichen und gut erreichbaren USB-A-Anschluss am Bedienpanel sowie dem schnellen und leisen Motor, der einen fixen Wechsel zwischen Sitz- und Stehposition ermöglicht.”</p>"
+          }
+        },
+        "swiper_EnDd8n": {
+          "type": "swiper",
+          "settings": {
+            "image": "shopify://shop_images/maidesite-logo-3.webp",
+            "text": "<p>“Ich persönlich bin sehr angetan von der guten Produktqualität, dem zusätzlichen und gut erreichbaren USB-A-Anschluss am Bedienpanel sowie dem schnellen und leisen Motor, der einen fixen Wechsel zwischen Sitz- und Stehposition ermöglicht.”</p>"
+          }
+        },
+        "swiper_4kYG3r": {
+          "type": "swiper",
+          "settings": {
+            "image": "shopify://shop_images/maidesite-logo-4.webp",
+            "text": "<p>“Ich persönlich bin sehr angetan von der guten Produktqualität, dem zusätzlichen und gut erreichbaren USB-A-Anschluss am Bedienpanel sowie dem schnellen und leisen Motor, der einen fixen Wechsel zwischen Sitz- und Stehposition ermöglicht.”</p>"
+          }
+        }
+      },
+      "block_order": [
+        "swiper_bBWUrY",
+        "swiper_BnDxkz",
+        "swiper_EnDd8n",
+        "swiper_4kYG3r"
+      ],
+      "name": "maidesite swiper",
+      "settings": {
+        "title": "<p>Erfahrungen Unserer GeschäFtskunden Mit Maidesite</p>",
+        "text": ""
+      },
+      "custom_css": [
+        ".breadcrumb-con{width: 100%;position:absolute;top: 0;left: 0;z-index: 100;}"
+      ],
+    },
+
   },
   "order": [
     "breadcrumbs",
-    "contact_form_one"
+    "contact_form_one",
+    "img_with_text_box_simplicity_qrzG6W",
+    "maidesite_swiper_QhkQG8"
   ]
 }
