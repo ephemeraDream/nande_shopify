@@ -568,15 +568,14 @@ document.querySelectorAll(".product_info_bundle_product").forEach(item => {
     total_price_el.forEach(el => el.innerHTML = moneyWithoutTrailingZeros(total_price))
   })
 
-  const parent_body = item.closest(".common_modal_body")
   const product = bundle_products_data[item.getAttribute("data-id")].product
   let currVariant = bundle_products_data[item.getAttribute("data-id")].variant
   const curr_options = [...currVariant.options]
   const select_option = item.querySelectorAll(".product_info_bundle_modal_select")
   const select_item = item.querySelectorAll(".product_info_bundle_modal_select_item")
-  const img_contain = parent_body.querySelector(".product_info_bundle_modal_img")
-  const dp_price_contain = parent_body.querySelector(".product_info_bundle_modal_price_dp")
-  const op_price_contain = parent_body.querySelector(".product_info_bundle_modal_price_op")
+  const img_contain = item.querySelector(".product_info_bundle_modal_img")
+  const dp_price_contain = item.querySelector(".product_info_bundle_modal_price_dp")
+  const op_price_contain = item.querySelector(".product_info_bundle_modal_price_op")
   const setVariantOption = () => {
     select_option.forEach((selector, selectorIndex) => {
       if (selectorIndex < 2) return
