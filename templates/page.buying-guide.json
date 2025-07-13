@@ -23,7 +23,7 @@
       "img_with_text_simplicity_R8thEa": {
         "type": "img-with-text-simplicity",
         "custom_css": [
-            ".img_with_text_simplicity_section {background-color: #e2ded6; padding-top: 120rem; padding-bottom: 120rem;}",
+            ".img_with_text_simplicity_section {background-color: #e2ded6; padding-top: 12rem; padding-bottom: 12rem;}",
             ".img_with_text_simplicity_filebox {max-height: 48rem;height:auto}",
             ".img_with_text_simplicity{background-color: #fff;}",
             ".img_with_text_simplicity_info {padding: 4rem;}",
