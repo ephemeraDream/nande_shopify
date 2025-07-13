@@ -10,30 +10,27 @@ Products Swiper Section - 选择产品进行轮播
     <div class="session-box-inner product-carousel-c">
       <div class="product-carousel-container">
         <div class="swiper-wrapper">
-          {% for product_handle in section.settings.product_list %}
-            {% assign product = all_products[product_handle] %}
-            {% if product %}
-              <div class="swiper-slide product-card">
-                <a href="{{ product.url }}">
-                  {{-
-                    product.featured_image
-                    | image_url: width: product.featured_image.width
-                    | image_tag: alt: product.title
-                  -}}
-                  <div class="product_info">
-                    <h4 class="product_title">{{ product.title }}</h4>
-                    <div class="product_price">
-                      <div>{{ product.price | money_without_trailing_zeros }} </div>
-                      {% if product.compare_at_price != blank %}
-                        <div class="product_price_cap">
-                          {{ product.compare_at_price | money_without_trailing_zeros }}
-                        </div>
-                      {% endif %}
-                    </div>
+          {% for product in section.settings.product_list %}
+            <div class="swiper-slide product-card">
+              <a href="{{ product.url }}">
+                {{-
+                  product.featured_image
+                  | image_url: width: product.featured_image.width
+                  | image_tag: alt: product.title
+                -}}
+                <div class="product_info">
+                  <h4 class="product_title">{{ product.title }}</h4>
+                  <div class="product_price">
+                    <div>{{ product.price | money_without_trailing_zeros }} </div>
+                    {% if product.compare_at_price != blank %}
+                      <div class="product_price_cap">
+                        {{ product.compare_at_price | money_without_trailing_zeros }}
+                      </div>
+                    {% endif %}
                   </div>
-                </a>
-              </div>
-            {% endif %}
+                </div>
+              </a>
+            </div>
           {% endfor %}
         </div>
         
