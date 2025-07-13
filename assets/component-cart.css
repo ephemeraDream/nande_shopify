@@ -275,3 +275,13 @@ cart-items {
 .cart_section .cart-item__details {
   width: 100%;
 }
+
+.cart_section .quantity-popover-container {
+  width: 11.8rem !important;
+  padding: 0;
+}
+
+.cart_section .quantity-popover-container .quantity {
+  height: 4rem !important;
+  background-color: #fff !important;
+}

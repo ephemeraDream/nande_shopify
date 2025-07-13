@@ -463,6 +463,7 @@ cart-drawer-items::-webkit-scrollbar-track-piece {
 .drawer__cart-items-wrapper-right-head {
   display: flex;
   align-items: flex-start;
+  justify-content: space-between;
   gap: 1rem;
 }
 
