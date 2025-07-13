@@ -33,7 +33,7 @@ Product Tab Compare Section - 产品对比 tab切换
             <div class="tab-products">
               {% for product in block.settings.product_list %}
                   <div class="tab-product-card">
-                      <img src="{{ product.featured_image | image_url: width: 400 }}" alt="{{ product.title }}">
+                      <img src="{{ product.featured_image | image_url: width: 400 }}" alt="{{ product.title }}" class="product_img">
                       <div class="text-body tab-product-title">{{ product.title }}</div>
                       <div>color</div>
                       <a href="{{ product.url }}" class="nd-btn">En savoir plus {{ 'icon-right-arrow.svg' | inline_asset_content }}</a>
@@ -68,6 +68,7 @@ Product Tab Compare Section - 产品对比 tab切换
 .product-tab-compare .tab-products { display: flex; gap: 2rem; flex-wrap: wrap; }
 .product-tab-compare .tab-product-card { width: 200px; border: 1px solid #eee; padding: 1rem; border-radius: 8px; background: #fff; }
 {% comment %} .product-tab-compare .tab-product-title { font-size: 1.6rem; margin: 1rem 0 0.5rem; } {% endcomment %}
+.product-tab-compare .product_img{width:100%;height:auto;}
 .product-tab-compare .tab-product-title::before {
     content: "";
     height: 2.5rem;
