@@ -301,6 +301,12 @@ cart-drawer-items {
   color: #1F1F1F;
 }
 
+.cart-item__price-wrapper .cart-item__old-price {
+  font-size: 1.6rem;
+  text-decoration: line-through;
+  color: #7F7E75;
+}
+
 .cart-drawer .unit-price {
   margin-top: 0.6rem;
 }

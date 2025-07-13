@@ -226,17 +226,17 @@
                                 {%- if item.original_line_price != item.final_line_price -%}
                                   <div class="cart-item__discounted-prices">
                                     <span class="visually-hidden">
-                                      {{ 'products.product.price.regular_price' | t }}
-                                    </span>
-                                    <s class="cart-item__old-price price price--end">
-                                      {{ item.original_line_price | money }}
-                                    </s>
-                                    <span class="visually-hidden">
                                       {{ 'products.product.price.sale_price' | t }}
                                     </span>
                                     <span class="price price--end">
                                       {{ item.final_line_price | money }}
                                     </span>
+                                    <span class="visually-hidden">
+                                      {{ 'products.product.price.regular_price' | t }}
+                                    </span>
+                                    <s class="cart-item__old-price price price--end">
+                                      {{ item.original_line_price | money }}
+                                    </s>
                                   </div>
                                 {%- else -%}
                                   <span class="price price--end">

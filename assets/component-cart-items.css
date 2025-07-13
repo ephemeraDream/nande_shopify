@@ -276,6 +276,7 @@ cart-remove-button .icon-remove {
     display: flex;
     align-items: flex-start;
     justify-content: flex-end;
+    margin-top: 2rem;
   }
 }
 
