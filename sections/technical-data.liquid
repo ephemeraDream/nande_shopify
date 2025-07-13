@@ -1,10 +1,10 @@
 {{ 'section-technical-data.css' | asset_url | stylesheet_tag }}
 {% assign current_product = product %}
-{% if current_product == nil or current_product == blank %}
-  {% if section.settings.product %}
-    {% assign current_product = all_products[section.settings.product] %}
+{% unless current_product %}
+  {% if section.settings.select_product %}
+    {% assign current_product = all_products[section.settings.select_product] %}
   {% endif %}
-{% endif %}
+{% endunless %}
 {% assign technical_data = current_product.metafields.custom.technical_data.value.data.value %}
 <div class="technical_data_section padding-sider" id="{{ section.settings.spec_id }}">
   <div class="technical_data">
