@@ -278,7 +278,6 @@ cart-drawer-items {
   pointer-events: none;
   display: flex;
   align-items: flex-start;
-  justify-content: flex-end;
 }
 
 .cart-drawer.cart-drawer .cart-item__price-wrapper>*:only-child {
@@ -287,8 +286,16 @@ cart-drawer-items {
 
 .cart-drawer .cart-item__price-wrapper .cart-item__discounted-prices {
   display: flex;
-  flex-direction: column;
-  gap: 0.6rem;
+  /* flex-direction: column; */
+  align-items: baseline;
+  gap: 1rem;
+  font-family: "PP Right Grotesk";
+  font-size: 2rem;
+  font-weight: normal;
+  line-height: 130%;
+  letter-spacing: 0px;
+  font-variation-settings: "opsz" auto;
+  color: #1F1F1F;
 }
 
 .cart-drawer .unit-price {
@@ -314,9 +321,9 @@ cart-drawer-items {
   justify-content: space-between;
 }
 
-.cart-drawer .price {
+/* .cart-drawer .price {
   line-height: 1;
-}
+} */
 
 .cart-drawer .tax-note {
   margin: 1.2rem 0 2rem auto;
