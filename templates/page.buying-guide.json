@@ -1,0 +1,158 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ *  购买指南
+ * ------------------------------------------------------------
+ */
+ {
+    "sections": {
+      "breadcrumbs": {
+        "type": "breadcrumbs",
+        "settings": {
+          "custom_breadcrumb": "",
+        },
+        "custom_css": [
+          ".breadcrumb-con{width: 100%;position:absolute;top: 0;left: 0;z-index: 100;}"
+        ],
+      },
+      "img_with_text_simplicity_R8thEa": {
+        "type": "img-with-text-simplicity",
+        "custom_css": [
+            ".img_with_text_simplicity_section {background-color: #e2ded6; padding-top: 6rem;}",
+            ".img_with_text_simplicity_filebox {max-height: 48rem;height:auto}",
+            ".img_with_text_simplicity_info {padding-left: 3rem;}",
+            "@media screen and (max-width: 768px) {.img_with_text_simplicity_info {padding-left: 0rem;}}"
+        ],
+        "name": "img with text simplicity",
+        "settings": {
+            "header_title": "<p>Ergonomische Must-Haves FüRs BüRo</p>",
+            "header_content": "<p>Höhenverstellbarer Schreibtisch, ergonomischer Stuhl & mehr – für gesundes und komfortables Arbeiten!</p>",
+            "title": "<p>Ergonomisches Büro – 3 unverzichtbare Möbelstücke</p>",
+            "sub_title": "",
+            "description": "<p>Der ideale Tisch für Ihre Haustiere – stabil,<br/> komfortabel und perfekt für ihren Bedarf.</p>",
+            "file_position": "left",
+            "file_type": "image",
+            "file_image": "shopify://shop_images/product_info_demo_img_1.webp",
+            "video_url": "",
+            "link_url": "",
+            "btn_text":""
+        }
+      },
+      //缺
+      "img_with_text_tab_emEWU8": {
+        "type": "img-with-text-tab",
+        "blocks": {
+          "tab_fiwUXL": {
+            "type": "tab",
+            "settings": {
+              "tabname": "",
+              "title": "<p>Lokale Logistik und Lagerhaltung</p>",
+              "description": "<p>Mit unseren regionalen Lagern und einem effizienten Logistiknetzwerk gewährleisten wir eine schnelle und zuverlässige Lieferung.</p>",
+              "file_type": "image",
+              "file_image": "shopify://shop_images/b2b_02.webp",
+              "video_url": "",
+              "btn_text": "Jetzt unverbindlich beraten lassen",
+              "link": "#"
+            }
+          },
+          "tab_AUd88N": {
+            "type": "tab",
+            "settings": {
+              "tabname": "",
+              "title": "<p>Lokale Logistik und Lagerhaltung</p>",
+              "description": "<p>Mit unseren regionalen Lagern und einem effizienten Logistiknetzwerk gewährleisten wir eine schnelle und zuverlässige Lieferung.</p>",
+              "file_type": "image",
+              "file_image": "shopify://shop_images/b2b_02.webp",
+              "video_url": "",
+              "btn_text": "Jetzt unverbindlich beraten lassen",
+              "link": "#"
+            }
+          },
+        },
+        "block_order": [
+          "tab_fiwUXL",
+          "tab_AUd88N"
+        ],
+        "name": "img with text tab",
+        "settings": {
+          "spec_id": "",
+          "title": "<p>Erstklassige Produkte & Erstklassiger Service</p>",
+          "show_tab_head":false,
+          "layout":"image-right"
+        },
+        "custom_css": [
+          ".img_with_text_tab .img_with_text_tab_title {text-align: left;margin-bottom:6rem}"
+        ],
+      },
+      //缺
+      "polka_dot_swiper_4yRfwn": {
+        "type": "polka-dot-swiper",
+        "blocks": {
+          "swiper_74yt3y": {
+            "type": "swiper",
+            "settings": {
+              "title": "<p>Eleganter Arbeitsbereich</p>",
+              "text": "<p>Schaffe einen funktionalen und stilvollen Arbeitsplatz mit unserem klassischen Schreibtisch</p>",
+              "btn_text": "",
+              "image": "shopify://shop_images/polka_dot_swiper-2.webp",
+              "link": "",
+              "select_product": "",
+              "product_X": 0,
+              "product_Y": 0
+            }
+          },
+          "swiper_RR3AVA": {
+            "type": "swiper",
+            "settings": {
+              "title": "<p>Eleganter Arbeitsbereich</p>",
+              "text": "<p>Schaffe einen funktionalen und stilvollen Arbeitsplatz mit </p><p>unserem klassischen Schreibtisch</p>",
+              "btn_text": "",
+              "image": "shopify://shop_images/polka_dot_swiper-1.webp",
+              "link": "",
+              "select_product": "0",
+              "product_X": 0,
+              "product_Y": 0
+            }
+          },
+          "swiper_xwgRwF": {
+            "type": "swiper",
+            "settings": {
+              "title": "<p>Eleganter Arbeitsbereich</p>",
+              "text": "<p>Schaffe einen funktionalen und stilvollen Arbeitsplatz mit unserem klassischen Schreibtisch</p>",
+              "btn_text": "",
+              "image": "shopify://shop_images/polka_dot_swiper-2.webp",
+              "link": "",
+              "select_product": "0",
+              "product_X": 0,
+              "product_Y": 0
+            }
+          }
+        },
+        "block_order": [
+          "swiper_74yt3y",
+          "swiper_RR3AVA",
+          "swiper_xwgRwF"
+        ],
+        "name": "polka dot swiper",
+        "settings": {
+          "title": "<p>Ihr BüRo, Neu Definiert</p>",
+          "text": ""
+        },
+        "custom_css": [
+          ".polka_dot_swiper{padding-bottom:6rem}"
+        ],
+      },
+      //缺
+  
+    },
+    "order": [
+      "breadcrumbs",
+      "img_with_text_tab_emEWU8",
+      "polka_dot_swiper_4yRfwn",
+    ]
+  }
+  

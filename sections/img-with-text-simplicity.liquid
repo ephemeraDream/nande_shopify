@@ -1,6 +1,12 @@
 {{ 'section-img-with-text-simplicity.css' | asset_url | stylesheet_tag }}
 
 <div class="img_with_text_simplicity_section padding-sider">
+  {% unless section.settings.header_title == blank %}
+    <h2 class="padding-bottom-30 session-box-inner">{{ section.settings.header_title }}</h2>
+  {% endunless %}
+  {% unless section.settings.header_content == blank %}
+    <div class="padding-bottom-30 text-body">{{ section.settings.header_content }}</div>
+  {% endunless %}
   <div
     class="img_with_text_simplicity img_with_text_simplicity_{{ section.settings.file_position }}"
     id="{{ section.id }}"
@@ -77,6 +83,16 @@
     "groups": ["header", "footer"]
   },
   "settings": [
+    {
+      "type": "richtext",
+      "id": "header_title",
+      "label": "header_title"
+    },
+    {
+      "type": "richtext",
+      "id": "header_content",
+      "label": "header_content"
+    },
     {
       "type": "richtext",
       "id": "title",
