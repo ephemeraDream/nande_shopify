@@ -1,6 +1,6 @@
 {{ 'section-img-with-text-tab.css' | asset_url | stylesheet_tag }}
 
-<div class="img_with_text_tab_section padding-sider">
+<div class="img_with_text_tab_section padding-sider" id="img_with_text_tab_section-{{ section.id }}">
   <div class="img_with_text_tab">
     <h2 class="img_with_text_tab_title">{{ section.settings.title }}</h2>
     {% if section.settings.description != blank %}
@@ -83,14 +83,18 @@
 
 <script>
   (() => {
-    const tabItems = document.querySelectorAll('.img_with_text_tab_head_item');
-
-    const img_with_text_tab_swiper = new Swiper('.img_with_text_tab_section .swiper', {
-      slidesPerView: 1,
-      spaceBetween: 20,
+    const sectionId = '{{ section.id }}';
+    const sectionEl = document.getElementById('img_with_text_tab_section-' + sectionId);
+    if (!sectionEl) return;
+  
+    const tabItems = sectionEl.querySelectorAll('.img_with_text_tab_head_item');
+    const swiperEl = sectionEl.querySelector('.swiper');
+  
+    const img_with_text_tab_swiper = new Swiper(swiperEl, {
+      // ...你的配置...
       navigation: {
-        nextEl: '.img_with_text_tab_swiper_next',
-        prevEl: '.img_with_text_tab_swiper_prev',
+        nextEl: sectionEl.querySelector('.img_with_text_tab_swiper_next'),
+        prevEl: sectionEl.querySelector('.img_with_text_tab_swiper_prev'),
       },
       on: {
         slideChange: function () {
@@ -103,7 +107,7 @@
         },
       },
     });
-
+  
     tabItems.forEach((item, index) => {
       item.addEventListener('click', () => {
         tabItems.forEach((el) => el.classList.remove('active'));

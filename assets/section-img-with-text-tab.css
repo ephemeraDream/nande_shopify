@@ -20,6 +20,7 @@
   color: #1F1F1F;
   margin-bottom: 0.8rem;
 }
+.img_with_text_tab_section .text-body{text-align: center;}
 .img_with_text_tab .img_with_text_tab_title {
   text-transform: capitalize;
   color: #1F1F1F;
