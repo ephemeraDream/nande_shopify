@@ -645,6 +645,8 @@ cart-drawer-items::-webkit-scrollbar-track-piece {
 
 .drawer__footer .cart__ctas {
   justify-content: space-between;
+  align-items: flex-start;
+  margin-top: 1rem;
 }
 
 .cartdrawer_viewdetail {
@@ -683,4 +685,5 @@ cart-drawer-items::-webkit-scrollbar-track-piece {
   letter-spacing: 0px;
   font-variation-settings: "opsz" auto;
   color: #1F1F1F;
+  margin: 0;
 }
