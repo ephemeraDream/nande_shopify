@@ -287,22 +287,22 @@ cart-remove-button .icon-remove {
     padding-left: 4rem;
   }
 
-  .cart-items td {
+  /* .cart-items td {
     vertical-align: top;
     padding-top: 4rem;
-  }
+  } */
 
-  .cart-item {
+  /* .cart-item {
     display: table-row;
-  }
+  } */
 
-  .cart-item>td+td {
+  /* .cart-item>td+td {
     padding-left: 4rem;
-  }
+  } */
 
-  .cart-item__details {
+  /* .cart-item__details {
     width: 35rem;
-  }
+  } */
 
   .cart-item__media {
     width: 10rem;
