@@ -3,8 +3,8 @@
 <div class="img_with_text_tab_section padding-sider">
   <div class="img_with_text_tab">
     <h2 class="img_with_text_tab_title">{{ section.settings.title }}</h2>
-    {% if section.settings.sub_title != blank %}
-      <div class="text-body">{{ section.settings.sub_title }}</div>
+    {% if section.settings.description != blank %}
+      <div class="text-body">{{ section.settings.description }}</div>
     {% endif %}
     {% if section.settings.show_tab_head %}
       <div class="img_with_text_tab_head">
@@ -129,9 +129,9 @@
       "label": "specId"
     },
     {
-      "type": "text",
-      "id": "sub_title",
-      "label": "sub_title"
+      "type": "richtext",
+      "id": "description",
+      "label": "description"
     },
     {
       "type": "richtext",
