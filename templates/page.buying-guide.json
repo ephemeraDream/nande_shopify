@@ -48,21 +48,21 @@
         "type":"product-tab-compare",
         "name":"product_tab_compare",
         "settings":{
-            "title": "",
+            "title": ""
         },
         "blocks": {
             "tab1": {
-            "type": "tab",
-            "settings": {
-                "tab_title": "Lorem ipsum dolor sit"
-            }
+                "type": "tab",
+                "settings": {
+                    "tab_title": "Lorem ipsum dolor sit"
+                }
             },
             "item1_1": {
             "type": "item",
             "settings": {
                 "belong_tab": "0",
                 "select_product": "maidesite-th2-pro-plus-tischgestell-elektrisch-hohenverstellbar"
-            }
+                }
             },
             "item1_2": {
             "type": "item",
