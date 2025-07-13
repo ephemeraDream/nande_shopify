@@ -30,9 +30,7 @@ Product Tab Compare Section - 产品对比 tab切换
         {% for tab in section.settings.tabs %}
           <div class="tab-panel tab-panel-{{ section.id }} {% if forloop.first %}active{% endif %}" data-tab="{{ forloop.index0 }}">
             <div class="tab-products">
-              {% for handle in tab.product_list %}
-                {% assign product = all_products[handle] %}
-                {% if product %}
+              {% for product in tab.product_list %}
                   <div class="tab-product-card">
                     <a href="{{ product.url }}">
                       <img src="{{ product.featured_image | image_url: width: 400 }}" alt="{{ product.title }}">
@@ -45,7 +43,6 @@ Product Tab Compare Section - 产品对比 tab切换
                       </div>
                     </a>
                   </div>
-                {% endif %}
               {% endfor %}
             </div>
           </div>
