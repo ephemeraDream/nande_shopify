@@ -27,7 +27,7 @@
             ".img_with_text_simplicity{background-color: #fff;}",
             ".img_with_text_simplicity_info {padding: 4rem;}",
             ".img_with_text_simplicity_title{font-size: 4rem;}",
-            "@media screen and (max-width: 768px) {.img_with_text_simplicity_info {padding: 0rem;}}"
+            "@media screen and (max-width: 768px) {.img_with_text_simplicity_info {padding: 0rem;}.img_with_text_simplicity_title{font-size: 2.4rem;}}"
         ],
         "name": "img with text simplicity",
         "settings": {
@@ -125,7 +125,7 @@
             ".img_with_text_simplicity_filebox {max-height: 48rem;height:auto}",
             ".img_with_text_simplicity_info {padding-left: 4rem;}",
             ".img_with_text_simplicity_title{font-size: 4rem;}",
-            "@media screen and (max-width: 768px) {.img_with_text_simplicity_info {padding-left: 0rem;}}"
+            "@media screen and (max-width: 768px) {.img_with_text_simplicity_info {padding-left: 0rem;}.img_with_text_simplicity_title{font-size: 2.4rem;}}"
         ],
         "name": "img with text simplicity",
         "settings": {
@@ -149,7 +149,7 @@
             ".img_with_text_simplicity_filebox {max-height: 48rem;height:auto}",
             ".img_with_text_simplicity_info {padding-right: 4rem;}",
             ".img_with_text_simplicity_title{font-size: 4rem;}",
-            "@media screen and (max-width: 768px) {.img_with_text_simplicity_info {padding-left: 0rem;padding-right:0rem;}}"
+            "@media screen and (max-width: 768px) {.img_with_text_simplicity_info {padding-left: 0rem;padding-right:0rem;}.img_with_text_simplicity_title{font-size: 2.4rem;}}"
         ],
         "name": "img with text simplicity",
         "settings": {
@@ -173,7 +173,7 @@
             ".img_with_text_simplicity_filebox {max-height: 48rem;height:auto}",
             ".img_with_text_simplicity_info {padding-left: 4rem;}",
             ".img_with_text_simplicity_title{font-size: 4rem;}",
-            "@media screen and (max-width: 768px) {.img_with_text_simplicity_info {padding-left: 0rem;}}"
+            "@media screen and (max-width: 768px) {.img_with_text_simplicity_info {padding-left: 0rem;}.img_with_text_simplicity_title{font-size: 2.4rem;}}"
         ],
         "name": "img with text simplicity",
         "settings": {
@@ -369,11 +369,11 @@
         ],
         "name": "polka dot swiper",
         "settings": {
-          "title": "<p>Ihr BüRo, Neu Definiert</p>",
-          "text": ""
+          "title": "<p>Ergonomische BüRomöBel Kaufen</p>",
+          "text": "<p>Kompromisslose Qualität & maximale Ergonomie. Überzeuge Dich selbst von <br/>den mehrfach ausgezeichneten ergonomischen Büromöbeln von Maidesite</p>"
         },
         "custom_css": [
-          ".polka_dot_swiper{padding-bottom:6rem}"
+          ".polka_dot_swiper{padding-bottom:4rem;margin-bottom:12rem}"
         ]
       }
     },

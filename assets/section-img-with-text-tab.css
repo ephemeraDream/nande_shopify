@@ -163,4 +163,7 @@
   .img_with_text_tab .img_with_text_tab_contain_info{
     width: 100%;
   }
+  .img_with_text_tab .img_with_text_tab_contain .swiper-slide.right {
+    flex-direction: column;
+  }
 }
