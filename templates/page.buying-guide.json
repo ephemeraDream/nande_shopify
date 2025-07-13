@@ -249,7 +249,7 @@
           "layout":"image-left"
         },
         "custom_css": [
-            ".img_with_text_tab_section {background-color: #fff;}",
+            ".img_with_text_tab_section {background-color: #fff;padding-bottom:6rem;border-bottom:1px solid #E2DED6}",
             ".img_with_text_tab .img_with_text_tab_title {margin-bottom:6rem}",
             ".img_with_text_tab_swiper_prev,.img_with_text_tab_swiper_next{display:none}"
         ]
@@ -257,24 +257,10 @@
       "img_with_text_tab_emEWU9": {
         "type": "img-with-text-tab",
         "blocks": {
-          "tab_fiwUXL": {
+          "tab_fi01": {
             "type": "tab",
             "settings": {
-              "tabname": "Entlastet den Rücken",
-              "sub_title": "Extrem stabiler",
-              "title": "<p>Fortschrittliche Technologie</p>",
-              "description": "<p>Perfekt für zwei Familienmitglieder, um ihre individuelle Körpergröße anzupassen oder um zwei neue Höheneinstellungen für vielfältigere Körperhaltungen zu ermöglichen.Der Standard-USB-Ladeanschluss lädt deine digitalen Geräte zuverlässig auf, genau dann, wenn du es brauchst.</p>",
-              "file_type": "image",
-              "file_image": "shopify://shop_images/buying_g_05.webp",
-              "video_url": "",
-              "btn_text": "",
-              "link": "#"
-            }
-          },
-          "tab_AUd88N": {
-            "type": "tab",
-            "settings": {
-              "tabname": "Steigert die Produktivität",
+              "tabname": "Designer-Edition",
               "sub_title": "Extrem stabiler",
               "title": "<p>Fortschrittliche Technologie</p>",
               "description": "<p>Perfekt für zwei Familienmitglieder, um ihre individuelle Körpergröße anzupassen oder um zwei neue Höheneinstellungen für vielfältigere Körperhaltungen zu ermöglichen.Der Standard-USB-Ladeanschluss lädt deine digitalen Geräte zuverlässig auf, genau dann, wenn du es brauchst.</p>",
@@ -285,10 +271,10 @@
               "link": "#"
             }
           },
-          "tab_AUd8M": {
+          "tab_fi02": {
             "type": "tab",
             "settings": {
-              "tabname": "Fördert eine aktive Lebensweise",
+              "tabname": "DIY-Edition",
               "sub_title": "Extrem stabiler",
               "title": "<p>Fortschrittliche Technologie</p>",
               "description": "<p>Perfekt für zwei Familienmitglieder, um ihre individuelle Körpergröße anzupassen oder um zwei neue Höheneinstellungen für vielfältigere Körperhaltungen zu ermöglichen.Der Standard-USB-Ladeanschluss lädt deine digitalen Geräte zuverlässig auf, genau dann, wenn du es brauchst.</p>",
@@ -298,12 +284,26 @@
               "btn_text": "",
               "link": "#"
             }
+          },
+          "tab_fi03": {
+            "type": "tab",
+            "settings": {
+              "tabname": "Vierbein-Edition",
+              "sub_title": "Extrem stabiler",
+              "title": "<p>Fortschrittliche Technologie</p>",
+              "description": "<p>Perfekt für zwei Familienmitglieder, um ihre individuelle Körpergröße anzupassen oder um zwei neue Höheneinstellungen für vielfältigere Körperhaltungen zu ermöglichen.Der Standard-USB-Ladeanschluss lädt deine digitalen Geräte zuverlässig auf, genau dann, wenn du es brauchst.</p>",
+              "file_type": "image",
+              "file_image": "shopify://shop_images/buying_g_06.webp",
+              "video_url": "",
+              "btn_text": "",
+              "link": "#"
+            }
           }
         },
         "block_order": [
-          "tab_fiwUXL",
-          "tab_AUd88N",
-          "tab_AUd8M"
+          "tab_fi01",
+          "tab_fi02",
+          "tab_fi03"
         ],
         "name": "img with text tab",
         "settings": {
@@ -314,7 +314,7 @@
           "layout":"image-right"
         },
         "custom_css": [
-            ".img_with_text_tab_section {background-color: #fff;}",
+            ".img_with_text_tab_section {background-color: #fff;padding-top:6rem;}",
             ".img_with_text_tab .img_with_text_tab_title {margin-bottom:6rem}",
             ".img_with_text_tab_swiper_prev,.img_with_text_tab_swiper_next{display:none}"
         ]
