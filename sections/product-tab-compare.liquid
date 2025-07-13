@@ -59,10 +59,8 @@ Product Tab Compare Section - 产品对比 tab切换
                     {% endfor %}
                       </div>
                       <a href="{{ product.url }}" class="nd-btn">{{ 'common.en_savoir_plus' | t }} {{ 'icon-right-arrow.svg' | inline_asset_content }}</a>
+                     
                       <div class="tab-product-price">
-                        {{ product.price | money_without_trailing_zeros }}
-                      </div>
-                      <div class="compare_simple_item_price">
                         {% if product.compare_at_price != blank %}
                           {% assign price = product.compare_at_price | money_without_trailing_zeros %}
                         {% else %}
@@ -145,7 +143,6 @@ Product Tab Compare Section - 产品对比 tab切换
     background: repeating-linear-gradient(45deg, #eee, #eee 4px, #fff 4px, #fff 8px);
   }
 .product-tab-compare .nd-btn{width:100%;display: flex;justify-content: space-between;margin:0;}
-.product-tab-compare .tab-product-price { color: #1F1F1F; font-weight: bold; }
 
 .compare_simple .compare_simple_item_line {
     padding: 1rem 1.6rem;
@@ -162,7 +159,7 @@ Product Tab Compare Section - 产品对比 tab切换
     color: #7F7E75;
   }
   
-  .compare_simple .compare_simple_item_line_value {
+  .compare_simple .compare_simple_item_line_value,.product-tab-compare .tab-product-price {
     font-family: PP Right Grotesk;
     font-size: 2.4rem;
     font-weight: 500;
