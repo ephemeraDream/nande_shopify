@@ -428,3 +428,7 @@ cart-drawer-items::-webkit-scrollbar-track-piece {
   font-variation-settings: "opsz" auto;
   color: #1F1F1F;
 }
+
+.drawer__cart-items-wrapper-right{
+  flex: 1;
+}
