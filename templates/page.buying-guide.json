@@ -16,7 +16,8 @@
           "custom_breadcrumb": "",
         },
         "custom_css": [
-          ".breadcrumb-con{width: 100%;position:absolute;top: 0;left: 0;z-index: 100;}"
+          ".breadcrumb-con{width: 100%;position:absolute;top: 0;left: 0;z-index: 100;}",
+          ".breadcrumb,.breadcrumb a ,.breadcrumb span{color:#7F7E75;}"
         ],
       },
       "img_with_text_simplicity_R8thEa": {
