@@ -162,6 +162,7 @@
   }
   .img_with_text_tab .img_with_text_tab_contain_info{
     width: 100%;
+    padding: 2rem 0rem 2rem 0rem;
   }
   .img_with_text_tab .img_with_text_tab_contain .swiper-slide.right {
     flex-direction: column;
