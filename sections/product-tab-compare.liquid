@@ -58,10 +58,24 @@ Product Tab Compare Section - 产品对比 tab切换
                         {% endif %}
                     {% endfor %}
                       </div>
-                      <a href="{{ product.url }}" class="nd-btn">En savoir plus {{ 'icon-right-arrow.svg' | inline_asset_content }}</a>
+                      <a href="{{ product.url }}" class="nd-btn">{{ 'common.en_savoir_plus' | t }} {{ 'icon-right-arrow.svg' | inline_asset_content }}</a>
                       <div class="tab-product-price">
                         {{ product.price | money_without_trailing_zeros }}
                       </div>
+                      <div class="compare_simple_item_price">
+                        {% if product.compare_at_price != blank %}
+                          {% assign price = product.compare_at_price | money_without_trailing_zeros %}
+                        {% else %}
+                          {% assign price = product.price | money_without_trailing_zeros %}
+                        {% endif %}
+                        {{ 'products.product.price.from_price_html' | t: price: price }}
+                      </div>
+                      {% for item in product.metafields.custom.compare_simple.value.data.value %}
+                        <div class="compare_simple_item_line">
+                          <div class="compare_simple_item_line_label">{{ item.label }}</div>
+                          <div class="compare_simple_item_line_value">{{ item.value }}</div>
+                        </div>
+                      {%- endfor %}
                   </div>
               {% endfor %}
             </div>
@@ -132,6 +146,31 @@ Product Tab Compare Section - 产品对比 tab切换
   }
 .product-tab-compare .nd-btn{width:100%;display: flex;justify-content: space-between;margin:0;}
 .product-tab-compare .tab-product-price { color: #1F1F1F; font-weight: bold; }
+
+.compare_simple .compare_simple_item_line {
+    padding: 1rem 1.6rem;
+    border-bottom: 0.1rem solid #F3F3F3;
+  }
+  
+  .compare_simple .compare_simple_item_line_label {
+    font-family: "PP Right Grotesk";
+    font-size: 1.6rem;
+    font-weight: normal;
+    line-height: 130%;
+    letter-spacing: 0px;
+    font-variation-settings: "opsz" auto;
+    color: #7F7E75;
+  }
+  
+  .compare_simple .compare_simple_item_line_value {
+    font-family: PP Right Grotesk;
+    font-size: 2.4rem;
+    font-weight: 500;
+    line-height: 94%;
+    letter-spacing: 0px;
+    font-variation-settings: "opsz" auto;
+    color: #1F1F1F;
+  }
 
 @media(max-width:750px){
     .product-tab-compare .tab-titles{flex-direction:column}
