@@ -473,7 +473,7 @@
                             <div class="cartdrawer_bundle_product_body">
                               {%- for child in child_items -%}
                                 {% assign bundle_parent_id = child.properties.bundle_parent_id | times: 1.0 %}
-                                {%- if child.properties.bundle_parent_id == item.variant_id -%}
+                                {%- if bundle_parent_id == item.variant_id -%}
                                   <div class="cartdrawer_bundle_product_item">
                                     <img src="{{ child.image | image_url: width: 300 }}">
                                     <div class="cartdrawer_bundle_product_item_info">
