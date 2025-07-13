@@ -50,74 +50,53 @@
         "tab1": {
           "type": "tab",
           "settings": {
-            "tab_title": "Lorem ipsum dolor sit"
-          }
-        },
-        "item1_1": {
-          "type": "item",
-          "settings": {
-            "belong_tab": "0",
-            "select_product": "maidesite-th2-pro-plus-tischgestell-elektrisch-hohenverstellbar"
-          }
-        },
-        "item1_2": {
-          "type": "item",
-          "settings": {
-            "belong_tab": "0",
-            "select_product": "maidesite-tischgestell-elektrisch-hohenverstellbar-t2-pro-plus"
+            "tab_title": "Lorem ipsum dolor sit",
+            "product_list": [
+                "maidesite-tischgestell-elektrisch-hohenverstellbar-t2-pro-plus",
+                "maidesite-ec5-ergonomischer-burostuhl-mit-ruckenlehne",
+                "maidesite-ec6-ergonomischer-burostuhl-mit-kopfstutze-ruckenlehne-und-fussstutze",
+                "maidesite-3-fach-tischsteckdose-mit-usb-c-und-a-1-8m-kabel-steckdosenleiste",
+                "maidesite-pc-halterung",
+                "maidesite-tischplatte-120-140-160-cm-diy-schreibtischplatte",
+                "maidesite-serpentine-kabelrohr"
+            ]
           }
         },
         "tab2": {
           "type": "tab",
           "settings": {
-            "tab_title": "Lorem ipsum dolor sit"
-          }
-        },
-        "item2_1": {
-          "type": "item",
-          "settings": {
-            "belong_tab": "1",
-            "select_product": "maidesite-tischgestell-elektrisch-hohenverstellbar-t2-pro-plus"
-          }
-        },
-        "item2_2": {
-          "type": "item",
-          "settings": {
-            "belong_tab": "1",
-            "select_product": "maidesite-tischgestell-elektrisch-hohenverstellbar-t2-pro-plus"
+            "tab_title": "Lorem ipsum dolor sit",
+            "product_list": [
+                "maidesite-tischgestell-elektrisch-hohenverstellbar-t2-pro-plus",
+                "maidesite-ec5-ergonomischer-burostuhl-mit-ruckenlehne",
+                "maidesite-ec6-ergonomischer-burostuhl-mit-kopfstutze-ruckenlehne-und-fussstutze",
+                "maidesite-3-fach-tischsteckdose-mit-usb-c-und-a-1-8m-kabel-steckdosenleiste",
+                "maidesite-pc-halterung",
+                "maidesite-tischplatte-120-140-160-cm-diy-schreibtischplatte",
+                "maidesite-serpentine-kabelrohr"
+            ]
           }
         },
         "tab3": {
           "type": "tab",
           "settings": {
-            "tab_title": "Lorem ipsum dolor sit"
-          }
-        },
-        "item3_1": {
-          "type": "item",
-          "settings": {
-            "belong_tab": "2",
-            "select_product": "maidesite-th2-pro-plus-tischgestell-elektrisch-hohenverstellbar"
-          }
-        },
-        "item3_2": {
-          "type": "item",
-          "settings": {
-            "belong_tab": "2",
-            "select_product": "maidesite-th2-pro-plus-tischgestell-elektrisch-hohenverstellbar"
+            "tab_title": "Lorem ipsum dolor sit",
+            "product_list": [
+                "maidesite-tischgestell-elektrisch-hohenverstellbar-t2-pro-plus",
+                "maidesite-ec5-ergonomischer-burostuhl-mit-ruckenlehne",
+                "maidesite-ec6-ergonomischer-burostuhl-mit-kopfstutze-ruckenlehne-und-fussstutze",
+                "maidesite-3-fach-tischsteckdose-mit-usb-c-und-a-1-8m-kabel-steckdosenleiste",
+                "maidesite-pc-halterung",
+                "maidesite-tischplatte-120-140-160-cm-diy-schreibtischplatte",
+                "maidesite-serpentine-kabelrohr"
+            ]
           }
         }
       },
       "block_order": [
         "tab1",
-        "item1_1",
-        "item1_2",
         "tab2",
-        "item2_1",
-        "item2_2",
-        "tab3",
-        "item3_1",
-        "item3_2"
+        "tab3"
       ],
       "name": "product_tab_compare",
       "settings": {
