@@ -246,7 +246,9 @@
                                 <div class="cart-item__totals" role="cell" headers="CartDrawer-ColumnTotal">
                                   {%- render 'loading-spinner' -%}
                                   <div class="cart-item__price-wrapper">
-                                    {%- if item.original_line_price != item.final_line_price -%}
+                                    {%- if item.variant.compare_at_price > item.variant.price
+                                      or item.original_line_price != item.final_line_price
+                                    -%}
                                       <div class="cart-item__discounted-prices">
                                         <span class="visually-hidden">
                                           {{ 'products.product.price.sale_price' | t }}
@@ -257,9 +259,15 @@
                                         <span class="visually-hidden">
                                           {{ 'products.product.price.regular_price' | t }}
                                         </span>
-                                        <s class="cart-item__old-price price price--end">
-                                          {{ item.original_line_price | money }}
-                                        </s>
+                                        {% if item.variant.compare_at_price > item.variant.price %}
+                                          <s class="cart-item__old-price price price--end">
+                                            {{ item.variant.compare_at_price | money }}
+                                          </s>
+                                        {% else %}
+                                          <s class="cart-item__old-price price price--end">
+                                            {{ item.original_line_price | money }}
+                                          </s>
+                                        {% endif %}
                                       </div>
                                     {%- else -%}
                                       <span class="price price--end">
@@ -491,11 +499,17 @@
                                       </div>
                                       <div class="cartdrawer_bundle_product_item_price">
                                         <div class="cartdrawer_bundle_product_item_price_dp">
-                                          {{ item.final_line_price | money }}
+                                          {{ child.final_line_price | money }}
                                         </div>
-                                        <div class="cartdrawer_bundle_product_item_price_op">
-                                          {{ item.original_line_price | money }}
-                                        </div>
+                                        {% if child.variant.compare_at_price > child.variant.price %}
+                                          <div class="cartdrawer_bundle_product_item_price_op">
+                                            {{ child.variant.compare_at_price | money }}
+                                          </div>
+                                        {% else %}
+                                          <div class="cartdrawer_bundle_product_item_price_op">
+                                            {{ child.original_line_price | money }}
+                                          </div>
+                                        {% endif %}
                                       </div>
                                     </div>
                                   </div>
