@@ -95,7 +95,7 @@
             {%- if cart != empty -%}
               <div class="drawer__cart-items-wrapper">
                 <table class="cart-items" role="table">
-                  <thead role="rowgroup">
+                  {% comment %} <thead role="rowgroup">
                     <tr role="row">
                       <th id="CartDrawer-ColumnProductImage" role="columnheader">
                         <span class="visually-hidden">{{ 'sections.cart.headings.image' | t }}</span>
@@ -120,7 +120,7 @@
                         <span class="visually-hidden">{{ 'sections.cart.headings.quantity' | t }}</span>
                       </th>
                     </tr>
-                  </thead>
+                  </thead> {% endcomment %}
 
                   <tbody role="rowgroup">
                     {%- for item in cart.items -%}
