@@ -292,3 +292,19 @@ if (!customElements.get('cart-note')) {
     }
   );
 }
+
+const cart_products = document.querySelectorAll('[id^="CartDrawer-Item-"]')
+cart_products.forEach(item => {
+  const bundle_product_contain = item.querySelector(".cartdrawer_bundle_product")
+  const bundle_btn = item.querySelector(".cartdrawer_bundle_product_head")
+  if (bundle_product_contain) {
+    bundle_btn.addEventListener("click", () => {
+      bundle_product_contain.classList.toggle("active")
+    })
+  }
+})
+const cartdrawer_viewdetail = document.querySelector(".cartdrawer_viewdetail")
+cartdrawer_viewdetail.addEventListener("click", () => {
+  const parent = cartdrawer_viewdetail.closest(".drawer__footer")
+  parent.classList.toggle("active")
+})

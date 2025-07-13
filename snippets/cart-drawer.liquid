@@ -75,9 +75,11 @@
         </button>
       </div>
       {% if cart != empty and settings.show_info_bar %}
-        <div class="cart_drawer_infobar">
-          {{ settings.cart_infobar_icon }}
-          <div>{{ settings.cart_infobar_desc }}</div>
+        <div class="cart_drawer_infobar_contain">
+          <div class="cart_drawer_infobar">
+            {{ settings.cart_infobar_icon }}
+            <div>{{ settings.cart_infobar_desc }}</div>
+          </div>
         </div>
       {% endif %}
       <cart-drawer-items
@@ -246,6 +248,11 @@
                                 <div class="cart-item__totals" role="cell" headers="CartDrawer-ColumnTotal">
                                   {%- render 'loading-spinner' -%}
                                   <div class="cart-item__price-wrapper">
+                                    {% comment %}
+                                      {%- if item.variant.compare_at_price > item.variant.price
+                                        or item.original_line_price != item.final_line_price
+                                      -%}
+                                    {% endcomment %}
                                     {%- if item.original_line_price != item.final_line_price -%}
                                       <div class="cart-item__discounted-prices">
                                         <span class="visually-hidden">
@@ -260,6 +267,17 @@
                                         <s class="cart-item__old-price price price--end">
                                           {{ item.original_line_price | money }}
                                         </s>
+                                        {% comment %}
+                                          {% if item.variant.compare_at_price > item.variant.price %}
+                                            <s class="cart-item__old-price price price--end">
+                                              {{ item.variant.compare_at_price | money }}
+                                            </s>
+                                          {% else %}
+                                            <s class="cart-item__old-price price price--end">
+                                              {{ item.original_line_price | money }}
+                                            </s>
+                                          {% endif %}
+                                        {% endcomment %}
                                       </div>
                                     {%- else -%}
                                       <span class="price price--end">
@@ -465,10 +483,10 @@
                           </div>
                         </div>
                         {% if parent_ids contains item.variant_id %}
-                          <div class="cartdrawer_bundle_product">
+                          <div class="cartdrawer_bundle_product active">
                             <div class="cartdrawer_bundle_product_head">
                               {{ 'common.accessories' | t }}
-                              {{- 'icon-up.svg' | inline_asset_content -}}
+                              {{- 'icon-down.svg' | inline_asset_content -}}
                             </div>
                             <div class="cartdrawer_bundle_product_body">
                               {%- for child in child_items -%}
@@ -491,11 +509,24 @@
                                       </div>
                                       <div class="cartdrawer_bundle_product_item_price">
                                         <div class="cartdrawer_bundle_product_item_price_dp">
-                                          {{ item.final_line_price | money }}
+                                          {{ child.final_line_price | money }}
                                         </div>
-                                        <div class="cartdrawer_bundle_product_item_price_op">
-                                          {{ item.original_line_price | money }}
-                                        </div>
+                                        {% if child.original_line_price != child.final_line_price %}
+                                          <div class="cartdrawer_bundle_product_item_price_op">
+                                            {{ child.original_line_price | money }}
+                                          </div>
+                                        {% endif %}
+                                        {% comment %}
+                                          {% if child.variant.compare_at_price > child.variant.price %}
+                                            <div class="cartdrawer_bundle_product_item_price_op">
+                                              {{ child.variant.compare_at_price | money }}
+                                            </div>
+                                          {% elsif child.original_line_price != child.final_line_price %}
+                                            <div class="cartdrawer_bundle_product_item_price_op">
+                                              {{ child.original_line_price | money }}
+                                            </div>
+                                          {% endif %}
+                                        {% endcomment %}
                                       </div>
                                     </div>
                                   </div>
@@ -558,54 +589,77 @@
           </div>
 
           <div class="totals" role="status">
-            <h2 class="totals__total">{{ 'sections.cart.estimated_total' | t }}</h2>
-            <p class="totals__total-value">{{ cart.total_price | money_with_currency }}</p>
+            <h2 class="totals__total">{{ 'common.subtotal' | t }}</h2>
+            <p class="totals__total-value">{{ cart.original_total_price | money }}</p>
           </div>
-
-          <small class="tax-note caption-large rte">
-            {%- if cart.duties_included and cart.taxes_included -%}
-              {%- if shop.shipping_policy.body == blank -%}
-                {{ 'sections.cart.duties_and_taxes_included_shipping_at_checkout_without_policy' | t }}
-              {%- else -%}
-                {{
-                  'sections.cart.duties_and_taxes_included_shipping_at_checkout_with_policy_html'
-                  | t: link: shop.shipping_policy.url
-                }}
+          <div class="totals" role="status">
+            <h2 class="totals__total">{{ 'common.rabatt' | t }}</h2>
+            <p class="totals__total-value">{{ cart.total_discount | money }}</p>
+          </div>
+          <div class="cartdrawer_shipping_and_taxes">
+            <div class="totals" role="status">
+              <h2 class="totals__total">{{ 'common.shipping' | t }}</h2>
+              <p class="totals__total-value">{{ 'common.calculated_at_checkout' | t }}</p>
+            </div>
+            <div class="totals" role="status">
+              <h2 class="totals__total">{{ 'common.taxes' | t }}</h2>
+              <p class="totals__total-value">{{ 'common.calculated_at_checkout' | t }}</p>
+            </div>
+          </div>
+          <div class="totals cartdrawer_total_price" role="status">
+            <h2 class="totals__total">{{ 'common.gesamtsumme' | t }}</h2>
+            <p class="totals__total-value">{{ cart.total_price | money }}</p>
+          </div>
+          {% comment %}
+            <small class="tax-note caption-large rte">
+              {%- if cart.duties_included and cart.taxes_included -%}
+                {%- if shop.shipping_policy.body == blank -%}
+                  {{ 'sections.cart.duties_and_taxes_included_shipping_at_checkout_without_policy' | t }}
+                {%- else -%}
+                  {{
+                    'sections.cart.duties_and_taxes_included_shipping_at_checkout_with_policy_html'
+                    | t: link: shop.shipping_policy.url
+                  }}
+                {%- endif -%}
+              {%- elsif cart.duties_included == false and cart.taxes_included -%}
+                {%- if shop.shipping_policy.body == blank -%}
+                  {{ 'sections.cart.taxes_included_shipping_at_checkout_without_policy' | t }}
+                {%- else -%}
+                  {{
+                    'sections.cart.taxes_included_shipping_at_checkout_with_policy_html'
+                    | t: link: shop.shipping_policy.url
+                  }}
+                {%- endif -%}
+              {%- elsif cart.duties_included and cart.taxes_included == false -%}
+                {%- if shop.shipping_policy.body == blank -%}
+                  {{ 'sections.cart.duties_included_taxes_at_checkout_shipping_at_checkout_without_policy' | t }}
+                {%- else -%}
+                  {{
+                    'sections.cart.duties_included_taxes_at_checkout_shipping_at_checkout_with_policy_html'
+                    | t: link: shop.shipping_policy.url
+                  }}
+                {%- endif -%}
+              {%- elsif cart.duties_included == false and cart.taxes_included == false -%}
+                {%- if shop.shipping_policy.body == blank -%}
+                  {{ 'sections.cart.taxes_at_checkout_shipping_at_checkout_without_policy' | t }}
+                {%- else -%}
+                  {{
+                    'sections.cart.taxes_at_checkout_shipping_at_checkout_with_policy_html'
+                    | t: link: shop.shipping_policy.url
+                  }}
+                {%- endif -%}
               {%- endif -%}
-            {%- elsif cart.duties_included == false and cart.taxes_included -%}
-              {%- if shop.shipping_policy.body == blank -%}
-                {{ 'sections.cart.taxes_included_shipping_at_checkout_without_policy' | t }}
-              {%- else -%}
-                {{
-                  'sections.cart.taxes_included_shipping_at_checkout_with_policy_html'
-                  | t: link: shop.shipping_policy.url
-                }}
-              {%- endif -%}
-            {%- elsif cart.duties_included and cart.taxes_included == false -%}
-              {%- if shop.shipping_policy.body == blank -%}
-                {{ 'sections.cart.duties_included_taxes_at_checkout_shipping_at_checkout_without_policy' | t }}
-              {%- else -%}
-                {{
-                  'sections.cart.duties_included_taxes_at_checkout_shipping_at_checkout_with_policy_html'
-                  | t: link: shop.shipping_policy.url
-                }}
-              {%- endif -%}
-            {%- elsif cart.duties_included == false and cart.taxes_included == false -%}
-              {%- if shop.shipping_policy.body == blank -%}
-                {{ 'sections.cart.taxes_at_checkout_shipping_at_checkout_without_policy' | t }}
-              {%- else -%}
-                {{
-                  'sections.cart.taxes_at_checkout_shipping_at_checkout_with_policy_html'
-                  | t: link: shop.shipping_policy.url
-                }}
-              {%- endif -%}
-            {%- endif -%}
-          </small>
+            </small>
+          {% endcomment %}
         </div>
 
         <!-- CTAs -->
 
         <div class="cart__ctas" {{ block.shopify_attributes }}>
+          <div class="cartdrawer_viewdetail">
+            {{ 'common.check_details' | t }}
+            {{- 'icon-down.svg' | inline_asset_content -}}
+          </div>
           <button
             type="submit"
             id="CartDrawer-Checkout"
