@@ -326,22 +326,6 @@
         "layout": "image-right"
       }
     },
-    "product_carousel_two": {
-      "type": "product-carousel-two",
-      "name": "product_carousel_two",
-      "settings": {
-        "title": "Das GefäLlt Dir Vielleicht Auch",
-        "product_list": [
-          "maidesite-ergonomischer-stuhl-mit-kopfstutze-und-ruckenlehne",
-          "maidesite-ec5-ergonomischer-burostuhl-mit-ruckenlehne",
-          "maidesite-ec6-ergonomischer-burostuhl-mit-kopfstutze-ruckenlehne-und-fussstutze",
-          "maidesite-3-fach-tischsteckdose-mit-usb-c-und-a-1-8m-kabel-steckdosenleiste",
-          "maidesite-pc-halterung",
-          "maidesite-tischplatte-120-140-160-cm-diy-schreibtischplatte",
-          "maidesite-serpentine-kabelrohr"
-        ]
-      }
-    },
     "polka_dot_swiper_4yRfwn": {
       "type": "polka-dot-swiper",
       "blocks": {
@@ -399,6 +383,22 @@
         "text": "<p>Kompromisslose Qualität & maximale Ergonomie. Überzeuge Dich selbst von <br/>den mehrfach ausgezeichneten ergonomischen Büromöbeln von Maidesite</p>",
         "show_info": false
       }
+    },
+    "product_carousel_two": {
+      "type": "product-carousel-two",
+      "name": "product_carousel_two",
+      "settings": {
+        "title": "Das GefäLlt Dir Vielleicht Auch",
+        "product_list": [
+          "maidesite-ergonomischer-stuhl-mit-kopfstutze-und-ruckenlehne",
+          "maidesite-ec5-ergonomischer-burostuhl-mit-ruckenlehne",
+          "maidesite-ec6-ergonomischer-burostuhl-mit-kopfstutze-ruckenlehne-und-fussstutze",
+          "maidesite-3-fach-tischsteckdose-mit-usb-c-und-a-1-8m-kabel-steckdosenleiste",
+          "maidesite-pc-halterung",
+          "maidesite-tischplatte-120-140-160-cm-diy-schreibtischplatte",
+          "maidesite-serpentine-kabelrohr"
+        ]
+      }
     }
   },
   "order": [
@@ -410,7 +410,7 @@
     "img_with_text_simplicity_R8thd",
     "img_with_text_tab_emEWU8",
     "img_with_text_tab_emEWU9",
-    "product_carousel_two",
-    "polka_dot_swiper_4yRfwn"
+    "polka_dot_swiper_4yRfwn",
+    "product_carousel_two"
   ]
 }
