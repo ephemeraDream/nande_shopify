@@ -21,9 +21,9 @@ Products Swiper Section - 选择产品进行轮播
                 <div class="product_info">
                   <h4 class="product_title">{{ product.title }}</h4>
                   <div class="product_price">
-                    <div>{{ product.price | money_without_trailing_zeros }} </div>
+                    <h4>{{ product.price | money_without_trailing_zeros }} </h4>
                     {% if product.compare_at_price != blank %}
-                      <div class="product_price_cap">
+                      <div class="product_price_cap text-body">
                         {{ product.compare_at_price | money_without_trailing_zeros }}
                       </div>
                     {% endif %}
@@ -92,19 +92,10 @@ Products Swiper Section - 选择产品进行轮播
       display: flex;
       align-items: flex-end;
       gap: 1rem;
-      font-family: "PP Right Grotesk";
-      font-size: 3rem;
-      font-weight: 500;
-      line-height: 94%;
-      letter-spacing: 0px;
-      font-variation-settings: "opsz" auto;
       color: #fff;
     }
     
     .product-carousel .product_price_cap {
-      font-size: 2rem;
-      font-weight: normal;
-      line-height: 130%;
       text-decoration: line-through;
       color: #E2DED6;
     }
