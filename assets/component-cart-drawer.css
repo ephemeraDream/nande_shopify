@@ -497,8 +497,9 @@ cart-drawer-items::-webkit-scrollbar-track-piece {
 }
 
 .cartdrawer_bundle_product_head {
-  display: flex;
+  display: inline-flex;
   align-items: center;
+  justify-content: space-between;
   gap: 1.6rem;
   border-bottom: 0.1rem solid #1F1F1F;
   font-family: "PP Right Grotesk";
@@ -527,7 +528,7 @@ cart-drawer-items::-webkit-scrollbar-track-piece {
 }
 
 .cartdrawer_bundle_product_item_title {
-  display: inline-flex;
+  display: flex;
   justify-content: space-between;
   align-items: flex-start;
   gap: 1rem;
@@ -575,8 +576,29 @@ cart-drawer-items::-webkit-scrollbar-track-piece {
   height: 1.4rem;
   display: flex;
   cursor: pointer;
+  margin-top: 0.8rem;
 }
 
 .cartdrawer_bundle_product_item_info {
   flex: 1;
+}
+
+.cartdrawer_bundle_product_body {
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: max-height .3s ease-in-out, opacity .3s ease-in-out;
+}
+
+.cartdrawer_bundle_product.active .cartdrawer_bundle_product_body {
+  max-height: 100rem;
+  opacity: 1;
+}
+
+.cartdrawer_bundle_product_head svg {
+  transition: transform .3s ease-in-out;
+}
+
+.cartdrawer_bundle_product.active .cartdrawer_bundle_product_head svg {
+  transform: rotate(180deg);
 }

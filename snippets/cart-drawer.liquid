@@ -465,10 +465,10 @@
                           </div>
                         </div>
                         {% if parent_ids contains item.variant_id %}
-                          <div class="cartdrawer_bundle_product">
+                          <div class="cartdrawer_bundle_product active">
                             <div class="cartdrawer_bundle_product_head">
                               {{ 'common.accessories' | t }}
-                              {{- 'icon-up.svg' | inline_asset_content -}}
+                              {{- 'icon-down.svg' | inline_asset_content -}}
                             </div>
                             <div class="cartdrawer_bundle_product_body">
                               {%- for child in child_items -%}
