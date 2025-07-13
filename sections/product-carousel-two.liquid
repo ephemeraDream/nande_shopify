@@ -1,0 +1,206 @@
+{% comment %}
+------------------------------------------------------------
+Products Swiper Section - 选择产品进行轮播
+------------------------------------------------------------
+{% endcomment %}
+<div class="product-carousel  padding-top-120 padding-bottom-120 session-box-padding" >
+    {% unless section.settings.title == blank %}
+      <h2 class="padding-bottom-60 session-box-inner">{{ section.settings.title }}</h2>
+    {% endunless %}
+    <div class="session-box-inner product-carousel-c">
+      <div class="product-carousel-container">
+        <div class="swiper-wrapper">
+          {% for block in section.blocks %}
+            {% assign product = all_products[block.settings.select_product] %}
+            {% if product %}
+              <div class="swiper-slide product-card">
+                <a href="{{ product.url }}">
+                  {{-
+                    product.featured_image
+                    | image_url: width: product.featured_image.width
+                    | image_tag: alt: product.title
+                  -}}
+                  <div class="product_info">
+                    <h4 class="product_title">{{ product.title }}</h4>
+                    <div>
+                      <div class="product_price">
+                        <div>{{ product.price | money_without_trailing_zeros }} </div>
+                        {% if product.compare_at_price != blank %}
+                          <div class="product_price_cap">
+                            {{ product.compare_at_price | money_without_trailing_zeros }}
+                          </div>
+                        {% endif %}
+                      </div>
+                      <div class="product_btn nd-btn">
+                        {{ 'common.en_savoir_plus' | t }}
+                        {{ 'icon-right-arrow.svg' | inline_asset_content }}
+                      </div>
+                    </div>
+                  </div>
+                </a>
+              </div>
+              
+
+            {% endif %}
+          {% endfor %}
+        </div>
+        
+      </div>
+      <!-- 导航箭头 -->
+      <div class="product-button-prev">{{- 'swiper-left.svg' | inline_asset_content -}}</div>
+      <div class="product-button-next">{{- 'swiper-right.svg' | inline_asset_content -}}</div>
+    </div>
+</div>
+
+<style>
+    .product-carousel{background-color: #E2DED6;}
+    .product-carousel-c{position: relative;}
+    .product-carousel-container {
+      margin: 2rem auto;
+      position: relative;
+      overflow: hidden;
+    }
+    .product-card {
+      background: #fff;
+      padding: 2rem;
+    }
+    .product-card img {
+      width: 100%;
+      height: auto;
+    }
+    .product-carousel .product_info {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 3rem;
+      background-color: #fff;
+      padding-top: 1.4rem;
+    }
+    .product-carousel .product_title{
+      padding-bottom: 0.8rem;
+      border-bottom: 1px solid #E2DED6;
+    }
+    .product-carousel .product_price {
+      display: flex;
+      align-items: flex-end;
+      gap: 1rem;
+      font-family: "PP Right Grotesk";
+      font-size: 3rem;
+      font-weight: 500;
+      line-height: 94%;
+      letter-spacing: 0px;
+      font-variation-settings: "opsz" auto;
+      color: #1F1F1F;
+      margin-top: 0.6rem;
+    }
+    
+    .product-carousel .product_price_cap {
+      font-size: 1.6rem;
+      font-weight: normal;
+      line-height: 130%;
+      text-decoration: line-through;
+      color: #7F7E75;
+    }
+    .product-carousel .product_btn {
+      width: 100%;
+      margin-top: 2rem;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+    .product-carousel .product-button-prev, .product-carousel .product-button-next {
+      width: 6rem;
+      height: 6rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: #fff9;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      z-index: 1;
+      cursor: pointer;
+    }
+    .product-carousel .product-button-prev:hover, .product-carousel .product-button-next:hover {
+      background-color: #1f1f1f99;
+    }
+    .product-carousel .product-button-prev:hover svg path, .product-carousel .product-button-next:hover svg path {
+      fill: #bdff00;
+    }
+    .product-carousel .product-button-prev {
+      left: -7rem;
+    }
+    
+    .product-carousel .product-button-next {
+      right: -7rem;
+    }
+    
+</style>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    new Swiper(".product-carousel-container", {
+      slidesPerView: 3,
+      slidesPerGroup: 1,
+      spaceBetween: 20,
+      loop: false,
+      navigation: {
+        nextEl: ".product-button-next",
+        prevEl: ".product-button-prev",
+      },
+      breakpoints: {
+        0: {
+          slidesPerView: 1
+        },
+        768: {
+          slidesPerView: 2
+        },
+        1025: {
+          slidesPerView: 3
+        }
+      }
+    });
+  });
+</script>
+
+{% schema %}
+{
+  "name": "product carousel",
+  "tag": "section",
+  "class": "section",
+  "disabled_on": {
+    "groups": ["header", "footer"]
+  },
+  "settings": [
+    {
+        "type": "text",
+        "id": "title",
+        "label": "title"
+    },
+  ],
+  "blocks": [
+    {
+      "type": "item",
+      "name": "item",
+      "settings": [
+        {
+          "type": "product",
+          "id": "select_product",
+          "label": "product"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "product carousel",
+      "blocks": [
+        {
+          "type": "item"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

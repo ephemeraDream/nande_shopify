@@ -376,7 +376,54 @@
         "custom_css": [
           ".polka_dot_swiper{padding-bottom:4rem;margin-bottom:12rem}"
         ]
-      }
+      },
+      "product_carousel_two":{
+      "type": "product-carousel-two",
+      "name": "product_carousel_two",
+      "settings": {
+        "title": "Das GefäLlt Dir Vielleicht Auch"
+      },
+      "blocks": {
+        "item_3yir6V": {
+          "type": "item",
+          "settings": {
+            "select_product": "maidesite-to1-pro-elektrisch-hohenverstellbarer-schreibtisch"
+          }
+        },
+        "item_gyexDX": {
+          "type": "item",
+          "settings": {
+            "select_product": "maidesite-th2-pro-plus-tischgestell-elektrisch-hohenverstellbar"
+          }
+        },
+        "item_AHnCzP": {
+          "type": "item",
+          "settings": {
+            "select_product": "maidesite-to1-pro-elektrisch-hohenverstellbarer-schreibtisch"
+          }
+        },
+        "item_EEUjdz": {
+          "type": "item",
+          "settings": {
+            "select_product": "maidesite-th2-pro-plus-tischgestell-elektrisch-hohenverstellbar"
+          }
+        },
+        "item_z9X7dd": {
+          "type": "item",
+          "settings": {
+            "select_product": "maidesite-to1-pro-elektrisch-hohenverstellbarer-schreibtisch"
+          }
+        }
+      },
+      "block_order": [
+        "item_3yir6V",
+        "item_gyexDX",
+        "item_AHnCzP",
+        "item_EEUjdz",
+        "item_z9X7dd"
+      ]
+    },
+      
     },
 
     "order": [
@@ -388,7 +435,8 @@
       "img_with_text_simplicity_R8thd",
       "img_with_text_tab_emEWU8",
       "img_with_text_tab_emEWU9",
-      "polka_dot_swiper_4yRfwn"
+      "polka_dot_swiper_4yRfwn",
+      "product_carousel_two"
     ]
  }
 
