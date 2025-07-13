@@ -299,7 +299,7 @@ cart_products.forEach(item => {
   const bundle_btn = item.querySelector(".cartdrawer_bundle_product_head")
   if (bundle_product_contain) {
     bundle_btn.addEventListener("click", () => {
-      bundle_product_contain.toggleClass("active")
+      bundle_product_contain.classList.toggle("active")
     })
   }
 })
