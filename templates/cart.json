@@ -42,6 +42,9 @@
     },
     "recommended_products_mtrCpV": {
       "type": "recommended-products",
+      "custom_css": [
+        ".recommended_products_section {background-color: #E2DED6;}"
+      ],
       "name": "recommended products",
       "settings": {
         "spec_id": "",
