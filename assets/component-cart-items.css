@@ -117,9 +117,15 @@ cart-items .title-wrapper-with-link {
 }
 
 .product-option {
-  font-size: 1.4rem;
   word-break: break-word;
-  line-height: calc(1 + 0.5 / var(--font-body-scale));
+  font-family: "PP Right Grotesk";
+  font-size: 2rem;
+  font-weight: normal;
+  line-height: 130%;
+  letter-spacing: 0px;
+  font-variation-settings: "opsz" auto;
+  color: #7F7E75;
+  margin-top: 0.5rem;
 }
 
 .cart-item cart-remove-button {
@@ -210,7 +216,7 @@ cart-remove-button .icon-remove {
 }
 
 .product-option+.product-option {
-  margin-top: 0.4rem;
+  margin-top: 0.5rem;
 }
 
 .product-option * {
