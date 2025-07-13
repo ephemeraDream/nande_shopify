@@ -7,443 +7,407 @@
  * made to this file may be overwritten.
  * ------------------------------------------------------------
  */
- {
-    "sections": {
-      "breadcrumbs": {
-        "type": "breadcrumbs",
-        "settings": {
-          "custom_breadcrumb": "",
-        },
-        "custom_css": [
-          ".breadcrumb-con{width: 100%;position:absolute;top: 0;left: 0;z-index: 100;}",
-          ".breadcrumb,.breadcrumb a ,.breadcrumb span{color:#7F7E75;}"
-        ],
-      },
-      "img_with_text_simplicity_R8thEa": {
-        "type": "img-with-text-simplicity",
-        "custom_css": [
-            ".img_with_text_simplicity_section {background-color: #e2ded6; padding-top: 12rem; padding-bottom: 12rem;}",
-            ".img_with_text_simplicity_filebox {max-height: 48rem;height:auto}",
-            ".img_with_text_simplicity{background-color: #fff;}",
-            ".img_with_text_simplicity_info {padding: 4rem;}",
-            ".img_with_text_simplicity_title{font-size: 4rem;}",
-            "@media screen and (max-width: 768px) {.img_with_text_simplicity_info {padding: 2rem 0rem 2rem 0rem;}.img_with_text_simplicity_title{font-size: 2.4rem;}}"
-        ],
-        "name": "img with text simplicity",
-        "settings": {
-            "header_title": "<p>Ergonomische Must-Haves FüRs BüRo</p>",
-            "header_content": "<p>Höhenverstellbarer Schreibtisch, ergonomischer Stuhl & mehr – für gesundes und komfortables Arbeiten!</p>",
-            "title": "<p>Ergonomisches Büro – 3 unverzichtbare Möbelstücke</p>",
-            "sub_title": "",
-            "description": "<p>1.Ergonomische Bürostühle unterstützen dynamisches Sitzen und passen sich optimal an Deinen Körper an.<br><br>2.Höhenverstellbare Schreibtische fördern Bewegung und reduzieren das Risiko von Rückenschmerzen – per Knopfdruck zwischen Sitzen und Stehen wechseln.<br><br>3.Ein externer Monitor und ergonomische Ausstattung helfen, Rücken- und Nackenschmerzen zu vermeiden und die Augen zu entlasten.</p>",
-            "file_position": "left",
-            "file_type": "image",
-            "file_image": "shopify://shop_images/buying_g_01.webp",
-            "video_url": "",
-            "link_url": "",
-            "btn_text":""
-        }
-      },
-      "product_tab_compare":{
-        "type":"product-tab-compare",
-        "name":"product_tab_compare",
-        "settings":{
-            "title": "产品对比tab 还没做"
-        },
-        "blocks": {
-            "tab1": {
-                "type": "tab",
-                "settings": {
-                    "tab_title": "Lorem ipsum dolor sit"
-                }
-            },
-            "item1_1": {
-            "type": "item",
-            "settings": {
-                "belong_tab": "0",
-                "select_product": "maidesite-th2-pro-plus-tischgestell-elektrisch-hohenverstellbar"
-                }
-            },
-            "item1_2": {
-            "type": "item",
-            "settings": {
-                "belong_tab": "0",
-                "select_product": "maidesite-tischgestell-elektrisch-hohenverstellbar-t2-pro-plus"
-            }
-            },
-            "tab2": {
-            "type": "tab",
-            "settings": {
-                "tab_title": "Lorem ipsum dolor sit"
-            }
-            },
-            "item2_1": {
-            "type": "item",
-            "settings": {
-                "belong_tab": "1",
-                "select_product": "maidesite-tischgestell-elektrisch-hohenverstellbar-t2-pro-plus"
-            }
-            },
-            "item2_2": {
-            "type": "item",
-            "settings": {
-                "belong_tab": "1",
-                "select_product": "maidesite-tischgestell-elektrisch-hohenverstellbar-t2-pro-plus"
-            }
-            },
-            "tab3": {
-            "type": "tab",
-            "settings": {
-                "tab_title": "Lorem ipsum dolor sit"
-            }
-            },
-            "item3_1": {
-            "type": "item",
-            "settings": {
-                "belong_tab": "2",
-                "select_product": "maidesite-th2-pro-plus-tischgestell-elektrisch-hohenverstellbar"
-            }
-            },
-            "item3_2": {
-            "type": "item",
-            "settings": {
-                "belong_tab": "2",
-                "select_product": "maidesite-th2-pro-plus-tischgestell-elektrisch-hohenverstellbar"
-            }
-            }
-        },
-        "block_order": [
-            "tab1", "item1_1", "item1_2",
-            "tab2", "item2_1", "item2_2",
-            "tab3", "item3_1", "item3_2"
-        ]
-      },
-      "img_with_text_simplicity_R8thEb": {
-        "type": "img-with-text-simplicity",
-        "custom_css": [
-            ".img_with_text_simplicity_section {padding-top: 12rem; padding-bottom: 6rem;}",
-            ".img_with_text_simplicity_filebox {max-height: 48rem;height:auto}",
-            ".img_with_text_simplicity_info {padding-left: 4rem;}",
-            ".img_with_text_simplicity_title{font-size: 4rem;}",
-            "@media screen and (max-width: 768px) {.img_with_text_simplicity_info {padding: 2rem 0rem 0rem 0rem;}.img_with_text_simplicity_title{font-size: 2.4rem;}}"
-        ],
-        "name": "img with text simplicity",
-        "settings": {
-            "header_title": "<p>Erleben Sie Den Unterschied Von Maidesite</p>",
-            "header_content": "",
-            "title": "<p>Ergonomie neu erleben mit Maidesite</p>",
-            "sub_title": "<p>Maidesite</p>",
-            "description": "<p>Investieren Sie in Ihr Wohlbefinden und entdecken Sie den Unterschied, den Maidesite machen kann. Unsere ergonomischen Lösungen sind darauf ausgelegt, Ihr Arbeitserlebnis zu verbessern, eine gesunde Körperhaltung zu fördern und dafür zu sorgen, dass Sie sich den ganzen Tag über wohl und energiegeladen fühlen. Verwandeln Sie Ihren Arbeitsplatz mit Maidesite in eine Oase der Produktivität und des Wohlbefindens.</p>",
-            "file_position": "left",
-            "file_type": "image",
-            "file_image": "shopify://shop_images/buying_g_02.webp",
-            "video_url": "",
-            "link_url": "",
-            "btn_text":""
-        }
-      },
-      "img_with_text_simplicity_R8thEc": {
-        "type": "img-with-text-simplicity",
-        "custom_css": [
-            ".img_with_text_simplicity_section { padding-bottom: 6rem;}",
-            ".img_with_text_simplicity_filebox {max-height: 48rem;height:auto}",
-            ".img_with_text_simplicity_info {padding-right: 4rem;}",
-            ".img_with_text_simplicity_title{font-size: 4rem;}",
-            "@media screen and (max-width: 768px) {.img_with_text_simplicity_info {padding: 2rem 0rem 0rem 0rem;}.img_with_text_simplicity_title{font-size: 2.4rem;}}"
-        ],
-        "name": "img with text simplicity",
-        "settings": {
-            "header_title": "",
-            "header_content": "",
-            "title": "<p>Mit Weitblick entworfen, mit Exzellenz gefertigt</p>",
-            "sub_title": "<p>Maidesite</p>",
-            "description": "<p>Jedes Maidesite-Produkt wird sorgfältig unter Berücksichtigung der Benutzeranforderungen entworfen. Wir kombinieren diesen weitsichtigen Ansatz mit hochwertigen Materialien und fachmännischer Handwerkskunst,um ergonomische Lösungen zu liefern, auf die Sie sich verlassen können. Von unseren branchenführenden elektrisch höhenverstellbaren Schreibtischen und Stehpultgestellen bis hin zu unseren unterstützenden Computerstühlen und einer Reihe ergänzender ergonomischer Möbel und Accessoires bietet Maidesite einen umfassenden Ansatz zur Schaffung eines Arbeitsplatzes, der Ihre Gesundheit und Produktivität in den Vordergrund stellt.</p>",
-            "file_position": "right",
-            "file_type": "image",
-            "file_image": "shopify://shop_images/buying_g_03.webp",
-            "video_url": "",
-            "link_url": "",
-            "btn_text":""
-        }
-      },
-      "img_with_text_simplicity_R8thd": {
-        "type": "img-with-text-simplicity",
-        "custom_css": [
-            ".img_with_text_simplicity_section {padding-bottom: 10rem;}",
-            ".img_with_text_simplicity_filebox {max-height: 48rem;height:auto}",
-            ".img_with_text_simplicity_info {padding-left: 4rem;}",
-            ".img_with_text_simplicity_title{font-size: 4rem;}",
-            "@media screen and (max-width: 768px) {.img_with_text_simplicity_info {padding: 2rem 0rem 0rem 0rem;}.img_with_text_simplicity_title{font-size: 2.4rem;}}"
-        ],
-        "name": "img with text simplicity",
-        "settings": {
-            "header_title": "",
-            "header_content": "",
-            "title": "<p>Eine globale Marke, der Millionen vertrauen</p>",
-            "sub_title": "<p>Maidesite</p>",
-            "description": "<p>Maidesites Engagement für Innovation und Qualität hat bei Kunden auf der ganzen Welt Anklang gefunden. Unsere Produkte sind mittlerweile eine willkommene Ergänzung für Arbeitsplätze in über 27 Ländern, ein Beweis für den positiven Einfluss, den wir auf das Arbeitsleben der Menschen haben.</p>",
-            "file_position": "left",
-            "file_type": "image",
-            "file_image": "shopify://shop_images/buying_g_04.webp",
-            "video_url": "",
-            "link_url": "",
-            "btn_text":""
-        }
-      },
-      "img_with_text_tab_emEWU8": {
-        "type": "img-with-text-tab",
-        "blocks": {
-          "tab_fiwUXL": {
-            "type": "tab",
-            "settings": {
-              "tabname": "Entlastet den Rücken",
-              "sub_title": "Extrem stabiler",
-              "title": "<p>Fortschrittliche Technologie</p>",
-              "description": "<p>Perfekt für zwei Familienmitglieder, um ihre individuelle Körpergröße anzupassen oder um zwei neue Höheneinstellungen für vielfältigere Körperhaltungen zu ermöglichen.Der Standard-USB-Ladeanschluss lädt deine digitalen Geräte zuverlässig auf, genau dann, wenn du es brauchst.</p>",
-              "file_type": "image",
-              "file_image": "shopify://shop_images/buying_g_05.webp",
-              "video_url": "",
-              "btn_text": "",
-              "link": "#"
-            }
-          },
-          "tab_AUd88N": {
-            "type": "tab",
-            "settings": {
-              "tabname": "Steigert die Produktivität",
-              "sub_title": "Extrem stabiler",
-              "title": "<p>Fortschrittliche Technologie</p>",
-              "description": "<p>Perfekt für zwei Familienmitglieder, um ihre individuelle Körpergröße anzupassen oder um zwei neue Höheneinstellungen für vielfältigere Körperhaltungen zu ermöglichen.Der Standard-USB-Ladeanschluss lädt deine digitalen Geräte zuverlässig auf, genau dann, wenn du es brauchst.</p>",
-              "file_type": "image",
-              "file_image": "shopify://shop_images/buying_g_06.webp",
-              "video_url": "",
-              "btn_text": "",
-              "link": "#"
-            }
-          },
-          "tab_AUd8M": {
-            "type": "tab",
-            "settings": {
-              "tabname": "Fördert eine aktive Lebensweise",
-              "sub_title": "Extrem stabiler",
-              "title": "<p>Fortschrittliche Technologie</p>",
-              "description": "<p>Perfekt für zwei Familienmitglieder, um ihre individuelle Körpergröße anzupassen oder um zwei neue Höheneinstellungen für vielfältigere Körperhaltungen zu ermöglichen.Der Standard-USB-Ladeanschluss lädt deine digitalen Geräte zuverlässig auf, genau dann, wenn du es brauchst.</p>",
-              "file_type": "image",
-              "file_image": "shopify://shop_images/buying_g_05.webp",
-              "video_url": "",
-              "btn_text": "",
-              "link": "#"
-            }
-          }
-        },
-        "block_order": [
-          "tab_fiwUXL",
-          "tab_AUd88N",
-          "tab_AUd8M"
-        ],
-        "name": "img with text tab",
-        "settings": {
-          "spec_id": "",
-          "title": "<p>Vorteile Eines HöHenverstellbaren<br/>Schreibtischs</p>",
-          "show_tab_head":true,
-          "layout":"image-left"
-        },
-        "custom_css": [
-            ".img_with_text_tab_section {background-color: #fff;padding-bottom:6rem;border-bottom:1px solid #E2DED6}",
-            ".img_with_text_tab .img_with_text_tab_title {margin-bottom:6rem}",
-            ".img_with_text_tab_swiper_prev,.img_with_text_tab_swiper_next{display:none}"
-        ]
-      },
-      "img_with_text_tab_emEWU9": {
-        "type": "img-with-text-tab",
-        "blocks": {
-          "tab_fi01": {
-            "type": "tab",
-            "settings": {
-              "tabname": "Designer-Edition",
-              "sub_title": "Extrem stabiler",
-              "title": "<p>Fortschrittliche Technologie</p>",
-              "description": "<p>Perfekt für zwei Familienmitglieder, um ihre individuelle Körpergröße anzupassen oder um zwei neue Höheneinstellungen für vielfältigere Körperhaltungen zu ermöglichen.Der Standard-USB-Ladeanschluss lädt deine digitalen Geräte zuverlässig auf, genau dann, wenn du es brauchst.</p>",
-              "file_type": "image",
-              "file_image": "shopify://shop_images/buying_g_06.webp",
-              "video_url": "",
-              "btn_text": "",
-              "link": "#"
-            }
-          },
-          "tab_fi02": {
-            "type": "tab",
-            "settings": {
-              "tabname": "DIY-Edition",
-              "sub_title": "Extrem stabiler",
-              "title": "<p>Fortschrittliche Technologie</p>",
-              "description": "<p>Perfekt für zwei Familienmitglieder, um ihre individuelle Körpergröße anzupassen oder um zwei neue Höheneinstellungen für vielfältigere Körperhaltungen zu ermöglichen.Der Standard-USB-Ladeanschluss lädt deine digitalen Geräte zuverlässig auf, genau dann, wenn du es brauchst.</p>",
-              "file_type": "image",
-              "file_image": "shopify://shop_images/buying_g_05.webp",
-              "video_url": "",
-              "btn_text": "",
-              "link": "#"
-            }
-          },
-          "tab_fi03": {
-            "type": "tab",
-            "settings": {
-              "tabname": "Vierbein-Edition",
-              "sub_title": "Extrem stabiler",
-              "title": "<p>Fortschrittliche Technologie</p>",
-              "description": "<p>Perfekt für zwei Familienmitglieder, um ihre individuelle Körpergröße anzupassen oder um zwei neue Höheneinstellungen für vielfältigere Körperhaltungen zu ermöglichen.Der Standard-USB-Ladeanschluss lädt deine digitalen Geräte zuverlässig auf, genau dann, wenn du es brauchst.</p>",
-              "file_type": "image",
-              "file_image": "shopify://shop_images/buying_g_06.webp",
-              "video_url": "",
-              "btn_text": "",
-              "link": "#"
-            }
-          }
-        },
-        "block_order": [
-          "tab_fi01",
-          "tab_fi02",
-          "tab_fi03"
-        ],
-        "name": "img with text tab",
-        "settings": {
-          "spec_id": "",
-          "title": "<p>Ergonomische BüRoeinrichtung Leicht<br/> Gemacht</p>",
-          "description": "<p>Der benutzerfreundliche höhenverstellbare Schreibtisch Konfigurator von Ergotopia ermöglicht es Dir, Deinen Schreibtisch selbst zu planen und an Deine Bedürfnisse anzupassen. Egal, ob Bambus, Buche oder Nussbaum – wähle aus einer Vielzahl von Optionen und gestalte Deinen persönlichen Arbeitsplatz, an dem Du Dich rund um die Uhr wohlfühlst.</p>",
-          "show_tab_head":true,
-          "layout":"image-right"
-        },
-        "custom_css": [
-            ".img_with_text_tab_section {background-color: #fff;padding-top:6rem;}",
-            ".img_with_text_tab .img_with_text_tab_title {margin-bottom:6rem}",
-            ".img_with_text_tab_swiper_prev,.img_with_text_tab_swiper_next{display:none}"
-        ]
-      },
-      "polka_dot_swiper_4yRfwn": {
-        "type": "polka-dot-swiper",
-        "blocks": {
-          "swiper_74yt3y": {
-            "type": "swiper",
-            "settings": {
-              "title": "<p>Eleganter Arbeitsbereich</p>",
-              "text": "<p>Schaffe einen funktionalen und stilvollen Arbeitsplatz mit unserem klassischen Schreibtisch</p>",
-              "btn_text": "",
-              "image": "shopify://shop_images/polka_dot_swiper-2.webp",
-              "link": "",
-              "select_product": "",
-              "product_X": 0,
-              "product_Y": 0
-            }
-          },
-          "swiper_RR3AVA": {
-            "type": "swiper",
-            "settings": {
-              "title": "<p>Eleganter Arbeitsbereich</p>",
-              "text": "<p>Schaffe einen funktionalen und stilvollen Arbeitsplatz mit </p><p>unserem klassischen Schreibtisch</p>",
-              "btn_text": "",
-              "image": "shopify://shop_images/polka_dot_swiper-1.webp",
-              "link": "",
-              "select_product": "0",
-              "product_X": 0,
-              "product_Y": 0
-            }
-          },
-          "swiper_xwgRwF": {
-            "type": "swiper",
-            "settings": {
-              "title": "<p>Eleganter Arbeitsbereich</p>",
-              "text": "<p>Schaffe einen funktionalen und stilvollen Arbeitsplatz mit unserem klassischen Schreibtisch</p>",
-              "btn_text": "",
-              "image": "shopify://shop_images/polka_dot_swiper-2.webp",
-              "link": "",
-              "select_product": "0",
-              "product_X": 0,
-              "product_Y": 0
-            }
-          }
-        },
-        "block_order": [
-          "swiper_74yt3y",
-          "swiper_RR3AVA",
-          "swiper_xwgRwF"
-        ],
-        "name": "polka dot swiper",
-        "settings": {
-            "show_info":false,
-          "title": "<p>Ergonomische BüRomöBel Kaufen</p>",
-          "text": "<p>Kompromisslose Qualität & maximale Ergonomie. Überzeuge Dich selbst von <br/>den mehrfach ausgezeichneten ergonomischen Büromöbeln von Maidesite</p>"
-        },
-        "custom_css": [
-          ".polka_dot_swiper{padding-bottom:4rem;margin-bottom:12rem}"
-        ]
-      },
-      "product_carousel_two":{
-        "type": "product-carousel-two",
-        "name": "product_carousel_two",
-        "settings": {
-            "title": "Das GefäLlt Dir Vielleicht Auch"
-        },
-        "blocks": {
-            "item_3yir6V": {
-            "type": "item",
-            "settings": {
-                "select_product": "maidesite-to1-pro-elektrisch-hohenverstellbarer-schreibtisch"
-            }
-            },
-            "item_gyexDX": {
-            "type": "item",
-            "settings": {
-                "select_product": "maidesite-th2-pro-plus-tischgestell-elektrisch-hohenverstellbar"
-            }
-            },
-            "item_AHnCzP": {
-            "type": "item",
-            "settings": {
-                "select_product": "maidesite-to1-pro-elektrisch-hohenverstellbarer-schreibtisch"
-            }
-            },
-            "item_EEUjdz": {
-            "type": "item",
-            "settings": {
-                "select_product": "maidesite-th2-pro-plus-tischgestell-elektrisch-hohenverstellbar"
-            }
-            },
-            "item_z9X7dd": {
-            "type": "item",
-            "settings": {
-                "select_product": "maidesite-to1-pro-elektrisch-hohenverstellbarer-schreibtisch"
-            }
-            },
-            "item_3yir6F": {
-            "type": "item",
-            "settings": {
-                "select_product": "maidesite-to1-pro-elektrisch-hohenverstellbarer-schreibtisch"
-            }
-            },
-        },
-        "block_order": [
-            "item_3yir6V",
-            "item_gyexDX",
-            "item_AHnCzP",
-            "item_EEUjdz",
-            "item_z9X7dd",
-            "item_3yir6F",
-        ]
-      },
-      
+{
+  "sections": {
+    "breadcrumbs": {
+      "type": "breadcrumbs",
+      "custom_css": [
+        ".breadcrumb-con {width: 100%; position: absolute; top: 0; left: 0; z-index: 100;}",
+        ".breadcrumb,.breadcrumb a,.breadcrumb span {color: #7f7e75;}"
+      ],
+      "settings": {
+        "custom_breadcrumb": ""
+      }
     },
-
-    "order": [
-      "breadcrumbs",
-      "img_with_text_simplicity_R8thEa",
-      "product_tab_compare",
-      "img_with_text_simplicity_R8thEb",
-      "img_with_text_simplicity_R8thEc",
-      "img_with_text_simplicity_R8thd",
-      "img_with_text_tab_emEWU8",
-      "img_with_text_tab_emEWU9",
-      "product_carousel_two",
-      "polka_dot_swiper_4yRfwn"
-    ]
- }
-
+    "img_with_text_simplicity_R8thEa": {
+      "type": "img-with-text-simplicity",
+      "custom_css": [
+        ".img_with_text_simplicity_section {background-color: #e2ded6; padding-top: 12rem; padding-bottom: 12rem;}",
+        ".img_with_text_simplicity_filebox {max-height: 48rem; height: auto;}",
+        ".img_with_text_simplicity {background-color: #fff;}",
+        ".img_with_text_simplicity_info {padding: 4rem;}",
+        ".img_with_text_simplicity_title {font-size: 4rem;}",
+        "@media screen and (max-width: 768px) {.img_with_text_simplicity_info {padding: 2rem 0rem 2rem 0rem; } .img_with_text_simplicity_title {font-size: 2.4rem; }}"
+      ],
+      "name": "img with text simplicity",
+      "settings": {
+        "header_title": "<p>Ergonomische Must-Haves FüRs BüRo</p>",
+        "header_content": "<p>Höhenverstellbarer Schreibtisch, ergonomischer Stuhl & mehr – für gesundes und komfortables Arbeiten!</p>",
+        "title": "<p>Ergonomisches Büro – 3 unverzichtbare Möbelstücke</p>",
+        "sub_title": "",
+        "description": "<p>1.Ergonomische Bürostühle unterstützen dynamisches Sitzen und passen sich optimal an Deinen Körper an.<br><br>2.Höhenverstellbare Schreibtische fördern Bewegung und reduzieren das Risiko von Rückenschmerzen – per Knopfdruck zwischen Sitzen und Stehen wechseln.<br><br>3.Ein externer Monitor und ergonomische Ausstattung helfen, Rücken- und Nackenschmerzen zu vermeiden und die Augen zu entlasten.</p>",
+        "file_position": "left",
+        "file_type": "image",
+        "file_image": "shopify://shop_images/buying_g_01.webp",
+        "video_url": "",
+        "btn_text": "",
+        "link_url": ""
+      }
+    },
+    "product_tab_compare": {
+      "type": "product-tab-compare",
+      "blocks": {
+        "tab1": {
+          "type": "tab",
+          "settings": {
+            "tab_title": "Lorem ipsum dolor sit",
+            "product_list": [
+<<<<<<< HEAD
+                "maidesite-tischgestell-elektrisch-hohenverstellbar-t2-pro-plus",
+=======
+              "maidesite-tischgestell-elektrisch-hohenverstellbar-t2-pro-plus",
+>>>>>>> 354a062013ec603e3437b822c92b00683b6d7e91
+              "maidesite-to1-pro-elektrisch-hohenverstellbarer-schreibtisch",
+              "maidesite-el2-pro-art-tischgestell-elektrisch-hohenverstellbar",
+              "maidesite-th2-pro-plus-tischgestell-elektrisch-hohenverstellbar",
+              "maidesite-elektrisch-hohenverstellbarer-gestell-t2-pro"
+            ]
+          }
+        },
+        "tab2": {
+          "type": "tab",
+          "settings": {
+            "tab_title": "Lorem ipsum dolor sit",
+            "product_list": [
+<<<<<<< HEAD
+                "maidesite-tischgestell-elektrisch-hohenverstellbar-t2-pro-plus",
+              "maidesite-to1-pro-elektrisch-hohenverstellbarer-schreibtisch",
+              "maidesite-el2-pro-art-tischgestell-elektrisch-hohenverstellbar",
+              "maidesite-th2-pro-plus-tischgestell-elektrisch-hohenverstellbar",
+              "maidesite-elektrisch-hohenverstellbarer-gestell-t2-pro"
+=======
+              "maidesite-tischgestell-elektrisch-hohenverstellbar-t2-pro-plus",
+              "maidesite-ec5-ergonomischer-burostuhl-mit-ruckenlehne",
+              "maidesite-ec6-ergonomischer-burostuhl-mit-kopfstutze-ruckenlehne-und-fussstutze",
+              "maidesite-3-fach-tischsteckdose-mit-usb-c-und-a-1-8m-kabel-steckdosenleiste",
+              "maidesite-pc-halterung",
+              "maidesite-tischplatte-120-140-160-cm-diy-schreibtischplatte",
+              "maidesite-serpentine-kabelrohr"
+>>>>>>> 354a062013ec603e3437b822c92b00683b6d7e91
+            ]
+          }
+        },
+        "tab3": {
+          "type": "tab",
+          "settings": {
+            "tab_title": "Lorem ipsum dolor sit",
+            "product_list": [
+<<<<<<< HEAD
+                "maidesite-tischgestell-elektrisch-hohenverstellbar-t2-pro-plus",
+              "maidesite-to1-pro-elektrisch-hohenverstellbarer-schreibtisch",
+              "maidesite-el2-pro-art-tischgestell-elektrisch-hohenverstellbar",
+              "maidesite-th2-pro-plus-tischgestell-elektrisch-hohenverstellbar",
+              "maidesite-elektrisch-hohenverstellbarer-gestell-t2-pro"
+=======
+              "maidesite-tischgestell-elektrisch-hohenverstellbar-t2-pro-plus",
+              "maidesite-ec5-ergonomischer-burostuhl-mit-ruckenlehne",
+              "maidesite-ec6-ergonomischer-burostuhl-mit-kopfstutze-ruckenlehne-und-fussstutze",
+              "maidesite-3-fach-tischsteckdose-mit-usb-c-und-a-1-8m-kabel-steckdosenleiste",
+              "maidesite-pc-halterung",
+              "maidesite-tischplatte-120-140-160-cm-diy-schreibtischplatte",
+              "maidesite-serpentine-kabelrohr"
+>>>>>>> 354a062013ec603e3437b822c92b00683b6d7e91
+            ]
+          }
+        }
+      },
+      "block_order": [
+        "tab1",
+        "tab2",
+        "tab3"
+      ],
+      "name": "product_tab_compare",
+      "settings": {
+        "title": ""
+      }
+    },
+    "img_with_text_simplicity_R8thEb": {
+      "type": "img-with-text-simplicity",
+      "custom_css": [
+        ".img_with_text_simplicity_section {padding-top: 12rem; padding-bottom: 6rem;}",
+        ".img_with_text_simplicity_filebox {max-height: 48rem; height: auto;}",
+        ".img_with_text_simplicity_info {padding-left: 4rem;}",
+        ".img_with_text_simplicity_title {font-size: 4rem;}",
+        "@media screen and (max-width: 768px) {.img_with_text_simplicity_info {padding: 2rem 0rem 0rem 0rem; } .img_with_text_simplicity_title {font-size: 2.4rem; }}"
+      ],
+      "name": "img with text simplicity",
+      "settings": {
+        "header_title": "<p>Erleben Sie Den Unterschied Von Maidesite</p>",
+        "header_content": "",
+        "title": "<p>Ergonomie neu erleben mit Maidesite</p>",
+        "sub_title": "<p>Maidesite</p>",
+        "description": "<p>Investieren Sie in Ihr Wohlbefinden und entdecken Sie den Unterschied, den Maidesite machen kann. Unsere ergonomischen Lösungen sind darauf ausgelegt, Ihr Arbeitserlebnis zu verbessern, eine gesunde Körperhaltung zu fördern und dafür zu sorgen, dass Sie sich den ganzen Tag über wohl und energiegeladen fühlen. Verwandeln Sie Ihren Arbeitsplatz mit Maidesite in eine Oase der Produktivität und des Wohlbefindens.</p>",
+        "file_position": "left",
+        "file_type": "image",
+        "file_image": "shopify://shop_images/buying_g_02.webp",
+        "video_url": "",
+        "btn_text": "",
+        "link_url": ""
+      }
+    },
+    "img_with_text_simplicity_R8thEc": {
+      "type": "img-with-text-simplicity",
+      "custom_css": [
+        ".img_with_text_simplicity_section {padding-bottom: 6rem;}",
+        ".img_with_text_simplicity_filebox {max-height: 48rem; height: auto;}",
+        ".img_with_text_simplicity_info {padding-right: 4rem;}",
+        ".img_with_text_simplicity_title {font-size: 4rem;}",
+        "@media screen and (max-width: 768px) {.img_with_text_simplicity_info {padding: 2rem 0rem 0rem 0rem; } .img_with_text_simplicity_title {font-size: 2.4rem; }}"
+      ],
+      "name": "img with text simplicity",
+      "settings": {
+        "header_title": "",
+        "header_content": "",
+        "title": "<p>Mit Weitblick entworfen, mit Exzellenz gefertigt</p>",
+        "sub_title": "<p>Maidesite</p>",
+        "description": "<p>Jedes Maidesite-Produkt wird sorgfältig unter Berücksichtigung der Benutzeranforderungen entworfen. Wir kombinieren diesen weitsichtigen Ansatz mit hochwertigen Materialien und fachmännischer Handwerkskunst,um ergonomische Lösungen zu liefern, auf die Sie sich verlassen können. Von unseren branchenführenden elektrisch höhenverstellbaren Schreibtischen und Stehpultgestellen bis hin zu unseren unterstützenden Computerstühlen und einer Reihe ergänzender ergonomischer Möbel und Accessoires bietet Maidesite einen umfassenden Ansatz zur Schaffung eines Arbeitsplatzes, der Ihre Gesundheit und Produktivität in den Vordergrund stellt.</p>",
+        "file_position": "right",
+        "file_type": "image",
+        "file_image": "shopify://shop_images/buying_g_03.webp",
+        "video_url": "",
+        "btn_text": "",
+        "link_url": ""
+      }
+    },
+    "img_with_text_simplicity_R8thd": {
+      "type": "img-with-text-simplicity",
+      "custom_css": [
+        ".img_with_text_simplicity_section {padding-bottom: 10rem;}",
+        ".img_with_text_simplicity_filebox {max-height: 48rem; height: auto;}",
+        ".img_with_text_simplicity_info {padding-left: 4rem;}",
+        ".img_with_text_simplicity_title {font-size: 4rem;}",
+        "@media screen and (max-width: 768px) {.img_with_text_simplicity_info {padding: 2rem 0rem 0rem 0rem; } .img_with_text_simplicity_title {font-size: 2.4rem; }}"
+      ],
+      "name": "img with text simplicity",
+      "settings": {
+        "header_title": "",
+        "header_content": "",
+        "title": "<p>Eine globale Marke, der Millionen vertrauen</p>",
+        "sub_title": "<p>Maidesite</p>",
+        "description": "<p>Maidesites Engagement für Innovation und Qualität hat bei Kunden auf der ganzen Welt Anklang gefunden. Unsere Produkte sind mittlerweile eine willkommene Ergänzung für Arbeitsplätze in über 27 Ländern, ein Beweis für den positiven Einfluss, den wir auf das Arbeitsleben der Menschen haben.</p>",
+        "file_position": "left",
+        "file_type": "image",
+        "file_image": "shopify://shop_images/buying_g_04.webp",
+        "video_url": "",
+        "btn_text": "",
+        "link_url": ""
+      }
+    },
+    "img_with_text_tab_emEWU8": {
+      "type": "img-with-text-tab",
+      "blocks": {
+        "tab_fiwUXL": {
+          "type": "tab",
+          "settings": {
+            "tabname": "Entlastet den Rücken",
+            "sub_title": "Extrem stabiler",
+            "title": "<p>Fortschrittliche Technologie</p>",
+            "description": "<p>Perfekt für zwei Familienmitglieder, um ihre individuelle Körpergröße anzupassen oder um zwei neue Höheneinstellungen für vielfältigere Körperhaltungen zu ermöglichen.Der Standard-USB-Ladeanschluss lädt deine digitalen Geräte zuverlässig auf, genau dann, wenn du es brauchst.</p>",
+            "file_type": "image",
+            "file_image": "shopify://shop_images/buying_g_05.webp",
+            "video_url": "",
+            "btn_text": "",
+            "link": "#"
+          }
+        },
+        "tab_AUd88N": {
+          "type": "tab",
+          "settings": {
+            "tabname": "Steigert die Produktivität",
+            "sub_title": "Extrem stabiler",
+            "title": "<p>Fortschrittliche Technologie</p>",
+            "description": "<p>Perfekt für zwei Familienmitglieder, um ihre individuelle Körpergröße anzupassen oder um zwei neue Höheneinstellungen für vielfältigere Körperhaltungen zu ermöglichen.Der Standard-USB-Ladeanschluss lädt deine digitalen Geräte zuverlässig auf, genau dann, wenn du es brauchst.</p>",
+            "file_type": "image",
+            "file_image": "shopify://shop_images/buying_g_06.webp",
+            "video_url": "",
+            "btn_text": "",
+            "link": "#"
+          }
+        },
+        "tab_AUd8M": {
+          "type": "tab",
+          "settings": {
+            "tabname": "Fördert eine aktive Lebensweise",
+            "sub_title": "Extrem stabiler",
+            "title": "<p>Fortschrittliche Technologie</p>",
+            "description": "<p>Perfekt für zwei Familienmitglieder, um ihre individuelle Körpergröße anzupassen oder um zwei neue Höheneinstellungen für vielfältigere Körperhaltungen zu ermöglichen.Der Standard-USB-Ladeanschluss lädt deine digitalen Geräte zuverlässig auf, genau dann, wenn du es brauchst.</p>",
+            "file_type": "image",
+            "file_image": "shopify://shop_images/buying_g_05.webp",
+            "video_url": "",
+            "btn_text": "",
+            "link": "#"
+          }
+        }
+      },
+      "block_order": [
+        "tab_fiwUXL",
+        "tab_AUd88N",
+        "tab_AUd8M"
+      ],
+      "custom_css": [
+        ".img_with_text_tab_section {background-color: #fff; padding-bottom: 6rem; border-bottom: 1px solid #e2ded6;}",
+        ".img_with_text_tab .img_with_text_tab_title {margin-bottom: 6rem;}",
+        ".img_with_text_tab_swiper_prev,.img_with_text_tab_swiper_next {display: none;}"
+      ],
+      "name": "img with text tab",
+      "settings": {
+        "spec_id": "",
+        "description": "",
+        "title": "<p>Vorteile Eines HöHenverstellbaren<br/>Schreibtischs</p>",
+        "show_tab_head": true,
+        "layout": "image-left"
+      }
+    },
+    "img_with_text_tab_emEWU9": {
+      "type": "img-with-text-tab",
+      "blocks": {
+        "tab_fi01": {
+          "type": "tab",
+          "settings": {
+            "tabname": "Designer-Edition",
+            "sub_title": "Extrem stabiler",
+            "title": "<p>Fortschrittliche Technologie</p>",
+            "description": "<p>Perfekt für zwei Familienmitglieder, um ihre individuelle Körpergröße anzupassen oder um zwei neue Höheneinstellungen für vielfältigere Körperhaltungen zu ermöglichen.Der Standard-USB-Ladeanschluss lädt deine digitalen Geräte zuverlässig auf, genau dann, wenn du es brauchst.</p>",
+            "file_type": "image",
+            "file_image": "shopify://shop_images/buying_g_06.webp",
+            "video_url": "",
+            "btn_text": "",
+            "link": "#"
+          }
+        },
+        "tab_fi02": {
+          "type": "tab",
+          "settings": {
+            "tabname": "DIY-Edition",
+            "sub_title": "Extrem stabiler",
+            "title": "<p>Fortschrittliche Technologie</p>",
+            "description": "<p>Perfekt für zwei Familienmitglieder, um ihre individuelle Körpergröße anzupassen oder um zwei neue Höheneinstellungen für vielfältigere Körperhaltungen zu ermöglichen.Der Standard-USB-Ladeanschluss lädt deine digitalen Geräte zuverlässig auf, genau dann, wenn du es brauchst.</p>",
+            "file_type": "image",
+            "file_image": "shopify://shop_images/buying_g_05.webp",
+            "video_url": "",
+            "btn_text": "",
+            "link": "#"
+          }
+        },
+        "tab_fi03": {
+          "type": "tab",
+          "settings": {
+            "tabname": "Vierbein-Edition",
+            "sub_title": "Extrem stabiler",
+            "title": "<p>Fortschrittliche Technologie</p>",
+            "description": "<p>Perfekt für zwei Familienmitglieder, um ihre individuelle Körpergröße anzupassen oder um zwei neue Höheneinstellungen für vielfältigere Körperhaltungen zu ermöglichen.Der Standard-USB-Ladeanschluss lädt deine digitalen Geräte zuverlässig auf, genau dann, wenn du es brauchst.</p>",
+            "file_type": "image",
+            "file_image": "shopify://shop_images/buying_g_06.webp",
+            "video_url": "",
+            "btn_text": "",
+            "link": "#"
+          }
+        }
+      },
+      "block_order": [
+        "tab_fi01",
+        "tab_fi02",
+        "tab_fi03"
+      ],
+      "custom_css": [
+        ".img_with_text_tab_section {background-color: #fff; padding-top: 6rem;}",
+        ".img_with_text_tab .img_with_text_tab_title {margin-bottom: 6rem;}",
+        ".img_with_text_tab_swiper_prev,.img_with_text_tab_swiper_next {display: none;}"
+      ],
+      "name": "img with text tab",
+      "settings": {
+        "spec_id": "",
+        "description": "<p>Der benutzerfreundliche höhenverstellbare Schreibtisch Konfigurator von Ergotopia ermöglicht es Dir, Deinen Schreibtisch selbst zu planen und an Deine Bedürfnisse anzupassen. Egal, ob Bambus, Buche oder Nussbaum – wähle aus einer Vielzahl von Optionen und gestalte Deinen persönlichen Arbeitsplatz, an dem Du Dich rund um die Uhr wohlfühlst.</p>",
+        "title": "<p>Ergonomische BüRoeinrichtung Leicht<br/> Gemacht</p>",
+        "show_tab_head": true,
+        "layout": "image-right"
+      }
+    },
+    "polka_dot_swiper_4yRfwn": {
+      "type": "polka-dot-swiper",
+      "blocks": {
+        "swiper_74yt3y": {
+          "type": "swiper",
+          "settings": {
+            "title": "<p>Eleganter Arbeitsbereich</p>",
+            "text": "<p>Schaffe einen funktionalen und stilvollen Arbeitsplatz mit unserem klassischen Schreibtisch</p>",
+            "btn_text": "",
+            "image": "shopify://shop_images/polka_dot_swiper-2.webp",
+            "link": "",
+            "select_product": "",
+            "product_X": 0,
+            "product_Y": 0
+          }
+        },
+        "swiper_RR3AVA": {
+          "type": "swiper",
+          "settings": {
+            "title": "<p>Eleganter Arbeitsbereich</p>",
+            "text": "<p>Schaffe einen funktionalen und stilvollen Arbeitsplatz mit </p><p>unserem klassischen Schreibtisch</p>",
+            "btn_text": "",
+            "image": "shopify://shop_images/polka_dot_swiper-1.webp",
+            "link": "",
+            "select_product": "0",
+            "product_X": 0,
+            "product_Y": 0
+          }
+        },
+        "swiper_xwgRwF": {
+          "type": "swiper",
+          "settings": {
+            "title": "<p>Eleganter Arbeitsbereich</p>",
+            "text": "<p>Schaffe einen funktionalen und stilvollen Arbeitsplatz mit unserem klassischen Schreibtisch</p>",
+            "btn_text": "",
+            "image": "shopify://shop_images/polka_dot_swiper-2.webp",
+            "link": "",
+            "select_product": "0",
+            "product_X": 0,
+            "product_Y": 0
+          }
+        }
+      },
+      "block_order": [
+        "swiper_74yt3y",
+        "swiper_RR3AVA",
+        "swiper_xwgRwF"
+      ],
+      "custom_css": [
+        ".polka_dot_swiper {padding-bottom: 4rem; margin-bottom: 12rem;}"
+      ],
+      "name": "polka dot swiper",
+      "settings": {
+        "title": "<p>Ergonomische BüRomöBel Kaufen</p>",
+        "text": "<p>Kompromisslose Qualität & maximale Ergonomie. Überzeuge Dich selbst von <br/>den mehrfach ausgezeichneten ergonomischen Büromöbeln von Maidesite</p>",
+        "show_info": false
+      }
+    },
+    "product_carousel_two": {
+      "type": "product-carousel-two",
+      "name": "product_carousel_two",
+      "settings": {
+        "title": "Das GefäLlt Dir Vielleicht Auch",
+        "product_list": [
+          "maidesite-ergonomischer-stuhl-mit-kopfstutze-und-ruckenlehne",
+          "maidesite-ec5-ergonomischer-burostuhl-mit-ruckenlehne",
+          "maidesite-ec6-ergonomischer-burostuhl-mit-kopfstutze-ruckenlehne-und-fussstutze",
+          "maidesite-3-fach-tischsteckdose-mit-usb-c-und-a-1-8m-kabel-steckdosenleiste",
+          "maidesite-pc-halterung",
+          "maidesite-tischplatte-120-140-160-cm-diy-schreibtischplatte",
+          "maidesite-serpentine-kabelrohr"
+        ]
+      }
+    }
+  },
+  "order": [
+    "breadcrumbs",
+    "img_with_text_simplicity_R8thEa",
+    "product_tab_compare",
+    "img_with_text_simplicity_R8thEb",
+    "img_with_text_simplicity_R8thEc",
+    "img_with_text_simplicity_R8thd",
+    "img_with_text_tab_emEWU8",
+    "img_with_text_tab_emEWU9",
+    "polka_dot_swiper_4yRfwn",
+    "product_carousel_two"
+  ]
+}

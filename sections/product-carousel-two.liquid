@@ -10,38 +10,27 @@ Products Swiper Section - 选择产品进行轮播
     <div class="session-box-inner product-carousel-c">
       <div class="product-carousel-container">
         <div class="swiper-wrapper">
-          {% for block in section.blocks %}
-            {% assign product = all_products[block.settings.select_product] %}
-            {% if product %}
-              <div class="swiper-slide product-card">
-                <a href="{{ product.url }}">
-                  {{-
-                    product.featured_image
-                    | image_url: width: product.featured_image.width
-                    | image_tag: alt: product.title
-                  -}}
-                  <div class="product_info">
-                    <h4 class="product_title">{{ product.title }}</h4>
-                    <div>
-                      <div class="product_price">
-                        <div>{{ product.price | money_without_trailing_zeros }} </div>
-                        {% if product.compare_at_price != blank %}
-                          <div class="product_price_cap">
-                            {{ product.compare_at_price | money_without_trailing_zeros }}
-                          </div>
-                        {% endif %}
+          {% for product in section.settings.product_list %}
+            <div class="swiper-slide product-card">
+              <a href="{{ product.url }}">
+                {{-
+                  product.featured_image
+                  | image_url: width: product.featured_image.width
+                  | image_tag: alt: product.title
+                -}}
+                <div class="product_info">
+                  <h4 class="product_title">{{ product.title }}</h4>
+                  <div class="product_price">
+                    <h4>{{ product.price | money_without_trailing_zeros }} </h4>
+                    {% if product.compare_at_price != blank %}
+                      <div class="product_price_cap text-body">
+                        {{ product.compare_at_price | money_without_trailing_zeros }}
                       </div>
-                      <div class="product_btn nd-btn">
-                        {{ 'common.en_savoir_plus' | t }}
-                        {{ 'icon-right-arrow.svg' | inline_asset_content }}
-                      </div>
-                    </div>
+                    {% endif %}
                   </div>
-                </a>
-              </div>
-              
-
-            {% endif %}
+                </div>
+              </a>
+            </div>
           {% endfor %}
         </div>
         
@@ -63,7 +52,6 @@ Products Swiper Section - 选择产品进行轮播
     }
     .product-card {
       background: #fff;
-      padding: 2rem;
     }
     .product-card img {
       width: 100%;
@@ -74,34 +62,44 @@ Products Swiper Section - 选择产品进行轮播
       display: flex;
       flex-direction: column;
       justify-content: space-between;
-      gap: 3rem;
-      background-color: #fff;
-      padding-top: 1.4rem;
+      gap: 2.6rem;
+      background-color: #7F7E75;
+      padding: 0.5rem 2rem 2rem 2rem;
+      position: relative;
+    }
+    .product-carousel .product_info::before {
+      content: "";
+      height: 5rem;
+      width: 17.8rem;
+      background-color: #7F7E75;
+      position: absolute;
+      top: 0;
+      left: 0;
+      transform: translateY(-100%);
     }
     .product-carousel .product_title{
-      padding-bottom: 0.8rem;
-      border-bottom: 1px solid #E2DED6;
+      {% comment %} padding-bottom: 0.8rem; {% endcomment %}
+       color:#BDFF00;
+       display: -webkit-box;
+      -webkit-line-clamp: 3;      
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      line-height: 1em;
+      min-height: calc(1em * 3);
     }
     .product-carousel .product_price {
       display: flex;
       align-items: flex-end;
       gap: 1rem;
-      font-family: "PP Right Grotesk";
-      font-size: 3rem;
-      font-weight: 500;
-      line-height: 94%;
-      letter-spacing: 0px;
-      font-variation-settings: "opsz" auto;
-      color: #1F1F1F;
-      margin-top: 0.6rem;
+      color: #fff;
     }
-    
+    .product-carousel .product_price h4 {
+      color: #fff;
+    }
     .product-carousel .product_price_cap {
-      font-size: 1.6rem;
-      font-weight: normal;
-      line-height: 130%;
       text-decoration: line-through;
-      color: #7F7E75;
+      color: #E2DED6;
     }
     .product-carousel .product_btn {
       width: 100%;
@@ -136,15 +134,27 @@ Products Swiper Section - 选择产品进行轮播
     .product-carousel .product-button-next {
       right: -7rem;
     }
+    @media only screen and (max-width: 1024px) {
+      .product-carousel .product_info::before {
+        height: 3rem;
+        width: 15rem;
+      }
+    }
+    @media only screen and (max-width: 767px) {
+      .product-carousel .product_info::before {
+        height: 3rem;
+        width: 15rem;
+      }
+    }
     
 </style>
 
 <script>
   document.addEventListener("DOMContentLoaded", function () {
     new Swiper(".product-carousel-container", {
-      slidesPerView: 3,
+      slidesPerView: 5,
       slidesPerGroup: 1,
-      spaceBetween: 20,
+      spaceBetween: 30,
       loop: false,
       navigation: {
         nextEl: ".product-button-next",
@@ -158,7 +168,7 @@ Products Swiper Section - 选择产品进行轮播
           slidesPerView: 3
         },
         1025: {
-          slidesPerView: 5
+          slidesPerView: 4
         }
       }
     });
@@ -179,28 +189,16 @@ Products Swiper Section - 选择产品进行轮播
         "id": "title",
         "label": "title"
     },
-  ],
-  "blocks": [
     {
-      "type": "item",
-      "name": "item",
-      "settings": [
-        {
-          "type": "product",
-          "id": "select_product",
-          "label": "product"
-        }
-      ]
+      "type": "product_list",
+      "id": "product_list",
+      "label": "product list"
     }
   ],
+  
   "presets": [
     {
-      "name": "product carousel",
-      "blocks": [
-        {
-          "type": "item"
-        }
-      ]
+      "name": "product carousel two"
     }
   ]
 }
