@@ -5,7 +5,6 @@
  * This file may be updated by the Shopify admin theme editor
  * or related systems. Please exercise caution as any changes
  * made to this file may be overwritten.
- *  购买指南
  * ------------------------------------------------------------
  */
  {
@@ -147,13 +146,13 @@
           ".polka_dot_swiper{padding-bottom:6rem}"
         ]
       }
-  
     },
+
     "order": [
       "breadcrumbs",
       "img_with_text_simplicity_R8thEa",
       "img_with_text_tab_emEWU8",
       "polka_dot_swiper_4yRfwn"
     ]
-  }
-  
+ }
+
