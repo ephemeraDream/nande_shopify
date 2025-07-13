@@ -42,7 +42,6 @@
             "btn_text":""
         }
       },
-      //缺
       "img_with_text_tab_emEWU8": {
         "type": "img-with-text-tab",
         "blocks": {
@@ -71,7 +70,7 @@
               "btn_text": "Jetzt unverbindlich beraten lassen",
               "link": "#"
             }
-          },
+          }
         },
         "block_order": [
           "tab_fiwUXL",
@@ -86,9 +85,8 @@
         },
         "custom_css": [
           ".img_with_text_tab .img_with_text_tab_title {text-align: left;margin-bottom:6rem}"
-        ],
+        ]
       },
-      //缺
       "polka_dot_swiper_4yRfwn": {
         "type": "polka-dot-swiper",
         "blocks": {
@@ -144,16 +142,15 @@
         },
         "custom_css": [
           ".polka_dot_swiper{padding-bottom:6rem}"
-        ],
-      },
-      //缺
+        ]
+      }
   
     },
     "order": [
       "breadcrumbs",
       "img_with_text_simplicity_R8thEa",
       "img_with_text_tab_emEWU8",
-      "polka_dot_swiper_4yRfwn",
+      "polka_dot_swiper_4yRfwn"
     ]
   }
   
