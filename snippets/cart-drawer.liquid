@@ -141,7 +141,7 @@
                             >
                           {% endif %}
                         </td>
-                        <td>
+                        <div class="drawer__cart-items-wrapper-right">
                           <td class="cart-item__details" role="cell" headers="CartDrawer-ColumnProduct">
                             {%- if settings.show_vendor -%}
                               <p class="caption-with-letter-spacing light">{{ item.product.vendor }}</p>
@@ -450,7 +450,7 @@
                               </div>
                             </quantity-popover>
                           </td>
-                        </td>
+                        </div>
                       </tr>
                     {%- endfor -%}
                   </tbody>
