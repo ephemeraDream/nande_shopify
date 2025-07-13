@@ -197,6 +197,7 @@
             "type": "tab",
             "settings": {
               "tabname": "Entlastet den Rücken",
+              "sub_title": "Extrem stabiler",
               "title": "<p>Fortschrittliche Technologie</p>",
               "description": "<p>Perfekt für zwei Familienmitglieder, um ihre individuelle Körpergröße anzupassen oder um zwei neue Höheneinstellungen für vielfältigere Körperhaltungen zu ermöglichen.Der Standard-USB-Ladeanschluss lädt deine digitalen Geräte zuverlässig auf, genau dann, wenn du es brauchst.</p>",
               "file_type": "image",
@@ -210,6 +211,7 @@
             "type": "tab",
             "settings": {
               "tabname": "Steigert die Produktivität",
+              "sub_title": "Extrem stabiler",
               "title": "<p>Fortschrittliche Technologie</p>",
               "description": "<p>Perfekt für zwei Familienmitglieder, um ihre individuelle Körpergröße anzupassen oder um zwei neue Höheneinstellungen für vielfältigere Körperhaltungen zu ermöglichen.Der Standard-USB-Ladeanschluss lädt deine digitalen Geräte zuverlässig auf, genau dann, wenn du es brauchst.</p>",
               "file_type": "image",
@@ -223,6 +225,7 @@
             "type": "tab",
             "settings": {
               "tabname": "Fördert eine aktive Lebensweise",
+              "sub_title": "Extrem stabiler",
               "title": "<p>Fortschrittliche Technologie</p>",
               "description": "<p>Perfekt für zwei Familienmitglieder, um ihre individuelle Körpergröße anzupassen oder um zwei neue Höheneinstellungen für vielfältigere Körperhaltungen zu ermöglichen.Der Standard-USB-Ladeanschluss lädt deine digitalen Geräte zuverlässig auf, genau dann, wenn du es brauchst.</p>",
               "file_type": "image",
@@ -247,7 +250,7 @@
         },
         "custom_css": [
             ".img_with_text_tab_section {background-color: #fff;}",
-          ".img_with_text_tab .img_with_text_tab_title {margin-bottom:6rem}"
+            ".img_with_text_tab .img_with_text_tab_title {margin-bottom:6rem}"
         ]
       },
       "img_with_text_tab_emEWU9": {
