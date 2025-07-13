@@ -506,9 +506,11 @@
                                             {{ child.variant.compare_at_price | money }}
                                           </div>
                                         {% else %}
-                                          <div class="cartdrawer_bundle_product_item_price_op">
-                                            {{ child.original_line_price | money }}
-                                          </div>
+                                          {% if child.original_line_price != child.final_line_price %}
+                                            <div class="cartdrawer_bundle_product_item_price_op">
+                                              {{ child.original_line_price | money }}
+                                            </div>
+                                          {% endif %}
                                         {% endif %}
                                       </div>
                                     </div>
