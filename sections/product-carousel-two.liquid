@@ -53,12 +53,13 @@ Products Swiper Section - 选择产品进行轮播
 </div>
 
 <style>
-    .product-carousel{background-color: #E2DED6;}
+    .product-carousel{background-color: #E2DED6;overflow: hidden;}
     .product-carousel-c{position: relative;}
     .product-carousel-container {
       margin: 2rem auto;
       position: relative;
       overflow: hidden;
+      width:100vw;
     }
     .product-card {
       background: #fff;
@@ -154,10 +155,10 @@ Products Swiper Section - 选择产品进行轮播
           slidesPerView: 1
         },
         768: {
-          slidesPerView: 2
+          slidesPerView: 3
         },
         1025: {
-          slidesPerView: 3
+          slidesPerView: 5
         }
       }
     });

@@ -378,51 +378,58 @@
         ]
       },
       "product_carousel_two":{
-      "type": "product-carousel-two",
-      "name": "product_carousel_two",
-      "settings": {
-        "title": "Das GefäLlt Dir Vielleicht Auch"
+        "type": "product-carousel-two",
+        "name": "product_carousel_two",
+        "settings": {
+            "title": "Das GefäLlt Dir Vielleicht Auch"
+        },
+        "blocks": {
+            "item_3yir6V": {
+            "type": "item",
+            "settings": {
+                "select_product": "maidesite-to1-pro-elektrisch-hohenverstellbarer-schreibtisch"
+            }
+            },
+            "item_gyexDX": {
+            "type": "item",
+            "settings": {
+                "select_product": "maidesite-th2-pro-plus-tischgestell-elektrisch-hohenverstellbar"
+            }
+            },
+            "item_AHnCzP": {
+            "type": "item",
+            "settings": {
+                "select_product": "maidesite-to1-pro-elektrisch-hohenverstellbarer-schreibtisch"
+            }
+            },
+            "item_EEUjdz": {
+            "type": "item",
+            "settings": {
+                "select_product": "maidesite-th2-pro-plus-tischgestell-elektrisch-hohenverstellbar"
+            }
+            },
+            "item_z9X7dd": {
+            "type": "item",
+            "settings": {
+                "select_product": "maidesite-to1-pro-elektrisch-hohenverstellbarer-schreibtisch"
+            }
+            },
+            "item_3yir6F": {
+            "type": "item",
+            "settings": {
+                "select_product": "maidesite-to1-pro-elektrisch-hohenverstellbarer-schreibtisch"
+            }
+            },
+        },
+        "block_order": [
+            "item_3yir6V",
+            "item_gyexDX",
+            "item_AHnCzP",
+            "item_EEUjdz",
+            "item_z9X7dd",
+            "item_3yir6F",
+        ]
       },
-      "blocks": {
-        "item_3yir6V": {
-          "type": "item",
-          "settings": {
-            "select_product": "maidesite-to1-pro-elektrisch-hohenverstellbarer-schreibtisch"
-          }
-        },
-        "item_gyexDX": {
-          "type": "item",
-          "settings": {
-            "select_product": "maidesite-th2-pro-plus-tischgestell-elektrisch-hohenverstellbar"
-          }
-        },
-        "item_AHnCzP": {
-          "type": "item",
-          "settings": {
-            "select_product": "maidesite-to1-pro-elektrisch-hohenverstellbarer-schreibtisch"
-          }
-        },
-        "item_EEUjdz": {
-          "type": "item",
-          "settings": {
-            "select_product": "maidesite-th2-pro-plus-tischgestell-elektrisch-hohenverstellbar"
-          }
-        },
-        "item_z9X7dd": {
-          "type": "item",
-          "settings": {
-            "select_product": "maidesite-to1-pro-elektrisch-hohenverstellbarer-schreibtisch"
-          }
-        }
-      },
-      "block_order": [
-        "item_3yir6V",
-        "item_gyexDX",
-        "item_AHnCzP",
-        "item_EEUjdz",
-        "item_z9X7dd"
-      ]
-    },
       
     },
 
