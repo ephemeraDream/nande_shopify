@@ -37,7 +37,27 @@ Product Tab Compare Section - 产品对比 tab切换
                       <div class="tab-product-title">
                         <div class="text-body">{{ product.title }}</div>
                       </div>
-                      <div>color</div>
+                      <div class="tab-product-colors">
+                    {% for option in product.options_with_values %}
+                        {% if option.name == 'Farbe Tischplatte' %}
+                        {% for value in option.values %}
+                            {% assign color = '' %}
+                            {% for color_item in product.metafields.custom.color_option.value %}
+                            {% if color_item.name == value.name %}
+                                {% assign color = color_item.value %}
+                            {% endif %}
+                            {% endfor %}
+                            <div
+                            class="tab-product-color-circle{% if color == '' %} tab-product-color-circle-none{% endif %}"
+                            {% if color != '' %}
+                                style="background-color: {{ color }}"
+                            {% endif %}
+                            title="{{ value }}"
+                            ></div>
+                        {% endfor %}
+                        {% endif %}
+                    {% endfor %}
+                      </div>
                       <a href="{{ product.url }}" class="nd-btn">En savoir plus {{ 'icon-right-arrow.svg' | inline_asset_content }}</a>
                       <div class="tab-product-price">
                         {{ product.price | money_without_trailing_zeros }}
