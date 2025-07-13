@@ -70,10 +70,16 @@
           aria-label="{{ 'accessibility.close' | t }}"
         >
           <span class="svg-wrapper">
-            {{- 'icon-close.svg' | inline_asset_content -}}
+            {{- 'cart-close.svg' | inline_asset_content -}}
           </span>
         </button>
       </div>
+      {% if cart != empty and settings.show_info_bar %}
+        <div class="cart_drawer_infobar">
+          {{ settings.cart_infobar_icon }}
+          <div>{{ settings.cart_infobar_desc }}</div>
+        </div>
+      {% endif %}
       <cart-drawer-items
         {% if cart == empty %}
           class=" is-empty"

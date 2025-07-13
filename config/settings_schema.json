@@ -1451,5 +1451,26 @@
         "default": "scheme-1"
       }
     ]
+  },
+  {
+    "name": "cart info Bar",
+    "settings": [
+      {
+        "type": "checkbox",
+        "id": "show_info_bar",
+        "label": "Show Info Bar in Cart Drawer",
+        "default": true
+      },
+      {
+        "type": "textarea",
+        "id": "cart_infobar_icon",
+        "label": "cart info bar icon",
+      },
+      {
+        "type": "richtext",
+        "id": "cart_infobar_desc",
+        "label": "cart info bar desc",
+      }
+    ]
   }
 ]
