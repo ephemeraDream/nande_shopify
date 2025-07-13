@@ -75,9 +75,11 @@
         </button>
       </div>
       {% if cart != empty and settings.show_info_bar %}
-        <div class="cart_drawer_infobar">
-          {{ settings.cart_infobar_icon }}
-          <div>{{ settings.cart_infobar_desc }}</div>
+        <div class="cart_drawer_infobar_contain">
+          <div class="cart_drawer_infobar">
+            {{ settings.cart_infobar_icon }}
+            <div>{{ settings.cart_infobar_desc }}</div>
+          </div>
         </div>
       {% endif %}
       <cart-drawer-items

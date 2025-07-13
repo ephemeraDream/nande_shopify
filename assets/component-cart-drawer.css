@@ -19,7 +19,6 @@
   height: 100%;
   width: 70rem;
   max-width: calc(100vw - 3rem);
-  padding: 0 6rem;
   border: 0.1rem solid rgba(var(--color-foreground), 0.2);
   border-right: 0;
   overflow: hidden;
@@ -71,7 +70,7 @@ cart-drawer:not(.is-empty) .cart-drawer__collection {
 
 .drawer__header {
   position: relative;
-  padding: 7rem 0 2rem;
+  padding: 7rem 6rem 2rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -195,6 +194,7 @@ cart-drawer {
 cart-drawer-items {
   overflow: auto;
   flex: 1;
+  padding: 0 6rem;
 }
 
 @media screen and (max-height: 650px) {
@@ -602,4 +602,8 @@ cart-drawer-items::-webkit-scrollbar-track-piece {
 
 .cartdrawer_bundle_product.active .cartdrawer_bundle_product_head svg {
   transform: rotate(180deg);
+}
+
+.cart_drawer_infobar_contain {
+  padding: 0 6rem;
 }
