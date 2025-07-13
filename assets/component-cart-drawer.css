@@ -289,6 +289,9 @@ cart-drawer-items {
   /* flex-direction: column; */
   align-items: baseline;
   gap: 1rem;
+}
+
+.cart-item__price-wrapper {
   font-family: "PP Right Grotesk";
   font-size: 2rem;
   font-weight: normal;
