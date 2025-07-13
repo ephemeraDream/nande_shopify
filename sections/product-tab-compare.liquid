@@ -72,6 +72,10 @@ Product Tab Compare Section - 产品对比 tab切换
 .product-tab-compare .tab-product-card { width: 25%; }
 {% comment %} .product-tab-compare .tab-product-title { font-size: 1.6rem; margin: 1rem 0 0.5rem; } {% endcomment %}
 .product-tab-compare .product_img{width:100%;height:auto;}
+.product-tab-compare .tab-product-title {
+    position:relative;
+    padding:0.2rem 1.2rem;
+}
 .product-tab-compare .tab-product-title::before {
     content: "";
     height: 2.5rem;
@@ -90,9 +94,8 @@ Product Tab Compare Section - 产品对比 tab切换
     text-overflow: ellipsis;
     line-height: 1em;
     min-height: calc(1em * 2);
-    padding:0.2rem 1.2rem;
     background-color: #7F7E75;
-    position:relative;
+    overflow:hidden;
     color:#BDFF00;
   }
 .product-tab-compare .tab-product-price { color: #1F1F1F; font-weight: bold; }
