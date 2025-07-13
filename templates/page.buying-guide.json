@@ -48,7 +48,7 @@
         "type":"product-tab-compare",
         "name":"product_tab_compare",
         "settings":{
-            "title": ""
+            "title": "产品对比tab 还没做"
         },
         "blocks": {
             "tab1": {
@@ -117,6 +117,53 @@
             "tab2", "item2_1", "item2_2",
             "tab3", "item3_1", "item3_2"
         ]
+      },
+      "img_with_text_simplicity_R8thEb": {
+        "type": "img-with-text-simplicity",
+        "custom_css": [
+            ".img_with_text_simplicity_section {background-color: #e2ded6; padding-top: 12rem; padding-bottom: 6rem;}",
+            ".img_with_text_simplicity_filebox {max-height: 48rem;height:auto}",
+            ".img_with_text_simplicity_info {padding: 4rem;}",
+            ".img_with_text_simplicity_title{font-size: 4rem;}",
+            "@media screen and (max-width: 768px) {.img_with_text_simplicity_info {padding-left: 0rem;}}"
+        ],
+        "name": "img with text simplicity",
+        "settings": {
+            "header_title": "<p>Erleben Sie Den Unterschied Von Maidesite</p>",
+            "header_content": "",
+            "title": "<p>Ergonomie neu erleben mit Maidesite</p>",
+            "sub_title": "<p>Maidesite</p>",
+            "description": "<p>Investieren Sie in Ihr Wohlbefinden und entdecken Sie den Unterschied, den Maidesite machen kann. Unsere ergonomischen Lösungen sind darauf ausgelegt, Ihr Arbeitserlebnis zu verbessern, eine gesunde Körperhaltung zu fördern und dafür zu sorgen, dass Sie sich den ganzen Tag über wohl und energiegeladen fühlen. Verwandeln Sie Ihren Arbeitsplatz mit Maidesite in eine Oase der Produktivität und des Wohlbefindens.</p>",
+            "file_position": "left",
+            "file_type": "image",
+            "file_image": "shopify://shop_images/buying_g_02.webp",
+            "video_url": "",
+            "link_url": "",
+            "btn_text":""
+        }
+      },
+      "img_with_text_simplicity_R8thEc": {
+        "type": "img-with-text-simplicity",
+        "custom_css": [
+            ".img_with_text_simplicity_section {background-color: #e2ded6; padding-bottom: 6rem;}",
+            ".img_with_text_simplicity_filebox {max-height: 48rem;height:auto}",
+            ".img_with_text_simplicity_title{font-size: 4rem;}",
+            "@media screen and (max-width: 768px) {.img_with_text_simplicity_info {padding-left: 0rem;}}"
+        ],
+        "name": "img with text simplicity",
+        "settings": {
+            "header_title": "",
+            "header_content": "",
+            "title": "<p>Ergonomie neu erleben mit Maidesite</p>",
+            "sub_title": "<p>Maidesite</p>",
+            "description": "<p>Investieren Sie in Ihr Wohlbefinden und entdecken Sie den Unterschied, den Maidesite machen kann. Unsere ergonomischen Lösungen sind darauf ausgelegt, Ihr Arbeitserlebnis zu verbessern, eine gesunde Körperhaltung zu fördern und dafür zu sorgen, dass Sie sich den ganzen Tag über wohl und energiegeladen fühlen. Verwandeln Sie Ihren Arbeitsplatz mit Maidesite in eine Oase der Produktivität und des Wohlbefindens.</p>",
+            "file_position": "right",
+            "file_type": "image",
+            "file_image": "shopify://shop_images/buying_g_03.webp",
+            "video_url": "",
+            "link_url": "",
+            "btn_text":""
+        }
       },
       "img_with_text_tab_emEWU8": {
         "type": "img-with-text-tab",
