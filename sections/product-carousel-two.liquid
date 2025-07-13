@@ -10,6 +10,9 @@ Products Swiper Section - 选择产品进行轮播
     <div class="session-box-inner product-carousel-c">
       <div class="product-carousel-container">
         <div class="swiper-wrapper">
+          {% for product in section.settings.product_list %}
+            {{ product | json }}
+          {% endfor %}
           {% for product_handle in section.settings.product_list %}
             {% assign product = all_products[product_handle] %}
             {% if product %}
