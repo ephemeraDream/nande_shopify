@@ -127,12 +127,17 @@
                   <div role="rowgroup">
                     {%- assign parent_items = '' | split: '' -%}
                     {%- assign child_items = '' | split: '' -%}
+                    {%- assign parent_ids = '' -%}
 
                     {%- for item in cart.items -%}
                       {%- assign bundle_parent_id = item.properties.bundle_parent_id -%}
                       {%- if bundle_parent_id == blank -%}
                         {%- assign parent_items = cart.items | slice: forloop.index0 | concat: parent_items -%}
                       {%- else -%}
+                        {%- assign parent_ids = parent_ids | append: bundle_parent_id -%}
+                        {% unless forloop.last %}
+                          {%- assign parent_ids = parent_ids | append: ',' -%}
+                        {% endunless %}
                         {%- assign child_items = cart.items | slice: forloop.index0 | concat: child_items -%}
                       {%- endif -%}
                     {%- endfor -%}
@@ -459,14 +464,45 @@
                             </div>
                           </div>
                         </div>
-                        {%- for child in child_items -%}
-                          {{ child.properties.bundle_parent_id }}: {{ item.product_id }}
-                          {%- if child.properties.bundle_parent_id == item.product_id -%}
-                            <div class="cart-item child">
-                              <p>{{ child.product.title }}</p>
+                        {% if parent_ids contains item.variant_id %}
+                          <div class="cartdrawer_bundle_product">
+                            <div class="cartdrawer_bundle_product_head">
+                              {{ 'common.accessories' | t }}
+                              {{- 'icon-up.svg' | inline_asset_content -}}
                             </div>
-                          {%- endif -%}
-                        {%- endfor -%}
+                            <div class="cartdrawer_bundle_product_body">
+                              {%- for child in child_items -%}
+                                {%- if child.properties.bundle_parent_id == item.variant_id -%}
+                                  <div class="cartdrawer_bundle_product_item">
+                                    <img src="{{ child.image | image_url: width: 300 }}">
+                                    <div class="cartdrawer_bundle_product_item_info">
+                                      <div class="cartdrawer_bundle_product_item_title">
+                                        {{ child.product.title }}
+                                        <div class="cartdrawer_bundle_product_delete">
+                                          {{- 'icon-close.svg' | inline_asset_content -}}
+                                        </div>
+                                      </div>
+                                      <div class="cartdrawer_bundle_product_item_options">
+                                        {%- for option in child.options_with_values -%}
+                                          {{ option.value -}}
+                                          {%- unless forloop.last %} / {% endunless %}
+                                        {%- endfor -%}
+                                      </div>
+                                      <div class="cartdrawer_bundle_product_item_price">
+                                        <div class="cartdrawer_bundle_product_item_price_dp">
+                                          {{ item.final_line_price | money }}
+                                        </div>
+                                        <div class="cartdrawer_bundle_product_item_price_op">
+                                          {{ item.original_line_price | money }}
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                {%- endif -%}
+                              {%- endfor -%}
+                            </div>
+                          </div>
+                        {% endif %}
                       </div>
                     {%- endfor -%}
                   </div>
