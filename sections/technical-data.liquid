@@ -1,6 +1,11 @@
 {{ 'section-technical-data.css' | asset_url | stylesheet_tag }}
-
-{% assign technical_data = product.metafields.custom.technical_data.value.data.value %}
+{% assign current_product = product %}
+{% if current_product == nil or current_product == blank %}
+  {% if section.settings.product %}
+    {% assign current_product = all_products[section.settings.product] %}
+  {% endif %}
+{% endif %}
+{% assign technical_data = current_product.metafields.custom.technical_data.value.data.value %}
 <div class="technical_data_section padding-sider" id="{{ section.settings.spec_id }}">
   <div class="technical_data">
     <h2 class="technical_data_title">{{ section.settings.title }}</h2>
@@ -80,6 +85,11 @@
       "type": "richtext",
       "id": "title",
       "label": "title"
+    },
+    {
+      "type": "product",
+      "id": "select_product",
+      "label": "select_product"
     }
   ],
   "presets": [

@@ -436,7 +436,8 @@
       "name": "technical data",
       "settings": {
         "spec_id": "Technische_Daten",
-        "title": "<p>Technische Daten Des HöHenverstellbaren </p><p>Schreibtisches-T2 Pro Plus</p>"
+        "title": "<p>Technische Daten Des HöHenverstellbaren </p><p>Schreibtisches-T2 Pro Plus</p>",
+        "select_product":"maidesite-tischgestell-elektrisch-hohenverstellbar-t2-pro-plus"
       }
     },
     "image_big_polka_dot": {
