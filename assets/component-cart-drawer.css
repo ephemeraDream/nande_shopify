@@ -106,10 +106,10 @@ cart-drawer:not(.is-empty) .cart-drawer__collection {
   right: 5px;
 }
 
-.drawer__close .svg-wrapper {
+/* .drawer__close .svg-wrapper {
   height: 2rem;
   width: 2rem;
-}
+} */
 
 .drawer__contents {
   flex-grow: 1;
@@ -429,6 +429,12 @@ cart-drawer-items::-webkit-scrollbar-track-piece {
   color: #1F1F1F;
 }
 
-.drawer__cart-items-wrapper-right{
+.drawer__cart-items-wrapper-right {
   flex: 1;
+}
+
+.drawer__cart-items-wrapper-right-head {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
 }
