@@ -3,6 +3,9 @@
 <div class="img_with_text_tab_section padding-sider">
   <div class="img_with_text_tab">
     <h2 class="img_with_text_tab_title">{{ section.settings.title }}</h2>
+    {% if section.settings.sub_title != blank %}
+      <div class="text-body">{{ section.settings.sub_title }}</div>
+    {% endif %}
     {% if section.settings.show_tab_head %}
       <div class="img_with_text_tab_head">
         {% for item in section.blocks %}
@@ -57,6 +60,9 @@
               {% endif %}
             </div>
             <div class="img_with_text_tab_contain_info">
+              {% if block.settings.sub_title != blank %}
+                <div class="img_with_text_simplicity_subtitle">{{ block.settings.sub_title }}</div>
+              {% endif %}
               <div class="img_with_text_tab_contain_title">{{ block.settings.title }}</div>
               <div class="img_with_text_tab_contain_desc">{{ block.settings.description }}</div>
               {% if block.settings.btn_text != blank %}
@@ -121,6 +127,11 @@
       "type": "text",
       "id": "spec_id",
       "label": "specId"
+    },
+    {
+      "type": "text",
+      "id": "sub_title",
+      "label": "sub_title"
     },
     {
       "type": "richtext",
