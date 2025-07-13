@@ -519,7 +519,25 @@
       </form>
     </div>
   </cart-items>
-  <div class="cart_section_left"></div>
+  <div class="cart_section_left">
+    <div class="cart_section_left_title">{{ 'common.overview' | t }}</div>
+    <div class="cart_section_left_item">
+      <span>{{ 'common.subtotal' | t }}</span>
+      <span>{{ cart.original_total_price | money }}</span>
+    </div>
+    <div class="cart_section_left_item">
+      <span>{{ 'common.shipment' | t }}</span>
+      <span>{{ 'common.free' | t }}</span>
+    </div>
+    <div class="cart_section_left_item">
+      <span>{{ 'common.buy_more_save_more' | t }}</span>
+      <span>{{ cart.total_discount | money }}</span>
+    </div>
+    <div class="cart_section_left_item cart_section_left_total_price">
+      <span>{{ 'common.gesamtsumme' | t }}</span>
+      <span>{{ cart.total_price | money }}</span>
+    </div>
+  </div>
 </div>
 
 {% schema %}

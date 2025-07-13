@@ -568,11 +568,15 @@
     "gesamtsumme": "Gesamtsumme",
     "accesories": "Zubehör",
     "accessories": "Anzeigezubehör",
-    "subtotal": "Subtotal",
+    "subtotal": "Zwischensumme",
     "rabatt": "Rabatt",
     "shipping": "Shipping",
     "taxes": "Taxes",
     "calculated_at_checkout": "Calculated at checkout",
-    "check_details": "Check Details"
+    "check_details": "Check Details",
+    "overview": "Überblick",
+    "shipment": "Versand",
+    "free": "Kostenlos",
+    "buy_more_save_more": "Mehr kaufen mehr sparen"
   }
 }

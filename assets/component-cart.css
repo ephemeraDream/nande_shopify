@@ -240,6 +240,7 @@ cart-items {
   position: sticky;
   top: 0;
   background-color: #fff;
+  padding: 3rem 3.2rem 2.4rem;
 }
 
 .cart_section .title-wrapper-with-link .title--primary {
@@ -299,4 +300,55 @@ cart-items {
 
 .cart_section .quantity__button {
   width: 4rem;
+}
+
+.cart_section .cart_section_left_title {
+  font-family: "PP Right Grotesk";
+  font-size: 4rem;
+  font-weight: 500;
+  line-height: 94%;
+  letter-spacing: 0px;
+  font-variation-settings: "opsz" auto;
+  color: #1F1F1F;
+  margin-bottom: 2.8rem;
+}
+
+.cart_section .cart_section_left_item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: "PP Right Grotesk";
+  font-size: 2rem;
+  font-weight: normal;
+  line-height: 130%;
+  letter-spacing: 0px;
+  font-variation-settings: "opsz" auto;
+  color: #333333;
+  margin-bottom: 1.6rem;
+}
+
+.cart_section .cart_section_left_total_price {
+  border-top: 0.1rem solid #C4C4C4;
+  padding-top: 2rem;
+}
+
+.cart_section .cart_section_left_total_price span:last-child {
+  font-family: "PP Right Grotesk";
+  font-size: 3rem;
+  font-weight: 500;
+  line-height: 94%;
+  letter-spacing: 0px;
+  font-variation-settings: "opsz" auto;
+  color: #1F1F1F;
+}
+
+.cart_section .cart_section_left_note {
+  font-family: "PP Right Grotesk";
+  font-size: 1.6rem;
+  font-weight: normal;
+  line-height: 130%;
+  letter-spacing: 0px;
+  font-variation-settings: "opsz" auto;
+  color: #7F7E75;
+  text-align: right;
 }
