@@ -25,7 +25,7 @@
             ".img_with_text_simplicity_section {background-color: #e2ded6; padding-top: 12rem; padding-bottom: 12rem;}",
             ".img_with_text_simplicity_filebox {max-height: 48rem;height:auto}",
             ".img_with_text_simplicity{background-color: #fff;}",
-            ".img_with_text_simplicity_info {padding: 4rem;}",
+            ".img_with_text_simplicity_info {padding-left: 4rem;}",
             ".img_with_text_simplicity_title{font-size: 4rem;}",
             "@media screen and (max-width: 768px) {.img_with_text_simplicity_info {padding-left: 0rem;}}"
         ],
@@ -121,9 +121,9 @@
       "img_with_text_simplicity_R8thEb": {
         "type": "img-with-text-simplicity",
         "custom_css": [
-            ".img_with_text_simplicity_section {background-color: #e2ded6; padding-top: 12rem; padding-bottom: 6rem;}",
+            ".img_with_text_simplicity_section {padding-top: 12rem; padding-bottom: 6rem;}",
             ".img_with_text_simplicity_filebox {max-height: 48rem;height:auto}",
-            ".img_with_text_simplicity_info {padding: 4rem;}",
+            ".img_with_text_simplicity_info {padding-left: 4rem;}",
             ".img_with_text_simplicity_title{font-size: 4rem;}",
             "@media screen and (max-width: 768px) {.img_with_text_simplicity_info {padding-left: 0rem;}}"
         ],
@@ -145,8 +145,33 @@
       "img_with_text_simplicity_R8thEc": {
         "type": "img-with-text-simplicity",
         "custom_css": [
-            ".img_with_text_simplicity_section {background-color: #e2ded6; padding-bottom: 6rem;}",
+            ".img_with_text_simplicity_section { padding-bottom: 6rem;}",
             ".img_with_text_simplicity_filebox {max-height: 48rem;height:auto}",
+            ".img_with_text_simplicity_info {padding-right: 4rem;}",
+            ".img_with_text_simplicity_title{font-size: 4rem;}",
+            "@media screen and (max-width: 768px) {.img_with_text_simplicity_info {padding-left: 0rem;padding-right:0rem;}}"
+        ],
+        "name": "img with text simplicity",
+        "settings": {
+            "header_title": "",
+            "header_content": "",
+            "title": "<p>Mit Weitblick entworfen, mit Exzellenz gefertigt</p>",
+            "sub_title": "<p>Maidesite</p>",
+            "description": "<p>Jedes Maidesite-Produkt wird sorgfältig unter Berücksichtigung der Benutzeranforderungen entworfen. Wir kombinieren diesen weitsichtigen Ansatz mit hochwertigen Materialien und fachmännischer Handwerkskunst,um ergonomische Lösungen zu liefern, auf die Sie sich verlassen können. Von unseren branchenführenden elektrisch höhenverstellbaren Schreibtischen und Stehpultgestellen bis hin zu unseren unterstützenden Computerstühlen und einer Reihe ergänzender ergonomischer Möbel und Accessoires bietet Maidesite einen umfassenden Ansatz zur Schaffung eines Arbeitsplatzes, der Ihre Gesundheit und Produktivität in den Vordergrund stellt.</p>",
+            "file_position": "right",
+            "file_type": "image",
+            "file_image": "shopify://shop_images/buying_g_03.webp",
+            "video_url": "",
+            "link_url": "",
+            "btn_text":""
+        }
+      },
+      "img_with_text_simplicity_R8thd": {
+        "type": "img-with-text-simplicity",
+        "custom_css": [
+            ".img_with_text_simplicity_section {padding-bottom: 10rem;}",
+            ".img_with_text_simplicity_filebox {max-height: 48rem;height:auto}",
+            ".img_with_text_simplicity_info {padding-left: 4rem;}",
             ".img_with_text_simplicity_title{font-size: 4rem;}",
             "@media screen and (max-width: 768px) {.img_with_text_simplicity_info {padding-left: 0rem;}}"
         ],
@@ -154,12 +179,12 @@
         "settings": {
             "header_title": "",
             "header_content": "",
-            "title": "<p>Ergonomie neu erleben mit Maidesite</p>",
+            "title": "<p>Eine globale Marke, der Millionen vertrauen</p>",
             "sub_title": "<p>Maidesite</p>",
-            "description": "<p>Investieren Sie in Ihr Wohlbefinden und entdecken Sie den Unterschied, den Maidesite machen kann. Unsere ergonomischen Lösungen sind darauf ausgelegt, Ihr Arbeitserlebnis zu verbessern, eine gesunde Körperhaltung zu fördern und dafür zu sorgen, dass Sie sich den ganzen Tag über wohl und energiegeladen fühlen. Verwandeln Sie Ihren Arbeitsplatz mit Maidesite in eine Oase der Produktivität und des Wohlbefindens.</p>",
-            "file_position": "right",
+            "description": "<p>Maidesites Engagement für Innovation und Qualität hat bei Kunden auf der ganzen Welt Anklang gefunden. Unsere Produkte sind mittlerweile eine willkommene Ergänzung für Arbeitsplätze in über 27 Ländern, ein Beweis für den positiven Einfluss, den wir auf das Arbeitsleben der Menschen haben.</p>",
+            "file_position": "left",
             "file_type": "image",
-            "file_image": "shopify://shop_images/buying_g_03.webp",
+            "file_image": "shopify://shop_images/buying_g_04.webp",
             "video_url": "",
             "link_url": "",
             "btn_text":""
@@ -275,6 +300,7 @@
       "product_tab_compare",
       "img_with_text_simplicity_R8thEb",
       "img_with_text_simplicity_R8thEc",
+      "img_with_text_simplicity_R8thd",
       "img_with_text_tab_emEWU8",
       "polka_dot_swiper_4yRfwn"
     ]
