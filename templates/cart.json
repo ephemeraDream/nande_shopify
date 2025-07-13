@@ -39,10 +39,29 @@
         "padding_top": 20,
         "padding_bottom": 40
       }
+    },
+    "recommended_products_mtrCpV": {
+      "type": "recommended-products",
+      "name": "recommended products",
+      "settings": {
+        "spec_id": "",
+        "title": "<p>Das GefäLlt Dir Vielleicht Auch</p>",
+        "product_list": [
+          "ergoset-sc2-schreibtisch-ec6-burostuhl",
+          "ergoset-sn1-schreibtisch-ec5-burostuhl",
+          "ergoset-yoga-schreibtisch-ec6-burostuhl",
+          "maidesite-3-fach-tischsteckdose-mit-usb-c-und-a-1-8m-kabel-steckdosenleiste",
+          "maidesite-ergonomischer-stuhl-mit-kopfstutze-und-ruckenlehne",
+          "maidesite-ec5-ergonomischer-burostuhl-mit-ruckenlehne",
+          "maidesite-ec6-ergonomischer-burostuhl-mit-kopfstutze-ruckenlehne-und-fussstutze",
+          "maidesite-th2-pro-plus-tischgestell-elektrisch-hohenverstellbar"
+        ]
+      }
     }
   },
   "order": [
     "cart-items",
-    "cart-footer"
+    "cart-footer",
+    "recommended_products_mtrCpV"
   ]
 }
