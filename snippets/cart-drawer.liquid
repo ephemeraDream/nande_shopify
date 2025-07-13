@@ -220,61 +220,63 @@
 
                               <p class="product-option">{{ item.selling_plan_allocation.selling_plan.name }}</p>
                             {%- endif -%}
-                            <div class="cart-item__totals" role="cell" headers="CartDrawer-ColumnTotal">
-                              {%- render 'loading-spinner' -%}
-                              <div class="cart-item__price-wrapper">
-                                {%- if item.original_line_price != item.final_line_price -%}
-                                  <div class="cart-item__discounted-prices">
-                                    <span class="visually-hidden">
-                                      {{ 'products.product.price.sale_price' | t }}
-                                    </span>
-                                    <span class="price price--end">
-                                      {{ item.final_line_price | money }}
-                                    </span>
-                                    <span class="visually-hidden">
-                                      {{ 'products.product.price.regular_price' | t }}
-                                    </span>
-                                    <s class="cart-item__old-price price price--end">
-                                      {{ item.original_line_price | money }}
-                                    </s>
-                                  </div>
-                                {%- else -%}
-                                  <span class="price price--end">
-                                    {{ item.original_line_price | money }}
-                                  </span>
-                                {%- endif -%}
-
-                                {%- if item.variant.available and item.unit_price_measurement -%}
-                                  <div class="unit-price caption">
-                                    <span class="visually-hidden">{{ 'products.product.price.unit_price' | t }}</span>
-                                    {{ item.unit_price | money }}
-                                    <span aria-hidden="true">/</span>
-                                    <span class="visually-hidden"
-                                      >&nbsp;{{ 'accessibility.unit_price_separator' | t }}&nbsp;</span
-                                    >
-                                    {%- if item.unit_price_measurement.reference_value != 1 -%}
-                                      {{- item.unit_price_measurement.reference_value -}}
-                                    {%- endif -%}
-                                    {{ item.unit_price_measurement.reference_unit }}
-                                  </div>
-                                {%- endif -%}
-                              </div>
-                            </div>
                           </div>
 
                           <div class="drawer__cart-items-wrapper-right-bottom">
-                            <ul
-                              class="discounts list-unstyled"
-                              role="list"
-                              aria-label="{{ 'customer.order.discount' | t }}"
-                            >
-                              {%- for discount in item.line_level_discount_allocations -%}
-                                <li class="discounts__discount">
-                                  {% comment %} {{- 'icon-discount.svg' | inline_asset_content -}} {% endcomment %}
-                                  {{ discount.discount_application.title }}
-                                </li>
-                              {%- endfor -%}
-                            </ul>
+                            <div>
+                              <div class="cart-item__totals" role="cell" headers="CartDrawer-ColumnTotal">
+                                {%- render 'loading-spinner' -%}
+                                <div class="cart-item__price-wrapper">
+                                  {%- if item.original_line_price != item.final_line_price -%}
+                                    <div class="cart-item__discounted-prices">
+                                      <span class="visually-hidden">
+                                        {{ 'products.product.price.sale_price' | t }}
+                                      </span>
+                                      <span class="price price--end">
+                                        {{ item.final_line_price | money }}
+                                      </span>
+                                      <span class="visually-hidden">
+                                        {{ 'products.product.price.regular_price' | t }}
+                                      </span>
+                                      <s class="cart-item__old-price price price--end">
+                                        {{ item.original_line_price | money }}
+                                      </s>
+                                    </div>
+                                  {%- else -%}
+                                    <span class="price price--end">
+                                      {{ item.original_line_price | money }}
+                                    </span>
+                                  {%- endif -%}
+
+                                  {%- if item.variant.available and item.unit_price_measurement -%}
+                                    <div class="unit-price caption">
+                                      <span class="visually-hidden">{{ 'products.product.price.unit_price' | t }}</span>
+                                      {{ item.unit_price | money }}
+                                      <span aria-hidden="true">/</span>
+                                      <span class="visually-hidden"
+                                        >&nbsp;{{ 'accessibility.unit_price_separator' | t }}&nbsp;</span
+                                      >
+                                      {%- if item.unit_price_measurement.reference_value != 1 -%}
+                                        {{- item.unit_price_measurement.reference_value -}}
+                                      {%- endif -%}
+                                      {{ item.unit_price_measurement.reference_unit }}
+                                    </div>
+                                  {%- endif -%}
+                                </div>
+                              </div>
+                              <ul
+                                class="discounts list-unstyled"
+                                role="list"
+                                aria-label="{{ 'customer.order.discount' | t }}"
+                              >
+                                {%- for discount in item.line_level_discount_allocations -%}
+                                  <li class="discounts__discount">
+                                    {% comment %} {{- 'icon-discount.svg' | inline_asset_content -}} {% endcomment %}
+                                    {{ discount.discount_application.title }}
+                                  </li>
+                                {%- endfor -%}
+                              </ul>
+                            </div>
                             {%- liquid
                               assign has_qty_rules = false
                               if item.variant.quantity_rule.increment > 1 or item.variant.quantity_rule.min > 1 or item.variant.quantity_rule.max != null
