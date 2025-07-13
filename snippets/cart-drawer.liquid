@@ -125,21 +125,19 @@
                   {% endcomment %}
 
                   <div role="rowgroup">
-                    {%- assign parent_items = '' | split: ',' -%}
-                    {%- assign child_items = '' | split: ',' -%}
+                    {%- assign parent_items = '' | split: '' -%}
+                    {%- assign child_items = '' | split: '' -%}
 
                     {%- for item in cart.items -%}
-                      {%- for property in item.properties -%}
-                        {{ property }}
-                      {%- endfor -%}
                       {%- assign bundle_parent_id = item.properties.bundle_parent_id -%}
-                      {{ bundle_parent_id }}
                       {%- if bundle_parent_id == blank -%}
-                        {%- assign parent_items = parent_items | append: item -%}
+                        {%- assign parent_items = cart.items | slice: forloop.index0 | concat: parent_items -%}
                       {%- else -%}
-                        {%- assign child_items = child_items | append: item -%}
+                        {%- assign child_items = cart.items | slice: forloop.index0 | concat: child_items -%}
                       {%- endif -%}
                     {%- endfor -%}
+                    {% assign parent_items = parent_items | reverse %}
+                    {% assign child_items = child_items | reverse %}
                     {%- for item in parent_items -%}
                       <div id="CartDrawer-Item-{{ item.index | plus: 1 }}" class="cart-item" role="row">
                         <div class="cart-item-main">
