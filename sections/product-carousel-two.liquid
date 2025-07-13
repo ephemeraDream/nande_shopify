@@ -80,6 +80,13 @@ Products Swiper Section - 选择产品进行轮播
     .product-carousel .product_title{
       {% comment %} padding-bottom: 0.8rem; {% endcomment %}
        color:#BDFF00;
+       display: -webkit-box;
+      -webkit-line-clamp: 3;      
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      line-height: 1em;
+      min-height: calc(1.5em * 3);
     }
     .product-carousel .product_price {
       display: flex;
