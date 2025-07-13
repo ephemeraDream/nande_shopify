@@ -252,3 +252,7 @@ cart-items {
   font-variation-settings: "opsz" auto;
   color: #1F1F1F;
 }
+
+.cart_section .cart_drawer_infobar_contain {
+  padding: 0;
+}
