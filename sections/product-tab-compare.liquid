@@ -50,6 +50,7 @@ Product Tab Compare Section - 产品对比 tab切换
     </div>
 </div>
 <style>
+    .product-tab-compare{background: #fff;}
 .product-tab-compare .tab-titles{
     display:flex;gap:8%;border-bottom:1px solid #E2DED6;list-style:none;margin-bottom:30px;
     }
@@ -65,8 +66,8 @@ Product Tab Compare Section - 产品对比 tab切换
 
 .product-tab-compare .tab-panel { display: none; }
 .product-tab-compare .tab-panel.active { display: block; }
-.product-tab-compare .tab-products { display: flex; gap: 2rem; flex-wrap: wrap; }
-.product-tab-compare .tab-product-card { width: 200px; border: 1px solid #eee; padding: 1rem; border-radius: 8px; background: #fff; }
+.product-tab-compare .tab-products { display: flex; gap: 2rem; flex-wrap: nowrap; }
+.product-tab-compare .tab-product-card { width: 25%; }
 {% comment %} .product-tab-compare .tab-product-title { font-size: 1.6rem; margin: 1rem 0 0.5rem; } {% endcomment %}
 .product-tab-compare .product_img{width:100%;height:auto;}
 .product-tab-compare .tab-product-title::before {
@@ -88,7 +89,9 @@ Product Tab Compare Section - 产品对比 tab切换
     text-overflow: ellipsis;
     line-height: 1em;
     min-height: calc(1em * 2);
-    padding:0.2rem 12rem;
+    padding:0.2rem 1.2rem;
+    background-color: #7F7E75;
+    position:relative;
   }
 .product-tab-compare .tab-product-price { color: #1F1F1F; font-weight: bold; }
 .tab-product-price-op { color: #aaa; text-decoration: line-through; margin-left: 0.5rem; }
