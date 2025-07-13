@@ -38,7 +38,7 @@
   position: absolute;
   bottom: 0;
 }
-.polka_dot_swiper.show_info .swiper-slide::before,.polka_dot_swiper.show_info .swiper-slide .polka_dot_swiper_info{
+.polka_dot_swiper.info_hidden .swiper-slide::before,.polka_dot_swiper.info_hidden .swiper-slide .polka_dot_swiper_info{
   display: none!important;
 }
 
