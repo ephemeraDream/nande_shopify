@@ -43,7 +43,7 @@
     "recommended_products_mtrCpV": {
       "type": "recommended-products",
       "custom_css": [
-        ".recommended_products_section {background-color: #E2DED6;}"
+        ".recommended_products_section {background-color: #e2ded6;}"
       ],
       "name": "recommended products",
       "settings": {
@@ -58,7 +58,8 @@
           "maidesite-ec5-ergonomischer-burostuhl-mit-ruckenlehne",
           "maidesite-ec6-ergonomischer-burostuhl-mit-kopfstutze-ruckenlehne-und-fussstutze",
           "maidesite-th2-pro-plus-tischgestell-elektrisch-hohenverstellbar"
-        ]
+        ],
+        "number": 4
       }
     }
   },

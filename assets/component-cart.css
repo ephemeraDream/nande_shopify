@@ -379,7 +379,3 @@ cart-items {
   border-bottom: 0.1rem solid #C4C4C4;
   margin-bottom: 1rem;
 }
-
-.cart_section .wallet-cart-grid {
-  justify-content: center;
-}
