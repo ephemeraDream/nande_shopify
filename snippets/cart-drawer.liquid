@@ -641,6 +641,10 @@
         <!-- CTAs -->
 
         <div class="cart__ctas" {{ block.shopify_attributes }}>
+          <div class="cartdrawer_viewdetail">
+            {{ 'common.check_details' | t }}
+            {{- 'icon-down.svg' | inline_asset_content -}}
+          </div>
           <button
             type="submit"
             id="CartDrawer-Checkout"

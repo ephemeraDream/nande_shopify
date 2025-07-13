@@ -572,6 +572,7 @@
     "rabatt": "Rabatt",
     "shipping": "Shipping",
     "taxes": "Taxes",
-    "calculated_at_checkout": "Calculated at checkout"
+    "calculated_at_checkout": "Calculated at checkout",
+    "check_details": "Check Details"
   }
 }
