@@ -256,3 +256,9 @@ cart-items {
 .cart_section .cart_drawer_infobar_contain {
   padding: 0;
 }
+
+.cart_section .cart-item-main {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.6rem;
+}
