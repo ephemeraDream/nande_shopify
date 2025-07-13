@@ -27,25 +27,24 @@ Product Tab Compare Section - 产品对比 tab切换
         </div>
       </div>
       <div class="tab-content session-box-inner">
-        {% for tab in section.settings.tabs %}
+        {% for block in section.blocks %}
+            {% if block.type == 'tab' %}
           <div class="tab-panel tab-panel-{{ section.id }} {% if forloop.first %}active{% endif %}" data-tab="{{ forloop.index0 }}">
             <div class="tab-products">
-              {% for product in tab.product_list %}
+              {% for product in block.settings.product_list %}
                   <div class="tab-product-card">
-                    <a href="{{ product.url }}">
                       <img src="{{ product.featured_image | image_url: width: 400 }}" alt="{{ product.title }}">
                       <div class="tab-product-title">{{ product.title }}</div>
+                      <div>color</div>
+                      <a href="{{ product.url }}" class="nd-btn">En savoir plus {{ 'icon-right-arrow.svg' | inline_asset_content }}</a>
                       <div class="tab-product-price">
                         {{ product.price | money_without_trailing_zeros }}
-                        {% if product.compare_at_price %}
-                          <span class="tab-product-price-op">{{ product.compare_at_price | money_without_trailing_zeros }}</span>
-                        {% endif %}
                       </div>
-                    </a>
                   </div>
               {% endfor %}
             </div>
           </div>
+        {% endif %}
         {% endfor %}
       </div>
     </div>
