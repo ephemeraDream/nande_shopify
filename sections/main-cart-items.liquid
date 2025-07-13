@@ -145,11 +145,10 @@
                                   aria-label="{{ 'sections.cart.remove_title' | t: title: item.title | escape }}"
                                   data-variant-id="{{ item.variant.id }}"
                                 >
-                                  <span class="svg-wrapper">
-                                    {{- 'icon-remove.svg' | inline_asset_content: class: 'drawer_remove' -}}
-                                  </span>
+                                  {{- 'icon-remove.svg' | inline_asset_content -}}
                                 </button>
                               </cart-remove-button>
+                              {{- 'icon-remove.svg' | inline_asset_content -}}
                             </div>
                             {%- if item.product.has_only_default_variant == false
                               or item.properties.size != 0
