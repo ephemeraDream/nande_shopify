@@ -567,6 +567,11 @@
     "weiter": "Weiter",
     "gesamtsumme": "Gesamtsumme",
     "accesories": "Zubehör",
-    "accessories": "Anzeigezubehör"
+    "accessories": "Anzeigezubehör",
+    "subtotal": "Subtotal",
+    "rabatt": "Rabatt",
+    "shipping": "Shipping",
+    "taxes": "Taxes",
+    "calculated_at_checkout": "Calculated at checkout"
   }
 }
