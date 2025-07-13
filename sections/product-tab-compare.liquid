@@ -34,7 +34,7 @@ Product Tab Compare Section - 产品对比 tab切换
               {% for product in block.settings.product_list %}
                   <div class="tab-product-card">
                       <img src="{{ product.featured_image | image_url: width: 400 }}" alt="{{ product.title }}">
-                      <div class="tab-product-title">{{ product.title }}</div>
+                      <div class="text-body tab-product-title">{{ product.title }}</div>
                       <div>color</div>
                       <a href="{{ product.url }}" class="nd-btn">En savoir plus {{ 'icon-right-arrow.svg' | inline_asset_content }}</a>
                       <div class="tab-product-price">
@@ -67,7 +67,28 @@ Product Tab Compare Section - 产品对比 tab切换
 .product-tab-compare .tab-panel.active { display: block; }
 .product-tab-compare .tab-products { display: flex; gap: 2rem; flex-wrap: wrap; }
 .product-tab-compare .tab-product-card { width: 200px; border: 1px solid #eee; padding: 1rem; border-radius: 8px; background: #fff; }
-.product-tab-compare .tab-product-title { font-size: 1.6rem; margin: 1rem 0 0.5rem; }
+{% comment %} .product-tab-compare .tab-product-title { font-size: 1.6rem; margin: 1rem 0 0.5rem; } {% endcomment %}
+.product-tab-compare .tab-product-title::before {
+    content: "";
+    height: 2.5rem;
+    width: 13rem;
+    background-color: #7F7E75;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translateY(-100%);
+  }
+  .product-tab-compare .tab-product-title{
+    font-weight: 500;
+     display: -webkit-box;
+    -webkit-line-clamp: 2;      
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    line-height: 1em;
+    min-height: calc(1em * 2);
+    padding:0.2rem 12rem;
+  }
 .product-tab-compare .tab-product-price { color: #1F1F1F; font-weight: bold; }
 .tab-product-price-op { color: #aaa; text-decoration: line-through; margin-left: 0.5rem; }
 
