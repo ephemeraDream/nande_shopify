@@ -307,7 +307,7 @@
       "type":"marquee-images",
       "name": "marquee_images",
       "settings": {
-        "title": "Kundenstimmen Zu Maidesite",
+        "title": "Kundenstimmen Zu Maidesite"
       },
       "blocks":{
         "image_1": {
@@ -338,7 +338,7 @@
       "type": "product-carousel",
       "name": "product_carousel",
       "settings": {
-        "title": "Spezielle Rabatte Bei GroßEinkäUfen",
+        "title": "Spezielle Rabatte Bei GroßEinkäUfen"
       },
       "blocks": {
         "item_3yir6V": {
