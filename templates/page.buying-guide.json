@@ -25,9 +25,9 @@
             ".img_with_text_simplicity_section {background-color: #e2ded6; padding-top: 12rem; padding-bottom: 12rem;}",
             ".img_with_text_simplicity_filebox {max-height: 48rem;height:auto}",
             ".img_with_text_simplicity{background-color: #fff;}",
-            ".img_with_text_simplicity_info {padding-left: 4rem;}",
+            ".img_with_text_simplicity_info {padding: 4rem;}",
             ".img_with_text_simplicity_title{font-size: 4rem;}",
-            "@media screen and (max-width: 768px) {.img_with_text_simplicity_info {padding-left: 0rem;}}"
+            "@media screen and (max-width: 768px) {.img_with_text_simplicity_info {padding: 0rem;}}"
         ],
         "name": "img with text simplicity",
         "settings": {
@@ -196,6 +196,66 @@
           "tab_fiwUXL": {
             "type": "tab",
             "settings": {
+              "tabname": "Entlastet den Rücken",
+              "title": "<p>Fortschrittliche Technologie</p>",
+              "description": "<p>Perfekt für zwei Familienmitglieder, um ihre individuelle Körpergröße anzupassen oder um zwei neue Höheneinstellungen für vielfältigere Körperhaltungen zu ermöglichen.Der Standard-USB-Ladeanschluss lädt deine digitalen Geräte zuverlässig auf, genau dann, wenn du es brauchst.</p>",
+              "file_type": "image",
+              "file_image": "shopify://shop_images/buying_g_05.webp",
+              "video_url": "",
+              "btn_text": "",
+              "link": "#"
+            }
+          },
+          "tab_AUd88N": {
+            "type": "tab",
+            "settings": {
+              "tabname": "Steigert die Produktivität",
+              "title": "<p>Fortschrittliche Technologie</p>",
+              "description": "<p>Perfekt für zwei Familienmitglieder, um ihre individuelle Körpergröße anzupassen oder um zwei neue Höheneinstellungen für vielfältigere Körperhaltungen zu ermöglichen.Der Standard-USB-Ladeanschluss lädt deine digitalen Geräte zuverlässig auf, genau dann, wenn du es brauchst.</p>",
+              "file_type": "image",
+              "file_image": "shopify://shop_images/buying_g_06.webp",
+              "video_url": "",
+              "btn_text": "",
+              "link": "#"
+            }
+          },
+          "tab_AUd8M": {
+            "type": "tab",
+            "settings": {
+              "tabname": "Fördert eine aktive Lebensweise",
+              "title": "<p>Fortschrittliche Technologie</p>",
+              "description": "<p>Perfekt für zwei Familienmitglieder, um ihre individuelle Körpergröße anzupassen oder um zwei neue Höheneinstellungen für vielfältigere Körperhaltungen zu ermöglichen.Der Standard-USB-Ladeanschluss lädt deine digitalen Geräte zuverlässig auf, genau dann, wenn du es brauchst.</p>",
+              "file_type": "image",
+              "file_image": "shopify://shop_images/buying_g_05.webp",
+              "video_url": "",
+              "btn_text": "",
+              "link": "#"
+            }
+          }
+        },
+        "block_order": [
+          "tab_fiwUXL",
+          "tab_AUd88N",
+          "tab_AUd8M"
+        ],
+        "name": "img with text tab",
+        "settings": {
+          "spec_id": "",
+          "title": "<p>Vorteile Eines HöHenverstellbaren<br/>Schreibtischs</p>",
+          "show_tab_head":true,
+          "layout":"image-left"
+        },
+        "custom_css": [
+            ".img_with_text_tab_section {background-color: #fff;}",
+          ".img_with_text_tab .img_with_text_tab_title {margin-bottom:6rem}"
+        ]
+      },
+      "img_with_text_tab_emEWU9": {
+        "type": "img-with-text-tab",
+        "blocks": {
+          "tab_fiwUXL": {
+            "type": "tab",
+            "settings": {
               "tabname": "",
               "title": "<p>Lokale Logistik und Lagerhaltung</p>",
               "description": "<p>Mit unseren regionalen Lagern und einem effizienten Logistiknetzwerk gewährleisten wir eine schnelle und zuverlässige Lieferung.</p>",
@@ -302,6 +362,7 @@
       "img_with_text_simplicity_R8thEc",
       "img_with_text_simplicity_R8thd",
       "img_with_text_tab_emEWU8",
+      "img_with_text_tab_emEWU9",
       "polka_dot_swiper_4yRfwn"
     ]
  }
