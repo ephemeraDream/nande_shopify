@@ -262,3 +262,26 @@ cart-items {
   align-items: flex-start;
   gap: 1.6rem;
 }
+
+.cart_section .cart-item__media {
+  flex: 0 0 14rem;
+  height: 14rem;
+}
+
+.cart_section .drawer__cart-items-wrapper-right {
+  padding: 0;
+}
+
+.cart_section .cart-item__details {
+  width: 100%;
+}
+
+.cart_section .quantity-popover-container {
+  width: 11.8rem !important;
+  padding: 0;
+}
+
+.cart_section .quantity-popover-container .quantity {
+  height: 4rem !important;
+  background-color: #fff !important;
+}
