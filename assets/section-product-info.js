@@ -275,7 +275,11 @@ function initBuybox() {
         if (selectedAddsonItems.length) {
           selectedAddsonItems.forEach((item) => {
             const id = item.getAttribute("data-variant-id");
-            cartFormData.items.push({ id: id, quantity: 1 });
+            cartFormData.items.push({
+              id: id, quantity: 1, properties: {
+                'bundle_parent_id': goods_id
+              }
+            });
           });
         }
         btn.classList.add("is-loading");
