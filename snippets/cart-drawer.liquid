@@ -460,6 +460,7 @@
                           </div>
                         </div>
                         {%- for child in child_items -%}
+                          {{ child.properties.bundle_parent_id }}: {{ item.product_id }}
                           {%- if child.properties.bundle_parent_id == item.product_id -%}
                             <div class="cart-item child">
                               <p>{{ child.product.title }}</p>
