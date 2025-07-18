@@ -21,18 +21,16 @@
       <div class="swiper-wrapper">
         {% for item in section.blocks %}
           <div class="swiper-slide">
-            <div class="timeline-slide">
-              <div class="timeline-text">
-                <h3>{{ item.settings.small_title }}</h3>
-                <p class="text-body">{{ item.settings.text }}</p>
-              </div>
-              <div class="timeline-image">
-                {{-
-                  item.settings.image
-                  | image_url: width: item.settings.image.width
-                  | image_tag: alt: item.settings.title
-                -}}
-              </div>
+            <div class="timeline-text">
+              <h3>{{ item.settings.small_title }}</h3>
+              <p class="text-body">{{ item.settings.text }}</p>
+            </div>
+            <div class="timeline-image">
+              {{-
+                item.settings.image
+                | image_url: width: item.settings.image.width
+                | image_tag: alt: item.settings.title
+              -}}
             </div>
           </div>
         {% endfor %}
