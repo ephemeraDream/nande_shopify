@@ -253,7 +253,7 @@
             "text": ""
         },
         "custom_css": [
-          ".celebrity_swiper {padding-bottom:12rem}",
+          ".celebrity_swiper {padding-bottom:12rem;background-color: transparent;}",
         ]
       }
     },
