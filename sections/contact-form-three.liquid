@@ -127,7 +127,7 @@ aria-label="conatct"
                   id="ContactFormThree-body"
                   class="text-area field__input"
                   name="contact[body]"
-                  placeholder="Nachricht"
+                  placeholder="Kommentar"
                 >{{- form.body -}}</textarea>
               </div>
           
@@ -162,7 +162,7 @@ aria-label="conatct"
         gap:5rem;
     }
     .contact-form-two .form_left{
-      width:40%
+      width:35%
     }
     .contact-form-two .text-body{
       margin-top: 1.5rem;
@@ -225,7 +225,8 @@ aria-label="conatct"
       color: rgb(var(--color-foreground));
       font-weight:400;
       background-color:#fff;
-      line-height: 2rem;
+      line-height: 3rem;
+      height: 60px;
     }
     .contact-form-two select.field__input {
       appearance: none;
@@ -337,7 +338,7 @@ aria-label="conatct"
   "disabled_on": { "groups": ["header", "footer"] },
   "settings": [
     {
-      "type": "text",
+      "type": "richtext",
       "id": "title",
       "label": "Title"
     },
