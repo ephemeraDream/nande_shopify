@@ -1,0 +1,75 @@
+/*
+ * ------------------------------------------------------------
+ * 红人页面
+ * ------------------------------------------------------------
+ */
+ {
+    "sections": {
+      "breadcrumbs": {
+        "type": "breadcrumbs",
+        "custom_css": [
+          ".breadcrumb-con {width: 100%; position: absolute; top: 0; left: 0; z-index: 100;}",
+          ".breadcrumb,.breadcrumb a,.breadcrumb span {color: #7f7e75;}"
+        ],
+        "settings": {
+          "custom_breadcrumb": ""
+        }
+      },
+      "contact_form_one": {
+        "type": "contact-form-one",
+        "name": "contact_form_one",
+        "settings": {
+          "image": "shopify://shop_images/b2b_01.webp",
+          "title": "Optimieren Sie Ihr BüRo Mit Maidesite’S Ergonomischen LöSungen",
+          "desc":"Hinterlassen Sie Ihre E-Mail, senden Sie Ihre Anfrage und erhalten Sie innerhalb von 24 Stunden eine maßgeschneiderte Beratung!"
+        }
+      },
+      
+      "celebrity_swiper_aGymw9": {
+        "type": "celebrity-swiper",
+        "blocks": {
+            "swiper_mexwM6": {
+            "type": "swiper",
+            "settings": {
+                "name": "@Suli-Man",
+                "introduce": "<p>17.1 Million YouTube Followers</p>",
+                "description": "<p>\" I really liked it, and it looks really cool. It's just perfect for long workdays or gaming sessions where comfort and ergonomics are important.\"</p>",
+                "link": "",
+                "cover_image": "shopify://shop_images/celebrity-img-1.webp",
+                "video_url": "",
+                "url_upload": "shopify://files/videos/TO1-Pro-spine-healthy-mode_a586d928-0c0c-459d-99a8-75d2ab5cc36d.mp4"
+            }
+            },
+            "swiper_xWLxVC": {
+            "type": "swiper",
+            "settings": {
+                "name": "@EFRALINK",
+                "introduce": "<p>17.1 Million YouTube Followers</p>",
+                "description": "<p>\" Here is my new minimalist desk setup as a photographer and content creator for long editing sessions.\"</p>",
+                "link": "",
+                "cover_image": "shopify://shop_images/celebrity-img-2.webp",
+                "video_url": "",
+                "url_upload": "shopify://files/videos/TO1-Pro-spine-healthy-mode_a586d928-0c0c-459d-99a8-75d2ab5cc36d.mp4"
+            }
+            }
+        },
+        "block_order": [
+            "swiper_mexwM6",
+            "swiper_xWLxVC"
+        ],
+        "name": "celebrity swiper",
+        "settings": {
+            "title": "<p>Empfehlen Von</p>",
+            "text": ""
+        },
+        "custom_css": [
+          ".celebrity_swiper {padding-bottom:12rem;background-color: transparent;}",
+        ]
+      }
+    },
+    "order": [
+      "breadcrumbs",
+      "contact_form_one",
+      "celebrity_swiper_aGymw9"
+    ]
+  }
