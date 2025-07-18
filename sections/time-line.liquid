@@ -5,7 +5,7 @@
   </div>
 
   <div class="time-line-header session-box-padding">
-    <div class="swiper timeline-years session-box-inner">
+    <div class="swiper timeline-years">
       <div class="swiper-wrapper">
         {% for item in section.blocks %}
           <div class="swiper-slide" data-index="{{ forloop.index0 }}">
@@ -35,6 +35,8 @@
           </div>
         {% endfor %}
       </div>
+      <div class="timeline_prev">{{- 'swiper-left.svg' | inline_asset_content -}}</div>
+      <div class="timeline_next">{{- 'swiper-right.svg' | inline_asset_content -}}</div>
     </div>
   </div>
 
@@ -120,8 +122,8 @@
     const timelineContent = new Swiper(contentEl, {
       slidesPerView: 1,
       navigation: {
-        nextEl: sectionEl.querySelector('.timeline-next'),
-        prevEl: sectionEl.querySelector('.timeline-prev'),
+        nextEl: sectionEl.querySelector('.timeline_next'),
+        prevEl: sectionEl.querySelector('.timeline_prev'),
       },
       thumbs: {
         swiper: timelineYears,
@@ -148,6 +150,7 @@
     top:7px;
     left:50%;
     transform:translateX(-50%);
+    opacity: 0.2;
   }
   .time-line .time-line-header .swiper-slide{
     position:relative;
@@ -176,7 +179,7 @@
 
   .timeline-content .swiper-slide{
     display: flex;
-    align-items: center;
+    align-items: stretch;
     justify-content: center;
   }
   .timeline-content .swiper-slide .timeline-image{
@@ -193,43 +196,33 @@
     justify-content: center;
     gap: 3rem;
   }
-  {% comment %} .about_us_img_text .session-box-inner {
+  .timeline_prev,
+  .timeline_next {  
+    width: 6rem;
+    height: 6rem;
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 8.8rem;
-}
+    background-color: rgba(255, 255, 255, 0.6);
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1;
+    cursor: pointer;
+  }
+  .timeline_prev:hover svg path,
+  .timeline_next:hover svg path{  
+    color:#BDFF00;
+    fill:#BDFF00;
+  }
 
-.about_us_img_text.right .session-box-inner {
-    flex-direction: row-reverse;
-}
+  .time-line .timeline_prev {
+    left: 0;
+  }
 
-.about_us_img_text_img {
-    width: 50%;
-    height: auto;
-    position: relative;
-}
-.about_us_img_text_img img{
-    width:100%;
-    height:auto;
-    display:block;
-    object-fit:contain;
-}
-
-.about_us_img_text_text {
-    width: 50%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 30px;
-    padding: 20px 0px;
-}
-.about_us_img_text.right .about_us_img_text_text {
-    text-align: left;
-}
-.about_us_img_text_text_small_title{
-  padding-top:68px;
-} {% endcomment %}
+  .time-line .timeline_next {
+    right: 0;
+  }
 
 @media (max-width: 1024px) {
     {% comment %} .about_us_img_text_img,
