@@ -139,8 +139,8 @@
             "text": ""
         },
         "custom_css": [
-          ".breadcrumb-con {width: 100%; position: absolute; top: 0; left: 0; z-index: 100;}",
-        ],
+          ".maidesite_swiper .maidesite_swiper_title {text-align: center;}",
+        ]
       },
       "celebrity_swiper_aGymw9": {
         "type": "celebrity-swiper",
@@ -178,7 +178,10 @@
         "settings": {
             "title": "<p>Empfehlen Von</p>",
             "text": ""
-        }
+        },
+        "custom_css": [
+          ".celebrity_swiper {padding-bottom:12rem}",
+        ]
       }
     },
     "order": [
