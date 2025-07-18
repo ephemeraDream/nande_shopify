@@ -104,18 +104,26 @@
 {% endschema %}
 
 <script>
-  const timelineYears = new Swiper('.timeline-years', {
+(() => {
+  const sectionId = '{{ section.id }}';
+  const sectionEl = document.getElementById('timeline-section-' + sectionId);
+  if (!sectionEl) return;
+
+  const yearsEl = sectionEl.querySelector('.timeline-years');
+  const contentEl = sectionEl.querySelector('.timeline-content');
+
+  const timelineYears = new Swiper(yearsEl, {
     slidesPerView: 6,
     spaceBetween: 10,
     watchSlidesProgress: true,
     slideToClickedSlide: true, // 点击年份滑动内容
   });
 
-  const timelineContent = new Swiper('.timeline-content', {
+  const timelineContent = new Swiper(contentEl, {
     slidesPerView: 1,
     navigation: {
-      nextEl: '.timeline-next',
-      prevEl: '.timeline-prev',
+      nextEl: sectionEl.querySelector('.timeline-next'),
+      prevEl: sectionEl.querySelector('.timeline-prev'),
     },
     thumbs: {
       swiper: timelineYears,
@@ -128,6 +136,7 @@
       }
     }
   });
+})();
 </script>
 
 

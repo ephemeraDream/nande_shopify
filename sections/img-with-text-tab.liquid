@@ -89,12 +89,14 @@
   
     const tabItems = sectionEl.querySelectorAll('.img_with_text_tab_head_item');
     const swiperEl = sectionEl.querySelector('.swiper');
+
+    const swiperNext = sectionEl.querySelectorAll('.img_with_text_tab_swiper_next');
+    const swiperPrev = sectionEl.querySelectorAll('.img_with_text_tab_swiper_prev');
   
     const img_with_text_tab_swiper = new Swiper(swiperEl, {
-      // ...你的配置...
       navigation: {
-        nextEl: sectionEl.querySelector('.img_with_text_tab_swiper_next'),
-        prevEl: sectionEl.querySelector('.img_with_text_tab_swiper_prev'),
+        nextEl: swiperNext,
+        prevEl: swiperPrev,
       },
       on: {
         slideChange: function () {
