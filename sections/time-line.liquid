@@ -104,39 +104,39 @@
 {% endschema %}
 
 <script>
-(() => {
-  const sectionId = '{{ section.id }}';
-  const sectionEl = document.getElementById('timeline-section-' + sectionId);
-  if (!sectionEl) return;
-
-  const yearsEl = sectionEl.querySelector('.timeline-years');
-  const contentEl = sectionEl.querySelector('.timeline-content');
-
-  const timelineYears = new Swiper(yearsEl, {
-    slidesPerView: 6,
-    spaceBetween: 10,
-    watchSlidesProgress: true,
-    slideToClickedSlide: true, // 点击年份滑动内容
-  });
-
-  const timelineContent = new Swiper(contentEl, {
-    slidesPerView: 1,
-    navigation: {
-      nextEl: sectionEl.querySelector('.timeline-next'),
-      prevEl: sectionEl.querySelector('.timeline-prev'),
-    },
-    thumbs: {
-      swiper: timelineYears,
-    },
-    on: {
-      slideChange: function () {
-        // 同步年份 Swiper 滑动到中间位置
-        const activeIndex = this.activeIndex;
-        timelineYears.slideTo(activeIndex - 2); // 滑动时年份也跟着调整居中
+  (() => {
+    const sectionId = '{{ section.id }}';
+    const sectionEl = document.getElementById('timeline-section-' + sectionId);
+    if (!sectionEl) return;
+  
+    const yearsEl = sectionEl.querySelector('.timeline-years');
+    const contentEl = sectionEl.querySelector('.timeline-content');
+  
+    const timelineYears = new Swiper(yearsEl, {
+      slidesPerView: 6,
+      spaceBetween: 10,
+      watchSlidesProgress: true,
+      slideToClickedSlide: true,
+      // loop: true, // 可选
+    });
+  
+    const timelineContent = new Swiper(contentEl, {
+      slidesPerView: 1,
+      navigation: {
+        nextEl: sectionEl.querySelector('.timeline-next'),
+        prevEl: sectionEl.querySelector('.timeline-prev'),
+      },
+      thumbs: {
+        swiper: timelineYears,
+      },
+      on: {
+        slideChange: function () {
+          const targetIndex = Math.max(this.activeIndex - 2, 0);
+          timelineYears.slideTo(targetIndex);
+        }
       }
-    }
-  });
-})();
+    });
+  })();
 </script>
 
 
