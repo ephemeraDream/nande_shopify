@@ -11,6 +11,12 @@
           {{ 'icon-right-arrow.svg' | inline_asset_content }}
         </div>
       {% endif %}
+      {% if section.settings.contact_us %}
+        <div class="nd-btn faq_contact_us">
+          {{ 'common.contact_us' | t }}
+          {{ 'contact_icon.svg' | inline_asset_content }}
+        </div>
+      {% endif %}
     </div>
     <div class="faq_simple_list">
       {% for block in section.blocks %}
@@ -30,6 +36,7 @@
         {{ 'pagination-down.svg' | inline_asset_content }}
       </div>
     {% endif %}
+    
   </div>
 </div>
 
@@ -101,6 +108,12 @@
       "type": "checkbox",
       "id": "learn_more",
       "label": "show learn more",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "contact_us",
+      "label": "show contact us",
       "default": false
     }
   ],

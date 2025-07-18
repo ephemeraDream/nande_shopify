@@ -20,16 +20,114 @@
         "text_content":"<p>Our representatives stands by behind the live chat and the phone during business hours. During other time you could fill out the form. We’ll be in touch ASAP.</p>"
       }
     },
-    "form": {
-      "type": "contact-form",
+    "faq_simple_kxTbhc": {
+      "type": "faq-simple",
+      "blocks": {
+        "faq_E4jP4F": {
+          "type": "faq",
+          "settings": {
+            "question": "<p>Kann ich meine Bestellung stornieren?</p>",
+            "answer": "<p>Maidesite bietet durch seine produkten von höhenverstellbaren Schreibtischen, die Funktionsintegration, Szenenvielfalt und Personalisierung bieten, Ihnen die Möglichkeit, einfach zwischen verschiedenen Heimat-Aktivitätsmodi zu wechseln, die eine Desktop-Assistenten erfordern. <br/><br/>Dies ermöglicht Anhängern des modernen intelligenten Heimlebens, sich noch bequemer und müheloser in ihre vielfältigen Lebensstile einzuleben.<br/></p>"
+          }
+        },
+        "faq_AXAcgA": {
+          "type": "faq",
+          "settings": {
+            "question": "<p>Was ist, wenn ich mit jemandem sprechen mochte?</p>",
+            "answer": "<p>Maidesite bietet durch seine produkten von höhenverstellbaren Schreibtischen, die Funktionsintegration, Szenenvielfalt und Personalisierung bieten, Ihnen die Möglichkeit, einfach zwischen verschiedenen Heimat-Aktivitätsmodi zu wechseln, die eine Desktop-Assistenten erfordern. <br/><br/>Dies ermöglicht Anhängern des modernen intelligenten Heimlebens, sich noch bequemer und müheloser in ihre vielfältigen Lebensstile einzuleben.<br/></p>"
+          }
+        },
+        "faq_W9Mzyn": {
+          "type": "faq",
+          "settings": {
+            "question": "<p>Ist das Bestellen im Internet sicher? Was passiert mit meinen Daten?</p>",
+            "answer": "<p>Maidesite bietet durch seine produkten von höhenverstellbaren Schreibtischen, die Funktionsintegration, Szenenvielfalt und Personalisierung bieten, Ihnen die Möglichkeit, einfach zwischen verschiedenen Heimat-Aktivitätsmodi zu wechseln, die eine Desktop-Assistenten erfordern. <br/><br/>Dies ermöglicht Anhängern des modernen intelligenten Heimlebens, sich noch bequemer und müheloser in ihre vielfältigen Lebensstile einzuleben.<br/></p>"
+          }
+        },
+        "faq_VQVPFn": {
+          "type": "faq",
+          "settings": {
+            "question": "<p>Welche Moglichkeiten habe ich, um meine Bestellung zu bezahlen?</p>",
+            "answer": "<p>Maidesite bietet durch seine produkten von höhenverstellbaren Schreibtischen, die Funktionsintegration, Szenenvielfalt und Personalisierung bieten, Ihnen die Möglichkeit, einfach zwischen verschiedenen Heimat-Aktivitätsmodi zu wechseln, die eine Desktop-Assistenten erfordern. <br/><br/>Dies ermöglicht Anhängern des modernen intelligenten Heimlebens, sich noch bequemer und müheloser in ihre vielfältigen Lebensstile einzuleben.<br/></p>"
+          }
+        },
+        "faq_bELHrX": {
+          "type": "faq",
+          "settings": {
+            "question": "<p>Welche Moglichkeiten habe ich, um meine Bestellung zu bezahlen?</p>",
+            "answer": "<p>Maidesite bietet durch seine produkten von höhenverstellbaren Schreibtischen, die Funktionsintegration, Szenenvielfalt und Personalisierung bieten, Ihnen die Möglichkeit, einfach zwischen verschiedenen Heimat-Aktivitätsmodi zu wechseln, die eine Desktop-Assistenten erfordern. <br/><br/>Dies ermöglicht Anhängern des modernen intelligenten Heimlebens, sich noch bequemer und müheloser in ihre vielfältigen Lebensstile einzuleben.<br/></p>"
+          }
+        },
+        "faq_WtEK7r": {
+          "type": "faq",
+          "settings": {
+            "question": "<p>Welche Moglichkeiten habe ich, um meine Bestellung zu bezahlen?</p>",
+            "answer": "<p>Maidesite bietet durch seine produkten von höhenverstellbaren Schreibtischen, die Funktionsintegration, Szenenvielfalt und Personalisierung bieten, Ihnen die Möglichkeit, einfach zwischen verschiedenen Heimat-Aktivitätsmodi zu wechseln, die eine Desktop-Assistenten erfordern. <br/><br/>Dies ermöglicht Anhängern des modernen intelligenten Heimlebens, sich noch bequemer und müheloser in ihre vielfältigen Lebensstile einzuleben.<br/></p>"
+          }
+        },
+        "faq_EXWGc6": {
+          "type": "faq",
+          "settings": {
+            "question": "<p>Welche Moglichkeiten habe ich, um meine Bestellung zu bezahlen?</p>",
+            "answer": "<p>Maidesite bietet durch seine produkten von höhenverstellbaren Schreibtischen, die Funktionsintegration, Szenenvielfalt und Personalisierung bieten, Ihnen die Möglichkeit, einfach zwischen verschiedenen Heimat-Aktivitätsmodi zu wechseln, die eine Desktop-Assistenten erfordern. <br/><br/>Dies ermöglicht Anhängern des modernen intelligenten Heimlebens, sich noch bequemer und müheloser in ihre vielfältigen Lebensstile einzuleben.<br/></p>"
+          }
+        },
+        "faq_abheWf": {
+          "type": "faq",
+          "settings": {
+            "question": "<p>Welche Moglichkeiten habe ich, um meine Bestellung zu bezahlen?</p>",
+            "answer": "<p>Maidesite bietet durch seine produkten von höhenverstellbaren Schreibtischen, die Funktionsintegration, Szenenvielfalt und Personalisierung bieten, Ihnen die Möglichkeit, einfach zwischen verschiedenen Heimat-Aktivitätsmodi zu wechseln, die eine Desktop-Assistenten erfordern. <br/><br/>Dies ermöglicht Anhängern des modernen intelligenten Heimlebens, sich noch bequemer und müheloser in ihre vielfältigen Lebensstile einzuleben.<br/></p>"
+          }
+        },
+        "faq_mFDf3d": {
+          "type": "faq",
+          "settings": {
+            "question": "<p>Welche Moglichkeiten habe ich, um meine Bestellung zu bezahlen?</p>",
+            "answer": "<p>Maidesite bietet durch seine produkten von höhenverstellbaren Schreibtischen, die Funktionsintegration, Szenenvielfalt und Personalisierung bieten, Ihnen die Möglichkeit, einfach zwischen verschiedenen Heimat-Aktivitätsmodi zu wechseln, die eine Desktop-Assistenten erfordern. <br/><br/>Dies ermöglicht Anhängern des modernen intelligenten Heimlebens, sich noch bequemer und müheloser in ihre vielfältigen Lebensstile einzuleben.<br/></p>"
+          }
+        },
+        "faq_whBqrf": {
+          "type": "faq",
+          "settings": {
+            "question": "<p>Welche Moglichkeiten habe ich, um meine Bestellung zu bezahlen?</p>",
+            "answer": "<p>Maidesite bietet durch seine produkten von höhenverstellbaren Schreibtischen, die Funktionsintegration, Szenenvielfalt und Personalisierung bieten, Ihnen die Möglichkeit, einfach zwischen verschiedenen Heimat-Aktivitätsmodi zu wechseln, die eine Desktop-Assistenten erfordern. <br/><br/>Dies ermöglicht Anhängern des modernen intelligenten Heimlebens, sich noch bequemer und müheloser in ihre vielfältigen Lebensstile einzuleben.<br/></p>"
+          }
+        }
+      },
+      "block_order": [
+        "faq_E4jP4F",
+        "faq_AXAcgA",
+        "faq_W9Mzyn",
+        "faq_VQVPFn",
+        "faq_bELHrX",
+        "faq_WtEK7r",
+        "faq_EXWGc6",
+        "faq_abheWf",
+        "faq_mFDf3d",
+        "faq_whBqrf"
+      ],
+      "custom_css": [
+        ".faq_simple_section {background-color: #fafafa;}"
+      ],
+      "name": "faq simple",
       "settings": {
-        "heading": "",
-        "heading_size": "h1",
-        "color_scheme": "scheme-1",
-        "padding_top": 36,
-        "padding_bottom": 36
+        "heading": "<p>FAQ</p>",
+        "text": "<p>Häufig gestellte Fragen</p>",
+        "contact_us": true,
+        "show_btn": false,
+        "learn_more": false
       }
-    }
+    },
+    // "form": {
+    //   "type": "contact-form",
+    //   "settings": {
+    //     "heading": "",
+    //     "heading_size": "h1",
+    //     "color_scheme": "scheme-1",
+    //     "padding_top": 36,
+    //     "padding_bottom": 36
+    //   }
+    // }
     // "main": {
     //   "type": "main-page",
     //   "settings": {
@@ -42,7 +140,8 @@
   "order": [
     "breadcrumbs",
     "contact_form_three",
-    "form"
+    "faq_simple_kxTbhc",
+    // "form"
     // "main",
     
   ]
