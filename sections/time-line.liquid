@@ -24,7 +24,7 @@
             <div class="timeline-slide">
               <div class="timeline-text">
                 <h3>{{ item.settings.small_title }}</h3>
-                <p>{{ item.settings.text }}</p>
+                <p class="text-body">{{ item.settings.text }}</p>
               </div>
               <div class="timeline-image">
                 {{-
@@ -174,6 +174,26 @@
   }
   .time-line .time-line-header .swiper-slide.swiper-slide-thumb-active:before{
     background-color:#BDFF00;
+  }
+
+  .timeline-content .swiper-slide{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .timeline-content .swiper-slide .timeline-image{
+    width: 65%;
+  }
+  .timeline-content .swiper-slide .timeline-image img{width:100%;}
+  .timeline-text{
+    width: 35%;
+    background:#fff;
+    padding:3.4rem 5rem 3.4rem 3.4rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
   }
   {% comment %} .about_us_img_text .session-box-inner {
     display: flex;
