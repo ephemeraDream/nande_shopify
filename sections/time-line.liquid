@@ -1,5 +1,5 @@
 {% comment %} about-us页 时间轴 {% endcomment %}
-<div class="time-line padding-top-60 padding-bottom-60">
+<div class="time-line padding-top-60 padding-bottom-60" id="time_line_section-{{ section.id }}">
   <div class="session-box-padding">
     <h2 class="session-box-inner">{{ section.settings.title }}</h2>
   </div>
@@ -106,7 +106,7 @@
 <script>
   (() => {
     const sectionId = '{{ section.id }}';
-    const sectionEl = document.getElementById('timeline-section-' + sectionId);
+    const sectionEl = document.getElementById('time_line_section-' + sectionId);
     if (!sectionEl) return;
   
     const yearsEl = sectionEl.querySelector('.timeline-years');
@@ -117,7 +117,6 @@
       spaceBetween: 10,
       watchSlidesProgress: true,
       slideToClickedSlide: true,
-      // loop: true, // 可选
     });
   
     const timelineContent = new Swiper(contentEl, {
