@@ -64,6 +64,7 @@
 .img_with_text_tab .img_with_text_tab_contain {
   width: 100%;
   margin-top: 3rem;
+  position: relative;
 }
 
 .img_with_text_tab .img_with_text_tab_contain .swiper-slide {
@@ -121,12 +122,13 @@
 }
 .swiper_btn{
   width: 100%;
-  padding-left: calc(50%+3rem);
+  padding-left: calc(50% + 3rem);
   position: absolute;
   bottom: 5rem;
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   gap: 4rem;
+  z-index: 2;
 }
 .img_with_text_tab .img_with_text_tab_swiper_prev,
 .img_with_text_tab .img_with_text_tab_swiper_next {
