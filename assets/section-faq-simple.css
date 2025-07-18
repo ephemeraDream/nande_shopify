@@ -101,6 +101,10 @@
 .faq_simple .faq_simple_more_btn {
   cursor: pointer;
 }
+.faq_contact_us{
+  background-color: #7F7E75;
+  color: #fff;
+}
 
 .faq_simple .faq_simple_learnmore {
   display: inline-flex;
