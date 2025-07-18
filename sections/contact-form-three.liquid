@@ -15,7 +15,7 @@ aria-label="conatct"
         </div>
         <div class="form__content">
             
-            {%- form 'contact', id: 'ContactFormTwo', class: contact_form_class -%}
+            {%- form 'contact', id: 'ContactFormThree', class: contact_form_class -%}
 
               {%- if form.posted_successfully? -%}
                 <p class="form-status form__message success" tabindex="-1" autofocus>
@@ -28,11 +28,20 @@ aria-label="conatct"
               {%- endif -%}
           
               <div class="form-grid">
+                <div class="form-grid-field">
+                  <input
+                    type="text"
+                    id="ContactFormThree-name"
+                    class="field__input"
+                    name="contact[name]"
+                    placeholder="Vor-und Nachname"
+                  >
+                </div>
                 <div class="form-grid-field field--with-error">
                   <input
                     autocomplete="email"
                     type="email"
-                    id="ContactFormTwo-email"
+                    id="ContactFormThree-email"
                     class="field__input"
                     name="contact[email]"
                     spellcheck="false"
@@ -41,55 +50,68 @@ aria-label="conatct"
                     value="{% if form.email %}{{ form.email }}{% elsif customer %}{{ customer.email }}{% endif %}"
                     {% if form.errors contains 'email' %}
                       aria-invalid="true"
-                      aria-describedby="ContactFormTwo-email-error"
+                      aria-describedby="ContactFormThree-email-error"
                     {% endif %}
-                    placeholder="E-Mail*"
+                    placeholder="E-Mail-Adresse"
                   >
                   {%- if form.errors contains 'email' -%}
-                    <small class="contact__field-error" id="ContactFormTwo-email-error">
+                    <small class="contact__field-error" id="ContactFormThree-email-error">
                       {{ form.errors.messages.email }}
                     </small>
                   {%- endif -%}
                 </div>
-          
+
                 <div class="form-grid-field">
                   <input
                     type="text"
-                    id="ContactFormTwo-company"
+                    id="ContactFormThree-type"
                     class="field__input"
-                    name="contact[company]"
-                    placeholder="Unternehmen"
+                    name="contact[type]"
+                    value="{% if form.type %}{{ form.type }}{% elsif customer %}{{ customer.type }}{% endif %}"
+                    placeholder="Art der Anfrage"
                   >
                 </div>
 
                 <div class="form-grid-field">
                   <input
                     type="tel"
-                    id="ContactFormTwo-phone"
+                    id="ContactFormThree-phone"
                     class="field__input"
                     name="contact[phone]"
                     autocomplete="tel"
                     value="{% if form.phone %}{{ form.phone }}{% elsif customer %}{{ customer.phone }}{% endif %}"
-                    placeholder="Telefon"
+                    placeholder="Telefonnummer (optional)"
                   >
                 </div>
-          
+
                 <div class="form-grid-field">
                   <input
                     type="text"
-                    id="ContactFormTwo-name"
+                    id="ContactFormThree-company"
                     class="field__input"
-                    name="contact[name]"
+                    name="contact[company]"
+                    value="{% if form.company %}{{ form.company }}{% elsif customer %}{{ customer.company }}{% endif %}"
+                    placeholder="Unternehmen (optional)"
+                  >
+                </div>
+
+                <div class="form-grid-field">
+                  <input
+                    type="text"
+                    id="ContactFormThree-message"
+                    class="field__input"
+                    name="contact[message]"
                     autocomplete="name"
-                    value="{% if form.name %}{{ form.name }}{% elsif customer %}{{ customer.name }}{% endif %}"
-                    placeholder="Name"
+                    value="{% if form.message %}{{ form.message }}{% elsif customer %}{{ customer.message }}{% endif %}"
+                    placeholder="Nachricht (optional)"
                   >
                 </div>
               </div>
 
-              <div class="form-grid-field">
-                <select id="ContactFormTwo-menge" name="contact[menge]" class="field__input">
-                  <option value="" disabled selected>Menge wählen</option>
+              <div class="form-grid">
+              <div class="form-grid-field all-row">
+                <select id="ContactFormThree-query-type" name="contact[query-type]" class="field__input">
+                  <option value="" disabled selected>Query Type</option>
                   <option value="1">1 Stück</option>
                   <option value="2">2 Stück</option>
                   <option value="3">3 Stück</option>
@@ -97,11 +119,12 @@ aria-label="conatct"
                   <option value="5+">5+ Stück</option>
                 </select>
               </div>
+              </div>
           
               <div class="form-grid-field">
                 <textarea
                   rows="7"
-                  id="ContactFormTwo-body"
+                  id="ContactFormThree-body"
                   class="text-area field__input"
                   name="contact[body]"
                   placeholder="Nachricht"
@@ -139,7 +162,7 @@ aria-label="conatct"
         gap:5rem;
     }
     .contact-form-two .form_left{
-      width:50%
+      width:40%
     }
     .contact-form-two .text-body{
       margin-top: 1.5rem;
@@ -171,9 +194,9 @@ aria-label="conatct"
     .contact-form-two .form__content{
         display: flex;
         gap:3rem;
-        width:66rem;
+        width:72rem;
         flex-direction: column;
-        padding:4rem 5rem;
+        padding:3.2rem 3.1rem;
         background-color: #E2DED6;
     }
 
@@ -186,6 +209,9 @@ aria-label="conatct"
     
     .contact-form-two .form-grid-field {
       flex: 1 1 calc(50% - 8px);
+    }
+    .contact-form-two .form-grid-field.all-row {
+      flex: 1 1 100%;
     }
     
     .contact-form-two .field__input,
