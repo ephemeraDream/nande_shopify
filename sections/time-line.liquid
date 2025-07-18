@@ -3,24 +3,43 @@
   <div class="session-box-padding">
     <h2 class="session-box-inner">{{ section.settings.title }}</h2>
   </div>
-  <div class="time-line-header"></div>
-  <div class="session-box-padding">
-    <div class="time-line-item session-box-inner">
-        {{-
-            section.settings.image
-            | image_url: width: section.settings.image.width
-            | image_tag: alt: section.settings.title
-          -}}
-          <h4 class="about_us_img_text_text_small_title">{{ section.settings.small_title }}</h4>
-        <div class="text-body">{{ section.settings.text }}</div>
-        {% if section.settings.btn_text != blank %}
-        <a class="nd-btn" href="{{ section.settings.link }}">
-            {{ section.settings.btn_text }}
-            {{ 'icon-right-arrow.svg' | inline_asset_content }}
-        </a>
-        {% endif %}
+
+  <div class="time-line-header">
+    <div class="swiper timeline-years">
+      <div class="swiper-wrapper">
+        {% for item in section.blocks %}
+          <div class="swiper-slide" data-index="{{ forloop.index0 }}">
+            {{ item.settings.year_text }}
+          </div>
+        {% endfor %}
+      </div>
     </div>
   </div>
+
+  <div class="session-box-padding">
+    <div class="swiper timeline-content session-box-inner">
+      <div class="swiper-wrapper">
+        {% for item in section.blocks %}
+          <div class="swiper-slide">
+            <div class="timeline-slide">
+              <div class="timeline-text">
+                <h3>{{ item.settings.small_title }}</h3>
+                <p>{{ item.settings.text }}</p>
+              </div>
+              <div class="timeline-image">
+                {{-
+                  item.settings.image
+                  | image_url: width: item.settings.image.width
+                  | image_tag: alt: item.settings.title
+                -}}
+              </div>
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+
 </div>
 
 {% schema %}
@@ -33,27 +52,6 @@
   },
   "settings": [
     {
-        "type": "select",
-        "id": "layout",
-        "label": "Layout",
-        "options": [
-          {
-            "value": "image-left",
-            "label": "Image Left, Text Right"
-          },
-          {
-            "value": "image-right",
-            "label": "Text Left, Image Right"
-          }
-        ],
-        "default": "image-right"
-    },
-    {
-        "type": "text",
-        "id": "small_title",
-        "label": "small_title"
-    },
-    {
         "type": "text",
         "id": "title",
         "label": "title"
@@ -62,25 +60,77 @@
         "type": "richtext",
         "id": "text",
         "label": "text"
-    },
+    }
+  ],
+  "blocks": [
     {
-        "type": "text",
-        "id": "btn_text",
-        "label": "button text"
-    },
+      "type": "timeline",
+      "name": "timeline",
+      "settings": [
+        {
+          "type": "text",
+          "id": "year_text",
+          "label": "year text"
+        },
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "image"
+        },
+        {
+          "type": "richtext",
+          "id": "text",
+          "label": "text"
+        },
+        {
+          "type": "text",
+          "id": "small_title",
+          "label": "small_title"
+        }
+      ]
+    }
+  ],
+  "presets": [
     {
-        "type": "image_picker",
-        "id": "image",
-        "label": "image"
-    },
-    {
-        "type": "url",
-        "id": "link",
-        "label": "link"
+      "name": "time line",
+      "blocks": [
+        {
+          "type": "timeline"
+        }
+      ]
     }
   ]
 }
 {% endschema %}
+
+<script>
+  const timelineYears = new Swiper('.timeline-years', {
+    slidesPerView: 6,
+    spaceBetween: 10,
+    watchSlidesProgress: true,
+    slideToClickedSlide: true, // 点击年份滑动内容
+  });
+
+  const timelineContent = new Swiper('.timeline-content', {
+    slidesPerView: 1,
+    navigation: {
+      nextEl: '.timeline-next',
+      prevEl: '.timeline-prev',
+    },
+    thumbs: {
+      swiper: timelineYears,
+    },
+    on: {
+      slideChange: function () {
+        // 同步年份 Swiper 滑动到中间位置
+        const activeIndex = this.activeIndex;
+        timelineYears.slideTo(activeIndex - 2); // 滑动时年份也跟着调整居中
+      }
+    }
+  });
+</script>
+
+
 <style>
   .about_us_img_text .session-box-inner {
     display: flex;

@@ -29,11 +29,83 @@
         "type": "time-line",
         "name": "time_line",
         "settings": {
-          "image": "shopify://shop_images/about_01.webp",
           "title": "Unsere Reise In Etappen",
-          "small_title":"Maidesite – Ihr Partner für gesundes und produktives Arbeiten",
-          "text":"<p>Maidesite gehört zu den führenden Anbietern ergonomischer Büromöbel in Europa. <br/>Mit einem Team aus Designern, Ingenieuren und Ergonomie-Experten entwickeln wir innovative Lösungen, die Ihre Gesundheit, <br/>Ihren Komfort und Ihre Produktivität steigern. Unser Ziel: Eine Arbeitsumgebung, die sich perfekt an Ihre Bedürfnisse anpasst – für mehr Wohlbefinden und Effizienz im Alltag.</p>"
-        }
+          "text":""
+        },
+        "blocks": {
+            "timeline_bBWUrY": {
+            "type": "timeline",
+            "settings": {
+                "year_text": "2020",
+                "small_title":"Der Anfang einer Mission",
+                "image": "shopify://shop_images/about_02.webp",
+                "text": "<p>Maidesite wird gegründet und bringt die ersten höhenverstellbaren Schreibtische auf den Markt. Unser Ziel: <br/>Ergonomische Lösungen für ein gesünderes und produktiveres Arbeiten.</p>"
+            }
+            },
+            "timeline_BnDxkz": {
+            "type": "timeline",
+            "settings": {
+                "year_text": "2021",
+                "small_title":"Der Anfang einer Mission",
+                "image": "shopify://shop_images/about_02.webp",
+                "text": "<p>Maidesite wird gegründet und bringt die ersten höhenverstellbaren Schreibtische auf den Markt. Unser Ziel: <br/>Ergonomische Lösungen für ein gesünderes und produktiveres Arbeiten.</p>"
+            }
+            },
+            "timeline_EnDd8n": {
+            "type": "timeline",
+            "settings": {
+                "year_text": "2022",
+                "small_title":"Der Anfang einer Mission",
+                "image": "shopify://shop_images/about_02.webp",
+                "text": "<p>Maidesite wird gegründet und bringt die ersten höhenverstellbaren Schreibtische auf den Markt. Unser Ziel: <br/>Ergonomische Lösungen für ein gesünderes und produktiveres Arbeiten.</p>"
+            }
+            },
+            "timeline_4kYG3r": {
+            "type": "timeline",
+            "settings": {
+                "year_text": "2023",
+                "small_title":"Der Anfang einer Mission",
+                "image": "shopify://shop_images/about_02.webp",
+                "text": "<p>Maidesite wird gegründet und bringt die ersten höhenverstellbaren Schreibtische auf den Markt. Unser Ziel: <br/>Ergonomische Lösungen für ein gesünderes und produktiveres Arbeiten.</p>"
+            }
+            },
+            "timeline_4kYG33": {
+            "type": "timeline",
+            "settings": {
+                "year_text": "2024",
+                "small_title":"Der Anfang einer Mission",
+                "image": "shopify://shop_images/about_02.webp",
+                "text": "<p>Maidesite wird gegründet und bringt die ersten höhenverstellbaren Schreibtische auf den Markt. Unser Ziel: <br/>Ergonomische Lösungen für ein gesünderes und produktiveres Arbeiten.</p>"
+            }
+            },
+            "timeline_4kYG32": {
+            "type": "timeline",
+            "settings": {
+                "year_text": "2025",
+                "small_title":"Der Anfang einer Mission",
+                "image": "shopify://shop_images/about_02.webp",
+                "text": "<p>Maidesite wird gegründet und bringt die ersten höhenverstellbaren Schreibtische auf den Markt. Unser Ziel: <br/>Ergonomische Lösungen für ein gesünderes und produktiveres Arbeiten.</p>"
+            }
+            },
+            "timeline_4kYG31": {
+            "type": "timeline",
+            "settings": {
+                "year_text": "2026",
+                "small_title":"Der Anfang einer Mission",
+                "image": "shopify://shop_images/about_02.webp",
+                "text": "<p>Maidesite wird gegründet und bringt die ersten höhenverstellbaren Schreibtische auf den Markt. Unser Ziel: <br/>Ergonomische Lösungen für ein gesünderes und produktiveres Arbeiten.</p>"
+            }
+            }
+        },
+        "block_order": [
+            "timeline_bBWUrY",
+            "timeline_BnDxkz",
+            "timeline_EnDd8n",
+            "timeline_4kYG3r",
+            "timeline_4kYG33",
+            "timeline_4kYG32",
+            "timeline_4kYG31"
+        ]
       },
       "img_with_text_tab_emEWU8": {
         "type": "img-with-text-tab",
