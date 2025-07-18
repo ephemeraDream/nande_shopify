@@ -209,7 +209,11 @@
         "settings": {
             "title": "<p>Die Presse Liebt Maidesite</p>",
             "text": ""
-        }
+        },
+        "custom_css": [
+          ".maidesite_swiper_section {padding-top:0;background-color: transparent;}",
+          ".maidesite_swiper_section .maidesite_swiper_title{text-align:center}"
+        ]
       },
       "celebrity_swiper_aGymw9": {
         "type": "celebrity-swiper",

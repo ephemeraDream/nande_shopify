@@ -1,5 +1,5 @@
 {% comment %} about-us页 时间轴 {% endcomment %}
-<div class="time-line padding-top-60 padding-bottom-60" id="time_line_section-{{ section.id }}">
+<div class="time-line padding-top-60" id="time_line_section-{{ section.id }}">
   <div class="session-box-padding padding-bottom-60">
     <h2 class="session-box-inner">{{ section.settings.title }}</h2>
   </div>
@@ -243,9 +243,7 @@
     width: 100%;
   }
   .time-line .timeline_prev,
-  .time-line .timeline_next {  
-    width: 4rem;
-    height: 4rem;
+  .time-line .timeline_next { 
     top: 50%;
   }
 }
