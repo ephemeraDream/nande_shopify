@@ -5,7 +5,7 @@ Contact Form Three Section - 联系表单 联系我们页面
 {% endcomment %}
 <div class="contact-form-two session-box-padding overflow-hidden" 
 style="background-image: url('{{ section.settings.image | image_url: width: section.settings.image.width }}'); "
-aria-label="conatct"
+aria-label="contact"
 >
     <div class="contact-form-two__content session-box-inner">
         <div class="form_left">
@@ -34,6 +34,7 @@ aria-label="conatct"
                     id="ContactFormThree-name"
                     class="field__input"
                     name="contact[name]"
+                    value="{% if form.name %}{{ form.name }}{% elsif customer %}{{ customer.name }}{% endif %}"
                     placeholder="Vor-und Nachname"
                   >
                 </div>
@@ -67,7 +68,6 @@ aria-label="conatct"
                     id="ContactFormThree-type"
                     class="field__input"
                     name="contact[type]"
-                    value="{% if form.type %}{{ form.type }}{% elsif customer %}{{ customer.type }}{% endif %}"
                     placeholder="Art der Anfrage"
                   >
                 </div>
@@ -77,8 +77,9 @@ aria-label="conatct"
                     type="tel"
                     id="ContactFormThree-phone"
                     class="field__input"
-                    name="contact[phone]"
                     autocomplete="tel"
+                    name="contact[phone]"
+                    pattern="[0-9\-]*"
                     value="{% if form.phone %}{{ form.phone }}{% elsif customer %}{{ customer.phone }}{% endif %}"
                     placeholder="Telefonnummer (optional)"
                   >
@@ -90,7 +91,6 @@ aria-label="conatct"
                     id="ContactFormThree-company"
                     class="field__input"
                     name="contact[company]"
-                    value="{% if form.company %}{{ form.company }}{% elsif customer %}{{ customer.company }}{% endif %}"
                     placeholder="Unternehmen (optional)"
                   >
                 </div>
