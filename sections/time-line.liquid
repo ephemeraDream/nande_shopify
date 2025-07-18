@@ -16,7 +16,7 @@
     </div>
   </div>
 
-  <div class="session-box-padding">
+  <div class="time-line-container session-box-padding">
     <div class="swiper timeline-content session-box-inner">
       <div class="swiper-wrapper">
         {% for item in section.blocks %}
@@ -35,9 +35,9 @@
           </div>
         {% endfor %}
       </div>
-      <div class="timeline_prev">{{- 'swiper-left.svg' | inline_asset_content -}}</div>
-      <div class="timeline_next">{{- 'swiper-right.svg' | inline_asset_content -}}</div>
     </div>
+    <div class="timeline_prev">{{- 'swiper-left.svg' | inline_asset_content -}}</div>
+    <div class="timeline_next">{{- 'swiper-right.svg' | inline_asset_content -}}</div>
   </div>
 
 </div>
@@ -114,7 +114,7 @@
   
     const timelineYears = new Swiper(yearsEl, {
       slidesPerView: 6,
-      spaceBetween: 10,
+      spaceBetween: 30,
       watchSlidesProgress: true,
       slideToClickedSlide: true,
     });
@@ -196,6 +196,7 @@
     justify-content: center;
     gap: 3rem;
   }
+  .time-line-container{position:relative;}
   .timeline_prev,
   .timeline_next {  
     width: 6rem;
@@ -217,11 +218,11 @@
   }
 
   .time-line .timeline_prev {
-    left: 0;
+    left: 2vw;
   }
 
   .time-line .timeline_next {
-    right: 0;
+    right:2vw;
   }
 
 @media (max-width: 1024px) {
