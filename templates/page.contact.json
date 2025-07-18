@@ -75,7 +75,7 @@
         "faq_WtEK7r"
       ],
       "custom_css": [
-        ".faq_simple_section {background-color: #fff;}"
+        ".faq_simple_section {background-color: #fff;padding-bottom:120px;}"
       ],
       "name": "faq simple",
       "settings": {
