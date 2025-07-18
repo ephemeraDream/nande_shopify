@@ -1,0 +1,34 @@
+/*
+ * ------------------------------------------------------------
+ * 关于我们
+ * ------------------------------------------------------------
+ */
+ {
+    "sections": {
+      "breadcrumbs": {
+        "type": "breadcrumbs",
+        "custom_css": [
+          ".breadcrumb-con {width: 100%; position: absolute; top: 0; left: 0; z-index: 100;}",
+          ".breadcrumb,.breadcrumb a,.breadcrumb span {color: #7f7e75;}"
+        ],
+        "settings": {
+          "custom_breadcrumb": ""
+        }
+      },
+      "image_with_text_aboutus": {
+        "type": "image-with-text-aboutus",
+        "name": "image_with_text_aboutus",
+        "settings": {
+          "image": "shopify://shop_images/about_01.webp",
+          "title": "Ergonomisches Arbeiten Neu Definiert",
+          "small_title":"Maidesite – Ihr Partner für gesundes und produktives Arbeiten",
+          "text":"<p>Maidesite gehört zu den führenden Anbietern ergonomischer Büromöbel in Europa. <br/>Mit einem Team aus Designern, Ingenieuren und Ergonomie-Experten entwickeln wir innovative Lösungen, die Ihre Gesundheit, <br/>Ihren Komfort und Ihre Produktivität steigern. Unser Ziel: Eine Arbeitsumgebung, die sich perfekt an Ihre Bedürfnisse anpasst – für mehr Wohlbefinden und Effizienz im Alltag.</p>"
+        }
+      }
+      
+    },
+    "order": [
+      "breadcrumbs",
+      "image_with_text_aboutus"
+    ]
+  }
