@@ -163,6 +163,7 @@
     align-items: center;
     justify-content: flex-start;
     gap: 1.6rem;
+    cursor: pointer;
   }
   .time-line .time-line-header .swiper-slide:before{
     content:'';
@@ -211,18 +212,17 @@
     z-index: 1;
     cursor: pointer;
   }
-  .timeline_prev:hover svg path,
-  .timeline_next:hover svg path{  
-    color:#BDFF00;
-    fill:#BDFF00;
+  .timeline_prev:hover,
+  .timeline_next:hover{  
+    background-color:#BDFF00;
   }
 
-  .time-line .timeline_prev {
-    left: 2vw;
+  .time-line .timeline_prev { 
+    left: 4vw;
   }
 
   .time-line .timeline_next {
-    right:2vw;
+    right:4vw;
   }
 
 @media (max-width: 1024px) {
