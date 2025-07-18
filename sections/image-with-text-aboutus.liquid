@@ -1,5 +1,5 @@
 {% comment %} about-us页第一屏 文字图 {% endcomment %}
-<div class="about_us_img_text {% if section.settings.layout == 'image-right' %} right{% endif %} session-box-padding">
+<div class="about_us_img_text {% if section.settings.layout == 'image-right' %} right{% endif %} session-box-padding padding-top-60 padding-bottom-60">
   <div class="session-box-inner">
     <div class="about_us_img_text_img">
         {{-
@@ -81,12 +81,10 @@
 }
 {% endschema %}
 <style>
-  .about_us_img_text {
+  .about_us_img_text .session-box-inner {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-top: 60px;
-    margin-bottom: 60px;
     gap: 8.8rem;
 }
 
