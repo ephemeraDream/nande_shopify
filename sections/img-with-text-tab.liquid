@@ -15,7 +15,7 @@
         {% endfor %}
       </div>
     {% endif %}
-    <div class="img_with_text_tab_contain swiper">
+    <div class="img_with_text_tab_contain swiper {% if section.settings.layout == 'image-right' %} right{% endif %}">
       <div class="swiper-wrapper">
         {% for block in section.blocks %}
           <div class="swiper-slide {% if section.settings.layout == 'image-right' %} right{% endif %}">
@@ -71,12 +71,12 @@
                     {{ 'icon-right-arrow.svg' | inline_asset_content }}
                 </a>
               {% endif %}
-              <div class="img_with_text_tab_swiper_prev">{{- 'swiper-left.svg' | inline_asset_content -}}</div>
-              <div class="img_with_text_tab_swiper_next">{{- 'swiper-right.svg' | inline_asset_content -}}</div>
             </div>
           </div>
         {% endfor %}
       </div>
+      <div class="img_with_text_tab_swiper_prev">{{- 'swiper-left.svg' | inline_asset_content -}}</div>
+      <div class="img_with_text_tab_swiper_next">{{- 'swiper-right.svg' | inline_asset_content -}}</div>
     </div>
   </div>
 </div>
@@ -90,8 +90,8 @@
     const tabItems = sectionEl.querySelectorAll('.img_with_text_tab_head_item');
     const swiperEl = sectionEl.querySelector('.swiper');
 
-    const swiperNext = sectionEl.querySelectorAll('.img_with_text_tab_swiper_next');
-    const swiperPrev = sectionEl.querySelectorAll('.img_with_text_tab_swiper_prev');
+    const swiperNext = sectionEl.querySelector('.img_with_text_tab_swiper_next');
+    const swiperPrev = sectionEl.querySelector('.img_with_text_tab_swiper_prev');
   
     const img_with_text_tab_swiper = new Swiper(swiperEl, {
       navigation: {
