@@ -1,10 +1,23 @@
 {
   "sections": {
-    "main": {
-      "type": "main-page",
+    "breadcrumbs": {
+      "type": "breadcrumbs",
+      "custom_css": [
+        ".breadcrumb-con {width: 100%; position: absolute; top: 0; left: 0; z-index: 100;}",
+        ".breadcrumb,.breadcrumb a,.breadcrumb span {color: #7f7e75;}"
+      ],
       "settings": {
-        "padding_top": 36,
-        "padding_bottom": 36
+        "custom_breadcrumb": ""
+      }
+    },
+    "contact_form_three": {
+      "type": "contact-form-three",
+      "name": "contact_form_three",
+      "settings": {
+        "image": "",
+        "title": "Kostenlose Beratung Mit Catarina – Schnelle Antwort",
+        "desc":"Jetzt Termin buchen und innerhalb von 24 Stunden Rückmeldung erhalten.",
+        "text_content":"<ul><li> Aus einer Hand -Planung bis zur Montage</li><li>Passgenaues Konzept fur Ihr Buro</li><li>10.000 begeisterte Firmenkunden</li></ul>"
       }
     },
     "form": {
@@ -17,9 +30,20 @@
         "padding_bottom": 36
       }
     }
+    // "main": {
+    //   "type": "main-page",
+    //   "settings": {
+    //     "padding_top": 36,
+    //     "padding_bottom": 36
+    //   }
+    // },
+    
   },
   "order": [
-    "main",
+    "breadcrumbs",
+    "contact_form_three",
     "form"
+    // "main",
+    
   ]
 }
