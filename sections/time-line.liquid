@@ -4,8 +4,8 @@
     <h2 class="session-box-inner">{{ section.settings.title }}</h2>
   </div>
 
-  <div class="time-line-header">
-    <div class="swiper timeline-years">
+  <div class="time-line-header session-box-padding">
+    <div class="swiper timeline-years session-box-inner">
       <div class="swiper-wrapper">
         {% for item in section.blocks %}
           <div class="swiper-slide" data-index="{{ forloop.index0 }}">
@@ -140,7 +140,38 @@
 
 
 <style>
-  .about_us_img_text .session-box-inner {
+  .time-line .time-line-header{position:relative;}
+  .time-line .time-line-header:before{
+    content:''; 
+    width:100vw;
+    height:1px;
+    background-color:#767676;
+    position:absolute;
+    top:0;
+    left:50%;
+    transform:translateX(-50%);
+  }
+  .time-line .time-line-header .swiper-slide{
+    position:relative;
+    font-size:2.4rem;
+    color:#767676;
+    font-weight:500;
+    text-align:center;
+  }
+  .time-line .time-line-header .swiper-slide:before{
+    content:'';
+    width:1.6rem;
+    height:1.6rem;
+    background-color:#767676;
+    border: 0.2rem solid #7F7E75;
+    box-sizing: border-box;
+    display:inline-block;
+    margin-bottom:2.4rem;
+  }
+  .time-line .time-line-header .swiper-slide.swiper-slide-thumb-active:before{
+    background-color:#BDFF00;
+  }
+  {% comment %} .about_us_img_text .session-box-inner {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -176,10 +207,10 @@
 }
 .about_us_img_text_text_small_title{
   padding-top:68px;
-}
+} {% endcomment %}
 
 @media (max-width: 1024px) {
-    .about_us_img_text_img,
+    {% comment %} .about_us_img_text_img,
     .about_us_img_text_text {
         width: 100%;
     }
@@ -199,7 +230,7 @@
     }
     .about_us_img_text_text_small_title{
       padding-top:20px;
-    }
+    } {% endcomment %}
 }
 </style>
 
