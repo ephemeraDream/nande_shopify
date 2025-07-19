@@ -402,6 +402,7 @@ cart-items {
   letter-spacing: 0px;
   font-variation-settings: "opsz" auto;
   color: #FFFFFF;
+  cursor: pointer;
 }
 
 .cart_section .cart_section_left_discount input {
@@ -417,4 +418,9 @@ cart-items {
   letter-spacing: 0px;
   font-variation-settings: "opsz" auto;
   color: #7F7E75;
+}
+
+.cart_section .cart_section_left_discount input:focus+#cart_section_left_discount_btn {
+  background-color: #bdff00;
+  color: #1f1f1f;
 }
