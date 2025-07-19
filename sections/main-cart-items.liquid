@@ -280,7 +280,9 @@
                                 {%- for discount in item.line_level_discount_allocations -%}
                                   <li class="discounts__discount">
                                     {% comment %} {{- 'icon-discount.svg' | inline_asset_content -}} {% endcomment %}
-                                    {{ discount.discount_application.title }}
+                                    {{ discount.discount_application.title }} (-
+                                    {{- discount.total_allocated_amount | money -}}
+                                    )
                                   </li>
                                 {%- endfor -%}
                               </ul>
