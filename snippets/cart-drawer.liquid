@@ -183,6 +183,7 @@
                                 <cart-remove-button
                                   id="CartDrawer-Remove-{{ item.index | plus: 1 }}"
                                   data-index="{{ item.index | plus: 1 }}"
+                                  data-id="{{ item.variant.id }}"
                                 >
                                   <button
                                     type="button"
@@ -510,6 +511,7 @@
                                         <div
                                           class="cartdrawer_bundle_product_delete"
                                           data-index="{{ child.index | plus: 1 }}"
+                                          data-id="{{ child.variant.id }}"
                                         >
                                           {{- 'icon-close.svg' | inline_asset_content -}}
                                         </div>

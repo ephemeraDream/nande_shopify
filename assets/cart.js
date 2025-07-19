@@ -12,13 +12,12 @@ class CartRemoveButton extends HTMLElement {
       const linesToRemove = [];
       bundleProducts.forEach(item => {
         const removeBtn = item.querySelector(".cartdrawer_bundle_product_delete");
-        const index = removeBtn.dataset.index;
-        linesToRemove.push(index);
+        const id = removeBtn.dataset.id;
+        linesToRemove.push(id);
       });
 
-      linesToRemove.push(this.dataset.index);
-
       if (linesToRemove.length) {
+        linesToRemove.push(this.dataset.id);
         cartItems.updateQuantitiesInBatch(linesToRemove, event);
       } else {
         cartItems.updateQuantity(this.dataset.index, 0, event);
