@@ -198,6 +198,7 @@ class CartItems extends HTMLElement {
           });
           this.initBtnEvents()
           this.initBundleRemove()
+          this.updateDiscount()
           const updatedValue = parsedState.items[line - 1] ? parsedState.items[line - 1].quantity : undefined;
           let message = '';
           if (items.length === parsedState.items.length && updatedValue !== parseInt(quantityElement.value)) {

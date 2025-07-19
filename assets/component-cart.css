@@ -381,9 +381,33 @@ cart-items {
 .cart_section .cart_section_left_discount {
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
   gap: 0.7rem;
   border-bottom: 0.1rem solid #C4C4C4;
   padding-bottom: 2rem;
+}
+
+.cart_section .cart_section_left_discount_contain {
+  flex: 0 0 100%;
+  margin-top: 2rem;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.cart_section .cart_section_left_discount_item {
+  padding: 0 0.8rem;
+  height: 3rem;
+  display: flex;
+  align-items: center;
+  font-family: "PP Right Grotesk";
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 130%;
+  letter-spacing: 0px;
+  font-variation-settings: "opsz" auto;
+  color: #fff;
 }
 
 .cart_section .cart_section_left_discount_btn {
@@ -467,4 +491,8 @@ cart-items {
 .cart_section .cart-item {
   padding-bottom: 3rem;
   border-bottom: 0.1rem solid rgba(var(--color-foreground), 0.08);
+}
+
+.cart_section .cart-item+.cart-item {
+  margin-top: 3rem;
 }
