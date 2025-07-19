@@ -326,7 +326,11 @@ class CartItems extends HTMLElement {
           if (discountInput.value === "") {
             return
           }
-          const body = JSON.stringify({ discount: discountInput.value });
+          const body = JSON.stringify({
+            discount: discountInput.value,
+            sections: this.getSectionsToRender().map((section) => section.section),
+            sections_url: window.location.pathname,
+          });
           const eventTarget = 'change';
           fetch(`${routes.cart_update_url}`, { ...fetchConfig(), ...{ body } })
             .then((response) => {
