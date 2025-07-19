@@ -388,7 +388,7 @@ cart-items {
   padding-bottom: 2rem;
 }
 
-.cart_section #cart_section_left_discount_btn {
+.cart_section .cart_section_left_discount_btn {
   width: 10.7rem;
   height: 3rem;
   display: flex;
@@ -420,7 +420,7 @@ cart-items {
   color: #7F7E75;
 }
 
-.cart_section .cart_section_left_discount input:focus+#cart_section_left_discount_btn {
+.cart_section .cart_section_left_discount input:focus+.cart_section_left_discount_btn {
   background-color: #bdff00;
   color: #1f1f1f;
 }

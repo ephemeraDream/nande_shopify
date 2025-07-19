@@ -25,6 +25,7 @@ class CartItems extends HTMLElement {
     this.addEventListener('change', debouncedOnChange.bind(this));
     this.initBtnEvents()
     this.initBundleRemove()
+    this.updateDiscount()
   }
 
   cartUpdateUnsubscriber = undefined;
@@ -304,6 +305,92 @@ class CartItems extends HTMLElement {
           this.updateQuantity(index, 0, event);
         })
         removeBtn.dataset.initialized = "true";
+      }
+    })
+  }
+
+  updateDiscount() {
+    const updateDiscountContain = document.querySelectorAll(".cart_section_left_discount")
+    updateDiscountContain.forEach(item => {
+      const updateDiscountBtn = item.querySelector(".cart_section_left_discount_btn")
+      const discountInput = item.querySelector("input")
+      if (updateDiscountBtn && discountInput.value !== "" && !updateDiscountBtn.dataset.initialized) {
+        updateDiscountBtn.addEventListener("click", (event) => {
+          event.preventDefault();
+          const body = JSON.stringify({ discount: discountInput.value });
+          fetch(`${routes.cart_update_url}`, { ...fetchConfig(), ...{ body } })
+            .then((response) => {
+              return response.text();
+            })
+            .then((state) => {
+              const parsedState = JSON.parse(state);
+
+              CartPerformance.measure(`${eventTarget}:paint-updated-sections"`, () => {
+                const quantityElement =
+                  document.getElementById(`Quantity-${line}`) || document.getElementById(`Drawer-quantity-${line}`);
+                const items = document.querySelectorAll('.cart-item');
+
+                if (parsedState.errors) {
+                  quantityElement.value = quantityElement.getAttribute('value');
+                  this.updateLiveRegions(line, parsedState.errors);
+                  return;
+                }
+
+                this.classList.toggle('is-empty', parsedState.item_count === 0);
+                const cartDrawerWrapper = document.querySelector('cart-drawer');
+                const cartFooter = document.getElementById('main-cart-footer');
+
+                if (cartFooter) cartFooter.classList.toggle('is-empty', parsedState.item_count === 0);
+                if (cartDrawerWrapper) cartDrawerWrapper.classList.toggle('is-empty', parsedState.item_count === 0);
+
+                this.getSectionsToRender().forEach((section) => {
+                  const elementToReplace =
+                    document.getElementById(section.id).querySelector(section.selector) || document.getElementById(section.id);
+                  elementToReplace.innerHTML = this.getSectionInnerHTML(
+                    parsedState.sections[section.section],
+                    section.selector
+                  );
+                });
+                this.initBtnEvents()
+                this.initBundleRemove()
+                const updatedValue = parsedState.items[line - 1] ? parsedState.items[line - 1].quantity : undefined;
+                let message = '';
+                if (items.length === parsedState.items.length && updatedValue !== parseInt(quantityElement.value)) {
+                  if (typeof updatedValue === 'undefined') {
+                    message = window.cartStrings.error;
+                  } else {
+                    message = window.cartStrings.quantityError.replace('[quantity]', updatedValue);
+                  }
+                }
+                this.updateLiveRegions(line, message);
+
+                const lineItem =
+                  document.getElementById(`CartItem-${line}`) || document.getElementById(`CartDrawer-Item-${line}`);
+                if (lineItem && lineItem.querySelector(`[name="${name}"]`)) {
+                  cartDrawerWrapper
+                    ? trapFocus(cartDrawerWrapper, lineItem.querySelector(`[name="${name}"]`))
+                    : lineItem.querySelector(`[name="${name}"]`).focus();
+                } else if (parsedState.item_count === 0 && cartDrawerWrapper) {
+                  trapFocus(cartDrawerWrapper.querySelector('.drawer__inner-empty'), cartDrawerWrapper.querySelector('a'));
+                } else if (document.querySelector('.cart-item') && cartDrawerWrapper) {
+                  trapFocus(cartDrawerWrapper, document.querySelector('.cart-item__name'));
+                }
+              });
+
+              CartPerformance.measureFromEvent(`${eventTarget}:user-action`, event);
+
+              publish(PUB_SUB_EVENTS.cartUpdate, { source: 'cart-items', cartData: parsedState, variantId: variantId });
+            })
+            .catch(() => {
+              this.querySelectorAll('.loading__spinner').forEach((overlay) => overlay.classList.add('hidden'));
+              const errors = document.getElementById('cart-errors') || document.getElementById('CartDrawer-CartErrors');
+              errors.textContent = window.cartStrings.error;
+            })
+            .finally(() => {
+              this.disableLoading(line);
+            });
+        })
+        updateDiscountBtn.dataset.initialized = "true";
       }
     })
   }
