@@ -1,17 +1,21 @@
 {% comment %}
 ------------------------------------------------------------
-Contact Form One Section - 联系表单 头部那种
+Contact Form Four Section - 联系表单 红人页面那种
 ------------------------------------------------------------
 {% endcomment %}
-<div class="contact-form-one session-box-padding overflow-hidden" 
+<div class="contact-form-four session-box-padding overflow-hidden" 
 style="background-image: url('{{ section.settings.image | image_url: width: section.settings.image.width }}'); "
 aria-label="conatct"
 >
-    <div class="contact-form-one__content session-box-inner">
+    <div class="contact-form-four__content session-box-inner">
         <div class="form__content">
+          {% unless section.settings.title == blank %}
             <h2 class="one__title">{{ section.settings.title }}</h2>
+          {% endunless %}
+          {% unless section.settings.desc == blank %}
             <h4 class="one__desc">{{ section.settings.desc }}</h4>
-            {%- form 'contact', id: 'ContactFormOne', class: contact_form_class -%}
+          {% endunless %}
+            {%- form 'contact', id: 'ContactFormFour', class: contact_form_class -%}
 
               {%- if form.posted_successfully? -%}
                 <p class="form-status form__message success" tabindex="-1" autofocus>
@@ -28,7 +32,7 @@ aria-label="conatct"
                   <input
                     autocomplete="email"
                     type="email"
-                    id="ContactForm-email"
+                    id="ContactFormFour-email"
                     class="field__input"
                     name="contact[email]"
                     spellcheck="false"
@@ -37,12 +41,12 @@ aria-label="conatct"
                     value="{% if form.email %}{{ form.email }}{% elsif customer %}{{ customer.email }}{% endif %}"
                     {% if form.errors contains 'email' %}
                       aria-invalid="true"
-                      aria-describedby="ContactForm-email-error"
+                      aria-describedby="ContactFormFour-email-error"
                     {% endif %}
-                    placeholder="E-Mail*"
+                    placeholder="Deine E-Mail"
                   >
                   {%- if form.errors contains 'email' -%}
-                    <small class="contact__field-error" id="ContactForm-email-error">
+                    <small class="contact__field-error" id="ContactFormFour-email-error">
                       {{ form.errors.messages.email }}
                     </small>
                   {%- endif -%}
@@ -51,42 +55,44 @@ aria-label="conatct"
                 <div class="form-grid-field">
                   <input
                     type="text"
-                    id="ContactForm-company"
+                    id="ContactFormFour-press"
                     class="field__input"
-                    name="contact[company]"
-                    placeholder="Unternehmen (optional)"
+                    name="contact[press]"
+                    placeholder="Deine Presse-/Blog-Seite"
                   >
                 </div>
-          
-                <div class="form-grid-field">
-                  <input
-                    type="text"
-                    id="ContactForm-name"
-                    class="field__input"
-                    name="contact[name]"
-                    autocomplete="name"
-                    value="{% if form.name %}{{ form.name }}{% elsif customer %}{{ customer.name }}{% endif %}"
-                    placeholder="Name (optional)"
-                  >
+              </div>
+
+              <div class="form-grid">
+                <div class="form-grid-field all-row">
+                  <select id="ContactFormFour-standing-desk" name="contact[standing-desk]" class="field__input">
+                    <option value="" disabled selected>Stehschreibtisch</option>
+                    <option value="1">1 Stück</option>
+                    <option value="2">2 Stück</option>
+                    <option value="3">3 Stück</option>
+                    <option value="4">4 Stück</option>
+                    <option value="5+">5+ Stück</option>
+                  </select>
                 </div>
-          
-                <div class="form-grid-field">
-                  <input
-                    type="tel"
-                    id="ContactForm-phone"
-                    class="field__input"
-                    name="contact[phone]"
-                    autocomplete="tel"
-                    value="{% if form.phone %}{{ form.phone }}{% elsif customer %}{{ customer.phone }}{% endif %}"
-                    placeholder="Telefon (optional)"
-                  >
+              </div>
+
+              <div class="form-grid">
+                <div class="form-grid-field all-row">
+                  <select id="ContactFormFour-partnership" name="contact[partnership]" class="field__input">
+                    <option value="" disabled selected>Kooperationsideen</option>
+                    <option value="1">1 Stück</option>
+                    <option value="2">2 Stück</option>
+                    <option value="3">3 Stück</option>
+                    <option value="4">4 Stück</option>
+                    <option value="5+">5+ Stück</option>
+                  </select>
                 </div>
               </div>
           
               <div class="form-grid-field">
                 <textarea
                   rows="7"
-                  id="ContactForm-body"
+                  id="ContactFormFour-body"
                   class="text-area field__input"
                   name="contact[body]"
                   placeholder="Nachricht (optional)"
@@ -103,7 +109,7 @@ aria-label="conatct"
     </div>
 </div>
 <style>
-  .contact-form-one:before{
+  .contact-form-four:before{
     content:'';
     position: absolute;
     top:0;
@@ -113,14 +119,14 @@ aria-label="conatct"
     background: linear-gradient(269deg, #000000 50%, rgba(255, 255, 255, 0) 98%);
     opacity: 0.4;
   }
-    .contact-form-one{
+    .contact-form-four{
         background-size: cover; background-position: center;
         min-height: 96rem;
         display: flex;
         align-items: center;
         position: relative;
     }
-    .contact-form-one__content{
+    .contact-form-four__content{
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -128,29 +134,32 @@ aria-label="conatct"
         position: relative;
         z-index: 1;
     }
-    .contact-form-one .form__content{
+    .contact-form-four .form__content{
         display: flex;
         gap:3rem;
         width:72rem;
         flex-direction: column;
     }
-    .contact-form-one .one__title,.contact-form-one .one__desc{
+    .contact-form-four .one__title,.contact-form-four .one__desc{
         color: #fff;
     }
 
 
-    .contact-form-one .form-grid {
+    .contact-form-four .form-grid {
       display: flex;
       flex-wrap: wrap;
       gap: 15px;
       margin-bottom: 15px;
     }
     
-    .contact-form-one .form-grid .form-grid-field {
+    .contact-form-four .form-grid .form-grid-field {
       flex: 1 1 calc(50% - 8px);
     }
+    .contact-form-four .form-grid-field.all-row {
+      flex: 1 1 100%;
+    }
     
-    .contact-form-one .field__input,
+    .contact-form-four .field__input,
     textarea.text-area {
       width: 100%;
       padding: 10px 12px;
@@ -162,7 +171,17 @@ aria-label="conatct"
       font-weight:400;
       height: 5rem;
     }
-    .contact-form-one .field__input::placeholder,.contact-form-one textarea.text-area::placeholder {
+    .contact-form-four select.field__input {
+      appearance: none;
+      background-image: url("data:image/svg+xml,%3Csvg width='10' height='6' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 0l5 6 5-6z' fill='%23000'/%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: right 12px center;
+      background-size: 10px 6px;
+    }
+    .contact-form-four select.field__input option[disabled],.contact-form-four select.field__input:invalid{
+      color: #7F7E75; 
+    }
+    .contact-form-four .field__input::placeholder,.contact-form-four textarea.text-area::placeholder {
       color: #7F7E75;  
       opacity: 1;
       font-size: 2.4rem;
@@ -193,13 +212,13 @@ aria-label="conatct"
     }
 
     
-    .contact-form-one textarea.text-area {
+    .contact-form-four textarea.text-area {
       min-height: 120px;
       resize: vertical;
       margin-bottom: 15px;
     }
     
-    .contact-form-one .submit-button {
+    .contact-form-four .submit-button {
       border: none;
       padding: 2rem;
       height: auto;
@@ -209,35 +228,35 @@ aria-label="conatct"
       margin-top: 1rem;
     }
     
-    {% comment %} .contact-form-one .submit-button:hover {
+    {% comment %} .contact-form-four .submit-button:hover {
       background-color: #bfee00;
     } {% endcomment %}
     
-    .contact-form-one .form__message.success {
+    .contact-form-four .form__message.success {
       color: #00ff66;
       font-weight: bold;
       margin-bottom: 20px;
     }
     
-    .contact-form-one .form__message.error {
+    .contact-form-four .form__message.error {
       color: #ff4d4f;
       font-weight: bold;
       margin-bottom: 20px;
     }
     
-    .contact-form-one .contact__field-error {
+    .contact-form-four .contact__field-error {
       color: #ff4d4f;
       font-size: 13px;
       margin-top: 4px;
       display: block;
     }
     @media only screen and (max-width: 767px) {
-      .contact-form-one .form__content{
+      .contact-form-four .form__content{
         width:100%;
       }
-      .contact-form-one .field__input,
-      textarea.text-area,.contact-form-one .field__input::placeholder,
-      .contact-form-one textarea.text-area::placeholder,
+      .contact-form-four .field__input,
+      textarea.text-area,.contact-form-four .field__input::placeholder,
+      .contact-form-four textarea.text-area::placeholder,
       .field__input::-moz-placeholder,textarea::-moz-placeholder, 
       .field__input:-ms-input-placeholder,textarea::-moz-placeholder,
       .field__input::-ms-input-placeholder,textarea::-moz-placeholder{
@@ -250,7 +269,7 @@ aria-label="conatct"
 
 {% schema %}
 {
-  "name": "Contact Form One",
+  "name": "Contact Form Four",
   "tag": "section",
   "class": "section",
   "disabled_on": { "groups": ["header", "footer"] },
@@ -274,7 +293,7 @@ aria-label="conatct"
   "blocks": [
   ],
   "presets": [
-    { "name": "Contact Form One" }
+    { "name": "Contact Form Four" }
   ]
 }
 {% endschema %}
