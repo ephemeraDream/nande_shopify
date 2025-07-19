@@ -225,6 +225,12 @@ class CartItems extends HTMLElement {
         CartPerformance.measureFromEvent(`${eventTarget}:user-action`, event);
 
         publish(PUB_SUB_EVENTS.cartUpdate, { source: 'cart-items', cartData: parsedState, variantId: variantId });
+
+        const productLength = document.querySelectorAll("#main-cart-items .cart-items").length
+        if (productLength === 0) {
+          document.querySelector("#main-cart-items .cart_drawer_infobar_contain").classList.add("hidden")
+          document.querySelector("#main-cart-items .cart_section_left").classList.add("hidden")
+        }
       })
       .catch(() => {
         this.querySelectorAll('.loading__spinner').forEach((overlay) => overlay.classList.add('hidden'));
