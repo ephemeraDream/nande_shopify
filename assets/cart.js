@@ -170,12 +170,6 @@ class CartItems extends HTMLElement {
       .then((state) => {
         const parsedState = JSON.parse(state);
 
-        const productLength = document.querySelectorAll("#main-cart-items .cart-items").length
-        if (productLength === 0) {
-          document.querySelector("#main-cart-items .cart_drawer_infobar_contain").classList.add("hidden")
-          document.querySelector("#main-cart-items .cart_section_left").classList.add("hidden")
-        }
-
         CartPerformance.measure(`${eventTarget}:paint-updated-sections"`, () => {
           const quantityElement =
             document.getElementById(`Quantity-${line}`) || document.getElementById(`Drawer-quantity-${line}`);
@@ -238,6 +232,11 @@ class CartItems extends HTMLElement {
         errors.textContent = window.cartStrings.error;
       })
       .finally(() => {
+        const productLength = document.querySelectorAll("#main-cart-items .cart-items").length
+        if (productLength === 0) {
+          document.querySelector("#main-cart-items .cart_drawer_infobar_contain").classList.add("hidden")
+          document.querySelector("#main-cart-items .cart_section_left").classList.add("hidden")
+        }
         this.disableLoading(line);
       });
   }
