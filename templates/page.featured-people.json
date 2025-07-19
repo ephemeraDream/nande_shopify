@@ -185,14 +185,57 @@
             "spec_id": "",
             "title": "<p>Why Collaborating With Maidesite</p>",
             "image": "shopify://shop_images/featured-spaces-5.webp"
-        }
         },
+        "custom_css": [
+          ".img_with_foldtext_title {text-align:left}",
+        ]
+        },
+      "faq_simple_kxTbhc": {
+        "type": "faq-simple",
+        "blocks": {
+            "faq_E4jP4F": {
+            "type": "faq",
+            "settings": {
+                "question": "<p>Kann ich meine Bestellung stornieren?</p>",
+                "answer": "<p>Maidesite bietet durch seine produkten von höhenverstellbaren Schreibtischen, die Funktionsintegration, Szenenvielfalt und Personalisierung bieten, Ihnen die Möglichkeit, einfach zwischen verschiedenen Heimat-Aktivitätsmodi zu wechseln, die eine Desktop-Assistenten erfordern. <br/><br/>Dies ermöglicht Anhängern des modernen intelligenten Heimlebens, sich noch bequemer und müheloser in ihre vielfältigen Lebensstile einzuleben.<br/></p>"
+            }
+            },
+            "faq_AXAcgA": {
+            "type": "faq",
+            "settings": {
+                "question": "<p>Was ist, wenn ich mit jemandem sprechen mochte?</p>",
+                "answer": "<p>Maidesite bietet durch seine produkten von höhenverstellbaren Schreibtischen, die Funktionsintegration, Szenenvielfalt und Personalisierung bieten, Ihnen die Möglichkeit, einfach zwischen verschiedenen Heimat-Aktivitätsmodi zu wechseln, die eine Desktop-Assistenten erfordern. <br/><br/>Dies ermöglicht Anhängern des modernen intelligenten Heimlebens, sich noch bequemer und müheloser in ihre vielfältigen Lebensstile einzuleben.<br/></p>"
+            }
+            },
+            "faq_W9Mzyn": {
+            "type": "faq",
+            "settings": {
+                "question": "<p>Ist das Bestellen im Internet sicher? Was passiert mit meinen Daten?</p>",
+                "answer": "<p>Maidesite bietet durch seine produkten von höhenverstellbaren Schreibtischen, die Funktionsintegration, Szenenvielfalt und Personalisierung bieten, Ihnen die Möglichkeit, einfach zwischen verschiedenen Heimat-Aktivitätsmodi zu wechseln, die eine Desktop-Assistenten erfordern. <br/><br/>Dies ermöglicht Anhängern des modernen intelligenten Heimlebens, sich noch bequemer und müheloser in ihre vielfältigen Lebensstile einzuleben.<br/></p>"
+            }
+            }
+        }
+      },
+      "block_order": [
+        "faq_E4jP4F",
+        "faq_AXAcgA",
+        "faq_W9Mzyn"
+      ],
+      "custom_css": [
+        ".faq_simple_section {background-color: transparent;}"
+      ],
+      "name": "faq simple",
+      "settings": {
+        "heading": "<p>FAQ</p>",
+        "text": "<p>Häufig gestellte Fragen</p>",
+    },
     },
     "order": [
       "breadcrumbs",
       "contact_form_four",
       "brand_swiper",
       "celebrity_swiper_aGymw9",
-      "img_with_foldtext_RcBrkw"
+      "img_with_foldtext_RcBrkw",
+      "faq_simple_kxTbhc"
     ]
   }
