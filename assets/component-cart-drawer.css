@@ -789,8 +789,7 @@ cart-drawer-items::-webkit-scrollbar-track-piece {
   color: #1F1F1F;
 }
 
-.cart-drawer .cart__warnings .button {
-  width: 70.5rem;
+.cart-drawer .cart-drawer__empty-content .button {
   height: 6.8rem;
   background-color: #BDFF00;
   border: none;
