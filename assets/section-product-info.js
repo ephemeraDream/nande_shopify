@@ -295,7 +295,7 @@ function initBuybox() {
           } finally {
             btn.classList.remove("is-loading");
 
-            fetch(`${routes.cart_url}?sections=cart-drawer`)
+            fetch(`${routes.cart_url}`)
               .then((response) => response.json())
               .then((state) => {
                 const parsedState = JSON.parse(state);
