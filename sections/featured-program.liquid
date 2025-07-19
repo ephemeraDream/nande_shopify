@@ -21,12 +21,10 @@ Featured Program - 计划 流程 红人页面那种
                 | image_url: width: block.settings.icon.width
                 | image_tag: alt: block.settings.title, class: 'influencer-step-icon'
               -}}
-            <div class="influencer-step-content">
               <div class="text-body step-number">{{ block.settings.title }}</div>
               <div class="text-body step-desc">{{ block.settings.text }}</div>
-            </div>
             {% unless forloop.last %}
-              <div class="step-arrow">&gt;</div>
+              <div class="step-arrow">{{- 'swiper-left.svg' | inline_asset_content -}}</div>
             {% endunless %}
           </div>
         {% endfor %}
