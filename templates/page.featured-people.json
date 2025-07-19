@@ -109,7 +109,6 @@
           ".brand_swiper {background-color: transparent;}",
         ]
       },
-      
       "celebrity_swiper_aGymw9": {
         "type": "celebrity-swiper",
         "blocks": {
@@ -150,12 +149,50 @@
         "custom_css": [
           ".celebrity_swiper {padding-bottom:12rem;background-color: transparent;}",
         ]
-      }
+      },
+      "img_with_foldtext_RcBrkw": {
+        "type": "img-with-foldtext",
+        "blocks": {
+            "foldtext_HQhGDk": {
+            "type": "foldtext",
+            "settings": {
+                "title": "<p>64-129cm hohenverstellbar</p>",
+                "description": "<p>Normalerweise beträgt die optimale Schreibtischhöhe im Sitzen Ihre Körpergröße x 0,4 und im Stehen Ihre Körpergröße x 0,62. <br/>Höhenverstellbarer Schreibtisch mit 2 stufigen Säulen ist nur für die Körpergröße von 1,75-1,95 m geeignet. <br/>Vernal-Schreibtisch passt für Personen mit einer Körpergröße von 1,55-2,05 m.</p>"
+            }
+            },
+            "foldtext_HWP39G": {
+            "type": "foldtext",
+            "settings": {
+                "title": "<p>160 kg groBe Tragfahigkeit</p>",
+                "description": "<p>Normalerweise beträgt die optimale Schreibtischhöhe im Sitzen Ihre Körpergröße x 0,4 und im Stehen Ihre Körpergröße x 0,62. <br/>Höhenverstellbarer Schreibtisch mit 2 stufigen Säulen ist nur für die Körpergröße von 1,75-1,95 m geeignet. <br/>Vernal-Schreibtisch passt für Personen mit einer Körpergröße von 1,55-2,05 m.</p>"
+            }
+            },
+            "foldtext_iGWkAX": {
+            "type": "foldtext",
+            "settings": {
+                "title": "<p>Flexible Einstellung und schnelle Reaktion</p>",
+                "description": "<p>Normalerweise beträgt die optimale Schreibtischhöhe im Sitzen Ihre Körpergröße x 0,4 und im Stehen Ihre Körpergröße x 0,62. <br/>Höhenverstellbarer Schreibtisch mit 2 stufigen Säulen ist nur für die Körpergröße von 1,75-1,95 m geeignet. <br/>Vernal-Schreibtisch passt für Personen mit einer Körpergröße von 1,55-2,05 m.</p>"
+            }
+            }
+        },
+        "block_order": [
+            "foldtext_HQhGDk",
+            "foldtext_HWP39G",
+            "foldtext_iGWkAX"
+        ],
+        "name": "img with foldtext",
+        "settings": {
+            "spec_id": "",
+            "title": "<p>Why Collaborating With Maidesite</p>",
+            "image": "shopify://shop_images/featured-spaces-5.webp"
+        }
+        },
     },
     "order": [
       "breadcrumbs",
       "contact_form_four",
       "brand_swiper",
-      "celebrity_swiper_aGymw9"
+      "celebrity_swiper_aGymw9",
+      "img_with_foldtext_RcBrkw"
     ]
   }
