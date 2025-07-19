@@ -320,6 +320,11 @@ class CartItems extends HTMLElement {
     updateDiscountContain.forEach(item => {
       const updateDiscountBtn = item.querySelector(".cart_section_left_discount_btn")
       const discountInput = item.querySelector("input")
+      const discountContain = item.querySelector(".cart_section_left_discount_contain")
+      let nowDiscount
+      if (discountContain) {
+        nowDiscount = discountContain.dataset.discount
+      }
       if (updateDiscountBtn && !updateDiscountBtn.dataset.initialized) {
         updateDiscountBtn.addEventListener("click", (event) => {
           event.preventDefault();
@@ -327,7 +332,7 @@ class CartItems extends HTMLElement {
             return
           }
           const body = JSON.stringify({
-            discount: discountInput.value,
+            discount: nowDiscount ? nowDiscount + "," + discountInput.value : discountInput.value,
             sections: this.getSectionsToRender().map((section) => section.section),
             sections_url: window.location.pathname,
           });
