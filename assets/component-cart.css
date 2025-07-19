@@ -452,7 +452,7 @@ cart-items {
   color: #1F1F1F;
 }
 
-.cart_section .cart__warnings button {
+.cart_section .cart__warnings .button {
   width: 70.5rem;
   height: 6.8rem;
   background-color: #BDFF00;
