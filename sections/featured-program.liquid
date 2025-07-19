@@ -16,9 +16,11 @@ Featured Program - 计划 流程 红人页面那种
       <div class="steps-grid">
         {% for block in section.blocks %}
           <div class="influencer-step">
-            <div class="influencer-step-icon">
-              {{ block.settings.icon | image_url: width: 80 | image_tag: class: 'step-icon', alt: block.settings.title }}
-            </div>
+            {{-
+                block.settings.icon
+                | image_url: width: block.settings.icon.width
+                | image_tag: alt: block.settings.title, class: 'influencer-step-icon'
+              -}}
             <div class="influencer-step-content">
               <div class="text-body step-number">{{ block.settings.title }}</div>
               <div class="text-body step-desc">{{ block.settings.text }}</div>
