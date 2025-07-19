@@ -23,6 +23,7 @@ class CartItems extends HTMLElement {
     }, ON_CHANGE_DEBOUNCE_TIMER);
 
     this.addEventListener('change', debouncedOnChange.bind(this));
+    initBtnEvents()
   }
 
   cartUpdateUnsubscriber = undefined;
@@ -193,6 +194,7 @@ class CartItems extends HTMLElement {
               section.selector
             );
           });
+          initBtnEvents()
           const updatedValue = parsedState.items[line - 1] ? parsedState.items[line - 1].quantity : undefined;
           let message = '';
           if (items.length === parsedState.items.length && updatedValue !== parseInt(quantityElement.value)) {
@@ -274,6 +276,24 @@ class CartItems extends HTMLElement {
     cartItemElements.forEach((overlay) => overlay.classList.add('hidden'));
     cartDrawerItemElements.forEach((overlay) => overlay.classList.add('hidden'));
   }
+
+  initBtnEvents() {
+    const cart_products = document.querySelectorAll('[id^="CartDrawer-Item-"]')
+    cart_products.forEach(item => {
+      const bundle_product_contain = item.querySelector(".cartdrawer_bundle_product")
+      const bundle_btn = item.querySelector(".cartdrawer_bundle_product_head")
+      if (bundle_product_contain) {
+        bundle_btn.addEventListener("click", () => {
+          bundle_product_contain.classList.toggle("active")
+        })
+      }
+    })
+    const cartdrawer_viewdetail = document.querySelector(".cartdrawer_viewdetail")
+    cartdrawer_viewdetail.addEventListener("click", () => {
+      const parent = cartdrawer_viewdetail.closest(".drawer__footer")
+      parent.classList.toggle("active")
+    })
+  }
 }
 
 customElements.define('cart-items', CartItems);
@@ -297,19 +317,3 @@ if (!customElements.get('cart-note')) {
     }
   );
 }
-
-const cart_products = document.querySelectorAll('[id^="CartDrawer-Item-"]')
-cart_products.forEach(item => {
-  const bundle_product_contain = item.querySelector(".cartdrawer_bundle_product")
-  const bundle_btn = item.querySelector(".cartdrawer_bundle_product_head")
-  if (bundle_product_contain) {
-    bundle_btn.addEventListener("click", () => {
-      bundle_product_contain.classList.toggle("active")
-    })
-  }
-})
-const cartdrawer_viewdetail = document.querySelector(".cartdrawer_viewdetail")
-cartdrawer_viewdetail.addEventListener("click", () => {
-  const parent = cartdrawer_viewdetail.closest(".drawer__footer")
-  parent.classList.toggle("active")
-})
