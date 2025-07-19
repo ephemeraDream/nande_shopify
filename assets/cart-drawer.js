@@ -5,6 +5,7 @@ class CartDrawer extends HTMLElement {
     this.addEventListener('keyup', (evt) => evt.code === 'Escape' && this.close());
     this.querySelector('#CartDrawer-Overlay').addEventListener('click', this.close.bind(this));
     this.setHeaderCartIconAccessibility();
+    this.initBtnEvents()
   }
 
   setHeaderCartIconAccessibility() {
@@ -81,6 +82,7 @@ class CartDrawer extends HTMLElement {
 
       if (!sectionElement) return;
       sectionElement.innerHTML = this.getSectionInnerHTML(parsedState.sections[section.id], section.selector);
+      this.initBtnEvents()
     });
 
     setTimeout(() => {
@@ -111,6 +113,14 @@ class CartDrawer extends HTMLElement {
 
   setActiveElement(element) {
     this.activeElement = element;
+  }
+
+  initBtnEvents() {
+    const cartdrawer_viewdetail = this.querySelector(".cartdrawer_viewdetail")
+    cartdrawer_viewdetail.addEventListener("click", () => {
+      const parent = cartdrawer_viewdetail.closest(".drawer__footer")
+      parent.classList.toggle("active")
+    })
   }
 }
 

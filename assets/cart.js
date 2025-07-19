@@ -313,9 +313,3 @@ if (!customElements.get('cart-note')) {
     }
   );
 }
-
-const cartdrawer_viewdetail = document.querySelector(".cartdrawer_viewdetail")
-cartdrawer_viewdetail.addEventListener("click", () => {
-  const parent = cartdrawer_viewdetail.closest(".drawer__footer")
-  parent.classList.toggle("active")
-})
