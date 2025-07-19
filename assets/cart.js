@@ -314,9 +314,12 @@ class CartItems extends HTMLElement {
     updateDiscountContain.forEach(item => {
       const updateDiscountBtn = item.querySelector(".cart_section_left_discount_btn")
       const discountInput = item.querySelector("input")
-      if (updateDiscountBtn && discountInput.value !== "" && !updateDiscountBtn.dataset.initialized) {
+      if (updateDiscountBtn && !updateDiscountBtn.dataset.initialized) {
         updateDiscountBtn.addEventListener("click", (event) => {
           event.preventDefault();
+          if (discountInput.value === "") {
+            return
+          }
           const body = JSON.stringify({ discount: discountInput.value });
           fetch(`${routes.cart_update_url}`, { ...fetchConfig(), ...{ body } })
             .then((response) => {
