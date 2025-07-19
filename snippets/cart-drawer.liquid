@@ -577,20 +577,42 @@
         <!-- Subtotals -->
 
         <div class="cart-drawer__footer" {{ block.shopify_attributes }}>
-          <div>
+          {% comment %}
+            <div>
+              {%- if cart.cart_level_discount_applications.size > 0 -%}
+                <ul class="discounts list-unstyled" role="list" aria-label="{{ 'customer.order.discount' | t }}">
+                  {%- for discount in cart.cart_level_discount_applications -%}
+                    <li class="discounts__discount discounts__discount--end">
+                      {{- 'icon-discount.svg' | inline_asset_content -}}
+                      {{ discount.title | escape }}
+                      (-{{ discount.total_allocated_amount | money }})
+                    </li>
+                  {%- endfor -%}
+                </ul>
+              {%- endif -%}
+            </div>
+          {% endcomment %}
+          {% assign code_str = '' %}
+          {% assign discount_list = cart.cart_level_discount_applications | concat: cart.discount_applications %}
+          {% for discount in discount_list %}
+            {% assign code_str = code_str | append: discount.title %}
+            {% unless forloop.last %}
+              {% assign code_str = code_str | append: ',' %}
+            {% endunless %}
+          {%- endfor -%}
+          <div class="cart_section_left_discount" data-discount="{{ code_str }}">
+            <input autocomplete="off" type="text" name="discount" placeholder="{{ 'common.gutscheincode' | t }}">
+            <div class="cart_section_left_discount_btn">{{ 'common.anwenden' | t }}</div>
             {%- if cart.cart_level_discount_applications.size > 0 -%}
-              <ul class="discounts list-unstyled" role="list" aria-label="{{ 'customer.order.discount' | t }}">
-                {%- for discount in cart.cart_level_discount_applications -%}
-                  <li class="discounts__discount discounts__discount--end">
-                    {{- 'icon-discount.svg' | inline_asset_content -}}
-                    {{ discount.title | escape }}
-                    (-{{ discount.total_allocated_amount | money }})
-                  </li>
+              <div class="cart_section_left_discount_contain">
+                {% for discount in cart.cart_level_discount_applications %}
+                  <div class="cart_section_left_discount_item">
+                    {{ discount.title | escape_once }} (-{{ discount.total_allocated_amount | money }})
+                  </div>
                 {%- endfor -%}
-              </ul>
+              </div>
             {%- endif -%}
           </div>
-
           <div class="totals" role="status">
             <h2 class="totals__total">{{ 'common.subtotal' | t }}</h2>
             <p class="totals__total-value">{{ cart.original_total_price | money }}</p>
