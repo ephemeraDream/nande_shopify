@@ -290,6 +290,18 @@ class CartItems extends HTMLElement {
       }
     });
   }
+
+  initBundleRemove() {
+    const bundleProducts = this.querySelectorAll(".cartdrawer_bundle_product_item")
+    bundleProducts.forEach(item => {
+      const removeBtn = item.querySelector(".cartdrawer_bundle_product_delete")
+      const index = removeBtn.dataset.index
+      removeBtn.addEventListener("click", (event) => {
+        event.preventDefault();
+        this.updateQuantity(index, 0, event);
+      })
+    })
+  }
 }
 
 customElements.define('cart-items', CartItems);
