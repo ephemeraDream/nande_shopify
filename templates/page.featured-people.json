@@ -15,13 +15,13 @@
           "custom_breadcrumb": ""
         }
       },
-      "contact_form_one": {
-        "type": "contact-form-one",
-        "name": "contact_form_one",
+      "contact_form_four": {
+        "type": "contact-form-four",
+        "name": "contact_form_four",
         "settings": {
-          "image": "shopify://shop_images/b2b_01.webp",
-          "title": "Optimieren Sie Ihr BüRo Mit Maidesite’S Ergonomischen LöSungen",
-          "desc":"Hinterlassen Sie Ihre E-Mail, senden Sie Ihre Anfrage und erhalten Sie innerhalb von 24 Stunden eine maßgeschneiderte Beratung!"
+          "image": "shopify://shop_images/pe_01.webp",
+          "title": "FüLle Dieses Formular Aus, Um Unsere Zusammenarbeit Zu Starten.",
+          "desc":""
         }
       },
       
@@ -69,7 +69,7 @@
     },
     "order": [
       "breadcrumbs",
-      "contact_form_one",
+      "contact_form_four",
       "celebrity_swiper_aGymw9"
     ]
   }

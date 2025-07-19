@@ -1,0 +1,288 @@
+{% comment %}
+------------------------------------------------------------
+Contact Form Four Section - 联系表单 红人页面那种
+------------------------------------------------------------
+{% endcomment %}
+<div class="contact-form-four session-box-padding overflow-hidden" 
+style="background-image: url('{{ section.settings.image | image_url: width: section.settings.image.width }}'); "
+aria-label="conatct"
+>
+    <div class="contact-form-four__content session-box-inner">
+        <div class="form__content">
+          {% unless section.settings.title == blank %}
+            <h2 class="one__title">{{ section.settings.title }}</h2>
+          {% endunless %}
+          {% unless section.settings.desc == blank %}
+            <h4 class="one__desc">{{ section.settings.desc }}</h4>
+          {% endunless %}
+            {%- form 'contact', id: 'ContactFormFour', class: contact_form_class -%}
+
+              {%- if form.posted_successfully? -%}
+                <p class="form-status form__message success" tabindex="-1" autofocus>
+                  Ihre Nachricht wurde erfolgreich gesendet.
+                </p>
+              {%- elsif form.errors -%}
+                <div class="form__message error" role="alert" tabindex="-1" autofocus>
+                  Fehler beim Senden des Formulars. Bitte überprüfen Sie Ihre Eingaben.
+                </div>
+              {%- endif -%}
+          
+              <div class="form-grid">
+                <div class="form-grid-field field--with-error">
+                  <input
+                    autocomplete="email"
+                    type="email"
+                    id="ContactFormFour-email"
+                    class="field__input"
+                    name="contact[email]"
+                    spellcheck="false"
+                    autocapitalize="off"
+                    required
+                    value="{% if form.email %}{{ form.email }}{% elsif customer %}{{ customer.email }}{% endif %}"
+                    {% if form.errors contains 'email' %}
+                      aria-invalid="true"
+                      aria-describedby="ContactFormFour-email-error"
+                    {% endif %}
+                    placeholder="Deine E-Mail"
+                  >
+                  {%- if form.errors contains 'email' -%}
+                    <small class="contact__field-error" id="ContactFormFour-email-error">
+                      {{ form.errors.messages.email }}
+                    </small>
+                  {%- endif -%}
+                </div>
+          
+                <div class="form-grid-field">
+                  <input
+                    type="text"
+                    id="ContactFormFour-press"
+                    class="field__input"
+                    name="contact[press]"
+                    placeholder="Deine Presse-/Blog-Seite"
+                  >
+                </div>
+              </div>
+
+              <div class="form-grid">
+                <div class="form-grid-field all-row">
+                  <select id="ContactFormFour-standing-desk" name="contact[standing-desk]" class="field__input">
+                    <option value="" disabled selected>Stehschreibtisch</option>
+                    <option value="1">1 Stück</option>
+                    <option value="2">2 Stück</option>
+                    <option value="3">3 Stück</option>
+                    <option value="4">4 Stück</option>
+                    <option value="5+">5+ Stück</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="form-grid">
+                <div class="form-grid-field all-row">
+                  <select id="ContactFormFour-partnership" name="contact[partnership]" class="field__input">
+                    <option value="" disabled selected>Kooperationsideen</option>
+                    <option value="1">1 Stück</option>
+                    <option value="2">2 Stück</option>
+                    <option value="3">3 Stück</option>
+                    <option value="4">4 Stück</option>
+                    <option value="5+">5+ Stück</option>
+                  </select>
+                </div>
+              </div>
+          
+              <div class="form-grid-field">
+                <textarea
+                  rows="7"
+                  id="ContactFormFour-body"
+                  class="text-area field__input"
+                  name="contact[body]"
+                  placeholder="Nachricht (optional)"
+                >{{- form.body -}}</textarea>
+              </div>
+          
+              <button type="submit" class="submit-button nd-btn">
+                Absenden
+                {{ 'icon-right-arrow.svg' | inline_asset_content }}
+              </button>
+          
+            {%- endform -%}
+        </div>
+    </div>
+</div>
+<style>
+  .contact-form-four:before{
+    content:'';
+    position: absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background: linear-gradient(269deg, #000000 50%, rgba(255, 255, 255, 0) 98%);
+    opacity: 0.4;
+  }
+    .contact-form-four{
+        background-size: cover; background-position: center;
+        min-height: 96rem;
+        display: flex;
+        align-items: center;
+        position: relative;
+    }
+    .contact-form-four__content{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-end;
+        position: relative;
+        z-index: 1;
+    }
+    .contact-form-four .form__content{
+        display: flex;
+        gap:3rem;
+        width:72rem;
+        flex-direction: column;
+    }
+    .contact-form-four .one__title,.contact-form-four .one__desc{
+        color: #fff;
+    }
+
+
+    .contact-form-four .form-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+      margin-bottom: 15px;
+    }
+    
+    .contact-form-four .form-grid .form-grid-field {
+      flex: 1 1 calc(50% - 8px);
+    }
+    .contact-form-four .form-grid-field.all-row {
+      flex: 1 1 100%;
+    }
+    
+    .contact-form-four .field__input,
+    textarea.text-area {
+      width: 100%;
+      padding: 10px 12px;
+      font-size: 2.4rem;
+      border: none;
+      border-radius: 0px;
+      background: #fff;
+      color: rgb(var(--color-foreground));
+      font-weight:400;
+    }
+    .contact-form-four .field__input::placeholder,.contact-form-four textarea.text-area::placeholder {
+      color: #7F7E75;  
+      opacity: 1;
+      font-size: 2.4rem;
+      font-weight:400;
+    }
+    /* Firefox */
+    .field__input::-moz-placeholder,textarea::-moz-placeholder {
+      color: #7F7E75;
+      opacity: 1;
+      font-size: 2.4rem;
+      font-weight:400;
+    }
+
+    /* IE 10-11 */
+    .field__input:-ms-input-placeholder,textarea::-moz-placeholder {
+      color: #7F7E75;
+      opacity: 1;
+      font-size: 2.4rem;
+      font-weight:400;
+    }
+
+    /* Microsoft Edge */
+    .field__input::-ms-input-placeholder,textarea::-moz-placeholder {
+      color: #7F7E75;
+      opacity: 1;
+      font-size: 2.4rem;
+      font-weight:400;
+    }
+
+    
+    .contact-form-four textarea.text-area {
+      min-height: 120px;
+      resize: vertical;
+      margin-bottom: 15px;
+    }
+    
+    .contact-form-four .submit-button {
+      border: none;
+      padding: 2rem;
+      height: auto;
+      width: 50%;
+      display: flex;
+      justify-content: space-between;
+      margin-top: 1rem;
+    }
+    
+    {% comment %} .contact-form-four .submit-button:hover {
+      background-color: #bfee00;
+    } {% endcomment %}
+    
+    .contact-form-four .form__message.success {
+      color: #00ff66;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+    
+    .contact-form-four .form__message.error {
+      color: #ff4d4f;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+    
+    .contact-form-four .contact__field-error {
+      color: #ff4d4f;
+      font-size: 13px;
+      margin-top: 4px;
+      display: block;
+    }
+    @media only screen and (max-width: 767px) {
+      .contact-form-four .form__content{
+        width:100%;
+      }
+      .contact-form-four .field__input,
+      textarea.text-area,.contact-form-four .field__input::placeholder,
+      .contact-form-four textarea.text-area::placeholder,
+      .field__input::-moz-placeholder,textarea::-moz-placeholder, 
+      .field__input:-ms-input-placeholder,textarea::-moz-placeholder,
+      .field__input::-ms-input-placeholder,textarea::-moz-placeholder{
+        font-size: 1.8rem;
+      }
+     
+    }
+    
+</style>
+
+{% schema %}
+{
+  "name": "Contact Form Four",
+  "tag": "section",
+  "class": "section",
+  "disabled_on": { "groups": ["header", "footer"] },
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title"
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Background Image"
+    },
+    {
+        "type": "text",
+        "id": "desc",
+        "label": "desc"
+    }
+  ],
+  "blocks": [
+  ],
+  "presets": [
+    { "name": "Contact Form Four" }
+  ]
+}
+{% endschema %}
