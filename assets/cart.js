@@ -320,11 +320,7 @@ class CartItems extends HTMLElement {
     updateDiscountContain.forEach(item => {
       const updateDiscountBtn = item.querySelector(".cart_section_left_discount_btn")
       const discountInput = item.querySelector("input")
-      const discountContain = item.querySelector(".cart_section_left_discount_contain")
-      let nowDiscount
-      if (discountContain) {
-        nowDiscount = discountContain.dataset.discount
-      }
+      const nowDiscount = item.dataset.discount
       if (updateDiscountBtn && !updateDiscountBtn.dataset.initialized) {
         updateDiscountBtn.addEventListener("click", (event) => {
           event.preventDefault();

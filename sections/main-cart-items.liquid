@@ -544,18 +544,19 @@
           <span>{{ 'common.buy_more_save_more' | t }}</span>
           <span>{{ cart.total_discount | money }}</span>
         </div>
-        <div class="cart_section_left_discount">
+        {% assign code_str = '' %}
+        {% assign discount_list = cart.cart_level_discount_applications | concat: cart.discount_applications %}
+        {% for discount in discount_list %}
+          {% assign code_str = code_str | append: discount.title %}
+          {% unless forloop.last %}
+            {% assign code_str = code_str | append: ',' %}
+          {% endunless %}
+        {%- endfor -%}
+        <div class="cart_section_left_discount" data-discount="{{ code_str }}">
           <input autocomplete="off" type="text" name="discount" placeholder="{{ 'common.gutscheincode' | t }}">
           <div class="cart_section_left_discount_btn">{{ 'common.anwenden' | t }}</div>
           {%- if cart.cart_level_discount_applications.size > 0 -%}
-            {% assign code_str = '' %}
-            {% for discount in cart.cart_level_discount_applications %}
-              {% assign code_str = code_str | append: discount.title %}
-              {% unless forloop.last %}
-                {% assign code_str = code_str | append: ',' %}
-              {% endunless %}
-            {%- endfor -%}
-            <div class="cart_section_left_discount_contain" data-discount="{{ code_str }}">
+            <div class="cart_section_left_discount_contain">
               {% for discount in cart.cart_level_discount_applications %}
                 <div class="cart_section_left_discount_item">
                   {{ discount.title | escape_once }} (-{{ discount.total_allocated_amount | money }})
