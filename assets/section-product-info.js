@@ -297,7 +297,8 @@ function initBuybox() {
 
             fetch(`${routes.cart_url}?sections=cart-drawer`)
               .then((response) => response.json())
-              .then((sections) => {
+              .then((state) => {
+                const parsedState = JSON.parse(state);
                 // const sectionIds = ['cart-drawer'];
                 // for (const sectionId of sectionIds) {
                 //   const htmlString = sections[sectionId];
