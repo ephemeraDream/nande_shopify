@@ -327,6 +327,7 @@ class CartItems extends HTMLElement {
             return
           }
           const body = JSON.stringify({ discount: discountInput.value });
+          const eventTarget = 'change';
           fetch(`${routes.cart_update_url}`, { ...fetchConfig(), ...{ body } })
             .then((response) => {
               return response.text();
