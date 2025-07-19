@@ -40,8 +40,8 @@ background: #E2DED6;
 
 .featured-program .steps-grid {
 display: grid;
-grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-gap: 32px;
+grid-template-columns: repeat(3, 1fr);
+gap: 9rem;
 position: relative;
 }
 
@@ -71,6 +71,17 @@ color: #3D3D3D;
     font-size: 1.5rem;
     font-weight: bold;
     color: #1F1F1F;
+}
+@media screen and (max-width: 1024px) {
+    .featured-program .steps-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  @media screen and (max-width: 768px) {
+    .featured-program .steps-grid {
+      grid-template-columns: 1fr;
+    }
 }
       
 </style>
