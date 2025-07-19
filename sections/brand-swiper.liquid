@@ -20,10 +20,11 @@ Brand swipe - 品牌logo轮播 红人页面那种
             <div class="swiper-slide">
                 {{-
                     block.settings.logo
-                    | image_url: width: block.settings.logo.width
+                    | image_url
                     | image_tag: alt: block.settings.title, class: 'brand_swiper_logo'
-                -}}
-                <h3>{{ block.settings.title }}</h3>
+                  -}}
+                  
+                <h4>{{ block.settings.title }}</h4>
                 <p class="text-body">{{ block.settings.description }}</p>
                 <a href="{{ block.settings.link }}" class="learn-more">{{ section.settings.btn_text }}</a>
             </div>
@@ -75,15 +76,19 @@ Brand swipe - 品牌logo轮播 红人页面那种
         max-width: 100%;
         margin-bottom: 3rem;
         height:auto;
+        width: auto;
+        display: block;
     }
     
-    .brand_swiper .swiper-slide h3 {
+    .brand_swiper .swiper-slide h4 {
         margin-bottom: 1.3rem;
     }
     
     .brand_swiper .swiper-slide p {
         color: #1F1F1F;
         flex-grow: 1;
+        font-size: 2rem;
+        line-height: 2.6rem;
     }
     
     .brand_swiper .swiper-slide .learn-more {
@@ -91,9 +96,15 @@ Brand swipe - 品牌logo轮播 红人页面那种
         background-color: #fff;
         display: inline-block;
         margin-top: 3rem;
-        font-weight: bold;
-        font-size:2.4rem;
+        font-weight: 500;
+        font-size: 2.4rem;
         color: #1F1F1F;
+        width: max-content;
+        line-height: 2.6rem;
+        transition: all .3s;
+    }
+    .brand_swiper .swiper-slide .learn-more:hover {
+        background-color: #BDFF00;
     }
 
 </style>
