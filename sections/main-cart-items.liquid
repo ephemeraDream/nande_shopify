@@ -25,7 +25,7 @@
 
 <script src="{{ 'quantity-popover.js' | asset_url }}" defer="defer"></script>
 
-<div class="cart_section padding-sider">
+<div class="cart_section padding-sider" id="main-cart-items" data-id="{{ section.id }}">
   <cart-items class="gradient color-{{ section.settings.color_scheme }} isolate{% if cart == empty %} is-empty{% else %} section-{{ section.id }}-padding{% endif %}">
     <div>
       <div class="title-wrapper-with-link">
@@ -59,7 +59,7 @@
       </div>
 
       <form action="{{ routes.cart_url }}" class="cart__contents critical-hidden" method="post" id="cart">
-        <div class="cart__items" id="main-cart-items" data-id="{{ section.id }}">
+        <div class="cart__items">
           <div class="js-contents">
             {%- if cart != empty -%}
               <div class="cart-items">
@@ -521,21 +521,23 @@
   </cart-items>
   <div class="cart_section_left">
     <div class="cart_section_left_title">{{ 'common.overview' | t }}</div>
-    <div class="cart_section_left_item">
-      <span>{{ 'common.subtotal' | t }}</span>
-      <span>{{ cart.original_total_price | money }}</span>
-    </div>
-    <div class="cart_section_left_item">
-      <span>{{ 'common.shipment' | t }}</span>
-      <span>{{ 'common.free' | t }}</span>
-    </div>
-    <div class="cart_section_left_item">
-      <span>{{ 'common.buy_more_save_more' | t }}</span>
-      <span>{{ cart.total_discount | money }}</span>
-    </div>
-    <div class="cart_section_left_item cart_section_left_total_price">
-      <span>{{ 'common.gesamtsumme' | t }}</span>
-      <span>{{ cart.total_price | money }}</span>
+    <div class="js-contents">
+      <div class="cart_section_left_item">
+        <span>{{ 'common.subtotal' | t }}</span>
+        <span>{{ cart.original_total_price | money }}</span>
+      </div>
+      <div class="cart_section_left_item">
+        <span>{{ 'common.shipment' | t }}</span>
+        <span>{{ 'common.free' | t }}</span>
+      </div>
+      <div class="cart_section_left_item">
+        <span>{{ 'common.buy_more_save_more' | t }}</span>
+        <span>{{ cart.total_discount | money }}</span>
+      </div>
+      <div class="cart_section_left_item cart_section_left_total_price">
+        <span>{{ 'common.gesamtsumme' | t }}</span>
+        <span>{{ cart.total_price | money }}</span>
+      </div>
     </div>
     <div class="cart_section_left_note">
       {%- if cart.duties_included and cart.taxes_included -%}
