@@ -146,10 +146,13 @@ class CartDrawerItems extends CartItems {
     });
 
     const cartdrawer_viewdetail = document.querySelector(".cartdrawer_viewdetail")
-    cartdrawer_viewdetail.addEventListener("click", () => {
-      const parent = cartdrawer_viewdetail.closest(".drawer__footer")
-      parent.classList.toggle("active")
-    })
+    if (cartdrawer_viewdetail && !cartdrawer_viewdetail.dataset.initialized) {
+      cartdrawer_viewdetail.addEventListener("click", () => {
+        const parent = cartdrawer_viewdetail.closest(".drawer__footer")
+        parent.classList.toggle("active")
+      })
+      cartdrawer_viewdetail.dataset.initialized = "true";
+    }
   }
 }
 
