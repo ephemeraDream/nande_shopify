@@ -190,6 +190,72 @@
           ".img_with_foldtext_title {text-align:left}",
         ]
         },
+      "featured_program": {
+            "type": "featured-program",
+            "name": "featured_program",
+            "settings": {
+            "title": "<p>So Verdienst Du Mit Dem Maidesite<br/> Influencer Program</p>",
+            "description": "<p>We work with the afiliate network shareAsale. Visit their network, search for flexispot(1D:68890) on ShareAsale,then submit an afiliate request.<br/> You can also send proposal to: rita@flexispot.com. Once it approved, it's easy to earn commission by referring shoppers.</p>"
+            },
+            "blocks": {
+                "step_01": {
+                    "type": "step",
+                    "settings": {
+                        "image": "shopify://shop_images/pe_icon_01.webp",
+                        "title": "<p>01.</p>",
+                        "text": "<p>Registriere dich: Erstelle ein Konto auf unserer Affiliate-Plattform (z. B. Impact).</p>",
+                    }
+                },
+                "step_02": {
+                    "type": "step",
+                    "settings": {
+                        "image": "shopify://shop_images/pe_icon_02.webp",
+                        "title": "<p>02.</p>",
+                        "text": "<p>Tritt dem Programm bei: Suche nach „Maidesite“ (Impact ID: 6061752) und beantrage die Teilnahme.</p>",
+                    }
+                },
+                "step_03": {
+                    "type": "step",
+                    "settings": {
+                        "image": "shopify://shop_images/pe_icon_03.webp",
+                        "title": "<p>03.</p>",
+                        "text": "<p>Erhalte deine Tracking-Links: Sobald du angenommen wirst, erhältst du personalisierte Affiliate-Links für unsere Produkte.</p>",
+                    }
+                },
+                "step_04": {
+                    "type": "step",
+                    "settings": {
+                        "image": "shopify://shop_images/pe_icon_04.webp",
+                        "title": "<p>04.</p>",
+                        "text": "<p>Erstelle & teile Content: Poste Videos, Blogartikel oder Social-Media-Posts mit deinen Links, um dein Publikum zu begeistern.</p>",
+                    }
+                },
+                "step_05": {
+                    "type": "step",
+                    "settings": {
+                        "image": "shopify://shop_images/pe_icon_05.webp",
+                        "title": "<p>05.</p>",
+                        "text": "<p>Generiere Verkäufe: Wenn jemand über deinen Link kauft, erhältst du eine Provision von bis zu 15 % auf den Umsatz.</p>",
+                    }
+                },
+                "step_06": {
+                    "type": "step",
+                    "settings": {
+                        "image": "shopify://shop_images/pe_icon_06.webp",
+                        "title": "<p>06.</p>",
+                        "text": "<p>Verdiene Geld: Deine Einnahmen werden direkt über die Affiliate-Plattform ausgezahlt – je mehr du vermittelst, desto mehr verdienst du!</p>",
+                    }
+                }
+            },
+            "block_order": [
+                "step_01",
+                "step_02",
+                "step_03",
+                "step_04",
+                "step_05",
+                "step_06"
+            ],
+      },
       "faq_simple_kxTbhc": {
         "type": "faq-simple",
         "blocks": {
@@ -221,7 +287,7 @@
         "faq_W9Mzyn"
       ],
       "custom_css": [
-        ".faq_simple_section {background-color: transparent;}"
+        ".faq_simple_section {background-color: transparent;padding-bottom:12rem;}"
       ],
       "name": "faq simple",
       "settings": {
@@ -236,6 +302,7 @@
       "brand_swiper",
       "celebrity_swiper_aGymw9",
       "img_with_foldtext_RcBrkw",
+      "featured_program",
       "faq_simple_kxTbhc"
     ]
   }

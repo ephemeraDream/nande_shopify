@@ -1,0 +1,121 @@
+{% comment %}
+------------------------------------------------------------
+Featured Program - 计划 流程 红人页面那种
+------------------------------------------------------------
+{% endcomment %}
+
+<div class="featured-program session-box-padding padding-top-120 padding-bottom-120">
+    <div class="session-box-inner">
+      {% if section.settings.title != blank %}
+        <h2 class="steps-title padding-bottom-30">{{ section.settings.title }}</h2>
+      {% endif %}
+      {% if section.settings.description != blank %}
+        <div class="text-body padding-bottom-30">{{ section.settings.description }}</div>
+      {% endif %}
+      
+      <div class="steps-grid">
+        {% for block in section.blocks %}
+          <div class="influencer-step">
+            <div class="influencer-step-icon">
+              {{ block.settings.icon | image_url: width: 80 | image_tag: class: 'step-icon', alt: block.settings.title }}
+            </div>
+            <div class="influencer-step-content">
+              <div class="text-body step-number">{{ block.settings.title }}</div>
+              <div class="text-body step-desc">{{ block.settings.text }}</div>
+            </div>
+            {% unless forloop.last %}
+              <div class="step-arrow">&gt;</div>
+            {% endunless %}
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+<style>
+.featured-program {
+background: #E2DED6;
+}
+
+.featured-program .steps-grid {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+gap: 32px;
+position: relative;
+}
+
+.featured-program .influencer-step {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    padding-right: 20px;
+    gap: 1rem;
+}
+
+.featured-program .influencer-step-icon{
+width: 32px;
+height: 32px;
+object-fit: contain;
+}
+
+.featured-program .step-desc,.featured-program .step-number {
+color: #3D3D3D;
+}
+
+.step-arrow {
+    position: absolute;
+    right: -15px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #1F1F1F;
+}
+      
+</style>
+{% schema %}
+{
+  "name": "Featured Program",
+  "settings": [
+    {
+      "type": "textarea",
+      "id": "title",
+      "label": "Title"
+    },
+    {
+      "type": "textarea",
+      "id": "description",
+      "label": "Description",
+    }
+  ],
+  "blocks": [
+    {
+      "type": "step",
+      "name": "Step",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "icon",
+          "label": "Step Icon"
+        },
+        {
+            "type": "textarea",
+            "id": "title",
+            "label": "Step Number"
+          },
+        {
+          "type": "textarea",
+          "id": "text",
+          "label": "Step Description"
+        }
+      ]
+    }
+  ],
+  "max_blocks": 6,
+  "presets": [
+    {
+      "name": "Featured Program",
+      "category": "Custom"
+    }
+  ]
+}
+{% endschema %}
