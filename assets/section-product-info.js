@@ -284,39 +284,47 @@ function initBuybox() {
         }
         btn.classList.add("is-loading");
         if (type === "add_to_cart") {
-          try {
-            await fetch(window.Shopify.routes.root + "cart/add.js", {
-              method: "POST",
-              headers: { "Content-Type": "application/json" },
-              body: JSON.stringify(cartFormData),
-            });
-          } finally {
-            btn.classList.remove("is-loading");
 
-            fetch(`${routes.cart_url}?sections=cart-drawer`)
-              .then((response) => response.json())
-              .then((sections) => {
-                const sectionIds = ['cart-drawer'];
-                for (const sectionId of sectionIds) {
-                  const htmlString = sections[sectionId];
-                  const html = new DOMParser().parseFromString(htmlString, 'text/html');
-                  const sourceElement = html.querySelector(`${sectionId}`);
-                  const targetElement = document.querySelector(`${sectionId}`);
-                  if (targetElement && sourceElement) {
-                    targetElement.replaceWith(sourceElement);
-                  }
-                }
-                document.body.classList.add('overflow-hidden');
-                const theme_cart = document.querySelector('cart-notification') || document.querySelector('cart-drawer');
-                if (theme_cart && theme_cart.classList.contains('is-empty')) theme_cart.classList.remove('is-empty');
-                setTimeout(() => {
-                  theme_cart.classList.add('animate', 'active');
-                });
-              })
-              .catch((e) => {
-                console.error('Error updating cart sections:', e);
+          const body = JSON.stringify({
+            ...cartFormData,
+            sections: this.getSectionsToRender().map((section) => section.section),
+            sections_url: window.location.pathname,
+          });
+
+          fetch(`${routes.cart_add_url}`, { ...fetchConfig(), ...{ body } })
+            .then((response) => response.text())
+            .then((state) => {
+              const parsedState = JSON.parse(state);
+              // const sectionIds = ['cart-drawer'];
+              // for (const sectionId of sectionIds) {
+              //   const htmlString = sections[sectionId];
+              //   const html = new DOMParser().parseFromString(htmlString, 'text/html');
+              //   const sourceElement = html.querySelector(`${sectionId}`);
+              //   const targetElement = document.querySelector(`${sectionId}`);
+              //   if (targetElement && sourceElement) {
+              //     targetElement.replaceWith(sourceElement);
+              //   }
+              // }
+              getSectionsToRender().forEach((section) => {
+                const elementToReplace =
+                  document.getElementById(section.id).querySelector(section.selector) || document.getElementById(section.id);
+                elementToReplace.innerHTML = getSectionInnerHTML(
+                  parsedState.sections[section.section],
+                  section.selector
+                );
               });
-          }
+              document.body.classList.add('overflow-hidden');
+              const theme_cart = document.querySelector('cart-notification') || document.querySelector('cart-drawer');
+              if (theme_cart && theme_cart.classList.contains('is-empty')) theme_cart.classList.remove('is-empty');
+              setTimeout(() => {
+                theme_cart.classList.add('animate', 'active');
+              });
+            })
+            .catch((e) => {
+              console.error('Error updating cart sections:', e);
+            }).finally(() => {
+              btn.classList.remove("is-loading");
+            });
         }
         if (type === "buy_it_now") {
           const buildCheckoutUrl = (items) => {
@@ -332,6 +340,23 @@ function initBuybox() {
         }
       });
     });
+}
+function getSectionsToRender() {
+  return [
+    {
+      id: 'CartDrawer',
+      section: 'cart-drawer',
+      selector: '.drawer__inner',
+    },
+    {
+      id: 'cart-icon-bubble',
+      section: 'cart-icon-bubble',
+      selector: '.shopify-section',
+    },
+  ];
+}
+function getSectionInnerHTML(html, selector) {
+  return new DOMParser().parseFromString(html, 'text/html').querySelector(selector).innerHTML;
 }
 // 变体切换
 const product_data = JSON.parse(document.getElementById('product_info_data').textContent);
