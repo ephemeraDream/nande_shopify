@@ -5,7 +5,6 @@ class CartDrawer extends HTMLElement {
     this.addEventListener('keyup', (evt) => evt.code === 'Escape' && this.close());
     this.querySelector('#CartDrawer-Overlay').addEventListener('click', this.close.bind(this));
     this.setHeaderCartIconAccessibility();
-    this.initBtnEvents()
   }
 
   setHeaderCartIconAccessibility() {
@@ -82,7 +81,6 @@ class CartDrawer extends HTMLElement {
 
       if (!sectionElement) return;
       sectionElement.innerHTML = this.getSectionInnerHTML(parsedState.sections[section.id], section.selector);
-      this.initBtnEvents()
     });
 
     setTimeout(() => {
@@ -114,14 +112,6 @@ class CartDrawer extends HTMLElement {
   setActiveElement(element) {
     this.activeElement = element;
   }
-
-  initBtnEvents() {
-    const cartdrawer_viewdetail = this.querySelector(".cartdrawer_viewdetail")
-    cartdrawer_viewdetail.addEventListener("click", () => {
-      const parent = cartdrawer_viewdetail.closest(".drawer__footer")
-      parent.classList.toggle("active")
-    })
-  }
 }
 
 customElements.define('cart-drawer', CartDrawer);
@@ -140,6 +130,26 @@ class CartDrawerItems extends CartItems {
         selector: '.shopify-section',
       },
     ];
+  }
+
+  initBtnEvents() {
+    const cart_products = this.querySelectorAll('[id^="CartDrawer-Item-"]');
+    cart_products.forEach(item => {
+      const bundle_product_contain = item.querySelector(".cartdrawer_bundle_product");
+      const bundle_btn = item.querySelector(".cartdrawer_bundle_product_head");
+      if (bundle_product_contain && bundle_btn && !bundle_btn.dataset.initialized) {
+        bundle_btn.addEventListener("click", () => {
+          bundle_product_contain.classList.toggle("active");
+        });
+        bundle_btn.dataset.initialized = "true";
+      }
+    });
+
+    const cartdrawer_viewdetail = document.querySelector(".cartdrawer_viewdetail")
+    cartdrawer_viewdetail.addEventListener("click", () => {
+      const parent = cartdrawer_viewdetail.closest(".drawer__footer")
+      parent.classList.toggle("active")
+    })
   }
 }
 
