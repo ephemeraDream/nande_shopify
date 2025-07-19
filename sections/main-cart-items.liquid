@@ -45,17 +45,23 @@
         </div>
       {% endif %}
       <div class="cart__warnings">
-        <h1 class="cart__empty-text">{{ 'sections.cart.empty' | t }}</h1>
+        <h1 class="cart__empty-text">{{ 'common.shopping_cart' | t }}</h1>
+        <div class="cart__empty-desc">
+          {{ 'icon-cart-empty.svg' | inline_asset_content }}
+          {{ 'common.shopping_cart_empty' | t }}
+        </div>
         <a href="{{ routes.all_products_collection_url }}" class="button">
-          {{ 'general.continue_shopping' | t }}
+          {{ 'common.continue_shopping' | t }}
         </a>
 
-        {%- if shop.customer_accounts_enabled and customer == null -%}
-          <h2 class="cart__login-title">{{ 'sections.cart.login.title' | t }}</h2>
-          <p class="cart__login-paragraph">
-            {{ 'sections.cart.login.paragraph_html' | t: link: routes.account_login_url }}
-          </p>
-        {%- endif -%}
+        {% comment %}
+          {%- if shop.customer_accounts_enabled and customer == null -%}
+            <h2 class="cart__login-title">{{ 'sections.cart.login.title' | t }}</h2>
+            <p class="cart__login-paragraph">
+              {{ 'sections.cart.login.paragraph_html' | t: link: routes.account_login_url }}
+            </p>
+          {%- endif -%}
+        {% endcomment %}
       </div>
 
       <form action="{{ routes.cart_url }}" class="cart__contents critical-hidden" method="post" id="cart">

@@ -581,6 +581,9 @@
     "checkout_now_safely": "Jetzt sicher zur Kasse",
     "contact_us": "Contact Us",
     "anwenden": "Anwenden",
-    "gutscheincode": "Gutscheincode"
+    "gutscheincode": "Gutscheincode",
+    "shopping_cart": "Shopping Cart",
+    "shopping_cart_empty": "Your shopping cart is empty",
+    "continue_shopping": "Continue Shopping"
   }
 }
