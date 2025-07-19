@@ -23,7 +23,7 @@ class CartItems extends HTMLElement {
     }, ON_CHANGE_DEBOUNCE_TIMER);
 
     this.addEventListener('change', debouncedOnChange.bind(this));
-    initBtnEvents()
+    this.initBtnEvents()
   }
 
   cartUpdateUnsubscriber = undefined;
@@ -194,7 +194,7 @@ class CartItems extends HTMLElement {
               section.selector
             );
           });
-          initBtnEvents()
+          this.initBtnEvents()
           const updatedValue = parsedState.items[line - 1] ? parsedState.items[line - 1].quantity : undefined;
           let message = '';
           if (items.length === parsedState.items.length && updatedValue !== parseInt(quantityElement.value)) {
