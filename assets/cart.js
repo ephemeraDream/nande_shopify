@@ -277,21 +277,17 @@ class CartItems extends HTMLElement {
   }
 
   initBtnEvents() {
-    const cart_products = document.querySelectorAll('[id^="CartDrawer-Item-"]')
+    const cart_products = this.querySelectorAll('[id^="CartDrawer-Item-"]');
     cart_products.forEach(item => {
-      const bundle_product_contain = item.querySelector(".cartdrawer_bundle_product")
-      const bundle_btn = item.querySelector(".cartdrawer_bundle_product_head")
-      if (bundle_product_contain) {
+      const bundle_product_contain = item.querySelector(".cartdrawer_bundle_product");
+      const bundle_btn = item.querySelector(".cartdrawer_bundle_product_head");
+      if (bundle_product_contain && bundle_btn && !bundle_btn.dataset.initialized) {
         bundle_btn.addEventListener("click", () => {
-          bundle_product_contain.classList.toggle("active")
-        })
+          bundle_product_contain.classList.toggle("active");
+        });
+        bundle_btn.dataset.initialized = "true"; // 防止重复绑定
       }
-    })
-    const cartdrawer_viewdetail = document.querySelector(".cartdrawer_viewdetail")
-    cartdrawer_viewdetail.addEventListener("click", () => {
-      const parent = cartdrawer_viewdetail.closest(".drawer__footer")
-      parent.classList.toggle("active")
-    })
+    });
   }
 }
 
@@ -316,3 +312,9 @@ if (!customElements.get('cart-note')) {
     }
   );
 }
+
+const cartdrawer_viewdetail = document.querySelector(".cartdrawer_viewdetail")
+cartdrawer_viewdetail.addEventListener("click", () => {
+  const parent = cartdrawer_viewdetail.closest(".drawer__footer")
+  parent.classList.toggle("active")
+})
