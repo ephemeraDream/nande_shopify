@@ -23,9 +23,7 @@ Featured Program - 计划 流程 红人页面那种
               -}}
               <div class="text-body step-number">{{ block.settings.title }}</div>
               <div class="text-body step-desc">{{ block.settings.text }}</div>
-            {% unless forloop.last %}
               <div class="step-arrow">{{- 'swiper-left.svg' | inline_asset_content -}}</div>
-            {% endunless %}
           </div>
         {% endfor %}
       </div>
@@ -61,7 +59,7 @@ object-fit: contain;
 color: #3D3D3D;
 }
 
-.step-arrow {
+.featured-program .step-arrow {
     position: absolute;
     right: -15px;
     top: 50%;
@@ -70,16 +68,25 @@ color: #3D3D3D;
     font-weight: bold;
     color: #1F1F1F;
 }
+.featured-program .step-arrow:nth-child(3n) {
+    display: none;
+  }
 @media screen and (max-width: 1024px) {
     .featured-program .steps-grid {
       grid-template-columns: repeat(2, 1fr);
     }
+    .featured-program .step-arrow:nth-child(2n) {
+        display: none;
+      }
   }
   
   @media screen and (max-width: 768px) {
     .featured-program .steps-grid {
       grid-template-columns: 1fr;
     }
+    .featured-program .step-arrow {
+        display: none !important;
+      }
 }
       
 </style>
