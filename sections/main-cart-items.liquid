@@ -537,6 +537,10 @@
         <span>{{ 'common.buy_more_save_more' | t }}</span>
         <span>{{ cart.total_discount | money }}</span>
       </div>
+      <div class="cart_section_left_discount">
+        <input autocomplete="off" type="text" name="discount">
+        <div id="cart_section_left_discount_btn">{{ 'common.anwenden' | t }}</div>
+      </div>
       <div class="cart_section_left_item cart_section_left_total_price">
         <span>{{ 'common.gesamtsumme' | t }}</span>
         <span>{{ cart.total_price | money }}</span>
