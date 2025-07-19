@@ -88,8 +88,8 @@ aria-label="conatct"
               </div>
 
               <div class="form-grid-field">
-                <select id="ContactFormTwo-menge" name="contact[menge]" class="field__input">
-                  <option value="" disabled selected>Menge wählen</option>
+                <select id="ContactFormTwo-menge" name="contact[menge]" class="field__input" required>
+                  <option value="" disabled selected hidden>Menge wählen</option>
                   <option value="1">1 Stück</option>
                   <option value="2">2 Stück</option>
                   <option value="3">3 Stück</option>
@@ -204,12 +204,12 @@ aria-label="conatct"
     }
     .contact-form-two select.field__input {
       appearance: none;
-      background-image: url("data:image/svg+xml,%3Csvg width='10' height='6' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 0l5 6 5-6z' fill='%23000'/%3E%3C/svg%3E");
+      background-image: url("data:image/svg+xml,%3Csvg width='10' height='6' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 0l5 6 5-6z' fill='%237F7E75'/%3E%3C/svg%3E");
       background-repeat: no-repeat;
       background-position: right 12px center;
       background-size: 10px 6px;
     }
-    .contact-form-two select.field__input option:disabled {
+    .contact-form-two select.field__input  option[disabled],.contact-form-two select.field__input:invalid {
       color: #7F7E75; 
     }
     .contact-form-two .field__input::placeholder,.contact-form-two textarea.text-area::placeholder {
