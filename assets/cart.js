@@ -23,7 +23,6 @@ class CartItems extends HTMLElement {
     }, ON_CHANGE_DEBOUNCE_TIMER);
 
     this.addEventListener('change', debouncedOnChange.bind(this));
-    this.initBtnEvents()
   }
 
   cartUpdateUnsubscriber = undefined;
