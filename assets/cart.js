@@ -136,6 +136,11 @@ class CartItems extends HTMLElement {
         section: 'cart-live-region-text',
         selector: '.shopify-section',
       },
+      {
+        id: 'main-cart-items',
+        section: document.getElementById('main-cart-items').dataset.id,
+        selector: '.js-contents-total',
+      },
       // {
       //   id: 'main-cart-footer',
       //   section: document.getElementById('main-cart-footer').dataset.id,
