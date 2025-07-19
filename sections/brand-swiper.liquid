@@ -1,0 +1,202 @@
+{% comment %}
+------------------------------------------------------------
+Brand swipe - 品牌logo轮播 红人页面那种
+------------------------------------------------------------
+{% endcomment %}
+<div class="brand_swiper session-box-padding overflow-hidden padding-top-120" id="brand_swiper_section-{{ section.id }}">
+    <div class="brand_swiper_header session-box-inner">
+    {% unless section.settings.title == blank %}
+        <h2 class="brand_swiper_title">{{ section.settings.title }}</h2>
+    {% endunless %}
+      <div class="swiper_btn">
+        <div class="brand_swiper_prev">{{- 'swiper-left.svg' | inline_asset_content -}}</div>
+        <div class="brand_swiper_next">{{- 'swiper-right.svg' | inline_asset_content -}}</div>
+      </div>
+    </div>
+  
+    <div class="swiper brand_swiper_con session-box-inner">
+        <div class="swiper-wrapper">
+          {% for block in section.blocks %}
+            <div class="swiper-slide">
+                {{-
+                    block.settings.logo
+                    | image_url: width: block.settings.logo.width
+                    | image_tag: alt: block.settings.title, class: 'brand_swiper_logo'
+                -}}
+                <h3>{{ block.settings.title }}</h3>
+                <p class="text-body">{{ block.settings.description }}</p>
+                <a href="{{ block.settings.link }}" class="learn-more">{{ section.settings.btn_text }}</a>
+            </div>
+          {% endfor %}
+        </div>
+    </div>
+  </div>
+
+<style>
+    .brand_swiper_header{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .brand_swiper_header .swiper_btn{
+        width: 18rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+    .brand_swiper_header .brand_swiper_prev,
+    .brand_swiper_header .brand_swiper_next {
+        width: 6rem;
+        height: 6rem;
+        background-color: #E2DED6;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+    }
+    .brand_swiper_header .brand_swiper_prev:hover,
+    .brand_swiper_header .brand_swiper_next:hover {
+        background-color: rgba(31, 31, 31, .6);
+    }
+    .brand_swiper_header .brand_swiper_prev:hover svg path,
+    .brand_swiper_header .brand_swiper_next:hover svg path {
+        fill: #BDFF00;
+    }
+
+    .brand_swiper .swiper-slide {
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        text-align: left;
+      }
+    
+    .brand_swiper .swiper-slide .brand_swiper_logo {
+        max-width: 100%;
+        margin-bottom: 3rem;
+        height:auto;
+    }
+    
+    .brand_swiper .swiper-slide h3 {
+        margin-bottom: 1.3rem;
+    }
+    
+    .brand_swiper .swiper-slide p {
+        color: #1F1F1F;
+        flex-grow: 1;
+    }
+    
+    .brand_swiper .swiper-slide .learn-more {
+        padding: 4px 8px;
+        background-color: #fff;
+        display: inline-block;
+        margin-top: 3rem;
+        font-weight: bold;
+        font-size:2.4rem;
+        color: #1F1F1F;
+    }
+
+</style>
+
+<script>
+    (() => {
+        const sectionId = '{{ section.id }}';
+        const sectionEl = document.getElementById('brand_swiper_section-' + sectionId);
+        if (!sectionEl) return;
+      
+        const tabItems = sectionEl.querySelectorAll('.img_with_text_tab_head_item');
+        const swiperEl = sectionEl.querySelector('.brand_swiper_con');
+    
+        const prevBtn = sectionEl.querySelector('.brand_swiper_prev');
+        const nextBtn = sectionEl.querySelector('.brand_swiper_next');
+      
+        const brandSwiper = new Swiper(swiperEl, {
+            slidesPerView: 3,
+            slidesPerGroup: 3,
+            grid: {
+              rows: 2,
+              fill: 'row'
+            },
+            spaceBetween: 30,
+            navigation: {
+              nextEl: nextBtn,
+              prevEl: prevBtn
+            },
+            breakpoints: {
+              1024: {
+                slidesPerView: 3,
+                slidesPerGroup: 3,
+                grid: {
+                  rows: 2
+                }
+              },
+              768: {
+                slidesPerView: 2,
+                slidesPerGroup: 2,
+                grid: {
+                  rows: 2
+                }
+              },
+              480: {
+                slidesPerView: 1,
+                slidesPerGroup: 1,
+                grid: {
+                  rows: 1
+                }
+              }
+            }
+          });
+      })();
+  </script>
+  
+{% schema %}
+{
+  "name": "Brand In The Press",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title"
+    },
+    {
+      "type": "text",
+      "id": "btn_text",
+      "label": "Button Title"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "swiper",
+      "name": "swiper",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "logo",
+          "label": "Logo"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title"
+        },
+        {
+          "type": "textarea",
+          "id": "description",
+          "label": "Description"
+        },
+        {
+          "type": "url",
+          "id": "link",
+          "label": "Link"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Brand In The Press",
+      "category": "Custom"
+    }
+  ]
+}
+{% endschema %}

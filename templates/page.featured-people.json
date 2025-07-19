@@ -9,7 +9,7 @@
         "type": "breadcrumbs",
         "custom_css": [
           ".breadcrumb-con {width: 100%; position: absolute; top: 0; left: 0; z-index: 100;}",
-          ".breadcrumb,.breadcrumb a,.breadcrumb span {color: #7f7e75;}"
+          ".breadcrumb,.breadcrumb a,.breadcrumb span {color: #fff;}"
         ],
         "settings": {
           "custom_breadcrumb": ""
@@ -23,6 +23,91 @@
           "title": "FüLle Dieses Formular Aus, Um Unsere Zusammenarbeit Zu Starten.",
           "desc":""
         }
+      },
+      "brand_swiper": {
+        "type": "brand-swiper",
+        "blocks": {
+            "swiper_01": {
+                "type": "swiper",
+                "settings": {
+                    "title": "Kostenloser und Schneller Versand",
+                    "description": "<p>Normalerweise beträgt die optimale Schreibtischhöhe im Sitzen Ihre Körpergröße x 0,4 und im Stehen Ihre Körpergröße x 0,62. Höhenverstellbarer Schreibtisch mit 2 stufigen Säulen ist nur für die Körpergröße von 1,75-1,95 m geeignet. </p>",
+                    "link": "",
+                    "logo": "shopify://shop_images/pe_logo_01.webp"
+                }
+            },
+            "swiper_02": {
+                "type": "swiper",
+                "settings": {
+                    "title": "Kostenloser und Schneller Versand",
+                    "description": "<p>Normalerweise beträgt die optimale Schreibtischhöhe im Sitzen Ihre Körpergröße x 0,4 und im Stehen Ihre Körpergröße x 0,62. Höhenverstellbarer Schreibtisch mit 2 stufigen Säulen ist nur für die Körpergröße von 1,75-1,95 m geeignet. </p>",
+                    "link": "",
+                    "logo": "shopify://shop_images/pe_logo_01.webp"
+                }
+            },
+            "swiper_03": {
+                "type": "swiper",
+                "settings": {
+                    "title": "Kostenloser und Schneller Versand",
+                    "description": "<p>Normalerweise beträgt die optimale Schreibtischhöhe im Sitzen Ihre Körpergröße x 0,4 und im Stehen Ihre Körpergröße x 0,62. Höhenverstellbarer Schreibtisch mit 2 stufigen Säulen ist nur für die Körpergröße von 1,75-1,95 m geeignet. </p>",
+                    "link": "",
+                    "logo": "shopify://shop_images/pe_logo_01.webp"
+                }
+            },
+            "swiper_04": {
+                "type": "swiper",
+                "settings": {
+                    "title": "Kostenloser und Schneller Versand",
+                    "description": "<p>Normalerweise beträgt die optimale Schreibtischhöhe im Sitzen Ihre Körpergröße x 0,4 und im Stehen Ihre Körpergröße x 0,62. Höhenverstellbarer Schreibtisch mit 2 stufigen Säulen ist nur für die Körpergröße von 1,75-1,95 m geeignet. </p>",
+                    "link": "",
+                    "logo": "shopify://shop_images/pe_logo_01.webp"
+                }
+            },
+            "swiper_05": {
+                "type": "swiper",
+                "settings": {
+                    "title": "Kostenloser und Schneller Versand",
+                    "description": "<p>Normalerweise beträgt die optimale Schreibtischhöhe im Sitzen Ihre Körpergröße x 0,4 und im Stehen Ihre Körpergröße x 0,62. Höhenverstellbarer Schreibtisch mit 2 stufigen Säulen ist nur für die Körpergröße von 1,75-1,95 m geeignet. </p>",
+                    "link": "",
+                    "logo": "shopify://shop_images/pe_logo_01.webp"
+                }
+            },
+            "swiper_06": {
+                "type": "swiper",
+                "settings": {
+                    "title": "Kostenloser und Schneller Versand",
+                    "description": "<p>Normalerweise beträgt die optimale Schreibtischhöhe im Sitzen Ihre Körpergröße x 0,4 und im Stehen Ihre Körpergröße x 0,62. Höhenverstellbarer Schreibtisch mit 2 stufigen Säulen ist nur für die Körpergröße von 1,75-1,95 m geeignet. </p>",
+                    "link": "",
+                    "logo": "shopify://shop_images/pe_logo_01.webp"
+                }
+            },
+            "swiper_07": {
+                "type": "swiper",
+                "settings": {
+                    "title": "Kostenloser und Schneller Versand",
+                    "description": "<p>Normalerweise beträgt die optimale Schreibtischhöhe im Sitzen Ihre Körpergröße x 0,4 und im Stehen Ihre Körpergröße x 0,62. Höhenverstellbarer Schreibtisch mit 2 stufigen Säulen ist nur für die Körpergröße von 1,75-1,95 m geeignet. </p>",
+                    "link": "",
+                    "logo": "shopify://shop_images/pe_logo_01.webp"
+                }
+            },
+        },
+        "block_order": [
+            "swiper_01",
+            "swiper_02",
+            "swiper_03",
+            "swiper_04",
+            "swiper_05",
+            "swiper_06",
+            "swiper_07"
+        ],
+        "name": "brand_swiper",
+        "settings": {
+            "title": "Brand In The Press",
+            "btn_text": "Learn More"
+        },
+        "custom_css": [
+          ".brand_swiper {background-color: transparent;}",
+        ]
       },
       
       "celebrity_swiper_aGymw9": {
