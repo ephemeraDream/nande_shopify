@@ -25,7 +25,7 @@
 
 <script src="{{ 'quantity-popover.js' | asset_url }}" defer="defer"></script>
 
-<div class="cart_section padding-sider">
+<div class="cart_section padding-sider" id="main-cart-items" data-id="{{ section.id }}">
   <cart-items class="gradient color-{{ section.settings.color_scheme }} isolate{% if cart == empty %} is-empty{% else %} section-{{ section.id }}-padding{% endif %}">
     <div>
       <div class="title-wrapper-with-link">
@@ -45,21 +45,27 @@
         </div>
       {% endif %}
       <div class="cart__warnings">
-        <h1 class="cart__empty-text">{{ 'sections.cart.empty' | t }}</h1>
+        <h1 class="cart__empty-text">{{ 'common.shopping_cart' | t }}</h1>
+        <div class="cart__empty-desc">
+          {{ 'icon-cart-empty.svg' | inline_asset_content }}
+          {{ 'common.shopping_cart_empty' | t }}
+        </div>
         <a href="{{ routes.all_products_collection_url }}" class="button">
-          {{ 'general.continue_shopping' | t }}
+          {{ 'common.continue_shopping' | t }}
         </a>
 
-        {%- if shop.customer_accounts_enabled and customer == null -%}
-          <h2 class="cart__login-title">{{ 'sections.cart.login.title' | t }}</h2>
-          <p class="cart__login-paragraph">
-            {{ 'sections.cart.login.paragraph_html' | t: link: routes.account_login_url }}
-          </p>
-        {%- endif -%}
+        {% comment %}
+          {%- if shop.customer_accounts_enabled and customer == null -%}
+            <h2 class="cart__login-title">{{ 'sections.cart.login.title' | t }}</h2>
+            <p class="cart__login-paragraph">
+              {{ 'sections.cart.login.paragraph_html' | t: link: routes.account_login_url }}
+            </p>
+          {%- endif -%}
+        {% endcomment %}
       </div>
 
       <form action="{{ routes.cart_url }}" class="cart__contents critical-hidden" method="post" id="cart">
-        <div class="cart__items" id="main-cart-items" data-id="{{ section.id }}">
+        <div class="cart__items">
           <div class="js-contents">
             {%- if cart != empty -%}
               <div class="cart-items">
@@ -274,7 +280,9 @@
                                 {%- for discount in item.line_level_discount_allocations -%}
                                   <li class="discounts__discount">
                                     {% comment %} {{- 'icon-discount.svg' | inline_asset_content -}} {% endcomment %}
-                                    {{ discount.discount_application.title }}
+                                    {{ discount.discount_application.title }} (-
+                                    {{- discount.total_allocated_amount | money -}}
+                                    )
                                   </li>
                                 {%- endfor -%}
                               </ul>
@@ -460,7 +468,10 @@
                                   <div class="cartdrawer_bundle_product_item_info">
                                     <div class="cartdrawer_bundle_product_item_title">
                                       {{ child.product.title }}
-                                      <div class="cartdrawer_bundle_product_delete">
+                                      <div
+                                        class="cartdrawer_bundle_product_delete"
+                                        data-index="{{ child.index | plus: 1 }}"
+                                      >
                                         {{- 'icon-close.svg' | inline_asset_content -}}
                                       </div>
                                     </div>
@@ -519,85 +530,113 @@
       </form>
     </div>
   </cart-items>
-  <div class="cart_section_left">
-    <div class="cart_section_left_title">{{ 'common.overview' | t }}</div>
-    <div class="cart_section_left_item">
-      <span>{{ 'common.subtotal' | t }}</span>
-      <span>{{ cart.original_total_price | money }}</span>
-    </div>
-    <div class="cart_section_left_item">
-      <span>{{ 'common.shipment' | t }}</span>
-      <span>{{ 'common.free' | t }}</span>
-    </div>
-    <div class="cart_section_left_item">
-      <span>{{ 'common.buy_more_save_more' | t }}</span>
-      <span>{{ cart.total_discount | money }}</span>
-    </div>
-    <div class="cart_section_left_item cart_section_left_total_price">
-      <span>{{ 'common.gesamtsumme' | t }}</span>
-      <span>{{ cart.total_price | money }}</span>
-    </div>
-    <div class="cart_section_left_note">
-      {%- if cart.duties_included and cart.taxes_included -%}
-        {%- if shop.shipping_policy.body == blank -%}
-          {{ 'sections.cart.duties_and_taxes_included_shipping_at_checkout_without_policy' | t }}
-        {%- else -%}
-          {{
-            'sections.cart.duties_and_taxes_included_shipping_at_checkout_with_policy_html'
-            | t: link: shop.shipping_policy.url
-          }}
+  {% if cart != empty %}
+    <div class="cart_section_left">
+      <div class="cart_section_left_title">{{ 'common.overview' | t }}</div>
+      <div class="js-contents-total">
+        <div class="cart_section_left_item">
+          <span>{{ 'common.subtotal' | t }}</span>
+          <span>{{ cart.original_total_price | money }}</span>
+        </div>
+        <div class="cart_section_left_item">
+          <span>{{ 'common.shipment' | t }}</span>
+          <span>{{ 'common.free' | t }}</span>
+        </div>
+        <div class="cart_section_left_item">
+          <span>{{ 'common.buy_more_save_more' | t }}</span>
+          <span>{{ cart.total_discount | money }}</span>
+        </div>
+        {% assign code_str = '' %}
+        {% assign discount_list = cart.cart_level_discount_applications | concat: cart.discount_applications %}
+        {% for discount in discount_list %}
+          {% assign code_str = code_str | append: discount.title %}
+          {% unless forloop.last %}
+            {% assign code_str = code_str | append: ',' %}
+          {% endunless %}
+        {%- endfor -%}
+        <div class="cart_section_left_discount" data-discount="{{ code_str }}">
+          <input autocomplete="off" type="text" name="discount" placeholder="{{ 'common.gutscheincode' | t }}">
+          <div class="cart_section_left_discount_btn">{{ 'common.anwenden' | t }}</div>
+          {%- if cart.cart_level_discount_applications.size > 0 -%}
+            <div class="cart_section_left_discount_contain">
+              {% for discount in cart.cart_level_discount_applications %}
+                <div class="cart_section_left_discount_item">
+                  {{ discount.title | escape_once }} (-{{ discount.total_allocated_amount | money }})
+                </div>
+              {%- endfor -%}
+            </div>
+          {%- endif -%}
+        </div>
+        <div class="cart_section_left_item cart_section_left_total_price">
+          <span>{{ 'common.gesamtsumme' | t }}</span>
+          <span>{{ cart.total_price | money }}</span>
+        </div>
+      </div>
+      <div class="cart_section_left_note">
+        {%- if cart.duties_included and cart.taxes_included -%}
+          {%- if shop.shipping_policy.body == blank -%}
+            {{ 'sections.cart.duties_and_taxes_included_shipping_at_checkout_without_policy' | t }}
+          {%- else -%}
+            {{
+              'sections.cart.duties_and_taxes_included_shipping_at_checkout_with_policy_html'
+              | t: link: shop.shipping_policy.url
+            }}
+          {%- endif -%}
+        {%- elsif cart.duties_included == false and cart.taxes_included -%}
+          {%- if shop.shipping_policy.body == blank -%}
+            {{ 'sections.cart.taxes_included_shipping_at_checkout_without_policy' | t }}
+          {%- else -%}
+            {{
+              'sections.cart.taxes_included_shipping_at_checkout_with_policy_html'
+              | t: link: shop.shipping_policy.url
+            }}
+          {%- endif -%}
+        {%- elsif cart.duties_included and cart.taxes_included == false -%}
+          {%- if shop.shipping_policy.body == blank -%}
+            {{ 'sections.cart.duties_included_taxes_at_checkout_shipping_at_checkout_without_policy' | t }}
+          {%- else -%}
+            {{
+              'sections.cart.duties_included_taxes_at_checkout_shipping_at_checkout_with_policy_html'
+              | t: link: shop.shipping_policy.url
+            }}
+          {%- endif -%}
+        {%- elsif cart.duties_included == false and cart.taxes_included == false -%}
+          {%- if shop.shipping_policy.body == blank -%}
+            {{ 'sections.cart.taxes_at_checkout_shipping_at_checkout_without_policy' | t }}
+          {%- else -%}
+            {{
+              'sections.cart.taxes_at_checkout_shipping_at_checkout_with_policy_html'
+              | t: link: shop.shipping_policy.url
+            }}
+          {%- endif -%}
         {%- endif -%}
-      {%- elsif cart.duties_included == false and cart.taxes_included -%}
-        {%- if shop.shipping_policy.body == blank -%}
-          {{ 'sections.cart.taxes_included_shipping_at_checkout_without_policy' | t }}
-        {%- else -%}
-          {{ 'sections.cart.taxes_included_shipping_at_checkout_with_policy_html' | t: link: shop.shipping_policy.url }}
-        {%- endif -%}
-      {%- elsif cart.duties_included and cart.taxes_included == false -%}
-        {%- if shop.shipping_policy.body == blank -%}
-          {{ 'sections.cart.duties_included_taxes_at_checkout_shipping_at_checkout_without_policy' | t }}
-        {%- else -%}
-          {{
-            'sections.cart.duties_included_taxes_at_checkout_shipping_at_checkout_with_policy_html'
-            | t: link: shop.shipping_policy.url
-          }}
-        {%- endif -%}
-      {%- elsif cart.duties_included == false and cart.taxes_included == false -%}
-        {%- if shop.shipping_policy.body == blank -%}
-          {{ 'sections.cart.taxes_at_checkout_shipping_at_checkout_without_policy' | t }}
-        {%- else -%}
-          {{
-            'sections.cart.taxes_at_checkout_shipping_at_checkout_with_policy_html'
-            | t: link: shop.shipping_policy.url
-          }}
-        {%- endif -%}
+      </div>
+      <div class="cart_section_left_btn">
+        <button
+          type="submit"
+          id="CartDrawer-Checkout"
+          class="cart__checkout-button button"
+          name="checkout"
+          form="CartDrawer-Form"
+          {% if cart == empty %}
+            disabled
+          {% endif %}
+        >
+          {{ 'common.checkout_now_safely' | t }}
+        </button>
+      </div>
+      <div class="cart_section_left_payment">
+        {%- for type in shop.enabled_payment_types -%}
+          {{ type | payment_type_svg_tag }}
+        {%- endfor -%}
+      </div>
+      {%- if additional_checkout_buttons -%}
+        <div class="cart__dynamic-checkout-buttons additional-checkout-buttons">
+          {{ content_for_additional_checkout_buttons }}
+        </div>
       {%- endif -%}
     </div>
-    <div class="cart_section_left_btn">
-      <button
-        type="submit"
-        id="CartDrawer-Checkout"
-        class="cart__checkout-button button"
-        name="checkout"
-        form="CartDrawer-Form"
-        {% if cart == empty %}
-          disabled
-        {% endif %}
-      >
-        {{ 'common.checkout_now_safely' | t }}
-      </button>
-    </div>
-    <div class="cart_section_left_payment">
-      {%- for type in shop.enabled_payment_types -%}
-        {{ type | payment_type_svg_tag }}
-      {%- endfor -%}
-    </div>
-    {%- if additional_checkout_buttons -%}
-      <div class="cart__dynamic-checkout-buttons additional-checkout-buttons">
-        {{ content_for_additional_checkout_buttons }}
-      </div>
-    {%- endif -%}
-  </div>
+  {% endif %}
 </div>
 
 {% schema %}

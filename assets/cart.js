@@ -23,6 +23,9 @@ class CartItems extends HTMLElement {
     }, ON_CHANGE_DEBOUNCE_TIMER);
 
     this.addEventListener('change', debouncedOnChange.bind(this));
+    this.initBtnEvents()
+    this.initBundleRemove()
+    this.updateDiscount()
   }
 
   cartUpdateUnsubscriber = undefined;
@@ -137,10 +140,15 @@ class CartItems extends HTMLElement {
         selector: '.shopify-section',
       },
       {
-        id: 'main-cart-footer',
-        section: document.getElementById('main-cart-footer').dataset.id,
-        selector: '.js-contents',
+        id: 'main-cart-items',
+        section: document.getElementById('main-cart-items').dataset.id,
+        selector: '.js-contents-total',
       },
+      // {
+      //   id: 'main-cart-footer',
+      //   section: document.getElementById('main-cart-footer').dataset.id,
+      //   selector: '.js-contents',
+      // },
     ];
   }
 
@@ -188,6 +196,9 @@ class CartItems extends HTMLElement {
               section.selector
             );
           });
+          this.initBtnEvents()
+          this.initBundleRemove()
+          this.updateDiscount()
           const updatedValue = parsedState.items[line - 1] ? parsedState.items[line - 1].quantity : undefined;
           let message = '';
           if (items.length === parsedState.items.length && updatedValue !== parseInt(quantityElement.value)) {
@@ -222,6 +233,11 @@ class CartItems extends HTMLElement {
         errors.textContent = window.cartStrings.error;
       })
       .finally(() => {
+        const productLength = document.querySelectorAll("#main-cart-items .cart-items").length
+        if (productLength === 0) {
+          document.querySelector("#main-cart-items .cart_drawer_infobar_contain").classList.add("hidden")
+          document.querySelector("#main-cart-items .cart_section_left").classList.add("hidden")
+        }
         this.disableLoading(line);
       });
   }
@@ -269,6 +285,85 @@ class CartItems extends HTMLElement {
     cartItemElements.forEach((overlay) => overlay.classList.add('hidden'));
     cartDrawerItemElements.forEach((overlay) => overlay.classList.add('hidden'));
   }
+
+  initBtnEvents() {
+    const cart_products = this.querySelectorAll('[id^="CartDrawer-Item-"]');
+    cart_products.forEach(item => {
+      const bundle_product_contain = item.querySelector(".cartdrawer_bundle_product");
+      const bundle_btn = item.querySelector(".cartdrawer_bundle_product_head");
+      if (bundle_product_contain && bundle_btn && !bundle_btn.dataset.initialized) {
+        bundle_btn.addEventListener("click", () => {
+          bundle_product_contain.classList.toggle("active");
+        });
+        bundle_btn.dataset.initialized = "true";
+      }
+    });
+  }
+
+  initBundleRemove() {
+    const bundleProducts = this.querySelectorAll(".cartdrawer_bundle_product_item")
+    bundleProducts.forEach(item => {
+      const removeBtn = item.querySelector(".cartdrawer_bundle_product_delete")
+      const index = removeBtn.dataset.index
+      if (removeBtn && !removeBtn.dataset.initialized) {
+        removeBtn.addEventListener("click", (event) => {
+          event.preventDefault();
+          this.updateQuantity(index, 0, event);
+        })
+        removeBtn.dataset.initialized = "true";
+      }
+    })
+  }
+
+  updateDiscount() {
+    const updateDiscountContain = document.querySelectorAll(".cart_section_left_discount")
+    updateDiscountContain.forEach(item => {
+      const updateDiscountBtn = item.querySelector(".cart_section_left_discount_btn")
+      const discountInput = item.querySelector("input")
+      const nowDiscount = item.dataset.discount
+      if (updateDiscountBtn && !updateDiscountBtn.dataset.initialized) {
+        updateDiscountBtn.addEventListener("click", (event) => {
+          event.preventDefault();
+          if (discountInput.value === "") {
+            return
+          }
+          const body = JSON.stringify({
+            discount: nowDiscount ? nowDiscount + "," + discountInput.value : discountInput.value,
+            sections: this.getSectionsToRender().map((section) => section.section),
+            sections_url: window.location.pathname,
+          });
+          const eventTarget = 'change';
+          fetch(`${routes.cart_update_url}`, { ...fetchConfig(), ...{ body } })
+            .then((response) => {
+              return response.text();
+            })
+            .then((state) => {
+              const parsedState = JSON.parse(state);
+
+              this.getSectionsToRender().forEach((section) => {
+                const elementToReplace =
+                  document.getElementById(section.id).querySelector(section.selector) || document.getElementById(section.id);
+                elementToReplace.innerHTML = this.getSectionInnerHTML(
+                  parsedState.sections[section.section],
+                  section.selector
+                );
+              });
+              this.initBtnEvents()
+              this.initBundleRemove()
+              this.updateDiscount()
+            })
+            .catch(() => {
+              this.querySelectorAll('.loading__spinner').forEach((overlay) => overlay.classList.add('hidden'));
+              const errors = document.getElementById('cart-errors') || document.getElementById('CartDrawer-CartErrors');
+              errors.textContent = window.cartStrings.error;
+            })
+            .finally(() => {
+            });
+        })
+        updateDiscountBtn.dataset.initialized = "true";
+      }
+    })
+  }
 }
 
 customElements.define('cart-items', CartItems);
@@ -292,19 +387,3 @@ if (!customElements.get('cart-note')) {
     }
   );
 }
-
-const cart_products = document.querySelectorAll('[id^="CartDrawer-Item-"]')
-cart_products.forEach(item => {
-  const bundle_product_contain = item.querySelector(".cartdrawer_bundle_product")
-  const bundle_btn = item.querySelector(".cartdrawer_bundle_product_head")
-  if (bundle_product_contain) {
-    bundle_btn.addEventListener("click", () => {
-      bundle_product_contain.classList.toggle("active")
-    })
-  }
-})
-const cartdrawer_viewdetail = document.querySelector(".cartdrawer_viewdetail")
-cartdrawer_viewdetail.addEventListener("click", () => {
-  const parent = cartdrawer_viewdetail.closest(".drawer__footer")
-  parent.classList.toggle("active")
-})

@@ -57,8 +57,6 @@ cart-items {
 
 .cart__items {
   position: relative;
-  padding-bottom: 3rem;
-  border-bottom: 0.1rem solid rgba(var(--color-foreground), 0.08);
 }
 
 .cart__items--disabled {
@@ -328,7 +326,7 @@ cart-items {
 }
 
 .cart_section .cart_section_left_total_price {
-  border-top: 0.1rem solid #C4C4C4;
+  /* border-top: 0.1rem solid #C4C4C4; */
   padding-top: 2rem;
 }
 
@@ -378,4 +376,124 @@ cart-items {
 .cart_section .cart_section_left_payment {
   border-bottom: 0.1rem solid #C4C4C4;
   margin-bottom: 1rem;
+}
+
+.cart_section .cart_section_left_discount {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.7rem;
+  border-bottom: 0.1rem solid #C4C4C4;
+  padding-bottom: 2rem;
+}
+
+.cart_section .cart_section_left_discount_contain {
+  flex: 0 0 100%;
+  margin-top: 1.3rem;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.cart_section .cart_section_left_discount_item {
+  padding: 0 0.8rem;
+  height: 3rem;
+  display: flex;
+  align-items: center;
+  font-family: "PP Right Grotesk";
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 130%;
+  letter-spacing: 0px;
+  font-variation-settings: "opsz" auto;
+  background-color: #bdff00;
+  color: #1f1f1f;
+}
+
+.cart_section .cart_section_left_discount_btn {
+  width: 10.7rem;
+  height: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #7F7E75;
+  font-family: "PP Right Grotesk";
+  font-size: 1.6rem;
+  font-weight: normal;
+  line-height: 130%;
+  letter-spacing: 0px;
+  font-variation-settings: "opsz" auto;
+  color: #FFFFFF;
+  cursor: pointer;
+}
+
+.cart_section .cart_section_left_discount input {
+  flex: 1;
+  border: 1px solid #E2DED6;
+  height: 3rem;
+  padding: 0 1.8rem;
+  background-color: #FAFAFA;
+  font-family: "PP Right Grotesk";
+  font-size: 1.6rem;
+  font-weight: normal;
+  line-height: 130%;
+  letter-spacing: 0px;
+  font-variation-settings: "opsz" auto;
+  color: #7F7E75;
+}
+
+.cart_section .cart_section_left_discount input:focus+.cart_section_left_discount_btn {
+  background-color: #bdff00;
+  color: #1f1f1f;
+}
+
+.cart_section .cart__empty-desc {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.2rem;
+  font-family: "PP Right Grotesk";
+  font-size: 2rem;
+  font-weight: normal;
+  line-height: 94%;
+  letter-spacing: 0px;
+  font-variation-settings: "opsz" auto;
+  color: #1F1F1F;
+  margin-bottom: 3rem;
+}
+
+.cart_section .cart__empty-text {
+  font-family: "PP Right Grotesk";
+  font-size: 6rem;
+  font-weight: 500;
+  line-height: 94%;
+  text-align: center;
+  text-transform: capitalize;
+  letter-spacing: 0px;
+  font-variation-settings: "opsz" auto;
+  color: #1F1F1F;
+}
+
+.cart_section .cart__warnings .button {
+  width: 70.5rem;
+  height: 6.8rem;
+  background-color: #BDFF00;
+  border: none;
+  font-family: "PP Right Grotesk";
+  font-size: 2.4rem;
+  font-weight: 500;
+  line-height: 112%;
+  letter-spacing: 0px;
+  font-variation-settings: "opsz" auto;
+  color: #1F1F1F;
+}
+
+.cart_section .cart-item {
+  padding-bottom: 3rem;
+  border-bottom: 0.1rem solid rgba(var(--color-foreground), 0.08);
+}
+
+.cart_section .cart-item+.cart-item {
+  margin-top: 3rem;
 }

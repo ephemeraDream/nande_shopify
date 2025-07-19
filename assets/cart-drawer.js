@@ -15,11 +15,19 @@ class CartDrawer extends HTMLElement {
     cartLink.setAttribute('aria-haspopup', 'dialog');
     cartLink.addEventListener('click', (event) => {
       event.preventDefault();
+      if (window.location.pathname === '/cart') {
+        location.href = "/cart"
+        return;
+      }
       this.open(cartLink);
     });
     cartLink.addEventListener('keydown', (event) => {
       if (event.code.toUpperCase() === 'SPACE') {
         event.preventDefault();
+        if (window.location.pathname === '/cart') {
+          location.href = "/cart"
+          return;
+        }
         this.open(cartLink);
       }
     });
@@ -130,6 +138,29 @@ class CartDrawerItems extends CartItems {
         selector: '.shopify-section',
       },
     ];
+  }
+
+  initBtnEvents() {
+    const cart_products = this.querySelectorAll('[id^="CartDrawer-Item-"]');
+    cart_products.forEach(item => {
+      const bundle_product_contain = item.querySelector(".cartdrawer_bundle_product");
+      const bundle_btn = item.querySelector(".cartdrawer_bundle_product_head");
+      if (bundle_product_contain && bundle_btn && !bundle_btn.dataset.initialized) {
+        bundle_btn.addEventListener("click", () => {
+          bundle_product_contain.classList.toggle("active");
+        });
+        bundle_btn.dataset.initialized = "true";
+      }
+    });
+
+    const cartdrawer_viewdetail = document.querySelector(".cartdrawer_viewdetail")
+    if (cartdrawer_viewdetail && !cartdrawer_viewdetail.dataset.initialized) {
+      cartdrawer_viewdetail.addEventListener("click", () => {
+        const parent = cartdrawer_viewdetail.closest(".drawer__footer")
+        parent.classList.toggle("active")
+      })
+      cartdrawer_viewdetail.dataset.initialized = "true";
+    }
   }
 }
 

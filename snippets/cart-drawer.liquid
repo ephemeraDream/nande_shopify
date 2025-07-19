@@ -31,27 +31,35 @@
         <div class="drawer__inner-empty">
           <div class="cart-drawer__warnings center{% if settings.cart_drawer_collection != blank %} cart-drawer__warnings--has-collection{% endif %}">
             <div class="cart-drawer__empty-content">
-              <h2 class="cart__empty-text">{{ 'sections.cart.empty' | t }}</h2>
-              <button
-                class="drawer__close"
-                type="button"
-                onclick="this.closest('cart-drawer').close()"
-                aria-label="{{ 'accessibility.close' | t }}"
-              >
-                <span class="svg-wrapper">
-                  {{- 'icon-close.svg' | inline_asset_content -}}
-                </span>
-              </button>
+              <h2 class="cart__empty-text">{{ 'common.shopping_cart' | t }}</h2>
+              <div class="cart__empty-desc">
+                {{ 'icon-cart-empty.svg' | inline_asset_content }}
+                {{ 'common.shopping_cart_empty' | t }}
+              </div>
+              {% comment %}
+                <button
+                  class="drawer__close"
+                  type="button"
+                  onclick="this.closest('cart-drawer').close()"
+                  aria-label="{{ 'accessibility.close' | t }}"
+                >
+                  <span class="svg-wrapper">
+                    {{- 'icon-close.svg' | inline_asset_content -}}
+                  </span>
+                </button>
+              {% endcomment %}
               <a href="{{ routes.all_products_collection_url }}" class="button">
-                {{ 'general.continue_shopping' | t }}
+                {{ 'common.continue_shopping' | t }}
               </a>
 
-              {%- if shop.customer_accounts_enabled and customer == null -%}
-                <p class="cart__login-title h3">{{ 'sections.cart.login.title' | t }}</p>
-                <p class="cart__login-paragraph">
-                  {{ 'sections.cart.login.paragraph_html' | t: link: routes.account_login_url }}
-                </p>
-              {%- endif -%}
+              {% comment %}
+                {%- if shop.customer_accounts_enabled and customer == null -%}
+                  <p class="cart__login-title h3">{{ 'sections.cart.login.title' | t }}</p>
+                  <p class="cart__login-paragraph">
+                    {{ 'sections.cart.login.paragraph_html' | t: link: routes.account_login_url }}
+                  </p>
+                {%- endif -%}
+              {% endcomment %}
             </div>
           </div>
           {%- if settings.cart_drawer_collection != blank -%}
@@ -311,7 +319,9 @@
                                   {%- for discount in item.line_level_discount_allocations -%}
                                     <li class="discounts__discount">
                                       {% comment %} {{- 'icon-discount.svg' | inline_asset_content -}} {% endcomment %}
-                                      {{ discount.discount_application.title }}
+                                      {{ discount.discount_application.title }} (-
+                                      {{- discount.total_allocated_amount | money -}}
+                                      )
                                     </li>
                                   {%- endfor -%}
                                 </ul>
@@ -497,7 +507,10 @@
                                     <div class="cartdrawer_bundle_product_item_info">
                                       <div class="cartdrawer_bundle_product_item_title">
                                         {{ child.product.title }}
-                                        <div class="cartdrawer_bundle_product_delete">
+                                        <div
+                                          class="cartdrawer_bundle_product_delete"
+                                          data-index="{{ child.index | plus: 1 }}"
+                                        >
                                           {{- 'icon-close.svg' | inline_asset_content -}}
                                         </div>
                                       </div>
@@ -574,20 +587,42 @@
         <!-- Subtotals -->
 
         <div class="cart-drawer__footer" {{ block.shopify_attributes }}>
-          <div>
+          {% comment %}
+            <div>
+              {%- if cart.cart_level_discount_applications.size > 0 -%}
+                <ul class="discounts list-unstyled" role="list" aria-label="{{ 'customer.order.discount' | t }}">
+                  {%- for discount in cart.cart_level_discount_applications -%}
+                    <li class="discounts__discount discounts__discount--end">
+                      {{- 'icon-discount.svg' | inline_asset_content -}}
+                      {{ discount.title | escape }}
+                      (-{{ discount.total_allocated_amount | money }})
+                    </li>
+                  {%- endfor -%}
+                </ul>
+              {%- endif -%}
+            </div>
+          {% endcomment %}
+          {% assign code_str = '' %}
+          {% assign discount_list = cart.cart_level_discount_applications | concat: cart.discount_applications %}
+          {% for discount in discount_list %}
+            {% assign code_str = code_str | append: discount.title %}
+            {% unless forloop.last %}
+              {% assign code_str = code_str | append: ',' %}
+            {% endunless %}
+          {%- endfor -%}
+          <div class="cart_section_left_discount" data-discount="{{ code_str }}">
+            <input autocomplete="off" type="text" name="discount" placeholder="{{ 'common.gutscheincode' | t }}">
+            <div class="cart_section_left_discount_btn">{{ 'common.anwenden' | t }}</div>
             {%- if cart.cart_level_discount_applications.size > 0 -%}
-              <ul class="discounts list-unstyled" role="list" aria-label="{{ 'customer.order.discount' | t }}">
-                {%- for discount in cart.cart_level_discount_applications -%}
-                  <li class="discounts__discount discounts__discount--end">
-                    {{- 'icon-discount.svg' | inline_asset_content -}}
-                    {{ discount.title | escape }}
-                    (-{{ discount.total_allocated_amount | money }})
-                  </li>
+              <div class="cart_section_left_discount_contain">
+                {% for discount in cart.cart_level_discount_applications %}
+                  <div class="cart_section_left_discount_item">
+                    {{ discount.title | escape_once }} (-{{ discount.total_allocated_amount | money }})
+                  </div>
                 {%- endfor -%}
-              </ul>
+              </div>
             {%- endif -%}
           </div>
-
           <div class="totals" role="status">
             <h2 class="totals__total">{{ 'common.subtotal' | t }}</h2>
             <p class="totals__total-value">{{ cart.original_total_price | money }}</p>

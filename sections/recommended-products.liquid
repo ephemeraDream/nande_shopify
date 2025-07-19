@@ -6,7 +6,7 @@
     <div class="recommended_products_contain swiper">
       <div class="swiper-wrapper">
         {% for product in section.settings.product_list %}
-          <div class="swiper-slide">
+          <a class="swiper-slide" href="{{ product.url }}">
             <div class="recommended_products_img">
               <img src="{{ product.featured_image | image_url }}" alt="{{ product.title }}">
             </div>
@@ -21,7 +21,7 @@
                 {% endif %}
               </div>
             </div>
-          </div>
+          </a>
         {% endfor %}
       </div>
     </div>
