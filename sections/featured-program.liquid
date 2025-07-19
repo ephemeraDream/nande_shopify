@@ -45,7 +45,6 @@ position: relative;
     display: flex;
     flex-direction: column;
     position: relative;
-    padding-right: 20px;
     gap: 1rem;
 }
 
@@ -61,7 +60,7 @@ color: #3D3D3D;
 
 .featured-program .step-arrow {
     position: absolute;
-    right: -15px;
+    right: -40px;
     top: 50%;
     transform: translateY(-50%);
     font-size: 1.5rem;
@@ -75,6 +74,9 @@ color: #3D3D3D;
     .featured-program .steps-grid {
       grid-template-columns: repeat(2, 1fr);
     }
+    .featured-program .influencer-step:nth-child(3n) .step-arrow {
+        display: block;
+      }
     .featured-program .influencer-step:nth-child(2n) .step-arrow {
         display: none;
       }
@@ -83,6 +85,7 @@ color: #3D3D3D;
   @media screen and (max-width: 768px) {
     .featured-program .steps-grid {
       grid-template-columns: 1fr;
+      gap: 3rem;
     }
     .featured-program .step-arrow {
         display: none !important;
