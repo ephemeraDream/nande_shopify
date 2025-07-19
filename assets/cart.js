@@ -24,6 +24,7 @@ class CartItems extends HTMLElement {
 
     this.addEventListener('change', debouncedOnChange.bind(this));
     this.initBtnEvents()
+    this.initBundleRemove()
   }
 
   cartUpdateUnsubscriber = undefined;
@@ -195,6 +196,7 @@ class CartItems extends HTMLElement {
             );
           });
           this.initBtnEvents()
+          this.initBundleRemove()
           const updatedValue = parsedState.items[line - 1] ? parsedState.items[line - 1].quantity : undefined;
           let message = '';
           if (items.length === parsedState.items.length && updatedValue !== parseInt(quantityElement.value)) {
@@ -286,7 +288,7 @@ class CartItems extends HTMLElement {
         bundle_btn.addEventListener("click", () => {
           bundle_product_contain.classList.toggle("active");
         });
-        bundle_btn.dataset.initialized = "true"; // 防止重复绑定
+        bundle_btn.dataset.initialized = "true";
       }
     });
   }
@@ -296,10 +298,13 @@ class CartItems extends HTMLElement {
     bundleProducts.forEach(item => {
       const removeBtn = item.querySelector(".cartdrawer_bundle_product_delete")
       const index = removeBtn.dataset.index
-      removeBtn.addEventListener("click", (event) => {
-        event.preventDefault();
-        this.updateQuantity(index, 0, event);
-      })
+      if (removeBtn && !removeBtn.dataset.initialized) {
+        removeBtn.addEventListener("click", (event) => {
+          event.preventDefault();
+          this.updateQuantity(index, 0, event);
+        })
+        removeBtn.dataset.initialized = "true";
+      }
     })
   }
 }
