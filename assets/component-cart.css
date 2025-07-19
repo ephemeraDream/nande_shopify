@@ -389,7 +389,7 @@ cart-items {
 
 .cart_section .cart_section_left_discount_contain {
   flex: 0 0 100%;
-  margin-top: 2rem;
+  margin-top: 1.3rem;
   display: flex;
   align-items: center;
   flex-wrap: wrap;
@@ -407,7 +407,8 @@ cart-items {
   line-height: 130%;
   letter-spacing: 0px;
   font-variation-settings: "opsz" auto;
-  color: #fff;
+  background-color: #bdff00;
+  color: #1f1f1f;
 }
 
 .cart_section .cart_section_left_discount_btn {

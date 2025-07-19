@@ -396,7 +396,6 @@ class CartItems extends HTMLElement {
               errors.textContent = window.cartStrings.error;
             })
             .finally(() => {
-              this.disableLoading(line);
             });
         })
         updateDiscountBtn.dataset.initialized = "true";
