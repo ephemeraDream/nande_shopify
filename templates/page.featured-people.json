@@ -225,7 +225,7 @@
                 "step_04": {
                     "type": "step",
                     "settings": {
-                        "icon": "shopify://shop_images/pe_icon_04.webp",
+                        "icon": "shopify://shop_images/pe_icon_03.webp",
                         "title": "<p>04.</p>",
                         "text": "<p>Erstelle & teile Content: Poste Videos, Blogartikel oder Social-Media-Posts mit deinen Links, um dein Publikum zu begeistern.</p>",
                     }
