@@ -4,7 +4,7 @@ Brand swipe - 品牌logo轮播 红人页面那种
 ------------------------------------------------------------
 {% endcomment %}
 <div class="brand_swiper session-box-padding overflow-hidden padding-top-120" id="brand_swiper_section-{{ section.id }}">
-    <div class="brand_swiper_header session-box-inner">
+    <div class="brand_swiper_header session-box-inner padding-bottom-60">
     {% unless section.settings.title == blank %}
         <h2 class="brand_swiper_title">{{ section.settings.title }}</h2>
     {% endunless %}
@@ -25,7 +25,7 @@ Brand swipe - 品牌logo轮播 红人页面那种
                   -}}
                   
                 <h4>{{ block.settings.title }}</h4>
-                <p class="text-body">{{ block.settings.description }}</p>
+                <div class="text-body">{{ block.settings.description }}</div>
                 <a href="{{ block.settings.link }}" class="learn-more">{{ section.settings.btn_text }}</a>
             </div>
           {% endfor %}
@@ -73,10 +73,9 @@ Brand swipe - 品牌logo轮播 红人页面那种
       }
     
     .brand_swiper .swiper-slide .brand_swiper_logo {
-        max-width: 100%;
         margin-bottom: 3rem;
         height:auto;
-        width: auto;
+        width: 60%;
         display: block;
     }
     
@@ -84,11 +83,10 @@ Brand swipe - 品牌logo轮播 红人页面那种
         margin-bottom: 1.3rem;
     }
     
-    .brand_swiper .swiper-slide p {
+    .brand_swiper .swiper-slide .text-body {
         color: #1F1F1F;
         flex-grow: 1;
-        font-size: 2rem;
-        line-height: 2.6rem;
+        line-height: 1.3em;
     }
     
     .brand_swiper .swiper-slide .learn-more {
