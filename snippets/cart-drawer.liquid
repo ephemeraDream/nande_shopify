@@ -497,7 +497,10 @@
                                     <div class="cartdrawer_bundle_product_item_info">
                                       <div class="cartdrawer_bundle_product_item_title">
                                         {{ child.product.title }}
-                                        <div class="cartdrawer_bundle_product_delete">
+                                        <div
+                                          class="cartdrawer_bundle_product_delete"
+                                          data-index="{{ child.index | plus: 1 }}"
+                                        >
                                           {{- 'icon-close.svg' | inline_asset_content -}}
                                         </div>
                                       </div>

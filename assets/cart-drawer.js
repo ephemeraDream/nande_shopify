@@ -15,11 +15,19 @@ class CartDrawer extends HTMLElement {
     cartLink.setAttribute('aria-haspopup', 'dialog');
     cartLink.addEventListener('click', (event) => {
       event.preventDefault();
+      if (window.location.pathname === '/cart') {
+        location.href = "/cart"
+        return;
+      }
       this.open(cartLink);
     });
     cartLink.addEventListener('keydown', (event) => {
       if (event.code.toUpperCase() === 'SPACE') {
         event.preventDefault();
+        if (window.location.pathname === '/cart') {
+          location.href = "/cart"
+          return;
+        }
         this.open(cartLink);
       }
     });
