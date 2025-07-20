@@ -24,12 +24,21 @@
     </h2>
     <div class="session-box-inner nav_header">
       <nav class="blog-categories">
-        {% for blog in blogs %}
+        {% for blog_handle in all_blogs %}
+          {% assign blog = all_blogs[blog_handle] %}
+          <a href="{{ blog.url }}" class="nav_item {% if blog.handle == request.handle %}active{% endif %}">
+            {{ blog.title }}
+          </a>
+        {% endfor %}
+        {% if section.settings.blogs != blank %}
+          {% for block in section.blocks %}
+            {% assign blog = all_blogs[block.settings.blog] %}
           {% comment %} <a href="{{ blog.url }}" class="{% if blog.handle == request.handle %}active{% endif %}">
             {{ blog.title }}
           </a> {% endcomment %}
           <div class="nav_item {% if blog.handle == request.handle %}active{% endif %}">{{ blog.title }}</div>
         {% endfor %}
+      {% endif %}
       </nav>
       <div class="blog-sort-buttons">
         <a href="?sort=latest" class="sort-btn {% unless request.params.sort == 'popular' %}active{% endunless %}">Latest</a>
@@ -153,6 +162,19 @@
       "label": "t:sections.all.padding.padding_bottom",
       "default": 100
     }
-  ]
+  ],
+  "blocks": [
+    {
+      "type": "blog_item",
+      "name": "博客分类",
+      "settings": [
+        {
+          "type": "blog",
+          "id": "blog",
+          "label": "选择一个博客分类"
+        }
+      ]
+    }
+  ],
 }
 {% endschema %}
