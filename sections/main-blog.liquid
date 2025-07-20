@@ -32,7 +32,7 @@
         {% comment %} <a href="{{ blog.url }}" class="{% if blog.handle == request.handle %}active{% endif %}">
           {{ blog.title }}
         </a> {% endcomment %}
-        {{ blog_item.handle }}----{{ request.handle }}
+        {{ blog_item.handle }}----{{ blog.handle }}
         <div class="nav_item {% if blog_item.handle == request.handle %}active{% endif %}">{{ blog_item.title }}</div>
         {% endfor %}
       </nav>
