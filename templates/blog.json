@@ -29,7 +29,25 @@
         "show_author": false,
         "padding_top": 80,
         "padding_bottom": 100
-      }
+      },
+      "blocks": {
+            "blog_item_01": {
+            "type": "blog_item",
+            "settings": {
+                "blog": "Maidesite Blog"
+              }
+            },
+            "blog_item_02": {
+            "type": "blog_item",
+            "settings": {
+                "blog": "News"
+              }
+            }
+        },
+        "block_order": [
+            "blog_item_01",
+            "blog_item_02"
+        ],
     }
   },
   "order": [
