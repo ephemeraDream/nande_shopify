@@ -170,7 +170,6 @@ class CartDrawerItems extends CartItems {
 
         const url = productRecommendationsSection.dataset.url;
         // const url = `${window.Shopify.routes.root}recommendations/products.json?product_id=${productRecommendationsSection.dataset.id}&intent=complementary`
-
         fetch(url)
           .then((response) => response.text())
           .then((text) => {
