@@ -29,10 +29,9 @@
           {{- article.title | link_to: article.url }}
         {% endfor %}
 
-        {% for blog_handle in all_blogs %}
-          {% assign blog = all_blogs[blog_handle] %}
-          <a href="{{ blog.url }}" class="nav_item {% if blog.handle == request.handle %}active{% endif %}">
-            {{ blog.title }}
+        {% for blog_handle in blogs %}
+          <a href="{{ blog_handle.url }}" class="nav_item {% if blog_handle.handle == request.handle %}active{% endif %}">
+            {{ blog_handle.title }}
           </a>
         {% endfor %}
 
