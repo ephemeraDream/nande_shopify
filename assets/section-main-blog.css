@@ -67,7 +67,7 @@
   top:-40px;
 }
 .article-card-wrapper:hover .article-card>.card__content,.article-card-wrapper:hover .article-card__blog {
-  background-color: #BDFF00;
+  background-color: #BDFF00!important;
 }
 .article-card-wrapper:hover .article-card .card__content .article-card__info,.article-card-wrapper:hover .article-card__blog {
   color: #1F1F1F;
