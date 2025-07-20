@@ -57,6 +57,7 @@
   padding: 2rem;
   background-color: #fff;
 }
+.card--standard>.card__content .card__information{padding: 0!important;}
 
 
 @media screen and (min-width: 750px) {
