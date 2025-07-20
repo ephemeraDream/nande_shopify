@@ -175,7 +175,7 @@ class CartDrawerItems extends CartItems {
           .then((text) => {
             const html = document.createElement('div');
             html.innerHTML = text;
-            const recommendations = html.querySelector('.cart-drawer .cart_product_recommendations_swiper');
+            const recommendations = html.querySelector('.cart-drawer .cart_product_recommendations');
 
             if (recommendations && recommendations.innerHTML.trim().length) {
               productRecommendationsSection.querySelector('.cart_product_recommendations_swiper').innerHTML = recommendations.innerHTML;
@@ -205,7 +205,10 @@ class CartDrawerItems extends CartItems {
 
     const productRecommendationsSection = document.querySelector('.cart-drawer .cart_product_recommendations');
     if (productRecommendationsSection && !productRecommendationsSection.dataset.initialized) {
-      const observer = new IntersectionObserver(handleIntersection, { rootMargin: '0px 0px 0px 0px' });
+      const observer = new IntersectionObserver(handleIntersection, {
+        root: null,
+        threshold: 0.1,
+      });
       observer.observe(productRecommendationsSection);
       productRecommendationsSection.dataset.initialized = "true";
     }
