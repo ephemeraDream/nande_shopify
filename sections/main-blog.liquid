@@ -25,10 +25,9 @@
     <div class="session-box-inner nav_header">
       <nav class="blog-categories">
         {{ all_blogs['maidesite-blog'].title }}
-        {{ blogs | json }}
-        {% for article in blogs.maidesite-blog.articles %}
+        {% comment %} {% for article in blogs.maidesite-blog.articles %}
           {{- article.title | link_to: article.url }}
-        {% endfor %}
+        {% endfor %} {% endcomment %}
 
         {% for blog_handle in blogs %}
           <a href="{{ blog_handle.url }}" class="nav_item {% if blog_handle.handle == request.handle %}active{% endif %}">
