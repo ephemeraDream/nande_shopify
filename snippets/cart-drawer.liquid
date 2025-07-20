@@ -564,8 +564,8 @@
           <div id="CartDrawer-CartErrors" role="alert"></div>
         </form>
         <div
-          class="cart_product_recommendations product-recommendations"
-          data-id="{{ cart.items[0].product_id }}"
+          class="cart_product_recommendations"
+          data-id="{{ parent_items.first.product_id }}"
           data-url="{{ routes.product_recommendations_url }}?section_id=related-products&product_id={{ cart.items[0].product_id }}&intent=complementary"
         >
           {%- if recommendations.performed? and recommendations.products_count > 0 -%}
