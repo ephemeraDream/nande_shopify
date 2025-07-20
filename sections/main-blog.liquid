@@ -26,12 +26,8 @@
       <nav class="blog-categories">
         {{ blogs['maidesite-blog'].title }}
         {{ blogs['maidesite-blog'].url }}
-        {% comment %} {% for article in blogs.maidesite-blog.articles %}
-          {{- article.title | link_to: article.url }}
-        {% endfor %} {% endcomment %}
 
-        {% for blog_handle in blogs %}
-          {% assign blog_item = blogs[blog_handle] %}
+        {% for blog_item in blogs %}
           <a href="{{ blog_item.url }}" class="nav_item {% if blog_item.handle == request.handle %}active{% endif %}">
             {{ blog_item.title }}
           </a>
@@ -39,7 +35,7 @@
 
         {% if section.settings.blogs != blank %}
           {% for block in section.blocks %}
-            {% assign blog_item = blogs[block.settings.blog.handle] %}
+            {% assign blog_item = block.settings.blog %}
           {% comment %} <a href="{{ blog.url }}" class="{% if blog.handle == request.handle %}active{% endif %}">
             {{ blog.title }}
           </a> {% endcomment %}
