@@ -40,6 +40,8 @@
   font-family:"PP Right Grotesk";
   color: #7F7E75;
 }
+.article-card__blog{font-size: 1.8rem;font-weight: 500;}
+.article-card__excerpt{font-size: 2rem;font-weight: 300;}
 .article-card .card__content .article-card__excerpt{
   font-size: 2rem;
   line-height: 1.3em;
