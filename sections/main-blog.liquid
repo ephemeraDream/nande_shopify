@@ -8,7 +8,7 @@
     padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
   }
 
-  @media screen and (min-width: 750px) {
+  @media screen and (min-width: 767px) {
     .section-{{ section.id }}-padding {
       padding-top: {{ section.settings.padding_top }}px;
       padding-bottom: {{ section.settings.padding_bottom }}px;
@@ -16,11 +16,26 @@
   }
 {%- endstyle -%}
 
-{%- paginate blog.articles by 6 -%}
-  <div class="main-blog page-width section-{{ section.id }}-padding">
-    <h1 class="title--primary{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--fade-in{% endif %}">
+{%- paginate blog.articles by 10 -%}
+  <div class="main-blog session-box-padding section-{{ section.id }}-padding">
+    
+    <h2 class="session-box-inner title--primary{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--fade-in{% endif %}">
       {{ blog.title | escape }}
-    </h1>
+    </h2>
+    <div class="session-box-inner nav_header">
+      <nav class="blog-categories">
+        {% for blog in blogs %}
+          {% comment %} <a href="{{ blog.url }}" class="{% if blog.handle == request.handle %}active{% endif %}">
+            {{ blog.title }}
+          </a> {% endcomment %}
+          <div class="nav_item {% if blog.handle == request.handle %}active{% endif %}">{{ blog.title }}</div>
+        {% endfor %}
+      </nav>
+      <div class="blog-sort-buttons">
+        <a href="?sort=latest" class="sort-btn {% unless request.params.sort == 'popular' %}active{% endunless %}">Latest</a>
+        <a href="?sort=popular" class="sort-btn {% if request.params.sort == 'popular' %}active{% endif %}">Popular</a>
+      </div>
+    </div>
 
     <div class="blog-articles {% if section.settings.layout == 'collage' %}blog-articles--collage{% endif %}">
       {%- for article in blog.articles -%}
