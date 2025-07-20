@@ -120,6 +120,7 @@ cart-drawer:not(.is-empty) .cart-drawer__collection {
   /* border-top: 0.1rem solid rgba(var(--color-foreground), 0.2); */
   box-shadow: 0px -0.4rem 1rem 0px rgba(0, 0, 0, 0.3);
   padding: 2.5rem 6rem 3rem;
+  z-index: 1;
 }
 
 cart-drawer-items.is-empty+.drawer__footer {
@@ -800,4 +801,104 @@ cart-drawer-items::-webkit-scrollbar-track-piece {
   letter-spacing: 0px;
   font-variation-settings: "opsz" auto;
   color: #1F1F1F;
+}
+
+.cart-drawer .cart_product_recommendations {
+  margin-top: 2rem;
+}
+
+.cart-drawer .cart_product_recommendations_head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-family: "PP Right Grotesk";
+  font-size: 4rem;
+  font-weight: 500;
+  line-height: 94%;
+  letter-spacing: 0px;
+  font-variation-settings: "opsz" auto;
+  color: #1F1F1F;
+}
+
+.cart-drawer .cart_product_recommendations_swiper_btn {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.cart-drawer .cart_product_recommendations_swiper_prev,
+.cart-drawer .cart_product_recommendations_swiper_next {
+  width: 3rem;
+  height: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #F2F1ED;
+}
+
+.cart-drawer .cart_product_recommendations_box {
+  display: flex;
+  flex-direction: column;
+  width: calc((100% - 0.6rem) / 4);
+  gap: 1rem;
+}
+
+.cart-drawer .cart_product_recommendations_box img {
+  width: 100%;
+  aspect-ratio: 1;
+  object-fit: contain;
+  object-position: center center;
+  background-color: #FAFAFA;
+}
+
+.cart-drawer .cart_recommendations_product_info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-content: space-between;
+}
+
+.cart-drawer .cart_recommendations_product_info_title {
+  font-family: "PP Right Grotesk";
+  font-size: 1.6rem;
+  font-weight: 500;
+  line-height: 94%;
+  letter-spacing: 0px;
+  font-variation-settings: "opsz" auto;
+  color: #1F1F1F;
+}
+
+.cart-drawer .cart_recommendations_product_info_price {
+  display: flex;
+  align-items: baseline;
+  gap: 1rem;
+  font-family: "PP Right Grotesk";
+  font-size: 1.6rem;
+  font-weight: normal;
+  line-height: 130%;
+  letter-spacing: 0px;
+  font-variation-settings: "opsz" auto;
+  color: #1F1F1F;
+}
+
+.cart-drawer .cart_recommendations_product_info_price_op {
+  font-size: 1.4rem;
+  text-decoration: line-through;
+  color: #7F7E75;
+}
+
+.cart-drawer .cart_recommendations_product_btn {
+  width: 100%;
+  height: 2.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.8rem;
+  background-color: #7F7E75;
+  color: #BDFF00;
+  cursor: pointer;
+}
+
+.cart-drawer .cart_recommendations_product_btn svg path {
+  fill: #BDFF00;
 }

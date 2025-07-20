@@ -563,6 +563,52 @@
           </div>
           <div id="CartDrawer-CartErrors" role="alert"></div>
         </form>
+        <div
+          class="cart_product_recommendations"
+          data-id="{{ parent_items.first.product_id }}"
+          data-url="{{ routes.product_recommendations_url }}?section_id=related-products&product_id={{ cart.items[0].product_id }}&intent=complementary"
+        >
+          {%- if recommendations.performed? and recommendations.products_count > 0 -%}
+            <div class="cart_product_recommendations_head">
+              <span>{{ 'common.you_might_also_like' | t }}</span>
+              <div class="cart_product_recommendations_swiper_btn">
+                <div class="cart_product_recommendations_swiper_prev">
+                  {{- 'swiper-left.svg' | inline_asset_content -}}
+                </div>
+                <div class="cart_product_recommendations_swiper_next">
+                  {{- 'swiper-right.svg' | inline_asset_content -}}
+                </div>
+              </div>
+            </div>
+            <div class="swiper cart_product_recommendations_swiper">
+              <div class="swiper-wrapper">
+                {%- for product in recommendations.products -%}
+                  <div class="cart_product_recommendations_box swiper-slide">
+                    <img
+                      src="{{ product.featured_media | image_url }}"
+                      alt="{{ product.title }}"
+                    >
+                    <div class="cart_recommendations_product_info">
+                      <div class="cart_recommendations_product_info_title">{{ product.title }}</div>
+                      <div>
+                        <div class="cart_recommendations_product_info_price">
+                          {{ product.price | money }}
+                          <span class="cart_recommendations_product_info_price_op">
+                            {{- product.compare_at_price | money -}}
+                          </span>
+                        </div>
+                        <div class="cart_recommendations_product_btn">
+                          {{ 'common.jetzt_konfigurieren' | t }}
+                          {{ 'icon-right-arrow.svg' | inline_asset_content }}
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                {%- endfor -%}
+              </div>
+            </div>
+          {%- endif -%}
+        </div>
       </cart-drawer-items>
       <div class="drawer__footer">
         {%- if settings.show_cart_note -%}
