@@ -167,7 +167,8 @@
       "name": "polka dot swiper",
       "settings": {
         "title": "<p>Entdecke Deinen Stil Und Lass Dich </p><p>Inspirieren</p>",
-        "text": "<p>Gestalte deinen Maidesite-Arbeitsbereich mit unseren </p><p>inspirierten Räumen und Produkten</p>"
+        "text": "<p>Gestalte deinen Maidesite-Arbeitsbereich mit unseren </p><p>inspirierten Räumen und Produkten</p>",
+        "show_info": true
       }
     },
     "compare_simple_8gK3g4": {
@@ -176,25 +177,25 @@
         "item_6kCRQ4": {
           "type": "item",
           "settings": {
-            "select_product": "maidesite-th2-pro-plus-tischgestell-elektrisch-hohenverstellbar"
+            "select_product": "maidesite-tischgestell-elektrisch-hohenverstellbar-t2-pro-plus"
           }
         },
         "item_mgqRNf": {
           "type": "item",
           "settings": {
-            "select_product": "maidesite-el2-plus-art-tischgestell-elektrisch-hohenverstellbar-fur-mydealz"
+            "select_product": "maidesite-tischgestell-elektrisch-hohenverstellbar-t2-pro-plus"
           }
         },
         "item_wtnaqX": {
           "type": "item",
           "settings": {
-            "select_product": "maidesite-el2-plus-art-tischgestell-elektrisch-hohenverstellbar-fur-mydealz"
+            "select_product": "maidesite-tischgestell-elektrisch-hohenverstellbar-t2-pro-plus"
           }
         },
         "item_hrmkBQ": {
           "type": "item",
           "settings": {
-            "select_product": "maidesite-el2-plus-art-tischgestell-elektrisch-hohenverstellbar-fur-mydealz"
+            "select_product": "maidesite-tischgestell-elektrisch-hohenverstellbar-t2-pro-plus"
           }
         }
       },
