@@ -168,18 +168,17 @@ class CartDrawerItems extends CartItems {
 
         observer.unobserve(productRecommendationsSection);
 
-        // const url = productRecommendationsSection.dataset.url;
-        const url = `${window.Shopify.routes.root}recommendations/products.json?product_id=${productRecommendationsSection.dataset.id}&intent=complementary`
-
+        const url = productRecommendationsSection.dataset.url;
+        // const url = `${window.Shopify.routes.root}recommendations/products.json?product_id=${productRecommendationsSection.dataset.id}&intent=complementary`
         fetch(url)
           .then((response) => response.text())
           .then((text) => {
             const html = document.createElement('div');
             html.innerHTML = text;
-            const recommendations = html.querySelector('.cart-drawer .cart_product_recommendations');
+            const recommendations = html.querySelector('.cart-drawer .cart_product_recommendations_swiper');
 
             if (recommendations && recommendations.innerHTML.trim().length) {
-              productRecommendationsSection.innerHTML = recommendations.innerHTML;
+              productRecommendationsSection.querySelector('.cart_product_recommendations_swiper').innerHTML = recommendations.innerHTML;
 
               initializeSwiper();
             }
