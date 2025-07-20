@@ -34,9 +34,9 @@
         "group_BtbHgz": {
           "type": "group",
           "settings": {
-            "dropdown_key": "",
-            "label": "",
-            "key": ""
+            "dropdown_key": "stehschreibtisch",
+            "label": "Bestellung",
+            "key": "bestellung"
           }
         }
       },
