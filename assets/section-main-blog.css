@@ -36,7 +36,7 @@
 .blog-articles--onecard> *:nth-child(1) .article-card .card__content .card__heading{
   font-size: 2.2rem;
 }
-.article-card__info,.article-card__blog{
+.article-card .card__content .article-card__info,.article-card__blog{
   font-family:"PP Right Grotesk";
   color: #7F7E75;
 }
