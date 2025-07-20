@@ -24,7 +24,8 @@
     </h2>
     <div class="session-box-inner nav_header">
       <nav class="blog-categories">
-        {{ all_blogs['maidesite-blog'].title }}
+        {{ blogs['maidesite-blog'].title }}
+        {{ blogs['maidesite-blog'].url }}
         {% comment %} {% for article in blogs.maidesite-blog.articles %}
           {{- article.title | link_to: article.url }}
         {% endfor %} {% endcomment %}
@@ -38,7 +39,7 @@
 
         {% if section.settings.blogs != blank %}
           {% for block in section.blocks %}
-            {% assign blog_item = blogs[block.settings.blog] %}
+            {% assign blog_item = blogs[block.settings.blog.handle] %}
           {% comment %} <a href="{{ blog.url }}" class="{% if blog.handle == request.handle %}active{% endif %}">
             {{ blog.title }}
           </a> {% endcomment %}
