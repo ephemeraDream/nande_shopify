@@ -30,18 +30,19 @@
         {% endfor %} {% endcomment %}
 
         {% for blog_handle in blogs %}
-          <a href="{{ blog_handle.url }}" class="nav_item {% if blog_handle.handle == request.handle %}active{% endif %}">
-            {{ blog_handle.title }}
+          {% assign blog_item = blogs[blog_handle] %}
+          <a href="{{ blog_item.url }}" class="nav_item {% if blog_item.handle == request.handle %}active{% endif %}">
+            {{ blog_item.title }}
           </a>
         {% endfor %}
 
         {% if section.settings.blogs != blank %}
           {% for block in section.blocks %}
-            {% assign blog = all_blogs[block.settings.blog] %}
+            {% assign blog_item = blogs[block.settings.blog] %}
           {% comment %} <a href="{{ blog.url }}" class="{% if blog.handle == request.handle %}active{% endif %}">
             {{ blog.title }}
           </a> {% endcomment %}
-          <div class="nav_item {% if blog.handle == request.handle %}active{% endif %}">{{ blog.title }}</div>
+          <div class="nav_item {% if blog_item.handle == request.handle %}active{% endif %}">{{ blog_item.title }}</div>
           {% endfor %}
         {% endif %}
       </nav>
