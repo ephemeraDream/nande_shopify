@@ -565,8 +565,7 @@
         </form>
         <div
           class="cart_product_recommendations"
-          id="cart_product_recommendations"
-          data-url="{{ routes.product_recommendations_url }}?section_id=cart_product_recommendations&product_id={{ cart.items[0].product_id }}"
+          data-url="{{ routes.product_recommendations_url }}?section_id=related-products&product_id={{ cart.items[0].product_id }}"
         >
           {%- if recommendations.performed? and recommendations.products_count > 0 -%}
             <div class="cart_product_recommendations_head">
