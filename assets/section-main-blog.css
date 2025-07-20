@@ -76,7 +76,7 @@
   }
   .blog-articles--onecard> *:nth-child(1) .article-card .card__inner{width: 50%;}
   .blog-articles--onecard> *:nth-child(1) .article-card .card__inner .card__media{position: relative;width: 100%;min-height:42rem;}
-  /* .blog-articles--onecard> *:nth-child(1) .article-card .card__inner .card__content{display: none;} */
+  .blog-articles--onecard> *:nth-child(1) .article-card .card__inner .card__content{display: none;}
   .blog-articles--onecard> *:nth-child(1) .article-card>.card__content {
     width: 50%;
     padding: 4rem;
