@@ -24,9 +24,9 @@
     </h2>
     <div class="session-box-inner nav_header">
       <nav class="blog-categories">
-        {{ all_blogs['maidesite-blogs'].title }}
+        {{ all_blogs['maidesite-blog'].title }}
         {{ blogs | json }}
-        {% for article in blogs.maidesite-blogs.articles %}
+        {% for article in blogs.maidesite-blog.articles %}
           {{- article.title | link_to: article.url }}
         {% endfor %}
 
