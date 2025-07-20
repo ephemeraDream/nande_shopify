@@ -1,0 +1,38 @@
+{{ 'section-product-compare.css' | asset_url | stylesheet_tag }}
+
+<div class="product_compare_section padding-sider">
+  <div class="product_compare"></div>
+</div>
+
+{% schema %}
+{
+  "name": "product compare",
+  "tag": "section",
+  "class": "section",
+  "disabled_on": {
+    "groups": ["header", "footer"]
+  },
+  "settings": [
+    {
+      "type": "richtext",
+      "id": "title",
+      "label": "title"
+    },
+    {
+      "type": "richtext",
+      "id": "text",
+      "label": "text"
+    },
+    {
+      "type": "product_list",
+      "id": "product_list",
+      "label": "product list"
+    }
+  ],
+  "presets": [
+    {
+      "name": "product compare"
+    }
+  ]
+}
+{% endschema %}
