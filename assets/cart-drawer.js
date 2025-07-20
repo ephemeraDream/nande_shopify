@@ -181,6 +181,43 @@ class CartDrawerItems extends CartItems {
               productRecommendationsSection.querySelector('.cart_product_recommendations_swiper').innerHTML = recommendations.innerHTML;
 
               initializeSwiper();
+
+              document.querySelectorAll(".cart_recommendations_product_btn").addEventListener("click", (e) => {
+                const body = JSON.stringify({
+                  items: [{
+                    id: e.currentTarget.dataset.id,
+                    quantity: 1
+                  }],
+                  sections: this.getSectionsToRender().map((section) => section.section),
+                  sections_url: window.location.pathname,
+                });
+                fetch(`${routes.cart_add_url}`, { ...fetchConfig(), ...{ body } })
+                  .then((response) => {
+                    return response.text();
+                  })
+                  .then((state) => {
+                    const parsedState = JSON.parse(state);
+
+                    this.getSectionsToRender().forEach((section) => {
+                      const elementToReplace =
+                        document.getElementById(section.id).querySelector(section.selector) || document.getElementById(section.id);
+                      elementToReplace.innerHTML = this.getSectionInnerHTML(
+                        parsedState.sections[section.section],
+                        section.selector
+                      );
+                    });
+                    this.initBtnEvents()
+                    this.initBundleRemove()
+                    this.updateDiscount()
+                  })
+                  .catch(() => {
+                    this.querySelectorAll('.loading__spinner').forEach((overlay) => overlay.classList.add('hidden'));
+                    const errors = document.getElementById('cart-errors') || document.getElementById('CartDrawer-CartErrors');
+                    errors.textContent = window.cartStrings.error;
+                  })
+                  .finally(() => {
+                  });
+              })
             }
           })
           .catch((e) => {

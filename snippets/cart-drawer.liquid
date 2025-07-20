@@ -597,7 +597,10 @@
                             {{- product.compare_at_price | money -}}
                           </span>
                         </div>
-                        <div class="cart_recommendations_product_btn">
+                        <div
+                          class="cart_recommendations_product_btn"
+                          data-id="{{ product.selected_or_first_available_variant.id }}"
+                        >
                           {{ 'common.jetzt_konfigurieren' | t }}
                           {{ 'icon-right-arrow.svg' | inline_asset_content }}
                         </div>
