@@ -36,6 +36,17 @@
 .blog-articles--onecard> *:nth-child(1) .article-card .card__content .card__heading{
   font-size: 2.2rem;
 }
+.article-card__excerpt,.article-card__blog{
+  font-family:"PP Right Grotesk";
+}
+.article-card .card__content .article-card__excerpt{
+  font-size: 2rem;
+  line-height: 1.3em;
+  color: #1F1F1F;
+  display: none;
+  margin-top: 1rem;
+}
+.blog-articles--onecard> *:nth-child(1) .article-card .card__content .article-card__excerpt{display: block;}
 
 
 @media screen and (min-width: 750px) {
@@ -78,6 +89,7 @@
     font-weight: 500;
     color: #7F7E75;
   }
+  
 
   /* collage */
   .blog-articles--collage > *:nth-child(3n + 1),
