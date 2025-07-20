@@ -565,7 +565,7 @@
         </form>
         <div
           class="cart_product_recommendations"
-          data-url="{{ routes.product_recommendations_url }}?section_id={{ section.id }}&product_id={{ cart.items[0].product_id }}"
+          data-url="{{ routes.product_recommendations_url }}?section_id=product-recommendations&product_id={{ cart.items[0].product_id }}"
         >
           {%- if recommendations.performed? and recommendations.products_count > 0 -%}
             <div class="cart_product_recommendations_head">
@@ -759,55 +759,3 @@
     </div>
   </div>
 </cart-drawer>
-
-<script>
-  document.addEventListener('DOMContentLoaded', () => {
-    const handleIntersection = (entries, observer) => {
-      entries.forEach((entry) => {
-        if (!entries[0].isIntersecting) return;
-
-        observer.unobserve(productRecommendationsSection);
-
-        const url = productRecommendationsSection.dataset.url;
-
-        fetch(url)
-          .then((response) => response.text())
-          .then((text) => {
-            const html = document.createElement('div');
-            html.innerHTML = text;
-            const recommendations = html.querySelector('.cart-drawer .cart_product_recommendations');
-
-            if (recommendations && recommendations.innerHTML.trim().length) {
-              productRecommendationsSection.innerHTML = recommendations.innerHTML;
-
-              initializeSwiper();
-            }
-          })
-          .catch((e) => {
-            console.error(e);
-          });
-      });
-    };
-
-    const initializeSwiper = () => {
-      setTimeout(() => {
-        new Swiper('.cart-drawer .cart_product_recommendations_swiper', {
-          slidesPerView: 4,
-          loop: true,
-          spaceBetween: 2,
-          navigation: {
-            nextEl: '.cart-drawer .cart_product_recommendations_swiper_next',
-            prevEl: '.cart-drawer .cart_product_recommendations_swiper_prev',
-          },
-        });
-      }, 0);
-    };
-
-    const productRecommendationsSection = document.querySelector('.cart-drawer .cart_product_recommendations');
-    if (productRecommendationsSection && !productRecommendationsSection.dataset.initialized) {
-      const observer = new IntersectionObserver(handleIntersection, { rootMargin: '0px 0px 0px 0px' });
-      observer.observe(productRecommendationsSection);
-      productRecommendationsSection.dataset.initialized = 'true';
-    }
-  });
-</script>
