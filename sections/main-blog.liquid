@@ -34,15 +34,13 @@
           </a>
         {% endfor %}
 
-        {% if section.settings.blogs != blank %}
-          {% for block in section.blocks %}
-            {% assign blog_item = block.settings.blog %}
-          {% comment %} <a href="{{ blog.url }}" class="{% if blog.handle == request.handle %}active{% endif %}">
-            {{ blog.title }}
-          </a> {% endcomment %}
-          <div class="nav_item {% if blog_item.handle == request.handle %}active{% endif %}">{{ blog_item.title }}</div>
-          {% endfor %}
-        {% endif %}
+        {% for block in section.blocks %}
+          {% assign blog_item = block.settings.blog %}
+        {% comment %} <a href="{{ blog.url }}" class="{% if blog.handle == request.handle %}active{% endif %}">
+          {{ blog.title }}
+        </a> {% endcomment %}
+        <div class="nav_item {% if blog_item.handle == request.handle %}active{% endif %}">{{ blog_item.title }}</div>
+        {% endfor %}
       </nav>
       <div class="blog-sort-buttons">
         <a href="?sort=latest" class="sort-btn {% unless request.params.sort == 'popular' %}active{% endunless %}">Latest</a>
