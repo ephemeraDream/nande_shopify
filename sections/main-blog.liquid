@@ -27,9 +27,10 @@
         {{ blogs['maidesite-blog'].title }}
         {{ blogs['maidesite-blog'].url }}
 
-        {% for blog_item in blogs %}
-          <a href="{{ blog_item.url }}" class="nav_item {% if blog_item.handle == request.handle %}active{% endif %}">
-            {{ blog_item.title }}
+        {% for blog_handle in blogs %}
+          {% assign blog = blogs[blog_handle] %}
+          <a href="{{ blog.url }}" class="nav_item {% if blog.handle == request.handle %}active{% endif %}">
+            {{ blog.title }}
           </a>
         {% endfor %}
 
