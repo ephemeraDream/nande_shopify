@@ -63,31 +63,39 @@ aria-label="conatct"
                 </div>
               </div>
 
-              <div class="form-grid">
-                <div class="form-grid-field all-row">
-                  <select id="ContactFormFour-standing-desk" name="contact[standing-desk]" class="field__input" required>
-                    <option value="" disabled selected hidden>Stehschreibtisch</option>
-                    <option value="1">1 Stück</option>
-                    <option value="2">2 Stück</option>
-                    <option value="3">3 Stück</option>
-                    <option value="4">4 Stück</option>
-                    <option value="5+">5+ Stück</option>
-                  </select>
-                </div>
-              </div>
+              {% assign dropdowns = section.blocks | where: "type", "dropdown" %}
+              {% assign groups = section.blocks | where: "type", "group" %}
+              {% assign options = section.blocks | where: "type", "option" %}
 
-              <div class="form-grid">
-                <div class="form-grid-field all-row">
-                  <select id="ContactFormFour-partnership" name="contact[partnership]" class="field__input" required>
-                    <option value="" disabled selected hidden>Kooperationsideen</option>
-                    <option value="1">1 Stück</option>
-                    <option value="2">2 Stück</option>
-                    <option value="3">3 Stück</option>
-                    <option value="4">4 Stück</option>
-                    <option value="5+">5+ Stück</option>
-                  </select>
+              {% for dropdown in dropdowns %}
+                {% assign dropdown_key = dropdown.settings.key %}
+                <div class="form-grid">
+                  <div class="form-grid-field all-row">
+                    <select
+                      id="ContactFormFour-{{ dropdown_key }}"
+                      name="contact[{{ dropdown.settings.field_name }}]"
+                      class="field__input"
+                      {% if dropdown.settings.required %}required{% endif %}
+                    >
+                      <option value="" disabled selected hidden>{{ dropdown.settings.label }}</option>
+
+                      {% for group in groups %}
+                        {% if group.settings.dropdown_key == dropdown_key %}
+                          <optgroup label="{{ group.settings.label }}">
+                            {% assign group_key = group.settings.key %}
+                            {% for opt in options %}
+                              {% if opt.settings.group_key == group_key %}
+                                <option value="{{ opt.settings.value }}">{{ opt.settings.label }}</option>
+                              {% endif %}
+                            {% endfor %}
+                          </optgroup>
+                        {% endif %}
+                      {% endfor %}
+                    </select>
+                  </div>
                 </div>
-              </div>
+              {% endfor %}
+
           
               <div class="form-grid-field">
                 <textarea
@@ -291,6 +299,75 @@ aria-label="conatct"
     }
   ],
   "blocks": [
+    {
+      "type": "dropdown",
+      "name": "Dropdown",
+      "settings": [
+        {
+          "type": "text",
+          "id": "key",
+          "label": "唯一标识（如：standing-desk）"
+        },
+        {
+          "type": "text",
+          "id": "label",
+          "label": "占位提示（如：Stehschreibtisch）"
+        },
+        {
+          "type": "text",
+          "id": "field_name",
+          "label": "字段名称（如：standing-desk）"
+        },
+        {
+          "type": "checkbox",
+          "id": "required",
+          "label": "是否为必填项",
+          "default": true
+        }
+      ]
+    },
+    {
+      "type": "group",
+      "name": "Option-Gruppe",
+      "settings": [
+        {
+          "type": "text",
+          "id": "dropdown_key",
+          "label": "归属 Dropdown-Key（如：standing-desk）"
+        },
+        {
+          "type": "text",
+          "id": "label",
+          "label": "分组名称（如：Bestellung）"
+        },
+        {
+          "type": "text",
+          "id": "key",
+          "label": "分组唯一 Key（如：bestellung）"
+        }
+      ]
+    },
+    {
+      "type": "option",
+      "name": "Dropdown-Option",
+      "settings": [
+        {
+          "type": "text",
+          "id": "group_key",
+          "label": "归属 Group-Key（如：bestellung）"
+        },
+        {
+          "type": "text",
+          "id": "label",
+          "label": "显示文字（如：1 Stück）"
+        },
+        {
+          "type": "text",
+          "id": "value",
+          "label": "提交值（如：1）"
+        }
+      ]
+    }
   ],
   "presets": [
     { "name": "Contact Form Four" }

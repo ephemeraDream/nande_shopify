@@ -22,7 +22,74 @@
           "image": "shopify://shop_images/pe_01.webp",
           "title": "FüLle Dieses Formular Aus, Um Unsere Zusammenarbeit Zu Starten.",
           "desc":""
-        }
+        },
+        "blocks": {
+            "dropdown_01": {
+                "type": "dropdown",
+                "settings": {
+                    "label": "Stehschreibtisch",
+                    "key": "stehschreibtisch",
+                    "field_name": "stehschreibtisch"
+                }
+            },
+            "dropdown_02": {
+                "type": "dropdown",
+                "settings": {
+                    "label": "Kooperationsideen",
+                    "key": "kooperationsideen",
+                    "field_name": "kooperationsideen"
+                }
+            },
+            "group_01": {
+                "type": "group",
+                "settings": {
+                    "label": "Bestellung",
+                    "key": "bestellung",
+                    "dropdown_key": "stehschreibtisch"
+                }
+            },
+            "option_01": {
+                "type": "option",
+                "settings": {
+                    "label": "Umtausch",
+                    "value": "umtausch",
+                    "group_key": "bestellung"
+                }
+            },
+            "option_02": {
+            "type": "option",
+            "settings": {
+                "label": "Stornierung der Bestellung",
+                "value": "stornierung",
+                "group_key": "bestellung"
+            }
+            },
+            "group_02": {
+            "type": "group",
+            "settings": {
+                "label": "Produktinfo",
+                "key": "produktinfo",
+                "dropdown_key": "kooperationsideen"
+            }
+            },
+            "option_03": {
+            "type": "option",
+            "settings": {
+                "label": "Garantie",
+                "value": "garantie",
+                "group_key": "produktinfo"
+            }
+            },
+        },
+        "block_order": [
+            "dropdown_01",
+            "dropdown_02",
+            "group_01",
+            "group_02",
+            "option_01",
+            "option_02",
+            "option_03"
+        ],
       },
       "brand_swiper": {
         "type": "brand-swiper",
