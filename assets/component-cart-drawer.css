@@ -196,6 +196,7 @@ cart-drawer-items {
   overflow: auto;
   flex: 1;
   padding: 0 6rem;
+  padding-bottom: 2rem;
 }
 
 @media screen and (max-height: 650px) {
