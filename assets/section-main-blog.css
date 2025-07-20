@@ -38,6 +38,7 @@
 }
 .article-card__excerpt,.article-card__blog{
   font-family:"PP Right Grotesk";
+  color: #7F7E75;
 }
 .article-card .card__content .article-card__excerpt{
   font-size: 2rem;
@@ -47,6 +48,10 @@
   margin-top: 1rem;
 }
 .blog-articles--onecard> *:nth-child(1) .article-card .card__content .article-card__excerpt{display: block;}
+.article-card .card__content {
+  padding: 2rem;
+  background-color: #fff;
+}
 
 
 @media screen and (min-width: 750px) {
@@ -82,12 +87,10 @@
   .blog-articles--onecard> *:nth-child(1) .article-card .card__content .article-card__info{
     font-size: 2.4rem;
     font-weight: 500;
-    color: #7F7E75;
   }
   .blog-articles--onecard> *:nth-child(1) .article-card .card__content .article-card__blog{
     font-size: 2.4rem;
     font-weight: 500;
-    color: #7F7E75;
   }
   
 
