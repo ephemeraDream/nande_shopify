@@ -36,12 +36,14 @@
 .blog-articles--onecard> *:nth-child(1) .article-card .card__content .card__heading{
   font-size: 2.2rem;
 }
-.article-card__excerpt,.article-card__blog{
+.article-card__info,.article-card__blog{
   font-family:"PP Right Grotesk";
   color: #7F7E75;
 }
 .article-card__blog{font-size: 1.8rem;font-weight: 500;}
-.article-card__excerpt{font-size: 2rem;font-weight: 300;}
+.article-card .card__content .article-card__info{
+  font-size: 2rem;font-weight: 300;
+}
 .article-card .card__content .article-card__excerpt{
   font-size: 2rem;
   line-height: 1.3em;
