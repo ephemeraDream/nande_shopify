@@ -1,14 +1,23 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "breadcrumbs": {
-        "type": "breadcrumbs",
-        "custom_css": [
-          ".breadcrumb-con {width: 100%; position: absolute; top: 0; left: 0; z-index: 100;}",
-          ".breadcrumb,.breadcrumb a,.breadcrumb span {color: #7F7E75;}"
-        ],
-        "settings": {
-          "custom_breadcrumb": ""
-        }
+      "type": "breadcrumbs",
+      "custom_css": [
+        ".breadcrumb-con {width: 100%; position: absolute; top: 0; left: 0; z-index: 100;}",
+        ".breadcrumb,.breadcrumb a,.breadcrumb span {color: #7f7e75;}"
+      ],
+      "settings": {
+        "custom_breadcrumb": ""
+      }
     },
     "main": {
       "type": "main-blog",
@@ -19,7 +28,7 @@
         "show_date": true,
         "show_author": false,
         "padding_top": 80,
-        "padding_bottom": 120
+        "padding_bottom": 36
       }
     }
   },
