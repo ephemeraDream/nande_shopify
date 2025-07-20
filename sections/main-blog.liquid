@@ -26,14 +26,12 @@
       <nav class="blog-categories">
         {% comment %} {{ blogs['maidesite-blog'].title }}
         {{ blogs['maidesite-blog'].url }} {% endcomment %}
-
         {% for block in section.blocks %}
           {% assign blog_item = block.settings.blog %}
-        {% comment %} <a href="{{ blog.url }}" class="{% if blog.handle == request.handle %}active{% endif %}">
-          {{ blog.title }}
-        </a> {% endcomment %}
-        {{ blog_item.handle }}----{{ blog.handle }}
-        <div class="nav_item {% if blog_item.handle == request.handle %}active{% endif %}">{{ blog_item.title }}</div>
+          <a href="{{ blog_item.url }}" class="nav_item {% if blog_item.handle == blog.handle %}active{% endif %}">
+            {{ blog_item.title }}
+          </a> 
+        {% comment %} <div class="nav_item {% if blog_item.handle == blog.handle %}active{% endif %}">{{ blog_item.title }}</div> {% endcomment %}
         {% endfor %}
       </nav>
       <div class="blog-sort-buttons">
