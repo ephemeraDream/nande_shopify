@@ -24,15 +24,8 @@
     </h2>
     <div class="session-box-inner nav_header">
       <nav class="blog-categories">
-        {{ blogs['maidesite-blog'].title }}
-        {{ blogs['maidesite-blog'].url }}
-
-        {% for blog_handle in blogs %}
-          {% assign blog = blogs[blog_handle] %}
-          <a href="{{ blog.url }}" class="nav_item {% if blog.handle == request.handle %}active{% endif %}">
-            {{ blog.title }}
-          </a>
-        {% endfor %}
+        {% comment %} {{ blogs['maidesite-blog'].title }}
+        {{ blogs['maidesite-blog'].url }} {% endcomment %}
 
         {% for block in section.blocks %}
           {% assign blog_item = block.settings.blog %}
