@@ -23,7 +23,54 @@
         "title": "<p>Fragen, Wünsche, Anliegen?<br/> Wir Haben Immer Ein Offenes Ohr!</p>",
         "desc":"",
         "text_content":"<p>Our representatives stands by behind the live chat and the phone during business hours. During other time you could fill out the form. We’ll be in touch ASAP.</p>"
-      }
+      },
+      "blocks": {
+        "group_01": {
+          "type": "group",
+          "settings": {
+            "label": "Bestellung",
+            "key": "bestellung"
+          }
+        },
+        "option_01": {
+          "type": "option",
+          "settings": {
+            "label": "Umtausch",
+            "value": "umtausch",
+            "group_key": "bestellung"
+          }
+        },
+        "option_02": {
+          "type": "option",
+          "settings": {
+            "label": "Stornierung der Bestellung",
+            "value": "stornierung",
+            "group_key": "bestellung"
+          }
+        },
+        "group_02": {
+          "type": "group",
+          "settings": {
+            "label": "Produktinfo",
+            "key": "produktinfo"
+          }
+        },
+        "option_03": {
+          "type": "option",
+          "settings": {
+            "label": "Garantie",
+            "value": "garantie",
+            "group_key": "produktinfo"
+          }
+        },
+      },
+      "block_order": [
+        "group_01",
+        "group_02",
+        "option_01",
+        "option_02",
+        "option_03"
+      ],
     },
     "faq_simple_kxTbhc": {
       "type": "faq-simple",

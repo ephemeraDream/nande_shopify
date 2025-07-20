@@ -112,18 +112,18 @@ aria-label="contact"
               <div class="form-grid-field all-row">
                 <select id="ContactFormThree-query-type" name="contact[query-type]" class="field__input" required>
                   <option value="" disabled selected hidden>Query Type</option>
-                  <optgroup label="Bestellung">
-                    <option value="umtausch">Umtausch</option>
-                    <option value="stornierung">Stornierung der Bestellung</option>
-                    <option value="rechnung">Rechnungsanfrage</option>
-                    <option value="steuer">Steuerbefreiung</option>
-                  </optgroup>
-                  <optgroup label="Produktinfo">
-                    <option value="garantie">Garantie</option>
-                    <option value="technik">Technisches Detail zum Produkt</option>
-                    <option value="beratung">Beratung bei Produktausfall</option>
-                    <option value="installation">Installation</option>
-                  </optgroup>
+                  {% assign groups = section.blocks | where: "type", "group" %}
+                  {% assign options = section.blocks | where: "type", "option" %}
+                  {% for group in groups %}
+                    {% assign group_key = group.settings.key | default: group.id %}
+                    <optgroup label="{{ group.settings.label }}">
+                      {% for opt in options %}
+                        {% if opt.settings.group_key == group_key %}
+                          <option value="{{ opt.settings.value }}">{{ opt.settings.label }}</option>
+                        {% endif %}
+                      {% endfor %}
+                    </optgroup>
+                  {% endfor %}
                 </select>
               </div>
               </div>
@@ -366,6 +366,44 @@ aria-label="contact"
     },
   ],
   "blocks": [
+    {
+      "type": "group",
+      "name": "Option Gruppe",
+      "settings": [
+        {
+          "type": "text",
+          "id": "label",
+          "label": "Gruppenname"
+        },
+        {
+          "type": "text",
+          "id": "key",
+          "label": "Key",
+        }
+      ]
+    }
+    ,
+    {
+      "type": "option",
+      "name": "Option",
+      "settings": [
+        {
+          "type": "text",
+          "id": "label",
+          "label": "Option Label"
+        },
+        {
+          "type": "text",
+          "id": "value",
+          "label": "Option Value"
+        },
+        {
+          "type": "text",
+          "id": "group_key",
+          "label": "Gruppe Key"
+        }
+      ]
+    }
   ],
   "presets": [
     { "name": "Contact Form Three" }
