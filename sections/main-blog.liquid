@@ -40,7 +40,7 @@
       </div>
     </div>
 
-    <div class="blog-articles {% if section.settings.layout == 'collage' %}blog-articles--collage{% endif %}">
+    <div class="session-box-inner blog-articles {% if section.settings.layout == 'collage' %}blog-articles--onecard{% endif %}">
       {%- for article in blog.articles -%}
         <div
           class="blog-articles__article article{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
