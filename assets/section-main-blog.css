@@ -56,8 +56,16 @@
 .article-card>.card__content {
   padding: 2rem;
   background-color: #fff;
+  position: relative;
 }
 .card--standard>.card__content .card__information{padding: 0!important;}
+.blog-articles--onecard > *:not(:nth-child(1)) .article-card__blog {
+  position: absolute;
+  background-color: #fff;
+  padding: 1.6rem 2rem 0;
+  left: 0;
+  top:-40px;
+}
 
 
 @media screen and (min-width: 750px) {
