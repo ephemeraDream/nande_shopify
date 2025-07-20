@@ -168,8 +168,8 @@ class CartDrawerItems extends CartItems {
 
         observer.unobserve(productRecommendationsSection);
 
-        // const url = productRecommendationsSection.dataset.url;
-        const url = `recommendations/products.json?product_id=${productRecommendationsSection.dataset.id}`
+        const url = productRecommendationsSection.dataset.url;
+        // const url = `recommendations/products.json?product_id=${productRecommendationsSection.dataset.id}`
 
         fetch(url)
           .then((response) => response.text())

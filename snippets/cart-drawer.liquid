@@ -566,7 +566,7 @@
         <div
           class="cart_product_recommendations product-recommendations"
           data-id="{{ cart.items[0].product_id }}"
-          data-url="{{ routes.product_recommendations_url }}?section_id=product-recommendations&product_id={{ cart.items[0].product_id }}"
+          data-url="{{ routes.product_recommendations_url }}?section_id=main-product&product_id={{ cart.items[0].product_id }}&intent=complementary"
         >
           {%- if recommendations.performed? and recommendations.products_count > 0 -%}
             <div class="cart_product_recommendations_head">
