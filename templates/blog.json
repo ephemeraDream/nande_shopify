@@ -34,13 +34,13 @@
             "blog_item_01": {
             "type": "blog_item",
             "settings": {
-                "blog": "Maidesite Blog"
+                "blog": "maidesite-blog"
               }
             },
             "blog_item_02": {
             "type": "blog_item",
             "settings": {
-                "blog": "News"
+                "blog": "news"
               }
             }
         },
