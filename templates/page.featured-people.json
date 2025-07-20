@@ -22,6 +22,15 @@
     "contact_form_four": {
       "type": "contact-form-four",
       "blocks": {
+        "dropdown_Tgxtye": {
+          "type": "dropdown",
+          "settings": {
+            "key": "kooperationsideen",
+            "label": "Kooperationsideen",
+            "field_name": "kooperationsideen",
+            "required": true
+          }
+        },
         "option_G4Ckdy": {
           "type": "option",
           "settings": {
@@ -49,6 +58,7 @@
         }
       },
       "block_order": [
+        "dropdown_Tgxtye",
         "option_G4Ckdy",
         "dropdown_MqfBFN",
         "group_BtbHgz"
