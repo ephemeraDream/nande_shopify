@@ -24,15 +24,18 @@
     </h2>
     <div class="session-box-inner nav_header">
       <nav class="blog-categories">
-        {% for article in blogs.potion-notions.articles %}
+        {{ blogs | json }}
+        {% for article in blogs.maidesite-blogs.articles %}
           {{- article.title | link_to: article.url }}
         {% endfor %}
+
         {% for blog_handle in all_blogs %}
           {% assign blog = all_blogs[blog_handle] %}
           <a href="{{ blog.url }}" class="nav_item {% if blog.handle == request.handle %}active{% endif %}">
             {{ blog.title }}
           </a>
         {% endfor %}
+
         {% if section.settings.blogs != blank %}
           {% for block in section.blocks %}
             {% assign blog = all_blogs[block.settings.blog] %}
@@ -40,8 +43,8 @@
             {{ blog.title }}
           </a> {% endcomment %}
           <div class="nav_item {% if blog.handle == request.handle %}active{% endif %}">{{ blog.title }}</div>
-        {% endfor %}
-      {% endif %}
+          {% endfor %}
+        {% endif %}
       </nav>
       <div class="blog-sort-buttons">
         <a href="?sort=latest" class="sort-btn {% unless request.params.sort == 'popular' %}active{% endunless %}">Latest</a>
