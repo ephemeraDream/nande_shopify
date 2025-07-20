@@ -24,6 +24,9 @@
     </h2>
     <div class="session-box-inner nav_header">
       <nav class="blog-categories">
+        {% for article in blogs.potion-notions.articles %}
+          {{- article.title | link_to: article.url }}
+        {% endfor %}
         {% for blog_handle in all_blogs %}
           {% assign blog = all_blogs[blog_handle] %}
           <a href="{{ blog.url }}" class="nav_item {% if blog.handle == request.handle %}active{% endif %}">
