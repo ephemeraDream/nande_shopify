@@ -62,9 +62,15 @@
 .blog-articles--onecard > *:not(:nth-child(1)) .article-card__blog {
   position: absolute;
   background-color: #fff;
-  padding: 1.6rem 2rem 0;
+  padding: 1rem 2rem 0;
   left: 0;
   top:-40px;
+}
+.article-card-wrapper:hover .article-card>.card__content,.article-card-wrapper:hover .article-card__blog {
+  background-color: #BDFF00;
+}
+.article-card-wrapper:hover .article-card .card__content .article-card__info,.article-card-wrapper:hover .article-card__blog {
+  color: #1F1F1F;
 }
 
 
