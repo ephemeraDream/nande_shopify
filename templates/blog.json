@@ -1,5 +1,15 @@
 {
   "sections": {
+    "breadcrumbs": {
+        "type": "breadcrumbs",
+        "custom_css": [
+          ".breadcrumb-con {width: 100%; position: absolute; top: 0; left: 0; z-index: 100;}",
+          ".breadcrumb,.breadcrumb a,.breadcrumb span {color: #7F7E75;}"
+        ],
+        "settings": {
+          "custom_breadcrumb": ""
+        }
+    },
     "main": {
       "type": "main-blog",
       "settings": {
@@ -14,6 +24,7 @@
     }
   },
   "order": [
+    "breadcrumbs",
     "main"
   ]
 }
