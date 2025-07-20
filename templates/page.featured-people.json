@@ -22,6 +22,14 @@
     "contact_form_four": {
       "type": "contact-form-four",
       "blocks": {
+        "option_G4Ckdy": {
+          "type": "option",
+          "settings": {
+            "group_key": "bestellung",
+            "label": "Umtausch",
+            "value": "Umtausch"
+          }
+        },
         "dropdown_MqfBFN": {
           "type": "dropdown",
           "settings": {
@@ -41,6 +49,7 @@
         }
       },
       "block_order": [
+        "option_G4Ckdy",
         "dropdown_MqfBFN",
         "group_BtbHgz"
       ],
