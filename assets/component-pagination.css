@@ -48,7 +48,7 @@ a.pagination__item:hover::after {
 }
 
 .pagination__item .icon-caret {
-  height: 0.6rem;
+  height: 1rem;
 }
 
 .pagination__item--current::after {
