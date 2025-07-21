@@ -17,14 +17,21 @@
           "type": "item",
           "settings": {
             "title": "Produkt",
-            "anchor_name": "Produkt"
+            "anchor_name": "tabs_topic"
           }
         },
         "item_qaC4iV": {
           "type": "item",
           "settings": {
             "title": "Produktbeschreibung",
-            "anchor_name": "Produktbeschreibung"
+            "anchor_name": "topic_text_img"
+          }
+        },
+        "item_Vt9rJN": {
+          "type": "item",
+          "settings": {
+            "title": "Kundenbewertungen",
+            "anchor_name": "img_with_text_simplicity"
           }
         },
         "item_RrNzfE": {
@@ -32,13 +39,6 @@
           "settings": {
             "title": "Technische Daten",
             "anchor_name": "Technische_Daten"
-          }
-        },
-        "item_Vt9rJN": {
-          "type": "item",
-          "settings": {
-            "title": "Kundenbewertungen",
-            "anchor_name": "Kundenbewertungen"
           }
         }
       },
