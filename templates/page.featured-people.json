@@ -1,352 +1,331 @@
 /*
  * ------------------------------------------------------------
- * 红人页面
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
  * ------------------------------------------------------------
  */
- {
-    "sections": {
-      "breadcrumbs": {
-        "type": "breadcrumbs",
-        "custom_css": [
-          ".breadcrumb-con {width: 100%; position: absolute; top: 0; left: 0; z-index: 100;}",
-          ".breadcrumb,.breadcrumb a,.breadcrumb span {color: #fff;}"
-        ],
-        "settings": {
-          "custom_breadcrumb": ""
+{
+  "sections": {
+    "breadcrumbs": {
+      "type": "breadcrumbs",
+      "custom_css": [
+        ".breadcrumb-con {width: 100%; position: absolute; top: 0; left: 0; z-index: 100;}",
+        ".breadcrumb,.breadcrumb a,.breadcrumb span {color: #fff;}"
+      ],
+      "settings": {
+        "custom_breadcrumb": ""
+      }
+    },
+    "contact_form_four": {
+      "type": "contact-form-four",
+      "blocks": {
+        "dropdown_Tgxtye": {
+          "type": "dropdown",
+          "settings": {
+            "key": "kooperationsideen",
+            "label": "Kooperationsideen",
+            "field_name": "kooperationsideen",
+            "required": true
+          }
+        },
+        "option_G4Ckdy": {
+          "type": "option",
+          "settings": {
+            "group_key": "bestellung",
+            "label": "Umtausch",
+            "value": "Umtausch"
+          }
+        },
+        "dropdown_MqfBFN": {
+          "type": "dropdown",
+          "settings": {
+            "key": "stehschreibtisch",
+            "label": "Stehschreibtisch",
+            "field_name": "Stehschreibtisch",
+            "required": true
+          }
+        },
+        "group_BtbHgz": {
+          "type": "group",
+          "settings": {
+            "dropdown_key": "stehschreibtisch",
+            "label": "Bestellung",
+            "key": "bestellung"
+          }
         }
       },
-      "contact_form_four": {
-        "type": "contact-form-four",
-        "name": "contact_form_four",
-        "settings": {
-          "image": "shopify://shop_images/pe_01.webp",
-          "title": "FüLle Dieses Formular Aus, Um Unsere Zusammenarbeit Zu Starten.",
-          "desc":""
+      "block_order": [
+        "dropdown_Tgxtye",
+        "option_G4Ckdy",
+        "dropdown_MqfBFN",
+        "group_BtbHgz"
+      ],
+      "name": "contact_form_four",
+      "settings": {
+        "title": "FüLle Dieses Formular Aus, Um Unsere Zusammenarbeit Zu Starten.",
+        "image": "shopify://shop_images/pe_01.webp",
+        "desc": ""
+      }
+    },
+    "brand_swiper": {
+      "type": "brand-swiper",
+      "blocks": {
+        "swiper_01": {
+          "type": "swiper",
+          "settings": {
+            "logo": "shopify://shop_images/pe_logo_01.webp",
+            "title": "Kostenloser und Schneller Versand",
+            "description": "<p>Normalerweise beträgt die optimale Schreibtischhöhe im Sitzen Ihre Körpergröße x 0,4 und im Stehen Ihre Körpergröße x 0,62. Höhenverstellbarer Schreibtisch mit 2 stufigen Säulen ist nur für die Körpergröße von 1,75-1,95 m geeignet. </p>",
+            "link": ""
+          }
         },
-        "blocks": {
-            "dropdown_01": {
-                "type": "dropdown",
-                "settings": {
-                    "label": "Stehschreibtisch",
-                    "key": "stehschreibtisch",
-                    "field_name": "stehschreibtisch"
-                }
-            },
-            "dropdown_02": {
-                "type": "dropdown",
-                "settings": {
-                    "label": "Kooperationsideen",
-                    "key": "kooperationsideen",
-                    "field_name": "kooperationsideen"
-                }
-            },
-            "group_01": {
-                "type": "group",
-                "settings": {
-                    "label": "Bestellung",
-                    "key": "bestellung",
-                    "dropdown_key": "stehschreibtisch"
-                }
-            },
-            "option_01": {
-                "type": "option",
-                "settings": {
-                    "label": "Umtausch",
-                    "value": "umtausch",
-                    "group_key": "bestellung"
-                }
-            },
-            "option_02": {
-            "type": "option",
-            "settings": {
-                "label": "Stornierung der Bestellung",
-                "value": "stornierung",
-                "group_key": "bestellung"
-            }
-            },
-            "group_02": {
-            "type": "group",
-            "settings": {
-                "label": "Produktinfo",
-                "key": "produktinfo",
-                "dropdown_key": "kooperationsideen"
-            }
-            },
-            "option_03": {
-            "type": "option",
-            "settings": {
-                "label": "Garantie",
-                "value": "garantie",
-                "group_key": "produktinfo"
-            }
-            },
+        "swiper_02": {
+          "type": "swiper",
+          "settings": {
+            "logo": "shopify://shop_images/pe_logo_01.webp",
+            "title": "Kostenloser und Schneller Versand",
+            "description": "<p>Normalerweise beträgt die optimale Schreibtischhöhe im Sitzen Ihre Körpergröße x 0,4 und im Stehen Ihre Körpergröße x 0,62. Höhenverstellbarer Schreibtisch mit 2 stufigen Säulen ist nur für die Körpergröße von 1,75-1,95 m geeignet. </p>",
+            "link": ""
+          }
         },
-        "block_order": [
-            "dropdown_01",
-            "dropdown_02",
-            "group_01",
-            "group_02",
-            "option_01",
-            "option_02",
-            "option_03"
-        ],
+        "swiper_03": {
+          "type": "swiper",
+          "settings": {
+            "logo": "shopify://shop_images/pe_logo_01.webp",
+            "title": "Kostenloser und Schneller Versand",
+            "description": "<p>Normalerweise beträgt die optimale Schreibtischhöhe im Sitzen Ihre Körpergröße x 0,4 und im Stehen Ihre Körpergröße x 0,62. Höhenverstellbarer Schreibtisch mit 2 stufigen Säulen ist nur für die Körpergröße von 1,75-1,95 m geeignet. </p>",
+            "link": ""
+          }
+        },
+        "swiper_04": {
+          "type": "swiper",
+          "settings": {
+            "logo": "shopify://shop_images/pe_logo_01.webp",
+            "title": "Kostenloser und Schneller Versand",
+            "description": "<p>Normalerweise beträgt die optimale Schreibtischhöhe im Sitzen Ihre Körpergröße x 0,4 und im Stehen Ihre Körpergröße x 0,62. Höhenverstellbarer Schreibtisch mit 2 stufigen Säulen ist nur für die Körpergröße von 1,75-1,95 m geeignet. </p>",
+            "link": ""
+          }
+        },
+        "swiper_05": {
+          "type": "swiper",
+          "settings": {
+            "logo": "shopify://shop_images/pe_logo_01.webp",
+            "title": "Kostenloser und Schneller Versand",
+            "description": "<p>Normalerweise beträgt die optimale Schreibtischhöhe im Sitzen Ihre Körpergröße x 0,4 und im Stehen Ihre Körpergröße x 0,62. Höhenverstellbarer Schreibtisch mit 2 stufigen Säulen ist nur für die Körpergröße von 1,75-1,95 m geeignet. </p>",
+            "link": ""
+          }
+        },
+        "swiper_06": {
+          "type": "swiper",
+          "settings": {
+            "logo": "shopify://shop_images/pe_logo_01.webp",
+            "title": "Kostenloser und Schneller Versand",
+            "description": "<p>Normalerweise beträgt die optimale Schreibtischhöhe im Sitzen Ihre Körpergröße x 0,4 und im Stehen Ihre Körpergröße x 0,62. Höhenverstellbarer Schreibtisch mit 2 stufigen Säulen ist nur für die Körpergröße von 1,75-1,95 m geeignet. </p>",
+            "link": ""
+          }
+        },
+        "swiper_07": {
+          "type": "swiper",
+          "settings": {
+            "logo": "shopify://shop_images/pe_logo_01.webp",
+            "title": "Kostenloser und Schneller Versand",
+            "description": "<p>Normalerweise beträgt die optimale Schreibtischhöhe im Sitzen Ihre Körpergröße x 0,4 und im Stehen Ihre Körpergröße x 0,62. Höhenverstellbarer Schreibtisch mit 2 stufigen Säulen ist nur für die Körpergröße von 1,75-1,95 m geeignet. </p>",
+            "link": ""
+          }
+        }
       },
-      "brand_swiper": {
-        "type": "brand-swiper",
-        "blocks": {
-            "swiper_01": {
-                "type": "swiper",
-                "settings": {
-                    "title": "Kostenloser und Schneller Versand",
-                    "description": "<p>Normalerweise beträgt die optimale Schreibtischhöhe im Sitzen Ihre Körpergröße x 0,4 und im Stehen Ihre Körpergröße x 0,62. Höhenverstellbarer Schreibtisch mit 2 stufigen Säulen ist nur für die Körpergröße von 1,75-1,95 m geeignet. </p>",
-                    "link": "",
-                    "logo": "shopify://shop_images/pe_logo_01.webp"
-                }
-            },
-            "swiper_02": {
-                "type": "swiper",
-                "settings": {
-                    "title": "Kostenloser und Schneller Versand",
-                    "description": "<p>Normalerweise beträgt die optimale Schreibtischhöhe im Sitzen Ihre Körpergröße x 0,4 und im Stehen Ihre Körpergröße x 0,62. Höhenverstellbarer Schreibtisch mit 2 stufigen Säulen ist nur für die Körpergröße von 1,75-1,95 m geeignet. </p>",
-                    "link": "",
-                    "logo": "shopify://shop_images/pe_logo_01.webp"
-                }
-            },
-            "swiper_03": {
-                "type": "swiper",
-                "settings": {
-                    "title": "Kostenloser und Schneller Versand",
-                    "description": "<p>Normalerweise beträgt die optimale Schreibtischhöhe im Sitzen Ihre Körpergröße x 0,4 und im Stehen Ihre Körpergröße x 0,62. Höhenverstellbarer Schreibtisch mit 2 stufigen Säulen ist nur für die Körpergröße von 1,75-1,95 m geeignet. </p>",
-                    "link": "",
-                    "logo": "shopify://shop_images/pe_logo_01.webp"
-                }
-            },
-            "swiper_04": {
-                "type": "swiper",
-                "settings": {
-                    "title": "Kostenloser und Schneller Versand",
-                    "description": "<p>Normalerweise beträgt die optimale Schreibtischhöhe im Sitzen Ihre Körpergröße x 0,4 und im Stehen Ihre Körpergröße x 0,62. Höhenverstellbarer Schreibtisch mit 2 stufigen Säulen ist nur für die Körpergröße von 1,75-1,95 m geeignet. </p>",
-                    "link": "",
-                    "logo": "shopify://shop_images/pe_logo_01.webp"
-                }
-            },
-            "swiper_05": {
-                "type": "swiper",
-                "settings": {
-                    "title": "Kostenloser und Schneller Versand",
-                    "description": "<p>Normalerweise beträgt die optimale Schreibtischhöhe im Sitzen Ihre Körpergröße x 0,4 und im Stehen Ihre Körpergröße x 0,62. Höhenverstellbarer Schreibtisch mit 2 stufigen Säulen ist nur für die Körpergröße von 1,75-1,95 m geeignet. </p>",
-                    "link": "",
-                    "logo": "shopify://shop_images/pe_logo_01.webp"
-                }
-            },
-            "swiper_06": {
-                "type": "swiper",
-                "settings": {
-                    "title": "Kostenloser und Schneller Versand",
-                    "description": "<p>Normalerweise beträgt die optimale Schreibtischhöhe im Sitzen Ihre Körpergröße x 0,4 und im Stehen Ihre Körpergröße x 0,62. Höhenverstellbarer Schreibtisch mit 2 stufigen Säulen ist nur für die Körpergröße von 1,75-1,95 m geeignet. </p>",
-                    "link": "",
-                    "logo": "shopify://shop_images/pe_logo_01.webp"
-                }
-            },
-            "swiper_07": {
-                "type": "swiper",
-                "settings": {
-                    "title": "Kostenloser und Schneller Versand",
-                    "description": "<p>Normalerweise beträgt die optimale Schreibtischhöhe im Sitzen Ihre Körpergröße x 0,4 und im Stehen Ihre Körpergröße x 0,62. Höhenverstellbarer Schreibtisch mit 2 stufigen Säulen ist nur für die Körpergröße von 1,75-1,95 m geeignet. </p>",
-                    "link": "",
-                    "logo": "shopify://shop_images/pe_logo_01.webp"
-                }
-            },
+      "block_order": [
+        "swiper_01",
+        "swiper_02",
+        "swiper_03",
+        "swiper_04",
+        "swiper_05",
+        "swiper_06",
+        "swiper_07"
+      ],
+      "custom_css": [
+        ".brand_swiper {background-color: transparent;}"
+      ],
+      "name": "brand_swiper",
+      "settings": {
+        "title": "Brand In The Press",
+        "btn_text": "Learn More"
+      }
+    },
+    "celebrity_swiper_aGymw9": {
+      "type": "celebrity-swiper",
+      "blocks": {
+        "swiper_mexwM6": {
+          "type": "swiper",
+          "settings": {
+            "name": "@Suli-Man",
+            "introduce": "<p>17.1 Million YouTube Followers</p>",
+            "description": "<p>\" I really liked it, and it looks really cool. It's just perfect for long workdays or gaming sessions where comfort and ergonomics are important.\"</p>",
+            "link": "",
+            "cover_image": "shopify://shop_images/celebrity-img-1.webp",
+            "video_url": "",
+            "url_upload": "shopify://files/videos/TO1-Pro-spine-healthy-mode_a586d928-0c0c-459d-99a8-75d2ab5cc36d.mp4"
+          }
         },
-        "block_order": [
-            "swiper_01",
-            "swiper_02",
-            "swiper_03",
-            "swiper_04",
-            "swiper_05",
-            "swiper_06",
-            "swiper_07"
-        ],
-        "name": "brand_swiper",
-        "settings": {
-            "title": "Brand In The Press",
-            "btn_text": "Learn More"
-        },
-        "custom_css": [
-          ".brand_swiper {background-color: transparent;}",
-        ]
+        "swiper_xWLxVC": {
+          "type": "swiper",
+          "settings": {
+            "name": "@EFRALINK",
+            "introduce": "<p>17.1 Million YouTube Followers</p>",
+            "description": "<p>\" Here is my new minimalist desk setup as a photographer and content creator for long editing sessions.\"</p>",
+            "link": "",
+            "cover_image": "shopify://shop_images/celebrity-img-2.webp",
+            "video_url": "",
+            "url_upload": "shopify://files/videos/TO1-Pro-spine-healthy-mode_a586d928-0c0c-459d-99a8-75d2ab5cc36d.mp4"
+          }
+        }
       },
-      "celebrity_swiper_aGymw9": {
-        "type": "celebrity-swiper",
-        "blocks": {
-            "swiper_mexwM6": {
-            "type": "swiper",
-            "settings": {
-                "name": "@Suli-Man",
-                "introduce": "<p>17.1 Million YouTube Followers</p>",
-                "description": "<p>\" I really liked it, and it looks really cool. It's just perfect for long workdays or gaming sessions where comfort and ergonomics are important.\"</p>",
-                "link": "",
-                "cover_image": "shopify://shop_images/celebrity-img-1.webp",
-                "video_url": "",
-                "url_upload": "shopify://files/videos/TO1-Pro-spine-healthy-mode_a586d928-0c0c-459d-99a8-75d2ab5cc36d.mp4"
-            }
-            },
-            "swiper_xWLxVC": {
-            "type": "swiper",
-            "settings": {
-                "name": "@EFRALINK",
-                "introduce": "<p>17.1 Million YouTube Followers</p>",
-                "description": "<p>\" Here is my new minimalist desk setup as a photographer and content creator for long editing sessions.\"</p>",
-                "link": "",
-                "cover_image": "shopify://shop_images/celebrity-img-2.webp",
-                "video_url": "",
-                "url_upload": "shopify://files/videos/TO1-Pro-spine-healthy-mode_a586d928-0c0c-459d-99a8-75d2ab5cc36d.mp4"
-            }
-            }
+      "block_order": [
+        "swiper_mexwM6",
+        "swiper_xWLxVC"
+      ],
+      "custom_css": [
+        ".celebrity_swiper {padding-bottom: 12rem; background-color: transparent;}"
+      ],
+      "name": "celebrity swiper",
+      "settings": {
+        "title": "<p>Empfehlen Von</p>",
+        "text": ""
+      }
+    },
+    "img_with_foldtext_RcBrkw": {
+      "type": "img-with-foldtext",
+      "blocks": {
+        "foldtext_HQhGDk": {
+          "type": "foldtext",
+          "settings": {
+            "title": "<p>64-129cm hohenverstellbar</p>",
+            "description": "<p>Normalerweise beträgt die optimale Schreibtischhöhe im Sitzen Ihre Körpergröße x 0,4 und im Stehen Ihre Körpergröße x 0,62. <br/>Höhenverstellbarer Schreibtisch mit 2 stufigen Säulen ist nur für die Körpergröße von 1,75-1,95 m geeignet. <br/>Vernal-Schreibtisch passt für Personen mit einer Körpergröße von 1,55-2,05 m.</p>"
+          }
         },
-        "block_order": [
-            "swiper_mexwM6",
-            "swiper_xWLxVC"
-        ],
-        "name": "celebrity swiper",
-        "settings": {
-            "title": "<p>Empfehlen Von</p>",
-            "text": ""
+        "foldtext_HWP39G": {
+          "type": "foldtext",
+          "settings": {
+            "title": "<p>160 kg groBe Tragfahigkeit</p>",
+            "description": "<p>Normalerweise beträgt die optimale Schreibtischhöhe im Sitzen Ihre Körpergröße x 0,4 und im Stehen Ihre Körpergröße x 0,62. <br/>Höhenverstellbarer Schreibtisch mit 2 stufigen Säulen ist nur für die Körpergröße von 1,75-1,95 m geeignet. <br/>Vernal-Schreibtisch passt für Personen mit einer Körpergröße von 1,55-2,05 m.</p>"
+          }
         },
-        "custom_css": [
-          ".celebrity_swiper {padding-bottom:12rem;background-color: transparent;}",
-        ]
+        "foldtext_iGWkAX": {
+          "type": "foldtext",
+          "settings": {
+            "title": "<p>Flexible Einstellung und schnelle Reaktion</p>",
+            "description": "<p>Normalerweise beträgt die optimale Schreibtischhöhe im Sitzen Ihre Körpergröße x 0,4 und im Stehen Ihre Körpergröße x 0,62. <br/>Höhenverstellbarer Schreibtisch mit 2 stufigen Säulen ist nur für die Körpergröße von 1,75-1,95 m geeignet. <br/>Vernal-Schreibtisch passt für Personen mit einer Körpergröße von 1,55-2,05 m.</p>"
+          }
+        }
       },
-      "img_with_foldtext_RcBrkw": {
-        "type": "img-with-foldtext",
-        "blocks": {
-            "foldtext_HQhGDk": {
-            "type": "foldtext",
-            "settings": {
-                "title": "<p>64-129cm hohenverstellbar</p>",
-                "description": "<p>Normalerweise beträgt die optimale Schreibtischhöhe im Sitzen Ihre Körpergröße x 0,4 und im Stehen Ihre Körpergröße x 0,62. <br/>Höhenverstellbarer Schreibtisch mit 2 stufigen Säulen ist nur für die Körpergröße von 1,75-1,95 m geeignet. <br/>Vernal-Schreibtisch passt für Personen mit einer Körpergröße von 1,55-2,05 m.</p>"
-            }
-            },
-            "foldtext_HWP39G": {
-            "type": "foldtext",
-            "settings": {
-                "title": "<p>160 kg groBe Tragfahigkeit</p>",
-                "description": "<p>Normalerweise beträgt die optimale Schreibtischhöhe im Sitzen Ihre Körpergröße x 0,4 und im Stehen Ihre Körpergröße x 0,62. <br/>Höhenverstellbarer Schreibtisch mit 2 stufigen Säulen ist nur für die Körpergröße von 1,75-1,95 m geeignet. <br/>Vernal-Schreibtisch passt für Personen mit einer Körpergröße von 1,55-2,05 m.</p>"
-            }
-            },
-            "foldtext_iGWkAX": {
-            "type": "foldtext",
-            "settings": {
-                "title": "<p>Flexible Einstellung und schnelle Reaktion</p>",
-                "description": "<p>Normalerweise beträgt die optimale Schreibtischhöhe im Sitzen Ihre Körpergröße x 0,4 und im Stehen Ihre Körpergröße x 0,62. <br/>Höhenverstellbarer Schreibtisch mit 2 stufigen Säulen ist nur für die Körpergröße von 1,75-1,95 m geeignet. <br/>Vernal-Schreibtisch passt für Personen mit einer Körpergröße von 1,55-2,05 m.</p>"
-            }
-            }
+      "block_order": [
+        "foldtext_HQhGDk",
+        "foldtext_HWP39G",
+        "foldtext_iGWkAX"
+      ],
+      "custom_css": [
+        ".img_with_foldtext_title {text-align: left;}"
+      ],
+      "name": "img with foldtext",
+      "settings": {
+        "spec_id": "",
+        "title": "<p>Why Collaborating With Maidesite</p>",
+        "image": "shopify://shop_images/featured-spaces-5.webp"
+      }
+    },
+    "featured_program": {
+      "type": "featured-program",
+      "blocks": {
+        "step_01": {
+          "type": "step",
+          "settings": {
+            "icon": "shopify://shop_images/pe_icon_01.webp",
+            "title": "<p>01.</p>",
+            "text": "<p>Registriere dich: Erstelle ein Konto auf unserer Affiliate-Plattform (z. B. Impact).</p>"
+          }
         },
-        "block_order": [
-            "foldtext_HQhGDk",
-            "foldtext_HWP39G",
-            "foldtext_iGWkAX"
-        ],
-        "name": "img with foldtext",
-        "settings": {
-            "spec_id": "",
-            "title": "<p>Why Collaborating With Maidesite</p>",
-            "image": "shopify://shop_images/featured-spaces-5.webp"
+        "step_02": {
+          "type": "step",
+          "settings": {
+            "icon": "shopify://shop_images/pe_icon_02.webp",
+            "title": "<p>02.</p>",
+            "text": "<p>Tritt dem Programm bei: Suche nach „Maidesite“ (Impact ID: 6061752) und beantrage die Teilnahme.</p>"
+          }
         },
-        "custom_css": [
-          ".img_with_foldtext_title {text-align:left}",
-        ]
+        "step_03": {
+          "type": "step",
+          "settings": {
+            "icon": "shopify://shop_images/pe_icon_03.webp",
+            "title": "<p>03.</p>",
+            "text": "<p>Erhalte deine Tracking-Links: Sobald du angenommen wirst, erhältst du personalisierte Affiliate-Links für unsere Produkte.</p>"
+          }
         },
-      "featured_program": {
-            "type": "featured-program",
-            "name": "featured_program",
-            "settings": {
-            "title": "<p>So Verdienst Du Mit Dem Maidesite<br/> Influencer Program</p>",
-            "description": "<p>We work with the afiliate network shareAsale. Visit their network, search for flexispot(1D:68890) on ShareAsale,then submit an afiliate request.<br/> You can also send proposal to: rita@flexispot.com. Once it approved, it's easy to earn commission by referring shoppers.</p>"
-            },
-            "blocks": {
-                "step_01": {
-                    "type": "step",
-                    "settings": {
-                        "icon": "shopify://shop_images/pe_icon_01.webp",
-                        "title": "<p>01.</p>",
-                        "text": "<p>Registriere dich: Erstelle ein Konto auf unserer Affiliate-Plattform (z. B. Impact).</p>",
-                    }
-                },
-                "step_02": {
-                    "type": "step",
-                    "settings": {
-                        "icon": "shopify://shop_images/pe_icon_02.webp",
-                        "title": "<p>02.</p>",
-                        "text": "<p>Tritt dem Programm bei: Suche nach „Maidesite“ (Impact ID: 6061752) und beantrage die Teilnahme.</p>",
-                    }
-                },
-                "step_03": {
-                    "type": "step",
-                    "settings": {
-                        "icon": "shopify://shop_images/pe_icon_03.webp",
-                        "title": "<p>03.</p>",
-                        "text": "<p>Erhalte deine Tracking-Links: Sobald du angenommen wirst, erhältst du personalisierte Affiliate-Links für unsere Produkte.</p>",
-                    }
-                },
-                "step_04": {
-                    "type": "step",
-                    "settings": {
-                        "icon": "shopify://shop_images/pe_icon_03.webp",
-                        "title": "<p>04.</p>",
-                        "text": "<p>Erstelle & teile Content: Poste Videos, Blogartikel oder Social-Media-Posts mit deinen Links, um dein Publikum zu begeistern.</p>",
-                    }
-                },
-                "step_05": {
-                    "type": "step",
-                    "settings": {
-                        "icon": "shopify://shop_images/pe_icon_05.webp",
-                        "title": "<p>05.</p>",
-                        "text": "<p>Generiere Verkäufe: Wenn jemand über deinen Link kauft, erhältst du eine Provision von bis zu 15 % auf den Umsatz.</p>",
-                    }
-                },
-                "step_06": {
-                    "type": "step",
-                    "settings": {
-                        "icon": "shopify://shop_images/pe_icon_06.webp",
-                        "title": "<p>06.</p>",
-                        "text": "<p>Verdiene Geld: Deine Einnahmen werden direkt über die Affiliate-Plattform ausgezahlt – je mehr du vermittelst, desto mehr verdienst du!</p>",
-                    }
-                }
-            },
-            "block_order": [
-                "step_01",
-                "step_02",
-                "step_03",
-                "step_04",
-                "step_05",
-                "step_06"
-            ],
+        "step_04": {
+          "type": "step",
+          "settings": {
+            "icon": "shopify://shop_images/pe_icon_03.webp",
+            "title": "<p>04.</p>",
+            "text": "<p>Erstelle & teile Content: Poste Videos, Blogartikel oder Social-Media-Posts mit deinen Links, um dein Publikum zu begeistern.</p>"
+          }
+        },
+        "step_05": {
+          "type": "step",
+          "settings": {
+            "icon": "shopify://shop_images/pe_icon_05.webp",
+            "title": "<p>05.</p>",
+            "text": "<p>Generiere Verkäufe: Wenn jemand über deinen Link kauft, erhältst du eine Provision von bis zu 15 % auf den Umsatz.</p>"
+          }
+        },
+        "step_06": {
+          "type": "step",
+          "settings": {
+            "icon": "shopify://shop_images/pe_icon_06.webp",
+            "title": "<p>06.</p>",
+            "text": "<p>Verdiene Geld: Deine Einnahmen werden direkt über die Affiliate-Plattform ausgezahlt – je mehr du vermittelst, desto mehr verdienst du!</p>"
+          }
+        }
       },
-      "faq_simple_kxTbhc": {
-        "type": "faq-simple",
-        "blocks": {
-            "faq_E4jP4F": {
-                "type": "faq",
-                "settings": {
-                    "question": "<p>Kann ich meine Bestellung stornieren?</p>",
-                    "answer": "<p>Maidesite bietet durch seine produkten von höhenverstellbaren Schreibtischen, die Funktionsintegration, Szenenvielfalt und Personalisierung bieten, Ihnen die Möglichkeit, einfach zwischen verschiedenen Heimat-Aktivitätsmodi zu wechseln, die eine Desktop-Assistenten erfordern. <br/><br/>Dies ermöglicht Anhängern des modernen intelligenten Heimlebens, sich noch bequemer und müheloser in ihre vielfältigen Lebensstile einzuleben.<br/></p>"
-                }
-            },
-            "faq_AXAcgA": {
-                "type": "faq",
-                "settings": {
-                    "question": "<p>Was ist, wenn ich mit jemandem sprechen mochte?</p>",
-                    "answer": "<p>Maidesite bietet durch seine produkten von höhenverstellbaren Schreibtischen, die Funktionsintegration, Szenenvielfalt und Personalisierung bieten, Ihnen die Möglichkeit, einfach zwischen verschiedenen Heimat-Aktivitätsmodi zu wechseln, die eine Desktop-Assistenten erfordern. <br/><br/>Dies ermöglicht Anhängern des modernen intelligenten Heimlebens, sich noch bequemer und müheloser in ihre vielfältigen Lebensstile einzuleben.<br/></p>"
-                }
-            },
-            "faq_W9Mzyn": {
-                "type": "faq",
-                "settings": {
-                    "question": "<p>Ist das Bestellen im Internet sicher? Was passiert mit meinen Daten?</p>",
-                    "answer": "<p>Maidesite bietet durch seine produkten von höhenverstellbaren Schreibtischen, die Funktionsintegration, Szenenvielfalt und Personalisierung bieten, Ihnen die Möglichkeit, einfach zwischen verschiedenen Heimat-Aktivitätsmodi zu wechseln, die eine Desktop-Assistenten erfordern. <br/><br/>Dies ermöglicht Anhängern des modernen intelligenten Heimlebens, sich noch bequemer und müheloser in ihre vielfältigen Lebensstile einzuleben.<br/></p>"
-                }
-            }
+      "block_order": [
+        "step_01",
+        "step_02",
+        "step_03",
+        "step_04",
+        "step_05",
+        "step_06"
+      ],
+      "name": "featured_program",
+      "settings": {
+        "title": "<p>So Verdienst Du Mit Dem Maidesite<br> Influencer Program</p>",
+        "description": "<p>We work with the afiliate network shareAsale. Visit their network, search for flexispot(1D:68890) on ShareAsale,then submit an afiliate request.<br> You can also send proposal to: rita@flexispot.com. Once it approved, it's easy to earn commission by referring shoppers.</p>"
+      }
+    },
+    "faq_simple_kxTbhc": {
+      "type": "faq-simple",
+      "blocks": {
+        "faq_E4jP4F": {
+          "type": "faq",
+          "settings": {
+            "question": "<p>Kann ich meine Bestellung stornieren?</p>",
+            "answer": "<p>Maidesite bietet durch seine produkten von höhenverstellbaren Schreibtischen, die Funktionsintegration, Szenenvielfalt und Personalisierung bieten, Ihnen die Möglichkeit, einfach zwischen verschiedenen Heimat-Aktivitätsmodi zu wechseln, die eine Desktop-Assistenten erfordern. <br/><br/>Dies ermöglicht Anhängern des modernen intelligenten Heimlebens, sich noch bequemer und müheloser in ihre vielfältigen Lebensstile einzuleben.<br/></p>"
+          }
+        },
+        "faq_AXAcgA": {
+          "type": "faq",
+          "settings": {
+            "question": "<p>Was ist, wenn ich mit jemandem sprechen mochte?</p>",
+            "answer": "<p>Maidesite bietet durch seine produkten von höhenverstellbaren Schreibtischen, die Funktionsintegration, Szenenvielfalt und Personalisierung bieten, Ihnen die Möglichkeit, einfach zwischen verschiedenen Heimat-Aktivitätsmodi zu wechseln, die eine Desktop-Assistenten erfordern. <br/><br/>Dies ermöglicht Anhängern des modernen intelligenten Heimlebens, sich noch bequemer und müheloser in ihre vielfältigen Lebensstile einzuleben.<br/></p>"
+          }
+        },
+        "faq_W9Mzyn": {
+          "type": "faq",
+          "settings": {
+            "question": "<p>Ist das Bestellen im Internet sicher? Was passiert mit meinen Daten?</p>",
+            "answer": "<p>Maidesite bietet durch seine produkten von höhenverstellbaren Schreibtischen, die Funktionsintegration, Szenenvielfalt und Personalisierung bieten, Ihnen die Möglichkeit, einfach zwischen verschiedenen Heimat-Aktivitätsmodi zu wechseln, die eine Desktop-Assistenten erfordern. <br/><br/>Dies ermöglicht Anhängern des modernen intelligenten Heimlebens, sich noch bequemer und müheloser in ihre vielfältigen Lebensstile einzuleben.<br/></p>"
+          }
+        }
       },
       "block_order": [
         "faq_E4jP4F",
@@ -354,22 +333,25 @@
         "faq_W9Mzyn"
       ],
       "custom_css": [
-        ".faq_simple_section {background-color: transparent;padding-bottom:12rem;}"
+        ".faq_simple_section {background-color: transparent; padding-bottom: 12rem;}"
       ],
       "name": "faq simple",
       "settings": {
         "heading": "<p>FAQ</p>",
         "text": "<p>Häufig gestellte Fragen</p>",
-        },
+        "show_btn": false,
+        "learn_more": false,
+        "contact_us": false
       }
-    },
-    "order": [
-      "breadcrumbs",
-      "contact_form_four",
-      "brand_swiper",
-      "celebrity_swiper_aGymw9",
-      "img_with_foldtext_RcBrkw",
-      "featured_program",
-      "faq_simple_kxTbhc"
-    ]
-  }
+    }
+  },
+  "order": [
+    "breadcrumbs",
+    "contact_form_four",
+    "brand_swiper",
+    "celebrity_swiper_aGymw9",
+    "img_with_foldtext_RcBrkw",
+    "featured_program",
+    "faq_simple_kxTbhc"
+  ]
+}
