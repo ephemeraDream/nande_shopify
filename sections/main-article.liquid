@@ -303,6 +303,21 @@
     </div>
     <div class="featured_article">
       <h3>Unsere beliebten Blogs</h3>
+      {% assign related_articles = article.metafields.custom.related_articles %}
+      {% if related_articles.size > 0 %}
+        {% assign recommended = related_articles %}
+      {% else %}
+        {% assign recommended = blog.articles | where: "id", article.id, true | limit: 3 %}
+        {% assign recommended = recommended | where_exp: "item", "item.id != article.id" | limit: 2 %}
+      {% endif %}
+      {% for item in recommended %}
+        <div class="article-card">
+          <a href="{{ item.url }}">
+            <h3>{{ item.title }}</h3>
+            <p>{{ item.excerpt | truncate: 100 }}</p>
+          </a>
+        </div>
+      {% endfor %}
     </div>
     <div class="featured_pro">
       <h3>Featured Products</h3>
