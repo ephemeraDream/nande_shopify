@@ -336,11 +336,26 @@
         <a href="{{ product.url }}" class="product_card">
           <div class="product_card__img">
             {% if product.image %}
-              <img src="{{ product.image | image_url: width: 400 }}" alt="{{ product.image.alt | escape }}" loading="lazy">
+              {{-
+                product.featured_image
+                | image_url: width: product.featured_image.width
+                | image_tag: alt: product.title
+              -}}
             {% endif %}
           </div>
           <h4>{{ product.title }}</h4>
-          <p class="date text-body">{{ product.published_at | time_tag: format: 'date' }}</p>
+          <div class="product_price">
+            <h4>{{ product.price | money_without_trailing_zeros }} </h4>
+            {% if product.compare_at_price != blank %}
+              <div class="product_price_cap text-body">
+                {{ product.compare_at_price | money_without_trailing_zeros }}
+              </div>
+            {% endif %}
+          </div>
+          <div class="product_btn nd-btn">
+            {{ 'common.en_savoir_plus' | t }}
+            {{ 'icon-right-arrow.svg' | inline_asset_content }}
+          </div>
         </a>
       {% endfor %}
     </div>

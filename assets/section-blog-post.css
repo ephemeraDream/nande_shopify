@@ -194,3 +194,41 @@
 .nd_article .nd_article_right .featured_article .date{color: #7F7E75;}
 .nd_article .nd_article_right .featured_article .article_card:hover img{transform: scale(1.1);}
 .nd_article .nd_article_right .featured_article .article_card:hover h4{text-decoration: underline;}
+.nd_article .nd_article_right .featured_pro .product-card {
+  background: #fff;
+  padding: 2rem;
+  display: flex;flex-direction: column;gap: 2rem;
+}
+.nd_article .nd_article_right .featured_pro .product-card .product_card__img{width: 100%;height: auto;overflow: hidden;}
+.nd_article .nd_article_right .featured_pro .product-card img {
+  width: 100%;
+  height: auto;
+  transition: all 0.3s ease-in-out;
+}
+.nd_article .nd_article_right .featured_pro .product_price {
+  display: flex;
+  align-items: flex-end;
+  gap: 1rem;
+  font-family: "PP Right Grotesk";
+  font-size: 3rem;
+  font-weight: 500;
+  line-height: 94%;
+  letter-spacing: 0px;
+  font-variation-settings: "opsz" auto;
+  color: #1F1F1F;
+  margin-top: 0.6rem;
+}
+.nd_article .nd_article_right .featured_pro .product_price_cap {
+  font-size: 1.6rem;
+  font-weight: normal;
+  line-height: 130%;
+  text-decoration: line-through;
+  color: #7F7E75;
+}
+.nd_article .nd_article_right .featured_pro .product_btn {
+  width: 100%;
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
