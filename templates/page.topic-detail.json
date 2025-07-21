@@ -49,7 +49,12 @@
         "item_Vt9rJN"
       ],
       "name": "product anchor bar",
-      "settings": {}
+      "settings": {},
+      "custom_css": [
+        ".product_anchor_bar .product_anchor_bar_left_item{font-size: 2rem;}",
+        ".product_anchor_bar{border-top: 1px solid #D8D8D8;}",
+        ".product_anchor_bar_section{padding-top:7px}"
+      ],
     },
     "breadcrumbs": {
       "type": "breadcrumbs",
@@ -57,7 +62,7 @@
         "custom_breadcrumb": "",
       },
       "custom_css": [
-        ".breadcrumb-con{width: 100%;position:absolute;top: 0;left: 0;z-index: 100;}"
+        ".breadcrumb-con{width: 100%;position:absolute;top: 60px;left: 0;z-index: 100;}"
       ],
     },
     "banner_topic": {
