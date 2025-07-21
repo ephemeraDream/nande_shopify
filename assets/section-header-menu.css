@@ -328,6 +328,7 @@
   flex-direction: column;
   justify-content: space-between;
   flex: 1;
+  transition: all .3s ease;
 
 }
 
