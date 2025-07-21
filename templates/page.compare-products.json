@@ -15,9 +15,19 @@
         "padding_top": 28,
         "padding_bottom": 28
       }
+    },
+    "product_compare_gnnX7j": {
+      "type": "product-compare",
+      "name": "product compare",
+      "settings": {
+        "title": "<p>Vergleichen Sie </p><p>Maidesite-Modelle</p>",
+        "text": "<p>Vergleichen Sie die verschiedenen Maidesite-Modelle und finden Sie den perfekten höhenverstellbaren </p><p>Schreibtisch für Ihre Bedürfnisse.</p>",
+        "product_list": []
+      }
     }
   },
   "order": [
-    "main"
+    "main",
+    "product_compare_gnnX7j"
   ]
 }
