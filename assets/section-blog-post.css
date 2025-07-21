@@ -173,3 +173,12 @@
 .article-template__back:last-child {
   margin-bottom: 3.2rem;
 }
+
+/* 南得文章页 新 */
+.nd_article{
+  display: flex;
+  gap: 4rem;
+  justify-content: space-between;
+}
+.nd_article .nd_article_left{width: 66%;background-color: #fff;}
+.nd_article .nd_article_right{width: 30%;}
