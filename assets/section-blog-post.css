@@ -188,3 +188,5 @@
 .nd_article .nd_article_right .catalog  .nav_item:hover{border-bottom: 2px solid #BDFF00;color: #000000;}
 .nd_article .nd_article_right .featured_article,
 .nd_article .nd_article_right .featured_pro{ padding: 3rem;background-color: #E2DED6;display: flex;flex-direction: column;gap:3rem;}
+.nd_article .nd_article_right .featured_article img{width: 100%;height: auto;}
+.nd_article .nd_article_right .featured_article .date{color: #7F7E75;}
