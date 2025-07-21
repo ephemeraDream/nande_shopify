@@ -325,6 +325,24 @@
     </div>
     <div class="featured_pro">
       <h3>Featured Products</h3>
+      {% assign related_products = article.metafields.custom.related_products %}
+      {% if related_products and related_products.size > 0 %}
+        {% assign recommended_products = related_products | slice: 0, 2 %}
+      {% else %}
+        {% assign recommended_products = collections.all.products | slice: 0, 2 %}
+      {% endif %}
+
+      {% for product in recommended_products %}
+        <a href="{{ product.url }}" class="product_card">
+          <div class="product_card__img">
+            {% if product.image %}
+              <img src="{{ product.image | image_url: width: 400 }}" alt="{{ product.image.alt | escape }}" loading="lazy">
+            {% endif %}
+          </div>
+          <h4>{{ product.title }}</h4>
+          <p class="date text-body">{{ product.published_at | time_tag: format: 'date' }}</p>
+        </a>
+      {% endfor %}
     </div>
   </div>
 
