@@ -9,13 +9,6 @@
  */
 {
   "sections": {
-    "main": {
-      "type": "main-page",
-      "settings": {
-        "padding_top": 28,
-        "padding_bottom": 28
-      }
-    },
     "product_compare_gnnX7j": {
       "type": "product-compare",
       "name": "product compare",
@@ -29,7 +22,6 @@
     }
   },
   "order": [
-    "main",
     "product_compare_gnnX7j"
   ]
 }
