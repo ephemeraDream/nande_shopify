@@ -51,7 +51,7 @@
       "name": "product anchor bar",
       "settings": {},
       "custom_css": [
-        ".product_anchor_bar .product_anchor_bar_left_item{font-size: 2rem;}",
+        ".product_anchor_bar .product_anchor_bar_left_item,.product_anchor_bar .product_anchor_bar_btn{font-size: 2rem;}",
         ".product_anchor_bar{border-top: 1px solid #D8D8D8;}",
         ".product_anchor_bar_section{padding-top:7px}"
       ],
