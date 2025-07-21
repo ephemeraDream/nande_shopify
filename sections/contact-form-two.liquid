@@ -90,11 +90,18 @@ aria-label="conatct"
               <div class="form-grid-field">
                 <select id="ContactFormTwo-menge" name="contact[menge]" class="field__input" required>
                   <option value="" disabled selected hidden>Menge wählen</option>
-                  <option value="1">1 Stück</option>
-                  <option value="2">2 Stück</option>
-                  <option value="3">3 Stück</option>
-                  <option value="4">4 Stück</option>
-                  <option value="5+">5+ Stück</option>
+                  {% assign groups = section.blocks | where: "type", "group" %}
+                  {% assign options = section.blocks | where: "type", "option" %}
+                  {% for group in groups %}
+                    {% assign group_key = group.settings.key | default: group.id %}
+                    <optgroup label="{{ group.settings.label }}">
+                      {% for opt in options %}
+                        {% if opt.settings.group_key == group_key %}
+                          <option value="{{ opt.settings.value }}">{{ opt.settings.label }}</option>
+                        {% endif %}
+                      {% endfor %}
+                    </optgroup>
+                  {% endfor %}
                 </select>
               </div>
           
@@ -333,6 +340,44 @@ aria-label="conatct"
     },
   ],
   "blocks": [
+    {
+      "type": "group",
+      "name": "Option Gruppe",
+      "settings": [
+        {
+          "type": "text",
+          "id": "label",
+          "label": "Gruppenname"
+        },
+        {
+          "type": "text",
+          "id": "key",
+          "label": "Key",
+        }
+      ]
+    }
+    ,
+    {
+      "type": "option",
+      "name": "Option",
+      "settings": [
+        {
+          "type": "text",
+          "id": "label",
+          "label": "Option Label"
+        },
+        {
+          "type": "text",
+          "id": "value",
+          "label": "Option Value"
+        },
+        {
+          "type": "text",
+          "id": "group_key",
+          "label": "Gruppe Key"
+        }
+      ]
+    }
   ],
   "presets": [
     { "name": "Contact Form Two" }
