@@ -83,7 +83,8 @@
   position: absolute;
   left: 0;
   background-color: #F2F1ED;
-  padding: 3rem 0 4.5rem 0;
+  padding-top:3rem;
+  padding-bottom:4.5rem;
   visibility: hidden;
   transform: translateY(-10px);
   opacity: 0;
@@ -170,7 +171,8 @@
   position: absolute;
   left: 0;
   background-color: #F2F1ED;
-  padding: 7rem 0 5rem 0;
+  padding-top:7rem;
+  padding-bottom:5rem;
   visibility: hidden;
   transform: translateY(-10px);
   opacity: 0;
