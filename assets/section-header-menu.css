@@ -89,6 +89,7 @@
   transform: translateY(-10px);
   opacity: 0;
   transition: transform .3s, opacity .2s, visibility .3s;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
 }
 
 .header_menu .header_menu_item[data-type="img_width_text"]:hover .header_menu_item_submenu {
@@ -177,6 +178,7 @@
   transform: translateY(-10px);
   opacity: 0;
   transition: transform .3s, opacity .2s, visibility .3s;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
 }
 
 .header_menu .header_menu_item[data-type="product_collection"]:hover .header_menu_item_submenu {
