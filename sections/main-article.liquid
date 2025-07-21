@@ -303,22 +303,14 @@
     </div>
     <div class="featured_article">
       <h3>Unsere beliebten Blogs</h3>
-      {% assign related_articles = article.metafields.custom.related_articles.value %}
-      {% if related_articles %}
-        {% assign handles = related_articles %}
-        {% if related_articles is string %}
-          {% assign handles = related_articles | split: ',' %}
-        {% endif %}
-        {% assign recommended = [] %}
-        {% for handle in handles limit: 2 %}
-          {% assign product = all_products[handle] %}
-          {% if product %}
-            {% assign recommended = recommended | push: product %}
-          {% endif %}
-        {% endfor %}
+      {% assign related_articles = article.metafields.custom.related_articles %}
+      {% if related_articles and related_articles.size > 0 %}
+        {% assign recommended = related_articles | slice: 0, 2 %}
       {% else %}
-        {% assign recommended = blog.articles | where_exp: "item", "item.id != article.id" | limit: 2 %}
+        {% assign other_articles = blog.articles | where_exp: "item", "item.id != article.id" %}
+        {% assign recommended = other_articles | slice: 0, 2 %}
       {% endif %}
+
       {% for item in recommended %}
         <div class="article-card">
           <a href="{{ item.url }}">
