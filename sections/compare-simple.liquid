@@ -40,7 +40,7 @@
               <div class="compare_simple_item_title">{{ block.settings.select_product.title }}</div>
             </div>
             <div class="compare_simple_item_color">
-              {% for option in block.settings.select_product.options_with_values %}
+              {% for option in block.settings.select_product.options_with_values limit: 4 %}
                 {%- case option.name -%}
                   {%- when 'Farbe Tischplatte' -%}
                     {% for value in option.values %}
