@@ -182,3 +182,7 @@
 }
 .nd_article .nd_article_left{width: 66%;background-color: #fff;}
 .nd_article .nd_article_right{width: 30%;}
+.nd_article .nd_article_right .catalog{ padding: 3rem;background-color: #E2DED6;}
+.nd_article .nd_article_right .catalog .nav_item{cursor: pointer;font-size: 2rem;color: #7F7E75;line-height: 3.6rem;border-bottom: 1px solid transparent;}
+.nd_article .nd_article_right .catalog .nav_item.active,
+.nd_article .nd_article_right .catalog  .nav_item:hover{border-bottom: 1px solid #BDFF00;color: #000000;}

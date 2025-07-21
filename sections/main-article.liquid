@@ -290,7 +290,17 @@
     {%- endif -%}
   </article>
 
-  <div class="nd_article_right"></div>
+  <div class="nd_article_right">
+    <div class="catalog">
+      <h3>catalog</h3>
+      {% for block in section.blocks %}
+        {% assign blog_item = block.settings.blog %}
+        <a href="{{ blog_item.url }}" class="nav_item {% if blog_item.handle == blog.handle %}active{% endif %}">
+          {{ blog_item.title }}
+        </a> 
+      {% endfor %}
+    </div>
+  </div>
 
 </div>
 </div>
@@ -372,6 +382,17 @@
           "id": "share_label",
           "label": "t:sections.main-article.blocks.share.settings.text.label",
           "default": "t:sections.main-article.blocks.share.settings.text.default"
+        }
+      ]
+    },
+    {
+      "type": "blog_item",
+      "name": "博客分类",
+      "settings": [
+        {
+          "type": "blog",
+          "id": "blog",
+          "label": "选择一个博客分类"
         }
       ]
     }

@@ -31,13 +31,27 @@
                 },
                 "content":{
                     "type":"content","settings":{}
-                }
-            },
-            "block_order":[
+                },
+                "blog_item_01": {
+                    "type": "blog_item",
+                    "settings": {
+                        "blog": "maidesite-blog"
+                      }
+                    },
+                "blog_item_02": {
+                    "type": "blog_item",
+                    "settings": {
+                        "blog": "news"
+                      }
+                    }
+                },
+                "block_order":[
                 "featured_image",
                 "title",
                 "share",
-                "content"
+                "content",
+                "blog_item_01",
+                "blog_item_02"
             ],
             "settings":{}
         }
