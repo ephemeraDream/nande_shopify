@@ -292,7 +292,7 @@
 
   <div class="nd_article_right">
     <div class="catalog">
-      <h3>catalog</h3>
+      <h3>Catalog</h3>
       {% assign blog_items = section.blocks | where: "type", "blog_item" %}
       {% for block in blog_items %}
         {% assign blog_item = block.settings.blog %}
@@ -300,6 +300,12 @@
           {{ blog_item.title }}
         </a> 
       {% endfor %}
+    </div>
+    <div class="featured_article">
+      <h3>Unsere beliebten Blogs</h3>
+    </div>
+    <div class="featured_pro">
+      <h3>Featured Products</h3>
     </div>
   </div>
 
