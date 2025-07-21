@@ -329,9 +329,9 @@
       {% if related_products and related_products.size > 0 %}
         {% assign recommended_products = related_products | slice: 0, 2 %}
       {% else %}
-        {% assign recommended_products = collections.all.products | slice: 0, 2 %}
+        {% assign recommended_products = collections.all.products | reverse | slice: 0, 2 %}
       {% endif %}
-1
+
       {% for product in recommended_products %}
         <a href="{{ product.url }}" class="product_card">
           <div class="product_card__img">
