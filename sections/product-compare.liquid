@@ -1,7 +1,13 @@
 {{ 'section-product-compare.css' | asset_url | stylesheet_tag }}
 
 <div class="product_compare_section padding-sider">
-  <div class="product_compare"></div>
+  <div class="product_compare">
+    <div class="product_compare_title">{{ section.settings.title }}</div>
+    <div class="product_compare_flex">
+      <div class="product_compare_text">{{ section.settings.text }}</div>
+      {{- 'cart-close.svg' | inline_asset_content -}}
+    </div>
+  </div>
 </div>
 
 {% schema %}
