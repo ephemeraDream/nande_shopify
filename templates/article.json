@@ -6,7 +6,8 @@
                 "custom_breadcrumb": "",
             },
             "custom_css": [
-                ".breadcrumb-con{top: 0px;position:relative}"
+                ".breadcrumb-con{top: 0px;position:relative}",
+                ".breadcrumb,.breadcrumb a,.breadcrumb span {color: #7f7e75;}"
             ],
         },
         "main":{
