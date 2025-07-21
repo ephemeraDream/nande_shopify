@@ -16,7 +16,7 @@
         "custom_breadcrumb": "",
       },
       "custom_css": [
-        ".breadcrumb-con{width: 100%;position:absolute;top: 0;left: 0;z-index: 100;}"
+        ".breadcrumb-con{top: 0;}"
       ],
     },
     "contact_form_one": {
