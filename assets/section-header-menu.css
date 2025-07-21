@@ -392,3 +392,12 @@
 .header_menu .header_menu_item[data-type="product_collection"] .header_menu_item_submenu_swiper_next {
   right: 0;
 }
+/* new fxy */
+.header_menu .header_menu_item[data-type="product_collection"] a.swiper-slide:hover .header_menu_item_submenu_product_info{
+  background-color: #BDFF00;
+}
+.header_menu .header_menu_item[data-type="product_collection"] a.swiper-slide:hover .header_menu_item_submenu_product_title,
+.header_menu .header_menu_item[data-type="product_collection"] a.swiper-slide:hover .header_menu_item_submenu_product_desc,
+.header_menu .header_menu_item[data-type="product_collection"] a.swiper-slide:hover .header_menu_item_submenu_product_price{
+  color: #1a1a1a;
+}
