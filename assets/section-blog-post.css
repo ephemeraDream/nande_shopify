@@ -227,8 +227,8 @@
 }
 .nd_article .nd_article_right .featured_pro .product_btn {
   width: 100%;
-  margin-top: 2rem;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
 }
+.nd_article .nd_article_right .featured_pro .product_card:hover img{transform: scale(1.1);}
