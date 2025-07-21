@@ -5,7 +5,7 @@
 {% endcomment %}
 {{ 'section-topic-text-img.css' | asset_url | stylesheet_tag }}
 
-<div class="topic-text-img padding-top-30 padding-bottom-120 session-box-padding">
+<div class="topic-text-img padding-top-30 padding-bottom-120 session-box-padding" id="{{ section.settings.spec_id }}">
   {% unless section.settings.title == blank %}
     <h2 class="padding-bottom-60 session-box-inner">{{ section.settings.title }}</h2>
   {% endunless %}
@@ -55,7 +55,12 @@
       "type": "text",
       "id": "title",
       "label": "Title"
-    }
+    },
+    {
+      "type": "text",
+      "id": "spec_id",
+      "label": "specId"
+    },
   ],
   "blocks": [
     {

@@ -4,7 +4,7 @@
 ------------------------------------------------------------
 {% endcomment %}
 
-<div class="padding-top-120 tabs_topic">
+<div class="padding-top-120 tabs_topic" id="{{ section.settings.spec_id }}">
   <div class="session-box-padding padding-bottom-60">
     {% unless section.settings.title == blank %}
       <h2 class="session-box-inner">{{ section.settings.title }}</h2>
@@ -348,6 +348,11 @@
       "type": "text",
       "id": "title",
       "label": "Section title"
+    },
+    {
+      "type": "text",
+      "id": "spec_id",
+      "label": "specId"
     }
   ],
   "blocks": [

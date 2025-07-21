@@ -1,7 +1,7 @@
 {{ 'section-img-with-text-tab.css' | asset_url | stylesheet_tag }}
 
-<div class="img_with_text_tab_section padding-sider" id="img_with_text_tab_section-{{ section.id }}">
-  <div class="img_with_text_tab">
+<div class="img_with_text_tab_section padding-sider" id="{{ section.settings.spec_id }}">
+  <div class="img_with_text_tab" id="img_with_text_tab_section-{{ section.id }}">
     <h2 class="img_with_text_tab_title">{{ section.settings.title }}</h2>
     {% if section.settings.description != blank %}
       <div class="text-body">{{ section.settings.description }}</div>

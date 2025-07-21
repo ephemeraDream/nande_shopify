@@ -2,7 +2,7 @@
 
 {% assign color_label = section.settings.color_label %}
 
-<div class="bundle_simple_section padding-sider">
+<div class="bundle_simple_section padding-sider" id="{{ section.settings.spec_id }}">
   <div class="bundle_simple">
     <h2 class="bundle_simple_title">{{ section.settings.title }}</h2>
     <div class="bundle_simple_text">{{ section.settings.text }}</div>
@@ -118,6 +118,11 @@
     "groups": ["header", "footer"]
   },
   "settings": [
+    {
+      "type": "text",
+      "id": "spec_id",
+      "label": "specId"
+    },
     {
       "type": "richtext",
       "id": "title",

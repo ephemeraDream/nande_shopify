@@ -3,7 +3,7 @@
 专题详情页：大图带波点
 ------------------------------------------------------------
 {% endcomment %}
-<div class="image-big-polka-dot">
+<div class="image-big-polka-dot" id="{{ section.settings.spec_id }}">
   
   {% unless section.settings.title == blank %}
   <div class="session-box-padding">
@@ -77,6 +77,11 @@
       "id": "image",
       "label": "Image"
     },
+    {
+      "type": "text",
+      "id": "spec_id",
+      "label": "specId"
+    }
   ],
   "blocks": [
     {

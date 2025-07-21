@@ -105,6 +105,7 @@
     "tabs_topic": {
       "type": "tabs-topic",
       "settings": {
+        "spec_id": "tabs_topic",
         "title": "Yoga & Ergonomie Im Perfekten Einklang",
       },
       "blocks": {
@@ -220,6 +221,7 @@
     "topic_text_img":{
       "type": "topic-text-img",
       "settings": {
+        "spec_id": "topic_text_img",
         "title": "Nahtloses Design Trifft Auf FunktionalitäT",
       },
       "blocks": {
@@ -307,7 +309,8 @@
         "file_image": "shopify://shop_images/product_info_demo_img_1.webp",
         "video_url": "",
         "link_url": "#",
-        "btn_text":"En savoir plus"
+        "btn_text":"En savoir plus",
+        "spec_id": "img_with_text_simplicity",
       }
     },
     "img_with_text_simplicity_R8thEa": {
@@ -354,6 +357,7 @@
       "type": "accordion-gallery",
       "settings": {
         "title": "Nahtloses Design Trifft Auf FunktionalitäT",
+        "spec_id": "accordion_gallery",
       },
       "blocks": {
         "item_1": {
@@ -470,14 +474,14 @@
       ],
       "name": "img with text tab",
       "settings": {
-        "spec_id": "",
+        "spec_id": "img_with_text_tab",
         "title": "<p>Title Title</p>"
       },
       "custom_css": [
         ".img_with_text_tab_section {background-color: #E2DED6;}"
       ],
     },
-    "technical_data_L3gXUm": {//需要改造 原来是获取产品的设置
+    "technical_data_L3gXUm": {
       "type": "technical-data",
       "name": "technical data",
       "settings": {
@@ -511,6 +515,7 @@
         "product_block_2"
       ],
       "settings": {
+        "spec_id": "image_big_polka_dot",
         "title": "<p>Die Ideale Wahl FüR Yoga-Enthusiasten, Die Komfort<br/> Und QualitäT SchäTzen.</p>",
         "image": "shopify://shop_images/topic-detail02.webp",
       },
@@ -520,6 +525,7 @@
       "type": "bundle-simple",
       "name": "bundle simple",
       "settings": {
+        "spec_id": "bundle_simple",
         "title": "<p>Stelle Deinen Schreibtisch Zusammen</p>",
         "text": "<p>Gestalte deinen Maidesite-Arbeitsbereich mit unseren </p><p>inspirierten Räumen und Produkten</p>",
         "product_list": [
@@ -625,6 +631,7 @@
       ],
       "name": "faq simple",
       "settings": {
+        "spec_id": "faq_simple",
         "heading": "<p>FAQ</p>",
         "text": "<p>Häufig gestellte Fragen</p>",
         "show_btn": true,

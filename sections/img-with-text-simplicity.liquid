@@ -1,6 +1,6 @@
 {{ 'section-img-with-text-simplicity.css' | asset_url | stylesheet_tag }}
 
-<div class="img_with_text_simplicity_section padding-sider">
+<div class="img_with_text_simplicity_section padding-sider" id="{{ section.settings.spec_id }}">
   {% unless section.settings.header_title == blank %}
     <h2 class="padding-bottom-30 session-box-inner">{{ section.settings.header_title }}</h2>
   {% endunless %}
@@ -83,6 +83,11 @@
     "groups": ["header", "footer"]
   },
   "settings": [
+    {
+      "type": "text",
+      "id": "spec_id",
+      "label": "specId"
+    },
     {
       "type": "richtext",
       "id": "header_title",
