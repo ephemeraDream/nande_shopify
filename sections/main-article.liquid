@@ -318,7 +318,7 @@
               <img src="{{ item.image | image_url: width: 400 }}" alt="{{ item.image.alt | escape }}" loading="lazy">
             {% endif %}
             <h4>{{ item.title }}</h4>
-            <p class="date text-body">{{{ item.published_at | time_tag: format: 'date' }}</p>
+            <p class="date text-body">{{ item.published_at | time_tag: format: 'date' }}</p>
           </a>
         </div>
       {% endfor %}
