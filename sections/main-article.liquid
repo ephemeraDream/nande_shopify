@@ -335,13 +335,11 @@
       {% for product in recommended_products %}
         <a href="{{ product.url }}" class="product_card">
           <div class="product_card__img">
-            {% if product.image %}
-              {{-
-                product.featured_image
-                | image_url: width: product.featured_image.width
-                | image_tag: alt: product.title
-              -}}
-            {% endif %}
+            {{-
+              product.featured_image
+              | image_url: width: product.featured_image.width
+              | image_tag: alt: product.title
+            -}}
           </div>
           <h4>{{ product.title }}</h4>
           <div class="product_price">
