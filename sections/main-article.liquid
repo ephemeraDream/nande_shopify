@@ -293,8 +293,9 @@
   <div class="nd_article_right">
     <div class="catalog">
       <h3>catalog</h3>
-      {% for blog_items in section.blocks | where: "type", "blog_item" %}
-        {% assign blog_item = blog_items.settings.blog %}
+      {% assign blog_items = section.blocks | where: "type", "blog_item" %}
+      {% for block in blog_items %}
+        {% assign blog_item = block.settings.blog %}
         <a href="{{ blog_item.url }}" class="nav_item {% if blog_item.handle == blog.handle %}active{% endif %}">
           {{ blog_item.title }}
         </a> 
