@@ -312,15 +312,15 @@
       {% endif %}
 
       {% for item in recommended %}
-        <div class="article-card">
-          <a href="{{ item.url }}">
+          <a href="{{ item.url }}" class="article_card">
+            <div class="article_card__img">
             {% if item.image %}
               <img src="{{ item.image | image_url: width: 400 }}" alt="{{ item.image.alt | escape }}" loading="lazy">
             {% endif %}
+            </div>
             <h4>{{ item.title }}</h4>
             <p class="date text-body">{{ item.published_at | time_tag: format: 'date' }}</p>
           </a>
-        </div>
       {% endfor %}
     </div>
     <div class="featured_pro">
