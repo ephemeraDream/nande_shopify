@@ -10,6 +10,47 @@
  */
 {
   "sections": {
+    "product_anchor_bar_atcVF4": {
+      "type": "product-anchor-bar",
+      "blocks": {
+        "item_q4KMRQ": {
+          "type": "item",
+          "settings": {
+            "title": "Produkt",
+            "anchor_name": "Produkt"
+          }
+        },
+        "item_qaC4iV": {
+          "type": "item",
+          "settings": {
+            "title": "Produktbeschreibung",
+            "anchor_name": "Produktbeschreibung"
+          }
+        },
+        "item_RrNzfE": {
+          "type": "item",
+          "settings": {
+            "title": "Technische Daten",
+            "anchor_name": "Technische_Daten"
+          }
+        },
+        "item_Vt9rJN": {
+          "type": "item",
+          "settings": {
+            "title": "Kundenbewertungen",
+            "anchor_name": "Kundenbewertungen"
+          }
+        }
+      },
+      "block_order": [
+        "item_q4KMRQ",
+        "item_qaC4iV",
+        "item_RrNzfE",
+        "item_Vt9rJN"
+      ],
+      "name": "product anchor bar",
+      "settings": {}
+    },
     "breadcrumbs": {
       "type": "breadcrumbs",
       "settings": {
@@ -588,6 +629,7 @@
     
   },
   "order": [
+    "product_anchor_bar_atcVF4",
     "breadcrumbs",
     "banner_topic",
     "tabs_topic",
