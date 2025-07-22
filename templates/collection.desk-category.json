@@ -23,13 +23,13 @@
         "item_3yir6V": {
           "type": "item",
           "settings": {
-            "select_product": "maidesite-hohenverstellbar-schreibtisch-t2-pro-plus-140-160-180-cm"
+            "select_product": "maidesite-tischgestell-elektrisch-hohenverstellbar-t2-pro-plus"
           }
         },
         "item_gyexDX": {
           "type": "item",
           "settings": {
-            "select_product": "maidesite-hohenverstellbarer-schreibtisch-elektrisch-t1-basic-100-120-140-160-cm"
+            "select_product": "maidesite-tischgestell-elektrisch-hohenverstellbar-t2-pro-plus"
           }
         },
         "item_AHnCzP": {
@@ -41,13 +41,13 @@
         "item_EEUjdz": {
           "type": "item",
           "settings": {
-            "select_product": "maidesite-el2-plus-art-tischgestell-elektrisch-hohenverstellbar-fur-mydealz"
+            "select_product": "maidesite-tischgestell-elektrisch-hohenverstellbar-t2-pro-plus"
           }
         },
         "item_z9X7dd": {
           "type": "item",
           "settings": {
-            "select_product": "maidesite-to1-pro-elektrisch-hohenverstellbarer-schreibtisch"
+            "select_product": "maidesite-tischgestell-elektrisch-hohenverstellbar-t2-pro-plus"
           }
         }
       },
@@ -72,26 +72,36 @@
       ],
       "name": "img with text simplicity",
       "settings": {
+        "spec_id": "",
+        "header_title": "",
+        "header_content": "",
         "title": "<p>Vergleichen Sie </p><p>Maidesite-Modelle</p>",
         "sub_title": "",
         "description": "<p>Vergleichen Sie die verschiedenen Maidesite-Modelle und finden Sie den </p><p>perfekten höhenverstellbaren Schreibtisch für Ihre Bedürfnisse.</p>",
         "file_position": "right",
         "file_type": "image",
         "file_image": "shopify://shop_images/Vergleichen_Sie_Maidesite-Modelle_img_1.webp",
-        "video_url": ""
+        "video_url": "",
+        "btn_text": "",
+        "link_url": ""
       }
     },
     "img_with_text_simplicity_dDeThj": {
       "type": "img-with-text-simplicity",
       "name": "img with text simplicity",
       "settings": {
+        "spec_id": "",
+        "header_title": "",
+        "header_content": "",
         "title": "<p>Vergleichen Sie </p><p>Maidesite-Modelle</p>",
         "sub_title": "",
         "description": "<p>Vergleichen Sie die verschiedenen Maidesite-Modelle und finden Sie den </p><p>perfekten höhenverstellbaren Schreibtisch für Ihre Bedürfnisse.</p>",
         "file_position": "left",
         "file_type": "image",
         "file_image": "shopify://shop_images/Vergleichen_Sie_Maidesite-Modelle_img_2.webp",
-        "video_url": ""
+        "video_url": "",
+        "btn_text": "",
+        "link_url": ""
       }
     },
     "img_with_text_simplicity_CehiJc": {
@@ -101,13 +111,18 @@
       ],
       "name": "img with text simplicity",
       "settings": {
+        "spec_id": "",
+        "header_title": "",
+        "header_content": "",
         "title": "<p>Vergleichen Sie </p><p>Maidesite-Modelle</p>",
         "sub_title": "",
         "description": "<p>Vergleichen Sie die verschiedenen Maidesite-Modelle und finden Sie den </p><p>perfekten höhenverstellbaren Schreibtisch für Ihre Bedürfnisse.</p>",
         "file_position": "right",
         "file_type": "image",
         "file_image": "shopify://shop_images/Vergleichen_Sie_Maidesite-Modelle_img_3.webp",
-        "video_url": ""
+        "video_url": "",
+        "btn_text": "",
+        "link_url": ""
       }
     },
     "faq_simple_MFhhga": {
@@ -150,8 +165,12 @@
       ],
       "name": "faq simple",
       "settings": {
+        "spec_id": "",
         "heading": "<p>FAQ</p>",
-        "text": "<p>Häufig gestellte Fragen</p>"
+        "text": "<p>Häufig gestellte Fragen</p>",
+        "show_btn": false,
+        "learn_more": false,
+        "contact_us": false
       }
     }
   },

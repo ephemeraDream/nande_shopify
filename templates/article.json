@@ -1,63 +1,51 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
-    "sections":{
-        "breadcrumbs": {
-            "type": "breadcrumbs",
-            "settings": {
-                "custom_breadcrumb": "",
-            },
-            "custom_css": [
-                ".breadcrumb-con{top: 0px;position:relative}",
-                ".breadcrumb,.breadcrumb a,.breadcrumb span {color: #7f7e75;}"
-            ],
+  "sections": {
+    "main": {
+      "type": "main-article",
+      "blocks": {
+        "featured_image": {
+          "type": "featured_image",
+          "settings": {
+            "image_height": "adapt"
+          }
         },
-        "main":{
-            "type":"main-article",
-            "blocks":{
-                "featured_image":{
-                    "type":"featured_image",
-                    "settings":{"image_height":"adapt"}
-                },
-                "title":{
-                    "type":"title",
-                    "settings":{
-                        "blog_show_date":true,"blog_show_author":false
-                    }
-                },
-                "share":{
-                    "type":"share",
-                    "settings":{
-                        "share_label":"Share"
-                    }
-                },
-                "content":{
-                    "type":"content","settings":{}
-                },
-                "blog_item_01": {
-                    "type": "blog_item",
-                    "settings": {
-                        "blog": "maidesite-blog"
-                      }
-                    },
-                "blog_item_02": {
-                    "type": "blog_item",
-                    "settings": {
-                        "blog": "news"
-                      }
-                    }
-                },
-                "block_order":[
-                "featured_image",
-                "title",
-                "share",
-                "content",
-                "blog_item_01",
-                "blog_item_02"
-            ],
-            "settings":{}
+        "title": {
+          "type": "title",
+          "settings": {
+            "blog_show_date": true,
+            "blog_show_author": false
+          }
+        },
+        "share": {
+          "type": "share",
+          "settings": {
+            "share_label": "Share"
+          }
+        },
+        "content": {
+          "type": "content",
+          "settings": {}
         }
-    },
-    "order":[
-        "breadcrumbs",
-        "main"
-    ]
+      },
+      "block_order": [
+        "featured_image",
+        "title",
+        "share",
+        "content"
+      ],
+      "settings": {}
+    }
+  },
+  "order": [
+    "main"
+  ]
 }
