@@ -91,6 +91,16 @@
   object-fit: contain;
   object-position: center top;
 }
+@media screen and (max-width: 1440px) {
+  .compare_simple .compare_simple_item .swiper {
+    height: auto;
+  }
+  
+  .compare_simple .compare_simple_item .swiper .swiper-slide img {
+    height: auto;
+  }
+}
+
 
 .compare_simple .compare_simple_item_title {
   width: 100%;
@@ -99,12 +109,6 @@
   padding: 0 1.6rem;
   position: absolute;
   bottom: 0;
-  font-family: "PP Right Grotesk";
-  font-size: 3rem;
-  font-weight: 500;
-  line-height: 94%;
-  letter-spacing: 0px;
-  font-variation-settings: "opsz" auto;
   color: #1F1F1F;
   padding-bottom: 1rem;
   z-index: 1;

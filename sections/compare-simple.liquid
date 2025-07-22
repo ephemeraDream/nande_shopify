@@ -37,7 +37,14 @@
                   {%- endcase -%}
                 {%- endfor %}
               </div>
-              <div class="compare_simple_item_title">{{ block.settings.select_product.title }}</div>
+              {% assign product_model = product.metafields.custom.product_model.value %}
+                <h4 class="compare_simple_item_title">
+                  {% if product_model != blank %}
+                    {{ product_model }}
+                  {% else %}
+                    {{ block.settings.select_product.title  }}
+                  {% endif %}
+                </h4>
             </div>
             <div class="compare_simple_item_color">
               {% for option in block.settings.select_product.options_with_values %}
