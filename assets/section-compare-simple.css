@@ -84,9 +84,6 @@
   height: 37rem;
   background-color: #FAFAFA;
 }
-.compare_simple .compare_simple_item .swiper .swiper-wrapper {
-  overflow: hidden;
-}
 
 .compare_simple .compare_simple_item .swiper .swiper-slide img {
   width: 100%;
@@ -94,16 +91,6 @@
   object-fit: contain;
   object-position: center top;
 }
-/* @media screen and (max-width: 1440px) {
-  .compare_simple .compare_simple_item .swiper {
-    height: auto;
-  }
-  
-  .compare_simple .compare_simple_item .swiper .swiper-slide img {
-    height: auto;
-  }
-} */
-
 
 .compare_simple .compare_simple_item_title {
   width: 100%;

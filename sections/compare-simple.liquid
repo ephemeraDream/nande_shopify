@@ -37,6 +37,7 @@
                   {%- endcase -%}
                 {%- endfor %}
               </div>
+              {{ product.metafields.custom.product_model | json }}
               {% assign product_model = product.metafields.custom.product_model %}
                 <h4 class="compare_simple_item_title">
                   {% if product_model != blank %}
