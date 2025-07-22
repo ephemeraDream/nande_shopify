@@ -3762,13 +3762,13 @@ a {
 }
 
 .custom_pagination .ajax_pagination {
-  width: 6rem;
-  height: 6rem;
+  width: 5rem;
+  height: 5rem;
   display: flex;
   align-items: center;
   justify-content: center;
   font-family: "PP Right Grotesk";
-  font-size: 3.6rem;
+  font-size: 2rem;
   font-weight: 500;
   line-height: 112%;
   text-align: center;
@@ -3784,8 +3784,8 @@ a {
 }
 
 .custom_pagination .ajax_pagination svg {
-  width: 3.6rem;
-  height: 3.6rem;
+  width: 3rem;
+  height: 3rem;
 }
 
 .custom_pagination .ajax_pagination:hover svg path {
