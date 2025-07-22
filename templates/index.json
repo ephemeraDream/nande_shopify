@@ -210,7 +210,10 @@
         "title": "<p>Finde Deinen </p><p>Passenden Schreibtisch</p>",
         "text": "<p>Maidesite bietet anpassbare höhenverstellbare </p><p>Schreibtische für Deine Bedürfnisse.</p>",
         "link_text": "Mehr erfahren"
-      }
+      },
+      "custom_css": [
+        ".compare_simple .compare_simple_item_title{font-size: 3rem;}"
+      ]
     },
     "image_comparison_JHgace": {
       "type": "image-comparison",

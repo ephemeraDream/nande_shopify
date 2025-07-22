@@ -106,6 +106,10 @@
   z-index: 1;
   font-size: 2rem;
 }
+@media screen and (max-width: 1440px) {
+  .compare_simple .compare_simple_item_title{font-size: 2rem;}
+}
+
 .compare_simple .compare_simple_item_title span{
   display: -webkit-box;
   -webkit-line-clamp: 2; /* 显示2行 */
