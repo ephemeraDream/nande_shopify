@@ -40,9 +40,9 @@
               {% assign product_model = block.settings.select_product.metafields.custom.product_model %}
                 <h4 class="compare_simple_item_title">
                   {% if product_model != blank %}
-                    {{ product_model }}
+                    <span>{{ product_model }}</span>
                   {% else %}
-                    {{ block.settings.select_product.title  }}
+                    <span>{{ block.settings.select_product.title  }}</span>
                   {% endif %}
                 </h4>
             </div>

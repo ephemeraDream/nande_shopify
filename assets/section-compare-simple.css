@@ -105,8 +105,10 @@
   padding-bottom: 1rem;
   z-index: 1;
   font-size: 2rem;
+}
+.compare_simple .compare_simple_item_title span{
   display: -webkit-box;
-  -webkit-line-clamp: 1; /* 显示2行 */
+  -webkit-line-clamp: 2; /* 显示2行 */
   -webkit-box-orient: vertical;
   overflow: hidden;
   text-overflow: ellipsis;
