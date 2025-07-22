@@ -9,15 +9,19 @@
  */
 {
   "sections": {
-    "main": {
-      "type": "main-page",
+    "product_compare_gnnX7j": {
+      "type": "product-compare",
+      "name": "product compare",
       "settings": {
-        "padding_top": 28,
-        "padding_bottom": 28
+        "title": "<p>Vergleichen Sie </p><p>Maidesite-Modelle</p>",
+        "text": "<p>Vergleichen Sie die verschiedenen Maidesite-Modelle und finden Sie den perfekten höhenverstellbaren </p><p>Schreibtisch für Ihre Bedürfnisse.</p>",
+        "product_list": [
+          "maidesite-tischgestell-elektrisch-hohenverstellbar-t2-pro-plus"
+        ]
       }
     }
   },
   "order": [
-    "main"
+    "product_compare_gnnX7j"
   ]
 }

@@ -62,14 +62,17 @@
               {%- endfor %}
             </div>
             <div class="compare_simple_item_price">
-              {% if block.settings.select_product.compare_at_price != blank %}
-                {% assign price = block.settings.select_product.compare_at_price | money_without_trailing_zeros %}
-              {% else %}
-                {% assign price = block.settings.select_product.price | money_without_trailing_zeros %}
-              {% endif %}
+              {% comment %}
+                {% if block.settings.select_product.compare_at_price != blank %}
+                  {% assign price = block.settings.select_product.compare_at_price | money_without_trailing_zeros %}
+                {% else %}
+                  {% assign price = block.settings.select_product.price | money_without_trailing_zeros %}
+                {% endif %}
+              {% endcomment %}
+              {% assign price = block.settings.select_product.price | money_without_trailing_zeros %}
               {{ 'products.product.price.from_price_html' | t: price: price }}
             </div>
-            {% for item in block.settings.select_product.metafields.custom.compare_simple.value.data.value %}
+            {% for item in block.settings.select_product.metafields.custom.compare_simple.value.data.value limit: 4 %}
               <div class="compare_simple_item_line">
                 <div class="compare_simple_item_line_label">{{ item.label }}</div>
                 <div class="compare_simple_item_line_value">{{ item.value }}</div>
