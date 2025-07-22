@@ -128,13 +128,15 @@
                                         Maidesite
                                       {% endif %}
                                     </div>
-                                    {% if show_info.description.value != blank %}
-                                      <div class="header_menu_item_submenu_product_desc">
+                                    
+                                    <div class="header_menu_item_submenu_product_desc">
+                                      {% if show_info.description.value != blank %}
                                         {{ show_info.description | metafield_tag }}
-                                      </div>
-                                    {% else %}
-                                      {{ product.title }}
-                                    {% endif %}
+                                      {% else %}
+                                        {{ product.title }}
+                                      {% endif %}
+                                    </div>
+                                    
                                   </div>
                                   <div>
                                     {% render 'product-rating', product: product %}
