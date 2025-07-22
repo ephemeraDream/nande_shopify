@@ -230,5 +230,6 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  margin-top: 0;
 }
 .nd_article .nd_article_right .featured_pro .product_card:hover img{transform: scale(1.1);}
