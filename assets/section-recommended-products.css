@@ -42,7 +42,7 @@
 .recommended_products .recommended_products_contain .swiper-slide:hover .product_title_top,
 .recommended_products .recommended_products_contain .swiper-slide:hover .recommended_products_info_price,
 .recommended_products .recommended_products_contain .swiper-slide:hover .recommended_products_info_price_op {
-  background-color: #1A1A1A;
+  color: #1A1A1A;
 }
 
 .recommended_products .recommended_products_img {
