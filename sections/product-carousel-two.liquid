@@ -19,6 +19,14 @@ Products Swiper Section - 选择产品进行轮播
                   | image_tag: alt: product.title
                 -}}
                 <div class="product_info">
+                  {% assign product_title_top = block.settings.select_product.metafields.custom.product_title_top %}
+                  <h4 class="product_title_top">
+                    {% if product_title_top != blank %}
+                      {{ product_title_top }}
+                    {% else %}
+                      Maidesite
+                    {% endif %}
+                  </h4>
                   <h4 class="product_title">{{ product.title }}</h4>
                   <div class="product_price">
                     <h4>{{ product.price | money_without_trailing_zeros }} </h4>
@@ -67,15 +75,15 @@ Products Swiper Section - 选择产品进行轮播
       padding: 0.5rem 2rem 2rem 2rem;
       position: relative;
     }
-    .product-carousel .product_info::before {
+    .product-carousel .product_info .product_title_top {
       content: "";
-      height: 5rem;
-      width: 17.8rem;
       background-color: #7F7E75;
       position: absolute;
       top: 0;
       left: 0;
       transform: translateY(-100%);
+      padding: 1rem 2rem 0rem;
+      transition: all 0.3s ease;
     }
     .product-carousel .product_title{
       {% comment %} padding-bottom: 0.8rem; {% endcomment %}
