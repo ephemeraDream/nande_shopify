@@ -13,11 +13,13 @@ Products Swiper Section - 选择产品进行轮播
           {% for product in section.settings.product_list %}
             <div class="swiper-slide product-card">
               <a href="{{ product.url }}">
+                <div class="product_img">
                 {{-
                   product.featured_image
                   | image_url: width: product.featured_image.width
                   | image_tag: alt: product.title
                 -}}
+                </div>
                 <div class="product_info">
                   {% assign product_title_top = block.settings.select_product.metafields.custom.product_title_top %}
                   <h4 class="product_title_top">
@@ -61,9 +63,25 @@ Products Swiper Section - 选择产品进行轮播
     .product-card {
       background: #fff;
     }
+    .product-carousel .product-card.swiper-slide:hover img {
+      transform: scale(1.1);
+    }
+    .product-carousel .product-card.swiper-slide:hover .product_info,
+    .product-carousel .product-card.swiper-slide:hover .product_title_top {
+      background-color: #BDFF00;
+      color: #1A1A1A;
+      
+    }
+    .product-carousel .product-card.swiper-slide:hover .product_price h4,
+    .product-carousel .product-card.swiper-slide:hover .product_title,
+    .product-carousel .product-card.swiper-slide:hover .product_price_cap {
+      color: #1A1A1A;
+    }
+    .product-card .product_img{overflow: hidden;}
     .product-card img {
       width: 100%;
       height: auto;
+      transition: all 0.3s ease;
     }
     .product-carousel .product_info {
       flex: 1;
@@ -74,7 +92,6 @@ Products Swiper Section - 选择产品进行轮播
       background-color: #7F7E75;
       padding: 0.5rem 2rem 2rem 2rem;
       position: relative;
-      line-height: 1em;
     }
     .product-carousel .product_info .product_title_top {
       content: "";
@@ -86,6 +103,7 @@ Products Swiper Section - 选择产品进行轮播
       padding: 1rem 2rem 0rem;
       transition: all 0.3s ease;
       line-height: 1em;
+      color:#BDFF00;
     }
     .product-carousel .product_title{
       {% comment %} padding-bottom: 0.8rem; {% endcomment %}
