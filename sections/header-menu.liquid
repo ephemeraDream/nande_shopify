@@ -125,13 +125,15 @@
                                       {% if show_info.title.value != blank %}
                                         {{ show_info.title.value }}
                                       {% else %}
-                                        {{ product.title }}
+                                        Maidesite
                                       {% endif %}
                                     </div>
                                     {% if show_info.description.value != blank %}
                                       <div class="header_menu_item_submenu_product_desc">
                                         {{ show_info.description | metafield_tag }}
                                       </div>
+                                    {% else %}
+                                      {{ product.title }}
                                     {% endif %}
                                   </div>
                                   <div>
