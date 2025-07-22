@@ -37,8 +37,7 @@
                   {%- endcase -%}
                 {%- endfor %}
               </div>
-              {{ product.metafields.custom.product_model | json }}
-              {% assign product_model = product.metafields.custom.product_model %}
+              {% assign product_model = block.settings.select_product.metafields.custom.product_model %}
                 <h4 class="compare_simple_item_title">
                   {% if product_model != blank %}
                     {{ product_model }}
@@ -53,7 +52,7 @@
                   {%- when 'Farbe Tischplatte' -%}
                     {% for value in option.values %}
                       {% assign color = '' %}
-                      {% for color_item in product.metafields.custom.color_option.value %}
+                      {% for color_item in block.settings.select_product.metafields.custom.color_option.value %}
                         {% if color_item.name == value.name %}
                           {% assign color = color_item.value %}
                         {% endif %}
