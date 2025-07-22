@@ -11,7 +11,15 @@
               <img src="{{ product.featured_image | image_url }}" alt="{{ product.title }}">
             </div>
             <div class="recommended_products_info">
-              <div class="recommended_products_info_title">{{ product.title }}</div>
+              {% assign product_title_top = block.settings.select_product.metafields.custom.product_title_top %}
+              <h3 class="product_title_top">
+                {% if product_title_top != blank %}
+                  {{ product_title_top }}
+                {% else %}
+                  Maidesite
+                {% endif %}
+              </h3>
+              <h3 class="recommended_products_info_title">{{ product.title }}</h3>
               <div class="recommended_products_info_price">
                 {{ product.price | money_without_trailing_zeros }}
                 {% if product.compare_at_price %}

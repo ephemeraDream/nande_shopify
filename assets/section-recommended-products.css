@@ -58,24 +58,19 @@
   position: relative;
 }
 
-.recommended_products .recommended_products_info::before {
-  content: "";
+.recommended_products .recommended_products_info .product_title_top {
+  /* content: "";
   height: 5rem;
-  width: 17.8rem;
+  width: 17.8rem; */
   background-color: #7F7E75;
   position: absolute;
   top: 0;
   left: 0;
   transform: translateY(-100%);
+  padding: 1rem 2rem;
 }
 
-.recommended_products .recommended_products_info_title {
-  font-family: "PP Right Grotesk";
-  font-size: 4rem;
-  font-weight: 500;
-  line-height: 94%;
-  letter-spacing: 0px;
-  font-variation-settings: "opsz" auto;
+.recommended_products .recommended_products_info_title,.recommended_products .recommended_products_info .product_title_top {
   color: #BDFF00;
 }
 
