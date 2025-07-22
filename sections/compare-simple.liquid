@@ -37,9 +37,8 @@
                   {%- endcase -%}
                 {%- endfor %}
               </div>
-              {% assign product_model = product.metafields.custom.product_model.value %}
+              {% assign product_model = product.metafields.custom.product_model %}
                 <h4 class="compare_simple_item_title">
-                  {{ product_model }} 1
                   {% if product_model != blank %}
                     {{ product_model }}
                   {% else %}
