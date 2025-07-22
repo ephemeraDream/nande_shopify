@@ -100,9 +100,10 @@
   padding: 0 1.6rem;
   position: absolute;
   bottom: 0;
-  color: #1F1F1F;
+  color: #BDFF00;
   padding-bottom: 1rem;
   z-index: 1;
+  font-size: 2rem;
 }
 
 .compare_simple .compare_simple_item_title::before {
@@ -117,6 +118,7 @@
 }
 .compare_simple .compare_simple_item:hover .compare_simple_item_title,.compare_simple .compare_simple_item:hover .compare_simple_item_title::before {
   background-color: #BDFF00;
+  color: #1F1F1F;
 }
 
 .compare_simple .compare_simple_item_color {
