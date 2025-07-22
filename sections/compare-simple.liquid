@@ -38,8 +38,15 @@
                 {%- endfor %}
               </div>
               {% assign product_model = block.settings.select_product.metafields.custom.product_model %}
+              {% assign product_title_top = block.settings.select_product.metafields.custom.product_title_top %}
                 <h4 class="compare_simple_item_title">
-                  <span class="product_title_top">maidesite</span>
+                  <span class="product_title_top">
+                    {% if product_title_top != blank %}
+                      {{ product_title_top }}
+                    {% else %}
+                      Maidesite
+                    {% endif %}
+                  </span>
                   {% if product_model != blank %}
                     <span>{{ product_model }}</span>
                   {% else %}

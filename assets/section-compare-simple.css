@@ -120,13 +120,12 @@
 
 .compare_simple .compare_simple_item_title .product_title_top {
   width: 50%;
-  height: 2.4rem;
   background-color: #7F7E75;
   position: absolute;
   top: 0;
   left: 0;
   transform: translateY(-100%);
-  padding: 1.6rem;
+  padding: 0.6rem 1.6rem;
 }
 .compare_simple .compare_simple_item:hover .compare_simple_item_title,.compare_simple .compare_simple_item:hover .compare_simple_item_title .product_title_top {
   background-color: #BDFF00;
