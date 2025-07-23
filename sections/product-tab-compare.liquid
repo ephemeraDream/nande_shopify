@@ -190,16 +190,16 @@ Product Tab Compare Section - 产品对比 tab切换
       panels.forEach(function(panel, idx) {
         panel.classList.toggle('active', idx === tabIndex);
         //swiper-update
-        if (idx === tabIndex) {
+        {% comment %} if (idx === tabIndex) {
           const swiperContainer = panel.querySelector('.tab-products-wrapper.swiper');
           if (swiperContainer && swiperContainer.swiper) {
             swiperContainer.swiper.update();
           }
-        }
+        } {% endcomment %}
       });
     }
 
-    document.addEventListener('DOMContentLoaded', function () {
+    {% comment %} document.addEventListener('DOMContentLoaded', function () {
       document.querySelectorAll('.tab-panel.swiper').forEach(function(el, index) {
         new Swiper(el, {
           slidesPerView: 5,
@@ -216,7 +216,7 @@ Product Tab Compare Section - 产品对比 tab切换
           }
         });
       });
-    });
+    }); {% endcomment %}
 </script>
 
 {% schema %}
