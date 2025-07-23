@@ -93,8 +93,8 @@ Product Tab Compare Section - 产品对比 tab切换
               {% endfor %}
             </div>
               <!-- 导航按钮 -->
-              <div class="swiper-button-prev"></div>
-              <div class="swiper-button-next"></div>
+              <div class="swiper-button-prev">{{- 'swiper-left.svg' | inline_asset_content -}}</div>
+              <div class="swiper-button-next">{{- 'swiper-right.svg' | inline_asset_content -}}</div>
           </div>
         {% endif %}
         {% endfor %}
@@ -193,6 +193,26 @@ Product Tab Compare Section - 产品对比 tab切换
     letter-spacing: 0px;
     font-variation-settings: "opsz" auto;
     color: #1F1F1F;
+  }
+  .product-tab-compare .swiper-button-prev,
+  .product-tab-compare .swiper-button-next {
+    width: 5rem;
+    height: 5rem;
+    background-color: #E2DED6;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+  }
+  
+  .product-tab-compare .swiper-button-prev:hover,
+  .product-tab-compare .swiper-button-next:hover {
+    background-color: rgba(31, 31, 31, .6);
+  }
+  
+  .product-tab-compare .swiper-button-prev:hover svg path,
+  .product-tab-compare .swiper-button-next:hover svg path {
+    fill: #BDFF00;
   }
 
 @media(max-width:750px){
