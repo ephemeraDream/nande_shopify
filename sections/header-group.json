@@ -16,6 +16,7 @@
       "blocks": {
         "announcement-bar-0": {
           "type": "announcement",
+          "disabled": true,
           "settings": {
             "text": "Welcome to our store",
             "link": ""
@@ -49,8 +50,8 @@
         "color_scheme": "scheme-1",
         "show_line_separator": true,
         "show_social": false,
-        "enable_country_selector": false,
-        "enable_language_selector": false
+        "enable_country_selector": true,
+        "enable_language_selector": true
       }
     },
     "header_simple_ULLndz": {

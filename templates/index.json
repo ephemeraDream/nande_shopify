@@ -15,9 +15,9 @@
         "banner_item_V4RHqa": {
           "type": "banner_item",
           "settings": {
-            "title": "",
-            "text": "",
-            "btn_text": "",
+            "title": "<h6>poo</h6>",
+            "text": "<p>pooolooopopppopo</p>",
+            "btn_text": "Buy Now",
             "link": "",
             "file_position": "middle_left",
             "file_type": "image",
@@ -40,6 +40,7 @@
         },
         "banner_item_e7J8AA": {
           "type": "banner_item",
+          "disabled": true,
           "settings": {
             "title": "<p>Nahtloses Design Trifft Auf FunktionalitäT</p>",
             "text": "<p>Ein durchdachtes, einheitliches Design, das Ästhetik und Funktion kombiniert – für einen </p><p>modernen Arbeitsplatz, der sich nahtlos in Ihr Zuhause einfügt</p>",
@@ -128,8 +129,8 @@
             "image": "shopify://shop_images/polka_dot_swiper-2.webp",
             "link": "",
             "select_product": "maidesite-tischgestell-elektrisch-hohenverstellbar-t2-pro-plus",
-            "product_X": 31,
-            "product_Y": 37
+            "product_X": 34,
+            "product_Y": 34
           }
         },
         "swiper_RR3AVA": {
@@ -205,15 +206,15 @@
         "item_wtnaqX",
         "item_hrmkBQ"
       ],
+      "custom_css": [
+        ".compare_simple .compare_simple_item_title {font-size: 3rem;}"
+      ],
       "name": "compare simple",
       "settings": {
         "title": "<p>Finde Deinen </p><p>Passenden Schreibtisch</p>",
         "text": "<p>Maidesite bietet anpassbare höhenverstellbare </p><p>Schreibtische für Deine Bedürfnisse.</p>",
         "link_text": "Mehr erfahren"
-      },
-      "custom_css": [
-        ".compare_simple .compare_simple_item_title{font-size: 3rem;}"
-      ]
+      }
     },
     "image_comparison_JHgace": {
       "type": "image-comparison",
@@ -227,6 +228,7 @@
       "type": "bundle-simple",
       "name": "bundle simple",
       "settings": {
+        "spec_id": "",
         "title": "<p>Stelle Deinen Schreibtisch Zusammen</p>",
         "text": "<p>Gestalte deinen Maidesite-Arbeitsbereich mit unseren </p><p>inspirierten Räumen und Produkten</p>",
         "product_list": [
@@ -378,7 +380,7 @@
             "description": "<p>\" I really liked it, and it looks really cool. It's just perfect for long workdays or gaming sessions where comfort and ergonomics are important.\"</p>",
             "link": "",
             "cover_image": "shopify://shop_images/celebrity-img-1.webp",
-            "video_url": "",
+            "video_url": "https://www.youtube.com/watch?v=4PeG_NHx6Jk&t=9s",
             "url_upload": "shopify://files/videos/TO1-Pro-spine-healthy-mode_a586d928-0c0c-459d-99a8-75d2ab5cc36d.mp4"
           }
         },
