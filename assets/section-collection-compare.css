@@ -267,9 +267,10 @@
 
 .collection_compare .collection_compare_product_img {
   width: 100%;
-  height: 36rem;
+  /* height: 36rem; */
   background-color: #FAFAFA;
   position: relative;
+  overflow: hidden;
 }
 
 .collection_compare .collection_compare_product_img img {
@@ -277,6 +278,11 @@
   height: 100%;
   object-fit: contain;
   object-position: center center;
+  transition: transform .3s ease;
+}
+
+.collection_compare .collection_compare_product:hover img {
+  transform: scale(1.1);
 }
 
 .collection_compare .collection_compare_product_info {
