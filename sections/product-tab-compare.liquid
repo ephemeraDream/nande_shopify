@@ -201,6 +201,18 @@ Product Tab Compare Section - 产品对比 tab切换
     background-color: #E2DED6;
     cursor: pointer;
     display:none;
+    position: absolute;
+    top: var(--swiper-navigation-top-offset,50%);
+    transform: translateY(-50%);
+    z-index: 10;
+  }
+  .product-tab-compare  .tab-swiper-button-prev {
+    left: var(--swiper-navigation-sides-offset, 10px);
+    right: auto;
+  }
+  .product-tab-compare  .tab-swiper-button-next {
+    right: var(--swiper-navigation-sides-offset, 10px);
+    left: auto;
   }
   
   .product-tab-compare .tab-swiper-button-prev:hover,
