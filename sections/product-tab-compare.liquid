@@ -93,8 +93,8 @@ Product Tab Compare Section - 产品对比 tab切换
               {% endfor %}
             </div>
               <!-- 导航按钮 -->
-              <div class="swiper-button-prev">{{- 'swiper-left.svg' | inline_asset_content -}}</div>
-              <div class="swiper-button-next">{{- 'swiper-right.svg' | inline_asset_content -}}</div>
+              <div class="tab-swiper-button-prev">{{- 'swiper-left.svg' | inline_asset_content -}}</div>
+              <div class="tab-swiper-button-next">{{- 'swiper-right.svg' | inline_asset_content -}}</div>
           </div>
         {% endif %}
         {% endfor %}
@@ -194,27 +194,32 @@ Product Tab Compare Section - 产品对比 tab切换
     font-variation-settings: "opsz" auto;
     color: #1F1F1F;
   }
-  .product-tab-compare .swiper-button-prev,
-  .product-tab-compare .swiper-button-next {
+  .product-tab-compare .tab-swiper-button-prev,
+  .product-tab-compare .tab-swiper-button-next {
     width: 5rem;
     height: 5rem;
     background-color: #E2DED6;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     cursor: pointer;
+    display:none;
   }
   
-  .product-tab-compare .swiper-button-prev:hover,
-  .product-tab-compare .swiper-button-next:hover {
+  .product-tab-compare .tab-swiper-button-prev:hover,
+  .product-tab-compare .tab-swiper-button-next:hover {
     background-color: rgba(31, 31, 31, .6);
   }
   
-  .product-tab-compare .swiper-button-prev:hover svg path,
-  .product-tab-compare .swiper-button-next:hover svg path {
+  .product-tab-compare .tab-swiper-button-prev:hover svg path,
+  .product-tab-compare .tab-swiper-button-next:hover svg path {
     fill: #BDFF00;
   }
-
+@media(max-width:1440px){
+  .product-tab-compare .tab-swiper-button-prev,
+  .product-tab-compare .tab-swiper-button-next {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
 @media(max-width:750px){
     .product-tab-compare .tab-titles{flex-direction:column}
 }
