@@ -14,6 +14,7 @@
       "blocks": {
         "banner_item_V4RHqa": {
           "type": "banner_item",
+          "disabled": true,
           "settings": {
             "title": "<h6>poo</h6>",
             "text": "<p>pooolooopopppopo</p>",
@@ -380,8 +381,7 @@
             "description": "<p>\" I really liked it, and it looks really cool. It's just perfect for long workdays or gaming sessions where comfort and ergonomics are important.\"</p>",
             "link": "",
             "cover_image": "shopify://shop_images/celebrity-img-1.webp",
-            "video_url": "https://www.youtube.com/watch?v=4PeG_NHx6Jk&t=9s",
-            "url_upload": "shopify://files/videos/TO1-Pro-spine-healthy-mode_a586d928-0c0c-459d-99a8-75d2ab5cc36d.mp4"
+            "video_url": "https://www.youtube.com/watch?v=4PeG_NHx6Jk&t=9s"
           }
         },
         "swiper_qRmjCc": {

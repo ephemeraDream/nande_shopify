@@ -5,19 +5,18 @@
  * This file may be updated by the Shopify admin theme editor
  * or related systems. Please exercise caution as any changes
  * made to this file may be overwritten.
- * 专题页-专题集合页
  * ------------------------------------------------------------
  */
 {
   "sections": {
     "breadcrumbs": {
       "type": "breadcrumbs",
-      "settings": {
-        "custom_breadcrumb": "",
-      },
       "custom_css": [
-        ".breadcrumb-con{top: 0;}"
+        ".breadcrumb-con {top: 0;}"
       ],
+      "settings": {
+        "custom_breadcrumb": ""
+      }
     },
     "banner_topic": {
       "type": "banner",
@@ -81,13 +80,13 @@
         "product_block_2"
       ],
       "settings": {
+        "layout": "image-left",
         "small_title": "Maidesite SPACES",
         "title": "Yoga HöHenverstellbare Schreibtische",
         "text": "<p>Die beste Wahl für alle Yoga-Enthusiasten, die Komfort und Qualität schätzen. <br/>Diese hochwertigen Schreibtische sind ideal für Yoga- und Meditationen-Tätigkeiten.</p>",
         "btn_text": "En savoir plus",
         "image": "shopify://shop_images/polka_dot_img01.webp",
-        "link": "",
-        "layout": "image-left"
+        "link": ""
       }
     },
     "image_with_text_polka_dot_right": {
@@ -115,13 +114,13 @@
         "product_block_2"
       ],
       "settings": {
+        "layout": "image-right",
         "small_title": "Maidesite SPACES",
         "title": "Petdesk",
         "text": "<p>Der ideale Tisch für Ihre Haustiere – stabil, komfortabel und perfekt für ihren Bedarf.</p>",
         "btn_text": "En savoir plus",
         "image": "shopify://shop_images/polka_dot_img02.webp",
-        "link": "",
-        "layout": "image-right"
+        "link": ""
       }
     },
     "image_with_text_polka_dot_2": {
@@ -149,13 +148,13 @@
         "product_block_2"
       ],
       "settings": {
+        "layout": "image-left",
         "small_title": "Maidesite SPACES",
         "title": "Familydesk",
         "text": "<p>Ein intelligenter Tisch für die ganze Familie – vielseitig, ergonomisch und perfekt für den Alltag.</p>",
         "btn_text": "En savoir plus",
         "image": "shopify://shop_images/polka_dot_img03.webp",
-        "link": "",
-        "layout": "image-left"
+        "link": ""
       }
     },
     "image_with_text_polka_dot_right_2": {
@@ -183,15 +182,15 @@
         "product_block_2"
       ],
       "settings": {
+        "layout": "image-right",
         "small_title": "Maidesite SPACES",
         "title": "Workfit Pro",
         "text": "<p>Produktives Arbeiten und gesundes Sitzen in perfektem Einklang.</p>",
         "btn_text": "En savoir plus",
         "image": "shopify://shop_images/polka_dot_img04.webp",
-        "link": "",
-        "layout": "image-right"
+        "link": ""
       }
-    },
+    }
   },
   "order": [
     "breadcrumbs",
