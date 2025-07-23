@@ -29,34 +29,34 @@ Product Tab Compare Section - 产品对比 tab切换
       <div class="tab-content session-box-inner">
         {% for block in section.blocks %}
             {% if block.type == 'tab' %}
-          <div class="tab-panel tab-panel-{{ section.id }} {% if forloop.first %}active{% endif %}" data-tab="{{ forloop.index0 }}">
-            <div class="tab-products">
+          <div class="swiper tab-panel tab-panel-{{ section.id }} {% if forloop.first %}active{% endif %}" data-tab="{{ forloop.index0 }}" id="tab-swiper-{{ section.id }}-{{ forloop.index0 }}">
+            <div class="tab-products swiper-wrapper">
               {% for product in block.settings.product_list %}
-                  <div class="tab-product-card">
+                  <div class="tab-product-card swiper-slide">
                       <img src="{{ product.featured_image | image_url: width: 400 }}" alt="{{ product.title }}" class="product_img">
                       <div class="tab-product-title">
                         <div class="text-body">{{ product.title }}</div>
                       </div>
                       <div class="tab-product-colors">
-                    {% for option in product.options_with_values %}
-                        {% if option.name == 'Farbe Tischplatte' %}
-                        {% for value in option.values %}
-                            {% assign color = '' %}
-                            {% for color_item in product.metafields.custom.color_option.value %}
-                            {% if color_item.name == value.name %}
-                                {% assign color = color_item.value %}
-                            {% endif %}
-                            {% endfor %}
-                            <div
-                            class="tab-product-color-circle{% if color == '' %} tab-product-color-circle-none{% endif %}"
-                            {% if color != '' %}
-                                style="background-color: {{ color }}"
-                            {% endif %}
-                            title="{{ value }}"
-                            ></div>
-                        {% endfor %}
-                        {% endif %}
-                    {% endfor %}
+                      {% for option in product.options_with_values %}
+                          {% if option.name == 'Farbe Tischplatte' %}
+                          {% for value in option.values %}
+                              {% assign color = '' %}
+                              {% for color_item in product.metafields.custom.color_option.value %}
+                              {% if color_item.name == value.name %}
+                                  {% assign color = color_item.value %}
+                              {% endif %}
+                              {% endfor %}
+                              <div
+                              class="tab-product-color-circle{% if color == '' %} tab-product-color-circle-none{% endif %}"
+                              {% if color != '' %}
+                                  style="background-color: {{ color }}"
+                              {% endif %}
+                              title="{{ value }}"
+                              ></div>
+                          {% endfor %}
+                          {% endif %}
+                      {% endfor %}
                       </div>
                       <a href="{{ product.url }}" class="nd-btn">{{ 'common.en_savoir_plus' | t }} {{ 'icon-right-arrow.svg' | inline_asset_content }}</a>
                       <div class="compare_simple_item_line">
@@ -79,6 +79,9 @@ Product Tab Compare Section - 产品对比 tab切换
                   </div>
               {% endfor %}
             </div>
+              <!-- 导航按钮 -->
+              <div class="swiper-button-prev"></div>
+              <div class="swiper-button-next"></div>
           </div>
         {% endif %}
         {% endfor %}
@@ -186,8 +189,34 @@ Product Tab Compare Section - 产品对比 tab切换
       });
       panels.forEach(function(panel, idx) {
         panel.classList.toggle('active', idx === tabIndex);
+        //swiper-update
+        if (idx === tabIndex) {
+          const swiperContainer = panel.querySelector('.tab-products-wrapper.swiper');
+          if (swiperContainer && swiperContainer.swiper) {
+            swiperContainer.swiper.update();
+          }
+        }
       });
     }
+
+    document.addEventListener('DOMContentLoaded', function () {
+      document.querySelectorAll('.tab-panel.swiper').forEach(function(el, index) {
+        new Swiper(el, {
+          slidesPerView: 5,
+          spaceBetween: 20,
+          navigation: {
+            nextEl: el.querySelector('.swiper-button-next'),
+            prevEl: el.querySelector('.swiper-button-prev'),
+          },
+          breakpoints: {
+            0: { slidesPerView: 2 },
+            768: { slidesPerView: 3 },
+            1024: { slidesPerView: 4 },
+            1440: { slidesPerView: 5 }
+          }
+        });
+      });
+    });
 </script>
 
 {% schema %}
