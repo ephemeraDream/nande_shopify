@@ -37,7 +37,6 @@ Product Tab Compare Section - 产品对比 tab切换
                       {% assign product_model = product.metafields.custom.product_model %}
                       {% assign product_title_top = product.metafields.custom.product_title_top %}
                       <div class="tab-product-title text-body">
-                        {% comment %} <div class="text-body">{{ product.title }}</div> {% endcomment %}
                         <span class="product_title_top">
                           {% if product_title_top != blank %}
                             {{ product_title_top }}
@@ -137,9 +136,9 @@ Product Tab Compare Section - 产品对比 tab切换
     top: 0;
     left: 0;
     transform: translateY(-100%);
-    padding: 0.6rem 1.2rem;
+    padding: 0.4rem 1.2rem 0;
     color:#BDFF00;
-    transition:all .3s ease;
+    transition: background-color .3s ease;
   }
   .product-tab-compare .tab-product-title .text-title{
      display: -webkit-box;
