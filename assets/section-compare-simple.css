@@ -83,7 +83,7 @@
   width: 100%;
   max-height: 37rem;
   background-color: #FAFAFA;
-  padding-bottom: 7rem;
+  padding-bottom: 6rem;
 }
 
 .compare_simple .compare_simple_item .swiper .swiper-slide img {
@@ -109,9 +109,9 @@
   .compare_simple .compare_simple_item_title{font-size: 2rem;}
 }
 
-.compare_simple .compare_simple_item_title span{
+.compare_simple .compare_simple_item_title .product_title{
   display: -webkit-box;
-  -webkit-line-clamp: 2; /* 显示2行 */
+  -webkit-line-clamp: 1; 
   -webkit-box-orient: vertical;
   overflow: hidden;
   text-overflow: ellipsis;
