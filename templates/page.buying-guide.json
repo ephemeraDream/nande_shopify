@@ -1,6 +1,10 @@
 /*
  * ------------------------------------------------------------
- * 购买指南
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
  * ------------------------------------------------------------
  */
 {
@@ -27,6 +31,7 @@
       ],
       "name": "img with text simplicity",
       "settings": {
+        "spec_id": "",
         "header_title": "<p>Ergonomische Must-Haves FüRs BüRo</p>",
         "header_content": "<p>Höhenverstellbarer Schreibtisch, ergonomischer Stuhl & mehr – für gesundes und komfortables Arbeiten!</p>",
         "title": "<p>Ergonomisches Büro – 3 unverzichtbare Möbelstücke</p>",
@@ -49,10 +54,10 @@
             "tab_title": "Lorem ipsum dolor sit",
             "product_list": [
               "maidesite-tischgestell-elektrisch-hohenverstellbar-t2-pro-plus",
-              "maidesite-tischgestell-elektrisch-hohenverstellbar-t2-pro-plus",
-              "maidesite-tischgestell-elektrisch-hohenverstellbar-t2-pro-plus",
               "maidesite-th2-pro-plus-tischgestell-elektrisch-hohenverstellbar",
-              "maidesite-elektrisch-hohenverstellbarer-gestell-t2-pro"
+              "maidesite-elektrisch-hohenverstellbarer-gestell-t2-pro",
+              "maidesite-to1-pro-elektrisch-hohenverstellbarer-schreibtisch",
+              "maidesite-el2-pro-art-tischgestell-elektrisch-hohenverstellbar"
             ]
           }
         },
@@ -61,11 +66,11 @@
           "settings": {
             "tab_title": "Lorem ipsum dolor sit",
             "product_list": [
-                "maidesite-tischgestell-elektrisch-hohenverstellbar-t2-pro-plus",
+              "maidesite-tischgestell-elektrisch-hohenverstellbar-t2-pro-plus",
               "maidesite-to1-pro-elektrisch-hohenverstellbarer-schreibtisch",
               "maidesite-tischgestell-elektrisch-hohenverstellbar-t2-pro-plus",
               "maidesite-th2-pro-plus-tischgestell-elektrisch-hohenverstellbar",
-              "maidesite-tischgestell-elektrisch-hohenverstellbar-t2-pro-plus",
+              "maidesite-tischgestell-elektrisch-hohenverstellbar-t2-pro-plus"
             ]
           }
         },
@@ -74,7 +79,7 @@
           "settings": {
             "tab_title": "Lorem ipsum dolor sit",
             "product_list": [
-                "maidesite-tischgestell-elektrisch-hohenverstellbar-t2-pro-plus",
+              "maidesite-tischgestell-elektrisch-hohenverstellbar-t2-pro-plus",
               "maidesite-to1-pro-elektrisch-hohenverstellbarer-schreibtisch",
               "maidesite-tischgestell-elektrisch-hohenverstellbar-t2-pro-plus",
               "maidesite-tischgestell-elektrisch-hohenverstellbar-t2-pro-plus",
@@ -104,6 +109,7 @@
       ],
       "name": "img with text simplicity",
       "settings": {
+        "spec_id": "",
         "header_title": "<p>Erleben Sie Den Unterschied Von Maidesite</p>",
         "header_content": "",
         "title": "<p>Ergonomie neu erleben mit Maidesite</p>",
@@ -128,6 +134,7 @@
       ],
       "name": "img with text simplicity",
       "settings": {
+        "spec_id": "",
         "header_title": "",
         "header_content": "",
         "title": "<p>Mit Weitblick entworfen, mit Exzellenz gefertigt</p>",
@@ -152,6 +159,7 @@
       ],
       "name": "img with text simplicity",
       "settings": {
+        "spec_id": "",
         "header_title": "",
         "header_content": "",
         "title": "<p>Eine globale Marke, der Millionen vertrauen</p>",
