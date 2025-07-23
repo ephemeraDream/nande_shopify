@@ -34,8 +34,22 @@ Product Tab Compare Section - 产品对比 tab切换
               {% for product in block.settings.product_list %}
                   <div class="tab-product-card swiper-slide">
                       <img src="{{ product.featured_image | image_url: width: 400 }}" alt="{{ product.title }}" class="product_img">
-                      <div class="tab-product-title">
-                        <div class="text-body">{{ product.title }}</div>
+                      {% assign product_model = block.settings.select_product.metafields.custom.product_model %}
+                      {% assign product_title_top = block.settings.select_product.metafields.custom.product_title_top %}
+                      <div class="tab-product-title text-body">
+                        {% comment %} <div class="text-body">{{ product.title }}</div> {% endcomment %}
+                        <span class="product_title_top">
+                          {% if product_title_top != blank %}
+                            {{ product_title_top }}
+                          {% else %}
+                            Maidesite
+                          {% endif %}
+                        </span>
+                        {% if product_model != blank %}
+                          <span class="text-title">{{ product_model }}</span>
+                        {% else %}
+                          <span class="text-title">{{ block.settings.select_product.title  }}</span>
+                        {% endif %}
                       </div>
                       <div class="tab-product-colors">
                       {% for option in product.options_with_values %}
@@ -113,19 +127,21 @@ Product Tab Compare Section - 产品对比 tab切换
     position:relative;
     padding:0.2rem 1.2rem 0.5rem;
     background-color: #7F7E75;
+    font-weight:500;
+    transition:all .3s ease;
 }
-.product-tab-compare .tab-product-title::before {
-    content: "";
-    height: 2.5rem;
-    width: 13rem;
+  .compare_simple .compare_simple_item_title .product_title_top {
+    width: 50%;
     background-color: #7F7E75;
     position: absolute;
     top: 0;
     left: 0;
-    transform: translateY(-90%);
+    transform: translateY(-100%);
+    padding: 0.6rem 1.2rem;
+    color:#BDFF00;
+    transition:all .3s ease;
   }
-  .product-tab-compare .tab-product-title .text-body{
-    font-weight: 500;
+  .product-tab-compare .tab-product-title .text-title{
      display: -webkit-box;
     -webkit-line-clamp: 2;      
     -webkit-box-orient: vertical;
@@ -134,6 +150,14 @@ Product Tab Compare Section - 产品对比 tab切换
     min-height: calc(1em * 2);
     overflow:hidden;
     color:#BDFF00;
+  }
+  .product-tab-compare .tab-product-card:hover .tab-product-title,
+  .product-tab-compare .tab-product-card:hover .product_title_top{
+    background-color: #BDFF00;
+    color:#1a1a1a;
+  }
+  .product-tab-compare .tab-product-card:hover .tab-product-title .text-title{
+    color:#1a1a1a;
   }
   .product-tab-compare .tab-product-colors{min-height: 30px;}
   .product-tab-compare  .tab-product-color-circle {
