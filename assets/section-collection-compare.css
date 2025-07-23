@@ -331,6 +331,7 @@
   align-items: center;
   justify-content: space-between;
   margin-top: 2rem;
+  width: 100%;
 }
 
 .collection_compare .collection_compare_contain_select_switch_box {
