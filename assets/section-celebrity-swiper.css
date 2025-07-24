@@ -38,7 +38,7 @@
 
 .celebrity_swiper .celebrity_swiper_item_left {
   flex: 0 0 auto;
-  width: 32rem;
+  width: 34%;
   padding: 6rem 1.8rem 2rem 2.4rem;
   background-color: #fff;
   display: flex;
@@ -80,7 +80,7 @@
 .celebrity_swiper .celebrity_swiper_item_right {
   position: relative;
   flex: 0 0 auto;
-  width: 64rem;
+  width: 66%;
   cursor: pointer;
 }
 
