@@ -209,7 +209,8 @@
         "item_hrmkBQ"
       ],
       "custom_css": [
-        ".compare_simple .compare_simple_item_title {font-size: 3rem;}"
+        ".compare_simple .compare_simple_item_title {font-size: 3rem;}",
+        "@media screen and (max-width: 1440px) {.compare_simple .compare_simple_item_title { font-size: 2rem;}}"
       ],
       "name": "compare simple",
       "settings": {
