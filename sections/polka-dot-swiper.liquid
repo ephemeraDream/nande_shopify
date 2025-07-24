@@ -119,7 +119,17 @@
       });
     });
     document.addEventListener('click', function(e) {
-      if (!root.contains(e.target) || e.target.classList.contains('polka_dot_swiper_contain')) {
+      if (
+        root.contains(e.target) &&
+        !e.target.classList.contains('polka_dot_swiper_contain') &&
+        !e.target.classList.contains('polka_dot_swiper_product') &&
+        !e.target.closest('.polka_dot_swiper_product')
+      ) {
+        products.forEach(function(product) {
+          product.classList.remove('active');
+        });
+      }
+      if (!root.contains(e.target)) {
         products.forEach(function(product) {
           product.classList.remove('active');
         });
