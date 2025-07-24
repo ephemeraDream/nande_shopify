@@ -158,6 +158,15 @@
   justify-content: center;
   z-index: 2;
 }
+.polka_dot_swiper .polka_dot_swiper_contain::before{
+  width: 4rem;
+  height: 4rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  animation: pulse 2s infinite;
+}
 
 .polka_dot_swiper .polka_dot_swiper_product {
   position: absolute;
