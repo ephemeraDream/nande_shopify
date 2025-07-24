@@ -26,18 +26,18 @@
   </div>
   <div class="padding-sider company_intro_contain">
     <div class="company_intro_contain_left">
-      <div class="company_intro_title">{{ section.settings.title }}</div>
+      <h2 class="company_intro_title">{{ section.settings.title }}</h2>
       <a
         {% if section.settings.link != blank %}
           href="{{ section.settings.link }}"
         {% endif %}
-        class="company_intro_btn"
+        class="company_intro_btn nd-btn"
       >
         {{- section.settings.link_text -}}
         {{ 'icon-right-arrow.svg' | inline_asset_content }}
       </a>
     </div>
-    <div class="company_intro_contain_right">{{ section.settings.introduce }}</div>
+    <div class="company_intro_contain_right text-body">{{ section.settings.introduce }}</div>
   </div>
 </div>
 
