@@ -14,6 +14,7 @@
       "blocks": {
         "banner_item_V4RHqa": {
           "type": "banner_item",
+          "disabled": true,
           "settings": {
             "title": "",
             "text": "",
