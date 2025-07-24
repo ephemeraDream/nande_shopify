@@ -52,10 +52,10 @@
         <div class="session-box-padding">
         <div class="session-box-inner">
         <div class="section_banner_info section_banner_info_{{ block.settings.file_position }}">
-          <div class="section_banner_info_title">{{ block.settings.title }}</div>
-          <div class="section_banner_info_text">{{ block.settings.text }}</div>
+          <h2 class="section_banner_info_title">{{ block.settings.title }}</h2>
+          <div class="section_banner_info_text text-body">{{ block.settings.text }}</div>
           {% if block.settings.btn_text != blank %}
-            <a class="section_banner_info_btn" href="{{ block.settings.link }}">
+            <a class="section_banner_info_btn nd-btn" href="{{ block.settings.link }}">
               {{ block.settings.btn_text }}
               {{ 'icon-right-arrow.svg' | inline_asset_content }}
             </a>
