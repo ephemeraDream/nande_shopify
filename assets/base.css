@@ -4112,7 +4112,8 @@ a {
   right: 3.90625vw;
 }
 .swiper_btn_white_prev.is-hidden,
-.swiper_btn_white_next.is-hidden {
+.swiper_btn_white_next.is-hidden,
+.swiper_btn_white.swiper-button-disabled {
   display: none !important;
 }
 @media screen and (max-width: 1024px) {
