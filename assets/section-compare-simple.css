@@ -67,16 +67,16 @@
   fill: #7F7E75;
 }
 
-.compare_simple .compare_simple_contain_body {
-  display: flex;
+.compare_simple .compare_simple_contain_body_outer {
+  /* display: flex;
   align-items: stretch;
-  gap: 1.2rem;
+  gap: 1.2rem; */
   margin-top: 4.4rem;
 }
 
 .compare_simple .compare_simple_item {
   flex: 1;
-  width: 0;
+  width: 100%;
 }
 
 .compare_simple .compare_simple_item .swiper {
