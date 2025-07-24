@@ -108,11 +108,12 @@
 @media screen and (max-width: 1024px) {
 .celebrity_swiper .celebrity_swiper_item {
   flex-direction: column;
+  height: auto;
 }
 .celebrity_swiper .celebrity_swiper_item_left,.celebrity_swiper .celebrity_swiper_item_right{width: 100%;}
 .celebrity_swiper .celebrity_swiper_item_desc{margin-top: 3rem;}
 .celebrity_swiper .celebrity_swiper_item_right {
-  height: 30rem;
+  height: 35rem;
 }
 }
 
