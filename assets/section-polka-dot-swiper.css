@@ -178,8 +178,11 @@
   right: 0;
   bottom: 0;
   transform: translateX(100%) translateY(100%);
-  display: flex;
   align-items: stretch;
+  display: none;
+}
+.polka_dot_swiper .polka_dot_swiper_product.active {
+  display: flex;
 }
 
 .polka_dot_swiper .polka_dot_swiper_product_img {

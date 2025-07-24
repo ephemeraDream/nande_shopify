@@ -66,6 +66,7 @@
 
 <script>
   (function() {
+    //swiper
     var root = document.getElementById('{{ swiper_id }}');
     var swiperEl = root.querySelector('.swiper');
     var prevEl = root.querySelector('.polka_dot_swiper_prev');
@@ -98,9 +99,32 @@
         nextEl.classList.remove('is-hidden');
       }
     }
-
     swiper.on('slideChange', updateArrowVisibility);
     updateArrowVisibility();
+
+    // polka_dot
+    var contains = root.querySelectorAll('.polka_dot_swiper_contain');
+    var products = root.querySelectorAll('.polka_dot_swiper_product');
+
+    contains.forEach(function(contain, idx) {
+      contain.addEventListener('click', function(e) {
+        e.stopPropagation();
+        products.forEach(function(product, pidx) {
+          if (pidx === idx) {
+            product.classList.add('active');
+          } else {
+            product.classList.remove('active');
+          }
+        });
+      });
+    });
+    document.addEventListener('click', function(e) {
+      if (!root.contains(e.target) || e.target.classList.contains('polka_dot_swiper_contain')) {
+        products.forEach(function(product) {
+          product.classList.remove('active');
+        });
+      }
+    });
   })();
 </script>
 
