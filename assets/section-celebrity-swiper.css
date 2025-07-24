@@ -101,7 +101,7 @@
   cursor: pointer;
 }
 
-.celebrity_swiper .celebrity_swiper_prev,
+/* .celebrity_swiper .celebrity_swiper_prev,
 .celebrity_swiper .celebrity_swiper_next {
   width: 6rem;
   height: 6rem;
@@ -114,12 +114,12 @@
   transform: translateY(-50%);
   z-index: 1;
   cursor: pointer;
-}
+} */
 
-.celebrity_swiper .celebrity_swiper_prev {
+/* .celebrity_swiper .celebrity_swiper_prev {
   left: 6.6145833vw;
 }
 
 .celebrity_swiper .celebrity_swiper_next {
   right: 13.2291667vw;
-}
+} */
