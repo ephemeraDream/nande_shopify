@@ -12,24 +12,10 @@
 }
 
 .blogs_simple .blogs_simple_title {
-  font-family: "PP Right Grotesk";
-  font-size: 6rem;
-  font-weight: 500;
-  line-height: 94%;
-  text-transform: capitalize;
-  letter-spacing: 0px;
-  font-variation-settings: "opsz" auto;
   color: #1F1F1F;
 }
 
 .blogs_simple .blogs_simple_text {
-  font-family: "PP Right Grotesk";
-  font-size: 3rem;
-  font-weight: 500;
-  line-height: 94%;
-  letter-spacing: 0px;
-  font-variation-settings: "opsz" auto;
-  color: #1F1F1F;
   margin-top: 3rem;
 }
 
@@ -64,22 +50,10 @@
 }
 
 .blogs_simple .blogs_simple_item_info_title {
-  font-family: "PP Right Grotesk";
-  font-size: 3rem;
-  font-weight: 500;
-  line-height: 94%;
-  letter-spacing: 0px;
-  font-variation-settings: "opsz" auto;
   color: #1F1F1F;
 }
 
 .blogs_simple .blogs_simple_item_info_date {
-  font-family: "PP Right Grotesk";
-  font-size: 2rem;
-  font-weight: normal;
-  line-height: 112%;
-  letter-spacing: 0px;
-  font-variation-settings: "opsz" auto;
   color: #7F7E75;
 }
 
@@ -103,7 +77,7 @@
   background-color: #fff;
 }
 
-.blogs_simple .blogs_simple_prev,
+/* .blogs_simple .blogs_simple_prev,
 .blogs_simple .blogs_simple_next {
   width: 6rem;
   height: 6rem;
@@ -124,7 +98,7 @@
 
 .blogs_simple .blogs_simple_next {
   right: 13.2291667vw;
-}
+} */
 
 .blogs_simple .blogs_simple_item:hover .blogs_simple_item_info_tag,
 .blogs_simple .blogs_simple_item:hover .blogs_simple_item_info {
