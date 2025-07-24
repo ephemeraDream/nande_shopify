@@ -16,6 +16,7 @@
           "type": "banner_item",
           "disabled": true,
           "settings": {
+            "sub_title": "",
             "title": "",
             "text": "",
             "btn_text": "",
@@ -44,6 +45,7 @@
           "type": "banner_item",
           "disabled": true,
           "settings": {
+            "sub_title": "",
             "title": "<p>Nahtloses Design Trifft Auf FunktionalitäT</p>",
             "text": "<p>Ein durchdachtes, einheitliches Design, das Ästhetik und Funktion kombiniert – für einen </p><p>modernen Arbeitsplatz, der sich nahtlos in Ihr Zuhause einfügt</p>",
             "btn_text": "En savoir plus",
@@ -210,13 +212,14 @@
       ],
       "custom_css": [
         ".compare_simple .compare_simple_item_title {font-size: 3rem;}",
-        "@media screen and (max-width: 1440px) {.compare_simple .compare_simple_item_title { font-size: 2rem;}}"
+        "@media screen and (max-width: 1440px) {.compare_simple .compare_simple_item_title {font-size: 2rem; }}"
       ],
       "name": "compare simple",
       "settings": {
         "title": "<p>Finde Deinen </p><p>Passenden Schreibtisch</p>",
         "text": "<p>Maidesite bietet anpassbare höhenverstellbare </p><p>Schreibtische für Deine Bedürfnisse.</p>",
-        "link_text": "Mehr erfahren"
+        "link_text": "Mehr erfahren",
+        "slides_per_view": 4
       }
     },
     "image_comparison_JHgace": {
@@ -460,45 +463,6 @@
     },
     "blogs_simple_wk9zqm": {
       "type": "blogs-simple",
-      "blocks": {
-        "blog_YzcWXz": {
-          "type": "blog",
-          "settings": {
-            "article": "maidesite-blog/top-10-hohenverstellbar-schreibtischgestelle-bis-400"
-          }
-        },
-        "blog_NP9Ntd": {
-          "type": "blog",
-          "settings": {
-            "article": "maidesite-blog/perfekte-schreibtischgrosse-so-passt-der-tisch-zu-ihrem-beruf"
-          }
-        },
-        "blog_twTURf": {
-          "type": "blog",
-          "settings": {
-            "article": "maidesite-blog/wie-viel-kostet-ein-guter-hohenverstellbarer-schreibtische"
-          }
-        },
-        "blog_eNBTc4": {
-          "type": "blog",
-          "settings": {
-            "article": "maidesite-blog/so-erhalten-sie-ein-attest-vom-hausarzt-fur-einen-hohenverstallbaren-schreibtisch"
-          }
-        },
-        "blog_pjtFrj": {
-          "type": "blog",
-          "settings": {
-            "article": "maidesite-blog/hohenverstellbare-schreibtisch-im-job-wer-zahlt-eigentlich"
-          }
-        }
-      },
-      "block_order": [
-        "blog_YzcWXz",
-        "blog_NP9Ntd",
-        "blog_twTURf",
-        "blog_eNBTc4",
-        "blog_pjtFrj"
-      ],
       "name": "blogs simple",
       "settings": {
         "title": "<p>Blogs</p>",
