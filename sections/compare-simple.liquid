@@ -142,11 +142,26 @@
         1025: {
           slidesPerView: 3,
         },
-        1440: {
+        1300: {
           slidesPerView: 4,
         }
       }
     });
+
+    function updateArrowVisibility() {
+      if (swiper.isBeginning) {
+        prevEl.classList.add('is-hidden');
+      } else {
+        prevEl.classList.remove('is-hidden');
+      }
+      if (swiper.isEnd) {
+        nextEl.classList.add('is-hidden');
+      } else {
+        nextEl.classList.remove('is-hidden');
+      }
+    }
+    swiper.on('slideChange', updateArrowVisibility);
+    updateArrowVisibility();
   
     // inner-swiper start
     var itemList = document.querySelectorAll('.compare_simple_item');
