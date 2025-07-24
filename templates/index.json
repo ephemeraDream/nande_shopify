@@ -9,6 +9,15 @@
  */
 {
   "sections": {
+    "breadcrumbs": {
+      "type": "breadcrumbs",
+      "custom_css": [
+        ".breadcrumb-con { top: 0; z-index: 7;}",
+      ],
+      "settings": {
+        "custom_breadcrumb": ""
+      }
+    },
     "banner_8A7fgF": {
       "type": "banner",
       "blocks": {
@@ -505,6 +514,7 @@
     }
   },
   "order": [
+    "breadcrumbs",
     "banner_8A7fgF",
     "link_block_ygbQVD",
     "polka_dot_swiper_4yRfwn",
