@@ -148,6 +148,7 @@
       }
     });
 
+    /**
     function updateArrowVisibility() {
       if (swiper.isBeginning) {
         prevEl.classList.add('is-hidden');
@@ -162,6 +163,7 @@
     }
     swiper.on('slideChange', updateArrowVisibility);
     updateArrowVisibility();
+    **/
   
     // inner-swiper start
     var itemList = document.querySelectorAll('.compare_simple_item');
@@ -171,7 +173,7 @@
         var innerSwiper = new Swiper(innerSwiperEl, {
           slidesPerView: 1,
           spaceBetween: 0,
-          allowTouchMove: false, // 如果你不想让用户滑动切换图片
+          allowTouchMove: false, 
         });
         item.querySelectorAll('.compare_simple_item_color_circle').forEach((circle, index) => {
           circle.addEventListener('click', function () {
