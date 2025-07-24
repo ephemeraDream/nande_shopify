@@ -2,8 +2,8 @@
 
 <div class="boxgrid_simple_section padding-sider">
   <div class="boxgrid_simple">
-    <div class="boxgrid_simple_title">{{ section.settings.title }}</div>
-    <div class="boxgrid_simple_text">{{ section.settings.text }}</div>
+    <h2 class="boxgrid_simple_title">{{ section.settings.title }}</h2>
+    <h4 class="boxgrid_simple_text">{{ section.settings.text }}</h4>
     <div class="boxgrid_simple_contain">
       {% for block in section.blocks %}
         <div class="boxgrid_simple_item{% if block.settings.active == "true" %} active{% endif %}{% if forloop.index0 < 3 %} first_line{% endif %}">
