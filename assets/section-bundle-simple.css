@@ -183,6 +183,15 @@
 .bundle_simple .bundle_simple_product_price {
   color: #1F1F1F;
 }
+.bundle_simple .bundle_simple_product_title {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: normal;
+}
+
 
 .bundle_simple .bundle_simple_product_price {
   text-align: left;

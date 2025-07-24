@@ -18,6 +18,14 @@
             </div>
             <div class="bundle_simple_product_info">
               <div>
+                {% assign product_model = product.metafields.custom.product_model %}
+                <h4 class="bundle_simple_product_model">
+                  {% if product_model != blank %}
+                    {{ product_model }}
+                  {% else %}
+                    Model
+                  {% endif %}
+                </h4>
                 <h4 class="bundle_simple_product_title">{{ product.title }}</h4>
                 <h4 class="bundle_simple_product_price">
                   {{ product.selected_or_first_available_variant.price | money_without_trailing_zeros }}
