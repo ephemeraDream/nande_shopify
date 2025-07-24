@@ -161,6 +161,7 @@
   align-items: center;
   justify-content: center;
   z-index: 2;
+  cursor: pointer;
 }
 .polka_dot_swiper .polka_dot_swiper_contain::before{
   content: "";

@@ -295,9 +295,10 @@
 .header_menu .header_menu_item[data-type="product_collection"] .header_menu_item_submenu_product_img {
   position: relative;
   width: 100%;
-  height: 33rem;
-  background-color: #fff;
+  /* height: 33rem; */
+  background-color: #FAFAFA;
   overflow: hidden;
+  padding-bottom: 3rem;
 }
 
 .header_menu .header_menu_item[data-type="product_collection"] .header_menu_item_submenu_product_img img {
