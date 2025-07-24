@@ -29,7 +29,7 @@
 .link_block .link_block_contain_item {
   flex: 0 0 auto;
   width: calc((100% - 3.2rem) / 2);
-  height: 43rem;
+  /* height: 43rem; */
   position: relative;
   overflow: hidden;
 }
@@ -67,6 +67,7 @@
   font-weight: 500;
   color: #FFFFFF;
   margin-top: 2rem;
+  line-height: 1em;
 }
 
 .link_block .link_block_contain_item_info_btn {
