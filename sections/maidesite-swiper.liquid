@@ -1,6 +1,6 @@
 {{ 'section-maidesite-swiper.css' | asset_url | stylesheet_tag }}
 
-<div class="maidesite_swiper_section padding-sider" id="maidesite_swiper_section-{{ section.id }}">
+<div class="maidesite_swiper_section padding-sider">
   <div class="maidesite_swiper">
     <h2 class="maidesite_swiper_title">{{ section.settings.title }}</h2>
     <h4 class="maidesite_swiper_text">{{ section.settings.text }}</h4>
@@ -34,41 +34,47 @@
 </div>
 
 <script>
-  (() => {
-    const sectionId = '{{ section.id }}';
-    const sectionEl = document.getElementById('maidesite_swiper_section-' + sectionId);
-    if (!sectionEl) return;
-  
-    const imageEl = sectionEl.querySelector('.maidesite_swiper_image');
-    const textEl = sectionEl.querySelector('.maidesite_swiper_desc');
-  
-    const maidesite_swiper_text = new Swiper(textEl, {
-      spaceBetween: 0,
-      effect: 'fade',
-      allowTouchMove: false,
-    });
-  
-    const maidesite_swiper_image = new Swiper(imageEl, {
-      slidesPerView: 4,
-      spaceBetween: 24,
-      navigation: {
-        nextEl: sectionEl.querySelector('.maidesite_swiper_next'),
-        prevEl: sectionEl.querySelector('.maidesite_swiper_prev'),
-      },
-      breakpoints: {
-        1440: { slidesPerView: 4 },
-        1024: { slidesPerView: 4 },
-        768:  { slidesPerView: 3 },
-        0:    { slidesPerView: 2 },
-      },
-      thumbs: {
-        swiper: maidesite_swiper_text,
-      },
-    });
-  
-  })();
-  
-  
+  const maidesite_swiper_text = new Swiper('.maidesite_swiper_desc', {
+    spaceBetween: 0,
+  });
+
+  const maidesite_swiper_image = new Swiper('.maidesite_swiper_image', {
+    slidesPerView: 4,
+    spaceBetween: 24,
+  });
+
+  let maidesite_swiper_index = 0;
+  const maidesite_swiper_image_slides = maidesite_swiper_image.slides;
+  const totalSlides = maidesite_swiper_image_slides.length;
+
+  let maidesite_swiper_timer = setInterval(nextSlide, 5000);
+
+  function updateSlideClasses(index) {
+    maidesite_swiper_image_slides.forEach((slide) => slide.classList.remove('swiper-slide-active'));
+    maidesite_swiper_image_slides[index].classList.add('swiper-slide-active');
+  }
+
+  function nextSlide() {
+    maidesite_swiper_index = (maidesite_swiper_index + 1) % totalSlides;
+    maidesite_swiper_image.slideTo(maidesite_swiper_index);
+    maidesite_swiper_text.slideTo(maidesite_swiper_index);
+    updateSlideClasses(maidesite_swiper_index);
+  }
+
+  function prevSlide() {
+    maidesite_swiper_index = (maidesite_swiper_index - 1 + totalSlides) % totalSlides;
+    maidesite_swiper_image.slideTo(maidesite_swiper_index);
+    maidesite_swiper_text.slideTo(maidesite_swiper_index);
+    updateSlideClasses(maidesite_swiper_index);
+  }
+
+  document.querySelector('.maidesite_swiper_prev').addEventListener('click', () => {
+    prevSlide();
+  });
+
+  document.querySelector('.maidesite_swiper_next').addEventListener('click', () => {
+    nextSlide();
+  });
 </script>
 
 {% schema %}
