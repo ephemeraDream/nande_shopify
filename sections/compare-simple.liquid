@@ -28,10 +28,12 @@
                           | first
                         %}
                         <div class="swiper-slide">
+                          <a href="{{ block.settings.select_product.url }}">
                           <img
                             src="{{ first_variant.featured_image | image_url }}"
                             alt="{{ value.variant.title }}"
                           >
+                            </a>
                         </div>
                       {%- endfor %}
                   {%- endcase -%}
@@ -76,6 +78,7 @@
                 {%- endcase -%}
               {%- endfor %}
             </div>
+            <a href="{{ block.settings.select_product.url }}" class="nd-btn">{{ 'common.en_savoir_plus' | t }} {{ 'icon-right-arrow.svg' | inline_asset_content }}</a>
             <div class="compare_simple_item_price">
               {% comment %}
                 {% if block.settings.select_product.compare_at_price != blank %}
