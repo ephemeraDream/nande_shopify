@@ -34,30 +34,38 @@
 </div>
 
 <script>
-  const maidesite_swiper_text = new Swiper('.maidesite_swiper_desc', {
-    spaceBetween: 0,
-    effect: 'fade',
-    allowTouchMove: false, // 禁止手动滑动
-  });
-  
-  const maidesite_swiper_image = new Swiper('.maidesite_swiper_image', {
-    slidesPerView: 4,
-    spaceBetween: 24,
-    navigation: {
-      nextEl: '.maidesite_swiper_next',
-      prevEl: '.maidesite_swiper_prev',
-    },
-    breakpoints: {
-      1440: { slidesPerView: 5 },
-      1024: { slidesPerView: 4 },
-      768:  { slidesPerView: 3 },
-      0:    { slidesPerView: 2 },
-    }
-  });
-  
-  // 联动两个 swiper
-  maidesite_swiper_image.controller.control = maidesite_swiper_text;
-  maidesite_swiper_text.controller.control = maidesite_swiper_image;
+  // 如果是模块化写法，需注册模块
+// import Swiper, { Navigation, Controller, EffectFade } from 'swiper';
+// Swiper.use([Navigation, Controller, EffectFade]);
+
+const maidesite_swiper_text = new Swiper('.maidesite_swiper_desc', {
+  spaceBetween: 0,
+  effect: 'fade',
+  allowTouchMove: false,
+});
+
+const maidesite_swiper_image = new Swiper('.maidesite_swiper_image', {
+  slidesPerView: 4,
+  spaceBetween: 24,
+  navigation: {
+    nextEl: '.maidesite_swiper_next',
+    prevEl: '.maidesite_swiper_prev',
+  },
+  breakpoints: {
+    1440: { slidesPerView: 4 },
+    1024: { slidesPerView: 4 },
+    768:  { slidesPerView: 3 },
+    0:    { slidesPerView: 2 },
+  },
+  // 启用控制器
+  controller: {
+    control: maidesite_swiper_text
+  }
+});
+
+// 双向控制
+maidesite_swiper_text.controller.control = maidesite_swiper_image;
+
   
 </script>
 
