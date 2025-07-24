@@ -1,6 +1,6 @@
 {{ 'section-maidesite-swiper.css' | asset_url | stylesheet_tag }}
 
-<div class="maidesite_swiper_section padding-sider">
+<div class="maidesite_swiper_section padding-sider" id="maidesite_swiper_section-{{ section.id }}">
   <div class="maidesite_swiper">
     <h2 class="maidesite_swiper_title">{{ section.settings.title }}</h2>
     <h4 class="maidesite_swiper_text">{{ section.settings.text }}</h4>
@@ -35,34 +35,39 @@
 
 <script>
   (() => {
-const maidesite_swiper_text = new Swiper('.maidesite_swiper_desc', {
-  spaceBetween: 0,
-  effect: 'fade',
-  allowTouchMove: false,
-});
-
-const maidesite_swiper_image = new Swiper('.maidesite_swiper_image', {
-  slidesPerView: 4,
-  spaceBetween: 24,
-  navigation: {
-    nextEl: '.maidesite_swiper_next',
-    prevEl: '.maidesite_swiper_prev',
-  },
-  breakpoints: {
-    1440: { slidesPerView: 4 },
-    1024: { slidesPerView: 4 },
-    768:  { slidesPerView: 3 },
-    0:    { slidesPerView: 2 },
-  },
-  // 启用控制器
-  controller: {
-    control: maidesite_swiper_text
-  }
-});
-
-// 双向控制
-maidesite_swiper_text.controller.control = maidesite_swiper_image;
-})();
+    const sectionId = '{{ section.id }}';
+    const sectionEl = document.getElementById('maidesite_swiper_section-' + sectionId);
+    if (!sectionEl) return;
+  
+    const imageEl = sectionEl.querySelector('.maidesite_swiper_image');
+    const textEl = sectionEl.querySelector('.maidesite_swiper_desc');
+  
+    const maidesite_swiper_text = new Swiper(textEl, {
+      spaceBetween: 0,
+      effect: 'fade',
+      allowTouchMove: false,
+    });
+  
+    const maidesite_swiper_image = new Swiper(imageEl, {
+      slidesPerView: 4,
+      spaceBetween: 24,
+      navigation: {
+        nextEl: sectionEl.querySelector('.maidesite_swiper_next'),
+        prevEl: sectionEl.querySelector('.maidesite_swiper_prev'),
+      },
+      breakpoints: {
+        1440: { slidesPerView: 4 },
+        1024: { slidesPerView: 4 },
+        768:  { slidesPerView: 3 },
+        0:    { slidesPerView: 2 },
+      },
+      thumbs: {
+        swiper: maidesite_swiper_text,
+      },
+    });
+  
+  })();
+  
   
 </script>
 
