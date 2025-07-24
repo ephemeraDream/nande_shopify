@@ -150,22 +150,22 @@
       }
     });
   
-    // 里层swiper初始化
+    // inner-swiper start
     var itemList = document.querySelectorAll('.compare_simple_item');
     itemList.forEach(function(item) {
       var innerSwiperEl = item.querySelector('.swiper');
       if (innerSwiperEl) {
-        new Swiper(innerSwiperEl, {
+        var innerSwiper = new Swiper(innerSwiperEl, {
           slidesPerView: 1,
           spaceBetween: 0,
           allowTouchMove: false, // 如果你不想让用户滑动切换图片
         });
-      }
-      item.querySelectorAll('.compare_simple_item_color_circle').forEach((circle, index) => {
-        circle.addEventListener('click', function () {
-          innerSwiperEl.slideTo(index);
+        item.querySelectorAll('.compare_simple_item_color_circle').forEach((circle, index) => {
+          circle.addEventListener('click', function () {
+            innerSwiper.slideTo(index);
+          });
         });
-      });
+      }
     });
   })();
 </script>
