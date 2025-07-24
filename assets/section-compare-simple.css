@@ -105,9 +105,6 @@
   z-index: 1;
   font-size: 2rem;
 }
-@media screen and (max-width: 1440px) {
-  .compare_simple .compare_simple_item_title{font-size: 2rem;}
-}
 
 .compare_simple .compare_simple_item_title .product_title{
   display: -webkit-box;
@@ -200,3 +197,8 @@
   color: #1F1F1F;
 }
 .compare_simple .nd-btn{width:100%;display: flex;justify-content: space-between;margin:0;}
+@media screen and (max-width: 1440px) {
+  .compare_simple .compare_simple_item_title{font-size: 2rem;}
+  .compare_simple .compare_simple_item_line_value{font-size: 2rem;}
+  .compare_simple .compare_simple_item_price{font-size: 2rem;}
+}
