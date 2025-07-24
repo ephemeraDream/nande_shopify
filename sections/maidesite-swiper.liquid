@@ -36,45 +36,31 @@
 <script>
   const maidesite_swiper_text = new Swiper('.maidesite_swiper_desc', {
     spaceBetween: 0,
+    effect: 'fade',
+    allowTouchMove: true, 
   });
-
+  
   const maidesite_swiper_image = new Swiper('.maidesite_swiper_image', {
     slidesPerView: 4,
     spaceBetween: 24,
+    navigation: {
+      nextEl: '.maidesite_swiper_next',
+      prevEl: '.maidesite_swiper_prev',
+    },
+    breakpoints: {
+      1440: { slidesPerView: 5 },
+      1024: { slidesPerView: 4 },
+      768:  { slidesPerView: 3 },
+      0:    { slidesPerView: 2 },
+    },
+    thumbs: {
+      swiper: maidesite_swiper_text,
+    }
   });
 
-  let maidesite_swiper_index = 0;
-  const maidesite_swiper_image_slides = maidesite_swiper_image.slides;
-  const totalSlides = maidesite_swiper_image_slides.length;
-
-  let maidesite_swiper_timer = setInterval(nextSlide, 5000);
-
-  function updateSlideClasses(index) {
-    maidesite_swiper_image_slides.forEach((slide) => slide.classList.remove('swiper-slide-active'));
-    maidesite_swiper_image_slides[index].classList.add('swiper-slide-active');
-  }
-
-  function nextSlide() {
-    maidesite_swiper_index = (maidesite_swiper_index + 1) % totalSlides;
-    maidesite_swiper_image.slideTo(maidesite_swiper_index);
-    maidesite_swiper_text.slideTo(maidesite_swiper_index);
-    updateSlideClasses(maidesite_swiper_index);
-  }
-
-  function prevSlide() {
-    maidesite_swiper_index = (maidesite_swiper_index - 1 + totalSlides) % totalSlides;
-    maidesite_swiper_image.slideTo(maidesite_swiper_index);
-    maidesite_swiper_text.slideTo(maidesite_swiper_index);
-    updateSlideClasses(maidesite_swiper_index);
-  }
-
-  document.querySelector('.maidesite_swiper_prev').addEventListener('click', () => {
-    prevSlide();
-  });
-
-  document.querySelector('.maidesite_swiper_next').addEventListener('click', () => {
-    nextSlide();
-  });
+  maidesite_swiper_image.controller.control = maidesite_swiper_text;
+  maidesite_swiper_text.controller.control = maidesite_swiper_image;
+  
 </script>
 
 {% schema %}
