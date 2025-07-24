@@ -30,6 +30,7 @@
   display: flex;
   gap: 2rem;
   align-items: flex-start;
+  overflow: hidden;
 }
 
 .bundle_simple .bundle_simple_contain_left {
@@ -383,5 +384,10 @@
 @media screen and (max-width: 1024px) {
   .bundle_simple .bundle_simple_product {
     width: 100%;
+}
+}
+@media screen and (max-width: 768px) {
+  .bundle_simple .bundle_simple_contain_right {
+    width: 20rem;
 }
 }
