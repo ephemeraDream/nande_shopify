@@ -7,7 +7,7 @@
   </div>
   <div class="swiper">
     {% assign blocks_count = section.blocks | size %}
-    {% assign fallback_articles = blogs.news.articles | slice: 0, 5 %}
+    {% assign fallback_articles = blogs.maidesite_blog.articles | slice: 0, 5 %}
 
     <div class="swiper-wrapper">
       {% if blocks_count > 0 %}
