@@ -6,26 +6,44 @@
     <h4 class="blogs_simple_text">{{ section.settings.text }}</h4>
   </div>
   <div class="swiper">
+    {% assign blocks_count = section.blocks | size %}
+    {% assign fallback_articles = blogs.news.articles | slice: 0, 5 %}
+
     <div class="swiper-wrapper">
-      {% for block in section.blocks %}
-        <div class="swiper-slide blogs_simple_item">
-          <a href="{{ block.settings.article.url }}">
-            {{-
-              block.settings.article.image
-              | image_url: width: block.settings.article.image.width
-              | image_tag: alt: block.settings.article.title
-            -}}
-            <div class="blogs_simple_item_info">
-              <div class="blogs_simple_item_info_tag">{{ 'common.neueste' | t }}</div>
-              <h4 class="blogs_simple_item_info_title">{{ block.settings.article.title }}</h4>
-              <div class="blogs_simple_item_info_date text-body">
-                {{ block.settings.article.updated_at | date: '%-d %B. %Y' }}
+      {% if blocks_count > 0 %}
+        {% for block in section.blocks %}
+          {% assign article = block.settings.article %}
+          <div class="swiper-slide blogs_simple_item">
+            <a href="{{ article.url }}">
+              {{ article.image | image_url: width: article.image.width | image_tag: alt: article.title }}
+              <div class="blogs_simple_item_info">
+                <div class="blogs_simple_item_info_tag">{{ 'common.neueste' | t }}</div>
+                <h4 class="blogs_simple_item_info_title">{{ article.title }}</h4>
+                <div class="blogs_simple_item_info_date text-body">
+                  {{ article.updated_at | date: '%-d %B. %Y' }}
+                </div>
               </div>
-            </div>
-          </a>
-        </div>
-      {% endfor %}
+            </a>
+          </div>
+        {% endfor %}
+      {% else %}
+        {% for article in fallback_articles %}
+          <div class="swiper-slide blogs_simple_item">
+            <a href="{{ article.url }}">
+              {{ article.image | image_url: width: article.image.width | image_tag: alt: article.title }}
+              <div class="blogs_simple_item_info">
+                <div class="blogs_simple_item_info_tag">{{ 'common.neueste' | t }}</div>
+                <h4 class="blogs_simple_item_info_title">{{ article.title }}</h4>
+                <div class="blogs_simple_item_info_date text-body">
+                  {{ article.updated_at | date: '%-d %B. %Y' }}
+                </div>
+              </div>
+            </a>
+          </div>
+        {% endfor %}
+      {% endif %}
     </div>
+
     <div class="swiper_btn_white swiper_btn_white_prev blogs_simple_prev">{{- 'swiper-left.svg' | inline_asset_content -}}</div>
     <div class="swiper_btn_white swiper_btn_white_next blogs_simple_next">{{- 'swiper-right.svg' | inline_asset_content -}}</div>
   </div>
