@@ -30,9 +30,8 @@
             {% endif %}
             {% if block.settings.video_url != blank %}
               {% if block.settings.video_url contains 'youtube.com' or block.settings.video_url contains 'youtu.be' %}
-                <div class="video-wrapper">
-                  <iframe width="100%" height="100%" src="https://www.youtube.com/embed/4PeG_NHx6Jk?si=WjcY9yTbo26Q0grQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                </div>
+                <iframe width="100%" height="100%" src="https://www.youtube.com/embed/{{ block.settings.video_url | split: 'v=' | last | split: '&' | first }}"
+                  title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
               {% else %}
                 <video
                   loop
