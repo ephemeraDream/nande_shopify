@@ -13,111 +13,161 @@
           {{ 'icon-right-arrow.svg' | inline_asset_content }}
         </div>
       </div>
-      <div class="compare_simple_contain_body">
-        {% for block in section.blocks -%}
-          <div class="compare_simple_item">
-            <div class="swiper">
-              <div class="swiper-wrapper">
-                {% for option in block.settings.select_product.options_with_values %}
-                  {%- case option.name -%}
-                    {%- when 'Farbe Tischplatte' -%}
-                      {% assign index = 'option' | append: forloop.index %}
-                      {% for value in option.values %}
-                        {% assign first_variant = block.settings.select_product.variants
-                          | where: index, value
-                          | first
-                        %}
-                        <div class="swiper-slide">
-                          <a href="{{ block.settings.select_product.url }}">
-                          <img
-                            src="{{ first_variant.featured_image | image_url }}"
-                            alt="{{ value.variant.title }}"
-                          >
-                            </a>
-                        </div>
+      <div class="compare_simple_contain_body_outer">
+        <div class="compare_simple_outer_swiper">
+          <div class="swiper">
+            <div class="swiper-wrapper">
+              {% for block in section.blocks -%}
+                <div class="swiper-slide">
+                  <div class="compare_simple_item">
+                    <div class="swiper">
+                      <div class="swiper-wrapper">
+                        {% for option in block.settings.select_product.options_with_values %}
+                          {%- case option.name -%}
+                            {%- when 'Farbe Tischplatte' -%}
+                              {% assign index = 'option' | append: forloop.index %}
+                              {% for value in option.values %}
+                                {% assign first_variant = block.settings.select_product.variants
+                                  | where: index, value
+                                  | first
+                                %}
+                                <div class="swiper-slide">
+                                  <a href="{{ block.settings.select_product.url }}">
+                                  <img
+                                    src="{{ first_variant.featured_image | image_url }}"
+                                    alt="{{ value.variant.title }}"
+                                    width="{{ first_variant.featured_image.width }}"
+                                    height="{{ first_variant.featured_image.height }}"
+                                  >
+                                    </a>
+                                </div>
+                              {%- endfor %}
+                          {%- endcase -%}
+                        {%- endfor %}
+                      </div>
+                      {% assign product_model = block.settings.select_product.metafields.custom.product_model %}
+                      {% assign product_title_top = block.settings.select_product.metafields.custom.product_title_top %}
+                        <h4 class="compare_simple_item_title">
+                          <span class="product_title_top">
+                            {% if product_title_top != blank %}
+                              {{ product_title_top }}
+                            {% else %}
+                              Maidesite
+                            {% endif %}
+                          </span>
+                          {% if product_model != blank %}
+                            <span class="product_title">{{ product_model }}</span>
+                          {% else %}
+                            <span class="product_title">{{ block.settings.select_product.title  }}</span>
+                          {% endif %}
+                        </h4>
+                    </div>
+                    <div class="compare_simple_item_color">
+                      {% for option in block.settings.select_product.options_with_values %}
+                        {%- case option.name -%}
+                          {%- when 'Farbe Tischplatte' -%}
+                            {% for value in option.values %}
+                              {% assign color = '' %}
+                              {% for color_item in block.settings.select_product.metafields.custom.color_option.value %}
+                                {% if color_item.name == value.name %}
+                                  {% assign color = color_item.value %}
+                                {% endif %}
+                              {% endfor %}
+                              <div
+                                class="compare_simple_item_color_circle{% if color == '' %} compare_simple_item_color_circle_none{% endif %}"
+                                {% if color != '' %}
+                                  style="background-color: {{ color }}"
+                                {% endif %}
+                                title="{{ value }}"
+                              ></div>
+                            {%- endfor %}
+                        {%- endcase -%}
                       {%- endfor %}
-                  {%- endcase -%}
-                {%- endfor %}
-              </div>
-              {% assign product_model = block.settings.select_product.metafields.custom.product_model %}
-              {% assign product_title_top = block.settings.select_product.metafields.custom.product_title_top %}
-                <h4 class="compare_simple_item_title">
-                  <span class="product_title_top">
-                    {% if product_title_top != blank %}
-                      {{ product_title_top }}
-                    {% else %}
-                      Maidesite
-                    {% endif %}
-                  </span>
-                  {% if product_model != blank %}
-                    <span class="product_title">{{ product_model }}</span>
-                  {% else %}
-                    <span class="product_title">{{ block.settings.select_product.title  }}</span>
-                  {% endif %}
-                </h4>
-            </div>
-            <div class="compare_simple_item_color">
-              {% for option in block.settings.select_product.options_with_values %}
-                {%- case option.name -%}
-                  {%- when 'Farbe Tischplatte' -%}
-                    {% for value in option.values %}
-                      {% assign color = '' %}
-                      {% for color_item in block.settings.select_product.metafields.custom.color_option.value %}
-                        {% if color_item.name == value.name %}
-                          {% assign color = color_item.value %}
+                    </div>
+                    <a href="{{ block.settings.select_product.url }}" class="nd-btn">{{ 'common.en_savoir_plus' | t }} {{ 'icon-right-arrow.svg' | inline_asset_content }}</a>
+                    <div class="compare_simple_item_price">
+                      {% comment %}
+                        {% if block.settings.select_product.compare_at_price != blank %}
+                          {% assign price = block.settings.select_product.compare_at_price | money_without_trailing_zeros %}
+                        {% else %}
+                          {% assign price = block.settings.select_product.price | money_without_trailing_zeros %}
                         {% endif %}
-                      {% endfor %}
-                      <div
-                        class="compare_simple_item_color_circle{% if color == '' %} compare_simple_item_color_circle_none{% endif %}"
-                        {% if color != '' %}
-                          style="background-color: {{ color }}"
-                        {% endif %}
-                        title="{{ value }}"
-                      ></div>
+                      {% endcomment %}
+                      {% assign price = block.settings.select_product.price | money_without_trailing_zeros %}
+                      {{ 'products.product.price.from_price_html' | t: price: price }}
+                    </div>
+                    {% for item in block.settings.select_product.metafields.custom.compare_simple.value.data.value limit: 4 %}
+                      <div class="compare_simple_item_line">
+                        <div class="compare_simple_item_line_label">{{ item.label }}</div>
+                        <div class="compare_simple_item_line_value">{{ item.value }}</div>
+                      </div>
                     {%- endfor %}
-                {%- endcase -%}
+                  </div>
+                </div>
               {%- endfor %}
             </div>
-            <a href="{{ block.settings.select_product.url }}" class="nd-btn">{{ 'common.en_savoir_plus' | t }} {{ 'icon-right-arrow.svg' | inline_asset_content }}</a>
-            <div class="compare_simple_item_price">
-              {% comment %}
-                {% if block.settings.select_product.compare_at_price != blank %}
-                  {% assign price = block.settings.select_product.compare_at_price | money_without_trailing_zeros %}
-                {% else %}
-                  {% assign price = block.settings.select_product.price | money_without_trailing_zeros %}
-                {% endif %}
-              {% endcomment %}
-              {% assign price = block.settings.select_product.price | money_without_trailing_zeros %}
-              {{ 'products.product.price.from_price_html' | t: price: price }}
-            </div>
-            {% for item in block.settings.select_product.metafields.custom.compare_simple.value.data.value limit: 4 %}
-              <div class="compare_simple_item_line">
-                <div class="compare_simple_item_line_label">{{ item.label }}</div>
-                <div class="compare_simple_item_line_value">{{ item.value }}</div>
-              </div>
-            {%- endfor %}
+            <div class="compare_simple_outer_prev">{{ 'swiper-left.svg' | inline_asset_content }}</div>
+            <div class="compare_simple_outer_next">{{ 'swiper-right.svg' | inline_asset_content }}</div>
           </div>
-        {%- endfor %}
+          <div class="compare_simple_outer_pagination"></div>
+        </div>
       </div>
     </div>
   </div>
 </div>
 
 <script>
-  const compare_simple_item_list = document.querySelectorAll('.compare_simple_item');
-  compare_simple_item_list.forEach((item) => {
-    const compare_simple_item_swiper = new Swiper(item.querySelector('.swiper'), {
-      slidesPerView: 1,
-      spaceBetween: 0,
-      allowTouchMove: false,
-    });
 
-    item.querySelectorAll('.compare_simple_item_color_circle').forEach((circle, index) => {
-      circle.addEventListener('click', function () {
-        compare_simple_item_swiper.slideTo(index);
+  (function() {
+    // 外层swiper
+    var root = document.querySelector('.compare_simple_outer_swiper');
+    if (!root) return;
+    var swiperEl = root.querySelector('.swiper');
+    var prevEl = root.querySelector('.compare_simple_outer_prev');
+    var nextEl = root.querySelector('.compare_simple_outer_next');
+    var paginationEl = root.querySelector('.compare_simple_outer_pagination');
+    var swiper = new Swiper(swiperEl, {
+      slidesPerView: 4,
+      spaceBetween: 24,
+      navigation: {
+        nextEl: nextEl,
+        prevEl: prevEl,
+      },
+      pagination: {
+        el: paginationEl,
+        clickable: true,
+      },
+      breakpoints: {
+        0: {
+          slidesPerView: 2,
+        },
+        768: {
+          slidesPerView: 3,
+        },
+        1025: {
+          slidesPerView: 4,
+        }
+      }
+    });
+  
+    // 里层swiper初始化
+    var itemList = document.querySelectorAll('.compare_simple_item');
+    itemList.forEach(function(item) {
+      var innerSwiperEl = item.querySelector('.swiper');
+      if (innerSwiperEl) {
+        new Swiper(innerSwiperEl, {
+          slidesPerView: 1,
+          spaceBetween: 0,
+          allowTouchMove: false, // 如果你不想让用户滑动切换图片
+        });
+      }
+      item.querySelectorAll('.compare_simple_item_color_circle').forEach((circle, index) => {
+        circle.addEventListener('click', function () {
+          compare_simple_item_swiper.slideTo(index);
+        });
       });
     });
-  });
+  })();
 </script>
 
 {% schema %}
