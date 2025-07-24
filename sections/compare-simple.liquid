@@ -126,8 +126,8 @@
     var prevEl = document.querySelector('.compare_simple_outer_prev');
     var nextEl = document.querySelector('.compare_simple_outer_next');
     var swiper = new Swiper(swiperEl, {
-      slidesPerView: 4,
-      spaceBetween: 24,
+      slidesPerView: {{ section.settings.slides_per_view | default: 4 }},
+      spaceBetween: 20,
       navigation: {
         nextEl: nextEl,
         prevEl: prevEl,
@@ -143,7 +143,7 @@
           slidesPerView: 3,
         },
         1300: {
-          slidesPerView: 4,
+          slidesPerView: {{ section.settings.slides_per_view | default: 4 }},
         }
       }
     });
@@ -206,6 +206,15 @@
       "type": "text",
       "id": "link_text",
       "label": "link text"
+    },
+    {
+      "type": "range",
+      "id": "slides_per_view",
+      "label": "每行显示数量",
+      "min": 1,
+      "max": 5,
+      "step": 1,
+      "default": 4
     }
   ],
   "blocks": [

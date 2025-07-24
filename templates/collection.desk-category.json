@@ -62,7 +62,8 @@
       "settings": {
         "title": "<p>Finde Deinen Passenden HöHenverstellbar </p><p>Schreibtisch</p>",
         "text": "<p>Maidesite bietet anpassbare höhenverstellbare </p><p>Schreibtische für Deine Bedürfnisse.</p>",
-        "link_text": "Mehr erfahren"
+        "link_text": "Mehr erfahren",
+        "slides_per_view": 5
       }
     },
     "img_with_text_simplicity_URDzRN": {
