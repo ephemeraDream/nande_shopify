@@ -215,6 +215,13 @@
   color: #000000;
 }
 
-@media screen and (max-width: 1024px) {
-  
+@media screen and (max-width: 768px) {
+.polka_dot_swiper .polka_dot_swiper_img {
+    min-height: 40rem;
+}
+.polka_dot_swiper .polka_dot_swiper_product {
+  right: 50%;
+  bottom: 50%;
+  transform: translate(-50%, -50%);
+}
 }

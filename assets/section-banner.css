@@ -47,15 +47,6 @@
   background-color: #BDFF00;
   cursor: pointer;
 }
-@media screen and (max-width: 1440px) {
-  .section_banner .section_banner_info_btn {
-    height: 5rem;
-    margin-top: 4rem;
-  }
-  .section_banner .section_banner_info_text {
-    margin-top: 2rem;
-  }
-}
 
 .section_banner .session-box-padding{
   height: 100%;
@@ -118,4 +109,17 @@
 .section_banner .section_banner_info_bottom_right {
   right: 0vw;
   bottom: 6rem;
+}
+
+@media screen and (max-width: 1440px) {
+  .section_banner .section_banner_info_btn {
+    height: 5rem;
+    margin-top: 4rem;
+  }
+  .section_banner .section_banner_info_text {
+    margin-top: 2rem;
+  }
+}
+@media screen and (max-width: 768px) {
+  .section_banner .swiper-slide{min-height: 30rem;}
 }
