@@ -71,6 +71,8 @@
 }
 
 .polka_dot_swiper .polka_dot_swiper_info_btn {
+  display: flex;
+  gap: 0.8rem;
   color: #1F1F1F;
 }
 
