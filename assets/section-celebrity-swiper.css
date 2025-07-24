@@ -110,6 +110,10 @@
   flex-direction: column;
 }
 .celebrity_swiper .celebrity_swiper_item_left,.celebrity_swiper .celebrity_swiper_item_right{width: 100%;}
+.celebrity_swiper .celebrity_swiper_item_desc{margin-top: 3rem;}
+.celebrity_swiper .celebrity_swiper_item_right {
+  height: 30rem;
+}
 }
 
 /* .celebrity_swiper .celebrity_swiper_prev,
