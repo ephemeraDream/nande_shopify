@@ -221,7 +221,8 @@
 }
 .polka_dot_swiper .polka_dot_swiper_product {
   right: 50%;
-  bottom: 50%;
-  transform: translate(-50%, -50%);
+  bottom: 24px;
+  transform: translate(47%, 100%);
+    
 }
 }
