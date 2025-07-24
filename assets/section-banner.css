@@ -43,6 +43,16 @@
   background-color: #BDFF00;
   cursor: pointer;
 }
+@media screen and (min-width: 1440px) {
+  .section_banner .section_banner_info_btn {
+    height: 5rem;
+    margin-top: 4rem;
+  }
+  .section_banner .section_banner_info_text {
+    margin-top: 2rem;
+  }
+}
+
 .section_banner .session-box-padding{
   height: 100%;
   width: 100%;
