@@ -34,10 +34,7 @@
 </div>
 
 <script>
-  // 如果是模块化写法，需注册模块
-// import Swiper, { Navigation, Controller, EffectFade } from 'swiper';
-// Swiper.use([Navigation, Controller, EffectFade]);
-
+  (() => {
 const maidesite_swiper_text = new Swiper('.maidesite_swiper_desc', {
   spaceBetween: 0,
   effect: 'fade',
@@ -65,7 +62,7 @@ const maidesite_swiper_image = new Swiper('.maidesite_swiper_image', {
 
 // 双向控制
 maidesite_swiper_text.controller.control = maidesite_swiper_image;
-
+})();
   
 </script>
 
