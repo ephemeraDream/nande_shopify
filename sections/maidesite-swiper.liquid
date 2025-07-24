@@ -37,7 +37,7 @@
   const maidesite_swiper_text = new Swiper('.maidesite_swiper_desc', {
     spaceBetween: 0,
     effect: 'fade',
-    allowTouchMove: true, 
+    allowTouchMove: false, // 可选，禁用手动拖动文字
   });
   
   const maidesite_swiper_image = new Swiper('.maidesite_swiper_image', {
@@ -48,7 +48,7 @@
       prevEl: '.maidesite_swiper_prev',
     },
     breakpoints: {
-      1440: { slidesPerView: 4 },
+      1440: { slidesPerView: 5 },
       1024: { slidesPerView: 4 },
       768:  { slidesPerView: 3 },
       0:    { slidesPerView: 2 },
@@ -57,7 +57,7 @@
       swiper: maidesite_swiper_text,
     }
   });
-
+  
   maidesite_swiper_image.controller.control = maidesite_swiper_text;
   maidesite_swiper_text.controller.control = maidesite_swiper_image;
   
