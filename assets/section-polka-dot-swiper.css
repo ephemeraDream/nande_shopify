@@ -147,6 +147,10 @@
 .polka_dot_swiper .polka_dot_swiper_next {
   right: 3.90625vw;
 }
+.polka_dot_swiper_prev.is-hidden,
+.polka_dot_swiper_next.is-hidden {
+  display: none !important;
+}
 
 .polka_dot_swiper .polka_dot_swiper_contain {
   position: absolute;

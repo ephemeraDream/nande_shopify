@@ -1,6 +1,7 @@
 {{ 'section-polka-dot-swiper.css' | asset_url | stylesheet_tag }}
 
-<div class="polka_dot_swiper {% if section.settings.show_info == false %} info_hidden{% endif %}">
+{%- assign swiper_id = 'polka_dot_swiper_' | append: section.id -%}
+<div id="{{ swiper_id }}" class="polka_dot_swiper {% if section.settings.show_info == false %} info_hidden{% endif %}">
   <div class="polka_dot_swiper_header padding-sider">
     <h2 class="polka_dot_swiper_title">{{ section.settings.title }}</h2>
     {% if section.settings.text != blank %}
@@ -64,20 +65,43 @@
 </div>
 
 <script>
-  new Swiper('.polka_dot_swiper .swiper', {
-    slidesPerView: 'auto',
-    spaceBetween: 60,
-    initialSlide: 1,
-    centeredSlides: true,
-    pagination: {
-      el: '.polka_dot_swiper .swiper-pagination',
-      clickable: true,
-    },
-    navigation: {
-      nextEl: '.polka_dot_swiper_next',
-      prevEl: '.polka_dot_swiper_prev',
-    },
-  });
+  (function() {
+    var root = document.getElementById('{{ swiper_id }}');
+    var swiperEl = root.querySelector('.swiper');
+    var prevEl = root.querySelector('.polka_dot_swiper_prev');
+    var nextEl = root.querySelector('.polka_dot_swiper_next');
+    var paginationEl = root.querySelector('.swiper-pagination');
+    var swiper = new Swiper(swiperEl, {
+      slidesPerView: 'auto',
+      spaceBetween: 60,
+      initialSlide: 1,
+      centeredSlides: true,
+      pagination: {
+        el: paginationEl,
+        clickable: true,
+      },
+      navigation: {
+        nextEl: nextEl,
+        prevEl: prevEl,
+      },
+    });
+
+    function updateArrowVisibility() {
+      if (swiper.isBeginning) {
+        prevEl.classList.add('is-hidden');
+      } else {
+        prevEl.classList.remove('is-hidden');
+      }
+      if (swiper.isEnd) {
+        nextEl.classList.add('is-hidden');
+      } else {
+        nextEl.classList.remove('is-hidden');
+      }
+    }
+
+    swiper.on('slideChange', updateArrowVisibility);
+    updateArrowVisibility();
+  })();
 </script>
 
 {% schema %}
