@@ -29,15 +29,27 @@
               %}
             {% endif %}
             {% if block.settings.video_url != blank %}
-              <video
-                loop
-                playsinline
-                preload="auto"
-                {% if poster_image != blank %}
-                  poster="{{ poster_image }}"
-                {% endif %}
-                src="{{ block.settings.video_url }}"
-              ></video>
+              {% if block.settings.video_url contains 'youtube.com' or block.settings.video_url contains 'youtu.be' %}
+                <div class="video-wrapper">
+                  <iframe
+                    src="https://www.youtube.com/embed/{{ block.settings.video_url | split: 'v=' | last | split: '&' | first }}"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen
+                  ></iframe>
+                </div>
+              {% else %}
+                <video
+                  loop
+                  playsinline
+                  preload="auto"
+                  {% if poster_image != blank %}
+                    poster="{{ poster_image }}"
+                  {% endif %}
+                  src="{{ block.settings.video_url }}"
+                  controls
+                ></video>
+              {% endif %}              
             {% else %}
               {{
                 block.settings.url_upload
