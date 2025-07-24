@@ -73,6 +73,8 @@
   background-color: #fff;
   margin-top: 4.6rem;
   color: #7F7E75;
+  display: flex;
+  gap: 0.8rem;
 }
 
 .link_block .link_block_contain_item_info_btn svg path {
