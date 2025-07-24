@@ -221,9 +221,11 @@
   }
   .polka_dot_swiper .polka_dot_swiper_product {
     right: 50%;
-    bottom: 24px;
-    transform: translate(47%, 100%);
-      
+    bottom: 0;
+    transform: translate(49%, 100%);
+  }
+  .polka_dot_swiper .polka_dot_swiper_product_info {
+    width: 14rem;
   }
   .polka_dot_swiper .polka_dot_swiper_contain,.polka_dot_swiper .polka_dot_swiper_contain::before {
     width: 3rem;

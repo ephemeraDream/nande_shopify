@@ -193,3 +193,9 @@
     padding: 3rem;
   }
 }
+
+@media screen and (max-width: 768px) {
+  .compare_simple .compare_simple_contain_head {
+    flex-direction: column;
+}
+}
