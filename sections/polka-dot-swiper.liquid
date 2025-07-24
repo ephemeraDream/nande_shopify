@@ -43,7 +43,9 @@
                   -}}
                 </div>
                 <div class="polka_dot_swiper_product_info">
-                  <div class="polka_dot_swiper_product_info_title">{{ block.settings.select_product.title }}</div>
+                  <h4 class="polka_dot_swiper_product_info_title">
+                    {{ block.settings.select_product.metafields.custom.product_model | default: block.settings.select_product.title }}
+                  </h4>
                   <div class="polka_dot_swiper_product_info_price">
                     {{ block.settings.select_product.price | money_without_trailing_zeros }}
                     {{- 'icon-shopping-cart.svg' | inline_asset_content -}}
