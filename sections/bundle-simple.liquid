@@ -109,6 +109,11 @@
     {% for product in section.settings.product_list %}
       "{{ product.id }}": {
         "product": {{- product | json -}},
+        "metafields": {
+          "custom": {
+            "product_model": {{ product.metafields.custom.product_model | json }}
+          }
+        },
         "variant": {{ product.selected_or_first_available_variant | json }},
         "symbol": {{ currency_symbol | json }}
       }{% unless forloop.last %},{% endunless %}

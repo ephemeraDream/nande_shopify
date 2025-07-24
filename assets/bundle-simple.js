@@ -6,10 +6,11 @@ const add_to_cart = document.querySelector(".bundle_simple .bundle_simple_box_bo
 
 product_items.forEach(item => {
   const product = bundle_simple_data[item.getAttribute("data-id")].product
+  const metafields = bundle_simple_data[item.getAttribute("data-id")].metafields;
   let currVariant = bundle_simple_data[item.getAttribute("data-id")].variant
   const symbol = bundle_simple_data[item.getAttribute("data-id")].symbol
   const curr_options = [...currVariant.options]
-  console.log(product, currVariant)
+  // console.log(product, currVariant)
   const img_contain = item.querySelector(".bundle_simple_product_img img")
   const price_contain = item.querySelector(".bundle_simple_product_price")
   const select_option = item.querySelectorAll(".bundle_simple_option_select")
@@ -143,7 +144,7 @@ product_items.forEach(item => {
       <div class="bundle_simple_box_body_list_item_right">
         <div class="bundle_simple_box_body_list_item_right_head">
           <div class="bundle_simple_box_body_list_item_right_head_left">
-            <h4 class="bundle_simple_box_body_list_item_product_title">${product?.metafields?.custom?.product_model || product.title}</h4>
+            <h4 class="bundle_simple_box_body_list_item_product_title">${metafields?.custom?.product_model || product.title}</h4>
             <div class="bundle_simple_box_body_list_item_product_option">
               ${currVariant.options.join(' | ')}
             </div>
