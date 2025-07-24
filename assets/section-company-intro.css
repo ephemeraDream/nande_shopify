@@ -64,3 +64,10 @@
   font-variation-settings: "opsz" auto;
   color: #1F1F1F;
 }
+@media screen and (max-width: 768px) {
+  .company_intro .company_intro_contain {
+    flex-direction: column;
+}
+.company_intro .company_intro_contain_left,
+.company_intro .company_intro_contain_right{width: 100%;}
+}
