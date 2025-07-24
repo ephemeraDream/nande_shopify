@@ -379,3 +379,9 @@
   border: none;
   padding-left: 12px;
 }
+
+@media screen and (max-width: 1024px) {
+  .bundle_simple .bundle_simple_product {
+    width: 100%;
+}
+}
