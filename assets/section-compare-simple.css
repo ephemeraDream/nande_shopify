@@ -199,5 +199,11 @@
   .compare_simple .compare_simple_contain_head {
     flex-direction: column;
     gap: 2rem;
-}
+  }
+  .compare_simple .compare_simple_outer_prev{
+    left: -4.5rem;
+  }
+  .compare_simple .compare_simple_outer_next{
+    right: -4.5rem;
+  }
 }
