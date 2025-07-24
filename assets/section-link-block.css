@@ -104,3 +104,8 @@
     margin-top: 3rem;
   }
 }
+@media screen and (max-width: 1440px) {
+  .link_block .link_block_contain_item {
+    width: 100%;
+  }
+}
