@@ -387,7 +387,7 @@
 }
 }
 @media screen and (max-width: 768px) {
-  .bundle_simple .bundle_simple_contain_right {
+  /* .bundle_simple .bundle_simple_contain_right {
     width: 20rem;
-}
+} */
 }
