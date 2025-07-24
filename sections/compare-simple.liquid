@@ -123,8 +123,8 @@
     var root = document.querySelector('.compare_simple_outer_swiper');
     if (!root) return;
     var swiperEl = root.querySelector('.swiper');
-    var prevEl = root.querySelector('.compare_simple_outer_prev');
-    var nextEl = root.querySelector('.compare_simple_outer_next');
+    var prevEl = document.querySelector('.compare_simple_outer_prev');
+    var nextEl = document.querySelector('.compare_simple_outer_next');
     var swiper = new Swiper(swiperEl, {
       slidesPerView: 4,
       spaceBetween: 24,
