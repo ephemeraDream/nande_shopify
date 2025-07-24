@@ -62,8 +62,17 @@
   background-color: #BDFF00;
   cursor: pointer;
 }
+.section_banner .session-box-padding{
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 2;
+}
 .section_banner .session-box-inner{
   position: relative;
+  height: 100%;
 }
 .section_banner .section_banner_info_top_left {
   left: 0vw;
