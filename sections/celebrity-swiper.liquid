@@ -51,6 +51,7 @@
                   src="{{ block.settings.video_url }}"
                   controls
                 ></video>
+                <div class="celebrity_swiper_item_playicon">{{- 'icon-play.svg' | inline_asset_content -}}</div>
               {% endif %}              
             {% else %}
               {{
@@ -63,8 +64,8 @@
                   preload: 'auto',
                   poster: poster_image
               }}
+              <div class="celebrity_swiper_item_playicon">{{- 'icon-play.svg' | inline_asset_content -}}</div>
             {% endif %}
-            <div class="celebrity_swiper_item_playicon">{{- 'icon-play.svg' | inline_asset_content -}}</div>
           </div>
         </div>
       {% endfor %}
