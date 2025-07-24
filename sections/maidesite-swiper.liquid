@@ -35,11 +35,9 @@
 
 <script>
   const maidesite_swiper_text = new Swiper('.maidesite_swiper_desc', {
+    spaceBetween: 0,
     effect: 'fade',
-    fadeEffect: {
-      crossFade: true,
-    },
-    allowTouchMove: false,
+    allowTouchMove: false, // 禁止手动滑动
   });
   
   const maidesite_swiper_image = new Swiper('.maidesite_swiper_image', {
@@ -54,16 +52,12 @@
       1024: { slidesPerView: 4 },
       768:  { slidesPerView: 3 },
       0:    { slidesPerView: 2 },
-    },
-    // 注意：不需要 thumbs，这里用 controller 方式同步两个 swiper
+    }
   });
   
-  maidesite_swiper_image.on('slideChange', () => {
-    maidesite_swiper_text.slideTo(maidesite_swiper_image.activeIndex);
-  });
-  
-  maidesite_swiper_text.controller.control = maidesite_swiper_image;
+  // 联动两个 swiper
   maidesite_swiper_image.controller.control = maidesite_swiper_text;
+  maidesite_swiper_text.controller.control = maidesite_swiper_image;
   
 </script>
 
