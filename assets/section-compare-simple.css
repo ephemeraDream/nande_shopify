@@ -13,7 +13,7 @@
 .compare_simple .compare_simple_contain {
   width: 100%;
   background-color: #fff;
-  padding: 5.4rem 2.8rem 6rem 5rem;
+  padding: 5rem 5rem 6rem 5rem;
 }
 
 .compare_simple .compare_simple_contain_head {
@@ -201,4 +201,7 @@
   .compare_simple .compare_simple_item_title{font-size: 2rem;}
   .compare_simple .compare_simple_item_line_value{font-size: 2rem;}
   .compare_simple .compare_simple_item_price{font-size: 2rem;}
+  .compare_simple .compare_simple_contain {
+    padding: 3rem;
+  }
 }

@@ -2,8 +2,8 @@
 
 <div class="link_block_section padding-sider">
   <div class="link_block">
-    <div class="link_block_title">{{ section.settings.title }}</div>
-    <div class="link_block_text">{{ section.settings.text }}</div>
+    <h2 class="link_block_title">{{ section.settings.title }}</h2>
+    <h4 class="link_block_text">{{ section.settings.text }}</h4>
     <div class="link_block_contain">
       {% for block in section.blocks %}
         <a href="{{ block.settings.link }}" class="link_block_contain_item">
@@ -13,10 +13,10 @@
             | image_tag: alt: block.settings.title
           -}}
           <div class="link_block_contain_item_info">
-            <div class="link_block_contain_item_info_title">{{ block.settings.title }}</div>
-            <div class="link_block_contain_item_info_text">{{ block.settings.text }}</div>
+            <h4 class="link_block_contain_item_info_title">{{ block.settings.title }}</h4>
+            <div class="link_block_contain_item_info_text text-body">{{ block.settings.text }}</div>
             {% if block.settings.btn_text != blank %}
-              <div class="link_block_contain_item_info_btn">
+              <div class="link_block_contain_item_info_btn nd-btn">
                 {{ block.settings.btn_text }}
                 {{ 'icon-right-arrow.svg' | inline_asset_content }}
               </div>

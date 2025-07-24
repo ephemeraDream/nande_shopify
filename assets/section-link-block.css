@@ -11,23 +11,10 @@
 }
 
 .link_block .link_block_title {
-  font-family: "PP Right Grotesk";
-  font-size: 6rem;
-  font-weight: 500;
-  line-height: 94%;
-  text-transform: capitalize;
-  letter-spacing: 0px;
-  font-variation-settings: "opsz" auto;
   color: #1F1F1F;
 }
 
 .link_block .link_block_text {
-  font-family: "PP Right Grotesk";
-  font-size: 3rem;
-  font-weight: 500;
-  line-height: 94%;
-  letter-spacing: 0px;
-  font-variation-settings: "opsz" auto;
   color: #1F1F1F;
   margin-top: 3rem;
 }
@@ -72,40 +59,19 @@
 }
 
 .link_block .link_block_contain_item_info_title {
-  font-family: "PP Right Grotesk";
-  font-size: 3rem;
-  font-weight: 500;
-  line-height: 94%;
-  letter-spacing: 0px;
-  font-variation-settings: "opsz" auto;
   color: #FFFFFF;
 }
 
 .link_block .link_block_contain_item_info_text {
-  font-family: "PP Right Grotesk";
   font-size: 2.4rem;
   font-weight: 500;
-  line-height: 94%;
-  letter-spacing: 0px;
-  font-variation-settings: "opsz" auto;
   color: #FFFFFF;
   margin-top: 2rem;
 }
 
 .link_block .link_block_contain_item_info_btn {
-  height: 3.5rem;
-  display: inline-flex;
-  align-items: center;
-  gap: 0.8rem;
   background-color: #fff;
-  padding: 0 0.8rem;
   margin-top: 4.6rem;
-  font-family: "PP Right Grotesk";
-  font-size: 2.4rem;
-  font-weight: 500;
-  line-height: 112%;
-  letter-spacing: 0px;
-  font-variation-settings: "opsz" auto;
   color: #7F7E75;
 }
 
@@ -124,4 +90,14 @@
 
 .link_block .link_block_contain_item:hover .link_block_contain_item_info_btn svg path {
   fill: #1F1F1F;
+}
+
+@media screen and (max-width: 1440px) {
+  .link_block .link_block_contain_item_info_text {
+    font-size: 1.8rem;
+    margin-top: 1.4rem;
+  }
+  .link_block .link_block_contain_item_info_btn {
+    margin-top: 3rem;
+  }
 }

@@ -109,7 +109,6 @@
             <div class="compare_simple_outer_prev">{{ 'swiper-left.svg' | inline_asset_content }}</div>
             <div class="compare_simple_outer_next">{{ 'swiper-right.svg' | inline_asset_content }}</div>
           </div>
-          <div class="compare_simple_outer_pagination"></div>
         </div>
       </div>
     </div>
@@ -125,17 +124,12 @@
     var swiperEl = root.querySelector('.swiper');
     var prevEl = root.querySelector('.compare_simple_outer_prev');
     var nextEl = root.querySelector('.compare_simple_outer_next');
-    var paginationEl = root.querySelector('.compare_simple_outer_pagination');
     var swiper = new Swiper(swiperEl, {
       slidesPerView: 4,
       spaceBetween: 24,
       navigation: {
         nextEl: nextEl,
         prevEl: prevEl,
-      },
-      pagination: {
-        el: paginationEl,
-        clickable: true,
       },
       breakpoints: {
         0: {
