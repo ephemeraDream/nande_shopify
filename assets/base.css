@@ -4085,7 +4085,45 @@ a {
   padding: 12rem 0;
 }
 /*****************************  padding  end *****************************/
-
+/*****************************  swiper  *****************************/
+.swiper_btn_white{
+  width: 6rem;
+  height: 6rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(255, 255, 255, 0.6);
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1;
+  cursor: pointer;
+}
+.swiper_btn_white:hover {
+  background-color: #1f1f1f99;
+}
+.swiper_btn_white:hover svg path{
+  fill: #bdff00;
+}
+.swiper_btn_white.swiper_btn_white_prev {
+  left: 3.90625vw;
+}
+.swiper_btn_white.swiper_btn_white_next {
+  right: 3.90625vw;
+}
+.swiper_btn_white_prev.is-hidden,
+.swiper_btn_white_next.is-hidden {
+  display: none !important;
+}
+@media screen and (max-width: 1024px) {
+  .swiper_btn_white{
+    width: 4.5rem;
+    height: 4.5rem;
+  }
+  .swiper_btn_white svg{
+    width: 1.2rem;
+  }
+}
 /*****************************  animation  *****************************/
 @keyframes pulse {
   0% {

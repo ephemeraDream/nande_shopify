@@ -27,7 +27,7 @@
 
 .polka_dot_swiper .swiper-slide {
   max-width: 144rem;
-  height: 70rem;
+  max-height: 70rem;
 }
 
 .polka_dot_swiper .swiper-slide::before {
@@ -98,7 +98,7 @@
   background: #BDFF00;
 }
 
-.polka_dot_swiper .polka_dot_swiper_prev,
+/* .polka_dot_swiper .polka_dot_swiper_prev,
 .polka_dot_swiper .polka_dot_swiper_next {
   width: 6rem;
   height: 6rem;
@@ -128,7 +128,7 @@
 .polka_dot_swiper_prev.is-hidden,
 .polka_dot_swiper_next.is-hidden {
   display: none !important;
-}
+} */
 
 .polka_dot_swiper .polka_dot_swiper_contain {
   position: absolute;
@@ -213,4 +213,8 @@
   letter-spacing: 0px;
   font-variation-settings: "opsz" auto;
   color: #000000;
+}
+
+@media screen and (max-width: 1024px) {
+  
 }
