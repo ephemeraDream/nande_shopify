@@ -62,9 +62,11 @@
   background-color: #BDFF00;
   cursor: pointer;
 }
-
+.section_banner .session-box-inner{
+  position: relative;
+}
 .section_banner .section_banner_info_top_left {
-  left: 12.5vw;
+  left: 0vw;
   top: 6rem;
 }
 
@@ -75,12 +77,12 @@
 }
 
 .section_banner .section_banner_info_top_right {
-  right: 12.5vw;
+  right: 0vw;
   top: 6rem;
 }
 
 .section_banner .section_banner_info_middle_left {
-  left: 12.5vw;
+  left: 0vw;
   top: 50%;
   transform: translateY(-50%);
 }
@@ -93,13 +95,13 @@
 }
 
 .section_banner .section_banner_info_middle_right {
-  right: 12.5vw;
+  right: 0vw;
   top: 50%;
   transform: translateY(-50%);
 }
 
 .section_banner .section_banner_info_bottom_left {
-  left: 12.5vw;
+  left: 0vw;
   bottom: 6rem;
 }
 
@@ -110,6 +112,6 @@
 }
 
 .section_banner .section_banner_info_bottom_right {
-  right: 12.5vw;
+  right: 0vw;
   bottom: 6rem;
 }

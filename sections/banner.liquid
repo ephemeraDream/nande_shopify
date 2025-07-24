@@ -49,6 +49,8 @@
             }}
           {% endif %}
         {% endif %}
+        <div class="session-box-padding">
+        <div class="session-box-inner">
         <div class="section_banner_info section_banner_info_{{ block.settings.file_position }}">
           <div class="section_banner_info_title">{{ block.settings.title }}</div>
           <div class="section_banner_info_text">{{ block.settings.text }}</div>
@@ -58,6 +60,8 @@
               {{ 'icon-right-arrow.svg' | inline_asset_content }}
             </a>
           {% endif %}
+        </div>
+        </div>
         </div>
       </div>
     {% endfor %}
