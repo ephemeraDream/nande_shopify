@@ -22,7 +22,11 @@
   position: absolute;
   z-index: 9;
 }
-
+.section_banner_sub_title {
+  color: #FFFFFF;
+  font-size: 1.6rem;
+  font-weight: 400;
+}
 .section_banner .section_banner_info_title {
   color: #FFFFFF;
 }

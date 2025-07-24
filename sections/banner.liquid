@@ -52,6 +52,7 @@
         <div class="session-box-padding">
         <div class="session-box-inner">
         <div class="section_banner_info section_banner_info_{{ block.settings.file_position }}">
+          <h5 class="section_banner_sub_title">{{ block.settings.sub_title }}</h5>
           <h2 class="section_banner_info_title">{{ block.settings.title }}</h2>
           <div class="section_banner_info_text text-body">{{ block.settings.text }}</div>
           {% if block.settings.btn_text != blank %}
@@ -90,6 +91,11 @@
       "type": "banner_item",
       "name": "swiper",
       "settings": [
+        {
+          "type": "richtext",
+          "id": "sub_title",
+          "label": "sub_title"
+        },
         {
           "type": "richtext",
           "id": "title",

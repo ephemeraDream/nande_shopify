@@ -29,6 +29,7 @@
         "banner_item_ykwd4B": {
           "type": "banner_item",
           "settings": {
+            "sub_title": "<p>Maidesite</p>",
             "title": "<p>Maidesite Spaces</p>",
             "text": "<p>Lassen Sie sich inspirieren und gestalten Sie Ihren perfekten Maidesite-Arbeitsplatz <br/>mit unseren sorgfältig kuratierten Räumen.</p>",
             "btn_text": "En savoir plus",
