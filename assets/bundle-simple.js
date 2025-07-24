@@ -143,7 +143,7 @@ product_items.forEach(item => {
       <div class="bundle_simple_box_body_list_item_right">
         <div class="bundle_simple_box_body_list_item_right_head">
           <div class="bundle_simple_box_body_list_item_right_head_left">
-            <div class="bundle_simple_box_body_list_item_product_title">${product.title}</div>
+            <h4 class="bundle_simple_box_body_list_item_product_title">${product?.metafields?.custom?.product_model || product.title}</h4>
             <div class="bundle_simple_box_body_list_item_product_option">
               ${currVariant.options.join(' | ')}
             </div>
