@@ -14,11 +14,10 @@
       "blocks": {
         "banner_item_V4RHqa": {
           "type": "banner_item",
-          "disabled": true,
           "settings": {
-            "title": "<h6>poo</h6>",
-            "text": "<p>pooolooopopppopo</p>",
-            "btn_text": "Buy Now",
+            "title": "",
+            "text": "",
+            "btn_text": "",
             "link": "",
             "file_position": "middle_left",
             "file_type": "image",
