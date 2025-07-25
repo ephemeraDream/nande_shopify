@@ -306,7 +306,7 @@
             "image": "shopify://shop_images/product_info_demo_img_1.webp"
           }
         },
-        "foldtext_iGWkAX": {
+        "foldtext_iGWkAs": {
           "type": "foldtext",
           "settings": {
             "title": "<p>Flexible Einstellung und schnelle Reaktion</p>",
@@ -318,7 +318,7 @@
       "block_order": [
         "foldtext_HQhGDk",
         "foldtext_HWP39G",
-        "foldtext_iGWkAX"
+        "foldtext_iGWkAs"
       ],
       "name": "img with foldtext",
       "settings": {
