@@ -1,1 +1,66 @@
-{"sections":{"main":{"type":"main-404","settings":{}}},"order":["main"]}
+{
+    "sections":{
+        "breadcrumbs": {
+            "type": "breadcrumbs",
+            "custom_css": [
+                ".breadcrumb-con {top: 0; z-index: 7; position: relative;}",
+                ".breadcrumb,.breadcrumb a,.breadcrumb span {color: #7f7e75;}"
+            ],
+            "settings": {
+                "custom_breadcrumb": ""
+            }
+        },
+        "main":{
+            "type":"main-404","settings":{}
+        },
+        "contact_list": {
+            "type": "contact-list",
+            "blocks": {
+                "item_01": {
+                    "type": "item",
+                "settings": {
+                    "icon": "shopify://shop_images/pe_icon_01.webp",
+                    "title": "<p>01.</p>",
+                    "text": "<p>Registriere dich: Erstelle ein Konto auf unserer Affiliate-Plattform (z. B. Impact).</p>"
+                }
+                },
+                "item_02": {
+                "type": "item",
+                "settings": {
+                    "icon": "shopify://shop_images/pe_icon_02.webp",
+                    "title": "<p>02.</p>",
+                    "text": "<p>Tritt dem Programm bei: Suche nach „Maidesite“ (Impact ID: 6061752) und beantrage die Teilnahme.</p>"
+                }
+                },
+                "item_03": {
+                "type": "item",
+                "settings": {
+                    "icon": "shopify://shop_images/pe_icon_03.webp",
+                    "title": "<p>03.</p>",
+                    "text": "<p>Erhalte deine Tracking-Links: Sobald du angenommen wirst, erhältst du personalisierte Affiliate-Links für unsere Produkte.</p>"
+                }
+                },
+                "item_04": {
+                "type": "item",
+                "settings": {
+                    "icon": "shopify://shop_images/pe_icon_03.webp",
+                    "title": "<p>04.</p>",
+                    "text": "<p>Erstelle & teile Content: Poste Videos, Blogartikel oder Social-Media-Posts mit deinen Links, um dein Publikum zu begeistern.</p>"
+                }
+                }
+            },
+            "block_order": [
+                "item_01",
+                "item_02",
+                "item_03",
+                "item_04"
+            ],
+            "name": "contact_list",
+            "settings": {
+                "title": "<p>Wie KöNnen Wir Ihnen Helfen?</p>",
+                "description": ""
+            }
+        }
+    },
+    "order":["main","contact_list"]
+}

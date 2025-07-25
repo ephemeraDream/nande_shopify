@@ -299,7 +299,9 @@
       "name": "featured_program",
       "settings": {
         "title": "<p>So Verdienst Du Mit Dem Maidesite<br> Influencer Program</p>",
-        "description": "<p>We work with the afiliate network shareAsale. Visit their network, search for flexispot(1D:68890) on ShareAsale,then submit an afiliate request.<br> You can also send proposal to: rita@flexispot.com. Once it approved, it's easy to earn commission by referring shoppers.</p>"
+        "description": "<p>We work with the afiliate network shareAsale. Visit their network, search for flexispot(1D:68890) on ShareAsale,then submit an afiliate request.<br> You can also send proposal to: rita@flexispot.com. Once it approved, it's easy to earn commission by referring shoppers.</p>",
+        "btn_text": "Join Us",
+        "btn_link": ""
       }
     },
     "faq_simple_kxTbhc": {

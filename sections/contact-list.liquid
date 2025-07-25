@@ -1,10 +1,10 @@
 {% comment %}
 ------------------------------------------------------------
-Featured Program - 计划 流程 红人页面那种
+Contact List - 各种联系方式
 ------------------------------------------------------------
 {% endcomment %}
 
-<div class="featured-program session-box-padding padding-top-120 padding-bottom-120">
+<div class="contact-list session-box-padding padding-top-120 padding-bottom-120">
     <div class="session-box-inner">
       {% if section.settings.title != blank %}
         <h2 class="steps-title padding-bottom-30">{{ section.settings.title }}</h2>
@@ -13,66 +13,57 @@ Featured Program - 计划 流程 红人页面那种
         <div class="text-body padding-bottom-30">{{ section.settings.description }}</div>
       {% endif %}
       
-      <div class="steps-grid">
+      <div class="steps-grid padding-top-30">
         {% for block in section.blocks %}
           <div class="influencer-step">
-            {{-
+            <div>
+              <div class="text-body step-number">{{ block.settings.title }}</div>
+              <div class="text-body step-desc">{{ block.settings.text }}</div>
+            </div>
+            <div class="bottom">
+              <a href="{{ section.settings.btn_link }}" class="nd-btn">
+                {{ section.settings.btn_text }}
+                {{ 'icon-right-arrow.svg' | inline_asset_content }}
+              </a>
+              {{-
                 block.settings.icon
                 | image_url: width: block.settings.icon.width
                 | image_tag: alt: block.settings.title, class: 'influencer-step-icon'
               -}}
-              <div class="text-body step-number">{{ block.settings.title }}</div>
-              <div class="text-body step-desc">{{ block.settings.text }}</div>
-              <div class="step-arrow">{{- 'swiper-right.svg' | inline_asset_content -}}</div>
+            </div>
           </div>
         {% endfor %}
-      </div>
-
-      <div class="join_btn">
-        <a href="{{ section.settings.btn_link }}" class="nd-btn">
-          {{ section.settings.btn_text }}
-          {{ 'icon-right-arrow.svg' | inline_asset_content }}
-        </a>
       </div>
     </div>
   </div>
 <style>
-.featured-program .join_btn {
-  display: flex;
-  justify-content: center;
-}
-.featured-program .join_btn .nd-btn{
-  width: 100%;
-  max-width: 420px;
-  display: flex;
-  justify-content: center;
-  gap: 1rem;
-}
-.featured-program {
+.contact-list {
 background: #E2DED6;
 }
 
-.featured-program .steps-grid {
+.contact-list .steps-grid {
 display: grid;
-grid-template-columns: repeat(3, 1fr);
-gap: 9rem;
+grid-template-columns: repeat(4, 1fr);
+gap: 1.7rem;
 position: relative;
 }
 
-.featured-program .influencer-step {
+.contact-list .influencer-step {
     display: flex;
     flex-direction: column;
     position: relative;
     gap: 1rem;
+    padding:1.5rem 0.9rem 1.5rem 2.4rem;
+    background: #fff;
 }
-
-.featured-program .influencer-step-icon{
-width: 32px;
-height: 32px;
+.contact-list .influencer-step .bottom{display:flex;}
+.contact-list .influencer-step-icon{
+width: 40px;
+height: 40px;
 object-fit: contain;
 }
 
-.featured-program .step-desc,.featured-program .step-number {
+.contact-list .step-desc,.contact-list .step-number {
 color: #3D3D3D;
 }
 
@@ -124,37 +115,37 @@ color: #3D3D3D;
       "type": "textarea",
       "id": "description",
       "label": "Description",
-    },
-    {
-      "type": "text",
-      "id": "btn_text",
-      "label": "Button Text"
-    },
-    {
-      "type": "url",
-      "id": "btn_link",
-      "label": "Button Link"
     }
   ],
   "blocks": [
     {
-      "type": "step",
-      "name": "Step",
+      "type": "item",
+      "name": "Item",
       "settings": [
         {
           "type": "image_picker",
           "id": "icon",
-          "label": "Step Icon"
+          "label": "Icon"
         },
         {
-            "type": "textarea",
+            "type": "text",
             "id": "title",
-            "label": "Step Number"
+            "label": "Title"
           },
         {
           "type": "textarea",
           "id": "text",
-          "label": "Step Description"
+          "label": "Description"
+        },
+        {
+          "type": "text",
+          "id": "btn_text",
+          "label": "Button Text"
+        },
+        {
+          "type": "url",
+          "id": "btn_link",
+          "label": "Button Link"
         }
       ]
     }
