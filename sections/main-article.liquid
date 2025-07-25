@@ -296,7 +296,7 @@
         <div class="post-nav__item post-nav__prev">
           <a href="{{ article.previous.url }}">
             <div class="swiper_btn_white">{{- 'swiper-left.svg' | inline_asset_content -}}</div>
-            <div class="text">
+            <div class="text-body">
               <div class="label">previous</div>
               <div class="title">{{ article.previous.title }}</div>
             </div>
@@ -307,7 +307,7 @@
       {% if article.next %}
         <div class="post-nav__item post-nav__next">
           <a href="{{ article.next.url }}">
-            <div class="text">
+            <div class="text-body">
               <div class="label">Next</div>
               <div class="title">{{ article.next.title }}</div>
             </div>

@@ -282,3 +282,4 @@
 .post-nav__item .post-nav__prev a{display: flex;justify-content: start;}
 .post-nav__item .post-nav__next a{display: flex;justify-content: end;}
 .post-nav__item .post-nav__prev .swiper_btn_white{position:relative!important;}
+.post-nav__item .label{font-size: 24px;font-weight: 500;color: #1F1F1F;}
