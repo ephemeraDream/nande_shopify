@@ -232,3 +232,20 @@
   margin-top: 0;
 }
 .nd_article .nd_article_right .featured_pro .product_card:hover img{transform: scale(1.1);}
+
+/*******************new********************/
+.social-share{
+  display: inline-block;
+  border-left: 2px solid #7F7E75;
+  padding-left: 1.5rem;
+}
+.article__date{
+  display: inline-block;
+  border-left: 2px solid #7F7E75;
+  padding-left: 1.5rem;
+}
+.article__date,.article__author{
+  font-size: 1.8rem;
+  color: #7F7E75;
+  font-weight: 500;
+}

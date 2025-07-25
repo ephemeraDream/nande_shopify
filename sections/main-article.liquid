@@ -53,15 +53,31 @@
             >
               {{ article.title | escape }}
             </h1>
+            {%- if block.settings.blog_show_author -%}
+              <span class="article__author">{{ article.author }}</span>
+            {%- endif -%}
             {%- if block.settings.blog_show_date -%}
-              <span class="circle-divider caption-with-letter-spacing">
+              <span class="article__date">
                 {{- article.published_at | time_tag: format: 'date' -}}
               </span>
             {%- endif -%}
-            {%- if block.settings.blog_show_author -%}
-              <span class="caption-with-letter-spacing">
-                <span>{{ article.author }}</span>
-              </span>
+            
+            {%- if section.settings.show_share_buttons -%}
+              <div class="social-share">
+                {% render 'social-share',
+                  share_title: article.title,
+                  share_url: article.url,
+                  share_image: article.image,
+                  share_facebook: section.settings.share_facebook,
+                  share_twitter: section.settings.share_twitter,
+                  share_pinterest: section.settings.share_pinterest,
+                  share_email: section.settings.share_email,
+                  share_telegram: section.settings.share_telegram,
+                  share_reddit: section.settings.share_reddit,
+                  share_whatsapp: section.settings.share_whatsapp,
+                  share_linkedin: section.settings.share_linkedin
+                %}
+              </div>
             {%- endif -%}
           </header>
 
@@ -421,7 +437,61 @@
           "id": "blog_show_author",
           "default": false,
           "label": "t:sections.main-article.blocks.title.settings.blog_show_author.label"
-        }
+        },
+        {
+          "type": "checkbox",
+          "id": "show_share_buttons",
+          "label": "Show social share links",
+          "default": true
+        },
+        {
+          "type": "checkbox",
+          "id": "share_facebook",
+          "label": "显示 Facebook",
+          "default": true
+        },
+        {
+          "type": "checkbox",
+          "id": "share_twitter",
+          "label": "显示 Twitter",
+          "default": true
+        },
+        {
+          "type": "checkbox",
+          "id": "share_pinterest",
+          "label": "显示 Pinterest",
+          "default": true
+        },
+        {
+          "type": "checkbox",
+          "id": "share_linkedin",
+          "label": "显示 LinkedIn",
+          "default": false
+        },
+        {
+          "type": "checkbox",
+          "id": "share_whatsapp",
+          "label": "显示 WhatsApp",
+          "default": false
+        },
+        {
+          "type": "checkbox",
+          "id": "share_telegram",
+          "label": "显示 Telegram",
+          "default": false
+        },
+        {
+          "type": "checkbox",
+          "id": "share_reddit",
+          "label": "显示 Reddit",
+          "default": false
+        },
+        {
+          "type": "checkbox",
+          "id": "share_email",
+          "label": "显示邮件分享",
+          "default": false
+        }        
       ]
     },
     {
