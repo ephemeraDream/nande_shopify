@@ -11,7 +11,12 @@
             }
         },
         "main":{
-            "type":"main-404","settings":{}
+            "type":"main-404","settings":{
+                "title": "Oops! The Page Is Missing",
+                "description": "We're sorry, but the page you are looking for can't be found. Try using the search bar below to discover products or explore more on our site.",
+                "btn_text": "Return to Home",
+                "btn_link": "/"
+            }
         },
         "contact_list": {
             "type": "contact-list",

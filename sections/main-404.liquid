@@ -1,23 +1,80 @@
-<style type="text/css">
-  .template-404 .title + * {
-    margin-top: 1rem;
-  }
 
+
+<div class="main_404 session-box-padding padding-top-60 padding-bottom-120 center">
+  <div class="session-box-inner">
+    {% if section.settings.title != blank %}
+      <h2>{{ section.settings.title }}</h2>
+    {% endif %}
+    {% if section.settings.description != blank %}
+      <h4>{{ section.settings.description }}</h4>
+    {% endif %}
+    <div class="search_box"></div>
+    <a href="{{ section.settings.btn_link }}" class="nd-btn">
+      {{ section.settings.btn_text }}
+      {{ 'icon-right-arrow.svg' | inline_asset_content }}
+    </a>
+  </div>
+</div>
+
+<style type="text/css">
+  .main_404 .session-box-inner{
+    display:flex;
+    flex-direction: column;
+    gap:3rem;
+    justify-content: center;
+    padding-top:7.2rem;
+  }
+  .main_404 .session-box-inner .nd-btn{
+    width: 50%;
+    max-width: 700px;
+    padding:2rem;text-align: center;
+  }
+  .main_404 .session-box-inner .search_box{
+    width: 50%;
+    max-width: 700px;
+  }
   @media screen and (min-width: 750px) {
-    .template-404 .title + * {
-      margin-top: 2rem;
+    .main_404 .session-box-inner .nd-btn{
+      width: 100%;
+      max-width: 100%;
+    }
+    .main_404 .session-box-inner .search_box{
+      width: 100%;
+      max-width: 100%;
     }
   }
 </style>
 
-<div class="template-404 page-width page-margin center">
-  <p>
-    {{ 'templates.404.subtext' | t }}
-  </p>
-  <h1 class="title">
-    {{ 'templates.404.title' | t }}
-  </h1>
-  <a href="{{ routes.all_products_collection_url }}" class="button">
-    {{ 'general.continue_shopping' | t }}
-  </a>
-</div>
+{% schema %}
+{
+  "name": "Main 404",
+  "settings": [
+    {
+      "type": "textarea",
+      "id": "title",
+      "label": "Title"
+    },
+    {
+      "type": "textarea",
+      "id": "description",
+      "label": "Description",
+    },
+    {
+      "type": "text",
+      "id": "btn_text",
+      "label": "Button Text"
+    },
+    {
+      "type": "url",
+      "id": "btn_link",
+      "label": "Button Link"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Main 404",
+      "category": "Custom"
+    }
+  ]
+}
+{% endschema %}
