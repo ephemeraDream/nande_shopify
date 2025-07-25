@@ -54,14 +54,13 @@
 }
 
 .article-template header {
-  margin-top: 4.4rem;
-  margin-bottom: 2rem;
-  line-height: calc(0.8 / var(--font-body-scale));
+  margin: 3rem 3rem 1.8rem;
+  /* line-height: calc(0.8 / var(--font-body-scale)); */
 }
 
 @media screen and (min-width: 750px) {
   .article-template header {
-    margin-top: 5rem;
+    margin-top: 3rem;
   }
 }
 
@@ -70,7 +69,7 @@
 }
 
 .article-template__title:not(:only-child) {
-  margin-bottom: 1rem;
+  margin-bottom: 3rem;
 }
 
 .article-template__link {
