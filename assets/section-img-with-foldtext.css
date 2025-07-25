@@ -28,7 +28,7 @@
   align-items: center;
 }
 
-.img_with_foldtext .img_with_foldtext_contain .img_with_foldtext_left img {
+.img_with_foldtext .img_with_foldtext_contain .img_with_foldtext_left {
   flex: 0 0 auto;
   width: 50%;
   height: 48rem;
