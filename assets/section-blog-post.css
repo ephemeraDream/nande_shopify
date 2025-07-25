@@ -234,19 +234,23 @@
 .nd_article .nd_article_right .featured_pro .product_card:hover img{transform: scale(1.1);}
 
 /*******************new********************/
-.social-share{
-  display: inline-block;
+.social-share:not(:first-child){
   border-left: 2px solid #7F7E75;
   padding-left: 1.5rem;
+  margin-left: 1.5rem;
 }
-.article__date{
-  display: inline-block;
+.article__date:not(:first-child){
   border-left: 2px solid #7F7E75;
   padding-left: 1.5rem;
+  margin-left: 1.5rem;
 }
 .article__date,.article__author{
   font-size: 1.8rem;
   color: #7F7E75;
   font-weight: 500;
   line-height: 1em;
+  display: inline-block;
+}
+.social-share{
+  display: inline-block;
 }
