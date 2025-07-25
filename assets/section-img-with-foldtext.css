@@ -55,6 +55,9 @@
   color: #7F7E75;
   gap: 2rem;
 }
+.img_with_foldtext .img_with_foldtext_item_head .img_with_foldtext_question {
+  width: 90%;
+}
 
 .img_with_foldtext .img_with_foldtext_item.active .img_with_foldtext_answer {
   padding-bottom: 3rem;
@@ -117,4 +120,11 @@
   font-variation-settings: "opsz" auto;
   color: #1F1F1F;
   padding: 3rem 0;
+}
+
+.img_with_foldtext .img_with_foldtext_image {
+  display: none;
+}
+.img_with_foldtext .img_with_foldtext_image.active {
+  display: block;
 }

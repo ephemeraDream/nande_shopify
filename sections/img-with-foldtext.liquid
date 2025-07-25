@@ -4,11 +4,13 @@
   <div class="img_with_foldtext">
     <div class="img_with_foldtext_title">{{ section.settings.title }}</div>
     <div class="img_with_foldtext_contain">
-      {{-
-        section.settings.image
-        | image_url: width: section.settings.image.width
-        | image_tag: alt: section.settings.title
-      -}}
+      {% for block in section.blocks %}
+        {{-
+          block.settings.image
+          | image_url: width: block.settings.image.width
+          | image_tag: class: 'img_with_foldtext_image{% if forloop.first %} active{% endif %}', alt: block.settings.title
+        -}}
+      {% endfor %}
       <div class="img_with_foldtext_contain_right">
         {% for block in section.blocks %}
           <div class="img_with_foldtext_item{% if forloop.first %} active{% endif %}">
@@ -32,24 +34,26 @@
 <script>
   document.addEventListener('DOMContentLoaded', function () {
     const faqItems = document.querySelectorAll('.img_with_foldtext_item');
+    const images = document.querySelectorAll('.img_with_foldtext_image');
 
-    faqItems.forEach((item) => {
-      const faqItem = item.querySelector('.img_with_foldtext_item_head');
+    faqItems.forEach((item, index) => {
+      const header = item.querySelector('.img_with_foldtext_item_head');
 
-      faqItem.addEventListener('click', function () {
+      header.addEventListener('click', function () {
         const isActive = item.classList.contains('active');
 
-        document.querySelectorAll('.img_with_foldtext_item').forEach((i) => {
-          i.classList.remove('active');
-        });
+        // 切换文字内容区域
+        faqItems.forEach(i => i.classList.remove('active'));
+        if (!isActive) item.classList.add('active');
 
-        if (!isActive) {
-          item.classList.add('active');
-        }
+        // 切换对应的图片
+        images.forEach(img => img.classList.remove('active'));
+        if (!isActive) images[index].classList.add('active');
       });
     });
   });
 </script>
+
 
 {% schema %}
 {
@@ -90,6 +94,11 @@
           "type": "richtext",
           "id": "description",
           "label": "description"
+        },
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "image"
         }
       ]
     }
