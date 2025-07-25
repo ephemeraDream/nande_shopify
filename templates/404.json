@@ -62,5 +62,5 @@
             }
         }
     },
-    "order":["main","contact_list"]
+    "order":["breadcrumbs","main","contact_list"]
 }
