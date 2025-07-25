@@ -44,11 +44,9 @@
             "share_email": false
           }
         },
-        "share": {
-          "type": "share",
-          "settings": {
-            "share_label": "Share"
-          }
+        "table_of_contents_theme_extension_KNEHJ7": {
+          "type": "shopify://apps/table-of-contents/blocks/theme-extension/d06f5754-affb-4dc7-a2a9-18d74d225f70",
+          "settings": {}
         },
         "content": {
           "type": "content",
@@ -70,16 +68,23 @@
       "block_order": [
         "featured_image",
         "title",
-        "share",
+        "table_of_contents_theme_extension_KNEHJ7",
         "content",
         "blog_item_01",
         "blog_item_02"
       ],
       "settings": {}
+    },
+    "1753435566f4dc9b1e": {
+      "type": "apps",
+      "settings": {
+        "include_margins": true
+      }
     }
   },
   "order": [
     "breadcrumbs",
-    "main"
+    "main",
+    "1753435566f4dc9b1e"
   ]
 }
