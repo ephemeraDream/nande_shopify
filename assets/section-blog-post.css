@@ -288,7 +288,7 @@
 .post-nav .text-body{display: flex; flex-direction: column; justify-content: space-around;}
 .post-nav .post-nav__next .text-body{text-align: right;}
 
-.article-template__content h2{font-size: 4rem;}
-.article-template__content h3{font-size: 3rem;}
-.article-template__content h4{font-size: 2rem;}
-.article-template__content h5{font-size: 1.8rem;}
+.article-template__content h2{font-size: 4rem;margin: 0.3rem 0;}
+.article-template__content h3{font-size: 3rem;margin: 0.3rem 0;}
+.article-template__content h4{font-size: 2rem;margin: 0.3rem 0;}
+.article-template__content h5{font-size: 1.8rem;margin: 0.3rem 0;}
