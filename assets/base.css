@@ -4133,7 +4133,7 @@ a {
   padding: 0;
   margin: 0;
 }
-.li a{
+.social_share li a{
   width: 2rem;
   height: 2rem;
   display: inline-flex;
@@ -4143,12 +4143,12 @@ a {
   background-color: #1F1F1F;
   border-radius: 50%;
 }
-.li a svg{
+.social_share li a svg{
   width: 1.4rem;
   fill: #fff;
   color: #fff;
 }
-.li a svg path{
+.social_share li a svg path{
   fill: #fff;
   color: #fff;
 }
