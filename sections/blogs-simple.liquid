@@ -6,7 +6,7 @@
     <h4 class="blogs_simple_text">{{ section.settings.text }}</h4>
   </div>
   <div class="swiper">
-    {% assign selected_blog = section.settings.selected_blog %}
+    {% assign selected_blog = section.settings.blog %}
     {% assign blocks_count = section.blocks | size %}
 
     {% if blocks_count > 0 %}
