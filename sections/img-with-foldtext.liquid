@@ -5,11 +5,16 @@
     <div class="img_with_foldtext_title">{{ section.settings.title }}</div>
     <div class="img_with_foldtext_contain">
       {% for block in section.blocks %}
-        {{-
+        {% assign img_class = 'img_with_foldtext_image' %}
+        {% if forloop.first %}
+          {% assign img_class = img_class | append: ' active' %}
+        {% endif %}
+    
+        {{
           block.settings.image
           | image_url: width: block.settings.image.width
-          | image_tag: class: 'img_with_foldtext_image{% if forloop.first %} active{% endif %}', alt: block.settings.title
-        -}}
+          | image_tag: class: img_class, alt: block.settings.title
+        }}
       {% endfor %}
       <div class="img_with_foldtext_contain_right">
         {% for block in section.blocks %}
