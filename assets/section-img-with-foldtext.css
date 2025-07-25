@@ -28,12 +28,16 @@
   align-items: center;
 }
 
-.img_with_foldtext .img_with_foldtext_contain img {
+.img_with_foldtext .img_with_foldtext_contain .img_with_foldtext_left img {
   flex: 0 0 auto;
   width: 50%;
   height: 48rem;
   object-fit: cover;
   object-position: center center;
+}
+.img_with_foldtext .img_with_foldtext_contain .img_with_foldtext_left img {
+  width: 100%;
+  height: auto;
 }
 
 .img_with_foldtext .img_with_foldtext_contain_right {
