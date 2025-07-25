@@ -4155,7 +4155,9 @@ a {
 }
 .social_share li a svg path{
   fill: #fff;
-  color: #fff;
+}
+.social_share li a:hover svg path{
+  fill: #bdff00;
 }
 /*****************************  animation  *****************************/
 @keyframes pulse {
