@@ -1,6 +1,6 @@
 
 
-<div class="main_404 session-box-padding padding-top-60 padding-bottom-120 center">
+<div class="main_404 session-box-padding padding-bottom-120 center">
   <div class="session-box-inner">
     {% if section.settings.title != blank %}
       <h2>{{ section.settings.title }}</h2>
@@ -22,19 +22,16 @@
     flex-direction: column;
     gap:3rem;
     justify-content: center;
-    padding-top:7.2rem;
-  }
-  .main_404 .session-box-inner .nd-btn{
     width: 50%;
     max-width: 700px;
+  }
+  .main_404 .session-box-inner .nd-btn{
     padding:2rem;text-align: center;
   }
   .main_404 .session-box-inner .search_box{
-    width: 50%;
-    max-width: 700px;
   }
   @media screen and (min-width: 750px) {
-    .main_404 .session-box-inner .nd-btn{
+    .main_404 .session-box-inner{
       width: 100%;
       max-width: 100%;
     }
