@@ -291,6 +291,33 @@
       </div>
     {%- endif -%}
 
+    <div class="post-nav">
+      {% if article.previous %}
+        <div class="post-nav__item post-nav__prev">
+          <a href="{{ article.previous.url }}">
+            <div class="swiper_btn_white">{{- 'swiper-left.svg' | inline_asset_content -}}</div>
+            <div class="text">
+              <div class="label">previous</div>
+              <div class="title">{{ article.previous.title }}</div>
+            </div>
+          </a>
+        </div>
+      {% endif %}
+    
+      {% if article.next %}
+        <div class="post-nav__item post-nav__next">
+          <a href="{{ article.next.url }}">
+            <div class="text">
+              <div class="label">Next</div>
+              <div class="title">{{ article.next.title }}</div>
+            </div>
+            <div class="swiper_btn_white">{{- 'swiper-right.svg' | inline_asset_content -}}</div>
+          </a>
+        </div>
+      {% endif %}
+    </div>
+    
+
     <div class="article-template__back element-margin-top center{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
       <a href="{{ blog.url }}" class="article-template__link link animate-arrow">
         <span class="icon-wrap">
