@@ -266,6 +266,7 @@
   font-family: "PP Right Grotesk";
   font-weight: 500;
   font-size: 2.4rem;
+  --buttons-border-opacity: 0;
 }
 .article-template__comment-wrapper .button:hover{
   box-shadow: none;
