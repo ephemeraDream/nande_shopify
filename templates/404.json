@@ -19,33 +19,41 @@
                 "item_01": {
                     "type": "item",
                 "settings": {
-                    "icon": "shopify://shop_images/pe_icon_01.webp",
-                    "title": "<p>01.</p>",
-                    "text": "<p>Registriere dich: Erstelle ein Konto auf unserer Affiliate-Plattform (z. B. Impact).</p>"
+                    "icon": "shopify://shop_images/contact-list-01.webp",
+                    "title": "Live-Chat",
+                    "text": "<p>Montag–Freitag <br/>07:00–16:00 Uhr (MEZ)</p>",
+                    "btn_text": "Konto erstellen",
+                    "btn_link": ""
                 }
                 },
                 "item_02": {
                 "type": "item",
                 "settings": {
-                    "icon": "shopify://shop_images/pe_icon_02.webp",
-                    "title": "<p>02.</p>",
-                    "text": "<p>Tritt dem Programm bei: Suche nach „Maidesite“ (Impact ID: 6061752) und beantrage die Teilnahme.</p>"
+                    "icon": "shopify://shop_images/contact-list-02.webp",
+                    "title": "WhatsApp",
+                    "text": "<p>Montag–Freitag <br/>07:00–16:00 Uhr (MEZ)</p>",
+                    "btn_text": "Send a message",
+                    "btn_link": ""
                 }
                 },
                 "item_03": {
                 "type": "item",
                 "settings": {
-                    "icon": "shopify://shop_images/pe_icon_03.webp",
-                    "title": "<p>03.</p>",
-                    "text": "<p>Erhalte deine Tracking-Links: Sobald du angenommen wirst, erhältst du personalisierte Affiliate-Links für unsere Produkte.</p>"
+                    "icon": "shopify://shop_images/contact-list-03.webp",
+                    "title": "Messenger",
+                    "text": "<p>Montag–Freitag <br/>07:00–16:00 Uhr (MEZ)</p>",
+                    "btn_text": "Send a message",
+                    "btn_link": ""
                 }
                 },
                 "item_04": {
                 "type": "item",
                 "settings": {
-                    "icon": "shopify://shop_images/pe_icon_03.webp",
-                    "title": "<p>04.</p>",
-                    "text": "<p>Erstelle & teile Content: Poste Videos, Blogartikel oder Social-Media-Posts mit deinen Links, um dein Publikum zu begeistern.</p>"
+                    "icon": "shopify://shop_images/contact-list-04.webp",
+                    "title": "E-Mail schreiben",
+                    "text": "<p>Wählen Sie ein Anliegen aus, und wir antworten so schnell wie möglich.</p>",
+                    "btn_text": "Get in touch",
+                    "btn_link": ""
                 }
                 }
             },
