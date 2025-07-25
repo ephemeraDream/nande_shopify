@@ -62,7 +62,9 @@
         "featured_image",
         "title",
         "share",
-        "content"
+        "content",
+        "blog_item_01",
+        "blog_item_02"
       ],
       "settings": {}
     }
