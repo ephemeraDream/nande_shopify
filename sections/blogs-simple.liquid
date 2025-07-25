@@ -6,43 +6,42 @@
     <h4 class="blogs_simple_text">{{ section.settings.text }}</h4>
   </div>
   <div class="swiper">
+    {% assign selected_blog = section.settings.selected_blog %}
     {% assign blocks_count = section.blocks | size %}
-    {% assign fallback_articles = blogs.maidesite-blog.articles | slice: 0, 5 %}
+
+    {% if blocks_count > 0 %}
+      {% assign article_list = section.blocks %}
+    {% else %}
+      {% if selected_blog %}
+        {% assign article_list = blogs[selected_blog].articles | slice: 0, 5 %}
+      {% else %}
+        {% assign article_list = blogs.maidesite-blog.articles | slice: 0, 5 %}
+      {% endif %}
+    {% endif %}
 
     <div class="swiper-wrapper">
-      {% if blocks_count > 0 %}
-        {% for block in section.blocks %}
-          {% assign article = block.settings.article %}
-          <div class="swiper-slide blogs_simple_item">
-            <a href="{{ article.url }}">
-              {{ article.image | image_url: width: article.image.width | image_tag: alt: article.title }}
-              <div class="blogs_simple_item_info">
-                <div class="blogs_simple_item_info_tag">{{ 'common.neueste' | t }}</div>
-                <h4 class="blogs_simple_item_info_title">{{ article.title }}</h4>
-                <div class="blogs_simple_item_info_date text-body">
-                  {{ article.updated_at | date: '%-d %B. %Y' }}
-                </div>
+      {% for item in article_list %}
+        {% if blocks_count > 0 %}
+          {% assign article = item.settings.article %}
+        {% else %}
+          {% assign article = item %}
+        {% endif %}
+
+        <div class="swiper-slide blogs_simple_item">
+          <a href="{{ article.url }}">
+            {{ article.image | image_url: width: article.image.width | image_tag: alt: article.title }}
+            <div class="blogs_simple_item_info">
+              <div class="blogs_simple_item_info_tag">{{ 'common.neueste' | t }}</div>
+              <h4 class="blogs_simple_item_info_title">{{ article.title }}</h4>
+              <div class="blogs_simple_item_info_date text-body">
+                {{ article.updated_at | date: '%-d %B. %Y' }}
               </div>
-            </a>
-          </div>
-        {% endfor %}
-      {% else %}
-        {% for article in fallback_articles %}
-          <div class="swiper-slide blogs_simple_item">
-            <a href="{{ article.url }}">
-              {{ article.image | image_url: width: article.image.width | image_tag: alt: article.title }}
-              <div class="blogs_simple_item_info">
-                <div class="blogs_simple_item_info_tag">{{ 'common.neueste' | t }}</div>
-                <h4 class="blogs_simple_item_info_title">{{ article.title }}</h4>
-                <div class="blogs_simple_item_info_date text-body">
-                  {{ article.updated_at | date: '%-d %B. %Y' }}
-                </div>
-              </div>
-            </a>
-          </div>
-        {% endfor %}
-      {% endif %}
+            </div>
+          </a>
+        </div>
+      {% endfor %}
     </div>
+
 
     <div class="swiper_btn_white swiper_btn_white_prev blogs_simple_prev">{{- 'swiper-left.svg' | inline_asset_content -}}</div>
     <div class="swiper_btn_white swiper_btn_white_next blogs_simple_next">{{- 'swiper-right.svg' | inline_asset_content -}}</div>
@@ -78,6 +77,11 @@
       "type": "richtext",
       "id": "text",
       "label": "text"
+    },
+    {
+      "type": "blog",
+      "id": "blog",
+      "label": "选择一个博客分类"
     }
   ],
   "blocks": [

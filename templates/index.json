@@ -466,7 +466,8 @@
       "name": "blogs simple",
       "settings": {
         "title": "<p>Blogs</p>",
-        "text": ""
+        "text": "",
+        "blog": "maidesite-blog"
       }
     }
   },
