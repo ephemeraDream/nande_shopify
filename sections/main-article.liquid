@@ -298,7 +298,7 @@
           <div class="swiper_btn_white">{{- 'swiper-left.svg' | inline_asset_content -}}</div>
           <div class="text-body">
             <div class="post-nav__label">previous</div>
-            <div class="post-nav__title">{{ blog.previous_article.title }}</div>
+            <div class="post-nav__title">{{ blog.previous_article.title | truncate: 20}}</div>
           </div>
         </a>
         {% endif %}
@@ -309,7 +309,7 @@
         <a href="{{ blog.next_article.url }}">
           <div class="text-body">
             <div class="post-nav__label">Next</div>
-            <div class="post-nav__title">{{ blog.next_article.title }}</div>
+            <div class="post-nav__title">{{ blog.next_article.title | truncate: 20}}</div>
           </div>
           <div class="swiper_btn_white">{{- 'swiper-right.svg' | inline_asset_content -}}</div>
         </a>

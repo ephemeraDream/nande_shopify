@@ -285,3 +285,4 @@
 .post-nav .post-nav__label{font-size: 24px;font-weight: 500;color: #1F1F1F;}
 .post-nav .post-nav__title{color: #7F7E75;}
 .post-nav .text-body{display: flex; flex-direction: column; justify-content: space-around;}
+.post-nav .post-nav__next .text-body{text-align: right;}
