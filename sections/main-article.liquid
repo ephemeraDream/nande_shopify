@@ -292,24 +292,24 @@
     {%- endif -%}
 
     <div class="post-nav">
-      {% if article.previous %}
+      {% if blog.previous_article %}
         <div class="post-nav__item post-nav__prev">
-          <a href="{{ article.previous.url }}">
+          <a href="{{ blog.previous_article.url }}">
             <div class="swiper_btn_white">{{- 'swiper-left.svg' | inline_asset_content -}}</div>
             <div class="text-body">
               <div class="label">previous</div>
-              <div class="title">{{ article.previous.title }}</div>
+              <div class="title">{{ blog.previous_article.title }}</div>
             </div>
           </a>
         </div>
       {% endif %}
     
-      {% if article.next %}
+      {% if blog.next_article %}
         <div class="post-nav__item post-nav__next">
-          <a href="{{ article.next.url }}">
+          <a href="{{ blog.next_article.url }}">
             <div class="text-body">
               <div class="label">Next</div>
-              <div class="title">{{ article.next.title }}</div>
+              <div class="title">{{ blog.next_article.title }}</div>
             </div>
             <div class="swiper_btn_white">{{- 'swiper-right.svg' | inline_asset_content -}}</div>
           </a>
