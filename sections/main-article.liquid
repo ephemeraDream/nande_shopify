@@ -90,15 +90,6 @@
           >
             {{ article.content }}
           </div>
-
-        {%- when 'share' -%}
-          <div
-            class="article-template__social-sharing page-width page-width--narrow{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
-            {{ block.shopify_attributes }}
-          >
-            {% assign share_url = request.origin | append: article.url %}
-            {% render 'share-button', block: block, share_link: share_url %}
-          </div>
       {%- endcase -%}
     {%- endfor -%}
 
@@ -500,19 +491,6 @@
       "type": "content",
       "name": "t:sections.main-article.blocks.content.name",
       "limit": 1
-    },
-    {
-      "type": "share",
-      "name": "t:sections.main-article.blocks.share.name",
-      "limit": 2,
-      "settings": [
-        {
-          "type": "text",
-          "id": "share_label",
-          "label": "t:sections.main-article.blocks.share.settings.text.label",
-          "default": "t:sections.main-article.blocks.share.settings.text.default"
-        }
-      ]
     },
     {
       "type": "blog_item",
