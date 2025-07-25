@@ -4133,6 +4133,10 @@ a {
   padding: 0;
   margin: 0;
 }
+.social_share li{
+  width: 2rem;
+  height: 2rem;
+}
 .social_share li a{
   width: 2rem;
   height: 2rem;
