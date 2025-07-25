@@ -152,14 +152,14 @@
 }
 
 .article-template__comment-fields > * {
-  margin-bottom: 3rem;
+  margin-bottom: 2rem;
 }
 
 @media screen and (min-width: 750px) {
   .article-template__comment-fields {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-column-gap: 4rem;
+    grid-template-columns: repeat(1, 1fr);
+    grid-column-gap: 2rem;
   }
 }
 

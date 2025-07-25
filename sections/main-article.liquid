@@ -137,15 +137,15 @@
                 assign post_message = 'blogs.article.success_moderated'
               endif
             -%}
-            <h3>{{ 'blogs.article.comment_form_title' | t }}</h3>
+            <h3 class="padding-bottom-30">{{ 'blogs.article.comment_form_title' | t }}</h3>
             {%- if form.errors -%}
               <div class="form__message" role="alert">
-                <h3 class="form-status caption-large text-body" tabindex="-1" autofocus>
+                <h4 class="form-status caption-large text-body" tabindex="-1" autofocus>
                   <span class="svg-wrapper">
                     {{- 'icon-error.svg' | inline_asset_content -}}
                   </span>
                   {{ 'templates.contact.form.error_heading' | t }}
-                </h3>
+                </h4>
               </div>
               <ul class="form-status-list caption-large">
                 {%- for field in form.errors -%}
