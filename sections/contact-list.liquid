@@ -17,12 +17,12 @@ Contact List - 各种联系方式
         {% for block in section.blocks %}
           <div class="influencer-step">
             <div>
-              <div class="text-body step-number">{{ block.settings.title }}</div>
+              <h3>{{ block.settings.title }}</h3>
               <div class="text-body step-desc">{{ block.settings.text }}</div>
             </div>
             <div class="bottom">
-              <a href="{{ section.settings.btn_link }}" class="nd-btn">
-                {{ section.settings.btn_text }}
+              <a href="{{ block.settings.btn_link }}" class="nd-btn">
+                {{ block.settings.btn_text }}
                 {{ 'icon-right-arrow.svg' | inline_asset_content }}
               </a>
               {{-
