@@ -44,6 +44,18 @@
         "content": {
           "type": "content",
           "settings": {}
+        },
+        "blog_item_01": {
+          "type": "blog_item",
+          "settings": {
+            "blog": "maidesite-blog"
+          }
+        },
+        "blog_item_02": {
+          "type": "blog_item",
+          "settings": {
+            "blog": "news"
+          }
         }
       },
       "block_order": [
