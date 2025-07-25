@@ -88,7 +88,10 @@
 
 .article-template__content {
   margin: 3rem;
-
+}
+.article-template__content img{
+  width: 100%;
+  height: auto;
 }
 
 .article-template__social-sharing {
