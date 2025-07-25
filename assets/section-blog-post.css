@@ -263,6 +263,9 @@
   color: #1F1F1F;
   display: flex;
   justify-content: space-between;
+  font-family: "PP Right Grotesk";
+  font-weight: 500;
+  font-size: 2.4rem;
 }
 .article-template__comment-wrapper input[type='submit']:hover{
   background-color: #b1f100;
