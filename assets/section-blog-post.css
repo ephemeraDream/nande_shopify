@@ -269,4 +269,5 @@
 }
 .article-template__comment-wrapper .button:hover{
   box-shadow: none;
+  --buttons-border-opacity: 0;
 }
