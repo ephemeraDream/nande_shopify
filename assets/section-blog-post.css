@@ -267,3 +267,7 @@
 .article-template__comment-wrapper input[type='submit']:hover{
   background-color: #b1f100;
 }
+.article-template__comment-wrapper input[type='submit']:after {
+  content: "->";
+  position: unset;
+}
