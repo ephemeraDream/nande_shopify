@@ -2,13 +2,12 @@
     <div class="session-box-inner">
         <div class="help_left">
             <h4>{{ blog.title | escape }}</h4>
-            {% capture tag_string %},{% endcapture %}
+            {% assign unique_tags = '' %}
             {% for article in blog.articles %}
                 {% for tag in article.tags %}
-                {% assign tag_check = ',' | append: tag | append: ',' %}
-                {% unless tag_string contains tag_check %}
-                    {% capture tag_string %}{{ tag_string }}{{ tag_check }}{% endcapture %}
+                {% unless unique_tags contains tag %}
                     <button class="tag-filter-btn" data-tag="{{ tag }}">{{ tag }}</button>
+                    {% assign unique_tags = unique_tags | append: tag | append: ',' %}
                 {% endunless %}
                 {% endfor %}
             {% endfor %}
