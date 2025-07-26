@@ -22,7 +22,7 @@
                 {{ article.content }}
             </div>
             <div class="related">
-                <h4 class="padding-bottom-30">Related articles</h4>
+                <h4>Related articles</h4>
                 {% assign related_articles = article.metafields.custom.related_articles %}
                 {% if related_articles and related_articles.size > 0 %}
                     {% assign recommended = related_articles %}
@@ -52,10 +52,13 @@
     .main_blog_help .help_right{
         width:69%;
     }
+    .main_blog_help .help_left .nav_item a{color:#7F7E75;}
     .main_blog_help .help_left .nav_item{font-weight: 500;cursor: pointer;font-size: 2rem;color: #7F7E75;line-height: 1em;padding-bottom:1rem;margin-bottom: 2rem;border-bottom: 2px solid transparent;display: inline-block;transition: all 0.3s ease-in-out;}
     .main_blog_help .help_left .nav_item.active,
     .main_blog_help .help_left .nav_item:hover{border-bottom: 2px solid #BDFF00;color: #000000;}
-
+    .main_blog_help .help_left .nav_item.active a,
+    .main_blog_help .help_left .nav_item:hover a{color: #000000;}
+    .main_blog_help .help_right .related h4{padding-top:6rem;padding-bottom: 2rem;}
     .main_blog_help .help_right .related ul{list-style: none;margin:0;padding:0}
     .main_blog_help .help_right .related ul li a{padding:1.8rem 2rem;border-bottom: 2px solid #E2DED6;color:#1F1F1F;font-size: 2rem;display:block;}
     .main_blog_help .help_right .related ul li a:hover{background-color: #E2DED6;}
