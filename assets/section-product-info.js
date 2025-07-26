@@ -211,7 +211,8 @@ document.querySelectorAll(".product_info_left_thumb_select_item").forEach(btn =>
     btn.classList.add("active");
 
     if (type === "specs") {
-      const modal = btn.nextSibling
+      const parent = btn.closest(".product_info_left_thumb_select")
+      const modal = parent.querySelector(".common_modal")
       modal.style.display = "block";
       document.body.style.overflowY = "hidden";
 
