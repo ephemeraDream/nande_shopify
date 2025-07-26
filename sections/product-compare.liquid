@@ -99,7 +99,7 @@
                 {% assign price = block.settings.select_product.price | money_without_trailing_zeros %}
               {% endif %}
             {% endcomment %}
-            {% assign price = product.select_product.price | money_without_trailing_zeros %}
+            {% assign price = product.price | money_without_trailing_zeros %}
             {{ 'products.product.price.from_price_html' | t: price: price }}
           </div>
           <a class="product_compare_product_shop_now" href="{{ product.url }}">
