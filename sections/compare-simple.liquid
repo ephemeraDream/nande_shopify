@@ -33,13 +33,13 @@
                                 %}
                                 <div class="swiper-slide">
                                   <a href="{{ block.settings.select_product.url }}">
-                                  <img
-                                    src="{{ first_variant.featured_image | image_url }}"
-                                    alt="{{ value.variant.title }}"
-                                    width="{{ first_variant.featured_image.width }}"
-                                    height="{{ first_variant.featured_image.height }}"
-                                  >
-                                    </a>
+                                    <img
+                                      src="{{ first_variant.featured_image | image_url }}"
+                                      alt="{{ value.variant.title }}"
+                                      width="{{ first_variant.featured_image.width }}"
+                                      height="{{ first_variant.featured_image.height }}"
+                                    >
+                                  </a>
                                 </div>
                               {%- endfor %}
                           {%- endcase -%}
@@ -47,20 +47,20 @@
                       </div>
                       {% assign product_model = block.settings.select_product.metafields.custom.product_model %}
                       {% assign product_title_top = block.settings.select_product.metafields.custom.product_title_top %}
-                        <h4 class="compare_simple_item_title">
-                          <span class="product_title_top">
-                            {% if product_title_top != blank %}
-                              {{ product_title_top }}
-                            {% else %}
-                              Maidesite
-                            {% endif %}
-                          </span>
-                          {% if product_model != blank %}
-                            <span class="product_title">{{ product_model }}</span>
+                      <h4 class="compare_simple_item_title">
+                        <span class="product_title_top">
+                          {% if product_title_top != blank %}
+                            {{ product_title_top }}
                           {% else %}
-                            <span class="product_title">{{ block.settings.select_product.title  }}</span>
+                            Maidesite
                           {% endif %}
-                        </h4>
+                        </span>
+                        {% if product_model != blank %}
+                          <span class="product_title">{{ product_model }}</span>
+                        {% else %}
+                          <span class="product_title">{{ block.settings.select_product.title }}</span>
+                        {% endif %}
+                      </h4>
                     </div>
                     <div class="compare_simple_item_color">
                       {% for option in block.settings.select_product.options_with_values %}
@@ -84,7 +84,10 @@
                         {%- endcase -%}
                       {%- endfor %}
                     </div>
-                    <a href="{{ block.settings.select_product.url }}" class="nd-btn">{{ 'common.en_savoir_plus' | t }} {{ 'icon-right-arrow.svg' | inline_asset_content }}</a>
+                    <a href="{{ block.settings.select_product.url }}" class="nd-btn">
+                      {{- 'common.en_savoir_plus' | t }}
+                      {{ 'icon-right-arrow.svg' | inline_asset_content -}}
+                    </a>
                     <div class="compare_simple_item_price">
                       {% comment %}
                         {% if block.settings.select_product.compare_at_price != blank %}
@@ -96,7 +99,9 @@
                       {% assign price = block.settings.select_product.price | money_without_trailing_zeros %}
                       {{ 'products.product.price.from_price_html' | t: price: price }}
                     </div>
-                    {% for item in block.settings.select_product.metafields.custom.compare_simple.value.data.value limit: 4 %}
+                    {% for item in block.settings.select_product.metafields.custom.compare_simple.value.data.value
+                      limit: 4
+                    %}
                       <div class="compare_simple_item_line">
                         <div class="compare_simple_item_line_label">{{ item.label }}</div>
                         <div class="compare_simple_item_line_value">{{ item.value }}</div>
@@ -106,18 +111,20 @@
                 </div>
               {%- endfor %}
             </div>
-            
           </div>
         </div>
-        <div class="swiper_btn_white swiper_btn_white_prev compare_simple_outer_prev">{{ 'swiper-left.svg' | inline_asset_content }}</div>
-        <div class="swiper_btn_white swiper_btn_white_next compare_simple_outer_next">{{ 'swiper-right.svg' | inline_asset_content }}</div>
+        <div class="swiper_btn_white swiper_btn_white_prev compare_simple_outer_prev">
+          {{ 'swiper-left.svg' | inline_asset_content }}
+        </div>
+        <div class="swiper_btn_white swiper_btn_white_next compare_simple_outer_next">
+          {{ 'swiper-right.svg' | inline_asset_content }}
+        </div>
       </div>
     </div>
   </div>
 </div>
 
 <script>
-
   (function() {
     // 外层swiper
     var root = document.querySelector('.compare_simple_outer_swiper');
@@ -164,7 +171,7 @@
     swiper.on('slideChange', updateArrowVisibility);
     updateArrowVisibility();
     **/
-  
+
     // inner-swiper start
     var itemList = document.querySelectorAll('.compare_simple_item');
     itemList.forEach(function(item) {
@@ -173,7 +180,7 @@
         var innerSwiper = new Swiper(innerSwiperEl, {
           slidesPerView: 1,
           spaceBetween: 0,
-          allowTouchMove: false, 
+          allowTouchMove: false,
         });
         item.querySelectorAll('.compare_simple_item_color_circle').forEach((circle, index) => {
           circle.addEventListener('click', function () {
@@ -208,6 +215,11 @@
       "type": "text",
       "id": "link_text",
       "label": "link text"
+    },
+    {
+      "type": "url",
+      "id": "link_url",
+      "label": "link url"
     },
     {
       "type": "range",
