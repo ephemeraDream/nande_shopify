@@ -31,7 +31,7 @@
         {% for product in section.settings.product_list %}
           <option
             value="{{ product.metafields.custom.product_model.value }}"
-            {% if forloop.index0 == 1 %}
+            {% if forloop.index0 == 2 %}
               selected
             {% endif %}
           >

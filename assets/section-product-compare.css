@@ -212,3 +212,7 @@
 .product_compare .product_compare_product_showtitle .product_compare_product_head {
   opacity: 1;
 }
+
+.product_compare .product_compare_contain_other {
+  display: none;
+}
