@@ -115,320 +115,216 @@
       {% endfor %}
     </div>
     <div class="product_compare_contain_other">
-      {% for product in compare_products offset: 3 %}
-        <div class="product_compare_product" data-value="{{ product.metafields.custom.series_name.value }}">
-          <img
-            src="{{ product.featured_image | image_url: width:280 }}"
-            alt="{{ product.metafields.custom.series_name }}"
-            class="product_compare_product_featured_image"
-          >
-          <div class="product_compare_product_series_name">{{ product.metafields.custom.series_name }}</div>
-          <div class="product_compare_product_contain" data-type="product-info">
-            <div class="product_compare_product_description">{{ product.description | strip_html }}</div>
-          </div>
-          <div class="product_compare_product_standard_price">
-            {{ 'products.product.text.standard_price' | t }}
-          </div>
-          <div class="product_compare_product_price">
-            {{ 'products.product.text.from' | t }}
-            {{- product.price | money_without_trailing_zeros }}
-          </div>
-          <div class="product_compare_product_variants_count">
-            {{ 'products.product.text.available_variants' | t: variants_count: product.variants_count }}
-          </div>
-          {% if show_btns %}
-            <a class="product_compare_product_shop_now" href="{{ product.url }}">
-              {{- 'products.product.text.shop_now' | t -}}
-            </a>
-            <a
-              class="product_compare_product_learn_more"
-              href="/pages/{{ product.metafields.custom.series_name | handle }}-features"
-            >
-              {{- 'products.product.text.learn_more' | t -}}
-            </a>
-          {% endif %}
-          <div class="product_compare_product_between_line"></div>
-          {% for item in product.metafields.custom.product_product_compare.value.common_data.value %}
-            <div class="product_compare_product_label">{{ item.label }}</div>
-            <div class="product_compare_product_contain" data-type="{{ item.label | handle }}">
-              {% for value in item.value %}
-                <div class="product_compare_product_item product_compare_product_{{ item.label | handle }}">
-                  {% if value.image != '' %}
-                    <img
-                      src="{{ value.image }}"
-                      alt="{{ value.title }}"
-                    >
-                  {% endif %}
-                  <div class="product_compare_product_title">{{ value.title }}</div>
-                  {% if value.text != '' %}
-                    <div class="product_compare_product_text">{{ value.text }}</div>
-                  {% endif %}
-                </div>
-              {% endfor %}
+      {% for product in section.settings.product_list offset: 3 %}
+        <div class="product_compare_product" data-value="{{ product.metafields.custom.product_model.value }}">
+          <div class="swiper">
+            <div class="swiper-wrapper">
+              {% for option in product.options_with_values %}
+                {%- case option.name -%}
+                  {%- when 'Farbe Tischplatte' -%}
+                    {% assign index = 'option' | append: forloop.index %}
+                    {% for value in option.values %}
+                      {% assign first_variant = product.variants | where: index, value | first %}
+                      <div class="swiper-slide">
+                        <img
+                          src="{{ first_variant.featured_image | image_url }}"
+                          alt="{{ value.variant.title }}"
+                        >
+                      </div>
+                    {%- endfor %}
+                {%- endcase -%}
+              {%- endfor %}
             </div>
-            <div class="product_compare_product_between_line"></div>
-          {% endfor %}
-          {% if product.metafields.custom.product_product_compare.value.list_data != blank %}
-            {% assign list_data = product.metafields.custom.product_product_compare.value.list_data.value %}
-            <div class="product_compare_product_label">{{ list_data.label }}</div>
-            <div class="product_compare_product_item product_compare_product_{{ list_data.label | handle }}">
-              {% for value in list_data.value %}
-                <div class="product_compare_product_title">{{ value }}</div>
-              {% endfor %}
-            </div>
-            <div class="product_compare_product_between_line"></div>
-          {% endif %}
-          {% if product.metafields.custom.product_product_compare.value.img_data != blank and show_img_data %}
-            {% assign img_data = product.metafields.custom.product_product_compare.value.img_data.value %}
-            <div class="product_compare_product_label">{{ img_data.label }}</div>
-            <div class="product_compare_product_item_flex">
-              <div class="product_compare_product_item product_compare_product_{{ img_data.label | handle }}">
-                <img
-                  src="{{ img_data.value }}"
-                  alt="{{ product.metafields.custom.series_name }}"
-                >
+          </div>
+          <div class="product_compare_item_color">
+            {% for option in product.options_with_values %}
+              {%- case option.name -%}
+                {%- when 'Farbe Tischplatte' -%}
+                  {% for value in option.values %}
+                    {% assign color = '' %}
+                    {% for color_item in product.metafields.custom.color_option.value %}
+                      {% if color_item.name == value.name %}
+                        {% assign color = color_item.value %}
+                      {% endif %}
+                    {% endfor %}
+                    <div
+                      class="product_compare_item_color_circle{% if color == '' %} product_compare_item_color_circle_none{% endif %}"
+                      {% if color != '' %}
+                        style="background-color: {{ color }}"
+                      {% endif %}
+                      title="{{ value }}"
+                    ></div>
+                  {%- endfor %}
+              {%- endcase -%}
+            {%- endfor %}
+          </div>
+          <div class="product_compare_item_price">
+            {% comment %}
+              {% if block.settings.select_product.compare_at_price != blank %}
+                {% assign price = block.settings.select_product.compare_at_price | money_without_trailing_zeros %}
+              {% else %}
+                {% assign price = block.settings.select_product.price | money_without_trailing_zeros %}
+              {% endif %}
+            {% endcomment %}
+            {% assign price = product.price | money_without_trailing_zeros %}
+            {{ 'products.product.price.from_price_html' | t: price: price }}
+          </div>
+          <a class="product_compare_product_shop_now" href="{{ product.url }}">
+            {{ 'common.en_savoir_plus' | t }}
+            {{ 'icon-right-arrow.svg' | inline_asset_content }}
+          </a>
+          {% for item in product.metafields.custom.compare_simple.value.data.value %}
+            <div class="product_compare_product_card" data-type="{{ item.label | handle }}">
+              <div class="product_compare_product_head">{{ item.label }}</div>
+              <div class="product_compare_product_body">
+                <div class="product_compare_product_label">{{ item.label }}</div>
+                <div class="product_compare_product_contain">{{ item.value }}</div>
               </div>
             </div>
-            <a
-              class="product_compare_product_shop_now product_compare_product_shop_now_{{ img_data.label | handle }}"
-              href="{{ product.url }}"
-            >
-              {{- 'products.product.text.shop_now' | t -}}
-            </a>
-            <a
-              class="product_compare_product_learn_more"
-              href="/pages/{{ product.metafields.custom.series_name | handle }}-features"
-            >
-              {{- 'products.product.text.learn_more' | t -}}
-            </a>
-          {% endif %}
+          {% endfor %}
         </div>
       {% endfor %}
     </div>
   </div>
 </div>
 
-{% comment %}
-  <script>
-    const is_modal = JSON.parse({{ is_modal | json }})
-    const show_select = JSON.parse({{ show_select | json }})
+<script>
+  function unifyComparisonHeightsByType(el) {
+    const container = document.querySelector(el);
+    const items = container.querySelectorAll('.product_compare_product_card');
+    const typeMap = {};
 
-    if(is_modal && window.innerWidth > 768) {
-      const stickyEl = document.querySelectorAll('.product_compare_product_contain[data-type="product-name"]');
-      const sentinel = document.querySelector('.product_compare_product_series_name_sentinel');
+    // 初始化分组
+    items.forEach((item) => {
+      const type = item.getAttribute('data-type');
+      if (!typeMap[type]) typeMap[type] = [];
+      item.style.height = 'auto'; // 重置高度避免干扰
+      typeMap[type].push(item);
+    });
 
-      const observer = new IntersectionObserver(
-        ([entry]) => {
-          if (!entry.isIntersecting) {
-            stickyEl.forEach(item => item.classList.add('is-sticky'))
-          } else {
-            stickyEl.forEach(item => item.classList.remove('is-sticky'))
+    // 遍历每组，找出最大高度并统一设置
+    Object.values(typeMap).forEach((group) => {
+      let maxHeight = 0;
+
+      group.forEach((el) => {
+        const height = el.offsetHeight;
+        if (height > maxHeight) maxHeight = height;
+      });
+
+      group.forEach((el) => {
+        el.style.height = `${maxHeight}px`;
+      });
+    });
+  }
+
+  const target = document.querySelector('.product_compare');
+
+  if (target) {
+    const observer = new IntersectionObserver(
+      (entries, observer) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            unifyComparisonHeightsByType('.product_compare_contain');
+            observer.unobserve(target);
           }
-        },
-        { root: null, threshold: 0,}
-      );
-
-      observer.observe(sentinel);
-    }
-
-    function unifyComparisonHeightsByType(el) {
-      const container = document.querySelector(el);
-      const items = container.querySelectorAll('.product_compare_product_contain');
-      const typeMap = {};
-
-      // 初始化分组
-      items.forEach((item) => {
-        const type = item.getAttribute('data-type');
-        if (!typeMap[type]) typeMap[type] = [];
-        item.style.height = 'auto'; // 重置高度避免干扰
-        typeMap[type].push(item);
-      });
-
-      // 遍历每组，找出最大高度并统一设置
-      Object.values(typeMap).forEach((group) => {
-        let maxHeight = 0;
-
-        group.forEach((el) => {
-          const height = el.offsetHeight;
-          if (height > maxHeight) maxHeight = height;
         });
-
-        group.forEach((el) => {
-          el.style.height = `${maxHeight}px`;
-        });
-      });
-    }
-
-    const target = document.querySelector('.product_compare');
-
-    if (target) {
-      const observer = new IntersectionObserver(
-        (entries, observer) => {
-          entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-              unifyComparisonHeightsByType('.product_compare_contain.pc_show');
-              observer.unobserve(target);
-            }
-          });
-        },
-        {
-          root: null,
-          threshold: 0.1,
-        }
-      );
-
-      observer.observe(target);
-    }
-
-    const modalTarget = document.querySelector('.product_compare_contain_twoline');
-
-    if (modalTarget) {
-      const observer = new IntersectionObserver(
-        (entries, observer) => {
-          entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-              unifyComparisonHeightsByType('.product_compare_contain_twoline');
-              observer.unobserve(target);
-            }
-          });
-        },
-        {
-          root: null,
-          threshold: 0.1,
-        }
-      );
-
-      observer.observe(modalTarget);
-    }
-
-    function updateComparisonProduct(selectId, index) {
-      const select = document.getElementById(selectId);
-      const selectedValue = select.value;
-
-      const containerMain = document.querySelector('.product_compare_contain');
-      const containerOther = document.querySelector('.product_compare_contain_other');
-
-      const currentMainItem = containerMain.querySelectorAll('.product_compare_product')[index];
-      const newItemInOther = containerOther.querySelector(`.product_compare_product[data-value="${selectedValue}"]`);
-
-      if (!currentMainItem || !newItemInOther || currentMainItem.dataset.value === selectedValue) return;
-
-      // 克隆新旧节点
-      const newItemClone = newItemInOther.cloneNode(true);
-      const oldItemClone = currentMainItem.cloneNode(true);
-      if (index === 0) {
-        newItemClone.classList.add('product_compare_product_showtitle');
-      } else {
-        newItemClone.classList.remove('product_compare_product_showtitle');
+      },
+      {
+        root: null,
+        threshold: 0.1,
       }
-      // 替换目标位置的卡片
-      containerMain.replaceChild(newItemClone, currentMainItem);
-      containerOther.replaceChild(oldItemClone, newItemInOther);
+    );
 
-      // 替换后同步高度
-      unifyComparisonHeightsByType();
+    observer.observe(target);
+  }
+
+  function updateComparisonProduct(selectId, index) {
+    const select = document.getElementById(selectId);
+    const selectedValue = select.value;
+
+    const containerMain = document.querySelector('.product_compare_contain');
+    const containerOther = document.querySelector('.product_compare_contain_other');
+
+    const currentMainItem = containerMain.querySelectorAll('.product_compare_product')[index];
+    const newItemInOther = containerOther.querySelector(`.product_compare_product[data-value="${selectedValue}"]`);
+
+    if (!currentMainItem || !newItemInOther || currentMainItem.dataset.value === selectedValue) return;
+
+    // 克隆新旧节点
+    const newItemClone = newItemInOther.cloneNode(true);
+    const oldItemClone = currentMainItem.cloneNode(true);
+    if (index === 0) {
+      newItemClone.classList.add('product_compare_product_showtitle');
+    } else {
+      newItemClone.classList.remove('product_compare_product_showtitle');
     }
+    // 替换目标位置的卡片
+    containerMain.replaceChild(newItemClone, currentMainItem);
+    containerOther.replaceChild(oldItemClone, newItemInOther);
 
-    if(show_select) {
-      const selectOne = document.getElementById('productSelectOne');
-      const selectTwo = document.getElementById('productSelectTwo');
+    // 替换后同步高度
+    unifyComparisonHeightsByType();
+  }
 
-      function updateDisabledOptions() {
-        const valueOne = selectOne.value;
-        const valueTwo = selectTwo.value;
+  const selectOne = document.getElementById('productSelectOne');
+  const selectTwo = document.getElementById('productSelectTwo');
+  const selectThr = document.getElementById('productSelectThr');
 
-        // 清空所有 disabled
-        [...selectOne.options].forEach((opt) => (opt.disabled = false));
-        [...selectTwo.options].forEach((opt) => (opt.disabled = false));
+  function updateDisabledOptions() {
+    const valueOne = selectOne.value;
+    const valueTwo = selectTwo.value;
+    const valueThr = selectThr.value;
 
-        // 禁用对方选中的值
-        [...selectOne.options].forEach((opt) => {
-          if (opt.value === valueTwo) opt.disabled = true;
-        });
-        [...selectTwo.options].forEach((opt) => {
-          if (opt.value === valueOne) opt.disabled = true;
-        });
-      }
+    // 清空所有 disabled
+    [...selectOne.options].forEach((opt) => (opt.disabled = false));
+    [...selectTwo.options].forEach((opt) => (opt.disabled = false));
+    [...selectThr.options].forEach((opt) => (opt.disabled = false));
 
-      // 初始化
-      updateDisabledOptions();
+    // 禁用对方选中的值
+    [...selectOne.options].forEach((opt) => {
+      if (opt.value === valueTwo || opt.value === valueThr) opt.disabled = true;
+    });
+    [...selectTwo.options].forEach((opt) => {
+      if (opt.value === valueOne || opt.value === valueThr) opt.disabled = true;
+    });
+    [...selectThr.options].forEach((opt) => {
+      if (opt.value === valueOne || opt.value === valueTwo) opt.disabled = true;
+    });
+  }
 
-      // 监听选择器变化
-      selectOne.addEventListener('change', () => {
-        updateComparisonProduct('productSelectOne', 0); // 替换第一个
-        updateDisabledOptions();
+  // 初始化
+  updateDisabledOptions();
+
+  // 监听选择器变化
+  selectOne.addEventListener('change', () => {
+    updateComparisonProduct('productSelectOne', 0); // 替换第一个
+    updateDisabledOptions();
+  });
+
+  selectTwo.addEventListener('change', () => {
+    updateComparisonProduct('productSelectTwo', 1); // 替换第二个
+    updateDisabledOptions();
+  });
+
+  selectThr.addEventListener('change', () => {
+    updateComparisonProduct('productSelectThr', 1); // 替换第三个
+    updateDisabledOptions();
+  });
+
+  document.querySelectorAll('.product_compare_contain .product_compare_product').forEach((item) => {
+    const swiperEl = item.querySelector('.swiper');
+    const swiper = new Swiper(swiperEl, {
+      slidesPerView: 1,
+      spaceBetween: 0,
+      allowTouchMove: false,
+    });
+    item.querySelectorAll('.product_compare_item_color_circle').forEach((circle, index) => {
+      circle.addEventListener('click', function () {
+        swiper.slideTo(index);
       });
-
-      selectTwo.addEventListener('change', () => {
-        updateComparisonProduct('productSelectTwo', 1); // 替换第二个
-        updateDisabledOptions();
-      });
-    }
-
-    document.querySelectorAll(".product_compare_product_head").forEach(item => {
-      item.addEventListener("click", () => {
-        const contain = item.closest(".product_compare_contain")
-        const parent = item.closest(".product_compare_product_card")
-        const type = parent.getAttribute("data-type")
-        contain.querySelectorAll(`.product_compare_product_card[data-type="${type}"]`).forEach(el => el.toggleAttribute("open"))
-      })
-    })
-
-    if(window.innerWidth < 768) {
-      document.querySelectorAll(".product_compare_product_tips").forEach(item => {
-        item.addEventListener("click", (e) => {
-          e.stopPropagation();
-          item.toggleAttribute("open")
-        })
-      })
-      document.addEventListener("click", (e) => {
-        document.querySelectorAll(".product_compare_product_tips").forEach(item => {
-          if(item.hasAttribute("open")) {
-            item.removeAttribute("open")
-          }
-        })
-      });
-      const stickyEl = document.querySelectorAll('.product_compare_product_contain[data-type="product-name"]');
-      const sentinel = document.querySelector('.product_compare_product_series_name_sentinel');
-
-      const observer = new IntersectionObserver(
-        ([entry]) => {
-          if (!entry.isIntersecting) {
-            stickyEl.forEach(item => item.classList.add('is-sticky'))
-          } else {
-            stickyEl.forEach(item => item.classList.remove('is-sticky'))
-          }
-        },
-        { root: null, threshold: 0,}
-      );
-
-      observer.observe(sentinel);
-
-      if(!is_modal){
-        const header = document.querySelector('.section-header-mobile');
-        const targets = document.querySelectorAll('.product_compare_product_contain[data-type="product-name"]');
-
-        if (header && targets.length) {
-          const observer = new MutationObserver((mutationsList) => {
-            for (let mutation of mutationsList) {
-              if (mutation.attributeName === 'class') {
-                const hasHidden = header.classList.contains('shopify-section-header-hidden');
-
-                if (!hasHidden) {
-                  targets.forEach(item => item.classList.add('is-sticky-top'));
-                } else {
-                  targets.forEach(item => item.classList.remove('is-sticky-top'));
-                }
-              }
-            }
-          });
-
-          observer.observe(header, { attributes: true });
-        }
-      }
-    }
-  </script>
-{% endcomment %}
+    });
+  });
+</script>
 
 {% schema %}
 {
