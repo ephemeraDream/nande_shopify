@@ -42,6 +42,7 @@ function initSwiper() {
     on: {
       slideChange: function (swiper) {
         imgthumbSwiper.slideTo(swiper.activeIndex)
+        console.log(swiper)
       }
     },
     // thumbs: {
