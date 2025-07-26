@@ -8,10 +8,10 @@
           <h2 class="compare_simple_contain_head_title">{{ section.settings.title }}</h2>
           <h4 class="compare_simple_contain_head_text">{{ section.settings.text }}</h4>
         </div>
-        <div class="compare_simple_contain_head_link">
+        <a class="compare_simple_contain_head_link" href="{{ section.settings.link_url }}">
           {{ section.settings.link_text }}
           {{ 'icon-right-arrow.svg' | inline_asset_content }}
-        </div>
+        </a>
       </div>
       <div class="compare_simple_contain_body_outer">
         <div class="compare_simple_outer_swiper">
