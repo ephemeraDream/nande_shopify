@@ -1,5 +1,11 @@
 {{ 'section-header-simple.css' | asset_url | stylesheet_tag }}
 
+<style>
+  .{{ section.id }} {
+    z-index: 101;
+  }
+</style>
+
 <div class="header_simple_section padding-sider">
   <div class="header_simple">
     <a href="{{ routes.root_url }}" class="header_simple_logo">
