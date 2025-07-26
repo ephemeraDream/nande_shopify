@@ -213,23 +213,28 @@ document.querySelectorAll(".product_info_left_thumb_select_item").forEach(btn =>
     if (type === "specs") {
       const parent = btn.closest(".product_info_left_thumb_select")
       const modal = parent.querySelector(".common_modal")
+      const originalParent = modal.parentElement;
+      const nextSibling = modal.nextElementSibling;
+      document.body.appendChild(modal);
       modal.style.display = "block";
       document.body.style.overflowY = "hidden";
 
-      modal
-        .querySelector(".common_modal_close")
-        .addEventListener("click", (e) => {
-          e.stopPropagation()
-          modal.style.display = "none";
-          document.body.style.overflowY = "auto";
-        });
+      modal.querySelector(".common_modal_close").addEventListener("click", closeModal);
+
       modal.addEventListener("click", (e) => {
-        e.stopPropagation()
-        if (e.target === modal) {
-          modal.style.display = "none";
-          document.body.style.overflowY = "auto";
-        }
+        if (e.target === modal) closeModal();
       });
+
+      function closeModal() {
+        modal.style.display = "none";
+        document.body.style.overflowY = "auto";
+
+        if (nextSibling) {
+          originalParent.insertBefore(modal, nextSibling);
+        } else {
+          originalParent.appendChild(modal);
+        }
+      }
       return
     }
     const imgthumb_swiper_box = document.querySelector(".imgthumb_swiper_box")
