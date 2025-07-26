@@ -79,6 +79,17 @@
           });
         });
       });
+
+    const hash = window.location.hash.substring(1); 
+    if (hash) {
+        const defaultBtn = document.querySelector('.nav_item[data-tag="' + hash + '"]');
+        if (defaultBtn) {
+        defaultBtn.click();
+        }
+    } else if (buttons.length > 0) {
+        buttons[0].click();
+    }
+
     });
   </script>
   
