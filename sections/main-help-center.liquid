@@ -1,0 +1,171 @@
+
+
+<div class="main_help_center session-box-padding padding-top-30 padding-bottom-120 center">
+  <div class="session-box-inner">
+    <div class="help_center_title">
+      {% if section.settings.title != blank %}
+        <h2>{{ section.settings.title }}</h2>
+      {% endif %}
+      <div class="search_box">
+        <predictive-search class="search-modal__form" data-loading-text="{{ 'accessibility.loading' | t }}">
+          <form action="{{ routes.search_url }}" method="get" role="search" class="search search-modal__form">
+            <div class="field">
+              <input
+                class="search__input field__input"
+                id="Search-In-Out"
+                type="search"
+                name="q"
+                value="{{ search.terms | escape }}"
+                placeholder="{{ 'general.search.search' | t }}"
+                role="combobox"
+                aria-expanded="false"
+                aria-owns="predictive-search-results"
+                aria-controls="predictive-search-results"
+                aria-haspopup="listbox"
+                aria-autocomplete="list"
+                autocorrect="off"
+                autocomplete="off"
+                autocapitalize="off"
+                spellcheck="false"
+              >
+              <label class="field__label" for="Search-In-Out">{{ 'general.search.search' | t }}</label>
+              <input type="hidden" name="options[prefix]" value="last">
+              <button
+                type="reset"
+                class="reset__button field__button{% if search.terms == blank %} hidden{% endif %}"
+                aria-label="{{ 'general.search.reset' | t }}"
+              >
+                <span class="svg-wrapper">
+                  {{- 'icon-reset.svg' | inline_asset_content -}}
+                </span>
+              </button>
+              <button class="search__button field__button" aria-label="{{ 'general.search.search' | t }}">
+                <span class="svg-wrapper">
+                  {{- 'icon-search.svg' | inline_asset_content -}}
+                </span>
+              </button>
+            </div>
+  
+            <div class="predictive-search predictive-search--header" tabindex="-1" data-predictive-search>
+              {%- render 'loading-spinner', class: 'predictive-search__loading-state' -%}
+            </div>
+  
+            <span class="predictive-search-status visually-hidden" role="status" aria-hidden="true"></span>
+          </form>
+        </predictive-search>
+      </div>
+    </div>
+    
+    {% comment %} <a href="{{ section.settings.btn_link }}" class="nd-btn">
+      {{ section.settings.btn_text }}
+      {{ 'icon-right-arrow.svg' | inline_asset_content }}
+    </a> {% endcomment %}
+  </div>
+</div>
+
+<style type="text/css">
+  {% comment %} .main_help_center .session-box-inner{
+    display:flex;
+    flex-direction: column;
+    gap:3rem;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+  }
+  .main_help_center .session-box-inner h4{
+    width:80%;
+  }
+  .main_help_center .session-box-inner .nd-btn{
+    padding:2rem;
+    text-align: center;
+    width: 50%;
+    max-width: 700px;
+    height:6.7rem;
+    justify-content: center;
+    margin: 0;
+    gap: 1rem;
+  } {% endcomment %}
+  .help_center_title{display:flex;justify-content: space-between;gap:3rem}
+  .main_help_center .session-box-inner .search_box{
+    width: 50%;
+    max-width: 560px;
+  }
+  .main_help_center .search__input{background:#fff;height: 5.7rem;padding-left: 4rem;}
+  .main_help_center .search__button{height: 5.7rem;left:0;right:unset;}
+  .main_help_center .field__label{top:1.8rem;left: 4rem;color:#AAAAAA;}
+  .main_help_center .field__input:focus~.field__label{left:4rem;}
+  @media screen and (max-width: 750px) {
+    .main_help_center .session-box-inner,
+    .main_help_center .session-box-inner h4{
+      width: 100%;
+      max-width: 100%;
+    }
+    .main_help_center .session-box-inner .search_box,
+    .main_help_center .session-box-inner .nd-btn{
+      width: 100%;
+      max-width: 100%;
+    }
+  }
+</style>
+
+{% schema %}
+{
+  "name": "Main Help Center",
+  "settings": [
+    {
+      "type": "textarea",
+      "id": "title",
+      "label": "Title"
+    },
+    {
+      "type": "textarea",
+      "id": "description",
+      "label": "Description",
+    },
+    {
+      "type": "text",
+      "id": "btn_text",
+      "label": "Button Text"
+    },
+    {
+      "type": "url",
+      "id": "btn_link",
+      "label": "Button Link"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "item",
+      "name": "Item",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "image"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title"
+        },
+        {
+          "type": "textarea",
+          "id": "text",
+          "label": "Description"
+        },
+        {
+          "type": "blog",
+          "id": "blog",
+          "label": "选择一个博客分类"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Main Help Center",
+      "category": "Custom"
+    }
+  ]
+}
+{% endschema %}
