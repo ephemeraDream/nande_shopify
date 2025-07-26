@@ -79,7 +79,7 @@
                 "item_05",
                 "item_06"
             ],
-            "name": "main",
+            "name": "main"
         },
         "faq_simple_kxTbhc": {
             "type": "faq-simple",
@@ -177,5 +177,5 @@
             }
         }
     },
-    "order":["breadcrumbs","main","contact_list"]
+    "order":["breadcrumbs","main","faq_simple_kxTbhc","contact_list"]
 }
