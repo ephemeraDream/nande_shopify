@@ -1,12 +1,14 @@
 <div class="main_blog_help session-box-padding padding-top-60 padding-bottom-120">
     <div class="session-box-inner">
         <div class="help_left">
-            <h4>{{ blog.title | escape }}</h4>
+            <h4 class="padding-bottom-30">{{ blog.title | escape }}</h4>
             {% assign unique_tags = '' %}
             {% for article in blog.articles %}
                 {% for tag in article.tags %}
                 {% unless unique_tags contains tag %}
-                    <button class="tag-filter-btn" data-tag="{{ tag }}">{{ tag }}</button>
+                    <div class="nav_item {% if blog_item.handle == blog.handle %}active{% endif %}" data-tag="{{ tag }}">
+                        {{ tag }}
+                    </div> 
                     {% assign unique_tags = unique_tags | append: tag | append: ',' %}
                 {% endunless %}
                 {% endfor %}
@@ -28,4 +30,7 @@
     .main_blog_help .help_right{
         width:69%;
     }
+    .main_blog_help .help_left .nav_item{cursor: pointer;font-size: 2rem;color: #7F7E75;line-height: 1em;padding-bottom:1rem;margin-bottom: 2rem;border-bottom: 2px solid transparent;display: block;transition: all 0.3s ease-in-out;}
+    .main_blog_help .help_left .nav_item.active,
+    .main_blog_help .help_left .nav_item:hover{border-bottom: 2px solid #BDFF00;color: #000000;}
 </style>
