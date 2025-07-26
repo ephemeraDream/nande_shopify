@@ -52,12 +52,12 @@
         >
           <div class="swiper">
             <div class="swiper-wrapper">
-              {% for option in product.select_product.options_with_values %}
+              {% for option in product.options_with_values %}
                 {%- case option.name -%}
                   {%- when 'Farbe Tischplatte' -%}
                     {% assign index = 'option' | append: forloop.index %}
                     {% for value in option.values %}
-                      {% assign first_variant = product.select_product.variants | where: index, value | first %}
+                      {% assign first_variant = product.variants | where: index, value | first %}
                       <div class="swiper-slide">
                         <img
                           src="{{ first_variant.featured_image | image_url }}"
