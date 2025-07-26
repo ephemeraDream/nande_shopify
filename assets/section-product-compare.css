@@ -164,3 +164,44 @@
   color: #1F1F1F;
   margin-top: 3rem;
 }
+
+.product_compare .product_compare_product_card {
+  padding-top: 6rem;
+}
+
+.product_compare .product_compare_product_head {
+  font-family: "PP Right Grotesk";
+  font-size: 4rem;
+  font-weight: 500;
+  line-height: 94%;
+  letter-spacing: 0px;
+  font-variation-settings: "opsz" auto;
+  color: #1F1F1F;
+}
+
+.product_compare .product_compare_product_body {
+  margin-top: 3rem;
+  padding-top: 3rem;
+  border-top: 0.1rem solid #E2DED6;
+}
+
+.product_compare .product_compare_product_label {
+  font-family: "PP Right Grotesk";
+  font-size: 1.6rem;
+  font-weight: normal;
+  line-height: 130%;
+  letter-spacing: 0px;
+  font-variation-settings: "opsz" auto;
+  color: #7F7E75;
+}
+
+.product_compare .product_compare_product_contain {
+  font-family: "PP Right Grotesk";
+  font-size: 2.4rem;
+  font-weight: 500;
+  line-height: 94%;
+  letter-spacing: 0px;
+  font-variation-settings: "opsz" auto;
+  color: #1F1F1F;
+  margin-top: 0.8rem;
+}
