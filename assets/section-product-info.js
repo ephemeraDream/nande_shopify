@@ -210,6 +210,27 @@ document.querySelectorAll(".product_info_left_thumb_select_item").forEach(btn =>
     document.querySelectorAll(".product_info_left_thumb_select_item").forEach(b => b.classList.remove("active"));
     btn.classList.add("active");
 
+    if (type === "specs") {
+      const modal = btn.nextSibling
+      modal.style.display = "block";
+      document.body.style.overflowY = "hidden";
+
+      modal
+        .querySelector(".common_modal_close")
+        .addEventListener("click", (e) => {
+          e.stopPropagation()
+          modal.style.display = "none";
+          document.body.style.overflowY = "auto";
+        });
+      modal.addEventListener("click", (e) => {
+        e.stopPropagation()
+        if (e.target === modal) {
+          modal.style.display = "none";
+          document.body.style.overflowY = "auto";
+        }
+      });
+      return
+    }
     const imgthumb_swiper_box = document.querySelector(".imgthumb_swiper_box")
     if (type === "image") {
       imgthumb_swiper_box.style.opacity = 1

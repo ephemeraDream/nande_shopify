@@ -118,7 +118,20 @@
           {% if has_model %}
             <div class="product_info_left_thumb_select_item" data-type="model">3D</div>
           {% endif %}
-          <div class="product_info_left_thumb_select_item">Specs</div>
+          {% if product.metafields.custom.product_specs != blank %}
+            <div class="product_info_left_thumb_select_item" data-type="specs">Specs</div>
+            <div class="common_modal">
+              <div class="common_modal_contain">
+                <div class="common_modal_head">
+                  <span></span>
+                  <div class="common_modal_close">{{- 'icon-close.svg' | inline_asset_content -}}</div>
+                </div>
+                <div class="common_modal_body">
+                  {{ product.metafields.custom.product_specs.value | metafield_tag }}
+                </div>
+              </div>
+            </div>
+          {% endif %}
         </div>
       </div>
     </div>
