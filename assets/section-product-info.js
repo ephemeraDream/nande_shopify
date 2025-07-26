@@ -53,7 +53,7 @@ function initSwiper() {
               hiddenCount++;
             }
           }
-          swiper.slides[swiper.activeIndex - hiddenCount].hasAttribute("data-common") ? bundle_tabletop_img.style.display = "none" : bundle_tabletop_img.style.display = "block"
+          swiper.slides[swiper.activeIndex + hiddenCount].hasAttribute("data-common") ? bundle_tabletop_img.style.display = "none" : bundle_tabletop_img.style.display = "block"
         }
       }
     },
