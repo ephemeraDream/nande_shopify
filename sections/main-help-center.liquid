@@ -55,7 +55,22 @@
         </predictive-search>
       </div>
     </div>
-    <div></div>
+    
+    <div class="steps-grid padding-top-60">
+      {% for block in section.blocks %}
+        <div class="influencer-step">
+          {{-
+            block.settings.icon
+            | image_url: width: block.settings.icon.width
+            | image_tag: alt: block.settings.title, class: 'influencer-step-icon'
+          -}}
+          <div class="step-content">
+            <h4>{{ block.settings.title }}</h4>
+            <div class="text-body step-desc">{{ block.settings.text }}</div>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
     
     {% comment %} <a href="{{ section.settings.btn_link }}" class="nd-btn">
       {{ section.settings.btn_text }}
@@ -86,7 +101,7 @@
     margin: 0;
     gap: 1rem;
   } {% endcomment %}
-  .help_center_title{display:flex;justify-content: space-between;gap:3rem}
+  .main_help_center .help_center_title{display:flex;justify-content: space-between;gap:3rem}
   .main_help_center .session-box-inner .search_box{
     width: 50%;
     max-width: 560px;
@@ -95,7 +110,25 @@
   .main_help_center .search__button{height: 5.7rem;left:0;right:unset;}
   .main_help_center .field__label{top:1.8rem;left: 4rem;color:#AAAAAA;}
   .main_help_center .field__input:focus~.field__label{left:4rem;}
-  @media screen and (max-width: 750px) {
+
+  .main_help_center .steps-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 2fr);
+    gap: 2rem;
+    position: relative;
+  }
+  .main_help_center .influencer-step {
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      gap: 1rem;
+      padding:1.7rem;
+      background: #fff;
+  }
+  .main_help_center .influencer-step img{width: 100%;height:auto;}
+  .main_help_center .influencer-step .step-desc{color:#7F7E75;font-size: 1.6rem;line-height:1.3em;}
+
+  @media screen and (max-width: 768px) {
     .main_help_center .session-box-inner,
     .main_help_center .session-box-inner h4{
       width: 100%;
@@ -106,6 +139,7 @@
       width: 100%;
       max-width: 100%;
     }
+    .main_help_center .help_center_title{flex-direction: column;}
   }
 </style>
 
