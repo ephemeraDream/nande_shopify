@@ -263,7 +263,23 @@
     containerOther.replaceChild(oldItemClone, newItemInOther);
 
     // 替换后同步高度
-    unifyComparisonHeightsByType();
+    unifyComparisonHeightsByType('.product_compare_contain');
+
+    document.querySelectorAll('.product_compare_contain .product_compare_product').forEach((item, itemIndex) => {
+      if (itemIndex === index) {
+        const swiperEl = item.querySelector('.swiper');
+        const swiper = new Swiper(swiperEl, {
+          slidesPerView: 1,
+          spaceBetween: 0,
+          allowTouchMove: false,
+        });
+        item.querySelectorAll('.product_compare_item_color_circle').forEach((circle, index) => {
+          circle.addEventListener('click', function () {
+            swiper.slideTo(index);
+          });
+        });
+      }
+    });
   }
 
   const selectOne = document.getElementById('productSelectOne');
