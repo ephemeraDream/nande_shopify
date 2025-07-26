@@ -42,6 +42,19 @@ function initSwiper() {
     on: {
       slideChange: function (swiper) {
         imgthumbSwiper.slideTo(swiper.activeIndex)
+        const bundle_tabletop_img = document.querySelector(".product_info_bundle_tabletop_img")
+        if (bundle_tabletop_img) {
+          const slides = document.querySelectorAll('.imgmain_swiper .swiper-slide');
+          let hiddenCount = 0;
+
+          for (let i = 0; i <= swiper.activeIndex && i < slides.length; i++) {
+            const style = window.getComputedStyle(slides[i]);
+            if (style.display === "none") {
+              hiddenCount++;
+            }
+          }
+          swiper.slides[swiper.activeIndex + hiddenCount].hasAttribute("data-common") ? bundle_tabletop_img.style.display = "none" : bundle_tabletop_img.style.display = "block"
+        }
       }
     },
     // thumbs: {

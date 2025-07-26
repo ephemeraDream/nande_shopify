@@ -10,6 +10,7 @@
   {% endunless %}
 {% endfor %}
 {%- assign accessory_type_array = accessory_types | split: ',' | uniq -%}
+{% assign bundle_tabletop = product.metafields.custom.bundle_table_top.value %}
 
 <div class="product_info_section padding-sider">
   <div class="product_info">
@@ -45,6 +46,12 @@
               {% endif %}
             {% endfor %}
           </div>
+          {% if bundle_tabletop != blank %}
+            <img
+              src="{{ bundle_tabletop.selected_or_first_available_variant.featured_media | image_url }}"
+              class="product_info_bundle_tabletop_img"
+            >
+          {% endif %}
           <div class="imgmain_swiper_prev">
             {{- 'swiper-left.svg' | inline_asset_content -}}
           </div>
