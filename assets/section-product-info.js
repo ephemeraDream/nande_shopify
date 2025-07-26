@@ -42,7 +42,10 @@ function initSwiper() {
     on: {
       slideChange: function (swiper) {
         imgthumbSwiper.slideTo(swiper.activeIndex)
-        console.log(swiper.slides[swiper.activeIndex])
+        const bundle_tabletop_img = document.querySelector(".product_info_bundle_tabletop_img")
+        if (bundle_tabletop_img) {
+          swiper.slides[swiper.activeIndex].hasAttribute("data-common") ? bundle_tabletop_img.style.display = "none" : bundle_tabletop_img.style.display = "block"
+        }
       }
     },
     // thumbs: {
