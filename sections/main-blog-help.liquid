@@ -58,3 +58,27 @@
     .main_blog_help .help_right ul li a{padding:1.8rem 2rem;border-bottom: 2px solid #E2DED6;color:#1F1F1F;font-size: 2rem;display:block;}
     .main_blog_help .help_right ul li a:hover{background-color: #E2DED6;}
 </style>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const buttons = document.querySelectorAll(".nav_item");
+      const contentBlocks = document.querySelectorAll(".tag-content");
+  
+      buttons.forEach((btn) => {
+        btn.addEventListener("click", function () {
+          buttons.forEach((b) => b.classList.remove("active"));
+          btn.classList.add("active");
+  
+          const tag = btn.getAttribute("data-tag");
+          contentBlocks.forEach((block) => {
+            if (block.getAttribute("data-tag") === tag) {
+              block.style.display = "block";
+            } else {
+              block.style.display = "none";
+            }
+          });
+        });
+      });
+    });
+  </script>
+  
