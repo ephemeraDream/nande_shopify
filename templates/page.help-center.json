@@ -19,7 +19,7 @@
                 "item_01": {
                     "type": "item",
                     "settings": {
-                        "blog": "maidesite-blog",
+                        "blog": "meine-bestellung-und-zahlung",
                         "image": "shopify://shop_images/help_center_01.webp",
                         "title": "Meine Bestellung und Zahlung",
                         "text": "<p>Bestellinformationen, Bearbeitung, Stornierung, allgemeine Zahlungsfragen.</p>"

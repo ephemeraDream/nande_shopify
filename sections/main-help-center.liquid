@@ -72,36 +72,10 @@
         </a>
       {% endfor %}
     </div>
-    
-    {% comment %} <a href="{{ section.settings.btn_link }}" class="nd-btn">
-      {{ section.settings.btn_text }}
-      {{ 'icon-right-arrow.svg' | inline_asset_content }}
-    </a> {% endcomment %}
   </div>
 </div>
 
 <style type="text/css">
-  {% comment %} .main_help_center .session-box-inner{
-    display:flex;
-    flex-direction: column;
-    gap:3rem;
-    justify-content: center;
-    text-align: center;
-    align-items: center;
-  }
-  .main_help_center .session-box-inner h4{
-    width:80%;
-  }
-  .main_help_center .session-box-inner .nd-btn{
-    padding:2rem;
-    text-align: center;
-    width: 50%;
-    max-width: 700px;
-    height:6.7rem;
-    justify-content: center;
-    margin: 0;
-    gap: 1rem;
-  } {% endcomment %}
   .main_help_center .help_center_title{display:flex;justify-content: space-between;gap:3rem}
   .main_help_center .session-box-inner .search_box{
     width: 50%;
@@ -121,10 +95,13 @@
   .main_help_center .influencer-step {
       display: flex;
       flex-direction: column;
-      position: relative;
-      gap: 1rem;
-      padding:1.7rem;
-      background: #fff;
+  }
+  .main_help_center .influencer-step .step-content{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding:1.7rem;
+    background: #fff;
   }
   .main_help_center .influencer-step img{width: 100%;height:auto;}
   .main_help_center .influencer-step .step-desc{color:#7F7E75;font-size: 1.6rem;line-height:1.3em;}
