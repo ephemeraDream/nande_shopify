@@ -58,17 +58,18 @@
     
     <div class="steps-grid padding-top-60">
       {% for block in section.blocks %}
-        <div class="influencer-step">
+        {% assign blog_item = block.settings.blog %}
+        <a href="{{ blog_item.url }}" class="influencer-step">
           {{-
-            block.settings.icon
-            | image_url: width: block.settings.icon.width
+            block.settings.image
+            | image_url: width: block.settings.image.width
             | image_tag: alt: block.settings.title, class: 'influencer-step-icon'
           -}}
           <div class="step-content">
-            <h4>{{ block.settings.title }}</h4>
+            <h4>{{ blog_item.title }}</h4>
             <div class="text-body step-desc">{{ block.settings.text }}</div>
           </div>
-        </div>
+        </a>
       {% endfor %}
     </div>
     
