@@ -1,0 +1,88 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "breadcrumbs": {
+      "type": "breadcrumbs",
+      "custom_css": [
+        ".breadcrumb-con {top: 0; z-index: 7; position: relative;}",
+        ".breadcrumb,.breadcrumb a,.breadcrumb span {color: #7f7e75;}"
+      ],
+      "settings": {
+        "custom_breadcrumb": ""
+      }
+    },
+    "main": {
+      "type": "main-article-help",
+      "settings": {}
+    },
+    "contact_list": {
+        "type": "contact-list",
+        "blocks": {
+            "item_01": {
+                "type": "item",
+            "settings": {
+                "icon": "shopify://shop_images/contact-list-01.webp",
+                "title": "Live-Chat",
+                "text": "<p>Montag–Freitag <br/>07:00–16:00 Uhr (MEZ)</p>",
+                "btn_text": "Konto erstellen",
+                "btn_link": ""
+            }
+            },
+            "item_02": {
+            "type": "item",
+            "settings": {
+                "icon": "shopify://shop_images/contact-list-02.webp",
+                "title": "WhatsApp",
+                "text": "<p>Montag–Freitag <br/>07:00–16:00 Uhr (MEZ)</p>",
+                "btn_text": "Send a message",
+                "btn_link": ""
+            }
+            },
+            "item_03": {
+            "type": "item",
+            "settings": {
+                "icon": "shopify://shop_images/contact-list-03.webp",
+                "title": "Messenger",
+                "text": "<p>Montag–Freitag <br/>07:00–16:00 Uhr (MEZ)</p>",
+                "btn_text": "Send a message",
+                "btn_link": ""
+            }
+            },
+            "item_04": {
+            "type": "item",
+            "settings": {
+                "icon": "shopify://shop_images/contact-list-04.webp",
+                "title": "E-Mail schreiben",
+                "text": "<p>Wählen Sie ein Anliegen aus, und wir antworten so schnell wie möglich.</p>",
+                "btn_text": "Get in touch",
+                "btn_link": ""
+            }
+            }
+        },
+        "block_order": [
+            "item_01",
+            "item_02",
+            "item_03",
+            "item_04"
+        ],
+        "name": "contact_list",
+        "settings": {
+            "title": "<p>Wie KöNnen Wir Ihnen Helfen?</p>",
+            "description": ""
+        }
+    }
+  },
+  "order": [
+    "breadcrumbs",
+    "main",
+    "contact_list"
+  ]
+}

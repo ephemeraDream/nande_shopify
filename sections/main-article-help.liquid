@@ -1,0 +1,69 @@
+<div class="main_blog_help session-box-padding padding-top-60 padding-bottom-120">
+    <div class="session-box-inner">
+        <div class="help_left">
+            <h4 class="padding-bottom-30">{{ blog.title | escape }}</h4>
+            {% assign tag_list = '' %}
+            {% assign current_article_tags = article.tags %}
+            {% for article_item in blog.articles %}
+              {% for tag in article_item.tags %}
+                {% unless tag_list contains tag %}
+                  {% assign tag_list = tag_list | append: tag | append: ',' %}
+                  <div class="text-body nav_item{% if current_article_tags contains tag %} active{% endif %}" data-tag="{{ tag }}">
+                    <a href="{{ blog.url }}#{{ tag | handle }}">{{ tag }}</a>
+                  </div>
+                {% endunless %}
+              {% endfor %}
+            {% endfor %}
+          </div>
+          
+        <div class="help_right">
+            <h3 class="padding-bottom-30">{{ article.title | escape }}</h3>
+            <div class="help_right_content text-body" >
+                {{ article.content }}
+            </div>
+            <div class="related">
+                <h4 class="padding-bottom-30">Related articles</h4>
+                {% assign related_articles = article.metafields.custom.related_articles %}
+                {% if related_articles and related_articles.size > 0 %}
+                    {% assign recommended = related_articles %}
+                {% else %}
+                    {% assign other_articles = blog.articles | where_exp: "item", "item.id != article.id" %}
+                    {% assign recommended = other_articles %}
+                {% endif %}
+                <ul>
+                {% for item in recommended %}
+                    <li><a href="{{ item.url }}">{{ item.title }}</a></li>
+                {% endfor %}
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    .main_blog_help .session-box-inner{
+        display: flex;
+        justify-content: space-between;
+        gap: 30px;
+    }
+    .main_blog_help .help_left{
+        width:30%;
+    }
+    .main_blog_help .help_right{
+        width:69%;
+    }
+    .main_blog_help .help_left .nav_item{font-weight: 500;cursor: pointer;font-size: 2rem;color: #7F7E75;line-height: 1em;padding-bottom:1rem;margin-bottom: 2rem;border-bottom: 2px solid transparent;display: inline-block;transition: all 0.3s ease-in-out;}
+    .main_blog_help .help_left .nav_item.active,
+    .main_blog_help .help_left .nav_item:hover{border-bottom: 2px solid #BDFF00;color: #000000;}
+
+    .main_blog_help .help_right .related ul{list-style: none;margin:0;padding:0}
+    .main_blog_help .help_right .related ul li a{padding:1.8rem 2rem;border-bottom: 2px solid #E2DED6;color:#1F1F1F;font-size: 2rem;display:block;}
+    .main_blog_help .help_right .related ul li a:hover{background-color: #E2DED6;}
+
+    .help_right_content{padding: 6rem 0;border-top:2px solid #E2DED6;border-bottom:2px solid #E2DED6}
+</style>
+
+<script>
+
+  </script>
+  
