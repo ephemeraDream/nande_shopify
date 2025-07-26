@@ -11,7 +11,7 @@
                         {% if first_tag == '' %}
                             {% assign first_tag = tag %}
                         {% endif %} 
-                        <div class="nav_item {% if forloop.first and forloop.parentloop.first %} active{% endif %}" data-tag="{{ tag }}">
+                        <div class="text-body nav_item {% if forloop.first and forloop.parentloop.first %} active{% endif %}" data-tag="{{ tag }}">
                             {{ tag }}
                         </div> 
                     {% endunless %}
@@ -23,7 +23,7 @@
             {% for tag in tags %}
                 {% unless tag == '' %}
                 <div class="tag-content" data-tag="{{ tag }}" style="{% if tag != first_tag %}display:none;{% endif %}">
-                    <h2>{{ tag }}</h2>
+                    <h3 class="padding-bottom-30">{{ tag }}</h3>
                     <ul>
                     {% for article in blog.articles %}
                         {% if article.tags contains tag %}
@@ -50,7 +50,11 @@
     .main_blog_help .help_right{
         width:69%;
     }
-    .main_blog_help .help_left .nav_item{cursor: pointer;font-size: 2rem;color: #7F7E75;line-height: 1em;padding-bottom:1rem;margin-bottom: 2rem;border-bottom: 2px solid transparent;display: block;transition: all 0.3s ease-in-out;}
+    .main_blog_help .help_left .nav_item{font-weight: 500;cursor: pointer;font-size: 2rem;color: #7F7E75;line-height: 1em;padding-bottom:1rem;margin-bottom: 2rem;border-bottom: 2px solid transparent;display: inline-block;transition: all 0.3s ease-in-out;}
     .main_blog_help .help_left .nav_item.active,
     .main_blog_help .help_left .nav_item:hover{border-bottom: 2px solid #BDFF00;color: #000000;}
+
+    .main_blog_help .help_right ul{list-style: none;margin:0;padding:0}
+    .main_blog_help .help_right ul li a{padding:1.8rem 2rem;border-bottom: 2px solid #E2DED6;color:#1F1F1F;font-size: 2rem;}
+    .main_blog_help .help_right ul li a:hover{background-color: #E2DED6;}
 </style>
