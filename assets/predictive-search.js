@@ -5,7 +5,7 @@ if (!customElements.get('predictive-search')) {
     constructor() {
       super();
       this.cachedResults = {};
-      this.input = this.querySelector('.js-search-input');
+      this.input = this.querySelector('.search__input');
       this.productTypeSelect = this.querySelector('.js-search-product-types');
       this.productTypeInput = document.getElementById('product_type_input');
       this.resetBtn = this.querySelector('.js-search-reset');
