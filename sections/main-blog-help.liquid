@@ -5,11 +5,7 @@
             {% capture tag_string %},{% endcapture %}
             {% for article in blog.articles %}
                 {% for tag in article.tags %}
-                {% assign tag_check = ',' | append: tag | append: ',' %}
-                {% unless tag_string contains tag_check %}
-                    {% capture tag_string %}{{ tag_string }}{{ tag_check }}{% endcapture %}
                     <button class="tag-filter-btn" data-tag="{{ tag }}">{{ tag }}</button>
-                {% endunless %}
                 {% endfor %}
             {% endfor %}
         </div>
