@@ -5,7 +5,9 @@
     <div class="product_compare_title">{{ section.settings.title }}</div>
     <div class="product_compare_flex">
       <div class="product_compare_text">{{ section.settings.text }}</div>
-      {{- 'cart-close.svg' | inline_asset_content -}}
+      <a class="product_compare_back">
+        {{- 'cart-close.svg' | inline_asset_content -}}
+      </a>
     </div>
     <div class="product_compare_selectbox">
       <select id="productSelectOne" class="product_compare_select">
@@ -339,6 +341,10 @@
         swiper.slideTo(index);
       });
     });
+  });
+
+  document.querySelector('.product_compare_back').addEventListener('click', () => {
+    location.back();
   });
 </script>
 

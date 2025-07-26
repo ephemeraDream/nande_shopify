@@ -72,6 +72,10 @@
   justify-content: space-between;
   padding: 6.5rem 5rem 0;
   gap: 4.6rem;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: #F2F1ED;
 }
 
 .product_compare .product_compare_select {
