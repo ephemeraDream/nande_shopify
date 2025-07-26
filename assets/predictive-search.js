@@ -1,325 +1,277 @@
-/* global debounce */
+class PredictiveSearch extends SearchForm {
+  constructor() {
+    super();
+    this.cachedResults = {};
+    this.predictiveSearchResults = this.querySelector('[data-predictive-search]');
+    this.allPredictiveSearchInstances = document.querySelectorAll('predictive-search');
+    this.isOpen = false;
+    this.abortController = new AbortController();
+    this.searchTerm = '';
 
-if (!customElements.get('predictive-search')) {
-  class PredictiveSearch extends HTMLElement {
-    constructor() {
-      super();
-      this.cachedResults = {};
-      this.input = this.querySelector('.search__input');
-      this.productTypeSelect = this.querySelector('.js-search-product-types');
-      this.productTypeInput = document.getElementById('product_type_input');
-      this.resetBtn = this.querySelector('.js-search-reset');
-      this.results = this.querySelector('.js-search-results');
-      this.overlay = this.querySelector('.js-search-overlay');
-      this.statusEl = this.querySelector('.js-search-status');
-      this.loadingText = this.getAttribute('data-loading-text');
-      this.addListeners();
+    this.setupEventListeners();
+  }
+
+  setupEventListeners() {
+    this.input.form.addEventListener('submit', this.onFormSubmit.bind(this));
+
+    this.input.addEventListener('focus', this.onFocus.bind(this));
+    this.addEventListener('focusout', this.onFocusOut.bind(this));
+    this.addEventListener('keyup', this.onKeyup.bind(this));
+    this.addEventListener('keydown', this.onKeydown.bind(this));
+  }
+
+  getQuery() {
+    return this.input.value.trim();
+  }
+
+  onChange() {
+    super.onChange();
+    const newSearchTerm = this.getQuery();
+    if (!this.searchTerm || !newSearchTerm.startsWith(this.searchTerm)) {
+      // Remove the results when they are no longer relevant for the new search term
+      // so they don't show up when the dropdown opens again
+      this.querySelector('#predictive-search-results-groups-wrapper')?.remove();
     }
 
-    /**
-     * Triggers when the web component is removed from the DOM
-     */
-    disconnectedCallback() {
-      this.close();
+    // Update the term asap, don't wait for the predictive search query to finish loading
+    this.updateSearchForTerm(this.searchTerm, newSearchTerm);
+
+    this.searchTerm = newSearchTerm;
+
+    if (!this.searchTerm.length) {
+      this.close(true);
+      return;
     }
 
-    addListeners() {
-      this.input.addEventListener('focus', this.handleFocus.bind(this));
-      this.input.addEventListener('input', debounce(this.handleInput.bind(this)));
-      if (this.productTypeSelect) {
-        this.productTypeSelect.addEventListener('change', this.handleProductTypeChange.bind(this));
-      }
-      this.querySelector('.search').addEventListener('submit', this.handleSubmit.bind(this));
-    }
+    this.getSearchResults(this.searchTerm);
+  }
 
-    /**
-     * Gets the value of the search input field.
-     * @returns {string}
-     */
-    getQuery() {
-      return this.input.value.trim();
-    }
+  onFormSubmit(event) {
+    if (!this.getQuery().length || this.querySelector('[aria-selected="true"] a')) event.preventDefault();
+  }
 
-    /**
-     * Handles search form submit.
-     * @param {object} evt - Event object.
-     */
-    handleSubmit(evt) {
-      if (
-        !this.getQuery().length
-        || this.querySelector('.predictive-search__item[aria-selected="true"]:not(.js-submit)')
-      ) {
-        evt.preventDefault();
-      }
-    }
-
-    /**
-     * Handles 'input' events on the search field.
-     */
-    handleInput() {
-      // autocomplete=off prevents browser from restoring value after using back button in Safari
-      this.input.setAttribute('value', this.input.value);
-
-      const searchTerm = this.getQuery();
-
-      if (!searchTerm.length) {
-        this.close();
-        return;
-      }
-
-      this.getResults(searchTerm);
-    }
-
-    /**
-     * Handles a change of product type
-     * @param {object} evt - Event object.
-     */
-    handleProductTypeChange(evt) {
-      this.productTypeInput.value = evt.detail.selectedValue;
-      const query = this.getQuery();
-      if (query.length > 0) {
-        this.getResults(query);
-      }
-    }
-
-    /**
-     * Handles 'focus' events on the search field.
-     */
-    handleFocus() {
-      const searchTerm = this.getQuery();
-      if (!searchTerm.length) return;
-
-      if (this.getAttribute('results') === 'true') {
-        this.open();
-      } else {
-        this.getResults(searchTerm);
-      }
-    }
-
-    /**
-     * Handles 'keydown' events on the custom element.
-     * @param {object} evt - Event object.
-     */
-    handleKeydown(evt) {
-      // Let tabs script handle keydown events on the tab buttons.
-      if (evt.target.matches('.tablist__tab')) return;
-
-      switch (evt.key) {
-        case 'ArrowUp':
-        case 'ArrowDown':
-          evt.preventDefault();
-
-          if (this.hasAttribute('open')) {
-            this.handleResultsNav(evt.key);
-          }
-          break;
-
-        case 'Enter':
-          this.selectOption();
-          break;
-
-        case 'Escape':
-          this.close();
-          break;
-
-        // no default
-      }
-    }
-
-    /**
-     * Handles 'keyup' events on the custom element.
-     */
-    handleKeyup() {
-      // If search field is empty after key press, close the results.
-      if (!this.getQuery().length) this.close();
-    }
-
-    /**
-     * Handles keyboard navigation of the results.
-     * @param {string} key - Key pressed.
-     */
-    handleResultsNav(key) {
-      const selectedResult = this.querySelector(
-        '[role="tabpanel"]:not([hidden]) [aria-selected="true"]'
-      );
-      const allResults = this.querySelectorAll(
-        '[role="tabpanel"]:not([hidden]) .predictive-search__item'
-      );
-      let resultToSelect = allResults[0];
-
-      if (key === 'ArrowUp') {
-        if (!selectedResult) return;
-
-        // Select the next result up or the last one if we've reached the top of the list.
-        resultToSelect = selectedResult.previousElementSibling || allResults[allResults.length - 1];
-      } else if (key === 'ArrowDown') {
-        if (selectedResult) {
-          // Select the next result down or the first one if we've reached the bottom of the list.
-          resultToSelect = selectedResult.nextElementSibling || allResults[0];
-        }
-      }
-
-      this.statusEl.textContent = '';
-
-      if (resultToSelect) {
-        // If the selected item didn't change, do nothing.
-        if (resultToSelect === selectedResult) return;
-
-        resultToSelect.setAttribute('aria-selected', 'true');
-        if (selectedResult) selectedResult.setAttribute('aria-selected', 'false');
-
-        this.setLiveRegionText(resultToSelect.textContent);
-        this.input.setAttribute('aria-activedescendant', resultToSelect.id);
-      }
-    }
-
-    /**
-     * Selects a result
-     */
-    selectOption() {
-      const selectedResult = this.querySelector('[aria-selected="true"] > .js-search-link');
-      if (selectedResult) selectedResult.click();
-    }
-
-    /**
-     * Gets the results for a search term.
-     * @param {string} searchTerm - Search query.
-     */
-    async getResults(searchTerm) {
-      this.setLiveRegionLoadingState();
-
-      const searchTypes = [];
-      if (theme.settings.pSearchShowProducts) searchTypes.push('product');
-      if (theme.settings.pSearchShowCollections) searchTypes.push('collection');
-      if (theme.settings.pSearchShowPages) searchTypes.push('page');
-      if (theme.settings.pSearchShowArticles) searchTypes.push('article');
-      if (theme.settings.pSearchShowSuggestions) searchTypes.push('query');
-
-      let searchFields = 'title,product_type,variants.title,vendor';
-      if (theme.settings.pSearchIncludeSkus) searchFields += ',variants.sku';
-      if (theme.settings.pSearchIncludeTags) searchFields += ',tag';
-
-      let searchParams = '';
-      if (this.productTypeInput && this.productTypeInput.value !== '') {
-        searchParams = `q=product_type:${encodeURIComponent(this.productTypeInput.value)} AND ${encodeURIComponent(searchTerm)}`;
-      } else {
-        searchParams = `q=${encodeURIComponent(searchTerm)}`;
-      }
-
-      searchParams += `&${encodeURIComponent('resources[type]')}=${searchTypes.join()}`;
-      searchParams += `&${encodeURIComponent('resources[limit]')}=${theme.settings.pSearchLimit}`;
-      searchParams += `&${encodeURIComponent('resources[limit_scope]')}=${
-        theme.settings.pSearchLimitScope
-      }`;
-      searchParams += `&${encodeURIComponent('resources[options][fields]')}=${searchFields}`;
-      searchParams += '&section_id=predictive-search';
-
-      const queryKey = searchParams.replace(' ', '-').toLowerCase();
-      if (this.cachedResults[queryKey]) {
-        this.renderResults(this.cachedResults[queryKey]);
-        return;
-      }
-
-      try {
-        const response = await fetch(`${theme.routes.predictiveSearch}?${searchParams}`);
-        if (!response.ok) throw new Error(response.status);
-
-        const tmpl = document.createElement('template');
-        tmpl.innerHTML = await response.text();
-
-        const resultsEl = tmpl.content.querySelector('#shopify-section-predictive-search');
-        const resultsMarkup = resultsEl.innerHTML.replace(/psearch/g, this.input.id);
-
-        this.cachedResults[queryKey] = resultsMarkup;
-        this.renderResults(resultsMarkup);
-      } catch (error) {
-        this.close();
-        throw error;
-      }
-    }
-
-    /**
-     * Sets the live region loading state.
-     */
-    setLiveRegionLoadingState() {
-      this.setLiveRegionText(this.loadingText);
-    }
-
-    /**
-     * Sets the live region text.
-     * @param {string} statusText - Status text.
-     */
-    setLiveRegionText(statusText) {
-      this.statusEl.setAttribute('aria-hidden', 'false');
-      this.statusEl.textContent = statusText;
-
-      setTimeout(() => {
-        this.statusEl.setAttribute('aria-hidden', 'true');
-      }, 1000);
-    }
-
-    /**
-     * Renders the results markup.
-     * @param {string} resultsMarkup - Results markup.
-     */
-    renderResults(resultsMarkup) {
-      this.results.innerHTML = resultsMarkup;
-      this.setAttribute('results', true);
-      this.open();
-    }
-
-    /**
-     * Opens the results listbox.
-     */
-    open() {
-      this.overlay.classList.add('is-visible');
-      if (this.getQuery().length) this.resetBtn.hidden = false;
-      this.input.setAttribute('aria-expanded', 'true');
-      this.setAttribute('open', '');
-      document.body.classList.add('overlay-predictive-search');
-
-      // Add event handlers (so the bound event listeners can be removed).
-      this.keydownHandler = this.keydownHandler || this.handleKeydown.bind(this);
-      this.keyupHandler = this.keyupHandler || this.handleKeyup.bind(this);
-      this.resetBtnClickHandler = this.resetBtnClickHandler || this.close.bind(this);
-      this.overlayClickHandler = this.overlayClickHandler || this.close.bind(this);
-
-      // Add event listeners (for while results are open).
-      this.addEventListener('keydown', this.keydownHandler);
-      this.addEventListener('keyup', this.keyupHandler);
-      this.resetBtn.addEventListener('click', this.resetBtnClickHandler);
-      this.overlay.addEventListener('click', this.overlayClickHandler);
-    }
-
-    /**
-     * Closes the results listbox.
-     * @param {object} evt - Event object.
-     */
-    close(evt) {
-      // If reset button was clicked, empty the input field.
-      if (evt && evt.target === this.resetBtn) {
-        this.input.value = '';
-        this.removeAttribute('results');
-        this.input.focus();
-      }
-
-      // Deselect the selected result (if there is one).
-      const selected = this.querySelector('.predictive-search__item[aria-selected="true"]');
-      if (selected) selected.setAttribute('aria-selected', 'false');
-
-      this.removeAttribute('open');
-      this.resetBtn.hidden = true;
-      this.overlay.classList.remove('is-visible');
-      this.input.setAttribute('aria-activedescendant', '');
-      this.input.setAttribute('aria-expanded', 'false');
-      document.body.classList.remove('overlay-predictive-search');
-
-      // Remove event listeners added on search results opening.
-      this.removeEventListener('keydown', this.keydownHandler);
-      this.resetBtn.removeEventListener('click', this.resetBtnClickHandler);
-      this.overlay.removeEventListener('click', this.overlayClickHandler);
+  onFormReset(event) {
+    super.onFormReset(event);
+    if (super.shouldResetForm()) {
+      this.searchTerm = '';
+      this.abortController.abort();
+      this.abortController = new AbortController();
+      this.closeResults(true);
     }
   }
 
-  customElements.define('predictive-search', PredictiveSearch);
+  onFocus() {
+    const currentSearchTerm = this.getQuery();
+
+    if (!currentSearchTerm.length) return;
+
+    if (this.searchTerm !== currentSearchTerm) {
+      // Search term was changed from other search input, treat it as a user change
+      this.onChange();
+    } else if (this.getAttribute('results') === 'true') {
+      this.open();
+    } else {
+      this.getSearchResults(this.searchTerm);
+    }
+  }
+
+  onFocusOut() {
+    setTimeout(() => {
+      if (!this.contains(document.activeElement)) this.close();
+    });
+  }
+
+  onKeyup(event) {
+    if (!this.getQuery().length) this.close(true);
+    event.preventDefault();
+
+    switch (event.code) {
+      case 'ArrowUp':
+        this.switchOption('up');
+        break;
+      case 'ArrowDown':
+        this.switchOption('down');
+        break;
+      case 'Enter':
+        this.selectOption();
+        break;
+    }
+  }
+
+  onKeydown(event) {
+    // Prevent the cursor from moving in the input when using the up and down arrow keys
+    if (event.code === 'ArrowUp' || event.code === 'ArrowDown') {
+      event.preventDefault();
+    }
+  }
+
+  updateSearchForTerm(previousTerm, newTerm) {
+    const searchForTextElement = this.querySelector('[data-predictive-search-search-for-text]');
+    const currentButtonText = searchForTextElement?.innerText;
+    if (currentButtonText) {
+      if (currentButtonText.match(new RegExp(previousTerm, 'g')).length > 1) {
+        // The new term matches part of the button text and not just the search term, do not replace to avoid mistakes
+        return;
+      }
+      const newButtonText = currentButtonText.replace(previousTerm, newTerm);
+      searchForTextElement.innerText = newButtonText;
+    }
+  }
+
+  switchOption(direction) {
+    if (!this.getAttribute('open')) return;
+
+    const moveUp = direction === 'up';
+    const selectedElement = this.querySelector('[aria-selected="true"]');
+
+    // Filter out hidden elements (duplicated page and article resources) thanks
+    // to this https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/offsetParent
+    const allVisibleElements = Array.from(this.querySelectorAll('li, button.predictive-search__item')).filter(
+      (element) => element.offsetParent !== null
+    );
+    let activeElementIndex = 0;
+
+    if (moveUp && !selectedElement) return;
+
+    let selectedElementIndex = -1;
+    let i = 0;
+
+    while (selectedElementIndex === -1 && i <= allVisibleElements.length) {
+      if (allVisibleElements[i] === selectedElement) {
+        selectedElementIndex = i;
+      }
+      i++;
+    }
+
+    this.statusElement.textContent = '';
+
+    if (!moveUp && selectedElement) {
+      activeElementIndex = selectedElementIndex === allVisibleElements.length - 1 ? 0 : selectedElementIndex + 1;
+    } else if (moveUp) {
+      activeElementIndex = selectedElementIndex === 0 ? allVisibleElements.length - 1 : selectedElementIndex - 1;
+    }
+
+    if (activeElementIndex === selectedElementIndex) return;
+
+    const activeElement = allVisibleElements[activeElementIndex];
+
+    activeElement.setAttribute('aria-selected', true);
+    if (selectedElement) selectedElement.setAttribute('aria-selected', false);
+
+    this.input.setAttribute('aria-activedescendant', activeElement.id);
+  }
+
+  selectOption() {
+    const selectedOption = this.querySelector('[aria-selected="true"] a, button[aria-selected="true"]');
+
+    if (selectedOption) selectedOption.click();
+  }
+
+  getSearchResults(searchTerm) {
+    const queryKey = searchTerm.replace(' ', '-').toLowerCase();
+    this.setLiveRegionLoadingState();
+
+    if (this.cachedResults[queryKey]) {
+      this.renderSearchResults(this.cachedResults[queryKey]);
+      return;
+    }
+
+    fetch(`${routes.predictive_search_url}?q=${encodeURIComponent(searchTerm)}&section_id=predictive-search`, {
+      signal: this.abortController.signal,
+    })
+      .then((response) => {
+        if (!response.ok) {
+          var error = new Error(response.status);
+          this.close();
+          throw error;
+        }
+
+        return response.text();
+      })
+      .then((text) => {
+        const resultsMarkup = new DOMParser()
+          .parseFromString(text, 'text/html')
+          .querySelector('#shopify-section-predictive-search').innerHTML;
+        // Save bandwidth keeping the cache in all instances synced
+        this.allPredictiveSearchInstances.forEach((predictiveSearchInstance) => {
+          predictiveSearchInstance.cachedResults[queryKey] = resultsMarkup;
+        });
+        this.renderSearchResults(resultsMarkup);
+      })
+      .catch((error) => {
+        if (error?.code === 20) {
+          // Code 20 means the call was aborted
+          return;
+        }
+        this.close();
+        throw error;
+      });
+  }
+
+  setLiveRegionLoadingState() {
+    this.statusElement = this.statusElement || this.querySelector('.predictive-search-status');
+    this.loadingText = this.loadingText || this.getAttribute('data-loading-text');
+
+    this.setLiveRegionText(this.loadingText);
+    this.setAttribute('loading', true);
+  }
+
+  setLiveRegionText(statusText) {
+    this.statusElement.setAttribute('aria-hidden', 'false');
+    this.statusElement.textContent = statusText;
+
+    setTimeout(() => {
+      this.statusElement.setAttribute('aria-hidden', 'true');
+    }, 1000);
+  }
+
+  renderSearchResults(resultsMarkup) {
+    this.predictiveSearchResults.innerHTML = resultsMarkup;
+    this.setAttribute('results', true);
+
+    this.setLiveRegionResults();
+    this.open();
+  }
+
+  setLiveRegionResults() {
+    this.removeAttribute('loading');
+    this.setLiveRegionText(this.querySelector('[data-predictive-search-live-region-count-value]').textContent);
+  }
+
+  getResultsMaxHeight() {
+    this.resultsMaxHeight =
+      window.innerHeight - document.querySelector('.section-header')?.getBoundingClientRect().bottom;
+    return this.resultsMaxHeight;
+  }
+
+  open() {
+    this.predictiveSearchResults.style.maxHeight = this.resultsMaxHeight || `${this.getResultsMaxHeight()}px`;
+    this.setAttribute('open', true);
+    this.input.setAttribute('aria-expanded', true);
+    this.isOpen = true;
+  }
+
+  close(clearSearchTerm = false) {
+    this.closeResults(clearSearchTerm);
+    this.isOpen = false;
+  }
+
+  closeResults(clearSearchTerm = false) {
+    if (clearSearchTerm) {
+      this.input.value = '';
+      this.removeAttribute('results');
+    }
+    const selected = this.querySelector('[aria-selected="true"]');
+
+    if (selected) selected.setAttribute('aria-selected', false);
+
+    this.input.setAttribute('aria-activedescendant', '');
+    this.removeAttribute('loading');
+    this.removeAttribute('open');
+    this.input.setAttribute('aria-expanded', false);
+    this.resultsMaxHeight = false;
+    this.predictiveSearchResults.removeAttribute('style');
+  }
 }
+
+customElements.define('predictive-search', PredictiveSearch);
