@@ -1,6 +1,32 @@
-<div class="main_blog_help session-box-padding padding-top-30 padding-bottom-120">
+<div class="main_blog_help session-box-padding padding-top-60 padding-bottom-120">
     <div class="session-box-inner">
-        <div class="help_left">1</div>
+        <div class="help_left">
+            <h4>{{ blog.title | escape }}</h4>
+            {% capture tag_string %},{% endcapture %}
+            {% for article in blog.articles %}
+                {% for tag in article.tags %}
+                {% assign tag_check = ',' | append: tag | append: ',' %}
+                {% unless tag_string contains tag_check %}
+                    {% capture tag_string %}{{ tag_string }}{{ tag_check }}{% endcapture %}
+                    <button class="tag-filter-btn" data-tag="{{ tag }}">{{ tag }}</button>
+                {% endunless %}
+                {% endfor %}
+            {% endfor %}
+        </div>
         <div class="help_right">2</div>
     </div>
 </div>
+
+<style>
+    .main_blog_help .session-box-inner{
+        display: flex;
+        justify-content: space-between;
+        gap: 30px;
+    }
+    .main_blog_help .help_left{
+        width:30%;
+    }
+    .main_blog_help .help_right{
+        width:69%;
+    }
+</style>
