@@ -213,6 +213,7 @@ document.querySelectorAll(".product_info_left_thumb_select_item").forEach(btn =>
     if (type === "specs") {
       const parent = btn.closest(".product_info_left_thumb_select")
       const modal = parent.querySelector(".common_modal")
+      document.body.appendChild(modal);
       modal.style.display = "block";
       document.body.style.overflowY = "hidden";
 
