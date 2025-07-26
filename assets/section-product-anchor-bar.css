@@ -58,6 +58,7 @@
   cursor: pointer;
   transition: opacity .6s ease, color .6s ease, background-position .4s ease-out;
   border: none;
+  margin: 0;
 }
 
 .product_anchor_bar .product_anchor_bar_btn[disabled] {
