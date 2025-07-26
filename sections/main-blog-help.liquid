@@ -2,19 +2,39 @@
     <div class="session-box-inner">
         <div class="help_left">
             <h4 class="padding-bottom-30">{{ blog.title | escape }}</h4>
-            {% assign unique_tags = '' %}
+            {% assign tag_list = '' %}
+            {% assign first_tag = '' %}
             {% for article in blog.articles %}
                 {% for tag in article.tags %}
-                {% unless unique_tags contains tag %}
-                    <div class="nav_item {% if blog_item.handle == blog.handle %}active{% endif %}" data-tag="{{ tag }}">
-                        {{ tag }}
-                    </div> 
-                    {% assign unique_tags = unique_tags | append: tag | append: ',' %}
-                {% endunless %}
+                    {% unless tag_list contains tag %}
+                        {% assign tag_list = tag_list | append: tag | append: ',' %}
+                        {% if first_tag == '' %}
+                            {% assign first_tag = tag %}
+                        {% endif %} 
+                        <div class="nav_item {% if forloop.first and forloop.parentloop.first %} active{% endif %}" data-tag="{{ tag }}">
+                            {{ tag }}
+                        </div> 
+                    {% endunless %}
                 {% endfor %}
             {% endfor %}
         </div>
-        <div class="help_right">2</div>
+        <div class="help_right">
+            {% assign tags = tag_list | split: ',' %}
+            {% for tag in tags %}
+                {% unless tag == '' %}
+                <div class="tag-content" data-tag="{{ tag }}" style="{% if tag != first_tag %}display:none;{% endif %}">
+                    <h2>{{ tag }}</h2>
+                    <ul>
+                    {% for article in blog.articles %}
+                        {% if article.tags contains tag %}
+                        <li><a href="{{ article.url }}">{{ article.title }}</a></li>
+                        {% endif %}
+                    {% endfor %}
+                    </ul>
+                </div>
+                {% endunless %}
+            {% endfor %}
+        </div>
     </div>
 </div>
 
