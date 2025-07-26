@@ -70,7 +70,7 @@
             </div>
           </div>
           <div class="product_compare_item_color">
-            {% for option in product.select_product.options_with_values %}
+            {% for option in product.options_with_values %}
               {%- case option.name -%}
                 {%- when 'Farbe Tischplatte' -%}
                   {% for value in option.values %}
