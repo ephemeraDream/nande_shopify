@@ -427,7 +427,7 @@
                                       data-value="{{ value }}"
                                       class="product_info_bundle_modal_select_item{% if value.selected %} product_info_bundle_modal_select_item_select{% endif %}"
                                       title="{{ value }}"
-                                      data-img="{{ available_variant.featured_media | image_url }}"
+                                      data-img="{{ value.variant.featured_media | image_url }}"
                                     >
                                       <div
                                         class="product_info_bundle_modal_select_item_circle{% if color == '' %} product_info_bundle_modal_select_item_none{% endif %}"
