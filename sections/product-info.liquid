@@ -443,7 +443,7 @@
                                 </div>
                               </div>
 
-                              <div class="product_info_bundle_modal_contain" data-option="{{ bundled_product.options_with_values | json }}">
+                              <div class="product_info_bundle_modal_contain">
                                 {%- for option in bundled_product.options_with_values -%}
                                   {% assign option_hanlde = option.name | handle %}
                                   <div class="product_info_bundle_modal_item">
@@ -462,6 +462,7 @@
                                     >
                                       {% assign index = 'option' | append: forloop.index %}
                                       {%- for value in option.values -%}
+                                        {{ option.values | json }}
                                         {% assign available_variant = product.variants
                                           | where: index, value
                                           | where: 'available'
