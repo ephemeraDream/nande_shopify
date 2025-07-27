@@ -567,6 +567,13 @@
           name="goods_id"
           value="{{ product.selected_or_first_available_variant.id | default: product.id }}"
         >
+        {% if has_tabletop %}
+          <input
+            type="hidden"
+            name="bundle_tabletop_id"
+            value="{{ bundle_tabletop.selected_or_first_available_variant.id | default: bundle_tabletop.id }}"
+          >
+        {% endif %}
         <div class="product_info_buybox_contain">
           {% if bundle_products != blank %}
             <div class="product_info_bundle_prevnext">

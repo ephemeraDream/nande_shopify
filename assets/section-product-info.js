@@ -407,6 +407,7 @@ const curr_options = [...currVariant.options]
 const bundle_tabletop_data = JSON.parse(document.getElementById('bundle_tabletop_data').textContent);
 const bundle_tabletop = bundle_tabletop_data.product
 let curr_bundle_tabletop_variant = bundle_tabletop_data.variant
+const curr_bundle_tabletop_options = [...curr_bundle_tabletop_variant.options]
 const has_tabletop = bundle_tabletop_data.has_tabletop
 if (!has_tabletop) {
   setVariantOption()
@@ -450,36 +451,45 @@ document.querySelectorAll(".product_info_option_select_item").forEach(el => {
     if (target.classList.contains("product_info_option_select_item_select")) return
     const parent = target.closest(".product_info_option_select")
     const parent_index = parent.getAttribute("data-index")
+    const is_bundle_tabletop = parent.hasAttribute("data-type")
     document.querySelectorAll(".product_info_steps_contain_item_box[data-type='option'] .product_info_steps_contain_item_box_line")[parent_index].querySelector(".product_info_steps_contain_item_box_line_value").innerHTML = target.getAttribute("data-value")
     parent.querySelector('.product_info_option_select_item_select').classList.remove('product_info_option_select_item_select')
     target.classList.add('product_info_option_select_item_select')
     target.closest(".product_info_option_item").querySelector(".product_info_option_label_select").innerHTML = target.getAttribute("data-value")
-    curr_options[parent.getAttribute("data-index")] = target.getAttribute("data-value")
-    currVariant = product.variants.find(el => areArraysEqual(curr_options, el.options))
-    if (!currVariant && curr_options.length === 3) {
-      currVariant = product.variants.find(
-        (v) => v.option1 === curr_options[0] && v.option2 === curr_options[1]
-      );
+    if (is_bundle_tabletop) {
+      curr_bundle_tabletop_options[Number(parent.getAttribute("data-index")) - curr_options.length] = target.getAttribute("data-value")
+      curr_bundle_tabletop_variant = bundle_tabletop.variants.find(el => areArraysEqual(curr_bundle_tabletop_options, el.options))
+      document.querySelector("input[name='bundle_tabletop_id']").value = curr_bundle_tabletop_variant.id
+    } else {
+      curr_options[parent.getAttribute("data-index")] = target.getAttribute("data-value")
+      currVariant = product.variants.find(el => areArraysEqual(curr_options, el.options))
+      if (!currVariant && curr_options.length === 3) {
+        currVariant = product.variants.find(
+          (v) => v.option1 === curr_options[0] && v.option2 === curr_options[1]
+        );
 
-      if (currVariant) {
-        curr_options[2] = currVariant.option3
-        document.querySelectorAll(`.product_info_option_select[data-index="2"] .product_info_option_select_item`).forEach(el => {
-          if (el.getAttribute("data-value") === currVariant.option3) {
-            el.classList.add('product_info_option_select_item_select')
-            document.querySelector('.product_info_option_select[data-index="2"]').closest(".product_info_option_item").querySelector(".product_info_option_label_select").innerHTML = el.getAttribute("data-value")
-            document.querySelectorAll(".product_info_steps_contain_item_box[data-type='option'] .product_info_steps_contain_item_box_line")[2].querySelector(".product_info_steps_contain_item_box_line_value").innerHTML = el.getAttribute("data-value")
-          } else {
-            el.classList.remove('product_info_option_select_item_select')
-          }
-        });
+        if (currVariant) {
+          curr_options[2] = currVariant.option3
+          document.querySelectorAll(`.product_info_option_select[data-index="2"] .product_info_option_select_item`).forEach(el => {
+            if (el.getAttribute("data-value") === currVariant.option3) {
+              el.classList.add('product_info_option_select_item_select')
+              document.querySelector('.product_info_option_select[data-index="2"]').closest(".product_info_option_item").querySelector(".product_info_option_label_select").innerHTML = el.getAttribute("data-value")
+              document.querySelectorAll(".product_info_steps_contain_item_box[data-type='option'] .product_info_steps_contain_item_box_line")[2].querySelector(".product_info_steps_contain_item_box_line_value").innerHTML = el.getAttribute("data-value")
+            } else {
+              el.classList.remove('product_info_option_select_item_select')
+            }
+          });
+        }
       }
+      document.querySelector("input[name='goods_id']").value = currVariant.id
     }
-    document.querySelector("input[name='goods_id']").value = currVariant.id
-    setVariantOption()
+    if (!has_tabletop) {
+      setVariantOption()
+      updateUrl()
+      updateImagesByVariantMedia()
+    }
     updateVariantPrice()
     updateBuyBtns()
-    updateUrl()
-    updateImagesByVariantMedia()
   })
 })
 function areArraysEqual(arr1, arr2) {
@@ -496,10 +506,12 @@ function areArraysEqual(arr1, arr2) {
   return true;
 }
 function updateVariantPrice() {
-  const price = moneyWithoutTrailingZeros(currVariant.price)
+  const price_dp = has_tabletop ? curr_bundle_tabletop_variant.price + currVariant.price : currVariant.price
+  const price = moneyWithoutTrailingZeros(price_dp)
   document.querySelectorAll(".product_info_price_dp").forEach(item => item.innerHTML = price)
-  if (currVariant.compare_at_price && currVariant.compare_at_price > currVariant.price) {
-    const compare_at_price = moneyWithoutTrailingZeros(currVariant.compare_at_price)
+  const price_op = has_tabletop ? curr_bundle_tabletop_variant.compare_at_price + currVariant.compare_at_price : currVariant.compare_at_price
+  if (price_op && price_op > price_dp) {
+    const compare_at_price = moneyWithoutTrailingZeros(price_op)
     document.querySelectorAll(".product_info_price_op").forEach(item => {
       item.innerHTML = compare_at_price
       item.classList.remove("hidden")
@@ -525,7 +537,7 @@ function moneyWithoutTrailingZeros(cents) {
 }
 function updateBuyBtns() {
   const btns = document.querySelectorAll(".product_info_buybox_btns_btn")
-  btns.forEach(item => item.toggleAttribute("disabled", !currVariant.available))
+  btns.forEach(item => item.toggleAttribute("disabled", has_tabletop ? !currVariant.available && !curr_bundle_tabletop_variant.available : !currVariant.available))
 }
 function updateUrl() {
   const url = new URL(window.location.href);
