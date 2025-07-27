@@ -1285,6 +1285,15 @@
   transform-origin: center center;
 }
 
+.product_info_bundle_product_info .product_info_bundle_modal_select {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 0.8rem;
+  margin-bottom: 0.2rem;
+}
+
+
 .product_info_bundle_product_info .product_info_bundle_modal_select[select-type="circle"] .product_info_bundle_modal_select_item {
   width: 1rem;
   height: 1rem;
