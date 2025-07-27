@@ -404,7 +404,13 @@ const product = product_data.product
 let currVariant = product_data.variant
 const symbol = product_data.symbol
 const curr_options = [...currVariant.options]
-setVariantOption()
+const bundle_tabletop_data = JSON.parse(document.getElementById('bundle_tabletop_data').textContent);
+const bundle_tabletop = bundle_tabletop_data.product
+let curr_bundle_tabletop_variant = bundle_tabletop_data.variant
+const has_tabletop = bundle_tabletop_data.has_tabletop
+if (!has_tabletop) {
+  setVariantOption()
+}
 updateImagesByVariantMedia()
 function setVariantOption() {
   document.querySelectorAll(".product_info_option_select").forEach((selector, selectorIndex) => {

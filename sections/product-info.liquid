@@ -323,6 +323,7 @@
                   class="product_info_option_select"
                   select-type="{% if option_hanlde contains "farbe" %}circle{% else %}box{% endif %}"
                   data-index="{{ forloop.index0 | plus: product.options.size }}"
+                  data-type="bundle_tabletop"
                 >
                   {%- for value in option.values -%}
                     {% if option_hanlde contains 'farbe' %}
@@ -773,7 +774,8 @@
 </script>
 <script type="application/json" id="bundle_tabletop_data">
   {
-    "bundle_tabletop": {{- bundle_tabletop | json -}},
+    "product": {{- bundle_tabletop | json -}},
+    "variant": {{ bundle_tabletop.selected_or_first_available_variant | json }},
     "has_tabletop": {{ has_tabletop | json }}
   }
 </script>
