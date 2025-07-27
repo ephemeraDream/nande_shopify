@@ -670,7 +670,7 @@ document.querySelectorAll(".product_info_bundle_product").forEach(item => {
   const product = bundle_products_data[item.getAttribute("data-id")].product
   let currVariant = bundle_products_data[item.getAttribute("data-id")].variant
   const curr_options = [...currVariant.options]
-  const select_option = item.querySelectorAll(".product_info_bundle_modal_select")
+  const select_option = item.querySelectorAll(".product_info_bundle_modal .product_info_bundle_modal_select")
   const select_item = item.querySelectorAll(".product_info_bundle_modal_select_item")
   const img_contain = item.querySelector(".product_info_bundle_modal_img")
   const dp_price_contain = item.querySelector(".product_info_bundle_modal_price_dp")
@@ -708,17 +708,31 @@ document.querySelectorAll(".product_info_bundle_product").forEach(item => {
 
   select_item.forEach(el => {
     el.addEventListener("click", (event) => {
+      event.stopPropagation()
       const target = event.target.closest(".product_info_bundle_modal_select_item")
       if (target.classList.contains("product_info_bundle_modal_select_item_select")) return
       const parent = target.closest(".product_info_bundle_modal_select")
-      parent.querySelector('.product_info_bundle_modal_select_item_select').classList.remove('product_info_bundle_modal_select_item_select')
-      target.classList.add('product_info_bundle_modal_select_item_select')
-      target.closest(".product_info_bundle_modal_item").querySelector(".product_info_bundle_modal_label_select").innerHTML = target.getAttribute("data-value")
+      const index = parent.dataset.index
+      const is_card_circle = parent.hasAttribute("data-type")
+      const parent_list = item.querySelectorAll(`.product_info_bundle_modal_select[data-index="${index}"]`)
+      parent_list.forEach(parentEl => {
+        parentEl.querySelector('.product_info_bundle_modal_select_item_select').classList.remove('product_info_bundle_modal_select_item_select')
+        parentEl.querySelector(`.product_info_bundle_modal_select_item[data-value="${target.getAttribute("data-value")}"]`).classList.add('product_info_bundle_modal_select_item_select')
+        const labelEl = parentEl.closest(".product_info_bundle_modal_item").querySelector(".product_info_bundle_modal_label_select")
+        if (labelEl) {
+          labelEl.innerHTML = target.getAttribute("data-value")
+        }
+      })
       curr_options[parent.getAttribute("data-index")] = target.getAttribute("data-value")
       currVariant = product.variants.find(el => areArraysEqual(curr_options, el.options) && el.available)
       if (currVariant) {
         img_contain.src = currVariant.featured_image.src
         dp_price_contain.innerHTML = moneyWithoutTrailingZeros(currVariant.price)
+        if (is_card_circle) {
+          item.querySelector(".product_info_bundle_product_img img").src = currVariant.featured_image.src
+          item.querySelector(".product_info_bundle_product_price").innerHTML = `+${moneyWithoutTrailingZeros(currVariant.price)}`
+          item.setAttribute("data-variant-id", currVariant.id)
+        }
         if (currVariant.compare_at_price) {
           op_price_contain.innerHTML = moneyWithoutTrailingZeros(currVariant.compare_at_price)
           op_price_contain.classList.remove("hidden")
@@ -743,6 +757,11 @@ document.querySelectorAll(".product_info_bundle_product").forEach(item => {
           });
           img_contain.src = currVariant.featured_image.src
           dp_price_contain.innerHTML = moneyWithoutTrailingZeros(currVariant.price)
+          if (is_card_circle) {
+            item.querySelector(".product_info_bundle_product_img img").src = currVariant.featured_image.src
+            item.querySelector(".product_info_bundle_product_price").innerHTML = `+${moneyWithoutTrailingZeros(currVariant.price)}`
+            item.setAttribute("data-variant-id", currVariant.id)
+          }
           if (currVariant.compare_at_price) {
             op_price_contain.innerHTML = moneyWithoutTrailingZeros(currVariant.compare_at_price)
             op_price_contain.classList.remove("hidden")
