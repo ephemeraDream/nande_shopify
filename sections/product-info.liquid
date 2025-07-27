@@ -18,6 +18,19 @@
     assign has_tabletop = true
   endif
 %}
+{% liquid
+  assign price_dp = product.selected_or_first_available_variant.price | default: product.price
+  if has_tabletop
+    assign bundle_tabletop_price_dp = bundle_tabletop.selected_or_first_available_variant.price | default: bundle_tabletop.price
+    assign price_dp = price_dp | plus: bundle_tabletop_price_dp
+  endif
+
+  assign price_op = product.selected_or_first_available_variant.compare_at_price | default: product.compare_at_price
+  if has_tabletop
+    assign bundle_tabletop_price_op = bundle_tabletop.selected_or_first_available_variant.compare_at_price | default: bundle_tabletop.compare_at_price
+    assign price_op = price_op | plus: bundle_tabletop_price_op
+  endif
+%}
 
 <div class="product_info_section padding-sider">
   <div class="product_info">
@@ -176,18 +189,10 @@
         {%- endfor -%}
         <div class="product_info_price">
           <div class="product_info_price_dp">
-            {{
-              product.selected_or_first_available_variant.price
-              | default: product.price
-              | money_without_trailing_zeros
-            }}
+            {{ price_dp | money_without_trailing_zeros }}
           </div>
           <div class="product_info_price_op">
-            {{
-              product.selected_or_first_available_variant.compare_at_price
-              | default: product.compare_at_price
-              | money_without_trailing_zeros
-            }}
+            {{ price_op | money_without_trailing_zeros }}
           </div>
           {%- if section.settings.show_tax_and_shipping -%}
             {%- if cart.taxes_included or shop.shipping_policy.body != blank -%}
@@ -359,11 +364,7 @@
           <div class="product_info_bundle_info_title">{{ 'common.gesamtsumme' | t }}</div>
           <div class="product_info_bundle_info_right">
             <span class="product_info_bundle_info_total product_info_price_dp">
-              {{-
-                product.selected_or_first_available_variant.price
-                | default: product.price
-                | money_without_trailing_zeros
-              -}}
+              {{- price_dp | money_without_trailing_zeros -}}
             </span>
             {%- if section.settings.show_tax_and_shipping -%}
               {%- if cart.taxes_included or shop.shipping_policy.body != blank -%}
@@ -516,11 +517,7 @@
           <div class="product_info_bundle_info_title">{{ 'common.gesamtsumme' | t }}</div>
           <div class="product_info_bundle_info_right">
             <span class="product_info_bundle_info_total product_info_price_dp">
-              {{-
-                product.selected_or_first_available_variant.price
-                | default: product.price
-                | money_without_trailing_zeros
-              -}}
+              {{- price_dp | money_without_trailing_zeros -}}
             </span>
             {%- if section.settings.show_tax_and_shipping -%}
               {%- if cart.taxes_included or shop.shipping_policy.body != blank -%}
@@ -676,18 +673,10 @@
           {% endif %}
           <div class="product_info_price">
             <div class="product_info_price_dp">
-              {{
-                product.selected_or_first_available_variant.price
-                | default: product.price
-                | money_without_trailing_zeros
-              }}
+              {{ price_dp | money_without_trailing_zeros }}
             </div>
             <div class="product_info_price_op">
-              {{
-                product.selected_or_first_available_variant.compare_at_price
-                | default: product.compare_at_price
-                | money_without_trailing_zeros
-              }}
+              {{ price_op | money_without_trailing_zeros }}
             </div>
             {%- if section.settings.show_tax_and_shipping -%}
               {%- if cart.taxes_included or shop.shipping_policy.body != blank -%}
