@@ -713,7 +713,7 @@ document.querySelectorAll(".product_info_bundle_product").forEach(item => {
       if (target.classList.contains("product_info_bundle_modal_select_item_select")) return
       const parent = target.closest(".product_info_bundle_modal_select")
       const index = parent.dataset.index
-      const is_card_circle = parent.hasAttribute("data-type")
+      // const is_card_circle = parent.hasAttribute("data-type")
       const parent_list = item.querySelectorAll(`.product_info_bundle_modal_select[data-index="${index}"]`)
       parent_list.forEach(parentEl => {
         parentEl.querySelector('.product_info_bundle_modal_select_item_select').classList.remove('product_info_bundle_modal_select_item_select')
@@ -728,11 +728,10 @@ document.querySelectorAll(".product_info_bundle_product").forEach(item => {
       if (currVariant) {
         img_contain.src = currVariant.featured_image.src
         dp_price_contain.innerHTML = moneyWithoutTrailingZeros(currVariant.price)
-        if (is_card_circle) {
-          item.querySelector(".product_info_bundle_product_img img").src = currVariant.featured_image.src
-          item.querySelector(".product_info_bundle_product_price").innerHTML = `+${moneyWithoutTrailingZeros(currVariant.price)}`
-          item.setAttribute("data-variant-id", currVariant.id)
-        }
+        item.querySelector(".product_info_bundle_product_img img").src = currVariant.featured_image.src
+        item.querySelector(".product_info_bundle_product_price").innerHTML = `+${moneyWithoutTrailingZeros(currVariant.price)}`
+        item.setAttribute("data-variant-id", currVariant.id)
+
         if (currVariant.compare_at_price) {
           op_price_contain.innerHTML = moneyWithoutTrailingZeros(currVariant.compare_at_price)
           op_price_contain.classList.remove("hidden")
@@ -757,11 +756,10 @@ document.querySelectorAll(".product_info_bundle_product").forEach(item => {
           });
           img_contain.src = currVariant.featured_image.src
           dp_price_contain.innerHTML = moneyWithoutTrailingZeros(currVariant.price)
-          if (is_card_circle) {
-            item.querySelector(".product_info_bundle_product_img img").src = currVariant.featured_image.src
-            item.querySelector(".product_info_bundle_product_price").innerHTML = `+${moneyWithoutTrailingZeros(currVariant.price)}`
-            item.setAttribute("data-variant-id", currVariant.id)
-          }
+          item.querySelector(".product_info_bundle_product_img img").src = currVariant.featured_image.src
+          item.querySelector(".product_info_bundle_product_price").innerHTML = `+${moneyWithoutTrailingZeros(currVariant.price)}`
+          item.setAttribute("data-variant-id", currVariant.id)
+
           if (currVariant.compare_at_price) {
             op_price_contain.innerHTML = moneyWithoutTrailingZeros(currVariant.compare_at_price)
             op_price_contain.classList.remove("hidden")
@@ -799,9 +797,9 @@ document.querySelectorAll(".product_info_bundle_product").forEach(item => {
   // 捆绑弹窗确定
   const confirm_btn = item.querySelector(".product_info_bundle_modal_btn")
   confirm_btn.addEventListener("click", () => {
-    item.querySelector(".product_info_bundle_product_img img").src = currVariant.featured_image.src
-    item.querySelector(".product_info_bundle_product_price").innerHTML = `+${moneyWithoutTrailingZeros(currVariant.price)}`
-    item.setAttribute("data-variant-id", currVariant.id)
+    // item.querySelector(".product_info_bundle_product_img img").src = currVariant.featured_image.src
+    // item.querySelector(".product_info_bundle_product_price").innerHTML = `+${moneyWithoutTrailingZeros(currVariant.price)}`
+    // item.setAttribute("data-variant-id", currVariant.id)
     handleProductClick(true)
     modal.style.display = "none";
     document.body.style.overflowY = "auto";
