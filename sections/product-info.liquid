@@ -27,7 +27,7 @@
 
   assign price_op = product.selected_or_first_available_variant.compare_at_price | default: product.compare_at_price
   if has_tabletop
-    assign bundle_tabletop_price_op = bundle_tabletop.selected_or_first_available_variant.compare_at_price | default: bundle_tabletop.compare_at_price
+    assign bundle_tabletop_price_op = bundle_tabletop.selected_or_first_available_variant.compare_at_price | default: bundle_tabletop.compare_at_price | default: bundle_tabletop_price_dp
     assign price_op = price_op | plus: bundle_tabletop_price_op
   endif
 %}
