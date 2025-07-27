@@ -400,7 +400,6 @@ function getSectionInnerHTML(html, selector) {
 }
 // 变体切换
 const product_data = JSON.parse(document.getElementById('product_info_data').textContent);
-console.log(product_data)
 const product = product_data.product
 let currVariant = product_data.variant
 const symbol = product_data.symbol

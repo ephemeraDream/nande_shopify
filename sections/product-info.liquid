@@ -302,6 +302,56 @@
               </div>
             </div>
           {% endfor %}
+          {% if has_tabletop %}
+            {%- for option in bundle_tabletop.options_with_values -%}
+              {% assign option_hanlde = option.name | handle %}
+              <div class="product_info_option_item">
+                <div class="product_info_option_label">
+                  {{ option.name }}：
+                  <span class="product_info_option_label_select">
+                    {%- for value in option.values -%}
+                      {%- if value.selected %}{{ value }}{% endif -%}
+                    {% endfor %}
+                  </span>
+                </div>
+                <div
+                  class="product_info_option_select"
+                  select-type="{% if option_hanlde contains "farbe" %}circle{% else %}box{% endif %}"
+                  data-index="{{ forloop.index0 | plus: product.options.size }}"
+                >
+                  {%- for value in option.values -%}
+                    {% if option_hanlde contains 'farbe' %}
+                      {% assign color = '' %}
+                      {% for color_item in bundle_tabletop.metafields.custom.color_option.value %}
+                        {% if color_item.name == value.name %}
+                          {% assign color = color_item.value %}
+                        {% endif %}
+                      {% endfor %}
+                      <div
+                        data-value="{{ value }}"
+                        class="product_info_option_select_item{% if value.selected %} product_info_option_select_item_select{% endif %}"
+                        title="{{ value }}"
+                      >
+                        <div
+                          class="product_info_option_select_item_circle{% if color == '' %} product_info_option_select_item_none{% endif %}"
+                          {% if color != '' %}
+                            style="background-color: {{ color }}"
+                          {% endif %}
+                        ></div>
+                      </div>
+                    {% else %}
+                      <div
+                        class="product_info_option_select_item{% if value.selected %} product_info_option_select_item_select{% endif %}"
+                        data-value="{{ value }}"
+                      >
+                        {{ value }}
+                      </div>
+                    {% endif %}
+                  {% endfor %}
+                </div>
+              </div>
+            {% endfor %}
+          {% endif %}
         </div>
       </div>
       <div class="product_info_steps_contain hidden" data-index="1">
