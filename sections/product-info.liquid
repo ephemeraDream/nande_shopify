@@ -462,7 +462,7 @@
                                     >
                                       {% assign index = 'option' | append: forloop.index %}
                                       {%- for value in option.values -%}
-                                        {{ option.values | json }}
+                                        {{ value | json }}
                                         {% assign available_variant = product.variants
                                           | where: index, value
                                           | where: 'available'
