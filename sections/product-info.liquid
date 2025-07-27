@@ -401,6 +401,47 @@
                         </div>
                       </div>
                       <div class="product_info_bundle_product_info">
+                        {%- for option in bundled_product.options_with_values -%}
+                          {% assign option_hanlde = option.name | handle %}
+                          {% if option_hanlde contains 'farbe' %}
+                            <div class="product_info_bundle_modal_item">
+                              <div
+                                class="product_info_bundle_modal_select"
+                                select-type="circle"
+                                data-index="{{ forloop.index0 }}"
+                              >
+                                {% assign index = 'option' | append: forloop.index %}
+                                {%- for value in option.values -%}
+                                  {% assign available_variant = bundled_product.variants
+                                    | where: index, value
+                                    | where: 'available'
+                                  %}
+                                  {% if available_variant.size > 0 %}
+                                    {% assign color = '' %}
+                                    {% for color_item in bundled_product.metafields.custom.color_option.value %}
+                                      {% if color_item.name == value.name %}
+                                        {% assign color = color_item.value %}
+                                      {% endif %}
+                                    {% endfor %}
+                                    <div
+                                      data-value="{{ value }}"
+                                      class="product_info_bundle_modal_select_item{% if value.selected %} product_info_bundle_modal_select_item_select{% endif %}"
+                                      title="{{ value }}"
+                                      data-img="{{ available_variant.featured_media | image_url }}"
+                                    >
+                                      <div
+                                        class="product_info_bundle_modal_select_item_circle{% if color == '' %} product_info_bundle_modal_select_item_none{% endif %}"
+                                        {% if color != '' %}
+                                          style="background-color: {{ color }}"
+                                        {% endif %}
+                                      ></div>
+                                    </div>
+                                  {% endif %}
+                                {% endfor %}
+                              </div>
+                            </div>
+                          {% endif %}
+                        {% endfor %}
                         <div class="product_info_bundle_product_title">{{ bundled_product.title }}</div>
                         <div class="product_info_bundle_product_price">
                           +
