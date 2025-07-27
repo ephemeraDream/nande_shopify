@@ -487,6 +487,8 @@ document.querySelectorAll(".product_info_option_select_item").forEach(el => {
       setVariantOption()
       updateUrl()
       updateImagesByVariantMedia()
+    } else {
+      document.querySelector(".product_info_bundle_tabletop_img").src = curr_bundle_tabletop_variant.featured_image.src
     }
     updateVariantPrice()
     updateBuyBtns()
