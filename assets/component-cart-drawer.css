@@ -526,7 +526,8 @@ cart-drawer-items::-webkit-scrollbar-track-piece {
 }
 
 .cartdrawer_bundle_product_item img {
-  flex: 0 0 7rem;
+  flex: 0 0 auto;
+  width: 7rem;
   height: 7rem;
   object-fit: contain;
   object-position: center center;
