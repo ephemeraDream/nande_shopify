@@ -325,7 +325,7 @@ function initBuybox() {
         const bundle_tabletop = document.querySelector("input[name='bundle_tabletop_id']")
         if (bundle_tabletop) {
           cartFormData.items.push({
-            id: bundle_tabletop.id, quantity: Number(quantityInput.value), properties: {
+            id: bundle_tabletop.value, quantity: Number(quantityInput.value), properties: {
               'bundle_parent_id': goods_id
             }
           });
