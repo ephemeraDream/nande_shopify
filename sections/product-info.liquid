@@ -191,7 +191,7 @@
           <div class="product_info_price_dp">
             {{ price_dp | money_without_trailing_zeros }}
           </div>
-          <div class="product_info_price_op">
+          <div class="product_info_price_op{% unless price_op > price_dp %} hidden{% endunless %}">
             {{ price_op | money_without_trailing_zeros }}
           </div>
           {%- if section.settings.show_tax_and_shipping -%}
@@ -675,7 +675,7 @@
             <div class="product_info_price_dp">
               {{ price_dp | money_without_trailing_zeros }}
             </div>
-            <div class="product_info_price_op">
+            <div class="product_info_price_op{% unless price_op > price_dp %} hidden{% endunless %}">
               {{ price_op | money_without_trailing_zeros }}
             </div>
             {%- if section.settings.show_tax_and_shipping -%}
