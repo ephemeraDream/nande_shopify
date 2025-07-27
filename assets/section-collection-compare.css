@@ -678,6 +678,7 @@
   z-index: 110;
   padding-top: 10rem;
   padding-bottom: 12rem;
+  display: none;
 }
 
 .collection_compare .collection_compare_modal_title {
@@ -728,6 +729,8 @@
   border-width: 0.1rem 0.1rem 0px 0px;
   border-style: solid;
   border-color: #7F7E75;
+  cursor: pointer;
+  height: 5.8rem;
 }
 
 .collection_compare .collection_compare_modal .collection_compare_product_select {
@@ -743,6 +746,14 @@
   align-items: center;
   justify-content: flex-end;
   gap: 1.4rem;
+  height: 5.8rem;
+  border-bottom: 0.1rem solid #7F7E75;
+  cursor: pointer;
+}
+
+.collection_compare .collection_compare_modal_return svg {
+  width: 2rem;
+  height: 1.7rem;
 }
 
 @media screen and (max-width: 1440px) {
