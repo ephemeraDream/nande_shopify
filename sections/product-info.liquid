@@ -462,8 +462,7 @@
                                     >
                                       {% assign index = 'option' | append: forloop.index %}
                                       {%- for value in option.values -%}
-                                        {{ product.variants | json }}
-                                        {% assign available_variant = product.variants
+                                        {% assign available_variant = bundled_product.variants
                                           | where: index, value
                                           | where: 'available'
                                         %}
