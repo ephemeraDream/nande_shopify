@@ -238,3 +238,12 @@ document.querySelectorAll(".collection_compare_product_saleinfo_countdown").forE
   updateCountdown();
   setInterval(updateCountdown, 1000);
 })
+// 确认对比
+document.querySelector(".collection_compare_select_contain_body_btn").addEventListener("click", (e) => {
+  if (e.target.closest(".collection_compare_select_contain_body_btn").hasAttribute("disable")) return
+  const contain = document.querySelector(".collection_compare_modal_contain")
+  contain.innerHTML = ""
+  document.querySelectorAll(".collection_compare_select_contain_body_list_item").forEach(item => {
+    console.log(collection_compare_data[item.dataset.id])
+  })
+})
