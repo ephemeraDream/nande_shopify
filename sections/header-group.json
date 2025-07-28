@@ -16,7 +16,6 @@
       "blocks": {
         "announcement-bar-0": {
           "type": "announcement",
-          "disabled": true,
           "settings": {
             "text": "Welcome to our store",
             "link": ""
@@ -25,8 +24,7 @@
         "img_with_text_QJDYxJ": {
           "type": "img_with_text",
           "settings": {
-            "text": "<p>Up to 52% Off</p><p>Amazing Eco-Powered Deals for Every Journey !</p>",
-            "image": "shopify://shop_images/announcement-bar-img.webp",
+            "text": "<p><em><strong>Up to 52% Off</strong></em></p>",
             "link": ""
           }
         },
@@ -34,7 +32,7 @@
           "type": "countdown",
           "settings": {
             "text": "<p>Rabatt TH30 30 Rabatt fur T2 Pro Plus</p>",
-            "countdown_handle": "summer-sale",
+            "countdown_handle": "",
             "link": ""
           }
         }
@@ -47,8 +45,8 @@
       "custom_css": [],
       "settings": {
         "auto_rotate": true,
-        "change_slides_speed": 5,
-        "color_scheme": "scheme-1",
+        "change_slides_speed": 6,
+        "color_scheme": "scheme-4",
         "show_line_separator": true,
         "show_social": false,
         "enable_country_selector": true,
@@ -66,46 +64,53 @@
         "img_width_text_Dh6yzR": {
           "type": "img_width_text",
           "settings": {
-            "name": "Featured Spaces",
+            "name": "Inspirationen",
             "link": "",
             "collection_list": [
               "yoga",
-              "petdesk",
-              "regenbogentisch",
-              "workfit-pro",
-              "flexidesk",
-              "familydesk"
+              "space",
+              "t2-pro-max"
             ]
           }
         },
         "product_collection_eEzYM8": {
           "type": "product_collection",
           "settings": {
-            "name": "Standing Desk",
+            "name": "Höhenverstellbare Schreibtische",
             "link": "",
             "collection_list": [
-              "schreibtisch-home-office",
-              "maidesite-burozubehor",
-              "burotisch-hohenverstellbar",
+              "preiswert",
+              "klassiker",
+              "exklusiv",
               "maidesite-produkt",
-              "hohenverstellbarer-schreibtisch"
+              "maidesite-tischplatte"
             ],
-            "info_title": "<p>Furnishing for your team?</p>",
-            "info_text": "<p>Wisit <a href=\"/pages/maidesite-faq\" title=\"FAQs\">Branch Business</a> to learn how Branchtakes the work out of creating an inspiringworkplace.</p>"
+            "info_title": "<p>Ausstattung für Ihr Team?</p>",
+            "info_text": "<p>Besuchen Sie unsere <a href=\"https://www.maidesite.de/pages/geschaftskunden-2025\" title=\"https://www.maidesite.de/pages/geschaftskunden-2025\">Geschäftskunden</a>-Seite und entdecken Sie ergonomische Lösungen für moderne Arbeitsplätze.</p>"
           }
         },
-        "single_link_LwNt6r": {
-          "type": "single_link",
+        "product_collection_dkDC4b": {
+          "type": "product_collection",
           "settings": {
-            "name": "Chair",
-            "link": ""
+            "name": "Ergonomische Stühle",
+            "link": "shopify://collections/ergonomischer-burostuhl",
+            "collection_list": [
+              "ergonomischer-burostuhl"
+            ],
+            "info_title": "",
+            "info_text": ""
           }
         },
-        "single_link_RWXnMF": {
-          "type": "single_link",
+        "product_collection_RDMYxc": {
+          "type": "product_collection",
           "settings": {
-            "name": "Accesories",
-            "link": ""
+            "name": "Zubehör",
+            "link": "shopify://collections/maidesite-burozubehor",
+            "collection_list": [
+              "maidesite-burozubehor"
+            ],
+            "info_title": "",
+            "info_text": ""
           }
         },
         "single_link_nU48XR": {
@@ -118,8 +123,8 @@
         "single_link_hjwkXN": {
           "type": "single_link",
           "settings": {
-            "name": "Bulk Order",
-            "link": ""
+            "name": "Geschäftskunden",
+            "link": "shopify://pages/geschaftskunden-2025"
           }
         },
         "link_list_yBG8wE": {
@@ -134,8 +139,8 @@
       "block_order": [
         "img_width_text_Dh6yzR",
         "product_collection_eEzYM8",
-        "single_link_LwNt6r",
-        "single_link_RWXnMF",
+        "product_collection_dkDC4b",
+        "product_collection_RDMYxc",
         "single_link_nU48XR",
         "single_link_hjwkXN",
         "link_list_yBG8wE"

@@ -14,30 +14,29 @@
       "blocks": {
         "banner_item_V4RHqa": {
           "type": "banner_item",
-          "disabled": true,
           "settings": {
-            "sub_title": "",
-            "title": "",
-            "text": "",
-            "btn_text": "",
+            "sub_title": "<p>New release</p>",
+            "title": "<p>Maidesite Space</p>",
+            "text": "<p>Tragkraft bis 200 kg, individuell erweiterbar und modern im Design: Der modulare Smart Desk</p>",
+            "btn_text": "Jetzt kaufen",
             "link": "",
             "file_position": "middle_left",
             "file_type": "image",
-            "file_image": "shopify://shop_images/banner-1.webp",
+            "file_image": "shopify://shop_images/Banner_0a355c62-7d1a-4c62-808a-e74e71a042b1.jpg",
             "video_url": ""
           }
         },
         "banner_item_ykwd4B": {
           "type": "banner_item",
           "settings": {
-            "sub_title": "<p>Maidesite</p>",
-            "title": "<p>Maidesite Spaces</p>",
-            "text": "<p>Lassen Sie sich inspirieren und gestalten Sie Ihren perfekten Maidesite-Arbeitsplatz <br/>mit unseren sorgfältig kuratierten Räumen.</p>",
-            "btn_text": "En savoir plus",
+            "sub_title": "<p>Eleganz, die sich bewegt</p>",
+            "title": "<p>Maidesite Yoga</p>",
+            "text": "<p>Sanftes Design trifft auf ergonomische Innovation: Der höhenverstellbare Schreibtisch mit <br/>Schublade & kabelloser Qi-Ladestation – für einen flexiblen, gesunden Alltag.</p>",
+            "btn_text": "Jetzt kaufen",
             "link": "",
-            "file_position": "middle_left",
+            "file_position": "bottom_right",
             "file_type": "image",
-            "file_image": "shopify://shop_images/banner-2.webp",
+            "file_image": "shopify://shop_images/Banner_-_YOGA_-_1.jpg",
             "video_url": ""
           }
         },
@@ -71,41 +70,41 @@
         "item_FzLRBi": {
           "type": "item",
           "settings": {
-            "title": "<p>Schreibtische</p>",
-            "text": "<p>Höhenverstellbare Schreibtische für </p><p>dein Büro</p>",
-            "btn_text": "Erkunden",
+            "title": "<p>Höhenverstellbare Schreibtische</p>",
+            "text": "",
+            "btn_text": "Alle anzeigen",
             "image": "shopify://shop_images/link-block-1.webp",
-            "link": ""
+            "link": "shopify://collections/hohenverstellbarer-schreibtisch"
           }
         },
         "item_K7NCmg": {
           "type": "item",
           "settings": {
-            "title": "<p>Stühle</p>",
-            "text": "<p>Komfortable und stilvolle Bürostühle</p>",
-            "btn_text": "Erkunden",
-            "image": "shopify://shop_images/link-block-2.webp",
-            "link": ""
+            "title": "<p>Ergonomische Bürostühle</p>",
+            "text": "",
+            "btn_text": "Alle anzeigen",
+            "image": "shopify://shop_images/6a6194c936e3b796ca017bcb427d0844_1bc72ad3-3dd4-46b1-af1e-79aebaabbbf6.jpg",
+            "link": "shopify://collections/ergonomischer-burostuhl"
           }
         },
         "item_jEQh9H": {
           "type": "item",
           "settings": {
-            "title": "<p>Zubehör</p>",
-            "text": "<p>Funktionales Zubehör für deinen </p><p>Arbeitsplatz</p>",
-            "btn_text": "Erkunden",
-            "image": "shopify://shop_images/link-block-3.webp",
-            "link": ""
+            "title": "<p>Bürozubehör</p>",
+            "text": "",
+            "btn_text": "Alle anzeigen",
+            "image": "shopify://shop_images/05c749914ceb6f0e401d50aac1cec636.jpg",
+            "link": "shopify://collections/maidesite-burozubehor"
           }
         },
         "item_3EWnyb": {
           "type": "item",
           "settings": {
             "title": "<p>Pakete</p>",
-            "text": "<p>Ideal kombinierte Sets für dein Büro</p>",
-            "btn_text": "Erkunden",
-            "image": "shopify://shop_images/link-block-4.webp",
-            "link": ""
+            "text": "",
+            "btn_text": "Alle anzeigen",
+            "image": "shopify://shop_images/a8e9f7ef556f09917041953654d98435.jpg",
+            "link": "shopify://collections/jetzt-im-set-sparen"
           }
         }
       },
@@ -117,8 +116,8 @@
       ],
       "name": "link block",
       "settings": {
-        "title": "<p>Stelle Deinen Schreibtisch Zusammen</p>",
-        "text": "<p>Gestalte deinen Maidesite-Arbeitsbereich mit unseren </p><p>inspirierten Räumen und Produkten</p>"
+        "title": "<p>Design trifft auf Ergonomie</p>",
+        "text": "<p>Weil dein Arbeitsplatz mehr verdient als Standard.</p>"
       }
     },
     "polka_dot_swiper_4yRfwn": {
