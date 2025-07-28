@@ -89,18 +89,28 @@
             "info_text": "<p>Besuchen Sie unsere <a href=\"https://www.maidesite.de/pages/geschaftskunden-2025\" title=\"https://www.maidesite.de/pages/geschaftskunden-2025\">Geschäftskunden</a>-Seite und entdecken Sie ergonomische Lösungen für moderne Arbeitsplätze.</p>"
           }
         },
-        "single_link_LwNt6r": {
-          "type": "single_link",
+        "product_collection_dkDC4b": {
+          "type": "product_collection",
           "settings": {
             "name": "Ergonomische Stühle",
-            "link": "shopify://collections/ergonomischer-burostuhl"
+            "link": "shopify://collections/ergonomischer-burostuhl",
+            "collection_list": [
+              "ergonomischer-burostuhl"
+            ],
+            "info_title": "",
+            "info_text": ""
           }
         },
-        "single_link_RWXnMF": {
-          "type": "single_link",
+        "product_collection_RDMYxc": {
+          "type": "product_collection",
           "settings": {
             "name": "Zubehör",
-            "link": "shopify://collections/maidesite-burozubehor"
+            "link": "shopify://collections/maidesite-burozubehor",
+            "collection_list": [
+              "maidesite-burozubehor"
+            ],
+            "info_title": "",
+            "info_text": ""
           }
         },
         "single_link_nU48XR": {
@@ -129,8 +139,8 @@
       "block_order": [
         "img_width_text_Dh6yzR",
         "product_collection_eEzYM8",
-        "single_link_LwNt6r",
-        "single_link_RWXnMF",
+        "product_collection_dkDC4b",
+        "product_collection_RDMYxc",
         "single_link_nU48XR",
         "single_link_hjwkXN",
         "link_list_yBG8wE"
