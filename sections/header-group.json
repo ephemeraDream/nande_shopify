@@ -64,7 +64,7 @@
         "img_width_text_Dh6yzR": {
           "type": "img_width_text",
           "settings": {
-            "name": "Featured Spaces",
+            "name": "Inspirationen",
             "link": "",
             "collection_list": [
               "yoga",
@@ -76,7 +76,7 @@
         "product_collection_eEzYM8": {
           "type": "product_collection",
           "settings": {
-            "name": "Standing Desk",
+            "name": "Höhenverstellbare Schreibtische",
             "link": "",
             "collection_list": [
               "preiswert",
@@ -92,15 +92,15 @@
         "single_link_LwNt6r": {
           "type": "single_link",
           "settings": {
-            "name": "Chair",
-            "link": ""
+            "name": "Ergonomische Stühle",
+            "link": "shopify://collections/ergonomischer-burostuhl"
           }
         },
         "single_link_RWXnMF": {
           "type": "single_link",
           "settings": {
-            "name": "Accesories",
-            "link": ""
+            "name": "Zubehör",
+            "link": "shopify://collections/maidesite-burozubehor"
           }
         },
         "single_link_nU48XR": {
@@ -113,8 +113,8 @@
         "single_link_hjwkXN": {
           "type": "single_link",
           "settings": {
-            "name": "Bulk Order",
-            "link": ""
+            "name": "Geschäftskunden",
+            "link": "shopify://pages/geschaftskunden-2025"
           }
         },
         "link_list_yBG8wE": {
