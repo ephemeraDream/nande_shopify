@@ -181,7 +181,7 @@
         "item_6kCRQ4": {
           "type": "item",
           "settings": {
-            "select_product": "maidesite-tischgestell-elektrisch-hohenverstellbar-t2-pro-plus"
+            "select_product": "maidesite-elektrisch-hohenverstellbarer-gestell-t2-pro"
           }
         },
         "item_mgqRNf": {
@@ -193,11 +193,12 @@
         "item_wtnaqX": {
           "type": "item",
           "settings": {
-            "select_product": "maidesite-tischgestell-elektrisch-hohenverstellbar-t2-pro-plus"
+            "select_product": "maidesite-t2-pro-max-tischgestell-elektrisch-hohenverstellbar"
           }
         },
         "item_hrmkBQ": {
           "type": "item",
+          "disabled": true,
           "settings": {
             "select_product": "maidesite-tischgestell-elektrisch-hohenverstellbar-t2-pro-plus"
           }
@@ -224,6 +225,7 @@
     },
     "image_comparison_JHgace": {
       "type": "image-comparison",
+      "disabled": true,
       "name": "Image Comparison",
       "settings": {
         "left_image": "shopify://shop_images/img-comparison.webp",
@@ -238,9 +240,9 @@
         "title": "<p>Stelle Deinen Schreibtisch Zusammen</p>",
         "text": "<p>Gestalte deinen Maidesite-Arbeitsbereich mit unseren </p><p>inspirierten Räumen und Produkten</p>",
         "product_list": [
-          "maidesite-el2-pro-art-tischgestell-elektrisch-hohenverstellbar",
-          "maidesite-to1-pro-elektrisch-hohenverstellbarer-schreibtisch",
-          "maidesite-elektrisch-hohenverstellbarer-schreibtisch-120x60-140x70-cm-s2-pro"
+          "maidesite-t2-pro-max-tischgestell-elektrisch-hohenverstellbar",
+          "maidesite-ec5-ergonomischer-burostuhl-mit-ruckenlehne",
+          "maidesite-3-fach-tischsteckdose-mit-usb-c-und-a-1-8m-kabel-steckdosenleiste"
         ],
         "product_link_text": "En savoir plus",
         "bundle_title": "<p>Collocation</p>",
