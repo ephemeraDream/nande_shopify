@@ -16,7 +16,6 @@
       "blocks": {
         "announcement-bar-0": {
           "type": "announcement",
-          "disabled": true,
           "settings": {
             "text": "Welcome to our store",
             "link": ""
@@ -25,8 +24,7 @@
         "img_with_text_QJDYxJ": {
           "type": "img_with_text",
           "settings": {
-            "text": "<p>Up to 52% Off</p><p>Amazing Eco-Powered Deals for Every Journey !</p>",
-            "image": "shopify://shop_images/announcement-bar-img.webp",
+            "text": "<p><em><strong>Up to 52% Off</strong></em></p>",
             "link": ""
           }
         },
@@ -34,7 +32,7 @@
           "type": "countdown",
           "settings": {
             "text": "<p>Rabatt TH30 30 Rabatt fur T2 Pro Plus</p>",
-            "countdown_handle": "summer-sale",
+            "countdown_handle": "",
             "link": ""
           }
         }
@@ -47,8 +45,8 @@
       "custom_css": [],
       "settings": {
         "auto_rotate": true,
-        "change_slides_speed": 5,
-        "color_scheme": "scheme-1",
+        "change_slides_speed": 6,
+        "color_scheme": "scheme-4",
         "show_line_separator": true,
         "show_social": false,
         "enable_country_selector": true,
