@@ -172,7 +172,8 @@
     {% for product in product_list %}
       "{{ product.id }}": {
         "product": {{- product | json -}},
-        "symbol": {{ currency_symbol | json }}
+        "symbol": {{ currency_symbol | json }},
+        "compare_simple": {{ product.metafields.custom.compare_simple.value.data.value | json }}
       }{% unless forloop.last %},{% endunless %}
     {% endfor %}
   }
