@@ -32,7 +32,7 @@
           "type": "countdown",
           "settings": {
             "text": "<p>Rabatt TH30 30 Rabatt fur T2 Pro Plus</p>",
-            "countdown_handle": "",
+            "countdown_handle": "summer-sale",
             "link": ""
           }
         }
