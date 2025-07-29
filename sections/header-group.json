@@ -16,6 +16,7 @@
       "blocks": {
         "announcement-bar-0": {
           "type": "announcement",
+          "disabled": true,
           "settings": {
             "text": "Welcome to our store",
             "link": ""
@@ -24,12 +25,13 @@
         "img_with_text_QJDYxJ": {
           "type": "img_with_text",
           "settings": {
-            "text": "<p><em><strong>Up to 52% Off</strong></em></p>",
+            "text": "<p><strong>Sommer Sale: </strong>Sichere Dir jetzt die heißesten Deals von bis zu 150 € Rabatt</p>",
             "link": ""
           }
         },
         "countdown_77kmfi": {
           "type": "countdown",
+          "disabled": true,
           "settings": {
             "text": "<p>Rabatt TH30 30 Rabatt fur T2 Pro Plus</p>",
             "countdown_handle": "summer-sale",
