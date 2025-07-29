@@ -129,15 +129,16 @@
             "title": "<p>Eleganter Arbeitsbereich</p>",
             "text": "<p>Schaffe einen funktionalen und stilvollen Arbeitsplatz mit unserem klassischen Schreibtisch</p>",
             "btn_text": "En savoir plus",
-            "image": "shopify://shop_images/polka_dot_swiper-2.webp",
+            "image": "shopify://shop_images/1_cd0b56ec-7a84-4288-a78a-b9008d49df22.jpg",
             "link": "",
-            "select_product": "maidesite-tischgestell-elektrisch-hohenverstellbar-t2-pro-plus",
-            "product_X": 34,
-            "product_Y": 34
+            "select_product": "maidesite-t4-pro-plus-vierbeinige-elliptische-saule-elektrisch-hohenverstellbares-gestell",
+            "product_X": 49,
+            "product_Y": 40
           }
         },
         "swiper_RR3AVA": {
           "type": "swiper",
+          "disabled": true,
           "settings": {
             "title": "<p>Eleganter Arbeitsbereich</p>",
             "text": "<p>Schaffe einen funktionalen und stilvollen Arbeitsplatz mit </p><p>unserem klassischen Schreibtisch</p>",
@@ -151,6 +152,7 @@
         },
         "swiper_xwgRwF": {
           "type": "swiper",
+          "disabled": true,
           "settings": {
             "title": "<p>Eleganter Arbeitsbereich</p>",
             "text": "<p>Schaffe einen funktionalen und stilvollen Arbeitsplatz mit unserem klassischen Schreibtisch</p>",
