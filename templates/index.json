@@ -123,11 +123,24 @@
     "polka_dot_swiper_4yRfwn": {
       "type": "polka-dot-swiper",
       "blocks": {
+        "swiper_xwgRwF": {
+          "type": "swiper",
+          "settings": {
+            "title": "<p><strong>Yoga</strong></p>",
+            "text": "<p>Zeitlose Ästhetik für stilvolle Work-Life-Balance.</p>",
+            "btn_text": "En savoir plus",
+            "image": "shopify://shop_images/YOGA_-_1_80dbac95-bdf1-4531-a898-05e1c0987d43.jpg",
+            "link": "",
+            "select_product": "ergoset-yoga-schreibtisch-ec6-burostuhl",
+            "product_X": 55,
+            "product_Y": 36
+          }
+        },
         "swiper_74yt3y": {
           "type": "swiper",
           "settings": {
-            "title": "<p>Eleganter Arbeitsbereich</p>",
-            "text": "<p>Schaffe einen funktionalen und stilvollen Arbeitsplatz mit unserem klassischen Schreibtisch</p>",
+            "title": "<p><strong>T4 Pro Plus</strong></p>",
+            "text": "<p>Standfest bei jeder Bewegung – keine Wackler, kein Nachgeben.</p>",
             "btn_text": "En savoir plus",
             "image": "shopify://shop_images/1_cd0b56ec-7a84-4288-a78a-b9008d49df22.jpg",
             "link": "",
@@ -138,37 +151,22 @@
         },
         "swiper_RR3AVA": {
           "type": "swiper",
-          "disabled": true,
           "settings": {
-            "title": "<p>Eleganter Arbeitsbereich</p>",
-            "text": "<p>Schaffe einen funktionalen und stilvollen Arbeitsplatz mit </p><p>unserem klassischen Schreibtisch</p>",
+            "title": "<p><strong>Space</strong></p>",
+            "text": "<p>Flexibel erweiterbar – passe das Tischsystem an dein Setup und deinen Workflow an.</p>",
             "btn_text": "En savoir plus",
-            "image": "shopify://shop_images/polka_dot_swiper-1.webp",
+            "image": "shopify://shop_images/1_4a1df8e0-f83c-40bb-97a2-39609c903ac1.jpg",
             "link": "",
             "select_product": "maidesite-th2-pro-plus-tischgestell-elektrisch-hohenverstellbar",
-            "product_X": 52,
+            "product_X": 42,
             "product_Y": 45
-          }
-        },
-        "swiper_xwgRwF": {
-          "type": "swiper",
-          "disabled": true,
-          "settings": {
-            "title": "<p>Eleganter Arbeitsbereich</p>",
-            "text": "<p>Schaffe einen funktionalen und stilvollen Arbeitsplatz mit unserem klassischen Schreibtisch</p>",
-            "btn_text": "En savoir plus",
-            "image": "shopify://shop_images/polka_dot_swiper-2.webp",
-            "link": "",
-            "select_product": "maidesite-to1-pro-elektrisch-hohenverstellbarer-schreibtisch",
-            "product_X": 22,
-            "product_Y": 40
           }
         }
       },
       "block_order": [
+        "swiper_xwgRwF",
         "swiper_74yt3y",
-        "swiper_RR3AVA",
-        "swiper_xwgRwF"
+        "swiper_RR3AVA"
       ],
       "name": "polka dot swiper",
       "settings": {
@@ -227,7 +225,6 @@
     },
     "image_comparison_JHgace": {
       "type": "image-comparison",
-      "disabled": true,
       "name": "Image Comparison",
       "settings": {
         "left_image": "shopify://shop_images/img-comparison.webp",
