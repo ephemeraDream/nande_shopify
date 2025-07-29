@@ -225,6 +225,7 @@
     },
     "image_comparison_JHgace": {
       "type": "image-comparison",
+      "disabled": true,
       "name": "Image Comparison",
       "settings": {
         "left_image": "shopify://shop_images/img-comparison.webp",
