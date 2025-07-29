@@ -165,7 +165,11 @@
                         {%- endif -%}
                       >
                         <div class="announcement_bar_text">{{ block.settings.text }}</div>
-                        <img src="{{ block.settings.image | image_url }}">
+                        {%- assign image = section.blocks.first.settings.image -%}
+                        {%- if image and image != blank and image != "" -%}
+                          <img src="{{ image | image_url }}">
+                        {%- endif -%}
+                        
                       </a>
                     </div>
                   </div>
