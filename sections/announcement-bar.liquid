@@ -55,7 +55,9 @@
               {%- endif -%}
             >
               <div class="announcement_bar_text">{{ section.blocks.first.settings.text }}</div>
+              {%- if section.blocks.first.settings.image != blank -%}
               <img src="{{ section.blocks.first.settings.image | image_url }}">
+             {%- endif -%}
             </a>
           {%- when 'countdown' -%}
             {% assign countdown_handle = section.blocks.first.settings.countdown_handle %}
