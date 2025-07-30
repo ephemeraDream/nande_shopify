@@ -382,7 +382,7 @@
           "type": "swiper",
           "settings": {
             "name": "@EFRALINK",
-            "introduce": "<p>17.1 Million YouTube Followers</p>",
+            "introduce": "",
             "description": "<p>“Wenn wir im Stehen arbeiten wollen, ist das besonders interessant. Das Arbeiten im Stehen hilft uns, unsere Beine zu   strecken und die Position unseres Ruckens zu andern, was vorteilhaft ist. Mit diesen Schreibtischen konnen wir nicht nur fur  kurze Zeit, sondern auch fur langere Zeit im Stehen arbeiten.”</p>",
             "link": "",
             "cover_image": "shopify://shop_images/EFRALINK.png",
@@ -393,19 +393,31 @@
         "swiper_qRmjCc": {
           "type": "swiper",
           "settings": {
-            "name": "@EFRALINK",
-            "introduce": "<p>17.1 Million YouTube Followers</p>",
-            "description": "<p>\" Here is my new minimalist desk setup as a photographer and content creator for long editing sessions.\"</p>",
+            "name": "@LauraBC",
+            "introduce": "",
+            "description": "<p>\"Hier ist mein neues minimalistisches Schreibtisch-Setup als Fotograf und Content Creator für lange Bearbeitungsstunden. Ich bearbeite sowohl Fotos als auch Videos, daher ist ein komfortabler Arbeitsplatz ein Muss. Hier zeige ich Ihnen die wesentlichen Dinge, die Sie als Fotograf und Content Creator unbedingt haben sollten! :)\"</p>",
             "link": "",
-            "cover_image": "shopify://shop_images/celebrity-img-2.webp",
+            "cover_image": "shopify://shop_images/Laura_BC.png",
             "video_url": "",
-            "url_upload": "shopify://files/videos/TO1-Pro-spine-healthy-mode_a586d928-0c0c-459d-99a8-75d2ab5cc36d.mp4"
+            "url_upload": "shopify://files/videos/My Desk Setup as a Photographer and Content Creator for Long Hours of Editing.mp4"
+          }
+        },
+        "swiper_KgkXnm": {
+          "type": "swiper",
+          "settings": {
+            "name": "@ch3",
+            "introduce": "",
+            "description": "",
+            "link": "",
+            "video_url": "",
+            "url_upload": "shopify://files/videos/EC2.mp4"
           }
         }
       },
       "block_order": [
         "swiper_R8cQdW",
-        "swiper_qRmjCc"
+        "swiper_qRmjCc",
+        "swiper_KgkXnm"
       ],
       "name": "celebrity swiper",
       "settings": {
