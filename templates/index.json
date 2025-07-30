@@ -42,7 +42,6 @@
         },
         "banner_item_e7J8AA": {
           "type": "banner_item",
-          "disabled": true,
           "settings": {
             "sub_title": "",
             "title": "<p>Nahtloses Design Trifft Auf FunktionalitäT</p>",
@@ -50,9 +49,9 @@
             "btn_text": "En savoir plus",
             "link": "",
             "file_position": "middle_left",
-            "file_type": "image",
-            "file_image": "shopify://shop_images/banner-3.webp",
-            "video_url": ""
+            "file_type": "video",
+            "video_url": "",
+            "url_upload": "shopify://files/videos/Yoga Hochverstellbare elektrische Stehtisch.mp4"
           }
         }
       },
