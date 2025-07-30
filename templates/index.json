@@ -404,6 +404,7 @@
         },
         "swiper_KgkXnm": {
           "type": "swiper",
+          "disabled": true,
           "settings": {
             "name": "@ch3",
             "introduce": "",
