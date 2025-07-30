@@ -197,7 +197,6 @@
         },
         "item_wtnaqX": {
           "type": "item",
-          "disabled": true,
           "settings": {
             "select_product": "maidesite-t2-pro-max-tischgestell-elektrisch-hohenverstellbar"
           }
