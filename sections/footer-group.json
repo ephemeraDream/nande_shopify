@@ -42,14 +42,14 @@
           "type": "link_list",
           "settings": {
             "heading": "<p><strong>Beliebte Produkte</strong></p>",
-            "menu": "main-menu"
+            "menu": "beliebte-produkte"
           }
         },
-        "link_list_CHcGwy": {
+        "link_list_CnJ9gh": {
           "type": "link_list",
           "settings": {
-            "heading": "<p><strong>Rechtliches</strong></p>",
-            "menu": "support-1"
+            "heading": "<p><strong>Maidesite</strong></p>",
+            "menu": "footer-1"
           }
         },
         "link_list_cGTUAy": {
@@ -59,20 +59,20 @@
             "menu": "footer"
           }
         },
-        "link_list_CnJ9gh": {
+        "link_list_CHcGwy": {
           "type": "link_list",
           "settings": {
-            "heading": "<p><strong>Maidesite</strong></p>",
-            "menu": "footer-1"
+            "heading": "<p><strong>Rechtliches</strong></p>",
+            "menu": "support-1"
           }
         }
       },
       "block_order": [
         "company_info_MaXiWq",
         "link_list_QEdHcV",
-        "link_list_CHcGwy",
+        "link_list_CnJ9gh",
         "link_list_cGTUAy",
-        "link_list_CnJ9gh"
+        "link_list_CHcGwy"
       ],
       "name": "footer simple",
       "settings": {}
