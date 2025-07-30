@@ -130,9 +130,7 @@
       "settings": {
         "spec_id": "Produkt",
         "show_playicon": "true",
-        "cover_image": "shopify://shop_images/product_info_video_cover.webp",
-        "video_url": "",
-        "url_upload": "shopify://files/videos/TO1-Pro-anti-collision_2b6db0d3-82b5-44c0-876a-e5095807f303.mp4",
+        "video_url": "https://youtu.be/CpglzDtEiXA",
         "title": "<p>Alle Produkte Im üBerblick</p>",
         "description": ""
       }
@@ -224,13 +222,18 @@
       ],
       "name": "img with text simplicity",
       "settings": {
+        "spec_id": "",
+        "header_title": "",
+        "header_content": "",
         "title": "<p>Stabil Und Langlebig</p>",
         "sub_title": "<p>Extrem stabiler </p>",
         "description": "<p>Dreiecksunterstützungsstruktur ist extrem stabil im Vergleich zu anderen Schreibtischdesigns.<br/>Sie ist auch in der höchsten Höhe von ausgezeichneter Stabilität.Neben den strukturellen Verbesserungen trägt auch die präzise Verarbeitung und Konstruktion <br/>zur Stabilität bei.Der Spalt zwischen den Säulen beträgt weniger als 0,03 mm. Die dreiteiligen Säulen gleiten nahtlos ineinander, <br/>wodurch jegliches Wackeln verhindert wird.</p>",
         "file_position": "right",
         "file_type": "image",
         "file_image": "shopify://shop_images/product_info_demo_img_1.webp",
-        "video_url": ""
+        "video_url": "",
+        "btn_text": "",
+        "link_url": ""
       }
     },
     "img_with_text_simplicity_nJFALq": {
@@ -242,13 +245,18 @@
       ],
       "name": "img with text simplicity",
       "settings": {
+        "spec_id": "",
+        "header_title": "",
+        "header_content": "",
         "title": "<p>Stabil Und Langlebig</p>",
         "sub_title": "<p>Extrem stabiler </p>",
         "description": "<p>Dreiecksunterstützungsstruktur ist extrem stabil im Vergleich zu anderen Schreibtischdesigns.<br/>Sie ist auch in der höchsten Höhe von ausgezeichneter Stabilität.Neben den strukturellen Verbesserungen trägt auch die präzise Verarbeitung und Konstruktion <br/>zur Stabilität bei.Der Spalt zwischen den Säulen beträgt weniger als 0,03 mm. Die dreiteiligen Säulen gleiten nahtlos ineinander, <br/>wodurch jegliches Wackeln verhindert wird.</p>",
         "file_position": "left",
         "file_type": "image",
         "file_image": "shopify://shop_images/product_info_demo_img_2.webp",
-        "video_url": ""
+        "video_url": "",
+        "btn_text": "",
+        "link_url": ""
       }
     },
     "img_with_text_simplicity_YLCpmN": {
@@ -259,13 +267,18 @@
       ],
       "name": "img with text simplicity",
       "settings": {
+        "spec_id": "",
+        "header_title": "",
+        "header_content": "",
         "title": "<p>Stabil Und Langlebig</p>",
         "sub_title": "<p>Extrem stabiler </p>",
         "description": "<p>Dreiecksunterstützungsstruktur ist extrem stabil im Vergleich zu anderen Schreibtischdesigns.<br/>Sie ist auch in der höchsten Höhe von ausgezeichneter Stabilität.Neben den strukturellen Verbesserungen trägt auch die präzise Verarbeitung und Konstruktion <br/>zur Stabilität bei.Der Spalt zwischen den Säulen beträgt weniger als 0,03 mm. Die dreiteiligen Säulen gleiten nahtlos ineinander, <br/>wodurch jegliches Wackeln verhindert wird.</p>",
         "file_position": "right",
         "file_type": "image",
         "file_image": "shopify://shop_images/product_info_demo_img_1.webp",
-        "video_url": ""
+        "video_url": "",
+        "btn_text": "",
+        "link_url": ""
       }
     },
     "img_with_text_simplicity_JRCJ4f": {
@@ -277,13 +290,18 @@
       ],
       "name": "img with text simplicity",
       "settings": {
+        "spec_id": "",
+        "header_title": "",
+        "header_content": "",
         "title": "<p>Stabil Und Langlebig</p>",
         "sub_title": "<p>Extrem stabiler </p>",
         "description": "<p>Dreiecksunterstützungsstruktur ist extrem stabil im Vergleich zu anderen Schreibtischdesigns.<br/>Sie ist auch in der höchsten Höhe von ausgezeichneter Stabilität.Neben den strukturellen Verbesserungen trägt auch die präzise Verarbeitung und Konstruktion <br/>zur Stabilität bei.Der Spalt zwischen den Säulen beträgt weniger als 0,03 mm. Die dreiteiligen Säulen gleiten nahtlos ineinander, <br/>wodurch jegliches Wackeln verhindert wird.</p>",
         "file_position": "left",
         "file_type": "image",
         "file_image": "shopify://shop_images/product_info_demo_img_1.webp",
-        "video_url": ""
+        "video_url": "",
+        "btn_text": "",
+        "link_url": ""
       }
     },
     "img_with_foldtext_RcBrkw": {
@@ -333,44 +351,56 @@
           "type": "tab",
           "settings": {
             "tabname": "Sitzende Erinnerung",
+            "sub_title": "",
             "title": "<p>Fortschrittliche Technologie</p>",
             "description": "<p>Perfekt für zwei Familienmitglieder, um ihre individuelle Körpergröße anzupassen oder um zwei neue Höheneinstellungen <br/>für vielfältigere Körperhaltungen zu ermöglichen.Der Standard-USB-Ladeanschluss lädt deine digitalen Geräte zuverlässig auf, <br/>genau dann, wenn du es brauchst.</p>",
             "file_type": "image",
             "file_image": "shopify://shop_images/006.jpg",
-            "video_url": ""
+            "video_url": "",
+            "btn_text": "",
+            "link": ""
           }
         },
         "tab_AUd88N": {
           "type": "tab",
           "settings": {
             "tabname": "Sitzende Erinnerung",
+            "sub_title": "",
             "title": "<p>Fortschrittliche Technologie</p>",
             "description": "<p>Perfekt für zwei Familienmitglieder, um ihre individuelle Körpergröße anzupassen oder um zwei neue Höheneinstellungen <br/>für vielfältigere Körperhaltungen zu ermöglichen.Der Standard-USB-Ladeanschluss lädt deine digitalen Geräte zuverlässig auf, <br/>genau dann, wenn du es brauchst.</p>",
             "file_type": "image",
             "file_image": "shopify://shop_images/006.jpg",
-            "video_url": ""
+            "video_url": "",
+            "btn_text": "",
+            "link": ""
           }
         },
         "tab_JyxzQm": {
           "type": "tab",
           "settings": {
             "tabname": "Sitzende Erinnerung",
+            "sub_title": "",
             "title": "<p>Fortschrittliche Technologie</p>",
             "description": "<p>Perfekt für zwei Familienmitglieder, um ihre individuelle Körpergröße anzupassen oder um zwei neue Höheneinstellungen <br/>für vielfältigere Körperhaltungen zu ermöglichen.Der Standard-USB-Ladeanschluss lädt deine digitalen Geräte zuverlässig auf, <br/>genau dann, wenn du es brauchst.</p>",
             "file_type": "image",
             "file_image": "shopify://shop_images/006.jpg",
-            "video_url": ""
+            "video_url": "",
+            "btn_text": "",
+            "link": ""
           }
         },
         "tab_LmGatL": {
           "type": "tab",
           "settings": {
             "tabname": "Sitzende Erinnerung",
+            "sub_title": "",
             "title": "<p>Fortschrittliche Technologie</p>",
             "description": "<p>Perfekt für zwei Familienmitglieder, um ihre individuelle Körpergröße anzupassen oder um zwei neue Höheneinstellungen <br/>für vielfältigere Körperhaltungen zu ermöglichen.Der Standard-USB-Ladeanschluss lädt deine digitalen Geräte zuverlässig auf, <br/>genau dann, wenn du es brauchst.</p>",
             "file_type": "image",
             "file_image": "shopify://shop_images/006.jpg",
-            "video_url": ""
+            "video_url": "",
+            "btn_text": "",
+            "link": ""
           }
         }
       },
@@ -383,7 +413,10 @@
       "name": "img with text tab",
       "settings": {
         "spec_id": "",
-        "title": "<p>Title Title</p>"
+        "description": "",
+        "title": "<p>Title Title</p>",
+        "show_tab_head": true,
+        "layout": "image-left"
       }
     },
     "technical_data_L3gXUm": {
@@ -391,7 +424,8 @@
       "name": "technical data",
       "settings": {
         "spec_id": "Technische_Daten",
-        "title": "<p>Technische Daten Des HöHenverstellbaren </p><p>Schreibtisches-T2 Pro Plus</p>"
+        "title": "<p>Technische Daten Des HöHenverstellbaren </p><p>Schreibtisches-T1 Pro</p>",
+        "select_product": "elektrisch-hohenverstellbarer-gestell-t1-basic"
       }
     },
     "maidesite_swiper_QhkQG8": {
@@ -567,10 +601,12 @@
       ],
       "name": "faq simple",
       "settings": {
+        "spec_id": "",
         "heading": "<p>FAQ</p>",
         "text": "<p>Häufig gestellte Fragen</p>",
         "show_btn": true,
-        "learn_more": true
+        "learn_more": true,
+        "contact_us": false
       }
     },
     "product_comment_GV7BHg": {
@@ -610,7 +646,8 @@
           "maidesite-ec6-ergonomischer-burostuhl-mit-kopfstutze-ruckenlehne-und-fussstutze",
           "maidesite-th2-pro-plus-tischgestell-elektrisch-hohenverstellbar",
           "maidesite-el2-pro-art-tischgestell-elektrisch-hohenverstellbar"
-        ]
+        ],
+        "number": 3
       }
     }
   },
