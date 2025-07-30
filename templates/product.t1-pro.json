@@ -124,8 +124,25 @@
       "name": "product anchor bar",
       "settings": {}
     },
+    "video_wPHLA8": {
+      "type": "video",
+      "name": "t:sections.video.presets.name",
+      "settings": {
+        "heading": "Maidesite mobiler Schreibtisch T1 Pro Ausrüstung",
+        "heading_size": "h1",
+        "enable_video_looping": false,
+        "video_url": "https://youtu.be/CpglzDtEiXA",
+        "cover_image": "shopify://shop_images/Maidesite-T1-Pro-Hohenverstellbares-Tischgestell-weiss-fur-bessere-Wirkung.jpg",
+        "description": "",
+        "full_width": false,
+        "color_scheme": "",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
     "video_simplicity_zX8daC": {
       "type": "video-simplicity",
+      "disabled": true,
       "name": "video simplicity",
       "settings": {
         "spec_id": "Produkt",
@@ -164,12 +181,13 @@
             "title": "<h3>Tragfähigkeit bis 90 kg</h3>",
             "description": "<ul><li>Dieser Schreibtisch kann bis zu 90 kg belasten. Sie können problemlos 2 Monitore, einen PC und andere Büroartikel darauf platzieren.</li></ul>",
             "file_type": "image",
-            "file_image": "shopify://shop_images/featured-spaces-5.webp",
+            "file_image": "shopify://shop_images/Maidesite-standing-desk-T1-Basic-with-90kg-loading-capacity.jpg",
             "video_url": ""
           }
         },
         "file_with_text_B39ehq": {
           "type": "file_with_text",
+          "disabled": true,
           "settings": {
             "title": "<p>Kostenloser und Schneller Versand</p>",
             "description": "<p>Normalerweise beträgt die optimale Schreibtischhöhe im Sitzen Ihre Körpergröße x 0,4 und im Stehen Ihre Körpergröße x 0,62. Höhenverstellbarer Schreibtisch mit 2 stufigen Säulen ist nur für die Körpergröße von 1,75-1,95 m geeignet. </p>",
@@ -180,6 +198,7 @@
         },
         "file_with_text_JJXCp8": {
           "type": "file_with_text",
+          "disabled": true,
           "settings": {
             "title": "<p>Kostenloser und Schneller Versand</p>",
             "description": "<p>Normalerweise beträgt die optimale Schreibtischhöhe im Sitzen Ihre Körpergröße x 0,4 und im Stehen Ihre Körpergröße x 0,62. Höhenverstellbarer Schreibtisch mit 2 stufigen Säulen ist nur für die Körpergröße von 1,75-1,95 m geeignet. </p>",
@@ -190,6 +209,7 @@
         },
         "file_with_text_THJTyK": {
           "type": "file_with_text",
+          "disabled": true,
           "settings": {
             "title": "<p>Kostenloser und Schneller Versand</p>",
             "description": "<p>Normalerweise beträgt die optimale Schreibtischhöhe im Sitzen Ihre Körpergröße x 0,4 und im Stehen Ihre Körpergröße x 0,62. Höhenverstellbarer Schreibtisch mit 2 stufigen Säulen ist nur für die Körpergröße von 1,75-1,95 m geeignet. </p>",
@@ -225,7 +245,7 @@
         "spec_id": "",
         "header_title": "",
         "header_content": "",
-        "title": "<p>Stabil Und Langlebig</p>",
+        "title": "<h2>Extrem praktisch Höhenverstellbarer Schreibtisch</h2>",
         "sub_title": "<p>Extrem stabiler </p>",
         "description": "<p>Dreiecksunterstützungsstruktur ist extrem stabil im Vergleich zu anderen Schreibtischdesigns.<br/>Sie ist auch in der höchsten Höhe von ausgezeichneter Stabilität.Neben den strukturellen Verbesserungen trägt auch die präzise Verarbeitung und Konstruktion <br/>zur Stabilität bei.Der Spalt zwischen den Säulen beträgt weniger als 0,03 mm. Die dreiteiligen Säulen gleiten nahtlos ineinander, <br/>wodurch jegliches Wackeln verhindert wird.</p>",
         "file_position": "right",
@@ -654,6 +674,7 @@
   "order": [
     "product_info_NXNt6g",
     "product_anchor_bar_atcVF4",
+    "video_wPHLA8",
     "video_simplicity_zX8daC",
     "img_with_text_box_simplicity_qrzG6W",
     "img_with_text_simplicity_R8thEq",
