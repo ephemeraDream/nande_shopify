@@ -145,7 +145,7 @@
         "video_url": "https://youtu.be/CpglzDtEiXA",
         "cover_image": "shopify://shop_images/Maidesite-T1-Pro-Hohenverstellbares-Tischgestell-weiss-fur-bessere-Wirkung.jpg",
         "description": "",
-        "full_width": false,
+        "full_width": true,
         "color_scheme": "",
         "padding_top": 36,
         "padding_bottom": 36
@@ -158,19 +158,19 @@
           "type": "file_with_text",
           "settings": {
             "title": "<h3>Kompatibel mit 100-180 cm Platten</h3>",
-            "description": "<ul><li>Unterstützt Tischplatten in den Größen 100x60, 120x60, 140x70, 160x80 und 180x80 cm.</li><li>Recyceln Sie Ihre eigene Tischplatte mit dem T1 Basis-Tischgestell und tragen Sie so zum Schutz unserer Erde bei.</li></ul>",
+            "description": "<ul><li>Unterstützt Tischplatten in den Größen 100x60, 120x60, 140x70, 160x80 und 180x80 cm.</li></ul>",
             "file_type": "image",
-            "file_image": "shopify://shop_images/T1-Pro-hohenverstellbarer-Schreibtisch-weiss-und-1000-1800mm-Tischplatte.jpg",
+            "file_image": "shopify://shop_images/T1-Pro-hohenverstellbarer-Schreibtisch-weiss-und-1000-1800mm-Tischplatte-1200x800.jpg",
             "video_url": ""
           }
         },
         "file_with_text_McHwGa": {
           "type": "file_with_text",
           "settings": {
-            "title": "<h3>Höhenverstellbar für Kinder und Erwachsene in unterschiedlicher Höhe</h3>",
+            "title": "<h3>Höhenverstellbar für Kinder und Erwachsene</h3>",
             "description": "<ul><li>Dieser höhenverstellbare Schreibtisch passt perfekt für Personen mit einer Körpergröße von 1,5 bis 1,83 Metern, da er sich von 72 bis 120 cm in der Höhe verstellen lässt.</li></ul>",
             "file_type": "image",
-            "file_image": "shopify://shop_images/Maidesite-T1-Pro-hohenverstellbar-Bereich-72-120cm.jpg",
+            "file_image": "shopify://shop_images/Maidesite-T1-Pro-hohenverstellbar-Bereich-72-120cm-1200x800.jpg",
             "video_url": ""
           }
         },
@@ -178,15 +178,14 @@
           "type": "file_with_text",
           "settings": {
             "title": "<h3>Tragfähigkeit bis 90 kg</h3>",
-            "description": "<ul><li>Dieser Schreibtisch kann bis zu 90 kg belasten. Sie können problemlos 2 Monitore, einen PC und andere Büroartikel darauf platzieren.</li></ul>",
+            "description": "",
             "file_type": "image",
-            "file_image": "shopify://shop_images/Maidesite-standing-desk-T1-Basic-with-90kg-loading-capacity.jpg",
+            "file_image": "shopify://shop_images/Maidesite-standing-desk-T1-Pro-with-90kg-loading-capacity-1200x800.jpg",
             "video_url": ""
           }
         },
         "file_with_text_B39ehq": {
           "type": "file_with_text",
-          "disabled": true,
           "settings": {
             "title": "<p>Kostenloser und Schneller Versand</p>",
             "description": "<p>Normalerweise beträgt die optimale Schreibtischhöhe im Sitzen Ihre Körpergröße x 0,4 und im Stehen Ihre Körpergröße x 0,62. Höhenverstellbarer Schreibtisch mit 2 stufigen Säulen ist nur für die Körpergröße von 1,75-1,95 m geeignet. </p>",
@@ -197,7 +196,6 @@
         },
         "file_with_text_JJXCp8": {
           "type": "file_with_text",
-          "disabled": true,
           "settings": {
             "title": "<p>Kostenloser und Schneller Versand</p>",
             "description": "<p>Normalerweise beträgt die optimale Schreibtischhöhe im Sitzen Ihre Körpergröße x 0,4 und im Stehen Ihre Körpergröße x 0,62. Höhenverstellbarer Schreibtisch mit 2 stufigen Säulen ist nur für die Körpergröße von 1,75-1,95 m geeignet. </p>",
@@ -208,7 +206,6 @@
         },
         "file_with_text_THJTyK": {
           "type": "file_with_text",
-          "disabled": true,
           "settings": {
             "title": "<p>Kostenloser und Schneller Versand</p>",
             "description": "<p>Normalerweise beträgt die optimale Schreibtischhöhe im Sitzen Ihre Körpergröße x 0,4 und im Stehen Ihre Körpergröße x 0,62. Höhenverstellbarer Schreibtisch mit 2 stufigen Säulen ist nur für die Körpergröße von 1,75-1,95 m geeignet. </p>",
@@ -228,8 +225,8 @@
       ],
       "name": "file box simplicity",
       "settings": {
-        "spec_id": "Produktbeschreibung",
-        "main_title": "<h2>Höhenverstellbarer Schreibtisch mit hervorragender Leistung</h2>",
+        "spec_id": "",
+        "main_title": "<h2>Leistungsstarker, preiswerter höhenverstellbarer Schreibtisch</h2>",
         "row_num": 3
       }
     },
@@ -245,8 +242,8 @@
         "header_title": "",
         "header_content": "",
         "title": "<h2>Extrem praktisch Höhenverstellbarer Schreibtisch</h2>",
-        "sub_title": "",
-        "description": "<h3>Vier Speicherhöhen&USB-Ladeanschlüsse</h3><ul><li>Perfekt für zwei Familienmitglieder, um ihre individuelle Körpergröße anzupassen oder um zwei neue Höheneinstellungen für vielfältigere Körperhaltungen zu ermöglichen.</li><li>Der Standard-USB-Ladeanschluss lädt deine digitalen Geräte zuverlässig auf, genau dann, wenn du es brauchst.</li></ul>",
+        "sub_title": "<p>666</p>",
+        "description": "<p></p><p></p>",
         "file_position": "right",
         "file_type": "image",
         "file_image": "shopify://shop_images/T1-Pro-hohenverstellbarer-Schreibtisch-Handsteuerung.jpg",
