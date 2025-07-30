@@ -404,6 +404,7 @@
         },
         "swiper_KgkXnm": {
           "type": "swiper",
+          "disabled": true,
           "settings": {
             "name": "@ch3",
             "introduce": "",
@@ -478,7 +479,7 @@
       "type": "blogs-simple",
       "name": "blogs simple",
       "settings": {
-        "title": "<p>Blogs</p>",
+        "title": "<p>der Blog</p>",
         "text": "",
         "blog": "maidesite-blog"
       }

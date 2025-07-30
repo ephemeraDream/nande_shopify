@@ -41,38 +41,38 @@
         "link_list_QEdHcV": {
           "type": "link_list",
           "settings": {
-            "heading": "<p>Shop</p>",
+            "heading": "<p><strong>Beliebte Produkte</strong></p>",
             "menu": "main-menu"
-          }
-        },
-        "link_list_CnJ9gh": {
-          "type": "link_list",
-          "settings": {
-            "heading": "<p>Know Us</p>",
-            "menu": "footer-1"
-          }
-        },
-        "link_list_cGTUAy": {
-          "type": "link_list",
-          "settings": {
-            "heading": "<p>Explore</p>",
-            "menu": "footer"
           }
         },
         "link_list_CHcGwy": {
           "type": "link_list",
           "settings": {
-            "heading": "<p>Support</p>",
+            "heading": "<p><strong>Rechtliches</strong></p>",
             "menu": "support-1"
+          }
+        },
+        "link_list_cGTUAy": {
+          "type": "link_list",
+          "settings": {
+            "heading": "<p><strong>Info-Center</strong></p>",
+            "menu": "footer"
+          }
+        },
+        "link_list_CnJ9gh": {
+          "type": "link_list",
+          "settings": {
+            "heading": "<p><strong>Maidesite</strong></p>",
+            "menu": "footer-1"
           }
         }
       },
       "block_order": [
         "company_info_MaXiWq",
         "link_list_QEdHcV",
-        "link_list_CnJ9gh",
+        "link_list_CHcGwy",
         "link_list_cGTUAy",
-        "link_list_CHcGwy"
+        "link_list_CnJ9gh"
       ],
       "name": "footer simple",
       "settings": {}
