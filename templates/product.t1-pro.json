@@ -37,6 +37,16 @@
             "modal_tip": "<p>Durch das Absenden des Formulars speichern wir die von Ihnen eingegebenen Daten, um Ihre Anfrage zu bearbeiten. In keinem Fall werden diese Daten weitergegeben. Weitere Informationen finden Sie in unserer Datenschutzerklärung.</p>"
           }
         },
+        "klarna_on_site_messaging_app_block_JH6nhp": {
+          "type": "shopify://apps/klarna-on-site-messaging/blocks/app-block/b95936a9-74b6-4a95-8103-6a1b6459c25e",
+          "settings": {
+            "data_key": "top-strip-promotion-badge",
+            "theme": "default",
+            "topPadding": "0",
+            "bottomPadding": "0",
+            "messagePrefix": ""
+          }
+        },
         "modal_KiCBrG": {
           "type": "modal",
           "settings": {
@@ -72,6 +82,7 @@
       "block_order": [
         "loox_reviews_loox_rating_qF3bkU",
         "wholesale_modal_CBqFgt",
+        "klarna_on_site_messaging_app_block_JH6nhp",
         "modal_KiCBrG",
         "modal_TaRbWz",
         "modal_EB43X9",
@@ -138,18 +149,6 @@
         "color_scheme": "",
         "padding_top": 36,
         "padding_bottom": 36
-      }
-    },
-    "video_simplicity_zX8daC": {
-      "type": "video-simplicity",
-      "disabled": true,
-      "name": "video simplicity",
-      "settings": {
-        "spec_id": "Produkt",
-        "show_playicon": "true",
-        "video_url": "https://youtu.be/CpglzDtEiXA",
-        "title": "<p>Alle Produkte Im üBerblick</p>",
-        "description": ""
       }
     },
     "img_with_text_box_simplicity_qrzG6W": {
@@ -246,11 +245,11 @@
         "header_title": "",
         "header_content": "",
         "title": "<h2>Extrem praktisch Höhenverstellbarer Schreibtisch</h2>",
-        "sub_title": "<p>Extrem stabiler </p>",
-        "description": "<p>Dreiecksunterstützungsstruktur ist extrem stabil im Vergleich zu anderen Schreibtischdesigns.<br/>Sie ist auch in der höchsten Höhe von ausgezeichneter Stabilität.Neben den strukturellen Verbesserungen trägt auch die präzise Verarbeitung und Konstruktion <br/>zur Stabilität bei.Der Spalt zwischen den Säulen beträgt weniger als 0,03 mm. Die dreiteiligen Säulen gleiten nahtlos ineinander, <br/>wodurch jegliches Wackeln verhindert wird.</p>",
+        "sub_title": "",
+        "description": "<h3>Vier Speicherhöhen&USB-Ladeanschlüsse</h3><ul><li>Perfekt für zwei Familienmitglieder, um ihre individuelle Körpergröße anzupassen oder um zwei neue Höheneinstellungen für vielfältigere Körperhaltungen zu ermöglichen.</li><li>Der Standard-USB-Ladeanschluss lädt deine digitalen Geräte zuverlässig auf, genau dann, wenn du es brauchst.</li></ul>",
         "file_position": "right",
         "file_type": "image",
-        "file_image": "shopify://shop_images/product_info_demo_img_1.webp",
+        "file_image": "shopify://shop_images/T1-Pro-hohenverstellbarer-Schreibtisch-Handsteuerung.jpg",
         "video_url": "",
         "btn_text": "",
         "link_url": ""
@@ -258,6 +257,7 @@
     },
     "img_with_text_simplicity_nJFALq": {
       "type": "img-with-text-simplicity",
+      "disabled": true,
       "custom_css": [
         ".img_with_text_simplicity_section {background-color: #e2ded6; padding-top: 6rem;}",
         ".img_with_text_simplicity_filebox {height: 48rem;}",
@@ -675,7 +675,6 @@
     "product_info_NXNt6g",
     "product_anchor_bar_atcVF4",
     "video_wPHLA8",
-    "video_simplicity_zX8daC",
     "img_with_text_box_simplicity_qrzG6W",
     "img_with_text_simplicity_R8thEq",
     "img_with_text_simplicity_nJFALq",
