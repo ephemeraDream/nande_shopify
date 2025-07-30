@@ -381,12 +381,13 @@
         "swiper_R8cQdW": {
           "type": "swiper",
           "settings": {
-            "name": "@Suli-Man",
+            "name": "@EFRALINK",
             "introduce": "<p>17.1 Million YouTube Followers</p>",
-            "description": "<p>\" I really liked it, and it looks really cool. It's just perfect for long workdays or gaming sessions where comfort and ergonomics are important.\"</p>",
+            "description": "<p>“Wenn wir im Stehen arbeiten wollen, ist das besonders interessant. Das Arbeiten im Stehen hilft uns, unsere Beine zu   strecken und die Position unseres Ruckens zu andern, was vorteilhaft ist. Mit diesen Schreibtischen konnen wir nicht nur fur  kurze Zeit, sondern auch fur langere Zeit im Stehen arbeiten.”</p>",
             "link": "",
-            "cover_image": "shopify://shop_images/celebrity-img-1.webp",
-            "video_url": "https://youtu.be/4PeG_NHx6Jk?si=QXQT-CmgzL2nFeNc"
+            "cover_image": "shopify://shop_images/EFRALINK.png",
+            "video_url": "",
+            "url_upload": "shopify://files/videos/T2 Pro Plus.mp4"
           }
         },
         "swiper_qRmjCc": {
