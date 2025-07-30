@@ -44,8 +44,8 @@
           "type": "banner_item",
           "settings": {
             "sub_title": "",
-            "title": "<p>Nahtloses Design Trifft Auf FunktionalitäT</p>",
-            "text": "<p>Ein durchdachtes, einheitliches Design, das Ästhetik und Funktion kombiniert – für einen </p><p>modernen Arbeitsplatz, der sich nahtlos in Ihr Zuhause einfügt</p>",
+            "title": "",
+            "text": "",
             "btn_text": "En savoir plus",
             "link": "",
             "file_position": "middle_left",
@@ -177,6 +177,12 @@
     "compare_simple_8gK3g4": {
       "type": "compare-simple",
       "blocks": {
+        "item_hrmkBQ": {
+          "type": "item",
+          "settings": {
+            "select_product": "elektrisch-hohenverstellbarer-gestell-t1-basic"
+          }
+        },
         "item_6kCRQ4": {
           "type": "item",
           "settings": {
@@ -194,20 +200,13 @@
           "settings": {
             "select_product": "maidesite-t2-pro-max-tischgestell-elektrisch-hohenverstellbar"
           }
-        },
-        "item_hrmkBQ": {
-          "type": "item",
-          "disabled": true,
-          "settings": {
-            "select_product": "maidesite-tischgestell-elektrisch-hohenverstellbar-t2-pro-plus"
-          }
         }
       },
       "block_order": [
+        "item_hrmkBQ",
         "item_6kCRQ4",
         "item_mgqRNf",
-        "item_wtnaqX",
-        "item_hrmkBQ"
+        "item_wtnaqX"
       ],
       "custom_css": [
         ".compare_simple .compare_simple_item_title {font-size: 3rem;}",
