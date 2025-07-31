@@ -177,8 +177,8 @@
         "file_with_text_f9yPAD": {
           "type": "file_with_text",
           "settings": {
-            "title": "<h3>Tragfähigkeit bis 90 kg</h3>",
-            "description": "",
+            "title": "<p>Schreibtisch mit einer Tragfähigkeit von bis zu 90 kg</p>",
+            "description": "<ul><li>Sie können problemlos 2 Monitore, einen PC und andere Büroartikel darauf platzieren.</li></ul>",
             "file_type": "image",
             "file_image": "shopify://shop_images/Maidesite-standing-desk-T1-Pro-with-90kg-loading-capacity-1200x800.jpg",
             "video_url": ""
