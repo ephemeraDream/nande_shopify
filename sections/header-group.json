@@ -79,13 +79,13 @@
           "type": "product_collection",
           "settings": {
             "name": "Höhenverstellbare Schreibtische",
-            "link": "",
+            "link": "shopify://collections/hohenverstellbarer-schreibtisch",
             "collection_list": [
-              "preiswert",
-              "klassiker",
-              "exklusiv",
-              "maidesite-produkt",
-              "maidesite-tischplatte"
+              "hohenverstellbarer-schreibtisch-der-einstiegsklasse",
+              "hohenverstellbarer-schreibtisch-der-professional-serie",
+              "hohenverstellbarer-schreibtisch-der-premium-serie",
+              "maidesite-tischplatte",
+              "maidesite-produkt"
             ],
             "info_title": "<p>Ausstattung für Ihr Team?</p>",
             "info_text": "<p>Besuchen Sie unsere <a href=\"https://www.maidesite.de/pages/geschaftskunden-2025\" title=\"https://www.maidesite.de/pages/geschaftskunden-2025\">Geschäftskunden</a>-Seite und entdecken Sie ergonomische Lösungen für moderne Arbeitsplätze.</p>"
