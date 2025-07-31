@@ -583,14 +583,14 @@
         "faq_abheWf": {
           "type": "faq",
           "settings": {
-            "question": "<h4>Was muss ich tun, wenn \"E01, E09, E12, ASR/RST \" angezeigt wird?</h4>",
+            "question": "<p>Was muss ich tun, wenn \"E01, E09, E12, ASR/RST \" angezeigt wird?</p>",
             "answer": "<p>Halten Sie die Abwärtstaste gedrückt, um den Tisch auf die niedrigste Stufe abzusenken, lassen Sie sie dann los, halten Sie die Abwärtstaste 5 Sekunden lang gedrückt, die Handsteuerung zeigt RST an, halten Sie dann die Abwärtstaste 5 Sekunden lang gedrückt, die Handsteuerung zeigt die Nummer an, und die Rückstellung ist abgeschlossen. Sie können uns auch per E-Mail kontaktieren: contact@maidesite.de<br/></p>"
           }
         },
         "faq_mFDf3d": {
           "type": "faq",
           "settings": {
-            "question": "<h4>Was muss ich tun, wenn \"HOT\" angezeigt wird?</h4>",
+            "question": "<p>Was muss ich tun, wenn \"HOT\" angezeigt wird?</p>",
             "answer": "<p>Das liegt daran, dass die Temperatur des Netzteils zu hoch ist oder es zu oft betrieben wird. Bitte trennen Sie das Netzteil für 20 Minuten vom Stromnetz und schließen Sie es dann wieder an. Sie können uns auch per E-Mail kontaktieren: contact@maidesite.de</p>"
           }
         },
