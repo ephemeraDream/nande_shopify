@@ -88,6 +88,7 @@
         "modal_EB43X9",
         "payment_methods_mnXJ7D"
       ],
+      "custom_css": [],
       "name": "product info",
       "settings": {
         "media_ratio": "1.33",
@@ -533,8 +534,8 @@
         "faq_E4jP4F": {
           "type": "faq",
           "settings": {
-            "question": "<p>Kann ich meine Bestellung stornieren?</p>",
-            "answer": "<p>Maidesite bietet durch seine produkten von höhenverstellbaren Schreibtischen, die Funktionsintegration, Szenenvielfalt und Personalisierung bieten, Ihnen die Möglichkeit, einfach zwischen verschiedenen Heimat-Aktivitätsmodi zu wechseln, die eine Desktop-Assistenten erfordern. <br/><br/>Dies ermöglicht Anhängern des modernen intelligenten Heimlebens, sich noch bequemer und müheloser in ihre vielfältigen Lebensstile einzuleben.<br/></p>"
+            "question": "<p>Wie breit ist das Tischgestell des T1 Pro?</p>",
+            "answer": "<p>Das Gestell des T1 Pro kann in der Breite zwischen 96 cm und 160 cm verstellt werden.</p>"
           }
         },
         "faq_AXAcgA": {
