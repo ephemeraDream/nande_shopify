@@ -15,9 +15,9 @@
       "type": "subscribe-emails",
       "name": "subscribe emails",
       "settings": {
-        "title": "<p>Get an Exclusive 15% Off</p><p>Your First Purchase</p>",
-        "btn_text": "Sign Up",
-        "confirm_text": "By signing up, you agree to Anker's Terms of Use and Privacy Policy."
+        "title": "<p>ERHALTEN SIE 5% RABATT</p>",
+        "btn_text": "Abonnieren",
+        "confirm_text": "Mit Ihrer Anmeldung stimmen Sie den Nutzungsbedingungen und der Datenschutzrichtlinie von Maidesite zu."
       }
     },
     "footer_simple_eAwcpi": {
