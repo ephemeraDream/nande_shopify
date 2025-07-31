@@ -211,7 +211,7 @@
             "title": "<p>FSC-zertifizierte Tischplatte</p>",
             "description": "<p>Optionale FSC-zertifizierte Tischplatten in 120x60cm, 140x70cm und 160x80cm mit vorgebohrten Löchern.</p>",
             "file_type": "image",
-            "file_image": "shopify://shop_images/featured-spaces-5.webp",
+            "file_image": "shopify://shop_images/FSC_certificate_table_top.jpg",
             "video_url": ""
           }
         }
@@ -233,6 +233,7 @@
     },
     "img_with_text_simplicity_R8thEq": {
       "type": "img-with-text-simplicity",
+      "disabled": true,
       "custom_css": [
         ".img_with_text_simplicity_section {background-color: #e2ded6; padding-top: 12rem;}",
         ".img_with_text_simplicity_filebox {height: 48rem;}"
@@ -279,6 +280,7 @@
     },
     "img_with_text_simplicity_YLCpmN": {
       "type": "img-with-text-simplicity",
+      "disabled": true,
       "custom_css": [
         ".img_with_text_simplicity_section {background-color: #e2ded6; padding-top: 6rem;}",
         ".img_with_text_simplicity_filebox {height: 48rem;}"
@@ -301,6 +303,7 @@
     },
     "img_with_text_simplicity_JRCJ4f": {
       "type": "img-with-text-simplicity",
+      "disabled": true,
       "custom_css": [
         ".img_with_text_simplicity_section {background-color: #e2ded6; padding-top: 6rem; padding-bottom: 12rem;}",
         ".img_with_text_simplicity_filebox {height: 48rem;}",
@@ -355,6 +358,7 @@
         "foldtext_HWP39G",
         "foldtext_iGWkAs"
       ],
+      "disabled": true,
       "name": "img with foldtext",
       "settings": {
         "spec_id": "",
@@ -368,12 +372,12 @@
         "tab_fiwUXL": {
           "type": "tab",
           "settings": {
-            "tabname": "Sitzende Erinnerung",
+            "tabname": "CE-ZERTIFIZIERUNG",
             "sub_title": "",
-            "title": "<p>Fortschrittliche Technologie</p>",
+            "title": "<p>ce-zertifikat höhenverstellbarer tisch</p>",
             "description": "<p>Perfekt für zwei Familienmitglieder, um ihre individuelle Körpergröße anzupassen oder um zwei neue Höheneinstellungen <br/>für vielfältigere Körperhaltungen zu ermöglichen.Der Standard-USB-Ladeanschluss lädt deine digitalen Geräte zuverlässig auf, <br/>genau dann, wenn du es brauchst.</p>",
             "file_type": "image",
-            "file_image": "shopify://shop_images/006.jpg",
+            "file_image": "shopify://shop_images/J-S2D-2-EU_MD_Certificate_of_Compliance_00.jpg",
             "video_url": "",
             "btn_text": "",
             "link": ""
@@ -428,11 +432,12 @@
         "tab_JyxzQm",
         "tab_LmGatL"
       ],
+      "disabled": true,
       "name": "img with text tab",
       "settings": {
         "spec_id": "",
         "description": "",
-        "title": "<p>Title Title</p>",
+        "title": "<p>CE/FSC-zertifizierter höhenverstellbarer Schreibtisch und Tischplatte</p>",
         "show_tab_head": true,
         "layout": "image-left"
       }
