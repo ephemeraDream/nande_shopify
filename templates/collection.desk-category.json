@@ -23,13 +23,13 @@
         "item_3yir6V": {
           "type": "item",
           "settings": {
-            "select_product": "maidesite-tischgestell-elektrisch-hohenverstellbar-t2-pro-plus"
+            "select_product": "elektrisch-hohenverstellbarer-gestell-t1-basic"
           }
         },
         "item_gyexDX": {
           "type": "item",
           "settings": {
-            "select_product": "maidesite-tischgestell-elektrisch-hohenverstellbar-t2-pro-plus"
+            "select_product": "maidesite-elektrisch-hohenverstellbarer-gestell-t2-pro"
           }
         },
         "item_AHnCzP": {
@@ -41,13 +41,13 @@
         "item_EEUjdz": {
           "type": "item",
           "settings": {
-            "select_product": "maidesite-tischgestell-elektrisch-hohenverstellbar-t2-pro-plus"
+            "select_product": "maidesite-t2-pro-max-tischgestell-elektrisch-hohenverstellbar"
           }
         },
         "item_z9X7dd": {
           "type": "item",
           "settings": {
-            "select_product": "maidesite-tischgestell-elektrisch-hohenverstellbar-t2-pro-plus"
+            "select_product": "maidesite-th2-pro-plus-tischgestell-elektrisch-hohenverstellbar"
           }
         }
       },
@@ -63,6 +63,7 @@
         "title": "<p>Finde Deinen Passenden HöHenverstellbar </p><p>Schreibtisch</p>",
         "text": "<p>Maidesite bietet anpassbare höhenverstellbare </p><p>Schreibtische für Deine Bedürfnisse.</p>",
         "link_text": "Mehr erfahren",
+        "link_url": "",
         "slides_per_view": 5
       }
     },
