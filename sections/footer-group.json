@@ -56,14 +56,14 @@
           "type": "link_list",
           "settings": {
             "heading": "<p><strong>Info-Center</strong></p>",
-            "menu": "footer"
+            "menu": "support"
           }
         },
         "link_list_CHcGwy": {
           "type": "link_list",
           "settings": {
             "heading": "<p><strong>Rechtliches</strong></p>",
-            "menu": "support-1"
+            "menu": "footer"
           }
         }
       },
