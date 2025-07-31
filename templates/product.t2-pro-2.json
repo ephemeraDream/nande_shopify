@@ -140,6 +140,16 @@
     "img_with_text_box_simplicity_qrzG6W": {
       "type": "img-with-text-box-simplicity",
       "blocks": {
+        "file_with_text_THJTyK": {
+          "type": "file_with_text",
+          "settings": {
+            "title": "<p>Solide und stabil</p>",
+            "description": "<p>T2 Pro höhenverstellbar – auch in Maximalhöhe absolut stabil, kein Wackeln </p>",
+            "file_type": "image",
+            "file_image": "shopify://shop_images/Maidesite-T2-Pro-Plus-Hohenverstellbarer-Schreibtisch-zu-Hause-1200x800.png",
+            "video_url": ""
+          }
+        },
         "file_with_text_McHwGa": {
           "type": "file_with_text",
           "settings": {
@@ -174,7 +184,7 @@
           "type": "file_with_text",
           "settings": {
             "title": "<h3>4 Voreingestellte Speicherhöhen</h3>",
-            "description": "<p>Normalerweise beträgt die optimale Schreibtischhöhe im Sitzen Ihre Körpergröße x 0,4 und im Stehen Ihre Körpergröße x 0,62. Höhenverstellbarer Schreibtisch mit 2 stufigen Säulen ist nur für die Körpergröße von 1,75-1,95 m geeignet. </p>",
+            "description": "<p>4 Speicherplätze für Familie & Haltungen, plus USB-Ladepunkt</p>",
             "file_type": "image",
             "file_image": "shopify://shop_images/Control-panel-T2-Pro-DE-1200x800.jpg",
             "video_url": ""
@@ -189,30 +199,20 @@
             "file_image": "shopify://shop_images/FSC_certificate_table_top.jpg",
             "video_url": ""
           }
-        },
-        "file_with_text_THJTyK": {
-          "type": "file_with_text",
-          "settings": {
-            "title": "<p>Kostenloser und Schneller Versand</p>",
-            "description": "<p>Normalerweise beträgt die optimale Schreibtischhöhe im Sitzen Ihre Körpergröße x 0,4 und im Stehen Ihre Körpergröße x 0,62. Höhenverstellbarer Schreibtisch mit 2 stufigen Säulen ist nur für die Körpergröße von 1,75-1,95 m geeignet. </p>",
-            "file_type": "image",
-            "file_image": "shopify://shop_images/T2-Pro-black-vintage-1200x800.jpg",
-            "video_url": ""
-          }
         }
       },
       "block_order": [
+        "file_with_text_THJTyK",
         "file_with_text_McHwGa",
         "file_with_text_Q8tJKk",
         "file_with_text_f9yPAD",
         "file_with_text_B39ehq",
-        "file_with_text_JJXCp8",
-        "file_with_text_THJTyK"
+        "file_with_text_JJXCp8"
       ],
       "name": "file box simplicity",
       "settings": {
         "spec_id": "Produktbeschreibung",
-        "main_title": "<p>4 Speicherplätze für Familie & Haltungen, plus USB-Ladepunkt</p>",
+        "main_title": "<h2>Warum Maidesite T2 Pro Plus Höhenverstellbarer Schreibtisch?</h2>",
         "row_num": 3
       }
     },
