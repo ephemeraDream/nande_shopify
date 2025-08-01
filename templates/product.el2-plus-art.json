@@ -575,15 +575,15 @@
         "faq_E4jP4F": {
           "type": "faq",
           "settings": {
-            "question": "<p>Wie groß ist die Breite des Rahmens?</p>",
-            "answer": "<p>Die Breite des Rahmens kann zwischen 100cm und 180 cm eingestellt werden.</p>"
+            "question": "<p>Wie groß ist das EL2 Plus Art Paket?</p>",
+            "answer": "<p>Das Paket ist 105,5*28,5*21 cm groß.</p>"
           }
         },
         "faq_AXAcgA": {
           "type": "faq",
           "settings": {
-            "question": "<p>Welche Größe hat die Platte, die in den Rahmen passt?</p>",
-            "answer": "<p>Das Produkt ist für Platten von 110-200cm x 60-90cm geeignet.</p>"
+            "question": "<p>Wie groß ist die Breite des Rahmens?</p>",
+            "answer": "<p>Die Breite des Rahmens kann zwischen 100 cm und 180 cm eingestellt werden.</p>"
           }
         },
         "faq_W9Mzyn": {
@@ -596,36 +596,36 @@
         "faq_VQVPFn": {
           "type": "faq",
           "settings": {
-            "question": "<p>Kann ich den Rahmen verwenden, wenn mein Boden nicht eben ist?</p>",
-            "answer": "<p>Natürlich können Sie das. Wir haben verstellbare Füße unter den Beinen des Rahmens angebracht, um kleinere Bodenunebenheiten auszugleichen.</p>"
+            "question": "<p>In welche Länder kann nicht geliefert werden?</p>",
+            "answer": "<p>Liechtenstein, Serbien, Norwegen, Marokko, Monaco, Portugal Inseln und die spanischen Inseln.</p>"
           }
         },
         "faq_bELHrX": {
           "type": "faq",
           "settings": {
-            "question": "<p>Was ist der Unterschied zwischen dem T2 Pro Plus und dem S2 Pro Plus?</p>",
-            "answer": "<p>Der T2 Pro Plus ist ein separater Rahmen, während der S2 Pro Plus ein Bausatz ist, der den T2 Pro Plus und eine Platte enthält.</p>"
+            "question": "<p>Welche Größe hat die Platte, die in den Rahmen passt?</p>",
+            "answer": "<p>Das Produkt ist für Platten von 100-200cm x 60-80cm geeignet.</p>"
           }
         },
         "faq_WtEK7r": {
           "type": "faq",
           "settings": {
-            "question": "<p>Was ist der Unterschied zwischen T2 Pro Plus und TH2 Pro Plus?</p>",
-            "answer": "<p>Der TH2 Pro Plus verfügt über eine ovale Hubsäule und ovale Füße für stabileres Heben und Senken, bessere Tragfähigkeit und ein schlankeres, eleganteres Aussehen.</p>"
+            "question": "<p>Kann ich den Rahmen verwenden, wenn mein Boden nicht eben ist?</p>",
+            "answer": "<p>Natürlich können Sie das. Wir haben verstellbare Füße unter den Beinen des Rahmens angebracht, um kleinere Bodenunebenheiten auszugleichen.</p>"
           }
         },
         "faq_EXWGc6": {
           "type": "faq",
           "settings": {
-            "question": "<p>Bietet das Produkt einen Installationsservice an?</p>",
-            "answer": "<p>Wir können derzeit keinen Montageservice anbieten, aber wir werden eine Montageanleitung und ausreichend Schrauben in das Paket legen, um Ihnen die Arbeit zu erleichtern!</p>"
+            "question": "<p>Ich wohne nicht in Deutschland, kann ich bei Maidesite einkaufen?</p>",
+            "answer": "<p>Ja. Wir können Ihr Paket in die meisten Länder in Europa versenden!</p>"
           }
         },
         "faq_abheWf": {
           "type": "faq",
           "settings": {
-            "question": "<h4>Ich kann die Bedienungsanleitung nicht finden, wo kann ich eine Kopie erhalten?</h4>",
-            "answer": "<p>Sie können das Benutzerhandbuch für den höhenverstellbaren Schreibtisch T2 Pro Plus herunterladen, indem Sie <a href=\"https://cdn.shopify.com/s/files/1/0574/9728/8897/files/Maidesite-T2-Pro-T2-Pro-Plus-User-manual-GB-DE-FR-ES-IT-V03-20230813.pdf?v=1723185246\" title=\"T2 Pro Plus User Manual\">hier</a> klicken. Wenn Sie ein Problem haben, senden Sie bitte eine E-Mail an contact@maidesite.de, wir helfen Ihnen gerne weiter.</p>"
+            "question": "<p>Was ist der Unterschied zwischen dem EL2 Plus Art und dem EL2 Pro Art?</p>",
+            "answer": "<p>Der EL2 Pro Art ist für Personen mit einer Körpergröße zwischen 1,5 und 1,8 m geeignet, der EL2 Plus Art für Personen mit einer Körpergröße zwischen 1,4 und 1,9 m. Sie können je nach Ihren Bedürfnissen und Vorlieben wählen.</p>"
           }
         },
         "faq_mFDf3d": {
@@ -637,7 +637,6 @@
         },
         "faq_whBqrf": {
           "type": "faq",
-          "disabled": true,
           "settings": {
             "question": "<p>Was muss ich tun, wenn \"HOT\" angezeigt wird?</p>",
             "answer": "<p>Das liegt daran, dass die Temperatur des Netzteils zu hoch ist oder es zu oft betrieben wird. Bitte trennen Sie das Netzteil für 20 Minuten vom Stromnetz und schließen Sie es dann wieder an. Sie können uns auch per E-Mail kontaktieren: contact@maidesite.de</p>"
@@ -663,7 +662,7 @@
       "settings": {
         "spec_id": "",
         "heading": "<p>FAQ</p>",
-        "text": "<h3>Schreibtisch Höhenverstellbar T2 Pro Plus Technical</h3>",
+        "text": "<h3>Schreibtisch Höhenverstellbar EL2 Plus Art Technical</h3>",
         "show_btn": true,
         "learn_more": true,
         "contact_us": false
