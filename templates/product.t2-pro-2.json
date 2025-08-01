@@ -352,10 +352,10 @@
         "tab_fiwUXL": {
           "type": "tab",
           "settings": {
-            "tabname": "Sitzende Erinnerung",
+            "tabname": "Hochwertiges Material",
             "sub_title": "",
-            "title": "<p>Fortschrittliche Technologie</p>",
-            "description": "<p>Perfekt für zwei Familienmitglieder, um ihre individuelle Körpergröße anzupassen oder um zwei neue Höheneinstellungen <br/>für vielfältigere Körperhaltungen zu ermöglichen.Der Standard-USB-Ladeanschluss lädt deine digitalen Geräte zuverlässig auf, <br/>genau dann, wenn du es brauchst.</p>",
+            "title": "<h3>Hochwertiges Material und erstklassige Fertigung</h3>",
+            "description": "<ul><li>Unsere Schreibtische bestehen aus erstklassigen Industriematerialien von Fortune-500-Unternehmen. </li><li>Die höhenverstellbaren Maidesite-Tische werden in vollautomatisierten Produktionsprozessen gefertigt, um höchste Qualität sicherzustellen.</li></ul>",
             "file_type": "image",
             "file_image": "shopify://shop_images/006.jpg",
             "video_url": "",
@@ -393,6 +393,7 @@
         },
         "tab_LmGatL": {
           "type": "tab",
+          "disabled": true,
           "settings": {
             "tabname": "Sitzende Erinnerung",
             "sub_title": "",
@@ -416,7 +417,7 @@
       "settings": {
         "spec_id": "",
         "description": "",
-        "title": "<p>Title Title</p>",
+        "title": "<p>Maidesite-Schreibtische sind stabiler und langlebiger</p>",
         "show_tab_head": true,
         "layout": "image-left"
       }
