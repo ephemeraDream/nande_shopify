@@ -229,14 +229,14 @@
       "name": "img with text simplicity",
       "settings": {
         "spec_id": "",
-        "header_title": "",
+        "header_title": "<h2>Multifunktionaler ergonomischer Bürostuhl mit Rückenlehne und Kopfstütze</h2>",
         "header_content": "",
-        "title": "<h3>Unabhängig einstellbare Lendenwirbelstütze</h3>",
+        "title": "<h3>Rundum gemütlich von Kopf bis Arm</h3>",
         "sub_title": "<p>Zuverlässig und stützend</p>",
-        "description": "<ul><li>Dieser Stuhl ist mit einer unabhängigen, gebogenen Lendenwirbelstütze ausgestattet, die sich perfekt an Ihre untere Taille anpasst und den Druck auf die Taille effektiv lindert.</li><li>Die Drei-Reifen-Einstellfunktion bietet verschiedene Stützgrade entsprechend den Bedürfnissen Ihrer Taille und sorgt so auch bei langen Arbeitszeiten für Komfort.</li></ul>",
+        "description": "<ul><li>Genießen Sie den Komfort der atmungsaktiven Kopfstütze zur Entspannung von Kopf und Nacken.</li><li>Die 80-mm-Höhenverstellung und die 30°-Winkelverstellung können den Druck auf die Halswirbelsäule deutlich lindern und Ihre Arbeit entspannter und komfortabler machen.</li></ul>",
         "file_position": "right",
         "file_type": "image",
-        "file_image": "shopify://shop_images/EC6_ergonomic_chair_with_lumbar_support.jpg",
+        "file_image": "shopify://shop_images/Maidesite_EC5_ergonomic_office_chair_black_with_2D_headrest_and_3D_armrest.jpg",
         "video_url": "",
         "btn_text": "",
         "link_url": ""
@@ -254,12 +254,12 @@
         "spec_id": "",
         "header_title": "",
         "header_content": "",
-        "title": "<h3>2D-Nackenschutz-Kopfstütze</h3>",
-        "sub_title": "<p>Perfekte Passform</p>",
-        "description": "<ul><li>Genießen Sie den Komfort der atmungsaktiven Kopfstütze zur Entspannung von Kopf und Nacken.</li><li>Die 40-mm-Höhenverstellung und die 26°-Winkelverstellung können den Druck auf die Halswirbelsäule deutlich lindern und Ihre Arbeit entspannter und komfortabler machen.</li></ul>",
+        "title": "<h3>Unabhängig einstellbare Lendenwirbelstütze</h3>",
+        "sub_title": "",
+        "description": "<ul><li>Dieser Stuhl ist mit einer unabhängigen, gebogenen Lordosenstütze ausgestattet, die sich optimal an Ihre Lendenwirbelsäule anpasst und den Druck auf den unteren Rücken effektiv reduziert.</li><li>Die Verstellfunktion ermöglicht eine individuelle Anpassung an Ihre Taille und gewährleistet so Komfort auch bei langen Arbeitsstunden.</li></ul>",
         "file_position": "left",
         "file_type": "image",
-        "file_image": "shopify://shop_images/EC6_office_chair_headrest.jpg",
+        "file_image": "shopify://shop_images/Ergonomischer-Burostuhl-EC5-mit-unabhangiger-Gelenkstutze-zur-Minimierung-von-Ruckenbeschwerden.jpg",
         "video_url": "",
         "btn_text": "",
         "link_url": ""
@@ -434,7 +434,7 @@
       "name": "technical data",
       "settings": {
         "spec_id": "Technische_Daten",
-        "title": "<p>Technische Daten Des Ergonomischer Bürostuhl -EC6</p>",
+        "title": "<p>Technische Daten Des Ergonomischer Bürostuhl -EC5</p>",
         "select_product": ""
       }
     },
