@@ -126,6 +126,7 @@
     },
     "video_simplicity_zX8daC": {
       "type": "video-simplicity",
+      "disabled": true,
       "name": "video simplicity",
       "settings": {
         "spec_id": "Produkt",
