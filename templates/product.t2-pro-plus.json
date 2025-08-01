@@ -267,7 +267,8 @@
       "name": "img with foldtext",
       "settings": {
         "spec_id": "",
-        "title": "<p>Extrem stabiler T2 Pro Plus</p>"
+        "title": "<p>Extrem stabiler T2 Pro Plus</p>",
+        "image": "shopify://shop_images/Triangle-support-structurer-on-T2-pro-plus-standing-desk-1.png"
       }
     },
     "img_with_text_simplicity_R8thEq": {
@@ -472,7 +473,8 @@
       "name": "img with foldtext",
       "settings": {
         "spec_id": "",
-        "title": "<p>Maidesite-Schreibtisch stabiler und zuverlässiger</p>"
+        "title": "<p>Maidesite-Schreibtisch stabiler und zuverlässiger</p>",
+        "image": "shopify://shop_images/Maidesite-height-adjustable-desk-high-quality-materials_85cee93e-590b-48ed-bdb9-b92f7f51dedd.jpg"
       }
     },
     "technical_data_L3gXUm": {
