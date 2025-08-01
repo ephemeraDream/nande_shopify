@@ -523,13 +523,6 @@
             "answer": "<p>Die Breite des Rahmens kann zwischen 100cm und 180 cm eingestellt werden.</p>"
           }
         },
-        "faq_AXAcgA": {
-          "type": "faq",
-          "settings": {
-            "question": "<h4>Welche Größe hat die Platte, die in den Rahmen passt?</h4>",
-            "answer": "<p>Das Produkt ist für Platten von 110-200cm x 60-90cm geeignet.</p>"
-          }
-        },
         "faq_W9Mzyn": {
           "type": "faq",
           "settings": {
@@ -537,18 +530,25 @@
             "answer": "<p>Der Rahmen ist für Personen mit einer Körpergröße von 1.5-1.8m geeignet.</p>"
           }
         },
+        "faq_AXAcgA": {
+          "type": "faq",
+          "settings": {
+            "question": "<h4>Welche Größe hat die Platte, die in den Rahmen passt?</h4>",
+            "answer": "<p>Das Produkt ist für Platten von 110-200cm x 60-90cm geeignet.</p>"
+          }
+        },
         "faq_VQVPFn": {
           "type": "faq",
           "settings": {
-            "question": "<p>Welche Moglichkeiten habe ich, um meine Bestellung zu bezahlen?</p>",
-            "answer": "<p>Maidesite bietet durch seine produkten von höhenverstellbaren Schreibtischen, die Funktionsintegration, Szenenvielfalt und Personalisierung bieten, Ihnen die Möglichkeit, einfach zwischen verschiedenen Heimat-Aktivitätsmodi zu wechseln, die eine Desktop-Assistenten erfordern. <br/><br/>Dies ermöglicht Anhängern des modernen intelligenten Heimlebens, sich noch bequemer und müheloser in ihre vielfältigen Lebensstile einzuleben.<br/></p>"
+            "question": "<p>Kann ich den T2 Pro-Schreibtisch verwenden, wenn mein Boden nicht eben ist?</p>",
+            "answer": "<p>Natürlich können Sie das. Wir haben unter den Beinen des Rahmens verstellbare Füße angebracht, um kleinere Unebenheiten im Boden auszugleichen.</p>"
           }
         },
         "faq_bELHrX": {
           "type": "faq",
           "settings": {
-            "question": "<p>Welche Moglichkeiten habe ich, um meine Bestellung zu bezahlen?</p>",
-            "answer": "<p>Maidesite bietet durch seine produkten von höhenverstellbaren Schreibtischen, die Funktionsintegration, Szenenvielfalt und Personalisierung bieten, Ihnen die Möglichkeit, einfach zwischen verschiedenen Heimat-Aktivitätsmodi zu wechseln, die eine Desktop-Assistenten erfordern. <br/><br/>Dies ermöglicht Anhängern des modernen intelligenten Heimlebens, sich noch bequemer und müheloser in ihre vielfältigen Lebensstile einzuleben.<br/></p>"
+            "question": "<p>Was ist der Unterschied zwischen dem T2 Pro und dem T2 Pro Plus?</p>",
+            "answer": "<p>Der T2 Pro ist für Personen mit einer Körpergröße zwischen 1,5 und 1,8 m geeignet, der T2 Pro Plus für Personen mit einer Körpergröße zwischen 1,4 und 1,9 m. Sie können je nach Ihren Bedürfnissen und Vorlieben wählen.</p>"
           }
         },
         "faq_WtEK7r": {
@@ -589,8 +589,8 @@
       },
       "block_order": [
         "faq_E4jP4F",
-        "faq_AXAcgA",
         "faq_W9Mzyn",
+        "faq_AXAcgA",
         "faq_VQVPFn",
         "faq_bELHrX",
         "faq_WtEK7r",
