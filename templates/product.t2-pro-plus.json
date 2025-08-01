@@ -91,7 +91,7 @@
       "custom_css": [],
       "name": "product info",
       "settings": {
-        "media_ratio": "1.33",
+        "media_ratio": "1",
         "show_tax_and_shipping": true
       }
     },
