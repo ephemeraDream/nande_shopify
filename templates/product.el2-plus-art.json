@@ -158,10 +158,10 @@
         "file_with_text_JJXCp8": {
           "type": "file_with_text",
           "settings": {
-            "title": "<h3>Multifunktions-Bedienfeld</h3>",
-            "description": "<p>4 Rollen machen aus Ihrem Schreibtisch einen mobilen Schreibtisch</p>",
+            "title": "<h3>Elegantes Design</h3>",
+            "description": "<p>Verfügt über ein elegantes Design, Säule und Fuß mit Arc-Stil, moderneres und häusliches Design.</p>",
             "file_type": "image",
-            "file_image": "shopify://shop_images/Triangle-support-structurer-on-T2-pro-plus-standing-desk-1.png",
+            "file_image": "shopify://shop_images/TH2-Pro-Plus-oval-leg-frame.jpg",
             "video_url": ""
           }
         },
@@ -171,7 +171,7 @@
             "title": "<h3>Super Duale Motoren</h3>",
             "description": "<ul><li>Maidesite Duale Motorensystem ist besser als andere Produkt mit nur einem Motor.</li></ul>",
             "file_type": "image",
-            "file_image": "shopify://shop_images/3_1.png",
+            "file_image": "shopify://shop_images/dual-motor-stable-standing-desk-leg-black-TH2-Pro-plus.jpg",
             "video_url": ""
           }
         },
@@ -181,17 +181,17 @@
             "title": "<h3>Max. Verstellhöhe</h3>",
             "description": "<ul><li>Der 3-stufige tischgestell höhenverstellbar, der über den größten Höhenverstellbereich von 62-125 cm auf dem Markt verfügt<br/><br/></li></ul>",
             "file_type": "image",
-            "file_image": "shopify://shop_images/P4-1_4a6542b6-3298-49c3-8449-41f2de33e3a3.jpg",
+            "file_image": "shopify://shop_images/TH2-Pro-Plus-hohenverstellbarer-schreibtischbereich-62cm-125cm.jpg",
             "video_url": ""
           }
         },
         "file_with_text_f9yPAD": {
           "type": "file_with_text",
           "settings": {
-            "title": "<h3>Belastbar bis 160 kg</h3>",
-            "description": "<ul><li>Deren Material 20 % mehr als andere Produkte, stark und stabil. Der Traglast bis zu 160 kg.</li></ul>",
+            "title": "<h3>Belastbar bis 180 kg</h3>",
+            "description": "<ul><li>Deren Material 20 % mehr als andere Produkte, stark und stabil. Der Traglast bis zu 180 kg.</li></ul>",
             "file_type": "image",
-            "file_image": "shopify://shop_images/Maidesite-standing-desk-T2-Pro-with-160kg-loading-capacity_1200x800_77bc9297-af7b-4d54-838d-14b4e90c837d.jpg",
+            "file_image": "shopify://shop_images/Maidesite-standing-desk-TH2-Pro-Plus-with-180kg-loading-capacity_1_fc471cf5-86e4-4df5-ab87-6dee5f8004f2.jpg",
             "video_url": ""
           }
         },
@@ -264,6 +264,7 @@
         "foldtext_HWP39G",
         "foldtext_iGWkAs"
       ],
+      "disabled": true,
       "name": "img with foldtext",
       "settings": {
         "spec_id": "",
