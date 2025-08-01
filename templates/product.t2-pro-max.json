@@ -191,17 +191,17 @@
             "title": "<h3>Belastbar bis 180 kg</h3>",
             "description": "<p>Deren Material 20 % mehr als andere Produkte, stark und stabil. Der Traglast bis zu 180 kg.</p>",
             "file_type": "image",
-            "file_image": "shopify://shop_images/Maidesite-standing-desk-TH2-Pro-Plus-with-180kg-loading-capacity_1_fc471cf5-86e4-4df5-ab87-6dee5f8004f2.jpg",
+            "file_image": "shopify://shop_images/8d62567f3976a249cabee9308f1d71fa.jpg",
             "video_url": ""
           }
         },
         "file_with_text_B39ehq": {
           "type": "file_with_text",
           "settings": {
-            "title": "<h3>Multifunktions-Bedienfeld</h3>",
-            "description": "<p>4-Memory-Speicherplätze, die entsprechen unterschiedliche voreingestellte Höhe. Sie können 0,5h,1h,2h Erinnerung einstellen.</p>",
+            "title": "<h3>Einfache Bedienfreude</h3>",
+            "description": "<p>Klaviertasten und eine intuitive grafische Oberfläche machen die Einrichtung zum Kinderspiel.</p>",
             "file_type": "image",
-            "file_image": "shopify://shop_images/Control-panel-RJ32-socket-T2-Pro-Plus-DE_a477a1f9-43c6-4c54-8515-5f43d32e5be1_1.jpg",
+            "file_image": "shopify://shop_images/T2-Pro-Max-black-control-panel-with-Maid-OS_9ae8a8ff-e2b8-48aa-bd7c-3e6c54d59f49.jpg",
             "video_url": ""
           }
         },
@@ -281,14 +281,14 @@
       "name": "img with text simplicity",
       "settings": {
         "spec_id": "",
-        "header_title": "",
+        "header_title": "<h2>Extrem stabiler höhenverstellbarer Schreibtisch</h2>",
         "header_content": "",
-        "title": "",
-        "sub_title": "<h3>Sitzende Erinnerung</h3>",
-        "description": "<ul><li>Erinnerung an langes Sitzen: Intervallfunktion erinnert Sie daran, nach 0,5, 1 oder 2 Stunden aufzustehen.</li><li>Verbessert Ihre Haltung und steigert die Produktivität.</li></ul>",
+        "title": "<h3>Stabileres Design</h3>",
+        "sub_title": "",
+        "description": "<ul><li>Dreiecksunterstützungsstruktur ist extrem stabil im Vergleich zu anderen Schreibtischdesigns.</li><li>Dank verstärktem Querträger, Seitenstreben und Füßen bietet der Rahmen extra Stabilität.</li></ul>",
         "file_position": "right",
         "file_type": "image",
-        "file_image": "shopify://shop_images/Maidesite-TH2-Pro-Plus-standing-desk-_29_5776133d-cc2f-43c8-9d97-893d30c012a6.jpg",
+        "file_image": "shopify://shop_images/T2-Pro-Max-is-ultra-solid.jpg",
         "video_url": "",
         "btn_text": "",
         "link_url": ""
@@ -306,12 +306,12 @@
         "spec_id": "",
         "header_title": "",
         "header_content": "",
-        "title": "",
-        "sub_title": "<h3>Kollisionsschutz</h3>",
-        "description": "<p>Die eingebaute Gyroskop-gesteuerte Anti-Kollisions-Rückfederung schützt Ihr Gerät vor Schäden durch Stürze.</p>",
+        "title": "<h3>Stärkere Füße</h3>",
+        "sub_title": "",
+        "description": "<ul><li>Schwere Schreibtischfüße haben einen niedrigeren Schwerpunkt, was die Stabilität erhöht.</li><li>Jedes T2 Pro Max Tischbein was 50 % mehr ist als herkömmliche Beine.</li><li>Dadurch ist es stabiler als andere Tischgestelle.</li></ul>",
         "file_position": "left",
         "file_type": "image",
-        "file_image": "shopify://shop_images/TH2-Pro-Plus-Antikollisionssystem.jpg",
+        "file_image": "shopify://shop_images/T2-Pro-Max-ultra-solid-lift-column-feet.jpg",
         "video_url": "",
         "btn_text": "",
         "link_url": ""
@@ -329,11 +329,11 @@
         "header_title": "",
         "header_content": "",
         "title": "",
-        "sub_title": "<h3>Kindersicherung</h3>",
-        "description": "<p>Die Kindersicherung verhindert, dass Kinder oder Haustiere das Touchpad unbeabsichtigt bedienen und versehentlich Funktionen auslösen.</p>",
+        "sub_title": "<h3>Stabilere Säule</h3>",
+        "description": "<ul><li>Neben den strukturellen Verbesserungen trägt auch die präzise Verarbeitung und Konstruktion zur Stabilität bei.</li><li>Der Spalt zwischen den Säulen beträgt weniger als 0,03 mm. Die dreiteiligen Säulen gleiten nahtlos ineinander, wodurch jegliches Wackeln verhindert wird.</li></ul>",
         "file_position": "right",
         "file_type": "image",
-        "file_image": "shopify://shop_images/P6-3.jpg",
+        "file_image": "shopify://shop_images/T2-Pro-Max-is-super-stable-with-precise-gasket.jpg",
         "video_url": "",
         "btn_text": "",
         "link_url": ""
@@ -341,6 +341,7 @@
     },
     "img_with_text_simplicity_JRCJ4f": {
       "type": "img-with-text-simplicity",
+      "disabled": true,
       "custom_css": [
         ".img_with_text_simplicity_section {background-color: #e2ded6; padding-top: 6rem; padding-bottom: 12rem;}",
         ".img_with_text_simplicity_filebox {height: 48rem;}",
