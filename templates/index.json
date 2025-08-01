@@ -402,6 +402,17 @@
             "url_upload": "shopify://files/videos/My Desk Setup as a Photographer and Content Creator for Long Hours of Editing.mp4"
           }
         },
+        "swiper_4AhqcM": {
+          "type": "swiper",
+          "settings": {
+            "name": "ds",
+            "introduce": "<p>sddssds</p>",
+            "description": "<p>sdssd</p>",
+            "link": "",
+            "cover_image": "shopify://shop_images/8d62567f3976a249cabee9308f1d71fa.jpg",
+            "video_url": "https://www.youtube.com/watch?v=XExE1XDGqpQ"
+          }
+        },
         "swiper_KgkXnm": {
           "type": "swiper",
           "disabled": true,
@@ -418,6 +429,7 @@
       "block_order": [
         "swiper_R8cQdW",
         "swiper_qRmjCc",
+        "swiper_4AhqcM",
         "swiper_KgkXnm"
       ],
       "name": "celebrity swiper",
