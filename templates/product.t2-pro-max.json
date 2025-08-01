@@ -143,8 +143,8 @@
         "heading": "Maidesite mobiler Schreibtisch T2 Pro Plus Ausrüstung",
         "heading_size": "h1",
         "enable_video_looping": false,
-        "video_url": "https://www.youtube.com/watch?v=YstPRgITxvk&t=6s",
-        "cover_image": "shopify://shop_images/Maidesite-oval-leg-height-adjustabkle-desk-in-office.jpg",
+        "video_url": "https://www.youtube.com/watch?v=Yk8zyCCxmNg",
+        "cover_image": "shopify://shop_images/T2-Pro-Max-adjustable-height-desk-black-with-oak-top-in-large-room.jpg",
         "description": "",
         "full_width": false,
         "color_scheme": "",
@@ -158,10 +158,10 @@
         "file_with_text_JJXCp8": {
           "type": "file_with_text",
           "settings": {
-            "title": "<h3>Elegantes Design</h3>",
-            "description": "<p>Verfügt über ein elegantes Design, Säule und Fuß mit Arc-Stil, moderneres und häusliches Design.</p>",
+            "title": "<p>Schnell aufgebaut</p>",
+            "description": "<p>Nur 15-20 Minuten Montagezeit!</p>",
             "file_type": "image",
-            "file_image": "shopify://shop_images/TH2-Pro-Plus-oval-leg-frame.jpg",
+            "file_image": "shopify://shop_images/T2-Pro-Max-is-fast-assembly-desk.jpg",
             "video_url": ""
           }
         },
@@ -171,7 +171,7 @@
             "title": "<h3>Super Duale Motoren</h3>",
             "description": "<p>Maidesite Duale Motorensystem ist besser als andere Produkt mit nur einem Motor.</p>",
             "file_type": "image",
-            "file_image": "shopify://shop_images/dual-motor-stable-standing-desk-leg-black-TH2-Pro-plus.jpg",
+            "file_image": "shopify://shop_images/Schwarz-06.jpg",
             "video_url": ""
           }
         },
@@ -179,9 +179,9 @@
           "type": "file_with_text",
           "settings": {
             "title": "<h3>Max. Verstellhöhe</h3>",
-            "description": "<p>Der 3-stufige tischgestell höhenverstellbar, der über den größten Höhenverstellbereich von 62-125 cm auf dem Markt verfügt<br/><br/></p>",
+            "description": "<p>Der 3-stufige tischgestell höhenverstellbar, der über den größten Höhenverstellbereich von 65-135 cm auf dem Markt verfügt<br/><br/></p>",
             "file_type": "image",
-            "file_image": "shopify://shop_images/TH2-Pro-Plus-hohenverstellbarer-schreibtischbereich-62cm-125cm.jpg",
+            "file_image": "shopify://shop_images/T2-Pro-Max-gray-desk-height-adjustable-65-135-cm.jpg",
             "video_url": ""
           }
         },
@@ -227,7 +227,7 @@
       "name": "file box simplicity",
       "settings": {
         "spec_id": "",
-        "main_title": "<p>Warum T2 Pro Plus wählen?</p>",
+        "main_title": "<p>Warum T2 Pro Max wählen?</p>",
         "row_num": 3
       }
     },
