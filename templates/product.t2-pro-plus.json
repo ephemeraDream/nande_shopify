@@ -197,6 +197,7 @@
         },
         "file_with_text_B39ehq": {
           "type": "file_with_text",
+          "disabled": true,
           "settings": {
             "title": "<h3>Multifunktions-Bedienfeld</h3>",
             "description": "<p>4-Memory-Speicherplätze, die entsprechen unterschiedliche voreingestellte Höhe. Sie können 0,5h,1h,2h Erinnerung einstellen.</p>",
@@ -207,6 +208,7 @@
         },
         "file_with_text_THJTyK": {
           "type": "file_with_text",
+          "disabled": true,
           "settings": {
             "title": "<h3>FSC Tischplatte</h3>",
             "description": "<p>Optionale FSC-zertifizierte Tischplatten in 120x60cm, 140x70cm und 160x80cm mit vorgebohrten Löchern.</p>",
@@ -228,7 +230,7 @@
       "settings": {
         "spec_id": "",
         "main_title": "<h2>Leistungsstarker, preiswerter höhenverstellbarer Schreibtisch</h2>",
-        "row_num": 3
+        "row_num": 4
       }
     },
     "img_with_foldtext_RcBrkw": {
