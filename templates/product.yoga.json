@@ -143,8 +143,8 @@
         "heading": "Maidesite mobiler Schreibtisch T2 Pro Plus Ausrüstung",
         "heading_size": "h1",
         "enable_video_looping": false,
-        "video_url": "https://www.youtube.com/watch?v=Yk8zyCCxmNg",
-        "cover_image": "shopify://shop_images/T2-Pro-Max-adjustable-height-desk-black-with-oak-top-in-large-room.jpg",
+        "video_url": "https://www.youtube.com/watch?v=pGd9OwWrLhA",
+        "cover_image": "shopify://shop_images/Young_lady_yoga_on_an_orange_Maiddesite_Yoga_adjustable_height_desk.png",
         "description": "",
         "full_width": false,
         "color_scheme": "",
@@ -158,10 +158,10 @@
         "file_with_text_JJXCp8": {
           "type": "file_with_text",
           "settings": {
-            "title": "<p>Schnell aufgebaut</p>",
+            "title": "<p>Wohnungsfreundliches Design</p>",
             "description": "<p>Nur 15-20 Minuten Montagezeit!</p>",
             "file_type": "image",
-            "file_image": "shopify://shop_images/T2-Pro-Max-is-fast-assembly-desk.jpg",
+            "file_image": "shopify://shop_images/1_87d9a4e3-d4b5-4a7a-8659-77631f33e78a.jpg",
             "video_url": ""
           }
         },
@@ -227,7 +227,7 @@
       "name": "file box simplicity",
       "settings": {
         "spec_id": "",
-        "main_title": "<p>Warum T2 Pro Max wählen?</p>",
+        "main_title": "<p>Warum Yoga wählen?</p>",
         "row_num": 3
       }
     },
