@@ -267,6 +267,7 @@
     },
     "img_with_text_simplicity_YLCpmN": {
       "type": "img-with-text-simplicity",
+      "disabled": true,
       "custom_css": [
         ".img_with_text_simplicity_section {background-color: #e2ded6; padding-top: 6rem;}",
         ".img_with_text_simplicity_filebox {height: 48rem;}"
@@ -289,6 +290,7 @@
     },
     "img_with_text_simplicity_JRCJ4f": {
       "type": "img-with-text-simplicity",
+      "disabled": true,
       "custom_css": [
         ".img_with_text_simplicity_section {background-color: #e2ded6; padding-top: 6rem; padding-bottom: 12rem;}",
         ".img_with_text_simplicity_filebox {height: 48rem;}",
@@ -343,6 +345,7 @@
         "foldtext_HWP39G",
         "foldtext_iGWkAs"
       ],
+      "disabled": true,
       "name": "img with foldtext",
       "settings": {
         "spec_id": "",
@@ -416,6 +419,7 @@
         "tab_JyxzQm",
         "tab_LmGatL"
       ],
+      "disabled": true,
       "name": "img with text tab",
       "settings": {
         "spec_id": "",
