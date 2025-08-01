@@ -189,9 +189,9 @@
           "type": "file_with_text",
           "settings": {
             "title": "<h3>Vier Speicherhöhen&USB-Ladeanschlüsse</h3>",
-            "description": "<ul><li>4 Speicherplätze für Familie & Haltungen, plus USB-Ladepunkt</li></ul>",
+            "description": "<ul><li>4 Speicherplätze für Familie & Haltungen, plus USB-C Ladepunkt</li></ul>",
             "file_type": "image",
-            "file_image": "shopify://shop_images/Maidesite-T1-Pro-control-panel-1200x800.jpg",
+            "file_image": "shopify://shop_images/T1_Pro_Control_Panel_with_USB-C.jpg",
             "video_url": ""
           }
         },
