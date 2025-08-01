@@ -172,6 +172,7 @@
         },
         "file_with_text_B39ehq": {
           "type": "file_with_text",
+          "disabled": true,
           "settings": {
             "title": "<p>Kostenloser und Schneller Versand</p>",
             "description": "<p>Normalerweise beträgt die optimale Schreibtischhöhe im Sitzen Ihre Körpergröße x 0,4 und im Stehen Ihre Körpergröße x 0,62. Höhenverstellbarer Schreibtisch mit 2 stufigen Säulen ist nur für die Körpergröße von 1,75-1,95 m geeignet. </p>",
@@ -182,6 +183,7 @@
         },
         "file_with_text_JJXCp8": {
           "type": "file_with_text",
+          "disabled": true,
           "settings": {
             "title": "<p>Kostenloser und Schneller Versand</p>",
             "description": "<p>Normalerweise beträgt die optimale Schreibtischhöhe im Sitzen Ihre Körpergröße x 0,4 und im Stehen Ihre Körpergröße x 0,62. Höhenverstellbarer Schreibtisch mit 2 stufigen Säulen ist nur für die Körpergröße von 1,75-1,95 m geeignet. </p>",
@@ -192,6 +194,7 @@
         },
         "file_with_text_THJTyK": {
           "type": "file_with_text",
+          "disabled": true,
           "settings": {
             "title": "<p>Kostenloser und Schneller Versand</p>",
             "description": "<p>Normalerweise beträgt die optimale Schreibtischhöhe im Sitzen Ihre Körpergröße x 0,4 und im Stehen Ihre Körpergröße x 0,62. Höhenverstellbarer Schreibtisch mit 2 stufigen Säulen ist nur für die Körpergröße von 1,75-1,95 m geeignet. </p>",
@@ -515,29 +518,30 @@
     "faq_simple_kxTbhc": {
       "type": "faq-simple",
       "blocks": {
-        "faq_E4jP4F": {
-          "type": "faq",
-          "settings": {
-            "question": "<p>Kann ich meine Bestellung stornieren?</p>",
-            "answer": "<p>Maidesite bietet durch seine produkten von höhenverstellbaren Schreibtischen, die Funktionsintegration, Szenenvielfalt und Personalisierung bieten, Ihnen die Möglichkeit, einfach zwischen verschiedenen Heimat-Aktivitätsmodi zu wechseln, die eine Desktop-Assistenten erfordern. <br/><br/>Dies ermöglicht Anhängern des modernen intelligenten Heimlebens, sich noch bequemer und müheloser in ihre vielfältigen Lebensstile einzuleben.<br/></p>"
-          }
-        },
         "faq_AXAcgA": {
           "type": "faq",
           "settings": {
-            "question": "<p>Was ist, wenn ich mit jemandem sprechen mochte?</p>",
-            "answer": "<p>Maidesite bietet durch seine produkten von höhenverstellbaren Schreibtischen, die Funktionsintegration, Szenenvielfalt und Personalisierung bieten, Ihnen die Möglichkeit, einfach zwischen verschiedenen Heimat-Aktivitätsmodi zu wechseln, die eine Desktop-Assistenten erfordern. <br/><br/>Dies ermöglicht Anhängern des modernen intelligenten Heimlebens, sich noch bequemer und müheloser in ihre vielfältigen Lebensstile einzuleben.<br/></p>"
+            "question": "<p>Was ist das maximale Gewicht, das dieser Bürostuhl tragen kann?</p>",
+            "answer": "<p>Das maximale Gewicht, das der ergonomische Stuhl EC6 tragen kann, beträgt 120 kg.</p>"
+          }
+        },
+        "faq_E4jP4F": {
+          "type": "faq",
+          "settings": {
+            "question": "<h4>Was ist der Unterschied zwischen den ergonomischen Stühlen ec5 und ec6?</h4>",
+            "answer": "<p>Der EC6 ist ein Premium-Modell mit vier Funktionen: Höhenverstellung, Sitzverschiebung um 5 cm nach vorne und hinten, Neigen und Arretieren. Der EC5 bietet nur zwei Funktionen.<br/><br/>Die adaptive Rückenlehne des EC6 ist um 2 cm verstellbar und sorgt so für besseren Halt.<br/><br/>Die Rückenlehne des EC6 kann um 7 cm in der Höhe angepasst werden, beim EC5 ist dies nicht möglich.<br/><br/>Der EC6 verfügt über eine Fußstütze, der EC5 nicht.</p>"
           }
         },
         "faq_W9Mzyn": {
           "type": "faq",
           "settings": {
-            "question": "<p>Ist das Bestellen im Internet sicher? Was passiert mit meinen Daten?</p>",
-            "answer": "<p>Maidesite bietet durch seine produkten von höhenverstellbaren Schreibtischen, die Funktionsintegration, Szenenvielfalt und Personalisierung bieten, Ihnen die Möglichkeit, einfach zwischen verschiedenen Heimat-Aktivitätsmodi zu wechseln, die eine Desktop-Assistenten erfordern. <br/><br/>Dies ermöglicht Anhängern des modernen intelligenten Heimlebens, sich noch bequemer und müheloser in ihre vielfältigen Lebensstile einzuleben.<br/></p>"
+            "question": "<p>Bietet das Produkt einen Installationsservice an?</p>",
+            "answer": "<p>Wir können derzeit keinen Montageservice anbieten, aber wir werden eine Montageanleitung und ausreichend Schrauben in das Paket legen, um Ihnen die Arbeit zu erleichtern!</p>"
           }
         },
         "faq_VQVPFn": {
           "type": "faq",
+          "disabled": true,
           "settings": {
             "question": "<p>Welche Moglichkeiten habe ich, um meine Bestellung zu bezahlen?</p>",
             "answer": "<p>Maidesite bietet durch seine produkten von höhenverstellbaren Schreibtischen, die Funktionsintegration, Szenenvielfalt und Personalisierung bieten, Ihnen die Möglichkeit, einfach zwischen verschiedenen Heimat-Aktivitätsmodi zu wechseln, die eine Desktop-Assistenten erfordern. <br/><br/>Dies ermöglicht Anhängern des modernen intelligenten Heimlebens, sich noch bequemer und müheloser in ihre vielfältigen Lebensstile einzuleben.<br/></p>"
@@ -545,6 +549,7 @@
         },
         "faq_bELHrX": {
           "type": "faq",
+          "disabled": true,
           "settings": {
             "question": "<p>Welche Moglichkeiten habe ich, um meine Bestellung zu bezahlen?</p>",
             "answer": "<p>Maidesite bietet durch seine produkten von höhenverstellbaren Schreibtischen, die Funktionsintegration, Szenenvielfalt und Personalisierung bieten, Ihnen die Möglichkeit, einfach zwischen verschiedenen Heimat-Aktivitätsmodi zu wechseln, die eine Desktop-Assistenten erfordern. <br/><br/>Dies ermöglicht Anhängern des modernen intelligenten Heimlebens, sich noch bequemer und müheloser in ihre vielfältigen Lebensstile einzuleben.<br/></p>"
@@ -552,6 +557,7 @@
         },
         "faq_WtEK7r": {
           "type": "faq",
+          "disabled": true,
           "settings": {
             "question": "<p>Welche Moglichkeiten habe ich, um meine Bestellung zu bezahlen?</p>",
             "answer": "<p>Maidesite bietet durch seine produkten von höhenverstellbaren Schreibtischen, die Funktionsintegration, Szenenvielfalt und Personalisierung bieten, Ihnen die Möglichkeit, einfach zwischen verschiedenen Heimat-Aktivitätsmodi zu wechseln, die eine Desktop-Assistenten erfordern. <br/><br/>Dies ermöglicht Anhängern des modernen intelligenten Heimlebens, sich noch bequemer und müheloser in ihre vielfältigen Lebensstile einzuleben.<br/></p>"
@@ -559,6 +565,7 @@
         },
         "faq_EXWGc6": {
           "type": "faq",
+          "disabled": true,
           "settings": {
             "question": "<p>Welche Moglichkeiten habe ich, um meine Bestellung zu bezahlen?</p>",
             "answer": "<p>Maidesite bietet durch seine produkten von höhenverstellbaren Schreibtischen, die Funktionsintegration, Szenenvielfalt und Personalisierung bieten, Ihnen die Möglichkeit, einfach zwischen verschiedenen Heimat-Aktivitätsmodi zu wechseln, die eine Desktop-Assistenten erfordern. <br/><br/>Dies ermöglicht Anhängern des modernen intelligenten Heimlebens, sich noch bequemer und müheloser in ihre vielfältigen Lebensstile einzuleben.<br/></p>"
@@ -566,6 +573,7 @@
         },
         "faq_abheWf": {
           "type": "faq",
+          "disabled": true,
           "settings": {
             "question": "<p>Welche Moglichkeiten habe ich, um meine Bestellung zu bezahlen?</p>",
             "answer": "<p>Maidesite bietet durch seine produkten von höhenverstellbaren Schreibtischen, die Funktionsintegration, Szenenvielfalt und Personalisierung bieten, Ihnen die Möglichkeit, einfach zwischen verschiedenen Heimat-Aktivitätsmodi zu wechseln, die eine Desktop-Assistenten erfordern. <br/><br/>Dies ermöglicht Anhängern des modernen intelligenten Heimlebens, sich noch bequemer und müheloser in ihre vielfältigen Lebensstile einzuleben.<br/></p>"
@@ -573,6 +581,7 @@
         },
         "faq_mFDf3d": {
           "type": "faq",
+          "disabled": true,
           "settings": {
             "question": "<p>Welche Moglichkeiten habe ich, um meine Bestellung zu bezahlen?</p>",
             "answer": "<p>Maidesite bietet durch seine produkten von höhenverstellbaren Schreibtischen, die Funktionsintegration, Szenenvielfalt und Personalisierung bieten, Ihnen die Möglichkeit, einfach zwischen verschiedenen Heimat-Aktivitätsmodi zu wechseln, die eine Desktop-Assistenten erfordern. <br/><br/>Dies ermöglicht Anhängern des modernen intelligenten Heimlebens, sich noch bequemer und müheloser in ihre vielfältigen Lebensstile einzuleben.<br/></p>"
@@ -580,6 +589,7 @@
         },
         "faq_whBqrf": {
           "type": "faq",
+          "disabled": true,
           "settings": {
             "question": "<p>Welche Moglichkeiten habe ich, um meine Bestellung zu bezahlen?</p>",
             "answer": "<p>Maidesite bietet durch seine produkten von höhenverstellbaren Schreibtischen, die Funktionsintegration, Szenenvielfalt und Personalisierung bieten, Ihnen die Möglichkeit, einfach zwischen verschiedenen Heimat-Aktivitätsmodi zu wechseln, die eine Desktop-Assistenten erfordern. <br/><br/>Dies ermöglicht Anhängern des modernen intelligenten Heimlebens, sich noch bequemer und müheloser in ihre vielfältigen Lebensstile einzuleben.<br/></p>"
@@ -587,8 +597,8 @@
         }
       },
       "block_order": [
-        "faq_E4jP4F",
         "faq_AXAcgA",
+        "faq_E4jP4F",
         "faq_W9Mzyn",
         "faq_VQVPFn",
         "faq_bELHrX",
