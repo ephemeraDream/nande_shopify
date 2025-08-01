@@ -147,17 +147,17 @@
             "title": "<h3>Verstellbare Rückenlehne mit Neigung</h3>",
             "description": "<ul><li>Rückenlehne 95–130° neigbar – für jede Sitz- oder Relaxposition</li></ul>",
             "file_type": "image",
-            "file_image": "shopify://shop_images/EC6_office_chair_base.jpg",
+            "file_image": "shopify://shop_images/Maidesite_EC5_ergonomic_office_chair_black_is_comfortable_for_working_reading_and_relaxing.jpg",
             "video_url": ""
           }
         },
         "file_with_text_Q8tJKk": {
           "type": "file_with_text",
           "settings": {
-            "title": "<h3>Multifunktionale Armlehnen</h3>",
-            "description": "<ul><li>4D-Armlehnen: 6,8 cm Höhe/Breite + 15° Drehung – perfekte Arm- und Ellbogenunterstützung.</li></ul>",
+            "title": "<h3>Netzgewebe: Für ein neues Sitzgefühl</h3>",
+            "description": "<ul><li>Atmungsaktives Netzgewebe sorgt für beste Luftzirkulation – auch bei stundenlangem Sitzen angenehm kühl und komfortabel.</li></ul>",
             "file_type": "image",
-            "file_image": "shopify://shop_images/EC6_ergonomic_chair_3D_armrest.jpg",
+            "file_image": "shopify://shop_images/Maidesite_EC5_ergonomic_office_chair_black_can_breath_as_made_from_quality_mesh.jpg",
             "video_url": ""
           }
         },
@@ -165,9 +165,9 @@
           "type": "file_with_text",
           "settings": {
             "title": "<h3>Robuste Stützkapazität</h3>",
-            "description": "<ul><li>Bürostuhl bis 120 kg, belüftetes Kissen – Komfort für alle Körpertypen, den ganzen Tag.</li></ul>",
+            "description": "<ul><li>120 kg Bürostuhl mit großem, belüftetem Kissen – Komfort für jede Figur, den ganzen Tag.</li></ul>",
             "file_type": "image",
-            "file_image": "shopify://shop_images/EC6_Office_Chair_with_T2_Pro_Max_adjustable_height_desk_in_the_office.jpg",
+            "file_image": "shopify://shop_images/Maidesite_EC5_ergonomic_office_chair_supports_120_kg_people_working_stable_and_safe.jpg",
             "video_url": ""
           }
         },
@@ -216,7 +216,7 @@
       "name": "file box simplicity",
       "settings": {
         "spec_id": "Produktbeschreibung",
-        "main_title": "<p>Verbesserter Komfort durch mehrfach verstellbares Design</p>",
+        "main_title": "<h2>Verbesserter Komfort durch mehrfach verstellbares Design</h2>",
         "row_num": 3
       }
     },
