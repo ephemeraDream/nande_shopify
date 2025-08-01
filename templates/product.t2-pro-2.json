@@ -353,7 +353,7 @@
           "type": "tab",
           "settings": {
             "tabname": "Hochwertiges Material",
-            "sub_title": "",
+            "sub_title": "Erstklassig",
             "title": "<h3>Hochwertiges Material und erstklassige Fertigung</h3>",
             "description": "<ul><li>Unsere Schreibtische bestehen aus erstklassigen Industriematerialien von Fortune-500-Unternehmen. </li><li>Die höhenverstellbaren Maidesite-Tische werden in vollautomatisierten Produktionsprozessen gefertigt, um höchste Qualität sicherzustellen.</li></ul>",
             "file_type": "image",
@@ -366,10 +366,10 @@
         "tab_AUd88N": {
           "type": "tab",
           "settings": {
-            "tabname": "Sitzende Erinnerung",
-            "sub_title": "",
-            "title": "<p>Fortschrittliche Technologie</p>",
-            "description": "<p>Perfekt für zwei Familienmitglieder, um ihre individuelle Körpergröße anzupassen oder um zwei neue Höheneinstellungen <br/>für vielfältigere Körperhaltungen zu ermöglichen.Der Standard-USB-Ladeanschluss lädt deine digitalen Geräte zuverlässig auf, <br/>genau dann, wenn du es brauchst.</p>",
+            "tabname": "100%-Prüfung",
+            "sub_title": "Verantwortungsbewusst",
+            "title": "<h3>Strenge 100%-Prüfung vor der Auslieferung</h3>",
+            "description": "<ul><li>Jedes Schreibtisch, das Sie erhalten, unterzieht sich einer strengen 100%-Prüfung, um sicherzustellen, dass es fehlerfrei ist.</li></ul>",
             "file_type": "image",
             "file_image": "shopify://shop_images/006.jpg",
             "video_url": "",
@@ -380,10 +380,10 @@
         "tab_JyxzQm": {
           "type": "tab",
           "settings": {
-            "tabname": "Sitzende Erinnerung",
-            "sub_title": "",
-            "title": "<p>Fortschrittliche Technologie</p>",
-            "description": "<p>Perfekt für zwei Familienmitglieder, um ihre individuelle Körpergröße anzupassen oder um zwei neue Höheneinstellungen <br/>für vielfältigere Körperhaltungen zu ermöglichen.Der Standard-USB-Ladeanschluss lädt deine digitalen Geräte zuverlässig auf, <br/>genau dann, wenn du es brauchst.</p>",
+            "tabname": "Zertifizierungen",
+            "sub_title": "Zuverlässig",
+            "title": "<p>Zertifizierungen für Zuverlässigkeit</p>",
+            "description": "<ul><li>Mit Zertifizierungen wie CE, UKCA und FSC garantieren wir, dass unsere justierbaren Schreibtische von Maidesite funktional sind und den meisten Bürotischstandards entsprechen.</li></ul>",
             "file_type": "image",
             "file_image": "shopify://shop_images/006.jpg",
             "video_url": "",
