@@ -1134,4 +1134,17 @@ li[data-address]>h2 {
   .order_section_child_item td:first-of-type {
     padding-left: 0rem;
   }
+
+  .order_section_product_info {
+    flex-direction: column !important;
+    align-items: flex-end;
+  }
+
+  .order_section_flex_left {
+    flex-wrap: wrap;
+  }
+
+  .order_section_flex h2 {
+    margin: 0;
+  }
 }
