@@ -489,51 +489,7 @@
       "settings": {
         "spec_id": "Technische_Daten",
         "title": "<p>Technische Daten Des HöHenverstellbaren </p><p>Schreibtisches-T1 Pro</p>",
-        "select_product": "maidesite-tischplatte-120-140-160-cm-diy-schreibtischplatte"
-      }
-    },
-    "maidesite_swiper_QhkQG8": {
-      "type": "maidesite-swiper",
-      "blocks": {
-        "swiper_bBWUrY": {
-          "type": "swiper",
-          "settings": {
-            "image": "shopify://shop_images/maidesite-logo-1.webp",
-            "text": "<p>“Ich persönlich bin sehr angetan von der guten Produktqualität, dem zusätzlichen und gut erreichbaren USB-A-Anschluss am Bedienpanel sowie dem schnellen und leisen Motor, der einen fixen Wechsel zwischen Sitz- und Stehposition ermöglicht.”</p>"
-          }
-        },
-        "swiper_BnDxkz": {
-          "type": "swiper",
-          "settings": {
-            "image": "shopify://shop_images/maidesite-logo-2.webp",
-            "text": "<p>“Ich persönlich bin sehr angetan von der guten Produktqualität, dem zusätzlichen und gut erreichbaren USB-A-Anschluss am Bedienpanel sowie dem schnellen und leisen Motor, der einen fixen Wechsel zwischen Sitz- und Stehposition ermöglicht.”</p>"
-          }
-        },
-        "swiper_EnDd8n": {
-          "type": "swiper",
-          "settings": {
-            "image": "shopify://shop_images/maidesite-logo-3.webp",
-            "text": "<p>“Ich persönlich bin sehr angetan von der guten Produktqualität, dem zusätzlichen und gut erreichbaren USB-A-Anschluss am Bedienpanel sowie dem schnellen und leisen Motor, der einen fixen Wechsel zwischen Sitz- und Stehposition ermöglicht.”</p>"
-          }
-        },
-        "swiper_4kYG3r": {
-          "type": "swiper",
-          "settings": {
-            "image": "shopify://shop_images/maidesite-logo-4.webp",
-            "text": "<p>“Ich persönlich bin sehr angetan von der guten Produktqualität, dem zusätzlichen und gut erreichbaren USB-A-Anschluss am Bedienpanel sowie dem schnellen und leisen Motor, der einen fixen Wechsel zwischen Sitz- und Stehposition ermöglicht.”</p>"
-          }
-        }
-      },
-      "block_order": [
-        "swiper_bBWUrY",
-        "swiper_BnDxkz",
-        "swiper_EnDd8n",
-        "swiper_4kYG3r"
-      ],
-      "name": "maidesite swiper",
-      "settings": {
-        "title": "<p>Die Presse Liebt Maidesite</p>",
-        "text": ""
+        "select_product": "maidesite-tischgestell-elektrisch-hohenverstellbar-t2-pro-plus"
       }
     },
     "celebrity_swiper_aGymw9": {
@@ -568,6 +524,7 @@
         "swiper_mexwM6",
         "swiper_xWLxVC"
       ],
+      "disabled": true,
       "name": "celebrity swiper",
       "settings": {
         "title": "<p>Empfehlen Von</p>",
@@ -736,7 +693,6 @@
     "img_with_text_tab_emEWU8",
     "img_with_foldtext_LzqrtY",
     "technical_data_L3gXUm",
-    "maidesite_swiper_QhkQG8",
     "celebrity_swiper_aGymw9",
     "faq_simple_kxTbhc",
     "product_comment_GV7BHg",
