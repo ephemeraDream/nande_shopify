@@ -259,7 +259,7 @@
                 {%- endif -%}
               </td>
               {% comment %} {% if parent_ids contains line_item.variant_id %} {% endcomment %}
-              <td class="cartdrawer_bundle_product active">
+              <tr class="cartdrawer_bundle_product active">
                 <div class="cartdrawer_bundle_product_head">
                   {{ 'common.accessories' | t }}
                   {{- 'icon-down.svg' | inline_asset_content -}}
@@ -461,7 +461,7 @@
                     </div>
                   {%- endfor -%}
                 </div>
-              </td>
+              </tr>
               {% comment %} {% endif %} {% endcomment %}
             </tr>
           {%- endfor -%}
