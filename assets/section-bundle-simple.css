@@ -1,6 +1,5 @@
 .bundle_simple_section {
   width: 100%;
-  padding-top: 12rem;
   background-color: #f2f1ed;
 }
 
@@ -386,7 +385,7 @@
 }
 }
 @media screen and (max-width: 768px) {
-  /* .bundle_simple .bundle_simple_contain_right {
-    width: 20rem;
-} */
+  .bundle_simple .bundle_simple_contain {
+    flex-direction: column;
+  }
 }
