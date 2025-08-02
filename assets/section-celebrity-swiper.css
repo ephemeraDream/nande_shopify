@@ -108,7 +108,7 @@
   right: unset;
 }
 @media screen and (max-width: 1600px) {
-  .celebrity_swiper .padding-sider {
+  .celebrity_swiper.padding-sider {
       padding-right: 0rem!important;
   }
 }
@@ -124,7 +124,7 @@
 }
 }
 @media screen and (max-width: 767px) {
-  .celebrity_swiper .padding-sider {
+  .celebrity_swiper.padding-sider {
       padding-right: 2rem!important;
   }
   .celebrity_swiper .swiper {
