@@ -1077,3 +1077,9 @@ li[data-address]>h2 {
   gap: 3rem;
   margin-top: 3rem;
 }
+
+.order_section_feature_img {
+  width: 14rem;
+  height: 14rem;
+  position: relative;
+}

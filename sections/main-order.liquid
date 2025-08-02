@@ -62,16 +62,17 @@
                 <div>
                   {{ line_item.properties.bundle_parent_id }}
                   {% if line_item.image %}
-                    {% comment %} Leave empty space due to a:empty CSS display: none rule {% endcomment %}
-                    <a href="{{ line_item.url }}" class="cart-item__link" tabindex="-1" aria-hidden="true"> </a>
-                    <img
-                      class="cart-item__image"
-                      src="{{ line_item.image | image_url: width: 300 }}"
-                      alt="{{ line_item.image.alt | escape }}"
-                      loading="lazy"
-                      width="150"
-                      height="{{ 150 | divided_by: line_item.image.aspect_ratio | ceil }}"
-                    >
+                    <div class="order_section_feature_img">
+                      <a href="{{ line_item.url }}" class="cart-item__link" tabindex="-1" aria-hidden="true"> </a>
+                      <img
+                        class="cart-item__image"
+                        src="{{ line_item.image | image_url: width: 300 }}"
+                        alt="{{ line_item.image.alt | escape }}"
+                        loading="lazy"
+                        width="150"
+                        height="{{ 150 | divided_by: line_item.image.aspect_ratio | ceil }}"
+                      >
+                    </div>
                   {% endif %}
                   {%- if line_item.url != blank -%}
                     <a href="{{ line_item.url }}">{{ line_item.title | escape }}</a>
