@@ -4176,3 +4176,18 @@ a {
     box-shadow: 0 0 0 0 rgba(189, 255, 0, 0);
   }
 }
+/*****************************  animation end *****************************/
+/*****************************  product-feature *****************************/
+.product_core_features ul{
+  padding: 0;
+  margin: 0;
+  list-style: disc;
+}
+.product_core_features ul li{
+  padding: 0;
+  margin: 0;
+  font-size: 1.6rem;
+  line-height: 1.3em;
+  color: #7F7E75;
+}
+/*****************************  product-feature end *****************************/

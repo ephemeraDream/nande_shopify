@@ -93,6 +93,12 @@
                 </div>
                 <div class="collection_compare_product_info">
                   <h4 class="collection_compare_product_title">{{ product.title }}</h4>
+                  {% if product.metafields.custom.core_features %}
+                    <div class="product_core_features">
+                      {{ product.metafields.custom.core_features | metafield_tag }}
+                    </div>
+                  {% endif %}
+                  
                   <div>
                     {% render 'product-rating', product: product %}
                     <div class="collection_compare_product_price">
