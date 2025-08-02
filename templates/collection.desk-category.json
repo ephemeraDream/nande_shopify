@@ -111,7 +111,7 @@
         "link_url": "",
         "padding_top": 0,
         "padding_bottom": 0,
-        "background_color": "rgba(0,0,0,0)"
+        "background_color": "#ffffff"
       }
     },
     "img_with_text_simplicity_CehiJc": {
@@ -134,8 +134,8 @@
         "btn_text": "",
         "link_url": "",
         "padding_top": 0,
-        "padding_bottom": 0,
-        "background_color": "rgba(0,0,0,0)"
+        "padding_bottom": 120,
+        "background_color": "#ffffff"
       }
     },
     "faq_simple_MFhhga": {
