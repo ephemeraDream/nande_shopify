@@ -1391,4 +1391,13 @@
   }
   .product_info_buybox_quantity_box{width: 100%;}
   .product_info_buybox_btns_btn{width: 100%;}
+  .product_info_section .product_infor_simplicity_right_select_title,
+  .product_info_section .product_info_bottom_bar .product_info_buybox_btns_btn,
+  .product_info_section .product_info_bottom_bar .product_info_buybox_btns_btn{font-size: 1.2rem;}
+  .product_info_section .product_info_bottom_bar .product_info_price{font-size: 1.2rem;}
+  .product_info_section .product_info_bottom_bar_contain {
+    gap: 0.6rem;
+    flex-direction: column;
+    padding-top:0.6rem
+}
 }
