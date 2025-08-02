@@ -1085,6 +1085,6 @@ li[data-address]>h2 {
 }
 
 .order_section_product_info {
-  flex-direction: row;
+  flex-direction: row !important;
   gap: 2rem;
 }
