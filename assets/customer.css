@@ -1083,3 +1083,8 @@ li[data-address]>h2 {
   height: 14rem;
   position: relative;
 }
+
+.order_section_product_info {
+  flex-direction: row;
+  gap: 2rem;
+}

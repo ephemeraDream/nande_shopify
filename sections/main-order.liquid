@@ -15,7 +15,7 @@
   }
 {%- endstyle -%}
 
-<div class="customer order section-{{ section.id }}-padding">
+<div class="customer order section-{{ section.id }}-padding padding-sider">
   <div>
     <div>
       <div class="order_section_flex">
@@ -59,7 +59,7 @@
                 scope="row"
                 data-label="{{ 'customer.order.product' | t }}"
               >
-                <div>
+                <div class="order_section_product_info">
                   {{ line_item.properties.bundle_parent_id }}
                   {% if line_item.image %}
                     <div class="order_section_feature_img">
