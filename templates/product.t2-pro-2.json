@@ -12,7 +12,7 @@
     "breadcrumbs": {
       "type": "breadcrumbs",
       "custom_css": [
-        ".breadcrumb-con { top: 0; z-index: 7;position: relative;}",
+        ".breadcrumb-con {top: 0; z-index: 7; position: relative;}",
         ".breadcrumb,.breadcrumb a,.breadcrumb span {color: #7f7e75;}"
       ],
       "settings": {
@@ -143,8 +143,11 @@
         "cover_image": "shopify://shop_images/product_info_video_cover.webp",
         "video_url": "",
         "url_upload": "shopify://files/videos/TO1-Pro-anti-collision_2b6db0d3-82b5-44c0-876a-e5095807f303.mp4",
-        "title": "<p>Alle Produkte Im üBerblick</p>",
-        "description": ""
+        "title": "Alle Produkte Im üBerblick",
+        "description": "",
+        "padding_top": 120,
+        "padding_bottom": 0,
+        "background_color": "#f2f1ed"
       }
     },
     "img_with_text_box_simplicity_qrzG6W": {
@@ -163,7 +166,7 @@
         "file_with_text_McHwGa": {
           "type": "file_with_text",
           "settings": {
-            "title": "<h3>Bis zu 160 kg Tragkraft</h3>",
+            "title": "<p>Bis zu 160 kg Tragkraft</p>",
             "description": "<ul><li>Platzieren Sie 2-3 27-Zoll-Monitore, Drucker, PC-Tower und andere Bürogeräte ohne Sorgen.</li></ul>",
             "file_type": "image",
             "file_image": "shopify://shop_images/Maidesite-standing-desk-T2-Pro-with-160kg-loading-capacity_1200x800_77bc9297-af7b-4d54-838d-14b4e90c837d.jpg",
@@ -173,7 +176,7 @@
         "file_with_text_Q8tJKk": {
           "type": "file_with_text",
           "settings": {
-            "title": "<h3>Unterstützt 110-200 cm Tischplatte</h3>",
+            "title": "<p>Unterstützt 110-200 cm Tischplatte</p>",
             "description": "<p>Ausziehbarer Steh-Schreibtischrahmen passt sich ideal an Tischplatten von 110 bis 200 x 60 bis 80 cm an.</p>",
             "file_type": "image",
             "file_image": "shopify://shop_images/Maidesite-T2-Pro-Hohenverstellbarer-Tisch-Weiss-Nutzungs-Tisch-1100mm-2000mm-1200x800_3ab849dd-da36-4ae4-879f-2261e2db5885.jpg",
@@ -183,17 +186,16 @@
         "file_with_text_f9yPAD": {
           "type": "file_with_text",
           "settings": {
-            "title": "<h3>Höhenverstellbar für Kinder und Erwachsene</h3>",
+            "title": "<p>Höhenverstellbar für Kinder und Erwachsene</p>",
             "description": "<ul><li>Dieser höhenverstellbare Schreibtisch passt perfekt für Personen mit einer Körpergröße von 1,5 bis 1,83 Metern, da er sich von 72 bis 120 cm in der Höhe verstellen lässt.</li></ul>",
             "file_type": "image",
-            "file_image": "shopify://shop_images/Maidesite-T1-Pro-hohenverstellbar-Bereich-72-120cm-1200x800_893c6a22-cbd0-47a1-9ca4-e6cf54dc7118.jpg",
             "video_url": ""
           }
         },
         "file_with_text_B39ehq": {
           "type": "file_with_text",
           "settings": {
-            "title": "<h3>4 Voreingestellte Speicherhöhen</h3>",
+            "title": "<p>4 Voreingestellte Speicherhöhen</p>",
             "description": "<p>4 Speicherplätze für Familie & Haltungen, plus USB-Ladepunkt</p>",
             "file_type": "image",
             "file_image": "shopify://shop_images/Control_panel_with_USB-C_for_T2_Series-2.jpg",
@@ -222,8 +224,11 @@
       "name": "file box simplicity",
       "settings": {
         "spec_id": "Produktbeschreibung",
-        "main_title": "<h2>Warum Maidesite T2 Pro Plus Höhenverstellbarer Schreibtisch?</h2>",
-        "row_num": 3
+        "main_title": "<p>Warum Maidesite T2 Pro Plus Höhenverstellbarer Schreibtisch?</p>",
+        "row_num": 3,
+        "padding_top": 120,
+        "padding_bottom": 120,
+        "background_color": "rgba(0,0,0,0)"
       }
     },
     "img_with_foldtext_RcBrkw": {
@@ -263,7 +268,9 @@
       "settings": {
         "spec_id": "",
         "title": "<p>Warum der höhenverstellbare Schreibtisch Maidesite T2 Pro stabiler ist</p>",
-        "image": "shopify://shop_images/featured-spaces-5.webp"
+        "image": "shopify://shop_images/featured-spaces-5.webp",
+        "padding_top": 120,
+        "padding_bottom": 120
       }
     },
     "img_with_text_simplicity_R8thEq": {
@@ -285,7 +292,10 @@
         "file_image": "shopify://shop_images/Sitz-Steh-Erinnerung-an-den-Maidesite-Stehschreibtisch-1200x800.png",
         "video_url": "",
         "btn_text": "",
-        "link_url": ""
+        "link_url": "",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "background_color": "rgba(0,0,0,0)"
       }
     },
     "img_with_text_simplicity_nJFALq": {
@@ -308,7 +318,10 @@
         "file_image": "shopify://shop_images/Maidesite-hohenverstellbarer-Schreibtisch-mit-Kollisionsschutz-fur-mehr-Sicherheit-1200x800.png",
         "video_url": "",
         "btn_text": "",
-        "link_url": ""
+        "link_url": "",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "background_color": "rgba(0,0,0,0)"
       }
     },
     "img_with_text_simplicity_YLCpmN": {
@@ -330,7 +343,10 @@
         "file_image": "shopify://shop_images/child-lock-for-T2-Pro-T2-Pro-Plus.jpg",
         "video_url": "",
         "btn_text": "",
-        "link_url": ""
+        "link_url": "",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "background_color": "rgba(0,0,0,0)"
       }
     },
     "img_with_text_simplicity_JRCJ4f": {
@@ -353,7 +369,10 @@
         "file_image": "shopify://shop_images/T2-Pro-standing-desk-with-safety-round-corner-1200x800.png",
         "video_url": "",
         "btn_text": "",
-        "link_url": ""
+        "link_url": "",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "background_color": "rgba(0,0,0,0)"
       }
     },
     "img_with_text_tab_emEWU8": {
@@ -482,7 +501,9 @@
       "name": "maidesite swiper",
       "settings": {
         "title": "<p>Die Presse Liebt Maidesite</p>",
-        "text": ""
+        "text": "",
+        "padding_top": 120,
+        "padding_bottom": 0
       }
     },
     "celebrity_swiper_aGymw9": {
@@ -520,7 +541,9 @@
       "name": "celebrity swiper",
       "settings": {
         "title": "<p>Empfehlen Von</p>",
-        "text": ""
+        "text": "",
+        "padding_top": 120,
+        "padding_bottom": 0
       }
     },
     "faq_simple_kxTbhc": {
@@ -622,7 +645,10 @@
         "text": "<p>Häufig gestellte Fragen</p>",
         "show_btn": true,
         "learn_more": true,
-        "contact_us": false
+        "contact_us": false,
+        "padding_top": 120,
+        "padding_bottom": 120,
+        "background_color": "rgba(0,0,0,0)"
       }
     },
     "product_comment_GV7BHg": {
@@ -663,7 +689,9 @@
           "maidesite-th2-pro-plus-tischgestell-elektrisch-hohenverstellbar",
           "maidesite-el2-pro-art-tischgestell-elektrisch-hohenverstellbar"
         ],
-        "number": 3
+        "number": 3,
+        "padding_top": 120,
+        "padding_bottom": 120
       }
     }
   },
