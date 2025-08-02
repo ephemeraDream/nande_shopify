@@ -987,6 +987,7 @@ li[data-address]>h2 {
   display: flex;
   gap: 3.8rem;
   padding: 2.8rem 2rem 4rem;
+  background: #fff;
 }
 
 .account_section_account_body_item_title {
@@ -1021,4 +1022,8 @@ li[data-address]>h2 {
   color: #7F7E75;
   margin-top: 2.6rem;
   cursor: pointer;
+}
+
+.account_section_account_body_item {
+  flex: 1;
 }
