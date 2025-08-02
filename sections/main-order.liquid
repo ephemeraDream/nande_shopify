@@ -260,7 +260,7 @@
               </td>
               {% comment %} {% if parent_ids contains line_item.variant_id %} {% endcomment %}
               <tr>
-                <td class="cartdrawer_bundle_product active">
+                <td class="cartdrawer_bundle_product active" colspan="5">
                   <div class="cartdrawer_bundle_product_head">
                     {{ 'common.accessories' | t }}
                     {{- 'icon-down.svg' | inline_asset_content -}}
@@ -271,7 +271,7 @@
                       {%- if bundle_parent_id == line_item.variant_id -%}
                       {%- endif -%}
                       <div role="row">
-                        <div
+                        <td
                           id="Row{{ child.key }}"
                           headers="ColumnProduct"
                           role="rowheader"
@@ -365,15 +365,15 @@
                               {%- endif -%}
                             </div>
                           </div>
-                        </div>
-                        <div
+                        </td>
+                        <td
                           headers="Row{{ child.key }} ColumnSku"
                           role="cell"
                           data-label="{{ 'customer.order.sku' | t }}"
                         >
                           {{ child.sku }}
-                        </div>
-                        <div
+                        </td>
+                        <td
                           headers="Row{{ child.key }} ColumnPrice"
                           role="cell"
                           data-label="{{ 'customer.order.price' | t }}"
@@ -427,15 +427,15 @@
                           {%- else -%}
                             <span>{{ child.final_price | money }}</span>
                           {%- endif -%}
-                        </div>
-                        <div
+                        </td>
+                        <td
                           headers="Row{{ child.key }} ColumnQuantity"
                           role="cell"
                           data-label="{{ 'customer.order.quantity' | t }}"
                         >
                           {{ child.quantity }}
-                        </div>
-                        <div
+                        </td>
+                        <td
                           headers="Row{{ child.key }} ColumnTotal"
                           role="cell"
                           data-label="{{ 'customer.order.total' | t }}"
@@ -458,7 +458,7 @@
                           {%- else -%}
                             {{ child.original_line_price | money }}
                           {%- endif -%}
-                        </div>
+                        </td>
                       </div>
                     {%- endfor -%}
                   </div>
