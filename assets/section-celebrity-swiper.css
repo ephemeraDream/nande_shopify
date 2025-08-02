@@ -104,12 +104,12 @@
   left: 3vw;
 }
 .celebrity_swiper .swiper_btn_white.swiper_btn_white_next {
-  left: 90vw;
+  left: 85vw;
   right: unset;
 }
 @media screen and (max-width: 1600px) {
   .celebrity_swiper .padding-sider {
-      padding-right: 0rem;
+      padding-right: 0rem!important;
   }
 }
 @media screen and (max-width: 1024px) {
@@ -125,7 +125,7 @@
 }
 @media screen and (max-width: 767px) {
   .celebrity_swiper .padding-sider {
-      padding-right: 2rem;
+      padding-right: 2rem!important;
   }
   .celebrity_swiper .swiper {
     padding-left: 0;
