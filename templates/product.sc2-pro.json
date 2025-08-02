@@ -575,43 +575,43 @@
         "faq_E4jP4F": {
           "type": "faq",
           "settings": {
-            "question": "<p>Wie groß ist die Breite des Rahmens?</p>",
-            "answer": "<p>Die Breite des Rahmens kann zwischen 110cm und 220 cm eingestellt werden.</p>"
+            "question": "<p>Für welche Höhe ist dieser Rahmen geeignet?</p>",
+            "answer": "<p>Die Zwei-Stufen-Option eignet sich für Personen von 1,5 bis 1,8 m, die Drei-Stufen-Option für 1,4 bis 1,9 m.</p>"
           }
         },
         "faq_AXAcgA": {
           "type": "faq",
           "settings": {
-            "question": "<p>Welche Größe hat die Platte, die in den Rahmen passt?</p>",
-            "answer": "<p>Das Produkt ist für Platten von 110-220cm x 60-100cm geeignet.</p>"
+            "question": "<p>Kann ich den Rahmen verwenden, wenn mein Boden nicht eben ist?</p>",
+            "answer": "<p>Natürlich können Sie das. Wir haben verstellbare Füße unter den Beinen des Rahmens angebracht, um kleinere Bodenunebenheiten auszugleichen.</p>"
           }
         },
         "faq_W9Mzyn": {
           "type": "faq",
           "settings": {
-            "question": "<p>Für welche Höhe ist dieser Rahmen geeignet?</p>",
-            "answer": "<p>Der Rahmen ist für Personen mit einer Körpergröße von 1.45-2.1m geeignet.</p>"
+            "question": "<p>Bietet das Produkt einen Installationsservice an?</p>",
+            "answer": "<p>Wir können derzeit keinen Montageservice anbieten, aber wir werden eine Montageanleitung und ausreichend Schrauben in das Paket legen, um Ihnen die Arbeit zu erleichtern!</p>"
           }
         },
         "faq_VQVPFn": {
           "type": "faq",
           "settings": {
-            "question": "<p>Kann ich den Rahmen verwenden, wenn mein Boden nicht eben ist?</p>",
-            "answer": "<p>Natürlich können Sie das. Wir haben unter den Gestellbeinen verstellbare Füße angebracht, um kleinere (innerhalb von 1 cm) Unebenheiten im Boden auszugleichen.</p>"
+            "question": "<p>Was muss ich tun, wenn \"E01, E09, E12, ASR/RST \" angezeigt wird?</p>",
+            "answer": "<p>Halten Sie die Abwärtstaste gedrückt, um den Tisch auf die niedrigste Stufe abzusenken, lassen Sie sie dann los, halten Sie die Abwärtstaste 5 Sekunden lang gedrückt, die Handsteuerung zeigt RST an, halten Sie dann die Abwärtstaste 5 Sekunden lang gedrückt, die Handsteuerung zeigt die Nummer an, und die Rückstellung ist abgeschlossen. Sie können uns auch per E-Mail kontaktieren: contact@maidesite.de</p>"
           }
         },
         "faq_yWwLLL": {
           "type": "faq",
           "settings": {
-            "question": "<p>Was ist der Unterschied zwischen dem T2 Pro Plus und dem T2 Pro Max?</p>",
-            "answer": "<p>Der T2 Pro Max ist für Personen mit einer Körpergröße zwischen 1,45 und 2,1 m geeignet, der T2 Pro Plus für Personen mit einer Körpergröße zwischen 1,4 und 1,9 m. Sie können je nach Ihren Bedürfnissen und Vorlieben wählen.</p>"
+            "question": "<p>Was muss ich tun, wenn \"HOT\" angezeigt wird?</p>",
+            "answer": "<p>Das liegt daran, dass die Temperatur des Netzteils zu hoch ist oder es zu oft betrieben wird. Bitte trennen Sie das Netzteil für 20 Minuten vom Stromnetz und schließen Sie es dann wieder an. Sie können uns auch per E-Mail kontaktieren: contact@maidesite.de</p>"
           }
         },
         "faq_bELHrX": {
           "type": "faq",
           "settings": {
-            "question": "<p>Was ist der Unterschied zwischen T2 Pro Max und EL2 Plus Art?</p>",
-            "answer": "<p>Der El2 Plus Art verfügt über eine ovale Hubsäule und ovale Füße für ein schlankeres, eleganteres Aussehen.<br/>Der T2 Pro Max hat einen größeren Höhenverstellbereich, am besten für 1,45–2,1 Meter große Personen, der EL2 Plus Art für 1,4–1,9 Meter.</p>"
+            "question": "<p>Wie lange dauert die Lieferung?</p>",
+            "answer": "<p>2-4 Tage innerhalb Deutschlands, 3-7 Tage ins benachbarte Ausland</p>"
           }
         },
         "faq_WtEK7r": {
@@ -670,7 +670,7 @@
       "settings": {
         "spec_id": "",
         "heading": "<p>FAQ</p>",
-        "text": "<h3>Schreibtisch Höhenverstellbar T2 Pro Max Technical</h3>",
+        "text": "<h3>Höhenverstellbarer Schreibtisch SC2 Pro Technik</h3>",
         "show_btn": true,
         "learn_more": true,
         "contact_us": false
