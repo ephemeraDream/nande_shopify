@@ -29,8 +29,8 @@
 
 .img_with_text_simplicity .img_with_text_simplicity_filebox {
   position: relative;
-  height: 72rem;
-  margin-top: 3rem;
+  /* height: 72rem;
+  margin-top: 3rem; */
 }
 
 .img_with_text_simplicity .img_with_text_simplicity_filebox_video,
