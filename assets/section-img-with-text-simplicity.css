@@ -101,7 +101,11 @@
     display: flex;
     flex-direction: column-reverse;
     align-items: flex-start;
+    gap: 2rem;
   }
+  .img_with_text_simplicity_left .img_with_text_simplicity_info {
+    padding-left:0rem;
+  } 
 
   .img_with_text_simplicity .img_with_text_simplicity_subtitle {
     font-size: 16px;
@@ -112,9 +116,9 @@
   }
 
   .img_with_text_simplicity .img_with_text_simplicity_filebox {
-    height: 66.67vw;
+    /* height: 66.67vw; */
     margin-top: 3.2vw;
-    border-radius: 3.2vw;
+    /* border-radius: 3.2vw; */
   }
 
   .img_with_text_simplicity .img_with_text_simplicity_filebox_video,
