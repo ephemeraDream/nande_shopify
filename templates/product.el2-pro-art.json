@@ -343,6 +343,7 @@
     },
     "img_with_text_simplicity_JRCJ4f": {
       "type": "img-with-text-simplicity",
+      "disabled": true,
       "custom_css": [
         ".img_with_text_simplicity_section {background-color: #e2ded6; padding-top: 6rem; padding-bottom: 12rem;}",
         ".img_with_text_simplicity_filebox {height: 48rem;}",
@@ -577,29 +578,8 @@
         "faq_E4jP4F": {
           "type": "faq",
           "settings": {
-            "question": "<p>Wie groß ist das EL2 Plus Art Paket?</p>",
+            "question": "<p>Wie groß ist das EL2 Pro Art Paket?</p>",
             "answer": "<p>Das Paket ist 105,5*28,5*21 cm groß.</p>"
-          }
-        },
-        "faq_AXAcgA": {
-          "type": "faq",
-          "settings": {
-            "question": "<p>Wie groß ist die Breite des Rahmens?</p>",
-            "answer": "<p>Die Breite des Rahmens kann zwischen 100 cm und 180 cm eingestellt werden.</p>"
-          }
-        },
-        "faq_W9Mzyn": {
-          "type": "faq",
-          "settings": {
-            "question": "<p>Für welche Höhe ist dieser Rahmen geeignet?</p>",
-            "answer": "<p>Der Rahmen ist für Personen mit einer Körpergröße von 1.4-1.9m geeignet.</p>"
-          }
-        },
-        "faq_VQVPFn": {
-          "type": "faq",
-          "settings": {
-            "question": "<p>In welche Länder kann nicht geliefert werden?</p>",
-            "answer": "<p>Liechtenstein, Serbien, Norwegen, Marokko, Monaco, Portugal Inseln und die spanischen Inseln.</p>"
           }
         },
         "faq_bELHrX": {
@@ -609,18 +589,11 @@
             "answer": "<p>Das Produkt ist für Platten von 100-200cm x 60-80cm geeignet.</p>"
           }
         },
-        "faq_WtEK7r": {
+        "faq_W9Mzyn": {
           "type": "faq",
           "settings": {
-            "question": "<p>Kann ich den Rahmen verwenden, wenn mein Boden nicht eben ist?</p>",
-            "answer": "<p>Natürlich können Sie das. Wir haben verstellbare Füße unter den Beinen des Rahmens angebracht, um kleinere Bodenunebenheiten auszugleichen.</p>"
-          }
-        },
-        "faq_EXWGc6": {
-          "type": "faq",
-          "settings": {
-            "question": "<p>Ich wohne nicht in Deutschland, kann ich bei Maidesite einkaufen?</p>",
-            "answer": "<p>Ja. Wir können Ihr Paket in die meisten Länder in Europa versenden!</p>"
+            "question": "<p>Für welche Höhe ist dieser Rahmen geeignet?</p>",
+            "answer": "<p>Der Rahmen ist für Personen mit einer Körpergröße von 1.5-1.83m geeignet.</p>"
           }
         },
         "faq_abheWf": {
@@ -643,19 +616,40 @@
             "question": "<p>Was muss ich tun, wenn \"HOT\" angezeigt wird?</p>",
             "answer": "<p>Das liegt daran, dass die Temperatur des Netzteils zu hoch ist oder es zu oft betrieben wird. Bitte trennen Sie das Netzteil für 20 Minuten vom Stromnetz und schließen Sie es dann wieder an. Sie können uns auch per E-Mail kontaktieren: contact@maidesite.de</p>"
           }
+        },
+        "faq_VQVPFn": {
+          "type": "faq",
+          "settings": {
+            "question": "<p>In welche Länder kann nicht geliefert werden?</p>",
+            "answer": "<p>Liechtenstein, Serbien, Norwegen, Marokko, Monaco, Portugal Inseln und die spanischen Inseln.</p>"
+          }
+        },
+        "faq_WtEK7r": {
+          "type": "faq",
+          "disabled": true,
+          "settings": {
+            "question": "<p>Kann ich den Rahmen verwenden, wenn mein Boden nicht eben ist?</p>",
+            "answer": "<p>Natürlich können Sie das. Wir haben verstellbare Füße unter den Beinen des Rahmens angebracht, um kleinere Bodenunebenheiten auszugleichen.</p>"
+          }
+        },
+        "faq_EXWGc6": {
+          "type": "faq",
+          "settings": {
+            "question": "<p>Ich wohne nicht in Deutschland, kann ich bei Maidesite einkaufen?</p>",
+            "answer": "<p>Ja. Wir können Ihr Paket in die meisten Länder in Europa versenden!</p>"
+          }
         }
       },
       "block_order": [
         "faq_E4jP4F",
-        "faq_AXAcgA",
-        "faq_W9Mzyn",
-        "faq_VQVPFn",
         "faq_bELHrX",
-        "faq_WtEK7r",
-        "faq_EXWGc6",
+        "faq_W9Mzyn",
         "faq_abheWf",
         "faq_mFDf3d",
-        "faq_whBqrf"
+        "faq_whBqrf",
+        "faq_VQVPFn",
+        "faq_WtEK7r",
+        "faq_EXWGc6"
       ],
       "custom_css": [
         ".faq_simple_section {background-color: #fafafa;}"
@@ -664,7 +658,7 @@
       "settings": {
         "spec_id": "",
         "heading": "<p>FAQ</p>",
-        "text": "<h3>Schreibtisch Höhenverstellbar EL2 Plus Art Technical</h3>",
+        "text": "<h3>Schreibtisch Höhenverstellbar EL2 Pro Art Technical</h3>",
         "show_btn": true,
         "learn_more": true,
         "contact_us": false
