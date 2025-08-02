@@ -12,7 +12,7 @@
     "breadcrumbs": {
       "type": "breadcrumbs",
       "custom_css": [
-        ".breadcrumb-con { top: 0; z-index: 7;position: relative;}",
+        ".breadcrumb-con {top: 0; z-index: 7; position: relative;}",
         ".breadcrumb,.breadcrumb a,.breadcrumb span {color: #7f7e75;}"
       ],
       "settings": {
@@ -159,7 +159,7 @@
         "full_width": false,
         "color_scheme": "",
         "padding_top": 36,
-        "padding_bottom": 36
+        "padding_bottom": 0
       }
     },
     "img_with_text_box_simplicity_qrzG6W": {
@@ -238,7 +238,10 @@
       "settings": {
         "spec_id": "",
         "main_title": "<p>Warum EL2 Pro Art wählen?</p>",
-        "row_num": 3
+        "row_num": 3,
+        "padding_top": 120,
+        "padding_bottom": 120,
+        "background_color": "rgba(0,0,0,0)"
       }
     },
     "img_with_foldtext_RcBrkw": {
@@ -278,7 +281,9 @@
       "settings": {
         "spec_id": "",
         "title": "<p>Verstellbarer Schreibtisch mit 3 Sicherheitsfunktionen</p>",
-        "image": "shopify://shop_images/featured-spaces-5.webp"
+        "image": "shopify://shop_images/featured-spaces-5.webp",
+        "padding_top": 120,
+        "padding_bottom": 120
       }
     },
     "img_with_text_simplicity_R8thEq": {
@@ -301,7 +306,10 @@
         "file_image": "shopify://shop_images/Maidesite-TH2-Pro-Plus-standing-desk-_29_5776133d-cc2f-43c8-9d97-893d30c012a6.jpg",
         "video_url": "",
         "btn_text": "",
-        "link_url": ""
+        "link_url": "",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "background_color": "rgba(0,0,0,0)"
       }
     },
     "img_with_text_simplicity_nJFALq": {
@@ -325,7 +333,10 @@
         "file_image": "shopify://shop_images/TH2-Pro-Plus-Antikollisionssystem.jpg",
         "video_url": "",
         "btn_text": "",
-        "link_url": ""
+        "link_url": "",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "background_color": "rgba(0,0,0,0)"
       }
     },
     "img_with_text_simplicity_YLCpmN": {
@@ -348,7 +359,10 @@
         "file_image": "shopify://shop_images/P6-3.jpg",
         "video_url": "",
         "btn_text": "",
-        "link_url": ""
+        "link_url": "",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "background_color": "rgba(0,0,0,0)"
       }
     },
     "img_with_text_simplicity_JRCJ4f": {
@@ -372,7 +386,10 @@
         "file_image": "shopify://shop_images/Maidesite-TH2-Pro-Plus-ovaler-hohenverstellbarer-Schreibtisch-mit-Holz-Arbeitsplatte_182e6972-2959-4113-a847-066c479b2bbd.jpg",
         "video_url": "",
         "btn_text": "",
-        "link_url": ""
+        "link_url": "",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "background_color": "rgba(0,0,0,0)"
       }
     },
     "img_with_text_tab_emEWU8": {
@@ -487,7 +504,9 @@
       "name": "img with foldtext",
       "settings": {
         "spec_id": "",
-        "title": "<p>Maidesite-Schreibtisch stabiler und zuverlässiger</p>"
+        "title": "<p>Maidesite-Schreibtisch stabiler und zuverlässiger</p>",
+        "padding_top": 120,
+        "padding_bottom": 120
       }
     },
     "technical_data_L3gXUm": {
@@ -541,7 +560,9 @@
       "name": "maidesite swiper",
       "settings": {
         "title": "<p>Die Presse Liebt Maidesite</p>",
-        "text": ""
+        "text": "",
+        "padding_top": 120,
+        "padding_bottom": 0
       }
     },
     "celebrity_swiper_aGymw9": {
@@ -579,7 +600,9 @@
       "name": "celebrity swiper",
       "settings": {
         "title": "<p>Empfehlen Von</p>",
-        "text": ""
+        "text": "",
+        "padding_top": 120,
+        "padding_bottom": 0
       }
     },
     "faq_simple_kxTbhc": {
@@ -671,7 +694,10 @@
         "text": "<h3>Schreibtisch Höhenverstellbar EL2 Pro Art Technical</h3>",
         "show_btn": true,
         "learn_more": true,
-        "contact_us": false
+        "contact_us": false,
+        "padding_top": 120,
+        "padding_bottom": 120,
+        "background_color": "rgba(0,0,0,0)"
       }
     },
     "product_comment_GV7BHg": {
@@ -712,7 +738,9 @@
           "maidesite-th2-pro-plus-tischgestell-elektrisch-hohenverstellbar",
           "maidesite-el2-pro-art-tischgestell-elektrisch-hohenverstellbar"
         ],
-        "number": 3
+        "number": 3,
+        "padding_top": 120,
+        "padding_bottom": 120
       }
     }
   },

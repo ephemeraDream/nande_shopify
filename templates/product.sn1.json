@@ -12,7 +12,7 @@
     "breadcrumbs": {
       "type": "breadcrumbs",
       "custom_css": [
-        ".breadcrumb-con { top: 0; z-index: 7;position: relative;}",
+        ".breadcrumb-con {top: 0; z-index: 7; position: relative;}",
         ".breadcrumb,.breadcrumb a,.breadcrumb span {color: #7f7e75;}"
       ],
       "settings": {
@@ -168,7 +168,7 @@
         "file_with_text_f9yPAD": {
           "type": "file_with_text",
           "settings": {
-            "title": "<h3>Bürotisch belastbar bis 90 kg</h3>",
+            "title": "<p>Bürotisch belastbar bis 90 kg</p>",
             "description": "<ul><li>Sie können problemlos 2 Monitore, einen PC und andere Büroartikel darauf platzieren.</li></ul>",
             "file_type": "image",
             "file_image": "shopify://shop_images/Maidesite-standing-desk-T1-Pro-with-90kg-loading-capacity-1200x800_bacabd7e-408d-4d8b-b5fe-7a71bc99010c.jpg",
@@ -178,10 +178,10 @@
         "file_with_text_McHwGa": {
           "type": "file_with_text",
           "settings": {
-            "title": "<h3>Höhenverstellbar für Kinder und Erwachsene</h3>",
+            "title": "<p>Höhenverstellbar für Kinder und Erwachsene</p>",
             "description": "<ul><li>Dieser höhenverstellbare Schreibtisch passt perfekt für Personen mit einer Körpergröße von 1,5 bis 1,83 Metern</li></ul>",
             "file_type": "image",
-            "file_image": "shopify://shop_images/Maidesite-T1-Pro-hohenverstellbar-Bereich-72-120cm-1200x800_893c6a22-cbd0-47a1-9ca4-e6cf54dc7118.jpg",
+            "file_image": "shopify://shop_images/2-stage-desk-height-adjustable-72-120cm.jpg",
             "video_url": ""
           }
         },
@@ -189,7 +189,7 @@
           "type": "file_with_text",
           "disabled": true,
           "settings": {
-            "title": "<h3>Kompatibel mit 100-180 cm Platten</h3>",
+            "title": "<p>Kompatibel mit 100-180 cm Platten</p>",
             "description": "<ul><li>Unterstützt Tischplatten in den Größen 100x60, 120x60, 140x70, 160x80 und 180x80 cm.</li></ul>",
             "file_type": "image",
             "file_image": "shopify://shop_images/T1-Pro-hohenverstellbarer-Schreibtisch-weiss-und-1000-1800mm-Tischplatte-1200x800.jpg",
@@ -199,7 +199,7 @@
         "file_with_text_B39ehq": {
           "type": "file_with_text",
           "settings": {
-            "title": "<h3>Vier Speicherhöhen&USB-Ladeanschlüsse</h3>",
+            "title": "<p>Vier Speicherhöhen&USB-Ladeanschlüsse</p>",
             "description": "<ul><li>4 Speicherplätze für Familie & Haltungen, plus USB-C Ladepunkt</li></ul>",
             "file_type": "image",
             "file_image": "shopify://shop_images/T1_Pro_Control_Panel_with_USB-C.jpg",
@@ -240,8 +240,11 @@
       "name": "file box simplicity",
       "settings": {
         "spec_id": "",
-        "main_title": "<h2>Leistungsstarker, preiswerter höhenverstellbarer Schreibtisch</h2>",
-        "row_num": 3
+        "main_title": "<p>Leistungsstarker, preiswerter höhenverstellbarer Schreibtisch</p>",
+        "row_num": 3,
+        "padding_top": 120,
+        "padding_bottom": 120,
+        "background_color": "rgba(0,0,0,0)"
       }
     },
     "img_with_text_simplicity_R8thEq": {
@@ -264,7 +267,10 @@
         "file_image": "shopify://shop_images/T1-Pro-hohenverstellbarer-Schreibtisch-Handsteuerung.jpg",
         "video_url": "",
         "btn_text": "",
-        "link_url": ""
+        "link_url": "",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "background_color": "rgba(0,0,0,0)"
       }
     },
     "img_with_text_simplicity_nJFALq": {
@@ -288,7 +294,10 @@
         "file_image": "shopify://shop_images/product_info_demo_img_2.webp",
         "video_url": "",
         "btn_text": "",
-        "link_url": ""
+        "link_url": "",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "background_color": "rgba(0,0,0,0)"
       }
     },
     "img_with_text_simplicity_YLCpmN": {
@@ -311,7 +320,10 @@
         "file_image": "shopify://shop_images/product_info_demo_img_1.webp",
         "video_url": "",
         "btn_text": "",
-        "link_url": ""
+        "link_url": "",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "background_color": "rgba(0,0,0,0)"
       }
     },
     "img_with_text_simplicity_JRCJ4f": {
@@ -335,7 +347,10 @@
         "file_image": "shopify://shop_images/product_info_demo_img_1.webp",
         "video_url": "",
         "btn_text": "",
-        "link_url": ""
+        "link_url": "",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "background_color": "rgba(0,0,0,0)"
       }
     },
     "img_with_foldtext_RcBrkw": {
@@ -376,7 +391,9 @@
       "settings": {
         "spec_id": "",
         "title": "<p>Title Title</p>",
-        "image": "shopify://shop_images/featured-spaces-5.webp"
+        "image": "shopify://shop_images/featured-spaces-5.webp",
+        "padding_top": 120,
+        "padding_bottom": 120
       }
     },
     "img_with_text_tab_emEWU8": {
@@ -505,7 +522,9 @@
       "name": "maidesite swiper",
       "settings": {
         "title": "<p>Die Presse Liebt Maidesite</p>",
-        "text": ""
+        "text": "",
+        "padding_top": 120,
+        "padding_bottom": 0
       }
     },
     "celebrity_swiper_aGymw9": {
@@ -542,7 +561,9 @@
       "name": "celebrity swiper",
       "settings": {
         "title": "<p>Empfehlen Von</p>",
-        "text": ""
+        "text": "",
+        "padding_top": 120,
+        "padding_bottom": 0
       }
     },
     "faq_simple_kxTbhc": {
@@ -637,7 +658,10 @@
         "text": "<p>Häufig gestellte Fragen</p>",
         "show_btn": true,
         "learn_more": true,
-        "contact_us": false
+        "contact_us": false,
+        "padding_top": 120,
+        "padding_bottom": 120,
+        "background_color": "rgba(0,0,0,0)"
       }
     },
     "product_comment_GV7BHg": {
@@ -678,7 +702,9 @@
           "maidesite-th2-pro-plus-tischgestell-elektrisch-hohenverstellbar",
           "maidesite-el2-pro-art-tischgestell-elektrisch-hohenverstellbar"
         ],
-        "number": 3
+        "number": 3,
+        "padding_top": 120,
+        "padding_bottom": 120
       }
     }
   },
