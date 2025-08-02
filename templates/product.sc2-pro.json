@@ -264,11 +264,10 @@
         "foldtext_HWP39G",
         "foldtext_iGWkAs"
       ],
-      "disabled": true,
       "name": "img with foldtext",
       "settings": {
         "spec_id": "",
-        "title": "<p>Extrem stabiler T2 Pro Plus</p>",
+        "title": "<p>Extrem stabiler SC2 Pro</p>",
         "image": "shopify://shop_images/featured-spaces-5.webp"
       }
     },
@@ -281,14 +280,14 @@
       "name": "img with text simplicity",
       "settings": {
         "spec_id": "",
-        "header_title": "<p>Extrem stabiler höhenverstellbarer Schreibtisch</p>",
+        "header_title": "",
         "header_content": "",
-        "title": "<h3>Stabileres Design</h3>",
+        "title": "<h3>Sitzende Erinnerung</h3>",
         "sub_title": "",
-        "description": "<ul><li>Dreiecksunterstützungsstruktur ist extrem stabil im Vergleich zu anderen Schreibtischdesigns.</li><li>Dank verstärktem Querträger, Seitenstreben und Füßen bietet der Rahmen extra Stabilität.</li></ul>",
+        "description": "<ul><li>Erinnerung an langes Sitzen: Intervallfunktion erinnert Sie daran, nach 0,5, 1 oder 2 Stunden aufzustehen.</li><li>Verbessert Ihre Haltung und steigert die Produktivität.</li></ul>",
         "file_position": "right",
         "file_type": "image",
-        "file_image": "shopify://shop_images/T2-Pro-Max-is-ultra-solid.jpg",
+        "file_image": "shopify://shop_images/Sitz-Steh-Erinnerung-an-den-Maidesite-Stehschreibtisch-1200x800.png",
         "video_url": "",
         "btn_text": "",
         "link_url": ""
@@ -306,12 +305,12 @@
         "spec_id": "",
         "header_title": "",
         "header_content": "",
-        "title": "<h3>Stärkere Füße</h3>",
+        "title": "<h3>Kollisionsschutz</h3>",
         "sub_title": "",
-        "description": "<ul><li>Schwere Schreibtischfüße haben einen niedrigeren Schwerpunkt, was die Stabilität erhöht.</li><li>Jedes T2 Pro Max Tischbein was 50 % mehr ist als herkömmliche Beine.</li><li>Dadurch ist es stabiler als andere Tischgestelle.</li></ul>",
+        "description": "<p>Die eingebaute Gyroskop-gesteuerte Anti-Kollisions-Rückfederung schützt Ihr Gerät vor Schäden durch Stürze.</p>",
         "file_position": "left",
         "file_type": "image",
-        "file_image": "shopify://shop_images/T2-Pro-Max-ultra-solid-lift-column-feet.jpg",
+        "file_image": "shopify://shop_images/Maidesite-hohenverstellbarer-Schreibtisch-mit-Kollisionsschutz-fur-mehr-Sicherheit-1200x800.png",
         "video_url": "",
         "btn_text": "",
         "link_url": ""
@@ -329,11 +328,11 @@
         "header_title": "",
         "header_content": "",
         "title": "",
-        "sub_title": "<h3>Stabilere Säule</h3>",
-        "description": "<ul><li>Neben den strukturellen Verbesserungen trägt auch die präzise Verarbeitung und Konstruktion zur Stabilität bei.</li><li>Der Spalt zwischen den Säulen beträgt weniger als 0,03 mm. Die dreiteiligen Säulen gleiten nahtlos ineinander, wodurch jegliches Wackeln verhindert wird.</li></ul>",
+        "sub_title": "<h3>Kindersicherung</h3>",
+        "description": "<p>Die Kindersicherung verhindert, dass Kinder oder Haustiere das Touchpad unbeabsichtigt bedienen und versehentlich Funktionen auslösen.</p>",
         "file_position": "right",
         "file_type": "image",
-        "file_image": "shopify://shop_images/T2-Pro-Max-is-super-stable-with-precise-gasket.jpg",
+        "file_image": "shopify://shop_images/Child-lock-on-Maidesite-standing-desk-control-pad-for-safety_736b2884-109f-4269-bb7b-083abfe49c60.jpg",
         "video_url": "",
         "btn_text": "",
         "link_url": ""
