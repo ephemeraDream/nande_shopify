@@ -7,11 +7,6 @@
  * made to this file may be overwritten.
  * ------------------------------------------------------------
  */
-/*
- * ------------------------------------------------------------
- * 联系我们
- * ------------------------------------------------------------
- */
 {
   "sections": {
     "breadcrumbs": {
@@ -26,19 +21,19 @@
     },
     "contact_form_three": {
       "type": "contact-form-three",
-      "name": "contact_form_three",
-      "settings": {
-        "image": "",
-        "title": "<p>Fragen, Wünsche, Anliegen?<br/> Wir Haben Immer Ein Offenes Ohr!</p>",
-        "desc":"",
-        "text_content":"<p>Our representatives stands by behind the live chat and the phone during business hours. During other time you could fill out the form. We’ll be in touch ASAP.</p>"
-      },
       "blocks": {
         "group_01": {
           "type": "group",
           "settings": {
             "label": "Bestellung",
             "key": "bestellung"
+          }
+        },
+        "group_02": {
+          "type": "group",
+          "settings": {
+            "label": "Produktinfo",
+            "key": "produktinfo"
           }
         },
         "option_01": {
@@ -57,13 +52,6 @@
             "group_key": "bestellung"
           }
         },
-        "group_02": {
-          "type": "group",
-          "settings": {
-            "label": "Produktinfo",
-            "key": "produktinfo"
-          }
-        },
         "option_03": {
           "type": "option",
           "settings": {
@@ -71,7 +59,7 @@
             "value": "garantie",
             "group_key": "produktinfo"
           }
-        },
+        }
       },
       "block_order": [
         "group_01",
@@ -80,6 +68,12 @@
         "option_02",
         "option_03"
       ],
+      "name": "contact_form_three",
+      "settings": {
+        "title": "<p>Fragen, Wünsche, Anliegen?<br/> Wir Haben Immer Ein Offenes Ohr!</p>",
+        "desc": "",
+        "text_content": "<p>Our representatives stands by behind the live chat and the phone during business hours. During other time you could fill out the form. We’ll be in touch ASAP.</p>"
+      }
     },
     "faq_simple_kxTbhc": {
       "type": "faq-simple",
@@ -136,42 +130,25 @@
         "faq_WtEK7r"
       ],
       "custom_css": [
-        ".faq_simple_section {background-color: #fff;padding-bottom:120px;}"
+        ".faq_simple_section {background-color: #fff; padding-bottom: 120px;}"
       ],
       "name": "faq simple",
       "settings": {
+        "spec_id": "",
         "heading": "<p>FAQ</p>",
         "text": "<p>Häufig gestellte Fragen</p>",
-        "contact_us": true,
         "show_btn": false,
-        "learn_more": false
+        "learn_more": false,
+        "contact_us": true,
+        "padding_top": 120,
+        "padding_bottom": 120,
+        "background_color": "#ffffff"
       }
-    },
-    // "form": {
-    //   "type": "contact-form",
-    //   "settings": {
-    //     "heading": "",
-    //     "heading_size": "h1",
-    //     "color_scheme": "scheme-1",
-    //     "padding_top": 36,
-    //     "padding_bottom": 36
-    //   }
-    // }
-    // "main": {
-    //   "type": "main-page",
-    //   "settings": {
-    //     "padding_top": 36,
-    //     "padding_bottom": 36
-    //   }
-    // },
-    
+    }
   },
   "order": [
     "breadcrumbs",
     "contact_form_three",
-    "faq_simple_kxTbhc",
-    // "form"
-    // "main",
-    
+    "faq_simple_kxTbhc"
   ]
 }
