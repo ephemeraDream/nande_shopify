@@ -22,16 +22,18 @@
       {% for block in section.blocks %}
         <div class="swiper-slide celebrity_swiper_item">
           <div class="celebrity_swiper_item_left">
-            <a
-              {% if block.settings.link != blank %}
-                href="{{ block.settings.link }}"
-              {% endif %}
-              class="celebrity_swiper_item_name"
-            >
-              {{- block.settings.name -}}
-            </a>
-            <div class="celebrity_swiper_item_intro">{{ block.settings.introduce }}</div>
-            <div class="celebrity_swiper_item_desc">{{ block.settings.description }}</div>
+            <div class="left_top">
+              <a
+                {% if block.settings.link != blank %}
+                  href="{{ block.settings.link }}"
+                {% endif %}
+                class="celebrity_swiper_item_name"
+              >
+                {{- block.settings.name -}}
+              </a>
+              <div class="celebrity_swiper_item_intro">{{ block.settings.introduce }}</div>
+            </div>
+            <div class="celebrity_swiper_item_desc text-body">{{ block.settings.description }}</div>
           </div>
           <div class="celebrity_swiper_item_right">
             {% assign poster_image = blank %}
