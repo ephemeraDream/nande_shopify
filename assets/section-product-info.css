@@ -1362,6 +1362,7 @@
   .product_info_section .product_info_bottom_bar .product_info_buybox_btns_btn,
   .product_info_section .product_info_bottom_bar .product_info_buybox_btns_btn{font-size: 2rem;}
   .product_info_section .product_info_bottom_bar .product_info_price{font-size: 2.4rem;}
+}
 @media screen and (max-width: 1024px) {
   .product_info{
     flex-direction: column;
@@ -1375,6 +1376,10 @@
     position: relative;
     max-width: 100%;
   }
+  .product_info_section .product_infor_simplicity_right_select_title,
+  .product_info_section .product_info_bottom_bar .product_info_buybox_btns_btn,
+  .product_info_section .product_info_bottom_bar .product_info_buybox_btns_btn{font-size: 1.6rem;}
+  .product_info_section .product_info_bottom_bar .product_info_price{font-size: 1.6rem;}
 }
 
 @media screen and (max-width: 767px) {
