@@ -8,7 +8,6 @@
   max-width: 144rem;
   margin: 0 auto;
 }
-.celebrity_swiper .swiper-wrapper{width: 180vw;}
 
 .celebrity_swiper .celebrity_swiper_title {
   font-family: "PP Right Grotesk";
@@ -28,6 +27,7 @@
 .celebrity_swiper .swiper {
   margin-top: 6rem;
   padding-left: calc((100% - 144rem)/2);
+  width: 130vw;
 }
 
 .celebrity_swiper .celebrity_swiper_item {
@@ -99,9 +99,11 @@
   cursor: pointer;
 }
 
-/* @media screen and (max-width: 1440px) {
-  .celebrity_swiper .swiper-wrapper{width: 130vw;}
-} */
+@media screen and (max-width: 1600px) {
+  .celebrity_swiper .padding-sider {
+      padding-right: 0rem;
+  }
+}
 @media screen and (max-width: 1024px) {
 .celebrity_swiper .celebrity_swiper_item {
   flex-direction: column;
@@ -113,7 +115,15 @@
   height: 35rem;
 }
 }
-
+@media screen and (max-width: 767px) {
+  .celebrity_swiper .padding-sider {
+      padding-right: 2rem;
+  }
+  .celebrity_swiper .swiper {
+    padding-left: 0;
+    width: 100%;
+  }
+}
 /* .celebrity_swiper .celebrity_swiper_prev,
 .celebrity_swiper .celebrity_swiper_next {
   width: 6rem;
