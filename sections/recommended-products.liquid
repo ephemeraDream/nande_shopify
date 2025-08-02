@@ -53,12 +53,23 @@
 <script>
   new Swiper('.recommended_products_section .swiper', {
     loop: true,
-    slidesPerView: {{ section.settings.number | json }},
+    slidesPerView: 1,
     spaceBetween: 46,
     navigation: {
       nextEl: '.recommended_products_next',
       prevEl: '.recommended_products_prev',
     },
+    breakpoints: {
+      768: {
+        slidesPerView: 2, 
+      },
+      1024: {
+        slidesPerView: 3, 
+      }
+      1440: {
+        slidesPerView: {{ section.settings.number | json }}, 
+      }
+    }
   });
 </script>
 
