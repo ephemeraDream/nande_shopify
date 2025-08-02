@@ -124,3 +124,15 @@
 .img_with_foldtext .img_with_foldtext_image.active {
   display: block;
 }
+@media screen and (max-width: 768px) {
+.img_with_foldtext .img_with_foldtext_contain{
+  flex-direction: column;
+}
+.img_with_foldtext .img_with_foldtext_left{
+  width: 100%;
+}
+.img_with_foldtext .img_with_foldtext_contain_right{
+  width: 100%;
+  padding-left: 0;
+}
+}
