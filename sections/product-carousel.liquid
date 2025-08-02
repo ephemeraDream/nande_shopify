@@ -22,6 +22,11 @@ Products Swiper Section - 选择产品进行轮播
                   -}}
                   <div class="product_info">
                     <h4 class="product_title">{{ product.title }}</h4>
+                    {% if product.metafields.custom.core_features %}
+                      <div class="product_core_features">
+                        {{ product.metafields.custom.core_features | metafield_tag }}
+                      </div>
+                    {% endif %}
                     <div>
                       <div class="product_price">
                         <div>{{ product.price | money_without_trailing_zeros }} </div>
