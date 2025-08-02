@@ -116,15 +116,25 @@
   }
 
   .img_with_text_simplicity .img_with_text_simplicity_filebox {
-    height: auto;
+    /* height: 66.67vw; */
     margin-top: 3.2vw;
     /* border-radius: 3.2vw; */
   }
 
+  .img_with_text_simplicity .img_with_text_simplicity_filebox_video,
+  .img_with_text_simplicity .img_with_text_simplicity_filebox_image {
+    border-radius: 3.2vw;
+  }
+
+  /* .img_with_text_simplicity_left,
+  .img_with_text_simplicity_right {
+    display: block;
+  } */
+
   .img_with_text_simplicity_left .img_with_text_simplicity_filebox,
   .img_with_text_simplicity_right .img_with_text_simplicity_filebox {
     width: 100%;
-    height: auto;
+    height: 66.67vw;
   }
 
   #sturdy_stable .img_with_text_simplicity .img_with_text_simplicity_title,
