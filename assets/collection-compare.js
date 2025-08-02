@@ -252,32 +252,31 @@ document.querySelector(".collection_compare_select_contain_body_btn").addEventLi
     container.className = 'collection_compare_modal_contain_item';
     container.dataset.id = item.dataset.id;
 
+    const swiper_wrapper = document.createElement('div');
+    swiper_wrapper.className = 'swiper-wrapper';
+    options_with_values.forEach((option, index) => {
+      if (option.name === "Farbe Tischplatte") {
+        option.values.forEach(value => {
+          const first_variant = product.variants.filters(variant => variant["option" + index] === value)[0]
+          swiper_wrapper.innerHTML += `
+            <div class="swiper-slide">
+              <a>
+                <img
+                  src="${first_variant.featured_image.src}"
+                  alt="${first_variant.title}"
+                  width="${first_variant.featured_image.width}"
+                  height="${first_variant.featured_image.height}"
+                >
+              </a>
+            </div>
+          `
+        })
+      }
+    })
+
     container.innerHTML = `
         <div class="swiper">
-          <div class="swiper-wrapper">
-            {% for option in block.settings.select_product.options_with_values %}
-              {%- case option.name -%}
-                {%- when 'Farbe Tischplatte' -%}
-                  {% assign index = 'option' | append: forloop.index %}
-                  {% for value in option.values %}
-                    {% assign first_variant = block.settings.select_product.variants
-                      | where: index, value
-                      | first
-                    %}
-                    <div class="swiper-slide">
-                      <a href="{{ block.settings.select_product.url }}">
-                        <img
-                          src="{{ first_variant.featured_image | image_url }}"
-                          alt="{{ value.variant.title }}"
-                          width="{{ first_variant.featured_image.width }}"
-                          height="{{ first_variant.featured_image.height }}"
-                        >
-                      </a>
-                    </div>
-                  {%- endfor %}
-              {%- endcase -%}
-            {%- endfor %}
-          </div>
+          ${swiper_wrapper}
           {% assign product_model = block.settings.select_product.metafields.custom.product_model %}
           {% assign product_title_top = block.settings.select_product.metafields.custom.product_title_top %}
           <h4 class="compare_simple_item_title">
