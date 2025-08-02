@@ -775,7 +775,7 @@
   }
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 749px) {
   .collection_compare .collection_compare_product {
     width: 100%;
   }
@@ -806,5 +806,14 @@
   .collection_compare .collection_compare_contain_head_right{
     justify-content: space-evenly;
     flex-direction: column;
+  }
+  .collection_compare .collection_compare_select_btn{
+    font-size: 1.6rem;
+    width: 26rem;
+    height: 6rem;
+    right: -10.5rem;
+  }
+  .collection_compare .collection_compare_select[open] .collection_compare_select_contain{
+    width: 90vw;
   }
 }
