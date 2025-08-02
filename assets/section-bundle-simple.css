@@ -61,6 +61,7 @@
   font-variation-settings: "opsz" auto;
   color: #000000;
   position: relative;
+  z-index: 2;
 }
 
 .bundle_simple .bundle_simple_contain_right::before {
@@ -70,8 +71,7 @@
   background-color: #BDFF00;
   position: absolute;
   top: 40px;
-  right: 0;
-  transform: translateX(100%);
+  left: 0;
 }
 
 .bundle_simple .bundle_simple_box_body {
