@@ -46,8 +46,8 @@ Products Swiper Section - 选择产品进行轮播
         
       </div>
       <!-- 导航箭头 -->
-      <div class="product-button-prev">{{- 'swiper-left.svg' | inline_asset_content -}}</div>
-      <div class="product-button-next">{{- 'swiper-right.svg' | inline_asset_content -}}</div>
+      <div class="swiper_btn_white swiper_btn_white_prev product-button-prev">{{- 'swiper-left.svg' | inline_asset_content -}}</div>
+      <div class="swiper_btn_white swiper_btn_white_next product-button-next">{{- 'swiper-right.svg' | inline_asset_content -}}</div>
     </div>
 </div>
 
@@ -136,31 +136,10 @@ Products Swiper Section - 选择产品进行轮播
       justify-content: space-between;
     }
     .product-carousel .product-button-prev, .product-carousel .product-button-next {
-      width: 6rem;
-      height: 6rem;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background-color: #fff9;
-      position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
       z-index: 1;
       cursor: pointer;
     }
-    .product-carousel .product-button-prev:hover, .product-carousel .product-button-next:hover {
-      background-color: #1f1f1f99;
-    }
-    .product-carousel .product-button-prev:hover svg path, .product-carousel .product-button-next:hover svg path {
-      fill: #bdff00;
-    }
-    .product-carousel .product-button-prev {
-      left: -7rem;
-    }
-    
-    .product-carousel .product-button-next {
-      right: -7rem;
-    }
+
     @media only screen and (max-width: 1024px) {
       .product-carousel .product_info::before {
         height: 3rem;
