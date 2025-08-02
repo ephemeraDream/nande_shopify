@@ -259,208 +259,210 @@
                 {%- endif -%}
               </td>
               {% comment %} {% if parent_ids contains line_item.variant_id %} {% endcomment %}
-              <tr class="cartdrawer_bundle_product active">
-                <div class="cartdrawer_bundle_product_head">
-                  {{ 'common.accessories' | t }}
-                  {{- 'icon-down.svg' | inline_asset_content -}}
-                </div>
-                <div class="cartdrawer_bundle_product_body">
-                  {%- for child in parent_items -%}
-                    {% assign bundle_parent_id = child.properties.bundle_parent_id | times: 1.0 %}
-                    {%- if bundle_parent_id == line_item.variant_id -%}
-                    {%- endif -%}
-                    <div role="row">
-                      <div
-                        id="Row{{ child.key }}"
-                        headers="ColumnProduct"
-                        role="rowheader"
-                        scope="row"
-                        data-label="{{ 'customer.order.product' | t }}"
-                      >
-                        <div class="order_section_product_info">
-                          {{ child.properties.bundle_parent_id }}
-                          {% if child.image %}
-                            <div class="order_section_feature_img">
-                              <a href="{{ child.url }}" class="cart-item__link" tabindex="-1" aria-hidden="true"> </a>
-                              <img
-                                class="cart-item__image"
-                                src="{{ child.image | image_url: width: 300 }}"
-                                alt="{{ child.image.alt | escape }}"
-                                loading="lazy"
-                                width="150"
-                                height="{{ 150 | divided_by: child.image.aspect_ratio | ceil }}"
-                              >
-                            </div>
-                          {% endif %}
-                          <div>
-                            {%- if child.url != blank -%}
-                              <a href="{{ child.url }}">{{ child.title | escape }}</a>
-                            {%- else -%}
-                              <p>{{ child.title | escape }}</p>
-                            {%- endif -%}
-                            {%- assign property_size = child.properties | size -%}
-                            {%- unless child.selling_plan_allocation == null and property_size == 0 -%}
-                              <div class="properties">
-                                {%- unless child.product.has_only_default_variant -%}
-                                  <span>
-                                    {{ child.variant.title | escape }}
-                                  </span>
-                                {%- endunless -%}
-                                {%- unless child.selling_plan_allocation == null -%}
-                                  <span>
-                                    {{ child.selling_plan_allocation.selling_plan.name }}
-                                  </span>
-                                {%- endunless -%}
-                                {%- if property_size != 0 -%}
-                                  {%- for property in child.properties -%}
-                                    {% assign property_first_char = property.first | slice: 0 %}
-                                    {%- if property.last != blank and property_first_char != '_' -%}
-                                      <span>{{ property.first }}:</span>
-                                      <span>
-                                        {%- if property.last contains '/uploads/' -%}
-                                          <a href="{{ property.last }}">{{ property.last | split: '/' | last }}</a>
-                                        {%- else -%}
-                                          {{ property.last }}
-                                        {%- endif -%}
-                                      </span>
-                                    {%- endif -%}
-                                  {%- endfor -%}
-                                {%- endif -%}
+              <tr>
+                <td class="cartdrawer_bundle_product active" colspan="5">
+                  <div class="cartdrawer_bundle_product_head">
+                    {{ 'common.accessories' | t }}
+                    {{- 'icon-down.svg' | inline_asset_content -}}
+                  </div>
+                  <div class="cartdrawer_bundle_product_body">
+                    {%- for child in parent_items -%}
+                      {% assign bundle_parent_id = child.properties.bundle_parent_id | times: 1.0 %}
+                      {%- if bundle_parent_id == line_item.variant_id -%}
+                      {%- endif -%}
+                      <div role="row">
+                        <td
+                          id="Row{{ child.key }}"
+                          headers="ColumnProduct"
+                          role="rowheader"
+                          scope="row"
+                          data-label="{{ 'customer.order.product' | t }}"
+                        >
+                          <div class="order_section_product_info">
+                            {{ child.properties.bundle_parent_id }}
+                            {% if child.image %}
+                              <div class="order_section_feature_img">
+                                <a href="{{ child.url }}" class="cart-item__link" tabindex="-1" aria-hidden="true"> </a>
+                                <img
+                                  class="cart-item__image"
+                                  src="{{ child.image | image_url: width: 300 }}"
+                                  alt="{{ child.image.alt | escape }}"
+                                  loading="lazy"
+                                  width="150"
+                                  height="{{ 150 | divided_by: child.image.aspect_ratio | ceil }}"
+                                >
                               </div>
-                            {%- endunless -%}
-
-                            {%- if child.line_level_discount_allocations != blank -%}
-                              <ul role="list" aria-label="{{ 'customer.order.discount' | t }}">
-                                {%- for discount_allocation in child.line_level_discount_allocations -%}
-                                  <li>
-                                    <span class="svg-wrapper">
-                                      {{- 'icon-discount.svg' | inline_asset_content -}}
+                            {% endif %}
+                            <div>
+                              {%- if child.url != blank -%}
+                                <a href="{{ child.url }}">{{ child.title | escape }}</a>
+                              {%- else -%}
+                                <p>{{ child.title | escape }}</p>
+                              {%- endif -%}
+                              {%- assign property_size = child.properties | size -%}
+                              {%- unless child.selling_plan_allocation == null and property_size == 0 -%}
+                                <div class="properties">
+                                  {%- unless child.product.has_only_default_variant -%}
+                                    <span>
+                                      {{ child.variant.title | escape }}
                                     </span>
-                                    {{- discount_allocation.discount_application.title | escape }} (-
-                                    {{- discount_allocation.amount | money -}}
-                                    )
-                                  </li>
-                                {%- endfor -%}
-                              </ul>
-                            {%- endif -%}
-
-                            {%- if child.fulfillment -%}
-                              <div class="fulfillment">
-                                {%- assign created_at = child.fulfillment.created_at | time_tag: format: 'date' -%}
-                                <span>{{ 'customer.order.fulfilled_at_html' | t: date: created_at }}</span>
-
-                                {%- if child.fulfillment.tracking_url -%}
-                                  <a href="{{ child.fulfillment.tracking_url }}">
-                                    {{ 'customer.order.track_shipment' | t }}
-                                  </a>
-                                {%- endif -%}
-                                <span>
-                                  {{ child.fulfillment.tracking_company }}
-                                  {%- if child.fulfillment.tracking_number -%}
-                                    #{{ child.fulfillment.tracking_number }}
+                                  {%- endunless -%}
+                                  {%- unless child.selling_plan_allocation == null -%}
+                                    <span>
+                                      {{ child.selling_plan_allocation.selling_plan.name }}
+                                    </span>
+                                  {%- endunless -%}
+                                  {%- if property_size != 0 -%}
+                                    {%- for property in child.properties -%}
+                                      {% assign property_first_char = property.first | slice: 0 %}
+                                      {%- if property.last != blank and property_first_char != '_' -%}
+                                        <span>{{ property.first }}:</span>
+                                        <span>
+                                          {%- if property.last contains '/uploads/' -%}
+                                            <a href="{{ property.last }}">{{ property.last | split: '/' | last }}</a>
+                                          {%- else -%}
+                                            {{ property.last }}
+                                          {%- endif -%}
+                                        </span>
+                                      {%- endif -%}
+                                    {%- endfor -%}
                                   {%- endif -%}
-                                </span>
-                              </div>
-                            {%- endif -%}
+                                </div>
+                              {%- endunless -%}
+
+                              {%- if child.line_level_discount_allocations != blank -%}
+                                <ul role="list" aria-label="{{ 'customer.order.discount' | t }}">
+                                  {%- for discount_allocation in child.line_level_discount_allocations -%}
+                                    <li>
+                                      <span class="svg-wrapper">
+                                        {{- 'icon-discount.svg' | inline_asset_content -}}
+                                      </span>
+                                      {{- discount_allocation.discount_application.title | escape }} (-
+                                      {{- discount_allocation.amount | money -}}
+                                      )
+                                    </li>
+                                  {%- endfor -%}
+                                </ul>
+                              {%- endif -%}
+
+                              {%- if child.fulfillment -%}
+                                <div class="fulfillment">
+                                  {%- assign created_at = child.fulfillment.created_at | time_tag: format: 'date' -%}
+                                  <span>{{ 'customer.order.fulfilled_at_html' | t: date: created_at }}</span>
+
+                                  {%- if child.fulfillment.tracking_url -%}
+                                    <a href="{{ child.fulfillment.tracking_url }}">
+                                      {{ 'customer.order.track_shipment' | t }}
+                                    </a>
+                                  {%- endif -%}
+                                  <span>
+                                    {{ child.fulfillment.tracking_company }}
+                                    {%- if child.fulfillment.tracking_number -%}
+                                      #{{ child.fulfillment.tracking_number }}
+                                    {%- endif -%}
+                                  </span>
+                                </div>
+                              {%- endif -%}
+                            </div>
                           </div>
-                        </div>
-                      </div>
-                      <div
-                        headers="Row{{ child.key }} ColumnSku"
-                        role="cell"
-                        data-label="{{ 'customer.order.sku' | t }}"
-                      >
-                        {{ child.sku }}
-                      </div>
-                      <div
-                        headers="Row{{ child.key }} ColumnPrice"
-                        role="cell"
-                        data-label="{{ 'customer.order.price' | t }}"
-                      >
-                        {%- if child.original_price != child.final_price or child.unit_price_measurement -%}
-                          <dl>
-                            {%- if child.original_price != child.final_price -%}
-                              <dt>
-                                <span class="visually-hidden">{{ 'products.product.price.regular_price' | t }}</span>
-                              </dt>
-                              <dd class="regular-price">
-                                <s>{{ child.original_price | money }}</s>
-                              </dd>
-                              <dt>
-                                <span class="visually-hidden">{{ 'products.product.price.sale_price' | t }}</span>
-                              </dt>
-                              <dd>
-                                <span>{{ child.final_price | money }}</span>
-                              </dd>
-                            {%- else -%}
-                              <dt>
-                                <span class="visually-hidden">{{ 'products.product.price.regular_price' | t }}</span>
-                              </dt>
-                              <dd>
-                                {{ child.original_price | money }}
-                              </dd>
-                            {%- endif -%}
-                            {%- if child.unit_price_measurement -%}
-                              <dt>
-                                <span class="visually-hidden">{{ 'products.product.price.unit_price' | t }}</span>
-                              </dt>
-                              <dd class="unit-price">
-                                <span>
-                                  {%- capture unit_price_separator -%}
+                        </td>
+                        <td
+                          headers="Row{{ child.key }} ColumnSku"
+                          role="cell"
+                          data-label="{{ 'customer.order.sku' | t }}"
+                        >
+                          {{ child.sku }}
+                        </td>
+                        <td
+                          headers="Row{{ child.key }} ColumnPrice"
+                          role="cell"
+                          data-label="{{ 'customer.order.price' | t }}"
+                        >
+                          {%- if child.original_price != child.final_price or child.unit_price_measurement -%}
+                            <dl>
+                              {%- if child.original_price != child.final_price -%}
+                                <dt>
+                                  <span class="visually-hidden">{{ 'products.product.price.regular_price' | t }}</span>
+                                </dt>
+                                <dd class="regular-price">
+                                  <s>{{ child.original_price | money }}</s>
+                                </dd>
+                                <dt>
+                                  <span class="visually-hidden">{{ 'products.product.price.sale_price' | t }}</span>
+                                </dt>
+                                <dd>
+                                  <span>{{ child.final_price | money }}</span>
+                                </dd>
+                              {%- else -%}
+                                <dt>
+                                  <span class="visually-hidden">{{ 'products.product.price.regular_price' | t }}</span>
+                                </dt>
+                                <dd>
+                                  {{ child.original_price | money }}
+                                </dd>
+                              {%- endif -%}
+                              {%- if child.unit_price_measurement -%}
+                                <dt>
+                                  <span class="visually-hidden">{{ 'products.product.price.unit_price' | t }}</span>
+                                </dt>
+                                <dd class="unit-price">
+                                  <span>
+                                    {%- capture unit_price_separator -%}
                             <span aria-hidden="true">/</span
                             ><span class="visually-hidden">{{ 'accessibility.unit_price_separator' | t }}&nbsp;</span>
                           {%- endcapture -%}
-                                  {%- capture unit_price_base_unit -%}
+                                    {%- capture unit_price_base_unit -%}
                             {%- if child.unit_price_measurement.reference_value != 1 -%}
                               {{- child.unit_price_measurement.reference_value -}}
                             {%- endif -%}
                             {{ child.unit_price_measurement.reference_unit }}
                           {%- endcapture -%}
-                                  <span data-unit-price>{{ child.unit_price | money }}</span>
-                                  {{- unit_price_separator -}}
-                                  {{- unit_price_base_unit -}}
-                                </span>
+                                    <span data-unit-price>{{ child.unit_price | money }}</span>
+                                    {{- unit_price_separator -}}
+                                    {{- unit_price_base_unit -}}
+                                  </span>
+                                </dd>
+                              {%- endif -%}
+                            </dl>
+                          {%- else -%}
+                            <span>{{ child.final_price | money }}</span>
+                          {%- endif -%}
+                        </td>
+                        <td
+                          headers="Row{{ child.key }} ColumnQuantity"
+                          role="cell"
+                          data-label="{{ 'customer.order.quantity' | t }}"
+                        >
+                          {{ child.quantity }}
+                        </td>
+                        <td
+                          headers="Row{{ child.key }} ColumnTotal"
+                          role="cell"
+                          data-label="{{ 'customer.order.total' | t }}"
+                        >
+                          {%- if child.original_line_price != child.final_line_price -%}
+                            <dl>
+                              <dt>
+                                <span class="visually-hidden">{{ 'products.product.price.regular_price' | t }}</span>
+                              </dt>
+                              <dd class="regular-price">
+                                <s>{{ child.original_line_price | money }}</s>
                               </dd>
-                            {%- endif -%}
-                          </dl>
-                        {%- else -%}
-                          <span>{{ child.final_price | money }}</span>
-                        {%- endif -%}
+                              <dt>
+                                <span class="visually-hidden">{{ 'products.product.price.sale_price' | t }}</span>
+                              </dt>
+                              <dd>
+                                <span>{{ child.final_line_price | money }}</span>
+                              </dd>
+                            </dl>
+                          {%- else -%}
+                            {{ child.original_line_price | money }}
+                          {%- endif -%}
+                        </td>
                       </div>
-                      <div
-                        headers="Row{{ child.key }} ColumnQuantity"
-                        role="cell"
-                        data-label="{{ 'customer.order.quantity' | t }}"
-                      >
-                        {{ child.quantity }}
-                      </div>
-                      <div
-                        headers="Row{{ child.key }} ColumnTotal"
-                        role="cell"
-                        data-label="{{ 'customer.order.total' | t }}"
-                      >
-                        {%- if child.original_line_price != child.final_line_price -%}
-                          <dl>
-                            <dt>
-                              <span class="visually-hidden">{{ 'products.product.price.regular_price' | t }}</span>
-                            </dt>
-                            <dd class="regular-price">
-                              <s>{{ child.original_line_price | money }}</s>
-                            </dd>
-                            <dt>
-                              <span class="visually-hidden">{{ 'products.product.price.sale_price' | t }}</span>
-                            </dt>
-                            <dd>
-                              <span>{{ child.final_line_price | money }}</span>
-                            </dd>
-                          </dl>
-                        {%- else -%}
-                          {{ child.original_line_price | money }}
-                        {%- endif -%}
-                      </div>
-                    </div>
-                  {%- endfor -%}
-                </div>
+                    {%- endfor -%}
+                  </div>
+                </td>
               </tr>
               {% comment %} {% endif %} {% endcomment %}
             </tr>
