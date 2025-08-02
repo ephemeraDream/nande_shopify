@@ -1,6 +1,5 @@
 .bundle_simple_section {
   width: 100%;
-  padding-top: 12rem;
   background-color: #f2f1ed;
 }
 
@@ -62,17 +61,17 @@
   font-variation-settings: "opsz" auto;
   color: #000000;
   position: relative;
+  z-index: 2;
 }
 
-.bundle_simple .bundle_simple_box_head::before {
+.bundle_simple .bundle_simple_contain_right::before {
   content: "";
-  width: 17.4rem;
+  width: 100%;
   height: 2rem;
   background-color: #BDFF00;
   position: absolute;
-  bottom: 0;
-  right: 0;
-  transform: translateX(100%);
+  top: 40px;
+  left: 0;
 }
 
 .bundle_simple .bundle_simple_box_body {
@@ -386,7 +385,10 @@
 }
 }
 @media screen and (max-width: 768px) {
-  /* .bundle_simple .bundle_simple_contain_right {
-    width: 20rem;
-} */
+  .bundle_simple .bundle_simple_contain {
+    flex-direction: column;
+  }
+  .bundle_simple .bundle_simple_contain_right {
+    width: 100%;
+}
 }

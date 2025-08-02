@@ -1,8 +1,20 @@
 {{ 'section-bundle-simple.css' | asset_url | stylesheet_tag }}
 
 {% assign color_label = section.settings.color_label %}
+{%- style -%}
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+  }
 
-<div class="bundle_simple_section padding-sider" id="{{ section.settings.spec_id }}">
+  @media screen and (min-width: 767px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+{%- endstyle -%}
+<div class="bundle_simple_section padding-sider section-{{ section.id }}-padding" id="{{ section.settings.spec_id }}">
   <div class="bundle_simple">
     <h2 class="bundle_simple_title">{{ section.settings.title }}</h2>
     <div class="bundle_simple_text">{{ section.settings.text }}</div>
@@ -175,7 +187,27 @@
       "type": "textarea",
       "id": "color_label",
       "label": "color select option name"
-    }
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 120,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_top",
+      "default": 120
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 120,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_bottom",
+      "default": 0
+    },
   ],
   "presets": [
     {
