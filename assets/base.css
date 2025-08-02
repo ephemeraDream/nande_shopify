@@ -4182,6 +4182,7 @@ a {
   padding: 0;
   margin: 0;
   list-style: disc;
+  padding-left: 1.4rem;
 }
 .product_core_features ul li{
   padding: 0;
