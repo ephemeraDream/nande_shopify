@@ -129,17 +129,17 @@
 }
 @media screen and (max-width: 1440px) {
   .recommended_products .recommended_products_prev {
-    left: -8rem;
-  }
-  .recommended_products .recommended_products_next {
-    right: -8rem;
-  }
-}
-@media screen and (max-width: 1024px) {
-  .recommended_products .recommended_products_prev {
     left: -4rem;
   }
   .recommended_products .recommended_products_next {
     right: -4rem;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .recommended_products .recommended_products_prev {
+    left: 0rem;
+  }
+  .recommended_products .recommended_products_next {
+    right: 0rem;
   }
 }
