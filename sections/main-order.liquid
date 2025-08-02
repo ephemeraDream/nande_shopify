@@ -269,7 +269,7 @@
                     {% assign bundle_parent_id = child.properties.bundle_parent_id | times: 1.0 %}
                     {%- if bundle_parent_id == line_item.variant_id -%}
                     {%- endif -%}
-                    <tr role="row">
+                    <td role="row">
                       <td
                         id="Row{{ child.key }}"
                         headers="ColumnProduct"
@@ -458,7 +458,7 @@
                           {{ child.original_line_price | money }}
                         {%- endif -%}
                       </td>
-                    </tr>
+                    </td>
                   {%- endfor -%}
                 </div>
               </td>
