@@ -156,13 +156,15 @@
           {{ 'customer.login_page.sign_in' | t }}
         </button>
         {%- if form.password_needed -%}
-          <a href="#recover">
+          <a href="#recover" class="login_section_href">
             {{ 'customer.login_page.forgot_password' | t }}
           </a>
         {%- endif -%}
-        <a href="{{ routes.account_register_url }}">
-          {{ 'customer.login_page.create_account' | t }}
-        </a>
+        {% comment %}
+          <a href="{{ routes.account_register_url }}">
+            {{ 'customer.login_page.create_account' | t }}
+          </a>
+        {% endcomment %}
       {%- endform -%}
     </div>
 
