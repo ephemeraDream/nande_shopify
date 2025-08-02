@@ -1097,7 +1097,7 @@ li[data-address]>h2 {
 
 .cartdrawer_bundle_product {
   text-align: left !important;
-  padding-bottom: 2.4rem!important;
+  padding-bottom: 2.4rem !important;
 }
 
 .order_section_child_item .order_section_feature_img {
@@ -1107,4 +1107,14 @@ li[data-address]>h2 {
 
 .order_section_child_item td:first-of-type {
   padding-left: 9.2rem;
+}
+
+.customer.order tr {
+  padding: 0 1.4rem;
+}
+
+@media screen and (max-width: 768px) {
+  .cartdrawer_bundle_product {
+    padding-right: 1.4rem;
+  }
 }
