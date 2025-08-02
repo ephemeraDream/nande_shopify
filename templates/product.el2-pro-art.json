@@ -158,10 +158,10 @@
         "file_with_text_Q8tJKk": {
           "type": "file_with_text",
           "settings": {
-            "title": "<p>Super Duale Motoren</p>",
-            "description": "<p>Maidesite Duale Motorensystem ist besser als andere Produkt mit nur einem Motor.</p>",
+            "title": "<p>Passt auf 110–200 cm Platten</p>",
+            "description": "<ul><li>Unterstützt Tischplatten in den Größen 120x60, 140x70, 160x80, 180x80 und 200x80 cm.</li></ul>",
             "file_type": "image",
-            "file_image": "shopify://shop_images/dual-motor-stable-standing-desk-leg-black-TH2-Pro-plus.jpg",
+            "file_image": "shopify://shop_images/Maidesite-Hohenverstellbarer-Schreibtisch-EL2-Pro-Art-mit-Breitenbereich-1000-1800mm.jpg",
             "video_url": ""
           }
         },
@@ -181,17 +181,7 @@
             "title": "<p>Höhenverstellbar für Jung & Alt</p>",
             "description": "<p>Dieser Stehtisch ist optimal für Personen mit einer Körpergröße von 1,5 bis 1,83 m, da er sich in der Höhe von 72 bis 120 cm verstellen lässt.</p>",
             "file_type": "image",
-            "file_image": "shopify://shop_images/Maidesite-T1-Pro-hohenverstellbar-Bereich-72-120cm-1200x800_893c6a22-cbd0-47a1-9ca4-e6cf54dc7118.jpg",
-            "video_url": ""
-          }
-        },
-        "file_with_text_JJXCp8": {
-          "type": "file_with_text",
-          "settings": {
-            "title": "<p>Elegantes Design</p>",
-            "description": "<p>Verfügt über ein elegantes Design, Säule und Fuß mit Arc-Stil, moderneres und häusliches Design.</p>",
-            "file_type": "image",
-            "file_image": "shopify://shop_images/TH2-Pro-Plus-oval-leg-frame.jpg",
+            "file_image": "shopify://shop_images/Maidesite_zweistufiger_h_henverstellbarer_Schreibtischlift_von_72_bis_120_cm.jpg",
             "video_url": ""
           }
         },
@@ -201,7 +191,17 @@
             "title": "<p>Multifunktions-Bedienfeld</p>",
             "description": "<p>4-Memory-Speicherplätze, die entsprechen unterschiedliche voreingestellte Höhe. Sie können 0,5h,1h,2h Erinnerung einstellen.</p>",
             "file_type": "image",
-            "file_image": "shopify://shop_images/Control-panel-RJ32-socket-T2-Pro-Plus-DE_a477a1f9-43c6-4c54-8515-5f43d32e5be1_1.jpg",
+            "file_image": "shopify://shop_images/Control_panel_with_USB-C_for_T2_Series-2.jpg",
+            "video_url": ""
+          }
+        },
+        "file_with_text_JJXCp8": {
+          "type": "file_with_text",
+          "settings": {
+            "title": "<p>Sitz-Steh-Erinnerung</p>",
+            "description": "<ul><li>Bewegungserinnerung: Intervall 0,5/1/2 h zum Aufstehen</li><li>Verbessert Ihre Körperhaltung und steigert die Produktivität.</li></ul>",
+            "file_type": "image",
+            "file_image": "shopify://shop_images/Maidesite-Stehpult-EL2-Pro-Art-mit-Sitz-Steh-Erinnerung-1200x800.jpg",
             "video_url": ""
           }
         },
@@ -220,8 +220,8 @@
         "file_with_text_Q8tJKk",
         "file_with_text_f9yPAD",
         "file_with_text_McHwGa",
-        "file_with_text_JJXCp8",
         "file_with_text_B39ehq",
+        "file_with_text_JJXCp8",
         "file_with_text_THJTyK"
       ],
       "name": "file box simplicity",
