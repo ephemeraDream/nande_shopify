@@ -144,7 +144,10 @@
         "video_url": "",
         "url_upload": "shopify://files/videos/TO1-Pro-anti-collision_2b6db0d3-82b5-44c0-876a-e5095807f303.mp4",
         "title": "<p>Alle Produkte Im üBerblick</p>",
-        "description": ""
+        "description": "",
+        "padding_top": 120,
+        "padding_bottom": 0,
+        "background_color": "#f2f1ed"
       }
     },
     "img_with_text_box_simplicity_qrzG6W": {
