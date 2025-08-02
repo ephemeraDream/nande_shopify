@@ -373,6 +373,14 @@
 
 .login p {
   margin: 1.5rem 0;
+  font-family: "PP Right Grotesk";
+  font-size: 1.6rem;
+  font-weight: normal;
+  line-height: 130%;
+  text-align: right;
+  letter-spacing: 0px;
+  font-variation-settings: "opsz" auto;
+  color: #333333;
 }
 
 .login h3 {
@@ -430,14 +438,14 @@
 :is(.account, .order) {
   margin: 0 auto;
   max-width: var(--page-width);
-  padding-left: 2rem;
-  padding-right: 2rem;
+  /* padding-left: 2rem;
+  padding-right: 2rem; */
 }
 
 @media screen and (min-width: 750px) {
   :is(.account, .order) {
-    padding-left: 5rem;
-    padding-right: 5rem;
+    /* padding-left: 5rem;
+    padding-right: 5rem; */
   }
 }
 
@@ -873,4 +881,35 @@ li[data-address]>h2 {
   font-variation-settings: "opsz" auto;
   color: #7F7E75;
   top: calc(1.8rem + var(--inputs-border-width));
+}
+
+.account_section_tabs {
+  flex: 0 0 auto;
+  width: 27.7rem;
+}
+
+.account_section_tabs_item {
+  font-family: "PP Right Grotesk";
+  font-size: 2rem;
+  font-weight: bold;
+  line-height: 94%;
+  letter-spacing: 0px;
+  font-variation-settings: "opsz" auto;
+  color: #7F7E75;
+  margin-bottom: 3.4rem;
+}
+
+.account_section_tabs_item.active {
+  color: #1F1F1F;
+  text-decoration: underline;
+  text-decoration-color: #BDFF00;
+}
+
+.account_section_tabs_contain {
+  flex: 1;
+  display: none;
+}
+
+.account_section_tabs_contain.active {
+  display: block;
 }

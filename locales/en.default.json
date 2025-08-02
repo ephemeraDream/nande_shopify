@@ -590,6 +590,8 @@
     "receive": "Erhalten Sie",
     "discount_on_your_order": "Rabatt auf Ihre Bestellung",
     "login": "Anmelden",
-    "register": "Registrieren"
+    "register": "Registrieren",
+    "overview_account": "ÜBERSICHT",
+    "my_order": "MEINE BESTELLUNGEN"
   }
 }

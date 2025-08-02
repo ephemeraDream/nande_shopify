@@ -18,7 +18,7 @@
   {%- assign hide_shop_login_button = true -%}
 {%- endif -%}
 
-<div class="customer login section-{{ section.id }}-padding">
+<div class="customer login section-{{ section.id }}-padding padding-sider">
   <div class="login_section_title">{{ 'common.start_now' | t }}</div>
   <div class="login_section_text">
     {{ 'common.receive' | t }}
@@ -183,7 +183,7 @@
   </div>
   <div class="login_section_tabs_contain" data-value="register">
     <h1>
-      {{ 'customer.register.title' | t }}
+      {% comment %} {{ 'customer.register.title' | t }} {% endcomment %}
     </h1>
     {%- form 'create_customer', novalidate: 'novalidate' -%}
       {%- if form.errors -%}
