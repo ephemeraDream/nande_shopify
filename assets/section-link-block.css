@@ -108,4 +108,7 @@
   .link_block .link_block_contain_item {
     width: 100%;
   }
+  .link_block_section {
+    padding-top: 9rem;
+  }
 }
