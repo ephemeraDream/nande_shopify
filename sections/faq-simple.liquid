@@ -1,6 +1,19 @@
 {{ 'section-faq-simple.css' | asset_url | stylesheet_tag }}
+{%- style -%}
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+  }
 
-<div id="section-{{ section.id }}" class="faq_simple_section padding-sider">
+  @media screen and (min-width: 767px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+{%- endstyle -%}
+<div id="section-{{ section.id }}" class="faq_simple_section padding-sider section-{{ section.id }}-padding"
+  style="background-color: {{ section.settings.background_color }};">
   <div class="faq_simple" id="{{ section.settings.spec_id }}">
     <div class="faq_simple_heading">{{ section.settings.heading }}</div>
     <div class="faq_simple_text_contain">
@@ -120,6 +133,32 @@
       "id": "contact_us",
       "label": "show contact us",
       "default": false
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 120,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_top",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 120,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_bottom",
+      "default": 0
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "背景颜色",
+      "default": "transparent"
     }
   ],
   "blocks": [

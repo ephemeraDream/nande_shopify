@@ -145,6 +145,12 @@
   .faq_simple .faq_simple_question {
     font-size: 3rem;
   }
+  .faq_simple .faq_simple_item_head {
+    padding: 3rem 0 3rem 0;
+  }
+  .faq_simple .faq_simple_item.active .faq_simple_answer {
+    padding-bottom: 3rem;
+  }
 }
 @media only screen and (max-width: 767px) {
   .faq_simple .faq_simple_heading {
@@ -155,5 +161,11 @@
   }
   .faq_simple .faq_simple_answer{
     font-size: 1.6rem;
+  }
+  .faq_simple .faq_simple_item_head {
+    padding: 2rem 0 2rem 0;
+  }
+  .faq_simple .faq_simple_item.active .faq_simple_answer {
+    padding-bottom: 2rem;
   }
 }
