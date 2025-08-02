@@ -763,16 +763,47 @@
 
 @media screen and (max-width: 1024px) {
   .collection_compare .collection_compare_product_contain {
-    gap: 2rem;
+    gap: 3rem;
   }
 
   .collection_compare .collection_compare_product {
-    width: calc((100% - 2rem) / 2);
+    width: calc((100% - 3rem) / 2);
+  }
+
+  .collection_compare .collection_compare_contain_body_right_list .collection_compare_product {
+    flex-direction: column;
   }
 }
 
 @media screen and (max-width: 767px) {
   .collection_compare .collection_compare_product {
     width: 100%;
+  }
+  .collection_compare .collection_compare_contain_switchfilter,
+  .collection_compare .collection_compare_contain_head_label,
+  .collection_compare .collection_compare_contain_sort_label,
+  .collection_compare .collection_compare_contain_sort_select_item{
+    font-size: 1.4rem;
+  }
+  .collection_compare .collection_compare_contain_head_label,
+  .collection_compare .collection_compare_contain_sort_label{
+    margin-left: 1.4rem;
+  }
+  .collection_compare .collection_compare_contain_body_left{
+    flex: unset;
+    z-index: 9;
+    width: 14%;
+  }
+  .collection_compare_contain_body_left .facets-container{
+    grid-template-columns: repeat(1, auto);
+  }
+  .collection_compare .collection_compare_contain_body{
+    gap: 2rem;
+  }
+  .collection_compare .collection_compare_contain_switchfilter {
+    flex: 0 0 2.4rem;
+  }
+  .collection_compare .collection_compare_contain_head_right{
+    overflow: auto;
   }
 }
