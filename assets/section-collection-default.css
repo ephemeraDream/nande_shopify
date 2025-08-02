@@ -11,23 +11,10 @@
 }
 
 .collection_default .collection_default_title {
-  font-family: "PP Right Grotesk";
-  font-size: 6rem;
-  font-weight: 500;
-  line-height: 94%;
-  text-transform: capitalize;
-  letter-spacing: 0px;
-  font-variation-settings: "opsz" auto;
   color: #1F1F1F;
 }
 
 .collection_default .collection_default_text {
-  font-family: "PP Right Grotesk";
-  font-size: 2rem;
-  font-weight: normal;
-  line-height: 94%;
-  letter-spacing: 0px;
-  font-variation-settings: "opsz" auto;
   color: #1F1F1F;
   margin-top: 3rem;
 }
@@ -154,3 +141,17 @@
   color: #1F1F1F;
   margin-top: 1.4rem;
 }
+
+  @media screen and (max-width: 1400px) {
+    .collection_default .collection_default_head_item{font-size: 2rem;}
+  }
+  @media screen and (max-width: 1200px) {
+    .collection_default .collection_default_head_item{font-size: 1.6rem;}
+  }
+  @media screen and (max-width: 767px) {
+    .collection_default .collection_default_head_item{width: 100%;}
+    .collection_default .collection_default_head {
+      flex-direction: column;
+  }
+  }
+ 
