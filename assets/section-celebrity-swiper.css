@@ -8,7 +8,7 @@
   max-width: 144rem;
   margin: 0 auto;
 }
-.celebrity_swiper .swiper-wrapper{width: 140vw;}
+.celebrity_swiper .swiper-wrapper{width: 180vw;}
 
 .celebrity_swiper .celebrity_swiper_title {
   font-family: "PP Right Grotesk";
@@ -99,9 +99,9 @@
   cursor: pointer;
 }
 
-@media screen and (max-width: 1440px) {
+/* @media screen and (max-width: 1440px) {
   .celebrity_swiper .swiper-wrapper{width: 130vw;}
-}
+} */
 @media screen and (max-width: 1024px) {
 .celebrity_swiper .celebrity_swiper_item {
   flex-direction: column;
