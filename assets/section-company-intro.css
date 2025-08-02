@@ -70,4 +70,11 @@
 }
 .company_intro .company_intro_contain_left,
 .company_intro .company_intro_contain_right{width: 100%;}
+.company_intro .company_intro_contain {
+  margin: 2rem auto 0;
+}
+.company_intro .company_intro_btn {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
 }
