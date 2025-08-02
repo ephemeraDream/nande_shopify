@@ -104,4 +104,16 @@
   min-width: 16rem;
 }
 .technical_data .technical_data_head{overflow-x: scroll;}
+
+}
+
+@media screen and (max-width: 767px) {
+.technical_data .technical_data_contain .swiper-slide{
+  flex-direction: column;
+}
+.technical_data .technical_data_contain_info,
+.technical_data .technical_data_contain_filebox{
+  width: 100%;
+  
+}
 }
