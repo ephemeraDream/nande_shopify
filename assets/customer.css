@@ -1024,6 +1024,19 @@ li[data-address]>h2 {
   cursor: pointer;
 }
 
+.customer a.account_section_account_body_item_btn {
+  font-family: "PP Right Grotesk";
+  font-size: 2rem;
+  font-weight: normal;
+  line-height: 130%;
+  letter-spacing: 0px;
+  text-decoration: underline;
+  font-variation-settings: "opsz" auto;
+  color: #7F7E75;
+  margin-top: 2.6rem;
+  cursor: pointer;
+}
+
 .account_section_account_body_item {
   flex: 1;
   display: flex;
