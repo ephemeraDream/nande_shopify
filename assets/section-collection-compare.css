@@ -776,6 +776,9 @@
 }
 
 @media screen and (max-width: 767px) {
+  .collection_compare .collection_compare_contain_head{
+    height: 6rem;
+  }
   .collection_compare .collection_compare_product {
     width: 100%;
   }
@@ -796,10 +799,6 @@
   .collection_compare .collection_compare_contain_switchfilter {
     flex: 0 0 2.4rem;
   }
-  .collection_compare .collection_compare_contain_head_right{
-    justify-content: space-evenly;
-    flex-direction: column;
-  }
   .collection_compare .collection_compare_select_btn{
     font-size: 1.6rem;
     width: 26rem;
@@ -811,6 +810,10 @@
   }
 }
 @media screen and (max-width: 749px) {
+  .collection_compare .collection_compare_contain_head_right{
+    justify-content: space-evenly;
+    flex-direction: column;
+  }
   .collection_compare .collection_compare_contain_body_left{
     flex: unset;
     z-index: 9;
