@@ -267,12 +267,12 @@
                   </div>
                 </td>
               </tr>
-              <tr class="cartdrawer_bundle_product_body" role="row">
+              <tr class="cartdrawer_bundle_product_body">
                 {%- for child in parent_items -%}
                   {% assign bundle_parent_id = child.properties.bundle_parent_id | times: 1.0 %}
                   {%- if bundle_parent_id == line_item.variant_id -%}
                   {%- endif -%}
-                  <td>
+                  <tr role="row">
                     <td
                       id="Row{{ child.key }}"
                       headers="ColumnProduct"
@@ -461,7 +461,7 @@
                         {{ child.original_line_price | money }}
                       {%- endif -%}
                     </td>
-                  </td>
+                  </tr>
                 {%- endfor -%}
               </tr>
               {% comment %} {% endif %} {% endcomment %}
