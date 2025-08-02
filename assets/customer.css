@@ -1069,3 +1069,11 @@ li[data-address]>h2 {
   justify-content: space-between;
   gap: 1rem;
 }
+
+.order_section_flex_left {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 3rem;
+  margin-top: 3rem;
+}
