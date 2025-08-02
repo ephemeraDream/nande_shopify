@@ -139,7 +139,7 @@
   }
   .celebrity_swiper .swiper_btn_white.swiper_btn_white_next {
     left: unset;
-    right: 0;
+    right: 3vw;
   }
 }
 
