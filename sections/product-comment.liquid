@@ -2,7 +2,7 @@
 
 <div class="product_comment_section padding-sider" id="{{ section.settings.spec_id }}">
   <div class="product_comment">
-    <div class="product_comment_title">{{ section.settings.title }}</div>
+    <h2 class="product_comment_title">{{ section.settings.title }}</h2>
     {%- for block in section.blocks -%}
       {%- case block.type -%}
         {%- when '@app' -%}

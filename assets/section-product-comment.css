@@ -10,13 +10,6 @@
 }
 
 .product_comment .product_comment_title {
-  font-family: "PP Right Grotesk";
-  font-size: 6rem;
-  font-weight: 500;
-  line-height: 94%;
-  text-transform: capitalize;
-  letter-spacing: 0px;
-  font-variation-settings: "opsz" auto;
   color: #1F1F1F;
   margin-bottom: 6rem;
 }
