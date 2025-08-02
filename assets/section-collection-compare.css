@@ -804,6 +804,7 @@
     flex: 0 0 2.4rem;
   }
   .collection_compare .collection_compare_contain_head_right{
-    overflow: auto;
+    justify-content: space-evenly;
+    flex-direction: column;
   }
 }
