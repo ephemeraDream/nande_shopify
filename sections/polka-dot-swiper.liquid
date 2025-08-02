@@ -1,5 +1,17 @@
 {{ 'section-polka-dot-swiper.css' | asset_url | stylesheet_tag }}
+{%- style -%}
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+  }
 
+  @media screen and (min-width: 767px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+{%- endstyle -%}
 {%- assign swiper_id = 'polka_dot_swiper_' | append: section.id -%}
 <div id="{{ swiper_id }}" 
   class="polka_dot_swiper {% if section.settings.show_info == false %} info_hidden{% endif %} section-{{ section.id }}-padding"
