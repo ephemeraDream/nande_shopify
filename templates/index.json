@@ -223,11 +223,10 @@
     },
     "image_comparison_JHgace": {
       "type": "image-comparison",
-      "disabled": true,
       "name": "Image Comparison",
       "settings": {
-        "left_image": "shopify://shop_images/img-comparison.webp",
-        "right_image": "shopify://shop_images/img-comparison.webp"
+        "left_image": "shopify://shop_images/2_-_0731_-_2_87740f47-c9a9-449f-b5dd-1ad11bd6b662.jpg",
+        "right_image": "shopify://shop_images/2_-_0731_-_2.jpg"
       }
     },
     "bundle_simple_WFrNiX": {
