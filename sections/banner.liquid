@@ -75,6 +75,10 @@
     autoplay: true,
     spaceBetween: 0,
   });
+  const bannerEl = document.querySelector('.section_banner');
+
+bannerEl.addEventListener('mouseenter', () => swiper.autoplay.stop());
+bannerEl.addEventListener('mouseleave', () => swiper.autoplay.start());
 </script>
 
 {% schema %}
