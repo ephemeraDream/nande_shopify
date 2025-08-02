@@ -178,13 +178,19 @@
     width: 100%;
     padding: 2rem;
   }
+  .img_with_text_tab .img_with_text_tab_contain_info .nd-btn{
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-between;
+    font-size: 1.8rem;
+  }
   .img_with_text_tab .img_with_text_tab_contain .swiper-slide.right {
     flex-direction: column;
   }
   .img_with_text_tab_contain .swiper_btn{
     bottom: unset;
     gap: 1rem;
-    top: 36%;
+    top: 0;
     left: 0;
   }
   .img_with_text_tab .img_with_text_tab_swiper_prev, .img_with_text_tab .img_with_text_tab_swiper_next {
