@@ -904,6 +904,7 @@ li[data-address]>h2 {
   color: #1F1F1F;
   text-decoration: underline;
   text-decoration-color: #BDFF00;
+  text-underline-offset: 0.1rem;
 }
 
 .account_section_tabs_contain {
@@ -980,4 +981,44 @@ li[data-address]>h2 {
   letter-spacing: 0px;
   font-variation-settings: "opsz" auto;
   color: #7F7E75;
+}
+
+.account_section_account_body {
+  display: flex;
+  gap: 3.8rem;
+  padding: 2.8rem 2rem 4rem;
+}
+
+.account_section_account_body_item_title {
+  font-family: "PP Right Grotesk";
+  font-size: 3rem;
+  font-weight: 500;
+  line-height: 94%;
+  letter-spacing: 0px;
+  font-variation-settings: "opsz" auto;
+  color: #1F1F1F;
+}
+
+.account_section_account_body_item_text {
+  font-family: "PP Right Grotesk";
+  font-size: 2rem;
+  font-weight: normal;
+  line-height: 130%;
+  letter-spacing: 0px;
+  font-variation-settings: "opsz" auto;
+  color: #1F1F1F;
+  margin-top: 1.6rem;
+}
+
+.account_section_account_body_item_btn {
+  font-family: "PP Right Grotesk";
+  font-size: 2rem;
+  font-weight: normal;
+  line-height: 130%;
+  letter-spacing: 0px;
+  text-decoration: underline;
+  font-variation-settings: "opsz" auto;
+  color: #7F7E75;
+  margin-top: 2.6rem;
+  cursor: pointer;
 }
