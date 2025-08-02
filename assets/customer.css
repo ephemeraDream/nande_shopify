@@ -8,7 +8,7 @@
 
 @media screen and (min-width: 750px) {
   .customer:not(.account):not(.order) {
-    max-width: 47.8rem;
+    max-width: 72rem;
   }
 }
 
@@ -52,7 +52,7 @@
 }
 
 .customer .field {
-  margin: 2rem 0 0 0;
+  margin: 1.6rem 0 0 0;
 }
 
 .customer .field:first-of-type {
@@ -818,4 +818,26 @@ li[data-address]>h2 {
 .login_section_tabs_item.active {
   background-color: #1F1F1F;
   color: #fff;
+}
+
+.customer .field input {
+  max-width: 70.5rem;
+  background-color: #fff;
+  height: 6rem;
+  padding: 0 1.4rem;
+  font-family: "PP Right Grotesk";
+  font-size: 2.4rem;
+  font-weight: normal;
+  line-height: 100%;
+  letter-spacing: 0px;
+  font-variation-settings: "opsz" auto;
+  color: #1F1F1F;
+}
+
+.customer .field input::placeholder {
+  color: #7F7E75;
+}
+
+.login_section_tabs_contain {
+  margin-top: 3.5rem;
 }
