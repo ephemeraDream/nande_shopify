@@ -94,3 +94,10 @@
   padding-left: 2rem;
   min-width: 30rem;
 }
+@media screen and (max-width: 1024px) {
+.technical_data .technical_data_head_item {
+  font-size: 1.8rem;
+  min-width: 16rem;
+}
+.technical_data .technical_data_head{overflow-x: scroll;}
+}
