@@ -961,12 +961,12 @@ li[data-address]>h2 {
   margin-top: 1.2rem;
 }
 
-.account_section_exit {
+.account_section_exit,
+.account_section_exit a {
   font-family: "PP Right Grotesk";
   font-size: 1.6rem;
   line-height: 130%;
   letter-spacing: 0px;
-  text-decoration: underline;
   font-variation-settings: "opsz" auto;
   color: #7F7E75;
   position: absolute;
