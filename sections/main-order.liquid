@@ -269,8 +269,8 @@
                     {% assign bundle_parent_id = child.properties.bundle_parent_id | times: 1.0 %}
                     {%- if bundle_parent_id == line_item.variant_id -%}
                     {%- endif -%}
-                    <td role="row">
-                      <td
+                    <div role="row">
+                      <div
                         id="Row{{ child.key }}"
                         headers="ColumnProduct"
                         role="rowheader"
@@ -364,15 +364,15 @@
                             {%- endif -%}
                           </div>
                         </div>
-                      </td>
-                      <td
+                      </div>
+                      <div
                         headers="Row{{ child.key }} ColumnSku"
                         role="cell"
                         data-label="{{ 'customer.order.sku' | t }}"
                       >
                         {{ child.sku }}
-                      </td>
-                      <td
+                      </div>
+                      <div
                         headers="Row{{ child.key }} ColumnPrice"
                         role="cell"
                         data-label="{{ 'customer.order.price' | t }}"
@@ -426,15 +426,15 @@
                         {%- else -%}
                           <span>{{ child.final_price | money }}</span>
                         {%- endif -%}
-                      </td>
-                      <td
+                      </div>
+                      <div
                         headers="Row{{ child.key }} ColumnQuantity"
                         role="cell"
                         data-label="{{ 'customer.order.quantity' | t }}"
                       >
                         {{ child.quantity }}
-                      </td>
-                      <td
+                      </div>
+                      <div
                         headers="Row{{ child.key }} ColumnTotal"
                         role="cell"
                         data-label="{{ 'customer.order.total' | t }}"
@@ -457,8 +457,8 @@
                         {%- else -%}
                           {{ child.original_line_price | money }}
                         {%- endif -%}
-                      </td>
-                    </td>
+                      </div>
+                    </div>
                   {%- endfor -%}
                 </div>
               </td>
