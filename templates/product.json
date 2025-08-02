@@ -675,6 +675,7 @@
     }
   },
   "order": [
+    "breadcrumbs",
     "product_info_NXNt6g",
     "product_anchor_bar_atcVF4",
     "video_simplicity_zX8daC",
