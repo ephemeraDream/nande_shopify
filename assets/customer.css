@@ -8,7 +8,7 @@
 
 @media screen and (min-width: 750px) {
   .customer:not(.account):not(.order) {
-    max-width: 72rem;
+    max-width: 75rem;
   }
 }
 
@@ -52,7 +52,9 @@
 }
 
 .customer .field {
-  margin: 1.6rem 0 0 0;
+  margin: 1.6rem auto 0 auto;
+  justify-content: center;
+  width: 70.5rem;
 }
 
 .customer .field:first-of-type {
@@ -834,10 +836,17 @@ li[data-address]>h2 {
   color: #1F1F1F;
 }
 
-.customer .field input::placeholder {
-  color: #7F7E75;
-}
-
 .login_section_tabs_contain {
   margin-top: 3.5rem;
+}
+
+.customer .field label {
+  font-family: "PP Right Grotesk";
+  font-size: 2.4rem;
+  font-weight: normal;
+  line-height: 100%;
+  letter-spacing: 0px;
+  font-variation-settings: "opsz" auto;
+  color: #7F7E75;
+  top: calc(1.8rem + var(--inputs-border-width));
 }
