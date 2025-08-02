@@ -18,7 +18,7 @@
 .product_anchor_bar .product_anchor_bar_left {
   display: flex;
   align-items: center;
-  gap: 8.5rem;
+  gap: 5vw;
   height: 100%;
 }
 
@@ -34,11 +34,16 @@
   font-variation-settings: "opsz" auto;
   color: #7F7E75;
   cursor: pointer;
+  width: fit-content;
 }
 
 .product_anchor_bar .product_anchor_bar_left_item.active {
   color: #1F1F1F;
   border-bottom: 0.2rem solid #BDFF00;
+}
+
+.product_anchor_bar .product_anchor_bar_left_item:hover {
+  color: #1F1F1F;
 }
 
 .product_anchor_bar .product_anchor_bar_btn {
@@ -65,4 +70,11 @@
   opacity: .4;
   background-position: 0 100%;
   cursor: not-allowed;
+}
+
+@media screen and (max-width: 1440px) {
+  .product_anchor_bar .product_anchor_bar_left_item,
+  .product_anchor_bar .product_anchor_bar_btn {
+    font-size: 1.8rem;
+  }
 }
