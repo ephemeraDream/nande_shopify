@@ -1117,4 +1117,21 @@ li[data-address]>h2 {
   .cartdrawer_bundle_product {
     padding-right: 1.4rem;
   }
+
+  .order tbody tr:first-of-type td:first-of-type>div {
+    flex-direction: column !important;
+  }
+
+  .customer.order .cart-item__image {
+    max-width: 100%;
+  }
+
+  .order_section_feature_img {
+    width: 10rem;
+    height: 10rem;
+  }
+
+  .order_section_child_item td:first-of-type {
+    padding-left: 0rem;
+  }
 }
