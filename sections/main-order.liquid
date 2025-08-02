@@ -50,7 +50,25 @@
           </tr>
         </thead>
         <tbody role="rowgroup">
+          {%- assign parent_items = '' | split: '' -%}
+          {%- assign child_items = '' | split: '' -%}
+          {%- assign parent_ids = '' -%}
+
           {%- for line_item in order.line_items -%}
+            {%- assign bundle_parent_id = line_item.properties.bundle_parent_id -%}
+            {%- if bundle_parent_id == blank -%}
+              {%- assign parent_items = order.line_items | slice: forloop.index0 | concat: parent_items -%}
+            {%- else -%}
+              {%- assign parent_ids = parent_ids | append: bundle_parent_id -%}
+              {% unless forloop.last %}
+                {%- assign parent_ids = parent_ids | append: ',' -%}
+              {% endunless %}
+              {%- assign child_items = order.line_items | slice: forloop.index0 | concat: child_items -%}
+            {%- endif -%}
+          {%- endfor -%}
+          {% assign parent_items = parent_items | reverse %}
+          {% assign child_items = child_items | reverse %}
+          {%- for line_item in parent_items -%}
             <tr role="row">
               <td
                 id="Row{{ line_item.key }}"
