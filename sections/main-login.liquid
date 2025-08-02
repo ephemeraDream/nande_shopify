@@ -30,9 +30,9 @@
   </div>
 
   <div class="login_section_tabs_contain" data-value="login">
-    {% comment %} <h1 id="recover" tabindex="-1">
-      {{ 'customer.recover_password.title' | t }}
-    </h1> {% endcomment %}
+    <h1 id="recover" tabindex="-1">
+      {% comment %} {{ 'customer.recover_password.title' | t }} {% endcomment %}
+    </h1>
     <div>
       <p>
         {{ 'customer.recover_password.subtext' | t }}
@@ -80,7 +80,7 @@
     </div>
 
     <h1 id="login" tabindex="-1">
-      {{ 'customer.login_page.title' | t }}
+      {% comment %} {{ 'customer.login_page.title' | t }} {% endcomment %}
     </h1>
     <div>
       {%- if recover_success == true -%}
