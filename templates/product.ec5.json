@@ -135,7 +135,10 @@
         "video_url": "",
         "url_upload": "shopify://files/videos/TO1-Pro-anti-collision_2b6db0d3-82b5-44c0-876a-e5095807f303.mp4",
         "title": "<p>Alle Produkte Im üBerblick</p>",
-        "description": ""
+        "description": "",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "background_color": "#f2f1ed"
       }
     },
     "img_with_text_box_simplicity_qrzG6W": {
@@ -144,7 +147,7 @@
         "file_with_text_McHwGa": {
           "type": "file_with_text",
           "settings": {
-            "title": "<h3>Verstellbare Rückenlehne mit Neigung</h3>",
+            "title": "<p>Verstellbare Rückenlehne mit Neigung</p>",
             "description": "<ul><li>Rückenlehne 95–130° neigbar – für jede Sitz- oder Relaxposition</li></ul>",
             "file_type": "image",
             "file_image": "shopify://shop_images/Maidesite_EC5_ergonomic_office_chair_black_is_comfortable_for_working_reading_and_relaxing.jpg",
@@ -154,7 +157,7 @@
         "file_with_text_Q8tJKk": {
           "type": "file_with_text",
           "settings": {
-            "title": "<h3>Netzgewebe: Für ein neues Sitzgefühl</h3>",
+            "title": "<p>Netzgewebe: Für ein neues Sitzgefühl</p>",
             "description": "<ul><li>Atmungsaktives Netzgewebe sorgt für beste Luftzirkulation – auch bei stundenlangem Sitzen angenehm kühl und komfortabel.</li></ul>",
             "file_type": "image",
             "file_image": "shopify://shop_images/Maidesite_EC5_ergonomic_office_chair_black_can_breath_as_made_from_quality_mesh.jpg",
@@ -164,7 +167,7 @@
         "file_with_text_f9yPAD": {
           "type": "file_with_text",
           "settings": {
-            "title": "<h3>Robuste Stützkapazität</h3>",
+            "title": "<p>Robuste Stützkapazität</p>",
             "description": "<ul><li>120 kg Bürostuhl mit großem, belüftetem Kissen – Komfort für jede Figur, den ganzen Tag.</li></ul>",
             "file_type": "image",
             "file_image": "shopify://shop_images/Maidesite_EC5_ergonomic_office_chair_supports_120_kg_people_working_stable_and_safe.jpg",
