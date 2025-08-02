@@ -9,6 +9,16 @@
  */
 {
   "sections": {
+    "breadcrumbs": {
+      "type": "breadcrumbs",
+      "custom_css": [
+        ".breadcrumb-con { top: 0; z-index: 7;position: relative;}",
+        ".breadcrumb,.breadcrumb a,.breadcrumb span {color: #7f7e75;}"
+      ],
+      "settings": {
+        "custom_breadcrumb": ""
+      }
+    },
     "product_info_NXNt6g": {
       "type": "product-info",
       "blocks": {
@@ -708,6 +718,7 @@
     }
   },
   "order": [
+    "breadcrumbs",
     "product_info_NXNt6g",
     "product_anchor_bar_atcVF4",
     "video_wPHLA8",
