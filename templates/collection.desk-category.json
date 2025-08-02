@@ -65,15 +65,12 @@
         "link_text": "Mehr erfahren",
         "link_url": "",
         "padding_top": 120,
-        "padding_bottom": 0,
+        "padding_bottom": 120,
         "slides_per_view": 5
       }
     },
     "img_with_text_simplicity_URDzRN": {
       "type": "img-with-text-simplicity",
-      "custom_css": [
-        ".img_with_text_simplicity_section {margin-top: 12rem;}"
-      ],
       "name": "img with text simplicity",
       "settings": {
         "spec_id": "",
@@ -87,7 +84,10 @@
         "file_image": "shopify://shop_images/image_3e826893-51d9-435e-9191-f8a9e8456c5b.png",
         "video_url": "",
         "btn_text": "",
-        "link_url": ""
+        "link_url": "",
+        "padding_top": 120,
+        "padding_bottom": 0,
+        "background_color": "#ffffff"
       }
     },
     "img_with_text_simplicity_dDeThj": {
@@ -105,14 +105,14 @@
         "file_image": "shopify://shop_images/Vergleichen_Sie_Maidesite-Modelle_img_2.webp",
         "video_url": "",
         "btn_text": "",
-        "link_url": ""
+        "link_url": "",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "background_color": "#ffffff"
       }
     },
     "img_with_text_simplicity_CehiJc": {
       "type": "img-with-text-simplicity",
-      "custom_css": [
-        ".img_with_text_simplicity_section {margin-bottom: 12rem;}"
-      ],
       "name": "img with text simplicity",
       "settings": {
         "spec_id": "",
@@ -126,7 +126,10 @@
         "file_image": "shopify://shop_images/Vergleichen_Sie_Maidesite-Modelle_img_3.webp",
         "video_url": "",
         "btn_text": "",
-        "link_url": ""
+        "link_url": "",
+        "padding_top": 0,
+        "padding_bottom": 120,
+        "background_color": "#ffffff"
       }
     },
     "faq_simple_MFhhga": {
