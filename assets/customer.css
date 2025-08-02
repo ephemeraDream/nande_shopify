@@ -359,6 +359,7 @@
   color: #333333;
   margin-top: 1.8rem;
   text-align: right;
+  text-decoration: auto;
 }
 
 .login a[href='#recover'] {
@@ -856,6 +857,11 @@ li[data-address]>h2 {
 
 .login_section_tabs_contain {
   margin-top: 3.5rem;
+  display: none;
+}
+
+.login_section_tabs_contain.active {
+  display: block;
 }
 
 .customer .field label {

@@ -29,7 +29,7 @@
     <div class="login_section_tabs_item" data-value="register">{{ 'common.register' | t }}</div>
   </div>
 
-  <div class="login_section_tabs_contain" data-value="login">
+  <div class="login_section_tabs_contain active" data-value="login">
     <h1 id="recover" tabindex="-1">
       {% comment %} {{ 'customer.recover_password.title' | t }} {% endcomment %}
     </h1>
@@ -300,6 +300,19 @@
     {%- endform -%}
   </div>
 </div>
+
+<script>
+  document.querySelectorAll('.login_section_tabs_item').forEach((item) => {
+    item.addEventListener('click', () => {
+      if (item.classList.contains('active')) return;
+      document.querySelector('.login_section_tabs_item.active').classList.remove('active');
+      item.classList.add('active');
+      const type = item.dataset.value;
+      document.querySelector('.login_section_tabs_contain.active').classList.remove('active');
+      document.querySelector(`.login_section_tabs_contain[data-value=${type}]`).classList.add('active');
+    });
+  });
+</script>
 
 {% schema %}
 {
