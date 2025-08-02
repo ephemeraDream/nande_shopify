@@ -275,10 +275,7 @@
     },
     "img_with_text_simplicity_R8thEq": {
       "type": "img-with-text-simplicity",
-      "custom_css": [
-        ".img_with_text_simplicity_section {background-color: #e2ded6; padding-top: 12rem;}",
-        ".img_with_text_simplicity_filebox {height: 48rem;}"
-      ],
+      "custom_css": [],
       "name": "img with text simplicity",
       "settings": {
         "spec_id": "",
@@ -293,16 +290,14 @@
         "video_url": "",
         "btn_text": "",
         "link_url": "",
-        "padding_top": 0,
+        "padding_top": 120,
         "padding_bottom": 0,
-        "background_color": "rgba(0,0,0,0)"
+        "background_color": "#e2ded6"
       }
     },
     "img_with_text_simplicity_nJFALq": {
       "type": "img-with-text-simplicity",
       "custom_css": [
-        ".img_with_text_simplicity_section {background-color: #e2ded6; padding-top: 6rem;}",
-        ".img_with_text_simplicity_filebox {height: 48rem;}",
         ".img_with_text_simplicity_info {padding-left: 3rem;}"
       ],
       "name": "img with text simplicity",
@@ -319,17 +314,14 @@
         "video_url": "",
         "btn_text": "",
         "link_url": "",
-        "padding_top": 0,
+        "padding_top": 60,
         "padding_bottom": 0,
-        "background_color": "rgba(0,0,0,0)"
+        "background_color": "#e2ded6"
       }
     },
     "img_with_text_simplicity_YLCpmN": {
       "type": "img-with-text-simplicity",
-      "custom_css": [
-        ".img_with_text_simplicity_section {background-color: #e2ded6; padding-top: 6rem;}",
-        ".img_with_text_simplicity_filebox {height: 48rem;}"
-      ],
+      "custom_css": [],
       "name": "img with text simplicity",
       "settings": {
         "spec_id": "",
@@ -344,16 +336,14 @@
         "video_url": "",
         "btn_text": "",
         "link_url": "",
-        "padding_top": 0,
+        "padding_top": 60,
         "padding_bottom": 0,
-        "background_color": "rgba(0,0,0,0)"
+        "background_color": "#e2ded6"
       }
     },
     "img_with_text_simplicity_JRCJ4f": {
       "type": "img-with-text-simplicity",
       "custom_css": [
-        ".img_with_text_simplicity_section {background-color: #e2ded6; padding-top: 6rem; padding-bottom: 12rem;}",
-        ".img_with_text_simplicity_filebox {height: 48rem;}",
         ".img_with_text_simplicity_info {padding-left: 3rem;}"
       ],
       "name": "img with text simplicity",
@@ -370,9 +360,9 @@
         "video_url": "",
         "btn_text": "",
         "link_url": "",
-        "padding_top": 0,
-        "padding_bottom": 0,
-        "background_color": "rgba(0,0,0,0)"
+        "padding_top": 60,
+        "padding_bottom": 120,
+        "background_color": "#e2ded6"
       }
     },
     "img_with_text_tab_emEWU8": {
