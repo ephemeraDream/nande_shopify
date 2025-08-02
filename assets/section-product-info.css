@@ -1389,7 +1389,7 @@
   .product_info_section .product_info_bundle_product {
     flex: 0 0 calc((100% - 0.6rem) / 2);
   }
-  .product_info_buybox_quantity_box{width: 100%;}
+  .product_info .product_info_buybox_quantity_box{width: 100%;}
   .product_info_buybox_contain .product_info_buybox_btns_btn{width: 100%;}
   .product_info_section .product_infor_simplicity_right_select_title,
   .product_info_section .product_info_bottom_bar .product_info_buybox_btns_btn,
