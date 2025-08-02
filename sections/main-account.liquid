@@ -43,7 +43,7 @@
           <div class="account_section_account_body_item_title">My orders</div>
           <div class="account_section_account_body_item_text">View your online orders.</div>
         </div>
-        <div class="account_section_account_body_item_btn">View all order</div>
+        <div class="account_section_account_body_item_btn" id="view_orders">View all order</div>
       </div>
       <div class="account_section_account_body_item">
         <div>
@@ -52,7 +52,7 @@
             View and manage addresses, edit your contact address and add new addresses.
           </div>
         </div>
-        <div class="account_section_account_body_item_btn">View address book</div>
+        <a class="account_section_account_body_item_btn" href="{{ routes.account_addresses_url }}">View address book</a>
       </div>
     </div>
   </div>
@@ -193,6 +193,26 @@
     </div>
   {% endcomment %}
 </div>
+
+<script>
+  document.querySelectorAll('.account_section_tabs_item').forEach((item) => {
+    item.addEventListener('click', () => {
+      if (item.classList.contains('active')) return;
+      document.querySelector('.account_section_tabs_item.active').classList.remove('active');
+      item.classList.add('active');
+      const type = item.dataset.value;
+      document.querySelector('.account_section_tabs_contain.active').classList.remove('active');
+      document.querySelector(`.account_section_tabs_contain[data-value=${type}]`).classList.add('active');
+    });
+  });
+
+  document.querySelector('#view_orders').addEventListener('click', () => {
+    document.querySelector('.account_section_tabs_item.active').classList.remove('active');
+    document.querySelector('.account_section_tabs_item[data-value="order"]').classList.add('active');
+    document.querySelector('.account_section_tabs_contain.active').classList.remove('active');
+    document.querySelector('.account_section_tabs_contain[data-value="order"]').classList.add('active');
+  });
+</script>
 
 {% schema %}
 {
