@@ -1026,4 +1026,7 @@ li[data-address]>h2 {
 
 .account_section_account_body_item {
   flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
