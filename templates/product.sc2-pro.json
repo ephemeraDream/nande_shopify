@@ -623,6 +623,7 @@
         },
         "faq_EXWGc6": {
           "type": "faq",
+          "disabled": true,
           "settings": {
             "question": "<h4>Ich kann die Bedienungsanleitung nicht finden, wo kann ich eine Kopie erhalten?</h4>",
             "answer": "<p>Sie können das Benutzerhandbuch für den höhenverstellbaren Schreibtisch T2 Pro Max herunterladen, indem Sie <a href=\"https://cdn.shopify.com/s/files/1/0574/9728/8897/files/T2_Pro_Max-20241121_compressed.pdf?v=1737514230\" title=\"https://cdn.shopify.com/s/files/1/0574/9728/8897/files/T2_Pro_Max-20241121_compressed.pdf?v=1737514230\">hier</a> klicken. Wenn Sie ein Problem haben, senden Sie bitte eine E-Mail an contact@maidesite.de, wir helfen Ihnen gerne weiter.</p>"
@@ -630,6 +631,7 @@
         },
         "faq_abheWf": {
           "type": "faq",
+          "disabled": true,
           "settings": {
             "question": "<p>Was muss ich tun, wenn \"RESET, ERR07,ERR08,ERR11, ERR12, ERR13 \" angezeigt wird?</p>",
             "answer": "<p>Halten Sie die Abwärtstaste gedrückt, um den Tisch auf die niedrigste Stufe abzusenken, lassen Sie sie dann los, halten Sie die Abwärtstaste 5 Sekunden lang gedrückt, die Handsteuerung zeigt RST an, halten Sie dann die Abwärtstaste 5 Sekunden lang gedrückt, die Handsteuerung zeigt die Nummer an, und die Rückstellung ist abgeschlossen. Sie können uns auch per E-Mail kontaktieren: contact@maidesite.de</p>"
@@ -637,6 +639,7 @@
         },
         "faq_mFDf3d": {
           "type": "faq",
+          "disabled": true,
           "settings": {
             "question": "<p>Was muss ich tun, wenn \"H01\" angezeigt wird?</p>",
             "answer": "<p>Das liegt daran, dass die Temperatur des Netzteils zu hoch ist oder es zu oft betrieben wird. Bitte trennen Sie das Netzteil für 20 Minuten vom Stromnetz und schließen Sie es dann wieder an. Sie können uns auch per E-Mail kontaktieren: contact@maidesite.de.</p>"
@@ -644,6 +647,7 @@
         },
         "faq_whBqrf": {
           "type": "faq",
+          "disabled": true,
           "settings": {
             "question": "<p>Wie lange dauert die Lieferung?</p>",
             "answer": "<p>2-4 Tage innerhalb Deutschlands, 3-7 Tage ins benachbarte Ausland.</p>"
