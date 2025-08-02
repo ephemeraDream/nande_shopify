@@ -119,6 +119,14 @@
 .recommended_products .recommended_products_next {
   right: -12rem;
 }
+@media screen and (max-width: 1600px) {
+  .recommended_products .recommended_products_prev {
+    left: -6rem;
+  }
+  .recommended_products .recommended_products_next {
+    right: -6rem;
+  }
+}
 @media screen and (max-width: 1440px) {
   .recommended_products .recommended_products_prev {
     left: -4rem;
