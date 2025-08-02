@@ -12,7 +12,7 @@
     "breadcrumbs": {
       "type": "breadcrumbs",
       "custom_css": [
-        ".breadcrumb-con { top: 0; z-index: 7;position: relative;}",
+        ".breadcrumb-con {top: 0; z-index: 7; position: relative;}",
         ".breadcrumb,.breadcrumb a,.breadcrumb span {color: #7f7e75;}"
       ],
       "settings": {
@@ -145,7 +145,10 @@
         "video_url": "",
         "url_upload": "shopify://files/videos/TO1-Pro-anti-collision_2b6db0d3-82b5-44c0-876a-e5095807f303.mp4",
         "title": "Alle Produkte Im üBerblick",
-        "description": ""
+        "description": "",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "background_color": "#f2f1ed"
       }
     },
     "img_with_text_box_simplicity_qrzG6W": {
@@ -154,7 +157,7 @@
         "file_with_text_McHwGa": {
           "type": "file_with_text",
           "settings": {
-            "title": "<h3>Verstellbare Rückenlehne mit Neigung</h3>",
+            "title": "<p>Verstellbare Rückenlehne mit Neigung</p>",
             "description": "<ul><li>Rückenlehne 95–130° neigbar – für jede Sitz- oder Relaxposition</li></ul>",
             "file_type": "image",
             "file_image": "shopify://shop_images/EC6_office_chair_base.jpg",
@@ -164,7 +167,7 @@
         "file_with_text_Q8tJKk": {
           "type": "file_with_text",
           "settings": {
-            "title": "<h3>Multifunktionale Armlehnen</h3>",
+            "title": "<p>Multifunktionale Armlehnen</p>",
             "description": "<ul><li>4D-Armlehnen: 6,8 cm Höhe/Breite + 15° Drehung – perfekte Arm- und Ellbogenunterstützung.</li></ul>",
             "file_type": "image",
             "file_image": "shopify://shop_images/EC6_ergonomic_chair_3D_armrest.jpg",
@@ -174,7 +177,7 @@
         "file_with_text_f9yPAD": {
           "type": "file_with_text",
           "settings": {
-            "title": "<h3>Robuste Stützkapazität</h3>",
+            "title": "<p>Robuste Stützkapazität</p>",
             "description": "<ul><li>Bürostuhl bis 120 kg, belüftetes Kissen – Komfort für alle Körpertypen, den ganzen Tag.</li></ul>",
             "file_type": "image",
             "file_image": "shopify://shop_images/EC6_Office_Chair_with_T2_Pro_Max_adjustable_height_desk_in_the_office.jpg",
@@ -227,15 +230,15 @@
       "settings": {
         "spec_id": "Produktbeschreibung",
         "main_title": "<p>Verbesserter Komfort durch mehrfach verstellbares Design</p>",
-        "row_num": 3
+        "row_num": 3,
+        "padding_top": 120,
+        "padding_bottom": 120,
+        "background_color": "rgba(0,0,0,0)"
       }
     },
     "img_with_text_simplicity_R8thEq": {
       "type": "img-with-text-simplicity",
-      "custom_css": [
-        ".img_with_text_simplicity_section {background-color: #e2ded6; padding-top: 12rem;}",
-        ".img_with_text_simplicity_filebox {height: 48rem;}"
-      ],
+      "custom_css": [],
       "name": "img with text simplicity",
       "settings": {
         "spec_id": "",
@@ -249,14 +252,15 @@
         "file_image": "shopify://shop_images/EC6_ergonomic_chair_with_lumbar_support.jpg",
         "video_url": "",
         "btn_text": "",
-        "link_url": ""
+        "link_url": "",
+        "padding_top": 120,
+        "padding_bottom": 0,
+        "background_color": "#e2ded6"
       }
     },
     "img_with_text_simplicity_nJFALq": {
       "type": "img-with-text-simplicity",
       "custom_css": [
-        ".img_with_text_simplicity_section {background-color: #e2ded6; padding-top: 6rem;}",
-        ".img_with_text_simplicity_filebox {height: 48rem;}",
         ".img_with_text_simplicity_info {padding-left: 3rem;}"
       ],
       "name": "img with text simplicity",
@@ -272,7 +276,10 @@
         "file_image": "shopify://shop_images/EC6_office_chair_headrest.jpg",
         "video_url": "",
         "btn_text": "",
-        "link_url": ""
+        "link_url": "",
+        "padding_top": 60,
+        "padding_bottom": 120,
+        "background_color": "#e2ded6"
       }
     },
     "img_with_text_simplicity_YLCpmN": {
@@ -295,7 +302,10 @@
         "file_image": "shopify://shop_images/product_info_demo_img_1.webp",
         "video_url": "",
         "btn_text": "",
-        "link_url": ""
+        "link_url": "",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "background_color": "rgba(0,0,0,0)"
       }
     },
     "img_with_text_simplicity_JRCJ4f": {
@@ -319,7 +329,10 @@
         "file_image": "shopify://shop_images/product_info_demo_img_1.webp",
         "video_url": "",
         "btn_text": "",
-        "link_url": ""
+        "link_url": "",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "background_color": "rgba(0,0,0,0)"
       }
     },
     "img_with_foldtext_RcBrkw": {
@@ -489,7 +502,9 @@
       "name": "maidesite swiper",
       "settings": {
         "title": "<p>Die Presse Liebt Maidesite</p>",
-        "text": ""
+        "text": "",
+        "padding_top": 120,
+        "padding_bottom": 0
       }
     },
     "celebrity_swiper_aGymw9": {
@@ -527,7 +542,9 @@
       "name": "celebrity swiper",
       "settings": {
         "title": "<p>Empfehlen Von</p>",
-        "text": ""
+        "text": "",
+        "padding_top": 120,
+        "padding_bottom": 0
       }
     },
     "faq_simple_kxTbhc": {
@@ -633,7 +650,10 @@
         "text": "<p>Häufig gestellte Fragen</p>",
         "show_btn": true,
         "learn_more": true,
-        "contact_us": false
+        "contact_us": false,
+        "padding_top": 120,
+        "padding_bottom": 120,
+        "background_color": "rgba(0,0,0,0)"
       }
     },
     "product_comment_GV7BHg": {
@@ -674,7 +694,9 @@
           "maidesite-th2-pro-plus-tischgestell-elektrisch-hohenverstellbar",
           "maidesite-el2-pro-art-tischgestell-elektrisch-hohenverstellbar"
         ],
-        "number": 3
+        "number": 3,
+        "padding_top": 120,
+        "padding_bottom": 120
       }
     }
   },
