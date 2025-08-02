@@ -290,7 +290,7 @@
         "description": "<p>Erhältlich in verschiedenen Farben, Formen und Größen – perfekt abgestimmt auf jeden Stil und Bedarf.</p>",
         "file_position": "right",
         "file_type": "image",
-        "file_image": "shopify://shop_images/01af9531-9158-4ede-87be-26818b919ab6.__CR0_0_1464_600_PT0_SX1464_V1____3.jpg",
+        "file_image": "shopify://shop_images/01af9531-9158-4ede-87be-26818b919ab6.__CR0_0_1464_600_PT0_SX1464_V1____5.jpg",
         "video_url": "",
         "btn_text": "",
         "link_url": ""
@@ -298,7 +298,6 @@
     },
     "img_with_text_simplicity_nJFALq": {
       "type": "img-with-text-simplicity",
-      "disabled": true,
       "custom_css": [
         ".img_with_text_simplicity_section {background-color: #e2ded6; padding-top: 6rem;}",
         ".img_with_text_simplicity_filebox {height: 48rem;}",
@@ -309,12 +308,12 @@
         "spec_id": "",
         "header_title": "",
         "header_content": "",
-        "title": "<h3>Stärkere Füße</h3>",
+        "title": "<p>Sicheres Design</p>",
         "sub_title": "",
-        "description": "<ul><li>Schwere Schreibtischfüße haben einen niedrigeren Schwerpunkt, was die Stabilität erhöht.</li><li>Jedes T2 Pro Max Tischbein was 50 % mehr ist als herkömmliche Beine.</li><li>Dadurch ist es stabiler als andere Tischgestelle.</li></ul>",
+        "description": "<p>Das abgerundete Design der Tischplatte bietet zusätzlichen Sicherheitsschutz und reduziert Verletzungen durch versehentliche Zusammenstöße.</p>",
         "file_position": "left",
         "file_type": "image",
-        "file_image": "shopify://shop_images/T2-Pro-Max-ultra-solid-lift-column-feet.jpg",
+        "file_image": "shopify://shop_images/01af9531-9158-4ede-87be-26818b919ab6.__CR0_0_1464_600_PT0_SX1464_V1____6.jpg",
         "video_url": "",
         "btn_text": "",
         "link_url": ""
@@ -322,7 +321,6 @@
     },
     "img_with_text_simplicity_YLCpmN": {
       "type": "img-with-text-simplicity",
-      "disabled": true,
       "custom_css": [
         ".img_with_text_simplicity_section {background-color: #e2ded6; padding-top: 6rem;}",
         ".img_with_text_simplicity_filebox {height: 48rem;}"
@@ -332,12 +330,12 @@
         "spec_id": "",
         "header_title": "",
         "header_content": "",
-        "title": "",
-        "sub_title": "<h3>Stabilere Säule</h3>",
-        "description": "<ul><li>Neben den strukturellen Verbesserungen trägt auch die präzise Verarbeitung und Konstruktion zur Stabilität bei.</li><li>Der Spalt zwischen den Säulen beträgt weniger als 0,03 mm. Die dreiteiligen Säulen gleiten nahtlos ineinander, wodurch jegliches Wackeln verhindert wird.</li></ul>",
+        "title": "<p>Vorgebohrter Löcher</p>",
+        "sub_title": "",
+        "description": "<p>Super einfach am Tischgestell zu montieren dank vorgebohrter Löcher und eingelassener Muttern.</p>",
         "file_position": "right",
         "file_type": "image",
-        "file_image": "shopify://shop_images/T2-Pro-Max-is-super-stable-with-precise-gasket.jpg",
+        "file_image": "shopify://shop_images/01af9531-9158-4ede-87be-26818b919ab6.__CR0_0_1464_600_PT0_SX1464_V1____7.jpg",
         "video_url": "",
         "btn_text": "",
         "link_url": ""
@@ -345,7 +343,6 @@
     },
     "img_with_text_simplicity_JRCJ4f": {
       "type": "img-with-text-simplicity",
-      "disabled": true,
       "custom_css": [
         ".img_with_text_simplicity_section {background-color: #e2ded6; padding-top: 6rem; padding-bottom: 12rem;}",
         ".img_with_text_simplicity_filebox {height: 48rem;}",
@@ -361,7 +358,7 @@
         "description": "<p>Die Abgerundeten Ecken der Tischplatte verringern die Verletzungsgefahr bei Stößen oder Stürzen.</p>",
         "file_position": "left",
         "file_type": "image",
-        "file_image": "shopify://shop_images/Maidesite-TH2-Pro-Plus-ovaler-hohenverstellbarer-Schreibtisch-mit-Holz-Arbeitsplatte_182e6972-2959-4113-a847-066c479b2bbd.jpg",
+        "file_image": "shopify://shop_images/01af9531-9158-4ede-87be-26818b919ab6.__CR0_0_1464_600_PT0_SX1464_V1____8.jpg",
         "video_url": "",
         "btn_text": "",
         "link_url": ""
@@ -443,6 +440,63 @@
         "layout": "image-left"
       }
     },
+    "img_with_text_tab_aRiDTy": {
+      "type": "img-with-text-tab",
+      "blocks": {
+        "tab_GQtdax": {
+          "type": "tab",
+          "settings": {
+            "tabname": "120x60cm",
+            "sub_title": "",
+            "title": "",
+            "description": "<ul><li>Größe: 120 x 60cm</li><li>Form: Rectangular</li><li>Dicke: 2.5cm</li><li>Produktgewicht: 18.3 kg</li><li>Versandgewicht: 22 kg</li><li>Verpackungsmaße: 127×77×7.5 cm</li></ul>",
+            "file_type": "image",
+            "video_url": "",
+            "btn_text": "",
+            "link": ""
+          }
+        },
+        "tab_w4JqMc": {
+          "type": "tab",
+          "settings": {
+            "tabname": "140x70cm",
+            "sub_title": "",
+            "title": "",
+            "description": "<ul><li>Größe: 140 x 70cm</li><li>Form: Rectangular</li><li>Dicke: 2.5cm</li><li>Produktgewicht: 18.3 kg</li><li>Versandgewicht: 22 kg</li><li>Verpackungsmaße: 127×77×7.5 cm</li></ul>",
+            "file_type": "image",
+            "video_url": "",
+            "btn_text": "",
+            "link": ""
+          }
+        },
+        "tab_cBmWVw": {
+          "type": "tab",
+          "settings": {
+            "tabname": "160x80cm",
+            "sub_title": "",
+            "title": "",
+            "description": "<ul><li>Größe: 160 x 80cm</li><li>Form: Rectangular</li><li>Dicke: 2.5cm</li><li>Produktgewicht: 18.3 kg</li><li>Versandgewicht: 22 kg</li><li>Verpackungsmaße: 127×77×7.5 cm</li></ul>",
+            "file_type": "image",
+            "video_url": "",
+            "btn_text": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "tab_GQtdax",
+        "tab_w4JqMc",
+        "tab_cBmWVw"
+      ],
+      "name": "img with text tab",
+      "settings": {
+        "spec_id": "",
+        "description": "",
+        "title": "<p>Spezifikationen</p>",
+        "show_tab_head": true,
+        "layout": "image-left"
+      }
+    },
     "img_with_foldtext_LzqrtY": {
       "type": "img-with-foldtext",
       "blocks": {
@@ -485,6 +539,7 @@
     },
     "technical_data_L3gXUm": {
       "type": "technical-data",
+      "disabled": true,
       "name": "technical data",
       "settings": {
         "spec_id": "Technische_Daten",
@@ -691,6 +746,7 @@
     "img_with_text_simplicity_YLCpmN",
     "img_with_text_simplicity_JRCJ4f",
     "img_with_text_tab_emEWU8",
+    "img_with_text_tab_aRiDTy",
     "img_with_foldtext_LzqrtY",
     "technical_data_L3gXUm",
     "celebrity_swiper_aGymw9",
