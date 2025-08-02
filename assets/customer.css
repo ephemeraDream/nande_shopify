@@ -933,7 +933,7 @@ li[data-address]>h2 {
 }
 
 .account_section_account_head_info {
-  padding: 1.4rem auto 1.2rem 2rem;
+  padding: 1.4rem 0 1.2rem 2rem;
 }
 
 .account_section_account_head_info_flex {
@@ -961,7 +961,7 @@ li[data-address]>h2 {
   margin-top: 1.2rem;
 }
 
-.account_section_exit_ {
+.account_section_exit {
   font-family: "PP Right Grotesk";
   font-size: 1.6rem;
   line-height: 130%;
