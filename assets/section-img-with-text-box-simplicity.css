@@ -74,5 +74,8 @@
   .img_with_text_box_simplicity .img_with_text_box_simplicity_contain_item_3 {
     width: 100%;
   }
+  .img_with_text_box_simplicity_info{
+    padding-top:2rem;
+  }
  
 }
