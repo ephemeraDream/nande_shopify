@@ -27,7 +27,7 @@
         ".img_with_text_simplicity {background-color: #fff;}",
         ".img_with_text_simplicity_info {padding: 4rem;}",
         ".img_with_text_simplicity_title {font-size: 4rem;}",
-        "@media screen and (max-width: 768px) {.img_with_text_simplicity_info {padding: 2rem 0rem 2rem 0rem; } .img_with_text_simplicity_title {font-size: 2.4rem; }}"
+        "@media screen and (max-width: 768px) {.img_with_text_simplicity_info{padding: 2rem; } .img_with_text_simplicity_title {font-size: 2.4rem; }}"
       ],
       "name": "img with text simplicity",
       "settings": {
@@ -36,13 +36,16 @@
         "header_content": "<p>Höhenverstellbarer Schreibtisch, ergonomischer Stuhl & mehr – für gesundes und komfortables Arbeiten!</p>",
         "title": "<p>Ergonomisches Büro – 3 unverzichtbare Möbelstücke</p>",
         "sub_title": "",
-        "description": "<p>1.Ergonomische Bürostühle unterstützen dynamisches Sitzen und passen sich optimal an Deinen Körper an.<br><br>2.Höhenverstellbare Schreibtische fördern Bewegung und reduzieren das Risiko von Rückenschmerzen – per Knopfdruck zwischen Sitzen und Stehen wechseln.<br><br>3.Ein externer Monitor und ergonomische Ausstattung helfen, Rücken- und Nackenschmerzen zu vermeiden und die Augen zu entlasten.</p>",
+        "description": "<p>1.Ergonomische Bürostühle unterstützen dynamisches Sitzen und passen sich optimal an Deinen Körper an.<br/><br/>2.Höhenverstellbare Schreibtische fördern Bewegung und reduzieren das Risiko von Rückenschmerzen – per Knopfdruck zwischen Sitzen und Stehen wechseln.<br/><br/>3.Ein externer Monitor und ergonomische Ausstattung helfen, Rücken- und Nackenschmerzen zu vermeiden und die Augen zu entlasten.</p>",
         "file_position": "left",
         "file_type": "image",
         "file_image": "shopify://shop_images/buying_g_01.webp",
         "video_url": "",
         "btn_text": "",
-        "link_url": ""
+        "link_url": "",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "background_color": "rgba(0,0,0,0)"
       }
     },
     "product_tab_compare": {
@@ -118,7 +121,10 @@
         "file_image": "shopify://shop_images/buying_g_02.webp",
         "video_url": "",
         "btn_text": "",
-        "link_url": ""
+        "link_url": "",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "background_color": "rgba(0,0,0,0)"
       }
     },
     "img_with_text_simplicity_R8thEc": {
@@ -143,7 +149,10 @@
         "file_image": "shopify://shop_images/buying_g_03.webp",
         "video_url": "",
         "btn_text": "",
-        "link_url": ""
+        "link_url": "",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "background_color": "rgba(0,0,0,0)"
       }
     },
     "img_with_text_simplicity_R8thd": {
@@ -168,7 +177,10 @@
         "file_image": "shopify://shop_images/buying_g_04.webp",
         "video_url": "",
         "btn_text": "",
-        "link_url": ""
+        "link_url": "",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "background_color": "rgba(0,0,0,0)"
       }
     },
     "img_with_text_tab_emEWU8": {
@@ -356,7 +368,9 @@
       "settings": {
         "title": "<p>Ergonomische BüRomöBel Kaufen</p>",
         "text": "<p>Kompromisslose Qualität & maximale Ergonomie. Überzeuge Dich selbst von <br/>den mehrfach ausgezeichneten ergonomischen Büromöbeln von Maidesite</p>",
-        "show_info": false
+        "show_info": false,
+        "padding_top": 120,
+        "padding_bottom": 36
       }
     },
     "product_carousel_two": {
