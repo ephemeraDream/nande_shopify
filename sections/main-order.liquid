@@ -583,6 +583,20 @@
   </div>
 </div>
 
+<script>
+  (() => {
+    document.querySelectorAll('.customer.order .cartdrawer_bundle_product').forEach((item) => {
+      item.addEventListener('click', () => {
+        item.classList.toggle('active');
+        const dataId = item.closest('.order_section_fold_item').dataset.value;
+        document
+          .querySelectorAll(`.order_section_child_item[data-value="${dataId}"]`)
+          .forEach((el) => el.classList.toggle('hidden'));
+      });
+    });
+  })();
+</script>
+
 {% schema %}
 {
   "name": "t:sections.main-order.name",
