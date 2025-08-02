@@ -56,8 +56,8 @@
 
 .technical_data .technical_data_contain_filebox {
   flex: 0 0 auto;
-  width: 72rem;
-  height: 60rem;
+  width: 50%;
+  height: auto;
 }
 
 .technical_data .technical_data_contain_filebox img {
@@ -83,6 +83,7 @@
   letter-spacing: 0px;
   font-variation-settings: "opsz" auto;
   color: #1F1F1F;
+  justify-content: space-between;
 }
 
 .technical_data .technical_data_contain_info_item:nth-child(2n) {
@@ -92,7 +93,10 @@
 .technical_data .technical_data_contain_info_item_label {
   color: #7F7E75;
   padding-left: 2rem;
-  min-width: 30rem;
+  min-width: 24rem;
+}
+.technical_data_contain_info_item_value{
+  width: 40%;
 }
 @media screen and (max-width: 1024px) {
 .technical_data .technical_data_head_item {
