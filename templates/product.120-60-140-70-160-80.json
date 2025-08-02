@@ -138,6 +138,7 @@
     },
     "video_wPHLA8": {
       "type": "video",
+      "disabled": true,
       "name": "t:sections.video.presets.name",
       "settings": {
         "heading": "Maidesite mobiler Schreibtisch T2 Pro Max Ausrüstung",
@@ -224,6 +225,7 @@
         "file_with_text_B39ehq",
         "file_with_text_THJTyK"
       ],
+      "disabled": true,
       "name": "file box simplicity",
       "settings": {
         "spec_id": "",
@@ -281,14 +283,14 @@
       "name": "img with text simplicity",
       "settings": {
         "spec_id": "",
-        "header_title": "<p>Extrem stabiler höhenverstellbarer Schreibtisch</p>",
+        "header_title": "",
         "header_content": "",
-        "title": "<h3>Stabileres Design</h3>",
+        "title": "<p>Tischplatte in vielfältigen Ausführungen</p>",
         "sub_title": "",
-        "description": "<ul><li>Dreiecksunterstützungsstruktur ist extrem stabil im Vergleich zu anderen Schreibtischdesigns.</li><li>Dank verstärktem Querträger, Seitenstreben und Füßen bietet der Rahmen extra Stabilität.</li></ul>",
+        "description": "<p>Erhältlich in verschiedenen Farben, Formen und Größen – perfekt abgestimmt auf jeden Stil und Bedarf.</p>",
         "file_position": "right",
         "file_type": "image",
-        "file_image": "shopify://shop_images/T2-Pro-Max-is-ultra-solid.jpg",
+        "file_image": "shopify://shop_images/01af9531-9158-4ede-87be-26818b919ab6.__CR0_0_1464_600_PT0_SX1464_V1____3.jpg",
         "video_url": "",
         "btn_text": "",
         "link_url": ""
@@ -296,6 +298,7 @@
     },
     "img_with_text_simplicity_nJFALq": {
       "type": "img-with-text-simplicity",
+      "disabled": true,
       "custom_css": [
         ".img_with_text_simplicity_section {background-color: #e2ded6; padding-top: 6rem;}",
         ".img_with_text_simplicity_filebox {height: 48rem;}",
@@ -319,6 +322,7 @@
     },
     "img_with_text_simplicity_YLCpmN": {
       "type": "img-with-text-simplicity",
+      "disabled": true,
       "custom_css": [
         ".img_with_text_simplicity_section {background-color: #e2ded6; padding-top: 6rem;}",
         ".img_with_text_simplicity_filebox {height: 48rem;}"
@@ -472,6 +476,7 @@
         "foldtext_7BhWHC",
         "foldtext_UUEbi9"
       ],
+      "disabled": true,
       "name": "img with foldtext",
       "settings": {
         "spec_id": "",
@@ -480,12 +485,11 @@
     },
     "technical_data_L3gXUm": {
       "type": "technical-data",
-      "disabled": true,
       "name": "technical data",
       "settings": {
         "spec_id": "Technische_Daten",
         "title": "<p>Technische Daten Des HöHenverstellbaren </p><p>Schreibtisches-T1 Pro</p>",
-        "select_product": "elektrisch-hohenverstellbarer-gestell-t1-basic"
+        "select_product": "maidesite-tischplatte-120-140-160-cm-diy-schreibtischplatte"
       }
     },
     "maidesite_swiper_QhkQG8": {
