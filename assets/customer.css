@@ -1096,10 +1096,14 @@ li[data-address]>h2 {
 }
 
 .cartdrawer_bundle_product {
-  text-align: left;
+  text-align: left !important;
 }
 
 .order_section_child_item .order_section_feature_img {
   width: 7rem;
   height: 7rem;
+}
+
+.order_section_child_item td:first-of-type {
+  padding-left: 9.2rem;
 }
