@@ -113,11 +113,11 @@
 }
 
 .recommended_products .recommended_products_prev {
-  left: -12rem;
+  left: -9rem;
 }
 
 .recommended_products .recommended_products_next {
-  right: -12rem;
+  right: -9rem;
 }
 @media screen and (max-width: 1600px) {
   .recommended_products .recommended_products_prev {
