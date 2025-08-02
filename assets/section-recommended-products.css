@@ -109,14 +109,6 @@
 
 .recommended_products .recommended_products_prev,
 .recommended_products .recommended_products_next {
-  width: 6rem;
-  height: 6rem;
-  position: absolute;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: #fff;
-  top: 50%;
   cursor: pointer;
 }
 
