@@ -60,6 +60,7 @@
                 data-label="{{ 'customer.order.product' | t }}"
               >
                 <div>
+                  {{ line_item.properties.bundle_parent_id }}
                   {%- if line_item.url != blank -%}
                     <a href="{{ line_item.url }}">{{ line_item.title | escape }}</a>
                   {%- else -%}
