@@ -5,27 +5,119 @@
  * This file may be updated by the Shopify admin theme editor
  * or related systems. Please exercise caution as any changes
  * made to this file may be overwritten.
- * B2B页 B端页面
  * ------------------------------------------------------------
  */
 {
   "sections": {
     "breadcrumbs": {
       "type": "breadcrumbs",
-      "settings": {
-        "custom_breadcrumb": "",
-      },
       "custom_css": [
-        ".breadcrumb-con{top: 0;}"
+        ".breadcrumb-con {top: 0;}"
       ],
+      "settings": {
+        "custom_breadcrumb": ""
+      }
     },
     "contact_form_one": {
       "type": "contact-form-one",
       "name": "contact_form_one",
       "settings": {
-        "image": "shopify://shop_images/b2b_01.webp",
         "title": "Optimieren Sie Ihr BüRo Mit Maidesite’S Ergonomischen LöSungen",
-        "desc":"Hinterlassen Sie Ihre E-Mail, senden Sie Ihre Anfrage und erhalten Sie innerhalb von 24 Stunden eine maßgeschneiderte Beratung!"
+        "image": "shopify://shop_images/b2b_01.webp",
+        "desc": "Hinterlassen Sie Ihre E-Mail, senden Sie Ihre Anfrage und erhalten Sie innerhalb von 24 Stunden eine maßgeschneiderte Beratung!"
+      }
+    },
+    "b2b_spezielle_rabatte": {
+      "type": "b2b-spezielle-rabatte",
+      "blocks": {
+        "item_fiwUXL": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/b2b_03.webp",
+            "title": "11-30 Menschen",
+            "sub_title": "Bis zu 15%",
+            "description": "<ul><li> Immer auf Lager</li><li>Flexibler Versand</li><li> Kostenloser Versand</li><li>Zusatzliches kostenloses Zubehor</li></ul>",
+            "btn_text": "Jetzt angebot anfordern",
+            "link": "#"
+          }
+        },
+        "item_AUd88N": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/b2b_04.webp",
+            "title": "31-50 Menschen",
+            "sub_title": "Bis zu 20%",
+            "description": "<ul><li> Mehrprodukt-Rabatte</li><li> Immer verfugbar</li><li> Flexible und kostenlose</li><li>Lieferung</li><li>Zusatzliche kostenlose Ergonomischer Stuhl</li></ul>",
+            "btn_text": "Jetzt angebot anfordern",
+            "link": "#"
+          }
+        },
+        "item_AUd88C": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/b2b_05.webp",
+            "title": ">50 Menschen",
+            "sub_title": "Bis zu 25%",
+            "description": "<ul><li> Mehrprodukt-Rabatte</li><li>Immer verfugbar</li><li>Flexible und kostenlose</li><li>Lieferung</li><li>Zusatzliche kostenlose Rahmen</li></ul>",
+            "btn_text": "Jetzt angebot anfordern",
+            "link": "#"
+          }
+        }
+      },
+      "block_order": [
+        "item_fiwUXL",
+        "item_AUd88N",
+        "item_AUd88C"
+      ],
+      "name": "img with text tab",
+      "settings": {
+        "title": "Spezielle Rabatte Bei GroßEinkäUfen"
+      }
+    },
+    "product_carousel": {
+      "type": "product-carousel",
+      "blocks": {
+        "item_3yir6V": {
+          "type": "item",
+          "settings": {
+            "select_product": "maidesite-elektrisch-hohenverstellbarer-gestell-t2-pro"
+          }
+        },
+        "item_gyexDX": {
+          "type": "item",
+          "settings": {
+            "select_product": "maidesite-tischgestell-elektrisch-hohenverstellbar-t2-pro-plus"
+          }
+        },
+        "item_EEUjdz": {
+          "type": "item",
+          "settings": {
+            "select_product": "maidesite-th2-pro-plus-tischgestell-elektrisch-hohenverstellbar"
+          }
+        },
+        "item_AHnCzP": {
+          "type": "item",
+          "settings": {
+            "select_product": "maidesite-t2-pro-max-tischgestell-elektrisch-hohenverstellbar"
+          }
+        },
+        "item_z9X7dd": {
+          "type": "item",
+          "settings": {
+            "select_product": "maidesite-t4-pro-plus-vierbeinige-elliptische-saule-elektrisch-hohenverstellbares-gestell"
+          }
+        }
+      },
+      "block_order": [
+        "item_3yir6V",
+        "item_gyexDX",
+        "item_EEUjdz",
+        "item_AHnCzP",
+        "item_z9X7dd"
+      ],
+      "name": "product_carousel",
+      "settings": {
+        "title": "Spezielle Rabatte Bei GroßEinkäUfen"
       }
     },
     "img_with_text_box_simplicity_qrzG6W": {
@@ -145,14 +237,14 @@
         "swiper_EnDd8n",
         "swiper_4kYG3r"
       ],
+      "custom_css": [
+        ".maidesite_swiper_section {background-color: #e2ded6;}"
+      ],
       "name": "maidesite swiper",
       "settings": {
         "title": "<p>Erfahrungen Unserer GeschäFtskunden Mit<br/> Maidesite</p>",
         "text": ""
-      },
-      "custom_css": [
-        ".maidesite_swiper_section{background-color: #E2DED6;}"
-      ],
+      }
     },
     "img_with_text_tab_emEWU8": {
       "type": "img-with-text-tab",
@@ -161,6 +253,7 @@
           "type": "tab",
           "settings": {
             "tabname": "",
+            "sub_title": "",
             "title": "<p>Lokale Logistik und Lagerhaltung</p>",
             "description": "<p>Mit unseren regionalen Lagern und einem effizienten Logistiknetzwerk gewährleisten wir eine schnelle und zuverlässige Lieferung.</p>",
             "file_type": "image",
@@ -174,6 +267,7 @@
           "type": "tab",
           "settings": {
             "tabname": "",
+            "sub_title": "",
             "title": "<p>Lokale Logistik und Lagerhaltung</p>",
             "description": "<p>Mit unseren regionalen Lagern und einem effizienten Logistiknetzwerk gewährleisten wir eine schnelle und zuverlässige Lieferung.</p>",
             "file_type": "image",
@@ -182,69 +276,23 @@
             "btn_text": "Jetzt unverbindlich beraten lassen",
             "link": "#"
           }
-        },
+        }
       },
       "block_order": [
         "tab_fiwUXL",
         "tab_AUd88N"
       ],
+      "custom_css": [
+        ".img_with_text_tab .img_with_text_tab_title {text-align: left; margin-bottom: 6rem;}"
+      ],
       "name": "img with text tab",
       "settings": {
         "spec_id": "",
+        "description": "",
         "title": "<p>Erstklassige Produkte & Erstklassiger Service</p>",
-        "show_tab_head":false,
-        "layout":"image-right"
-      },
-      "custom_css": [
-        ".img_with_text_tab .img_with_text_tab_title {text-align: left;margin-bottom:6rem}"
-      ],
-    },
-    "b2b_spezielle_rabatte": {
-      "type": "b2b-spezielle-rabatte",
-      "name": "img with text tab",
-      "settings": {
-        "title": "Spezielle Rabatte Bei GroßEinkäUfen",
-      },
-      "blocks": {
-        "item_fiwUXL": {
-          "type": "item",
-          "settings": {
-            "title": "11-30 Menschen",
-            "sub_title": "Bis zu 15%",
-            "description": "<ul><li> Immer auf Lager</li><li>Flexibler Versand</li><li> Kostenloser Versand</li><li>Zusatzliches kostenloses Zubehor</li></ul>",
-            "image": "shopify://shop_images/b2b_03.webp",
-            "btn_text": "Jetzt angebot anfordern",
-            "link": "#"
-          }
-        },
-        "item_AUd88N": {
-          "type": "item",
-          "settings": {
-            "title": "31-50 Menschen",
-            "sub_title": "Bis zu 20%",
-            "description": "<ul><li> Mehrprodukt-Rabatte</li><li> Immer verfugbar</li><li> Flexible und kostenlose</li><li>Lieferung</li><li>Zusatzliche kostenlose Ergonomischer Stuhl</li></ul>",
-            "image": "shopify://shop_images/b2b_04.webp",
-            "btn_text": "Jetzt angebot anfordern",
-            "link": "#"
-          }
-        },
-        "item_AUd88C": {
-          "type": "item",
-          "settings": {
-            "title": ">50 Menschen",
-            "sub_title": "Bis zu 25%",
-            "description": "<ul><li> Mehrprodukt-Rabatte</li><li>Immer verfugbar</li><li>Flexible und kostenlose</li><li>Lieferung</li><li>Zusatzliche kostenlose Rahmen</li></ul>",
-            "image": "shopify://shop_images/b2b_05.webp",
-            "btn_text": "Jetzt angebot anfordern",
-            "link": "#"
-          }
-        },
-      },
-      "block_order": [
-        "item_fiwUXL",
-        "item_AUd88N",
-        "item_AUd88C"
-      ],
+        "show_tab_head": false,
+        "layout": "image-right"
+      }
     },
     "polka_dot_swiper_4yRfwn": {
       "type": "polka-dot-swiper",
@@ -294,107 +342,74 @@
         "swiper_RR3AVA",
         "swiper_xwgRwF"
       ],
+      "custom_css": [
+        ".polka_dot_swiper {padding-bottom: 6rem;}"
+      ],
       "name": "polka dot swiper",
       "settings": {
         "title": "<p>Ihr BüRo, Neu Definiert</p>",
-        "text": ""
-      },
-      "custom_css": [
-        ".polka_dot_swiper{padding-bottom:6rem}"
-      ],
+        "text": "",
+        "show_info": true
+      }
     },
-    "marquee_images":{
-      "type":"marquee-images",
-      "name": "marquee_images",
-      "settings": {
-        "title": "Kundenstimmen Zu Maidesite"
-      },
-      "blocks":{
+    "marquee_images": {
+      "type": "marquee-images",
+      "blocks": {
         "image_1": {
           "type": "image",
-          "settings": {"image": "shopify://shop_images/maidesite-logo-1.webp"}
+          "settings": {
+            "image": "shopify://shop_images/maidesite-logo-1.webp",
+            "title": ""
+          }
         },
         "image_2": {
           "type": "image",
-          "settings": {"image": "shopify://shop_images/maidesite-logo-2.webp"}
+          "settings": {
+            "image": "shopify://shop_images/maidesite-logo-2.webp",
+            "title": ""
+          }
         },
         "image_3": {
           "type": "image",
-          "settings": {"image": "shopify://shop_images/maidesite-logo-3.webp"}
+          "settings": {
+            "image": "shopify://shop_images/maidesite-logo-3.webp",
+            "title": ""
+          }
         },
         "image_4": {
           "type": "image",
-          "settings": {"image": "shopify://shop_images/maidesite-logo-4.webp"}
-        },
+          "settings": {
+            "image": "shopify://shop_images/maidesite-logo-4.webp",
+            "title": ""
+          }
+        }
       },
       "block_order": [
         "image_1",
         "image_2",
         "image_3",
         "image_4"
-      ]
-    },
-    "product_carousel":{
-      "type": "product-carousel",
-      "name": "product_carousel",
+      ],
+      "name": "marquee_images",
       "settings": {
-        "title": "Spezielle Rabatte Bei GroßEinkäUfen"
-      },
-      "blocks": {
-        "item_3yir6V": {
-          "type": "item",
-          "settings": {
-            "select_product": "maidesite-to1-pro-elektrisch-hohenverstellbarer-schreibtisch"
-          }
-        },
-        "item_gyexDX": {
-          "type": "item",
-          "settings": {
-            "select_product": "maidesite-th2-pro-plus-tischgestell-elektrisch-hohenverstellbar"
-          }
-        },
-        "item_AHnCzP": {
-          "type": "item",
-          "settings": {
-            "select_product": "maidesite-to1-pro-elektrisch-hohenverstellbarer-schreibtisch"
-          }
-        },
-        "item_EEUjdz": {
-          "type": "item",
-          "settings": {
-            "select_product": "maidesite-th2-pro-plus-tischgestell-elektrisch-hohenverstellbar"
-          }
-        },
-        "item_z9X7dd": {
-          "type": "item",
-          "settings": {
-            "select_product": "maidesite-to1-pro-elektrisch-hohenverstellbarer-schreibtisch"
-          }
-        }
-      },
-      "block_order": [
-        "item_3yir6V",
-        "item_gyexDX",
-        "item_AHnCzP",
-        "item_EEUjdz",
-        "item_z9X7dd"
-      ]
+        "title": "Kundenstimmen Zu Maidesite"
+      }
     },
     "contact_form_two": {
       "type": "contact-form-two",
-      "name": "contact_form_two",
-      "settings": {
-        "image": "",
-        "title": "Kostenlose Beratung Mit Catarina – Schnelle Antwort",
-        "desc":"Jetzt Termin buchen und innerhalb von 24 Stunden Rückmeldung erhalten.",
-        "text_content":"<ul><li> Aus einer Hand -Planung bis zur Montage</li><li>Passgenaues Konzept fur Ihr Buro</li><li>10.000 begeisterte Firmenkunden</li></ul>"
-      },
       "blocks": {
         "group_01": {
           "type": "group",
           "settings": {
             "label": "Bestellung",
             "key": "bestellung"
+          }
+        },
+        "group_02": {
+          "type": "group",
+          "settings": {
+            "label": "Produktinfo",
+            "key": "produktinfo"
           }
         },
         "option_01": {
@@ -413,13 +428,6 @@
             "group_key": "bestellung"
           }
         },
-        "group_02": {
-          "type": "group",
-          "settings": {
-            "label": "Produktinfo",
-            "key": "produktinfo"
-          }
-        },
         "option_03": {
           "type": "option",
           "settings": {
@@ -427,7 +435,7 @@
             "value": "garantie",
             "group_key": "produktinfo"
           }
-        },
+        }
       },
       "block_order": [
         "group_01",
@@ -436,20 +444,24 @@
         "option_02",
         "option_03"
       ],
-    },
-
+      "name": "contact_form_two",
+      "settings": {
+        "title": "Kostenlose Beratung Mit Catarina – Schnelle Antwort",
+        "desc": "Jetzt Termin buchen und innerhalb von 24 Stunden Rückmeldung erhalten.",
+        "text_content": "<ul><li> Aus einer Hand -Planung bis zur Montage</li><li>Passgenaues Konzept fur Ihr Buro</li><li>10.000 begeisterte Firmenkunden</li></ul>"
+      }
+    }
   },
   "order": [
     "breadcrumbs",
     "contact_form_one",
+    "b2b_spezielle_rabatte",
+    "product_carousel",
     "img_with_text_box_simplicity_qrzG6W",
     "maidesite_swiper_QhkQG8",
     "img_with_text_tab_emEWU8",
-    "b2b_spezielle_rabatte",
     "polka_dot_swiper_4yRfwn",
     "marquee_images",
-    "product_carousel", 
     "contact_form_two"
-
   ]
 }
