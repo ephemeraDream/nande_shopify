@@ -5,7 +5,6 @@
  * This file may be updated by the Shopify admin theme editor
  * or related systems. Please exercise caution as any changes
  * made to this file may be overwritten.
- * 专题页-详情页
  * ------------------------------------------------------------
  */
 {
@@ -27,18 +26,18 @@
             "anchor_name": "topic_text_img"
           }
         },
-        "item_Vt9rJN": {
-          "type": "item",
-          "settings": {
-            "title": "Kundenbewertungen",
-            "anchor_name": "img_with_text_simplicity"
-          }
-        },
         "item_RrNzfE": {
           "type": "item",
           "settings": {
             "title": "Technische Daten",
             "anchor_name": "Technische_Daten"
+          }
+        },
+        "item_Vt9rJN": {
+          "type": "item",
+          "settings": {
+            "title": "Kundenbewertungen",
+            "anchor_name": "img_with_text_simplicity"
           }
         }
       },
@@ -48,22 +47,22 @@
         "item_RrNzfE",
         "item_Vt9rJN"
       ],
-      "name": "product anchor bar",
-      "settings": {},
       "custom_css": [
-        ".product_anchor_bar .product_anchor_bar_left_item,.product_anchor_bar .product_anchor_bar_btn{font-size: 2rem;}",
-        ".product_anchor_bar{border-top: 1px solid #D8D8D8;}",
-        ".product_anchor_bar_section{padding-top:7px}"
+        ".product_anchor_bar .product_anchor_bar_left_item,.product_anchor_bar .product_anchor_bar_btn {font-size: 2rem;}",
+        ".product_anchor_bar {border-top: 1px solid #d8d8d8;}",
+        ".product_anchor_bar_section {padding-top: 7px;}"
       ],
+      "name": "product anchor bar",
+      "settings": {}
     },
     "breadcrumbs": {
       "type": "breadcrumbs",
-      "settings": {
-        "custom_breadcrumb": "",
-      },
       "custom_css": [
-        ".breadcrumb-con{top: 60px;}"
+        ".breadcrumb-con {top: 60px;}"
       ],
+      "settings": {
+        "custom_breadcrumb": ""
+      }
     },
     "banner_topic": {
       "type": "banner",
@@ -71,6 +70,7 @@
         "banner_item_f7J8AA": {
           "type": "banner_item",
           "settings": {
+            "sub_title": "",
             "title": "<p>Maidesite Spaces</p>",
             "text": "<p>Lassen Sie sich inspirieren und gestalten Sie Ihren perfekten Maidesite-Arbeitsplatz <br/>mit unseren sorgfältig kuratierten Räumen.</p>",
             "btn_text": "En savoir plus",
@@ -84,6 +84,7 @@
         "banner_item_ckwd4B": {
           "type": "banner_item",
           "settings": {
+            "sub_title": "",
             "title": "<p>Nahtloses Design Trifft Auf FunktionalitäT</p>",
             "text": "<p>Ein durchdachtes, einheitliches Design, das Ästhetik und Funktion kombiniert – für einen </p><p>modernen Arbeitsplatz, der sich nahtlos in Ihr Zuhause einfügt</p>",
             "btn_text": "En savoir plus",
@@ -104,10 +105,6 @@
     },
     "tabs_topic": {
       "type": "tabs-topic",
-      "settings": {
-        "spec_id": "tabs_topic",
-        "title": "Yoga & Ergonomie Im Perfekten Einklang",
-      },
       "blocks": {
         "tab1": {
           "type": "tab",
@@ -213,94 +210,105 @@
         }
       },
       "block_order": [
-        "tab1", "slide1_1", "slide1_2",
-        "tab2", "slide2_1", "slide2_2",
-        "tab3", "slide3_1", "slide3_2"
-      ]
-    },
-    "topic_text_img":{
-      "type": "topic-text-img",
+        "tab1",
+        "slide1_1",
+        "slide1_2",
+        "tab2",
+        "slide2_1",
+        "slide2_2",
+        "tab3",
+        "slide3_1",
+        "slide3_2"
+      ],
       "settings": {
-        "spec_id": "topic_text_img",
-        "title": "Nahtloses Design Trifft Auf FunktionalitäT",
-      },
+        "title": "Yoga & Ergonomie Im Perfekten Einklang",
+        "spec_id": "tabs_topic"
+      }
+    },
+    "topic_text_img": {
+      "type": "topic-text-img",
       "blocks": {
         "card_1": {
           "type": "card",
           "settings": {
+            "box_type": "box_big",
             "image": "shopify://shop_images/polka_dot_swiper-1.webp",
             "title": "GELD ZURÜCK GARANTIE",
-            "title_position": "bottom",
-            "box_type": "box_big"
+            "title_position": "bottom"
           }
         },
         "card_2": {
           "type": "card",
           "settings": {
-            "image": "",
+            "box_type": "box_big",
             "title": "GELD ZURÜCK GARANTIE",
-            "title_position": "bottom",
-            "box_type": "box_big"
+            "title_position": "bottom"
           }
         },
         "card_3": {
           "type": "card",
           "settings": {
+            "box_type": "box_small",
             "image": "shopify://shop_images/polka_dot_swiper-1.webp",
             "title": "GELD ZURÜCK GARANTIE",
-            "title_position": "top",
-            "box_type": "box_small"
+            "title_position": "top"
           }
         },
         "card_4": {
           "type": "card",
           "settings": {
-            "image": "",
+            "box_type": "box_small",
             "title": "GELD ZURÜCK GARANTIE",
-            "title_position": "top",
-            "box_type": "box_small"
+            "title_position": "top"
           }
         },
         "card_5": {
           "type": "card",
           "settings": {
-            "image": "",
+            "box_type": "box_small",
             "title": "GELD ZURÜCK GARANTIE",
-            "title_position": "top",
-            "box_type": "box_small"
+            "title_position": "top"
           }
         },
         "card_6": {
           "type": "card",
           "settings": {
-            "image": "",
+            "box_type": "box_small",
             "title": "GELD ZURÜCK GARANTIE",
-            "title_position": "top",
-            "box_type": "box_small"
+            "title_position": "top"
           }
         },
         "card_7": {
           "type": "card",
           "settings": {
-            "image": "",
+            "box_type": "box_middle",
             "title": "GELD ZURÜCK GARANTIE",
-            "title_position": "bottom",
-            "box_type": "box_middle"
+            "title_position": "bottom"
           }
         }
       },
       "block_order": [
-        "card_1", "card_2", "card_3",  "card_4", "card_5", "card_6", "card_7"
-      ]
+        "card_1",
+        "card_2",
+        "card_3",
+        "card_4",
+        "card_5",
+        "card_6",
+        "card_7"
+      ],
+      "settings": {
+        "title": "Nahtloses Design Trifft Auf FunktionalitäT",
+        "spec_id": "topic_text_img"
+      }
     },
     "img_with_text_simplicity_R8thEq": {
       "type": "img-with-text-simplicity",
-      "custom_css": [
-        ".img_with_text_simplicity_section {background-color: #e2ded6; padding-top: 12rem;}",
-        ".img_with_text_simplicity_filebox {max-height: 48rem;height:auto}"
-      ],
+      "custom_css": [],
       "name": "img with text simplicity",
       "settings": {
+        "spec_id": "img_with_text_simplicity",
+        "header_title": "",
+        "header_content": "",
         "title": "<p>Ordnung Mit Cleverem Kabelmanagement</p>",
         "sub_title": "",
         "description": "<p>Der ideale Tisch für Ihre Haustiere – stabil,<br/> komfortabel und perfekt für ihren Bedarf.</p>",
@@ -308,21 +316,24 @@
         "file_type": "image",
         "file_image": "shopify://shop_images/product_info_demo_img_1.webp",
         "video_url": "",
+        "btn_text": "En savoir plus",
         "link_url": "#",
-        "btn_text":"En savoir plus",
-        "spec_id": "img_with_text_simplicity",
+        "padding_top": 120,
+        "padding_bottom": 0,
+        "background_color": "#e2ded6"
       }
     },
     "img_with_text_simplicity_R8thEa": {
       "type": "img-with-text-simplicity",
       "custom_css": [
-        ".img_with_text_simplicity_section {background-color: #e2ded6; padding-top: 6rem;}",
-        ".img_with_text_simplicity_filebox {max-height: 48rem;height:auto}",
         ".img_with_text_simplicity_info {padding-left: 3rem;}",
-        "@media screen and (max-width: 768px) {.img_with_text_simplicity_info {padding-left: 0rem;}}"
+        "@media screen and (max-width: 768px) {.img_with_text_simplicity_info {padding-left: 0rem; }}"
       ],
       "name": "img with text simplicity",
       "settings": {
+        "spec_id": "",
+        "header_title": "",
+        "header_content": "",
         "title": "<p>Ordnung Mit Cleverem Kabelmanagement</p>",
         "sub_title": "",
         "description": "<p>Der ideale Tisch für Ihre Haustiere – stabil,<br/> komfortabel und perfekt für ihren Bedarf.</p>",
@@ -330,18 +341,21 @@
         "file_type": "image",
         "file_image": "shopify://shop_images/product_info_demo_img_1.webp",
         "video_url": "",
+        "btn_text": "En savoir plus",
         "link_url": "#",
-        "btn_text":"En savoir plus"
+        "padding_top": 60,
+        "padding_bottom": 0,
+        "background_color": "#e2ded6"
       }
     },
     "img_with_text_simplicity_R8taEq": {
       "type": "img-with-text-simplicity",
-      "custom_css": [
-        ".img_with_text_simplicity_section {background-color: #e2ded6; padding-top: 6rem; padding-bottom: 12rem;}",
-        ".img_with_text_simplicity_filebox {max-height: 48rem;height:auto}"
-      ],
+      "custom_css": [],
       "name": "img with text simplicity",
       "settings": {
+        "spec_id": "",
+        "header_title": "",
+        "header_content": "",
         "title": "<p>Ordnung Mit Cleverem Kabelmanagement</p>",
         "sub_title": "",
         "description": "<p>Der ideale Tisch für Ihre Haustiere – stabil,<br/> komfortabel und perfekt für ihren Bedarf.</p>",
@@ -349,74 +363,82 @@
         "file_type": "image",
         "file_image": "shopify://shop_images/product_info_demo_img_1.webp",
         "video_url": "",
+        "btn_text": "En savoir plus",
         "link_url": "#",
-        "btn_text":"En savoir plus"
+        "padding_top": 60,
+        "padding_bottom": 120,
+        "background_color": "#e2ded6"
       }
     },
     "accordion_gallery": {
       "type": "accordion-gallery",
-      "settings": {
-        "title": "Nahtloses Design Trifft Auf FunktionalitäT",
-        "spec_id": "accordion_gallery",
-      },
       "blocks": {
         "item_1": {
           "type": "item",
           "settings": {
             "image": "shopify://shop_images/polka_dot_swiper-1.webp",
-            "title": "Eleganter Arbeitsbereich",
+            "title": "Eleganter Arbeitsbereich"
           }
         },
         "item_2": {
           "type": "item",
           "settings": {
             "image": "shopify://shop_images/polka_dot_swiper-1.webp",
-            "title": "Eleganter Arbeitsbereich",
+            "title": "Eleganter Arbeitsbereich"
           }
         },
         "item_3": {
           "type": "item",
           "settings": {
             "image": "shopify://shop_images/polka_dot_swiper-1.webp",
-            "title": "Eleganter Arbeitsbereich",
+            "title": "Eleganter Arbeitsbereich"
           }
         }
       },
       "block_order": [
-        "item_1", "item_2", "item_3",
-      ]
+        "item_1",
+        "item_2",
+        "item_3"
+      ],
+      "settings": {
+        "spec_id": "accordion_gallery",
+        "title": "Nahtloses Design Trifft Auf FunktionalitäT"
+      }
     },
     "accordion_gallery_2": {
       "type": "accordion-gallery",
-      "settings": {
-        "title": "Nahtloses Design Trifft Auf FunktionalitäT",
-      },
       "blocks": {
         "item_1": {
           "type": "item",
           "settings": {
             "image": "shopify://shop_images/polka_dot_swiper-1.webp",
-            "title": "Eleganter Arbeitsbereich",
+            "title": "Eleganter Arbeitsbereich"
           }
         },
         "item_2": {
           "type": "item",
           "settings": {
             "image": "shopify://shop_images/polka_dot_swiper-1.webp",
-            "title": "Eleganter Arbeitsbereich",
+            "title": "Eleganter Arbeitsbereich"
           }
         },
         "item_3": {
           "type": "item",
           "settings": {
             "image": "shopify://shop_images/polka_dot_swiper-1.webp",
-            "title": "Eleganter Arbeitsbereich",
+            "title": "Eleganter Arbeitsbereich"
           }
         }
       },
       "block_order": [
-        "item_1", "item_2", "item_3",
-      ]
+        "item_1",
+        "item_2",
+        "item_3"
+      ],
+      "settings": {
+        "spec_id": "",
+        "title": "Nahtloses Design Trifft Auf FunktionalitäT"
+      }
     },
     "img_with_text_tab_emEWU8": {
       "type": "img-with-text-tab",
@@ -425,44 +447,56 @@
           "type": "tab",
           "settings": {
             "tabname": "Sitzende Erinnerung",
+            "sub_title": "",
             "title": "<p>Fortschrittliche Technologie</p>",
             "description": "<p>Perfekt für zwei Familienmitglieder, um ihre individuelle Körpergröße anzupassen oder um zwei neue Höheneinstellungen <br/>für vielfältigere Körperhaltungen zu ermöglichen.Der Standard-USB-Ladeanschluss lädt deine digitalen Geräte zuverlässig auf, <br/>genau dann, wenn du es brauchst.</p>",
             "file_type": "image",
             "file_image": "shopify://shop_images/topic-detail01.webp",
-            "video_url": ""
+            "video_url": "",
+            "btn_text": "",
+            "link": ""
           }
         },
         "tab_AUd88N": {
           "type": "tab",
           "settings": {
             "tabname": "Sitzende Erinnerung",
+            "sub_title": "",
             "title": "<p>Fortschrittliche Technologie</p>",
             "description": "<p>Perfekt für zwei Familienmitglieder, um ihre individuelle Körpergröße anzupassen oder um zwei neue Höheneinstellungen <br/>für vielfältigere Körperhaltungen zu ermöglichen.Der Standard-USB-Ladeanschluss lädt deine digitalen Geräte zuverlässig auf, <br/>genau dann, wenn du es brauchst.</p>",
             "file_type": "image",
             "file_image": "shopify://shop_images/topic-detail01.webp",
-            "video_url": ""
+            "video_url": "",
+            "btn_text": "",
+            "link": ""
           }
         },
         "tab_JyxzQm": {
           "type": "tab",
           "settings": {
             "tabname": "Sitzende Erinnerung",
+            "sub_title": "",
             "title": "<p>Fortschrittliche Technologie</p>",
             "description": "<p>Perfekt für zwei Familienmitglieder, um ihre individuelle Körpergröße anzupassen oder um zwei neue Höheneinstellungen <br/>für vielfältigere Körperhaltungen zu ermöglichen.Der Standard-USB-Ladeanschluss lädt deine digitalen Geräte zuverlässig auf, <br/>genau dann, wenn du es brauchst.</p>",
             "file_type": "image",
             "file_image": "shopify://shop_images/topic-detail01.webp",
-            "video_url": ""
+            "video_url": "",
+            "btn_text": "",
+            "link": ""
           }
         },
         "tab_LmGatL": {
           "type": "tab",
           "settings": {
             "tabname": "Sitzende Erinnerung",
+            "sub_title": "",
             "title": "<p>Fortschrittliche Technologie</p>",
             "description": "<p>Perfekt für zwei Familienmitglieder, um ihre individuelle Körpergröße anzupassen oder um zwei neue Höheneinstellungen <br/>für vielfältigere Körperhaltungen zu ermöglichen.Der Standard-USB-Ladeanschluss lädt deine digitalen Geräte zuverlässig auf, <br/>genau dann, wenn du es brauchst.</p>",
             "file_type": "image",
             "file_image": "shopify://shop_images/topic-detail01.webp",
-            "video_url": ""
+            "video_url": "",
+            "btn_text": "",
+            "link": ""
           }
         }
       },
@@ -472,14 +506,17 @@
         "tab_JyxzQm",
         "tab_LmGatL"
       ],
+      "custom_css": [
+        ".img_with_text_tab_section {background-color: #e2ded6;}"
+      ],
       "name": "img with text tab",
       "settings": {
         "spec_id": "img_with_text_tab",
-        "title": "<p>Title Title</p>"
-      },
-      "custom_css": [
-        ".img_with_text_tab_section {background-color: #E2DED6;}"
-      ],
+        "description": "",
+        "title": "<p>Title Title</p>",
+        "show_tab_head": true,
+        "layout": "image-left"
+      }
     },
     "technical_data_L3gXUm": {
       "type": "technical-data",
@@ -487,7 +524,7 @@
       "settings": {
         "spec_id": "Technische_Daten",
         "title": "<p>Technische Daten Des HöHenverstellbaren </p><p>Schreibtisches-T2 Pro Plus</p>",
-        "select_product":"maidesite-tischgestell-elektrisch-hohenverstellbar-t2-pro-plus"
+        "select_product": "maidesite-tischgestell-elektrisch-hohenverstellbar-t2-pro-plus"
       }
     },
     "image_big_polka_dot": {
@@ -514,12 +551,12 @@
         "product_block_1",
         "product_block_2"
       ],
+      "custom_css": [],
       "settings": {
-        "spec_id": "image_big_polka_dot",
         "title": "<p>Die Ideale Wahl FüR Yoga-Enthusiasten, Die Komfort<br/> Und QualitäT SchäTzen.</p>",
         "image": "shopify://shop_images/topic-detail02.webp",
-      },
-      "custom_css": [],
+        "spec_id": "image_big_polka_dot"
+      }
     },
     "bundle_simple_WFrNiX": {
       "type": "bundle-simple",
@@ -537,7 +574,9 @@
         "bundle_title": "<p>Collocation</p>",
         "bundle_text": "<p>Premium-GestellEleganter Schreibtisch mit ovalen Beinen</p>",
         "bundle_link_text": "Add to bundle",
-        "color_label": "Farbe Gestel,Farbe Tischplatte,Farbe"
+        "color_label": "Farbe Gestel,Farbe Tischplatte,Farbe",
+        "padding_top": 120,
+        "padding_bottom": 0
       }
     },
     "faq_simple_kxTbhc": {
@@ -635,10 +674,13 @@
         "heading": "<p>FAQ</p>",
         "text": "<p>Häufig gestellte Fragen</p>",
         "show_btn": true,
-        "learn_more": true
+        "learn_more": true,
+        "contact_us": false,
+        "padding_top": 120,
+        "padding_bottom": 120,
+        "background_color": "rgba(0,0,0,0)"
       }
-    },
-    
+    }
   },
   "order": [
     "product_anchor_bar_atcVF4",
