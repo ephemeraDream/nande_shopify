@@ -77,4 +77,7 @@
   .product_anchor_bar .product_anchor_bar_btn {
     font-size: 1.8rem;
   }
+  .product_anchor_bar .product_anchor_bar_left {
+    overflow-x: auto;
+  }
 }

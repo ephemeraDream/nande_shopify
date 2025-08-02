@@ -12,7 +12,7 @@
     "breadcrumbs": {
       "type": "breadcrumbs",
       "custom_css": [
-        ".breadcrumb-con { top: 0; z-index: 7;}",
+        ".breadcrumb-con { top: 0; z-index: 7;position: relative;}",
         ".breadcrumb,.breadcrumb a,.breadcrumb span {color: #7f7e75;}"
       ],
       "settings": {
@@ -143,7 +143,7 @@
         "cover_image": "shopify://shop_images/product_info_video_cover.webp",
         "video_url": "",
         "url_upload": "shopify://files/videos/TO1-Pro-anti-collision_2b6db0d3-82b5-44c0-876a-e5095807f303.mp4",
-        "title": "<p>Alle Produkte Im üBerblick</p>",
+        "title": "Alle Produkte Im üBerblick",
         "description": "",
         "padding_top": 120,
         "padding_bottom": 0,
