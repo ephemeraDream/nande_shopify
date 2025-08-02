@@ -438,7 +438,7 @@
       "cancel": "Abbrechen",
       "create_account": "Konto erstellen",
       "email": "E-Mail",
-      "forgot_password": "Hast du dein Passwort vergessen?",
+      "forgot_password": "Passwort Vergessen?",
       "guest_continue": "Fortfahren",
       "guest_title": "Als Gast fortsetzen",
       "password": "Passwort",
@@ -585,6 +585,13 @@
     "shopping_cart": "Shopping Cart",
     "shopping_cart_empty": "Your shopping cart is empty",
     "continue_shopping": "Continue Shopping",
-    "you_might_also_like": "Das gefällt dir vielleicht auch"
+    "you_might_also_like": "Das gefällt dir vielleicht auch",
+    "start_now": "Jetzt Mit Maidesite Starten",
+    "receive": "Erhalten Sie",
+    "discount_on_your_order": "Rabatt auf Ihre Bestellung",
+    "login": "Anmelden",
+    "register": "Registrieren",
+    "overview_account": "ÜBERSICHT",
+    "my_order": "MEINE BESTELLUNGEN"
   }
 }

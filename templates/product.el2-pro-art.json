@@ -68,7 +68,7 @@
           "settings": {
             "title": "<p>Langlebigkeit mit Garantie</p>",
             "icon": "<svg xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" version=\"1.1\" width=\"18.916015625\" height=\"20\" viewbox=\"0 0 18.916015625 20\" xmlns:xlink=\"http://www.w3.org/1999/xlink\"><g><g><path d=\"M9.313555616455078,4.56782C10.574465616455079,4.56783,11.596635616455078,3.54528,11.596635616455078,2.28391C11.596635616455078,1.02254,10.574475616455079,0,9.313565616455078,0C8.052655616455079,0,7.030486399855078,1.02254,7.030475616455078,2.28391C7.031931376455078,3.54467,8.053245616455078,4.56636,9.313555616455078,4.56782ZM9.313555616455078,1.36177C9.822705616455078,1.36153,10.235635616455077,1.77428,10.235795616455079,2.28362C10.235875616455079,2.79304,9.823155616455079,3.20605,9.313995616455077,3.20605C8.804925616455078,3.20613,8.392195616455078,2.79325,8.392185616455079,2.28391C8.392665616455078,1.77499,8.804825616455078,1.36249,9.313555616455078,1.36177Z\" fill=\"#1F1F1F\" fill-opacity=\"1\"></path></g><g><path d=\"M6.882571625671387,9.230417852783203C6.882571625671387,7.8872978527832025,7.970991625671386,6.798487852783203,9.313621625671386,6.798487852783203C10.656251625671388,6.798487852783203,11.744671625671387,7.8872978527832025,11.744671625671387,9.230417852783203L11.744671625671387,10.008507852783204L13.106391625671387,10.008507852783204L13.106391625671387,9.230417852783203C13.106391625671387,7.134967852783204,11.408311625671388,5.436267852783203,9.313621625671386,5.436267852783203C7.218931625671386,5.436267852783203,5.520850842271387,7.134967852783204,5.520861625671387,9.230417852783203L5.520861625671387,10.008507852783204L6.882581625671387,10.008507852783204L6.882571625671387,9.230417852783203Z\" fill=\"#1F1F1F\" fill-opacity=\"1\"></path></g><g><path d=\"M18.4521,10.506452169616699C17.7204,9.5831641696167,16.3798,9.4262521696167,15.4548,10.1556251696167L12.5061,12.4863691696167L5.18426,11.835529169616699C4.62573,11.7848391696167,4.07015,11.959869169616699,3.64145,12.3215691696167L0.346459,15.0795791696167C-0.0631582,15.4231491696167,-0.117312,16.033659169616698,0.225437,16.4440091696167L2.90913,19.6527091696167C3.07361,19.8503191696167,3.31025,19.9739191696167,3.56635,19.9960191696167Q3.61052,20.0000191696167,3.65469,20.0000191696167C3.88096,19.9999191696167,4.09992,19.919919169616698,4.27305,19.7742191696167L5.19617,19.0014291696167L10.0587,19.433999169616698C10.6172,19.4845391696167,11.1727,19.3095291696167,11.6015,18.947969169616698L18.1473,13.4690491696167C19.0384,12.7301591696167,19.1737,11.4134891696167,18.4516,10.5086661696167M17.2741,12.4253991696167L10.7296,17.9043091696167C10.577,18.032519169616698,10.3795,18.0943991696167,10.1811,18.076189169616697L4.75538,17.595019169616698L3.70107,18.4787191696167L1.52178,15.8718091696167L4.51509,13.3660891696167C4.66759,13.237639169616699,4.86514,13.1755791696167,5.06367,13.193769169616699L10.9505,13.715599169616699L9.58699,14.7936991696167L6.417,14.5117991696167L6.29642,15.868279169616699L10.0066,16.1983291696167L16.2993,11.2244491696167C16.6308,10.955419169616698,17.1176,11.0060591696167,17.3867,11.3375791696167C17.6558,11.669099169616699,17.6054,12.156049169616699,17.2741,12.4253991696167Z\" fill=\"#1F1F1F\" fill-opacity=\"1\"></path></g></g></svg>",
-            "content": "<p>Alle höhenverstellbaren Schreibtische und Rahmen von Maidesite sind durch eine 10-jährige Garantie abgedeckt.</p>"
+            "content": "<p>Alle <a href=\"/collections/hohenverstellbarer-schreibtisch\" title=\"Höhenverstellbarer Schreibtisch\">höhenverstellbaren Schreibtische</a> und Gestell von Maidesite sind durch eine 10-jährige Garantie abgedeckt.</p>"
           }
         },
         "payment_methods_mnXJ7D": {
@@ -140,11 +140,11 @@
       "type": "video",
       "name": "t:sections.video.presets.name",
       "settings": {
-        "heading": "Maidesite mobiler Schreibtisch SC2 Pro Ausrüstung",
+        "heading": "Maidesite Sleek Design Höhenverstellbarer Schreibtisch EL2 Pro Art",
         "heading_size": "h1",
         "enable_video_looping": false,
-        "video_url": "https://www.youtube.com/watch?v=DZkoqFrUY28&t=2s",
-        "cover_image": "shopify://shop_images/SC2_-_1000x750_a74b68a5-1420-4b1b-a426-a8d802d0c7da.jpg",
+        "video_url": "https://www.youtube.com/watch?v=r0ewO4Almgo",
+        "cover_image": "shopify://shop_images/Maidesite-Doppelmotor-Stehpultgestell-schwarz-im-Buro-EL2-Pro-Art.jpg",
         "description": "",
         "full_width": false,
         "color_scheme": "",
@@ -155,43 +155,33 @@
     "img_with_text_box_simplicity_qrzG6W": {
       "type": "img-with-text-box-simplicity",
       "blocks": {
-        "file_with_text_JJXCp8": {
-          "type": "file_with_text",
-          "settings": {
-            "title": "<p>Extrem stabiler</p>",
-            "description": "<p>Sie ist auch in der höchsten Höhe von ausgezeichneter Stabilität.</p>",
-            "file_type": "image",
-            "file_image": "shopify://shop_images/01af9531-9158-4ede-87be-26818b919ab6.__CR0_0_1464_600_PT0_SX1464_V1____2.jpg",
-            "video_url": ""
-          }
-        },
         "file_with_text_Q8tJKk": {
           "type": "file_with_text",
           "settings": {
-            "title": "<p>Super Duale Motoren</p>",
-            "description": "<p>Maidesite Duale Motorensystem ist besser als andere Produkt mit nur einem Motor.</p>",
+            "title": "<p>Passt auf 110–200 cm Platten</p>",
+            "description": "<ul><li>Unterstützt Tischplatten in den Größen 120x60, 140x70, 160x80, 180x80 und 200x80 cm.</li></ul>",
             "file_type": "image",
-            "file_image": "shopify://shop_images/3_6a4cb3e2-d540-4e0f-b72b-3fdb2c32902d.png",
-            "video_url": ""
-          }
-        },
-        "file_with_text_McHwGa": {
-          "type": "file_with_text",
-          "settings": {
-            "title": "<p>Max. Verstellhöhe</p>",
-            "description": "<p>Der 3-stufige tischgestell höhenverstellbar, der über den größten Höhenverstellbereich von 62-125 cm auf dem Markt verfügt<br/><br/></p>",
-            "file_type": "image",
-            "file_image": "shopify://shop_images/P4-1_4a6542b6-3298-49c3-8449-41f2de33e3a3.jpg",
+            "file_image": "shopify://shop_images/Maidesite-Hohenverstellbarer-Schreibtisch-EL2-Pro-Art-mit-Breitenbereich-1000-1800mm.jpg",
             "video_url": ""
           }
         },
         "file_with_text_f9yPAD": {
           "type": "file_with_text",
           "settings": {
-            "title": "<p>Belastbar bis 160 kg</p>",
-            "description": "<p>Deren Material 20 % mehr als andere Produkte, stark und stabil. Der Traglast bis zu 160 kg.</p>",
+            "title": "<p>Belastbar bis 180 kg</p>",
+            "description": "<p>Deren Material 20 % mehr als andere Produkte, stark und stabil. Der Traglast bis zu 180 kg.</p>",
             "file_type": "image",
-            "file_image": "shopify://shop_images/Maidesite-standing-desk-T2-Pro-with-160kg-loading-capacity_1200x800_77bc9297-af7b-4d54-838d-14b4e90c837d.jpg",
+            "file_image": "shopify://shop_images/180kg-max-loading-capacity.jpg",
+            "video_url": ""
+          }
+        },
+        "file_with_text_McHwGa": {
+          "type": "file_with_text",
+          "settings": {
+            "title": "<p>Höhenverstellbar für Jung & Alt</p>",
+            "description": "<p>Dieser Stehtisch ist optimal für Personen mit einer Körpergröße von 1,5 bis 1,83 m, da er sich in der Höhe von 72 bis 120 cm verstellen lässt.</p>",
+            "file_type": "image",
+            "file_image": "shopify://shop_images/2-stage-desk-height-adjustable-72-120cm.jpg",
             "video_url": ""
           }
         },
@@ -201,7 +191,17 @@
             "title": "<p>Multifunktions-Bedienfeld</p>",
             "description": "<p>4-Memory-Speicherplätze, die entsprechen unterschiedliche voreingestellte Höhe. Sie können 0,5h,1h,2h Erinnerung einstellen.</p>",
             "file_type": "image",
-            "file_image": "shopify://shop_images/Control-panel-RJ32-socket-T2-Pro-Plus-DE_a477a1f9-43c6-4c54-8515-5f43d32e5be1_1.jpg",
+            "file_image": "shopify://shop_images/Control_panel_with_USB-C_for_T2_Series-2.jpg",
+            "video_url": ""
+          }
+        },
+        "file_with_text_JJXCp8": {
+          "type": "file_with_text",
+          "settings": {
+            "title": "<p>Sitz-Steh-Erinnerung</p>",
+            "description": "<ul><li>Bewegungserinnerung: Intervall 0,5/1/2 h zum Aufstehen</li><li>Verbessert Ihre Körperhaltung und steigert die Produktivität.</li></ul>",
+            "file_type": "image",
+            "file_image": "shopify://shop_images/Maidesite-Stehpult-EL2-Pro-Art-mit-Sitz-Steh-Erinnerung-1200x800.jpg",
             "video_url": ""
           }
         },
@@ -209,7 +209,7 @@
           "type": "file_with_text",
           "settings": {
             "title": "<p>FSC-zertifizierte Tischplatte</p>",
-            "description": "<p>Optionale FSC-zertifizierte Tischplatten in 160x80cm und 180x80cm mit vorgebohrten Löchern.</p>",
+            "description": "<p>Optionale FSC-zertifizierte Tischplatten in 120x60cm, 140x70cm und 160x80cm mit vorgebohrten Löchern.</p>",
             "file_type": "image",
             "file_image": "shopify://shop_images/P7.jpg",
             "video_url": ""
@@ -217,17 +217,17 @@
         }
       },
       "block_order": [
-        "file_with_text_JJXCp8",
         "file_with_text_Q8tJKk",
-        "file_with_text_McHwGa",
         "file_with_text_f9yPAD",
+        "file_with_text_McHwGa",
         "file_with_text_B39ehq",
+        "file_with_text_JJXCp8",
         "file_with_text_THJTyK"
       ],
       "name": "file box simplicity",
       "settings": {
         "spec_id": "",
-        "main_title": "<p>Warum SC2 Pro wählen?</p>",
+        "main_title": "<p>Warum EL2 Pro Art wählen?</p>",
         "row_num": 3
       }
     },
@@ -237,25 +237,25 @@
         "foldtext_HQhGDk": {
           "type": "foldtext",
           "settings": {
-            "title": "<h3>Stabileres Design</h3>",
-            "description": "<ul><li>Dreiecksunterstützungsstruktur ist extrem stabil im Vergleich zu anderen Schreibtischdesigns.</li><li>Sie ist auch in der höchsten Höhe von ausgezeichneter Stabilität.</li></ul>",
-            "image": "shopify://shop_images/Triangle-support-structurer-on-T2-pro-plus-standing-desk-1.png"
+            "title": "<p>Kollisionsschutzsystem</p>",
+            "description": "<ul><li>Die eingebaute Gyroskop-gesteuerte Anti-Kollisions-Rückfederung schützt Ihr Gerät vor Schäden durch Stürze.</li></ul>",
+            "image": "shopify://shop_images/Anti-collision-system.jpg"
           }
         },
         "foldtext_HWP39G": {
           "type": "foldtext",
           "settings": {
-            "title": "<h3>Stabilere Säule</h3>",
-            "description": "<ul><li>Neben den strukturellen Verbesserungen trägt auch die präzise Verarbeitung und Konstruktion zur Stabilität bei.</li><li>Der Spalt zwischen den Säulen beträgt weniger als 0,03 mm. Die dreiteiligen Säulen gleiten nahtlos ineinander, wodurch jegliches Wackeln verhindert wird.</li></ul>",
-            "image": "shopify://shop_images/T2-Pro-hohenverstellbares-Tischbein-mit-kleinem-Abstand-2.png"
+            "title": "<h3>Kindersicherung</h3>",
+            "description": "<ul><li>Die Kindersicherung verhindert, dass Kinder oder Haustiere versehentlich das Touchpanel betätigen und Funktionen auslösen.</li></ul>",
+            "image": "shopify://shop_images/child-lock-for-T2-Pro-T2-Pro-Plus.jpg"
           }
         },
         "foldtext_iGWkAs": {
           "type": "foldtext",
           "settings": {
-            "title": "<h3>Stärkere Füße</h3>",
-            "description": "<ul><li>Schwere Schreibtischfüße haben einen niedrigeren Schwerpunkt, was die Stabilität erhöht.</li><li>Jedes T2 Pro Plus Tischbein wiegt 2,55 kg, was 50 % mehr ist als herkömmliche Beine.</li><li>Dadurch ist es stabiler als andere Tischgestelle.</li></ul>",
-            "image": "shopify://shop_images/T2-Pro-hohenverstellbarer-Tischfuss-2.jpg"
+            "title": "<h3>Abgerundete Schreibtischecken</h3>",
+            "description": "<ul><li>Abgerundete Tischplattenecken verringern die Verletzungsgefahr durch Stöße oder Stürze.</li></ul>",
+            "image": "shopify://shop_images/Maidesite-Stehpult-EL2-Pro-Art-mit-Sicherheits-Rundecke-1200x800.png"
           }
         }
       },
@@ -267,12 +267,13 @@
       "name": "img with foldtext",
       "settings": {
         "spec_id": "",
-        "title": "<p>Extrem stabiler SC2 Pro</p>",
+        "title": "<p>Verstellbarer Schreibtisch mit 3 Sicherheitsfunktionen</p>",
         "image": "shopify://shop_images/featured-spaces-5.webp"
       }
     },
     "img_with_text_simplicity_R8thEq": {
       "type": "img-with-text-simplicity",
+      "disabled": true,
       "custom_css": [
         ".img_with_text_simplicity_section {background-color: #e2ded6; padding-top: 12rem;}",
         ".img_with_text_simplicity_filebox {height: 48rem;}"
@@ -282,12 +283,12 @@
         "spec_id": "",
         "header_title": "",
         "header_content": "",
-        "title": "<h3>Sitzende Erinnerung</h3>",
-        "sub_title": "",
+        "title": "",
+        "sub_title": "<h3>Sitzende Erinnerung</h3>",
         "description": "<ul><li>Erinnerung an langes Sitzen: Intervallfunktion erinnert Sie daran, nach 0,5, 1 oder 2 Stunden aufzustehen.</li><li>Verbessert Ihre Haltung und steigert die Produktivität.</li></ul>",
         "file_position": "right",
         "file_type": "image",
-        "file_image": "shopify://shop_images/Sitz-Steh-Erinnerung-an-den-Maidesite-Stehschreibtisch-1200x800.png",
+        "file_image": "shopify://shop_images/Maidesite-TH2-Pro-Plus-standing-desk-_29_5776133d-cc2f-43c8-9d97-893d30c012a6.jpg",
         "video_url": "",
         "btn_text": "",
         "link_url": ""
@@ -295,6 +296,7 @@
     },
     "img_with_text_simplicity_nJFALq": {
       "type": "img-with-text-simplicity",
+      "disabled": true,
       "custom_css": [
         ".img_with_text_simplicity_section {background-color: #e2ded6; padding-top: 6rem;}",
         ".img_with_text_simplicity_filebox {height: 48rem;}",
@@ -305,12 +307,12 @@
         "spec_id": "",
         "header_title": "",
         "header_content": "",
-        "title": "<h3>Kollisionsschutz</h3>",
-        "sub_title": "",
+        "title": "",
+        "sub_title": "<h3>Kollisionsschutz</h3>",
         "description": "<p>Die eingebaute Gyroskop-gesteuerte Anti-Kollisions-Rückfederung schützt Ihr Gerät vor Schäden durch Stürze.</p>",
         "file_position": "left",
         "file_type": "image",
-        "file_image": "shopify://shop_images/Maidesite-hohenverstellbarer-Schreibtisch-mit-Kollisionsschutz-fur-mehr-Sicherheit-1200x800.png",
+        "file_image": "shopify://shop_images/TH2-Pro-Plus-Antikollisionssystem.jpg",
         "video_url": "",
         "btn_text": "",
         "link_url": ""
@@ -318,6 +320,7 @@
     },
     "img_with_text_simplicity_YLCpmN": {
       "type": "img-with-text-simplicity",
+      "disabled": true,
       "custom_css": [
         ".img_with_text_simplicity_section {background-color: #e2ded6; padding-top: 6rem;}",
         ".img_with_text_simplicity_filebox {height: 48rem;}"
@@ -332,7 +335,7 @@
         "description": "<p>Die Kindersicherung verhindert, dass Kinder oder Haustiere das Touchpad unbeabsichtigt bedienen und versehentlich Funktionen auslösen.</p>",
         "file_position": "right",
         "file_type": "image",
-        "file_image": "shopify://shop_images/Child-lock-on-Maidesite-standing-desk-control-pad-for-safety_736b2884-109f-4269-bb7b-083abfe49c60.jpg",
+        "file_image": "shopify://shop_images/P6-3.jpg",
         "video_url": "",
         "btn_text": "",
         "link_url": ""
@@ -575,97 +578,78 @@
         "faq_E4jP4F": {
           "type": "faq",
           "settings": {
-            "question": "<p>Für welche Höhe ist dieser Rahmen geeignet?</p>",
-            "answer": "<p>Die Zwei-Stufen-Option eignet sich für Personen von 1,5 bis 1,8 m, die Drei-Stufen-Option für 1,4 bis 1,9 m.</p>"
+            "question": "<p>Wie groß ist das EL2 Pro Art Paket?</p>",
+            "answer": "<p>Das Paket ist 105,5*28,5*21 cm groß.</p>"
           }
         },
-        "faq_AXAcgA": {
+        "faq_bELHrX": {
           "type": "faq",
           "settings": {
-            "question": "<p>Kann ich den Rahmen verwenden, wenn mein Boden nicht eben ist?</p>",
-            "answer": "<p>Natürlich können Sie das. Wir haben verstellbare Füße unter den Beinen des Rahmens angebracht, um kleinere Bodenunebenheiten auszugleichen.</p>"
+            "question": "<p>Welche Größe hat die Platte, die in den Rahmen passt?</p>",
+            "answer": "<p>Das Produkt ist für Platten von 100-200cm x 60-80cm geeignet.</p>"
           }
         },
         "faq_W9Mzyn": {
           "type": "faq",
           "settings": {
-            "question": "<p>Bietet das Produkt einen Installationsservice an?</p>",
-            "answer": "<p>Wir können derzeit keinen Montageservice anbieten, aber wir werden eine Montageanleitung und ausreichend Schrauben in das Paket legen, um Ihnen die Arbeit zu erleichtern!</p>"
+            "question": "<p>Für welche Höhe ist dieser Rahmen geeignet?</p>",
+            "answer": "<p>Der Rahmen ist für Personen mit einer Körpergröße von 1.5-1.83m geeignet.</p>"
           }
         },
-        "faq_VQVPFn": {
+        "faq_abheWf": {
+          "type": "faq",
+          "settings": {
+            "question": "<p>Was ist der Unterschied zwischen dem EL2 Plus Art und dem EL2 Pro Art?</p>",
+            "answer": "<p>Der EL2 Pro Art ist für Personen mit einer Körpergröße zwischen 1,5 und 1,8 m geeignet, der EL2 Plus Art für Personen mit einer Körpergröße zwischen 1,4 und 1,9 m. Sie können je nach Ihren Bedürfnissen und Vorlieben wählen.</p>"
+          }
+        },
+        "faq_mFDf3d": {
           "type": "faq",
           "settings": {
             "question": "<p>Was muss ich tun, wenn \"E01, E09, E12, ASR/RST \" angezeigt wird?</p>",
-            "answer": "<p>Halten Sie die Abwärtstaste gedrückt, um den Tisch auf die niedrigste Stufe abzusenken, lassen Sie sie dann los, halten Sie die Abwärtstaste 5 Sekunden lang gedrückt, die Handsteuerung zeigt RST an, halten Sie dann die Abwärtstaste 5 Sekunden lang gedrückt, die Handsteuerung zeigt die Nummer an, und die Rückstellung ist abgeschlossen. Sie können uns auch per E-Mail kontaktieren: contact@maidesite.de</p>"
+            "answer": "<p>Halten Sie die Abwärtstaste gedrückt, um den Tisch auf die niedrigste Stufe abzusenken, lassen Sie sie dann los, halten Sie die Abwärtstaste 5 Sekunden lang gedrückt, die Handsteuerung zeigt RST an, halten Sie dann die Abwärtstaste 5 Sekunden lang gedrückt, die Handsteuerung zeigt die Nummer an, und die Rückstellung ist abgeschlossen. Sie können uns auch per E-Mail kontaktieren: contact@maidesite.de.</p>"
           }
         },
-        "faq_yWwLLL": {
+        "faq_whBqrf": {
           "type": "faq",
           "settings": {
             "question": "<p>Was muss ich tun, wenn \"HOT\" angezeigt wird?</p>",
             "answer": "<p>Das liegt daran, dass die Temperatur des Netzteils zu hoch ist oder es zu oft betrieben wird. Bitte trennen Sie das Netzteil für 20 Minuten vom Stromnetz und schließen Sie es dann wieder an. Sie können uns auch per E-Mail kontaktieren: contact@maidesite.de</p>"
           }
         },
-        "faq_bELHrX": {
+        "faq_VQVPFn": {
           "type": "faq",
           "settings": {
-            "question": "<p>Wie lange dauert die Lieferung?</p>",
-            "answer": "<p>2-4 Tage innerhalb Deutschlands, 3-7 Tage ins benachbarte Ausland</p>"
+            "question": "<p>In welche Länder kann nicht geliefert werden?</p>",
+            "answer": "<p>Liechtenstein, Serbien, Norwegen, Marokko, Monaco, Portugal Inseln und die spanischen Inseln.</p>"
           }
         },
         "faq_WtEK7r": {
           "type": "faq",
+          "disabled": true,
           "settings": {
-            "question": "<p>Bietet das Produkt einen Installationsservice an?</p>",
-            "answer": "<p>Wir können derzeit keinen Montageservice anbieten, aber wir werden eine Montageanleitung und ausreichend Schrauben in das Paket legen, um Ihnen die Arbeit zu erleichtern!</p>"
+            "question": "<p>Kann ich den Rahmen verwenden, wenn mein Boden nicht eben ist?</p>",
+            "answer": "<p>Natürlich können Sie das. Wir haben verstellbare Füße unter den Beinen des Rahmens angebracht, um kleinere Bodenunebenheiten auszugleichen.</p>"
           }
         },
         "faq_EXWGc6": {
           "type": "faq",
-          "disabled": true,
           "settings": {
-            "question": "<h4>Ich kann die Bedienungsanleitung nicht finden, wo kann ich eine Kopie erhalten?</h4>",
-            "answer": "<p>Sie können das Benutzerhandbuch für den höhenverstellbaren Schreibtisch T2 Pro Max herunterladen, indem Sie <a href=\"https://cdn.shopify.com/s/files/1/0574/9728/8897/files/T2_Pro_Max-20241121_compressed.pdf?v=1737514230\" title=\"https://cdn.shopify.com/s/files/1/0574/9728/8897/files/T2_Pro_Max-20241121_compressed.pdf?v=1737514230\">hier</a> klicken. Wenn Sie ein Problem haben, senden Sie bitte eine E-Mail an contact@maidesite.de, wir helfen Ihnen gerne weiter.</p>"
-          }
-        },
-        "faq_abheWf": {
-          "type": "faq",
-          "disabled": true,
-          "settings": {
-            "question": "<p>Was muss ich tun, wenn \"RESET, ERR07,ERR08,ERR11, ERR12, ERR13 \" angezeigt wird?</p>",
-            "answer": "<p>Halten Sie die Abwärtstaste gedrückt, um den Tisch auf die niedrigste Stufe abzusenken, lassen Sie sie dann los, halten Sie die Abwärtstaste 5 Sekunden lang gedrückt, die Handsteuerung zeigt RST an, halten Sie dann die Abwärtstaste 5 Sekunden lang gedrückt, die Handsteuerung zeigt die Nummer an, und die Rückstellung ist abgeschlossen. Sie können uns auch per E-Mail kontaktieren: contact@maidesite.de</p>"
-          }
-        },
-        "faq_mFDf3d": {
-          "type": "faq",
-          "disabled": true,
-          "settings": {
-            "question": "<p>Was muss ich tun, wenn \"H01\" angezeigt wird?</p>",
-            "answer": "<p>Das liegt daran, dass die Temperatur des Netzteils zu hoch ist oder es zu oft betrieben wird. Bitte trennen Sie das Netzteil für 20 Minuten vom Stromnetz und schließen Sie es dann wieder an. Sie können uns auch per E-Mail kontaktieren: contact@maidesite.de.</p>"
-          }
-        },
-        "faq_whBqrf": {
-          "type": "faq",
-          "disabled": true,
-          "settings": {
-            "question": "<p>Wie lange dauert die Lieferung?</p>",
-            "answer": "<p>2-4 Tage innerhalb Deutschlands, 3-7 Tage ins benachbarte Ausland.</p>"
+            "question": "<p>Ich wohne nicht in Deutschland, kann ich bei Maidesite einkaufen?</p>",
+            "answer": "<p>Ja. Wir können Ihr Paket in die meisten Länder in Europa versenden!</p>"
           }
         }
       },
       "block_order": [
         "faq_E4jP4F",
-        "faq_AXAcgA",
-        "faq_W9Mzyn",
-        "faq_VQVPFn",
-        "faq_yWwLLL",
         "faq_bELHrX",
-        "faq_WtEK7r",
-        "faq_EXWGc6",
+        "faq_W9Mzyn",
         "faq_abheWf",
         "faq_mFDf3d",
-        "faq_whBqrf"
+        "faq_whBqrf",
+        "faq_VQVPFn",
+        "faq_WtEK7r",
+        "faq_EXWGc6"
       ],
       "custom_css": [
         ".faq_simple_section {background-color: #fafafa;}"
@@ -674,7 +658,7 @@
       "settings": {
         "spec_id": "",
         "heading": "<p>FAQ</p>",
-        "text": "<h3>Höhenverstellbarer Schreibtisch SC2 Pro Technik</h3>",
+        "text": "<h3>Schreibtisch Höhenverstellbar EL2 Pro Art Technical</h3>",
         "show_btn": true,
         "learn_more": true,
         "contact_us": false

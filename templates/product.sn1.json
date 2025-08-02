@@ -72,7 +72,7 @@
           "type": "shopify://apps/klarna-on-site-messaging/blocks/app-block/b95936a9-74b6-4a95-8103-6a1b6459c25e",
           "settings": {
             "data_key": "top-strip-promotion-badge",
-            "theme": "default",
+            "theme": "custom",
             "topPadding": "0",
             "bottomPadding": "0",
             "messagePrefix": ""
@@ -450,7 +450,7 @@
       "name": "technical data",
       "settings": {
         "spec_id": "Technische_Daten",
-        "title": "<p>Technische Daten Des HöHenverstellbaren </p><p>Schreibtisches-T1 Pro</p>",
+        "title": "<p>Technische Daten Des HöHenverstellbaren </p><p>Schreibtisches-SN1</p>",
         "select_product": "elektrisch-hohenverstellbarer-gestell-t1-basic"
       }
     },
