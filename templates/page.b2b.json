@@ -268,10 +268,10 @@
           "settings": {
             "tabname": "",
             "sub_title": "",
-            "title": "<p>Lokale Logistik und Lagerhaltung</p>",
-            "description": "<p>Mit unseren regionalen Lagern und einem effizienten Logistiknetzwerk gewährleisten wir eine schnelle und zuverlässige Lieferung.</p>",
+            "title": "<p>Verantwortungsvolle & effiziente</p>",
+            "description": "<p>Ihre Bestellungen werden effizient bearbeitet und via DPD/DHL an Ihre Haustür geliefert.</p>",
             "file_type": "image",
-            "file_image": "shopify://shop_images/b2b_02.webp",
+            "file_image": "shopify://shop_images/Hilden_warehouse_works_1200x800_7cc91ea2-c59c-49f3-a82f-5614e864c5ae.jpg",
             "video_url": "",
             "btn_text": "Jetzt unverbindlich beraten lassen",
             "link": "#"
@@ -289,7 +289,7 @@
       "settings": {
         "spec_id": "",
         "description": "",
-        "title": "<p>Erstklassige Produkte & Erstklassiger Service</p>",
+        "title": "<p>Erstklassiger Schreibtisch & erstklassiger Service</p>",
         "show_tab_head": false,
         "layout": "image-right"
       }
