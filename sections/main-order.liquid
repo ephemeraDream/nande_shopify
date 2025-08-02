@@ -590,7 +590,7 @@
         item.classList.toggle('active');
         const dataId = item.closest('.order_section_fold_item').dataset.value;
         document
-          .querySelectorAll(`.order_section_child_item[data-value=${dataId}]`)
+          .querySelectorAll(`.order_section_child_item[data-value="${dataId}"]`)
           .forEach((el) => el.classList.toggle('hidden'));
       });
     });
