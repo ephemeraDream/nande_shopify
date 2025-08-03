@@ -16,13 +16,13 @@
   }
 {%- endstyle -%}
 
-{% assign sort_by_popular = request.params.sort == 'popular' %}
-{% assign sorted_articles = blog.articles %}
-{% if sort_by_popular %}
-  {% assign sorted_articles = blog.articles | sort: "metafields.custom.popular_score" | reverse %}
-{% endif %}
+{%- assign sorted_articles = blog.articles -%}
+{%- if request.params.sort == 'popular' -%}
+  {%- assign sorted_articles = blog.articles | sort: "metafields.custom.popular_score" | reverse -%}
+{%- endif -%}
 
-{%- paginate blog.articles by 10 -%}
+
+{%- paginate sorted_articles by 10 -%}
   <div class="main-blog session-box-padding section-{{ section.id }}-padding">
     
     <h2 class="session-box-inner title--primary{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--fade-in{% endif %}">
@@ -38,7 +38,6 @@
         {% endfor %}
       </nav>
       <div class="blog-sort-buttons">
-        {% sort_by_popular %}
         <a href="?sort=latest" class="sort-btn {% unless request.params.sort == 'popular' %}active{% endunless %}">Latest</a>
         <a href="?sort=popular" class="sort-btn {% if request.params.sort == 'popular' %}active{% endif %}">Popular</a>
       </div>
