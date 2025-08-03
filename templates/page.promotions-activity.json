@@ -158,12 +158,28 @@
         "title": "<p>2025 FrüHlingsrabatt</p>",
         "text": "<p>Je mehr Sie kaufen, desto mehr sparen Sie!</p>"
       }
+    },
+    "activity_products_normal_REbAHP": {
+      "type": "activity-products-normal",
+      "name": "activity products normal",
+      "settings": {
+        "specId": "",
+        "title": "<p>2025 FrüHlingsrabatt</p>",
+        "text": "<p>Je mehr Sie kaufen,desto mehr sparen Sie!</p>",
+        "product_list": [
+          "maidesite-th2-pro-plus-tischgestell-elektrisch-hohenverstellbar",
+          "maidesite-el2-pro-art-tischgestell-elektrisch-hohenverstellbar",
+          "maidesite-to1-pro-elektrisch-hohenverstellbarer-schreibtisch",
+          "ergoset-sc2-schreibtisch-ec6-burostuhl"
+        ]
+      }
     }
   },
   "order": [
     "main",
     "banner_8AcyUY",
     "product_anchor_bar_J93iqp",
-    "activity_products_tab_aUGewm"
+    "activity_products_tab_aUGewm",
+    "activity_products_normal_REbAHP"
   ]
 }
