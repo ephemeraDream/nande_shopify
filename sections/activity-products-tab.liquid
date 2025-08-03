@@ -108,6 +108,13 @@
 
                 <div>
                   {% render 'product-rating', product: product %}
+                  {% if sale_info != blank %}
+                    <div class="activity_products_tab_product_saleinfo_code">
+                      {{ 'common.code' | t -}}
+                      {{- sale_info.code }}
+                      <div class="activity_products_tab_saleinfo_btn" data-code="{{ sale_info.code }}">COPY</div>
+                    </div>
+                  {% endif %}
                   <div class="activity_products_tab_product_price">
                     <div>
                       {{ product.price | money_without_trailing_zeros }}
