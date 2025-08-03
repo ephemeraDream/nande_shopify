@@ -1,0 +1,198 @@
+{{ 'section-activity-products-normal.css' | asset_url | stylesheet_tag }}
+
+<div class="activity_products_normal_section padding-sider" id="{{ section.settings.specId }}">
+  <div class="activity_products_normal">
+    <div class="activity_products_normal_title">{{ section.settings.title }}</div>
+    <div class="activity_products_normal_text">{{ section.settings.text }}</div>
+    <div class="activity_products_tab_contain_products">
+      {% for product in section.settings.product_list %}
+        {% assign sale_info = product.metafields.custom.sale_info.value %}
+        <a
+          class="activity_products_normal_product"
+          data-type="{{ product.type | handleize }}"
+          href="{{ product.url }}"
+          data-id="{{ product.id }}"
+        >
+          <div class="activity_products_normal_product_img">
+            <img src="{{ product.featured_media | image_url }}" alt="{{ product.title }}">
+            {% if sale_info != blank %}
+              <div class="activity_products_normal_product_saleinfo">{{ sale_info.name }}</div>
+            {% endif %}
+          </div>
+          <div class="activity_products_normal_product_info">
+            <h4 class="activity_products_normal_product_title">{{ product.title }}</h4>
+
+            <div>
+              {% render 'product-rating', product: product %}
+              {% if sale_info != blank %}
+                <div class="activity_products_normal_product_saleinfo_code">
+                  {{ 'common.code' | t -}}
+                  {{- sale_info.code }}
+                  <div class="activity_products_normal_saleinfo_btn" data-code="{{ sale_info.code }}">COPY</div>
+                </div>
+              {% endif %}
+              <div class="activity_products_normal_product_price">
+                <div>
+                  {{ product.price | money_without_trailing_zeros }}
+                </div>
+                {% if product.compare_at_price != blank %}
+                  <div class="activity_products_normal_product_price_cap">
+                    {{ product.compare_at_price | money_without_trailing_zeros }}
+                  </div>
+                {% endif %}
+              </div>
+              <div class="activity_products_normal_product_btn nd-btn">
+                {{ 'common.jetzt_konfigurieren' | t }}
+                {{ 'icon-right-arrow.svg' | inline_asset_content }}
+              </div>
+              {% if sale_info != blank %}
+                <div
+                  class="activity_products_normal_product_saleinfo_countdown"
+                  data-end-date="{{ sale_info.datetime | date: "%Y-%m-%dT%H:%M:%SZ" }}"
+                >
+                  <span class="activity_products_normal_product_saleinfo_countdown_text">
+                    {{- 'common.ends_in' | t -}}
+                  </span>
+                  <div class="activity_products_normal_product_saleinfo_countdown_item" data-type="day"></div>
+                  <span>:</span>
+                  <div class="activity_products_normal_product_saleinfo_countdown_item" data-type="hour"></div>
+                  <span>:</span>
+                  <div class="activity_products_normal_product_saleinfo_countdown_item" data-type="minute"></div>
+                  <span>:</span>
+                  <div class="activity_products_normal_product_saleinfo_countdown_item" data-type="second"></div>
+                </div>
+              {% endif %}
+            </div>
+          </div>
+        </a>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+
+<script>
+  (() => {
+    document.querySelectorAll('.activity_products_normal_head_item').forEach((item) => {
+      item.addEventListener('click', () => {
+        if (item.classList.contains('active')) return;
+        document.querySelector('.activity_products_normal_head_item.active').classList.remove('active');
+        item.classList.add('active');
+        const value = item.dataset.value;
+        document.querySelector('.activity_products_normal_contain.active').classList.remove('active');
+        document.querySelector(`.activity_products_normal_contain[data-value="${value}"]`).classList.add('active');
+      });
+    });
+
+    const initCountDown = (countdownEl, itemClassName) => {
+      {% comment %} const countdownEl = document.querySelectorAll('.activity_products_normal_product_saleinfo_countdown'); {% endcomment %}
+      if (!countdownEl.length) return;
+
+      countdownEl.forEach((item) => {
+        const endDateStr = item.getAttribute('data-end-date');
+        const endDate = new Date(endDateStr);
+
+        const updateCountdownInnerHTML = (days, hours, minutes, seconds) => {
+          if (days > 0) {
+            item.querySelector(`.${itemClassName}[data-type='day']`).innerHTML =
+              String(days).padStart(2, '0');
+          }
+          item.querySelector(`.${itemClassName}[data-type='hour']`).innerHTML =
+            String(hours).padStart(2, '0');
+          item.querySelector(`.${itemClassName}[data-type='minute']`).innerHTML =
+            String(minutes).padStart(2, '0');
+          item.querySelector(`.${itemClassName}[data-type='second']`).innerHTML =
+            String(seconds).padStart(2, '0');
+
+          if (
+            days == 0 &&
+            item.querySelector(`.${itemClassName}[data-type='day']`)
+          ) {
+            item
+              .querySelector(`.${itemClassName}[data-type='day'] + span`)
+              .remove();
+            item.querySelector(`.${itemClassName}[data-type='day']`).remove();
+          }
+        };
+
+        function updateCountdown() {
+          const now = new Date();
+          const diff = endDate - now;
+          let days = 0,
+            hours = 0,
+            minutes = 0,
+            seconds = 0;
+
+          if (diff <= 0) {
+            updateCountdownInnerHTML(days, hours, minutes, seconds);
+            return;
+          }
+
+          days = Math.floor(diff / (1000 * 60 * 60 * 24));
+          hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
+          minutes = Math.floor((diff / (1000 * 60)) % 60);
+          seconds = Math.floor((diff / 1000) % 60);
+
+          updateCountdownInnerHTML(days, hours, minutes, seconds);
+        }
+
+        updateCountdown();
+        setInterval(updateCountdown, 1000);
+      });
+    };
+
+    initCountDown(document.querySelectorAll('.activity_products_normal_product_saleinfo_countdown'), "activity_products_normal_product_saleinfo_countdown_item");
+
+    document.querySelectorAll(".activity_products_normal_saleinfo_btn").forEach(item => {
+      item.addEventListener('click', async (e) => {
+        e.preventDefault();
+        const code = item.getAttribute('data-code');
+        await navigator.clipboard.writeText(code);
+
+        const originalText = item.innerHTML;
+        item.innerHTML = 'Copied';
+
+        setTimeout(() => {
+          item.innerHTML = originalText;
+        }, 5000);
+      });
+    });
+  })();
+</script>
+
+{% schema %}
+{
+  "name": "activity products normal",
+  "tag": "section",
+  "class": "section",
+  "disabled_on": {
+    "groups": ["header", "footer"]
+  },
+  "settings": [
+    {
+      "type": "text",
+      "id": "specId",
+      "label": "specId"
+    },
+    {
+      "type": "richtext",
+      "id": "title",
+      "label": "title"
+    },
+    {
+      "type": "richtext",
+      "id": "text",
+      "label": "text"
+    },
+    {
+      "type": "product_list",
+      "id": "product_list",
+      "label": "product list"
+    }
+  ],
+  "presets": [
+    {
+      "name": "activity products normal"
+    }
+  ]
+}
+{% endschema %}
