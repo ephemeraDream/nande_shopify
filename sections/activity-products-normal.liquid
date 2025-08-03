@@ -1,6 +1,9 @@
 {{ 'section-activity-products-normal.css' | asset_url | stylesheet_tag }}
 
-<div class="activity_products_normal_section padding-sider" id="{{ section.settings.specId }}">
+<div
+  class="activity_products_normal_section padding-sider{% if section.settings.style == "2" %} activity_products_normal_two_section{% endif %}"
+  id="{{ section.settings.specId }}"
+>
   <div class="activity_products_normal">
     <div class="activity_products_normal_title">{{ section.settings.title }}</div>
     <div class="activity_products_normal_text">{{ section.settings.text }}</div>
@@ -172,6 +175,22 @@
       "type": "text",
       "id": "specId",
       "label": "specId"
+    },
+    {
+      "type": "select",
+      "id": "style",
+      "options": [
+        {
+          "value": "1",
+          "label": "one"
+        },
+        {
+          "value": "2",
+          "label": "two"
+        }
+      ],
+      "default": "1",
+      "label": "style"
     },
     {
       "type": "richtext",

@@ -400,3 +400,14 @@
   text-decoration: underline;
   color: #FF7500;
 }
+
+.activity_products_normal_two_section {
+  background-color: #7F7E75;
+  padding-top: 12rem;
+}
+
+.activity_products_normal_two_section .activity_products_normal_title,
+.activity_products_normal_two_section .activity_products_normal_text {
+  color: #fff;
+  text-align: left;
+}
