@@ -102,9 +102,10 @@
         buttons.forEach(b => b.classList.remove('active'));
         this.classList.add('active');
         sort = this.dataset.sort;
+        urlParams.set('sort', sort);
+        const newUrl = `${url.pathname}?${urlParams.toString()}`;
+        history.replaceState(null, '', newUrl);
         sortArticles(sort);
-        // 可选：改变 URL 参数但不刷新页面
-        history.replaceState(null, '', `?sort=${sort}`);
       });
     });
   });
