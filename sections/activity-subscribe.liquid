@@ -47,9 +47,6 @@
                       placeholder="{{ 'newsletter.label' | t }}"
                       required
                     >
-                    <label class="field__label" for="NewsletterForm--{{ section.id }}">
-                      {{ 'newsletter.label' | t }}
-                    </label>
                     <button
                       type="submit"
                       class="newsletter-form__button field__button"
@@ -57,10 +54,14 @@
                       id="Subscribe"
                       aria-label="{{ 'newsletter.button_label' | t }}"
                     >
-                      <span class="svg-wrapper">
-                        {{- 'icon-arrow.svg' | inline_asset_content -}}
-                      </span>
+                      {{ section.settings.btn_text }}
                     </button>
+                  </div>
+                  <div class="subscribe_emails_confirm">
+                    <div class="subscribe_emails_confirm_checkbox">
+                      {{- 'icon-email-check.svg' | inline_asset_content -}}
+                    </div>
+                    {{ section.settings.confirm_text }}
                   </div>
                   {%- if form.errors -%}
                     <small class="newsletter-form__message form__message" id="ContactFooter-error">
