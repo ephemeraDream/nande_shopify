@@ -362,7 +362,7 @@
 .activity_products_tab .activity_products_tab_product_saleinfo {
   padding: .6rem;
   background-color: #ff7500;
-  font-family: PP Right Grotesk;
+  font-family: "PP Right Grotesk";
   font-size: 1.8rem;
   font-weight: 500;
   line-height: 80%;
@@ -372,4 +372,32 @@
   position: absolute;
   top: 1.4rem;
   left: 1.4rem;
+}
+
+.activity_products_tab .activity_products_tab_product_saleinfo_code {
+  display: flex;
+  align-items: baseline;
+  font-family: "PP Right Grotesk";
+  font-size: 1.6rem;
+  font-weight: normal;
+  line-height: 130%;
+  letter-spacing: 0px;
+  font-variation-settings: "opsz" auto;
+  margin-top: 2rem;
+  color: #7F7E75;
+  gap: 0.8rem;
+}
+
+.activity_products_tab .activity_products_tab_product_saleinfo_code .activity_products_tab_saleinfo_btn {
+  width: auto;
+  height: auto;
+  font-family: "PP Right Grotesk";
+  font-size: 1.6rem;
+  font-weight: normal;
+  line-height: 130%;
+  letter-spacing: 0px;
+  font-variation-settings: "opsz" auto;
+  text-decoration: underline;
+  margin-top: 2rem;
+  color: #FF7500;
 }
