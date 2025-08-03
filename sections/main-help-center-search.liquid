@@ -1,17 +1,17 @@
 {% comment %} 帮助中心 搜索页 模版 {% endcomment %}
 <div class="help_center_search session-box-padding padding-top-60 padding-bottom-120">
   <div class="session-box-inner">
+    <div class="help_center_search_title">
       <h2 class="padding-bottom-30">Search:</h2>
       <div class="template-search__search">
         <main-search>
-          <form action="{{ routes.search_url }}" method="get" role="search" class="search">
+          <form id="help-search-form" action="javascript:void(0);" role="search" class="search">
             <div class="field">
               <input
                 class="search__input field__input"
                 id="Search-In-Template"
                 type="search"
                 name="q"
-                value="{{ search.terms | escape }}"
                 placeholder="{{ 'general.search.search' | t }}"
               >
               <label class="field__label" for="Search-In-Template">{{ 'general.search.search' | t }}</label>
@@ -35,19 +35,31 @@
           </form>
         </main-search>
       </div>
-      <div class="result_list">
-        <ul>
-        {% for article in blog.articles %}
-            {% if article.tags contains tag %}
-            <li><a href="{{ article.url }}">{{ article.title }}</a></li>
-            {% endif %}
+    </div>
+    <div class="result_list">
+      <ul id="search-results">
+        {% for block in section.blocks %}
+          {% assign blog_handle = block.settings.blog %}
+          {% if blogs[blog_handle] != blank %}
+            {% for article in blogs[blog_handle].articles %}
+              <li 
+                data-title="{{ article.title | downcase }}" 
+                data-content="{{ article.content | strip_html | downcase }}"
+                data-blog="{{ blog_handle }}"
+              >
+                <a href="{{ article.url }}">{{ article.title }}</a>
+              </li>
+            {% endfor %}
+          {% endif %}
         {% endfor %}
-        </ul>
-      </div>
+      </ul>
+    </div>    
   </div>
 </div>
 
 <style>
+  .field__input, .select__select, .customer .field input, .customer select{background-color: #fff;}
+  .help_center_search_title{width:100%;max-width:900px;margin:0 auto;}
   .help_center_search .result_list ul{list-style: none;margin:0;padding:0}
   .help_center_search .result_list ul li a{padding:1.8rem 2rem;border-bottom: 2px solid #E2DED6;color:#1F1F1F;font-size: 2rem;display:block;}
   .help_center_search .result_list ul li a:hover{background-color: #E2DED6;}
@@ -58,37 +70,35 @@
 
 <script>
   document.addEventListener("DOMContentLoaded", function () {
-    const buttons = document.querySelectorAll(".nav_item");
-    const contentBlocks = document.querySelectorAll(".tag-content");
-
-    buttons.forEach((btn) => {
-      btn.addEventListener("click", function () {
-        buttons.forEach((b) => b.classList.remove("active"));
-        btn.classList.add("active");
-
-        const tag = btn.getAttribute("data-tag");
-        contentBlocks.forEach((block) => {
-          if (block.getAttribute("data-tag") === tag) {
-            block.style.display = "block";
-          } else {
-            block.style.display = "none";
-          }
-        });
+    const form = document.getElementById('help-search-form');
+    const input = document.getElementById('Search-In-Template');
+    const results = document.querySelectorAll('#search-results li');
+  
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      const keyword = input.value.trim().toLowerCase();
+  
+      let anyVisible = false;
+  
+      results.forEach(item => {
+        const title = item.getAttribute('data-title');
+        const content = item.getAttribute('data-content');
+  
+        if (title.includes(keyword) || content.includes(keyword)) {
+          item.style.display = 'block';
+          anyVisible = true;
+        } else {
+          item.style.display = 'none';
+        }
       });
-    });
-
-  const hash = window.location.hash.substring(1); 
-  if (hash) {
-      const defaultBtn = document.querySelector('.nav_item[data-tag="' + hash + '"]');
-      if (defaultBtn) {
-      defaultBtn.click();
+  
+      if (!anyVisible) {
+        document.getElementById('search-results').innerHTML = `<li>没有找到相关内容。</li>`;
       }
-  } else if (buttons.length > 0) {
-      buttons[0].click();
-  }
-
+    });
   });
 </script>
+  
 
 {% schema %}
 {
