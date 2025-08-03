@@ -1,0 +1,49 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 28,
+        "padding_bottom": 28
+      }
+    },
+    "banner_8AcyUY": {
+      "type": "banner",
+      "blocks": {
+        "banner_item_kEfP4k": {
+          "type": "banner_item",
+          "settings": {
+            "sub_title": "<p>Extrem stabiler </p>",
+            "title": "<p>Nahtloses Design Trifft Auf FunktionalitäT</p>",
+            "text": "<p>Ein durchdachtes, einheitliches Design, das Ästhetik und Funktion kombiniert – für einen </p><p>modernen Arbeitsplatz, der sich nahtlos in Ihr Zuhause einfügt</p>",
+            "btn_text": "En savoir plus",
+            "link": "",
+            "file_position": "middle_left",
+            "file_type": "image",
+            "file_image": "shopify://shop_images/01af9531-9158-4ede-87be-26818b919ab6.__CR0_0_1464_600_PT0_SX1464_V1.jpg",
+            "video_url": ""
+          }
+        }
+      },
+      "block_order": [
+        "banner_item_kEfP4k"
+      ],
+      "name": "banner",
+      "settings": {}
+    }
+  },
+  "order": [
+    "main",
+    "banner_8AcyUY"
+  ]
+}
