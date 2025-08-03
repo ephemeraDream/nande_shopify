@@ -61,6 +61,22 @@
                   {{ 'icon-right-arrow.svg' | inline_asset_content }}
                 </a>
               {% endif %}
+              {% if block.settings.show_countdown %}
+                {%- assign countdown = block.settings.countdown -%}
+                <div
+                  class="section_banner_countdown_box"
+                  data-end-date="{{ countdown.datetime | date: "%Y-%m-%dT%H:%M:%SZ" }}"
+                >
+                  <span class="section_banner_countdown_box_text">{{ 'common.ends_in' | t }}</span>
+                  <div class="section_banner_countdown_box_item" data-type="day"></div>
+                  <span>:</span>
+                  <div class="section_banner_countdown_box_item" data-type="hour"></div>
+                  <span>:</span>
+                  <div class="section_banner_countdown_box_item" data-type="minute"></div>
+                  <span>:</span>
+                  <div class="section_banner_countdown_box_item" data-type="second"></div>
+                </div>
+              {% endif %}
             </div>
           </div>
         </div>
@@ -70,15 +86,73 @@
 </div>
 
 <script>
-  const swiper = new Swiper('.section_banner', {
-    loop: true,
-    autoplay: true,
-    spaceBetween: 0,
-  });
-  const bannerEl = document.querySelector('.section_banner');
+  (() => {
+    const swiper = new Swiper('.section_banner', {
+      loop: true,
+      autoplay: true,
+      spaceBetween: 0,
+    });
+    const bannerEl = document.querySelector('.section_banner');
 
-  bannerEl.addEventListener('mouseenter', () => swiper.autoplay.stop());
-  bannerEl.addEventListener('mouseleave', () => swiper.autoplay.start());
+    bannerEl.addEventListener('mouseenter', () => swiper.autoplay.stop());
+    bannerEl.addEventListener('mouseleave', () => swiper.autoplay.start());
+
+    const countdownEl = document.querySelectorAll('.section_banner_countdown_box');
+    if (!countdownEl.length) return;
+
+    countdownEl.forEach((item) => {
+      const endDateStr = item.getAttribute('data-end-date');
+      const endDate = new Date(endDateStr);
+
+      const updateCountdownInnerHTML = (days, hours, minutes, seconds) => {
+        if (days > 0) {
+          item.querySelector(".section_banner_countdown_box_item[data-type='day']").innerHTML = String(days).padStart(
+            2,
+            '0'
+          );
+        }
+        item.querySelector(".section_banner_countdown_box_item[data-type='hour']").innerHTML = String(hours).padStart(
+          2,
+          '0'
+        );
+        item.querySelector(".section_banner_countdown_box_item[data-type='minute']").innerHTML = String(
+          minutes
+        ).padStart(2, '0');
+        item.querySelector(".section_banner_countdown_box_item[data-type='second']").innerHTML = String(
+          seconds
+        ).padStart(2, '0');
+
+        if (days == 0 && item.querySelector(".section_banner_countdown_box_item[data-type='day']")) {
+          item.querySelector(".section_banner_countdown_box_item[data-type='day'] + span").remove();
+          item.querySelector(".section_banner_countdown_box_item[data-type='day']").remove();
+        }
+      };
+
+      function updateCountdown() {
+        const now = new Date();
+        const diff = endDate - now;
+        let days = 0,
+          hours = 0,
+          minutes = 0,
+          seconds = 0;
+
+        if (diff <= 0) {
+          updateCountdownInnerHTML(days, hours, minutes, seconds);
+          return;
+        }
+
+        days = Math.floor(diff / (1000 * 60 * 60 * 24));
+        hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
+        minutes = Math.floor((diff / (1000 * 60)) % 60);
+        seconds = Math.floor((diff / 1000) % 60);
+
+        updateCountdownInnerHTML(days, hours, minutes, seconds);
+      }
+
+      updateCountdown();
+      setInterval(updateCountdown, 1000);
+    });
+  })();
 </script>
 
 {% schema %}
