@@ -231,7 +231,7 @@
 
     document.querySelectorAll(".activity_products_tab_saleinfo_btn").forEach(item => {
       item.addEventListener('click', async (e) => {
-        e.stopPropagation();
+        e.preventDefault();
         const code = item.getAttribute('data-code');
         await navigator.clipboard.writeText(code);
 
