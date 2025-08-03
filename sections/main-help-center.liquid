@@ -8,7 +8,7 @@
       {% endif %}
       <div class="search_box">
         <predictive-search class="search-modal__form" data-loading-text="{{ 'accessibility.loading' | t }}">
-          <form action="{{ routes.search_url }}" method="get" role="search" class="search search-modal__form">
+          <form id="help-search-form" action="javascript:void(0);" role="search" class="search">
             <div class="field">
               <input
                 class="search__input field__input"
@@ -128,6 +128,23 @@
     }
   }
 </style>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const form = document.getElementById('help-search-form');
+    const input = document.getElementById('Search-In-Out');
+  
+    form.addEventListener('submit', function (e) {
+      e.preventDefault(); 
+      const keyword = input.value.trim();
+      if (keyword) {
+        const targetURL = `https://www.maidesite.de/pages/topic-collection?view=help-search&keyword=${encodeURIComponent(keyword)}`;
+        window.location.href = targetURL;
+      }
+    });
+  });
+  </script>
+  
 
 {% schema %}
 {
