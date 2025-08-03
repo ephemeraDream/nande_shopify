@@ -2,7 +2,7 @@
 <div class="help_center_search session-box-padding padding-top-60 padding-bottom-120">
   <div class="session-box-inner">
     <div class="help_center_search_title">
-      <h2 class="padding-bottom-30">Search:</h2>
+      <h2 class="padding-bottom-30" id="search_title">Search:</h2>
       <div class="template-search__search">
         <main-search>
           <form id="help-search-form" action="javascript:void(0);" role="search" class="search">
@@ -53,6 +53,14 @@
           {% endif %}
         {% endfor %}
       </ul>
+
+      <div 
+        id="no-results" 
+        style="display:none; font-style: italic; color: #999;"
+      >
+        {{ section.settings.no_result_text }}
+      </div>
+      
     </div>    
   </div>
 </div>
@@ -60,6 +68,7 @@
 <style>
   .field__input, .select__select, .customer .field input, .customer select{background-color: #fff;}
   .help_center_search_title{width:100%;max-width:900px;margin:0 auto;}
+  .result_list{padding-top: 60px;}
   .help_center_search .result_list ul{list-style: none;margin:0;padding:0}
   .help_center_search .result_list ul li a{padding:1.8rem 2rem;border-bottom: 2px solid #E2DED6;color:#1F1F1F;font-size: 2rem;display:block;}
   .help_center_search .result_list ul li a:hover{background-color: #E2DED6;}
@@ -73,11 +82,13 @@
     const form = document.getElementById('help-search-form');
     const input = document.getElementById('Search-In-Template');
     const results = document.querySelectorAll('#search-results li');
+    const noResultItem = document.getElementById('no-results');
+    const searchTitle = document.getElementById('search_title');
   
     form.addEventListener('submit', function (e) {
       e.preventDefault();
       const keyword = input.value.trim().toLowerCase();
-  
+      searchTitle.textContent = `Search: ${keyword}`;
       let anyVisible = false;
   
       results.forEach(item => {
@@ -91,10 +102,7 @@
           item.style.display = 'none';
         }
       });
-  
-      if (!anyVisible) {
-        document.getElementById('search-results').innerHTML = `<li>没有找到相关内容。</li>`;
-      }
+      noResultItem.style.display = anyVisible ? 'none' : 'block';
     });
   });
 </script>
@@ -108,6 +116,12 @@
       "type": "text",
       "id": "title",
       "label": "Title"
+    },
+    {
+      "type": "text",
+      "id": "no_result_text",
+      "label": "No result message",
+      "default": "No matching content found."
     }
   ],
   "blocks": [
