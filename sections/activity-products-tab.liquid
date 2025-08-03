@@ -231,6 +231,7 @@
 
     document.querySelectorAll(".product_info_saleinfo_btn").forEach(item => {
       item.addEventListener('click', async (e) => {
+        e.stopPropagation();
         const code = e.target.getAttribute('data-code');
         await navigator.clipboard.writeText(code);
 
