@@ -103,11 +103,67 @@
       ],
       "name": "product anchor bar",
       "settings": {}
+    },
+    "activity_products_tab_aUGewm": {
+      "type": "activity-products-tab",
+      "blocks": {
+        "tab_EgLUp3": {
+          "type": "tab",
+          "settings": {
+            "title": "Sitzende Erinnerung",
+            "product_list": [
+              "maidesite-th2-pro-plus-tischgestell-elektrisch-hohenverstellbar",
+              "maidesite-el2-pro-art-tischgestell-elektrisch-hohenverstellbar",
+              "maidesite-to1-pro-elektrisch-hohenverstellbarer-schreibtisch",
+              "ergoset-sc2-schreibtisch-ec6-burostuhl",
+              "ergoset-sn1-schreibtisch-ec5-burostuhl"
+            ]
+          }
+        },
+        "tab_bgF4yF": {
+          "type": "tab",
+          "settings": {
+            "title": "Sitzende Erinnerung",
+            "product_list": [
+              "maidesite-th2-pro-plus-tischgestell-elektrisch-hohenverstellbar",
+              "maidesite-el2-pro-art-tischgestell-elektrisch-hohenverstellbar",
+              "maidesite-to1-pro-elektrisch-hohenverstellbarer-schreibtisch",
+              "ergoset-sc2-schreibtisch-ec6-burostuhl",
+              "ergoset-sn1-schreibtisch-ec5-burostuhl"
+            ]
+          }
+        },
+        "tab_6qFKiy": {
+          "type": "tab",
+          "settings": {
+            "title": "Sitzende Erinnerung",
+            "product_list": [
+              "maidesite-th2-pro-plus-tischgestell-elektrisch-hohenverstellbar",
+              "maidesite-el2-pro-art-tischgestell-elektrisch-hohenverstellbar",
+              "maidesite-to1-pro-elektrisch-hohenverstellbarer-schreibtisch",
+              "ergoset-sc2-schreibtisch-ec6-burostuhl",
+              "ergoset-sn1-schreibtisch-ec5-burostuhl"
+            ]
+          }
+        }
+      },
+      "block_order": [
+        "tab_EgLUp3",
+        "tab_bgF4yF",
+        "tab_6qFKiy"
+      ],
+      "name": "activity products tab",
+      "settings": {
+        "specId": "",
+        "title": "<p>2025 FrüHlingsrabatt</p>",
+        "text": "<p>Je mehr Sie kaufen, desto mehr sparen Sie!</p>"
+      }
     }
   },
   "order": [
     "main",
     "banner_8AcyUY",
-    "product_anchor_bar_J93iqp"
+    "product_anchor_bar_J93iqp",
+    "activity_products_tab_aUGewm"
   ]
 }

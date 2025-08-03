@@ -1,0 +1,347 @@
+.activity_products_tab_section {
+  width: 100%;
+  background-color: #f2f1ed;
+  padding-top: 12rem;
+  padding-bottom: 6rem;
+}
+
+.activity_products_tab {
+  max-width: 144rem;
+  margin: 0 auto;
+}
+
+.activity_products_tab .activity_products_tab_title {
+  font-family: "PP Right Grotesk";
+  font-size: 6rem;
+  font-weight: 500;
+  line-height: 94%;
+  text-align: center;
+  text-transform: capitalize;
+  letter-spacing: 0px;
+  font-variation-settings: "opsz" auto;
+  color: #1F1F1F;
+}
+
+.activity_products_tab .activity_products_tab_text {
+  font-family: "PP Right Grotesk";
+  font-size: 2rem;
+  font-weight: normal;
+  line-height: 94%;
+  text-align: center;
+  letter-spacing: 0px;
+  font-variation-settings: "opsz" auto;
+  color: #1F1F1F;
+  margin-top: 3rem;
+}
+
+.activity_products_tab .activity_products_tab_head {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2.8rem;
+  margin-top: 3rem;
+}
+
+.activity_products_tab .activity_products_tab_head_item {
+  min-width: 25.2rem;
+  height: 4.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 1rem;
+  background-color: #7F7E75;
+  font-family: "PP Right Grotesk";
+  font-size: 2.4rem;
+  font-weight: bold;
+  line-height: 94%;
+  letter-spacing: 0px;
+  font-variation-settings: "opsz" auto;
+  color: #FFFFFF;
+  cursor: pointer;
+}
+
+.activity_products_tab .activity_products_tab_head_item.active {
+  background: #1F1F1F;
+  color: #BDFF00;
+}
+
+.activity_products_tab .activity_products_tab_contain {
+  margin-top: 3rem;
+  display: none;
+}
+
+.activity_products_tab .activity_products_tab_contain.active {
+  display: block;
+}
+
+.activity_products_tab .activity_products_tab_contain_first_product {
+  width: 100%;
+  display: flex;
+  align-items: stretch;
+}
+
+.activity_products_tab .activity_products_tab_contain_first_product_img {
+  flex: 0 0 auto;
+  width: 50%;
+  min-height: 48rem;
+  overflow: hidden;
+}
+
+.activity_products_tab .activity_products_tab_contain_first_product_img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center center;
+}
+
+.activity_products_tab .activity_products_tab_contain_first_product_info {
+  flex: 0 0 auto;
+  width: 50%;
+  min-height: 48rem;
+  padding: 5.3rem 2.5rem;
+  background-color: #fff;
+}
+
+.activity_products_tab .activity_products_tab_contain_first_product_title {
+  font-family: "PP Right Grotesk";
+  font-size: 3rem;
+  font-weight: 500;
+  line-height: 94%;
+  letter-spacing: 0px;
+  font-variation-settings: "opsz" auto;
+  color: #1F1F1F;
+}
+
+.activity_products_tab .activity_products_tab_contain_first_product_desc {
+  font-family: "PP Right Grotesk";
+  font-size: 2rem;
+  font-weight: normal;
+  line-height: 112%;
+  letter-spacing: 0px;
+  font-variation-settings: "opsz" auto;
+  color: #1F1F1F;
+  margin-top: 2rem;
+}
+
+.activity_products_tab .activity_products_tab_saleinfo {
+  padding: 2rem 3.5rem;
+  background-color: #FF7500;
+  display: inline-flex;
+  margin-top: 2rem;
+}
+
+.activity_products_tab .activity_products_tab_saleinfo_name {
+  font-family: "PP Right Grotesk";
+  font-size: 4rem;
+  font-weight: 500;
+  line-height: 94%;
+  letter-spacing: 0px;
+  font-variation-settings: "opsz" auto;
+  color: #FFFFFF;
+  margin-bottom: 0.4rem;
+}
+
+.activity_products_tab .activity_products_tab_saleinfo_countdown {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  font-family: "PP Right Grotesk";
+  font-size: 1.4rem;
+  font-weight: 500;
+  line-height: 112%;
+  letter-spacing: 0px;
+  font-variation-settings: "opsz" auto;
+  color: #fff
+}
+
+.activity_products_tab .activity_products_tab_saleinfo_countdown_text {
+  font-family: "PP Right Grotesk";
+  font-size: 1.4rem;
+  font-weight: normal;
+  line-height: 130%;
+  letter-spacing: 0px;
+  font-variation-settings: "opsz" auto;
+  color: #FFFFFF;
+}
+
+.activity_products_tab .activity_products_tab_saleinfo_countdown_item {
+  width: 2rem;
+  height: 2rem;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #FF7500;
+}
+
+.activity_products_tab .activity_products_tab_saleinfo_left {
+  padding-right: 2.4rem;
+  border-right: 0.1rem dashed #FFFFFF;
+}
+
+.activity_products_tab .activity_products_tab_saleinfo_right {
+  padding-left: 2.4rem;
+}
+
+.activity_products_tab .activity_products_tab_saleinfo_code {
+  font-family: "PP Right Grotesk";
+  font-size: 1.6rem;
+  font-weight: normal;
+  line-height: 130%;
+  letter-spacing: 0px;
+  font-variation-settings: "opsz" auto;
+  color: #FFFFFF;
+  margin-bottom: 0.6rem;
+  margin-top: 0.6rem;
+  text-align: center;
+}
+
+.activity_products_tab .activity_products_tab_saleinfo_btn {
+  width: 11rem;
+  height: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+  font-family: "PP Right Grotesk";
+  font-size: 1.8rem;
+  font-weight: 500;
+  line-height: 112%;
+  letter-spacing: 0px;
+  font-variation-settings: "opsz" auto;
+  color: #1F1F1F;
+  cursor: pointer;
+}
+
+.activity_products_tab .activity_products_tab_contain_first_product_price {
+  display: flex;
+  align-items: baseline;
+  margin-top: 2rem;
+  font-family: "PP Right Grotesk";
+  font-size: 3rem;
+  font-weight: 500;
+  line-height: 94%;
+  letter-spacing: 0px;
+  font-variation-settings: "opsz" auto;
+  color: #1F1F1F;
+}
+
+.activity_products_tab .activity_products_tab_contain_first_product_price_op {
+  font-size: 1.6rem;
+  font-weight: normal;
+  line-height: 130%;
+  text-decoration: line-through;
+  color: #7F7E75;
+  margin-left: 1.8rem;
+}
+
+.activity_products_tab .activity_products_tab_contain_first_product_policies {
+  font-size: 1.4rem;
+  font-weight: normal;
+  line-height: 130%;
+  color: #7F7E75;
+  margin-left: 1rem;
+}
+
+.activity_products_tab .activity_products_tab_contain_first_product_btn {
+  height: 3.6rem;
+  padding: 0 0.8rem;
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  background-color: #BDFF00;
+  font-family: "PP Right Grotesk";
+  font-size: 2.4rem;
+  font-weight: 500;
+  line-height: 112%;
+  letter-spacing: 0px;
+  font-variation-settings: "opsz" auto;
+  color: #1F1F1F;
+  margin-top: 2.5rem;
+}
+
+.activity_products_tab .activity_products_tab_contain_products {
+  display: flex;
+  flex-wrap: wrap;
+  align-self: stretch;
+  margin-top: 3rem;
+  gap: 2.8rem;
+}
+
+.activity_products_tab .activity_products_tab_product {
+  flex: 0 0 auto;
+  width: calc((100% - 8.4rem) / 4);
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.activity_products_tab .activity_products_tab_product_img {
+  width: 100%;
+  /* height: 36rem; */
+  background-color: #FAFAFA;
+  position: relative;
+  overflow: hidden;
+}
+
+.activity_products_tab .activity_products_tab_product_img img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center center;
+  transition: transform .3s ease;
+}
+
+.activity_products_tab .activity_products_tab_product:hover img {
+  transform: scale(1.1);
+}
+
+.activity_products_tab .activity_products_tab_product_info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 2rem;
+  background-color: #fff;
+  padding: 1.4rem 1.1rem 1.4rem 1.4rem;
+}
+
+.activity_products_tab .activity_products_tab_product_title {
+  color: #1F1F1F;
+}
+
+.activity_products_tab .product_rating {
+  margin: 0;
+  color: #7F7E75;
+}
+
+.activity_products_tab .activity_products_tab_product_price {
+  display: flex;
+  align-items: flex-end;
+  gap: 1rem;
+  font-family: "PP Right Grotesk";
+  font-size: 3rem;
+  font-weight: 500;
+  line-height: 94%;
+  letter-spacing: 0px;
+  font-variation-settings: "opsz" auto;
+  color: #1F1F1F;
+  margin-top: 0.6rem;
+}
+
+.activity_products_tab .activity_products_tab_product_price_cap {
+  font-size: 1.6rem;
+  font-weight: normal;
+  line-height: 130%;
+  text-decoration: line-through;
+  color: #7F7E75;
+}
+
+.activity_products_tab .activity_products_tab_product_btn {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 2rem;
+  width: 100%;
+}
