@@ -7,29 +7,19 @@
         <h2>{{ section.settings.title }}</h2>
       {% endif %}
       <div class="search_box">
-        <predictive-search class="search-modal__form" data-loading-text="{{ 'accessibility.loading' | t }}">
+        <main-search>
           <form id="help-search-form" action="javascript:void(0);" role="search" class="search">
             <div class="field">
               <input
                 class="search__input field__input"
-                id="Search-In-Out"
+                id="Search-In-Template"
                 type="search"
                 name="q"
-                value="{{ search.terms | escape }}"
                 placeholder="{{ 'general.search.search' | t }}"
-                role="combobox"
-                aria-expanded="false"
-                aria-owns="predictive-search-results"
-                aria-controls="predictive-search-results"
-                aria-haspopup="listbox"
-                aria-autocomplete="list"
-                autocorrect="off"
-                autocomplete="off"
-                autocapitalize="off"
-                spellcheck="false"
               >
-              <label class="field__label" for="Search-In-Out">{{ 'general.search.search' | t }}</label>
-              <input type="hidden" name="options[prefix]" value="last">
+              <label class="field__label" for="Search-In-Template">{{ 'general.search.search' | t }}</label>
+              <input name="options[prefix]" type="hidden" value="last">
+
               <button
                 type="reset"
                 class="reset__button field__button{% if search.terms == blank %} hidden{% endif %}"
@@ -39,20 +29,14 @@
                   {{- 'icon-reset.svg' | inline_asset_content -}}
                 </span>
               </button>
-              <button class="search__button field__button" aria-label="{{ 'general.search.search' | t }}">
+              <button type="submit" class="search__button field__button" aria-label="{{ 'general.search.search' | t }}">
                 <span class="svg-wrapper">
                   {{- 'icon-search.svg' | inline_asset_content -}}
                 </span>
               </button>
             </div>
-  
-            <div class="predictive-search predictive-search--header" tabindex="-1" data-predictive-search>
-              {%- render 'loading-spinner', class: 'predictive-search__loading-state' -%}
-            </div>
-  
-            <span class="predictive-search-status visually-hidden" role="status" aria-hidden="true"></span>
           </form>
-        </predictive-search>
+        </main-search>
       </div>
     </div>
     
@@ -132,7 +116,7 @@
 <script>
   document.addEventListener("DOMContentLoaded", function () {
     const form = document.getElementById('help-search-form');
-    const input = document.getElementById('Search-In-Out');
+    const input = document.getElementById('Search-In-Template');
   
     form.addEventListener('submit', function (e) {
       e.preventDefault(); 
