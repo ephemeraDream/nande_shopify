@@ -31,7 +31,9 @@
             "file_position": "middle_left",
             "file_type": "image",
             "file_image": "shopify://shop_images/01af9531-9158-4ede-87be-26818b919ab6.__CR0_0_1464_600_PT0_SX1464_V1.jpg",
-            "video_url": ""
+            "video_url": "",
+            "show_countdown": true,
+            "countdown": "summer-sale"
           }
         }
       },
