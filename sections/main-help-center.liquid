@@ -105,7 +105,11 @@
   }
   .main_help_center .influencer-step img{width: 100%;height:auto;}
   .main_help_center .influencer-step .step-desc{color:#7F7E75;font-size: 1.6rem;line-height:1.3em;}
-
+  @media screen and (max-width: 1024px) {
+    .main_help_center .steps-grid {
+      grid-template-columns: repeat(2, 3fr);
+    }
+  }
   @media screen and (max-width: 768px) {
     .main_help_center .session-box-inner,
     .main_help_center .session-box-inner h4{
@@ -118,6 +122,10 @@
       max-width: 100%;
     }
     .main_help_center .help_center_title{flex-direction: column;}
+
+    .main_help_center .steps-grid {
+      grid-template-columns: repeat(1, 3fr);
+    }
   }
 </style>
 
