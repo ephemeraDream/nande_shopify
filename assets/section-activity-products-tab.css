@@ -84,7 +84,6 @@
   flex: 0 0 auto;
   width: 50%;
   min-height: 48rem;
-  height: 48rem;
   overflow: hidden;
 }
 
@@ -100,6 +99,7 @@
   width: 50%;
   min-height: 48rem;
   padding: 5.3rem 2.5rem;
+  background-color: #fff;
 }
 
 .activity_products_tab .activity_products_tab_contain_first_product_title {

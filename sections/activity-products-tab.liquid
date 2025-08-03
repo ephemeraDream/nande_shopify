@@ -83,7 +83,7 @@
               {%- endif -%}
             </div>
             <a class="activity_products_tab_contain_first_product_btn nd-btn" href="{{ first_product.url }}">
-              {{ section.settings.product_link_text }}
+              {{ 'common.jetzt_konfigurieren' | t }}
               {{ 'icon-right-arrow.svg' | inline_asset_content }}
             </a>
           </div>
@@ -121,10 +121,10 @@
                       </div>
                     {% endif %}
                   </div>
-                  <a class="ctivity_products_tab_product_btn nd-btn" href="{{ product.url }}">
-                    {{ 'common.en_savoir_plus' | t }}
+                  <div class="ctivity_products_tab_product_btn nd-btn">
+                    {{ 'common.jetzt_konfigurieren' | t }}
                     {{ 'icon-right-arrow.svg' | inline_asset_content }}
-                  </a>
+                  </div>
                   {% if sale_info != blank %}
                     <div
                       class="ctivity_products_tab_product_saleinfo_countdown"
