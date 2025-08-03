@@ -1,0 +1,204 @@
+{{ 'section-activity-products-tab.css' | asset_url | stylesheet_tag }}
+
+<div class="activity_products_tab_section padding-sider" id="{{ section.settings.specId }}">
+  <div class="activity_products_tab">
+    <div class="activity_products_tab_title">{{ section.settings.title }}</div>
+    <div class="activity_products_tab_text">{{ section.settings.text }}</div>
+    <div class="activity_products_tab_head">
+      {% for block in section.blocks %}
+        <div
+          class="activity_products_tab_head_item{% if forloop.first %} active{% endif %}"
+          data-value="{{block.settings.title  }}"
+        >
+          {{ block.settings.title }}
+        </div>
+      {% endfor %}
+    </div>
+    {% for block in section.blocks %}
+      <div
+        class="activity_products_tab_contain{% if forloop.first %} active{% endif %}"
+        data-value="{{block.settings.title  }}"
+      >
+        {% assign first_product = block.settings.product_list | first %}
+        <div class="activity_products_tab_contain_first_product">
+          <div class="activity_products_tab_contain_first_product_img">
+            <img
+              src="{{ first_product.featured_media | image_url }}"
+              alt="{{ first_product.title }}"
+            >
+          </div>
+          <div class="activity_products_tab_contain_first_product_info">
+            <div class="activity_products_tab_contain_first_product_title">{{ first_product.title }}</div>
+            {% assign key_features = product.metafields.custom.key_features.value %}
+            {% if key_features != blank %}
+              <div class="activity_products_tab_contain_first_product_desc">
+                {{ key_features.description | metafield_tag }}
+              </div>
+            {% endif %}
+            {% assign sale_info = product.metafields.custom.sale_info.value %}
+            {% if sale_info != blank %}
+              <div class="activity_products_tab_saleinfo">
+                <div class="activity_products_tab_saleinfo_left">
+                  <div class="activity_products_tab_saleinfo_name">{{ sale_info.name }}</div>
+                  <div
+                    class="activity_products_tab_saleinfo_countdown"
+                    data-end-date="{{ sale_info.datetime | date: "%Y-%m-%dT%H:%M:%SZ" }}"
+                  >
+                    <span class="activity_products_tab_saleinfo_countdown_text">{{ 'common.ends_in' | t }}</span>
+                    <div class="activity_products_tab_saleinfo_countdown_item" data-type="day"></div>
+                    <span>:</span>
+                    <div class="activity_products_tab_saleinfo_countdown_item" data-type="hour"></div>
+                    <span>:</span>
+                    <div class="activity_products_tab_saleinfo_countdown_item" data-type="minute"></div>
+                    <span>:</span>
+                    <div class="activity_products_tab_saleinfo_countdown_item" data-type="second"></div>
+                  </div>
+                </div>
+                <div class="activity_products_tab_saleinfo_right">
+                  <div class="activity_products_tab_saleinfo_code">
+                    {{ 'common.code' | t -}}
+                    {{- sale_info.code }}
+                  </div>
+                  <div class="activity_products_tab_saleinfo_btn" data-code="{{ sale_info.code }}">
+                    {{ 'common.copy_and_use' | t }}
+                  </div>
+                </div>
+              </div>
+            {% endif %}
+            <div class="activity_products_tab_contain_first_product_price">
+              <div class="activity_products_tab_contain_first_product_price_dp">
+                {{ first_product.price | money_without_trailing_zeros }}
+              </div>
+              <div class="activity_products_tab_contain_first_product_price_op{% unless first_product.compare_at_price > first_product.price %} hidden{% endunless %}">
+                {{ first_product.compare_at_price | money_without_trailing_zeros }}
+              </div>
+              {%- if section.settings.show_tax_and_shipping -%}
+                {%- if cart.taxes_included or shop.shipping_policy.body != blank -%}
+                  <div class="activity_products_tab_contain_first_product_policies">
+                    {%- if cart.taxes_included -%}
+                      {{ 'products.product.include_taxes' | t }}
+                    {%- endif -%}
+                  </div>
+                {%- endif -%}
+              {%- endif -%}
+            </div>
+            <a class="activity_products_tab_contain_first_product_btn nd-btn" href="{{ first_product.url }}">
+              {{ section.settings.product_link_text }}
+              {{ 'icon-right-arrow.svg' | inline_asset_content }}
+            </a>
+          </div>
+          <div class="activity_products_tab_contain_products">
+            {% for product in block.settings.product_list offset: 1 %}
+              {% assign sale_info = product.metafields.custom.sale_info.value %}
+              <a
+                class="ctivity_products_tab_product"
+                data-type="{{ product.type | handleize }}"
+                href="{{ product.url }}"
+                data-id="{{ product.id }}"
+              >
+                <div class="ctivity_products_tab_product_img">
+                  <img src="{{ product.featured_media | image_url }}" alt="{{ product.title }}">
+                  <div class="ctivity_products_tab_product_select">
+                    {{- 'icon-selected.svg' | inline_asset_content -}}
+                  </div>
+                  {% if sale_info != blank %}
+                    <div class="ctivity_products_tab_product_saleinfo">{{ sale_info.name }}</div>
+                  {% endif %}
+                </div>
+                <div class="ctivity_products_tab_product_info">
+                  <h4 class="ctivity_products_tab_product_title">{{ product.title }}</h4>
+
+                  <div>
+                    {% render 'product-rating', product: product %}
+                    <div class="ctivity_products_tab_product_price">
+                      <div>
+                        {{ product.price | money_without_trailing_zeros }}
+                      </div>
+                      {% if product.compare_at_price != blank %}
+                        <div class="ctivity_products_tab_product_price_cap">
+                          {{ product.compare_at_price | money_without_trailing_zeros }}
+                        </div>
+                      {% endif %}
+                    </div>
+                    <a class="ctivity_products_tab_product_btn nd-btn" href="{{ product.url }}">
+                      {{ 'common.en_savoir_plus' | t }}
+                      {{ 'icon-right-arrow.svg' | inline_asset_content }}
+                    </a>
+                    {% if sale_info != blank %}
+                      <div
+                        class="ctivity_products_tab_product_saleinfo_countdown"
+                        data-end-date="{{ sale_info.datetime | date: "%Y-%m-%dT%H:%M:%SZ" }}"
+                      >
+                        <span class="ctivity_products_tab_product_saleinfo_countdown_text">
+                          {{- 'common.ends_in' | t -}}
+                        </span>
+                        <div class="ctivity_products_tab_product_saleinfo_countdown_item" data-type="day"></div>
+                        <span>:</span>
+                        <div class="ctivity_products_tab_product_saleinfo_countdown_item" data-type="hour"></div>
+                        <span>:</span>
+                        <div class="ctivity_products_tab_product_saleinfo_countdown_item" data-type="minute"></div>
+                        <span>:</span>
+                        <div class="ctivity_products_tab_product_saleinfo_countdown_item" data-type="second"></div>
+                      </div>
+                    {% endif %}
+                  </div>
+                </div>
+              </a>
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "activity products tab",
+  "tag": "section",
+  "class": "section",
+  "disabled_on": {
+    "groups": ["header", "footer"]
+  },
+  "settings": [
+    {
+      "type": "text",
+      "id": "specId",
+      "label": "specId"
+    },
+    {
+      "type": "richtext",
+      "id": "title",
+      "label": "title"
+    },
+    {
+      "type": "richtext",
+      "id": "text",
+      "label": "text"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "tab",
+      "name": "tab",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "title"
+        },
+        {
+          "type": "product_list",
+          "id": "product_list",
+          "label": "product list"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "activity products tab"
+    }
+  ]
+}
+{% endschema %}
