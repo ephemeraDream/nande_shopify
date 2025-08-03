@@ -10,7 +10,31 @@
                 "custom_breadcrumb": ""
             }
         },
-        
+        "main":{    
+            "type":"main-help-center-search",
+            "settings":{
+                "title": "",
+            },
+            "blocks": {
+                "item_01": {
+                    "type": "item",
+                    "settings": {
+                        "blog": "meine-bestellung-und-zahlung",
+                    }
+                },
+                "item_02": {
+                    "type": "item",
+                    "settings": {
+                        "blog": "maidesite-blog",
+                    }
+                }
+            },
+            "block_order": [
+                "item_01",
+                "item_02"
+            ],
+            "name": "main"
+        },
         "contact_list": {
             "type": "contact-list",
             "blocks": {
@@ -68,5 +92,5 @@
             }
         }
     },
-    "order":["breadcrumbs","contact_list"]
+    "order":["breadcrumbs","main","contact_list"]
 }
