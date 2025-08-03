@@ -188,12 +188,14 @@
         "swiper_xWLxVC"
       ],
       "custom_css": [
-        ".celebrity_swiper {padding-bottom: 12rem; background-color: transparent;}"
+        ".celebrity_swiper {background-color: transparent;}"
       ],
       "name": "celebrity swiper",
       "settings": {
         "title": "<p>Empfehlen Von</p>",
-        "text": ""
+        "text": "",
+        "padding_top": 120,
+        "padding_bottom": 0
       }
     },
     "img_with_foldtext_RcBrkw": {
@@ -236,7 +238,9 @@
       "settings": {
         "spec_id": "",
         "title": "<p>Why Collaborating With Maidesite</p>",
-        "image": "shopify://shop_images/featured-spaces-5.webp"
+        "image": "shopify://shop_images/featured-spaces-5.webp",
+        "padding_top": 120,
+        "padding_bottom": 120
       }
     },
     "featured_program": {
@@ -347,7 +351,10 @@
         "text": "<p>Häufig gestellte Fragen</p>",
         "show_btn": false,
         "learn_more": false,
-        "contact_us": false
+        "contact_us": false,
+        "padding_top": 120,
+        "padding_bottom": 120,
+        "background_color": "rgba(0,0,0,0)"
       }
     }
   },
