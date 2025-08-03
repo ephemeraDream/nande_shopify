@@ -112,13 +112,13 @@
 
 .activity_subscribe .activity_subscribe_bottom_form .newsletter-form,
 .activity_subscribe .activity_subscribe_bottom_form .newsletter-form__field-wrapper {
-  max-width: 87.4rem;
+  max-width: 49rem;
   margin: 0;
   width: 100%;
 }
 
 .activity_subscribe .activity_subscribe_bottom_form .field__input {
-  height: 3.5rem;
+  height: 6.8rem;
   font-family: "PP Right Grotesk";
   font-size: 2.4rem;
   font-weight: 500;
@@ -139,9 +139,13 @@
   padding: 1.5rem;
   padding-right: 40%;
 }
-.activity_subscribe .activity_subscribe_bottom_form .newsletter-form__message{color: #7f7e75;}
+
+.activity_subscribe .activity_subscribe_bottom_form .newsletter-form__message {
+  color: #7f7e75;
+}
+
 .activity_subscribe .activity_subscribe_bottom_form .newsletter-form__button {
-  max-width: 31.1rem;
+  max-width: 18rem;
   background-color: #BDFF00;
   font-family: "PP Right Grotesk";
   font-size: 2.4rem;
@@ -157,4 +161,28 @@
 
 .activity_subscribe .activity_subscribe_bottom_form .newsletter-form__button:not(:focus-visible):not(.focused) {
   background-color: #BDFF00;
+}
+
+.activity_subscribe .activity_subscribe_bottom_form .field__input::placeholder {
+  opacity: 1;
+}
+
+.activity_subscribe .activity_subscribe_bottom_form .field__input::placeholder {
+  color: #E2DED6;
+}
+
+.activity_subscribe .activity_subscribe_bottom_form .field__input::-webkit-input-placeholder {
+  color: #E2DED6;
+}
+
+.activity_subscribe .activity_subscribe_bottom_form .field__input:-moz-placeholder {
+  color: #E2DED6;
+}
+
+.activity_subscribe .activity_subscribe_bottom_form .field__input::-moz-placeholder {
+  color: #E2DED6;
+}
+
+.activity_subscribe .activity_subscribe_bottom_form .field__input:-ms-input-placeholder {
+  color: #E2DED6;
 }
