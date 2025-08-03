@@ -88,17 +88,13 @@
     const results = document.querySelectorAll('#search-results li');
     const noResultItem = document.getElementById('no-results');
     const searchTitle = document.getElementById('search_title');
-  
-    form.addEventListener('submit', function (e) {
-      e.preventDefault();
-      const keyword = input.value.trim().toLowerCase();
+
+    function performSearch(keyword) {
       searchTitle.textContent = `Search: ${keyword}`;
       let anyVisible = false;
-  
       results.forEach(item => {
         const title = item.getAttribute('data-title');
         const content = item.getAttribute('data-content');
-  
         if (title.includes(keyword) || content.includes(keyword)) {
           item.style.display = 'block';
           anyVisible = true;
@@ -107,7 +103,20 @@
         }
       });
       noResultItem.style.display = anyVisible ? 'none' : 'block';
+    }
+  
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      const keyword = input.value.trim().toLowerCase();
+      performSearch(keyword);
     });
+  
+    const urlParams = new URLSearchParams(window.location.search);
+    const keywordParam = urlParams.get('keyword') || urlParams.get('q');
+    if (keywordParam) {
+      input.value = keywordParam;
+      performSearch(keywordParam.trim().toLowerCase());
+    }
   });
 </script>
   
