@@ -21,17 +21,10 @@
                     "settings": {
                         "blog": "meine-bestellung-und-zahlung",
                     }
-                },
-                "item_02": {
-                    "type": "item",
-                    "settings": {
-                        "blog": "maidesite-blog",
-                    }
                 }
             },
             "block_order": [
-                "item_01",
-                "item_02"
+                "item_01"
             ],
             "name": "main"
         },
