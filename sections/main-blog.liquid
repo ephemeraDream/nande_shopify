@@ -16,13 +16,8 @@
   }
 {%- endstyle -%}
 
-{%- assign sorted_articles = blog.articles -%}
-{%- if request.params.sort == 'popular' -%}
-  {%- assign sorted_articles = blog.articles | sort: "metafields.custom.popular_score" | reverse -%}
-{%- endif -%}
 
-
-{%- paginate sorted_articles by 10 -%}
+{%- paginate blog.articles by 10 -%}
   <div class="main-blog session-box-padding section-{{ section.id }}-padding">
     
     <h2 class="session-box-inner title--primary{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--fade-in{% endif %}">
@@ -42,9 +37,14 @@
         <a href="?sort=popular" class="sort-btn {% if request.params.sort == 'popular' %}active{% endif %}">Popular</a>
       </div>
     </div>
-
+    <p>当前排序参数是：{{ request.params.sort }}</p>
     <div class="session-box-inner blog-articles {% if section.settings.layout == 'collage' %}blog-articles--onecard{% endif %}">
-      {%- for article in sorted_articles -%}
+      {%- assign articles_on_page = blog.articles -%}
+
+      {%- if request.params.sort == 'popular' -%}
+        {%- assign articles_on_page = blog.articles | sort: "metafields.custom.popular_score" | reverse -%}
+      {%- endif -%}
+      {%- for article in articles_on_page -%}
         <div
           class="blog-articles__article article{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
           {% if settings.animations_reveal_on_scroll %}
