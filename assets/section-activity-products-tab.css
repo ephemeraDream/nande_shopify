@@ -345,3 +345,31 @@
   margin-top: 2rem;
   width: 100%;
 }
+
+.activity_products_tab .activity_products_tab_product_saleinfo_countdown {
+  display: flex;
+  gap: 0.4rem;
+  font-family: "PP Right Grotesk";
+  font-size: 1.6rem;
+  font-weight: normal;
+  line-height: 130%;
+  letter-spacing: 0px;
+  font-variation-settings: "opsz" auto;
+  color: #FF7500;
+  margin-top: 1.2rem;
+}
+
+.activity_products_tab .activity_products_tab_product_saleinfo {
+  padding: .6rem;
+  background-color: #ff7500;
+  font-family: PP Right Grotesk;
+  font-size: 1.8rem;
+  font-weight: 500;
+  line-height: 80%;
+  letter-spacing: 0px;
+  font-variation-settings: "opsz" auto;
+  color: #fff;
+  position: absolute;
+  top: 1.4rem;
+  left: 1.4rem;
+}
