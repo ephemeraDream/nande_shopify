@@ -1,0 +1,124 @@
+{{ 'section-activity-subscribe.css' | asset_url | stylesheet_tag }}
+
+<div class="activity_subscribe_section">
+  <div class="activity_subscribe">
+    {% for block in section.blocks %}
+      {%- case block.type -%}
+        {%- when 'top-left' -%}
+          <div class="activity_subscribe_top_item">
+            <div class="activity_subscribe_top_item_title">{{ block.settings.title }}</div>
+            <div class="activity_subscribe_top_item_text">{{ block.settings.text }}</div>
+            <div class="activity_subscribe_top_item_icon">{{ block.settings.icon }}</div>
+          </div>
+        {%- when 'modal' -%}
+          <div class="activity_subscribe_top_item">
+            <div class="activity_subscribe_top_item_title">{{ block.settings.title }}</div>
+            <div class="activity_subscribe_top_item_text">{{ block.settings.text }}</div>
+            <div class="activity_subscribe_top_item_icon">{{ block.settings.icon }}</div>
+          </div>
+        {%- when 'bottom' -%}
+          <div class="activity_subscribe_bottom">
+            <img src="{{ block.settings.background | image_url }}" class="activity_subscribe_bottom_img">
+            <div class="activity_subscribe_bottom_info">
+              <div class="activity_subscribe_bottom_subtitle">{{ block.settings.subtitle }}</div>
+              <div class="activity_subscribe_bottom_title">{{ block.settings.title }}</div>
+              <div class="activity_subscribe_bottom_text">{{ block.settings.text }}</div>
+            </div>
+          </div>
+      {%- endcase -%}
+    {% endfor %}
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "activity subscribe",
+  "tag": "section",
+  "class": "section",
+  "disabled_on": {
+    "groups": ["header", "footer"]
+  },
+  "settings": [
+    {
+      "type": "text",
+      "id": "specId",
+      "label": "specId"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "top-left",
+      "name": "top left",
+      "settings": [
+        {
+          "type": "richtext",
+          "id": "title",
+          "label": "title"
+        },
+        {
+          "type": "richtext",
+          "id": "text",
+          "label": "text"
+        },
+        {
+          "type": "textarea",
+          "id": "icon",
+          "label": "icon"
+        }
+      ]
+    },
+    {
+      "type": "top-right",
+      "name": "top right",
+      "settings": [
+        {
+          "type": "richtext",
+          "id": "title",
+          "label": "title"
+        },
+        {
+          "type": "richtext",
+          "id": "text",
+          "label": "text"
+        },
+        {
+          "type": "textarea",
+          "id": "icon",
+          "label": "icon"
+        }
+      ]
+    },
+    {
+      "type": "bottom",
+      "name": "bottom",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "background",
+          "label": "background"
+        },
+        {
+          "type": "richtext",
+          "id": "title",
+          "label": "title"
+        },
+        {
+          "type": "richtext",
+          "id": "subtitle",
+          "label": "subtitle"
+        },
+        {
+          "type": "richtext",
+          "id": "text",
+          "label": "text"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "activity subscribe"
+    }
+  ]
+}
+{% endschema %}
