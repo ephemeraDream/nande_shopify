@@ -25,6 +25,7 @@
   line-height: 1em;
   color: #7F7E75;
   transition: all 0.3s ease;
+  cursor: pointer;
 }
 .main-blog .blog-sort-buttons .sort-btn:hover {
   background-color: #1F1F1F;
