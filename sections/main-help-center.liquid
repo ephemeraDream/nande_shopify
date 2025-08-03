@@ -137,6 +137,8 @@
     form.addEventListener('submit', function (e) {
       e.preventDefault(); 
       const keyword = input.value.trim();
+      console.log(keyword);
+      console.log(input);
       if (keyword) {
         const targetURL = `https://www.maidesite.de/pages/topic-collection?view=help-search&keyword=${encodeURIComponent(keyword)}`;
         window.location.href = targetURL;
