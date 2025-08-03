@@ -1817,6 +1817,7 @@ details[open]>.share-button__fallback {
   padding: 1.5rem;
   margin: var(--inputs-border-width);
   transition: box-shadow var(--duration-short) ease;
+  font-family: "PP Right Grotesk";
 }
 
 .field__label,
@@ -1881,6 +1882,7 @@ details[open]>.share-button__fallback {
   right: 0;
   top: 0;
   width: 4.4rem;
+  font-family: "PP Right Grotesk";
 }
 
 .field__button>.svg-wrapper {
