@@ -57,12 +57,6 @@
                       {{ section.settings.btn_text }}
                     </button>
                   </div>
-                  <div class="subscribe_emails_confirm">
-                    <div class="subscribe_emails_confirm_checkbox">
-                      {{- 'icon-email-check.svg' | inline_asset_content -}}
-                    </div>
-                    {{ section.settings.confirm_text }}
-                  </div>
                   {%- if form.errors -%}
                     <small class="newsletter-form__message form__message" id="ContactFooter-error">
                       <span class="svg-wrapper">
