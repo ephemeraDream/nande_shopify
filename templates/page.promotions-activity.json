@@ -97,6 +97,9 @@
         "item_Cgh74t",
         "item_fLi8Gn"
       ],
+      "custom_css": [
+        ".product_anchor_bar_btn{display: none;}"
+      ],
       "name": "product anchor bar",
       "settings": {}
     }
