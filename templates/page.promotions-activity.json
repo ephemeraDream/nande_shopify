@@ -191,6 +191,45 @@
         ]
       }
     },
+    "activity_subscribe_tV4gHF": {
+      "type": "activity-subscribe",
+      "blocks": {
+        "top_left_TNQyCH": {
+          "type": "top-left",
+          "settings": {
+            "title": "<p>TITLE TITLE<br/>TITLE TITLETITLE TITLE</p>",
+            "text": "<p>Sofortige Zahlung oder Ratenzahlung mit Klarna<br/>Sofortige Zahlung </p>",
+            "icon": "<svg xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" version=\"1.1\" width=\"128.8000030517578\" height=\"117.26470184326172\" viewbox=\"0 0 128.8000030517578 117.26470184326172\" xmlns:xlink=\"http://www.w3.org/1999/xlink\"><g><path d=\"M91.067,117.265C89.0759,117.263,87.2083,116.299,86.054,114.677L75.4631,99.7606L6.14855,99.7606C2.75253,99.7559,0.00157068,97.0024,0,93.6063L0,6.14855C0.00471563,2.75475,2.75475,0.00471524,6.14855,0L122.649,0C126.044,0.00314049,128.795,2.75364,128.8,6.14855L128.8,93.6063C128.795,97.0012,126.044,99.7517,122.649,99.7549L106.671,99.7549L96.08,114.671C94.927,116.296,93.0592,117.262,91.067,117.265ZM8.79628,90.9615L80.0053,90.9615L91.067,106.54L102.143,90.9615L120.004,90.9615L120.004,8.79057L8.79628,8.79057L8.79628,90.9615Z\" fill=\"#000000\" fill-opacity=\"1\" style=\"mix-blend-mode:passthrough\"></path></g></svg>"
+          }
+        },
+        "top_right_fceWw8": {
+          "type": "top-right",
+          "settings": {
+            "title": "<p>TITLE TITLE<br/>TITLE TITLETITLE TITLE</p>",
+            "text": "<p>Sofortige Zahlung oder Ratenzahlung mit Klarna<br/>Sofortige Zahlung </p>",
+            "icon": "<svg xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" version=\"1.1\" width=\"128.8000030517578\" height=\"117.26470184326172\" viewbox=\"0 0 128.8000030517578 117.26470184326172\" xmlns:xlink=\"http://www.w3.org/1999/xlink\"><g><path d=\"M91.067,117.265C89.0759,117.263,87.2083,116.299,86.054,114.677L75.4631,99.7606L6.14855,99.7606C2.75253,99.7559,0.00157068,97.0024,0,93.6063L0,6.14855C0.00471563,2.75475,2.75475,0.00471524,6.14855,0L122.649,0C126.044,0.00314049,128.795,2.75364,128.8,6.14855L128.8,93.6063C128.795,97.0012,126.044,99.7517,122.649,99.7549L106.671,99.7549L96.08,114.671C94.927,116.296,93.0592,117.262,91.067,117.265ZM8.79628,90.9615L80.0053,90.9615L91.067,106.54L102.143,90.9615L120.004,90.9615L120.004,8.79057L8.79628,8.79057L8.79628,90.9615Z\" fill=\"#000000\" fill-opacity=\"1\" style=\"mix-blend-mode:passthrough\"></path></g></svg>"
+          }
+        },
+        "bottom_6MFfEX": {
+          "type": "bottom",
+          "settings": {
+            "background": "shopify://shop_images/a8e9f7ef556f09917041953654d98435.jpg",
+            "title": "<p>Fortschrittliche Technologie</p>",
+            "subtitle": "<p>Extrem stabiler </p>",
+            "text": "<p>Perfekt für zwei Familienmitglieder, um ihre individuelle Körpergröße anzupassen </p><p>oder um zwei neue Höheneinstellungen </p>"
+          }
+        }
+      },
+      "block_order": [
+        "top_left_TNQyCH",
+        "top_right_fceWw8",
+        "bottom_6MFfEX"
+      ],
+      "name": "activity subscribe",
+      "settings": {
+        "specId": ""
+      }
+    },
     "blogs_simple_XBYLNU": {
       "type": "blogs-simple",
       "name": "blogs simple",
@@ -210,6 +249,7 @@
     "activity_products_tab_aUGewm",
     "activity_products_normal_REbAHP",
     "activity_products_normal_8qJYJt",
+    "activity_subscribe_tV4gHF",
     "blogs_simple_XBYLNU"
   ]
 }
