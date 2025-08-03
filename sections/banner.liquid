@@ -50,19 +50,19 @@
           {% endif %}
         {% endif %}
         <div class="session-box-padding">
-        <div class="session-box-inner">
-        <div class="section_banner_info section_banner_info_{{ block.settings.file_position }}">
-          <h5 class="section_banner_sub_title">{{ block.settings.sub_title }}</h5>
-          <h2 class="section_banner_info_title">{{ block.settings.title }}</h2>
-          <div class="section_banner_info_text text-body">{{ block.settings.text }}</div>
-          {% if block.settings.btn_text != blank %}
-            <a class="section_banner_info_btn nd-btn" href="{{ block.settings.link }}">
-              {{ block.settings.btn_text }}
-              {{ 'icon-right-arrow.svg' | inline_asset_content }}
-            </a>
-          {% endif %}
-        </div>
-        </div>
+          <div class="session-box-inner">
+            <div class="section_banner_info section_banner_info_{{ block.settings.file_position }}">
+              <h5 class="section_banner_sub_title">{{ block.settings.sub_title }}</h5>
+              <h2 class="section_banner_info_title">{{ block.settings.title }}</h2>
+              <div class="section_banner_info_text text-body">{{ block.settings.text }}</div>
+              {% if block.settings.btn_text != blank %}
+                <a class="section_banner_info_btn nd-btn" href="{{ block.settings.link }}">
+                  {{ block.settings.btn_text }}
+                  {{ 'icon-right-arrow.svg' | inline_asset_content }}
+                </a>
+              {% endif %}
+            </div>
+          </div>
         </div>
       </div>
     {% endfor %}
@@ -70,15 +70,15 @@
 </div>
 
 <script>
-  const swiper =new Swiper('.section_banner', {
+  const swiper = new Swiper('.section_banner', {
     loop: true,
     autoplay: true,
     spaceBetween: 0,
   });
   const bannerEl = document.querySelector('.section_banner');
 
-bannerEl.addEventListener('mouseenter', () => swiper.autoplay.stop());
-bannerEl.addEventListener('mouseleave', () => swiper.autoplay.start());
+  bannerEl.addEventListener('mouseenter', () => swiper.autoplay.stop());
+  bannerEl.addEventListener('mouseleave', () => swiper.autoplay.start());
 </script>
 
 {% schema %}
@@ -204,6 +204,18 @@ bannerEl.addEventListener('mouseleave', () => swiper.autoplay.start());
           "type": "video",
           "id": "url_upload",
           "label": "video upload"
+        },
+        {
+          "type": "checkbox",
+          "id": "show_countdown",
+          "label": "show countdown",
+          "default": false
+        },
+        {
+          "type": "metaobject",
+          "metaobject_type": "countdown_date_time",
+          "id": "countdown",
+          "label": "countdown"
         }
       ]
     }
