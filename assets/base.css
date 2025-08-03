@@ -1697,6 +1697,7 @@ details[open]>.share-button__fallback {
   border-radius: var(--inputs-radius-outset);
   box-shadow: var(--inputs-shadow-horizontal-offset) var(--inputs-shadow-vertical-offset) var(--inputs-shadow-blur-radius) rgba(var(--color-shadow), var(--inputs-shadow-opacity));
   z-index: -1;
+  font-family: "PP Right Grotesk";
 }
 
 .field:after,
@@ -1716,6 +1717,7 @@ details[open]>.share-button__fallback {
   box-shadow: 0 0 0 var(--inputs-border-width) rgba(var(--color-foreground), var(--inputs-border-opacity));
   transition: box-shadow var(--duration-short) ease;
   z-index: 1;
+  font-family: "PP Right Grotesk";
 }
 
 .select__select {
