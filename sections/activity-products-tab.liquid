@@ -92,54 +92,54 @@
           {% for product in block.settings.product_list offset: 1 %}
             {% assign sale_info = product.metafields.custom.sale_info.value %}
             <a
-              class="ctivity_products_tab_product"
+              class="activity_products_tab_product"
               data-type="{{ product.type | handleize }}"
               href="{{ product.url }}"
               data-id="{{ product.id }}"
             >
-              <div class="ctivity_products_tab_product_img">
+              <div class="activity_products_tab_product_img">
                 <img src="{{ product.featured_media | image_url }}" alt="{{ product.title }}">
-                <div class="ctivity_products_tab_product_select">
+                <div class="activity_products_tab_product_select">
                   {{- 'icon-selected.svg' | inline_asset_content -}}
                 </div>
                 {% if sale_info != blank %}
-                  <div class="ctivity_products_tab_product_saleinfo">{{ sale_info.name }}</div>
+                  <div class="activity_products_tab_product_saleinfo">{{ sale_info.name }}</div>
                 {% endif %}
               </div>
-              <div class="ctivity_products_tab_product_info">
-                <h4 class="ctivity_products_tab_product_title">{{ product.title }}</h4>
+              <div class="activity_products_tab_product_info">
+                <h4 class="activity_products_tab_product_title">{{ product.title }}</h4>
 
                 <div>
                   {% render 'product-rating', product: product %}
-                  <div class="ctivity_products_tab_product_price">
+                  <div class="activity_products_tab_product_price">
                     <div>
                       {{ product.price | money_without_trailing_zeros }}
                     </div>
                     {% if product.compare_at_price != blank %}
-                      <div class="ctivity_products_tab_product_price_cap">
+                      <div class="activity_products_tab_product_price_cap">
                         {{ product.compare_at_price | money_without_trailing_zeros }}
                       </div>
                     {% endif %}
                   </div>
-                  <div class="ctivity_products_tab_product_btn nd-btn">
+                  <div class="activity_products_tab_product_btn nd-btn">
                     {{ 'common.jetzt_konfigurieren' | t }}
                     {{ 'icon-right-arrow.svg' | inline_asset_content }}
                   </div>
                   {% if sale_info != blank %}
                     <div
-                      class="ctivity_products_tab_product_saleinfo_countdown"
+                      class="activity_products_tab_product_saleinfo_countdown"
                       data-end-date="{{ sale_info.datetime | date: "%Y-%m-%dT%H:%M:%SZ" }}"
                     >
-                      <span class="ctivity_products_tab_product_saleinfo_countdown_text">
+                      <span class="activity_products_tab_product_saleinfo_countdown_text">
                         {{- 'common.ends_in' | t -}}
                       </span>
-                      <div class="ctivity_products_tab_product_saleinfo_countdown_item" data-type="day"></div>
+                      <div class="activity_products_tab_product_saleinfo_countdown_item" data-type="day"></div>
                       <span>:</span>
-                      <div class="ctivity_products_tab_product_saleinfo_countdown_item" data-type="hour"></div>
+                      <div class="activity_products_tab_product_saleinfo_countdown_item" data-type="hour"></div>
                       <span>:</span>
-                      <div class="ctivity_products_tab_product_saleinfo_countdown_item" data-type="minute"></div>
+                      <div class="activity_products_tab_product_saleinfo_countdown_item" data-type="minute"></div>
                       <span>:</span>
-                      <div class="ctivity_products_tab_product_saleinfo_countdown_item" data-type="second"></div>
+                      <div class="activity_products_tab_product_saleinfo_countdown_item" data-type="second"></div>
                     </div>
                   {% endif %}
                 </div>
