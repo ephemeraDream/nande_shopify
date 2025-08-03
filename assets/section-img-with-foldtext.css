@@ -124,11 +124,32 @@
 .img_with_foldtext .img_with_foldtext_image.active {
   display: block;
 }
+
+@media screen and (max-width: 1300px) {
+  .img_with_foldtext .img_with_foldtext_item.active .img_with_foldtext_item_head {
+    font-size: 4rem;
+    padding: 3rem 0;
+  }
+  .img_with_foldtext .img_with_foldtext_item_head {
+    font-size: 3rem;
+    padding: 1rem 0;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .img_with_foldtext .img_with_foldtext_item.active .img_with_foldtext_item_head {
+    font-size: 3rem;
+    padding: 2rem 0;
+  }
+  .img_with_foldtext .img_with_foldtext_item_head {
+    font-size: 2rem;
+    padding: 1rem 0;
+  }
+}
 @media screen and (max-width: 768px) {
 .img_with_foldtext .img_with_foldtext_contain{
   flex-direction: column;
 }
-.img_with_foldtext .img_with_foldtext_left{
+.img_with_foldtext .img_with_foldtext_contain .img_with_foldtext_left{
   width: 100%;
 }
 .img_with_foldtext .img_with_foldtext_contain_right{
