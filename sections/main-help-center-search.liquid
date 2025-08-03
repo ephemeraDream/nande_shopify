@@ -89,3 +89,35 @@
 
   });
 </script>
+
+{% schema %}
+{
+  "name": "Main Help Center Search",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title"
+    },
+  ],
+  "blocks": [
+    {
+      "type": "item",
+      "name": "Item",
+      "settings": [
+        {
+          "type": "blog",
+          "id": "blog",
+          "label": "选择一个博客分类"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Main Help Center Search",
+      "category": "Custom"
+    }
+  ]
+}
+{% endschema %}
