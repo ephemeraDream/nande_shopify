@@ -99,9 +99,6 @@
             >
               <div class="activity_products_tab_product_img">
                 <img src="{{ product.featured_media | image_url }}" alt="{{ product.title }}">
-                <div class="activity_products_tab_product_select">
-                  {{- 'icon-selected.svg' | inline_asset_content -}}
-                </div>
                 {% if sale_info != blank %}
                   <div class="activity_products_tab_product_saleinfo">{{ sale_info.name }}</div>
                 {% endif %}
