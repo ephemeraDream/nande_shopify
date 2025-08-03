@@ -33,24 +33,19 @@
         {% endfor %}
       </nav>
       <div class="blog-sort-buttons">
-        <a href="?sort=latest" class="sort-btn {% unless request.params.sort == 'popular' %}active{% endunless %}">Latest</a>
-        <a href="?sort=popular" class="sort-btn {% if request.params.sort == 'popular' %}active{% endif %}">Popular</a>
+        <div class="sort-btn" data-sort="latest">Latest</div>
+        <div class="sort-btn" data-sort="popular">Popular</div>
       </div>
     </div>
-    <p>当前排序参数是：{{ request.params.sort }}</p>
     <div class="session-box-inner blog-articles {% if section.settings.layout == 'collage' %}blog-articles--onecard{% endif %}">
-      {%- assign articles_on_page = blog.articles -%}
-
-      {%- if request.params.sort == 'popular' -%}
-        {%- assign articles_on_page = blog.articles | sort: "metafields.custom.popular_score" | reverse -%}
-      {%- endif -%}
-      {%- for article in articles_on_page -%}
+      {%- for article in blog.articles -%}
         <div
           class="blog-articles__article article{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
           {% if settings.animations_reveal_on_scroll %}
             data-cascade
             style="--animation-order: {{ forloop.index }};"
           {% endif %}
+          data-popular="{{ article.metafields.custom.popular_score }}" data-date="{{ article.published_at }}"
         >
           {%- render 'article-card',
             article: article,
@@ -71,6 +66,50 @@
     {%- endif -%}
   </div>
 {%- endpaginate -%}
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const articlesWrapper = document.querySelector('.blog-articles');
+    const buttons = document.querySelectorAll('.blog-sort-buttons .sort-btn');
+    const urlParams = new URLSearchParams(window.location.search);
+    let sort = urlParams.get('sort') || 'latest';
+  
+    function sortArticles(sortType) {
+      const articles = Array.from(articlesWrapper.children);
+      articles.sort((a, b) => {
+        if (sortType === 'popular') {
+          const aScore = parseFloat(a.dataset.popular) || 0;
+          const bScore = parseFloat(b.dataset.popular) || 0;
+          return bScore - aScore; // 热度高的排前
+        } else {
+          const aDate = new Date(a.dataset.date);
+          const bDate = new Date(b.dataset.date);
+          return bDate - aDate; // 时间新的排前
+        }
+      });
+      articles.forEach(article => articlesWrapper.appendChild(article));
+    }
+  
+    // 初始化高亮和排序
+    buttons.forEach(btn => {
+      btn.classList.toggle('active', btn.dataset.sort === sort);
+    });
+    sortArticles(sort);
+  
+    // 绑定点击事件
+    buttons.forEach(btn => {
+      btn.addEventListener('click', function () {
+        buttons.forEach(b => b.classList.remove('active'));
+        this.classList.add('active');
+        sort = this.dataset.sort;
+        sortArticles(sort);
+        // 可选：改变 URL 参数但不刷新页面
+        history.replaceState(null, '', `?sort=${sort}`);
+      });
+    });
+  });
+  
+</script>
 
 {% schema %}
 {
