@@ -1831,6 +1831,7 @@ details[open]>.share-button__fallback {
   color: rgba(var(--color-foreground), 0.75);
   letter-spacing: 0;
   line-height: 1.5;
+  font-family: "PP Right Grotesk";
 }
 
 .field__input:focus~.field__label,
