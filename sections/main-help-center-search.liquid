@@ -1,3 +1,4 @@
+{% comment %} 帮助中心 搜索页 模版 {% endcomment %}
 <div class="help_center_search session-box-padding padding-top-60 padding-bottom-120">
   <div class="session-box-inner">
       <h2 class="padding-bottom-30">Search:</h2>
@@ -88,3 +89,35 @@
 
   });
 </script>
+
+{% schema %}
+{
+  "name": "Main Help Center Search",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "item",
+      "name": "Item",
+      "settings": [
+        {
+          "type": "blog",
+          "id": "blog",
+          "label": "选择一个博客分类"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Main Help Center Search",
+      "category": "Custom"
+    }
+  ]
+}
+{% endschema %}

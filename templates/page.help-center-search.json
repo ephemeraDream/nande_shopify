@@ -20,64 +20,18 @@
                     "type": "item",
                     "settings": {
                         "blog": "meine-bestellung-und-zahlung",
-                        "image": "shopify://shop_images/help_center_01.webp",
-                        "title": "Meine Bestellung und Zahlung",
-                        "text": "<p>Bestellinformationen, Bearbeitung, Stornierung, allgemeine Zahlungsfragen.</p>"
                     }
                 },
                 "item_02": {
                     "type": "item",
                     "settings": {
                         "blog": "maidesite-blog",
-                        "image": "shopify://shop_images/help_center_02.webp",
-                        "title": "Versand und Lieferung",
-                        "text": "<p>Versandorte, Lieferzeiten, Steuern, allgemeine Versandanfragen.</p>"
-                    }
-                },
-                "item_03": {
-                    "type": "item",
-                    "settings": {
-                        "blog": "maidesite-blog",
-                        "image": "shopify://shop_images/help_center_03.webp",
-                        "title": "Richtlinien",
-                        "text": "<p>Garantien, kostenlose Testphasen, Versand & Rücksendungen.</p>"
-                    }
-                },
-                "item_04": {
-                    "type": "item",
-                    "settings": {
-                        "blog": "maidesite-blog",
-                        "image": "shopify://shop_images/help_center_04.webp",
-                        "title": "Produkte und Fehlerbehebung",
-                        "text": "<p>Allgemeine Produktfragen, Zusatzprodukte, Tipps zur Fehlerbehebung.</p>"
-                    }
-                },
-                "item_05": {
-                    "type": "item",
-                    "settings": {
-                        "blog": "maidesite-blog",
-                        "image": "shopify://shop_images/help_center_05.webp",
-                        "title": "Aktionen",
-                        "text": "<p>Empfehlungsprämien, Affiliate-Belohnungen, Store-Guthaben, Rabattcodes.</p>"
-                    }
-                },
-                "item_06": {
-                    "type": "item",
-                    "settings": {
-                        "blog": "maidesite-blog",
-                        "image": "shopify://shop_images/help_center_06.webp",
-                        "title": "Drittanbieter",
-                        "text": "<p>Richtlinien & allgemeine Fragen zu Drittanbietern.</p>"
                     }
                 }
             },
             "block_order": [
                 "item_01",
-                "item_02",
-                "item_03",
-                "item_04",
-                "item_05",
-                "item_06"
+                "item_02"
             ],
             "name": "main"
         },
