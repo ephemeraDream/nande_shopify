@@ -71,6 +71,7 @@
   document.addEventListener('DOMContentLoaded', function () {
     const articlesWrapper = document.querySelector('.blog-articles');
     const buttons = document.querySelectorAll('.blog-sort-buttons .sort-btn');
+    const url = new URL(window.location.href);               // 加上这一行
     const urlParams = new URLSearchParams(window.location.search);
     let sort = urlParams.get('sort') || 'latest';
   
@@ -109,6 +110,7 @@
       });
     });
   });
+  
   
 </script>
 
