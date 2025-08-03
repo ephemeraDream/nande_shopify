@@ -84,6 +84,7 @@
   flex: 0 0 auto;
   width: 50%;
   min-height: 48rem;
+  height: 48rem;
   overflow: hidden;
 }
 
