@@ -93,13 +93,19 @@
       searchTitle.textContent = `Search: ${keyword}`;
       let anyVisible = false;
       results.forEach(item => {
-        const title = item.getAttribute('data-title');
-        const content = item.getAttribute('data-content');
-        if (title.includes(keyword) || content.includes(keyword)) {
-          item.style.display = 'block';
-          anyVisible = true;
-        } else {
+        
+        if(keyword){
+          const title = item.getAttribute('data-title');
+          const content = item.getAttribute('data-content');
+          if (title.includes(keyword) || content.includes(keyword)) {
+            item.style.display = 'block';
+            anyVisible = true;
+          } else {
+            item.style.display = 'none';
+          }
+        }else{
           item.style.display = 'none';
+          anyVisible = true;
         }
       });
       noResultItem.style.display = anyVisible ? 'none' : 'block';
