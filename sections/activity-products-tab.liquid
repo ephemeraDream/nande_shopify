@@ -228,6 +228,20 @@
 
     initCountDown(document.querySelectorAll('.activity_products_tab_product_saleinfo_countdown'), "activity_products_tab_product_saleinfo_countdown_item");
     initCountDown(document.querySelectorAll('.activity_products_tab_saleinfo_countdown'), "activity_products_tab_saleinfo_countdown_item");
+
+    document.querySelectorAll(".product_info_saleinfo_btn").forEach(item => {
+      item.addEventListener('click', async (e) => {
+        const code = e.target.getAttribute('data-code');
+        await navigator.clipboard.writeText(code);
+
+        const originalText = e.target.innerHTML;
+        e.target.innerHTML = 'Copied';
+
+        setTimeout(() => {
+          e.target.innerHTML = originalText;
+        }, 5000);
+      });
+    });
   })();
 </script>
 
