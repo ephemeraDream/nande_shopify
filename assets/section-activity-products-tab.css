@@ -397,6 +397,7 @@
   line-height: 130%;
   letter-spacing: 0px;
   font-variation-settings: "opsz" auto;
+  text-decoration: underline;
   margin-top: 2rem;
   color: #FF7500;
 }

@@ -29,13 +29,13 @@
           </div>
           <div class="activity_products_tab_contain_first_product_info">
             <div class="activity_products_tab_contain_first_product_title">{{ first_product.title }}</div>
-            {% assign key_features = product.metafields.custom.key_features.value %}
+            {% assign key_features = first_product.metafields.custom.key_features.value %}
             {% if key_features != blank %}
               <div class="activity_products_tab_contain_first_product_desc">
                 {{ key_features.description | metafield_tag }}
               </div>
             {% endif %}
-            {% assign sale_info = product.metafields.custom.sale_info.value %}
+            {% assign sale_info = first_product.metafields.custom.sale_info.value %}
             {% if sale_info != blank %}
               <div class="activity_products_tab_saleinfo">
                 <div class="activity_products_tab_saleinfo_left">
