@@ -56,12 +56,11 @@
             >
               <div class="announcement_bar_text">{{ section.blocks.first.settings.text }}</div>
               {%- if section.blocks.first.settings.image != blank -%}
-              <img src="{{ section.blocks.first.settings.image | image_url }}">
-             {%- endif -%}
+                <img src="{{ section.blocks.first.settings.image | image_url }}">
+              {%- endif -%}
             </a>
           {%- when 'countdown' -%}
-            {% assign countdown_handle = section.blocks.first.settings.countdown_handle %}
-            {%- assign countdown = shop.metaobjects.countdown_date_time[countdown_handle] -%}
+            {%- assign countdown = section.blocks.first.settings.countdown -%}
             <a
               class="announcement_bar_countdown"
               {%- if section.blocks.first.settings.link != blank -%}
@@ -166,10 +165,9 @@
                       >
                         <div class="announcement_bar_text">{{ block.settings.text }}</div>
                         {%- assign image = section.blocks.first.settings.image -%}
-                        {%- if image and image != blank and image != "" -%}
+                        {%- if image and image != blank and image != '' -%}
                           <img src="{{ image | image_url }}">
                         {%- endif -%}
-                        
                       </a>
                     </div>
                   </div>
@@ -188,8 +186,7 @@
                       role="region"
                       aria-label="{{ 'sections.header.announcement' | t }}"
                     >
-                      {% assign countdown_handle = block.settings.countdown_handle %}
-                      {%- assign countdown = shop.metaobjects.countdown_date_time[countdown_handle] -%}
+                      {%- assign countdown = block.settings.countdown -%}
                       <a
                         class="announcement_bar_countdown"
                         {%- if block.settings.link != blank -%}
@@ -449,6 +446,12 @@
           "type": "url",
           "id": "link",
           "label": "t:sections.announcement-bar.blocks.announcement.settings.link.label"
+        },
+        {
+          "type": "metaobject",
+          "metaobject_type": "countdown_date_time",
+          "id": "countdown",
+          "label": "countdown"
         }
       ]
     }
