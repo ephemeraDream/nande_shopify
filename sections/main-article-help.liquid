@@ -53,7 +53,10 @@
         width:69%;
     }
     .main_blog_help .help_left .nav_item a{color:#7F7E75;}
-    .main_blog_help .help_left .nav_item{font-weight: 500;cursor: pointer;font-size: 2rem;color: #7F7E75;line-height: 1em;padding-bottom:1rem;margin-bottom: 2rem;border-bottom: 2px solid transparent;display: inline-block;transition: all 0.3s ease-in-out;}
+    .main_blog_help .help_left .nav_item{font-weight: 500;cursor: pointer;font-size: 2rem;color: #7F7E75;line-height: 1em;padding-bottom:1rem;margin-bottom: 2rem;border-bottom: 2px solid transparent;
+        display: block;
+        transition: all 0.3s ease-in-out;
+        width: fit-content;}
     .main_blog_help .help_left .nav_item.active,
     .main_blog_help .help_left .nav_item:hover{border-bottom: 2px solid #BDFF00;color: #000000;}
     .main_blog_help .help_left .nav_item.active a,
@@ -64,6 +67,18 @@
     .main_blog_help .help_right .related ul li a:hover{background-color: #E2DED6;}
 
     .help_right_content{padding: 6rem 0;border-top:2px solid #E2DED6;border-bottom:2px solid #E2DED6}
+
+    @media screen and (max-width: 768px) {
+        .main_blog_help .session-box-inner{
+            flex-direction: column;
+        }
+        .main_blog_help .help_left{
+            width:100%;
+        }
+        .main_blog_help .help_right{
+            width:100%;
+        }
+    }
 </style>
 
 <script>
