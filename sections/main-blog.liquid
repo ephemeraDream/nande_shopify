@@ -16,6 +16,12 @@
   }
 {%- endstyle -%}
 
+{% assign sort_by_popular = request.params.sort == 'popular' %}
+{% assign sorted_articles = blog.articles %}
+{% if sort_by_popular %}
+  {% assign sorted_articles = blog.articles | sort: "metafields.custom.popular_score" | reverse %}
+{% endif %}
+
 {%- paginate blog.articles by 10 -%}
   <div class="main-blog session-box-padding section-{{ section.id }}-padding">
     
@@ -24,24 +30,22 @@
     </h2>
     <div class="session-box-inner nav_header">
       <nav class="blog-categories">
-        {% comment %} {{ blogs['maidesite-blog'].title }}
-        {{ blogs['maidesite-blog'].url }} {% endcomment %}
         {% for block in section.blocks %}
           {% assign blog_item = block.settings.blog %}
           <a href="{{ blog_item.url }}" class="nav_item {% if blog_item.handle == blog.handle %}active{% endif %}">
             {{ blog_item.title }}
           </a> 
-        {% comment %} <div class="nav_item {% if blog_item.handle == blog.handle %}active{% endif %}">{{ blog_item.title }}</div> {% endcomment %}
         {% endfor %}
       </nav>
       <div class="blog-sort-buttons">
+        {% sort_by_popular %}
         <a href="?sort=latest" class="sort-btn {% unless request.params.sort == 'popular' %}active{% endunless %}">Latest</a>
         <a href="?sort=popular" class="sort-btn {% if request.params.sort == 'popular' %}active{% endif %}">Popular</a>
       </div>
     </div>
 
     <div class="session-box-inner blog-articles {% if section.settings.layout == 'collage' %}blog-articles--onecard{% endif %}">
-      {%- for article in blog.articles -%}
+      {%- for article in sorted_articles -%}
         <div
           class="blog-articles__article article{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
           {% if settings.animations_reveal_on_scroll %}
