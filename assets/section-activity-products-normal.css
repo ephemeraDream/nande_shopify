@@ -411,3 +411,26 @@
   color: #fff;
   text-align: left;
 }
+
+.activity_products_normal .activity_products_normal_flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.activity_products_normal .activity_products_normal_btn {
+  height: 3.6rem;
+  padding: 0 0.8rem;
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  background: #BDFF00;
+  font-family: PP Right Grotesk;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 112%;
+  letter-spacing: 0px;
+  font-variation-settings: "opsz" auto;
+  color: #1F1F1F;
+  cursor: pointer;
+}
