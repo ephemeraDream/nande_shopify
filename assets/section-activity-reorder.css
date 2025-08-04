@@ -1,0 +1,122 @@
+.activity_reorder_section {
+  width: 100%;
+  background-color: #1F1F1F;
+  padding-top: 12rem;
+  padding-bottom: 12rem;
+}
+
+.activity_reorder {
+  max-width: 144rem;
+  margin-top: 0 auto;
+}
+
+.activity_reorder .activity_reorder_title {
+  font-family: PP Right Grotesk;
+  font-size: 6rem;
+  font-weight: 500;
+  line-height: 94%;
+  text-align: center;
+  text-transform: capitalize;
+  letter-spacing: 0px;
+  font-variation-settings: "opsz" auto;
+  color: #BDFF00;
+}
+
+.activity_reorder .activity_reorder_text {
+  font-family: PP Right Grotesk;
+  font-size: 2rem;
+  font-weight: normal;
+  line-height: 94%;
+  text-align: center;
+  letter-spacing: 0px;
+  font-variation-settings: "opsz" auto;
+  color: #BDFF00;
+  margin-top: 3rem;
+}
+
+.activity_reorder .activity_reorder_contain {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  background-color: #fff;
+  gap: 2rem;
+  padding: 52px 50px 60px 74px;
+}
+
+.activity_reorder .activity_reorder_contain_left_title {
+  font-family: PP Right Grotesk;
+  font-size: 4rem;
+  font-weight: 500;
+  line-height: 94%;
+  letter-spacing: 0px;
+  font-variation-settings: "opsz" auto;
+  color: #3D3D3D;
+}
+
+.activity_reorder .activity_reorder_contain_left_title_num {
+  color: #FF7500;
+}
+
+.activity_reorder .activity_reorder_contain_left_text {
+  font-family: PP Right Grotesk;
+  font-size: 2rem;
+  font-weight: normal;
+  line-height: 130%;
+  letter-spacing: 0px;
+  font-variation-settings: "opsz" auto;
+  color: #7F7E75;
+  margin-top: 3rem;
+}
+
+.activity_reorder .activity_reorder_contain_left_btnline {
+  display: flex;
+  gap: 1.8rem;
+}
+
+.activity_reorder .activity_reorder_contain_left_btn {
+  height: 3.6rem;
+  min-width: 18rem;
+  padding: 0 0.8rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+  border: 0.2rem solid #1F1F1F;
+  font-family: PP Right Grotesk;
+  font-size: 2.4rem;
+  font-weight: 500;
+  line-height: 112%;
+  letter-spacing: 0px;
+  font-variation-settings: "opsz" auto;
+  color: #1F1F1F;
+  cursor: pointer;
+}
+
+.activity_reorder .activity_reorder_contain_left_btntwo {
+  height: 3.6rem;
+  min-width: 18rem;
+  padding: 0 0.8rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #BDFF00;
+  font-family: PP Right Grotesk;
+  font-size: 2.4rem;
+  font-weight: 500;
+  line-height: 112%;
+  letter-spacing: 0px;
+  font-variation-settings: "opsz" auto;
+  color: #1F1F1F;
+}
+
+.activity_reorder .activity_reorder_contain_left {
+  flex: 1;
+}
+
+.activity_reorder .activity_reorder_contain_img {
+  flex: 0 0 auto;
+  width: 63.3rem;
+  height: 37.8rem;
+  object-fit: contain;
+  object-position: center center;
+}

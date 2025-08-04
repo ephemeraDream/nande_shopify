@@ -1,0 +1,113 @@
+{{ 'section-activity-reorder.css' | asset_url | stylesheet_tag }}
+
+<div class="activity_reorder_section padding-sider" id="{{ section.settings.specId }}">
+  <div class="activity_reorder">
+    <div class="activity_reorder_title">{{ section.settings.title }}</div>
+    <div class="activity_reorder_text">{{ section.settings.text }}</div>
+    <div class="activity_reorder_contain">
+      <div class="activity_reorder_contain_left">
+        <div class="activity_reorder_contain_left_title">
+          {{ 'common.be_among_the_first' | t -}}
+          <span class="activity_reorder_contain_left_title_num">{{ section.settings.quota }}</span>
+          {{- 'common.customers_who' | t -}}
+          <span class="activity_reorder_contain_left_title_num">{{ section.settings.reorder_proportion }}</span>
+          {{- 'common.get_cashback' | t }}
+        </div>
+        <div class="activity_reorder_contain_left_text">{{ section.settings.explanation }}</div>
+        <div class="activity_reorder_contain_left_btnline">
+          <div class="activity_reorder_contain_left_btn nd-btn">
+            {{ 'common.regulate' | t }}
+            {{ 'icon-right-arrow.svg' | inline_asset_content }}
+          </div>
+
+          <div class="common_modal">
+            <div class="common_modal_contain">
+              <div class="common_modal_head">
+                <span>{{ 'common.regulate' | t }}</span>
+                <div class="common_modal_close">{{- 'icon-close.svg' | inline_asset_content -}}</div>
+              </div>
+              <div class="common_modal_body">
+                {{ section.settings.rule }}
+              </div>
+            </div>
+          </div>
+
+          {% if section.settings.btn_two != blank %}
+            <a class="activity_reorder_contain_left_btntwo" href="{{ section.settings.btn_two_link }}">
+              {{- section.settings.btn_two -}}
+            </a>
+          {% endif %}
+        </div>
+      </div>
+      <img src="{{ section.settings.right_img | image_url }}" class="activity_reorder_contain_img">
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "activity reorder",
+  "tag": "section",
+  "class": "section",
+  "disabled_on": {
+    "groups": ["header", "footer"]
+  },
+  "settings": [
+    {
+      "type": "text",
+      "id": "specId",
+      "label": "specId"
+    },
+    {
+      "type": "richtext",
+      "id": "title",
+      "label": "title"
+    },
+    {
+      "type": "richtext",
+      "id": "text",
+      "label": "text"
+    },
+    {
+      "type": "text",
+      "id": "quota",
+      "label": "quota"
+    },
+    {
+      "type": "text",
+      "id": "reorder_proportion",
+      "label": "reorder proportion"
+    },
+    {
+      "type": "richtext",
+      "id": "explanation",
+      "label": "explanation"
+    },
+    {
+      "type": "image_picker",
+      "id": "right_img",
+      "label": "right image"
+    },
+    {
+      "type": "richtext",
+      "id": "rule",
+      "label": "rule"
+    },
+    {
+      "type": "text",
+      "id": "btn_two",
+      "label": "button two text"
+    },
+    {
+      "type": "url",
+      "id": "btn_two_link",
+      "label": "button two link"
+    }
+  ],
+  "presets": [
+    {
+      "name": "activity reorder"
+    }
+  ]
+}
+{% endschema %}
