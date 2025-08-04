@@ -15,7 +15,7 @@
         </div>
         <div class="activity_reorder_contain_left_text">{{ section.settings.explanation }}</div>
         <div class="activity_reorder_contain_left_btnline">
-          <div class="activity_reorder_contain_left_btn nd-btn">
+          <div class="activity_reorder_contain_left_btn">
             {{ 'common.regulate' | t }}
             {{ 'icon-right-arrow.svg' | inline_asset_content }}
           </div>
@@ -43,6 +43,40 @@
     </div>
   </div>
 </div>
+
+<script>
+  (() => {
+    const rule_btn = document.querySelector('.activity_reorder_contain_left_btn');
+    if (rule_btn) {
+      rule_btn.addEventListener('click', () => {
+        const parent = rule_btn.closest('.activity_reorder_contain_left_btnline');
+        const modal = parent.querySelector('.common_modal');
+        const originalParent = modal.parentElement;
+        const nextSibling = modal.nextElementSibling;
+        document.body.appendChild(modal);
+        modal.style.display = 'block';
+        document.body.style.overflowY = 'hidden';
+
+        modal.querySelector('.common_modal_close').addEventListener('click', closeModal);
+
+        modal.addEventListener('click', (e) => {
+          if (e.target === modal) closeModal();
+        });
+
+        function closeModal() {
+          modal.style.display = 'none';
+          document.body.style.overflowY = 'auto';
+
+          if (nextSibling) {
+            originalParent.insertBefore(modal, nextSibling);
+          } else {
+            originalParent.appendChild(modal);
+          }
+        }
+      });
+    }
+  })();
+</script>
 
 {% schema %}
 {

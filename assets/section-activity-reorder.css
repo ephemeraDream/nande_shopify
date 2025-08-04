@@ -7,7 +7,7 @@
 
 .activity_reorder {
   max-width: 144rem;
-  margin-top: 0 auto;
+  margin: 0 auto;
 }
 
 .activity_reorder .activity_reorder_title {
@@ -41,6 +41,7 @@
   background-color: #fff;
   gap: 2rem;
   padding: 52px 50px 60px 74px;
+  margin-top: 3rem;
 }
 
 .activity_reorder .activity_reorder_contain_left_title {
@@ -71,6 +72,7 @@
 .activity_reorder .activity_reorder_contain_left_btnline {
   display: flex;
   gap: 1.8rem;
+  margin-top: 6rem;
 }
 
 .activity_reorder .activity_reorder_contain_left_btn {
@@ -119,4 +121,8 @@
   height: 37.8rem;
   object-fit: contain;
   object-position: center center;
+}
+
+.activity_reorder .activity_reorder_contain_left_btnline .common_modal {
+  display: none;
 }
