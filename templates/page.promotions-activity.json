@@ -176,6 +176,22 @@
         "rule": ""
       }
     },
+    "activity_reorder_VwgQAM": {
+      "type": "activity-reorder",
+      "name": "activity reorder",
+      "settings": {
+        "specId": "",
+        "title": "<p>50% Cashback Auf 100 Valide Bestellunge</p>",
+        "text": "<p>Sie können während Black Friday 50% Cashback auf 100 Bestellungen erhalten!</p>",
+        "quota": "100",
+        "reorder_proportion": "50%",
+        "explanation": "<p>Sind Sie bereit, 50% Cashback für Ihre </p><p>FlexiSpot-Bestellung zu gewinnen?</p>",
+        "right_img": "shopify://shop_images/YOGA_-_1_80dbac95-bdf1-4531-a898-05e1c0987d43.jpg",
+        "rule": "<p>asdasdasd</p>",
+        "btn_two": "Gewinnerliste",
+        "btn_two_link": ""
+      }
+    },
     "activity_products_normal_8qJYJt": {
       "type": "activity-products-normal",
       "name": "activity products normal",
@@ -258,6 +274,7 @@
     "product_anchor_bar_J93iqp",
     "activity_products_tab_aUGewm",
     "activity_products_normal_REbAHP",
+    "activity_reorder_VwgQAM",
     "activity_products_normal_8qJYJt",
     "activity_subscribe_tV4gHF",
     "blogs_simple_XBYLNU"
