@@ -24,6 +24,7 @@
         "banner_item_f7J8AA": {
           "type": "banner_item",
           "settings": {
+            "sub_title": "",
             "title": "<p>Maidesite Spaces</p>",
             "text": "<p>Lassen Sie sich inspirieren und gestalten Sie Ihren perfekten Maidesite-Arbeitsplatz <br/>mit unseren sorgfältig kuratierten Räumen.</p>",
             "btn_text": "En savoir plus",
@@ -31,12 +32,15 @@
             "file_position": "middle_left",
             "file_type": "image",
             "file_image": "shopify://shop_images/banner-2.webp",
-            "video_url": ""
+            "video_url": "",
+            "show_countdown": false,
+            "countdown": ""
           }
         },
         "banner_item_ckwd4B": {
           "type": "banner_item",
           "settings": {
+            "sub_title": "",
             "title": "<p>Nahtloses Design Trifft Auf FunktionalitäT</p>",
             "text": "<p>Ein durchdachtes, einheitliches Design, das Ästhetik und Funktion kombiniert – für einen </p><p>modernen Arbeitsplatz, der sich nahtlos in Ihr Zuhause einfügt</p>",
             "btn_text": "En savoir plus",
@@ -44,7 +48,9 @@
             "file_position": "middle_left",
             "file_type": "image",
             "file_image": "shopify://shop_images/banner-3.webp",
-            "video_url": ""
+            "video_url": "",
+            "show_countdown": false,
+            "countdown": ""
           }
         }
       },
@@ -119,7 +125,7 @@
         "title": "Petdesk",
         "text": "<p>Der ideale Tisch für Ihre Haustiere – stabil, komfortabel und perfekt für ihren Bedarf.</p>",
         "btn_text": "En savoir plus",
-        "image": "shopify://shop_images/polka_dot_img02.webp",
+        "image": "shopify://shop_images/8_ce882692-23a7-4350-8435-b6b675d3f453.jpg",
         "link": ""
       }
     },
