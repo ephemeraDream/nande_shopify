@@ -23,6 +23,7 @@
       "blocks": {
         "banner_item_f7J8AA": {
           "type": "banner_item",
+          "disabled": true,
           "settings": {
             "sub_title": "",
             "title": "<p>Maidesite Spaces</p>",
@@ -87,7 +88,7 @@
       ],
       "settings": {
         "layout": "image-left",
-        "small_title": "Maidesite SPACES",
+        "small_title": "Maidesite Yoga",
         "title": "Yoga HöHenverstellbare Schreibtische",
         "text": "<p>Die beste Wahl für alle Yoga-Enthusiasten, die Komfort und Qualität schätzen. <br/>Diese hochwertigen Schreibtische sind ideal für Yoga- und Meditationen-Tätigkeiten.</p>",
         "btn_text": "En savoir plus",
@@ -122,7 +123,7 @@
       "settings": {
         "layout": "image-right",
         "small_title": "Maidesite SPACES",
-        "title": "Petdesk",
+        "title": "Space",
         "text": "<p>Der ideale Tisch für Ihre Haustiere – stabil, komfortabel und perfekt für ihren Bedarf.</p>",
         "btn_text": "En savoir plus",
         "image": "shopify://shop_images/1_821aa423-15e2-4bca-ac56-2622e954faa6.jpg",
@@ -136,12 +137,13 @@
           "type": "product_item",
           "settings": {
             "select_product": "maidesite-tischgestell-elektrisch-hohenverstellbar-t2-pro-plus",
-            "product_X": 34,
+            "product_X": 48,
             "product_Y": 48
           }
         },
         "product_block_2": {
           "type": "product_item",
+          "disabled": true,
           "settings": {
             "select_product": "maidesite-th2-pro-plus-tischgestell-elektrisch-hohenverstellbar",
             "product_X": 79,
@@ -155,7 +157,7 @@
       ],
       "settings": {
         "layout": "image-left",
-        "small_title": "Maidesite SPACES",
+        "small_title": "Maidesite T4 Pro Plus",
         "title": "Familydesk",
         "text": "<p>Ein intelligenter Tisch für die ganze Familie – vielseitig, ergonomisch und perfekt für den Alltag.</p>",
         "btn_text": "En savoir plus",
