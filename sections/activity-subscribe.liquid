@@ -6,14 +6,42 @@
       {%- case block.type -%}
         {%- when 'top-left' -%}
           <div class="activity_subscribe_top_item">
-            <div class="activity_subscribe_top_item_title">{{ block.settings.title }}</div>
-            <div class="activity_subscribe_top_item_text">{{ block.settings.text }}</div>
+            <div>
+              <div class="activity_subscribe_top_item_title">{{ block.settings.title }}</div>
+              <div class="activity_subscribe_top_item_text">{{ block.settings.text }}</div>
+            </div>
+            <div class="activity_subscribe_top_item_btnline">
+              {% if block.settings.btn_one != blank %}
+                <a class="activity_subscribe_top_item_btnone" href="{{ block.settings.btn_one_link }}">
+                  {{- block.settings.btn_one -}}
+                </a>
+              {% endif %}
+              {% if block.settings.btn_two != blank %}
+                <a class="activity_subscribe_top_item_btntwo" href="{{ block.settings.btn_two_link }}">
+                  {{- block.settings.btn_two -}}
+                </a>
+              {% endif %}
+            </div>
             <div class="activity_subscribe_top_item_icon">{{ block.settings.icon }}</div>
           </div>
         {%- when 'top-right' -%}
           <div class="activity_subscribe_top_item">
-            <div class="activity_subscribe_top_item_title">{{ block.settings.title }}</div>
-            <div class="activity_subscribe_top_item_text">{{ block.settings.text }}</div>
+            <div>
+              <div class="activity_subscribe_top_item_title">{{ block.settings.title }}</div>
+              <div class="activity_subscribe_top_item_text">{{ block.settings.text }}</div>
+            </div>
+            <div class="activity_subscribe_top_item_btnline">
+              {% if block.settings.btn_one != blank %}
+                <a class="activity_subscribe_top_item_btnone" href="{{ block.settings.btn_one_link }}">
+                  {{- block.settings.btn_one -}}
+                </a>
+              {% endif %}
+              {% if block.settings.btn_two != blank %}
+                <a class="activity_subscribe_top_item_btntwo" href="{{ block.settings.btn_two_link }}">
+                  {{- block.settings.btn_two -}}
+                </a>
+              {% endif %}
+            </div>
             <div class="activity_subscribe_top_item_icon">{{ block.settings.icon }}</div>
           </div>
         {%- when 'bottom' -%}
@@ -122,6 +150,26 @@
           "type": "textarea",
           "id": "icon",
           "label": "icon"
+        },
+        {
+          "type": "text",
+          "id": "btn_one",
+          "label": "button one text"
+        },
+        {
+          "type": "url",
+          "id": "btn_one_link",
+          "label": "button one link"
+        },
+        {
+          "type": "text",
+          "id": "btn_two",
+          "label": "button two text"
+        },
+        {
+          "type": "url",
+          "id": "btn_two_link",
+          "label": "button two link"
         }
       ]
     },
@@ -143,6 +191,26 @@
           "type": "textarea",
           "id": "icon",
           "label": "icon"
+        },
+        {
+          "type": "text",
+          "id": "btn_one",
+          "label": "button one text"
+        },
+        {
+          "type": "url",
+          "id": "btn_one_link",
+          "label": "button one link"
+        },
+        {
+          "type": "text",
+          "id": "btn_two",
+          "label": "button two text"
+        },
+        {
+          "type": "url",
+          "id": "btn_two_link",
+          "label": "button two link"
         }
       ]
     },

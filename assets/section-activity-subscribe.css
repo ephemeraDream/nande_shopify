@@ -19,6 +19,9 @@
   background-color: #E2DED6;
   position: relative;
   padding: 2.6rem 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .activity_subscribe .activity_subscribe_top_item_title {
@@ -185,4 +188,44 @@
 
 .activity_subscribe .activity_subscribe_bottom_form .field__input:-ms-input-placeholder {
   color: #E2DED6;
+}
+
+.activity_subscribe .activity_subscribe_top_item_btnline {
+  display: flex;
+  gap: 1.8rem;
+}
+
+.activity_subscribe .activity_subscribe_top_item_btnone {
+  height: 3.6rem;
+  min-width: 18rem;
+  padding: 0 0.8rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+  border: 0.15rem solid #1F1F1F;
+  font-family: PP Right Grotesk;
+  font-size: 2.4rem;
+  font-weight: 500;
+  line-height: 112%;
+  letter-spacing: 0px;
+  font-variation-settings: "opsz" auto;
+  color: #1F1F1F;
+}
+
+.activity_subscribe .activity_subscribe_top_item_btntwo {
+  height: 3.6rem;
+  min-width: 18rem;
+  padding: 0 0.8rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #BDFF00;
+  font-family: PP Right Grotesk;
+  font-size: 2.4rem;
+  font-weight: 500;
+  line-height: 112%;
+  letter-spacing: 0px;
+  font-variation-settings: "opsz" auto;
+  color: #1F1F1F;
 }
