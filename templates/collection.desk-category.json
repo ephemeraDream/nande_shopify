@@ -12,7 +12,7 @@
     "breadcrumbs": {
       "type": "breadcrumbs",
       "custom_css": [
-        ".breadcrumb-con { top: 0; z-index: 7;position: relative;}",
+        ".breadcrumb-con {top: 0; z-index: 7; position: relative;}",
         ".breadcrumb,.breadcrumb a,.breadcrumb span {color: #7f7e75;}"
       ],
       "settings": {
@@ -88,7 +88,7 @@
         "header_content": "",
         "title": "<h2>Langes Sitzen: Gefahren für die Gesundheit</h2>",
         "sub_title": "",
-        "description": "<p>1,<strong>Muskulatur- und Bewegungsapparat-Beschwerden:</strong>Lang anhaltendes Sitzen kann zu Rückenschmerzen, Nackenbeschwerden und Gelenkstörungen führen.<br/>2,<strong>Erhöhtes Risiko für chronische Krankheiten</strong>: Sedentäre Lebensweise erhöht das Risiko für Fettleibigkeit, Diabetes Typ 2 und Herz-Kreislauf-Erkrankungen.<br/>3-<strong>Verringerter Stoffwechsel</strong>: Inaktivität kann den Metabolismus verlangsamen und zu Gewichtszunahme führen.<br/>4-<strong>Schlechte Durchblutung und Verdauungsprobleme</strong>5-<strong>Einfluss auf die psychische Gesundheit</strong>: Mangel an Bewegung kann zu Müdigkeit, verminderter Aufmerksamkeit und psychischen Störungen führen.<br/>6-<strong>Erhöhtes Risiko für bestimmte Krebsarten</strong></p>",
+        "description": "<p>1,<strong>Muskulatur- und Bewegungsapparat-Beschwerden:</strong>Lang anhaltendes Sitzen kann zu Rückenschmerzen, Nackenbeschwerden und Gelenkstörungen führen.<br/><br/>2,<strong>Erhöhtes Risiko für chronische Krankheiten</strong>: Sedentäre Lebensweise erhöht das Risiko für Fettleibigkeit, Diabetes Typ 2 und Herz-Kreislauf-Erkrankungen.<br/><br/>3-<strong>Verringerter Stoffwechsel</strong>: Inaktivität kann den Metabolismus verlangsamen und zu Gewichtszunahme führen.<br/><br/>4-<strong>Schlechte Durchblutung und Verdauungsprobleme<br/><br/></strong>5-<strong>Einfluss auf die psychische Gesundheit</strong>: Mangel an Bewegung kann zu Müdigkeit, verminderter Aufmerksamkeit und psychischen Störungen führen.<br/><br/></p>",
         "file_position": "right",
         "file_type": "image",
         "file_image": "shopify://shop_images/image_3e826893-51d9-435e-9191-f8a9e8456c5b.png",
