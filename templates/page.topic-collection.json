@@ -11,6 +11,7 @@
   "sections": {
     "breadcrumbs": {
       "type": "breadcrumbs",
+      "disabled": true,
       "custom_css": [
         ".breadcrumb-con {top: 0;}"
       ],
@@ -42,8 +43,8 @@
           "type": "banner_item",
           "settings": {
             "sub_title": "",
-            "title": "<p>Nahtloses Design Trifft Auf FunktionalitäT</p>",
-            "text": "<p>Ein durchdachtes, einheitliches Design, das Ästhetik und Funktion kombiniert – für einen </p><p>modernen Arbeitsplatz, der sich nahtlos in Ihr Zuhause einfügt</p>",
+            "title": "<p>Ergonomische Arbeitsplatzlösungen</p>",
+            "text": "<p>Ergonomische Arbeitsplatzlösungen für mehr Komfort, Gesundheit und Produktivität – im Büro oder Homeoffice.</p>",
             "btn_text": "En savoir plus",
             "link": "",
             "file_position": "middle_left",
@@ -88,8 +89,8 @@
       ],
       "settings": {
         "layout": "image-left",
-        "small_title": "Maidesite Yoga",
-        "title": "Yoga HöHenverstellbare Schreibtische",
+        "small_title": "",
+        "title": "Yoga",
         "text": "<p>Die beste Wahl für alle Yoga-Enthusiasten, die Komfort und Qualität schätzen. <br/>Diese hochwertigen Schreibtische sind ideal für Yoga- und Meditationen-Tätigkeiten.</p>",
         "btn_text": "En savoir plus",
         "image": "shopify://shop_images/polka_dot_img01.webp",
@@ -122,9 +123,9 @@
       ],
       "settings": {
         "layout": "image-right",
-        "small_title": "Maidesite SPACES",
+        "small_title": "",
         "title": "Space",
-        "text": "<p>Der ideale Tisch für Ihre Haustiere – stabil, komfortabel und perfekt für ihren Bedarf.</p>",
+        "text": "<p>Maximale Anpassung, modernes Design, erstklassige Stabilität – für Arbeitsplätze, die mit Ihnen mitwachsen.</p>",
         "btn_text": "En savoir plus",
         "image": "shopify://shop_images/1_821aa423-15e2-4bca-ac56-2622e954faa6.jpg",
         "link": ""
@@ -157,9 +158,9 @@
       ],
       "settings": {
         "layout": "image-left",
-        "small_title": "Maidesite T4 Pro Plus",
+        "small_title": "",
         "title": "T4 Pro Plus",
-        "text": "<p>Ein intelligenter Tisch für die ganze Familie – vielseitig, ergonomisch und perfekt für den Alltag.</p>",
+        "text": "<p>Robust, stabil und ergonomisch – für komfortables Arbeiten jeden Tag.</p>",
         "btn_text": "En savoir plus",
         "image": "shopify://shop_images/8_ce882692-23a7-4350-8435-b6b675d3f453.jpg",
         "link": ""
