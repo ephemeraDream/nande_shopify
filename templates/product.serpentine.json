@@ -148,6 +148,7 @@
     },
     "video_wPHLA8": {
       "type": "video",
+      "disabled": true,
       "name": "t:sections.video.presets.name",
       "settings": {
         "heading": "Maidesite mobiler Schreibtisch T2 Pro Max Ausrüstung",
@@ -168,35 +169,36 @@
         "file_with_text_JJXCp8": {
           "type": "file_with_text",
           "settings": {
-            "title": "<p>Schnell aufgebaut</p>",
-            "description": "<p>Nur 15-20 Minuten Montagezeit!</p>",
+            "title": "<p>Warum sollten Sie sich für diesen Serpentine Kabelrohr?</p>",
+            "description": "<ul><li>4-Wege-Kanaleingang zur Organisation aller Kabel.</li><li>Sitzen oder stehen, es folgt immer dem Höhenverstellbare Tisch.</li></ul>",
             "file_type": "image",
-            "file_image": "shopify://shop_images/T2-Pro-Max-is-fast-assembly-desk.jpg",
+            "file_image": "shopify://shop_images/04.jpg",
             "video_url": ""
           }
         },
         "file_with_text_Q8tJKk": {
           "type": "file_with_text",
           "settings": {
-            "title": "<p>Super Duale Motoren</p>",
-            "description": "<p>Maidesite Duale Motorensystem ist besser als andere Produkt mit nur einem Motor.</p>",
+            "title": "<p>Aufstieg und Abstieg</p>",
+            "description": "<p>Sitzen oder stehen, es folgt immer dem Höhenverstellbare Tisch.</p>",
             "file_type": "image",
-            "file_image": "shopify://shop_images/Schwarz-06.jpg",
+            "file_image": "shopify://shop_images/05.jpg",
             "video_url": ""
           }
         },
         "file_with_text_McHwGa": {
           "type": "file_with_text",
           "settings": {
-            "title": "<p>Max. Verstellhöhe</p>",
-            "description": "<p>Der 3-stufige tischgestell höhenverstellbar, der über den größten Höhenverstellbereich von 65-135 cm auf dem Markt verfügt<br/><br/></p>",
+            "title": "<p>Nach Belieben addieren oder subtrahieren</p>",
+            "description": "<p>Block nach Belieben entfernen oder hinzufügen.<br/><br/></p>",
             "file_type": "image",
-            "file_image": "shopify://shop_images/T2-Pro-Max-gray-desk-height-adjustable-65-135-cm.jpg",
+            "file_image": "shopify://shop_images/06.jpg",
             "video_url": ""
           }
         },
         "file_with_text_f9yPAD": {
           "type": "file_with_text",
+          "disabled": true,
           "settings": {
             "title": "<p>Belastbar bis 180 kg</p>",
             "description": "<p>Deren Material 20 % mehr als andere Produkte, stark und stabil. Der Traglast bis zu 180 kg.</p>",
@@ -207,6 +209,7 @@
         },
         "file_with_text_B39ehq": {
           "type": "file_with_text",
+          "disabled": true,
           "settings": {
             "title": "<p>Einfache Bedienfreude</p>",
             "description": "<p>Klaviertasten und eine intuitive grafische Oberfläche machen die Einrichtung zum Kinderspiel.</p>",
@@ -217,6 +220,7 @@
         },
         "file_with_text_THJTyK": {
           "type": "file_with_text",
+          "disabled": true,
           "settings": {
             "title": "<p>FSC-zertifizierte Tischplatte</p>",
             "description": "<p>Optionale FSC-zertifizierte Tischplatten in 120x60cm, 140x70cm und 160x80cm mit vorgebohrten Löchern.</p>",
@@ -237,7 +241,7 @@
       "name": "file box simplicity",
       "settings": {
         "spec_id": "",
-        "main_title": "<p>Warum T2 Pro Max wählen?</p>",
+        "main_title": "<p>Praktisches und einfach zu installierendes Kabelführungsset</p>",
         "row_num": 3,
         "padding_top": 100,
         "padding_bottom": 120,
@@ -289,6 +293,7 @@
     },
     "img_with_text_simplicity_R8thEq": {
       "type": "img-with-text-simplicity",
+      "disabled": true,
       "custom_css": [],
       "name": "img with text simplicity",
       "settings": {
@@ -311,6 +316,7 @@
     },
     "img_with_text_simplicity_nJFALq": {
       "type": "img-with-text-simplicity",
+      "disabled": true,
       "custom_css": [
         ".img_with_text_simplicity_info {padding-left: 3rem;}"
       ],
@@ -335,6 +341,7 @@
     },
     "img_with_text_simplicity_YLCpmN": {
       "type": "img-with-text-simplicity",
+      "disabled": true,
       "custom_css": [],
       "name": "img with text simplicity",
       "settings": {
@@ -491,6 +498,7 @@
         "foldtext_7BhWHC",
         "foldtext_UUEbi9"
       ],
+      "disabled": true,
       "name": "img with foldtext",
       "settings": {
         "spec_id": "",
@@ -547,6 +555,7 @@
         "swiper_EnDd8n",
         "swiper_4kYG3r"
       ],
+      "disabled": true,
       "name": "maidesite swiper",
       "settings": {
         "title": "<p>Die Presse Liebt Maidesite</p>",
@@ -587,6 +596,7 @@
         "swiper_mexwM6",
         "swiper_xWLxVC"
       ],
+      "disabled": true,
       "name": "celebrity swiper",
       "settings": {
         "title": "<p>Empfehlen Von</p>",
