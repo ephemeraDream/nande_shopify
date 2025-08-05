@@ -294,8 +294,8 @@
           "type": "card",
           "settings": {
             "box_type": "box_big",
-            "image": "shopify://shop_images/2b4cc21b595d7d2540eeb735dcfeb6be.png",
-            "title": "GELD ZURÜCK GARANTIE",
+            "image": "shopify://shop_images/young_woman.jpg",
+            "title": "",
             "title_position": "top"
           }
         },
@@ -367,14 +367,14 @@
         "spec_id": "img_with_text_simplicity",
         "header_title": "",
         "header_content": "",
-        "title": "<p>Ordnung Mit Cleverem Kabelmanagement</p>",
+        "title": "<p>All-in-One Design mit praktischen Extras</p>",
         "sub_title": "",
-        "description": "<p>Der ideale Tisch für Ihre Haustiere – stabil,<br/> komfortabel und perfekt für ihren Bedarf.</p>",
+        "description": "<p>Integrierte <strong>Qi-Ladefläche</strong> direkt in der Tischplatte – ideal zum kabellosen Laden von Smartphones oder Gadgets.</p>",
         "file_position": "right",
         "file_type": "image",
-        "file_image": "shopify://shop_images/product_info_demo_img_1.webp",
+        "file_image": "shopify://shop_images/4_9834589d-e501-4428-be42-5b7d7eacca0d.jpg",
         "video_url": "",
-        "btn_text": "En savoir plus",
+        "btn_text": "",
         "link_url": "#",
         "padding_top": 120,
         "padding_bottom": 0,
@@ -392,14 +392,14 @@
         "spec_id": "",
         "header_title": "",
         "header_content": "",
-        "title": "<p>Ordnung Mit Cleverem Kabelmanagement</p>",
+        "title": "<p><br/>Einbauschublade<br/><br/></p>",
         "sub_title": "",
-        "description": "<p>Der ideale Tisch für Ihre Haustiere – stabil,<br/> komfortabel und perfekt für ihren Bedarf.</p>",
+        "description": "<p>Stilvolle Einbauschublade unter der Platte bietet Ordnung und schnellen Zugriff auf Büro-Utensilien.</p>",
         "file_position": "left",
         "file_type": "image",
-        "file_image": "shopify://shop_images/product_info_demo_img_1.webp",
+        "file_image": "shopify://shop_images/5_bc69744f-d998-4f7f-b9fe-3c6ba832d648.jpg",
         "video_url": "",
-        "btn_text": "En savoir plus",
+        "btn_text": "",
         "link_url": "#",
         "padding_top": 60,
         "padding_bottom": 0,
@@ -419,7 +419,7 @@
         "description": "<p>Der ideale Tisch für Ihre Haustiere – stabil,<br/> komfortabel und perfekt für ihren Bedarf.</p>",
         "file_position": "right",
         "file_type": "image",
-        "file_image": "shopify://shop_images/product_info_demo_img_1.webp",
+        "file_image": "shopify://shop_images/2b4cc21b595d7d2540eeb735dcfeb6be.png",
         "video_url": "",
         "btn_text": "En savoir plus",
         "link_url": "#",
@@ -434,7 +434,7 @@
         "item_1": {
           "type": "item",
           "settings": {
-            "image": "shopify://shop_images/polka_dot_swiper-1.webp",
+            "image": "shopify://shop_images/YOGA_-_1.jpg",
             "title": "Eleganter Arbeitsbereich"
           }
         },
@@ -493,6 +493,7 @@
         "item_2",
         "item_3"
       ],
+      "disabled": true,
       "settings": {
         "spec_id": "",
         "title": "Nahtloses Design Trifft Auf FunktionalitäT"
@@ -609,6 +610,7 @@
         "product_block_1",
         "product_block_2"
       ],
+      "disabled": true,
       "custom_css": [],
       "settings": {
         "title": "<p>Die Ideale Wahl FüR Yoga-Enthusiasten, Die Komfort<br/> Und QualitäT SchäTzen.</p>",
@@ -618,6 +620,7 @@
     },
     "bundle_simple_WFrNiX": {
       "type": "bundle-simple",
+      "disabled": true,
       "name": "bundle simple",
       "settings": {
         "spec_id": "bundle_simple",
