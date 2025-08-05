@@ -57,6 +57,7 @@
     },
     "breadcrumbs": {
       "type": "breadcrumbs",
+      "disabled": true,
       "custom_css": [
         ".breadcrumb-con {top: 60px;}"
       ],
@@ -88,8 +89,8 @@
           "type": "banner_item",
           "settings": {
             "sub_title": "",
-            "title": "<p>Nahtloses Design Trifft Auf FunktionalitäT</p>",
-            "text": "<p>Ein durchdachtes, einheitliches Design, das Ästhetik und Funktion kombiniert – für einen </p><p>modernen Arbeitsplatz, der sich nahtlos in Ihr Zuhause einfügt</p>",
+            "title": "<p>Das macht Yoga besonders</p>",
+            "text": "<p>Shape Your Workstyle with Yoga</p>",
             "btn_text": "En savoir plus",
             "link": "",
             "file_position": "middle_left",
@@ -284,8 +285,8 @@
           "type": "card",
           "settings": {
             "box_type": "box_big",
-            "image": "shopify://shop_images/polka_dot_swiper-1.webp",
-            "title": "GELD ZURÜCK GARANTIE",
+            "image": "shopify://shop_images/Young_lady_yoga_on_an_orange_Maiddesite_Yoga_adjustable_height_desk.png",
+            "title": "Design & Verarbeitung überzeugt",
             "title_position": "bottom"
           }
         },
@@ -293,24 +294,26 @@
           "type": "card",
           "settings": {
             "box_type": "box_big",
+            "image": "shopify://shop_images/2b4cc21b595d7d2540eeb735dcfeb6be.png",
             "title": "GELD ZURÜCK GARANTIE",
-            "title_position": "bottom"
+            "title_position": "top"
           }
         },
         "card_3": {
           "type": "card",
           "settings": {
-            "box_type": "box_small",
-            "image": "shopify://shop_images/polka_dot_swiper-1.webp",
-            "title": "GELD ZURÜCK GARANTIE",
+            "box_type": "box_middle",
+            "image": "shopify://shop_images/4_9834589d-e501-4428-be42-5b7d7eacca0d.jpg",
+            "title": "Qi-Ladefläche",
             "title_position": "top"
           }
         },
         "card_4": {
           "type": "card",
           "settings": {
-            "box_type": "box_small",
-            "title": "GELD ZURÜCK GARANTIE",
+            "box_type": "box_middle",
+            "image": "shopify://shop_images/5_bc69744f-d998-4f7f-b9fe-3c6ba832d648.jpg",
+            "title": "Einbauschublade",
             "title_position": "top"
           }
         },
@@ -318,7 +321,8 @@
           "type": "card",
           "settings": {
             "box_type": "box_small",
-            "title": "GELD ZURÜCK GARANTIE",
+            "image": "shopify://shop_images/Der-hohenverstellbare-Yoga-Schreibtisch-benotigt-nur-3-Schritte-fur-eine-schnelle-Montage.jpg",
+            "title": "",
             "title_position": "top"
           }
         },
@@ -326,7 +330,8 @@
           "type": "card",
           "settings": {
             "box_type": "box_small",
-            "title": "GELD ZURÜCK GARANTIE",
+            "image": "shopify://shop_images/01af9531-9158-4ede-87be-26818b919ab6.__CR0_0_1464_600_PT0_SX1464_V1____1.jpg",
+            "title": "Antikollisionsschutz",
             "title_position": "top"
           }
         },
@@ -334,7 +339,8 @@
           "type": "card",
           "settings": {
             "box_type": "box_middle",
-            "title": "GELD ZURÜCK GARANTIE",
+            "image": "shopify://shop_images/Yoga-orange-Hohenverstellbarer-Schreibtisch-mit-orange-Tischplatte.jpg",
+            "title": "",
             "title_position": "bottom"
           }
         }
@@ -349,7 +355,7 @@
         "card_7"
       ],
       "settings": {
-        "title": "Nahtloses Design Trifft Auf FunktionalitäT",
+        "title": "Smart. Schön. Ergonomisch",
         "spec_id": "topic_text_img"
       }
     },
