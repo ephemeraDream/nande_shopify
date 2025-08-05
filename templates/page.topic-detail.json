@@ -155,13 +155,13 @@
         "slide2_1": {
           "type": "slide",
           "settings": {
-            "belong_tab": "1",
-            "image": "shopify://shop_images/9_-_700x525_-_YOGA.jpg",
+            "belong_tab": "0",
+            "image": "shopify://shop_images/Banner_-_YOGA_-_1.jpg",
             "title": "",
             "text": "",
             "btn_text": "",
             "link": "",
-            "select_product": "maidesite-tischgestell-elektrisch-hohenverstellbar-t2-pro-plus",
+            "select_product": "",
             "product_X": 31,
             "product_Y": 37
           }
