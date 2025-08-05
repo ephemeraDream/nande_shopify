@@ -114,11 +114,12 @@
         "tab1": {
           "type": "tab",
           "settings": {
-            "tab_title": "Innovation & Fortschritt"
+            "tab_title": "Midnight Marble"
           }
         },
         "slide1_1": {
           "type": "slide",
+          "disabled": true,
           "settings": {
             "belong_tab": "0",
             "image": "shopify://shop_images/polka_dot_swiper-1.webp",
@@ -135,27 +136,27 @@
           "type": "slide",
           "settings": {
             "belong_tab": "0",
-            "image": "shopify://shop_images/polka_dot_swiper-2.webp",
+            "image": "shopify://shop_images/YOGA_-_1_80dbac95-bdf1-4531-a898-05e1c0987d43.jpg",
             "title": "",
             "text": "",
             "btn_text": "",
             "link": "",
-            "select_product": "maidesite-tischgestell-elektrisch-hohenverstellbar-t2-pro-plus",
-            "product_X": 31,
+            "select_product": "",
+            "product_X": 54,
             "product_Y": 37
           }
         },
         "tab2": {
           "type": "tab",
           "settings": {
-            "tab_title": "Kundenzentrierung"
+            "tab_title": "Walnut Noir"
           }
         },
         "slide2_1": {
           "type": "slide",
           "settings": {
             "belong_tab": "1",
-            "image": "shopify://shop_images/polka_dot_swiper-2.webp",
+            "image": "shopify://shop_images/9_-_700x525_-_YOGA.jpg",
             "title": "",
             "text": "",
             "btn_text": "",
@@ -167,6 +168,7 @@
         },
         "slide2_2": {
           "type": "slide",
+          "disabled": true,
           "settings": {
             "belong_tab": "1",
             "image": "shopify://shop_images/polka_dot_swiper-1.webp",
@@ -212,6 +214,12 @@
             "product_X": 52,
             "product_Y": 45
           }
+        },
+        "tab_LEkh98": {
+          "type": "tab",
+          "settings": {
+            "tab_title": ""
+          }
         }
       },
       "block_order": [
@@ -223,7 +231,8 @@
         "slide2_2",
         "tab3",
         "slide3_1",
-        "slide3_2"
+        "slide3_2",
+        "tab_LEkh98"
       ],
       "settings": {
         "title": "Yoga & Ergonomie Im Perfekten Einklang",
