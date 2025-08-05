@@ -191,8 +191,8 @@
           "type": "slide",
           "disabled": true,
           "settings": {
-            "belong_tab": "2",
-            "image": "shopify://shop_images/polka_dot_swiper-2.webp",
+            "belong_tab": "1",
+            "image": "shopify://shop_images/buying_g_06.webp",
             "title": "",
             "text": "",
             "btn_text": "",
@@ -206,12 +206,12 @@
           "type": "slide",
           "settings": {
             "belong_tab": "2",
-            "image": "shopify://shop_images/2_f5829681-3871-4296-bcdc-9d4fc81ecf5b.jpg",
+            "image": "shopify://shop_images/topic-detail02.webp",
             "title": "",
             "text": "",
             "btn_text": "",
             "link": "",
-            "select_product": "maidesite-th2-pro-plus-tischgestell-elektrisch-hohenverstellbar",
+            "select_product": "",
             "product_X": 52,
             "product_Y": 45
           }
@@ -226,6 +226,7 @@
           "type": "slide",
           "settings": {
             "belong_tab": "0",
+            "image": "shopify://shop_images/Banner_-_YOGA_-_1.jpg",
             "title": "",
             "text": "",
             "btn_text": "",
@@ -239,6 +240,20 @@
           "type": "tab",
           "settings": {
             "tab_title": "Sunset Pop"
+          }
+        },
+        "slide_bLQ3Me": {
+          "type": "slide",
+          "settings": {
+            "belong_tab": "0",
+            "image": "shopify://shop_images/YOGA_-_1.jpg",
+            "title": "",
+            "text": "",
+            "btn_text": "",
+            "link": "",
+            "select_product": "",
+            "product_X": 0,
+            "product_Y": 0
           }
         }
       },
@@ -254,7 +269,8 @@
         "slide3_2",
         "tab_LEkh98",
         "slide_ckPRGe",
-        "tab_8ikfAr"
+        "tab_8ikfAr",
+        "slide_bLQ3Me"
       ],
       "settings": {
         "title": "Yoga & Ergonomie Im Perfekten Einklang",
