@@ -460,7 +460,7 @@
       ],
       "settings": {
         "spec_id": "accordion_gallery",
-        "title": "Nahtloses Design Trifft Auf FunktionalitäT"
+        "title": "Raum für Ideen"
       }
     },
     "accordion_gallery_2": {
@@ -572,7 +572,7 @@
       "settings": {
         "spec_id": "img_with_text_tab",
         "description": "",
-        "title": "<p>Title Title</p>",
+        "title": "<p>Technische Einblicke</p>",
         "show_tab_head": true,
         "layout": "image-left"
       }
