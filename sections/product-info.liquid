@@ -154,7 +154,7 @@
                   <div class="common_modal_close">{{- 'icon-close.svg' | inline_asset_content -}}</div>
                 </div>
                 <div class="common_modal_body">
-                  {{ product.metafields.custom.product_specs }}
+                  {{ product.metafields.custom.product_specs | metafield_tag }}
                 </div>
               </div>
             </div>
