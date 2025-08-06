@@ -42,7 +42,7 @@
                   class="announcement-bar__link link link--text focus-inset animate-arrow"
                 >
               {%- endif -%}
-              <div class="announcement_bar_text">{{ section.blocks.first.settings.text | escape }}</div>
+              <div class="announcement_bar_text" style="color: {{ section.blocks.first.settings.font_color }};">{{ section.blocks.first.settings.text | escape }}</div>
               {%- if section.blocks.first.settings.link != blank -%}
                 </a>
               {%- endif -%}
@@ -54,7 +54,7 @@
                 href="{{ section.blocks.first.settings.link }}"
               {%- endif -%}
             >
-              <div class="announcement_bar_text">{{ section.blocks.first.settings.text }}</div>
+              <div class="announcement_bar_text" style="color: {{ section.blocks.first.settings.font_color }};">{{ section.blocks.first.settings.text }}</div>
               {%- if section.blocks.first.settings.image != blank -%}
                 <img src="{{ section.blocks.first.settings.image | image_url }}">
               {%- endif -%}
@@ -404,6 +404,12 @@
           "type": "url",
           "id": "link",
           "label": "t:sections.announcement-bar.blocks.announcement.settings.link.label"
+        },
+        {
+          "type": "color",
+          "id": "font_color",
+          "label": "Font Color",
+          "default": "#BDFF00"
         }
       ]
     },
@@ -425,6 +431,12 @@
           "type": "url",
           "id": "link",
           "label": "t:sections.announcement-bar.blocks.announcement.settings.link.label"
+        },
+        {
+          "type": "color",
+          "id": "font_color",
+          "label": "Font Color",
+          "default": "#BDFF00"
         }
       ]
     },
