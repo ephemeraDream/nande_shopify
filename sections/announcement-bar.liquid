@@ -67,12 +67,12 @@
                 href="{{ section.blocks.first.settings.link }}"
               {%- endif -%}
             >
-              <div class="announcement_bar_text">{{ section.blocks.first.settings.text }}</div>
+              <div class="announcement_bar_text" style="color: {{ section.blocks.first.settings.font_color }};">{{ section.blocks.first.settings.text }}</div>
               <div
                 class="announcement_bar_countdown_box"
                 data-end-date="{{ countdown.datetime | date: "%Y-%m-%dT%H:%M:%SZ" }}"
               >
-                <span class="announcement_bar_countdown_box_text">{{ 'common.ends_in' | t }}</span>
+                <span class="announcement_bar_countdown_box_text" style="color: {{ section.blocks.first.settings.font_color }};">{{ 'common.ends_in' | t }}</span>
                 <div class="announcement_bar_countdown_box_item" data-type="day"></div>
                 <span>:</span>
                 <div class="announcement_bar_countdown_box_item" data-type="hour"></div>
@@ -452,6 +452,12 @@
           "metaobject_type": "countdown_date_time",
           "id": "countdown",
           "label": "countdown"
+        },
+        {
+          "type": "color",
+          "id": "font_color",
+          "label": "Font Color",
+          "default": "#BDFF00"
         }
       ]
     }
