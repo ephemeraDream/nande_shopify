@@ -24,8 +24,8 @@
             "file_type": "image",
             "file_image": "shopify://shop_images/Banner_0a355c62-7d1a-4c62-808a-e74e71a042b1.jpg",
             "video_url": "",
-            "show_countdown": false,
-            "countdown": ""
+            "show_countdown": true,
+            "countdown": "summer-sale"
           }
         },
         "banner_item_ykwd4B": {
