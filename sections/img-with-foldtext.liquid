@@ -53,28 +53,6 @@
   </div>
 </div>
 
-{% comment %} <script>
-  document.addEventListener('DOMContentLoaded', function () {
-    const faqItems = document.querySelectorAll('.img_with_foldtext_item');
-    const images = document.querySelectorAll('.img_with_foldtext_image');
-
-    faqItems.forEach((item, index) => {
-      const header = item.querySelector('.img_with_foldtext_item_head');
-
-      header.addEventListener('click', function () {
-        const isActive = item.classList.contains('active');
-
-        // 切换文字内容区域
-        faqItems.forEach(i => i.classList.remove('active'));
-        if (!isActive) item.classList.add('active');
-
-        // 切换对应的图片
-        images.forEach(img => img.classList.remove('active'));
-        if (!isActive) images[index].classList.add('active');
-      });
-    });
-  });
-</script> {% endcomment %}
 <script>
   document.addEventListener('DOMContentLoaded', function () {
     const sections = document.querySelectorAll('.img_with_foldtext_section');
@@ -86,22 +64,23 @@
       faqItems.forEach((item, index) => {
         const header = item.querySelector('.img_with_foldtext_item_head');
 
-        header.addEventListener('click', function () {
-          console.log('click');
-          const isActive = item.classList.contains('active');
+        header.addEventListener('click', function (e) {
+          e.stopPropagation(); // 防止冒泡触发别的区域（保险）
 
-          // 切换文字内容区域
+          // 获取当前点击所在 section 下的元素（只影响当前 section）
           faqItems.forEach(i => i.classList.remove('active'));
-          if (!isActive) item.classList.add('active');
-
-          // 切换对应的图片
           images.forEach(img => img.classList.remove('active'));
-          if (!isActive) images[index].classList.add('active');
+
+          item.classList.add('active');
+          if (images[index]) {
+            images[index].classList.add('active');
+          }
         });
       });
     });
   });
 </script>
+
 
 
 
