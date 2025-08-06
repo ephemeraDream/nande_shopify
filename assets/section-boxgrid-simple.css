@@ -76,4 +76,7 @@
   .boxgrid_simple .boxgrid_simple_item.active {
     width: 100%;
   }
+  .boxgrid_simple .boxgrid_simple_item.active{
+    order:-1;
+  }
 }
