@@ -24,7 +24,6 @@
         },
         "img_with_text_QJDYxJ": {
           "type": "img_with_text",
-          "disabled": true,
           "settings": {
             "text": "<p><strong>Sommer Sale: </strong>Sichere Dir jetzt die heißesten Deals von bis zu 150 € Rabatt</p>",
             "link": ""
@@ -32,11 +31,13 @@
         },
         "countdown_77kmfi": {
           "type": "countdown",
+          "disabled": true,
           "settings": {
             "text": "<p><strong>Sommer Sale: </strong>Sichere Dir jetzt die heißesten Deals von bis zu 150 € Rabatt</p>",
             "countdown_handle": "summer-sale",
             "link": "",
-            "countdown": "summer-sale"
+            "countdown": "summer-sale",
+            "font_color": "#121212"
           }
         }
       },
@@ -53,7 +54,7 @@
         "show_line_separator": true,
         "show_social": false,
         "enable_country_selector": true,
-        "enable_language_selector": true
+        "enable_language_selector": false
       }
     },
     "header_simple_ULLndz": {
