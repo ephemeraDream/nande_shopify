@@ -19,14 +19,16 @@
           "disabled": true,
           "settings": {
             "text": "Welcome to our store",
-            "link": ""
+            "link": "",
+            "font_color": "#bdff00"
           }
         },
         "img_with_text_QJDYxJ": {
           "type": "img_with_text",
           "settings": {
             "text": "<p><strong>Sommer Sale: </strong>Sichere Dir jetzt die heißesten Deals von bis zu 150 € Rabatt</p>",
-            "link": ""
+            "link": "",
+            "font_color": "#bdff00"
           }
         },
         "countdown_77kmfi": {
@@ -37,7 +39,7 @@
             "countdown_handle": "summer-sale",
             "link": "",
             "countdown": "summer-sale",
-            "font_color": "#121212"
+            "font_color": "#bdff00"
           }
         }
       },
@@ -53,7 +55,7 @@
         "color_scheme": "scheme-4",
         "show_line_separator": true,
         "show_social": false,
-        "enable_country_selector": true,
+        "enable_country_selector": false,
         "enable_language_selector": false
       }
     },
