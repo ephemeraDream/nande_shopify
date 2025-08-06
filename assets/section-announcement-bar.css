@@ -67,3 +67,27 @@
   justify-content: center;
   color: #FF7500;
 }
+
+@media screen and (max-width: 1024px) {
+  .announcement_bar_text,.announcement_bar_countdown_box_text,
+  .announcement_bar_countdown_box {
+    font-size: 1.4rem;
+  }
+  .announcement_bar_countdown_box_item {
+    width: 2rem;
+    height: 2rem;
+  }
+
+}
+
+@media screen and (max-width: 767px) {
+  .announcement_bar_text,.announcement_bar_countdown_box_text,
+  .announcement_bar_countdown_box {
+    font-size: 1.2rem;
+  }
+  .announcement_bar_countdown{
+    gap: 0.1rem;
+    flex-direction: column;
+  }
+
+}
