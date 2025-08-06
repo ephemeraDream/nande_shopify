@@ -12,7 +12,7 @@
         <div class="common_modal_close">{{- 'icon-close.svg' | inline_asset_content -}}</div>
       </div>
       <div class="common_modal_body">
-        {{ content | metafield_tag }}
+        {{ content | raw }}
       </div>
     </div>
   </div>
