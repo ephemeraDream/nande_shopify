@@ -77,7 +77,7 @@
       </predictive-search>
     </div>
     <div class="header_simple_icon_box">
-      <a class="header_simple_icon_item">{{ 'icon-customer-service.svg' | inline_asset_content }}</a>
+      <a href="{{ settings.customer_service_url }}" class="header_simple_icon_item">{{ 'icon-customer-service.svg' | inline_asset_content }}</a>
       {%- if shop.customer_accounts_enabled -%}
         <a
           href="{%- if customer -%}{{ routes.account_url }}{%- else -%}{{ routes.account_login_url }}{%- endif -%}"
@@ -97,7 +97,7 @@
           </div>
         {%- endif -%}
       </a>
-      <a class="header_simple_icon_item">{{ 'icon-message.svg' | inline_asset_content }}</a>
+      <a href="mailto:{{ shop.email }}" class="header_simple_icon_item">{{ 'icon-message.svg' | inline_asset_content }}</a>
     </div>
   </div>
 </div>
@@ -111,7 +111,13 @@
     "groups": ["footer"],
     "templates": ["*"]
   },
-  "settings": [],
+  "settings": [
+    {
+      "type": "text",
+      "id": "customer_service_url",
+      "label": "Customer Service URL"
+    }
+  ],
   "presets": [
     {
       "name": "header simple"
