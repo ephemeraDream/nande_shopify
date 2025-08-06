@@ -123,8 +123,15 @@
   color: #BDFF00;
   cursor: pointer;
   margin-top: 0.9rem;
+  transition: all 0.3s ease;
 }
-
+.bundle_simple .bundle_simple_box_body_btn:hover {
+  background-color: #BDFF00;
+  color: #1a1a1a;
+}
+.bundle_simple .bundle_simple_box_body_btn:hover svg path {
+  fill: #1a1a1a;
+}
 .bundle_simple .bundle_simple_box_body_btn svg path {
   fill: #BDFF00;
 }
