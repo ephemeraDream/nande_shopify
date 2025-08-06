@@ -23,6 +23,10 @@
   background-color: #fff;
   border-radius: 50%;
 }
+.list-social__link svg path{
+  color: rgb(var(--color-foreground));
+  fill: rgb(var(--color-foreground));
+}
 
 .utility-bar .list-social__link {
   padding: 0 0.8rem;
