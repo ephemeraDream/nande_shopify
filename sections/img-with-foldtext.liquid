@@ -65,8 +65,8 @@
         const header = item.querySelector('.img_with_foldtext_item_head');
 
         header.addEventListener('click', function (e) {
-          console.log('click');
-          e.stopPropagation(); // 防止冒泡触发别的区域（保险）
+          {% comment %} console.log('click'); {% endcomment %}
+          e.stopPropagation(); 
 
           // 获取当前点击所在 section 下的元素（只影响当前 section）
           faqItems.forEach(i => i.classList.remove('active'));
