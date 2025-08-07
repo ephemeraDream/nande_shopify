@@ -141,7 +141,7 @@
             <div class="page-btn" data-index="{{ forloop.index0 }}" aria-controls="slideshow-{{ section.id }}"{% if forloop.first %} aria-current="true"{% endif %}>
               <span class="visually-hidden">{{ 'sections.slideshow.load_slide' | t }} {{ forloop.index }} {{ 'general.slider.of' | t }} {{ forloop.length }}</span>
               {%- if section.settings.nav_style == 'slideshow_nav_lines' -%}
-                <span class="page-btn__line block relative overflow-hidden pointer-events-none"></span>
+                <span class="page-btn__line block relative overflow-hidden"></span>
               {%- else -%}
                 <svg width="30" height="30" viewBox="0 0 30 30" fill="none" class="page-btn__circle">
                   <circle class="page-btn__fg-circle" cx="15" cy="15" r="3.5" />
@@ -172,11 +172,11 @@
           {%- if section.settings.autoplay -%}
             <div class="slideshow-nav__autoplay {% unless section.settings.slider_pause %}hidden{% endunless %}">
               <div class="slideshow-nav__btn autoplay-btn btn">
-                <span class="pause-icon block pointer-events-none">
+                <span class="pause-icon block">
                   <span class="visually-hidden">{{ 'general.slider.pause' | t }}</span>
                   {% render 'icon-pause' %}
                 </span>
-                <span class="play-icon block pointer-events-none">
+                <span class="play-icon block">
                   <span class="visually-hidden">{{ 'general.slider.play' | t }}</span>
                   {% render 'icon-video' %}
                 </span>

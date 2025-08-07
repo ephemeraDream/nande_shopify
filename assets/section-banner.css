@@ -206,7 +206,8 @@
   --animation: var(--duration, 0s) forwards linear var(--play-state, paused);
   /* margin: 5px 2px; */
   color: rgba(var(--text-color)/.2);
-  pointer-events: initial;
+  /* pointer-events: initial; */
+  cursor: pointer;
 }
 .slideshow-ctrl .page-btn__line {
   width: 32px;
@@ -246,7 +247,7 @@ svg.page-btn__circle{
   height: 30px;
   fill: none;
   display: block;
-  pointer-events: none;
+  /* pointer-events: none; */
 }
 .slideshow-ctrl .page-btn__fg-circle {
   transform: rotate(-90deg);
@@ -278,9 +279,10 @@ svg.page-btn__circle{
   color: rgb(var(--text-color));
 }
 .slideshow-ctrl .slideshow-nav__btn {
-  padding: 7px;
+  padding: 3px;
   transition: background-color .3s,color .3s;
   color: rgb(var(--text-color));
+  cursor: pointer;
   }
 .slideshow-ctrl .slideshow-nav__btn:hover {
   background-color: rgb(var(--text-color));
