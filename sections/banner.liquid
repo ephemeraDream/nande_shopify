@@ -162,7 +162,7 @@
             </div>
 
             <div class="slideshow-nav__counter">
-              <span class="slideshow-nav__counter-current">2</span>
+              <span class="slideshow-nav__counter-current">1</span>
               <span aria-hidden="true"> / </span>
               <span class="visually-hidden">{{ 'general.slider.of' | t }}</span>
               <span class="slideshow-nav__counter-total">{{ section.blocks.size }}</span>
@@ -198,43 +198,91 @@
 
 <script>
   (() => {
-    const swiper = new Swiper('.section_banner', {
-      loop: true,
-      effect: "{{ section.settings.transition }}".replace('-', ''), // "slide", "fade"
-      autoplay: {
-        delay: {{ section.settings.autoplay_speed | times: 1000 }},
-        disableOnInteraction: false,
+    const ctrlEl = document.querySelector(".slideshow-ctrl");
+  const autoplayBtn = document.querySelector(".autoplay-btn");
+  const swiper = new Swiper(".section_banner", {
+    loop: true,
+    effect: "{{ section.settings.transition }}".replace("-", ""), // slide, fade
+    autoplay: {
+      delay: {{ section.settings.autoplay_speed | times: 1000 }},
+      disableOnInteraction: false,
+    },
+    navigation: {
+      nextEl: ".slideshow-nav__btn[name='next']",
+      prevEl: ".slideshow-nav__btn[name='prev']",
+    },
+    pagination: {
+      el: ".slideshow-pagination",
+      clickable: true,
+    },
+    on: {
+      init: function () {
+        // 初始设置为 running
+        if (ctrlEl) ctrlEl.style.setProperty("--play-state", "running");
+        updatePaginationHighlight(this.realIndex);
+        updateCounter(this.realIndex);
       },
-      navigation: {
-        nextEl: ".slideshow-nav__btn[name='next']",
-        prevEl: ".slideshow-nav__btn[name='prev']",
+      slideChange: function () {
+        updatePaginationHighlight(this.realIndex);
+        updateCounter(this.realIndex);
       },
-      pagination: {
-        el: ".slideshow-pagination",
-        clickable: true,
+      autoplayStart: function () {
+        if (ctrlEl) ctrlEl.style.setProperty("--play-state", "running");
       },
-      on: {
-        slideChange: function () {
-          const current = document.querySelector(".slideshow-nav__counter-current");
-          if (current) current.textContent = (this.realIndex + 1).toString();
-    
-          const buttons = document.querySelectorAll(".page-btn");
-          buttons.forEach((btn, idx) => {
-            if (idx === this.realIndex) {
-              btn.setAttribute("aria-current", "true");
-            } else {
-              btn.removeAttribute("aria-current");
-            }
-          });
-        }
+      autoplayStop: function () {
+        if (ctrlEl) ctrlEl.style.setProperty("--play-state", "paused");
+      }
+    }
+  });
+
+  const updatePaginationHighlight = (activeIndex) => {
+    const buttons = document.querySelectorAll(".page-btn");
+    buttons.forEach((btn, idx) => {
+      if (idx === activeIndex) {
+        btn.setAttribute("aria-current", "true");
+      } else {
+        btn.removeAttribute("aria-current");
       }
     });
+  };
+
+  const updateCounter = (index) => {
+    const current = document.querySelector(".slideshow-nav__counter-current");
+    if (current) current.textContent = (index + 1).toString();
+  };
+
+  // 鼠标悬停暂停 autoplay
+  const bannerEl = document.querySelector(".section_banner");
+  if (bannerEl) {
+    bannerEl.addEventListener("mouseenter", () => {
+      swiper.autoplay.stop();
+      if (autoplayBtn && !autoplayBtn.classList.contains("paused")) {
+        autoplayBtn.classList.add("paused"); // 播放按钮显示“暂停”状态
+      }
+    });
+    bannerEl.addEventListener("mouseleave", () => {
+      swiper.autoplay.start();
+      if (autoplayBtn && autoplayBtn.classList.contains("paused")) {
+        autoplayBtn.classList.remove("paused"); // 播放按钮显示“播放”状态
+      }
+    });
+  }
+
+  // 播放/暂停按钮切换
+  if (autoplayBtn) {
+    let playing = true;
+    autoplayBtn.addEventListener("click", () => {
+      if (playing) {
+        swiper.autoplay.stop();
+        autoplayBtn.classList.add("paused");
+      } else {
+        swiper.autoplay.start();
+        autoplayBtn.classList.remove("paused");
+      }
+      playing = !playing;
+    });
+  }
     
-
-
-    // const bannerEl = document.querySelector('.section_banner');
-    // bannerEl.addEventListener('mouseenter', () => swiper.autoplay.stop());
-    // bannerEl.addEventListener('mouseleave', () => swiper.autoplay.start());
 
     const countdownEl = document.querySelectorAll('.section_banner_countdown_box');
     if (!countdownEl.length) return;
