@@ -1,4 +1,4 @@
-{{ 'section-banner.css' | asset_url | stylesheet_tag }}
+
 {%- style -%}
 {%- if section.settings.height_mode == 'fixed' -%}
   .section_banner .swiper-wrapper.fixed-height{
@@ -43,6 +43,9 @@
 }
 
 {%- endstyle -%}
+
+{{ 'section-banner.css' | asset_url | stylesheet_tag }}
+
 <div class="section_banner swiper">
   <div class="swiper-wrapper {{ section.settings.height_mode }}-height">
     {% for block in section.blocks %}
