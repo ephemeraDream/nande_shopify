@@ -22,6 +22,7 @@
             "link": "",
             "file_position": "middle_left",
             "overlay_text_align": "text-start",
+            "transparent_content_color": "#ffffff",
             "file_type": "image",
             "file_image": "shopify://shop_images/Banner_0a355c62-7d1a-4c62-808a-e74e71a042b1.jpg",
             "video_url": "",
@@ -40,6 +41,7 @@
             "link": "",
             "file_position": "bottom_right",
             "overlay_text_align": "text-center",
+            "transparent_content_color": "#ffffff",
             "file_type": "image",
             "file_image": "shopify://shop_images/Banner_-_YOGA_-_1.jpg",
             "video_url": "",
@@ -58,6 +60,7 @@
             "link": "",
             "file_position": "middle_left",
             "overlay_text_align": "text-center",
+            "transparent_content_color": "#ffffff",
             "file_type": "video",
             "video_url": "",
             "url_upload": "shopify://files/videos/修改Banner 尺寸-1_cc5e7670-5c6b-4de6-8a69-f73a0b091b11.mp4",
@@ -72,7 +75,12 @@
         "banner_item_e7J8AA"
       ],
       "name": "banner",
-      "settings": {}
+      "settings": {
+        "height_mode": "auto",
+        "fixed_height_desktop": 600,
+        "fixed_height_mobile": 350,
+        "mobile_stacked": true
+      }
     },
     "link_block_ygbQVD": {
       "type": "link-block",
