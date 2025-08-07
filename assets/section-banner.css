@@ -157,7 +157,7 @@
 }
 
 /* 高度模式 */
-.section_banner .swiper-wrapper.screen-height{
+.section_banner .swiper-wrapper img.screen-height{
   height: calc(100vh - 166px);
 }
 

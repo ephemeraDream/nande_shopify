@@ -9,6 +9,9 @@
       .section_banner .swiper-wrapper.fixed-height{
         height: calc( {{ section.settings.fixed_height_mobile }} * 2px );
       }
+      .section_banner .swiper-wrapper.fixed-height img{
+        height: {{ section.settings.fixed_height_mobile }}px;
+      }
     }
   {%- else -%}
     @media screen and (max-width: 768px) {
@@ -77,7 +80,7 @@
             }}
           {% endif %}
         {% endif %}
-        <div class="session-box-padding {%- if section.settings.mobile_stacked -%}mobile-stacked{%- endif -%}">
+        <div class="session-box-padding {% if section.settings.mobile_stacked %}mobile-stacked{% endif %}">
           <div class="session-box-inner">
             <div class="section_banner_info section_banner_info_{{ block.settings.file_position }} {{ block.settings.overlay_text_align }}" style="color: {{ block.settings.transparent_content_color }};">
               <h5 class="section_banner_sub_title">{{ block.settings.sub_title }}</h5>
