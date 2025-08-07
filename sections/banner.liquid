@@ -269,18 +269,23 @@
       const autoplay = bannerEl.getAttribute("data-autoplay");
       if (autoplay === "true") {
         swiper.autoplay.stop();
-        // if (autoplayBtn && !autoplayBtn.classList.contains("paused")) {
-        //   autoplayBtn.classList.add("paused"); // 播放按钮显示“暂停”状态
-        // }
+        pauseTimeStart = Date.now();
+        const elapsed = pauseTimeStart - autoplayStartTime;
+        timeLeft = swiper.params.autoplay.delay - elapsed;
+
+        // 防止负值
+        if (timeLeft < 100) timeLeft = 100;
       }
     });
     bannerEl.addEventListener("mouseleave", () => {
       const autoplay = bannerEl.getAttribute("data-autoplay");
       if (autoplay === "true") {
-        swiper.autoplay.start();
-        // if (autoplayBtn && autoplayBtn.classList.contains("paused")) {
-        //   autoplayBtn.classList.remove("paused"); // 播放按钮显示“播放”状态
-        // }
+        bannerEl.style.setProperty("--play-state", "running");
+        clearTimeout(timer);
+        timer = setTimeout(() => {
+          swiper.slideNext();
+          swiper.autoplay.start();
+        }, timeLeft);
       }
     });
   }
