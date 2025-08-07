@@ -131,7 +131,7 @@
         {%- if section.settings.nav_style == 'slideshow_nav_dots' or section.settings.nav_style == 'slideshow_nav_lines' -%}
           <div class="slideshow-pagination flex items-center">
             {%- for block in section.blocks -%}
-              <button class="page-btn" data-index="{{ forloop.index0 }}" aria-controls="slideshow-{{ section.id }}"{% if forloop.first %} aria-current="true"{% endif %}>
+              <div class="page-btn" data-index="{{ forloop.index0 }}" aria-controls="slideshow-{{ section.id }}"{% if forloop.first %} aria-current="true"{% endif %}>
                 <span class="visually-hidden">{{ 'sections.slideshow.load_slide' | t }} {{ forloop.index }} {{ 'general.slider.of' | t }} {{ forloop.length }}</span>
                 {%- if section.settings.nav_style == 'slideshow_nav_lines' -%}
                   <span class="page-btn__line block relative overflow-hidden pointer-events-none"></span>
@@ -141,7 +141,7 @@
                     <circle class="page-btn__bg-circle" cx="15" cy="15" r="6" />
                   </svg>
                 {%- endif -%}
-              </button>
+              </div>
             {%- endfor -%}
           </div>
         {%- endif -%}
@@ -149,10 +149,10 @@
         {%- if section.settings.nav_style == 'arrows' or section.settings.autoplay -%}
           <div class="slideshow-nav flex items-center">
             {%- if section.settings.nav_style == 'arrows' -%}
-              <button type="button" class="slideshow-nav__btn btn hidden md:block has-ltr-icon" name="prev" aria-controls="slideshow-{{ section.id }}">
+              <div class="slideshow-nav__btn btn hidden md:block has-ltr-icon" name="prev" aria-controls="slideshow-{{ section.id }}">
                 <span class="visually-hidden">{{ 'general.slider.previous' | t }}</span>
                 {% render 'icon-chevron-left' %}
-              </button>
+              </div>
 
               <div class="slideshow-nav__counter">
                 <span class="slideshow-nav__counter-current">1</span>
@@ -164,7 +164,7 @@
 
             {%- if section.settings.autoplay -%}
               <div class="slideshow-nav__autoplay flex items-center {% unless section.settings.slider_pause %}hidden{% endunless %}">
-                <button type="button" class="slideshow-nav__btn autoplay-btn btn">
+                <div class="slideshow-nav__btn autoplay-btn btn">
                   <span class="pause-icon block pointer-events-none">
                     <span class="visually-hidden">{{ 'general.slider.pause' | t }}</span>
                     {% render 'icon-pause' %}
@@ -173,15 +173,15 @@
                     <span class="visually-hidden">{{ 'general.slider.play' | t }}</span>
                     {% render 'icon-video' %}
                   </span>
-                </button>
+                </div>
               </div>
             {%- endif -%}
 
             {%- if section.settings.nav_style == 'arrows' -%}
-              <button type="button" class="slideshow-nav__btn btn hidden md:block has-ltr-icon" name="next" aria-controls="slideshow-{{ section.id }}">
+              <div class="slideshow-nav__btn btn hidden md:block has-ltr-icon" name="next" aria-controls="slideshow-{{ section.id }}">
                 <span class="visually-hidden">{{ 'general.slider.next' | t }}</span>
                 {% render 'icon-chevron-right' %}
-              </button>
+              </div>
             {%- endif -%}
           </div>
         {%- endif -%}
