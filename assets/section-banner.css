@@ -283,6 +283,7 @@ svg.page-btn__circle{
   transition: background-color .3s,color .3s;
   color: rgb(var(--text-color));
   cursor: pointer;
+  display: flex;
   }
 .slideshow-ctrl .slideshow-nav__btn:hover {
   background-color: rgb(var(--text-color));
@@ -302,6 +303,9 @@ svg.page-btn__circle{
   }
 .autoplay-btn.is-paused .pause-icon, .autoplay-btn:not(.is-paused) .play-icon {
   display: none;
+}
+.slideshow-nav__counter {
+  margin: 0 10px;
 }
 .block{
   display: block;

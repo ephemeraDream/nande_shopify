@@ -34,7 +34,7 @@
 {%- endif -%}
 
 {%- if section.settings.autoplay -%}
-  :root {
+  .slideshow-ctrl {
     --duration: {{ section.settings.autoplay_speed }}s;
     --play-state: paused;
   }
@@ -49,7 +49,7 @@
 
 {{ 'section-banner.css' | asset_url | stylesheet_tag }}
 
-<div class="section_banner swiper">
+<div class="section_banner swiper" data-autoplay="{{ section.settings.autoplay }}" data-speed="{{ section.settings.autoplay_speed }}" data-transition="{{ section.settings.transition }}">
   <div class="swiper-wrapper {{ section.settings.height_mode }}-height">
     {% for block in section.blocks %}
       <div class="swiper-slide">
@@ -156,7 +156,7 @@
       {%- if section.settings.nav_style == 'arrows' or section.settings.autoplay -%}
         <div class="slideshow-nav flex items-center">
           {%- if section.settings.nav_style == 'arrows' -%}
-            <div class="slideshow-nav__btn btn hidden md:block has-ltr-icon" name="prev" aria-controls="slideshow-{{ section.id }}">
+            <div class="slideshow-nav__btn btn" name="prev" aria-controls="slideshow-{{ section.id }}">
               <span class="visually-hidden">{{ 'general.slider.previous' | t }}</span>
               {% render 'icon-chevron-left' %}
             </div>
@@ -185,7 +185,7 @@
           {%- endif -%}
 
           {%- if section.settings.nav_style == 'arrows' -%}
-            <div class="slideshow-nav__btn btn hidden md:block has-ltr-icon" name="next" aria-controls="slideshow-{{ section.id }}">
+            <div class="slideshow-nav__btn btn" name="next" aria-controls="slideshow-{{ section.id }}">
               <span class="visually-hidden">{{ 'general.slider.next' | t }}</span>
               {% render 'icon-chevron-right' %}
             </div>
@@ -200,11 +200,40 @@
   (() => {
     const swiper = new Swiper('.section_banner', {
       loop: true,
-      autoplay: true,
-      spaceBetween: 0,
+      autoplay: {
+        delay: {{ section.settings.autoplay_speed | times: 1000 }},
+        disableOnInteraction: false,
+      },
+      effect: "{{ section.settings.transition }}".replace('-', ''), // "slide", "fade"
+      navigation: {
+        nextEl: ".slideshow-nav__btn[name='next']",
+        prevEl: ".slideshow-nav__btn[name='prev']",
+      },
+      pagination: {
+        el: ".slideshow-pagination",
+        clickable: true
+      },
+      on: {
+        slideChange: function () {
+          // 更新当前页码
+          const current = document.querySelector(".slideshow-nav__counter-current");
+          if (current) current.textContent = (swiper.realIndex + 1).toString();
+  
+          // 高亮当前分页
+          const buttons = document.querySelectorAll(".page-btn");
+          buttons.forEach((btn, idx) => {
+            if (idx === swiper.realIndex) {
+              btn.setAttribute("aria-current", "true");
+            } else {
+              btn.removeAttribute("aria-current");
+            }
+          });
+        }
+      }
     });
-    const bannerEl = document.querySelector('.section_banner');
 
+
+    const bannerEl = document.querySelector('.section_banner');
     bannerEl.addEventListener('mouseenter', () => swiper.autoplay.stop());
     bannerEl.addEventListener('mouseleave', () => swiper.autoplay.start());
 
