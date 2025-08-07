@@ -266,27 +266,23 @@
   // 鼠标悬停暂停 autoplay
   if (bannerEl) {
     bannerEl.addEventListener("mouseenter", () => {
-      if (swiper.autoplay.running) {
+      const autoplay = bannerEl.getAttribute("data-autoplay");
+      if (autoplay === "true") {
         swiper.autoplay.stop();
-        pauseTimeStart = Date.now();
-        const elapsed = pauseTimeStart - autoplayStartTime;
-        timeLeft = swiper.params.autoplay.delay - elapsed;
-    
-        // 防止负值
-        if (timeLeft < 100) timeLeft = 100;
+        // if (autoplayBtn && !autoplayBtn.classList.contains("paused")) {
+        //   autoplayBtn.classList.add("paused"); // 播放按钮显示“暂停”状态
+        // }
       }
     });
-    
     bannerEl.addEventListener("mouseleave", () => {
-      if (!swiper.autoplay.running) {
-        clearTimeout(timer);
-        timer = setTimeout(() => {
-          swiper.slideNext();
-          swiper.autoplay.start();
-        }, timeLeft);
+      const autoplay = bannerEl.getAttribute("data-autoplay");
+      if (autoplay === "true") {
+        swiper.autoplay.start();
+        // if (autoplayBtn && autoplayBtn.classList.contains("paused")) {
+        //   autoplayBtn.classList.remove("paused"); // 播放按钮显示“播放”状态
+        // }
       }
     });
-    
   }
 
   // 播放/暂停按钮切换
