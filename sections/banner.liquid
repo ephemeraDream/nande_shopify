@@ -216,11 +216,11 @@
       on: {
         slideChange: function () {
           const current = document.querySelector(".slideshow-nav__counter-current");
-          if (current) current.textContent = (swiper.realIndex + 1).toString();
+          if (current) current.textContent = (this.realIndex + 1).toString();
     
           const buttons = document.querySelectorAll(".page-btn");
           buttons.forEach((btn, idx) => {
-            if (idx === swiper.realIndex) {
+            if (idx === this.realIndex) {
               btn.setAttribute("aria-current", "true");
             } else {
               btn.removeAttribute("aria-current");
