@@ -34,7 +34,7 @@
 {%- endif -%}
 
 {%- if section.settings.autoplay -%}
-  .slideshow-ctrl {
+  .section_banner {
     --duration: {{ section.settings.autoplay_speed }}s;
     --play-state: paused;
   }
@@ -49,8 +49,8 @@
 
 {{ 'section-banner.css' | asset_url | stylesheet_tag }}
 
-<div class="section_banner swiper" data-autoplay="{{ section.settings.autoplay }}" data-speed="{{ section.settings.autoplay_speed }}" data-transition="{{ section.settings.transition }}">
-  <div class="swiper-wrapper {{ section.settings.height_mode }}-height">
+<div class="section_banner swiper" data-autoplay="{{ section.settings.autoplay }}" data-speed="{{ section.settings.autoplay_speed }}" data-transition="{{ section.settings.transition }}" >
+  <div class="swiper-wrapper {{ section.settings.height_mode }}-height" aria-live="polite">
     {% for block in section.blocks %}
       <div class="swiper-slide">
         {% if block.settings.file_type == 'image' %}
@@ -198,7 +198,8 @@
 
 <script>
   (() => {
-  const ctrlEl = document.querySelector(".slideshow-ctrl");
+  const bannerEl = document.querySelector(".section_banner");
+  const wrapperEl = document.querySelector(".section_banner .swiper-wrapper");
   const autoplayBtn = document.querySelector(".autoplay-btn");
   const updatePaginationHighlight = (activeIndex) => {
     const buttons = document.querySelectorAll(".page-btn");
@@ -233,7 +234,7 @@
     on: {
       init: function () {
         // 初始设置为 running
-        if (ctrlEl) ctrlEl.style.setProperty("--play-state", "running");
+        if (bannerEl) bannerEl.style.setProperty("--play-state", "running");
         updatePaginationHighlight(this.realIndex);
         updateCounter(this.realIndex);
       },
@@ -242,27 +243,33 @@
         updateCounter(this.realIndex);
       },
       autoplayStart: function () {
-        if (ctrlEl) ctrlEl.style.setProperty("--play-state", "running");
+        if (bannerEl) bannerEl.style.setProperty("--play-state", "running");
       },
       autoplayStop: function () {
-        if (ctrlEl) ctrlEl.style.setProperty("--play-state", "paused");
+        if (bannerEl) bannerEl.style.setProperty("--play-state", "paused");
       }
     }
   });
 
   // 鼠标悬停暂停 autoplay
-  const bannerEl = document.querySelector(".section_banner");
+  
   if (bannerEl) {
     bannerEl.addEventListener("mouseenter", () => {
-      swiper.autoplay.stop();
-      if (autoplayBtn && !autoplayBtn.classList.contains("paused")) {
-        autoplayBtn.classList.add("paused"); // 播放按钮显示“暂停”状态
+      const autoplay = bannerEl.getAttribute("data-autoplay");
+      if (autoplay === "true") {
+        swiper.autoplay.stop();
+        // if (autoplayBtn && !autoplayBtn.classList.contains("paused")) {
+        //   autoplayBtn.classList.add("paused"); // 播放按钮显示“暂停”状态
+        // }
       }
     });
     bannerEl.addEventListener("mouseleave", () => {
-      swiper.autoplay.start();
-      if (autoplayBtn && autoplayBtn.classList.contains("paused")) {
-        autoplayBtn.classList.remove("paused"); // 播放按钮显示“播放”状态
+      const autoplay = bannerEl.getAttribute("data-autoplay");
+      if (autoplay === "true") {
+        swiper.autoplay.start();
+        // if (autoplayBtn && autoplayBtn.classList.contains("paused")) {
+        //   autoplayBtn.classList.remove("paused"); // 播放按钮显示“播放”状态
+        // }
       }
     });
   }
@@ -274,9 +281,11 @@
       if (playing) {
         swiper.autoplay.stop();
         autoplayBtn.classList.add("paused");
+        if (bannerEl) bannerEl.setAttribute("data-autoplay", "false");
       } else {
         swiper.autoplay.start();
         autoplayBtn.classList.remove("paused");
+        if (bannerEl) bannerEl.setAttribute("data-autoplay", "true");
       }
       playing = !playing;
       console.log(playing);

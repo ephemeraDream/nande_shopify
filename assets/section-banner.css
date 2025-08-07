@@ -202,7 +202,7 @@
     stroke-dashoffset: 0;
   }
 }
-.slideshow-ctrl .page-btn {
+.section_banner .slideshow-ctrl .page-btn {
   --animation: var(--duration, 0s) forwards linear var(--play-state, paused);
   /* margin: 5px 2px; */
   color: rgba(var(--text-color)/.2);
