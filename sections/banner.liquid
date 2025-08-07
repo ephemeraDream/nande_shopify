@@ -229,7 +229,7 @@
     loop: true,
     effect: "{{ section.settings.transition }}".replace("-", ""), // slide, fade
     autoplay: {
-      delay: {{ section.settings.autoplay_speed | times: 2000 }},
+      delay: {{ section.settings.autoplay_speed | times: 1000 }},
       disableOnInteraction: false,
     },
     navigation: {
