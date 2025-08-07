@@ -156,6 +156,12 @@
   color: #FF7500;
 }
 
+/* 高度模式 */
+.section_banner .swiper-wrapper.screen-height{
+  height: calc(100vh - 166px);
+}
+
+
 @media screen and (max-width: 1440px) {
   .section_banner .section_banner_info_btn {
     height: 4rem;
@@ -173,6 +179,10 @@
     width: 2.4rem;
     height: 2.4rem;
   }
+
+  .section_banner .swiper-wrapper.screen-height{
+    height: calc(100vh - 130px);
+  }
 }
 
 @media screen and (max-width: 768px) {
@@ -180,4 +190,5 @@
   .section_banner .swiper-slide video {
     min-height: 30rem;
   }
+
 }

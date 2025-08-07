@@ -1,7 +1,18 @@
 {{ 'section-banner.css' | asset_url | stylesheet_tag }}
-
+{%- style -%}
+{%- if section.settings.height_mode == 'fixed' -%}
+  .section_banner .swiper-wrapper.fixed-height{
+    height: {{ section.settings.fixed_height_desktop }}px;
+  }
+  @media screen and (max-width: 768px) {
+    .section_banner .swiper-wrapper.fixed-height{
+      height: {{ section.settings.fixed_height_mobile }}px;
+    }
+  }
+{%- endif -%}
+{%- endstyle -%}
 <div class="section_banner swiper">
-  <div class="swiper-wrapper">
+  <div class="swiper-wrapper {{ section.settings.height_mode }}-height">
     {% for block in section.blocks %}
       <div class="swiper-slide">
         {% if block.settings.file_type == 'image' %}
@@ -163,7 +174,59 @@
   "disabled_on": {
     "groups": ["header", "footer"]
   },
-  "settings": [],
+  "settings": [
+    {
+      "type": "header",
+      "content": "Layout"
+    },
+    {
+      "type": "select",
+      "id": "height_mode",
+      "label": "Image height",
+      "options": [
+        {
+          "value": "auto",
+          "label": "Height of first image"
+        },
+        {
+          "value": "fixed",
+          "label": "Fixed height (set below)"
+        },
+        {
+          "value": "screen",
+          "label": "Full screen height"
+        }
+      ],
+      "default": "auto"
+    },
+    {
+      "type": "range",
+      "id": "fixed_height_desktop",
+      "min": 400,
+      "max": 1000,
+      "step": 10,
+      "unit": "px",
+      "label": "Minimum fixed height on large screens",
+      "default": 600
+    },
+    {
+      "type": "range",
+      "id": "fixed_height_mobile",
+      "min": 250,
+      "max": 500,
+      "step": 10,
+      "unit": "px",
+      "label": "Minimum fixed height on mobile",
+      "default": 350
+    },
+    {
+      "type": "checkbox",
+      "id": "mobile_stacked",
+      "label": "Show text below image on mobile",
+      "info": "Does not apply to \"Full screen height\".",
+      "default": false
+    },
+  ],
   "blocks": [
     {
       "type": "banner_item",
@@ -333,3 +396,5 @@
   ]
 }
 {% endschema %}
+
+
