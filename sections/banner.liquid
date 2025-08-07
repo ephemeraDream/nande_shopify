@@ -6,9 +6,6 @@
   }
   {%- if section.settings.mobile_stacked -%}
     @media screen and (max-width: 768px) {
-      .section_banner .swiper-wrapper.fixed-height{
-        height: calc( {{ section.settings.fixed_height_mobile }} * 2px );
-      }
       .section_banner .swiper-wrapper.fixed-height img{
         height: {{ section.settings.fixed_height_mobile }}px;
       }
