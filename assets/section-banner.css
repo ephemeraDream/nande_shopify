@@ -301,7 +301,7 @@ svg.page-btn__circle{
   margin-inline-end: 8px;
   background-color: rgb(var(--text-color));
   }
-.autoplay-btn.is-paused .pause-icon, .autoplay-btn:not(.is-paused) .play-icon {
+.autoplay-btn.paused .pause-icon, .autoplay-btn:not(.paused) .play-icon {
   display: none;
 }
 .slideshow-ctrl .slideshow-nav__counter {
