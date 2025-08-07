@@ -264,9 +264,6 @@
   });
 
   // 鼠标悬停暂停 autoplay
-  let pauseTimeStart = 0;
-  let timeLeft = swiper.params.autoplay.delay; // 初始为 full delay
-  let timer = null;
   if (bannerEl) {
     bannerEl.addEventListener("mouseenter", () => {
       if (swiper.autoplay.running) {
