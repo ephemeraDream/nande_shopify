@@ -85,7 +85,7 @@
         "nav_position": "justify-center",
         "transition": "slide-fade",
         "autoplay": true,
-        "slider_pause": false,
+        "slider_pause": true,
         "autoplay_speed": 5
       }
     },
