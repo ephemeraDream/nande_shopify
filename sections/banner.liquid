@@ -34,8 +34,11 @@
 {%- endif -%}
 
 {%- if section.settings.autoplay -%}
-  --duration: {{ section.settings.autoplay_speed }}s;
-  --play-state: paused;
+  :root {
+    --duration: {{ section.settings.autoplay_speed }}s;
+    --play-state: paused;
+  }
+  
 {%- endif -%}
 
 .slideshow-ctrl {
