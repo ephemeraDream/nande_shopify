@@ -171,7 +171,7 @@
   display: flex;
   position: absolute;
   color: var(--text-color);
-  pointer-events: none;
+  /* pointer-events: none; */
 }
 .slideshow-ctrl.justify-start{
   justify-content: flex-start;
@@ -217,7 +217,7 @@
   border-radius: 0;
   background-color: currentColor;
   display: block;
-  pointer-events: none;
+  /* pointer-events: none; */
   position: relative;
 }
 .slideshow-ctrl [data-autoplay=true] .page-btn__line::after {
