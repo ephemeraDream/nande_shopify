@@ -51,7 +51,6 @@
         },
         "banner_item_e7J8AA": {
           "type": "banner_item",
-          "disabled": true,
           "settings": {
             "sub_title": "",
             "title": "",
