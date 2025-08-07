@@ -132,7 +132,7 @@
   display: flex;
   align-items: center;
   font-family: "PP Right Grotesk";
-  font-size: 3rem;
+  font-size: 2.6rem;
   font-weight: 500;
   line-height: 94%;
   letter-spacing: 0px;
@@ -158,17 +158,24 @@
 
 @media screen and (max-width: 1440px) {
   .section_banner .section_banner_info_btn {
-    height: 5rem;
-    margin-top: 4rem;
+    height: 4rem;
+    margin-top: 3rem;
   }
 
   .section_banner .section_banner_info_text {
-    margin-top: 2rem;
+    margin-top: 1rem;
+  }
+  .section_banner .section_banner_countdown_box{
+    font-size: 1.6rem;
+    margin-top: 1.4rem;
+  }
+  .section_banner .section_banner_countdown_box_item{
+    width: 2.4rem;
+    height: 2.4rem;
   }
 }
 
 @media screen and (max-width: 768px) {
-
   .section_banner .swiper-slide img,
   .section_banner .swiper-slide video {
     min-height: 30rem;
