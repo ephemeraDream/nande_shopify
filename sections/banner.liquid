@@ -201,16 +201,25 @@
   const bannerEl = document.querySelector(".section_banner");
   const wrapperEl = document.querySelector(".section_banner .swiper-wrapper");
   const autoplayBtn = document.querySelector(".autoplay-btn");
-  const updatePaginationHighlight = (activeIndex) => {
-    const buttons = document.querySelectorAll(".page-btn");
-    buttons.forEach((btn, idx) => {
+  // 绑定你自定义的分页按钮点击事件
+  const pageButtons = document.querySelectorAll(".page-btn");
+  pageButtons.forEach((btn) => {
+    btn.addEventListener("click", () => {
+      const index = parseInt(btn.dataset.index, 10);
+      swiper.slideToLoop(index); // slideToLoop 保证 loop 模式下正确跳转
+    });
+  });
+
+  // 更新 aria-current 的高亮状态
+  function updatePaginationHighlight(activeIndex) {
+    pageButtons.forEach((btn, idx) => {
       if (idx === activeIndex) {
         btn.setAttribute("aria-current", "true");
       } else {
         btn.removeAttribute("aria-current");
       }
     });
-  };
+  }
 
   const updateCounter = (index) => {
     const current = document.querySelector(".slideshow-nav__counter-current");
@@ -220,16 +229,12 @@
     loop: true,
     effect: "{{ section.settings.transition }}".replace("-", ""), // slide, fade
     autoplay: {
-      delay: {{ section.settings.autoplay_speed | times: 1000 }},
+      delay: {{ section.settings.autoplay_speed | times: 2000 }},
       disableOnInteraction: false,
     },
     navigation: {
       nextEl: ".slideshow-nav__btn[name='next']",
       prevEl: ".slideshow-nav__btn[name='prev']",
-    },
-    pagination: {
-      el: ".slideshow-pagination",
-      clickable: true,
     },
     on: {
       init: function () {
