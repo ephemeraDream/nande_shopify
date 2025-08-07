@@ -228,7 +228,7 @@
   height: 100%;
   transform: scaleX(0);
   transform-origin: 0;
-  background-color: var(--text-color);
+  background-color: rgb(var(--text-color));
 }
 [data-autoplay=true] [aria-current=true] > .page-btn__line {
   height: 3px;
@@ -239,7 +239,7 @@
 }
 .slideshow-ctrl .page-btn:hover > .page-btn__line,
 [data-autoplay=false] [aria-current=true] > .page-btn__line {
-  background-color: var(--text-color);
+  background-color: rgb(var(--text-color));
 }
 svg.page-btn__circle{
   width: 30px;
@@ -254,7 +254,7 @@ svg.page-btn__circle{
   stroke-width: 7px;
   stroke-dasharray: 22;
   stroke-dashoffset: 22;
-  stroke: var(--text-color);
+  stroke: rgb(var(--text-color));
 }
 .slideshow-ctrl [data-autoplay=true] [aria-current=true] .page-btn__fg-circle {
   animation: var(--animation);
@@ -268,14 +268,14 @@ svg.page-btn__circle{
 }
 .slideshow-ctrl .page-btn:hover .page-btn__bg-circle,
 .slideshow-ctrl [data-autoplay=false] [aria-current=true] .page-btn__bg-circle {
-  stroke: var(--text-color);
-  fill: var(--text-color);
+  stroke: rgb(var(--text-color));
+  fill: rgb(var(--text-color));
 }
 
 .slideshow-ctrl .slideshow-nav{
   display: flex;
   align-items: center;
-  color: var(--text-color);
+  color: rgb(var(--text-color));
 }
 .slideshow-nav__autoplay{
   margin-inline-start: 12px;
@@ -287,7 +287,7 @@ svg.page-btn__circle{
   width: 1px;
   height: 24px;
   margin-inline-end: 8px;
-  background-color: var(--text-color);
+  background-color: rgb(var(--text-color));
   }
 .autoplay-btn.is-paused .pause-icon, .autoplay-btn:not(.is-paused) .play-icon {
   display: none;
