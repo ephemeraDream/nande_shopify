@@ -22,6 +22,7 @@
   {%- endif -%}
 {%- endif -%}
 {%- if section.settings.mobile_stacked -%}
+  @media screen and (max-width: 768px) {
   .section_banner .swiper-slide .session-box-padding.mobile-stacked{ 
     position: relative;
     height: auto;
@@ -29,6 +30,8 @@
     padding-top:2rem;
     padding-bottom:2rem;
   }
+  .section_banner .swiper-slide .session-box-padding.mobile-stacked .section_banner_info{top:unset;left:unset;transform:unset;}
+}
 {%- endif -%}
 {%- endstyle -%}
 <div class="section_banner swiper">
