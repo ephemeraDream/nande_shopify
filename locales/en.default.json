@@ -61,9 +61,16 @@
     },
     "slider": {
       "of": "of",
+      "previous": "Previous",
+      "next": "Next",
       "next_slide": "Slide right",
       "previous_slide": "Slide left",
-      "name": "Slider"
+      "name": "Slider",
+      "load_slide": "Load slide",
+      "pause": "Pause slideshow",
+      "play": "Play slideshow",
+      "carousel": "Carousel",
+      "slide": "Slide"
     }
   },
   "newsletter": {
