@@ -30,6 +30,7 @@
         },
         "banner_item_ykwd4B": {
           "type": "banner_item",
+          "disabled": true,
           "settings": {
             "sub_title": "<p>Eleganz, die sich bewegt</p>",
             "title": "<p>Maidesite Yoga</p>",
@@ -46,6 +47,7 @@
         },
         "banner_item_e7J8AA": {
           "type": "banner_item",
+          "disabled": true,
           "settings": {
             "sub_title": "",
             "title": "",
