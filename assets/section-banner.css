@@ -90,9 +90,8 @@
 
 .section_banner .section_banner_info_middle_center {
   left: 50%;
-  transform: translateX(-50%);
   top: 50%;
-  transform: translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
 }
 
 .section_banner .section_banner_info_middle_right {
@@ -122,9 +121,11 @@
 }
 .section_banner .text-center{
   align-items: center;
+  text-align: center;
 }
 .section_banner .text-end{
   align-items: flex-end;
+  text-align: right;
 }
 
 .section_banner .section_banner_countdown_box {
