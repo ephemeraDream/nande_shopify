@@ -198,8 +198,23 @@
 
 <script>
   (() => {
-    const ctrlEl = document.querySelector(".slideshow-ctrl");
+  const ctrlEl = document.querySelector(".slideshow-ctrl");
   const autoplayBtn = document.querySelector(".autoplay-btn");
+  const updatePaginationHighlight = (activeIndex) => {
+    const buttons = document.querySelectorAll(".page-btn");
+    buttons.forEach((btn, idx) => {
+      if (idx === activeIndex) {
+        btn.setAttribute("aria-current", "true");
+      } else {
+        btn.removeAttribute("aria-current");
+      }
+    });
+  };
+
+  const updateCounter = (index) => {
+    const current = document.querySelector(".slideshow-nav__counter-current");
+    if (current) current.textContent = (index + 1).toString();
+  };
   const swiper = new Swiper(".section_banner", {
     loop: true,
     effect: "{{ section.settings.transition }}".replace("-", ""), // slide, fade
@@ -234,22 +249,6 @@
       }
     }
   });
-
-  const updatePaginationHighlight = (activeIndex) => {
-    const buttons = document.querySelectorAll(".page-btn");
-    buttons.forEach((btn, idx) => {
-      if (idx === activeIndex) {
-        btn.setAttribute("aria-current", "true");
-      } else {
-        btn.removeAttribute("aria-current");
-      }
-    });
-  };
-
-  const updateCounter = (index) => {
-    const current = document.querySelector(".slideshow-nav__counter-current");
-    if (current) current.textContent = (index + 1).toString();
-  };
 
   // 鼠标悬停暂停 autoplay
   const bannerEl = document.querySelector(".section_banner");
