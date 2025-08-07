@@ -277,6 +277,15 @@ svg.page-btn__circle{
   align-items: center;
   color: rgb(var(--text-color));
 }
+.slideshow-ctrl .slideshow-nav__btn {
+  padding: 7px;
+  transition: background-color .3s,color .3s;
+  color: rgb(var(--text-color));
+  }
+.slideshow-ctrl .slideshow-nav__btn:hover {
+  background-color: rgb(var(--text-color));
+  color: #333;
+  }
 .slideshow-nav__autoplay{
   margin-inline-start: 12px;
   display: flex;
