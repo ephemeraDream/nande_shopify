@@ -164,7 +164,7 @@
 /* 播放组件 */
 .slideshow-ctrl {
   z-index: 2;
-  bottom: 30px;
+  bottom: 20px;
   left: 50%;
   transform: translate(-50%);
   width: 100%;
@@ -204,7 +204,7 @@
 }
 .page-btn {
   --animation: var(--duration, 0s) forwards linear var(--play-state, paused);
-  margin: 5px 2px;
+  /* margin: 5px 2px; */
   color: rgba(var(--text-color)/.2);
   pointer-events: initial;
 }
@@ -218,11 +218,6 @@
   display: block;
   pointer-events: none;
   position: relative;
-}
-.slideshow-nav{
-  display: flex;
-  align-items: center;
-  color: var(--text-color);
 }
 [data-autoplay=true] .page-btn__line::after {
   content: "";
@@ -275,6 +270,43 @@ svg.page-btn__circle{
 [data-autoplay=false] [aria-current=true] .page-btn__bg-circle {
   stroke: rgb(var(--text-color));
   fill: rgb(var(--text-color));
+}
+
+.slideshow-nav{
+  display: flex;
+  align-items: center;
+  color: var(--text-color);
+}
+.slideshow-nav__autoplay{
+  margin-inline-start: 12px;
+  display: flex;
+  align-items: center;
+}
+.slideshow-nav__autoplay:before {
+  content: "";
+  width: 1px;
+  height: 24px;
+  margin-inline-end: 8px;
+  background-color: rgb(var(--text-color));
+  }
+.autoplay-btn.is-paused .pause-icon, .autoplay-btn:not(.is-paused) .play-icon {
+  display: none;
+}
+.block{
+  display: block;
+}
+.pointer-events-none{
+  pointer-events: none;
+}
+.autoplay-btn .icon {
+  display: block;
+  width: 24px;
+  height: 24px;
+  padding: 4px;
+}
+.icon {
+  vertical-align: top;
+  pointer-events: none;
 }
 
 @media screen and (max-width: 1440px) {

@@ -163,7 +163,7 @@
             {%- endif -%}
 
             {%- if section.settings.autoplay -%}
-              <div class="slideshow-nav__autoplay flex items-center {% unless section.settings.slider_pause %}hidden{% endunless %}">
+              <div class="slideshow-nav__autoplay {% unless section.settings.slider_pause %}hidden{% endunless %}">
                 <div class="slideshow-nav__btn autoplay-btn btn">
                   <span class="pause-icon block pointer-events-none">
                     <span class="visually-hidden">{{ 'general.slider.pause' | t }}</span>
