@@ -111,6 +111,7 @@
 .header_simple .header_simple_icon_item svg{
   width: 2.4rem;
   height: 2.4rem;
+  transition: all 0.3s ease;
 }
 
 .header_simple .header_simple_logo {
@@ -119,8 +120,8 @@
 .header_simple .header_simple_icon_item svg path{
   fill:#1a1a1a;
 }
-.header_simple .header_simple_icon_item:hover svg path{
-  fill:#323232;
+.header_simple .header_simple_icon_item:hover svg{
+  transform: scale(1.1);
 }
 @media screen and (max-width: 768px) {
 .header_simple_section {
