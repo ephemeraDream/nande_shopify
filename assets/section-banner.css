@@ -221,7 +221,7 @@
   /* pointer-events: none; */
   position: relative;
 }
- [data-autoplay=true] .slideshow-ctrl .page-btn__line::after {
+ [data-autoplay=true] .page-btn__line::after {
   content: "";
   position: absolute;
   top: 0;
@@ -232,15 +232,15 @@
   transform-origin: 0;
   background-color: rgb(var(--text-color));
 }
-[data-autoplay=true] [aria-current=true] .slideshow-ctrl > .page-btn__line {
+[data-autoplay=true] [aria-current=true] > .page-btn__line {
   height: 3px;
 }
-[data-autoplay=true] [aria-current=true] > .slideshow-ctrl .page-btn__line::after {
+[data-autoplay=true] [aria-current=true] > .page-btn__line::after {
   animation: var(--animation);
   animation-name: lineTimer;
 }
 .slideshow-ctrl .page-btn:hover > .page-btn__line,
-[data-autoplay=false] [aria-current=true] .slideshow-ctrl > .page-btn__line {
+[data-autoplay=false] [aria-current=true] > .page-btn__line {
   background-color: rgb(var(--text-color));
 }
 svg.page-btn__circle{
@@ -258,7 +258,7 @@ svg.page-btn__circle{
   stroke-dashoffset: 22;
   stroke: rgb(var(--text-color));
 }
- [data-autoplay=true] [aria-current=true] .slideshow-ctrl .page-btn__fg-circle {
+ [data-autoplay=true] [aria-current=true] .page-btn__fg-circle {
   animation: var(--animation);
   animation-name: circleTimer;
 }
@@ -269,7 +269,7 @@ svg.page-btn__circle{
   fill: transparent;
 }
 .slideshow-ctrl .page-btn:hover .page-btn__bg-circle,
- [data-autoplay=false] [aria-current=true] .slideshow-ctrl .page-btn__bg-circle {
+ [data-autoplay=false] [aria-current=true] .page-btn__bg-circle {
   stroke: rgb(var(--text-color));
   fill: rgb(var(--text-color));
 }
