@@ -59,7 +59,7 @@
             "btn_text": "",
             "link": "",
             "file_position": "middle_left",
-            "overlay_text_align": "text-center",
+            "overlay_text_align": "text-end",
             "transparent_content_color": "#ffffff",
             "file_type": "video",
             "video_url": "",
