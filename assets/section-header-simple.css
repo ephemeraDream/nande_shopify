@@ -120,7 +120,7 @@
   fill:#1a1a1a;
 }
 .header_simple .header_simple_icon_item:hover svg path{
-  fill:#bdff00;
+  fill:#323232;
 }
 @media screen and (max-width: 768px) {
 .header_simple_section {
