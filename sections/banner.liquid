@@ -51,7 +51,7 @@
         {% endif %}
         <div class="session-box-padding">
           <div class="session-box-inner">
-            <div class="section_banner_info section_banner_info_{{ block.settings.file_position }}">
+            <div class="section_banner_info section_banner_info_{{ block.settings.file_position }} {{ block.settings.overlay_text_align }}">
               <h5 class="section_banner_sub_title">{{ block.settings.sub_title }}</h5>
               <h2 class="section_banner_info_title">{{ block.settings.title }}</h2>
               <div class="section_banner_info_text text-body">{{ block.settings.text }}</div>
@@ -237,6 +237,26 @@
             }
           ],
           "default": "middle_left"
+        },
+        {
+          "type": "select",
+          "id": "overlay_text_align",
+          "label": "Text alignment",
+          "options": [
+            {
+              "value": "text-start",
+              "label": "Left"
+            },
+            {
+              "value": "text-center",
+              "label": "Center"
+            },
+            {
+              "value": "text-end",
+              "label": "Right"
+            }
+          ],
+          "default": "text-center"
         },
         {
           "type": "radio",
