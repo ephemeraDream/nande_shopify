@@ -42,7 +42,7 @@
 {%- endif -%}
 
 .slideshow-ctrl {
-    --text-color: {{ section.settings.pagination_color}};
+  --text-color: {{ section.settings.pagination_color.red }} {{ section.settings.pagination_color.green }} {{ section.settings.pagination_color.blue }};
 }
 
 {%- endstyle -%}

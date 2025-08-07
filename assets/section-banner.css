@@ -208,7 +208,7 @@
   color: rgba(var(--text-color)/.2);
   pointer-events: initial;
 }
-.page-btn__line {
+.slideshow-ctrl .page-btn__line {
   width: 32px;
   height: 2px;
   margin: 14px 6px;
@@ -239,7 +239,7 @@
 }
 .slideshow-ctrl .page-btn:hover > .page-btn__line,
 [data-autoplay=false] [aria-current=true] > .page-btn__line {
-  background-color: rgb(var(--text-color));
+  background-color: var(--text-color);
 }
 svg.page-btn__circle{
   width: 30px;
@@ -254,13 +254,13 @@ svg.page-btn__circle{
   stroke-width: 7px;
   stroke-dasharray: 22;
   stroke-dashoffset: 22;
-  stroke: rgb(var(--text-color));
+  stroke: var(--text-color);
 }
-[data-autoplay=true] [aria-current=true] .page-btn__fg-circle {
+.slideshow-ctrl [data-autoplay=true] [aria-current=true] .page-btn__fg-circle {
   animation: var(--animation);
   animation-name: circleTimer;
 }
-.page-btn__bg-circle {
+.slideshow-ctrl .page-btn__bg-circle {
   transition: stroke 0.2s, fill 0.2s;
   stroke-width: 2px;
   stroke: currentColor;
@@ -268,8 +268,8 @@ svg.page-btn__circle{
 }
 .slideshow-ctrl .page-btn:hover .page-btn__bg-circle,
 .slideshow-ctrl [data-autoplay=false] [aria-current=true] .page-btn__bg-circle {
-  stroke: rgb(var(--text-color));
-  fill: rgb(var(--text-color));
+  stroke: var(--text-color);
+  fill: var(--text-color);
 }
 
 .slideshow-ctrl .slideshow-nav{
@@ -287,7 +287,7 @@ svg.page-btn__circle{
   width: 1px;
   height: 24px;
   margin-inline-end: 8px;
-  background-color: rgb(var(--text-color));
+  background-color: var(--text-color);
   }
 .autoplay-btn.is-paused .pause-icon, .autoplay-btn:not(.is-paused) .play-icon {
   display: none;
