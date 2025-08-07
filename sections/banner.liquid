@@ -274,7 +274,7 @@
         timeLeft = swiper.params.autoplay.delay - elapsed;
 
         // 防止负值
-        if (timeLeft < 100) timeLeft = 100;
+        if (timeLeft < 10) timeLeft = 10;
       }
     });
     bannerEl.addEventListener("mouseleave", () => {
