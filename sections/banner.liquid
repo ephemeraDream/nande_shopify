@@ -51,7 +51,7 @@
         {% endif %}
         <div class="session-box-padding">
           <div class="session-box-inner">
-            <div class="section_banner_info section_banner_info_{{ block.settings.file_position }} {{ block.settings.overlay_text_align }}">
+            <div class="section_banner_info section_banner_info_{{ block.settings.file_position }} {{ block.settings.overlay_text_align }}" style="color: {{ block.settings.transparent_content_color }};">
               <h5 class="section_banner_sub_title">{{ block.settings.sub_title }}</h5>
               <h2 class="section_banner_info_title">{{ block.settings.title }}</h2>
               <div class="section_banner_info_text text-body">{{ block.settings.text }}</div>
@@ -256,7 +256,14 @@
               "label": "Right"
             }
           ],
-          "default": "text-center"
+          "default": "text-start"
+        },
+        {
+          "type": "color",
+          "id": "transparent_content_color",
+          "label": "Text color",
+          "info": "设置文字颜色",
+          "default": "#ffffff"
         },
         {
           "type": "radio",
