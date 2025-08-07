@@ -252,7 +252,7 @@
       slideChange: function () {
         updatePaginationHighlight(this.realIndex);
         updateCounter(this.realIndex);
-        timeLeft = swiper.params.autoplay.delay;
+        timeLeft = this.params.autoplay.delay;
       },
       autoplayStart: function () {
         if (bannerEl) bannerEl.style.setProperty("--play-state", "running");
