@@ -225,6 +225,12 @@
     const current = document.querySelector(".slideshow-nav__counter-current");
     if (current) current.textContent = (index + 1).toString();
   };
+
+  let autoplayStartTime = Date.now();
+  let pauseTimeStart = 0;
+  let timeLeft = 0;
+  let timer = null;
+
   const swiper = new Swiper(".section_banner", {
     loop: true,
     effect: "{{ section.settings.transition }}".replace("-", ""), // slide, fade
@@ -249,6 +255,7 @@
       },
       autoplayStart: function () {
         if (bannerEl) bannerEl.style.setProperty("--play-state", "running");
+        autoplayStartTime = Date.now();
       },
       autoplayStop: function () {
         if (bannerEl) bannerEl.style.setProperty("--play-state", "paused");
@@ -257,26 +264,32 @@
   });
 
   // 鼠标悬停暂停 autoplay
-  
+  let pauseTimeStart = 0;
+  let timeLeft = swiper.params.autoplay.delay; // 初始为 full delay
+  let timer = null;
   if (bannerEl) {
     bannerEl.addEventListener("mouseenter", () => {
-      const autoplay = bannerEl.getAttribute("data-autoplay");
-      if (autoplay === "true") {
+      if (swiper.autoplay.running) {
         swiper.autoplay.stop();
-        // if (autoplayBtn && !autoplayBtn.classList.contains("paused")) {
-        //   autoplayBtn.classList.add("paused"); // 播放按钮显示“暂停”状态
-        // }
+        pauseTimeStart = Date.now();
+        const elapsed = pauseTimeStart - autoplayStartTime;
+        timeLeft = swiper.params.autoplay.delay - elapsed;
+    
+        // 防止负值
+        if (timeLeft < 100) timeLeft = 100;
       }
     });
+    
     bannerEl.addEventListener("mouseleave", () => {
-      const autoplay = bannerEl.getAttribute("data-autoplay");
-      if (autoplay === "true") {
-        swiper.autoplay.start();
-        // if (autoplayBtn && autoplayBtn.classList.contains("paused")) {
-        //   autoplayBtn.classList.remove("paused"); // 播放按钮显示“播放”状态
-        // }
+      if (!swiper.autoplay.running) {
+        clearTimeout(timer);
+        timer = setTimeout(() => {
+          swiper.slideNext();
+          swiper.autoplay.start();
+        }, timeLeft);
       }
     });
+    
   }
 
   // 播放/暂停按钮切换
