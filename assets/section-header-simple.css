@@ -108,7 +108,24 @@
   height: 2.4rem;
   position: relative;
 }
+.header_simple .header_simple_icon_item svg{
+  width: 2.4rem;
+  height: 2.4rem;
+}
 
 .header_simple .header_simple_logo {
   display: flex;
+}
+.header_simple .header_simple_icon_item svg path{
+  fill:#1a1a1a;
+}
+.header_simple .header_simple_icon_item:hover svg path{
+  fill:#bdff00;
+}
+@media screen and (max-width: 768px) {
+.header_simple .header_simple_icon_box{gap: 1rem;}
+.header_simple .header_simple_icon_item svg{
+  width: 1.4rem;
+  height: 1.4rem;
+}
 }
