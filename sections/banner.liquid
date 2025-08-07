@@ -200,26 +200,24 @@
   (() => {
     const swiper = new Swiper('.section_banner', {
       loop: true,
+      effect: "{{ section.settings.transition }}".replace('-', ''), // "slide", "fade"
       autoplay: {
         delay: {{ section.settings.autoplay_speed | times: 1000 }},
         disableOnInteraction: false,
       },
-      effect: "{{ section.settings.transition }}".replace('-', ''), // "slide", "fade"
       navigation: {
         nextEl: ".slideshow-nav__btn[name='next']",
         prevEl: ".slideshow-nav__btn[name='prev']",
       },
       pagination: {
         el: ".slideshow-pagination",
-        clickable: true
+        clickable: true,
       },
       on: {
         slideChange: function () {
-          // 更新当前页码
           const current = document.querySelector(".slideshow-nav__counter-current");
           if (current) current.textContent = (swiper.realIndex + 1).toString();
-  
-          // 高亮当前分页
+    
           const buttons = document.querySelectorAll(".page-btn");
           buttons.forEach((btn, idx) => {
             if (idx === swiper.realIndex) {
@@ -231,6 +229,7 @@
         }
       }
     });
+    
 
 
     // const bannerEl = document.querySelector('.section_banner');
