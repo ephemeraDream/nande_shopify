@@ -75,7 +75,7 @@
       "name": "banner",
       "settings": {
         "height_mode": "fixed",
-        "fixed_height_desktop": 600,
+        "fixed_height_desktop": 700,
         "fixed_height_mobile": 420,
         "mobile_stacked": true,
         "nav_style": "slideshow_nav_dots",
