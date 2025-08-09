@@ -333,6 +333,13 @@
                       <div class="header_menu_item_submenu_swiper_next">
                         {{ 'header-swiper-right.svg' | inline_asset_content }}
                       </div>
+                      <a
+                        href="{{ item.url }}"
+                        class="header_menu_item_submenu_item_viewall"
+                      >
+                        view {{ item.title }} all
+                        {{ 'icon-right-arrow.svg' | inline_asset_content -}}
+                      </a>
                     </div>
                   {%- endfor -%}
                 {%- endif -%}
