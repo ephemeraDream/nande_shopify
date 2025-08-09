@@ -265,8 +265,9 @@ document.querySelector(".collection_compare_select_contain_body_btn").addEventLi
     container.style.width = `calc((100% - ${46 * (length - 1)}px) / ${length})`
 
     let compare_info_html = '';
-    compare_simple.forEach(item => {
-      compare_info_html += `
+    if (compare_simple) {
+      compare_simple.forEach(item => {
+        compare_info_html += `
         <div class="product_compare_product_card" data-type="${item.label}">
           <div class="product_compare_product_head">${item.label}</div>
           <div class="product_compare_product_body">
@@ -275,7 +276,8 @@ document.querySelector(".collection_compare_select_contain_body_btn").addEventLi
           </div>
         </div>
       `;
-    });
+      });
+    }
 
     container.innerHTML = `
       <div class="collection_compare_modal_contain_item_img">
