@@ -134,20 +134,16 @@
 @media screen and (max-width: 1024px) {
   .header_simple .header_simple_hamburger {
     display: block;
-    width: 2.4rem;
-    height: 2.4rem;
-    margin-right: 2.6rem;
   }
 }
 
 @media screen and (max-width: 768px) {
   .header_simple_section {
-    height: 6rem;
+    height: 10rem;
   }
 
   .header_simple {
-    align-items: center;
-    padding-bottom: 0rem;
+    padding-bottom: 1rem;
     flex-wrap: wrap;
   }
 
@@ -168,11 +164,6 @@
   }
 
   .header_simple .header_simple_icon_item svg {
-    width: 2rem;
-    height: 2rem;
-  }
-
-  .header_simple .header_simple_hamburger {
     width: 2rem;
     height: 2rem;
   }
