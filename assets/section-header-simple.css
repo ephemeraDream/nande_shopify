@@ -134,6 +134,9 @@
 @media screen and (max-width: 1024px) {
   .header_simple .header_simple_hamburger {
     display: block;
+    width: 2.4rem;
+    height: 2.4rem;
+    margin-right: 2.6rem;
   }
 }
 
@@ -149,6 +152,11 @@
 
   .header_simple_search {
     margin-left: 1.6rem;
+    display: none;
+  }
+
+  .header_simple .header_simple_logo {
+    flex: 1;
   }
 
   .header_simple .header_simple_icon_box {
