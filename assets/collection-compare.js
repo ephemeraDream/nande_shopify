@@ -317,7 +317,7 @@ document.querySelector(".collection_compare_modal_show_diff").addEventListener("
   const item = e.target.closest(".collection_compare_modal_show_diff")
   item.classList.toggle("active")
   if (item.classList.contains("active")) {
-    const cards = container.querySelectorAll('.product_compare_product_card');
+    const cards = document.querySelectorAll('.product_compare_product_card');
     const groups = {};
     cards.forEach(card => {
       const type = card.dataset.type;
