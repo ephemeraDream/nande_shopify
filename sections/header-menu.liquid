@@ -382,15 +382,18 @@
 
     const header_menu_item = document.querySelectorAll('.header_menu_mobile .header_menu_item');
     header_menu_item.forEach((menu) => {
+      const submenu = menu.querySelector('.header_menu_item_submenu');
       menu.addEventListener('click', (e) => {
         if (e.target.closest('.header_menu_item_title')) {
           return;
         }
-
-        const submenu = menu.querySelector('.header_menu_item_submenu');
         if (submenu) {
           submenu.style.display = 'block';
         }
+      });
+
+      submenu.querySelector('.header_menu_item_submenu_title').addEventListener('click', () => {
+        submenu.style.display = 'none';
       });
     });
   })();
