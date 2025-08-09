@@ -261,6 +261,8 @@ document.querySelector(".collection_compare_select_contain_body_btn").addEventLi
     } else {
       container.className = 'collection_compare_modal_contain_item';
     }
+    const length = document.querySelectorAll(".collection_compare_select_contain_body_list_item").length
+    container.style.width = `calc((100% - ${46 * (length - 1)}px) / ${length})`
 
     let compare_info_html = '';
     compare_simple.forEach(item => {
