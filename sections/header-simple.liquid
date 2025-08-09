@@ -8,6 +8,9 @@
 
 <div class="header_simple_section padding-sider">
   <div class="header_simple">
+    <div class="header_simple_hamburger">
+      {{- 'icon-hamburger.svg' | inline_asset_content -}}
+    </div>
     <a href="{{ routes.root_url }}" class="header_simple_logo">
       <div class="header__heading-logo-wrapper">
         {%- assign logo_alt = settings.logo.alt | default: shop.name | escape -%}
@@ -96,8 +99,12 @@
           </div>
         {%- endif -%}
       </a>
-      <a href="mailto:{{ shop.email }}" class="header_simple_icon_item">{{ 'icon-email.svg' | inline_asset_content }}</a>
-      <a href="{{ settings.customer_service_url }}" class="header_simple_icon_item">{{ 'icon-message.svg' | inline_asset_content }}</a>
+      <a href="mailto:{{ shop.email }}" class="header_simple_icon_item">
+        {{- 'icon-email.svg' | inline_asset_content -}}
+      </a>
+      <a href="{{ settings.customer_service_url }}" class="header_simple_icon_item">
+        {{- 'icon-message.svg' | inline_asset_content -}}
+      </a>
     </div>
   </div>
 </div>
