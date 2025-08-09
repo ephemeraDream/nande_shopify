@@ -393,8 +393,8 @@
       });
 
       if (submenu) {
-        console.log(submenu.querySelector('.header_menu_item_submenu_title'))
-        submenu.querySelector('.header_menu_item_submenu_title').addEventListener('click', () => {
+        submenu.querySelector('.header_menu_item_submenu_title').addEventListener('click', (e) => {
+          e.stopPropagation();
           submenu.style.display = 'none';
         });
       }
