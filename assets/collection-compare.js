@@ -307,3 +307,6 @@ document.querySelector(".collection_compare_select_contain_body_btn").addEventLi
     document.querySelector(".collection_compare_modal").style.display = "block"
   })
 })
+document.querySelector(".collection_compare_modal_return").addEventListener("click", () => {
+  document.querySelector(".collection_compare_modal").style.display = "none"
+})
