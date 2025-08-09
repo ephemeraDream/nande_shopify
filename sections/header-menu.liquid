@@ -264,7 +264,6 @@
                   {%- if block.settings.collection_list != blank -%}
                     {%- for item in block.settings.collection_list -%}
                       <a
-                        href="{{ item.url }}"
                         class="header_menu_item_submenu_item{% if forloop.first %} header_menu_item_submenu_item_active{% endif %}"
                         data-id="{{ item.handle }}"
                       >
@@ -337,7 +336,7 @@
                         href="{{ item.url }}"
                         class="header_menu_item_submenu_item_viewall"
                       >
-                        view {{ item.title }} all
+                        View {{ item.title }} All
                         {{ 'icon-right-arrow.svg' | inline_asset_content -}}
                       </a>
                     </div>
