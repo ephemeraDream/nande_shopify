@@ -438,6 +438,15 @@
   color: #000;
 }
 
+.header_menu_mobile .header_menu_item_icon {
+  width: 1rem;
+  display: flex;
+}
+
+.header_menu_mobile .header_menu_item_icon svg {
+  width: 100%;
+}
+
 .header_menu_mobile .header_menu_item_submenu {
   display: none;
 }
