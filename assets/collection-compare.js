@@ -243,7 +243,7 @@ document.querySelector(".collection_compare_select_contain_body_btn").addEventLi
   if (e.target.closest(".collection_compare_select_contain_body_btn").hasAttribute("disable")) return
   const contain = document.querySelector(".collection_compare_modal_contain")
   contain.innerHTML = ""
-  document.querySelectorAll(".collection_compare_select_contain_body_list_item").forEach(item => {
+  document.querySelectorAll(".collection_compare_select_contain_body_list_item").forEach((item, index) => {
     const product_data = collection_compare_data[item.dataset.id]
     const product = product_data.product
     const selected_or_first_available_variant = product_data.selected_or_first_available_variant
@@ -256,6 +256,11 @@ document.querySelector(".collection_compare_select_contain_body_btn").addEventLi
     const container = document.createElement('div');
     container.className = 'collection_compare_modal_contain_item';
     container.dataset.id = item.dataset.id;
+    if (index === 0) {
+      container.className = 'collection_compare_modal_contain_item product_compare_product_showtitle';
+    } else {
+      container.className = 'collection_compare_modal_contain_item';
+    }
 
     let compare_info_html = '';
     compare_simple.forEach(item => {

@@ -812,6 +812,53 @@
   margin-top: 1.6rem;
 }
 
+.collection_compare .product_compare_product_card {
+  padding-top: 6rem;
+}
+
+.collection_compare .product_compare_product_head {
+  font-family: PP Right Grotesk;
+  font-size: 4rem;
+  font-weight: 500;
+  line-height: 94%;
+  letter-spacing: 0px;
+  font-variation-settings: "opsz" auto;
+  color: #1f1f1f;
+  white-space: nowrap;
+  opacity: 0;
+}
+
+.collection_compare .product_compare_product_showtitle .product_compare_product_head {
+  opacity: 1;
+}
+
+.collection_compare .product_compare_product_body {
+  margin-top: 3rem;
+  padding-top: 3rem;
+  border-top: .1rem solid #E2DED6;
+}
+
+.collection_compare .product_compare_product_label {
+  font-family: PP Right Grotesk;
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 130%;
+  letter-spacing: 0px;
+  font-variation-settings: "opsz" auto;
+  color: #7f7e75;
+}
+
+.collection_compare .product_compare_product_contain {
+  font-family: PP Right Grotesk;
+  font-size: 2.4rem;
+  font-weight: 500;
+  line-height: 94%;
+  letter-spacing: 0px;
+  font-variation-settings: "opsz" auto;
+  color: #1f1f1f;
+  margin-top: .8rem;
+}
+
 @media screen and (max-width: 1440px) {
   .collection_compare .collection_compare_product_contain {
     gap: 3rem;
