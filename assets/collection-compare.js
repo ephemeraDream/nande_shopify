@@ -314,6 +314,6 @@ document.querySelector(".collection_compare_select_contain_body_btn").addEventLi
 
     contain.appendChild(container);
 
-    contain,style.display = "block"
+    document.querySelector(".collection_compare_modal").style.display = "block"
   })
 })
