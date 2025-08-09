@@ -392,9 +392,11 @@
         }
       });
 
-      submenu.querySelector('.header_menu_item_submenu_title').addEventListener('click', () => {
-        submenu.style.display = 'none';
-      });
+      if (submenu) {
+        submenu.querySelector('.header_menu_item_submenu_title').addEventListener('click', () => {
+          submenu.style.display = 'none';
+        });
+      }
     });
   })();
 </script>
