@@ -1334,48 +1334,64 @@ class CartPerformance {
 
 (() => {
   let lastScrollTop = 0; // 上一次滚动位置
-  let delta = 10;        // 阈值
+  let delta = 10;        // 滚动阈值
   let ticking = false;   // 节流控制
-  let navbarHeight = null; // 缓存总高度
+  let headerHeights = []; // 缓存每个header的高度
+  let totalHeight = 0;    // 总高度
+  let firstCalc = true;   // 是否第一次计算高度
 
-  const navbars = document.querySelectorAll('.shopify-section-group-header-group');
-  const mainContent = document.getElementById('MainContent');
+  const navbarList = document.querySelectorAll('.shopify-section-group-header-group');
+  const mainContent = document.querySelector('#MainContent');
 
-  function getTotalNavbarHeight() {
-    if (navbarHeight === null) {
-      navbarHeight = Array.from(navbars).reduce((total, el) => {
-        return total + el.offsetHeight;
-      }, 0);
+  // 计算高度
+  function calcHeights() {
+    headerHeights = Array.from(navbarList).map(el => el.offsetHeight);
+    totalHeight = headerHeights.reduce((sum, h) => sum + h, 0);
+    if (mainContent) {
+      mainContent.style.paddingTop = totalHeight + 'px';
     }
-    return navbarHeight;
   }
 
   function onScroll() {
     let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
 
-    // 超过阈值才触发
+    // 第一次滚动时计算
+    if (firstCalc) {
+      calcHeights();
+      firstCalc = false;
+    }
+
+    // 阈值判断
     if (Math.abs(scrollTop - lastScrollTop) <= delta) {
       ticking = false;
       return;
     }
 
     if (scrollTop > lastScrollTop) {
-      // 向下滚动
-      const height = getTotalNavbarHeight();
-      navbars.forEach(el => {
+      // 向下滚动：隐藏
+      let offset = 0;
+      navbarList.forEach((el, idx) => {
         el.style.position = 'fixed';
-        el.style.top = '0';
-        el.style.left = '0';
-        el.style.right = '0';
+        el.style.top = offset + 'px';
+        el.style.left = 0;
+        el.style.right = 0;
+        el.style.zIndex = 1000 + idx;
         el.style.transition = 'transform 0.2s ease-in-out';
-        el.style.transform = `translateY(-${height}px)`;
+        el.style.transform = `translateY(-${totalHeight}px)`;
+        offset += headerHeights[idx];
       });
-      mainContent.style.paddingTop = `${height}px`;
     } else {
-      // 向上滚动
-      navbars.forEach(el => {
+      // 向上滚动：恢复原位
+      let offset = 0;
+      navbarList.forEach((el, idx) => {
+        el.style.position = 'fixed';
+        el.style.top = offset + 'px';
+        el.style.left = 0;
+        el.style.right = 0;
+        el.style.zIndex = 1000 + idx;
         el.style.transition = 'transform 0.2s ease-in-out';
         el.style.transform = 'translateY(0px)';
+        offset += headerHeights[idx];
       });
     }
 
@@ -1390,3 +1406,4 @@ class CartPerformance {
     }
   });
 })();
+
