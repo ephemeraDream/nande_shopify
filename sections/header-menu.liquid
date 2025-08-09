@@ -165,7 +165,170 @@
     {% endfor %}
   </div>
 </div>
-<div class="header_menu_mobile"></div>
+<div class="header_menu_mobile">
+  {% for block in section.blocks %}
+    {%- case block.type -%}
+      {%- when 'single_link' -%}
+        <div class="header_menu_item" data-type="single_link">
+          <a
+            class="header_menu_item_title{% if block.settings.link.active %} header_menu_item_title_active{% endif %}"
+            {% if block.settings.link != blank %}
+              href="{{ block.settings.link }}"
+            {% endif %}
+          >
+            {{- block.settings.name -}}
+          </a>
+          {{- 'swiper-right.svg' | inline_asset_content -}}
+        </div>
+      {%- when 'img_width_text' -%}
+        <div class="header_menu_item" data-type="img_width_text">
+          <a
+            class="header_menu_item_title{% if block.settings.link.active %} header_menu_item_title_active{% endif %}"
+            {% if block.settings.link != blank %}
+              href="{{ block.settings.link }}"
+            {% endif %}
+          >
+            {{- block.settings.name -}}
+          </a>
+          <div class="header_menu_item_submenu session-box-padding">
+            <div class="header_menu_item_submenu_contain">
+              {%- if block.settings.collection_list != blank -%}
+                {%- for item in block.settings.collection_list -%}
+                  <a
+                    href="{{ item.url }}"
+                    class="header_menu_item_submenu_item"
+                  >
+                    <div class="header_menu_item_submenu_item_img">
+                      <img src="{{ item.featured_image | image_url }}">
+                      {{ 'icon-img-right-arrow.svg' | inline_asset_content }}
+                    </div>
+                    <div class="header_menu_item_submenu_item_title">{{ item.title }}</div>
+                    <div class="header_menu_item_submenu_item_desc">{{ item.description }}</div>
+                  </a>
+                {%- endfor -%}
+              {%- endif -%}
+            </div>
+          </div>
+        </div>
+      {%- when 'link_list' -%}
+        <div class="header_menu_item" data-type="link_list">
+          <a
+            class="header_menu_item_title{% if block.settings.link.active %} header_menu_item_title_active{% endif %}"
+            {% if block.settings.link != blank %}
+              href="{{ block.settings.link }}"
+            {% endif %}
+          >
+            {{- block.settings.name -}}
+          </a>
+          <div class="header_menu_item_submenu">
+            {%- if block.settings.menu != blank -%}
+              {%- for link in block.settings.menu.links -%}
+                <a
+                  href="{{ link.url }}"
+                  class="header_menu_item_submenu_item{% if link.active %} header_menu_item_submenu_item_active{% endif %}"
+                >
+                  {{ link.title | escape }}
+                </a>
+              {%- endfor -%}
+            {%- endif -%}
+          </div>
+        </div>
+      {%- when 'product_collection' -%}
+        <div class="header_menu_item" data-type="product_collection">
+          <a
+            class="header_menu_item_title{% if block.settings.link.active %} header_menu_item_title_active{% endif %}"
+            {% if block.settings.link != blank %}
+              href="{{ block.settings.link }}"
+            {% endif %}
+          >
+            {{- block.settings.name -}}
+          </a>
+          <div class="header_menu_item_submenu session-box-padding">
+            <div class="header_menu_item_submenu_contain">
+              <div class="header_menu_item_submenu_contain_left">
+                <div class="header_menu_item_submenu_tabhead">
+                  {%- if block.settings.collection_list != blank -%}
+                    {%- for item in block.settings.collection_list -%}
+                      <a
+                        href="{{ item.url }}"
+                        class="header_menu_item_submenu_item{% if forloop.first %} header_menu_item_submenu_item_active{% endif %}"
+                        data-id="{{ item.handle }}"
+                      >
+                        {{ item.title }}
+                      </a>
+                    {%- endfor -%}
+                  {%- endif -%}
+                </div>
+                <div class="header_menu_item_submenu_info">
+                  <div class="header_menu_item_submenu_info_title">{{ block.settings.info_title }}</div>
+                  <div class="header_menu_item_submenu_info_desc">{{ block.settings.info_text }}</div>
+                </div>
+              </div>
+              <div class="header_menu_item_submenu_contain_right">
+                {%- if block.settings.collection_list != blank -%}
+                  {%- for item in block.settings.collection_list -%}
+                    <div
+                      class="header_menu_item_submenu_tabcontent{% if forloop.first %} show{% endif %}"
+                      data-id="{{ item.handle }}"
+                    >
+                      <div
+                        class="swiper"
+                      >
+                        <div class="swiper-wrapper">
+                          {% for product in item.products %}
+                            {% assign show_info = product.metafields.custom.header_menu_info.value %}
+                            <a class="swiper-slide" href="{{ product.url }}">
+                              <div class="header_menu_item_submenu_product_img">
+                                <img src="{{ product.featured_image | image_url }}">
+                                {% if show_info.tag.value != blank %}
+                                  <div class="header_menu_item_submenu_product_tag">{{ show_info.tag.value }}</div>
+                                {% endif %}
+                              </div>
+                              <div class="header_menu_item_submenu_product_info">
+                                <div>
+                                  <div class="header_menu_item_submenu_product_title">
+                                    {% if show_info.title.value != blank %}
+                                      {{ show_info.title.value }}
+                                    {% else %}
+                                      Maidesite
+                                    {% endif %}
+                                  </div>
+
+                                  <div class="header_menu_item_submenu_product_desc">
+                                    {% if show_info.description.value != blank %}
+                                      {{ show_info.description | metafield_tag }}
+                                    {% else %}
+                                      {{ product.title }}
+                                    {% endif %}
+                                  </div>
+                                </div>
+                                <div>
+                                  {% render 'product-rating', product: product %}
+                                  <div class="header_menu_item_submenu_product_price">
+                                    {{ product.price | money_without_trailing_zeros }}
+                                  </div>
+                                </div>
+                              </div>
+                            </a>
+                          {% endfor %}
+                        </div>
+                      </div>
+                      <div class="header_menu_item_submenu_swiper_prev">
+                        {{ 'header-swiper-left.svg' | inline_asset_content }}
+                      </div>
+                      <div class="header_menu_item_submenu_swiper_next">
+                        {{ 'header-swiper-right.svg' | inline_asset_content }}
+                      </div>
+                    </div>
+                  {%- endfor -%}
+                {%- endif -%}
+              </div>
+            </div>
+          </div>
+        </div>
+    {% endcase %}
+  {% endfor %}
+</div>
 
 <script>
   const product_collection_menus = document.querySelectorAll(".header_menu_item[data-type='product_collection']");

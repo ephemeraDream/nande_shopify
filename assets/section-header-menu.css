@@ -421,6 +421,13 @@
   display: none;
 }
 
+.header_menu_mobile .header_menu_item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 5.6rem;
+}
+
 @media screen and (max-width: 1024px) {
   .header_menu_section {
     display: none;
@@ -434,5 +441,8 @@
     background-color: #fff;
     top: 0;
     left: 0;
+    z-index: 100;
+    padding: 16.6rem 2rem 1.6rem;
+    overflow: auto;
   }
 }
