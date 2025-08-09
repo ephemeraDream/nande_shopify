@@ -336,7 +336,7 @@
                         href="{{ item.url }}"
                         class="header_menu_item_submenu_item_viewall"
                       >
-                        View {{ item.title }} All
+                        View All
                         {{ 'icon-right-arrow.svg' | inline_asset_content -}}
                       </a>
                     </div>
@@ -432,6 +432,19 @@
           menu.querySelector(`.header_menu_item_submenu_tabcontent[data-id="${dataId}"]`).classList.add('show');
         });
       });
+    });
+
+    document.querySelector('.header_simple_hamburger').addEventListener('click', (e) => {
+      const item = e.target.closest('.header_simple_hamburger');
+      const header_menu_mobile = document.querySelector('.header_menu_mobile');
+      item.classList.toggle('active');
+      if (item.classList.contains('active')) {
+        header_menu_mobile.style.display = 'block';
+        document.body.style.overflowY = 'hidden';
+      } else {
+        header_menu_mobile.style.display = 'none';
+        document.body.style.overflowY = 'auto';
+      }
     });
   })();
 </script>
