@@ -256,27 +256,18 @@ document.querySelector(".collection_compare_select_contain_body_btn").addEventLi
     container.className = 'collection_compare_modal_contain_item';
     container.dataset.id = item.dataset.id;
 
-    // const swiper_wrapper = document.createElement('div');
-    // swiper_wrapper.className = 'swiper-wrapper';
-    // options_with_values.forEach((option, index) => {
-    //   if (option.name === "Farbe Tischplatte") {
-    //     option.values.forEach(value => {
-    //       const first_variant = product.variants.filter(variant => variant["option" + index] === value)[0]
-    //       swiper_wrapper.innerHTML += `
-    //         <div class="swiper-slide">
-    //           <a>
-    //             <img
-    //               src="${first_variant.featured_image.src}"
-    //               alt="${first_variant.title}"
-    //               width="${first_variant.featured_image.width}"
-    //               height="${first_variant.featured_image.height}"
-    //             >
-    //           </a>
-    //         </div>
-    //       `
-    //     })
-    //   }
-    // })
+    const compare_info = document.createElement('div');
+    compare_info.className = 'product_compare_product_card';
+    compare_simple.forEach(item => {
+      compare_info.dataset.type = item.label
+      compare_info.innerHTML = `
+        <div class="product_compare_product_head">${item.label}</div>
+        <div class="product_compare_product_body">
+          <div class="product_compare_product_label">${item.label}</div>
+          <div class="product_compare_product_contain">${item.value}</div>
+        </div>
+      `
+    })
 
     container.innerHTML = `
       <div class="collection_compare_modal_contain_item_img">
@@ -302,14 +293,7 @@ document.querySelector(".collection_compare_select_contain_body_btn").addEventLi
         En savoir plus
         <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="none" version="1.1" width="15" height="12" viewBox="0 0 15 12"><g transform="matrix(0,1,-1,0,15,-15)"><path d="M27,6.20233L21.00206,0L15,6.21087L16.19711,7.44878L20.151699999999998,3.35942L20.151699999999998,15L21.848300000000002,15L21.848300000000002,3.35515L25.8029,7.44451L27,6.20233Z" fill="#000000" fill-opacity="1" style="mix-blend-mode:passthrough"></path></g></svg>
       </a>
-      {% for item in block.settings.select_product.metafields.custom.compare_simple.value.data.value
-        limit: 4
-      %}
-        <div class="compare_simple_item_line">
-          <div class="compare_simple_item_line_label">{{ item.label }}</div>
-          <div class="compare_simple_item_line_value">{{ item.value }}</div>
-        </div>
-      {%- endfor %}
+      ${compare_info}
     `;
 
     contain.appendChild(container);
