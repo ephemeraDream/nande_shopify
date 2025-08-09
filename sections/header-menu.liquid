@@ -399,6 +399,34 @@
         });
       }
     });
+
+    const product_collection_menus_mobile = document.querySelectorAll(
+      ".header_menu_mobile .header_menu_item[data-type='product_collection']"
+    );
+    product_collection_menus_mobile.forEach((menu) => {
+      const product_collections = menu.querySelectorAll('.header_menu_item_submenu_tabcontent');
+      product_collections.forEach((item) => {
+        new Swiper(item.querySelector('.swiper'), {
+          slidesPerView: 1,
+          loop: true,
+          loopFillGroupWithBlank: true,
+          observer: true,
+        });
+      });
+
+      const tabs_item = menu.querySelectorAll('.header_menu_item_submenu_item');
+      tabs_item.forEach((item) => {
+        item.addEventListener('mouseenter', () => {
+          menu
+            .querySelector('.header_menu_item_submenu_item_active')
+            .classList.remove('header_menu_item_submenu_item_active');
+          item.classList.add('header_menu_item_submenu_item_active');
+          const dataId = item.getAttribute('data-id');
+          menu.querySelector('.header_menu_item_submenu_tabcontent.show').classList.remove('show');
+          menu.querySelector(`.header_menu_item_submenu_tabcontent[data-id="${dataId}"]`).classList.add('show');
+        });
+      });
+    });
   })();
 </script>
 
