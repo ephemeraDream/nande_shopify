@@ -744,11 +744,12 @@
   justify-content: center;
   margin-top: 3rem;
   gap: 4.6rem;
+  padding: 0 4.6rem;
 }
 
-.collection_compare .collection_compare_modal_contain_item {
+/* .collection_compare .collection_compare_modal_contain_item {
   max-width: 450px;
-}
+} */
 
 .collection_compare .collection_compare_modal_return svg {
   width: 2rem;
@@ -857,6 +858,10 @@
   font-variation-settings: "opsz" auto;
   color: #1f1f1f;
   margin-top: .8rem;
+}
+
+.collection_compare .collection_compare_modal_show_diff.active svg {
+  display: block;
 }
 
 @media screen and (max-width: 1440px) {

@@ -313,3 +313,7 @@ document.querySelector(".collection_compare_select_contain_body_btn").addEventLi
 document.querySelector(".collection_compare_modal_return").addEventListener("click", () => {
   document.querySelector(".collection_compare_modal").style.display = "none"
 })
+document.querySelector(".collection_compare_modal_show_diff").addEventListener("click", (e) => {
+  const item = e.target.closest(".collection_compare_modal_show_diff")
+  item.classList.toggle("active")
+})
