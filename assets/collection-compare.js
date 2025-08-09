@@ -246,89 +246,128 @@ document.querySelector(".collection_compare_select_contain_body_btn").addEventLi
   document.querySelectorAll(".collection_compare_select_contain_body_list_item").forEach(item => {
     const product_data = collection_compare_data[item.dataset.id]
     const product = product_data.product
+    const selected_or_first_available_variant = product_data.selected_or_first_available_variant
+    const product_model = product_data.product_model
+    const product_title_top = product_data.product_title_top
     const compare_simple = product_data.compare_simple
     const options_with_values = product_data.options_with_values
     const container = document.createElement('div');
     container.className = 'collection_compare_modal_contain_item';
     container.dataset.id = item.dataset.id;
 
-    const swiper_wrapper = document.createElement('div');
-    swiper_wrapper.className = 'swiper-wrapper';
-    options_with_values.forEach((option, index) => {
-      if (option.name === "Farbe Tischplatte") {
-        option.values.forEach(value => {
-          const first_variant = product.variants.filters(variant => variant["option" + index] === value)[0]
-          swiper_wrapper.innerHTML += `
-            <div class="swiper-slide">
-              <a>
-                <img
-                  src="${first_variant.featured_image.src}"
-                  alt="${first_variant.title}"
-                  width="${first_variant.featured_image.width}"
-                  height="${first_variant.featured_image.height}"
-                >
-              </a>
-            </div>
-          `
-        })
-      }
-    })
+    // const swiper_wrapper = document.createElement('div');
+    // swiper_wrapper.className = 'swiper-wrapper';
+    // options_with_values.forEach((option, index) => {
+    //   if (option.name === "Farbe Tischplatte") {
+    //     option.values.forEach(value => {
+    //       const first_variant = product.variants.filter(variant => variant["option" + index] === value)[0]
+    //       swiper_wrapper.innerHTML += `
+    //         <div class="swiper-slide">
+    //           <a>
+    //             <img
+    //               src="${first_variant.featured_image.src}"
+    //               alt="${first_variant.title}"
+    //               width="${first_variant.featured_image.width}"
+    //               height="${first_variant.featured_image.height}"
+    //             >
+    //           </a>
+    //         </div>
+    //       `
+    //     })
+    //   }
+    // })
 
     container.innerHTML = `
-        <div class="swiper">
-          ${swiper_wrapper}
-          {% assign product_model = block.settings.select_product.metafields.custom.product_model %}
-          {% assign product_title_top = block.settings.select_product.metafields.custom.product_title_top %}
-          <h4 class="compare_simple_item_title">
-            <span class="product_title_top">
-              {% if product_title_top != blank %}
-                {{ product_title_top }}
-              {% else %}
-                Maidesite
-              {% endif %}
-            </span>
-            {% if product_model != blank %}
-              <span class="product_title">{{ product_model }}</span>
+      <div>
+        <a href="${product.url}">
+          <img
+            src="${selected_or_first_available_variant.featured_image.src}"
+            alt="${product.title}"
+            width="${selected_or_first_available_variant.featured_image.width}"
+            height="${selected_or_first_available_variant.featured_image.height}"
+          >
+        </a>
+        <h4 class="compare_simple_item_title">
+          <span class="product_title_top">
+            {% if product_title_top != blank %}
+              {{ product_title_top }}
             {% else %}
-              <span class="product_title">{{ block.settings.select_product.title }}</span>
+              Maidesite
             {% endif %}
-          </h4>
-        </div>
-        <div class="compare_simple_item_color">
+          </span>
+          {% if product_model != blank %}
+            <span class="product_title">{{ product_model }}</span>
+          {% else %}
+            <span class="product_title">{{ block.settings.select_product.title }}</span>
+          {% endif %}
+        </h4>
+      </div>
+      <div class="swiper">
+        <div class="swiper-wrapper">
           {% for option in block.settings.select_product.options_with_values %}
             {%- case option.name -%}
               {%- when 'Farbe Tischplatte' -%}
+                {% assign index = 'option' | append: forloop.index %}
                 {% for value in option.values %}
-                  {% assign color = '' %}
-                  {% for color_item in block.settings.select_product.metafields.custom.color_option.value %}
-                    {% if color_item.name == value.name %}
-                      {% assign color = color_item.value %}
-                    {% endif %}
-                  {% endfor %}
-                  <div
-                    class="compare_simple_item_color_circle{% if color == '' %} compare_simple_item_color_circle_none{% endif %}"
-                    {% if color != '' %}
-                      style="background-color: {{ color }}"
-                    {% endif %}
-                    title="{{ value }}"
-                  ></div>
+                  {% assign first_variant = block.settings.select_product.variants
+                    | where: index, value
+                    | first
+                  %}
+                  <div class="swiper-slide">
+                    <a href="{{ block.settings.select_product.url }}">
+                      <img
+                        src="{{ first_variant.featured_image | image_url }}"
+                        alt="{{ value.variant.title }}"
+                        width="{{ first_variant.featured_image.width }}"
+                        height="{{ first_variant.featured_image.height }}"
+                      >
+                    </a>
+                  </div>
                 {%- endfor %}
             {%- endcase -%}
           {%- endfor %}
         </div>
-        <img
-          src="${product.featured_image}"
-          alt="${product.title}"
-        >
-        <div class="collection_compare_select_contain_body_list_item_right">
-          <div class="collection_compare_select_contain_body_list_item_product_title">${product.title}</div>
-          <div class="collection_compare_select_contain_body_list_item_product_price">
-            ${moneyWithoutTrailingZeros(product.price, collection_compare_data[id].symbol)}
-            ${product.compare_at_price ? `<div class="collection_compare_select_contain_body_list_item_product_price_op">${moneyWithoutTrailingZeros(product.compare_at_price, collection_compare_data[id].symbol)}</div>` : ""}
-          </div>
-          <div class="collection_compare_select_contain_body_list_item_close"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="none" version="1.1" width="20" height="20" viewBox="0 0 20 20"><defs><clipPath id="master_svg0_558_008093/393_24441"><rect x="0" y="0" width="20" height="20" rx="0"/></clipPath></defs><g clip-path="url(#master_svg0_558_008093/393_24441)"><g><g><g><path d="M15.440799743652343,5.441168583984375L14.558799743652344,4.559173583984375L9.999799743652343,9.115133583984374L5.440794743652344,4.559173583984375L4.558799743652344,5.441168583984375L9.114759743652343,10.000173583984374L4.558799743652344,14.559173583984375L5.440794743652344,15.441173583984375L9.999799743652343,10.885203583984374L14.558799743652344,15.441173583984375L15.440799743652343,14.559173583984375L10.884829743652343,10.000173583984374L15.440799743652343,5.441168583984375Z" fill="#7F7E75" fill-opacity="1"/></g></g></g></g></svg></div>
+        {% assign product_model = block.settings.select_product.metafields.custom.product_model %}
+        {% assign product_title_top = block.settings.select_product.metafields.custom.product_title_top %}
+        <h4 class="compare_simple_item_title">
+          <span class="product_title_top">
+            {% if product_title_top != blank %}
+              {{ product_title_top }}
+            {% else %}
+              Maidesite
+            {% endif %}
+          </span>
+          {% if product_model != blank %}
+            <span class="product_title">{{ product_model }}</span>
+          {% else %}
+            <span class="product_title">{{ block.settings.select_product.title }}</span>
+          {% endif %}
+        </h4>
+      </div>
+      <a href="{{ block.settings.select_product.url }}" class="nd-btn">
+        {{- 'common.en_savoir_plus' | t }}
+        {{ 'icon-right-arrow.svg' | inline_asset_content -}}
+      </a>
+      <div class="compare_simple_item_price">
+        {% comment %}
+          {% if block.settings.select_product.compare_at_price != blank %}
+            {% assign price = block.settings.select_product.compare_at_price | money_without_trailing_zeros %}
+          {% else %}
+            {% assign price = block.settings.select_product.price | money_without_trailing_zeros %}
+          {% endif %}
+        {% endcomment %}
+        {% assign price = block.settings.select_product.price | money_without_trailing_zeros %}
+        {{ 'products.product.price.from_price_html' | t: price: price }}
+      </div>
+      {% for item in block.settings.select_product.metafields.custom.compare_simple.value.data.value
+        limit: 4
+      %}
+        <div class="compare_simple_item_line">
+          <div class="compare_simple_item_line_label">{{ item.label }}</div>
+          <div class="compare_simple_item_line_value">{{ item.value }}</div>
         </div>
-      `;
+      {%- endfor %}
+    `;
 
     container.querySelector(".collection_compare_select_contain_body_list_item_close").addEventListener("click", (e) => {
       const item = e.target.closest(".collection_compare_select_contain_body_list_item")
