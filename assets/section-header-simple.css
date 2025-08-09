@@ -131,6 +131,15 @@
   display: none;
 }
 
+.header_simple .header_simple_hamburger div[close],
+.header_simple .header_simple_hamburger.active div[open] {
+  display: none;
+}
+
+.header_simple .header_simple_hamburger.active div[close] {
+  display: block;
+}
+
 @media screen and (max-width: 1024px) {
   .header_simple .header_simple_hamburger {
     display: block;

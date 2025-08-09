@@ -103,7 +103,12 @@
         {{- 'icon-message.svg' | inline_asset_content -}}
       </a>
       <a class="header_simple_icon_item header_simple_hamburger">
-        {{- 'icon-hamburger.svg' | inline_asset_content -}}
+        <div open>
+          {{- 'icon-hamburger.svg' | inline_asset_content -}}
+        </div>
+        <div close>
+          {{- 'icon-close.svg' | inline_asset_content -}}
+        </div>
       </a>
     </div>
   </div>
