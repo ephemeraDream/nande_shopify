@@ -308,6 +308,25 @@ document.querySelector(".collection_compare_select_contain_body_btn").addEventLi
 
     contain.appendChild(container);
   })
+
+  if (document.querySelector(".collection_compare_modal_show_diff").classList.contains("active")) {
+    const cards = document.querySelectorAll('.product_compare_product_card');
+    const groups = {};
+    cards.forEach(card => {
+      const type = card.dataset.type;
+      if (!groups[type]) groups[type] = [];
+      groups[type].push(card);
+    });
+    Object.values(groups).forEach(groupCards => {
+      const values = groupCards.map(c => c.dataset.value);
+      const allSame = values.every(v => v === values[0]);
+      if (allSame) {
+        groupCards.forEach(c => c.classList.add('hidden'));
+      } else {
+        groupCards.forEach(c => c.classList.remove('hidden'));
+      }
+    });
+  }
   document.querySelector(".collection_compare_modal").style.display = "block"
 })
 document.querySelector(".collection_compare_modal_return").addEventListener("click", () => {
