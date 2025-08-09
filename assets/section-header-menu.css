@@ -498,6 +498,7 @@
   display: flex;
   flex-wrap: wrap;
   gap: 2rem;
+  margin-top: 2rem;
 }
 
 .header_menu_mobile .header_menu_item[data-type=img_width_text] .header_menu_item_submenu_item {
@@ -511,6 +512,14 @@
   height: 28rem;
   overflow: hidden;
   position: relative;
+}
+
+.header_menu_mobile .header_menu_item[data-type=img_width_text] .header_menu_item_submenu_item_img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center center;
+  transition: transform .3s ease-in-out;
 }
 
 .header_menu_mobile .header_menu_item[data-type=img_width_text] .header_menu_item_submenu_item_title {
