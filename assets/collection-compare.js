@@ -249,6 +249,7 @@ document.querySelector(".collection_compare_select_contain_body_btn").addEventLi
     const selected_or_first_available_variant = product_data.selected_or_first_available_variant
     const product_model = product_data.product_model
     const product_title_top = product_data.product_title_top
+    const symbol = product_data.symbol
     const compare_simple = product_data.compare_simple
     const options_with_values = product_data.options_with_values
     const container = document.createElement('div');
@@ -289,75 +290,17 @@ document.querySelector(".collection_compare_select_contain_body_btn").addEventLi
         </a>
         <h4 class="compare_simple_item_title">
           <span class="product_title_top">
-            {% if product_title_top != blank %}
-              {{ product_title_top }}
-            {% else %}
-              Maidesite
-            {% endif %}
+            ${product_title_top ? product_title_top : "Maidesite"}
           </span>
-          {% if product_model != blank %}
-            <span class="product_title">{{ product_model }}</span>
-          {% else %}
-            <span class="product_title">{{ block.settings.select_product.title }}</span>
-          {% endif %}
+          ${product_model ? `<span class="product_title">${product_model}</span>` : `<span class="product_title">${product.title}</span>`}
         </h4>
       </div>
-      <div class="swiper">
-        <div class="swiper-wrapper">
-          {% for option in block.settings.select_product.options_with_values %}
-            {%- case option.name -%}
-              {%- when 'Farbe Tischplatte' -%}
-                {% assign index = 'option' | append: forloop.index %}
-                {% for value in option.values %}
-                  {% assign first_variant = block.settings.select_product.variants
-                    | where: index, value
-                    | first
-                  %}
-                  <div class="swiper-slide">
-                    <a href="{{ block.settings.select_product.url }}">
-                      <img
-                        src="{{ first_variant.featured_image | image_url }}"
-                        alt="{{ value.variant.title }}"
-                        width="{{ first_variant.featured_image.width }}"
-                        height="{{ first_variant.featured_image.height }}"
-                      >
-                    </a>
-                  </div>
-                {%- endfor %}
-            {%- endcase -%}
-          {%- endfor %}
-        </div>
-        {% assign product_model = block.settings.select_product.metafields.custom.product_model %}
-        {% assign product_title_top = block.settings.select_product.metafields.custom.product_title_top %}
-        <h4 class="compare_simple_item_title">
-          <span class="product_title_top">
-            {% if product_title_top != blank %}
-              {{ product_title_top }}
-            {% else %}
-              Maidesite
-            {% endif %}
-          </span>
-          {% if product_model != blank %}
-            <span class="product_title">{{ product_model }}</span>
-          {% else %}
-            <span class="product_title">{{ block.settings.select_product.title }}</span>
-          {% endif %}
-        </h4>
-      </div>
-      <a href="{{ block.settings.select_product.url }}" class="nd-btn">
-        {{- 'common.en_savoir_plus' | t }}
-        {{ 'icon-right-arrow.svg' | inline_asset_content -}}
+      <a href="${product.url}" class="nd-btn">
+        En savoir plus
+        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="none" version="1.1" width="15" height="12" viewBox="0 0 15 12"><g transform="matrix(0,1,-1,0,15,-15)"><path d="M27,6.20233L21.00206,0L15,6.21087L16.19711,7.44878L20.151699999999998,3.35942L20.151699999999998,15L21.848300000000002,15L21.848300000000002,3.35515L25.8029,7.44451L27,6.20233Z" fill="#000000" fill-opacity="1" style="mix-blend-mode:passthrough"></path></g></svg>
       </a>
       <div class="compare_simple_item_price">
-        {% comment %}
-          {% if block.settings.select_product.compare_at_price != blank %}
-            {% assign price = block.settings.select_product.compare_at_price | money_without_trailing_zeros %}
-          {% else %}
-            {% assign price = block.settings.select_product.price | money_without_trailing_zeros %}
-          {% endif %}
-        {% endcomment %}
-        {% assign price = block.settings.select_product.price | money_without_trailing_zeros %}
-        {{ 'products.product.price.from_price_html' | t: price: price }}
+        Von ${moneyWithoutTrailingZeros(product.price, symbol)}
       </div>
       {% for item in block.settings.select_product.metafields.custom.compare_simple.value.data.value
         limit: 4
@@ -369,14 +312,8 @@ document.querySelector(".collection_compare_select_contain_body_btn").addEventLi
       {%- endfor %}
     `;
 
-    container.querySelector(".collection_compare_select_contain_body_list_item_close").addEventListener("click", (e) => {
-      const item = e.target.closest(".collection_compare_select_contain_body_list_item")
-      item.remove()
-      parent.classList.toggle("selected")
-      select_num--
-      selectChangeLink()
-    })
-
     contain.appendChild(container);
+
+    contain,style.display = "block"
   })
 })

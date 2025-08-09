@@ -12,8 +12,11 @@
     }
   }
 {%- endstyle -%}
-<div id="section-{{ section.id }}" class="faq_simple_section padding-sider section-{{ section.id }}-padding"
-  style="background-color: {{ section.settings.background_color }};">
+<div
+  id="section-{{ section.id }}"
+  class="faq_simple_section padding-sider section-{{ section.id }}-padding"
+  style="background-color: {{ section.settings.background_color }};"
+>
   <div class="faq_simple" id="{{ section.settings.spec_id }}">
     <div class="faq_simple_heading">{{ section.settings.heading }}</div>
     <div class="faq_simple_text_contain">
@@ -49,47 +52,48 @@
         {{ 'pagination-down.svg' | inline_asset_content }}
       </div>
     {% endif %}
-    
   </div>
 </div>
 
 <script>
-  const show_learnmore = {{ section.settings.learn_more | json }}
-  document.addEventListener('DOMContentLoaded', function () {
-    const faqItems = document.querySelectorAll('.faq_simple_item');
+  (() => {
+    const show_learnmore = {{ section.settings.learn_more | json }}
+    document.addEventListener('DOMContentLoaded', function () {
+      const faqItems = document.querySelectorAll('.faq_simple_item');
 
-    faqItems.forEach((item) => {
-      const faqItem = item.querySelector('.faq_simple_item_head');
+      faqItems.forEach((item) => {
+        const faqItem = item.querySelector('.faq_simple_item_head');
 
-      faqItem.addEventListener('click', function () {
-        const isActive = item.classList.contains('active');
+        faqItem.addEventListener('click', function () {
+          const isActive = item.classList.contains('active');
 
-        document.querySelectorAll('.faq_simple_item').forEach((i) => {
-          i.classList.remove('active');
+          document.querySelectorAll('.faq_simple_item').forEach((i) => {
+            i.classList.remove('active');
+          });
+
+          if (!isActive) {
+            item.classList.add('active');
+          }
         });
-
-        if (!isActive) {
-          item.classList.add('active');
-        }
       });
     });
-  });
 
-  if(show_learnmore) {
-    const show_learnmore_btn = document.querySelector(".faq_simple_learnmore")
-    show_learnmore_btn.addEventListener("click", () => {
-      show_learnmore_btn.toggleAttribute("open")
-      if(show_learnmore_btn.hasAttribute("open")) {
-        document.querySelectorAll(".faq_simple_item").forEach(item => item.classList.remove("hidden"))
-      } else {
-        document.querySelectorAll(".faq_simple_item").forEach((item, index) => {
-          if(index > 5) {
-            item.classList.add("hidden")
-          }
-        })
-      }
-    })
-  }
+    if(show_learnmore) {
+      const show_learnmore_btn = document.querySelector(".faq_simple_learnmore")
+      show_learnmore_btn.addEventListener("click", () => {
+        show_learnmore_btn.toggleAttribute("open")
+        if(show_learnmore_btn.hasAttribute("open")) {
+          document.querySelectorAll(".faq_simple_item").forEach(item => item.classList.remove("hidden"))
+        } else {
+          document.querySelectorAll(".faq_simple_item").forEach((item, index) => {
+            if(index > 5) {
+              item.classList.add("hidden")
+            }
+          })
+        }
+      })
+    }
+  })()
 </script>
 
 {% schema %}
