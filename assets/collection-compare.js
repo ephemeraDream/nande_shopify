@@ -279,7 +279,7 @@ document.querySelector(".collection_compare_select_contain_body_btn").addEventLi
     // })
 
     container.innerHTML = `
-      <div>
+      <div class="collection_compare_modal_contain_item_img">
         <a href="${product.url}">
           <img
             src="${selected_or_first_available_variant.featured_image.src}"
