@@ -1051,7 +1051,7 @@ class SlideshowComponent extends SliderComponent {
     const slideScrollPosition =
       this.slider.scrollLeft +
       this.sliderFirstItemNode.clientWidth *
-        (this.sliderControlLinksArray.indexOf(event.currentTarget) + 1 - this.currentPage);
+      (this.sliderControlLinksArray.indexOf(event.currentTarget) + 1 - this.currentPage);
     this.slider.scrollTo({
       left: slideScrollPosition,
     });
@@ -1330,3 +1330,63 @@ class CartPerformance {
     );
   }
 }
+
+
+(() => {
+  let lastScrollTop = 0; // 上一次滚动位置
+  let delta = 10;        // 阈值
+  let ticking = false;   // 节流控制
+  let navbarHeight = null; // 缓存总高度
+
+  const navbars = document.querySelectorAll('.shopify-section-group-header-group');
+  const mainContent = document.getElementById('MainContent');
+
+  function getTotalNavbarHeight() {
+    if (navbarHeight === null) {
+      navbarHeight = Array.from(navbars).reduce((total, el) => {
+        return total + el.offsetHeight;
+      }, 0);
+    }
+    return navbarHeight;
+  }
+
+  function onScroll() {
+    let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+    // 超过阈值才触发
+    if (Math.abs(scrollTop - lastScrollTop) <= delta) {
+      ticking = false;
+      return;
+    }
+
+    if (scrollTop > lastScrollTop) {
+      // 向下滚动
+      const height = getTotalNavbarHeight();
+      navbars.forEach(el => {
+        el.style.position = 'fixed';
+        el.style.top = '0';
+        el.style.left = '0';
+        el.style.right = '0';
+        el.style.transition = 'transform 0.2s ease-in-out';
+        el.style.transform = `translateY(-${height}px)`;
+      });
+      mainContent.style.paddingTop = `${height}px`;
+    } else {
+      // 向上滚动
+      navbars.forEach(el => {
+        el.style.transition = 'transform 0.2s ease-in-out';
+        el.style.transform = 'translateY(0px)';
+      });
+    }
+
+    lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
+    ticking = false;
+  }
+
+  window.addEventListener('scroll', function () {
+    if (!ticking) {
+      ticking = true;
+      setTimeout(onScroll, 100); // 每 100ms 检测一次
+    }
+  });
+})();
