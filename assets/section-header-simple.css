@@ -148,11 +148,13 @@
   .header_simple {
     align-items: center;
     padding-bottom: 0rem;
+    flex-wrap: wrap;
   }
 
   .header_simple_search {
-    margin-left: 1.6rem;
-    display: none;
+    margin-left: 0;
+    flex: 0 0 100%;
+    order: 2;
   }
 
   .header_simple .header_simple_logo {
@@ -162,9 +164,15 @@
   .header_simple .header_simple_icon_box {
     gap: 1.2rem;
     margin-left: 1rem;
+    padding-bottom: 0;
   }
 
   .header_simple .header_simple_icon_item svg {
+    width: 2rem;
+    height: 2rem;
+  }
+
+  .header_simple .header_simple_hamburger {
     width: 2rem;
     height: 2rem;
   }
