@@ -316,8 +316,8 @@ document.querySelector(".collection_compare_modal_return").addEventListener("cli
 document.querySelector(".collection_compare_modal_show_diff").addEventListener("click", (e) => {
   const item = e.target.closest(".collection_compare_modal_show_diff")
   item.classList.toggle("active")
+  const cards = document.querySelectorAll('.product_compare_product_card');
   if (item.classList.contains("active")) {
-    const cards = document.querySelectorAll('.product_compare_product_card');
     const groups = {};
     cards.forEach(card => {
       const type = card.dataset.type;
@@ -333,5 +333,7 @@ document.querySelector(".collection_compare_modal_show_diff").addEventListener("
         groupCards.forEach(c => c.classList.remove('hidden'));
       }
     });
+  } else {
+    cards.forEach(el => el.classList.remove("hidden"))
   }
 })
