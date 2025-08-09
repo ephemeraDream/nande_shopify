@@ -182,6 +182,7 @@
         "symbol": {{ currency_symbol | json }},
         "compare_simple": {{ product.metafields.custom.compare_simple.value.data.value | json }},
         "options_with_values": {{ product.options_with_values | json }},
+        "url": {{ product.url | json }},
         "product_model": {{ product.metafields.custom.product_model | json }},
         "product_title_top": {{ product.metafields.custom.product_title_top | json }}
       }{% unless forloop.last %},{% endunless %}

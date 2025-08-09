@@ -250,28 +250,29 @@ document.querySelector(".collection_compare_select_contain_body_btn").addEventLi
     const product_model = product_data.product_model
     const product_title_top = product_data.product_title_top
     const symbol = product_data.symbol
+    const url = product_data.url
     const compare_simple = product_data.compare_simple
     const options_with_values = product_data.options_with_values
     const container = document.createElement('div');
     container.className = 'collection_compare_modal_contain_item';
     container.dataset.id = item.dataset.id;
 
-    const compare_info = document.createElement('div');
-    compare_info.className = 'product_compare_product_card';
+    let compare_info_html = '';
     compare_simple.forEach(item => {
-      compare_info.dataset.type = item.label
-      compare_info.innerHTML = `
-        <div class="product_compare_product_head">${item.label}</div>
-        <div class="product_compare_product_body">
-          <div class="product_compare_product_label">${item.label}</div>
-          <div class="product_compare_product_contain">${item.value}</div>
+      compare_info_html += `
+        <div class="product_compare_product_card" data-type="${item.label}">
+          <div class="product_compare_product_head">${item.label}</div>
+          <div class="product_compare_product_body">
+            <div class="product_compare_product_label">${item.label}</div>
+            <div class="product_compare_product_contain">${item.value}</div>
+          </div>
         </div>
-      `
-    })
+      `;
+    });
 
     container.innerHTML = `
       <div class="collection_compare_modal_contain_item_img">
-        <a href="${product.url}">
+        <a href="${url}">
           <img
             src="${selected_or_first_available_variant.featured_image.src}"
             alt="${product.title}"
@@ -289,11 +290,11 @@ document.querySelector(".collection_compare_select_contain_body_btn").addEventLi
       <div class="compare_simple_item_price">
         Von ${moneyWithoutTrailingZeros(product.price, symbol)}
       </div>
-      <a href="${product.url}" class="nd-btn">
+      <a href="${url}" class="nd-btn">
         En savoir plus
         <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="none" version="1.1" width="15" height="12" viewBox="0 0 15 12"><g transform="matrix(0,1,-1,0,15,-15)"><path d="M27,6.20233L21.00206,0L15,6.21087L16.19711,7.44878L20.151699999999998,3.35942L20.151699999999998,15L21.848300000000002,15L21.848300000000002,3.35515L25.8029,7.44451L27,6.20233Z" fill="#000000" fill-opacity="1" style="mix-blend-mode:passthrough"></path></g></svg>
       </a>
-      ${compare_info}
+      ${compare_info_html}
     `;
 
     contain.appendChild(container);
