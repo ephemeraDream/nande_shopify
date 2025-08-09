@@ -449,6 +449,34 @@
 
 .header_menu_mobile .header_menu_item_submenu {
   display: none;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  padding: 16.6rem 2rem 1.6rem;
+  overflow: auto;
+}
+
+.header_menu_mobile .header_menu_item_submenu_title {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-family: PP Right Grotesk;
+  font-size: 2rem;
+  font-weight: 500;
+  line-height: 94%;
+  letter-spacing: 0px;
+  font-variation-settings: "opsz" auto;
+  color: #000;
+  height: 5.6rem;
+  border-bottom: 0.1rem solid rgba(7, 7, 7, .2);
+}
+
+.header_menu_mobile .header_menu_item_submenu_title svg {
+  width: 1rem;
 }
 
 @media screen and (max-width: 1024px) {

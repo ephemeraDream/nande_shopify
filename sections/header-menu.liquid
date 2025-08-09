@@ -178,7 +178,6 @@
           >
             {{- block.settings.name -}}
           </a>
-          <div class="header_menu_item_icon">{{- 'swiper-right.svg' | inline_asset_content -}}</div>
         </div>
       {%- when 'img_width_text' -%}
         <div class="header_menu_item" data-type="img_width_text">
@@ -192,6 +191,10 @@
           </a>
           <div class="header_menu_item_icon">{{- 'swiper-right.svg' | inline_asset_content -}}</div>
           <div class="header_menu_item_submenu session-box-padding">
+            <div class="header_menu_item_submenu_title">
+              {{- 'swiper-left.svg' | inline_asset_content -}}
+              {{- block.settings.name -}}
+            </div>
             <div class="header_menu_item_submenu_contain">
               {%- if block.settings.collection_list != blank -%}
                 {%- for item in block.settings.collection_list -%}
@@ -223,6 +226,10 @@
           </a>
           <div class="header_menu_item_icon">{{- 'swiper-right.svg' | inline_asset_content -}}</div>
           <div class="header_menu_item_submenu">
+            <div class="header_menu_item_submenu_title">
+              {{- 'swiper-left.svg' | inline_asset_content -}}
+              {{- block.settings.name -}}
+            </div>
             {%- if block.settings.menu != blank -%}
               {%- for link in block.settings.menu.links -%}
                 <a
@@ -247,6 +254,10 @@
           </a>
           <div class="header_menu_item_icon">{{- 'swiper-right.svg' | inline_asset_content -}}</div>
           <div class="header_menu_item_submenu session-box-padding">
+            <div class="header_menu_item_submenu_title">
+              {{- 'swiper-left.svg' | inline_asset_content -}}
+              {{- block.settings.name -}}
+            </div>
             <div class="header_menu_item_submenu_contain">
               <div class="header_menu_item_submenu_contain_left">
                 <div class="header_menu_item_submenu_tabhead">
