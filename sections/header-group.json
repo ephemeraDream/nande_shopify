@@ -16,7 +16,6 @@
       "blocks": {
         "announcement-bar-0": {
           "type": "announcement",
-          "disabled": true,
           "settings": {
             "text": "Welcome to our store",
             "link": "",
@@ -33,7 +32,6 @@
         },
         "countdown_77kmfi": {
           "type": "countdown",
-          "disabled": true,
           "settings": {
             "text": "<p><strong>Sommer Sale: </strong>Sichere Dir jetzt die heißesten Deals von bis zu 150 € Rabatt</p>",
             "countdown_handle": "summer-sale",
@@ -62,7 +60,9 @@
     "header_simple_ULLndz": {
       "type": "header-simple",
       "name": "header simple",
-      "settings": {}
+      "settings": {
+        "customer_service_url": ""
+      }
     },
     "header_menu_KJeiwA": {
       "type": "header-menu",
