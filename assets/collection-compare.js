@@ -268,7 +268,7 @@ document.querySelector(".collection_compare_select_contain_body_btn").addEventLi
     if (compare_simple) {
       compare_simple.forEach(item => {
         compare_info_html += `
-        <div class="product_compare_product_card" data-type="${item.label}">
+        <div class="product_compare_product_card" data-type="${item.label}" data-value="${item.value}">
           <div class="product_compare_product_head">${item.label}</div>
           <div class="product_compare_product_body">
             <div class="product_compare_product_label">${item.label}</div>
@@ -316,4 +316,22 @@ document.querySelector(".collection_compare_modal_return").addEventListener("cli
 document.querySelector(".collection_compare_modal_show_diff").addEventListener("click", (e) => {
   const item = e.target.closest(".collection_compare_modal_show_diff")
   item.classList.toggle("active")
+  if (item.classList.contains("active")) {
+    const cards = container.querySelectorAll('.product_compare_product_card');
+    const groups = {};
+    cards.forEach(card => {
+      const type = card.dataset.type;
+      if (!groups[type]) groups[type] = [];
+      groups[type].push(card);
+    });
+    Object.values(groups).forEach(groupCards => {
+      const values = groupCards.map(c => c.dataset.value);
+      const allSame = values.every(v => v === values[0]);
+      if (allSame) {
+        groupCards.forEach(c => c.classList.add('hidden'));
+      } else {
+        groupCards.forEach(c => c.classList.remove('hidden'));
+      }
+    });
+  }
 })
