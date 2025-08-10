@@ -46,7 +46,7 @@
           </div>
           
           {% comment %} 获取属于当前swiper的product_dot blocks {% endcomment %}
-          {% assign current_swiper_number = forloop.index %}
+          {% assign current_swiper_number = forloop.index | append: '' %}
           {% assign product_dot_blocks = section.blocks | where: "type", "product_dot" %}
           {% for product_block in product_dot_blocks %}
             {% if product_block.settings.swiper_id == current_swiper_number and product_block.settings.select_product != blank %}
