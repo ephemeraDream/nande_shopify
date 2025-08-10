@@ -190,17 +190,18 @@
         if (overflowRight > productRect.width / 2) {
           centerProduct();
         } else {
-          let offset = parseFloat(currentProduct.style.left || 0) || 0;
-          currentProduct.style.left = (offset - (overflowRight / slideRect.width) * 100) + '%';
+          let offset = parseFloat(currentProduct.style.right || 0) || 0;
+          currentProduct.style.right = (offset + (overflowRight / slideRect.width) * 100) + '%';
         }
       } else if (overflowLeft > 0) {
         if (overflowLeft > productRect.width / 2) {
           centerProduct();
         } else {
-          let offset = parseFloat(currentProduct.style.left || 0) || 0;
-          currentProduct.style.left = (offset + (overflowLeft / slideRect.width) * 100) + '%';
+          let offset = parseFloat(currentProduct.style.right || 0) || 0;
+          currentProduct.style.right = (offset - (overflowLeft / slideRect.width) * 100) + '%';
         }
       }
+      
     }
     
   })();
