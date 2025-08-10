@@ -139,6 +139,10 @@
             // 再加 active & 提升 z-index
             currentProduct.classList.add('active');
             contain.style.zIndex = 3;
+
+            // 调整位置
+            adjustProductPosition(contain, currentProduct);
+
           }
         }
       });
@@ -161,6 +165,44 @@
         });
       }
     });
+
+    //位置
+    function adjustProductPosition(contain, currentProduct) {
+      // 重置位置（防止上一次点击遗留 transform/left）
+      currentProduct.style.left = '';
+      currentProduct.style.transform = '';
+    
+      // 获取 slide 和 product 的位置
+      var slideEl = contain.closest('.swiper-slide');
+      var slideRect = slideEl.getBoundingClientRect();
+      var productRect = currentProduct.getBoundingClientRect();
+    
+      var overflowRight = productRect.right - slideRect.right;
+      var overflowLeft = slideRect.left - productRect.left;
+    
+      // 辅助函数：居中
+      function centerProduct() {
+        currentProduct.style.left = '50%';
+        currentProduct.style.transform = 'translateX(-50%)';
+      }
+    
+      if (overflowRight > 0) {
+        if (overflowRight > productRect.width / 2) {
+          centerProduct();
+        } else {
+          let offset = parseFloat(currentProduct.style.left || 0) || 0;
+          currentProduct.style.left = (offset - (overflowRight / slideRect.width) * 100) + '%';
+        }
+      } else if (overflowLeft > 0) {
+        if (overflowLeft > productRect.width / 2) {
+          centerProduct();
+        } else {
+          let offset = parseFloat(currentProduct.style.left || 0) || 0;
+          currentProduct.style.left = (offset + (overflowLeft / slideRect.width) * 100) + '%';
+        }
+      }
+    }
+    
   })();
 </script>
 
