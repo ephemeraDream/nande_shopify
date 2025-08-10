@@ -112,17 +112,34 @@
     var contains = root.querySelectorAll('.polka_dot_swiper_contain');
     var products = root.querySelectorAll('.polka_dot_swiper_product');
 
-    contains.forEach(function(contain, idx) {
+    contains.forEach(function(contain) {
       contain.addEventListener('click', function(e) {
         e.stopPropagation();
-        // 隐藏所有其他产品
-        products.forEach(function(product) {
-          product.classList.remove('active');
-        });
-        // 显示当前点击的产品
+    
+        // 如果点击的是 polka_dot_swiper_product 自己，不执行切换
+        if (e.target.closest('.polka_dot_swiper_product')) {
+          return;
+        }
+    
         var currentProduct = contain.querySelector('.polka_dot_swiper_product');
+    
         if (currentProduct) {
-          currentProduct.classList.add('active');
+          if (currentProduct.classList.contains('active')) {
+            // 已经是 active → 移除
+            currentProduct.classList.remove('active');
+          } else {
+            // 先移除所有 active & 恢复 z-index
+            products.forEach(function(product) {
+              product.classList.remove('active');
+            });
+            contains.forEach(function(c) {
+              c.style.zIndex = 2;
+            });
+
+            // 再加 active & 提升 z-index
+            currentProduct.classList.add('active');
+            contain.style.zIndex = 3;
+          }
         }
       });
     });
