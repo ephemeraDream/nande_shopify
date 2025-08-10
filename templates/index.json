@@ -179,7 +179,7 @@
             "link": ""
           }
         },
-        "product_dot_1_1 ": {
+        "product_dot_1_1": {
           "type": "product_dot",
           "settings": {
             "swiper_id": "1",
@@ -188,7 +188,7 @@
             "product_Y": 36
           }
         },
-        "product_dot_1_2 ": {
+        "product_dot_1_2": {
           "type": "product_dot",
           "settings": {
             "swiper_id": "1",
@@ -197,7 +197,7 @@
             "product_Y": 45
           }
         },
-        "product_dot_2_1 ": {
+        "product_dot_2_1": {
           "type": "product_dot",
           "settings": {
             "swiper_id": "2",
@@ -206,7 +206,7 @@
             "product_Y": 36
           }
         },
-        "product_dot_3_1 ": {
+        "product_dot_3_1": {
           "type": "product_dot",
           "settings": {
             "swiper_id": "3",
@@ -214,16 +214,16 @@
             "product_X": 42,
             "product_Y": 45
           }
-        },
+        }
       },
       "block_order": [
         "swiper_xwgRwF",
         "swiper_74yt3y",
         "swiper_RR3AVA",
-        "product_dot_1_1 ",
-        "product_dot_1_2 ",
-        "product_dot_2_1 ",
-        "product_dot_3_1 "
+        "product_dot_1_1",
+        "product_dot_1_2",
+        "product_dot_2_1",
+        "product_dot_3_1"
       ],
       "name": "polka dot swiper",
       "settings": {
