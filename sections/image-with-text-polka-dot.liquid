@@ -142,37 +142,38 @@
 {% endschema %}
 <script>
     document.addEventListener('DOMContentLoaded', () => {
-      const icons = document.querySelectorAll('.polka_dot_contain .polka_dot_icon');
-    
-      icons.forEach(icon => {
-        const section = icon.closest('section');
-        const contain = icon.closest('.polka_dot_contain');
-        const product = contain.querySelector('.polka_dot_product');
+      document.querySelectorAll('.polka_dot_section').forEach(section => {
+        const icons = section.querySelectorAll('.polka_dot_contain .polka_dot_icon');
       
-        icon.addEventListener('click', () => {
-          console.log('click');
-          const wasNone = product && getComputedStyle(product).display === 'none';
+        icons.forEach(icon => {
+          const contain = icon.closest('.polka_dot_contain');
+          const product = contain.querySelector('.polka_dot_product');
       
-          // 先隐藏整个 section 下的所有 .polka_dot_product
-          section.querySelectorAll('.polka_dot_product').forEach(el => {
-            el.style.display = 'none';
-          });
-          console.log(wasNone, product);
-          // 如果之前是隐藏状态，就把当前的显示出来
-          if (wasNone && product) {
-            product.style.display = '';
-          }
-        });
-      });
+          icon.addEventListener('click', () => {
+            const wasNone = product && getComputedStyle(product).display === 'none';
       
+            // 只隐藏当前模块内的所有产品详情
+            section.querySelectorAll('.polka_dot_product').forEach(el => {
+              el.style.display = 'none';
+            });
       
-      document.querySelectorAll('.polka_dot_img_with_text_img').forEach(function(imgBox) {
-        imgBox.addEventListener('click', function() {
-          imgBox.parentElement.querySelectorAll('.polka_dot_product').forEach(function(el) {
-            el.style.display = 'none';
+            if (wasNone && product) {
+              product.style.display = '';
+            }
           });
         });
+      
+        // 点击模块图片区域，隐藏当前模块所有产品详情
+        const imgBox = section.querySelector('.polka_dot_img_with_text_img');
+        if (imgBox) {
+          imgBox.addEventListener('click', () => {
+            section.querySelectorAll('.polka_dot_product').forEach(el => {
+              el.style.display = 'none';
+            });
+          });
+        }
       });
+      
     
     });
 </script>
