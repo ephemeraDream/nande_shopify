@@ -134,7 +134,9 @@
           const wasNone = product && getComputedStyle(product).display === 'none';
           sectionEl.querySelectorAll('.polka_dot_product').forEach(el => {
             el.style.display = 'none';
-            contain.style.zIndex = 1;
+          });
+          sectionEl.querySelectorAll('.polka_dot_contain').forEach(el => {
+            el.style.zIndex = 1;
           });
     
           if (wasNone && product) {
