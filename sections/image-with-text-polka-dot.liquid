@@ -151,7 +151,7 @@
       
           icon.addEventListener('click', () => {
             const wasNone = product && getComputedStyle(product).display === 'none';
-      
+            console.log(wasNone, product);
             // 只隐藏当前模块内的所有产品详情
             section.querySelectorAll('.polka_dot_product').forEach(el => {
               el.style.display = 'none';
