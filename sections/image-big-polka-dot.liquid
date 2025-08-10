@@ -10,7 +10,7 @@
     <h2 class="padding-bottom-60 session-box-inner padding-top-120">{{ section.settings.title }}</h2>
   </div>
   {% endunless %}
-  <div class="polka_dot_img_with_text_img">
+  <div class="polka_dot_img_with_text_img" id="polka_dot-{{ section.id }}">
       {{-
           section.settings.image
           | image_url: width: section.settings.image.width
@@ -119,42 +119,36 @@
 }
 {% endschema %}
 <script>
+  (() => {
+    const sectionId = '{{ section.id }}';
     document.addEventListener('DOMContentLoaded', () => {
-      const icons = document.querySelectorAll('.polka_dot_contain .polka_dot_icon');
+      const sectionEl = document.getElementById('polka_dot-' + sectionId);
+      const icons = sectionEl.querySelectorAll('.polka_dot_contain .polka_dot_icon');
     
       icons.forEach(icon => {
+        const contain = icon.closest('.polka_dot_contain');
+        const product = contain.querySelector('.polka_dot_product');
+    
         icon.addEventListener('click', () => {
-          const contain = icon.closest('.polka_dot_contain');
-          if (!contain) return;
-      
-          // 找当前关联的 .polka_dot_product
-          const relatedProducts = contain.querySelectorAll('.polka_dot_product');
-      
-          // 判断当前关联是否有显示的
-          const isAnyVisible = Array.from(relatedProducts).some(el => {
-            return el.style.display !== 'none' && getComputedStyle(el).display !== 'none';
+          const wasNone = product && getComputedStyle(product).display === 'none';
+          sectionEl.querySelectorAll('.polka_dot_product').forEach(el => {
+            el.style.display = 'none';
           });
-      
-          if (isAnyVisible) {
-            // 如果当前显示，则点击关闭全部
-            relatedProducts.forEach(el => el.style.display = 'none');
-          } else {
-            // 当前没显示，先全部隐藏，再显示当前
-            document.querySelectorAll('.polka_dot_product').forEach(el => el.style.display = 'none');
-            relatedProducts.forEach(el => el.style.display = '');
+    
+          if (wasNone && product) {
+            product.style.display = '';
           }
         });
       });
       
-      document.querySelectorAll('.polka_dot_img_with_text_img').forEach(function(imgBox) {
-        imgBox.addEventListener('click', function() {
-          imgBox.parentElement.querySelectorAll('.polka_dot_product').forEach(function(el) {
-            el.style.display = 'none';
-          });
+      sectionEl.addEventListener('click', function() {
+        imgBox.parentElement.querySelectorAll('.polka_dot_product').forEach(function(el) {
+          el.style.display = 'none';
         });
       });
     
     });
+  })();
 </script>
 
     
