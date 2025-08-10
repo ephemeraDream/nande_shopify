@@ -1,6 +1,6 @@
 {% comment %} 波点图片带文字 {% endcomment %}
 {{ 'section-image-with-text-polka-dot.css' | asset_url | stylesheet_tag }}
-<div class="polka_dot_img_with_text {% if section.settings.layout == 'image-right' %} right{% endif %}">
+<div class="polka_dot_img_with_text {% if section.settings.layout == 'image-right' %} right{% endif %}" id="polka_dot_img_with_text-{{ section.id }}">
     <div class="polka_dot_img_with_text_img">
         {{-
             section.settings.image
@@ -141,10 +141,12 @@
 }
 {% endschema %}
 <script>
+  const sectionId = '{{ section.id }}';
+  
     document.addEventListener('DOMContentLoaded', () => {
-      document.querySelectorAll('.polka_dot_img_with_text').forEach(section => {
-        const icons = section.querySelectorAll('.polka_dot_contain .polka_dot_icon');
-      
+      const sectionEl = document.getElementById('polka_dot_img_with_text-' + sectionId);
+      const icons = sectionEl.querySelectorAll('.polka_dot_contain .polka_dot_icon');
+
         icons.forEach(icon => {
           const contain = icon.closest('.polka_dot_contain');
           const product = contain.querySelector('.polka_dot_product');
@@ -153,7 +155,7 @@
             const wasNone = product && getComputedStyle(product).display === 'none';
             console.log(wasNone, product);
             // 只隐藏当前模块内的所有产品详情
-            section.querySelectorAll('.polka_dot_product').forEach(el => {
+            sectionEl.querySelectorAll('.polka_dot_product').forEach(el => {
               el.style.display = 'none';
             });
       
@@ -172,7 +174,6 @@
             });
           });
         }
-      });
       
     
     });
