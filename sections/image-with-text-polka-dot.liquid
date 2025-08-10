@@ -157,7 +157,7 @@
           section.querySelectorAll('.polka_dot_product').forEach(el => {
             el.style.display = 'none';
           });
-      
+          console.log(wasNone, product);
           // 如果之前是隐藏状态，就把当前的显示出来
           if (wasNone && product) {
             product.style.display = '';
