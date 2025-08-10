@@ -835,7 +835,7 @@
   width: 8rem;
 }
 
-.product_info_section .product_info_steps_item:not(.active)+.product_info_steps_item::before {
+.product_info_section .product_info_steps_item:not(.active)+.product_info_steps_item:not(.active)::before {
   content: "";
   width: 0.1rem;
   height: 4rem;
@@ -1337,6 +1337,21 @@
   position: absolute;
   left: -0.25rem;
   top: -0.25rem;
+}
+
+.product_info_section .product_info_bundle_product_disabled_text {
+  font-family: PP Right Grotesk;
+  font-size: 1.2rem;
+  font-weight: normal;
+  line-height: 100%;
+  letter-spacing: 0px;
+  font-variation-settings: "opsz" auto;
+  color: #FF7500;
+  position: absolute;
+  width: 100%;
+  left: 0;
+  bottom: -1.6rem;
+  padding-left: 0.6rem;
 }
 
 @media screen and (max-width: 1440px) {
