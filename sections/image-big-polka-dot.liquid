@@ -126,6 +126,7 @@
       const icons = sectionEl.querySelectorAll('.polka_dot_contain .polka_dot_icon');
     
       icons.forEach(icon => {
+        event.stopPropagation();
         const contain = icon.closest('.polka_dot_contain');
         const product = contain.querySelector('.polka_dot_product');
     
