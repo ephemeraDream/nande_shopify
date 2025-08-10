@@ -146,28 +146,24 @@
     
       icons.forEach(icon => {
         const section = icon.closest('section');
+        const contain = icon.closest('.polka_dot_contain');
+        const product = contain.querySelector('.polka_dot_product');
       
         icon.addEventListener('click', () => {
-          const contain = icon.closest('.polka_dot_contain');
-          if (!contain) return;
+          const wasNone = product && getComputedStyle(product).display === 'none';
       
-          const relatedProducts = contain.querySelectorAll('.polka_dot_product');
-      
-          // 判断当前关联的是否有显示的
-          const isAnyVisible = Array.from(relatedProducts).some(el => {
-            return el.style.display !== 'none' && getComputedStyle(el).display !== 'none';
+          // 先隐藏整个 section 下的所有 .polka_dot_product
+          section.querySelectorAll('.polka_dot_product').forEach(el => {
+            el.style.display = 'none';
           });
       
-          if (isAnyVisible) {
-            // 当前显示，隐藏它们
-            relatedProducts.forEach(el => el.style.display = 'none');
-          } else {
-            // 当前没显示，先隐藏所有，再显示当前
-            section.querySelectorAll('.polka_dot_product').forEach(el => el.style.display = 'none');
-            relatedProducts.forEach(el => el.style.display = '');
+          // 如果之前是隐藏状态，就把当前的显示出来
+          if (wasNone && product) {
+            product.style.display = '';
           }
         });
       });
+      
       
       document.querySelectorAll('.polka_dot_img_with_text_img').forEach(function(imgBox) {
         imgBox.addEventListener('click', function() {
