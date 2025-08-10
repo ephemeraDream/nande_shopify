@@ -125,17 +125,24 @@
       icons.forEach(icon => {
         const section = icon.closest('section');
         const contain = icon.closest('.polka_dot_contain');
-        icon.addEventListener('mouseenter', () => {
-          section.querySelectorAll('.polka_dot_product')
-                 .forEach(el => el.style.display = 'none');
-          contain.querySelectorAll('.polka_dot_product')
-                 .forEach(el => el.style.display = '');
+        const product = contain.querySelector('.polka_dot_product');
+        
+        icon.addEventListener('click', (e) => {
+          e.stopPropagation();
+          
+          // 检查当前产品是否已显示
+          if (product.style.display === 'none' || product.style.display === '') {
+            // 如果隐藏，则显示当前产品，隐藏其他产品
+            section.querySelectorAll('.polka_dot_product')
+                   .forEach(el => el.style.display = 'none');
+            product.style.display = '';
+          } else {
+            // 如果已显示，则隐藏当前产品
+            product.style.display = 'none';
+          }
         });
-        {% comment %} icon.addEventListener('mouseleave', () => {
-          section.querySelectorAll('.polka_dot_product')
-                 .forEach(el => el.style.display = 'none');
-        }); {% endcomment %}
       });
+      
       document.querySelectorAll('.polka_dot_img_with_text_img').forEach(function(imgBox) {
         imgBox.addEventListener('click', function() {
           imgBox.parentElement.querySelectorAll('.polka_dot_product').forEach(function(el) {
