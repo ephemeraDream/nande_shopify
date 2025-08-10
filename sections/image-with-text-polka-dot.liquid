@@ -150,6 +150,7 @@
         const product = contain.querySelector('.polka_dot_product');
       
         icon.addEventListener('click', () => {
+          console.log('click');
           const wasNone = product && getComputedStyle(product).display === 'none';
       
           // 先隐藏整个 section 下的所有 .polka_dot_product
