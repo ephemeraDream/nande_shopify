@@ -210,6 +210,7 @@ add_to_cart.addEventListener("click", async () => {
   });
 
   if (items.length === 0) {
+    add_to_cart.classList.remove("is-loading");
     return;
   }
 
