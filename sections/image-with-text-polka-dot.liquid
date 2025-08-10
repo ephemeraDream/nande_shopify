@@ -166,15 +166,20 @@
       });
     
       // 点击模块图片区域，隐藏当前模块所有产品详情
-      {% comment %} const imgBox = sectionEl.querySelector('.polka_dot_img_with_text_img');
+      const imgBox = sectionEl.querySelector('.polka_dot_img_with_text_img');
       if (imgBox) {
-        imgBox.addEventListener('click', () => {
+        imgBox.addEventListener('click', (event) => {
+          // 如果点击的是波点图标或者波点图标内部元素，阻止隐藏
+          if (event.target.closest('.polka_dot_icon')) {
+            return; // 直接返回，不隐藏
+          }
+
+          // 否则隐藏所有产品详情
           sectionEl.querySelectorAll('.polka_dot_product').forEach(el => {
             el.style.display = 'none';
           });
         });
-      } {% endcomment %}
-      
+      }
     
     });
   })();

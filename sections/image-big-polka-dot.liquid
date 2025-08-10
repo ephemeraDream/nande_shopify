@@ -142,11 +142,11 @@
         });
       });
       
-      sectionEl.addEventListener('click', function() {
-        imgBox.parentElement.querySelectorAll('.polka_dot_product').forEach(function(el) {
+      {% comment %} sectionEl.addEventListener('click', function() {
+        sectionEl.querySelectorAll('.polka_dot_product').forEach(function(el) {
           el.style.display = 'none';
         });
-      });
+      }); {% endcomment %}
     
     });
   })();
