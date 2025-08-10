@@ -168,11 +168,11 @@
 
     //位置
     function adjustProductPosition(contain, currentProduct) {
-      // 重置位置（防止上一次点击遗留 transform/left）
-      currentProduct.style.left = '';
-      currentProduct.style.transform = '';
+      // 初始位置（假设默认是右下角：X=100%, Y=100%）
+      let baseX = 100;
+      let baseY = 100;
+      currentProduct.style.transform = `translateX(${baseX}%) translateY(${baseY}%)`;
     
-      // 获取 slide 和 product 的位置
       var slideEl = contain.closest('.swiper-slide');
       var slideRect = slideEl.getBoundingClientRect();
       var productRect = currentProduct.getBoundingClientRect();
@@ -180,29 +180,30 @@
       var overflowRight = productRect.right - slideRect.right;
       var overflowLeft = slideRect.left - productRect.left;
     
-      // 辅助函数：居中
+      // 居中辅助
       function centerProduct() {
-        currentProduct.style.left = '50%';
-        currentProduct.style.transform = 'translateX(-50%)';
+        currentProduct.style.transform = `translateX(-50%) translateY(${baseY}%)`;
       }
     
       if (overflowRight > 0) {
         if (overflowRight > productRect.width / 2) {
           centerProduct();
         } else {
-          let offset = parseFloat(currentProduct.style.right || 0) || 0;
-          currentProduct.style.right = (offset + (overflowRight / slideRect.width) * 100) + '%';
+          let movePercent = (overflowRight / slideRect.width) * 100;
+          baseX -= movePercent;
+          currentProduct.style.transform = `translateX(${baseX}%) translateY(${baseY}%)`;
         }
       } else if (overflowLeft > 0) {
         if (overflowLeft > productRect.width / 2) {
           centerProduct();
         } else {
-          let offset = parseFloat(currentProduct.style.right || 0) || 0;
-          currentProduct.style.right = (offset - (overflowLeft / slideRect.width) * 100) + '%';
+          let movePercent = (overflowLeft / slideRect.width) * 100;
+          baseX += movePercent;
+          currentProduct.style.transform = `translateX(${baseX}%) translateY(${baseY}%)`;
         }
       }
-      
     }
+    
     
   })();
 </script>
