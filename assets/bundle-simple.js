@@ -193,6 +193,8 @@ product_items.forEach(item => {
 })
 
 add_to_cart.addEventListener("click", async () => {
+  if (add_to_cart.classList.contains("is-loading")) return
+  add_to_cart.classList.add("is-loading")
   const items = [];
 
   bundle_simple_box.querySelectorAll(".bundle_simple_box_body_list_item").forEach(item => {
@@ -239,7 +241,7 @@ add_to_cart.addEventListener("click", async () => {
     .catch((e) => {
       console.error('Error updating cart sections:', e);
     }).finally(() => {
-      btn.classList.remove("is-loading");
+      add_to_cart.classList.remove("is-loading");
     });
 })
 
