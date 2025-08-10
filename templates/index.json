@@ -163,10 +163,7 @@
             "text": "<p>Standfest bei jeder Bewegung – keine Wackler, kein Nachgeben.</p>",
             "btn_text": "En savoir plus",
             "image": "shopify://shop_images/1_cd0b56ec-7a84-4288-a78a-b9008d49df22.jpg",
-            "link": "",
-            "select_product": "maidesite-t4-pro-plus-vierbeinige-elliptische-saule-elektrisch-hohenverstellbares-gestell",
-            "product_X": 49,
-            "product_Y": 40
+            "link": ""
           }
         },
         "swiper_RR3AVA": {
@@ -191,7 +188,7 @@
         "product_dot_1_2": {
           "type": "product_dot",
           "settings": {
-            "swiper_id": "1",
+            "swiper_id": "2",
             "select_product": "ergoset-yoga-schreibtisch-ec6-burostuhl",
             "product_X": 42,
             "product_Y": 45
@@ -202,8 +199,8 @@
           "settings": {
             "swiper_id": "2",
             "select_product": "ergoset-yoga-schreibtisch-ec6-burostuhl",
-            "product_X": 55,
-            "product_Y": 36
+            "product_X": 68,
+            "product_Y": 55
           }
         },
         "product_dot_3_1": {
