@@ -123,22 +123,25 @@
       const icons = document.querySelectorAll('.polka_dot_contain .polka_dot_icon');
     
       icons.forEach(icon => {
-        const section = icon.closest('section');
-        const contain = icon.closest('.polka_dot_contain');
-        const product = contain.querySelector('.polka_dot_product');
-        
-        icon.addEventListener('click', (e) => {
-          e.stopPropagation();
-          
-          // 检查当前产品是否已显示
-          if (product.style.display === 'none' || product.style.display === '') {
-            // 如果隐藏，则显示当前产品，隐藏其他产品
-            section.querySelectorAll('.polka_dot_product')
-                   .forEach(el => el.style.display = 'none');
-            product.style.display = '';
+        icon.addEventListener('click', () => {
+          const contain = icon.closest('.polka_dot_contain');
+          if (!contain) return;
+      
+          // 找当前关联的 .polka_dot_product
+          const relatedProducts = contain.querySelectorAll('.polka_dot_product');
+      
+          // 判断当前关联是否有显示的
+          const isAnyVisible = Array.from(relatedProducts).some(el => {
+            return el.style.display !== 'none' && getComputedStyle(el).display !== 'none';
+          });
+      
+          if (isAnyVisible) {
+            // 如果当前显示，则点击关闭全部
+            relatedProducts.forEach(el => el.style.display = 'none');
           } else {
-            // 如果已显示，则隐藏当前产品
-            product.style.display = 'none';
+            // 当前没显示，先全部隐藏，再显示当前
+            document.querySelectorAll('.polka_dot_product').forEach(el => el.style.display = 'none');
+            relatedProducts.forEach(el => el.style.display = '');
           }
         });
       });
