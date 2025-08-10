@@ -154,6 +154,7 @@
     
         icon.addEventListener('click', () => {
           event.stopPropagation();
+          contain.style.zIndex = 3;
           const wasNone = product && getComputedStyle(product).display === 'none';
           sectionEl.querySelectorAll('.polka_dot_product').forEach(el => {
             el.style.display = 'none';
