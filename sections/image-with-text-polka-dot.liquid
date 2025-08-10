@@ -169,7 +169,7 @@
       const imgBox = sectionEl.querySelector('.polka_dot_img_with_text_img');
       if (imgBox) {
         imgBox.addEventListener('click', () => {
-          section.querySelectorAll('.polka_dot_product').forEach(el => {
+          sectionEl.querySelectorAll('.polka_dot_product').forEach(el => {
             el.style.display = 'none';
           });
         });
