@@ -3968,7 +3968,7 @@ a {
 .polka_dot_product_info {
   padding: 1.6rem 0.8rem 0.8rem 0;
   background-color: #fff;
-  width: 23rem;
+  width: 20rem;
   flex: 0 0 auto;
   min-height: 8.8rem;
   position: relative;
@@ -3979,6 +3979,7 @@ a {
 .polka_dot_product_info_title {
   font-size: 2.4rem;
   color: #000000;
+  text-align: left;
 }
 
 .polka_dot_product_info_price {
