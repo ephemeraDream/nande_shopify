@@ -166,14 +166,14 @@
       });
     
       // 点击模块图片区域，隐藏当前模块所有产品详情
-      const imgBox = sectionEl.querySelector('.polka_dot_img_with_text_img');
+      {% comment %} const imgBox = sectionEl.querySelector('.polka_dot_img_with_text_img');
       if (imgBox) {
         imgBox.addEventListener('click', () => {
           sectionEl.querySelectorAll('.polka_dot_product').forEach(el => {
             el.style.display = 'none';
           });
         });
-      }
+      } {% endcomment %}
       
     
     });
