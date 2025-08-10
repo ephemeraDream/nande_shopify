@@ -168,42 +168,59 @@
 
     //位置
     function adjustProductPosition(contain, currentProduct) {
-      // 初始位置（假设默认是右下角：X=100%, Y=100%）
-      let baseX = 100;
-      let baseY = 100;
+      // base translate (默认右下)
+      var baseX = 100; // translateX 的基准百分比 (100% = 以自身宽度向右偏移一个自身宽度)
+      var baseY = 100; // translateY 的基准百分比
+      // 重置 transform（避免历史遗留）
       currentProduct.style.transform = `translateX(${baseX}%) translateY(${baseY}%)`;
     
+      // 强制回流以确保测量到最新位置
       var slideEl = contain.closest('.swiper-slide');
       var slideRect = slideEl.getBoundingClientRect();
       var productRect = currentProduct.getBoundingClientRect();
     
-      var overflowRight = productRect.right - slideRect.right;
-      var overflowLeft = slideRect.left - productRect.left;
+      var overflowRight = productRect.right - slideRect.right; // >0 表示向右溢出
+      var overflowLeft = slideRect.left - productRect.left;    // >0 表示向左溢出
     
-      // 居中辅助
-      function centerProduct() {
-        currentProduct.style.transform = `translateX(-50%) translateY(${baseY}%)`;
+      // clamp 辅助
+      function clamp(v, a, b) { return Math.max(a, Math.min(b, v)); }
+    
+      // 用 product 宽度来把 px 换成 translate%（因为 translate% 以元素自身尺寸为参照）
+      function pxToPercentOfProduct(px) {
+        return (px / productRect.width) * 100;
+      }
+    
+      // transform-only 的居中：把 product 的 center 移到 slide 的 center（只改 transform X）
+      function centerByTransform() {
+        var slideCenterX = slideRect.left + slideRect.width / 2;
+        var productCenterX = productRect.left + productRect.width / 2;
+        var shiftPx = productCenterX - slideCenterX; // 正表示 product 偏右，需要向左移动
+        var shiftPercent = pxToPercentOfProduct(shiftPx);
+        var newX = baseX - shiftPercent;
+        newX = clamp(newX, -200, 300); // 限制一个合理范围，防止极端值
+        currentProduct.style.transform = `translateX(${newX}%) translateY(${baseY}%)`;
       }
     
       if (overflowRight > 0) {
-        if (overflowRight > productRect.width / 2) {
-          centerProduct();
+        var movePct = pxToPercentOfProduct(overflowRight);
+        if (movePct > 50) {
+          centerByTransform();
         } else {
-          let movePercent = (overflowRight / slideRect.width) * 100;
-          baseX -= movePercent;
-          currentProduct.style.transform = `translateX(${baseX}%) translateY(${baseY}%)`;
+          var newX = baseX - movePct; // 向左移动（减小 translateX%）
+          newX = clamp(newX, -200, 300);
+          currentProduct.style.transform = `translateX(${newX}%) translateY(${baseY}%)`;
         }
       } else if (overflowLeft > 0) {
-        if (overflowLeft > productRect.width / 2) {
-          centerProduct();
+        var movePct = pxToPercentOfProduct(overflowLeft);
+        if (movePct > 50) {
+          centerByTransform();
         } else {
-          let movePercent = (overflowLeft / slideRect.width) * 100;
-          baseX += movePercent;
-          currentProduct.style.transform = `translateX(${baseX}%) translateY(${baseY}%)`;
+          var newX = baseX + movePct; // 向右移动（增大 translateX%）
+          newX = clamp(newX, -200, 300);
+          currentProduct.style.transform = `translateX(${newX}%) translateY(${baseY}%)`;
         }
       }
     }
-    
     
   })();
 </script>
