@@ -126,27 +126,32 @@
       const icons = sectionEl.querySelectorAll('.polka_dot_contain .polka_dot_icon');
     
       icons.forEach(icon => {
-        event.stopPropagation();
         const contain = icon.closest('.polka_dot_contain');
         const product = contain.querySelector('.polka_dot_product');
     
         icon.addEventListener('click', () => {
+          event.stopPropagation();
           const wasNone = product && getComputedStyle(product).display === 'none';
           sectionEl.querySelectorAll('.polka_dot_product').forEach(el => {
             el.style.display = 'none';
+            contain.style.zIndex = 1;
           });
     
           if (wasNone && product) {
+            contain.style.zIndex = 3;
             product.style.display = '';
           }
         });
       });
       
-      {% comment %} sectionEl.addEventListener('click', function() {
+      sectionEl.addEventListener('click', function() {
+        if (event.target.closest('.polka_dot_icon')) {
+          return; // 直接返回，不隐藏
+        }
         sectionEl.querySelectorAll('.polka_dot_product').forEach(function(el) {
           el.style.display = 'none';
         });
-      }); {% endcomment %}
+      }); 
     
     });
   })();
