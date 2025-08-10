@@ -193,8 +193,6 @@ product_items.forEach(item => {
 })
 
 add_to_cart.addEventListener("click", async () => {
-  if (add_to_cart.classList.contains("is-loading")) return
-  add_to_cart.classList.add("is-loading")
   const items = [];
 
   bundle_simple_box.querySelectorAll(".bundle_simple_box_body_list_item").forEach(item => {
@@ -210,9 +208,11 @@ add_to_cart.addEventListener("click", async () => {
   });
 
   if (items.length === 0) {
-    add_to_cart.classList.remove("is-loading");
     return;
   }
+
+  if (add_to_cart.classList.contains("is-loading")) return
+  add_to_cart.classList.add("is-loading")
 
   const body = JSON.stringify({
     items,
