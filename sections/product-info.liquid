@@ -547,6 +547,9 @@
                           </div>
                         </div>
                       </div>
+                      {% unless bundled_product.available %}
+                        <div class="product_info_bundle_product_disabled_text">{{ 'common.out_of_stock' | t }}</div>
+                      {% endunless %}
                     </div>
                   {% endif %}
                 {% endfor %}
@@ -885,7 +888,7 @@
           "label": "icon"
         },
         {
-          "type": "richtext",
+          "type": "liquid",
           "id": "content",
           "label": "content"
         }

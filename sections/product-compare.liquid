@@ -48,62 +48,66 @@
           class="product_compare_product{% if forloop.index0 == 0 %} product_compare_product_showtitle{% endif %}"
           data-value="{{ product.metafields.custom.product_model.value }}"
         >
-          <div class="swiper">
-            <div class="swiper-wrapper">
-              {% for option in product.options_with_values %}
-                {%- case option.name -%}
-                  {%- when 'Farbe Tischplatte' -%}
-                    {% assign index = 'option' | append: forloop.index %}
-                    {% for value in option.values %}
-                      {% assign first_variant = product.variants | where: index, value | first %}
-                      <div class="swiper-slide">
-                        <img
-                          src="{{ first_variant.featured_image | image_url }}"
-                          alt="{{ value.variant.title }}"
-                        >
-                      </div>
-                    {%- endfor %}
-                {%- endcase -%}
-              {%- endfor %}
+          <div class="product_compare_product_sticky">
+            <div class="swiper">
+              <div class="swiper-wrapper">
+                {% for option in product.options_with_values %}
+                  {%- case option.name -%}
+                    {%- when 'Farbe Tischplatte' -%}
+                      {% assign index = 'option' | append: forloop.index %}
+                      {% for value in option.values %}
+                        {% assign first_variant = product.variants | where: index, value | first %}
+                        <div class="swiper-slide">
+                          <img
+                            src="{{ first_variant.featured_image | image_url }}"
+                            alt="{{ value.variant.title }}"
+                          >
+                        </div>
+                      {%- endfor %}
+                  {%- endcase -%}
+                {%- endfor %}
+              </div>
             </div>
-          </div>
-          <div class="product_compare_item_color">
-            {% for option in product.options_with_values %}
-              {%- case option.name -%}
-                {%- when 'Farbe Tischplatte' -%}
-                  {% for value in option.values %}
-                    {% assign color = '' %}
-                    {% for color_item in product.metafields.custom.color_option.value %}
-                      {% if color_item.name == value.name %}
-                        {% assign color = color_item.value %}
-                      {% endif %}
-                    {% endfor %}
-                    <div
-                      class="product_compare_item_color_circle{% if color == '' %} product_compare_item_color_circle_none{% endif %}"
-                      {% if color != '' %}
-                        style="background-color: {{ color }}"
-                      {% endif %}
-                      title="{{ value }}"
-                    ></div>
-                  {%- endfor %}
-              {%- endcase -%}
-            {%- endfor %}
-          </div>
-          <div class="product_compare_item_price">
             {% comment %}
-              {% if block.settings.select_product.compare_at_price != blank %}
-                {% assign price = block.settings.select_product.compare_at_price | money_without_trailing_zeros %}
-              {% else %}
-                {% assign price = block.settings.select_product.price | money_without_trailing_zeros %}
-              {% endif %}
+              <div class="product_compare_item_color">
+                {% for option in product.options_with_values %}
+                  {%- case option.name -%}
+                    {%- when 'Farbe Tischplatte' -%}
+                      {% for value in option.values %}
+                        {% assign color = '' %}
+                        {% for color_item in product.metafields.custom.color_option.value %}
+                          {% if color_item.name == value.name %}
+                            {% assign color = color_item.value %}
+                          {% endif %}
+                        {% endfor %}
+                        <div
+                          class="product_compare_item_color_circle{% if color == '' %} product_compare_item_color_circle_none{% endif %}"
+                          {% if color != '' %}
+                            style="background-color: {{ color }}"
+                          {% endif %}
+                          title="{{ value }}"
+                        ></div>
+                      {%- endfor %}
+                  {%- endcase -%}
+                {%- endfor %}
+              </div>
             {% endcomment %}
-            {% assign price = product.price | money_without_trailing_zeros %}
-            {{ 'products.product.price.from_price_html' | t: price: price }}
+            <div class="product_compare_item_price">
+              {% comment %}
+                {% if block.settings.select_product.compare_at_price != blank %}
+                  {% assign price = block.settings.select_product.compare_at_price | money_without_trailing_zeros %}
+                {% else %}
+                  {% assign price = block.settings.select_product.price | money_without_trailing_zeros %}
+                {% endif %}
+              {% endcomment %}
+              {% assign price = product.price | money_without_trailing_zeros %}
+              {{ 'products.product.price.from_price_html' | t: price: price }}
+            </div>
+            <a class="product_compare_product_shop_now" href="{{ product.url }}">
+              {{ 'common.en_savoir_plus' | t }}
+              {{ 'icon-right-arrow.svg' | inline_asset_content }}
+            </a>
           </div>
-          <a class="product_compare_product_shop_now" href="{{ product.url }}">
-            {{ 'common.en_savoir_plus' | t }}
-            {{ 'icon-right-arrow.svg' | inline_asset_content }}
-          </a>
           {% for item in product.metafields.custom.compare_simple.value.data.value %}
             <div class="product_compare_product_card" data-type="{{ item.label | handle }}">
               <div class="product_compare_product_head">{{ item.label }}</div>
@@ -275,11 +279,11 @@
           spaceBetween: 0,
           allowTouchMove: false,
         });
-        item.querySelectorAll('.product_compare_item_color_circle').forEach((circle, index) => {
+        {% comment %} item.querySelectorAll('.product_compare_item_color_circle').forEach((circle, index) => {
           circle.addEventListener('click', function () {
             swiper.slideTo(index);
           });
-        });
+        }); {% endcomment %}
       }
     });
   }
@@ -336,11 +340,11 @@
       spaceBetween: 0,
       allowTouchMove: false,
     });
-    item.querySelectorAll('.product_compare_item_color_circle').forEach((circle, index) => {
+    {% comment %} item.querySelectorAll('.product_compare_item_color_circle').forEach((circle, index) => {
       circle.addEventListener('click', function () {
         swiper.slideTo(index);
       });
-    });
+    }); {% endcomment %}
   });
 
   document.querySelector('.product_compare_back').addEventListener('click', () => {

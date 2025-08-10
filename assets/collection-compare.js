@@ -243,101 +243,116 @@ document.querySelector(".collection_compare_select_contain_body_btn").addEventLi
   if (e.target.closest(".collection_compare_select_contain_body_btn").hasAttribute("disable")) return
   const contain = document.querySelector(".collection_compare_modal_contain")
   contain.innerHTML = ""
-  document.querySelectorAll(".collection_compare_select_contain_body_list_item").forEach(item => {
+  document.querySelectorAll(".collection_compare_select_contain_body_list_item").forEach((item, index) => {
     const product_data = collection_compare_data[item.dataset.id]
     const product = product_data.product
+    const selected_or_first_available_variant = product_data.selected_or_first_available_variant
+    const product_model = product_data.product_model
+    const product_title_top = product_data.product_title_top
+    const symbol = product_data.symbol
+    const url = product_data.url
     const compare_simple = product_data.compare_simple
     const options_with_values = product_data.options_with_values
     const container = document.createElement('div');
     container.className = 'collection_compare_modal_contain_item';
     container.dataset.id = item.dataset.id;
+    if (index === 0) {
+      container.className = 'collection_compare_modal_contain_item product_compare_product_showtitle';
+    } else {
+      container.className = 'collection_compare_modal_contain_item';
+    }
+    const length = document.querySelectorAll(".collection_compare_select_contain_body_list_item").length
+    container.style.width = `calc((100% - ${46 * (length - 1)}px) / ${length})`
 
-    const swiper_wrapper = document.createElement('div');
-    swiper_wrapper.className = 'swiper-wrapper';
-    options_with_values.forEach((option, index) => {
-      if (option.name === "Farbe Tischplatte") {
-        option.values.forEach(value => {
-          const first_variant = product.variants.filters(variant => variant["option" + index] === value)[0]
-          swiper_wrapper.innerHTML += `
-            <div class="swiper-slide">
-              <a>
-                <img
-                  src="${first_variant.featured_image.src}"
-                  alt="${first_variant.title}"
-                  width="${first_variant.featured_image.width}"
-                  height="${first_variant.featured_image.height}"
-                >
-              </a>
-            </div>
-          `
-        })
-      }
-    })
-
-    container.innerHTML = `
-        <div class="swiper">
-          ${swiper_wrapper}
-          {% assign product_model = block.settings.select_product.metafields.custom.product_model %}
-          {% assign product_title_top = block.settings.select_product.metafields.custom.product_title_top %}
-          <h4 class="compare_simple_item_title">
-            <span class="product_title_top">
-              {% if product_title_top != blank %}
-                {{ product_title_top }}
-              {% else %}
-                Maidesite
-              {% endif %}
-            </span>
-            {% if product_model != blank %}
-              <span class="product_title">{{ product_model }}</span>
-            {% else %}
-              <span class="product_title">{{ block.settings.select_product.title }}</span>
-            {% endif %}
-          </h4>
-        </div>
-        <div class="compare_simple_item_color">
-          {% for option in block.settings.select_product.options_with_values %}
-            {%- case option.name -%}
-              {%- when 'Farbe Tischplatte' -%}
-                {% for value in option.values %}
-                  {% assign color = '' %}
-                  {% for color_item in block.settings.select_product.metafields.custom.color_option.value %}
-                    {% if color_item.name == value.name %}
-                      {% assign color = color_item.value %}
-                    {% endif %}
-                  {% endfor %}
-                  <div
-                    class="compare_simple_item_color_circle{% if color == '' %} compare_simple_item_color_circle_none{% endif %}"
-                    {% if color != '' %}
-                      style="background-color: {{ color }}"
-                    {% endif %}
-                    title="{{ value }}"
-                  ></div>
-                {%- endfor %}
-            {%- endcase -%}
-          {%- endfor %}
-        </div>
-        <img
-          src="${product.featured_image}"
-          alt="${product.title}"
-        >
-        <div class="collection_compare_select_contain_body_list_item_right">
-          <div class="collection_compare_select_contain_body_list_item_product_title">${product.title}</div>
-          <div class="collection_compare_select_contain_body_list_item_product_price">
-            ${moneyWithoutTrailingZeros(product.price, collection_compare_data[id].symbol)}
-            ${product.compare_at_price ? `<div class="collection_compare_select_contain_body_list_item_product_price_op">${moneyWithoutTrailingZeros(product.compare_at_price, collection_compare_data[id].symbol)}</div>` : ""}
+    let compare_info_html = '';
+    if (compare_simple) {
+      compare_simple.forEach(item => {
+        compare_info_html += `
+        <div class="product_compare_product_card" data-type="${item.label}" data-value="${item.value}">
+          <div class="product_compare_product_head">${item.label}</div>
+          <div class="product_compare_product_body">
+            <div class="product_compare_product_label">${item.label}</div>
+            <div class="product_compare_product_contain">${item.value}</div>
           </div>
-          <div class="collection_compare_select_contain_body_list_item_close"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="none" version="1.1" width="20" height="20" viewBox="0 0 20 20"><defs><clipPath id="master_svg0_558_008093/393_24441"><rect x="0" y="0" width="20" height="20" rx="0"/></clipPath></defs><g clip-path="url(#master_svg0_558_008093/393_24441)"><g><g><g><path d="M15.440799743652343,5.441168583984375L14.558799743652344,4.559173583984375L9.999799743652343,9.115133583984374L5.440794743652344,4.559173583984375L4.558799743652344,5.441168583984375L9.114759743652343,10.000173583984374L4.558799743652344,14.559173583984375L5.440794743652344,15.441173583984375L9.999799743652343,10.885203583984374L14.558799743652344,15.441173583984375L15.440799743652343,14.559173583984375L10.884829743652343,10.000173583984374L15.440799743652343,5.441168583984375Z" fill="#7F7E75" fill-opacity="1"/></g></g></g></g></svg></div>
         </div>
       `;
+      });
+    }
 
-    container.querySelector(".collection_compare_select_contain_body_list_item_close").addEventListener("click", (e) => {
-      const item = e.target.closest(".collection_compare_select_contain_body_list_item")
-      item.remove()
-      parent.classList.toggle("selected")
-      select_num--
-      selectChangeLink()
-    })
+    container.innerHTML = `
+      <div class="collection_compare_modal_contain_item_img">
+        <a href="${url}">
+          <img
+            src="${selected_or_first_available_variant.featured_image.src}"
+            alt="${product.title}"
+            width="${selected_or_first_available_variant.featured_image.width}"
+            height="${selected_or_first_available_variant.featured_image.height}"
+          >
+        </a>
+        <h4 class="compare_simple_item_title">
+          <span class="product_title_top">
+            ${product_title_top ? product_title_top : "Maidesite"}
+          </span>
+          ${product_model ? `<span class="product_title">${product_model}</span>` : `<span class="product_title">${product.title}</span>`}
+        </h4>
+      </div>
+      <div class="compare_simple_item_price">
+        Von ${moneyWithoutTrailingZeros(product.price, symbol)}
+      </div>
+      <a href="${url}" class="nd-btn">
+        En savoir plus
+        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="none" version="1.1" width="15" height="12" viewBox="0 0 15 12"><g transform="matrix(0,1,-1,0,15,-15)"><path d="M27,6.20233L21.00206,0L15,6.21087L16.19711,7.44878L20.151699999999998,3.35942L20.151699999999998,15L21.848300000000002,15L21.848300000000002,3.35515L25.8029,7.44451L27,6.20233Z" fill="#000000" fill-opacity="1" style="mix-blend-mode:passthrough"></path></g></svg>
+      </a>
+      ${compare_info_html}
+    `;
 
     contain.appendChild(container);
   })
+
+  if (document.querySelector(".collection_compare_modal_show_diff").classList.contains("active")) {
+    const cards = document.querySelectorAll('.product_compare_product_card');
+    const groups = {};
+    cards.forEach(card => {
+      const type = card.dataset.type;
+      if (!groups[type]) groups[type] = [];
+      groups[type].push(card);
+    });
+    Object.values(groups).forEach(groupCards => {
+      const values = groupCards.map(c => c.dataset.value);
+      const allSame = values.every(v => v === values[0]);
+      if (allSame) {
+        groupCards.forEach(c => c.classList.add('hidden'));
+      } else {
+        groupCards.forEach(c => c.classList.remove('hidden'));
+      }
+    });
+  }
+  document.querySelector(".collection_compare_modal").style.display = "block"
+})
+document.querySelector(".collection_compare_modal_return").addEventListener("click", () => {
+  document.querySelector(".collection_compare_modal").style.display = "none"
+})
+document.querySelector(".collection_compare_modal_show_diff").addEventListener("click", (e) => {
+  const item = e.target.closest(".collection_compare_modal_show_diff")
+  item.classList.toggle("active")
+  const cards = document.querySelectorAll('.product_compare_product_card');
+  if (item.classList.contains("active")) {
+    const groups = {};
+    cards.forEach(card => {
+      const type = card.dataset.type;
+      if (!groups[type]) groups[type] = [];
+      groups[type].push(card);
+    });
+    Object.values(groups).forEach(groupCards => {
+      const values = groupCards.map(c => c.dataset.value);
+      const allSame = values.every(v => v === values[0]);
+      if (allSame) {
+        groupCards.forEach(c => c.classList.add('hidden'));
+      } else {
+        groupCards.forEach(c => c.classList.remove('hidden'));
+      }
+    });
+  } else {
+    cards.forEach(el => el.classList.remove("hidden"))
+  }
 })

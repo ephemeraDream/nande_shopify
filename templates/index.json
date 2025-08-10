@@ -14,7 +14,6 @@
       "blocks": {
         "banner_item_V4RHqa": {
           "type": "banner_item",
-          "disabled": true,
           "settings": {
             "sub_title": "<p>New release</p>",
             "title": "<p>Maidesite Space</p>",
@@ -76,9 +75,9 @@
       "name": "banner",
       "settings": {
         "height_mode": "fixed",
-        "fixed_height_desktop": 600,
-        "fixed_height_mobile": 350,
-        "mobile_stacked": false,
+        "fixed_height_desktop": 700,
+        "fixed_height_mobile": 420,
+        "mobile_stacked": true,
         "nav_style": "slideshow_nav_dots",
         "pagination_color": "#ffffff",
         "nav_position": "justify-center",

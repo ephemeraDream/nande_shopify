@@ -106,9 +106,15 @@
   max-width: 45rem;
 }
 
+.product_compare .product_compare_product_sticky {
+  background-color: #f2f1ed;
+  position: sticky;
+  top: 15.7rem;
+}
+
 .product_compare .product_compare_product .swiper {
   width: 100%;
-  aspect-ratio: 0.945;
+  /* aspect-ratio: 0.945; */
 }
 
 .product_compare .product_compare_product .swiper img {
