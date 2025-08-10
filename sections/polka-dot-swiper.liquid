@@ -24,51 +24,58 @@
   </div>
   <div class="swiper">
     <div class="swiper-wrapper">
-      {% for block in section.blocks %}
-        <div class="swiper-slide">
+      {% assign swiper_blocks = section.blocks | where: "type", "swiper" %}
+      {% for swiper_block in swiper_blocks %}
+        <div class="swiper-slide" data-swiper-index="{{ forloop.index0 }}">
           {{-
-            block.settings.image
-            | image_url: width: block.settings.image.width
-            | image_tag: alt: block.settings.title, class: 'polka_dot_swiper_img'
+            swiper_block.settings.image
+            | image_url: width: swiper_block.settings.image.width
+            | image_tag: alt: swiper_block.settings.title, class: 'polka_dot_swiper_img'
           -}}
           <div class="polka_dot_swiper_info">
             <div>
-              <h3 class="polka_dot_swiper_info_title">{{ block.settings.title }}</h3>
-              <div class="polka_dot_swiper_info_text text-body">{{ block.settings.text }}</div>
+              <h3 class="polka_dot_swiper_info_title">{{ swiper_block.settings.title }}</h3>
+              <div class="polka_dot_swiper_info_text text-body">{{ swiper_block.settings.text }}</div>
             </div>
-            {% if block.settings.btn_text != blank %}
-              <a class="nd-btn polka_dot_swiper_info_btn" href="{{ block.settings.link }}">
-                {{ block.settings.btn_text }}
+            {% if swiper_block.settings.btn_text != blank %}
+              <a class="nd-btn polka_dot_swiper_info_btn" href="{{ swiper_block.settings.link }}">
+                {{ swiper_block.settings.btn_text }}
                 {{ 'icon-right-arrow.svg' | inline_asset_content }}
               </a>
             {% endif %}
           </div>
-          {% if block.settings.select_product != blank %}
-            <div
-              class="polka_dot_swiper_contain"
-              style="top: {{ block.settings.product_Y }}%;left: {{ block.settings.product_X }}%"
-            >
-              {{- 'icon-plus.svg' | inline_asset_content -}}
-              <a class="polka_dot_swiper_product" href="{{ block.settings.select_product.url }}">
-                <div class="polka_dot_swiper_product_img">
-                  {{-
-                    block.settings.select_product.featured_media
-                    | image_url: width: block.settings.select_product.featured_media.width
-                    | image_tag: alt: block.settings.select_product.title
-                  -}}
-                </div>
-                <div class="polka_dot_swiper_product_info">
-                  <h4 class="polka_dot_swiper_product_info_title">
-                    {{ block.settings.select_product.metafields.custom.product_model | default: block.settings.select_product.title }}
-                  </h4>
-                  <div class="polka_dot_swiper_product_info_price">
-                    {{ block.settings.select_product.price | money_without_trailing_zeros }}
-                    {{- 'icon-shopping-cart.svg' | inline_asset_content -}}
+          
+          {% comment %} 获取属于当前swiper的product_dot blocks {% endcomment %}
+          {% assign current_swiper_number = forloop.index %}
+          {% assign product_dot_blocks = section.blocks | where: "type", "product_dot" %}
+          {% for product_block in product_dot_blocks %}
+            {% if product_block.settings.swiper_id == current_swiper_number and product_block.settings.select_product != blank %}
+              <div
+                class="polka_dot_swiper_contain"
+                style="top: {{ product_block.settings.product_Y }}%;left: {{ product_block.settings.product_X }}%"
+              >
+                {{- 'icon-plus.svg' | inline_asset_content -}}
+                <a class="polka_dot_swiper_product" href="{{ product_block.settings.select_product.url }}">
+                  <div class="polka_dot_swiper_product_img">
+                    {{-
+                      product_block.settings.select_product.featured_media
+                      | image_url: width: product_block.settings.select_product.featured_media.width
+                      | image_tag: alt: product_block.settings.select_product.title
+                    -}}
                   </div>
-                </div>
-              </a>
-            </div>
-          {% endif %}
+                  <div class="polka_dot_swiper_product_info">
+                    <h4 class="polka_dot_swiper_product_info_title">
+                      {{ product_block.settings.select_product.metafields.custom.product_model | default: product_block.settings.select_product.title }}
+                    </h4>
+                    <div class="polka_dot_swiper_product_info_price">
+                      {{ product_block.settings.select_product.price | money_without_trailing_zeros }}
+                      {{- 'icon-shopping-cart.svg' | inline_asset_content -}}
+                    </div>
+                  </div>
+                </a>
+              </div>
+            {% endif %}
+          {% endfor %}
         </div>
       {% endfor %}
     </div>
@@ -100,22 +107,6 @@
         prevEl: prevEl,
       },
     });
-    /**
-    function updateArrowVisibility() {
-      if (swiper.isBeginning) {
-        prevEl.classList.add('is-hidden');
-      } else {
-        prevEl.classList.remove('is-hidden');
-      }
-      if (swiper.isEnd) {
-        nextEl.classList.add('is-hidden');
-      } else {
-        nextEl.classList.remove('is-hidden');
-      }
-    }
-    swiper.on('slideChange', updateArrowVisibility);
-    updateArrowVisibility();
-    **/
 
     // polka_dot
     var contains = root.querySelectorAll('.polka_dot_swiper_contain');
@@ -124,15 +115,18 @@
     contains.forEach(function(contain, idx) {
       contain.addEventListener('click', function(e) {
         e.stopPropagation();
-        products.forEach(function(product, pidx) {
-          if (pidx === idx) {
-            product.classList.add('active');
-          } else {
-            product.classList.remove('active');
-          }
+        // 隐藏所有其他产品
+        products.forEach(function(product) {
+          product.classList.remove('active');
         });
+        // 显示当前点击的产品
+        var currentProduct = contain.querySelector('.polka_dot_swiper_product');
+        if (currentProduct) {
+          currentProduct.classList.add('active');
+        }
       });
     });
+    
     document.addEventListener('click', function(e) {
       if (
         root.contains(e.target) &&
@@ -228,6 +222,40 @@
           "type": "url",
           "id": "link",
           "label": "link"
+        }
+      ]
+    },
+    {
+      "type": "product_dot",
+      "name": "product dot",
+      "settings": [
+        {
+          "type": "select",
+          "id": "swiper_id",
+          "label": "关联到Swiper",
+          "options": [
+            {
+              "value": "1",
+              "label": "Swiper 1"
+            },
+            {
+              "value": "2", 
+              "label": "Swiper 2"
+            },
+            {
+              "value": "3",
+              "label": "Swiper 3"
+            },
+            {
+              "value": "4",
+              "label": "Swiper 4"
+            },
+            {
+              "value": "5",
+              "label": "Swiper 5"
+            }
+          ],
+          "default": "1"
         },
         {
           "type": "product",
@@ -263,6 +291,9 @@
       "blocks": [
         {
           "type": "swiper"
+        },
+        {
+          "type": "product_dot"
         }
       ]
     }

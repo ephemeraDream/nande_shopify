@@ -154,10 +154,7 @@
             "text": "<p>Zeitlose Ästhetik für stilvolle Work-Life-Balance.</p>",
             "btn_text": "En savoir plus",
             "image": "shopify://shop_images/YOGA_-_1_80dbac95-bdf1-4531-a898-05e1c0987d43.jpg",
-            "link": "",
-            "select_product": "ergoset-yoga-schreibtisch-ec6-burostuhl",
-            "product_X": 55,
-            "product_Y": 36
+            "link": ""
           }
         },
         "swiper_74yt3y": {
@@ -180,12 +177,45 @@
             "text": "<p>Flexibel erweiterbar – passe das Tischsystem an dein Setup und deinen Workflow an.</p>",
             "btn_text": "En savoir plus",
             "image": "shopify://shop_images/1_4a1df8e0-f83c-40bb-97a2-39609c903ac1.jpg",
-            "link": "",
+            "link": ""
+          }
+        },
+        "product_dot_1_1 ": {
+          "type": "product_dot",
+          "settings": {
+            "swiper_id": "1",
+            "select_product": "ergoset-yoga-schreibtisch-ec6-burostuhl",
+            "product_X": 55,
+            "product_Y": 36
+          }
+        },
+        "product_dot_1_2 ": {
+          "type": "product_dot",
+          "settings": {
+            "swiper_id": "1",
+            "select_product": "ergoset-yoga-schreibtisch-ec6-burostuhl",
+            "product_X": 42,
+            "product_Y": 45
+          }
+        },
+        "product_dot_2_1 ": {
+          "type": "product_dot",
+          "settings": {
+            "swiper_id": "2",
+            "select_product": "ergoset-yoga-schreibtisch-ec6-burostuhl",
+            "product_X": 55,
+            "product_Y": 36
+          }
+        },
+        "product_dot_3_1 ": {
+          "type": "product_dot",
+          "settings": {
+            "swiper_id": "3",
             "select_product": "maidesite-th2-pro-plus-tischgestell-elektrisch-hohenverstellbar",
             "product_X": 42,
             "product_Y": 45
           }
-        }
+        },
       },
       "block_order": [
         "swiper_xwgRwF",
