@@ -96,21 +96,14 @@
                         {%- endcase -%}
                       {%- endfor %}
                     </div>
+                    <div class="compare_simple_item_price">
+                      {% assign price = block.settings.select_product.price | money_without_trailing_zeros %}
+                      {{ 'products.product.price.from_price_html' | t: price: price }}
+                    </div>
                     <a href="{{ block.settings.select_product.url }}" class="nd-btn">
                       {{- 'common.en_savoir_plus' | t }}
                       {{ 'icon-right-arrow.svg' | inline_asset_content -}}
                     </a>
-                    <div class="compare_simple_item_price">
-                      {% comment %}
-                        {% if block.settings.select_product.compare_at_price != blank %}
-                          {% assign price = block.settings.select_product.compare_at_price | money_without_trailing_zeros %}
-                        {% else %}
-                          {% assign price = block.settings.select_product.price | money_without_trailing_zeros %}
-                        {% endif %}
-                      {% endcomment %}
-                      {% assign price = block.settings.select_product.price | money_without_trailing_zeros %}
-                      {{ 'products.product.price.from_price_html' | t: price: price }}
-                    </div>
                     {% for item in block.settings.select_product.metafields.custom.compare_simple.value.data.value
                       limit: 4
                     %}
