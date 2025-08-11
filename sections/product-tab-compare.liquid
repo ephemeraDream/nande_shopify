@@ -33,13 +33,13 @@ Product Tab Compare Section - 产品对比 tab切换
             <div class="tab-products swiper-wrapper">
               {% for product in block.settings.product_list %}
                   <div class="tab-product-card swiper-slide">
-                    <a href="{{ block.settings.select_product.url }}">
+                    <a href="{{ product.url }}">
                       <img src="{{ product.featured_image | image_url: width: 400 }}" alt="{{ product.title }}" class="product_img">
                     </a>
                       {% assign product_model = product.metafields.custom.product_model %}
                       {% assign product_title_top = product.metafields.custom.product_title_top %}
                       <div class="tab-product-title text-body">
-                        <a href="{{ block.settings.select_product.url }}">
+                        <a href="{{ product.url }}">
                         <span class="product_title_top">
                           {% if product_title_top != blank %}
                             {{ product_title_top }}
@@ -164,7 +164,9 @@ Product Tab Compare Section - 产品对比 tab切换
   }
 .product-tab-compare .nd-btn{width:100%;display: flex;justify-content: space-between;margin:0;}
 .product-tab-compare .compare_simple_item_price{
-  padding: 1.1rem;
+  padding: 0.1rem 1rem;
+  font-weight: 700;
+  font-size: 2rem;
 }
 .product-tab-compare .compare_simple_item_line {
     padding: 1.1rem;
