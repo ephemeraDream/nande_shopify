@@ -157,7 +157,7 @@
         contain.addEventListener('click', (e) => {
           e.stopPropagation();
           // 检查当前产品是否已显示
-          if (product.style.display === 'none' || product.style.display === '') {
+          if (product.style.display === 'none') {
             // 如果隐藏，则显示当前产品，隐藏其他产品
             const currentPanel = contain.closest('.tab-panel');
             currentPanel.querySelectorAll('.polka_dot_product')
