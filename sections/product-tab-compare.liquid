@@ -66,7 +66,11 @@ Product Tab Compare Section - 产品对比 tab切换
                         </div>
                       </div> {% endcomment %}
                       <div class="compare_simple_item_price">
-                        {% assign price = block.settings.select_product.price | money_without_trailing_zeros %}
+                        {% if product.compare_at_price != blank %}
+                          {% assign price = product.compare_at_price | money_without_trailing_zeros %}
+                        {% else %}
+                          {% assign price = product.price | money_without_trailing_zeros %}
+                        {% endif %}
                         {{ 'products.product.price.from_price_html' | t: price: price }}
                       </div>
                       <a href="{{ product.url }}" class="nd-btn">{{ 'common.en_savoir_plus' | t }} {{ 'icon-right-arrow.svg' | inline_asset_content }}</a>
