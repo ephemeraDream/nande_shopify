@@ -100,11 +100,13 @@
         nextEl: swiperNext,
         prevEl: swiperPrev,
       },
-      autoplay: {
-        delay: 5000,
-        disableOnInteraction: false 
-      },
-      loop: true, 
+      {% if section.settings.autoplay_enable %}
+        autoplay: {
+          delay: {{ section.settings.autoplay_delay }},
+          disableOnInteraction: false
+        },
+      {% endif %}
+      loop: {{ section.settings.loop }},
       on: {
         slideChange: function () {
           tabItems.forEach((el, index) => {
@@ -156,6 +158,24 @@
       "id": "show_tab_head",
       "label": "Is Show Tab Head",
       "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "loop",
+      "label": "Enable loop",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "autoplay_enable",
+      "label": "Enable autoplay",
+      "default": true
+    },
+    {
+      "type": "number",
+      "id": "autoplay_delay",
+      "label": "Autoplay delay (ms)",
+      "default": 5000
     },
     {
       "type": "select",
