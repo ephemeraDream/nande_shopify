@@ -33,10 +33,13 @@ Product Tab Compare Section - 产品对比 tab切换
             <div class="tab-products swiper-wrapper">
               {% for product in block.settings.product_list %}
                   <div class="tab-product-card swiper-slide">
+                    <a href="{{ block.settings.select_product.url }}">
                       <img src="{{ product.featured_image | image_url: width: 400 }}" alt="{{ product.title }}" class="product_img">
+                    </a>
                       {% assign product_model = product.metafields.custom.product_model %}
                       {% assign product_title_top = product.metafields.custom.product_title_top %}
                       <div class="tab-product-title text-body">
+                        <a href="{{ block.settings.select_product.url }}">
                         <span class="product_title_top">
                           {% if product_title_top != blank %}
                             {{ product_title_top }}
@@ -49,40 +52,24 @@ Product Tab Compare Section - 产品对比 tab切换
                         {% else %}
                           <span class="text-title">{{ product.title  }}</span>
                         {% endif %}
+                        </a>
                       </div>
-                      <div class="tab-product-colors">
-                      {% for option in product.options_with_values %}
-                          {% if option.name == 'Farbe Tischplatte' %}
-                          {% for value in option.values %}
-                              {% assign color = '' %}
-                              {% for color_item in product.metafields.custom.color_option.value %}
-                              {% if color_item.name == value.name %}
-                                  {% assign color = color_item.value %}
-                              {% endif %}
-                              {% endfor %}
-                              <div
-                              class="tab-product-color-circle{% if color == '' %} tab-product-color-circle-none{% endif %}"
-                              {% if color != '' %}
-                                  style="background-color: {{ color }}"
-                              {% endif %}
-                              title="{{ value }}"
-                              ></div>
-                          {% endfor %}
-                          {% endif %}
-                      {% endfor %}
-                      </div>
-                      <a href="{{ product.url }}" class="nd-btn">{{ 'common.en_savoir_plus' | t }} {{ 'icon-right-arrow.svg' | inline_asset_content }}</a>
-                      <div class="compare_simple_item_line">
+                      {% comment %} <div class="compare_simple_item_line">
                         <div class="compare_simple_item_line_label">Preis: </div>
-                      <div class="compare_simple_item_line_value">
-                        {% if product.compare_at_price != blank %}
-                          {% assign price = product.compare_at_price | money_without_trailing_zeros %}
-                        {% else %}
-                          {% assign price = product.price | money_without_trailing_zeros %}
-                        {% endif %}
+                        <div class="compare_simple_item_line_value">
+                          {% if product.compare_at_price != blank %}
+                            {% assign price = product.compare_at_price | money_without_trailing_zeros %}
+                          {% else %}
+                            {% assign price = product.price | money_without_trailing_zeros %}
+                          {% endif %}
+                          {{ 'products.product.price.from_price_html' | t: price: price }}
+                        </div>
+                      </div> {% endcomment %}
+                      <div class="compare_simple_item_price">
+                        {% assign price = block.settings.select_product.price | money_without_trailing_zeros %}
                         {{ 'products.product.price.from_price_html' | t: price: price }}
                       </div>
-                    </div>
+                      <a href="{{ product.url }}" class="nd-btn">{{ 'common.en_savoir_plus' | t }} {{ 'icon-right-arrow.svg' | inline_asset_content }}</a>
                       {% for item in product.metafields.custom.compare_simple.value.data.value %}
                         <div class="compare_simple_item_line">
                           <div class="compare_simple_item_line_label">{{ item.label }}</div>

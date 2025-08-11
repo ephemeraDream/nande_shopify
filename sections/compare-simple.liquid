@@ -60,6 +60,7 @@
                       {% assign product_model = block.settings.select_product.metafields.custom.product_model %}
                       {% assign product_title_top = block.settings.select_product.metafields.custom.product_title_top %}
                       <h4 class="compare_simple_item_title">
+                        <a href="{{ block.settings.select_product.url }}">
                         <span class="product_title_top">
                           {% if product_title_top != blank %}
                             {{ product_title_top }}
@@ -72,6 +73,7 @@
                         {% else %}
                           <span class="product_title">{{ block.settings.select_product.title }}</span>
                         {% endif %}
+                        </a>
                       </h4>
                     </div>
                     <div class="compare_simple_item_color">
