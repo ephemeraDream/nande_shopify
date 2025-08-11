@@ -464,6 +464,18 @@
             "url_upload": "shopify://files/videos/My Desk Setup as a Photographer and Content Creator for Long Hours of Editing.mp4"
           }
         },
+        "swiper_GfiKcC": {
+          "type": "swiper",
+          "settings": {
+            "name": "@LauraBC",
+            "introduce": "",
+            "description": "<p>\"Hier ist mein neues minimalistisches Schreibtisch-Setup als Fotograf und Content Creator für lange Bearbeitungsstunden. Ich bearbeite sowohl Fotos als auch Videos, daher ist ein komfortabler Arbeitsplatz ein Muss. Hier zeige ich Ihnen die wesentlichen Dinge, die Sie als Fotograf und Content Creator unbedingt haben sollten! :)\"</p>",
+            "link": "",
+            "cover_image": "shopify://shop_images/Laura_BC.png",
+            "video_url": "",
+            "url_upload": "shopify://files/videos/My Desk Setup as a Photographer and Content Creator for Long Hours of Editing.mp4"
+          }
+        },
         "swiper_4AhqcM": {
           "type": "swiper",
           "settings": {
@@ -474,25 +486,13 @@
             "cover_image": "shopify://shop_images/8d62567f3976a249cabee9308f1d71fa.jpg",
             "video_url": "https://www.youtube.com/watch?v=XExE1XDGqpQ"
           }
-        },
-        "swiper_KgkXnm": {
-          "type": "swiper",
-          "disabled": true,
-          "settings": {
-            "name": "@ch3",
-            "introduce": "",
-            "description": "",
-            "link": "",
-            "video_url": "",
-            "url_upload": "shopify://files/videos/EC2.mp4"
-          }
         }
       },
       "block_order": [
         "swiper_R8cQdW",
         "swiper_qRmjCc",
-        "swiper_4AhqcM",
-        "swiper_KgkXnm"
+        "swiper_GfiKcC",
+        "swiper_4AhqcM"
       ],
       "name": "celebrity swiper",
       "settings": {
