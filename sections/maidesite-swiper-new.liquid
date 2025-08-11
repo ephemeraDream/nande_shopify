@@ -61,17 +61,17 @@
       slidesPerView: 4,
       spaceBetween: 24,
       watchSlidesProgress: true,
-      slideToClickedSlide: true,
-      navigation: {
-        nextEl: sectionEl.querySelector('.maidesite_swiper_next'),
-        prevEl: sectionEl.querySelector('.maidesite_swiper_prev'),
-      },
+      slideToClickedSlide: true
     });
   
     const descSwiper = new Swiper(contentEl, {
       slidesPerView: 1,
       thumbs: {
         swiper: imgSwiper,
+      },
+      navigation: {
+        nextEl: sectionEl.querySelector('.maidesite_swiper_next'),
+        prevEl: sectionEl.querySelector('.maidesite_swiper_prev'),
       },
       on: {
         slideChange: function () {
