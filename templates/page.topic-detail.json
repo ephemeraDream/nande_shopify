@@ -136,7 +136,6 @@
         },
         "slide1_1": {
           "type": "slide",
-          "disabled": true,
           "settings": {
             "belong_tab": "0",
             "image": "shopify://shop_images/polka_dot_swiper-1.webp",
@@ -217,7 +216,6 @@
         },
         "slide2_2": {
           "type": "slide",
-          "disabled": true,
           "settings": {
             "belong_tab": "1",
             "image": "shopify://shop_images/polka_dot_swiper-1.webp",
@@ -235,7 +233,6 @@
         },
         "slide3_1": {
           "type": "slide",
-          "disabled": true,
           "settings": {
             "belong_tab": "2",
             "image": "shopify://shop_images/buying_g_06.webp",
