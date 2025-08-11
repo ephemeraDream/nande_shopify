@@ -73,11 +73,13 @@
         nextEl: sectionEl.querySelector('.maidesite_swiper_next'),
         prevEl: sectionEl.querySelector('.maidesite_swiper_prev'),
       },
-      autoplay: {
-        delay: 3000,
-        disableOnInteraction: false 
-      },
-      loop: true, 
+      {% if section.settings.autoplay_enable %}
+        autoplay: {
+          delay: {{ section.settings.autoplay_delay }},
+          disableOnInteraction: false
+        },
+      {% endif %}
+      loop: {{ section.settings.loop }},
       on: {
         slideChange: function () {
           const targetIndex = Math.max(this.activeIndex - 2, 0);
@@ -211,6 +213,24 @@
       "id": "show_buttons",
       "label": "Show Navigation Buttons",
       "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "loop",
+      "label": "Enable loop",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "autoplay_enable",
+      "label": "Enable autoplay",
+      "default": true
+    },
+    {
+      "type": "number",
+      "id": "autoplay_delay",
+      "label": "Autoplay delay (ms)",
+      "default": 3000
     },
     {
       "type": "range",
