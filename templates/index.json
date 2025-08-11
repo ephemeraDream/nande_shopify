@@ -392,7 +392,7 @@
       }
     },
     "maidesite_swiper_PzMRtf": {
-      "type": "maidesite-swiper-new",
+      "type": "maidesite-swiper",
       "blocks": {
         "swiper_9PWqTc": {
           "type": "swiper",
