@@ -75,23 +75,23 @@
                     
                     {% if product_block.settings.belong_tab == i_str and product_block.settings.belong_slide == slide_index_str and product_block.settings.select_product != blank %}
                         <div
-                            class="polka_dot_swiper_contain"
+                            class="polka_dot_contain"
                             style="top: {{ product_block.settings.product_Y }}%;left: {{ product_block.settings.product_X }}%"
                         >
-                            {{- 'icon-plus.svg' | inline_asset_content -}}
-                            <a class="polka_dot_swiper_product" href="{{ product_block.settings.select_product.url }}">
-                            <div class="polka_dot_swiper_product_img">
+                            <div class="polka_dot_icon">{{- 'icon-plus.svg' | inline_asset_content -}}</div>
+                            <a class="polka_dot_product {% if block.settings.product_X > 60 %} left{% endif %}" href="{{ product_block.settings.select_product.url }}">
+                            <div class="polka_dot_product_img">
                                 {{-
                                 product_block.settings.select_product.featured_media
                                 | image_url: width: product_block.settings.select_product.featured_media.width
                                 | image_tag: alt: product_block.settings.select_product.title
                                 -}}
                             </div>
-                            <div class="polka_dot_swiper_product_info">
-                                <h4 class="polka_dot_swiper_product_info_title">
+                            <div class="polka_dot_product_info">
+                                <h4 class="polka_dot_product_info_title truncate-2-lines">
                                   {{ product_block.settings.select_product.metafields.custom.product_model | default: product_block.settings.select_product.title }}
                                 </h4>
-                                <div class="polka_dot_swiper_product_info_price">
+                                <div class="polka_dot_product_info_price text-body">
                                 {{ product_block.settings.select_product.price | money_without_trailing_zeros }}
                                 {{- 'icon-shopping-cart.svg' | inline_asset_content -}}
                                 </div>
@@ -149,8 +149,8 @@
       });
       
       // 处理波点点击事件
-      document.querySelectorAll('.tabs_topic .polka_dot_swiper_contain').forEach(contain => {
-        const product = contain.querySelector('.polka_dot_swiper_product');
+      document.querySelectorAll('.tabs_topic .polka_dot_contain').forEach(contain => {
+        const product = contain.querySelector('.polka_dot_product');
         
         contain.addEventListener('click', (e) => {
           e.stopPropagation();
@@ -159,7 +159,7 @@
           if (product.style.display === 'none' || product.style.display === '') {
             // 如果隐藏，则显示当前产品，隐藏其他产品
             const currentPanel = contain.closest('.tab-panel');
-            currentPanel.querySelectorAll('.polka_dot_swiper_product')
+            currentPanel.querySelectorAll('.polka_dot_product')
                    .forEach(el => el.style.display = 'none');
             product.style.display = '';
           } else {
