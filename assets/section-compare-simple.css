@@ -119,6 +119,9 @@
   background-color: #BDFF00;
   color: #1F1F1F;
 }
+.compare_simple .compare_simple_item:hover .compare_simple_item_title .product_title {
+  color: #1F1F1F;
+}
 
 .compare_simple .compare_simple_item_color {
   display: flex;
