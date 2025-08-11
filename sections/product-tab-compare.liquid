@@ -75,7 +75,7 @@ Product Tab Compare Section - 产品对比 tab切换
                       </div>
                       <a href="{{ product.url }}" class="nd-btn">{{ 'common.en_savoir_plus' | t }} {{ 'icon-right-arrow.svg' | inline_asset_content }}</a>
                       {% for item in product.metafields.custom.compare_simple.value.data.value %}
-                        <div class="compare_simple_item_line">
+                        <div class="compare_simple_item_line text-body">
                           <div class="compare_simple_item_line_label">{{ item.label }}</div>
                           <div class="compare_simple_item_line_value">{{ item.value }}</div>
                         </div>
@@ -163,9 +163,11 @@ Product Tab Compare Section - 产品对比 tab切换
     background: repeating-linear-gradient(45deg, #eee, #eee 4px, #fff 4px, #fff 8px);
   }
 .product-tab-compare .nd-btn{width:100%;display: flex;justify-content: space-between;margin:0;}
-
+.product-tab-compare .compare_simple_item_price{
+  padding: 1.1rem;
+}
 .product-tab-compare .compare_simple_item_line {
-    padding: 1rem 1.6rem;
+    padding: 1.1rem;
     border-bottom: 0.1rem solid #F3F3F3;
   }
   
@@ -174,7 +176,7 @@ Product Tab Compare Section - 产品对比 tab切换
     font-weight: normal;
     line-height: 1.1em;
     letter-spacing: 0px;
-    font-variation-settings: "opsz" auto;
+    {% comment %} font-variation-settings: "opsz" auto; {% endcomment %}
     color: #7F7E75;
   }
   
@@ -183,7 +185,7 @@ Product Tab Compare Section - 产品对比 tab切换
     font-weight: 400;
     line-height: 1em;
     letter-spacing: 0px;
-    font-variation-settings: "opsz" auto;
+    {% comment %} font-variation-settings: "opsz" auto; {% endcomment %}
     color: #1F1F1F;
   }
   .product-tab-compare .tab-swiper-button-prev,
