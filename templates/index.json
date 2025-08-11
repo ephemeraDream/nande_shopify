@@ -421,18 +421,27 @@
             "image": "shopify://shop_images/maidesite-logo-4.webp",
             "text": "<p>“Ich persönlich bin sehr angetan von der guten Produktqualität, dem zusätzlichen und gut erreichbaren USB-A-Anschluss am Bedienpanel sowie dem schnellen und leisen Motor, der einen fixen Wechsel zwischen Sitz- und Stehposition ermöglicht.”</p>"
           }
+        },
+        "swiper_TbreXH": {
+          "type": "swiper",
+          "settings": {
+            "image": "shopify://shop_images/1_6.jpg",
+            "text": "<p>aaaa</p>"
+          }
         }
       },
       "block_order": [
         "swiper_9PWqTc",
         "swiper_EgbVj6",
         "swiper_8GRnUF",
-        "swiper_GwFmWX"
+        "swiper_GwFmWX",
+        "swiper_TbreXH"
       ],
       "name": "maidesite swiper",
       "settings": {
         "title": "<p>Die Presse Liebt Maidesite</p>",
         "text": "",
+        "show_buttons": true,
         "padding_top": 120,
         "padding_bottom": 0
       }
