@@ -12,7 +12,7 @@
   </div>
 
   <!-- Tab nav -->
-  <div class="tabs">
+  <div class="tabs" id="polka_dot_tabs-{{ section.id }}">
     <div class="session-box-padding">
     <ul class="tab-titles session-box-inner">
       {% assign tab_index = 0 %}
@@ -114,6 +114,7 @@
 </div>
 
 <script>
+(() => {
   function switchTab(idx) {
     // nav
     document.querySelectorAll('.tabs_topic .tab-titles li').forEach(li=>{
@@ -124,9 +125,10 @@
       p.classList.toggle('hidden', p.dataset.tabPanel != idx);
     });
   }
-
+  const sectionId = '{{ section.id }}';
   document.addEventListener('DOMContentLoaded', () => {
-    document.querySelectorAll('.tabs_topic .tab-panel').forEach(panel => {
+    const sectionEl = document.getElementById('polka_dot_tabs-' + sectionId);
+    sectionEl.querySelectorAll('.tab-panel').forEach(panel => {
         const swiperEl   = panel.querySelector('.swiper');
         const pagination = panel.querySelector('.swiper-pagination');
         const nextBtn    = panel.querySelector('.polka_dot_swiper_next');
@@ -149,7 +151,7 @@
       });
       
       // 处理波点点击事件
-      document.querySelectorAll('.tabs_topic .polka_dot_contain').forEach(contain => {
+      sectionEl.querySelectorAll('.polka_dot_contain').forEach(contain => {
         const product = contain.querySelector('.polka_dot_product');
         
         contain.addEventListener('click', (e) => {
@@ -170,16 +172,17 @@
       });
       
       // 点击图片区域隐藏所有产品
-      document.querySelectorAll('.tabs_topic .polka_dot_swiper_img').forEach(function(imgBox) {
+      sectionEl.querySelectorAll('.polka_dot_swiper_img').forEach(function(imgBox) {
         imgBox.addEventListener('click', function() {
           const currentPanel = imgBox.closest('.tab-panel');
-          currentPanel.querySelectorAll('.polka_dot_swiper_product').forEach(function(el) {
+          currentPanel.querySelectorAll('.polka_dot_product').forEach(function(el) {
             el.style.display = 'none';
           });
         });
       });
       
   });
+})();
 </script>
 
 {% comment %}
