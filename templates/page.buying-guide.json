@@ -27,7 +27,7 @@
         ".img_with_text_simplicity {background-color: #fff;}",
         ".img_with_text_simplicity_info {padding: 4rem;}",
         ".img_with_text_simplicity_title {font-size: 4rem;}",
-        "@media screen and (max-width: 768px) {.img_with_text_simplicity_info{padding: 2rem; } .img_with_text_simplicity_title {font-size: 2.4rem; }}"
+        "@media screen and (max-width: 768px) {.img_with_text_simplicity_info {padding: 2rem; } .img_with_text_simplicity_title {font-size: 2.4rem; }}"
       ],
       "name": "img with text simplicity",
       "settings": {
@@ -245,6 +245,9 @@
         "description": "",
         "title": "<p>Vorteile Eines HöHenverstellbaren<br/>Schreibtischs</p>",
         "show_tab_head": true,
+        "loop": false,
+        "autoplay_enable": false,
+        "autoplay_delay": 5000,
         "layout": "image-left"
       }
     },
@@ -310,6 +313,9 @@
         "description": "<p>Der benutzerfreundliche höhenverstellbare Schreibtisch Konfigurator von Ergotopia ermöglicht es Dir, Deinen Schreibtisch selbst zu planen und an Deine Bedürfnisse anzupassen. Egal, ob Bambus, Buche oder Nussbaum – wähle aus einer Vielzahl von Optionen und gestalte Deinen persönlichen Arbeitsplatz, an dem Du Dich rund um die Uhr wohlfühlst.</p>",
         "title": "<p>Ergonomische BüRoeinrichtung Leicht<br/> Gemacht</p>",
         "show_tab_head": true,
+        "loop": false,
+        "autoplay_enable": false,
+        "autoplay_delay": 5000,
         "layout": "image-right"
       }
     },
