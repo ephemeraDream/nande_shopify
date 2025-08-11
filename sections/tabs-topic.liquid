@@ -57,32 +57,49 @@
                     </a>
                     {% endif %}
                 </div>
-                {% if block.settings.select_product != blank %}
-                    <div
-                        class="polka_dot_swiper_contain"
-                        style="top: {{ block.settings.product_Y }}%;left: {{ block.settings.product_X }}%"
-                    >
-                        {{- 'icon-plus.svg' | inline_asset_content -}}
-                        <a class="polka_dot_swiper_product" href="{{ block.settings.select_product.url }}">
-                        <div class="polka_dot_swiper_product_img">
-                            {{-
-                            block.settings.select_product.featured_media
-                            | image_url: width: block.settings.select_product.featured_media.width
-                            | image_tag: alt: block.settings.select_product.title
-                            -}}
-                        </div>
-                        <div class="polka_dot_swiper_product_info">
-                            <h4 class="polka_dot_swiper_product_info_title">
-                              {{ block.settings.select_product.metafields.custom.product_model | default: block.settings.select_product.title }}
-                            </h4>
-                            <div class="polka_dot_swiper_product_info_price">
-                            {{ block.settings.select_product.price | money_without_trailing_zeros }}
-                            {{- 'icon-shopping-cart.svg' | inline_asset_content -}}
+                
+                {% comment %} 获取属于当前tab和当前swiper的product_dot blocks {% endcomment %}
+                {% assign product_dot_blocks = section.blocks | where: "type", "product_dot" %}
+                {% for product_block in product_dot_blocks %}
+                    {% comment %} 计算当前slide在tab中的索引 {% endcomment %}
+                    {% assign slide_index = 0 %}
+                    {% for slide_block in section.blocks %}
+                        {% if slide_block.type == 'slide' and slide_block.settings.belong_tab == i_str %}
+                            {% if slide_block == block %}
+                                {% break %}
+                            {% endif %}
+                            {% assign slide_index = slide_index | plus: 1 %}
+                        {% endif %}
+                    {% endfor %}
+                    {% assign slide_index_str = slide_index | append: '' %}
+                    
+                    {% if product_block.settings.belong_tab == i_str and product_block.settings.belong_slide == slide_index_str and product_block.settings.select_product != blank %}
+                        <div
+                            class="polka_dot_swiper_contain"
+                            style="top: {{ product_block.settings.product_Y }}%;left: {{ product_block.settings.product_X }}%"
+                        >
+                            {{- 'icon-plus.svg' | inline_asset_content -}}
+                            <a class="polka_dot_swiper_product" href="{{ product_block.settings.select_product.url }}">
+                            <div class="polka_dot_swiper_product_img">
+                                {{-
+                                product_block.settings.select_product.featured_media
+                                | image_url: width: product_block.settings.select_product.featured_media.width
+                                | image_tag: alt: product_block.settings.select_product.title
+                                -}}
                             </div>
+                            <div class="polka_dot_swiper_product_info">
+                                <h4 class="polka_dot_swiper_product_info_title">
+                                  {{ product_block.settings.select_product.metafields.custom.product_model | default: product_block.settings.select_product.title }}
+                                </h4>
+                                <div class="polka_dot_swiper_product_info_price">
+                                {{ product_block.settings.select_product.price | money_without_trailing_zeros }}
+                                {{- 'icon-shopping-cart.svg' | inline_asset_content -}}
+                                </div>
+                            </div>
+                            </a>
                         </div>
-                        </a>
-                    </div>
                     {% endif %}
+                {% endfor %}
             </div>
             {%- endif -%}
         {%- endfor -%}
@@ -131,6 +148,37 @@
         });
       });
       
+      // 处理波点点击事件
+      document.querySelectorAll('.tabs_topic .polka_dot_swiper_contain').forEach(contain => {
+        const product = contain.querySelector('.polka_dot_swiper_product');
+        
+        contain.addEventListener('click', (e) => {
+          e.stopPropagation();
+          
+          // 检查当前产品是否已显示
+          if (product.style.display === 'none' || product.style.display === '') {
+            // 如果隐藏，则显示当前产品，隐藏其他产品
+            const currentPanel = contain.closest('.tab-panel');
+            currentPanel.querySelectorAll('.polka_dot_swiper_product')
+                   .forEach(el => el.style.display = 'none');
+            product.style.display = '';
+          } else {
+            // 如果已显示，则隐藏当前产品
+            product.style.display = 'none';
+          }
+        });
+      });
+      
+      // 点击图片区域隐藏所有产品
+      document.querySelectorAll('.tabs_topic .polka_dot_swiper_img').forEach(function(imgBox) {
+        imgBox.addEventListener('click', function() {
+          const currentPanel = imgBox.closest('.tab-panel');
+          currentPanel.querySelectorAll('.polka_dot_swiper_product').forEach(function(el) {
+            el.style.display = 'none';
+          });
+        });
+      });
+      
   });
 </script>
 
@@ -170,15 +218,6 @@
     max-height: 68rem;
     position: relative;
   }
-  
-  {% comment %} .tabs_topic .swiper-slide::before {
-    content: "";
-    width: 100%;
-    height: 18rem;
-    background: linear-gradient(360deg, #000000 -2%, rgba(255, 255, 255, 0) 108%);
-    position: absolute;
-    bottom: 0;
-  } {% endcomment %}
   
   .tabs_topic .polka_dot_swiper_img {
     width: 100%;
@@ -384,7 +423,10 @@
           "options": [
             { "value": "0", "label": "Tab 1" },
             { "value": "1", "label": "Tab 2" },
-            { "value": "2", "label": "Tab 3" }
+            { "value": "2", "label": "Tab 3" },
+            { "value": "3", "label": "Tab 4" },
+            { "value": "4", "label": "Tab 5" },
+            { "value": "5", "label": "Tab 6" }
           ],
           "default": "0"
         },
@@ -408,32 +450,66 @@
             "type": "url",
             "id": "link",
             "label": "link"
-          },
-          {
-            "type": "product",
-            "id": "select_product",
-            "label": "product"
-          },
-          {
-            "type": "range",
-            "id": "product_X",
-            "min": 0,
-            "max": 100,
-            "step": 1,
-            "unit": "%",
-            "label": "product_X",
-            "default": 0
-          },
-          {
-            "type": "range",
-            "id": "product_Y",
-            "min": 0,
-            "max": 100,
-            "step": 1,
-            "unit": "%",
-            "label": "product_Y",
-            "default": 0
           }
+      ]
+    },
+    {
+      "type": "product_dot",
+      "name": "Product Dot",
+      "settings": [
+        {
+          "type": "select",
+          "id": "belong_tab",
+          "label": "Belongs to Tab",
+          "options": [
+            { "value": "0", "label": "Tab 1" },
+            { "value": "1", "label": "Tab 2" },
+            { "value": "2", "label": "Tab 3" },
+            { "value": "3", "label": "Tab 4" },
+            { "value": "4", "label": "Tab 5" },
+            { "value": "5", "label": "Tab 6" }
+          ],
+          "default": "0"
+        },
+        {
+          "type": "select",
+          "id": "belong_slide",
+          "label": "Belongs to Slide",
+          "options": [
+            { "value": "0", "label": "Slide 1" },
+            { "value": "1", "label": "Slide 2" },
+            { "value": "2", "label": "Slide 3" },
+            { "value": "3", "label": "Slide 4" },
+            { "value": "4", "label": "Slide 5" },
+            { "value": "5", "label": "Slide 6" }
+          ],
+          "default": "0"
+        },
+        {
+          "type": "product",
+          "id": "select_product",
+          "label": "product"
+        },
+        {
+          "type": "range",
+          "id": "product_X",
+          "min": 0,
+          "max": 100,
+          "step": 1,
+          "unit": "%",
+          "label": "product_X",
+          "default": 0
+        },
+        {
+          "type": "range",
+          "id": "product_Y",
+          "min": 0,
+          "max": 100,
+          "step": 1,
+          "unit": "%",
+          "label": "product_Y",
+          "default": 0
+        }
       ]
     }
   ],
