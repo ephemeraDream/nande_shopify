@@ -437,10 +437,13 @@
     document.querySelector('.header_simple_hamburger').addEventListener('click', (e) => {
       const item = e.target.closest('.header_simple_hamburger');
       const header_menu_mobile = document.querySelector('.header_menu_mobile');
+      const parent = item.closest('.shopify-section-group-header-group');
       item.classList.toggle('active');
       if (item.classList.contains('active')) {
         header_menu_mobile.style.display = 'block';
         document.body.style.overflowY = 'hidden';
+        parent.style.top = '0';
+        parent.style.zIndex = '999';
       } else {
         header_menu_mobile.style.display = 'none';
         document.body.style.overflowY = 'auto';
