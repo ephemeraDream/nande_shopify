@@ -187,6 +187,17 @@
             "product_Y": 60
           }
         },
+        "slide_Ecj8fN": {
+          "type": "slide",
+          "settings": {
+            "belong_tab": "0",
+            "image": "shopify://shop_images/1_cd0b56ec-7a84-4288-a78a-b9008d49df22.jpg",
+            "title": "",
+            "text": "",
+            "btn_text": "",
+            "link": ""
+          }
+        },
         "tab2": {
           "type": "tab",
           "settings": {
@@ -287,6 +298,7 @@
         "slide1_2",
         "product_dot_9JabRj",
         "product_dot_jphzNm",
+        "slide_Ecj8fN",
         "tab2",
         "slide2_1",
         "slide2_2",
