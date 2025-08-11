@@ -100,6 +100,7 @@
   -webkit-box-orient: vertical;
   overflow: hidden;
   text-overflow: ellipsis;
+  color: #1a1a1a;
 }
 
 .compare_simple .compare_simple_item_title .product_title_top {
@@ -112,6 +113,7 @@
   padding: .6rem 1.6rem 0;
   line-height: 1em;
   min-width: fit-content;
+  color: #1a1a1a;
 }
 .compare_simple .compare_simple_item:hover .compare_simple_item_title,.compare_simple .compare_simple_item:hover .compare_simple_item_title .product_title_top {
   background-color: #BDFF00;
