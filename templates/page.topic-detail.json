@@ -78,6 +78,8 @@
             "btn_text": "En savoir plus",
             "link": "",
             "file_position": "middle_left",
+            "overlay_text_align": "text-start",
+            "transparent_content_color": "#ffffff",
             "file_type": "image",
             "file_image": "shopify://shop_images/banner-2.webp",
             "video_url": "",
@@ -94,6 +96,8 @@
             "btn_text": "En savoir plus",
             "link": "",
             "file_position": "middle_left",
+            "overlay_text_align": "text-start",
+            "transparent_content_color": "#ffffff",
             "file_type": "image",
             "file_image": "shopify://shop_images/banner-3.webp",
             "video_url": "",
@@ -107,7 +111,19 @@
         "banner_item_ckwd4B"
       ],
       "name": "banner",
-      "settings": {}
+      "settings": {
+        "height_mode": "auto",
+        "fixed_height_desktop": 600,
+        "fixed_height_mobile": 350,
+        "mobile_stacked": false,
+        "nav_style": "slideshow_nav_lines",
+        "pagination_color": "#ffffff",
+        "nav_position": "justify-center",
+        "transition": "slide-fade",
+        "autoplay": true,
+        "slider_pause": false,
+        "autoplay_speed": 5
+      }
     },
     "tabs_topic": {
       "type": "tabs-topic",
@@ -127,10 +143,17 @@
             "title": "",
             "text": "",
             "btn_text": "",
-            "link": "",
-            "select_product": "maidesite-th2-pro-plus-tischgestell-elektrisch-hohenverstellbar",
-            "product_X": 52,
-            "product_Y": 45
+            "link": ""
+          }
+        },
+        "product_dot_pinQ6i": {
+          "type": "product_dot",
+          "settings": {
+            "belong_tab": "0",
+            "belong_slide": "0",
+            "select_product": "ergoset-sn1-schreibtisch-ec5-burostuhl",
+            "product_X": 50,
+            "product_Y": 38
           }
         },
         "slide1_2": {
@@ -141,10 +164,27 @@
             "title": "",
             "text": "",
             "btn_text": "",
-            "link": "",
-            "select_product": "",
-            "product_X": 54,
-            "product_Y": 37
+            "link": ""
+          }
+        },
+        "product_dot_9JabRj": {
+          "type": "product_dot",
+          "settings": {
+            "belong_tab": "0",
+            "belong_slide": "1",
+            "select_product": "ergoset-yoga-schreibtisch-ec6-burostuhl",
+            "product_X": 34,
+            "product_Y": 38
+          }
+        },
+        "product_dot_jphzNm": {
+          "type": "product_dot",
+          "settings": {
+            "belong_tab": "0",
+            "belong_slide": "1",
+            "select_product": "ergoset-sn1-schreibtisch-ec5-burostuhl",
+            "product_X": 63,
+            "product_Y": 54
           }
         },
         "tab2": {
@@ -161,10 +201,7 @@
             "title": "",
             "text": "",
             "btn_text": "",
-            "link": "",
-            "select_product": "",
-            "product_X": 31,
-            "product_Y": 37
+            "link": ""
           }
         },
         "slide2_2": {
@@ -176,10 +213,7 @@
             "title": "",
             "text": "",
             "btn_text": "",
-            "link": "",
-            "select_product": "maidesite-tischgestell-elektrisch-hohenverstellbar-t2-pro-plus",
-            "product_X": 31,
-            "product_Y": 37
+            "link": ""
           }
         },
         "tab3": {
@@ -197,10 +231,7 @@
             "title": "",
             "text": "",
             "btn_text": "",
-            "link": "",
-            "select_product": "maidesite-th2-pro-plus-tischgestell-elektrisch-hohenverstellbar",
-            "product_X": 52,
-            "product_Y": 45
+            "link": ""
           }
         },
         "slide3_2": {
@@ -211,10 +242,7 @@
             "title": "",
             "text": "",
             "btn_text": "",
-            "link": "",
-            "select_product": "",
-            "product_X": 52,
-            "product_Y": 45
+            "link": ""
           }
         },
         "tab_LEkh98": {
@@ -231,10 +259,7 @@
             "title": "",
             "text": "",
             "btn_text": "",
-            "link": "",
-            "select_product": "",
-            "product_X": 0,
-            "product_Y": 0
+            "link": ""
           }
         },
         "tab_8ikfAr": {
@@ -251,17 +276,17 @@
             "title": "",
             "text": "",
             "btn_text": "",
-            "link": "",
-            "select_product": "",
-            "product_X": 0,
-            "product_Y": 0
+            "link": ""
           }
         }
       },
       "block_order": [
         "tab1",
         "slide1_1",
+        "product_dot_pinQ6i",
         "slide1_2",
+        "product_dot_9JabRj",
+        "product_dot_jphzNm",
         "tab2",
         "slide2_1",
         "slide2_2",
