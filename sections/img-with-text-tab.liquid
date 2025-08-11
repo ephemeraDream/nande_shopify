@@ -94,8 +94,8 @@
 
     const swiperNext = sectionEl.querySelector('.img_with_text_tab_swiper_next');
     const swiperPrev = sectionEl.querySelector('.img_with_text_tab_swiper_prev');
-  
-    const img_with_text_tab_swiper = new Swiper(swiperEl, {
+    let img_with_text_tab_swiper;
+    img_with_text_tab_swiper = new Swiper(swiperEl, {
       navigation: {
         nextEl: swiperNext,
         prevEl: swiperPrev,
@@ -109,7 +109,7 @@
         slideChange: function () {
           tabItems.forEach((el, index) => {
             el.classList.remove('active');
-            if (index === img_with_text_tab_swiper.realIndex) {
+            if (index === this.realIndex) {
               el.classList.add('active');
             }
           });
