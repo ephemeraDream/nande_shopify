@@ -439,6 +439,7 @@
   }
   .bundle_simple .bundle_simple_contain_right:before {
     top: 27px;
+    height: 1.2rem;
   }
   .bundle_simple .bundle_simple_box_body_text{
     font-size: 1.6rem;
