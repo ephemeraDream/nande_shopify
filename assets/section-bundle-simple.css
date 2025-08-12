@@ -47,12 +47,13 @@
 }
 
 .bundle_simple .bundle_simple_box_head {
-  width: 17.4rem;
+  width: fit-content;
   height: 6rem;
   background-color: #BDFF00;
   display: inline-flex;
   align-items: center;
   padding-left: 2rem;
+  padding-right: 2rem;
   font-family: "PP Right Grotesk";
   font-size: 3rem;
   font-weight: 500;
@@ -426,5 +427,12 @@
 
   .bundle_simple .bundle_simple_contain_right {
     width: 100%;
+  }
+  .bundle_simple .bundle_simple_box_head {
+    width: fit-content;
+    height: 4rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    font-size: 2rem;
   }
 }
