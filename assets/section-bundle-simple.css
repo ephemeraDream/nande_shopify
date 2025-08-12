@@ -446,4 +446,15 @@
   }
   .bundle_simple .bundle_simple_box_body_price{font-size: 2rem;}
   .bundle_simple .bundle_simple_box_body_btn {height: 5rem;}
+  .bundle_simple_box_body_list{
+    display: flex;
+    flex-direction: row;
+    overflow: auto;
+  }
+  .bundle_simple .bundle_simple_box_body_list_item_product_option,
+   .bundle_simple .bundle_simple_box_body_list_item_product_price,
+    .bundle_simple .bundle_simple_box_body_list_item_btn{
+    font-size: 1.4rem;
+    line-height: 1em;
+  }
 }
