@@ -28,7 +28,7 @@
             "image": "shopify://shop_images/help_center_01.webp",
             "title": "Meine Bestellung und Zahlung",
             "text": "<p>Bestellinformationen, Bearbeitung, Stornierung, allgemeine Zahlungsfragen.</p>",
-            "blog": "vor-dem-kauf-produktberatung"
+            "blog": "meine-bestellung-und-zahlung-1"
           }
         },
         "item_02": {
@@ -55,7 +55,7 @@
             "image": "shopify://shop_images/help_center_04.webp",
             "title": "Produkte und Fehlerbehebung",
             "text": "<p>Allgemeine Produktfragen, Zusatzprodukte, Tipps zur Fehlerbehebung.</p>",
-            "blog": "meine-bestellung-und-zahlung"
+            "blog": "richtlinien"
           }
         },
         "item_05": {
@@ -64,7 +64,7 @@
             "image": "shopify://shop_images/help_center_05.webp",
             "title": "Aktionen",
             "text": "<p>Empfehlungsprämien, Affiliate-Belohnungen, Store-Guthaben, Rabattcodes.</p>",
-            "blog": "meine-bestellung-und-zahlung"
+            "blog": "haufige-after-sales-probleme-und-losungen"
           }
         },
         "item_06": {
@@ -73,7 +73,7 @@
             "image": "shopify://shop_images/help_center_06.webp",
             "title": "Drittanbieter",
             "text": "<p>Richtlinien & allgemeine Fragen zu Drittanbietern.</p>",
-            "blog": "meine-bestellung-und-zahlung"
+            "blog": "werbung-und-zusammenarbeit"
           }
         }
       },
