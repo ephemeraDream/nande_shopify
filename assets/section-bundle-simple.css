@@ -427,12 +427,22 @@
 
   .bundle_simple .bundle_simple_contain_right {
     width: 100%;
+    bottom:0;
+    top:unset;
   }
   .bundle_simple .bundle_simple_box_head {
     width: fit-content;
-    height: 4rem;
+    height: 3.6rem;
     padding-left: 1rem;
     padding-right: 1rem;
     font-size: 2rem;
   }
+  .bundle_simple .bundle_simple_contain_right:before {
+    top: 27px;
+  }
+  .bundle_simple .bundle_simple_box_body_text{
+    font-size: 1.6rem;
+  }
+  .bundle_simple .bundle_simple_box_body_price{font-size: 2rem;}
+  .bundle_simple .bundle_simple_box_body_btn {height: 5rem;}
 }
