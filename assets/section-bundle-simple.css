@@ -432,10 +432,10 @@
   }
   .bundle_simple .bundle_simple_box_head {
     width: fit-content;
-    height: 3.6rem;
+    height: 4rem;
     padding-left: 1rem;
     padding-right: 1rem;
-    font-size: 2rem;
+    font-size: 2.4rem;
   }
   .bundle_simple .bundle_simple_contain_right:before {
     top: 27px;
@@ -445,16 +445,20 @@
     font-size: 1.6rem;
   }
   .bundle_simple .bundle_simple_box_body_price{font-size: 2rem;}
-  .bundle_simple .bundle_simple_box_body_btn {height: 5rem;}
+  .bundle_simple .bundle_simple_box_body_btn {height: 5rem;font-size: 2rem;}
   .bundle_simple_box_body_list{
     display: flex;
     flex-direction: row;
     overflow: auto;
   }
-  .bundle_simple .bundle_simple_box_body_list_item_product_option,
-   .bundle_simple .bundle_simple_box_body_list_item_product_price,
-    .bundle_simple .bundle_simple_box_body_list_item_btn{
+
+  .bundle_simple .bundle_simple_box_body_list_item_product_price,
+  .bundle_simple .bundle_simple_box_body_list_item_btn{
     font-size: 1.4rem;
+    line-height: 1em;
+  }
+  .bundle_simple .bundle_simple_box_body_list_item_product_option{
+    font-size: 1.2rem;
     line-height: 1em;
   }
 }
