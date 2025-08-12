@@ -461,4 +461,7 @@
     font-size: 1.2rem;
     line-height: 1em;
   }
+  .bundle_simple .bundle_simple_box_body_list_item_right {
+    width: 38vw;
+}
 }
