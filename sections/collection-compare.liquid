@@ -76,9 +76,11 @@
       </div>
     </div>
     <div class="collection_compare_contain_body">
+      {%- if section.settings.enable_filtering -%}
       <div class="collection_compare_contain_body_left facets-vertical">
         {% render 'collection-facets', results: collection, filter_type: 'vertical' %}
       </div>
+     {% endif %}
       <div class="collection_compare_contain_body_right" data-id="{{ section.id }}">
         {% paginate collection.products by section.settings.products_per_page %}
           <div class="collection_compare_product_contain">
