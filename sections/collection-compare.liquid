@@ -21,11 +21,14 @@
   {% endif %}
   <div class="collection_compare_contain padding-sider">
     <div class="collection_compare_contain_head">
+      {%- if section.settings.enable_filtering -%}
       <div class="collection_compare_contain_switchfilter" data-type="open">
         <span>{{ 'common.filter' | t }}</span>
         {{- 'icon-filter.svg' | inline_asset_content -}}
       </div>
+      {% endif %}
       <div class="collection_compare_contain_head_right">
+        {%- if section.settings.enable_sorting -%}
         <div class="flex_center">
           <span class="collection_compare_contain_head_label">{{ 'common.sortieren_nach' | t }}</span>
           <div class="collection_compare_contain_sort">
@@ -52,11 +55,15 @@
             </div>
           </div>
         </div>
+      {% endif %}
         <div class="flex_center">
+          {%- if section.settings.enable_compare -%}
           <div class="flex_center collection_compare_contain_select_switch_box">
             <span class="collection_compare_contain_head_label">{{ 'common.vergleichen' | t }}</span>
             <div class="collection_compare_contain_select_switch"></div>
           </div>
+         {% endif %}
+         {%- if section.settings.show_layout_toggle -%}
           <span class="collection_compare_contain_head_label">{{ 'common.ansicht_als' | t }}</span>
           <div class="collection_compare_contain_showtype" data-type="list">
             {{- 'icon-list.svg' | inline_asset_content -}}
@@ -64,6 +71,7 @@
           <div class="collection_compare_contain_showtype active" data-type="grid">
             {{- 'icon-grid.svg' | inline_asset_content -}}
           </div>
+         {% endif %}
         </div>
       </div>
     </div>
@@ -72,7 +80,7 @@
         {% render 'collection-facets', results: collection, filter_type: 'vertical' %}
       </div>
       <div class="collection_compare_contain_body_right" data-id="{{ section.id }}">
-        {% paginate collection.products by 6 %}
+        {% paginate collection.products by section.settings.products_per_page %}
           <div class="collection_compare_product_contain">
             {% for product in collection.products %}
               {% assign sale_info = product.metafields.custom.sale_info.value %}
@@ -216,7 +224,57 @@
       "type": "video",
       "id": "video",
       "label": "banner video"
-    }
+    },
+    {
+      "type": "header",
+      "content": "Layout"
+    },
+    {
+      "type": "range",
+      "id": "products_per_page",
+      "min": 6,
+      "max": 36,
+      "step": 1,
+      "label": "Products per page",
+      "default": 6
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_compare",
+      "label": "Enable compare",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "show_layout_toggle",
+      "label": "Show grid/list layout buttons",
+      "default": true
+    },
+
+    {
+      "type": "header",
+      "content": "Filtering"
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_filtering",
+      "label": "Enable filtering",
+      "info": "[Customize filters](/admin/menus)",
+      "default": true
+    },
+
+    {
+      "type": "header",
+      "content": "Sorting"
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_sorting",
+      "label": "Enable sorting",
+      "default": true
+    },
+
+
   ],
   "presets": [
     {
