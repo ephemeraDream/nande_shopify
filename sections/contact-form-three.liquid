@@ -35,7 +35,7 @@ aria-label="contact"
                     class="field__input"
                     name="contact[name]"
                     value="{% if form.name %}{{ form.name }}{% elsif customer %}{{ customer.name }}{% endif %}"
-                    placeholder="Vor-und Nachname"
+                    placeholder="{{ section.settings.name_placeholder }}"
                   >
                 </div>
                 <div class="form-grid-field field--with-error">
@@ -53,7 +53,7 @@ aria-label="contact"
                       aria-invalid="true"
                       aria-describedby="ContactFormThree-email-error"
                     {% endif %}
-                    placeholder="E-Mail-Adresse"
+                    placeholder="{{ section.settings.mail_placeholder }}"
                   >
                   {%- if form.errors contains 'email' -%}
                     <small class="contact__field-error" id="ContactFormThree-email-error">
@@ -68,7 +68,7 @@ aria-label="contact"
                     id="ContactFormThree-type"
                     class="field__input"
                     name="contact[type]"
-                    placeholder="Art der Anfrage"
+                    placeholder="{{ section.settings.type_placeholder }}"
                   >
                 </div>
 
@@ -81,7 +81,7 @@ aria-label="contact"
                     name="contact[phone]"
                     pattern="[0-9\-]*"
                     value="{% if form.phone %}{{ form.phone }}{% elsif customer %}{{ customer.phone }}{% endif %}"
-                    placeholder="Telefonnummer (optional)"
+                    placeholder="{{ section.settings.phone_placeholder }}"
                   >
                 </div>
 
@@ -91,7 +91,7 @@ aria-label="contact"
                     id="ContactFormThree-company"
                     class="field__input"
                     name="contact[company]"
-                    placeholder="Unternehmen (optional)"
+                    placeholder="{{ section.settings.company_placeholder }}"
                   >
                 </div>
 
@@ -103,7 +103,7 @@ aria-label="contact"
                     name="contact[message]"
                     autocomplete="name"
                     value="{% if form.message %}{{ form.message }}{% elsif customer %}{{ customer.message }}{% endif %}"
-                    placeholder="Nachricht (optional)"
+                    placeholder="{{ section.settings.message_placeholder }}"
                   >
                 </div>
               </div>
@@ -134,7 +134,7 @@ aria-label="contact"
                   id="ContactFormThree-body"
                   class="text-area field__input"
                   name="contact[body]"
-                  placeholder="Kommentar"
+                  placeholder="{{ section.settings.comment_placeholder }}"
                 >{{- form.body -}}</textarea>
               </div>
           
@@ -371,6 +371,48 @@ aria-label="contact"
       "id": "btn_text",
       "label": "Button Text",
       "default": "Absenden"
+    },
+    {
+      "type": "text",
+      "id": "mail_placeholder",
+      "label": "E-Mail Placeholder",
+      "default": "E-Mail-Adresse"
+    },
+    {
+      "type": "text",
+      "id": "type_placeholder",
+      "label": "Type Placeholder",
+      "default": "Art der Anfrage"
+    },
+    {
+      "type": "text",
+      "id": "company_placeholder",
+      "label": "Company Placeholder",
+      "default": "Unternehmen (optional)"
+    },
+    {
+      "type": "text",
+      "id": "name_placeholder",
+      "label": "Name Placeholder",
+      "default": "Vor-und Nachname"
+    },
+    {
+      "type": "text",
+      "id": "phone_placeholder",
+      "label": "Phone Placeholder",
+      "default": "Telefonnummer (optional)"
+    },
+    {
+      "type": "text",
+      "id": "message_placeholder",
+      "label": "Message Placeholder",
+      "default": "Nachricht (optional)"
+    },
+    {
+      "type": "text",
+      "id": "comment_placeholder",
+      "label": "Comment Placeholder",
+      "default": "Kommentar"
     }
   ],
   "blocks": [
