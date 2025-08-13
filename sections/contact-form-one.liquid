@@ -94,7 +94,7 @@ aria-label="conatct"
               </div>
           
               <button type="submit" class="submit-button nd-btn">
-                Absenden
+                {{ section.settings.btn_text }}
                 {{ 'icon-right-arrow.svg' | inline_asset_content }}
               </button>
           
@@ -271,6 +271,12 @@ aria-label="conatct"
         "type": "text",
         "id": "desc",
         "label": "desc"
+    },
+    {
+      "type": "text",
+      "id": "btn_text",
+      "label": "Button Text",
+      "default": "Absenden"
     }
   ],
   "blocks": [
