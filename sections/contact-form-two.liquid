@@ -43,7 +43,7 @@ aria-label="conatct"
                       aria-invalid="true"
                       aria-describedby="ContactFormTwo-email-error"
                     {% endif %}
-                    placeholder="E-Mail*"
+                    placeholder="{{ section.settings.mail_placeholder }}"
                   >
                   {%- if form.errors contains 'email' -%}
                     <small class="contact__field-error" id="ContactFormTwo-email-error">
@@ -58,7 +58,7 @@ aria-label="conatct"
                     id="ContactFormTwo-company"
                     class="field__input"
                     name="contact[company]"
-                    placeholder="Unternehmen"
+                    placeholder="{{ section.settings.company_placeholder }}"
                   >
                 </div>
 
@@ -70,7 +70,7 @@ aria-label="conatct"
                     name="contact[phone]"
                     autocomplete="tel"
                     value="{% if form.phone %}{{ form.phone }}{% elsif customer %}{{ customer.phone }}{% endif %}"
-                    placeholder="Telefon"
+                    placeholder="{{ section.settings.phone_placeholder }}"
                   >
                 </div>
           
@@ -82,7 +82,7 @@ aria-label="conatct"
                     name="contact[name]"
                     autocomplete="name"
                     value="{% if form.name %}{{ form.name }}{% elsif customer %}{{ customer.name }}{% endif %}"
-                    placeholder="Name"
+                    placeholder="{{ section.settings.name_placeholder }}"
                   >
                 </div>
               </div>
@@ -111,7 +111,7 @@ aria-label="conatct"
                   id="ContactFormTwo-body"
                   class="text-area field__input"
                   name="contact[body]"
-                  placeholder="Nachricht"
+                  placeholder="{{ section.settings.message_placeholder }}"
                 >{{- form.body -}}</textarea>
               </div>
           
@@ -344,6 +344,36 @@ aria-label="conatct"
       "id": "btn_text",
       "label": "Button Text",
       "default": "Absenden"
+    },
+    {
+      "type": "text",
+      "id": "mail_placeholder",
+      "label": "E-Mail Placeholder",
+      "default": "E-Mail*"
+    },
+    {
+      "type": "text",
+      "id": "company_placeholder",
+      "label": "Company Placeholder",
+      "default": "Unternehmen"
+    },
+    {
+      "type": "text",
+      "id": "name_placeholder",
+      "label": "Name Placeholder",
+      "default": "Name"
+    },
+    {
+      "type": "text",
+      "id": "phone_placeholder",
+      "label": "Phone Placeholder",
+      "default": "Telefon"
+    },
+    {
+      "type": "text",
+      "id": "message_placeholder",
+      "label": "Message Placeholder",
+      "default": "Nachricht"
     }
   ],
   "blocks": [
