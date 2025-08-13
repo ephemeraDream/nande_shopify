@@ -39,7 +39,7 @@ aria-label="conatct"
                       aria-invalid="true"
                       aria-describedby="ContactForm-email-error"
                     {% endif %}
-                    placeholder="E-Mail*"
+                    placeholder="{{ section.settings.mail_placeholder }}"
                   >
                   {%- if form.errors contains 'email' -%}
                     <small class="contact__field-error" id="ContactForm-email-error">
@@ -54,7 +54,7 @@ aria-label="conatct"
                     id="ContactForm-company"
                     class="field__input"
                     name="contact[company]"
-                    placeholder="Unternehmen (optional)"
+                    placeholder="{{ section.settings.company_placeholder }}"
                   >
                 </div>
           
@@ -66,7 +66,7 @@ aria-label="conatct"
                     name="contact[name]"
                     autocomplete="name"
                     value="{% if form.name %}{{ form.name }}{% elsif customer %}{{ customer.name }}{% endif %}"
-                    placeholder="Name (optional)"
+                    placeholder="{{ section.settings.name_placeholder }}"
                   >
                 </div>
           
@@ -78,7 +78,7 @@ aria-label="conatct"
                     name="contact[phone]"
                     autocomplete="tel"
                     value="{% if form.phone %}{{ form.phone }}{% elsif customer %}{{ customer.phone }}{% endif %}"
-                    placeholder="Telefon (optional)"
+                    placeholder="{{ section.settings.phone_placeholder }}"
                   >
                 </div>
               </div>
@@ -89,7 +89,7 @@ aria-label="conatct"
                   id="ContactForm-body"
                   class="text-area field__input"
                   name="contact[body]"
-                  placeholder="Nachricht (optional)"
+                  placeholder="{{ section.settings.message_placeholder }}"
                 >{{- form.body -}}</textarea>
               </div>
           
@@ -277,6 +277,36 @@ aria-label="conatct"
       "id": "btn_text",
       "label": "Button Text",
       "default": "Absenden"
+    },
+    {
+      "type": "text",
+      "id": "mail_placeholder",
+      "label": "E-Mail Placeholder",
+      "default": "E-Mail*"
+    },
+    {
+      "type": "text",
+      "id": "company_placeholder",
+      "label": "Company Placeholder",
+      "default": "Unternehmen (optional)"
+    },
+    {
+      "type": "text",
+      "id": "name_placeholder",
+      "label": "Name Placeholder",
+      "default": "Name (optional)"
+    },
+    {
+      "type": "text",
+      "id": "phone_placeholder",
+      "label": "Phone Placeholder",
+      "default": "Telefon (optional)"
+    },
+    {
+      "type": "text",
+      "id": "message_placeholder",
+      "label": "Message Placeholder",
+      "default": "Nachricht (optional)"
     }
   ],
   "blocks": [
