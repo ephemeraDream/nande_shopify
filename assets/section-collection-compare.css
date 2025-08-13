@@ -228,8 +228,8 @@
 
 .collection_compare .collection_compare_contain_body_left {
   flex: 0 0 24rem;
-  position: sticky;
-  top: 0;
+  /* position: sticky;
+  top: 0; */
 }
 
 .collection_compare .collection_compare_contain_body_right {

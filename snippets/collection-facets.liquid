@@ -293,10 +293,8 @@
     </form>
   </facet-filters-form>
 
-  <menu-drawer
-    class="mobile-facets__wrapper{% if filter_type == 'horizontal' or filter_type == 'vertical' %} medium-hide large-up-hide{% endif %}"
-    data-breakpoint="mobile"
-  >
+  <menu-drawer  class="mobile-facets__wrapper{% if filter_type == 'horizontal' or filter_type == 'vertical' %} medium-hide large-up-hide{% endif %}"
+    data-breakpoint="mobile">
     <details class="mobile-facets__disclosure disclosure-has-popup">
       <summary class="mobile-facets__open-wrapper focus-offset">
         <span class="mobile-facets__open{% if filter_type == 'drawer' and enable_filtering == false %} medium-hide large-up-hide{% endif %}">
@@ -635,7 +633,6 @@
       </facet-filters-form>
     </details>
   </menu-drawer>
-
   <div class="active-facets active-facets-mobile medium-hide large-up-hide">
     {%- for filter in results.filters -%}
       {%- for value in filter.active_values -%}
@@ -676,10 +673,8 @@
       </a>
     </facet-remove>
   </div>
-  <div
-    class="product-count light{% if filter_type == 'vertical' or filter_type == 'horizontal' %} medium-hide large-up-hide{% endif %}"
-    role="status"
-  >
+  <div class="product-count light{% if filter_type == 'vertical' or filter_type == 'horizontal' %} medium-hide large-up-hide{% endif %}"
+    role="status">
     <h2 class="product-count__text text-body">
       <span id="ProductCount">
         {%- if results.results_count -%}
@@ -696,4 +691,5 @@
     </h2>
     {%- render 'loading-spinner' -%}
   </div>
+
 </div>
