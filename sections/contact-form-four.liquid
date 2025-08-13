@@ -43,7 +43,7 @@ aria-label="conatct"
                       aria-invalid="true"
                       aria-describedby="ContactFormFour-email-error"
                     {% endif %}
-                    placeholder="Deine E-Mail"
+                    placeholder="{{ section.settings.mail_placeholder }}"
                   >
                   {%- if form.errors contains 'email' -%}
                     <small class="contact__field-error" id="ContactFormFour-email-error">
@@ -58,7 +58,7 @@ aria-label="conatct"
                     id="ContactFormFour-press"
                     class="field__input"
                     name="contact[press]"
-                    placeholder="Deine Presse-/Blog-Seite"
+                    placeholder="{{ section.settings.type_placeholder }}"
                   >
                 </div>
               </div>
@@ -103,7 +103,7 @@ aria-label="conatct"
                   id="ContactFormFour-body"
                   class="text-area field__input"
                   name="contact[body]"
-                  placeholder="Nachricht (optional)"
+                  placeholder="{{ section.settings.message_placeholder }}"
                 >{{- form.body -}}</textarea>
               </div>
           
@@ -305,6 +305,24 @@ aria-label="conatct"
       "id": "btn_text",
       "label": "Button Text",
       "default": "Absenden"
+    },
+    {
+      "type": "text",
+      "id": "mail_placeholder",
+      "label": "E-Mail Placeholder",
+      "default": "Deine E-Mail"
+    },
+    {
+      "type": "text",
+      "id": "type_placeholder",
+      "label": "Type Placeholder",
+      "default": "Deine Presse-/Blog-Seite"
+    },
+    {
+      "type": "text",
+      "id": "message_placeholder",
+      "label": "Message Placeholder",
+      "default": "Nachricht (optional)"
     }
   ],
   "blocks": [
