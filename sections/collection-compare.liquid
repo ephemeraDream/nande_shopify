@@ -28,8 +28,8 @@
       </div>
       {% endif %}
       <div class="collection_compare_contain_head_right">
-        {%- if section.settings.enable_sorting -%}
         <div class="flex_center">
+          {%- if section.settings.enable_sorting -%}
           <span class="collection_compare_contain_head_label">{{ 'common.sortieren_nach' | t }}</span>
           <div class="collection_compare_contain_sort">
             {%- assign sort_by = collection.sort_by | default: collection.default_sort_by -%}
@@ -54,8 +54,9 @@
               {% endfor -%}
             </div>
           </div>
+          {% endif %}
         </div>
-      {% endif %}
+      
         <div class="flex_center">
           {%- if section.settings.enable_compare -%}
           <div class="flex_center collection_compare_contain_select_switch_box">
