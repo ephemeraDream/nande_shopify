@@ -81,6 +81,12 @@
             "content": "<p>Alle höhenverstellbaren Schreibtische und Rahmen von Maidesite sind durch eine 10-jährige Garantie abgedeckt.</p>"
           }
         },
+        "custom_liquid_DAbGdJ": {
+          "type": "custom-liquid",
+          "settings": {
+            "custom_liquid": "dfsdfsf"
+          }
+        },
         "payment_methods_mnXJ7D": {
           "type": "payment_methods",
           "settings": {
@@ -96,6 +102,7 @@
         "modal_KiCBrG",
         "modal_TaRbWz",
         "modal_EB43X9",
+        "custom_liquid_DAbGdJ",
         "payment_methods_mnXJ7D"
       ],
       "custom_css": [],
