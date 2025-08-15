@@ -265,10 +265,10 @@
             "file_type": "video",
             "file_image": "shopify://shop_images/T2-Pro-Max-black-control-panel-with-Maid-OS_9ae8a8ff-e2b8-48aa-bd7c-3e6c54d59f49.jpg",
             "video_url": "",
-            "url_upload": "shopify://files/videos/稳定性 - 0814 - Grey B 灰底.mp4"
+            "url_upload": "shopify://files/videos/稳定性 - 0814 - Grey C 灰底.mp4"
           }
         },
-        "file_with_text_Mjihyf": {
+        "file_with_text_rjDHRn": {
           "type": "file_with_text",
           "settings": {
             "title": "<p>Einfache Bedienfreude</p>",
@@ -276,10 +276,10 @@
             "file_type": "video",
             "file_image": "shopify://shop_images/T2-Pro-Max-black-control-panel-with-Maid-OS_9ae8a8ff-e2b8-48aa-bd7c-3e6c54d59f49.jpg",
             "video_url": "",
-            "url_upload": "shopify://files/videos/稳定性 - 0814 - Grey B 灰底.mp4"
+            "url_upload": "shopify://files/videos/稳定性 - 0814 - Grey C 灰底.mp4"
           }
         },
-        "file_with_text_WrYdd9": {
+        "file_with_text_4MkAbE": {
           "type": "file_with_text",
           "settings": {
             "title": "<p>Einfache Bedienfreude</p>",
@@ -287,7 +287,40 @@
             "file_type": "video",
             "file_image": "shopify://shop_images/T2-Pro-Max-black-control-panel-with-Maid-OS_9ae8a8ff-e2b8-48aa-bd7c-3e6c54d59f49.jpg",
             "video_url": "",
-            "url_upload": "shopify://files/videos/稳定性 - 0814 - Grey B 灰底.mp4"
+            "url_upload": "shopify://files/videos/稳定性 - 0814 - Grey C 灰底.mp4"
+          }
+        },
+        "file_with_text_b9T3hK": {
+          "type": "file_with_text",
+          "settings": {
+            "title": "<p>Einfache Bedienfreude</p>",
+            "description": "<p>Klaviertasten und eine intuitive grafische Oberfläche machen die Einrichtung zum Kinderspiel.</p>",
+            "file_type": "video",
+            "file_image": "shopify://shop_images/T2-Pro-Max-black-control-panel-with-Maid-OS_9ae8a8ff-e2b8-48aa-bd7c-3e6c54d59f49.jpg",
+            "video_url": "",
+            "url_upload": "shopify://files/videos/稳定性 - 0814 - Grey D 灰底.mp4"
+          }
+        },
+        "file_with_text_FKdcbG": {
+          "type": "file_with_text",
+          "settings": {
+            "title": "<p>Einfache Bedienfreude</p>",
+            "description": "<p>Klaviertasten und eine intuitive grafische Oberfläche machen die Einrichtung zum Kinderspiel.</p>",
+            "file_type": "video",
+            "file_image": "shopify://shop_images/T2-Pro-Max-black-control-panel-with-Maid-OS_9ae8a8ff-e2b8-48aa-bd7c-3e6c54d59f49.jpg",
+            "video_url": "",
+            "url_upload": "shopify://files/videos/稳定性 - 0814 - Grey D 灰底.mp4"
+          }
+        },
+        "file_with_text_jJ3gyr": {
+          "type": "file_with_text",
+          "settings": {
+            "title": "<p>Einfache Bedienfreude</p>",
+            "description": "<p>Klaviertasten und eine intuitive grafische Oberfläche machen die Einrichtung zum Kinderspiel.</p>",
+            "file_type": "video",
+            "file_image": "shopify://shop_images/T2-Pro-Max-black-control-panel-with-Maid-OS_9ae8a8ff-e2b8-48aa-bd7c-3e6c54d59f49.jpg",
+            "video_url": "",
+            "url_upload": "shopify://files/videos/稳定性 - 0814 - Grey D 灰底.mp4"
           }
         }
       },
@@ -301,8 +334,11 @@
         "file_with_text_ykc3D8",
         "file_with_text_4JkjmM",
         "file_with_text_PnqAPd",
-        "file_with_text_Mjihyf",
-        "file_with_text_WrYdd9"
+        "file_with_text_rjDHRn",
+        "file_with_text_4MkAbE",
+        "file_with_text_b9T3hK",
+        "file_with_text_FKdcbG",
+        "file_with_text_jJ3gyr"
       ],
       "name": "file box simplicity",
       "settings": {
