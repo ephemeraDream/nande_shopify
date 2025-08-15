@@ -65,13 +65,22 @@
   flex: 0 0 auto;
   width: calc((100% - 12rem) / 5);
 }
-
+@media only screen and (max-width: 1024px) {
+  .img_with_text_box_simplicity .img_with_text_box_simplicity_contain_item_3,
+  .img_with_text_box_simplicity .img_with_text_box_simplicity_contain_item_4,
+  .img_with_text_box_simplicity .img_with_text_box_simplicity_contain_item_5{
+    flex: 0 0 auto;
+    width: calc((100% - 6rem) / 3);
+  }
+}
 @media only screen and (max-width: 767px) {
   .img_with_text_box_simplicity .img_with_text_box_simplicity_contain {
     display: flex;
     flex-direction: column;
   }
-  .img_with_text_box_simplicity .img_with_text_box_simplicity_contain_item_3 {
+  .img_with_text_box_simplicity .img_with_text_box_simplicity_contain_item_3,
+  .img_with_text_box_simplicity .img_with_text_box_simplicity_contain_item_4,
+  .img_with_text_box_simplicity .img_with_text_box_simplicity_contain_item_5{
     width: 100%;
   }
   .img_with_text_box_simplicity_info{
