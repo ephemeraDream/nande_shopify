@@ -24,7 +24,13 @@
       "settings": {
         "title": "Optimieren Sie Ihr BüRo Mit Maidesite’S Ergonomischen LöSungen",
         "image": "shopify://shop_images/b2b_01.webp",
-        "desc": "Hinterlassen Sie Ihre E-Mail, senden Sie Ihre Anfrage und erhalten Sie innerhalb von 24 Stunden eine maßgeschneiderte Beratung!"
+        "desc": "Hinterlassen Sie Ihre E-Mail, senden Sie Ihre Anfrage und erhalten Sie innerhalb von 24 Stunden eine maßgeschneiderte Beratung!",
+        "btn_text": "Absenden",
+        "mail_placeholder": "E-Mail*",
+        "company_placeholder": "Unternehmen (optional)",
+        "name_placeholder": "Name (optional)",
+        "phone_placeholder": "Telefon (optional)",
+        "message_placeholder": "Nachricht (optional)"
       }
     },
     "b2b_spezielle_rabatte": {
@@ -140,9 +146,9 @@
           "settings": {
             "title": "<p>Langlebigkeit und Zuverlässigkeit</p>",
             "description": "<p>Profitieren Sie von unseren 5-10 Jahren Garantie auf alle Produkte. Maidesite steht für langlebige und robuste Büromöbel.die den hohen Anforderungen Ihres Unternehmens gerecht werden.</p>",
-            "file_type": "image",
+            "file_type": "video",
             "file_image": "shopify://shop_images/EC6_Office_Chair_with_T2_Pro_Max_adjustable_height_desk_in_the_office.jpg",
-            "video_url": ""
+            "video_url": "https://cdn.shopify.com/videos/c/o/v/809cdb70bec44ed0bad957db8b80cf40.mp4"
           }
         },
         "file_with_text_f9yPAD": {
@@ -249,6 +255,10 @@
       "settings": {
         "title": "<p>Erfahrungen Unserer GeschäFtskunden Mit<br/> Maidesite</p>",
         "text": "",
+        "show_buttons": true,
+        "loop": true,
+        "autoplay_enable": true,
+        "autoplay_delay": 3000,
         "padding_top": 120,
         "padding_bottom": 0
       }
@@ -298,6 +308,9 @@
         "description": "",
         "title": "<p>Erstklassiger Schreibtisch & erstklassiger Service</p>",
         "show_tab_head": false,
+        "loop": true,
+        "autoplay_enable": true,
+        "autoplay_delay": 5000,
         "layout": "image-right"
       }
     },
@@ -311,10 +324,7 @@
             "text": "<p>Schaffe einen funktionalen und stilvollen Arbeitsplatz mit unserem klassischen Schreibtisch</p>",
             "btn_text": "",
             "image": "shopify://shop_images/polka_dot_swiper-2.webp",
-            "link": "",
-            "select_product": "",
-            "product_X": 0,
-            "product_Y": 0
+            "link": ""
           }
         },
         "swiper_RR3AVA": {
@@ -324,10 +334,7 @@
             "text": "<p>Schaffe einen funktionalen und stilvollen Arbeitsplatz mit </p><p>unserem klassischen Schreibtisch</p>",
             "btn_text": "",
             "image": "shopify://shop_images/polka_dot_swiper-1.webp",
-            "link": "",
-            "select_product": "0",
-            "product_X": 0,
-            "product_Y": 0
+            "link": ""
           }
         },
         "swiper_xwgRwF": {
@@ -337,10 +344,7 @@
             "text": "<p>Schaffe einen funktionalen und stilvollen Arbeitsplatz mit unserem klassischen Schreibtisch</p>",
             "btn_text": "",
             "image": "shopify://shop_images/polka_dot_swiper-2.webp",
-            "link": "",
-            "select_product": "0",
-            "product_X": 0,
-            "product_Y": 0
+            "link": ""
           }
         }
       },
@@ -401,7 +405,9 @@
       ],
       "name": "marquee_images",
       "settings": {
-        "title": "Kundenstimmen Zu Maidesite"
+        "title": "Kundenstimmen Zu Maidesite",
+        "padding_top": 120,
+        "padding_bottom": 0
       }
     },
     "contact_form_two": {
@@ -457,7 +463,13 @@
       "settings": {
         "title": "Kostenlose Beratung Mit Catarina – Schnelle Antwort",
         "desc": "Jetzt Termin buchen und innerhalb von 24 Stunden Rückmeldung erhalten.",
-        "text_content": "<ul><li> Aus einer Hand -Planung bis zur Montage</li><li>Passgenaues Konzept fur Ihr Buro</li><li>10.000 begeisterte Firmenkunden</li></ul>"
+        "text_content": "<ul><li> Aus einer Hand -Planung bis zur Montage</li><li>Passgenaues Konzept fur Ihr Buro</li><li>10.000 begeisterte Firmenkunden</li></ul>",
+        "btn_text": "Absenden",
+        "mail_placeholder": "E-Mail*",
+        "company_placeholder": "Unternehmen",
+        "name_placeholder": "Name",
+        "phone_placeholder": "Telefon",
+        "message_placeholder": "Nachricht"
       }
     }
   },
