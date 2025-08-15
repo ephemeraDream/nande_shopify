@@ -278,6 +278,17 @@
             "video_url": "",
             "url_upload": "shopify://files/videos/稳定性 - 0814 - Grey C 灰底.mp4"
           }
+        },
+        "file_with_text_xU383k": {
+          "type": "file_with_text",
+          "settings": {
+            "title": "<p>Einfache Bedienfreude</p>",
+            "description": "<p>Klaviertasten und eine intuitive grafische Oberfläche machen die Einrichtung zum Kinderspiel.</p>",
+            "file_type": "video",
+            "file_image": "shopify://shop_images/T2-Pro-Max-black-control-panel-with-Maid-OS_9ae8a8ff-e2b8-48aa-bd7c-3e6c54d59f49.jpg",
+            "video_url": "",
+            "url_upload": "shopify://files/videos/稳定性 - 0814 - Grey C 灰底.mp4"
+          }
         }
       },
       "block_order": [
@@ -290,13 +301,14 @@
         "file_with_text_ykc3D8",
         "file_with_text_4JkjmM",
         "file_with_text_PnqAPd",
-        "file_with_text_rjDHRn"
+        "file_with_text_rjDHRn",
+        "file_with_text_xU383k"
       ],
       "name": "file box simplicity",
       "settings": {
         "spec_id": "",
         "main_title": "<p>Warum T2 Pro Max wählen?</p>",
-        "row_num": 5,
+        "row_num": 3,
         "padding_top": 100,
         "padding_bottom": 120,
         "background_color": "rgba(0,0,0,0)"
