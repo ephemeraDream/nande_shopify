@@ -167,6 +167,7 @@
       "blocks": {
         "file_with_text_JJXCp8": {
           "type": "file_with_text",
+          "disabled": true,
           "settings": {
             "title": "<p>Schnell aufgebaut</p>",
             "description": "<p>Nur 15-20 Minuten Montagezeit!</p>",
@@ -178,6 +179,7 @@
         },
         "file_with_text_Q8tJKk": {
           "type": "file_with_text",
+          "disabled": true,
           "settings": {
             "title": "<p>Super Duale Motoren</p>",
             "description": "<p>Maidesite Duale Motorensystem ist besser als andere Produkt mit nur einem Motor.</p>",
@@ -189,6 +191,7 @@
         },
         "file_with_text_McHwGa": {
           "type": "file_with_text",
+          "disabled": true,
           "settings": {
             "title": "<p>Max. Verstellhöhe</p>",
             "description": "<p>Der 3-stufige tischgestell höhenverstellbar, der über den größten Höhenverstellbereich von 65-135 cm auf dem Markt verfügt<br/><br/></p>",
@@ -199,6 +202,7 @@
         },
         "file_with_text_f9yPAD": {
           "type": "file_with_text",
+          "disabled": true,
           "settings": {
             "title": "<p>Belastbar bis 180 kg</p>",
             "description": "<p>Deren Material 20 % mehr als andere Produkte, stark und stabil. Der Traglast bis zu 180 kg.</p>",
@@ -210,6 +214,7 @@
         },
         "file_with_text_B39ehq": {
           "type": "file_with_text",
+          "disabled": true,
           "settings": {
             "title": "<p>Einfache Bedienfreude</p>",
             "description": "<p>Klaviertasten und eine intuitive grafische Oberfläche machen die Einrichtung zum Kinderspiel.</p>",
@@ -229,6 +234,61 @@
             "video_url": "",
             "url_upload": "shopify://files/videos/稳定性 - 0814 - Grey E 默认背景色.mp4"
           }
+        },
+        "file_with_text_MAfd6h": {
+          "type": "file_with_text",
+          "settings": {
+            "title": "<p>FSC-zertifizierte Tischplatte</p>",
+            "description": "<p>Optionale FSC-zertifizierte Tischplatten in 120x60cm, 140x70cm und 160x80cm mit vorgebohrten Löchern.</p>",
+            "file_type": "video",
+            "file_image": "shopify://shop_images/P7.jpg",
+            "video_url": "",
+            "url_upload": "shopify://files/videos/稳定性 - 0814 - Grey E 默认背景色.mp4"
+          }
+        },
+        "file_with_text_E7TVpT": {
+          "type": "file_with_text",
+          "settings": {
+            "title": "<p>FSC-zertifizierte Tischplatte</p>",
+            "description": "<p>Optionale FSC-zertifizierte Tischplatten in 120x60cm, 140x70cm und 160x80cm mit vorgebohrten Löchern.</p>",
+            "file_type": "video",
+            "file_image": "shopify://shop_images/P7.jpg",
+            "video_url": "",
+            "url_upload": "shopify://files/videos/稳定性 - 0814 - Grey E 默认背景色.mp4"
+          }
+        },
+        "file_with_text_LEDjYN": {
+          "type": "file_with_text",
+          "settings": {
+            "title": "<p>FSC-zertifizierte Tischplatte</p>",
+            "description": "<p>Optionale FSC-zertifizierte Tischplatten in 120x60cm, 140x70cm und 160x80cm mit vorgebohrten Löchern.</p>",
+            "file_type": "video",
+            "file_image": "shopify://shop_images/P7.jpg",
+            "video_url": "",
+            "url_upload": "shopify://files/videos/稳定性 - 0814 - Grey E 默认背景色.mp4"
+          }
+        },
+        "file_with_text_GaXECN": {
+          "type": "file_with_text",
+          "settings": {
+            "title": "<p>FSC-zertifizierte Tischplatte</p>",
+            "description": "<p>Optionale FSC-zertifizierte Tischplatten in 120x60cm, 140x70cm und 160x80cm mit vorgebohrten Löchern.</p>",
+            "file_type": "video",
+            "file_image": "shopify://shop_images/P7.jpg",
+            "video_url": "",
+            "url_upload": "shopify://files/videos/稳定性 - 0814 - Grey E 默认背景色.mp4"
+          }
+        },
+        "file_with_text_LKHUEm": {
+          "type": "file_with_text",
+          "settings": {
+            "title": "<p>FSC-zertifizierte Tischplatte</p>",
+            "description": "<p>Optionale FSC-zertifizierte Tischplatten in 120x60cm, 140x70cm und 160x80cm mit vorgebohrten Löchern.</p>",
+            "file_type": "video",
+            "file_image": "shopify://shop_images/P7.jpg",
+            "video_url": "",
+            "url_upload": "shopify://files/videos/稳定性 - 0814 - Grey E 默认背景色.mp4"
+          }
         }
       },
       "block_order": [
@@ -237,7 +297,12 @@
         "file_with_text_McHwGa",
         "file_with_text_f9yPAD",
         "file_with_text_B39ehq",
-        "file_with_text_THJTyK"
+        "file_with_text_THJTyK",
+        "file_with_text_MAfd6h",
+        "file_with_text_E7TVpT",
+        "file_with_text_LEDjYN",
+        "file_with_text_GaXECN",
+        "file_with_text_LKHUEm"
       ],
       "name": "file box simplicity",
       "settings": {
