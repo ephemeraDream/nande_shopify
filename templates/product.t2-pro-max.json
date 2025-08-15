@@ -170,9 +170,10 @@
           "settings": {
             "title": "<p>Schnell aufgebaut</p>",
             "description": "<p>Nur 15-20 Minuten Montagezeit!</p>",
-            "file_type": "image",
+            "file_type": "video",
             "file_image": "shopify://shop_images/T2-Pro-Max-is-fast-assembly-desk.jpg",
-            "video_url": ""
+            "video_url": "",
+            "url_upload": "shopify://files/videos/稳定性 - 0814 - 自调黄底.mp4"
           }
         },
         "file_with_text_Q8tJKk": {
@@ -180,9 +181,10 @@
           "settings": {
             "title": "<p>Super Duale Motoren</p>",
             "description": "<p>Maidesite Duale Motorensystem ist besser als andere Produkt mit nur einem Motor.</p>",
-            "file_type": "image",
+            "file_type": "video",
             "file_image": "shopify://shop_images/Schwarz-06.jpg",
-            "video_url": ""
+            "video_url": "",
+            "url_upload": "shopify://files/videos/稳定性 - 0814 - DESKIRONIC - 灰.mp4"
           }
         },
         "file_with_text_McHwGa": {
@@ -200,9 +202,10 @@
           "settings": {
             "title": "<p>Belastbar bis 180 kg</p>",
             "description": "<p>Deren Material 20 % mehr als andere Produkte, stark und stabil. Der Traglast bis zu 180 kg.</p>",
-            "file_type": "image",
+            "file_type": "video",
             "file_image": "shopify://shop_images/8d62567f3976a249cabee9308f1d71fa.jpg",
-            "video_url": ""
+            "video_url": "",
+            "url_upload": "shopify://files/videos/稳定性 - 0814 - Grey A 黑底.mp4"
           }
         },
         "file_with_text_B39ehq": {
@@ -210,9 +213,10 @@
           "settings": {
             "title": "<p>Einfache Bedienfreude</p>",
             "description": "<p>Klaviertasten und eine intuitive grafische Oberfläche machen die Einrichtung zum Kinderspiel.</p>",
-            "file_type": "image",
+            "file_type": "video",
             "file_image": "shopify://shop_images/T2-Pro-Max-black-control-panel-with-Maid-OS_9ae8a8ff-e2b8-48aa-bd7c-3e6c54d59f49.jpg",
-            "video_url": ""
+            "video_url": "",
+            "url_upload": "shopify://files/videos/稳定性 - 0814 - Grey B 灰底.mp4"
           }
         },
         "file_with_text_THJTyK": {
@@ -220,9 +224,10 @@
           "settings": {
             "title": "<p>FSC-zertifizierte Tischplatte</p>",
             "description": "<p>Optionale FSC-zertifizierte Tischplatten in 120x60cm, 140x70cm und 160x80cm mit vorgebohrten Löchern.</p>",
-            "file_type": "image",
+            "file_type": "video",
             "file_image": "shopify://shop_images/P7.jpg",
-            "video_url": ""
+            "video_url": "",
+            "url_upload": "shopify://files/videos/稳定性 - 0814 - Grey E 默认背景色.mp4"
           }
         }
       },
@@ -465,6 +470,9 @@
         "description": "",
         "title": "<p>CE/FSC-zertifizierter höhenverstellbarer Schreibtisch und Tischplatte</p>",
         "show_tab_head": true,
+        "loop": true,
+        "autoplay_enable": true,
+        "autoplay_delay": 5000,
         "layout": "image-left"
       }
     },
@@ -561,6 +569,10 @@
       "settings": {
         "title": "<p>Die Presse Liebt Maidesite</p>",
         "text": "",
+        "show_buttons": true,
+        "loop": true,
+        "autoplay_enable": true,
+        "autoplay_delay": 3000,
         "padding_top": 120,
         "padding_bottom": 0
       }
