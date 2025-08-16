@@ -1,3 +1,6 @@
+Fancybox.bind('[data-fancybox="product_info_img"]', {
+  // Your custom options for a specific gallery
+});
 // swiper相关
 let imgthumbSwiper, imgboxSwiper, videothumbSwiper, videoboxSwiper;
 initSwiper()
