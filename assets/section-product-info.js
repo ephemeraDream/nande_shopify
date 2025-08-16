@@ -597,7 +597,7 @@ function updateUrl() {
 function updateImagesByVariantMedia() {
   const mediaId = String(currVariant?.featured_media?.id || '');
 
-  const applyTo = (selector, isMainSwiper = false) => {
+  const applyTo = (selector) => {
     const slides = Array.from(document.querySelectorAll(selector));
     const isCommon = (i) => slides[i].hasAttribute('data-common');
 
@@ -609,33 +609,30 @@ function updateImagesByVariantMedia() {
     }
 
     // 向右扩展到“本组终点”
-    // 规则：一直走，直到遇到 “非 common 且前一张是 common” —— 这就是下一组的起点
     let right = featIdx;
     for (let i = featIdx + 1; i < slides.length; i++) {
       if (!isCommon(i) && isCommon(i - 1)) {
-        // i 是下一组第一张，当前组终点是 i-1
-        break;
+        break; // 下一组的起点
       }
-      right = i; // 仍在当前组范围内
+      right = i;
     }
 
-    // 显示规则：当前主图 + (featIdx, right] 区间内的 common；其他隐藏
+    // 显示规则：当前主图 + (featIdx, right] 区间内的 common
     for (let i = 0; i < slides.length; i++) {
       if (i === featIdx) {
         slides[i].style.display = 'block'; // 主图
       } else if (i > featIdx && i <= right && isCommon(i)) {
-        slides[i].style.display = 'block'; // 主图右侧这一组里的 common
+        slides[i].style.display = 'block'; // 右侧同组 common
       } else {
         slides[i].style.display = 'none';
       }
     }
 
-    // 主图作为可见序列的第 0 张
-    const activeIndex = 0;
-    return { activeIndex };
+    // ✅ activeIndex 保持为主图在整个 swiper 中的原始索引
+    return { activeIndex: featIdx };
   };
 
-  const { activeIndex } = applyTo('.imgmain_swiper .swiper-slide', true);
+  const { activeIndex } = applyTo('.imgmain_swiper .swiper-slide');
   applyTo('.imgthumb_swiper .swiper-slide');
 
   imgthumbSwiper.update();
