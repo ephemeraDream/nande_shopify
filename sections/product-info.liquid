@@ -67,7 +67,7 @@
                     data-common="true"
                   {% endunless %}
                   data-fancybox="product_info_img"
-                  href="{{ media.src }}"
+                  href="{{ media.src | image_url }}"
                 >
                   {{ media.src | image_url: width: media.src.width | image_tag: alt: product.title, preload: true }}
                 </div>
