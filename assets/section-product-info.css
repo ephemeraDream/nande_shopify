@@ -130,7 +130,7 @@
 }
 
 .product_info .imgthumb_swiper .swiper-slide img,
-.product_info .videothumb_swiper .swiper-slide img {
+.product_info .videothumb_swiper .swiper-slide video {
   width: 100%;
   height: 100%;
   object-fit: cover;

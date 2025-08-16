@@ -66,6 +66,8 @@ function initSwiper() {
     // loop: true,
     spaceBetween: 8,
     slidesPerView: 4,
+    observer: true,
+    observeParents: true,
     navigation: {
       nextEl: ".videothumb_swiper_box .videothumb_swiper_next",
       prevEl: ".videothumb_swiper_box .videothumb_swiper_prev",
@@ -77,6 +79,8 @@ function initSwiper() {
     fadeEffect: {
       crossFade: true,
     },
+    observer: true,
+    observeParents: true,
     spaceBetween: 0,
     navigation: {
       nextEl: ".videomain_swiper .videomain_swiper_next",
