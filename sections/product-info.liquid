@@ -371,6 +371,22 @@
                   data-index="{{ forloop.index0 | plus: product.options.size }}"
                   data-type="bundle_tabletop"
                 >
+                  {% if option_hanlde contains 'farbe' %}
+                    <div
+                      data-value="Nur Tischgestell"
+                      class="product_info_option_select_item product_info_option_select_item_select"
+                      title="Nur Tischgestell"
+                    >
+                      <div class="product_info_option_select_item_circle product_info_option_select_item_none"></div>
+                    </div>
+                  {% else %}
+                    <div
+                      class="product_info_option_select_item product_info_option_select_item_select"
+                      data-value="Nur Tischgestell"
+                    >
+                      {{ 'common.Nur Tischgestell' | t }}
+                    </div>
+                  {% endif %}
                   {%- for value in option.values -%}
                     {% if option_hanlde contains 'farbe' %}
                       {% assign color = '' %}
@@ -381,7 +397,7 @@
                       {% endfor %}
                       <div
                         data-value="{{ value }}"
-                        class="product_info_option_select_item{% if value.selected %} product_info_option_select_item_select{% endif %}"
+                        class="product_info_option_select_item"
                         title="{{ value }}"
                       >
                         <div
@@ -393,7 +409,7 @@
                       </div>
                     {% else %}
                       <div
-                        class="product_info_option_select_item{% if value.selected %} product_info_option_select_item_select{% endif %}"
+                        class="product_info_option_select_item"
                         data-value="{{ value }}"
                       >
                         {{ value }}

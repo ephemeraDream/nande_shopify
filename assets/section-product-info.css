@@ -1383,6 +1383,7 @@
   letter-spacing: 0px;
   font-variation-settings: "opsz" auto;
   color: #ff7500;
+  margin-bottom: 1.4rem;
 }
 
 @media screen and (max-width: 1440px) {
