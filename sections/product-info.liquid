@@ -3,12 +3,7 @@
   rel="stylesheet"
   href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@6.0/dist/fancybox/fancybox.css"
 >
-<script
-  src="https://code.jquery.com/jquery-3.7.1.min.js"
-  integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
-  crossorigin="anonymous"
-></script>
-<script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@6.0/dist/fancybox/fancybox.umd.js"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 
 {% assign bundle_products = product.metafields.custom.bundle_products.value %}
 {% assign accessory_types = '' %}
@@ -849,6 +844,7 @@
   </div>
 </div>
 
+<script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@6.0/dist/fancybox/fancybox.umd.js"></script>
 {% for currency in shop.enabled_currencies %}
   {% if currency.iso_code == shop.currency %}
     {%- assign currency_symbol = currency.symbol -%}
