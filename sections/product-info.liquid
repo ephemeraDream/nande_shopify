@@ -26,16 +26,22 @@
 %}
 {% liquid
   assign price_dp = product.selected_or_first_available_variant.price | default: product.price
-  if has_tabletop
-    assign bundle_tabletop_price_dp = bundle_tabletop.selected_or_first_available_variant.price | default: bundle_tabletop.price
-    assign price_dp = price_dp | plus: bundle_tabletop_price_dp
-  endif
+
+  comment
+    if has_tabletop
+      assign bundle_tabletop_price_dp = bundle_tabletop.selected_or_first_available_variant.price | default: bundle_tabletop.price
+      assign price_dp = price_dp | plus: bundle_tabletop_price_dp
+    endif
+  endcomment
 
   assign price_op = product.selected_or_first_available_variant.compare_at_price | default: product.compare_at_price
-  if has_tabletop
-    assign bundle_tabletop_price_op = bundle_tabletop.selected_or_first_available_variant.compare_at_price | default: bundle_tabletop.compare_at_price | default: bundle_tabletop_price_dp
-    assign price_op = price_op | plus: bundle_tabletop_price_op
-  endif
+
+  comment
+    if has_tabletop
+      assign bundle_tabletop_price_op = bundle_tabletop.selected_or_first_available_variant.compare_at_price | default: bundle_tabletop.compare_at_price | default: bundle_tabletop_price_dp
+      assign price_op = price_op | plus: bundle_tabletop_price_op
+    endif
+  endcomment
 %}
 
 <div class="product_info_section padding-sider">
