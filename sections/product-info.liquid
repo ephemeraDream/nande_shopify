@@ -181,7 +181,7 @@
           {% if has_model %}
             <div class="product_info_left_thumb_select_item" data-type="model">3D</div>
           {% endif %}
-          {% if product.metafields.custom.product_specs != blank %}
+          {% if section.settings.product_specs != blank %}
             <div class="product_info_left_thumb_select_item" data-type="specs">Specs</div>
             <div class="common_modal">
               <div class="common_modal_contain">
@@ -190,7 +190,7 @@
                   <div class="common_modal_close">{{- 'icon-close.svg' | inline_asset_content -}}</div>
                 </div>
                 <div class="common_modal_body">
-                  {{ product.metafields.custom.product_specs | metafield_tag }}
+                  {{ section.settings.product_specs }}
                 </div>
               </div>
             </div>
@@ -903,6 +903,11 @@
       "id": "show_tax_and_shipping",
       "label": "Show tax and shipping information",
       "default": true
+    },
+    {
+      "type": "liquid",
+      "id": "product_specs",
+      "label": "product specs modal content"
     }
   ],
   "blocks": [
