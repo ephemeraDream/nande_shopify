@@ -12,7 +12,7 @@
     "breadcrumbs": {
       "type": "breadcrumbs",
       "custom_css": [
-        ".breadcrumb-con { top: 0; z-index: 7;position: relative;}",
+        ".breadcrumb-con {top: 0; z-index: 7; position: relative;}",
         ".breadcrumb,.breadcrumb a,.breadcrumb span {color: #7f7e75;}"
       ],
       "settings": {
@@ -29,7 +29,10 @@
           "burotisch-hohenverstellbar",
           "schreibtisch-home-office",
           "maidesite-burozubehor",
-          "sie-konnen-auch-mogen"
+          "sie-konnen-auch-mogen",
+          "2024-new-year-sale",
+          "elektrisch-hohenverstellbarer-gestell",
+          "ergonomischer-burostuhl"
         ]
       }
     }
