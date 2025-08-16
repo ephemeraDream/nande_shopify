@@ -599,7 +599,7 @@ function updateImagesByVariantMedia() {
 
   const applyTo = (selector, isMainSwiper = false) => {
     const slides = Array.from(document.querySelectorAll(selector));
-    const isCommon = (idx) => slides[idx].hasAttribute('data-common');
+    const isCommon = (i) => slides[i].hasAttribute('data-common');
 
     // 找到当前变体主图
     const featIdx = slides.findIndex(s => String(s.dataset.mediaId) === mediaId);
@@ -608,24 +608,30 @@ function updateImagesByVariantMedia() {
       return { activeIndex: 0 };
     }
 
-    // 向右扩展：从主图开始，先保留主图，再吃掉后面连续的 common
+    // 向右扩展到“本组终点”
+    // 规则：一直走，直到遇到 “非 common 且前一张是 common” —— 这就是下一组的起点
     let right = featIdx;
-    while (right + 1 < slides.length && isCommon(right + 1)) {
-      right++;
+    for (let i = featIdx + 1; i < slides.length; i++) {
+      if (!isCommon(i) && isCommon(i - 1)) {
+        // i 是下一组第一张，当前组终点是 i-1
+        break;
+      }
+      right = i; // 仍在当前组范围内
     }
 
-    // 显示逻辑
+    // 显示规则：当前主图 + (featIdx, right] 区间内的 common；其他隐藏
     for (let i = 0; i < slides.length; i++) {
       if (i === featIdx) {
         slides[i].style.display = 'block'; // 主图
       } else if (i > featIdx && i <= right && isCommon(i)) {
-        slides[i].style.display = 'block'; // 主图右侧的 common
+        slides[i].style.display = 'block'; // 主图右侧这一组里的 common
       } else {
-        slides[i].style.display = 'none'; // 其他全部隐藏
+        slides[i].style.display = 'none';
       }
     }
 
-    const activeIndex = isMainSwiper ? 0 : featIdx; // 主图始终是第一张
+    // 主图作为可见序列的第 0 张
+    const activeIndex = 0;
     return { activeIndex };
   };
 
@@ -636,6 +642,7 @@ function updateImagesByVariantMedia() {
   imgboxSwiper.update();
   imgboxSwiper.slideTo(activeIndex);
 }
+
 
 
 // 捆绑步骤切换
