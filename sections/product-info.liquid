@@ -360,9 +360,12 @@
                 <div class="product_info_option_label">
                   {{ option.name }}：
                   <span class="product_info_option_label_select">
-                    {%- for value in option.values -%}
-                      {%- if value.selected %}{{ value }}{% endif -%}
-                    {% endfor %}
+                    {% comment %}
+                      {%- for value in option.values -%}
+                        {%- if value.selected %}{{ value }}{% endif -%}
+                      {% endfor %}
+                    {% endcomment %}
+                    {{ 'common.nur_tischgestell' | t }}
                   </span>
                 </div>
                 <div
