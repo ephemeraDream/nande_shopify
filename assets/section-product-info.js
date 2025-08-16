@@ -450,6 +450,7 @@ const product_data = JSON.parse(document.getElementById('product_info_data').tex
 const product = product_data.product
 let currVariant = product_data.variant
 const symbol = product_data.symbol
+const preorder_text = product_data.preorder_text
 const curr_options = [...currVariant.options]
 const bundle_tabletop_data = JSON.parse(document.getElementById('bundle_tabletop_data').textContent);
 const has_tabletop = bundle_tabletop_data.has_tabletop
@@ -530,6 +531,13 @@ document.querySelectorAll(".product_info_option_select_item").forEach(el => {
         }
       }
       document.querySelector("input[name='goods_id']").value = currVariant.id
+    }
+    const preorder_text_box = document.querySelector(".product_info_preorderbox")
+    if (preorder_text[currVariant.id]) {
+      preorder_text_box.innerHTML = preorder_text[currVariant.id]
+      preorder_text_box.classList.remove("hidden")
+    } else {
+      preorder_text_box.classList.add("hidden")
     }
     if (!has_tabletop) {
       setVariantOption()

@@ -652,6 +652,9 @@
         </div>
         <div class="product_info_steps_contain_item_box hidden" data-type="accesories"></div>
       </div>
+      <div class="product_info_preorderbox{% if product.selected_or_first_available_variant.metafields.custom.preorder_text.value == blank %} hidden{% endif %}">
+        {{ product.selected_or_first_available_variant.metafields.custom.preorder_text.value }}
+      </div>
       <div class="product_info_buybox">
         <input
           type="hidden"
@@ -857,7 +860,12 @@
   {
     "product": {{- product | json -}},
     "variant": {{ product.selected_or_first_available_variant | json }},
-    "symbol": {{ currency_symbol | json }}
+    "symbol": {{ currency_symbol | json }},
+    "preorder_text": {
+      {% for variant in product.variants %}
+        "{{ variant.id }}": {{ variant.metafields.custom.preorder_text.value | json }}
+      {% endfor %}
+    }
   }
 </script>
 <script type="application/json" id="bundle_products_data">
