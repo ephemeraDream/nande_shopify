@@ -81,6 +81,7 @@
         </div>
         {% for type in media_types %}
           {% if type == 'video' %}
+            {% assign has_video = true %}
             <div class="swiper videomain_swiper product_info_left_contain_group" data-type="{{ type }}">
               <div class="swiper-wrapper">
                 {% for media in product.media %}
@@ -100,6 +101,7 @@
             </div>
           {% endif %}
           {% if type == 'model' %}
+            {% assign has_model = true %}
             <div
               class="product_info_left_contain_group"
               data-type="{{ type }}"
