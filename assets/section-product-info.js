@@ -506,9 +506,38 @@ document.querySelectorAll(".product_info_option_select_item").forEach(el => {
     target.classList.add('product_info_option_select_item_select')
     target.closest(".product_info_option_item").querySelector(".product_info_option_label_select").innerHTML = target.getAttribute("data-value")
     if (is_bundle_tabletop) {
-      curr_bundle_tabletop_options[Number(parent.getAttribute("data-index")) - curr_options.length] = target.getAttribute("data-value")
-      curr_bundle_tabletop_variant = bundle_tabletop.variants.find(el => areArraysEqual(curr_bundle_tabletop_options, el.options))
-      document.querySelector("input[name='bundle_tabletop_id']").value = curr_bundle_tabletop_variant.id
+      if (target.getAttribute("data-value") === 'Nur Tischgestell') {
+        if (parent_index == 1) {
+          document.querySelectorAll(".product_info_option_select[data-index='2'] .product_info_option_select_item").forEach((item, index) => {
+            if (index === 0) {
+              item.classList.add("product_info_option_select_item_select")
+              item.classList.remove("hidden")
+            } else {
+              item.classList.remove("product_info_option_select_item_select")
+              item.classList.add("hidden")
+            }
+          })
+        }
+        curr_bundle_tabletop_variant = null
+        document.querySelector("input[name='bundle_tabletop_id']").value = ""
+      } else {
+        if (parent_index == 1) {
+          document.querySelectorAll(".product_info_option_select[data-index='2'] .product_info_option_select_item").forEach((item, index) => {
+            if (index === 0) {
+              item.classList.remove("product_info_option_select_item_select")
+              item.classList.add("hidden")
+            } else {
+              item.classList.remove("hidden")
+            }
+            if (item.getAttribute("data-value") === curr_bundle_tabletop_options[2 - curr_options.length]) {
+              item.classList.add("product_info_option_select_item_select")
+            }
+          })
+        }
+        curr_bundle_tabletop_options[Number(parent.getAttribute("data-index")) - curr_options.length] = target.getAttribute("data-value")
+        curr_bundle_tabletop_variant = bundle_tabletop.variants.find(el => areArraysEqual(curr_bundle_tabletop_options, el.options))
+        document.querySelector("input[name='bundle_tabletop_id']").value = curr_bundle_tabletop_variant.id
+      }
     } else {
       curr_options[parent.getAttribute("data-index")] = target.getAttribute("data-value")
       currVariant = product.variants.find(el => areArraysEqual(curr_options, el.options))
@@ -544,7 +573,12 @@ document.querySelectorAll(".product_info_option_select_item").forEach(el => {
       updateUrl()
       updateImagesByVariantMedia()
     } else {
-      document.querySelector(".product_info_bundle_tabletop_img").src = curr_bundle_tabletop_variant.featured_image.src
+      if (curr_bundle_tabletop_variant) {
+        document.querySelector(".product_info_bundle_tabletop_img").src = curr_bundle_tabletop_variant.featured_image.src
+        document.querySelector(".product_info_bundle_tabletop_img").classList.remove("hidden")
+      } else {
+        document.querySelector(".product_info_bundle_tabletop_img").classList.add("hidden")
+      }
     }
     if (has_tabletop && parent_index == 0) {
       updateImagesByVariantMedia()
@@ -567,10 +601,10 @@ function areArraysEqual(arr1, arr2) {
   return true;
 }
 function updateVariantPrice() {
-  const price_dp = has_tabletop ? curr_bundle_tabletop_variant.price + currVariant.price : currVariant.price
+  const price_dp = (has_tabletop && curr_bundle_tabletop_variant) ? curr_bundle_tabletop_variant.price + currVariant.price : currVariant.price
   const price = moneyWithoutTrailingZeros(price_dp)
   document.querySelectorAll(".product_info_price_dp").forEach(item => item.innerHTML = price)
-  const price_op = has_tabletop ? curr_bundle_tabletop_variant.compare_at_price + currVariant.compare_at_price : currVariant.compare_at_price
+  const price_op = (has_tabletop && curr_bundle_tabletop_variant) ? curr_bundle_tabletop_variant.compare_at_price + currVariant.compare_at_price : currVariant.compare_at_price
   if (price_op && price_op > price_dp) {
     const compare_at_price = moneyWithoutTrailingZeros(price_op)
     document.querySelectorAll(".product_info_price_op").forEach(item => {
