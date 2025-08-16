@@ -597,51 +597,41 @@ function updateUrl() {
 function updateImagesByVariantMedia() {
   const mediaId = String(currVariant?.featured_media?.id || '');
 
-  const applyTo = (selector) => {
+  const applyTo = (selector, isMainSwiper = false) => {
     const slides = Array.from(document.querySelectorAll(selector));
     const isCommon = (idx) => slides[idx].hasAttribute('data-common');
 
     // 找到当前变体主图
     const featIdx = slides.findIndex(s => String(s.dataset.mediaId) === mediaId);
     if (featIdx === -1) {
-      // 找不到就不做裁剪，直接全部显示
-      slides.forEach(s => (s.style.display = ''));
+      slides.forEach(s => (s.style.display = 'none'));
       return { activeIndex: 0 };
     }
 
-    // 1) 往左扩展到本组起点（直到遇到 common 或开头）
-    let left = featIdx;
-    while (left - 1 >= 0 && !isCommon(left - 1)) {
-      left--;
-    }
-
-    // 2) 往右扩展：先吃完本组非 common，再把紧跟着的一段 common 吃掉
+    // 向右扩展：从主图开始，先保留主图，再吃掉后面连续的 common
     let right = featIdx;
-    while (right + 1 < slides.length && !isCommon(right + 1)) {
-      right++;
-    }
     while (right + 1 < slides.length && isCommon(right + 1)) {
       right++;
     }
 
-    // 显示 [left, right]，隐藏其它
+    // 显示逻辑
     for (let i = 0; i < slides.length; i++) {
-      if (i >= left && i <= right) {
-        slides[i].style.display = 'block'; // 或者 '' 也行
+      if (i === featIdx) {
+        slides[i].style.display = 'block'; // 主图
+      } else if (i > featIdx && i <= right && isCommon(i)) {
+        slides[i].style.display = 'block'; // 主图右侧的 common
       } else {
-        slides[i].style.display = 'none';
+        slides[i].style.display = 'none'; // 其他全部隐藏
       }
     }
 
-    // 计算主图在可见段内的相对索引
-    const activeIndex = Math.max(0, featIdx - left);
+    const activeIndex = isMainSwiper ? 0 : featIdx; // 主图始终是第一张
     return { activeIndex };
   };
 
-  const { activeIndex } = applyTo('.imgmain_swiper .swiper-slide');
+  const { activeIndex } = applyTo('.imgmain_swiper .swiper-slide', true);
   applyTo('.imgthumb_swiper .swiper-slide');
 
-  // 刷新 & 定位
   imgthumbSwiper.update();
   imgboxSwiper.update();
   imgboxSwiper.slideTo(activeIndex);
