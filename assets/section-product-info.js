@@ -641,6 +641,7 @@ function updateImagesByVariantMedia() {
   imgthumbSwiper.update();
   imgboxSwiper.update();
   imgboxSwiper.slideTo(activeIndex);
+  imgthumbSwiper.slideTo(activeIndex);
 }
 
 
