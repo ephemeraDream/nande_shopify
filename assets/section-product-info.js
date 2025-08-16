@@ -1,5 +1,5 @@
 // swiper相关
-let imgthumbSwiper, imgboxSwiper;
+let imgthumbSwiper, imgboxSwiper, videothumbSwiper, videoboxSwiper;
 initSwiper()
 function initSwiper() {
   imgthumbSwiper = new Swiper(".imgthumb_swiper", {
@@ -60,6 +60,31 @@ function initSwiper() {
     // thumbs: {
     //   swiper: imgthumbSwiper,
     // }
+  });
+
+  videothumbSwiper = new Swiper(".videothumb_swiper", {
+    // loop: true,
+    spaceBetween: 8,
+    slidesPerView: 4,
+    navigation: {
+      nextEl: ".videothumb_swiper_box .videothumb_swiper_next",
+      prevEl: ".videothumb_swiper_box .videothumb_swiper_prev",
+    },
+  });
+  videoboxSwiper = new Swiper(".videomain_swiper", {
+    // loop: true,
+    effect: "fade",
+    fadeEffect: {
+      crossFade: true,
+    },
+    spaceBetween: 0,
+    navigation: {
+      nextEl: ".videomain_swiper .videomain_swiper_next",
+      prevEl: ".videomain_swiper .videomain_swiper_prev",
+    },
+    thumbs: {
+      swiper: videothumbSwiper,
+    }
   });
 }
 // 优惠倒计时
