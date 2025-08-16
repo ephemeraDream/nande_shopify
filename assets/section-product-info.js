@@ -392,6 +392,10 @@ function initBuybox() {
               //     targetElement.replaceWith(sourceElement);
               //   }
               // }
+              if (parsedState.errors) {
+                alert(parsedState.errors)
+                return
+              }
               getSectionsToRender().forEach((section) => {
                 const elementToReplace =
                   document.getElementById(section.id).querySelector(section.selector) || document.getElementById(section.id);
