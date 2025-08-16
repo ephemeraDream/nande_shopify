@@ -538,6 +538,9 @@ document.querySelectorAll(".product_info_option_select_item").forEach(el => {
     } else {
       document.querySelector(".product_info_bundle_tabletop_img").src = curr_bundle_tabletop_variant.featured_image.src
     }
+    if (has_tabletop && parent_index == 0) {
+      updateImagesByVariantMedia()
+    }
     updateVariantPrice()
     updateBuyBtns()
   })
