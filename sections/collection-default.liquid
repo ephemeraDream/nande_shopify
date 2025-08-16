@@ -6,7 +6,7 @@
     <div class="collection_default_text text-body">{{ section.settings.text }}</div>
     <div class="collection_default_head">
       {% for collection in section.settings.collection_list %}
-        <div class="collection_default_head_item">{{ collection.title }}</div>
+        <a class="collection_default_head_item" href="{{ collection.url }}">{{ collection.title }}</a>
       {% endfor %}
     </div>
     {% paginate collection.products by 12 %}
