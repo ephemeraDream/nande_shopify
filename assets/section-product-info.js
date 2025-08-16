@@ -73,6 +73,13 @@ function initSwiper() {
       nextEl: ".videothumb_swiper_box .videothumb_swiper_next",
       prevEl: ".videothumb_swiper_box .videothumb_swiper_prev",
     },
+    on: {
+      click: function (swiper) {
+        const clickedSlide = swiper.slides[swiper.clickedIndex];
+        videoboxSwiper.slideTo(clickedSlide);
+
+      }
+    },
   });
   videoboxSwiper = new Swiper(".videomain_swiper", {
     // loop: true,
