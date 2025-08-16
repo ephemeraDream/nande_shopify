@@ -125,6 +125,10 @@
   gap: 0.6rem;
 }
 
+.product_info .videothumb_swiper_box {
+  display: none;
+}
+
 .product_info .imgthumb_swiper,
 .product_info .videothumb_swiper {
   width: 26.4rem;
