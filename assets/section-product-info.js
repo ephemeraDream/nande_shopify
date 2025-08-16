@@ -597,34 +597,63 @@ function updateUrl() {
 function updateImagesByVariantMedia() {
   const mediaId = currVariant.featured_media?.id;
   let activeIndex = 0;
-  let count = 0;
 
-  const findSlide = (domstr, isMainSwiper = false) => {
-    document.querySelectorAll(domstr).forEach((slide) => {
+  const filterSlides = (domstr, isMainSwiper = false) => {
+    const slides = Array.from(document.querySelectorAll(domstr));
+    let foundVariant = false;
+    let count = 0;
+
+    for (let i = 0; i < slides.length; i++) {
+      const slide = slides[i];
       const slideMediaId = slide.dataset.mediaId;
-      const isCommon = slide.hasAttribute('data-common');
+      const isCommon = slide.hasAttribute("data-common");
 
-      if (String(slideMediaId) === String(mediaId) || isCommon) {
-        slide.style.display = 'block';
+      // 1. 还没找到变体主图 → 全部隐藏
+      if (!foundVariant) {
+        if (String(slideMediaId) === String(mediaId)) {
+          foundVariant = true;
+          slide.style.display = "block";
 
-        if (isMainSwiper && String(slideMediaId) === String(mediaId)) {
-          activeIndex = count;
+          if (isMainSwiper) activeIndex = count;
+          count++;
+        } else {
+          slide.style.display = "none";
         }
+        continue;
+      }
 
+      // 2. 找到主图之后
+      if (isCommon) {
+        slide.style.display = "block";
+        count++;
+      } else if (String(slideMediaId) === String(mediaId)) {
+        // 同一变体的其他图（万一有重复）
+        slide.style.display = "block";
+        if (isMainSwiper) activeIndex = count;
         count++;
       } else {
-        slide.style.display = 'none';
+        // 碰到另一个变体的图 → 结束
+        slide.style.display = "none";
+        break;
       }
-    });
+    }
+
+    // 剩余的 slide 隐藏
+    for (let j = count; j < slides.length; j++) {
+      slides[j].style.display = "none";
+    }
+
+    return activeIndex;
   };
 
-  findSlide('.imgmain_swiper .swiper-slide', true);
-  findSlide('.imgthumb_swiper .swiper-slide');
+  activeIndex = filterSlides(".imgmain_swiper .swiper-slide", true);
+  filterSlides(".imgthumb_swiper .swiper-slide");
 
   imgthumbSwiper.update();
   imgboxSwiper.update();
   imgboxSwiper.slideTo(activeIndex);
 }
+
 
 // 捆绑步骤切换
 const bundle_products_data = JSON.parse(document.getElementById('bundle_products_data').textContent);
