@@ -595,60 +595,53 @@ function updateUrl() {
   window.history.replaceState(null, "", url.toString());
 }
 function updateImagesByVariantMedia() {
-  const mediaId = currVariant.featured_media?.id;
-  let activeIndex = 0;
+  const mediaId = String(currVariant?.featured_media?.id || '');
 
-  const filterSlides = (domstr, isMainSwiper = false) => {
-    const slides = Array.from(document.querySelectorAll(domstr));
-    let foundVariant = false;
-    let count = 0;
+  const applyTo = (selector) => {
+    const slides = Array.from(document.querySelectorAll(selector));
+    const isCommon = (idx) => slides[idx].hasAttribute('data-common');
 
+    // 找到当前变体主图
+    const featIdx = slides.findIndex(s => String(s.dataset.mediaId) === mediaId);
+    if (featIdx === -1) {
+      // 找不到就不做裁剪，直接全部显示
+      slides.forEach(s => (s.style.display = ''));
+      return { activeIndex: 0 };
+    }
+
+    // 1) 往左扩展到本组起点（直到遇到 common 或开头）
+    let left = featIdx;
+    while (left - 1 >= 0 && !isCommon(left - 1)) {
+      left--;
+    }
+
+    // 2) 往右扩展：先吃完本组非 common，再把紧跟着的一段 common 吃掉
+    let right = featIdx;
+    while (right + 1 < slides.length && !isCommon(right + 1)) {
+      right++;
+    }
+    while (right + 1 < slides.length && isCommon(right + 1)) {
+      right++;
+    }
+
+    // 显示 [left, right]，隐藏其它
     for (let i = 0; i < slides.length; i++) {
-      const slide = slides[i];
-      const slideMediaId = slide.dataset.mediaId;
-      const isCommon = slide.hasAttribute("data-common");
-
-      // 1. 还没找到变体主图 → 全部隐藏
-      if (!foundVariant) {
-        if (String(slideMediaId) === String(mediaId)) {
-          foundVariant = true;
-          slide.style.display = "block";
-
-          if (isMainSwiper) activeIndex = count;
-          count++;
-        } else {
-          slide.style.display = "none";
-        }
-        continue;
-      }
-
-      // 2. 找到主图之后
-      if (isCommon) {
-        slide.style.display = "block";
-        count++;
-      } else if (String(slideMediaId) === String(mediaId)) {
-        // 同一变体的其他图（万一有重复）
-        slide.style.display = "block";
-        if (isMainSwiper) activeIndex = count;
-        count++;
+      if (i >= left && i <= right) {
+        slides[i].style.display = 'block'; // 或者 '' 也行
       } else {
-        // 碰到另一个变体的图 → 结束
-        slide.style.display = "none";
-        break;
+        slides[i].style.display = 'none';
       }
     }
 
-    // 剩余的 slide 隐藏
-    for (let j = count; j < slides.length; j++) {
-      slides[j].style.display = "none";
-    }
-
-    return activeIndex;
+    // 计算主图在可见段内的相对索引
+    const activeIndex = Math.max(0, featIdx - left);
+    return { activeIndex };
   };
 
-  activeIndex = filterSlides(".imgmain_swiper .swiper-slide", true);
-  filterSlides(".imgthumb_swiper .swiper-slide");
+  const { activeIndex } = applyTo('.imgmain_swiper .swiper-slide');
+  applyTo('.imgthumb_swiper .swiper-slide');
 
+  // 刷新 & 定位
   imgthumbSwiper.update();
   imgboxSwiper.update();
   imgboxSwiper.slideTo(activeIndex);
