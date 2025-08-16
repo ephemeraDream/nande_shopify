@@ -68,16 +68,10 @@ function initSwiper() {
     slidesPerView: 4,
     observer: true,
     observeParents: true,
+    watchSlidesProgress: true,
     navigation: {
       nextEl: ".videothumb_swiper_box .videothumb_swiper_next",
       prevEl: ".videothumb_swiper_box .videothumb_swiper_prev",
-    },
-    on: {
-      click: function (swiper) {
-        const clickedSlide = swiper.clickedIndex;
-        videoboxSwiper.slideTo(clickedSlide);
-
-      }
     },
   });
   videoboxSwiper = new Swiper(".videomain_swiper", {
@@ -93,6 +87,9 @@ function initSwiper() {
       nextEl: ".videomain_swiper .videomain_swiper_next",
       prevEl: ".videomain_swiper .videomain_swiper_prev",
     },
+    thumbs: {
+      swiper: videothumbSwiper,
+    }
   });
 }
 // 优惠倒计时
