@@ -517,6 +517,7 @@ document.querySelectorAll(".product_info_option_select_item").forEach(el => {
               item.classList.add("hidden")
             }
           })
+          document.querySelector(".product_info_option_select[data-index='2']").closest(".product_info_option_item").querySelector(".product_info_option_label_select").innerHTML = target.getAttribute("data-value")
         }
         curr_bundle_tabletop_variant = null
         document.querySelector("input[name='bundle_tabletop_id']").value = ""
@@ -531,6 +532,7 @@ document.querySelectorAll(".product_info_option_select_item").forEach(el => {
             }
             if (item.getAttribute("data-value") === curr_bundle_tabletop_options[2 - curr_options.length]) {
               item.classList.add("product_info_option_select_item_select")
+              document.querySelector(".product_info_option_select[data-index='2']").closest(".product_info_option_item").querySelector(".product_info_option_label_select").innerHTML = item.getAttribute("data-value")
             }
           })
         }
