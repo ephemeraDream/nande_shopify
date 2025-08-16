@@ -455,6 +455,7 @@ const curr_options = [...currVariant.options]
 const bundle_tabletop_data = JSON.parse(document.getElementById('bundle_tabletop_data').textContent);
 const has_tabletop = bundle_tabletop_data.has_tabletop
 const bundle_tabletop = bundle_tabletop_data.product
+const bundle_tabletop_preorder_text = bundle_tabletop_data.preorder_text
 let curr_bundle_tabletop_variant = bundle_tabletop_data.variant
 const curr_bundle_tabletop_options = curr_bundle_tabletop_variant ? [...curr_bundle_tabletop_variant.options] : []
 
@@ -568,7 +569,16 @@ document.querySelectorAll(".product_info_option_select_item").forEach(el => {
       preorder_text_box.innerHTML = preorder_text[currVariant.id]
       preorder_text_box.classList.remove("hidden")
     } else {
-      preorder_text_box.classList.add("hidden")
+      if (curr_bundle_tabletop_variant) {
+        if (bundle_tabletop_preorder_text[curr_bundle_tabletop_variant.id]) {
+          preorder_text_box.innerHTML = bundle_tabletop_preorder_text[curr_bundle_tabletop_variant.id]
+          preorder_text_box.classList.remove("hidden")
+        } else {
+          preorder_text_box.classList.add("hidden")
+        }
+      } else {
+        preorder_text_box.classList.add("hidden")
+      }
     }
     if (!has_tabletop) {
       setVariantOption()
