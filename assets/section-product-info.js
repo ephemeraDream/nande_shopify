@@ -68,6 +68,7 @@ function initSwiper() {
     slidesPerView: 4,
     observer: true,
     observeParents: true,
+    watchSlidesProgress: true,
     navigation: {
       nextEl: ".videothumb_swiper_box .videothumb_swiper_next",
       prevEl: ".videothumb_swiper_box .videothumb_swiper_prev",
