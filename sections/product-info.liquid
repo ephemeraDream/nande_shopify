@@ -1,4 +1,10 @@
 {{ 'section-product-info.css' | asset_url | stylesheet_tag }}
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@6.0/dist/fancybox/fancybox.css"
+>
+<script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@6.0/dist/fancybox/fancybox.umd.js"></script>
+
 {% assign bundle_products = product.metafields.custom.bundle_products.value %}
 {% assign accessory_types = '' %}
 
@@ -60,6 +66,8 @@
                   {% unless is_variant_img %}
                     data-common="true"
                   {% endunless %}
+                  data-fancybox="product_info_img"
+                  href="{{ media.src }}"
                 >
                   {{ media.src | image_url: width: media.src.width | image_tag: alt: product.title, preload: true }}
                 </div>
