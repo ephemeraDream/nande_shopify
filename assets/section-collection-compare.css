@@ -951,9 +951,23 @@
     overflow: auto;
     background: #fff;
     z-index: 1001;
+    padding: 3rem 2rem;
   }
 
   .collection_compare_contain_body_left .facets-container {
     grid-template-columns: repeat(1, auto);
+  }
+
+  .facets-wrap.parent-wrap.facets-wrap-vertical {
+    border: none;
+  }
+
+  .facets-vertical .facets__price .field:last-of-type {
+    margin-left: 1rem;
+  }
+
+  .mobile-facets__wrapper.medium-hide.large-up-hide,
+  .product-count.light.medium-hide.large-up-hide {
+    display: none;
   }
 }

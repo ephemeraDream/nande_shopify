@@ -550,6 +550,7 @@
 
 .facets__price .field {
   align-items: center;
+  border: 0.1rem solid #7F7E75;
 }
 
 .facets__price .field-currency {
