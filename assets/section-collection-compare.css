@@ -894,8 +894,12 @@
     width: calc((100% - 3rem) / 2);
   }
 
-  .collection_compare .collection_compare_contain_body_right_list .collection_compare_product {
+  /* .collection_compare .collection_compare_contain_body_right_list .collection_compare_product {
     flex-direction: column;
+  } */
+
+  .collection_compare .collection_compare_product_img img {
+    object-position: top center;
   }
 }
 
