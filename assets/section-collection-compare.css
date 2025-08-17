@@ -943,9 +943,14 @@
   }
 
   .collection_compare .collection_compare_contain_body_left {
-    flex: unset;
-    z-index: 9;
-    width: 14%;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    overflow: auto;
+    background: #fff;
+    z-index: 1001;
   }
 
   .collection_compare_contain_body_left .facets-container {
