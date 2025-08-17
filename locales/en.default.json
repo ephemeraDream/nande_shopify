@@ -606,6 +606,7 @@
     "customers_who": " Kunden, die ",
     "get_cashback": " Cashback erhalten",
     "out_of_stock": "Nicht vorrätig",
-    "nur_tischgestell": "Nur Tischgestell"
+    "nur_tischgestell": "Nur Tischgestell",
+    "show_results": "Zeige {{ search_num }} Ergebnisse"
   }
 }
