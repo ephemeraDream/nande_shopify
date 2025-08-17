@@ -22,6 +22,11 @@ mobile_facets_confirm_btn.addEventListener("click", () => {
     filter_contain.style.display = "flex"
   }
 })
+if (window.innerWidth < 769) {
+  const filter_contain = document.querySelector(".collection_compare_contain_body_left")
+  show_filter.setAttribute("data-type", "close")
+  filter_contain.style.display = "none"
+}
 //展示方式
 const show_types = document.querySelectorAll(".collection_compare_contain_showtype")
 show_types.forEach(item => {

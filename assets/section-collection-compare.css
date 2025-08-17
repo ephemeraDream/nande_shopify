@@ -941,7 +941,7 @@
 
   .collection_compare .mobile_facets_box {
     display: block;
-    position: absolute;
+    position: fixed;
     bottom: 0;
     left: 0;
     width: 100%;
