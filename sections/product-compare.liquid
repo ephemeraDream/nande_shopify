@@ -9,6 +9,7 @@
         {{- 'cart-close.svg' | inline_asset_content -}}
       </a>
     </div>
+    <div class="wrapper">
     <div class="product_compare_selectbox">
       <select id="productSelectOne" class="product_compare_select">
         {% for product in section.settings.product_list %}
@@ -190,6 +191,7 @@
           {% endfor %}
         </div>
       {% endfor %}
+    </div>
     </div>
   </div>
 </div>

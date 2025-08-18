@@ -224,3 +224,16 @@
   font-size: 1.8rem;
 }
 }
+@media (max-width: 767px) {
+  .product_compare .product_compare_select {
+    height: 4.5rem;
+    font-size: 2rem;
+  }
+  .product_compare .product_compare_product_contain{
+    font-size: 1.8rem;
+  }
+  .wrapper{overflow-x: auto;}
+  .wrapper .product_compare_selectbox,.product_compare .product_compare_contain,.product_compare_contain_other{
+    min-width: 900px;
+  }
+}
