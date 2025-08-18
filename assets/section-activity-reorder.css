@@ -128,3 +128,17 @@
 .activity_reorder .activity_reorder_contain_left_btnline .common_modal {
   display: none;
 }
+
+@media (max-width:767px) {
+  .activity_reorder .activity_reorder_contain {
+    gap: 1rem;
+    padding: 25px;
+    flex-direction: column;
+  }
+  .activity_reorder .activity_reorder_contain_left {  
+    width: 100%;
+  }
+  .activity_reorder .activity_reorder_contain_img {
+    width: 100%;
+  }
+}
