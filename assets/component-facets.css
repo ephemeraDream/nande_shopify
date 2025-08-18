@@ -1284,7 +1284,7 @@ input.mobile-facets__checkbox {
   .facet-checkbox .svg-wrapper {
     top: 1rem;
   }
-  .active-facets__button, .active-facets__button-remove {
+  .active-facets-mobile .active-facets__button{
     padding: 0.6rem,1.2rem;
 }
 }
