@@ -993,6 +993,7 @@
     background: #fff;
     z-index: 1001;
     padding: 3rem 2rem 12rem;
+    display: none;
   }
 
   .collection_compare_contain_body_left .facets-container {
