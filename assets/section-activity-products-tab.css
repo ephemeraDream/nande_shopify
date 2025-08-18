@@ -427,4 +427,7 @@
   padding-left: 0;
   padding-top: 1rem;
 }
+.activity_products_tab .activity_products_tab_product {
+  width: 100%;
+}
 }
