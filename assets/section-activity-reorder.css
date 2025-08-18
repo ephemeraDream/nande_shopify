@@ -136,4 +136,10 @@
     width: 100%;
     margin-top: 2rem;
   }
+  .activity_reorder .activity_reorder_contain_left_title {
+    font-size: 3rem;
+  }
+  .activity_reorder .activity_reorder_contain_left_btnline{
+    flex-direction: column;
+}
 }

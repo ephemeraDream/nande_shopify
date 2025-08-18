@@ -49,7 +49,7 @@
             <img src="{{ block.settings.background | image_url }}" class="activity_subscribe_bottom_img">
             <div class="activity_subscribe_bottom_info">
               <div class="activity_subscribe_bottom_subtitle">{{ block.settings.subtitle }}</div>
-              <div class="activity_subscribe_bottom_title">{{ block.settings.title }}</div>
+              <h2 class="activity_subscribe_bottom_title">{{ block.settings.title }}</h2>
               <div class="activity_subscribe_bottom_text">{{ block.settings.text }}</div>
               {%- form 'customer', id: 'activitySubscribe', class: 'activity_subscribe_bottom_form' -%}
                 <input type="hidden" name="contact[tags]" value="newsletter">

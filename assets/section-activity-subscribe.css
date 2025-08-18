@@ -94,13 +94,7 @@
 }
 
 .activity_subscribe .activity_subscribe_bottom_title {
-  font-family: PP Right Grotesk;
-  font-size: 6rem;
-  font-weight: 500;
-  line-height: 94%;
   text-transform: capitalize;
-  letter-spacing: 0px;
-  font-variation-settings: "opsz" auto;
   color: #FFFFFF;
   margin-top: 1.2rem;
 }
@@ -241,5 +235,19 @@
   .activity_subscribe .activity_subscribe_top_item_btnline {
     flex-direction: column;
     width: 50%;
+  }
+}
+@media (max-width: 767px) {
+  .activity_subscribe{
+    flex-direction: column;
+  }
+  .activity_subscribe .activity_subscribe_top_item{
+    width: 100%;
+  }
+  .activity_subscribe .activity_subscribe_top_item{
+    width: 100%;
+  }
+  .activity_subscribe .activity_subscribe_bottom{
+    padding: 2rem;
   }
 }
