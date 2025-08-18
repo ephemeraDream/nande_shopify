@@ -1275,3 +1275,16 @@ input.mobile-facets__checkbox {
   display: flex;
   width: 1.2rem;
 }
+
+@media screen and (max-width: 767px) {
+  .facet-checkbox {
+    font-size: 2rem;
+    line-height: 200%;
+  }
+  .facet-checkbox .svg-wrapper {
+    top: 1rem;
+  }
+  .active-facets__button, .active-facets__button-remove {
+    padding: 0.6rem,1.2rem;
+}
+}
