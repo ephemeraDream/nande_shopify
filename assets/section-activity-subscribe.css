@@ -250,4 +250,7 @@
   .activity_subscribe .activity_subscribe_bottom{
     padding: 2rem;
   }
+  .activity_subscribe .activity_subscribe_bottom_form .field__input{font-size: 1.8rem;}
+  .activity_subscribe .activity_subscribe_bottom_form .newsletter-form__button{font-size: 1.6rem;width: 30%;}
+  
 }
