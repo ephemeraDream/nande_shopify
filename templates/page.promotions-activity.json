@@ -29,6 +29,8 @@
             "btn_text": "En savoir plus",
             "link": "",
             "file_position": "middle_left",
+            "overlay_text_align": "text-start",
+            "transparent_content_color": "#ffffff",
             "file_type": "image",
             "file_image": "shopify://shop_images/01af9531-9158-4ede-87be-26818b919ab6.__CR0_0_1464_600_PT0_SX1464_V1.jpg",
             "video_url": "",
@@ -41,7 +43,19 @@
         "banner_item_kEfP4k"
       ],
       "name": "banner",
-      "settings": {}
+      "settings": {
+        "height_mode": "auto",
+        "fixed_height_desktop": 600,
+        "fixed_height_mobile": 500,
+        "mobile_stacked": false,
+        "nav_style": "slideshow_nav_lines",
+        "pagination_color": "#ffffff",
+        "nav_position": "justify-center",
+        "transition": "slide-fade",
+        "autoplay": true,
+        "slider_pause": false,
+        "autoplay_speed": 5
+      }
     },
     "product_anchor_bar_J93iqp": {
       "type": "product-anchor-bar",
@@ -99,7 +113,7 @@
       ],
       "custom_css": [
         ".product_anchor_bar_btn {display: none;}",
-        ".product_anchor_bar_left {flex: 0 0 100%; gap: 0; justify-content: space-between;}"
+        ".product_anchor_bar_left {flex: 0 0 100%; gap: 2rem; justify-content: space-between;}"
       ],
       "name": "product anchor bar",
       "settings": {}
