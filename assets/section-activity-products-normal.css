@@ -438,3 +438,9 @@
 .activity_products_normal .activity_products_normal_flex .common_modal {
   display: none;
 }
+
+@media (max-width: 1024px) {
+  .activity_products_normal .activity_products_normal_product {
+    width: calc((100% - 2.8rem) / 2);
+  }
+}
