@@ -11,14 +11,8 @@
 }
 
 .activity_reorder .activity_reorder_title {
-  font-family: PP Right Grotesk;
-  font-size: 6rem;
-  font-weight: 500;
-  line-height: 94%;
   text-align: center;
   text-transform: capitalize;
-  letter-spacing: 0px;
-  font-variation-settings: "opsz" auto;
   color: #BDFF00;
 }
 
@@ -140,5 +134,6 @@
   }
   .activity_reorder .activity_reorder_contain_img {
     width: 100%;
+    margin-top: 2rem;
   }
 }
