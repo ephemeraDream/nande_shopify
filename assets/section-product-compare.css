@@ -232,6 +232,9 @@
   .product_compare .product_compare_flex{
     padding: 0 2.4rem;
   }
+  .product_compare .product_compare_selectbox,.product_compare .product_compare_contain{
+    padding: 2.4rem 2.4rem 0;
+  }
   .product_compare .product_compare_select {
     height: 4.5rem;
     font-size: 2rem;
