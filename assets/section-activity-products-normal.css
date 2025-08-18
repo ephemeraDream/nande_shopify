@@ -439,3 +439,8 @@
     width: calc((100% - 2.8rem) / 2);
   }
 }
+@media (max-width: 767px) {
+  .activity_products_normal .activity_products_normal_product {
+    width: 100%;
+  }
+}
