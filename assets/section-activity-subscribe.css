@@ -49,6 +49,11 @@
   position: absolute;
   right: 3.4rem;
   bottom: 3rem;
+  width: 13%;
+}
+.activity_subscribe_top_item_icon svg{
+  width: 100%;
+  height: auto;
 }
 
 .activity_subscribe .activity_subscribe_bottom {
