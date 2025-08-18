@@ -400,3 +400,9 @@
   text-decoration: underline;
   color: #FF7500;
 }
+
+@media (max-width: 1024px) {
+  .activity_products_tab .activity_products_tab_product {
+    width: calc((100% - 2.8rem) / 2);
+  }
+}
