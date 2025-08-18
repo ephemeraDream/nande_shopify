@@ -15,7 +15,7 @@
 .activity_subscribe .activity_subscribe_top_item {
   flex: 0 0 auto;
   width: calc((100% - 6rem) / 2);
-  height: 33.6rem;
+  min-height: 33.6rem;
   background-color: #E2DED6;
   position: relative;
   padding: 2.6rem 3rem;
