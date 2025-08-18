@@ -172,6 +172,9 @@
 .activity_products_tab .activity_products_tab_saleinfo_left {
   padding-right: 2.4rem;
   border-right: 0.1rem dashed #FFFFFF;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .activity_products_tab .activity_products_tab_saleinfo_right {
