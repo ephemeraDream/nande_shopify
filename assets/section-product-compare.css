@@ -225,6 +225,13 @@
 }
 }
 @media (max-width: 767px) {
+  .product_compare .product_compare_title{
+    width: 100%;
+    padding-left: 2.4rem;
+  }
+  .product_compare .product_compare_flex{
+    padding: 0 2.4rem;
+  }
   .product_compare .product_compare_select {
     height: 4.5rem;
     font-size: 2rem;
