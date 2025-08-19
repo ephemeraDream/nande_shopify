@@ -180,7 +180,7 @@
           "type": "product_dot",
           "settings": {
             "swiper_id": "1",
-            "select_product": "ergoset-yoga-schreibtisch-ec6-burostuhl",
+            "select_product": "maidesite-yoga-hohenverstellbarer-schreibtisch-mit-tischplatte",
             "product_X": 55,
             "product_Y": 36
           }
@@ -189,7 +189,7 @@
           "type": "product_dot",
           "settings": {
             "swiper_id": "2",
-            "select_product": "ergoset-yoga-schreibtisch-ec6-burostuhl",
+            "select_product": "maidesite-t4-pro-plus-vierbeinige-elliptische-saule-elektrisch-hohenverstellbares-gestell",
             "product_X": 40,
             "product_Y": 42
           }
@@ -198,7 +198,7 @@
           "type": "product_dot",
           "settings": {
             "swiper_id": "2",
-            "select_product": "ergoset-yoga-schreibtisch-ec6-burostuhl",
+            "select_product": "maidesite-ec6-ergonomischer-burostuhl-mit-kopfstutze-ruckenlehne-und-fussstutze",
             "product_X": 68,
             "product_Y": 55
           }
@@ -442,6 +442,9 @@
         "title": "<p>Die Presse Liebt Maidesite</p>",
         "text": "",
         "show_buttons": true,
+        "loop": true,
+        "autoplay_enable": true,
+        "autoplay_delay": 3000,
         "padding_top": 120,
         "padding_bottom": 0
       }
