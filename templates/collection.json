@@ -25,15 +25,7 @@
       "settings": {
         "title": "<p>Alle Produkte Im üBerblick</p>",
         "text": "<p>Entdecken Sie unsere gesamte Produktpalette – von Schreibtischen bis zu Zubehör, alles an einem Ort für Ihren </p><p>Arbeitskomfort.</p>",
-        "collection_list": [
-          "burotisch-hohenverstellbar",
-          "schreibtisch-home-office",
-          "maidesite-burozubehor",
-          "sie-konnen-auch-mogen",
-          "2024-new-year-sale",
-          "elektrisch-hohenverstellbarer-gestell",
-          "ergonomischer-burostuhl"
-        ]
+        "collection_list": []
       }
     }
   },
