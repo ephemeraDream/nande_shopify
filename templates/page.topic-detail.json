@@ -140,16 +140,16 @@
             "tab_title": "Walnut Noir"
           }
         },
-        "tab_LEkh98": {
-          "type": "tab",
-          "settings": {
-            "tab_title": "Scandi Wood"
-          }
-        },
         "tab3": {
           "type": "tab",
           "settings": {
             "tab_title": "White Pure"
+          }
+        },
+        "tab_LEkh98": {
+          "type": "tab",
+          "settings": {
+            "tab_title": "Scandi Wood"
           }
         },
         "tab_8ikfAr": {
@@ -169,21 +169,10 @@
             "link": ""
           }
         },
-        "slide3_1": {
+        "slide2_1": {
           "type": "slide",
           "settings": {
             "belong_tab": "1",
-            "image": "shopify://shop_images/YOGA_-_1000x750_8e84b5c6-6731-4faf-bcf8-ccc5579db6de.jpg",
-            "title": "",
-            "text": "",
-            "btn_text": "",
-            "link": ""
-          }
-        },
-        "slide_ckPRGe": {
-          "type": "slide",
-          "settings": {
-            "belong_tab": "2",
             "image": "shopify://shop_images/Banner_-_YOGA_-_1.jpg",
             "title": "",
             "text": "",
@@ -194,8 +183,19 @@
         "slide3_2": {
           "type": "slide",
           "settings": {
-            "belong_tab": "3",
+            "belong_tab": "2",
             "image": "shopify://shop_images/topic-detail02.webp",
+            "title": "",
+            "text": "",
+            "btn_text": "",
+            "link": ""
+          }
+        },
+        "slide_ckPRGe": {
+          "type": "slide",
+          "settings": {
+            "belong_tab": "3",
+            "image": "shopify://shop_images/Banner_-_YOGA_-_1.jpg",
             "title": "",
             "text": "",
             "btn_text": "",
@@ -211,17 +211,6 @@
             "text": "",
             "btn_text": "",
             "link": ""
-          }
-        },
-        "product_dot_pinQ6i": {
-          "type": "product_dot",
-          "disabled": true,
-          "settings": {
-            "belong_tab": "0",
-            "belong_slide": "0",
-            "select_product": "ergoset-sn1-schreibtisch-ec5-burostuhl",
-            "product_X": 50,
-            "product_Y": 38
           }
         },
         "product_dot_9JabRj": {
@@ -245,22 +234,33 @@
             "product_X": 75,
             "product_Y": 60
           }
+        },
+        "product_dot_pinQ6i": {
+          "type": "product_dot",
+          "disabled": true,
+          "settings": {
+            "belong_tab": "0",
+            "belong_slide": "0",
+            "select_product": "ergoset-sn1-schreibtisch-ec5-burostuhl",
+            "product_X": 50,
+            "product_Y": 38
+          }
         }
       },
       "block_order": [
         "tab1",
         "tab2",
-        "tab_LEkh98",
         "tab3",
+        "tab_LEkh98",
         "tab_8ikfAr",
         "slide1_2",
-        "slide3_1",
-        "slide_ckPRGe",
+        "slide2_1",
         "slide3_2",
+        "slide_ckPRGe",
         "slide_bLQ3Me",
-        "product_dot_pinQ6i",
         "product_dot_9JabRj",
-        "product_dot_jphzNm"
+        "product_dot_jphzNm",
+        "product_dot_pinQ6i"
       ],
       "settings": {
         "title": "Yoga & Ergonomie Im Perfekten Einklang",
