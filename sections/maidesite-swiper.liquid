@@ -79,7 +79,13 @@
           disableOnInteraction: false
         },
       {% endif %}
-      loop: {{ section.settings.loop }}
+      loop: {{ section.settings.loop }},
+      on: {
+        slideChange: function () {
+          const targetIndex = Math.max(this.activeIndex - 2, 0);
+          imgSwiper.slideTo(targetIndex);
+        }
+      }
     });
   })();
 </script>
