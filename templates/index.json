@@ -441,7 +441,7 @@
       "settings": {
         "title": "<p>Die Presse Liebt Maidesite</p>",
         "text": "",
-        "show_buttons": true,
+        "show_buttons": false,
         "loop": true,
         "autoplay_enable": true,
         "autoplay_delay": 3000,
