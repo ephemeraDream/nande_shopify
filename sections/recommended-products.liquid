@@ -63,26 +63,35 @@
 </div>
 
 <script>
-  new Swiper('.recommended_products_section .swiper', {
-    loop: true,
-    slidesPerView: 1,
-    spaceBetween: 46,
-    navigation: {
-      nextEl: '.recommended_products_next',
-      prevEl: '.recommended_products_prev',
-    },
-    breakpoints: {
-      768: {
-        slidesPerView: 2,
+  (() => {
+    new Swiper('.recommended_products_section .swiper', {
+      loop: true,
+      slidesPerView: 1,
+      spaceBetween: 46,
+      navigation: {
+        nextEl: '.recommended_products_next',
+        prevEl: '.recommended_products_prev',
       },
-      1024: {
-        slidesPerView: 3,
-      },
-      1440: {
-        slidesPerView: {{ section.settings.number | json }},
+      breakpoints: {
+        768: {
+          slidesPerView: 2,
+        },
+        1024: {
+          slidesPerView: 3,
+        },
+        1440: {
+          slidesPerView: {{ section.settings.number | json }},
+        }
       }
-    }
-  });
+    });
+
+    document.querySelectorAll(".recommended_products .swiper-slide .recommended_products_info_btn").forEach(item => {
+      item.addEventListener("click", (e) => {
+        e.stopPropagation()
+        e.preventDefault()
+      })
+    })
+  })()
 </script>
 
 {% schema %}
