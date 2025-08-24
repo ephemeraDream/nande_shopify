@@ -1386,6 +1386,11 @@
   margin-bottom: 1.4rem;
 }
 
+.product_info .product_info_left_thumb_left {
+  flex: 0 0 auto;
+  width: 31.6rem;
+}
+
 @media screen and (max-width: 1440px) {
   .product_info_section .product_info_bundle_product {
     flex: 0 0 calc((100% - 1.8rem) / 4);
