@@ -88,14 +88,14 @@
 }
 
 .product_compare .product_compare_product {
-  width: calc((100% - 9.2rem) / 3);
+  width: calc(100% / 3);
   max-width: 45rem;
 }
 
 .product_compare .product_compare_product_sticky {
   background-color: #f2f1ed;
   position: sticky;
-  top: 15.7rem;
+  top: 12.5rem;
   padding-right: 4.6rem;
   padding-top: 3.2rem;
 }
