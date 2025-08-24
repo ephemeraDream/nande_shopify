@@ -85,7 +85,6 @@
   display: flex;
   justify-content: space-between;
   padding: 3.2rem 5rem 0;
-  gap: 4.6rem;
 }
 
 .product_compare .product_compare_product {
@@ -97,6 +96,7 @@
   background-color: #f2f1ed;
   position: sticky;
   top: 15.7rem;
+  padding-right: 4.6rem;
 }
 
 .product_compare .product_compare_product .swiper {
@@ -215,35 +215,49 @@
 .product_compare .product_compare_contain_other {
   display: none;
 }
+
 @media (max-width: 1024px) {
-.product_compare .product_compare_select {
-  height: 4.5rem;
-  font-size: 2rem;
-}
-.product_compare .product_compare_product_contain{
-  font-size: 1.8rem;
-}
-}
-@media (max-width: 767px) {
-  .product_compare .product_compare_title{
-    width: 100%;
-    padding-left: 2.4rem;
-  }
-  .product_compare .product_compare_flex{
-    padding: 0 2.4rem;
-  }
-  .product_compare .product_compare_selectbox,.product_compare .product_compare_contain{
-    padding: 2.4rem 2.4rem 0;
-  }
   .product_compare .product_compare_select {
     height: 4.5rem;
     font-size: 2rem;
   }
-  .product_compare .product_compare_product_contain{
+
+  .product_compare .product_compare_product_contain {
     font-size: 1.8rem;
   }
-  .wrapper{overflow-x: auto;}
-  .wrapper .product_compare_selectbox,.product_compare .product_compare_contain,.product_compare_contain_other{
+}
+
+@media (max-width: 767px) {
+  .product_compare .product_compare_title {
+    width: 100%;
+    padding-left: 2.4rem;
+  }
+
+  .product_compare .product_compare_flex {
+    padding: 0 2.4rem;
+  }
+
+  .product_compare .product_compare_selectbox,
+  .product_compare .product_compare_contain {
+    padding: 2.4rem 2.4rem 0;
+  }
+
+  .product_compare .product_compare_select {
+    height: 4.5rem;
+    font-size: 2rem;
+  }
+
+  .product_compare .product_compare_product_contain {
+    font-size: 1.8rem;
+  }
+
+  .wrapper {
+    overflow-x: auto;
+  }
+
+  .wrapper .product_compare_selectbox,
+  .product_compare .product_compare_contain,
+  .product_compare_contain_other {
     min-width: 900px;
   }
 }
