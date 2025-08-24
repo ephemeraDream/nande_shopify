@@ -240,6 +240,7 @@ document.querySelectorAll(".collection_compare_product_saleinfo_countdown").forE
 
     if (diff <= 0) {
       updateCountdownInnerHTML(days, hours, minutes, seconds);
+      item.classList.add("hidden")
       return;
     }
 
