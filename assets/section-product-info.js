@@ -125,6 +125,7 @@ if (sale_info_box) {
 
     if (diff <= 0) {
       updateCountdownInnerHTML(days, hours, minutes, seconds);
+      sale_info_box.classList.add("hidden")
       return;
     }
 
