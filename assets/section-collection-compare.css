@@ -743,7 +743,6 @@
   display: flex;
   justify-content: center;
   margin-top: 3rem;
-  gap: 4.6rem;
   padding: 0 4.6rem;
 }
 
@@ -872,6 +871,7 @@
   background-color: #f2f1ed;
   position: sticky;
   top: -10rem;
+  padding-right: 4.6rem;
 }
 
 @media screen and (max-width: 1440px) {
@@ -909,7 +909,6 @@
   }
 
   .collection_compare .collection_compare_modal_contain {
-    gap: 2rem;
     overflow-x: auto;
     width: 100%;
     justify-content: flex-start;
@@ -917,6 +916,10 @@
 
   .collection_compare .collection_compare_modal_contain_item {
     min-width: 30rem;
+  }
+
+  .collection_compare .product_compare_product_sticky {
+    padding-right: 2rem;
   }
 }
 
