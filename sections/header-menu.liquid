@@ -27,21 +27,29 @@
             </a>
             <div class="header_menu_item_submenu session-box-padding">
               <div class="header_menu_item_submenu_contain">
-                {%- if block.settings.collection_list != blank -%}
-                  {%- for item in block.settings.collection_list -%}
-                    <a
-                      href="{{ item.url }}"
-                      class="header_menu_item_submenu_item"
-                    >
-                      <div class="header_menu_item_submenu_item_img">
-                        <img src="{{ item.featured_image | image_url }}">
-                        {{ 'icon-img-right-arrow.svg' | inline_asset_content }}
-                      </div>
-                      <div class="header_menu_item_submenu_item_title">{{ item.title }}</div>
-                      <div class="header_menu_item_submenu_item_desc">{{ item.description }}</div>
-                    </a>
-                  {%- endfor -%}
-                {%- endif -%}
+                {% assign page_index_list = 'one, two, thr, four, five, six' | split: ',' %}
+                {%- for index in page_index_list -%}
+                  {% capture image_id %}page_{{ index }}_image{% endcapture %}
+                  {% capture title_id %}page_{{ index }}_title{% endcapture %}
+                  {% capture text_id %}page_{{ index }}_text{% endcapture %}
+                  {% capture link_id %}page_{{ index }}_link{% endcapture %}
+
+                  {% assign image = block.settings[image_id] %}
+                  {% assign title = block.settings[title_id] %}
+                  {% assign text = block.settings[text_id] %}
+                  {% assign url = block.settings[link_id] %}
+                  <a
+                    href="{{ url }}"
+                    class="header_menu_item_submenu_item"
+                  >
+                    <div class="header_menu_item_submenu_item_img">
+                      <img src="{{ image | image_url }}">
+                      {{ 'icon-img-right-arrow.svg' | inline_asset_content }}
+                    </div>
+                    <div class="header_menu_item_submenu_item_title">{{ title }}</div>
+                    <div class="header_menu_item_submenu_item_desc">{{ text }}</div>
+                  </a>
+                {%- endfor -%}
               </div>
             </div>
           </div>
@@ -196,21 +204,29 @@
               {{- block.settings.name -}}
             </div>
             <div class="header_menu_item_submenu_contain">
-              {%- if block.settings.collection_list != blank -%}
-                {%- for item in block.settings.collection_list -%}
-                  <a
-                    href="{{ item.url }}"
-                    class="header_menu_item_submenu_item"
-                  >
-                    <div class="header_menu_item_submenu_item_img">
-                      <img src="{{ item.featured_image | image_url }}">
-                      {{ 'icon-img-right-arrow.svg' | inline_asset_content }}
-                    </div>
-                    <div class="header_menu_item_submenu_item_title">{{ item.title }}</div>
-                    <div class="header_menu_item_submenu_item_desc">{{ item.description }}</div>
-                  </a>
-                {%- endfor -%}
-              {%- endif -%}
+              {% assign page_index_list = 'one, two, thr, four, five, six' | split: ',' %}
+              {%- for index in page_index_list -%}
+                {% capture image_id %}page_{{ index }}_image{% endcapture %}
+                {% capture title_id %}page_{{ index }}_title{% endcapture %}
+                {% capture text_id %}page_{{ index }}_text{% endcapture %}
+                {% capture link_id %}page_{{ index }}_link{% endcapture %}
+
+                {% assign image = block.settings[image_id] %}
+                {% assign title = block.settings[title_id] %}
+                {% assign text = block.settings[text_id] %}
+                {% assign url = block.settings[link_id] %}
+                <a
+                  href="{{ url }}"
+                  class="header_menu_item_submenu_item"
+                >
+                  <div class="header_menu_item_submenu_item_img">
+                    <img src="{{ image | image_url }}">
+                    {{ 'icon-img-right-arrow.svg' | inline_asset_content }}
+                  </div>
+                  <div class="header_menu_item_submenu_item_title">{{ title }}</div>
+                  <div class="header_menu_item_submenu_item_desc">{{ text }}</div>
+                </a>
+              {%- endfor -%}
             </div>
           </div>
         </div>
@@ -494,9 +510,124 @@
           "label": "link"
         },
         {
-          "type": "collection_list",
-          "id": "collection_list",
-          "label": "collection list"
+          "type": "image_picker",
+          "id": "page_one_image",
+          "label": "page one image"
+        },
+        {
+          "type": "text",
+          "id": "page_one_title",
+          "label": "page one title"
+        },
+        {
+          "type": "textarea",
+          "id": "page_one_text",
+          "label": "page one text"
+        },
+        {
+          "type": "url",
+          "id": "page_one_link",
+          "label": "page one link"
+        },
+        {
+          "type": "image_picker",
+          "id": "page_two_image",
+          "label": "page two image"
+        },
+        {
+          "type": "text",
+          "id": "page_two_title",
+          "label": "page two title"
+        },
+        {
+          "type": "textarea",
+          "id": "page_two_text",
+          "label": "page two text"
+        },
+        {
+          "type": "url",
+          "id": "page_two_link",
+          "label": "page two link"
+        },
+        {
+          "type": "image_picker",
+          "id": "page_thr_image",
+          "label": "page thr image"
+        },
+        {
+          "type": "text",
+          "id": "page_thr_title",
+          "label": "page thr title"
+        },
+        {
+          "type": "textarea",
+          "id": "page_thr_text",
+          "label": "page thr text"
+        },
+        {
+          "type": "url",
+          "id": "page_thr_link",
+          "label": "page thr link"
+        },
+        {
+          "type": "image_picker",
+          "id": "page_four_image",
+          "label": "page four image"
+        },
+        {
+          "type": "text",
+          "id": "page_four_title",
+          "label": "page four title"
+        },
+        {
+          "type": "textarea",
+          "id": "page_four_text",
+          "label": "page four text"
+        },
+        {
+          "type": "url",
+          "id": "page_four_link",
+          "label": "page four link"
+        },
+        {
+          "type": "image_picker",
+          "id": "page_five_image",
+          "label": "page five image"
+        },
+        {
+          "type": "text",
+          "id": "page_five_title",
+          "label": "page five title"
+        },
+        {
+          "type": "textarea",
+          "id": "page_five_text",
+          "label": "page five text"
+        },
+        {
+          "type": "url",
+          "id": "page_five_link",
+          "label": "page five link"
+        },
+        {
+          "type": "image_picker",
+          "id": "page_six_image",
+          "label": "page six image"
+        },
+        {
+          "type": "text",
+          "id": "page_six_title",
+          "label": "page six title"
+        },
+        {
+          "type": "textarea",
+          "id": "page_six_text",
+          "label": "page six text"
+        },
+        {
+          "type": "url",
+          "id": "page_six_link",
+          "label": "page six link"
         }
       ]
     },
