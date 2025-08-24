@@ -296,29 +296,31 @@ document.querySelector(".collection_compare_select_contain_body_btn").addEventLi
     }
 
     container.innerHTML = `
-      <div class="collection_compare_modal_contain_item_img">
-        <a href="${url}">
-          <img
-            src="${selected_or_first_available_variant.featured_image.src}"
-            alt="${product.title}"
-            width="${selected_or_first_available_variant.featured_image.width}"
-            height="${selected_or_first_available_variant.featured_image.height}"
-          >
+      <div class="product_compare_product_sticky">
+        <div class="collection_compare_modal_contain_item_img">
+          <a href="${url}">
+            <img
+              src="${selected_or_first_available_variant.featured_image.src}"
+              alt="${product.title}"
+              width="${selected_or_first_available_variant.featured_image.width}"
+              height="${selected_or_first_available_variant.featured_image.height}"
+            >
+          </a>
+          <h4 class="compare_simple_item_title">
+            <span class="product_title_top">
+              ${product_title_top ? product_title_top : "Maidesite"}
+            </span>
+            ${product_model ? `<span class="product_title">${product_model}</span>` : `<span class="product_title">${product.title}</span>`}
+          </h4>
+        </div>
+        <div class="compare_simple_item_price">
+          Von ${moneyWithoutTrailingZeros(product.price, symbol)}
+        </div>
+        <a href="${url}" class="nd-btn">
+          En savoir plus
+          <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="none" version="1.1" width="15" height="12" viewBox="0 0 15 12"><g transform="matrix(0,1,-1,0,15,-15)"><path d="M27,6.20233L21.00206,0L15,6.21087L16.19711,7.44878L20.151699999999998,3.35942L20.151699999999998,15L21.848300000000002,15L21.848300000000002,3.35515L25.8029,7.44451L27,6.20233Z" fill="#000000" fill-opacity="1" style="mix-blend-mode:passthrough"></path></g></svg>
         </a>
-        <h4 class="compare_simple_item_title">
-          <span class="product_title_top">
-            ${product_title_top ? product_title_top : "Maidesite"}
-          </span>
-          ${product_model ? `<span class="product_title">${product_model}</span>` : `<span class="product_title">${product.title}</span>`}
-        </h4>
       </div>
-      <div class="compare_simple_item_price">
-        Von ${moneyWithoutTrailingZeros(product.price, symbol)}
-      </div>
-      <a href="${url}" class="nd-btn">
-        En savoir plus
-        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="none" version="1.1" width="15" height="12" viewBox="0 0 15 12"><g transform="matrix(0,1,-1,0,15,-15)"><path d="M27,6.20233L21.00206,0L15,6.21087L16.19711,7.44878L20.151699999999998,3.35942L20.151699999999998,15L21.848300000000002,15L21.848300000000002,3.35515L25.8029,7.44451L27,6.20233Z" fill="#000000" fill-opacity="1" style="mix-blend-mode:passthrough"></path></g></svg>
-      </a>
       ${compare_info_html}
     `;
 
