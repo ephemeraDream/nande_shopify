@@ -12,7 +12,10 @@
     }
   }
 {%- endstyle -%}
-<div class="recommended_products_section padding-sider section-{{ section.id }}-padding" id="{{ section.settings.spec_id }}">
+<div
+  class="recommended_products_section padding-sider section-{{ section.id }}-padding"
+  id="{{ section.settings.spec_id }}"
+>
   <div class="recommended_products">
     <h2 class="recommended_products_title">{{ section.settings.title }}</h2>
     <div class="recommended_products_contain swiper">
@@ -32,21 +35,30 @@
                 {% endif %}
               </h3>
               <h3 class="recommended_products_info_title">{{ product.title }}</h3>
-              <div class="recommended_products_info_price">
-                {{ product.price | money_without_trailing_zeros }}
-                {% if product.compare_at_price %}
-                  <span class="recommended_products_info_price_op">
-                    {{- product.compare_at_price | money_without_trailing_zeros -}}
-                  </span>
-                {% endif %}
+              <div class="recommended_products_info_flex">
+                <div class="recommended_products_info_price">
+                  {{ product.price | money_without_trailing_zeros }}
+                  {% if product.compare_at_price %}
+                    <span class="recommended_products_info_price_op">
+                      {{- product.compare_at_price | money_without_trailing_zeros -}}
+                    </span>
+                  {% endif %}
+                </div>
+                <div class="recommended_products_info_btn">
+                  {{- 'icon-faq-close.svg' | inline_asset_content -}}
+                </div>
               </div>
             </div>
           </a>
         {% endfor %}
       </div>
     </div>
-    <div class="swiper_btn_white swiper_btn_white_prev recommended_products_prev">{{- 'swiper-left.svg' | inline_asset_content -}}</div>
-    <div class="swiper_btn_white swiper_btn_white_next recommended_products_next">{{- 'swiper-right.svg' | inline_asset_content -}}</div>
+    <div class="swiper_btn_white swiper_btn_white_prev recommended_products_prev">
+      {{- 'swiper-left.svg' | inline_asset_content -}}
+    </div>
+    <div class="swiper_btn_white swiper_btn_white_next recommended_products_next">
+      {{- 'swiper-right.svg' | inline_asset_content -}}
+    </div>
   </div>
 </div>
 
@@ -61,17 +73,16 @@
     },
     breakpoints: {
       768: {
-        slidesPerView: 2, 
+        slidesPerView: 2,
       },
       1024: {
-        slidesPerView: 3, 
+        slidesPerView: 3,
       },
       1440: {
-        slidesPerView: {{ section.settings.number | json }}, 
+        slidesPerView: {{ section.settings.number | json }},
       }
     }
   });
-  
 </script>
 
 {% schema %}
@@ -126,7 +137,7 @@
       "unit": "px",
       "label": "t:sections.all.padding.padding_bottom",
       "default": 120
-    },
+    }
   ],
   "presets": [
     {
