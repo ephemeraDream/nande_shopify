@@ -180,7 +180,10 @@
                 {% for media in product.media %}
                   {% if media.media_type == 'video' or media.media_type == 'external_video' %}
                     <div class="swiper-slide">
-                      {{ media | video_tag: autoplay: false, controls: false }}
+                      <img
+                        src="media.preview_image"
+                        alt="{{ product.title }}"
+                      >
                     </div>
                   {% endif %}
                 {% endfor %}
