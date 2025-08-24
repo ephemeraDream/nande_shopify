@@ -703,6 +703,7 @@ function updateImagesByVariantMedia() {
   imgboxSwiper.update();
   imgboxSwiper.slideTo(activeIndex);
   imgthumbSwiper.slideTo(activeIndex);
+  document.querySelector(".product_info_left_thumb_select_item[data-type='image']").click()
 }
 
 
