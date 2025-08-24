@@ -38,17 +38,19 @@
                   {% assign title = block.settings[title_id] %}
                   {% assign text = block.settings[text_id] %}
                   {% assign url = block.settings[link_id] %}
-                  <a
-                    href="{{ url }}"
-                    class="header_menu_item_submenu_item"
-                  >
-                    <div class="header_menu_item_submenu_item_img">
-                      <img src="{{ image | image_url }}">
-                      {{ 'icon-img-right-arrow.svg' | inline_asset_content }}
-                    </div>
-                    <div class="header_menu_item_submenu_item_title">{{ title }}</div>
-                    <div class="header_menu_item_submenu_item_desc">{{ text }}</div>
-                  </a>
+                  {% if image != blank %}
+                    <a
+                      href="{{ url }}"
+                      class="header_menu_item_submenu_item"
+                    >
+                      <div class="header_menu_item_submenu_item_img">
+                        <img src="{{ image | image_url }}">
+                        {{ 'icon-img-right-arrow.svg' | inline_asset_content }}
+                      </div>
+                      <div class="header_menu_item_submenu_item_title">{{ title }}</div>
+                      <div class="header_menu_item_submenu_item_desc">{{ text }}</div>
+                    </a>
+                  {% endif %}
                 {%- endfor -%}
               </div>
             </div>
@@ -215,17 +217,19 @@
                 {% assign title = block.settings[title_id] %}
                 {% assign text = block.settings[text_id] %}
                 {% assign url = block.settings[link_id] %}
-                <a
-                  href="{{ url }}"
-                  class="header_menu_item_submenu_item"
-                >
-                  <div class="header_menu_item_submenu_item_img">
-                    <img src="{{ image | image_url }}">
-                    {{ 'icon-img-right-arrow.svg' | inline_asset_content }}
-                  </div>
-                  <div class="header_menu_item_submenu_item_title">{{ title }}</div>
-                  <div class="header_menu_item_submenu_item_desc">{{ text }}</div>
-                </a>
+                {% if image != blank %}
+                  <a
+                    href="{{ url }}"
+                    class="header_menu_item_submenu_item"
+                  >
+                    <div class="header_menu_item_submenu_item_img">
+                      <img src="{{ image | image_url }}">
+                      {{ 'icon-img-right-arrow.svg' | inline_asset_content }}
+                    </div>
+                    <div class="header_menu_item_submenu_item_title">{{ title }}</div>
+                    <div class="header_menu_item_submenu_item_desc">{{ text }}</div>
+                  </a>
+                {% endif %}
               {%- endfor -%}
             </div>
           </div>
