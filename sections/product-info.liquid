@@ -181,7 +181,7 @@
                   {% if media.media_type == 'video' or media.media_type == 'external_video' %}
                     <div class="swiper-slide">
                       <img
-                        src="media.preview_image"
+                        src="{{ media.preview_image }}"
                         alt="{{ product.title }}"
                       >
                     </div>
