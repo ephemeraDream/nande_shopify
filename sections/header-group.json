@@ -16,7 +16,6 @@
       "blocks": {
         "announcement-bar-0": {
           "type": "announcement",
-          "disabled": true,
           "settings": {
             "text": "Welcome to our store",
             "link": "",
@@ -27,13 +26,13 @@
           "type": "img_with_text",
           "settings": {
             "text": "<p><strong>Sommer Sale: </strong>Sichere Dir jetzt die heißesten Deals von bis zu 150 € Rabatt</p>",
-            "link": "",
+            "image": "shopify://shop_images/3200_x_1800.jpg",
+            "link": "shopify://products/ergoset-sc2-schreibtisch-ec6-burostuhl",
             "font_color": "#bdff00"
           }
         },
         "countdown_77kmfi": {
           "type": "countdown",
-          "disabled": true,
           "settings": {
             "text": "<p><strong>Sommer Sale: </strong>Sichere Dir jetzt die heißesten Deals von bis zu 150 € Rabatt</p>",
             "countdown_handle": "summer-sale",
