@@ -24,7 +24,12 @@
       "name": "collection compare",
       "settings": {
         "show_banner": true,
-        "image": "shopify://shop_images/desk-category-banner.webp"
+        "image": "shopify://shop_images/desk-category-banner.webp",
+        "products_per_page": 6,
+        "enable_compare": true,
+        "show_layout_toggle": true,
+        "enable_filtering": false,
+        "enable_sorting": true
       }
     },
     "compare_simple_YrUqUG": {
