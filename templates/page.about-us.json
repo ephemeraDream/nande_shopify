@@ -1,268 +1,303 @@
 /*
  * ------------------------------------------------------------
- * 关于我们
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
  * ------------------------------------------------------------
  */
- {
-    "sections": {
-      "breadcrumbs": {
-        "type": "breadcrumbs",
-        "custom_css": [
-          ".breadcrumb-con { top: 0;}",
-          ".breadcrumb,.breadcrumb a,.breadcrumb span {color: #7f7e75;}"
-        ],
-        "settings": {
-          "custom_breadcrumb": ""
-        }
-      },
-      "image_with_text_aboutus": {
-        "type": "image-with-text-aboutus",
-        "name": "image_with_text_aboutus",
-        "settings": {
-          "image": "shopify://shop_images/about_01.webp",
-          "title": "Ergonomisches Arbeiten Neu Definiert",
-          "small_title":"Maidesite – Ihr Partner für gesundes und produktives Arbeiten",
-          "text":"<p>Maidesite gehört zu den führenden Anbietern ergonomischer Büromöbel in Europa. <br/>Mit einem Team aus Designern, Ingenieuren und Ergonomie-Experten entwickeln wir innovative Lösungen, die Ihre Gesundheit, <br/>Ihren Komfort und Ihre Produktivität steigern. Unser Ziel: Eine Arbeitsumgebung, die sich perfekt an Ihre Bedürfnisse anpasst – für mehr Wohlbefinden und Effizienz im Alltag.</p>"
-        }
-      },
-      "time_line": {
-        "type": "time-line",
-        "name": "time_line",
-        "settings": {
-          "title": "Unsere Reise In Etappen",
-          "text":""
-        },
-        "blocks": {
-            "timeline_bBWUrY": {
-            "type": "timeline",
-            "settings": {
-                "year_text": "2020",
-                "small_title":"Der Anfang einer Mission",
-                "image": "shopify://shop_images/about_02.webp",
-                "text": "<p>Maidesite wird gegründet und bringt die ersten höhenverstellbaren Schreibtische auf den Markt. Unser Ziel: <br/>Ergonomische Lösungen für ein gesünderes und produktiveres Arbeiten.</p>"
-            }
-            },
-            "timeline_BnDxkz": {
-            "type": "timeline",
-            "settings": {
-                "year_text": "2021",
-                "small_title":"Der Anfang einer Mission",
-                "image": "shopify://shop_images/about_02.webp",
-                "text": "<p>Maidesite wird gegründet und bringt die ersten höhenverstellbaren Schreibtische auf den Markt. Unser Ziel: <br/>Ergonomische Lösungen für ein gesünderes und produktiveres Arbeiten.</p>"
-            }
-            },
-            "timeline_EnDd8n": {
-            "type": "timeline",
-            "settings": {
-                "year_text": "2022",
-                "small_title":"Der Anfang einer Mission",
-                "image": "shopify://shop_images/about_02.webp",
-                "text": "<p>Maidesite wird gegründet und bringt die ersten höhenverstellbaren Schreibtische auf den Markt. Unser Ziel: <br/>Ergonomische Lösungen für ein gesünderes und produktiveres Arbeiten.</p>"
-            }
-            },
-            "timeline_4kYG3r": {
-            "type": "timeline",
-            "settings": {
-                "year_text": "2023",
-                "small_title":"Der Anfang einer Mission",
-                "image": "shopify://shop_images/about_02.webp",
-                "text": "<p>Maidesite wird gegründet und bringt die ersten höhenverstellbaren Schreibtische auf den Markt. Unser Ziel: <br/>Ergonomische Lösungen für ein gesünderes und produktiveres Arbeiten.</p>"
-            }
-            },
-            "timeline_4kYG33": {
-            "type": "timeline",
-            "settings": {
-                "year_text": "2024",
-                "small_title":"Der Anfang einer Mission",
-                "image": "shopify://shop_images/about_02.webp",
-                "text": "<p>Maidesite wird gegründet und bringt die ersten höhenverstellbaren Schreibtische auf den Markt. Unser Ziel: <br/>Ergonomische Lösungen für ein gesünderes und produktiveres Arbeiten.</p>"
-            }
-            },
-            "timeline_4kYG32": {
-            "type": "timeline",
-            "settings": {
-                "year_text": "2025",
-                "small_title":"Der Anfang einer Mission",
-                "image": "shopify://shop_images/about_02.webp",
-                "text": "<p>Maidesite wird gegründet und bringt die ersten höhenverstellbaren Schreibtische auf den Markt. Unser Ziel: <br/>Ergonomische Lösungen für ein gesünderes und produktiveres Arbeiten.</p>"
-            }
-            },
-            "timeline_4kYG31": {
-            "type": "timeline",
-            "settings": {
-                "year_text": "2026",
-                "small_title":"Der Anfang einer Mission",
-                "image": "shopify://shop_images/about_02.webp",
-                "text": "<p>Maidesite wird gegründet und bringt die ersten höhenverstellbaren Schreibtische auf den Markt. Unser Ziel: <br/>Ergonomische Lösungen für ein gesünderes und produktiveres Arbeiten.</p>"
-            }
-            }
-        },
-        "block_order": [
-            "timeline_bBWUrY",
-            "timeline_BnDxkz",
-            "timeline_EnDd8n",
-            "timeline_4kYG3r",
-            "timeline_4kYG33",
-            "timeline_4kYG32",
-            "timeline_4kYG31"
-        ]
-      },
-      "img_with_text_tab_emEWU8": {
-        "type": "img-with-text-tab",
-        "blocks": {
-            "tab_fiwUXL": {
-            "type": "tab",
-            "settings": {
-                "tabname": "Sitzende Erinnerung",
-                "title": "<p>Fortschrittliche Technologie</p>",
-                "description": "<p>Perfekt für zwei Familienmitglieder, um ihre individuelle Körpergröße anzupassen oder um zwei neue Höheneinstellungen <br/>für vielfältigere Körperhaltungen zu ermöglichen.Der Standard-USB-Ladeanschluss lädt deine digitalen Geräte zuverlässig auf, <br/>genau dann, wenn du es brauchst.</p>",
-                "file_type": "image",
-                "file_image": "shopify://shop_images/about_03.webp",
-                "video_url": ""
-            }
-            },
-            "tab_AUd88N": {
-            "type": "tab",
-            "settings": {
-                "tabname": "Sitzende Erinnerung",
-                "title": "<p>Fortschrittliche Technologie</p>",
-                "description": "<p>Perfekt für zwei Familienmitglieder, um ihre individuelle Körpergröße anzupassen oder um zwei neue Höheneinstellungen <br/>für vielfältigere Körperhaltungen zu ermöglichen.Der Standard-USB-Ladeanschluss lädt deine digitalen Geräte zuverlässig auf, <br/>genau dann, wenn du es brauchst.</p>",
-                "file_type": "image",
-                "file_image": "shopify://shop_images/about_03.webp",
-                "video_url": ""
-            }
-            },
-            "tab_JyxzQm": {
-            "type": "tab",
-            "settings": {
-                "tabname": "Sitzende Erinnerung",
-                "title": "<p>Fortschrittliche Technologie</p>",
-                "description": "<p>Perfekt für zwei Familienmitglieder, um ihre individuelle Körpergröße anzupassen oder um zwei neue Höheneinstellungen <br/>für vielfältigere Körperhaltungen zu ermöglichen.Der Standard-USB-Ladeanschluss lädt deine digitalen Geräte zuverlässig auf, <br/>genau dann, wenn du es brauchst.</p>",
-                "file_type": "image",
-                "file_image": "shopify://shop_images/about_03.webp",
-                "video_url": ""
-            }
-            },
-            "tab_LmGatL": {
-            "type": "tab",
-            "settings": {
-                "tabname": "Sitzende Erinnerung",
-                "title": "<p>Fortschrittliche Technologie</p>",
-                "description": "<p>Perfekt für zwei Familienmitglieder, um ihre individuelle Körpergröße anzupassen oder um zwei neue Höheneinstellungen <br/>für vielfältigere Körperhaltungen zu ermöglichen.Der Standard-USB-Ladeanschluss lädt deine digitalen Geräte zuverlässig auf, <br/>genau dann, wenn du es brauchst.</p>",
-                "file_type": "image",
-                "file_image": "shopify://shop_images/about_03.webp",
-                "video_url": ""
-            }
-            }
-        },
-        "block_order": [
-            "tab_fiwUXL",
-            "tab_AUd88N",
-            "tab_JyxzQm",
-            "tab_LmGatL"
-        ],
-        "name": "img with text tab",
-        "settings": {
-            "spec_id": "",
-            "title": "<p>Title Title</p>"
-        }
-      },
-      "maidesite_swiper_QhkQG8": {
-        "type": "maidesite-swiper",
-        "blocks": {
-            "swiper_bBWUrY": {
-            "type": "swiper",
-            "settings": {
-                "image": "shopify://shop_images/maidesite-logo-1.webp",
-                "text": "<p>“Ich persönlich bin sehr angetan von der guten Produktqualität, dem zusätzlichen und gut erreichbaren USB-A-Anschluss am Bedienpanel sowie dem schnellen und leisen Motor, der einen fixen Wechsel zwischen Sitz- und Stehposition ermöglicht.”</p>"
-            }
-            },
-            "swiper_BnDxkz": {
-            "type": "swiper",
-            "settings": {
-                "image": "shopify://shop_images/maidesite-logo-2.webp",
-                "text": "<p>“Ich persönlich bin sehr angetan von der guten Produktqualität, dem zusätzlichen und gut erreichbaren USB-A-Anschluss am Bedienpanel sowie dem schnellen und leisen Motor, der einen fixen Wechsel zwischen Sitz- und Stehposition ermöglicht.”</p>"
-            }
-            },
-            "swiper_EnDd8n": {
-            "type": "swiper",
-            "settings": {
-                "image": "shopify://shop_images/maidesite-logo-3.webp",
-                "text": "<p>“Ich persönlich bin sehr angetan von der guten Produktqualität, dem zusätzlichen und gut erreichbaren USB-A-Anschluss am Bedienpanel sowie dem schnellen und leisen Motor, der einen fixen Wechsel zwischen Sitz- und Stehposition ermöglicht.”</p>"
-            }
-            },
-            "swiper_4kYG3r": {
-            "type": "swiper",
-            "settings": {
-                "image": "shopify://shop_images/maidesite-logo-4.webp",
-                "text": "<p>“Ich persönlich bin sehr angetan von der guten Produktqualität, dem zusätzlichen und gut erreichbaren USB-A-Anschluss am Bedienpanel sowie dem schnellen und leisen Motor, der einen fixen Wechsel zwischen Sitz- und Stehposition ermöglicht.”</p>"
-            }
-            }
-        },
-        "block_order": [
-            "swiper_bBWUrY",
-            "swiper_BnDxkz",
-            "swiper_EnDd8n",
-            "swiper_4kYG3r"
-        ],
-        "name": "maidesite swiper",
-        "settings": {
-            "title": "<p>Die Presse Liebt Maidesite</p>",
-            "text": ""
-        },
-        "custom_css": [
-          ".maidesite_swiper_section {padding-top:0;background-color: transparent;}",
-          ".maidesite_swiper_section .maidesite_swiper_title{text-align:center}"
-        ]
-      },
-      "celebrity_swiper_aGymw9": {
-        "type": "celebrity-swiper",
-        "blocks": {
-            "swiper_mexwM6": {
-            "type": "swiper",
-            "settings": {
-                "name": "@Suli-Man",
-                "introduce": "<p>17.1 Million YouTube Followers</p>",
-                "description": "<p>\" I really liked it, and it looks really cool. It's just perfect for long workdays or gaming sessions where comfort and ergonomics are important.\"</p>",
-                "link": "",
-                "cover_image": "shopify://shop_images/celebrity-img-1.webp",
-                "video_url": "",
-                "url_upload": "shopify://files/videos/TO1-Pro-spine-healthy-mode_a586d928-0c0c-459d-99a8-75d2ab5cc36d.mp4"
-            }
-            },
-            "swiper_xWLxVC": {
-            "type": "swiper",
-            "settings": {
-                "name": "@EFRALINK",
-                "introduce": "<p>17.1 Million YouTube Followers</p>",
-                "description": "<p>\" Here is my new minimalist desk setup as a photographer and content creator for long editing sessions.\"</p>",
-                "link": "",
-                "cover_image": "shopify://shop_images/celebrity-img-2.webp",
-                "video_url": "",
-                "url_upload": "shopify://files/videos/TO1-Pro-spine-healthy-mode_a586d928-0c0c-459d-99a8-75d2ab5cc36d.mp4"
-            }
-            }
-        },
-        "block_order": [
-            "swiper_mexwM6",
-            "swiper_xWLxVC"
-        ],
-        "name": "celebrity swiper",
-        "settings": {
-            "title": "<p>Empfehlen Von</p>",
-            "text": ""
-        },
-        "custom_css": [
-          ".celebrity_swiper {padding-bottom:12rem;background-color: transparent;}",
-        ]
+{
+  "sections": {
+    "breadcrumbs": {
+      "type": "breadcrumbs",
+      "custom_css": [
+        ".breadcrumb-con {top: 0;}",
+        ".breadcrumb,.breadcrumb a,.breadcrumb span {color: #7f7e75;}"
+      ],
+      "settings": {
+        "custom_breadcrumb": ""
       }
     },
-    "order": [
-      "breadcrumbs",
-      "image_with_text_aboutus",
-      "time_line",  
-      "img_with_text_tab_emEWU8",
-      "maidesite_swiper_QhkQG8",
-      "celebrity_swiper_aGymw9"
-    ]
-  }
+    "image_with_text_aboutus": {
+      "type": "image-with-text-aboutus",
+      "name": "image_with_text_aboutus",
+      "settings": {
+        "layout": "image-right",
+        "small_title": "Maidesite – Ihr Partner für gesundes und produktives Arbeiten",
+        "title": "Ergonomisches Arbeiten Neu Definiert",
+        "text": "<p>Maidesite gehört zu den führenden Anbietern ergonomischer Büromöbel in Europa. <br/>Mit einem Team aus Designern, Ingenieuren und Ergonomie-Experten entwickeln wir innovative Lösungen, die Ihre Gesundheit, <br/>Ihren Komfort und Ihre Produktivität steigern. Unser Ziel: Eine Arbeitsumgebung, die sich perfekt an Ihre Bedürfnisse anpasst – für mehr Wohlbefinden und Effizienz im Alltag.</p>",
+        "btn_text": "",
+        "image": "shopify://shop_images/about_01.webp",
+        "link": ""
+      }
+    },
+    "time_line": {
+      "type": "time-line",
+      "blocks": {
+        "timeline_bBWUrY": {
+          "type": "timeline",
+          "settings": {
+            "year_text": "2021",
+            "image": "shopify://shop_images/Maidesite_manufacture_base.jpg",
+            "text": "<p>Maidesite wird gegründet und bringt die ersten höhenverstellbaren Schreibtische auf den Markt. Unser Ziel: <br/>Ergonomische Lösungen für ein gesünderes und produktiveres Arbeiten.</p>",
+            "small_title": "Der Anfang einer Mission"
+          }
+        },
+        "timeline_BnDxkz": {
+          "type": "timeline",
+          "settings": {
+            "year_text": "2021",
+            "image": "shopify://shop_images/Maidesite_manufacture_base.jpg",
+            "text": "<p>Maidesite wird gegründet und bringt die ersten höhenverstellbaren Schreibtische auf den Markt. Unser Ziel: <br/>Ergonomische Lösungen für ein gesünderes und produktiveres Arbeiten.</p>",
+            "small_title": "Der Anfang einer Mission"
+          }
+        },
+        "timeline_EnDd8n": {
+          "type": "timeline",
+          "settings": {
+            "year_text": "2022",
+            "image": "shopify://shop_images/Maidesite_manufacture_base.jpg",
+            "text": "<p>Maidesite wird gegründet und bringt die ersten höhenverstellbaren Schreibtische auf den Markt. Unser Ziel: <br/>Ergonomische Lösungen für ein gesünderes und produktiveres Arbeiten.</p>",
+            "small_title": "Der Anfang einer Mission"
+          }
+        },
+        "timeline_4kYG3r": {
+          "type": "timeline",
+          "settings": {
+            "year_text": "2023",
+            "image": "shopify://shop_images/Maidesite_manufacture_base.jpg",
+            "text": "<p>Maidesite wird gegründet und bringt die ersten höhenverstellbaren Schreibtische auf den Markt. Unser Ziel: <br/>Ergonomische Lösungen für ein gesünderes und produktiveres Arbeiten.</p>",
+            "small_title": "Der Anfang einer Mission"
+          }
+        },
+        "timeline_4kYG33": {
+          "type": "timeline",
+          "settings": {
+            "year_text": "2024",
+            "image": "shopify://shop_images/Maidesite_manufacture_base.jpg",
+            "text": "<p>Maidesite wird gegründet und bringt die ersten höhenverstellbaren Schreibtische auf den Markt. Unser Ziel: <br/>Ergonomische Lösungen für ein gesünderes und produktiveres Arbeiten.</p>",
+            "small_title": "Der Anfang einer Mission"
+          }
+        },
+        "timeline_4kYG32": {
+          "type": "timeline",
+          "disabled": true,
+          "settings": {
+            "year_text": "2025",
+            "image": "shopify://shop_images/about_02.webp",
+            "text": "<p>Maidesite wird gegründet und bringt die ersten höhenverstellbaren Schreibtische auf den Markt. Unser Ziel: <br/>Ergonomische Lösungen für ein gesünderes und produktiveres Arbeiten.</p>",
+            "small_title": "Der Anfang einer Mission"
+          }
+        },
+        "timeline_4kYG31": {
+          "type": "timeline",
+          "disabled": true,
+          "settings": {
+            "year_text": "2026",
+            "image": "shopify://shop_images/about_02.webp",
+            "text": "<p>Maidesite wird gegründet und bringt die ersten höhenverstellbaren Schreibtische auf den Markt. Unser Ziel: <br/>Ergonomische Lösungen für ein gesünderes und produktiveres Arbeiten.</p>",
+            "small_title": "Der Anfang einer Mission"
+          }
+        }
+      },
+      "block_order": [
+        "timeline_bBWUrY",
+        "timeline_BnDxkz",
+        "timeline_EnDd8n",
+        "timeline_4kYG3r",
+        "timeline_4kYG33",
+        "timeline_4kYG32",
+        "timeline_4kYG31"
+      ],
+      "name": "time_line",
+      "settings": {
+        "title": "Unsere Reise In Etappen",
+        "text": ""
+      }
+    },
+    "img_with_text_tab_emEWU8": {
+      "type": "img-with-text-tab",
+      "blocks": {
+        "tab_fiwUXL": {
+          "type": "tab",
+          "settings": {
+            "tabname": "Sitzende Erinnerung",
+            "sub_title": "",
+            "title": "<p>Fortschrittliche Technologie</p>",
+            "description": "<p>Perfekt für zwei Familienmitglieder, um ihre individuelle Körpergröße anzupassen oder um zwei neue Höheneinstellungen <br/>für vielfältigere Körperhaltungen zu ermöglichen.Der Standard-USB-Ladeanschluss lädt deine digitalen Geräte zuverlässig auf, <br/>genau dann, wenn du es brauchst.</p>",
+            "file_type": "image",
+            "file_image": "shopify://shop_images/about_03.webp",
+            "video_url": "",
+            "btn_text": "",
+            "link": ""
+          }
+        },
+        "tab_AUd88N": {
+          "type": "tab",
+          "settings": {
+            "tabname": "Sitzende Erinnerung",
+            "sub_title": "",
+            "title": "<p>Fortschrittliche Technologie</p>",
+            "description": "<p>Perfekt für zwei Familienmitglieder, um ihre individuelle Körpergröße anzupassen oder um zwei neue Höheneinstellungen <br/>für vielfältigere Körperhaltungen zu ermöglichen.Der Standard-USB-Ladeanschluss lädt deine digitalen Geräte zuverlässig auf, <br/>genau dann, wenn du es brauchst.</p>",
+            "file_type": "image",
+            "file_image": "shopify://shop_images/about_03.webp",
+            "video_url": "",
+            "btn_text": "",
+            "link": ""
+          }
+        },
+        "tab_JyxzQm": {
+          "type": "tab",
+          "settings": {
+            "tabname": "Sitzende Erinnerung",
+            "sub_title": "",
+            "title": "<p>Fortschrittliche Technologie</p>",
+            "description": "<p>Perfekt für zwei Familienmitglieder, um ihre individuelle Körpergröße anzupassen oder um zwei neue Höheneinstellungen <br/>für vielfältigere Körperhaltungen zu ermöglichen.Der Standard-USB-Ladeanschluss lädt deine digitalen Geräte zuverlässig auf, <br/>genau dann, wenn du es brauchst.</p>",
+            "file_type": "image",
+            "file_image": "shopify://shop_images/about_03.webp",
+            "video_url": "",
+            "btn_text": "",
+            "link": ""
+          }
+        },
+        "tab_LmGatL": {
+          "type": "tab",
+          "settings": {
+            "tabname": "Sitzende Erinnerung",
+            "sub_title": "",
+            "title": "<p>Fortschrittliche Technologie</p>",
+            "description": "<p>Perfekt für zwei Familienmitglieder, um ihre individuelle Körpergröße anzupassen oder um zwei neue Höheneinstellungen <br/>für vielfältigere Körperhaltungen zu ermöglichen.Der Standard-USB-Ladeanschluss lädt deine digitalen Geräte zuverlässig auf, <br/>genau dann, wenn du es brauchst.</p>",
+            "file_type": "image",
+            "file_image": "shopify://shop_images/about_03.webp",
+            "video_url": "",
+            "btn_text": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "tab_fiwUXL",
+        "tab_AUd88N",
+        "tab_JyxzQm",
+        "tab_LmGatL"
+      ],
+      "name": "img with text tab",
+      "settings": {
+        "spec_id": "",
+        "description": "",
+        "title": "<p>Title Title</p>",
+        "show_tab_head": true,
+        "loop": true,
+        "autoplay_enable": true,
+        "autoplay_delay": 5000,
+        "layout": "image-left"
+      }
+    },
+    "maidesite_swiper_QhkQG8": {
+      "type": "maidesite-swiper",
+      "blocks": {
+        "swiper_bBWUrY": {
+          "type": "swiper",
+          "settings": {
+            "image": "shopify://shop_images/maidesite-logo-1.webp",
+            "text": "<p>“Ich persönlich bin sehr angetan von der guten Produktqualität, dem zusätzlichen und gut erreichbaren USB-A-Anschluss am Bedienpanel sowie dem schnellen und leisen Motor, der einen fixen Wechsel zwischen Sitz- und Stehposition ermöglicht.”</p>"
+          }
+        },
+        "swiper_BnDxkz": {
+          "type": "swiper",
+          "settings": {
+            "image": "shopify://shop_images/maidesite-logo-2.webp",
+            "text": "<p>“Ich persönlich bin sehr angetan von der guten Produktqualität, dem zusätzlichen und gut erreichbaren USB-A-Anschluss am Bedienpanel sowie dem schnellen und leisen Motor, der einen fixen Wechsel zwischen Sitz- und Stehposition ermöglicht.”</p>"
+          }
+        },
+        "swiper_EnDd8n": {
+          "type": "swiper",
+          "settings": {
+            "image": "shopify://shop_images/maidesite-logo-3.webp",
+            "text": "<p>“Ich persönlich bin sehr angetan von der guten Produktqualität, dem zusätzlichen und gut erreichbaren USB-A-Anschluss am Bedienpanel sowie dem schnellen und leisen Motor, der einen fixen Wechsel zwischen Sitz- und Stehposition ermöglicht.”</p>"
+          }
+        },
+        "swiper_4kYG3r": {
+          "type": "swiper",
+          "settings": {
+            "image": "shopify://shop_images/maidesite-logo-4.webp",
+            "text": "<p>“Ich persönlich bin sehr angetan von der guten Produktqualität, dem zusätzlichen und gut erreichbaren USB-A-Anschluss am Bedienpanel sowie dem schnellen und leisen Motor, der einen fixen Wechsel zwischen Sitz- und Stehposition ermöglicht.”</p>"
+          }
+        }
+      },
+      "block_order": [
+        "swiper_bBWUrY",
+        "swiper_BnDxkz",
+        "swiper_EnDd8n",
+        "swiper_4kYG3r"
+      ],
+      "custom_css": [
+        ".maidesite_swiper_section {padding-top: 0; background-color: transparent;}",
+        ".maidesite_swiper_section .maidesite_swiper_title {text-align: center;}"
+      ],
+      "name": "maidesite swiper",
+      "settings": {
+        "title": "<p>Die Presse Liebt Maidesite</p>",
+        "text": "",
+        "show_buttons": true,
+        "loop": true,
+        "autoplay_enable": true,
+        "autoplay_delay": 3000,
+        "padding_top": 120,
+        "padding_bottom": 0
+      }
+    },
+    "celebrity_swiper_aGymw9": {
+      "type": "celebrity-swiper",
+      "blocks": {
+        "swiper_mexwM6": {
+          "type": "swiper",
+          "settings": {
+            "name": "@Suli-Man",
+            "introduce": "<p>17.1 Million YouTube Followers</p>",
+            "description": "<p>\" I really liked it, and it looks really cool. It's just perfect for long workdays or gaming sessions where comfort and ergonomics are important.\"</p>",
+            "link": "",
+            "cover_image": "shopify://shop_images/celebrity-img-1.webp",
+            "video_url": "",
+            "url_upload": "shopify://files/videos/TO1-Pro-spine-healthy-mode_a586d928-0c0c-459d-99a8-75d2ab5cc36d.mp4"
+          }
+        },
+        "swiper_xWLxVC": {
+          "type": "swiper",
+          "settings": {
+            "name": "@EFRALINK",
+            "introduce": "<p>17.1 Million YouTube Followers</p>",
+            "description": "<p>\" Here is my new minimalist desk setup as a photographer and content creator for long editing sessions.\"</p>",
+            "link": "",
+            "cover_image": "shopify://shop_images/celebrity-img-2.webp",
+            "video_url": "",
+            "url_upload": "shopify://files/videos/TO1-Pro-spine-healthy-mode_a586d928-0c0c-459d-99a8-75d2ab5cc36d.mp4"
+          }
+        }
+      },
+      "block_order": [
+        "swiper_mexwM6",
+        "swiper_xWLxVC"
+      ],
+      "custom_css": [
+        ".celebrity_swiper {padding-bottom: 12rem; background-color: transparent;}"
+      ],
+      "name": "celebrity swiper",
+      "settings": {
+        "title": "<p>Empfehlen Von</p>",
+        "text": "",
+        "padding_top": 120,
+        "padding_bottom": 0
+      }
+    }
+  },
+  "order": [
+    "breadcrumbs",
+    "image_with_text_aboutus",
+    "time_line",
+    "img_with_text_tab_emEWU8",
+    "maidesite_swiper_QhkQG8",
+    "celebrity_swiper_aGymw9"
+  ]
+}
