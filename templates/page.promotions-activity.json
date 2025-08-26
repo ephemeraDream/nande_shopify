@@ -32,7 +32,7 @@
             "overlay_text_align": "text-start",
             "transparent_content_color": "#ffffff",
             "file_type": "image",
-            "file_image": "shopify://shop_images/01af9531-9158-4ede-87be-26818b919ab6.__CR0_0_1464_600_PT0_SX1464_V1.jpg",
+            "file_image": "shopify://shop_images/2_ab4d81c1-cbb4-4894-a0de-55ed92334218.jpg",
             "video_url": "",
             "show_countdown": true,
             "countdown": "summer-sale"
@@ -44,7 +44,7 @@
       ],
       "name": "banner",
       "settings": {
-        "height_mode": "auto",
+        "height_mode": "screen",
         "fixed_height_desktop": 600,
         "fixed_height_mobile": 500,
         "mobile_stacked": false,
