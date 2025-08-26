@@ -16,6 +16,7 @@
       "blocks": {
         "announcement-bar-0": {
           "type": "announcement",
+          "disabled": true,
           "settings": {
             "text": "Welcome to our store",
             "link": "",
@@ -26,18 +27,18 @@
           "type": "img_with_text",
           "settings": {
             "text": "<p><strong>Sommer Sale: </strong>Sichere Dir jetzt die heißesten Deals von bis zu 150 € Rabatt</p>",
-            "image": "shopify://shop_images/3200_x_1800.jpg",
-            "link": "shopify://products/ergoset-sc2-schreibtisch-ec6-burostuhl",
+            "link": "",
             "font_color": "#bdff00"
           }
         },
         "countdown_77kmfi": {
           "type": "countdown",
+          "disabled": true,
           "settings": {
             "text": "<p><strong>Sommer Sale: </strong>Sichere Dir jetzt die heißesten Deals von bis zu 150 € Rabatt</p>",
             "countdown_handle": "summer-sale",
             "link": "",
-            "countdown": "2025-back-school-deal",
+            "countdown": "summer-sale",
             "font_color": "#bdff00"
           }
         }
@@ -62,7 +63,7 @@
       "type": "header-simple",
       "name": "header simple",
       "settings": {
-        "customer_service_url": "https://www.maidesite.de/collections/hohenverstellbarer-schreibtisch"
+        "customer_service_url": ""
       }
     },
     "header_menu_KJeiwA": {
@@ -77,10 +78,9 @@
             "page_one_title": "专题页1",
             "page_one_text": "专题页1",
             "page_one_link": "shopify://pages/2023-black-friday-gratis-bestellung-regeln",
-            "page_two_image": "shopify://shop_images/large_home_office_desk_setup_base_on_Maideiste_T2_Pro_Max.jpg",
-            "page_two_title": "专题页2",
-            "page_two_text": "专题页2",
-            "page_two_link": "shopify://pages/einkaufseinfuhrung",
+            "page_two_title": "",
+            "page_two_text": "",
+            "page_two_link": "",
             "page_thr_title": "",
             "page_thr_text": "",
             "page_thr_link": "",
