@@ -27,12 +27,12 @@
             </a>
             <div class="header_menu_item_submenu session-box-padding">
               <div class="header_menu_item_submenu_contain">
-                {% assign page_index_list = 'one, two, thr, four, five, six' | split: ',' %}
+                {% assign page_index_list = 'one,two,thr,four,five,six' | split: ',' %}
                 {%- for index in page_index_list -%}
-                  {% capture image_id %}page_{{ index }}_image{% endcapture %}
-                  {% capture title_id %}page_{{ index }}_title{% endcapture %}
-                  {% capture text_id %}page_{{ index }}_text{% endcapture %}
-                  {% capture link_id %}page_{{ index }}_link{% endcapture %}
+                  {% capture image_id %}page_{{index}}_image{% endcapture %}
+                  {% capture title_id %}page_{{index}}_title{% endcapture %}
+                  {% capture text_id %}page_{{index}}_text{% endcapture %}
+                  {% capture link_id %}page_{{index}}_link{% endcapture %}
 
                   {% assign image = block.settings[image_id] %}
                   {% assign title = block.settings[title_id] %}
