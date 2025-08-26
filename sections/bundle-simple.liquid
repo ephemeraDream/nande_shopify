@@ -23,14 +23,17 @@
         {% for product in section.settings.product_list %}
           <div class="bundle_simple_product" data-id="{{ product.id }}">
             <div class="bundle_simple_product_img">
+              <a href="{{ product.url }}">
               <img
                 src="{{ product.selected_or_first_available_variant.featured_image.src | image_url }}"
                 alt="{{ product.title }}"
               >
+              </a>
             </div>
             <div class="bundle_simple_product_info">
               <div>
                 {% assign product_model = product.metafields.custom.product_model %}
+                <a href="{{ product.url }}">
                 <h4 class="bundle_simple_product_model">
                   {% if product_model != blank %}
                     {{ product_model }}
@@ -39,6 +42,7 @@
                   {% endif %}
                 </h4>
                 <h4 class="bundle_simple_product_title">{{ product.title }}</h4>
+                </a>
                 <h4 class="bundle_simple_product_price">
                   {{ product.selected_or_first_available_variant.price | money_without_trailing_zeros }}
                 </h4>
