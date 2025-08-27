@@ -45,11 +45,19 @@
   --text-color: {{ section.settings.pagination_color.red }} {{ section.settings.pagination_color.green }} {{ section.settings.pagination_color.blue }};
 }
 
+.bg_color {
+  background-color: {{ section.settings.background_color }};
+}
+@media screen and (min-width: 768px) {
+  .bg_color {
+  background-color:transparent;
+ }
+}
 {%- endstyle -%}
 
 {{ 'section-banner.css' | asset_url | stylesheet_tag }}
 
-<div class="section_banner swiper" data-autoplay="{{ section.settings.autoplay }}" data-speed="{{ section.settings.autoplay_speed }}" data-transition="{{ section.settings.transition }}" >
+<div class="section_banner swiper bg_color" data-autoplay="{{ section.settings.autoplay }}" data-speed="{{ section.settings.autoplay_speed }}" data-transition="{{ section.settings.transition }}" >
   <div class="swiper-wrapper {{ section.settings.height_mode }}-height" aria-live="polite">
     {% for block in section.blocks %}
       <div class="swiper-slide">
@@ -427,6 +435,12 @@
       "label": "Show text below image on mobile",
       "info": "Does not apply to \"Full screen height\".",
       "default": false
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background color",
+      "default": "#dddddd"
     },
     {
       "type": "header",
