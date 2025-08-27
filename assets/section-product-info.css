@@ -1488,4 +1488,11 @@
   .product_info .product_info_left_thumb {
     flex-direction: column;
   }
+
+.product_info_section .product_info_steps_item:first-child span:first-child {
+  margin-left: 0rem;
+}
+.product_info_section .product_info_steps_item{
+  font-size: 1.6rem;
+}
 }
