@@ -4151,7 +4151,7 @@ a {
 }
 
 .nd_swiper_pagination.swiper-pagination-bullets.swiper-pagination-horizontal{
-  bottom: 0px;
+  bottom: -10px;
   display: none;
   align-items: center;
   justify-content: center;
