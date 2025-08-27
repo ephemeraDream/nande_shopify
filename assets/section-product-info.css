@@ -1485,4 +1485,7 @@
     flex-direction: column;
     padding-top: 0.6rem
   }
+  .product_info .product_info_left_thumb {
+    flex-direction: column;
+  }
 }
