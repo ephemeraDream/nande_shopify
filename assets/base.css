@@ -4149,8 +4149,12 @@ a {
 .swiper-button-disabled {
   display: none !important;
 }
+
 .nd_swiper_pagination.swiper-pagination-bullets.swiper-pagination-horizontal{
-  bottom: -9px;
+  bottom: 0px;
+  display: none;
+  align-items: center;
+  justify-content: center;
 }
 .nd_swiper_pagination .swiper-pagination-bullet {
   width: 1.2rem;
@@ -4172,6 +4176,11 @@ a {
   }
   .swiper_btn_white svg{
     width: 1.2rem;
+  }
+}
+@media screen and (max-width: 768px) {
+  .nd_swiper_pagination.swiper-pagination-bullets.swiper-pagination-horizontal {
+    display: flex!important;
   }
 }
 /**************************** share *****************************/
