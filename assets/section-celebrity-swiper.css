@@ -107,6 +107,9 @@
   left: 85vw;
   right: unset;
 }
+.celebrity_swiper .swiper-pagination {
+  display: none;
+}
 @media screen and (max-width: 1600px) {
   .celebrity_swiper.padding-sider {
       padding-right: 0rem!important;
@@ -137,9 +140,12 @@
   .celebrity_swiper .celebrity_swiper_item_right {
     height: 23rem;
   }
-  .celebrity_swiper .swiper_btn_white.swiper_btn_white_next {
-    left: unset;
-    right: 3vw;
+  .celebrity_swiper .swiper_btn_white.swiper_btn_white_next,
+  .celebrity_swiper .swiper_btn_white.swiper_btn_white_prev {
+    display: none;
+  }
+  .celebrity_swiper .swiper-pagination {
+    display: block;
   }
 }
 

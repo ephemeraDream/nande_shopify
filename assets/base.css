@@ -4149,6 +4149,22 @@ a {
 .swiper-button-disabled {
   display: none !important;
 }
+.swiper-pagination-bullets.swiper-pagination-horizontal{
+  bottom: -9px;
+}
+.swiper-pagination-bullet {
+  width: 1.2rem;
+  height: 1.2rem;
+  background: #7f7e75;
+  border-radius: 0;
+  opacity: 1;
+  margin: 0 .8rem !important;
+  border: .2rem solid #7F7E75;
+  box-sizing: border-box;
+}
+.swiper-pagination-bullet-active {
+  background: #bdff00;
+}
 @media screen and (max-width: 1024px) {
   .swiper_btn_white{
     width: 4.5rem;
