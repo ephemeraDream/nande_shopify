@@ -12,7 +12,8 @@
     }
   }
 {%- endstyle -%}
-<div class="celebrity_swiper padding-sider section-{{ section.id }}-padding">
+{%- assign swiper_id = 'celebrity_swiper_' | append: section.id -%}
+<div id="{{ swiper_id }}" class="celebrity_swiper padding-sider section-{{ section.id }}-padding">
   <div class="celebrity_swiper_header">
     <h2>{{ section.settings.title }}</h2>
     <h4 class="celebrity_swiper_text">{{ section.settings.text }}</h4>
@@ -91,6 +92,9 @@
 </div>
 
 <script>
+  (function() {
+  var root = document.getElementById('{{ swiper_id }}');
+  var paginationEl = root.querySelector('.swiper-pagination');
   new Swiper('.celebrity_swiper .swiper', {
     slidesPerView: 1, 
     spaceBetween: 20,
@@ -137,6 +141,7 @@
       }
     });
   });
+})();
 </script>
 
 {% schema %}
