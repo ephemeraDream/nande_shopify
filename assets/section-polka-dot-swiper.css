@@ -203,5 +203,8 @@
   .polka_dot_swiper .polka_dot_swiper_info {
     flex-direction: column;
     align-items: flex-start;
-}
+  }
+  .polka_dot_swiper .swiper_btn_white {
+    display: none;
+  }
 }
