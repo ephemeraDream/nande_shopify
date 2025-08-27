@@ -1,0 +1,300 @@
+
+{%- style -%}
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+  }
+
+  @media screen and (min-width: 767px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+{%- endstyle -%}
+<div class="activity_subscribe_top_section session-box-padding section-{{ section.id }}-padding">
+  <div class="session-box-inner" id="{{ section.settings.specId }}">
+    <h2 class="activity_subscribe_top_title">{{ section.settings.title }}</h2>
+    <h4 class="activity_subscribe_top_text">{{ section.settings.text }}</h4>
+  </div>
+  <div class="activity_top_subscribe">
+    {% for block in section.blocks %}
+      {%- case block.type -%}
+        {%- when 'top-left' -%}
+          <div class="activity_subscribe_top_item">
+            <div>
+              <h3 class="activity_subscribe_top_item_title">{{ block.settings.title }}</h3>
+              <div class="activity_subscribe_top_item_text text-body">{{ block.settings.text }}</div>
+            </div>
+            <div class="activity_subscribe_top_item_btnline">
+              {% if block.settings.btn_one != blank %}
+                <a class="activity_subscribe_top_item_btnone" href="{{ block.settings.btn_one_link }}">
+                  {{- block.settings.btn_one -}}
+                </a>
+              {% endif %}
+              {% if block.settings.btn_two != blank %}
+                <a class="activity_subscribe_top_item_btntwo" href="{{ block.settings.btn_two_link }}">
+                  {{- block.settings.btn_two -}}
+                </a>
+              {% endif %}
+            </div>
+            <div class="activity_subscribe_top_item_icon">{{ block.settings.icon }}</div>
+          </div>
+        {%- when 'top-right' -%}
+          <div class="activity_subscribe_top_item">
+            <div>
+              <h3 class="activity_subscribe_top_item_title">{{ block.settings.title }}</h3>
+              <div class="activity_subscribe_top_item_text text-body">{{ block.settings.text }}</div>
+            </div>
+            <div class="activity_subscribe_top_item_btnline">
+              {% if block.settings.btn_one != blank %}
+                <a class="activity_subscribe_top_item_btnone" href="{{ block.settings.btn_one_link }}">
+                  {{- block.settings.btn_one -}}
+                </a>
+              {% endif %}
+              {% if block.settings.btn_two != blank %}
+                <a class="activity_subscribe_top_item_btntwo" href="{{ block.settings.btn_two_link }}">
+                  {{- block.settings.btn_two -}}
+                </a>
+              {% endif %}
+            </div>
+            <div class="activity_subscribe_top_item_icon">{{ block.settings.icon }}</div>
+          </div>
+      {%- endcase -%}
+    {% endfor %}
+  </div>
+</div>
+<style>
+  .activity_subscribe_top_section {
+    width: 100%;
+    background-color: #f2f1ed;
+  }
+  .activity_subscribe_top_section .activity_subscribe_top_title {
+    color: #1F1F1F;
+  }
+  
+  .activity_subscribe_top_section .activity_subscribe_top_text {
+    color: #7F7E75;
+    margin-top: 3rem;
+  }
+  .activity_top_subscribe {
+    max-width: 144rem;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6rem;
+  }
+  .activity_top_subscribe .activity_subscribe_top_item {
+    flex: 0 0 auto;
+    width: calc((100% - 6rem) / 2);
+    min-height: 33.6rem;
+    background-color: #E2DED6;
+    position: relative;
+    padding: 2.6rem 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  .activity_top_subscribe .activity_subscribe_top_item_title {
+    color: #1F1F1F;
+  }
+  
+  .activity_top_subscribe .activity_subscribe_top_item_text {
+    font-variation-settings: "opsz" auto;
+    color: #1F1F1F;
+    margin-top: 1.2rem;
+  }
+  
+  .activity_top_subscribe .activity_subscribe_top_item_icon {
+    position: absolute;
+    right: 3.4rem;
+    bottom: 3rem;
+    width: 13%;
+    display: flex;
+    align-items: flex-end;
+  }
+  .activity_subscribe_top_item_icon svg{
+    width: 100%;
+    height: auto;
+  }
+  @media (max-width: 1170px) {
+    .activity_top_subscribe .activity_subscribe_top_item_btnline {
+      flex-direction: column;
+      width: 50%;
+    }
+  }
+  @media (max-width: 767px) {
+    .activity_top_subscribe{
+      flex-direction: column;
+    }
+    .activity_top_subscribe .activity_subscribe_top_item{
+      width: 100%;
+    }
+    .activity_top_subscribe .activity_subscribe_top_item{
+      width: 100%;
+    }
+  }
+</style>
+{% schema %}
+{
+  "name": "activity subscribe",
+  "tag": "section",
+  "class": "section",
+  "disabled_on": {
+    "groups": ["header", "footer"]
+  },
+  "settings": [
+    {
+      "type": "text",
+      "id": "specId",
+      "label": "specId"
+    },
+    {
+      "type": "richtext",
+      "id": "title",
+      "label": "title"
+    },
+    {
+      "type": "richtext",
+      "id": "text",
+      "label": "text"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 120,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_top",
+      "default": 120
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 120,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_bottom",
+      "default": 0
+    }
+  ],
+  "blocks": [
+    {
+      "type": "top-left",
+      "name": "top left",
+      "settings": [
+        {
+          "type": "richtext",
+          "id": "title",
+          "label": "title"
+        },
+        {
+          "type": "richtext",
+          "id": "text",
+          "label": "text"
+        },
+        {
+          "type": "textarea",
+          "id": "icon",
+          "label": "icon"
+        },
+        {
+          "type": "text",
+          "id": "btn_one",
+          "label": "button one text"
+        },
+        {
+          "type": "url",
+          "id": "btn_one_link",
+          "label": "button one link"
+        },
+        {
+          "type": "text",
+          "id": "btn_two",
+          "label": "button two text"
+        },
+        {
+          "type": "url",
+          "id": "btn_two_link",
+          "label": "button two link"
+        }
+      ]
+    },
+    {
+      "type": "top-right",
+      "name": "top right",
+      "settings": [
+        {
+          "type": "richtext",
+          "id": "title",
+          "label": "title"
+        },
+        {
+          "type": "richtext",
+          "id": "text",
+          "label": "text"
+        },
+        {
+          "type": "textarea",
+          "id": "icon",
+          "label": "icon"
+        },
+        {
+          "type": "text",
+          "id": "btn_one",
+          "label": "button one text"
+        },
+        {
+          "type": "url",
+          "id": "btn_one_link",
+          "label": "button one link"
+        },
+        {
+          "type": "text",
+          "id": "btn_two",
+          "label": "button two text"
+        },
+        {
+          "type": "url",
+          "id": "btn_two_link",
+          "label": "button two link"
+        }
+      ]
+    },
+    {
+      "type": "bottom",
+      "name": "bottom",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "background",
+          "label": "background"
+        },
+        {
+          "type": "richtext",
+          "id": "title",
+          "label": "title"
+        },
+        {
+          "type": "richtext",
+          "id": "subtitle",
+          "label": "subtitle"
+        },
+        {
+          "type": "richtext",
+          "id": "text",
+          "label": "text"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "activity subscribe"
+    }
+  ]
+}
+{% endschema %}

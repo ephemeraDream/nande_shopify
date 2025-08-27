@@ -1,49 +1,21 @@
 {{ 'section-activity-subscribe.css' | asset_url | stylesheet_tag }}
+{%- style -%}
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+  }
 
-<div class="activity_subscribe_section session-box-padding">
-  <div class="activity_subscribe">
+  @media screen and (min-width: 767px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+{%- endstyle -%}
+<div class="activity_subscribe_section session-box-padding section-{{ section.id }}-padding">
+  <div class="activity_subscribe" id="{{ section.settings.specId }}">
     {% for block in section.blocks %}
       {%- case block.type -%}
-        {%- when 'top-left' -%}
-          <div class="activity_subscribe_top_item">
-            <div>
-              <h3 class="activity_subscribe_top_item_title">{{ block.settings.title }}</h3>
-              <div class="activity_subscribe_top_item_text text-body">{{ block.settings.text }}</div>
-            </div>
-            <div class="activity_subscribe_top_item_btnline">
-              {% if block.settings.btn_one != blank %}
-                <a class="activity_subscribe_top_item_btnone" href="{{ block.settings.btn_one_link }}">
-                  {{- block.settings.btn_one -}}
-                </a>
-              {% endif %}
-              {% if block.settings.btn_two != blank %}
-                <a class="activity_subscribe_top_item_btntwo" href="{{ block.settings.btn_two_link }}">
-                  {{- block.settings.btn_two -}}
-                </a>
-              {% endif %}
-            </div>
-            <div class="activity_subscribe_top_item_icon">{{ block.settings.icon }}</div>
-          </div>
-        {%- when 'top-right' -%}
-          <div class="activity_subscribe_top_item">
-            <div>
-              <h3 class="activity_subscribe_top_item_title">{{ block.settings.title }}</h3>
-              <div class="activity_subscribe_top_item_text text-body">{{ block.settings.text }}</div>
-            </div>
-            <div class="activity_subscribe_top_item_btnline">
-              {% if block.settings.btn_one != blank %}
-                <a class="activity_subscribe_top_item_btnone" href="{{ block.settings.btn_one_link }}">
-                  {{- block.settings.btn_one -}}
-                </a>
-              {% endif %}
-              {% if block.settings.btn_two != blank %}
-                <a class="activity_subscribe_top_item_btntwo" href="{{ block.settings.btn_two_link }}">
-                  {{- block.settings.btn_two -}}
-                </a>
-              {% endif %}
-            </div>
-            <div class="activity_subscribe_top_item_icon">{{ block.settings.icon }}</div>
-          </div>
         {%- when 'bottom' -%}
           <div class="activity_subscribe_bottom">
             <img src="{{ block.settings.background | image_url }}" class="activity_subscribe_bottom_img">
@@ -129,6 +101,26 @@
       "type": "text",
       "id": "specId",
       "label": "specId"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 120,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_top",
+      "default": 60
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 120,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_bottom",
+      "default": 0
     }
   ],
   "blocks": [

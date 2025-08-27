@@ -223,8 +223,8 @@
         "rule": "<p>asdasdasdasdads</p>"
       }
     },
-    "activity_subscribe_tV4gHF": {
-      "type": "activity-subscribe",
+    "activity_subscribe_top_tV4gHF": {
+      "type": "activity-subscribe-top",
       "blocks": {
         "top_left_TNQyCH": {
           "type": "top-left",
@@ -250,6 +250,19 @@
             "btn_two_link": ""
           }
         },
+      },
+      "block_order": [
+        "top_left_TNQyCH",
+        "top_right_fceWw8"
+      ],
+      "name": "activity subscribe",
+      "settings": {
+        "specId": ""
+      }
+    },
+    "activity_subscribe_tV4gHF": {
+      "type": "activity-subscribe",
+      "blocks": {
         "bottom_6MFfEX": {
           "type": "bottom",
           "settings": {
@@ -261,8 +274,6 @@
         }
       },
       "block_order": [
-        "top_left_TNQyCH",
-        "top_right_fceWw8",
         "bottom_6MFfEX"
       ],
       "name": "activity subscribe",

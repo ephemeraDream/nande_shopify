@@ -13,8 +13,12 @@
 {%- endstyle -%}
 <div class="maidesite_swiper_new_section session-box-padding section-{{ section.id }}-padding">
   <div class="session-box-inner" id="maidesite_swiper_new_section-{{ section.id }}">
-    <h2 class="maidesite_swiper_title">{{ section.settings.title }}</h2>
-    <h4 class="maidesite_swiper_text">{{ section.settings.text }}</h4>
+    {% if section.settings.title != blank %}
+      <h2 class="maidesite_swiper_title">{{ section.settings.title }}</h2>
+    {% endif %}
+    {% if section.settings.text != blank %}
+      <h4 class="maidesite_swiper_text">{{ section.settings.text }}</h4>
+    {% endif %}
     <div class="maidesite_swiper_image_contain">
       <div class="swiper maidesite_swiper_image">
         <div class="swiper-wrapper">
