@@ -4149,10 +4149,10 @@ a {
 .swiper-button-disabled {
   display: none !important;
 }
-.swiper-pagination-bullets.swiper-pagination-horizontal{
+.nd_swiper_pagination.swiper-pagination-bullets.swiper-pagination-horizontal{
   bottom: -9px;
 }
-.swiper-pagination-bullet {
+.nd_swiper_pagination .swiper-pagination-bullet {
   width: 1.2rem;
   height: 1.2rem;
   background: #7f7e75;
@@ -4162,7 +4162,7 @@ a {
   border: .2rem solid #7F7E75;
   box-sizing: border-box;
 }
-.swiper-pagination-bullet-active {
+.nd_swiper_pagination .swiper-pagination-bullet-active {
   background: #bdff00;
 }
 @media screen and (max-width: 1024px) {

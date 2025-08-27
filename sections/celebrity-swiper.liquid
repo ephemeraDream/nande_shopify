@@ -88,13 +88,13 @@
     <div class="swiper_btn_white swiper_btn_white_prev celebrity_swiper_prev">{{- 'swiper-left.svg' | inline_asset_content -}}</div>
     <div class="swiper_btn_white swiper_btn_white_next celebrity_swiper_next">{{- 'swiper-right.svg' | inline_asset_content -}}</div>
   </div>
-  <div class="swiper-pagination"></div>
+  <div class="nd_swiper_pagination"></div>
 </div>
 
 <script>
   (function() {
   var root = document.getElementById('{{ swiper_id }}');
-  var paginationEl = root.querySelector('.swiper-pagination');
+  var paginationEl = root.querySelector('.nd_swiper_pagination');
   new Swiper('.celebrity_swiper .swiper', {
     slidesPerView: 1, 
     spaceBetween: 20,

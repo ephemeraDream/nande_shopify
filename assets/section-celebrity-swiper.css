@@ -107,7 +107,7 @@
   left: 85vw;
   right: unset;
 }
-.celebrity_swiper .swiper-pagination {
+.celebrity_swiper .nd_swiper_pagination {
   display: none;
 }
 @media screen and (max-width: 1600px) {
@@ -144,7 +144,7 @@
   .celebrity_swiper .swiper_btn_white.swiper_btn_white_prev {
     display: none;
   }
-  .celebrity_swiper .swiper-pagination {
+  .celebrity_swiper .nd_swiper_pagination {
     display: block;
   }
 }
