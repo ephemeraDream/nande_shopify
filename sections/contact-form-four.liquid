@@ -129,7 +129,7 @@ aria-label="conatct"
   }
     .contact-form-four{
         background-size: cover; background-position: center;
-        min-height: 96rem;
+        min-height: calc( 100vh - 170px );
         display: flex;
         align-items: center;
         position: relative;
@@ -141,6 +141,8 @@ aria-label="conatct"
         align-items: flex-end;
         position: relative;
         z-index: 1;
+        padding-top:2rem;
+        padding-bottom:2rem;
     }
     .contact-form-four .form__content{
         display: flex;
@@ -171,14 +173,16 @@ aria-label="conatct"
     textarea.text-area {
       width: 100%;
       padding: 10px 12px;
-      font-size: 2.4rem;
+      font-size: 2.2rem;
       border: none;
       border-radius: 0px;
       background: #fff;
       color: rgb(var(--color-foreground));
       font-weight:400;
-      height: 5rem;
       line-height: 1.1em;
+    }
+    .contact-form-one .field__input {
+      height: 4.6rem;
     }
     .contact-form-four select.field__input {
       appearance: none;
@@ -193,14 +197,14 @@ aria-label="conatct"
     .contact-form-four .field__input::placeholder,.contact-form-four textarea.text-area::placeholder {
       color: #7F7E75;  
       opacity: 1;
-      font-size: 2.4rem;
+      font-size: 2.2rem;
       font-weight:400;
     }
     /* Firefox */
     .field__input::-moz-placeholder,textarea::-moz-placeholder {
       color: #7F7E75;
       opacity: 1;
-      font-size: 2.4rem;
+      font-size: 2.2rem;
       font-weight:400;
     }
 
@@ -208,7 +212,7 @@ aria-label="conatct"
     .field__input:-ms-input-placeholder,textarea::-moz-placeholder {
       color: #7F7E75;
       opacity: 1;
-      font-size: 2.4rem;
+      font-size: 2.2rem;
       font-weight:400;
     }
 
@@ -229,7 +233,7 @@ aria-label="conatct"
     
     .contact-form-four .submit-button {
       border: none;
-      padding: 2rem;
+      padding: 1.4rem;
       height: auto;
       width: 50%;
       display: flex;
