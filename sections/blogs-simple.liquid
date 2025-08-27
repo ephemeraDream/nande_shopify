@@ -12,7 +12,8 @@
     }
   }
 {%- endstyle -%}
-<div class="blogs_simple padding-sider section-{{ section.id }}-padding">
+{%- assign swiper_id = 'celebrity_swiper_' | append: section.id -%}
+<div class="blogs_simple padding-sider section-{{ section.id }}-padding" id="{{ swiper_id }}">
   <div class="blogs_simple_header">
     <h2 class="blogs_simple_title">{{ section.settings.title }}</h2>
     <h4 class="blogs_simple_text">{{ section.settings.text }}</h4>
@@ -58,17 +59,29 @@
     <div class="swiper_btn_white swiper_btn_white_prev blogs_simple_prev">{{- 'swiper-left.svg' | inline_asset_content -}}</div>
     <div class="swiper_btn_white swiper_btn_white_next blogs_simple_next">{{- 'swiper-right.svg' | inline_asset_content -}}</div>
   </div>
+  <div class="nd_swiper_pagination"></div>
 </div>
 
 <script>
-  new Swiper('.blogs_simple .swiper', {
+  (function() {
+    var root = document.getElementById('{{ swiper_id }}');
+    var paginationEl = root.querySelector('.nd_swiper_pagination');
+    const swiperEl = root.querySelector('.blogs_simple .swiper');
+    const nextEl = root.querySelector('.blogs_simple_next');
+    const prevEl = root.querySelector('.blogs_simple_prev');
+  new Swiper(swiperEl, {
     slidesPerView: 'auto',
     spaceBetween: 20,
     navigation: {
-      nextEl: '.blogs_simple_next',
-      prevEl: '.blogs_simple_prev',
+      nextEl: nextEl,
+      prevEl: prevEl,
+    },
+    pagination: {
+      el: paginationEl,
+      clickable: true,
     },
   });
+})();
 </script>
 
 {% schema %}

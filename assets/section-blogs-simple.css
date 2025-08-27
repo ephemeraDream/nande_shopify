@@ -100,5 +100,9 @@
 .blogs_simple .blogs_simple_item img {
   height: auto;
 }
+.blogs_simple .swiper_btn_white.swiper_btn_white_next,
+  .blogs_simple .swiper_btn_white.swiper_btn_white_prev {
+    display: none;
+  }
  
 }

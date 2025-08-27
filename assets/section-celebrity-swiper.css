@@ -107,9 +107,7 @@
   left: 85vw;
   right: unset;
 }
-.celebrity_swiper .nd_swiper_pagination {
-  display: none;
-}
+
 @media screen and (max-width: 1600px) {
   .celebrity_swiper.padding-sider {
       padding-right: 0rem!important;
@@ -143,11 +141,6 @@
   .celebrity_swiper .swiper_btn_white.swiper_btn_white_next,
   .celebrity_swiper .swiper_btn_white.swiper_btn_white_prev {
     display: none;
-  }
-  .celebrity_swiper .nd_swiper_pagination {
-    display: flex;
-    align-items: center;
-    justify-content: center;
   }
 }
 
