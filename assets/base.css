@@ -4265,10 +4265,33 @@ a {
   padding-top: 60px;
   padding-bottom: 60px;
 }
+.shopify-policy__title {
+  display: none;
+}
+.shopify-policy__content h1{
+  text-align: center;
+}
+.shopify-policy__content h2{
+  font-size: 4rem;
+}
+.shopify-policy__content h3{
+  font-size: 3rem;
+}
+.shopify-policy__content p {
+  font-size: 1.6rem;
+  line-height: 1.2em;
+  color: #7F7E75;
+}
 @media only screen and (min-width: 750px) {
   .shopify-policy__container{
     padding-left: 4rem;
     padding-right: 4rem;
+  }
+  .shopify-policy__content h2{
+    font-size: 3rem;
+  }
+  .shopify-policy__content h3{
+    font-size: 2rem;
   }
 }
 @media only screen and (min-width: 1400px) {
