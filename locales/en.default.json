@@ -544,6 +544,7 @@
     }
   },
   "common": {
+    "view_cart": "Warenkorb ansehen",
     "neueste": "Neueste",
     "total": "Total",
     "remove": "Remove",
