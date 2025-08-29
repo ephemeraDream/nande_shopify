@@ -4266,16 +4266,15 @@ a {
   padding-bottom: 60px;
 }
 @media only screen and (min-width: 750px) {
-  .policy__container{
+  .shopify-policy__container{
     padding-left: 4rem;
     padding-right: 4rem;
   }
 }
 @media only screen and (min-width: 1400px) {
-  .session-box-inner {
+
+  .shopify-policy__container{
     max-width: var(--page-width);
-  }
-  .policy__container{
     padding-left: 6rem;
     padding-right: 6rem;
   }
