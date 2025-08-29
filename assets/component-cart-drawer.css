@@ -928,4 +928,8 @@ cart-drawer-items {
 .cart-drawer__footer .totals__total, .cart-drawer__footer .totals__total-value {
   font-size: 1.6rem;
 }
+.cart-drawer .cart-item__media {
+  flex: 0 0 8rem;
+  height: 8rem;
+}
 }
