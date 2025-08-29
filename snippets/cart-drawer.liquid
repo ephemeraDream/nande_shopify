@@ -48,12 +48,9 @@
                   </span>
                 </button>
               {% endcomment %}
-              <div class="flex items-center gap-x-theme">
-                <a class="cart-drawer__view-cart link block text-sm" href="/cart" data-no-instant="">Warenkorb ansehen</a>
-                <a href="{{ routes.all_products_collection_url }}" class="button">
-                  {{ 'common.continue_shopping' | t }}
-                </a>
-              </div>
+              <a href="{{ routes.all_products_collection_url }}" class="button">
+                {{ 'common.continue_shopping' | t }}
+              </a>
               
 
               {% comment %}
@@ -75,16 +72,20 @@
       {%- endif -%}
       <div class="drawer__header">
         <h2 class="drawer__heading">{{ 'sections.cart.title' | t }}</h2>
-        <button
-          class="drawer__close"
-          type="button"
-          onclick="this.closest('cart-drawer').close()"
-          aria-label="{{ 'accessibility.close' | t }}"
-        >
-          <span class="svg-wrapper">
-            {{- 'cart-close.svg' | inline_asset_content -}}
-          </span>
-        </button>
+        <div class="flex items-center gap-x-theme">
+          <a class="cart-drawer__view-cart link block text-sm" href="/cart" data-no-instant="">Warenkorb ansehen</a>
+          <button
+            class="drawer__close"
+            type="button"
+            onclick="this.closest('cart-drawer').close()"
+            aria-label="{{ 'accessibility.close' | t }}"
+          >
+            <span class="svg-wrapper">
+              {{- 'cart-close.svg' | inline_asset_content -}}
+            </span>
+          </button>
+        </div>
+        
       </div>
       {% if cart != empty and settings.show_info_bar %}
         <div class="cart_drawer_infobar_contain">
