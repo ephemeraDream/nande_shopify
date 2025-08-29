@@ -905,3 +905,10 @@ cart-drawer-items::-webkit-scrollbar-track-piece {
 .cart-drawer .cart_recommendations_product_btn svg path {
   fill: #BDFF00;
 }
+
+@media only screen and (max-width: 767px) {
+.drawer__header {
+  padding: 2rem;
+  flex-direction: column;
+}
+}
