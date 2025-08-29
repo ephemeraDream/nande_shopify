@@ -110,8 +110,13 @@
 }
 
 @media only screen and (max-width: 767px) {
-  .footer_simple .footer_simple_footer{
-    
+  .footer_simple .footer_simple_company_info_logo {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    object-position: center center;
+    position: relative;
+    left: 0rem;
   }
  
 }
