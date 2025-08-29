@@ -118,5 +118,7 @@
     position: relative;
     left: 0rem;
   }
- 
+  .footer_simple .footer_simple_company_info {
+    width: 100%;
+}
 }
