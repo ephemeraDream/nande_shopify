@@ -28,7 +28,7 @@
         "products_per_page": 6,
         "enable_compare": true,
         "show_layout_toggle": true,
-        "enable_filtering": false,
+        "enable_filtering": true,
         "enable_sorting": true
       }
     },

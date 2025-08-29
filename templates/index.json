@@ -76,8 +76,9 @@
       "settings": {
         "height_mode": "fixed",
         "fixed_height_desktop": 700,
-        "fixed_height_mobile": 420,
+        "fixed_height_mobile": 250,
         "mobile_stacked": true,
+        "background_color": "#dddddd",
         "nav_style": "slideshow_nav_dots",
         "pagination_color": "#ffffff",
         "nav_position": "justify-center",
