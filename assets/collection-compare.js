@@ -1,31 +1,39 @@
 const collection_compare_data = JSON.parse(document.getElementById('collection_compare_data').textContent);
 //侧拉筛选
 const show_filter = document.querySelector(".collection_compare_contain_switchfilter")
-show_filter.addEventListener("click", () => {
-  const filter_contain = document.querySelector(".collection_compare_contain_body_left")
-  if (show_filter.getAttribute("data-type") === "open") {
-    show_filter.setAttribute("data-type", "close")
-    filter_contain.style.display = "none"
-  } else {
-    show_filter.setAttribute("data-type", "open")
-    filter_contain.style.display = "flex"
-  }
-})
+if (show_filter) {
+  show_filter.addEventListener("click", () => {
+    const filter_contain = document.querySelector(".collection_compare_contain_body_left")
+    if (show_filter.getAttribute("data-type") === "open") {
+      show_filter.setAttribute("data-type", "close")
+      filter_contain.style.display = "none"
+    } else {
+      show_filter.setAttribute("data-type", "open")
+      filter_contain.style.display = "flex"
+    }
+  })
+}
+
 const mobile_facets_confirm_btn = document.querySelector(".mobile_facets_confirm_btn")
-mobile_facets_confirm_btn.addEventListener("click", () => {
+if (mobile_facets_confirm_btn) {
+  mobile_facets_confirm_btn.addEventListener("click", () => {
+    const filter_contain = document.querySelector(".collection_compare_contain_body_left")
+    if (show_filter && show_filter.getAttribute("data-type") === "open") {
+      show_filter.setAttribute("data-type", "close")
+      filter_contain.style.display = "none"
+    } else if (show_filter) {
+      show_filter.setAttribute("data-type", "open")
+      filter_contain.style.display = "flex"
+    }
+  })
+}
+
+if (window.innerWidth < 769 && show_filter) {
   const filter_contain = document.querySelector(".collection_compare_contain_body_left")
-  if (show_filter.getAttribute("data-type") === "open") {
+  if (filter_contain) {
     show_filter.setAttribute("data-type", "close")
     filter_contain.style.display = "none"
-  } else {
-    show_filter.setAttribute("data-type", "open")
-    filter_contain.style.display = "flex"
   }
-})
-if (window.innerWidth < 769) {
-  const filter_contain = document.querySelector(".collection_compare_contain_body_left")
-  show_filter.setAttribute("data-type", "close")
-  filter_contain.style.display = "none"
 }
 //展示方式
 const show_types = document.querySelectorAll(".collection_compare_contain_showtype")
