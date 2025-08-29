@@ -101,7 +101,8 @@
 @media screen and (max-width: 1024px) {
 .technical_data .technical_data_head_item {
   font-size: 1.8rem;
-  min-width: 16rem;
+  min-width: fit-content;
+  padding: 0 20px;
 }
 .technical_data .technical_data_head{overflow-x: scroll;}
 

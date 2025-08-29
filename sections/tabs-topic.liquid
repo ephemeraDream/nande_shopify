@@ -74,30 +74,30 @@
                     {% assign slide_index_str = slide_index | append: '' %}
                     
                     {% if product_block.settings.belong_tab == i_str and product_block.settings.belong_slide == slide_index_str and product_block.settings.select_product != blank %}
-                        <div
+                    <div
                             class="polka_dot_contain"
                             style="top: {{ product_block.settings.product_Y }}%;left: {{ product_block.settings.product_X }}%"
-                        >
+                    >
                             <div class="polka_dot_icon">{{- 'icon-plus.svg' | inline_asset_content -}}</div>
                             <a class="polka_dot_product {% if product_block.settings.product_X > 60 %} left{% endif %}" href="{{ product_block.settings.select_product.url }}" style="display: none;">
                             <div class="polka_dot_product_img">
-                                {{-
+                            {{-
                                 product_block.settings.select_product.featured_media
                                 | image_url: width: product_block.settings.select_product.featured_media.width
                                 | image_tag: alt: product_block.settings.select_product.title
-                                -}}
-                            </div>
+                            -}}
+                        </div>
                             <div class="polka_dot_product_info">
                                 <h4 class="polka_dot_product_info_title truncate-2-lines">
                                   {{ product_block.settings.select_product.metafields.custom.product_model | default: product_block.settings.select_product.title }}
-                                </h4>
+                            </h4>
                                 <div class="polka_dot_product_info_price text-body">
                                 {{ product_block.settings.select_product.price | money_without_trailing_zeros }}
-                                {{- 'icon-shopping-cart.svg' | inline_asset_content -}}
-                                </div>
+                            {{- 'icon-shopping-cart.svg' | inline_asset_content -}}
                             </div>
-                            </a>
                         </div>
+                        </a>
+                    </div>
                     {% endif %}
                 {% endfor %}
             </div>
@@ -490,32 +490,32 @@
             { "value": "5", "label": "Slide 6" }
           ],
           "default": "0"
-        },
-        {
-          "type": "product",
-          "id": "select_product",
-          "label": "product"
-        },
-        {
-          "type": "range",
-          "id": "product_X",
-          "min": 0,
-          "max": 100,
-          "step": 1,
-          "unit": "%",
-          "label": "product_X",
-          "default": 0
-        },
-        {
-          "type": "range",
-          "id": "product_Y",
-          "min": 0,
-          "max": 100,
-          "step": 1,
-          "unit": "%",
-          "label": "product_Y",
-          "default": 0
-        }
+          },
+          {
+            "type": "product",
+            "id": "select_product",
+            "label": "product"
+          },
+          {
+            "type": "range",
+            "id": "product_X",
+            "min": 0,
+            "max": 100,
+            "step": 1,
+            "unit": "%",
+            "label": "product_X",
+            "default": 0
+          },
+          {
+            "type": "range",
+            "id": "product_Y",
+            "min": 0,
+            "max": 100,
+            "step": 1,
+            "unit": "%",
+            "label": "product_Y",
+            "default": 0
+          }
       ]
     }
   ],

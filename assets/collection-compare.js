@@ -206,27 +206,44 @@ document.querySelectorAll(".collection_compare_product_saleinfo_countdown").forE
   const endDateStr = item.getAttribute('data-end-date');
   const endDate = new Date(endDateStr);
 
-  const updateCountdownInnerHTML = (days, hours, minutes, seconds) => {
+    const updateCountdownInnerHTML = (days, hours, minutes, seconds) => {
+    // 处理天数显示
     if (days > 0) {
       item.querySelector(".collection_compare_product_saleinfo_countdown_item[data-type='day']").innerHTML = String(days).padStart(
         2,
         '0'
       ) + "d";
-    }
-    item.querySelector(".collection_compare_product_saleinfo_countdown_item[data-type='hour']").innerHTML = String(hours).padStart(
-      2,
-      '0'
-    ) + "h";
-    item.querySelector(".collection_compare_product_saleinfo_countdown_item[data-type='minute']").innerHTML = String(
-      minutes
-    ).padStart(2, '0') + "m";
-    item.querySelector(".collection_compare_product_saleinfo_countdown_item[data-type='second']").innerHTML = String(
-      seconds
-    ).padStart(2, '0') + "s";
-
-    if (days == 0 && item.querySelector(".collection_compare_product_saleinfo_countdown_item[data-type='day']")) {
-      item.querySelector(".collection_compare_product_saleinfo_countdown_item[data-type='day'] + span").remove();
-      item.querySelector(".collection_compare_product_saleinfo_countdown_item[data-type='day']").remove();
+      item.querySelector(".collection_compare_product_saleinfo_countdown_item[data-type='hour']").innerHTML = String(hours).padStart(
+        2,
+        '0'
+      ) + "h";
+      item.querySelector(".collection_compare_product_saleinfo_countdown_item[data-type='minute']").innerHTML = String(
+        minutes
+      ).padStart(2, '0') + "m";
+      item.querySelector(".collection_compare_product_saleinfo_countdown_item[data-type='second']").innerHTML = String(
+        seconds
+      ).padStart(2, '0') + "s";
+    } else {
+      // 当没有天数时，隐藏天数相关的元素
+      const dayElement = item.querySelector(".collection_compare_product_saleinfo_countdown_item[data-type='day']");
+      const daySpan = item.querySelector(".collection_compare_product_saleinfo_countdown_item[data-type='day'] + span");
+      
+      if (dayElement && daySpan) {
+        daySpan.remove();
+        dayElement.remove();
+      }
+      
+      // 更新剩余时间显示
+      item.querySelector(".collection_compare_product_saleinfo_countdown_item[data-type='hour']").innerHTML = String(hours).padStart(
+        2,
+        '0'
+      ) + "h";
+      item.querySelector(".collection_compare_product_saleinfo_countdown_item[data-type='minute']").innerHTML = String(
+        minutes
+      ).padStart(2, '0') + "m";
+      item.querySelector(".collection_compare_product_saleinfo_countdown_item[data-type='second']").innerHTML = String(
+        seconds
+      ).padStart(2, '0') + "s";
     }
   };
 
