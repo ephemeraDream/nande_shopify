@@ -4313,6 +4313,7 @@ a {
 .flex {
   display: flex;
   }
-  .items-center {
+.items-center {
     align-items: center;
     }
+.items-bottom{align-items: flex-end;}
