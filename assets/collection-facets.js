@@ -84,6 +84,12 @@ class FacetFiltersForm extends HTMLElement {
       .parseFromString(html, 'text/html')
       .querySelector('.collection_compare_contain_body_right').innerHTML;
     initLoadMore()
+    
+    // 重新初始化倒计时功能
+    if (typeof initCollectionCompareCountdown === 'function') {
+      initCollectionCompareCountdown();
+    }
+    
     // document
     //   .querySelector('.collection_compare_contain_body_right')
     //   .querySelectorAll('.scroll-trigger')
