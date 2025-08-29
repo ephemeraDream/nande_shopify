@@ -48,9 +48,13 @@
                   </span>
                 </button>
               {% endcomment %}
-              <a href="{{ routes.all_products_collection_url }}" class="button">
-                {{ 'common.continue_shopping' | t }}
-              </a>
+              <div class="flex items-center gap-x-theme">
+                <a class="cart-drawer__view-cart link block text-sm" href="/cart" data-no-instant="">Warenkorb ansehen</a>
+                <a href="{{ routes.all_products_collection_url }}" class="button">
+                  {{ 'common.continue_shopping' | t }}
+                </a>
+              </div>
+              
 
               {% comment %}
                 {%- if shop.customer_accounts_enabled and customer == null -%}
