@@ -918,11 +918,14 @@ cart-drawer-items::-webkit-scrollbar-track-piece {
 .cart_drawer_infobar_contain {
   padding: 0 2rem;
 }
-.cart-drawer-items {
+cart-drawer-items {
   padding: 0 2rem 2rem;
 }
 .drawer__footer {
   padding: 2rem;
 }
 .drawer__footer .cart__ctas button{height: 4rem;font-size: 2rem;}
+.cart-drawer__footer .totals__total, .cart-drawer__footer .totals__total-value {
+  font-size: 1.6rem;
+}
 }
