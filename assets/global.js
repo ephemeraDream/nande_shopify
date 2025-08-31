@@ -1350,9 +1350,6 @@ class CartPerformance {
     if (mainContent) {
       mainContent.style.paddingTop = totalHeight + 'px';
     }
-    if (document.querySelector('.product_anchor_bar_section')) {
-      document.querySelector('.product_anchor_bar_section').parentElement.style.top = totalHeight + 'px';
-    }
   }
 
   function onScroll() {
@@ -1383,6 +1380,9 @@ class CartPerformance {
         el.style.transform = `translateY(-${totalHeight}px)`;
         offset += headerHeights[idx];
       });
+      if (document.querySelector('.product_anchor_bar_section')) {
+        document.querySelector('.product_anchor_bar_section').parentElement.style.top = '0px';
+      }
     } else {
       // 向上滚动：恢复原位
       let offset = 0;
@@ -1396,6 +1396,9 @@ class CartPerformance {
         el.style.transform = 'translateY(0px)';
         offset += headerHeights[idx];
       });
+      if (document.querySelector('.product_anchor_bar_section')) {
+        document.querySelector('.product_anchor_bar_section').parentElement.style.top = totalHeight + 'px';
+      }
     }
 
     lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
