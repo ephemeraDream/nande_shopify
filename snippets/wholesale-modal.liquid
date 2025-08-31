@@ -14,51 +14,7 @@
       <div class="common_modal_body">
         <div class="product_info_modal_title">{{ modal_title }}</div>
         <div class="product_info_modal_content">{{ modal_content }}</div>
-        {% comment %}
-          {%- form 'contact', id: 'ContactForm', class: contact_form_class -%}
-            <input
-              autocomplete="email"
-              type="email"
-              class="field-input"
-              name="contact[email]"
-              spellcheck="false"
-              autocapitalize="off"
-              value="{% if form.email %}{{ form.email }}{% elsif customer %}{{ customer.email }}{% endif %}"
-              placeholder="Emal*"
-              required
-            >
-            <input
-              class="field-input"
-              type="text"
-              name="contact[Unternehmen]"
-              placeholder="Unternehmen (optional)"
-            >
-            <input
-              class="field-input"
-              autocomplete="name"
-              type="text"
-              name="contact[Name]"
-              value="{% if form.name %}{{ form.name }}{% elsif customer %}{{ customer.name }}{% endif %}"
-              placeholder="Name (optional)"
-            >
-            <textarea
-              rows="6"
-              id="ContactForm-body"
-              class="field-input"
-              name="contact[Nachricht]"
-              placeholder="Nachricht (optional)"
-            >
-              {{- form.body -}}
-            </textarea>
-            <div class="contact-btn">
-              <button type="submit">
-                {{ 'common.absenden' | t -}}
-                {{- 'icon-commit.svg' | inline_asset_content }}
-              </button>
-            </div>
-          {%- endform -%}
-        {% endcomment %}
-        <form id="ContactForm" action="/contact" method="post" accept-charset="UTF-8" class="contact_form_class">
+        {%- form 'contact', id: 'ContactForm', class: contact_form_class -%}
           <input
             autocomplete="email"
             type="email"
@@ -99,7 +55,51 @@
               {{- 'icon-commit.svg' | inline_asset_content }}
             </button>
           </div>
-        </form>
+        {%- endform -%}
+        {% comment %}
+          <form id="ContactForm" action="/contact" method="post" accept-charset="UTF-8" class="contact_form_class">
+            <input
+              autocomplete="email"
+              type="email"
+              class="field-input"
+              name="contact[email]"
+              spellcheck="false"
+              autocapitalize="off"
+              value="{% if form.email %}{{ form.email }}{% elsif customer %}{{ customer.email }}{% endif %}"
+              placeholder="Emal*"
+              required
+            >
+            <input
+              class="field-input"
+              type="text"
+              name="contact[Unternehmen]"
+              placeholder="Unternehmen (optional)"
+            >
+            <input
+              class="field-input"
+              autocomplete="name"
+              type="text"
+              name="contact[Name]"
+              value="{% if form.name %}{{ form.name }}{% elsif customer %}{{ customer.name }}{% endif %}"
+              placeholder="Name (optional)"
+            >
+            <textarea
+              rows="6"
+              id="ContactForm-body"
+              class="field-input"
+              name="contact[Nachricht]"
+              placeholder="Nachricht (optional)"
+            >
+                {{- form.body -}}
+              </textarea>
+            <div class="contact-btn">
+              <button type="submit">
+                {{ 'common.absenden' | t -}}
+                {{- 'icon-commit.svg' | inline_asset_content }}
+              </button>
+            </div>
+          </form>
+        {% endcomment %}
 
         <div id="ContactForm-message" style="display:none;"></div>
         <div class="product_info_modal_tip">{{ modal_tip }}</div>
