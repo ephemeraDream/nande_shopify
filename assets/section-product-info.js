@@ -51,19 +51,14 @@ function initSwiper() {
     on: {
       slideChange: function (swiper) {
         imgthumbSwiper.slideTo(swiper.activeIndex)
-        const bundle_tabletop_img = document.querySelector(".product_info_bundle_tabletop_img")
-        if (bundle_tabletop_img) {
-          // const slides = document.querySelectorAll('.imgmain_swiper .swiper-slide');
-          // let hiddenCount = 0;
+        const bundleImg = document.querySelector('.product_info_bundle_tabletop_img');
+        if (!bundleImg || !swiper || !swiper.slides || swiper.slides.length === 0) return;
 
-          // for (let i = 0; i <= swiper.activeIndex && i < slides.length; i++) {
-          //   const style = window.getComputedStyle(slides[i]);
-          //   if (style.display === "none") {
-          //     hiddenCount++;
-          //   }
-          // }
-          swiper.slides[swiper.activeIndex].hasAttribute("data-common") ? bundle_tabletop_img.style.display = "none" : bundle_tabletop_img.style.display = "block"
-        }
+        const cur = swiper.slides[swiper.activeIndex];
+        if (!cur) return;
+
+        // 当前 slide 是通用图则隐藏，否则显示
+        bundleImg.style.display = cur.hasAttribute('data-common') ? 'none' : 'block';
       }
     },
     // thumbs: {
