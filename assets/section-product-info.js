@@ -60,9 +60,9 @@ function initSwiper() {
         }
       }
     },
-    // thumbs: {
-    //   swiper: imgthumbSwiper,
-    // }
+    thumbs: {
+      swiper: imgthumbSwiper,
+    }
   });
 
   videothumbSwiper = new Swiper(".videothumb_swiper", {
@@ -697,15 +697,15 @@ function updateImagesByVariantMedia() {
     }
 
     // 主图作为可见序列的第 0 张
-    const activeIndex = featIdx;
+    const activeIndex = 0;
     return { activeIndex };
   };
 
   const { activeIndex } = applyTo('.imgmain_swiper .swiper-slide');
   applyTo('.imgthumb_swiper .swiper-slide');
 
-  // imgthumbSwiper.update();
-  // imgboxSwiper.update();
+  imgthumbSwiper.update();
+  imgboxSwiper.update();
   imgboxSwiper.slideTo(activeIndex);
   imgthumbSwiper.slideTo(activeIndex);
   document.querySelector(".product_info_left_thumb_select_item[data-type='image']").click()
