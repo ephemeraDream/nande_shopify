@@ -661,45 +661,46 @@ function updateUrl() {
   url.searchParams.set("variant", currVariant.id);
   window.history.replaceState(null, "", url.toString());
 }
-function updateImagesByVariantMedia() {
-  if (!currVariant || !currVariant.featured_media) return;
+// 在页面加载时就存一份原始 slides 数据
+const originSlides = {
+  main: Array.from(document.querySelectorAll('.imgmain_swiper .swiper-slide')),
+  thumb: Array.from(document.querySelectorAll('.imgthumb_swiper .swiper-slide'))
+};
 
-  const mediaId = String(currVariant.featured_media.id);
-  const slides = Array.from(document.querySelectorAll('.imgmain_swiper .swiper-slide'));
-  const featIdx = slides.findIndex(s => s.dataset.mediaId === mediaId);
+function updateImagesByVariantMedia() {
+  const mediaId = String(currVariant?.featured_media?.id || '');
+  const slides = originSlides.main;  // 每次都基于原始的 main slides
+  const isCommon = (i) => slides[i].hasAttribute('data-common');
+  const featIdx = slides.findIndex(s => String(s.dataset.mediaId) === mediaId);
+
   if (featIdx === -1) return;
 
-  // 找到右边界（同组）
   let right = featIdx;
   for (let i = featIdx + 1; i < slides.length; i++) {
-    if (!slides[i].hasAttribute('data-common') && slides[i-1].hasAttribute('data-common')) break;
+    if (!isCommon(i) && isCommon(i - 1)) break;
     right = i;
   }
 
-  // ---- 这里替换成真正新建 DOM，而不是复用旧 DOM ----
-  const newSlides = slides.slice(featIdx, right + 1).filter((s, i) => i === 0 || s.hasAttribute('data-common'));
+  // 取当前变体对应的 + 通用图
+  const newSlides = slides.slice(featIdx, right + 1)
+    .filter((s, i) => i === 0 || s.hasAttribute('data-common'));
 
+  // 替换 imgbox
   imgboxSwiper.removeAllSlides();
-  imgboxSwiper.appendSlide(newSlides.map(s => {
-    return `<div class="swiper-slide" data-media-id="${s.dataset.mediaId}" ${s.hasAttribute('data-common') ? 'data-common' : ''}>
-              <img src="${s.querySelector('img').getAttribute('src')}" alt="">
-            </div>`;
-  }));
+  imgboxSwiper.appendSlide(newSlides.map(s => s.outerHTML));
 
-  // 同步 thumbs
-  const thumbSlides = Array.from(document.querySelectorAll('.imgthumb_swiper .swiper-slide'));
-  const newThumbs = thumbSlides.filter(s => newSlides.some(ns => ns.dataset.mediaId === s.dataset.mediaId));
-
+  // 替换 thumbs（同样用 originSlides 里的）
+  const thumbSlides = originSlides.thumb;
+  const newThumbs = thumbSlides.filter(s =>
+    newSlides.some(ns => ns.dataset.mediaId === s.dataset.mediaId)
+  );
   imgthumbSwiper.removeAllSlides();
-  imgthumbSwiper.appendSlide(newThumbs.map(s => {
-    return `<div class="swiper-slide" data-media-id="${s.dataset.mediaId}">
-              <img src="${s.querySelector('img').getAttribute('src')}" alt="">
-            </div>`;
-  }));
+  imgthumbSwiper.appendSlide(newThumbs.map(s => s.outerHTML));
 
   imgboxSwiper.slideTo(0);
   imgthumbSwiper.slideTo(0);
 }
+
 
 
 // 捆绑步骤切换
