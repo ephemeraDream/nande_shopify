@@ -656,6 +656,10 @@
   color: #7F7E75;
 }
 
+.product_info .common_modal_body .field-input::placeholder {
+  color: rgba(127, 126, 117, .5);
+}
+
 .product_info .common_modal_body .contact-btn button {
   display: flex;
   align-items: center;
@@ -1485,14 +1489,16 @@
     flex-direction: column;
     padding-top: 0.6rem
   }
+
   .product_info .product_info_left_thumb {
     flex-direction: column;
   }
 
-.product_info_section .product_info_steps_item:first-child span:first-child {
-  margin-left: 0rem;
-}
-.product_info_section .product_info_steps_item{
-  font-size: 1.6rem;
-}
+  .product_info_section .product_info_steps_item:first-child span:first-child {
+    margin-left: 0rem;
+  }
+
+  .product_info_section .product_info_steps_item {
+    font-size: 1.6rem;
+  }
 }
