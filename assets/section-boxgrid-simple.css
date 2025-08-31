@@ -50,12 +50,14 @@
   align-items: center;
   justify-content: center;
 }
+
 .boxgrid_simple .boxgrid_simple_item.active .boxgrid_simple_item_title,
-.boxgrid_simple .boxgrid_simple_item.active .boxgrid_simple_item_text{
+.boxgrid_simple .boxgrid_simple_item.active .boxgrid_simple_item_text {
   width: 50%;
   text-align: center;
   min-width: 31rem;
 }
+
 .boxgrid_simple .boxgrid_simple_item_title {
   color: #1F1F1F;
 }
@@ -72,11 +74,17 @@
 }
 
 @media screen and (max-width: 768px) {
+
   .boxgrid_simple .boxgrid_simple_item,
   .boxgrid_simple .boxgrid_simple_item.active {
     width: 100%;
   }
-  .boxgrid_simple .boxgrid_simple_item.active{
-    order:-1;
+
+  .boxgrid_simple .boxgrid_simple_item.active {
+    order: -1;
+  }
+
+  .boxgrid_simple .boxgrid_simple_item.first_line svg {
+    width: 40px;
   }
 }
