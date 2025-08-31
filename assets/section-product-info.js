@@ -689,11 +689,11 @@ function updateImagesByVariantMedia() {
     // 显示规则：当前主图 + (featIdx, right] 区间内的 common；其他隐藏
     for (let i = 0; i < slides.length; i++) {
       if (i === featIdx) {
-        slides[i].classList.remove('swiper-slide-hidden'); // 主图
+        slides[i].style.display = 'block'; // 主图
       } else if (i > featIdx && i <= right && isCommon(i)) {
-        slides[i].classList.remove('swiper-slide-hidden'); // 主图右侧这一组里的 common
+        slides[i].style.display = 'block'; // 主图右侧这一组里的 common
       } else {
-        slides[i].classList.add('swiper-slide-hidden');
+        slides[i].style.display = 'none';
       }
     }
 
