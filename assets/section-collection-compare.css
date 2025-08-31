@@ -326,7 +326,8 @@
   cursor: pointer;
 }
 
-.collection_compare .collection_compare_product_select {
+.collection_compare .collection_compare_product_select,
+.collection_compare .collection_compare_modal_show_diff_select {
   width: 2rem;
   height: 2rem;
   border: 1px solid #1F1F1F;
@@ -337,7 +338,8 @@
   display: none;
 }
 
-.collection_compare .collection_compare_product_select svg {
+.collection_compare .collection_compare_product_select svg,
+.collection_compare .collection_compare_modal_show_diff_select svg {
   display: none;
   width: 100%;
   height: 100%;
@@ -721,7 +723,7 @@
   height: 5.8rem;
 }
 
-.collection_compare .collection_compare_modal .collection_compare_product_select {
+.collection_compare .collection_compare_modal .collection_compare_modal_show_diff_select {
   display: block;
   position: relative;
   top: 0;
