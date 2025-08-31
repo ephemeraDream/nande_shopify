@@ -239,10 +239,9 @@
       <div class="product_info_steps_contain" data-index="0">
         <div class="product_info_title">{{ product.title }}</div>
         {%- for block in section.blocks -%}
-          {%- case block.type -%}
-            {%- when '@app' -%}
-              {% render block %}
-          {%- endcase -%}
+          {%- if block.type == '@app' and forloop.index == 1 -%}
+            {% render block %}
+          {%- endif -%}
         {%- endfor -%}
         <div class="product_info_price">
           <div class="product_info_price_dp">
@@ -763,6 +762,15 @@
         </button>
         {% comment %} {{ form | payment_button }} {% endcomment %}
       </div>
+      {%- assign app_count = 0 -%}
+      {%- for block in section.blocks -%}
+        {%- if block.type == '@app' -%}
+          {%- assign app_count = app_count | plus: 1 -%}
+          {%- if app_count == 2 -%}
+            {% render block %}
+          {%- endif -%}
+        {%- endif -%}
+      {%- endfor -%}
       {%- for block in section.blocks -%}
         {%- case block.type -%}
           {%- when 'wholesale_modal' -%}
