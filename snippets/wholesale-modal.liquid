@@ -59,15 +59,46 @@
           {%- endform -%}
         {% endcomment %}
         <form id="ContactForm" action="/contact" method="post" accept-charset="UTF-8" class="contact_form_class">
-          <input type="hidden" name="form_type" value="contact">
-          <input type="hidden" name="utf8" value="✓">
-
-          <input type="email" name="contact[email]" required placeholder="Email*">
-          <input type="text" name="contact[Unternehmen]" placeholder="Unternehmen (optional)">
-          <input type="text" name="contact[Name]" placeholder="Name (optional)">
-          <textarea name="contact[Nachricht]" rows="6" placeholder="Nachricht (optional)"></textarea>
-
-          <button type="submit">Absenden</button>
+          <input
+            autocomplete="email"
+            type="email"
+            class="field-input"
+            name="contact[email]"
+            spellcheck="false"
+            autocapitalize="off"
+            value="{% if form.email %}{{ form.email }}{% elsif customer %}{{ customer.email }}{% endif %}"
+            placeholder="Emal*"
+            required
+          >
+          <input
+            class="field-input"
+            type="text"
+            name="contact[Unternehmen]"
+            placeholder="Unternehmen (optional)"
+          >
+          <input
+            class="field-input"
+            autocomplete="name"
+            type="text"
+            name="contact[Name]"
+            value="{% if form.name %}{{ form.name }}{% elsif customer %}{{ customer.name }}{% endif %}"
+            placeholder="Name (optional)"
+          >
+          <textarea
+            rows="6"
+            id="ContactForm-body"
+            class="field-input"
+            name="contact[Nachricht]"
+            placeholder="Nachricht (optional)"
+          >
+              {{- form.body -}}
+            </textarea>
+          <div class="contact-btn">
+            <button type="submit">
+              {{ 'common.absenden' | t -}}
+              {{- 'icon-commit.svg' | inline_asset_content }}
+            </button>
+          </div>
         </form>
 
         <div id="ContactForm-message" style="display:none;"></div>
