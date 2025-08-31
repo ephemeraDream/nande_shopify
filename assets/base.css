@@ -3922,9 +3922,7 @@ a {
   top: 0;
   z-index: 9;
 }
-.common_modal_head{
-  
-}
+
 @media screen and (max-width: 767px) {
   .common_modal_contain{
     width: 90vw;
