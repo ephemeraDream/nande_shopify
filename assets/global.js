@@ -1350,6 +1350,9 @@ class CartPerformance {
     if (mainContent) {
       mainContent.style.paddingTop = totalHeight + 'px';
     }
+    if (document.querySelector('.product_anchor_bar_section')) {
+      document.querySelector('.product_anchor_bar_section').parentElement.style.top = totalHeight + 'px';
+    }
   }
 
   function onScroll() {
