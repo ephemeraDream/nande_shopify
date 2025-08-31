@@ -26,7 +26,8 @@ function initSwiper() {
         const targetIndex = visibleSlides.findIndex(slide => slide.dataset.mediaId === mediaId);
 
         if (targetIndex > -1) {
-          imgboxSwiper.slideTo(targetIndex);
+          // imgboxSwiper.slideTo(targetIndex);
+          imgboxSwiper.slideToLoop(targetIndex, 0, false);
         }
       }
     },
@@ -688,11 +689,11 @@ function updateImagesByVariantMedia() {
     // 显示规则：当前主图 + (featIdx, right] 区间内的 common；其他隐藏
     for (let i = 0; i < slides.length; i++) {
       if (i === featIdx) {
-        slides[i].style.display = 'block'; // 主图
+        slides[i].classList.remove('swiper-slide-hidden'); // 主图
       } else if (i > featIdx && i <= right && isCommon(i)) {
-        slides[i].style.display = 'block'; // 主图右侧这一组里的 common
+        slides[i].classList.remove('swiper-slide-hidden'); // 主图右侧这一组里的 common
       } else {
-        slides[i].style.display = 'none';
+        slides[i].classList.add('swiper-slide-hidden');
       }
     }
 
