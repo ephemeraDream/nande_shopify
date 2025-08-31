@@ -21,7 +21,7 @@ function initSwiper() {
         const mediaId = clickedSlide.dataset.mediaId;
 
         const visibleSlides = Array.from(document.querySelectorAll('.imgmain_swiper .swiper-slide'))
-          // .filter(slide => slide.style.display !== 'none');
+          .filter(slide => slide.style.display !== 'none');
 
         const targetIndex = visibleSlides.findIndex(slide => slide.dataset.mediaId === mediaId);
 
