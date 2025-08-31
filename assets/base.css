@@ -237,10 +237,12 @@ body:has(.section-header .drawer-menu) .announcement-bar-section .page-width {
 ::selection {
   background-color: rgba(var(--color-foreground), 0.2);
 }
-li{
+
+li {
   font-family: "PP Right Grotesk";
   line-height: calc(1 + 0.1 / var(--font-body-scale));
 }
+
 .text-body {
   font-size: 1.6rem;
   letter-spacing: 0;
@@ -250,17 +252,23 @@ li{
   font-weight: var(--font-body-weight);
   font-family: "PP Right Grotesk";
 }
+
 @media only screen and (min-width: 750px) {
   .text-body {
     font-size: 1.6rem;
   }
 }
+
 @media only screen and (min-width: 1400px) {
   .text-body {
     font-size: 2rem;
   }
 }
-a{font-family: "PP Right Grotesk";}
+
+a {
+  font-family: "PP Right Grotesk";
+}
+
 h1,
 h2,
 h3,
@@ -331,16 +339,19 @@ h2,
 }
 
 @media only screen and (min-width: 750px) {
+
   h2,
   .h2 {
     font-size: calc(var(--font-heading-scale) * 5rem);
   }
 }
+
 @media only screen and (min-width: 1400px) {
+
   h2,
   .h2 {
     font-size: calc(var(--font-heading-scale) * 6rem);
-    
+
   }
 }
 
@@ -350,12 +361,15 @@ h3,
 }
 
 @media only screen and (min-width: 750px) {
+
   h3,
   .h3 {
     font-size: calc(var(--font-heading-scale) * 3rem);
   }
 }
+
 @media only screen and (min-width: 1400px) {
+
   h3,
   .h3 {
     font-size: calc(var(--font-heading-scale) * 4rem);
@@ -367,13 +381,17 @@ h4,
   font-size: calc(var(--font-heading-scale) * 2.2rem);
   line-height: 1em;
 }
+
 @media only screen and (min-width: 750px) {
+
   h4,
   .h4 {
     font-size: calc(var(--font-heading-scale) * 2.6rem);
   }
 }
+
 @media only screen and (min-width: 1400px) {
+
   h4,
   .h4 {
     font-size: calc(var(--font-heading-scale) * 3rem);
@@ -399,7 +417,8 @@ h6,
   margin-block-start: 1.67em;
   margin-block-end: 1.67em;
 }
-.nd-btn{
+
+.nd-btn {
   height: 3.5rem;
   display: inline-flex;
   align-items: center;
@@ -422,13 +441,16 @@ h6,
   border-radius: 0;
   cursor: pointer;
 }
+
 .nd-btn:hover {
   background-color: #b1f100;
   transition-duration: .2s;
 }
-.nd-btn svg{
+
+.nd-btn svg {
   margin-top: 0.3rem;
 }
+
 /* arrow animation */
 @keyframes slide-right {
   0% {
@@ -441,11 +463,13 @@ h6,
     opacity: 1;
   }
 }
+
 .nd-btn:hover svg {
   animation: slide-right 0.3s ease-in-out forwards;
 }
+
 @media only screen and (min-width: 1400px) {
-  .nd-btn{
+  .nd-btn {
     height: 3.5rem;
     gap: 0.8rem;
     margin-top: 3rem;
@@ -3899,7 +3923,8 @@ a {
 .polka_dot_contain {
   position: absolute;
 }
-.polka_dot_contain .polka_dot_icon{
+
+.polka_dot_contain .polka_dot_icon {
   cursor: pointer;
   width: 2.4rem;
   height: 2.4rem;
@@ -3910,7 +3935,8 @@ a {
   z-index: 2;
   position: relative;
 }
-.polka_dot_contain::before{
+
+.polka_dot_contain::before {
   content: "";
   width: 2.4rem;
   height: 2.4rem;
@@ -3920,19 +3946,23 @@ a {
   z-index: 0;
   animation: pulse 2s infinite;
 }
-.polka_dot_contain .polka_dot_icon svg{
+
+.polka_dot_contain .polka_dot_icon svg {
   width: 14px;
 }
+
 @media only screen and (min-width: 1400px) {
-  .polka_dot_contain .polka_dot_icon{
+  .polka_dot_contain .polka_dot_icon {
     width: 4rem;
     height: 4rem;
   }
-  .polka_dot_contain::before{
+
+  .polka_dot_contain::before {
     width: 4rem;
     height: 4rem;
   }
-  .polka_dot_contain .polka_dot_icon svg{
+
+  .polka_dot_contain .polka_dot_icon svg {
     width: 20px;
   }
 }
@@ -3945,7 +3975,8 @@ a {
   display: flex;
   align-items: stretch;
 }
-.polka_dot_product.left{
+
+.polka_dot_product.left {
   transform: translate(0%) translateY(82%);
 }
 
@@ -3989,18 +4020,21 @@ a {
   line-height: 1.3em;
   color: #000000;
 }
+
 @media only screen and (max-width: 767px) {
-  .polka_dot_product_img{
+  .polka_dot_product_img {
     width: 8rem;
     padding: 0.8rem;
   }
-  .polka_dot_product_info{
+
+  .polka_dot_product_info {
     width: 12rem;
     padding: 0.8rem .8rem .8rem 0;
     margin-top: 1.2rem;
     min-height: 7rem;
   }
 }
+
 /***************************** polka-dot end **********************/
 
 /***************************** text truncate... /*****************************/
@@ -4013,21 +4047,23 @@ a {
   -webkit-box-orient: vertical;
   overflow: hidden;
   text-overflow: ellipsis;
-  max-height: 3em; 
+  max-height: 3em;
   line-height: 1em;
 }
+
 .truncate-2-lines {
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
   display: box;
-  -webkit-line-clamp: 2;  
+  -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
   overflow: hidden;
   text-overflow: ellipsis;
-  max-height: 2em; 
+  max-height: 2em;
   line-height: 1em;
 }
+
 .truncate-1-lines {
   display: -webkit-box;
   display: -moz-box;
@@ -4037,9 +4073,10 @@ a {
   -webkit-box-orient: vertical;
   overflow: hidden;
   text-overflow: ellipsis;
-  max-height: 1em; 
+  max-height: 1em;
   line-height: 1em;
 }
+
 /***************************** text truncate end *****************************/
 
 /*****************************  session *****************************/
@@ -4047,78 +4084,96 @@ a {
   width: 100%;
   margin: 0 auto;
 }
-.session-box-padding{
+
+.session-box-padding {
   padding-left: 2rem;
   padding-right: 2rem;
 }
+
 @media only screen and (min-width: 750px) {
-  .session-box-padding{
+  .session-box-padding {
     padding-left: 4rem;
     padding-right: 4rem;
   }
 }
+
 @media only screen and (min-width: 1400px) {
   .session-box-inner {
     max-width: var(--page-width);
   }
-  .session-box-padding{
+
+  .session-box-padding {
     padding-left: 6rem;
     padding-right: 6rem;
   }
 }
+
 /*****************************  session end *****************************/
 
 /*****************************  padding  *****************************/
 .padding-30 {
   padding: 3rem 0;
 }
+
 .padding-top-30 {
   padding-top: 3rem;
 }
+
 .padding-bottom-30 {
   padding-bottom: 3rem;
 }
+
 .padding-horizontal-30 {
   padding: 0 3rem;
 }
-.padding-vertically-30{
+
+.padding-vertically-30 {
   padding: 3rem 0;
 }
 
 .padding-60 {
   padding: 6rem 0;
 }
+
 .padding-top-60 {
   padding-top: 6rem;
 }
+
 .padding-bottom-60 {
   padding-bottom: 6rem;
 }
+
 .padding-horizontal-60 {
   padding: 0 6rem;
 }
-.padding-vertically-60{
+
+.padding-vertically-60 {
   padding: 6rem 0;
 }
 
 .padding-120 {
   padding: 12rem 0;
 }
+
 .padding-top-120 {
   padding-top: 12rem;
 }
+
 .padding-bottom-120 {
   padding-bottom: 12rem;
 }
+
 .padding-horizontal-120 {
   padding: 0 12rem;
 }
-.padding-vertically-120{
+
+.padding-vertically-120 {
   padding: 12rem 0;
 }
+
 /*****************************  padding  end *****************************/
 /*****************************  swiper  *****************************/
-.swiper_btn_white{
+.swiper_btn_white {
   width: 6rem;
   height: 6rem;
   display: flex;
@@ -4131,18 +4186,23 @@ a {
   z-index: 1;
   cursor: pointer;
 }
+
 .swiper_btn_white:hover {
   background-color: #1f1f1f99;
 }
-.swiper_btn_white:hover svg path{
+
+.swiper_btn_white:hover svg path {
   fill: #bdff00;
 }
+
 .swiper_btn_white.swiper_btn_white_prev {
   left: 3.90625vw;
 }
+
 .swiper_btn_white.swiper_btn_white_next {
   right: 3.90625vw;
 }
+
 .swiper_btn_white_prev.is-hidden,
 .swiper_btn_white_next.is-hidden,
 .swiper_btn_white.swiper-button-disabled,
@@ -4150,12 +4210,13 @@ a {
   display: none !important;
 }
 
-.nd_swiper_pagination.swiper-pagination-bullets.swiper-pagination-horizontal{
+.nd_swiper_pagination.swiper-pagination-bullets.swiper-pagination-horizontal {
   bottom: -10px;
   display: none;
   align-items: center;
   justify-content: center;
 }
+
 .nd_swiper_pagination .swiper-pagination-bullet {
   width: 1.2rem;
   height: 1.2rem;
@@ -4166,36 +4227,43 @@ a {
   border: .2rem solid #7F7E75;
   box-sizing: border-box;
 }
+
 .nd_swiper_pagination .swiper-pagination-bullet-active {
   background: #bdff00;
 }
+
 @media screen and (max-width: 1024px) {
-  .swiper_btn_white{
+  .swiper_btn_white {
     width: 4.5rem;
     height: 4.5rem;
   }
-  .swiper_btn_white svg{
+
+  .swiper_btn_white svg {
     width: 1.2rem;
   }
 }
+
 @media screen and (max-width: 768px) {
   .nd_swiper_pagination.swiper-pagination-bullets.swiper-pagination-horizontal {
-    display: flex!important;
+    display: flex !important;
   }
 }
+
 /**************************** share *****************************/
-.social_share{
+.social_share {
   display: flex;
   gap: 1.3rem;
   list-style: none;
   padding: 0;
   margin: 0;
 }
-.social_share li{
+
+.social_share li {
   width: 2rem;
   height: 2rem;
 }
-.social_share li a{
+
+.social_share li a {
   width: 2rem;
   height: 2rem;
   display: inline-flex;
@@ -4205,18 +4273,22 @@ a {
   background-color: #1F1F1F;
   border-radius: 50%;
 }
-.social_share li a svg{
+
+.social_share li a svg {
   width: 1.4rem;
   height: 1.4rem;
   fill: #fff;
   color: #fff;
 }
-.social_share li a svg path{
+
+.social_share li a svg path {
   fill: #fff;
 }
-.social_share li a:hover svg path{
+
+.social_share li a:hover svg path {
   fill: #bdff00;
 }
+
 /*****************************  animation  *****************************/
 @keyframes pulse {
   0% {
@@ -4234,26 +4306,30 @@ a {
     box-shadow: 0 0 0 0 rgba(189, 255, 0, 0);
   }
 }
+
 /*****************************  animation end *****************************/
 /*****************************  product *****************************/
-.product_core_features{
+.product_core_features {
   font-size: 1.6rem;
   line-height: 1.3em;
   color: #7F7E75;
 }
-.product_core_features ul{
+
+.product_core_features ul {
   padding: 0;
   margin: 0;
   list-style: disc;
   padding-left: 1.4rem;
 }
-.product_core_features ul li{
+
+.product_core_features ul li {
   padding: 0;
   margin: 0;
   font-size: 1.6rem;
   line-height: 1.3em;
   color: #7F7E75;
 }
+
 /*****************************  product end *****************************/
 
 /****************************** policy *****************************/
@@ -4265,55 +4341,75 @@ a {
   padding-top: 60px;
   padding-bottom: 60px;
 }
+
 .shopify-policy__title {
   display: none;
 }
-.shopify-policy__body h1{
+
+.shopify-policy__body h1 {
   text-align: center;
   line-height: 1.3em;
 }
-.shopify-policy__body h2{
+
+.shopify-policy__body h2 {
   font-size: 3.4rem;
   line-height: 1.3em;
   font-family: PP Right Grotesk;
 }
-.shopify-policy__body h3{
+
+.shopify-policy__body h3 {
   font-size: 2.4rem;
   line-height: 1.3em;
   font-family: PP Right Grotesk;
 }
+
 .shopify-policy__body p {
   /* font-size: 1.6rem;
   line-height: 1.2em; */
   font-family: PP Right Grotesk;
 }
+
 @media only screen and (min-width: 750px) {
-  .shopify-policy__container{
+  .shopify-policy__container {
     padding-left: 4rem;
     padding-right: 4rem;
   }
-  .shopify-policy__body h2{
+
+  .shopify-policy__body h2 {
     font-size: 4.6rem;
   }
-  .shopify-policy__body h3{
+
+  .shopify-policy__body h3 {
     font-size: 3.6rem;
   }
 }
+
 @media only screen and (min-width: 1400px) {
 
-  .shopify-policy__container{
+  .shopify-policy__container {
     max-width: var(--page-width);
     padding-left: 6rem;
     padding-right: 6rem;
   }
 }
+
 /****************************** policy end *****************************/
 
 /****************************** flex *****************************/
 .flex {
   display: flex;
-  }
+}
+
 .items-center {
-    align-items: center;
-    }
-.items-bottom{align-items: flex-end;}
+  align-items: center;
+}
+
+.items-bottom {
+  align-items: flex-end;
+}
+
+predictive-search .spinner {
+  width: 1.5rem;
+  height: 1.5rem;
+  line-height: 0;
+}
