@@ -4408,6 +4408,11 @@ a {
   align-items: flex-end;
 }
 
+predictive-search:not([loading]) .predictive-search__loading-state,
+predictive-search:not([loading]) .predictive-search-status__loading {
+  display: none;
+}
+
 predictive-search .spinner {
   width: 1.5rem;
   height: 1.5rem;
