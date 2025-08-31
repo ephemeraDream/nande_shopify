@@ -21,7 +21,7 @@ function initSwiper() {
         const mediaId = clickedSlide.dataset.mediaId;
 
         const visibleSlides = Array.from(document.querySelectorAll('.imgmain_swiper .swiper-slide'))
-          .filter(slide => slide.style.display !== 'none');
+          // .filter(slide => slide.style.display !== 'none');
 
         const targetIndex = visibleSlides.findIndex(slide => slide.dataset.mediaId === mediaId);
 
@@ -60,9 +60,9 @@ function initSwiper() {
         }
       }
     },
-    thumbs: {
-      swiper: imgthumbSwiper,
-    }
+    // thumbs: {
+    //   swiper: imgthumbSwiper,
+    // }
   });
 
   videothumbSwiper = new Swiper(".videothumb_swiper", {
@@ -706,7 +706,7 @@ function updateImagesByVariantMedia() {
 
   imgthumbSwiper.update();
   imgboxSwiper.update();
-  // imgboxSwiper.slideTo(activeIndex);
+  imgboxSwiper.slideTo(activeIndex);
   imgthumbSwiper.slideTo(activeIndex);
   document.querySelector(".product_info_left_thumb_select_item[data-type='image']").click()
 }
