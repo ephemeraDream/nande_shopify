@@ -25,12 +25,12 @@
           {% for block in section.blocks %}
             <div class="swiper-slide">
               <div class="maidesite_swiper_image_item">
-              {{-
-                block.settings.image
-                | image_url: width: block.settings.image.width
-                | image_tag: alt: block.settings.title
-              -}}
-             </div>
+                {{-
+                  block.settings.image
+                  | image_url: width: block.settings.image.width
+                  | image_tag: alt: block.settings.title
+                -}}
+              </div>
             </div>
           {% endfor %}
         </div>
@@ -57,17 +57,23 @@
     const sectionId = '{{ section.id }}';
     const sectionEl = document.getElementById('maidesite_swiper_new_section-' + sectionId);
     if (!sectionEl) return;
-  
+
     const imgEl = sectionEl.querySelector('.maidesite_swiper_image');
     const contentEl = sectionEl.querySelector('.maidesite_swiper_desc');
-  
+
     const imgSwiper = new Swiper(imgEl, {
       slidesPerView: 4,
       spaceBetween: 24,
       //watchSlidesProgress: true,
       //slideToClickedSlide: true
+      breakpoints: {
+        768: {
+          slidesPerView: 3,
+          spaceBetween: 20,
+        },
+      }
     });
-  
+
     const descSwiper = new Swiper(contentEl, {
       slidesPerView: 1,
       thumbs: {
@@ -96,55 +102,55 @@
 
 <style>
   .maidesite_swiper_new_section {
-    width: 100%; 
-  background-color: #FAFAFA;
-  overflow: hidden;
+    width: 100%;
+    background-color: #fafafa;
+    overflow: hidden;
   }
   .maidesite_swiper_new_section .maidesite_swiper_title {
-    color: #1F1F1F;
+    color: #1f1f1f;
   }
-  
+
   .maidesite_swiper_new_section .maidesite_swiper_text {
-    color: #7F7E75;
+    color: #7f7e75;
     margin-top: 3rem;
   }
-  
+
   .maidesite_swiper_new_section .maidesite_swiper_image_contain {
     position: relative;
     width: 100%;
     margin-top: 6rem;
   }
 
-  .maidesite_swiper_new_section .maidesite_swiper_image .swiper-slide{
+  .maidesite_swiper_new_section .maidesite_swiper_image .swiper-slide {
     border-bottom: 0.2rem solid transparent;
   }
-  .maidesite_swiper_new_section .maidesite_swiper_image .swiper-slide-thumb-active{
-    border-bottom: 0.2rem solid #BDFF00;
+  .maidesite_swiper_new_section .maidesite_swiper_image .swiper-slide-thumb-active {
+    border-bottom: 0.2rem solid #bdff00;
   }
-  .maidesite_swiper_new_section .maidesite_swiper_image .maidesite_swiper_image_item{
-    padding:1rem;
-    height:7rem;
+  .maidesite_swiper_new_section .maidesite_swiper_image .maidesite_swiper_image_item {
+    padding: 1rem;
+    height: 7rem;
     display: flex;
     justify-content: center;
     align-items: center;
-    background:#fff;
-    margin-bottom:1.7rem;
+    background: #fff;
+    margin-bottom: 1.7rem;
     cursor: pointer;
   }
-  .maidesite_swiper_new_section .maidesite_swiper_image .maidesite_swiper_image_item img{
-    height:100%;
-    width:auto;
+  .maidesite_swiper_new_section .maidesite_swiper_image .maidesite_swiper_image_item img {
+    height: 100%;
+    width: auto;
   }
-  
+
   .maidesite_swiper_new_section .maidesite_swiper_desc {
     width: 100%;
     margin-top: 3.2rem;
     padding-bottom: 9rem;
-    border-bottom: 0.2rem solid #E2DED6;
+    border-bottom: 0.2rem solid #e2ded6;
   }
 
-  .maidesite_swiper_new_section .maidesite_swiper_desc .swiper-slide{
-    color:#1F1F1F;
+  .maidesite_swiper_new_section .maidesite_swiper_desc .swiper-slide {
+    color: #1f1f1f;
     text-align: center;
     display: flex;
     justify-content: center;
@@ -172,23 +178,31 @@
   .maidesite_swiper_new_section .maidesite_swiper_next {
     right: -8.1rem;
   }
-  .maidesite_swiper_new_section .maidesite_swiper_desc .swiper-slide .maidesite_swiper_desc_item{width:50%;}
+  .maidesite_swiper_new_section .maidesite_swiper_desc .swiper-slide .maidesite_swiper_desc_item {
+    width: 50%;
+  }
   @media screen and (max-width: 1500px) {
     .maidesite_swiper_new_section .maidesite_swiper_prev,
-  .maidesite_swiper_new_section .maidesite_swiper_next {display:none;}
+    .maidesite_swiper_new_section .maidesite_swiper_next {
+      display: none;
+    }
   }
   @media screen and (max-width: 1024px) {
-    .maidesite_swiper_new_section .maidesite_swiper_desc .swiper-slide .maidesite_swiper_desc_item{width:70%;}
-    .maidesite_swiper_new_section .maidesite_swiper_image .maidesite_swiper_image_item{
-      height:5rem;
+    .maidesite_swiper_new_section .maidesite_swiper_desc .swiper-slide .maidesite_swiper_desc_item {
+      width: 70%;
+    }
+    .maidesite_swiper_new_section .maidesite_swiper_image .maidesite_swiper_image_item {
+      height: 5rem;
     }
   }
   @media screen and (max-width: 768px) {
-    .maidesite_swiper_new_section .maidesite_swiper_desc .swiper-slide .maidesite_swiper_desc_item{width:100%;}
-    .maidesite_swiper_new_section .maidesite_swiper_image .maidesite_swiper_image_item{
-      padding:0.6rem;
-      height:3.6rem;
-      margin-bottom:1rem;
+    .maidesite_swiper_new_section .maidesite_swiper_desc .swiper-slide .maidesite_swiper_desc_item {
+      width: 100%;
+    }
+    .maidesite_swiper_new_section .maidesite_swiper_image .maidesite_swiper_image_item {
+      padding: 0.6rem;
+      height: 3.6rem;
+      margin-bottom: 1rem;
     }
   }
 </style>
