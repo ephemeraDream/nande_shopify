@@ -4,6 +4,11 @@ Fancybox.bind('[data-fancybox="product_info_img"]', {
 // swiper相关
 let imgthumbSwiper, imgboxSwiper, videothumbSwiper, videoboxSwiper;
 initSwiper()
+// 在页面加载时就存一份原始 slides 数据
+const originSlides = {
+  main: Array.from(document.querySelectorAll('.imgmain_swiper .swiper-slide')),
+  thumb: Array.from(document.querySelectorAll('.imgthumb_swiper .swiper-slide'))
+};
 function initSwiper() {
   imgthumbSwiper = new Swiper(".imgthumb_swiper", {
     // loop: true,
@@ -661,12 +666,6 @@ function updateUrl() {
   url.searchParams.set("variant", currVariant.id);
   window.history.replaceState(null, "", url.toString());
 }
-// 在页面加载时就存一份原始 slides 数据
-const originSlides = {
-  main: Array.from(document.querySelectorAll('.imgmain_swiper .swiper-slide')),
-  thumb: Array.from(document.querySelectorAll('.imgthumb_swiper .swiper-slide'))
-};
-
 function updateImagesByVariantMedia() {
   const mediaId = String(currVariant?.featured_media?.id || '');
   const slides = originSlides.main;  // 每次都基于原始的 main slides
