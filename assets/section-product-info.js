@@ -706,8 +706,8 @@ function updateImagesByVariantMedia() {
 
   // imgthumbSwiper.update();
   // imgboxSwiper.update();
-  imgboxSwiper.slideTo(activeIndex);
-  imgthumbSwiper.slideTo(activeIndex);
+  imgboxSwiper.slideToLoop(activeIndex, 0, false);
+  imgthumbSwiper.slideToLoop(activeIndex, 0, false);
   document.querySelector(".product_info_left_thumb_select_item[data-type='image']").click()
 }
 
