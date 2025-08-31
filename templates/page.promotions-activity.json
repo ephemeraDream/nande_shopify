@@ -48,6 +48,7 @@
         "fixed_height_desktop": 600,
         "fixed_height_mobile": 500,
         "mobile_stacked": false,
+        "background_color": "#dddddd",
         "nav_style": "slideshow_nav_lines",
         "pagination_color": "#ffffff",
         "nav_position": "justify-center",
@@ -249,7 +250,7 @@
             "btn_two": "Gewinnerliste",
             "btn_two_link": ""
           }
-        },
+        }
       },
       "block_order": [
         "top_left_TNQyCH",
@@ -257,7 +258,11 @@
       ],
       "name": "activity subscribe",
       "settings": {
-        "specId": ""
+        "specId": "",
+        "title": "",
+        "text": "",
+        "padding_top": 120,
+        "padding_bottom": 0
       }
     },
     "activity_subscribe_tV4gHF": {
@@ -278,7 +283,9 @@
       ],
       "name": "activity subscribe",
       "settings": {
-        "specId": ""
+        "specId": "",
+        "padding_top": 60,
+        "padding_bottom": 0
       }
     },
     "blogs_simple_XBYLNU": {
@@ -291,6 +298,21 @@
         "padding_top": 120,
         "padding_bottom": 120
       }
+    },
+    "1756630419fbe27307": {
+      "type": "apps",
+      "blocks": {
+        "wheelify_spin_wheel_email_pop_wheelify_app_section_yFCWeq": {
+          "type": "shopify://apps/wheelify-spin-wheel-email-pop/blocks/wheelify-app-section/505ff42c-abce-4466-9558-7e1d3b2cfcd7",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "wheelify_spin_wheel_email_pop_wheelify_app_section_yFCWeq"
+      ],
+      "settings": {
+        "include_margins": true
+      }
     }
   },
   "order": [
@@ -300,6 +322,7 @@
     "activity_products_tab_aUGewm",
     "activity_products_normal_REbAHP",
     "activity_reorder_VwgQAM",
+    "1756630419fbe27307",
     "activity_products_normal_8qJYJt",
     "activity_subscribe_top_tV4gHF",
     "activity_subscribe_tV4gHF",
