@@ -660,6 +660,10 @@
   color: rgba(127, 126, 117, .5);
 }
 
+.product_info .common_modal_body input::-webkit-input-placeholder {
+  color: rgba(127, 126, 117, .5);
+}
+
 .product_info .common_modal_body .contact-btn button {
   display: flex;
   align-items: center;
