@@ -56,8 +56,54 @@
             </button>
           </div>
         {%- endform -%}
+        <div id="ContactForm-message" class="contact-message" style="display:none;"></div>
         <div class="product_info_modal_tip">{{ modal_tip }}</div>
       </div>
     </div>
   </div>
 </div>
+
+<script>
+  () => {
+    document.addEventListener('DOMContentLoaded', () => {
+      const form = document.getElementById('ContactForm');
+      const messageBox = document.getElementById('ContactForm-message');
+
+      form.addEventListener('submit', async (e) => {
+        e.preventDefault();
+
+        messageBox.style.display = 'none';
+        messageBox.innerHTML = '';
+
+        const formData = new FormData(form);
+
+        try {
+          const res = await fetch('/contact', {
+            method: 'POST',
+            body: formData,
+            headers: {
+              'X-Requested-With': 'XMLHttpRequest',
+            },
+          });
+
+          const text = await res.text();
+
+          if (text.includes('contact[success]')) {
+            messageBox.innerHTML = '✅ Vielen Dank! Ihre Nachricht wurde gesendet.';
+            messageBox.style.color = 'green';
+          } else {
+            messageBox.innerHTML = '❌ Etwas ist schiefgelaufen. Bitte versuchen Sie es erneut.';
+            messageBox.style.color = 'red';
+          }
+
+          messageBox.style.display = 'block';
+          form.reset();
+        } catch (err) {
+          messageBox.innerHTML = '❌ Netzwerkfehler. Bitte versuchen Sie es später erneut.';
+          messageBox.style.color = 'red';
+          messageBox.style.display = 'block';
+        }
+      });
+    });
+  };
+</script>
