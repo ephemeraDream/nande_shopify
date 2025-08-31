@@ -705,8 +705,8 @@ function updateImagesByVariantMedia() {
   const { activeIndex } = applyTo('.imgmain_swiper .swiper-slide');
   applyTo('.imgthumb_swiper .swiper-slide');
 
-  // imgthumbSwiper.update();
-  // imgboxSwiper.update();
+  imgthumbSwiper.update();
+  imgboxSwiper.update();
   imgboxSwiper.slideToLoop(activeIndex, 0, false);
   imgthumbSwiper.slideToLoop(activeIndex, 0, false);
   document.querySelector(".product_info_left_thumb_select_item[data-type='image']").click()
