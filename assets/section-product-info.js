@@ -663,55 +663,33 @@ function updateUrl() {
 }
 function updateImagesByVariantMedia() {
   const mediaId = String(currVariant?.featured_media?.id || '');
+  const slides = Array.from(document.querySelectorAll('.imgmain_swiper .swiper-slide'));
+  const isCommon = (i) => slides[i].hasAttribute('data-common');
+  const featIdx = slides.findIndex(s => String(s.dataset.mediaId) === mediaId);
 
-  const applyTo = (selector) => {
-    const slides = Array.from(document.querySelectorAll(selector));
-    const isCommon = (i) => slides[i].hasAttribute('data-common');
+  if (featIdx === -1) return;
 
-    // 找到当前变体主图
-    const featIdx = slides.findIndex(s => String(s.dataset.mediaId) === mediaId);
-    if (featIdx === -1) {
-      slides.forEach(s => (s.style.display = 'none'));
-      return { activeIndex: 0 };
-    }
+  let right = featIdx;
+  for (let i = featIdx + 1; i < slides.length; i++) {
+    if (!isCommon(i) && isCommon(i - 1)) break;
+    right = i;
+  }
 
-    // 向右扩展到“本组终点”
-    // 规则：一直走，直到遇到 “非 common 且前一张是 common” —— 这就是下一组的起点
-    let right = featIdx;
-    for (let i = featIdx + 1; i < slides.length; i++) {
-      if (!isCommon(i) && isCommon(i - 1)) {
-        // i 是下一组第一张，当前组终点是 i-1
-        break;
-      }
-      right = i; // 仍在当前组范围内
-    }
+  const newSlides = slides.slice(featIdx, right + 1).filter((s, i) => i === 0 || s.hasAttribute('data-common'));
 
-    // 显示规则：当前主图 + (featIdx, right] 区间内的 common；其他隐藏
-    for (let i = 0; i < slides.length; i++) {
-      if (i === featIdx) {
-        slides[i].style.display = 'block'; // 主图
-      } else if (i > featIdx && i <= right && isCommon(i)) {
-        slides[i].style.display = 'block'; // 主图右侧这一组里的 common
-      } else {
-        slides[i].style.display = 'none';
-      }
-    }
+  // 替换 swiper slides
+  imgboxSwiper.removeAllSlides();
+  imgboxSwiper.appendSlide(newSlides.map(s => s.outerHTML));
 
-    // 主图作为可见序列的第 0 张
-    const activeIndex = 0;
-    return { activeIndex };
-  };
+  // 同步 thumbs
+  const thumbSlides = Array.from(document.querySelectorAll('.imgthumb_swiper .swiper-slide'));
+  const newThumbs = thumbSlides.filter(s => newSlides.some(ns => ns.dataset.mediaId === s.dataset.mediaId));
+  imgthumbSwiper.removeAllSlides();
+  imgthumbSwiper.appendSlide(newThumbs.map(s => s.outerHTML));
 
-  const { activeIndex } = applyTo('.imgmain_swiper .swiper-slide');
-  applyTo('.imgthumb_swiper .swiper-slide');
-
-  imgthumbSwiper.update();
-  imgboxSwiper.update();
-  imgboxSwiper.slideToLoop(activeIndex, 0, false);
-  imgthumbSwiper.slideToLoop(activeIndex, 0, false);
-  document.querySelector(".product_info_left_thumb_select_item[data-type='image']").click()
+  imgboxSwiper.slideTo(0);
+  imgthumbSwiper.slideTo(0);
 }
-
 
 
 // 捆绑步骤切换
