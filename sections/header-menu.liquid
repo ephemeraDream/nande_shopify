@@ -1,5 +1,11 @@
 {{ 'section-header-menu.css' | asset_url | stylesheet_tag }}
 
+<style>
+  #shopify-section-{{ section.id }} {
+    z-index: 1001;
+  }
+</style>
+
 <div class="header_menu_section session-box-padding">
   <div class="header_menu">
     {% for block in section.blocks %}

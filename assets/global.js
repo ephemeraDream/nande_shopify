@@ -1375,7 +1375,7 @@ class CartPerformance {
         el.style.top = offset + 'px';
         el.style.left = 0;
         el.style.right = 0;
-        el.style.zIndex = 1000 + idx;
+        // el.style.zIndex = 1000 + idx;
         el.style.transition = 'transform 0.2s ease-in-out';
         el.style.transform = `translateY(-${totalHeight}px)`;
         offset += headerHeights[idx];
@@ -1388,7 +1388,7 @@ class CartPerformance {
         el.style.top = offset + 'px';
         el.style.left = 0;
         el.style.right = 0;
-        el.style.zIndex = 1000 + idx;
+        // el.style.zIndex = 1000 + idx;
         el.style.transition = 'transform 0.2s ease-in-out';
         el.style.transform = 'translateY(0px)';
         offset += headerHeights[idx];
