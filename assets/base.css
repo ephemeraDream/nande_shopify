@@ -3879,11 +3879,11 @@ a {
 }
 
 .common_modal_head {
-  height: 6rem;
+  min-height:4rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 2rem;
+  padding: 1rem 2rem 1rem;
   font-family: "PP Right Grotesk";
   font-size: 3rem;
   font-weight: 500;
@@ -3905,6 +3905,10 @@ a {
   max-height: calc(78vh - 6rem);
   overflow: auto;
 }
+.common_modal_body img{
+  width: 100%;
+  height: auto;
+}
 
 .common_modal_close {
   width: 2rem;
@@ -3918,6 +3922,9 @@ a {
   top: 0;
   z-index: 9;
 }
+.common_modal_head{
+  
+}
 @media screen and (max-width: 767px) {
   .common_modal_contain{
     width: 90vw;
@@ -3927,6 +3934,7 @@ a {
   .common_modal_body {
     padding: 0rem 2rem 2rem;
 }
+
 }
 
 /**************** polka_dot *************************/
