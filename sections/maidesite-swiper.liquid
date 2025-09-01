@@ -129,15 +129,6 @@
     margin-top: 6rem;
   }
 
-  .maidesite_swiper_new_section .maidesite_swiper_image {
-    overflow: visible;
-  }
-
-  /* 确保小数 slidesPerView 正常工作 */
-  .maidesite_swiper_new_section .maidesite_swiper_image .swiper-wrapper {
-    align-items: stretch;
-  }
-
   .maidesite_swiper_new_section .maidesite_swiper_image .swiper-slide {
     border-bottom: 0.2rem solid transparent;
   }
@@ -202,6 +193,12 @@
     .maidesite_swiper_new_section .maidesite_swiper_prev,
     .maidesite_swiper_new_section .maidesite_swiper_next {
       display: none;
+    }
+    .maidesite_swiper_new_section .maidesite_swiper_image {
+      overflow: visible;
+    }
+    .maidesite_swiper_new_section .maidesite_swiper_image .swiper-wrapper {
+      align-items: stretch;
     }
   }
   @media screen and (max-width: 1024px) {
