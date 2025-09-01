@@ -96,6 +96,8 @@
     const swiperPrev = sectionEl.querySelector('.img_with_text_tab_swiper_prev');
     let img_with_text_tab_swiper;
     img_with_text_tab_swiper = new Swiper(swiperEl, {
+      slidesPerView: 1.2,
+      spaceBetween: 20,
       navigation: {
         nextEl: swiperNext,
         prevEl: swiperPrev,
@@ -117,6 +119,12 @@
           });
         },
       },
+      breakpoints: {
+        768: {
+          slidesPerView: 1,
+          spaceBetween: 20,
+        },
+      }
     });
   
     tabItems.forEach((item, index) => {
