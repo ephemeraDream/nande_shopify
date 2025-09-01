@@ -185,6 +185,7 @@
     width: 4rem;
     height: 4rem;
     background-color: #e2ded6bd;
+    display: none;
 }
 .img_with_text_tab .img_with_text_tab_swiper_prev svg, .img_with_text_tab .img_with_text_tab_swiper_next svg {
   width: 2rem;
