@@ -62,20 +62,24 @@
     const contentEl = sectionEl.querySelector('.maidesite_swiper_desc');
 
     const imgSwiper = new Swiper(imgEl, {
-      slidesPerView: 2,
-      spaceBetween: 24,
+      slidesPerView: 1,
+      spaceBetween: 20,
       //watchSlidesProgress: true,
       //slideToClickedSlide: true
       breakpoints: {
         320: {
-          slidesPerView: 2,
+          slidesPerView: 1,
           spaceBetween: 20,
         },
         768: {
-          slidesPerView: 3,
+          slidesPerView: 2,
           spaceBetween: 24,
         },
         1024: {
+          slidesPerView: 3,
+          spaceBetween: 24,
+        },
+        1300: {
           slidesPerView: 4,
           spaceBetween: 24,
         },
