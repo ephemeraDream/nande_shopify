@@ -96,7 +96,7 @@
   var root = document.getElementById('{{ swiper_id }}');
   var paginationEl = root.querySelector('.nd_swiper_pagination');
   new Swiper('.celebrity_swiper .swiper', {
-    slidesPerView: 1, 
+    slidesPerView: 1.2, 
     spaceBetween: 20,
     navigation: {
       nextEl: '.celebrity_swiper_next',
@@ -108,8 +108,9 @@
     },
     breakpoints: {
       768: {
-        slidesPerView: "auto", 
-      }
+        slidesPerView: 1.2,
+        spaceBetween: 20,
+      },
     }
   });
   
