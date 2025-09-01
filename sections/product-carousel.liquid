@@ -140,7 +140,11 @@ Products Swiper Section - 选择产品进行轮播
     .product-carousel .product-button-next {
       right: -7rem;
     }
-    
+    @media screen and (max-width: 1024px) {
+      .product-carousel .product-button-prev, .product-carousel .product-button-next {
+        display: none;
+      }
+    }
 </style>
 
 <script>
