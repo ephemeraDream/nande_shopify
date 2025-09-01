@@ -62,24 +62,20 @@
     const contentEl = sectionEl.querySelector('.maidesite_swiper_desc');
 
     const imgSwiper = new Swiper(imgEl, {
-      slidesPerView: 1,
+      slidesPerView: 2.5,
       spaceBetween: 20,
       //watchSlidesProgress: true,
       //slideToClickedSlide: true
       breakpoints: {
         320: {
-          slidesPerView: 1,
+          slidesPerView: 2.5,
           spaceBetween: 20,
         },
         768: {
-          slidesPerView: 2,
+          slidesPerView: 3.5,
           spaceBetween: 24,
         },
         1024: {
-          slidesPerView: 3,
-          spaceBetween: 24,
-        },
-        1300: {
           slidesPerView: 4,
           spaceBetween: 24,
         },
@@ -131,6 +127,15 @@
     position: relative;
     width: 100%;
     margin-top: 6rem;
+  }
+
+  .maidesite_swiper_new_section .maidesite_swiper_image {
+    overflow: visible;
+  }
+
+  /* 确保小数 slidesPerView 正常工作 */
+  .maidesite_swiper_new_section .maidesite_swiper_image .swiper-wrapper {
+    align-items: stretch;
   }
 
   .maidesite_swiper_new_section .maidesite_swiper_image .swiper-slide {
@@ -215,6 +220,11 @@
       padding: 0.6rem;
       height: 3.6rem;
       margin-bottom: 1rem;
+    }
+    
+    /* 移动端显示部分下一个项目 */
+    .maidesite_swiper_new_section .maidesite_swiper_image {
+      padding-right: 2rem;
     }
   }
 </style>
