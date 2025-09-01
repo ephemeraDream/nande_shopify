@@ -228,6 +228,12 @@ Product Tab Compare Section - 产品对比 tab切换
     justify-content: center;
   }
 }
+@media(max-width:1024px){
+  .product-tab-compare .tab-swiper-button-prev,
+  .product-tab-compare .tab-swiper-button-next {
+    display: none;
+  }
+}
 @media(max-width:750px){
     .product-tab-compare .tab-titles{flex-direction:column}
 }
@@ -258,15 +264,15 @@ Product Tab Compare Section - 产品对比 tab切换
     document.addEventListener('DOMContentLoaded', function () {
       document.querySelectorAll('.tab-panel.swiper').forEach(function(el, index) {
         new Swiper(el, {
-          slidesPerView: 5,
+          slidesPerView: 1.5,
           spaceBetween: 20,
           navigation: {
             nextEl: el.querySelector('.tab-swiper-button-next'),
             prevEl: el.querySelector('.tab-swiper-button-prev'),
           },
           breakpoints: {
-            0: { slidesPerView: 2 },
-            768: { slidesPerView: 3 },
+            0: { slidesPerView: 1.5 },
+            768: { slidesPerView: 2.5 },
             1024: { slidesPerView: 4 },
             1440: { slidesPerView: 5 }
           }
