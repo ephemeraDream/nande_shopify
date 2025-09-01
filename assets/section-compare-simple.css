@@ -212,6 +212,10 @@
   .compare_simple .compare_simple_outer_next{
     right: -4.5rem;
   }
+  .compare_simple .compare_simple_outer_prev,
+    .compare_simple .compare_simple_outer_next {
+      display: none;
+    }
 }
 @media screen and (max-width: 768px) {
   .compare_simple .compare_simple_contain_head {
