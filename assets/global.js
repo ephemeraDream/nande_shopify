@@ -1348,7 +1348,7 @@ class CartPerformance {
     headerHeights = Array.from(navbarList).map(el => el.offsetHeight);
     totalHeight = headerHeights.reduce((sum, h) => sum + h, 0);
     if (mainContent) {
-      mainContent.style.paddingTop = totalHeight + 'px';
+      mainContent.style.marginTop = totalHeight + 'px';
     }
   }
 
