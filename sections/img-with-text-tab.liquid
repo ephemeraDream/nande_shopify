@@ -63,8 +63,8 @@
               {% if block.settings.sub_title != blank %}
                 <div class="img_with_text_simplicity_subtitle">{{ block.settings.sub_title }}</div>
               {% endif %}
-              <div class="img_with_text_tab_contain_title">{{ block.settings.title }}</div>
-              <div class="img_with_text_tab_contain_desc">{{ block.settings.description }}</div>
+              <h3 class="img_with_text_tab_contain_title">{{ block.settings.title }}</h3>
+              <div class="img_with_text_tab_contain_desc text-body">{{ block.settings.description }}</div>
               {% if block.settings.btn_text != blank %}
                 <a class="nd-btn" href="{{ block.settings.link }}">
                     {{ block.settings.btn_text }}
