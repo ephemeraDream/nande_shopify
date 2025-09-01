@@ -150,8 +150,8 @@ Products Swiper Section - 选择产品进行轮播
 <script>
   document.addEventListener("DOMContentLoaded", function () {
     new Swiper(".product-carousel-container", {
-      slidesPerView: 3,
-      slidesPerGroup: 1,
+      slidesPerView: 1.2,
+      //slidesPerGroup: 1,
       spaceBetween: 20,
       loop: false,
       navigation: {
@@ -159,9 +159,6 @@ Products Swiper Section - 选择产品进行轮播
         prevEl: ".product-button-prev",
       },
       breakpoints: {
-        0: {
-          slidesPerView: 1.2
-        },
         768: {
           slidesPerView: 2.2
         },
