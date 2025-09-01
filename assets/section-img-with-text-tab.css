@@ -170,7 +170,7 @@
     width: 100%;
     flex-direction: row;
     justify-content: space-between;
-    font-size: 1.8rem;
+    font-size: 1.4rem;
   }
   .img_with_text_tab .img_with_text_tab_contain .swiper-slide.right {
     flex-direction: column;
