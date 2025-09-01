@@ -145,6 +145,9 @@ Products Swiper Section - 选择产品进行轮播
         height: 3rem;
         width: 15rem;
       }
+      .product-carousel .product-button-prev, .product-carousel .product-button-next {
+        display: none;
+      }
     }
     @media only screen and (max-width: 767px) {
       .product-carousel .product_info::before {
@@ -161,9 +164,9 @@ Products Swiper Section - 选择产品进行轮播
 <script>
   document.addEventListener("DOMContentLoaded", function () {
     new Swiper(".product-carousel-container", {
-      slidesPerView: 5,
+      slidesPerView: 1.2,
       slidesPerGroup: 1,
-      spaceBetween: 30,
+      spaceBetween: 20,
       loop: false,
       navigation: {
         nextEl: ".product-button-next",
@@ -171,13 +174,18 @@ Products Swiper Section - 选择产品进行轮播
       },
       breakpoints: {
         0: {
-          slidesPerView: 1
+          slidesPerView: 1.2
         },
         768: {
-          slidesPerView: 3
+          slidesPerView: 2.5
         },
         1025: {
-          slidesPerView: 4
+          slidesPerView: 4,
+          spaceBetween: 30
+        },
+        1440: {
+          slidesPerView: 5,
+          spaceBetween: 30
         }
       }
     });
