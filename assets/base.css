@@ -4438,3 +4438,15 @@ predictive-search .spinner {
   height: 1.5rem;
   line-height: 0;
 }
+
+/*****************************  wheelify  *****************************/
+#wheelify-spin_a_sale_cc_store_front_module .wheelify-ContentRight h1.wheelify-text-heading{
+  color: #3D3D3D;
+  font-family: PP Right Grotesk;
+  font-size: 4rem;
+}
+#wheelify-spin_a_sale_cc_store_front_module p.wheelify-text-description{
+  color: #7F7E75;
+  font-family: PP Right Grotesk;
+  font-size: 2rem;
+}
