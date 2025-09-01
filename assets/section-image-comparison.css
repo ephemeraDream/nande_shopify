@@ -52,4 +52,8 @@
   .image-comparison {
     height: 30rem;
   }
+  .image-comparison .divider svg {
+    left: -1.1rem;
+    width: 26px;
+  }
 }
