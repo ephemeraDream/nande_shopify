@@ -4441,7 +4441,7 @@ predictive-search .spinner {
 
 /*****************************  wheelify  *****************************/
 #shopify-block-ATTZPeG4rWUMydlRzd__wheelify_spin_wheel_email_pop_wheelify_app_section_yFCWeq{
-  padding:6rem 0;
+  padding:12rem 0;
 }
 body.gradient #wheelify-spin_a_sale_cc_store_front_module .wheelify-ContentRight h1.wheelify-text-heading{
   color: #3D3D3D;
@@ -4455,13 +4455,9 @@ body.gradient #wheelify-spin_a_sale_cc_store_front_module p.wheelify-text-descri
   font-size: 2rem;
   line-height: 1.3em;
 }
-body.gradient #wheelify-spin_a_sale_cc_store_front_module.wheelify-wrapper-spinner.popupview .wheelify-ContentRight .cc_checkbox .cc_checkbox_label{
-  color: #7F7E75;
-  font-family: PP Right Grotesk;
-  font-size: 1.4rem;
-  line-height: 1.3em;
-}
 body.gradient #wheelify-spin_a_sale_cc_store_front_module span#cc-spin-a-sale-consent-text{
   color: #7F7E75!important;
   font-family: PP Right Grotesk;
+  font-size: 1.4rem!important;
+  line-height: 1.3em!important;
 }
