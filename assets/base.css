@@ -4461,3 +4461,7 @@ body.gradient #wheelify-spin_a_sale_cc_store_front_module.wheelify-wrapper-spinn
   font-size: 1.4rem;
   line-height: 1.3em;
 }
+body.gradient #wheelify-spin_a_sale_cc_store_front_module span#cc-spin-a-sale-consent-text{
+  color: #7F7E75!important;
+  font-family: PP Right Grotesk;
+}
