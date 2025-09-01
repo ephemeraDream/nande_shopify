@@ -102,7 +102,8 @@
       "name": "product info",
       "settings": {
         "media_ratio": "1.33",
-        "show_tax_and_shipping": true
+        "show_tax_and_shipping": true,
+        "product_specs": ""
       }
     },
     "product_anchor_bar_atcVF4": {
@@ -181,6 +182,7 @@
             "title": "<p>Höhenverstellbar für Kinder und Erwachsene</p>",
             "description": "<ul><li>Dieser höhenverstellbare Schreibtisch passt perfekt für Personen mit einer Körpergröße von 1,5 bis 1,83 Metern</li></ul>",
             "file_type": "image",
+            "file_image": "shopify://shop_images/Maidesite-T1-Basic-hohenverstellbar-Bereich-72-120cm_27f1dca0-074c-4c64-80a8-4112a4a7af04.jpg",
             "video_url": ""
           }
         },
@@ -465,6 +467,9 @@
         "description": "",
         "title": "<p>CE/FSC-zertifizierter höhenverstellbarer Schreibtisch und Tischplatte</p>",
         "show_tab_head": true,
+        "loop": true,
+        "autoplay_enable": true,
+        "autoplay_delay": 5000,
         "layout": "image-left"
       }
     },
@@ -519,6 +524,10 @@
       "settings": {
         "title": "<p>Die Presse Liebt Maidesite</p>",
         "text": "",
+        "show_buttons": true,
+        "loop": true,
+        "autoplay_enable": true,
+        "autoplay_delay": 3000,
         "padding_top": 120,
         "padding_bottom": 0
       }
