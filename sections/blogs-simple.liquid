@@ -59,27 +59,33 @@
     <div class="swiper_btn_white swiper_btn_white_prev blogs_simple_prev">{{- 'swiper-left.svg' | inline_asset_content -}}</div>
     <div class="swiper_btn_white swiper_btn_white_next blogs_simple_next">{{- 'swiper-right.svg' | inline_asset_content -}}</div>
   </div>
-  <div class="nd_swiper_pagination"></div>
+  {% comment %} <div class="nd_swiper_pagination"></div> {% endcomment %}
 </div>
 
 <script>
   (function() {
     var root = document.getElementById('{{ swiper_id }}');
-    var paginationEl = root.querySelector('.nd_swiper_pagination');
+    //var paginationEl = root.querySelector('.nd_swiper_pagination');
     const swiperEl = root.querySelector('.blogs_simple .swiper');
     const nextEl = root.querySelector('.blogs_simple_next');
     const prevEl = root.querySelector('.blogs_simple_prev');
   new Swiper(swiperEl, {
-    slidesPerView: 'auto',
+    slidesPerView: 1.2,
     spaceBetween: 20,
     navigation: {
       nextEl: nextEl,
       prevEl: prevEl,
     },
-    pagination: {
-      el: paginationEl,
-      clickable: true,
-    },
+    breakpoints: {
+      768: {
+        slidesPerView: 'auto',
+        spaceBetween: 20,
+      },
+    }
+    //pagination: {
+     // el: paginationEl,
+     // clickable: true,
+    //},
   });
 })();
 </script>

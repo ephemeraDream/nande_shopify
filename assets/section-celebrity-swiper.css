@@ -142,9 +142,6 @@
   .celebrity_swiper .swiper_btn_white.swiper_btn_white_prev {
     display: none;
   }
-  .celebrity_swiper .nd_swiper_pagination{
-    display: none;
-  }
 }
 
 /* .celebrity_swiper .celebrity_swiper_prev,
