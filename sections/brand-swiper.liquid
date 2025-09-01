@@ -108,11 +108,12 @@ Brand swipe - 品牌logo轮播 红人页面那种
         .brand_swiper .swiper-slide .learn-more {
             font-size: 1.8rem;
         }
-        .brand_swiper_header .brand_swiper_prev,
-    .brand_swiper_header .brand_swiper_next {
-        display: none;
     }
-    }
+    @media only screen and (max-width: 768px) {
+      .brand_swiper_header .swiper_btn{
+          display: none;
+      }
+  }
 
 </style>
 
@@ -129,7 +130,7 @@ Brand swipe - 品牌logo轮播 红人页面那种
         const nextBtn = sectionEl.querySelector('.brand_swiper_next');
       
         const brandSwiper = new Swiper(swiperEl, {
-            slidesPerView: 1.1,
+            slidesPerView: 1.2,
             slidesPerGroup: 1,
             grid: {
               rows: 1,
@@ -149,7 +150,7 @@ Brand swipe - 品牌logo轮播 红人页面那种
                 }
               },
               768: {
-                slidesPerView: 2.1,
+                slidesPerView: 2.2,
                 slidesPerGroup: 2,
                 grid: {
                   rows: 2
