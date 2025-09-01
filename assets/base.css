@@ -4447,9 +4447,17 @@ body.gradient #wheelify-spin_a_sale_cc_store_front_module .wheelify-ContentRight
   color: #3D3D3D;
   font-family: PP Right Grotesk;
   font-size: 4rem;
+  line-height: 1.3em;
 }
 body.gradient #wheelify-spin_a_sale_cc_store_front_module p.wheelify-text-description{
   color: #7F7E75;
   font-family: PP Right Grotesk;
   font-size: 2rem;
+  line-height: 1.3em;
+}
+body.gradient #wheelify-spin_a_sale_cc_store_front_module.wheelify-wrapper-spinner.popupview .wheelify-ContentRight .cc_checkbox .cc_checkbox_label{
+  color: #7F7E75;
+  font-family: PP Right Grotesk;
+  font-size: 1.4rem;
+  line-height: 1.3em;
 }
