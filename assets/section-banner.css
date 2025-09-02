@@ -351,7 +351,7 @@ svg.page-btn__circle{
 @media screen and (max-width: 768px) {
   .section_banner .swiper-slide img,
   .section_banner .swiper-slide video {
-    min-height: 30rem;
+    min-height: 10rem;
   }
 
 }
