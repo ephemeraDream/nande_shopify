@@ -604,7 +604,9 @@
 .product_info .product_info_payment_contain {
   margin-left: 4rem;
 }
-
+.product_info .product_info_payment_contain svg {
+  height: 1.7rem;width: auto;
+}
 .product_info .product_info_modal_title {
   font-family: "PP Right Grotesk";
   font-size: 3.6rem;
