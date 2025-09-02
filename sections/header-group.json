@@ -71,6 +71,7 @@
       "blocks": {
         "img_width_text_Dh6yzR": {
           "type": "img_width_text",
+          "disabled": true,
           "settings": {
             "name": "Inspirationen",
             "link": "",
