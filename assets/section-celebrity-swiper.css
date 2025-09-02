@@ -117,8 +117,12 @@
 .celebrity_swiper .celebrity_swiper_item {
   flex-direction: column;
   height: auto;
+  justify-content: space-between;
 }
 .celebrity_swiper .celebrity_swiper_item_left,.celebrity_swiper .celebrity_swiper_item_right{width: 100%;}
+.celebrity_swiper .celebrity_swiper_item_left{
+  flex-grow: 1;
+}
 .celebrity_swiper .celebrity_swiper_item_desc{margin-top: 3rem;}
 .celebrity_swiper .celebrity_swiper_item_right {
   height: 32rem;

@@ -4058,6 +4058,18 @@ a {
 /***************************** polka-dot end **********************/
 
 /***************************** text truncate... /*****************************/
+.truncate-4-lines {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-height: 4em;
+  line-height: 1em;
+}
 .truncate-3-lines {
   display: -webkit-box;
   display: -moz-box;
