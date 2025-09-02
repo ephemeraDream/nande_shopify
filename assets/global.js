@@ -1405,6 +1405,16 @@ class CartPerformance {
     ticking = false;
   }
 
+  let lastWidth = window.innerWidth;
+  window.addEventListener('resize', () => {
+    const currentWidth = window.innerWidth;
+    if (currentWidth !== lastWidth) {
+      // console.log(`宽度变化: ${lastWidth}px → ${currentWidth}px`);
+      lastWidth = currentWidth;
+      calcHeights();
+    }
+  });
+
   window.addEventListener('scroll', function () {
     if (!ticking) {
       ticking = true;
