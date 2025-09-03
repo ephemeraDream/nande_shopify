@@ -106,7 +106,6 @@
       "name": "contact_form_two",
       "settings": {
         "title": "Optimieren Sie Ihre Büros mit Maidesite – Wir unterstützen Sie von Anfang bis Ende!",
-        "image": "shopify://shop_images/b2b_01.webp",
         "desc": "",
         "text_content": "<p>Ergonomische Arbeitsplätze, die Ihre Mitarbeiter begeistern und Ihre Produktivität steigern. Erhalten Sie jetzt ein unverbindliches Angebot und profitieren Sie von unserer umfassenden Beratung und Betreuung</p><p>Sie können das gewünschte<strong> Produktmodell </strong>und die <strong>Menge</strong> eingeben, um den genauen Preis und die verfügbare Zeit zu erfahren.</p>",
         "btn_text": "Absenden",
@@ -120,10 +119,21 @@
     "b2b_spezielle_rabatte": {
       "type": "b2b-spezielle-rabatte",
       "blocks": {
+        "item_4zTmAb": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/T2-Pro-Plus--4_990b6dd8-a416-46b8-8e49-2af000ca9ed0.jpg",
+            "title": "",
+            "sub_title": "",
+            "description": "",
+            "btn_text": "",
+            "link": ""
+          }
+        },
         "item_fiwUXL": {
           "type": "item",
           "settings": {
-            "image": "shopify://shop_images/b2b_03.webp",
+            "image": "shopify://shop_images/b2b.jpg",
             "title": "11-30 Menschen",
             "sub_title": "Bis zu 15%",
             "description": "<ul><li> Immer auf Lager</li><li>Flexibler Versand</li><li> Kostenloser Versand</li><li>Zusatzliches kostenloses Zubehor</li></ul>",
@@ -155,6 +165,7 @@
         }
       },
       "block_order": [
+        "item_4zTmAb",
         "item_fiwUXL",
         "item_AUd88N",
         "item_AUd88C"
