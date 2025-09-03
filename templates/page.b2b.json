@@ -20,6 +20,7 @@
     },
     "contact_form_one": {
       "type": "contact-form-one",
+      "disabled": true,
       "name": "contact_form_one",
       "settings": {
         "title": "Optimieren Sie Ihr BüRo Mit Maidesite’S Ergonomischen LöSungen",
@@ -31,6 +32,89 @@
         "name_placeholder": "Name (optional)",
         "phone_placeholder": "Telefon (optional)",
         "message_placeholder": "Nachricht (optional)"
+      }
+    },
+    "contact_form_two": {
+      "type": "contact-form-two",
+      "blocks": {
+        "group_01": {
+          "type": "group",
+          "settings": {
+            "label": "Wie viele Produkte möchten Sie anfragen?",
+            "key": "Wie viele Produkte möchten Sie anfragen?"
+          }
+        },
+        "group_02": {
+          "type": "group",
+          "disabled": true,
+          "settings": {
+            "label": "Produktinfo",
+            "key": "produktinfo"
+          }
+        },
+        "option_01": {
+          "type": "option",
+          "settings": {
+            "label": "3-10",
+            "value": "3-10",
+            "group_key": "Wie viele Produkte möchten Sie anfragen?"
+          }
+        },
+        "option_02": {
+          "type": "option",
+          "settings": {
+            "label": "10-30",
+            "value": "10-30",
+            "group_key": "Wie viele Produkte möchten Sie anfragen?"
+          }
+        },
+        "option_03": {
+          "type": "option",
+          "settings": {
+            "label": "31-50",
+            "value": "31-50",
+            "group_key": "Wie viele Produkte möchten Sie anfragen?"
+          }
+        },
+        "option_MmFUiC": {
+          "type": "option",
+          "settings": {
+            "label": "51-100",
+            "value": "51-100",
+            "group_key": "Wie viele Produkte möchten Sie anfragen?"
+          }
+        },
+        "option_N7abKE": {
+          "type": "option",
+          "settings": {
+            "label": "100+",
+            "value": "100+",
+            "group_key": "Wie viele Produkte möchten Sie anfragen?"
+          }
+        }
+      },
+      "block_order": [
+        "group_01",
+        "group_02",
+        "option_01",
+        "option_02",
+        "option_03",
+        "option_MmFUiC",
+        "option_N7abKE"
+      ],
+      "custom_css": [],
+      "name": "contact_form_two",
+      "settings": {
+        "title": "Optimieren Sie Ihre Büros mit Maidesite – Wir unterstützen Sie von Anfang bis Ende!",
+        "image": "shopify://shop_images/b2b_01.webp",
+        "desc": "",
+        "text_content": "<p>Ergonomische Arbeitsplätze, die Ihre Mitarbeiter begeistern und Ihre Produktivität steigern. Erhalten Sie jetzt ein unverbindliches Angebot und profitieren Sie von unserer umfassenden Beratung und Betreuung</p><p>Sie können das gewünschte<strong> Produktmodell </strong>und die <strong>Menge</strong> eingeben, um den genauen Preis und die verfügbare Zeit zu erfahren.</p>",
+        "btn_text": "Absenden",
+        "mail_placeholder": "E-Mail*",
+        "company_placeholder": "Unternehmen",
+        "name_placeholder": "Name",
+        "phone_placeholder": "Telefon",
+        "message_placeholder": "Nachricht"
       }
     },
     "b2b_spezielle_rabatte": {
@@ -409,99 +493,18 @@
         "padding_top": 120,
         "padding_bottom": 0
       }
-    },
-    "contact_form_two": {
-      "type": "contact-form-two",
-      "blocks": {
-        "group_01": {
-          "type": "group",
-          "settings": {
-            "label": "Wie viele Produkte möchten Sie anfragen?",
-            "key": "Wie viele Produkte möchten Sie anfragen?"
-          }
-        },
-        "group_02": {
-          "type": "group",
-          "disabled": true,
-          "settings": {
-            "label": "Produktinfo",
-            "key": "produktinfo"
-          }
-        },
-        "option_01": {
-          "type": "option",
-          "settings": {
-            "label": "3-10",
-            "value": "3-10",
-            "group_key": "Wie viele Produkte möchten Sie anfragen?"
-          }
-        },
-        "option_02": {
-          "type": "option",
-          "settings": {
-            "label": "10-30",
-            "value": "10-30",
-            "group_key": "Wie viele Produkte möchten Sie anfragen?"
-          }
-        },
-        "option_03": {
-          "type": "option",
-          "settings": {
-            "label": "31-50",
-            "value": "31-50",
-            "group_key": "Wie viele Produkte möchten Sie anfragen?"
-          }
-        },
-        "option_MmFUiC": {
-          "type": "option",
-          "settings": {
-            "label": "51-100",
-            "value": "51-100",
-            "group_key": "Wie viele Produkte möchten Sie anfragen?"
-          }
-        },
-        "option_N7abKE": {
-          "type": "option",
-          "settings": {
-            "label": "100+",
-            "value": "100+",
-            "group_key": "Wie viele Produkte möchten Sie anfragen?"
-          }
-        }
-      },
-      "block_order": [
-        "group_01",
-        "group_02",
-        "option_01",
-        "option_02",
-        "option_03",
-        "option_MmFUiC",
-        "option_N7abKE"
-      ],
-      "name": "contact_form_two",
-      "settings": {
-        "title": "Kostenlose Beratung Mit Catarina – Schnelle Antwort",
-        "desc": "Jetzt Termin buchen und innerhalb von 24 Stunden Rückmeldung erhalten.",
-        "text_content": "<ul><li> Aus einer Hand -Planung bis zur Montage</li><li>Passgenaues Konzept fur Ihr Buro</li><li>10.000 begeisterte Firmenkunden</li></ul>",
-        "btn_text": "Absenden",
-        "mail_placeholder": "E-Mail*",
-        "company_placeholder": "Unternehmen",
-        "name_placeholder": "Name",
-        "phone_placeholder": "Telefon",
-        "message_placeholder": "Nachricht"
-      }
     }
   },
   "order": [
     "breadcrumbs",
     "contact_form_one",
+    "contact_form_two",
     "b2b_spezielle_rabatte",
     "product_carousel",
     "img_with_text_box_simplicity_qrzG6W",
     "maidesite_swiper_QhkQG8",
     "img_with_text_tab_emEWU8",
     "polka_dot_swiper_4yRfwn",
-    "marquee_images",
-    "contact_form_two"
+    "marquee_images"
   ]
 }
