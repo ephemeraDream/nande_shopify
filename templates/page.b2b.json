@@ -116,18 +116,98 @@
         "message_placeholder": "Nachricht"
       }
     },
+    "img_with_text_box_simplicity_KeYW6M": {
+      "type": "img-with-text-box-simplicity",
+      "blocks": {
+        "file_with_text_iG3PLG": {
+          "type": "file_with_text",
+          "settings": {
+            "title": "<h3>Für Unternehmen gemacht:</h3>",
+            "description": "<p>Robuste Materialien, CE-zertifiziert, wartungsarm und langlebig.<br/><br/></p>",
+            "file_type": "image",
+            "file_image": "shopify://shop_images/certificate.png",
+            "video_url": ""
+          }
+        },
+        "file_with_text_bKiJBP": {
+          "type": "file_with_text",
+          "settings": {
+            "title": "<h3>Nachhaltige Bürolösungen für eine grüne Zukunft</h3>",
+            "description": "<p>Maidesite: Nachhaltige & effiziente Büromöbel mit FSC-Zertifizierung<br/><br/></p>",
+            "file_type": "image",
+            "file_image": "shopify://shop_images/P7.jpg",
+            "video_url": ""
+          }
+        },
+        "file_with_text_8jgGi6": {
+          "type": "file_with_text",
+          "settings": {
+            "title": "<h3>24-Stunden-Angebot</h3>",
+            "description": "<p>Wir senden Ihnen an Werktagen innerhalb von 24 Stunden ein offizielles Angebot per E-Mail zu.<br/><br/></p>",
+            "file_type": "image",
+            "file_image": "shopify://shop_images/pexels-mart-production-7709278.jpg",
+            "video_url": ""
+          }
+        },
+        "file_with_text_TxJinf": {
+          "type": "file_with_text",
+          "settings": {
+            "title": "<h3>Probetisch zum vergünstigten Preis</h3>",
+            "description": "<p>Testen Sie den Schreibtisch vor dem Großeinkauf, ganz ohne Risiko.<br/><br/></p>",
+            "file_type": "image",
+            "file_image": "shopify://shop_images/large_home_office_desk_setup_base_on_Maideiste_T2_Pro_Max.jpg",
+            "video_url": ""
+          }
+        },
+        "file_with_text_8CFXgL": {
+          "type": "file_with_text",
+          "settings": {
+            "title": "<h3>Langlebigkeit und Zuverlässigkeit</h3>",
+            "description": "<p>Maidesite bietet robuste Büromöbel für hohe Ansprüche mit 5-10 Jahren Garantie.<br/><br/></p>",
+            "file_type": "image",
+            "video_url": ""
+          }
+        },
+        "file_with_text_Gjqpnm": {
+          "type": "file_with_text",
+          "settings": {
+            "title": "<h3>Wettbewerbsfähige Preise und umfassender Service</h3>",
+            "description": "<p>Wettbewerbsfähige Preise und Top-Service für Firmenkunden: von der Beratung über die Montage bis zur umfassenden Betreuung.<br/><br/></p>",
+            "file_type": "image",
+            "video_url": ""
+          }
+        }
+      },
+      "block_order": [
+        "file_with_text_iG3PLG",
+        "file_with_text_bKiJBP",
+        "file_with_text_8jgGi6",
+        "file_with_text_TxJinf",
+        "file_with_text_8CFXgL",
+        "file_with_text_Gjqpnm"
+      ],
+      "name": "file box simplicity",
+      "settings": {
+        "spec_id": "",
+        "main_title": "",
+        "row_num": 3,
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "background_color": "transparent"
+      }
+    },
     "b2b_spezielle_rabatte": {
       "type": "b2b-spezielle-rabatte",
       "blocks": {
         "item_4zTmAb": {
           "type": "item",
           "settings": {
-            "image": "shopify://shop_images/T2-Pro-Plus--4_990b6dd8-a416-46b8-8e49-2af000ca9ed0.jpg",
-            "title": "",
-            "sub_title": "",
-            "description": "",
-            "btn_text": "",
-            "link": ""
+            "image": "shopify://shop_images/b2b_page.jpg",
+            "title": "3-10 Menschen",
+            "sub_title": "Bis zu 10% RABATT",
+            "description": "<ul><li>Kostenloser Versand,</li><li>Standard-Support</li></ul>",
+            "btn_text": "Jetzt angebot anfordern",
+            "link": "#"
           }
         },
         "item_fiwUXL": {
@@ -135,7 +215,7 @@
           "settings": {
             "image": "shopify://shop_images/b2b.jpg",
             "title": "11-30 Menschen",
-            "sub_title": "Bis zu 15%",
+            "sub_title": "Bis zu 15% RABATT",
             "description": "<ul><li> Immer auf Lager</li><li>Flexibler Versand</li><li> Kostenloser Versand</li><li>Zusatzliches kostenloses Zubehor</li></ul>",
             "btn_text": "Jetzt angebot anfordern",
             "link": "#"
@@ -146,7 +226,7 @@
           "settings": {
             "image": "shopify://shop_images/b2b_04.webp",
             "title": "31-50 Menschen",
-            "sub_title": "Bis zu 20%",
+            "sub_title": "Bis zu 20% RABATT",
             "description": "<ul><li> Mehrprodukt-Rabatte</li><li> Immer verfugbar</li><li> Flexible und kostenlose</li><li>Lieferung</li><li>Zusatzliche kostenlose Ergonomischer Stuhl</li></ul>",
             "btn_text": "Jetzt angebot anfordern",
             "link": "#"
@@ -157,8 +237,8 @@
           "settings": {
             "image": "shopify://shop_images/b2b_05.webp",
             "title": ">50 Menschen",
-            "sub_title": "Bis zu 25%",
-            "description": "<ul><li> Mehrprodukt-Rabatte</li><li>Immer verfugbar</li><li>Flexible und kostenlose</li><li>Lieferung</li><li>Zusatzliche kostenlose Rahmen</li></ul>",
+            "sub_title": "Bis zu 25%RABATT",
+            "description": "<ul><li> Mehrprodukt-Rabatte</li><li>Immer verfugbar</li><li>Flexible und kostenlose</li><li>Lieferung</li><li>Zusatzliche kostenlose Rahmen</li><li><strong>Für ein starkes Team und maximale Arbeitseffizienz.</strong></li></ul>",
             "btn_text": "Jetzt angebot anfordern",
             "link": "#"
           }
@@ -510,6 +590,7 @@
     "breadcrumbs",
     "contact_form_one",
     "contact_form_two",
+    "img_with_text_box_simplicity_KeYW6M",
     "b2b_spezielle_rabatte",
     "product_carousel",
     "img_with_text_box_simplicity_qrzG6W",
