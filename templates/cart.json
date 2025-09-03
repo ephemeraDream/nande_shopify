@@ -33,6 +33,7 @@
         "subtotal",
         "buttons"
       ],
+      "disabled": true,
       "settings": {
         "color_scheme": "scheme-1",
         "padding_top": 20,
@@ -48,7 +49,11 @@
       "settings": {
         "spec_id": "",
         "title": "<p>Das GefäLlt Dir Vielleicht Auch</p>",
-        "product_list": [],
+        "product_list": [
+          "maidesite-3-fach-tischsteckdose-mit-usb-c-und-a-1-8m-kabel-steckdosenleiste",
+          "maidesite-ec5-ergonomischer-burostuhl-mit-ruckenlehne",
+          "maidesite-serpentine-kabelrohr"
+        ],
         "number": 4,
         "padding_top": 120,
         "padding_bottom": 120
