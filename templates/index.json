@@ -86,7 +86,7 @@
         "pagination_color": "#ffffff",
         "nav_position": "justify-center",
         "transition": "slide-fade",
-        "autoplay": true,
+        "autoplay": false,
         "slider_pause": true,
         "autoplay_speed": 9
       }
