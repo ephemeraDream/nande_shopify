@@ -298,12 +298,15 @@
       "name": "bundle simple",
       "settings": {
         "spec_id": "",
-        "title": "<p>Stelle Deinen Schreibtisch Zusammen</p>",
-        "text": "<p>Gestalte deinen Maidesite-Arbeitsbereich mit unseren </p><p>inspirierten Räumen und Produkten</p>",
+        "title": "<p>Stelle dein Traum-Büro zusammen</p>",
+        "text": "<p>Tische, Stühle & Zubehör – alles in einem Schritt auswählen</p>",
         "product_list": [
+          "maidesite-elektrisch-hohenverstellbarer-gestell-t2-pro",
+          "maidesite-tischgestell-elektrisch-hohenverstellbar-t2-pro-plus",
           "maidesite-t2-pro-max-tischgestell-elektrisch-hohenverstellbar",
-          "maidesite-ec5-ergonomischer-burostuhl-mit-ruckenlehne",
-          "maidesite-3-fach-tischsteckdose-mit-usb-c-und-a-1-8m-kabel-steckdosenleiste"
+          "maidesite-ec6-ergonomischer-burostuhl-mit-kopfstutze-ruckenlehne-und-fussstutze",
+          "maidesite-3-fach-tischsteckdose-mit-usb-c-und-a-1-8m-kabel-steckdosenleiste",
+          "maidesite-serpentine-kabelrohr"
         ],
         "product_link_text": "Zum Set",
         "bundle_title": "<p>Bestes Bundle</p>",
