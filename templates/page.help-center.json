@@ -25,7 +25,7 @@
         "item_01": {
           "type": "item",
           "settings": {
-            "image": "shopify://shop_images/help_center_01.webp",
+            "image": "shopify://shop_images/track.jpg",
             "title": "Meine Bestellung und Zahlung",
             "text": "<p>Bestellinformationen, Bearbeitung, Stornierung, allgemeine Zahlungsfragen.</p>",
             "blog": "meine-bestellung-und-zahlung"
@@ -34,7 +34,7 @@
         "item_02": {
           "type": "item",
           "settings": {
-            "image": "shopify://shop_images/help_center_02.webp",
+            "image": "shopify://shop_images/products.jpg",
             "title": "Versand und Lieferung",
             "text": "<p>Versandorte, Lieferzeiten, Steuern, allgemeine Versandanfragen.</p>",
             "blog": "logistik-und-lieferung"
@@ -43,7 +43,7 @@
         "item_03": {
           "type": "item",
           "settings": {
-            "image": "shopify://shop_images/help_center_03.webp",
+            "image": "shopify://shop_images/Promotion.jpg",
             "title": "Richtlinien",
             "text": "<p>Garantien, kostenlose Testphasen, Versand & Rücksendungen.</p>",
             "blog": "richtlinien"
@@ -52,7 +52,7 @@
         "item_04": {
           "type": "item",
           "settings": {
-            "image": "shopify://shop_images/help_center_04.webp",
+            "image": "shopify://shop_images/Promotion.jpg",
             "title": "Produkte und Fehlerbehebung",
             "text": "<p>Allgemeine Produktfragen, Zusatzprodukte, Tipps zur Fehlerbehebung.</p>",
             "blog": "richtlinien"
@@ -61,7 +61,7 @@
         "item_05": {
           "type": "item",
           "settings": {
-            "image": "shopify://shop_images/help_center_05.webp",
+            "image": "shopify://shop_images/policies.jpg",
             "title": "Aktionen",
             "text": "<p>Empfehlungsprämien, Affiliate-Belohnungen, Store-Guthaben, Rabattcodes.</p>",
             "blog": "haufige-after-sales-probleme-und-losungen"
@@ -70,7 +70,7 @@
         "item_06": {
           "type": "item",
           "settings": {
-            "image": "shopify://shop_images/help_center_06.webp",
+            "image": "shopify://shop_images/cooperate.png",
             "title": "Drittanbieter",
             "text": "<p>Richtlinien & allgemeine Fragen zu Drittanbietern.</p>",
             "blog": "werbung-und-zusammenarbeit"
