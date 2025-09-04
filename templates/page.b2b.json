@@ -639,9 +639,60 @@
       ],
       "name": "marquee_images",
       "settings": {
-        "title": "Kundenstimmen Zu Maidesite",
-        "padding_top": 120,
+        "title": "Erfolgreiche Teams wählen Maidesite.",
+        "padding_top": 60,
         "padding_bottom": 0
+      }
+    },
+    "faq_simple_TycRxV": {
+      "type": "faq-simple",
+      "blocks": {
+        "faq_xt6yLi": {
+          "type": "faq",
+          "settings": {
+            "question": "<p>Wie lange dauert die Lieferung?</p>",
+            "answer": "<p>2-4 Arbeitstage in Deutschland, 3-7 Arbeitstage außerhalb Deutschlands.</p>"
+          }
+        },
+        "faq_bnc3cE": {
+          "type": "faq",
+          "settings": {
+            "question": "<h4>Welche Möglichkeiten habe ich, um meine Bestellung zu bezahlen?</h4>",
+            "answer": "<p>Paypal，Stripe，Klarna(BNPL) und Banküberweisungen</p>"
+          }
+        },
+        "faq_xgcnzY": {
+          "type": "faq",
+          "settings": {
+            "question": "<p>Wie lange ist die Garantie auf Maidesite-Produkte?</p>",
+            "answer": "<p>Wir bieten auf höhenverstellbare Schreibtische und Gestelle eine Garantie von 5-10 Jahren, auf Zubehör 5 Jahre. Im Garantiefall können Sie zwischen kostenloser Reparatur, Rückerstattung oder einer angemessenen Ersatzlieferung wählen. Die Garantie deckt jedoch keine Folgeschäden ab und gilt nicht bei Verlust, natürlichem Verschleiß oder Schäden durch unsachgemäße Nutzung oder Pflege. Natürlich übernehmen wir im Garantiefall die Rücksendekosten. Ein großer Vorteil für Sie: Sie müssen nicht nachweisen, ob der Mangel bereits bei Übergabe bestand. So können Sie risikofrei kaufen!<br/><br/></p>"
+          }
+        },
+        "faq_Yyb8gN": {
+          "type": "faq",
+          "settings": {
+            "question": "<p>Kann ich nach einem Großeinkauf die Ware zurückgeben, wenn ich nicht zufrieden bin?</p>",
+            "answer": "<p>Das wird nicht funktionieren. Wenn Sie sich Sorgen um die Qualität machen, können wir Ihnen Muster zum Selbstkostenpreis verkaufen, und Sie können nach dem Testen und der Feststellung, dass es keine Probleme gibt, in großen Mengen kaufen.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "faq_xt6yLi",
+        "faq_bnc3cE",
+        "faq_xgcnzY",
+        "faq_Yyb8gN"
+      ],
+      "name": "faq simple",
+      "settings": {
+        "spec_id": "",
+        "heading": "<p>FAQ – Häufig gestellte Fragen</p>",
+        "text": "",
+        "show_btn": false,
+        "learn_more": false,
+        "contact_us": false,
+        "padding_top": 120,
+        "padding_bottom": 120,
+        "background_color": "transparent"
       }
     }
   },
@@ -657,6 +708,7 @@
     "maidesite_swiper_QhkQG8",
     "img_with_text_tab_emEWU8",
     "polka_dot_swiper_4yRfwn",
-    "marquee_images"
+    "marquee_images",
+    "faq_simple_TycRxV"
   ]
 }
