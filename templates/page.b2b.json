@@ -629,13 +629,77 @@
             "image": "shopify://shop_images/maidesite-logo-4.webp",
             "title": ""
           }
+        },
+        "image_pmDq4E": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/logo-Dodel-2.jpg",
+            "title": ""
+          }
+        },
+        "image_a7cNqb": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/logo_SCB.png",
+            "title": ""
+          }
+        },
+        "image_kaNjK7": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/skylotec-logo.svg",
+            "title": ""
+          }
+        },
+        "image_mA9zwq": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/the_do_logo.png",
+            "title": ""
+          }
+        },
+        "image_LbBfag": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/logo_systec.png",
+            "title": ""
+          }
+        },
+        "image_tN4ycm": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/innovit-logo.png",
+            "title": ""
+          }
+        },
+        "image_nFJyA6": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/KoenigMetall-Logo-Gruppe.png",
+            "title": ""
+          }
+        },
+        "image_qDHtYN": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Raiffeisenbank_Mehring-Leiwen_eG-Logo_264x50_0b73436a-a90e-4663-b6d0-b18afae8a225.png",
+            "title": ""
+          }
         }
       },
       "block_order": [
         "image_1",
         "image_2",
         "image_3",
-        "image_4"
+        "image_4",
+        "image_pmDq4E",
+        "image_a7cNqb",
+        "image_kaNjK7",
+        "image_mA9zwq",
+        "image_LbBfag",
+        "image_tN4ycm",
+        "image_nFJyA6",
+        "image_qDHtYN"
       ],
       "name": "marquee_images",
       "settings": {
