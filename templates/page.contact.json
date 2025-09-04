@@ -268,9 +268,9 @@
         "spec_id": "",
         "heading": "<p>FAQ</p>",
         "text": "<p>Häufig gestellte Fragen</p>",
-        "show_btn": false,
+        "show_btn": true,
         "learn_more": false,
-        "contact_us": true,
+        "contact_us": false,
         "padding_top": 120,
         "padding_bottom": 120,
         "background_color": "#ffffff"
