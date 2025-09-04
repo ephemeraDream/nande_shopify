@@ -33,6 +33,7 @@
         },
         "banner_item_ykwd4B": {
           "type": "banner_item",
+          "disabled": true,
           "settings": {
             "sub_title": "<p>Eleganz, die sich bewegt</p>",
             "title": "<p>Maidesite Yoga</p>",
@@ -75,12 +76,13 @@
         "banner_item_ykwd4B",
         "banner_item_e7J8AA"
       ],
+      "custom_css": [],
       "name": "banner",
       "settings": {
-        "height_mode": "screen",
+        "height_mode": "auto",
         "fixed_height_desktop": 700,
         "fixed_height_mobile": 250,
-        "mobile_stacked": true,
+        "mobile_stacked": false,
         "background_color": "#dddddd",
         "nav_style": "slideshow_nav_dots",
         "pagination_color": "#ffffff",
