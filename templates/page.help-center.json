@@ -34,8 +34,8 @@
         "item_02": {
           "type": "item",
           "settings": {
-            "image": "shopify://shop_images/products.jpg",
-            "title": "Versand und Lieferung",
+            "image": "shopify://shop_images/shipping.jpg",
+            "title": "Logistik und Lieferung",
             "text": "<p>Versandorte, Lieferzeiten, Steuern, allgemeine Versandanfragen.</p>",
             "blog": "logistik-und-lieferung"
           }
@@ -43,25 +43,25 @@
         "item_03": {
           "type": "item",
           "settings": {
-            "image": "shopify://shop_images/Promotion.jpg",
-            "title": "Richtlinien",
+            "image": "shopify://shop_images/policies.jpg",
+            "title": "Produkte & Fehlerbehebung",
             "text": "<p>Garantien, kostenlose Testphasen, Versand & Rücksendungen.</p>",
-            "blog": "richtlinien"
+            "blog": "produkte-fehlerbehebung"
           }
         },
         "item_04": {
           "type": "item",
           "settings": {
-            "image": "shopify://shop_images/Promotion.jpg",
+            "image": "shopify://shop_images/products.jpg",
             "title": "Produkte und Fehlerbehebung",
             "text": "<p>Allgemeine Produktfragen, Zusatzprodukte, Tipps zur Fehlerbehebung.</p>",
-            "blog": "richtlinien"
+            "blog": "produkte-fehlerbehebung"
           }
         },
         "item_05": {
           "type": "item",
           "settings": {
-            "image": "shopify://shop_images/policies.jpg",
+            "image": "shopify://shop_images/Promotion.jpg",
             "title": "Aktionen",
             "text": "<p>Empfehlungsprämien, Affiliate-Belohnungen, Store-Guthaben, Rabattcodes.</p>",
             "blog": "haufige-after-sales-probleme-und-losungen"
