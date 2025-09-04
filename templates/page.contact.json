@@ -36,6 +36,20 @@
             "key": "produktinfo"
           }
         },
+        "group_W7PUa6": {
+          "type": "group",
+          "settings": {
+            "label": "",
+            "key": ""
+          }
+        },
+        "group_7c43kq": {
+          "type": "group",
+          "settings": {
+            "label": "",
+            "key": ""
+          }
+        },
         "option_01": {
           "type": "option",
           "settings": {
@@ -47,7 +61,7 @@
         "option_02": {
           "type": "option",
           "settings": {
-            "label": "Stornierung der Bestellung",
+            "label": "Rückgabe & Widerruf",
             "value": "stornierung",
             "group_key": "bestellung"
           }
@@ -55,8 +69,32 @@
         "option_03": {
           "type": "option",
           "settings": {
+            "label": "Rechnungsanfrage",
+            "value": "Rechnungsanfrage",
+            "group_key": "bestellung"
+          }
+        },
+        "option_4HLqie": {
+          "type": "option",
+          "settings": {
+            "label": "Steuerbefreiung",
+            "value": "Steuerbefreiung",
+            "group_key": "bestellung"
+          }
+        },
+        "option_PTRNjy": {
+          "type": "option",
+          "settings": {
+            "label": "Versand & Lieferung",
+            "value": "Versand & Lieferung",
+            "group_key": "bestellung"
+          }
+        },
+        "option_pRbH4z": {
+          "type": "option",
+          "settings": {
             "label": "Garantie",
-            "value": "garantie",
+            "value": "Garantie",
             "group_key": "produktinfo"
           }
         }
@@ -64,15 +102,28 @@
       "block_order": [
         "group_01",
         "group_02",
+        "group_W7PUa6",
+        "group_7c43kq",
         "option_01",
         "option_02",
-        "option_03"
+        "option_03",
+        "option_4HLqie",
+        "option_PTRNjy",
+        "option_pRbH4z"
       ],
       "name": "contact_form_three",
       "settings": {
         "title": "<p>Fragen, Wünsche, Anliegen?<br/> Wir Haben Immer Ein Offenes Ohr!</p>",
         "desc": "",
-        "text_content": "<p>Our representatives stands by behind the live chat and the phone during business hours. During other time you could fill out the form. We’ll be in touch ASAP.</p>"
+        "text_content": "<p>Our representatives stands by behind the live chat and the phone during business hours. During other time you could fill out the form. We’ll be in touch ASAP.</p>",
+        "btn_text": "Absenden",
+        "mail_placeholder": "E-Mail-Adresse",
+        "type_placeholder": "Art der Anfrage",
+        "company_placeholder": "Unternehmen (optional)",
+        "name_placeholder": "Vor-und Nachname",
+        "phone_placeholder": "Telefonnummer (optional)",
+        "message_placeholder": "Nachricht (optional)",
+        "comment_placeholder": "Kommentar"
       }
     },
     "faq_simple_kxTbhc": {
