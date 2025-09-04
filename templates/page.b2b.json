@@ -704,7 +704,7 @@
       "name": "marquee_images",
       "settings": {
         "title": "Erfolgreiche Teams wählen Maidesite.",
-        "padding_top": 60,
+        "padding_top": 32,
         "padding_bottom": 0
       }
     },
