@@ -26,8 +26,8 @@
         "img_with_text_QJDYxJ": {
           "type": "img_with_text",
           "settings": {
-            "text": "<p><strong>Sommer Sale: </strong>Sichere Dir jetzt die heißesten Deals von bis zu 150 € Rabatt</p>",
-            "link": "",
+            "text": "<p><a href=\"https://www.maidesite.de/collections/hohenverstellbarer-schreibtisch\">Mehr kaufen, mehr sparen</a>：60€ Rabatt ab 499€ (Code:MD60); 120€ Rabatt ab 999€ (Code:MD120); 200€ Rabatt ab 1599€ (Code:MD200)</p>",
+            "link": "shopify://pages/back-to-school-deals",
             "font_color": "#bdff00"
           }
         },
