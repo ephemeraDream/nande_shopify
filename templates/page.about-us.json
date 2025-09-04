@@ -19,8 +19,129 @@
         "custom_breadcrumb": ""
       }
     },
+    "rich_text_UmRzxm": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_fPkK9B": {
+          "type": "heading",
+          "settings": {
+            "heading": "Über Maidesite",
+            "heading_size": "h1"
+          }
+        }
+      },
+      "block_order": [
+        "heading_fPkK9B"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 52,
+        "padding_bottom": 52
+      }
+    },
+    "img_with_text_simplicity_ztTbRn": {
+      "type": "img-with-text-simplicity",
+      "blocks": {
+        "append_info_ikLkaV": {
+          "type": "appendInfo",
+          "settings": {
+            "subtitle": "",
+            "text": ""
+          }
+        }
+      },
+      "block_order": [
+        "append_info_ikLkaV"
+      ],
+      "name": "img with text simplicity",
+      "settings": {
+        "spec_id": "",
+        "header_title": "",
+        "header_content": "",
+        "title": "",
+        "sub_title": "<h2>Hallo. Wir sind MAIDESITE.</h2>",
+        "description": "Maidesite: Ergonomie für ein gesünderes, glücklicheres Leben\n\nMaidesite entstand aus dem Wunsch heraus, das Arbeitsleben von Menschen überall auf der Welt zu verbessern.\n\nUnsere Wurzeln liegen in der Branche für medizinische Rehabilitationsbedarf, wo wir aus erster Hand miterlebt haben, welche negativen Auswirkungen langes Sitzen auf Gesundheit und Wohlbefinden haben kann. Deshalb widmen wir uns der Entwicklung ergonomischer Möbel und Accessoires, die Ihnen während Ihres gesamten Arbeitstages Komfort und Unterstützung bieten, egal ob Sie im Büro oder von zu Hause aus arbeiten.",
+        "file_position": "right",
+        "file_type": "image",
+        "file_image": "shopify://shop_images/Maidesite-desk-story.jpg",
+        "video_url": "",
+        "btn_text": "",
+        "link_url": "",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "background_color": "transparent"
+      }
+    },
+    "img_with_text_simplicity_L7gzPR": {
+      "type": "img-with-text-simplicity",
+      "name": "img with text simplicity",
+      "settings": {
+        "spec_id": "",
+        "header_title": "",
+        "header_content": "",
+        "title": "",
+        "sub_title": "<h3><strong>Mit Weitblick entworfen, mit Exzellenz gefertigt</strong></h3>",
+        "description": "Jedes Maidesite-Produkt wird sorgfältig unter Berücksichtigung der Benutzeranforderungen entworfen. Wir kombinieren diesen weitsichtigen Ansatz mit hochwertigen Materialien und fachmännischer Handwerkskunst, um ergonomische Lösungen zu liefern, auf die Sie sich verlassen können. Von unseren branchenführenden elektrisch höhenverstellbaren Schreibtischen und Stehpultgestellen bis hin zu unseren unterstützenden Computerstühlen und einer Reihe ergänzender ergonomischer Möbel und Accessoires bietet Maidesite einen umfassenden Ansatz zur Schaffung eines Arbeitsplatzes, der Ihre Gesundheit und Produktivität in den Vordergrund stellt.",
+        "file_position": "left",
+        "file_type": "image",
+        "file_image": "shopify://shop_images/Maidesite-standing-desk-design-hand-drawing-1600x1200.jpg",
+        "video_url": "",
+        "btn_text": "",
+        "link_url": "",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "background_color": "transparent"
+      }
+    },
+    "img_with_text_simplicity_Aaq73m": {
+      "type": "img-with-text-simplicity",
+      "name": "img with text simplicity",
+      "settings": {
+        "spec_id": "",
+        "header_title": "",
+        "header_content": "",
+        "title": "",
+        "sub_title": "<h3>Eine globale Marke, der Millionen vertrauen</h3>",
+        "description": "Maidesites Engagement für Innovation und Qualität hat bei Kunden auf der ganzen Welt Anklang gefunden. Unsere Produkte sind mittlerweile eine willkommene Ergänzung für Arbeitsplätze in über 27 Ländern, ein Beweis für den positiven Einfluss, den wir auf das Arbeitsleben der Menschen haben.",
+        "file_position": "right",
+        "file_type": "image",
+        "file_image": "shopify://shop_images/Maidesite-standing-desk-design-hand-drawing-1600x1200.jpg",
+        "video_url": "",
+        "btn_text": "",
+        "link_url": "",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "background_color": "transparent"
+      }
+    },
+    "img_with_text_simplicity_fpq6an": {
+      "type": "img-with-text-simplicity",
+      "name": "img with text simplicity",
+      "settings": {
+        "spec_id": "",
+        "header_title": "",
+        "header_content": "",
+        "title": "",
+        "sub_title": "<h3><strong>Erleben Sie den Unterschied von Maidesite</strong></h3>",
+        "description": "Investieren Sie in Ihr Wohlbefinden und entdecken Sie den Unterschied, den Maidesite machen kann. Unsere ergonomischen Lösungen sind darauf ausgelegt, Ihr Arbeitserlebnis zu verbessern, eine gesunde Körperhaltung zu fördern und dafür zu sorgen, dass Sie sich den ganzen Tag über wohl und energiegeladen fühlen. Verwandeln Sie Ihren Arbeitsplatz mit Maidesite in eine Oase der Produktivität und des Wohlbefindens.",
+        "file_position": "left",
+        "file_type": "image",
+        "file_image": "shopify://shop_images/Maidesite-standing-desk-design-hand-drawing-1600x1200.jpg",
+        "video_url": "",
+        "btn_text": "",
+        "link_url": "",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "background_color": "transparent"
+      }
+    },
     "image_with_text_aboutus": {
       "type": "image-with-text-aboutus",
+      "disabled": true,
       "name": "image_with_text_aboutus",
       "settings": {
         "layout": "image-right",
@@ -110,6 +231,7 @@
         "timeline_4kYG32",
         "timeline_4kYG31"
       ],
+      "disabled": true,
       "name": "time_line",
       "settings": {
         "title": "Unsere Reise In Etappen",
@@ -182,6 +304,7 @@
         "tab_JyxzQm",
         "tab_LmGatL"
       ],
+      "disabled": true,
       "name": "img with text tab",
       "settings": {
         "spec_id": "",
@@ -294,6 +417,11 @@
   },
   "order": [
     "breadcrumbs",
+    "rich_text_UmRzxm",
+    "img_with_text_simplicity_ztTbRn",
+    "img_with_text_simplicity_L7gzPR",
+    "img_with_text_simplicity_Aaq73m",
+    "img_with_text_simplicity_fpq6an",
     "image_with_text_aboutus",
     "time_line",
     "img_with_text_tab_emEWU8",
