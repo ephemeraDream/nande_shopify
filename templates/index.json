@@ -91,13 +91,23 @@
     "link_block_ygbQVD": {
       "type": "link-block",
       "blocks": {
+        "item_3EWnyb": {
+          "type": "item",
+          "settings": {
+            "title": "Höhenverstellbarer Schreibtisch",
+            "text": "",
+            "btn_text": "Alle anzeigen",
+            "image": "shopify://shop_images/a8e9f7ef556f09917041953654d98435.jpg",
+            "link": "shopify://collections/hohenverstellbarer-schreibtisch-der-premium-serie"
+          }
+        },
         "item_FzLRBi": {
           "type": "item",
           "settings": {
-            "title": "Höhenverstellbare Schreibtische",
+            "title": "Tischgestell Höhenverstellbar",
             "text": "",
             "btn_text": "Alle anzeigen",
-            "image": "shopify://shop_images/link-block-1.webp",
+            "image": "shopify://shop_images/b84cd3454131b39178552983962b7c41_3b248903-d17d-46f5-90bc-200051a58bae.jpg",
             "link": "shopify://collections/hohenverstellbarer-schreibtisch"
           }
         },
@@ -120,28 +130,18 @@
             "image": "shopify://shop_images/05c749914ceb6f0e401d50aac1cec636.jpg",
             "link": "shopify://collections/maidesite-burozubehor"
           }
-        },
-        "item_3EWnyb": {
-          "type": "item",
-          "settings": {
-            "title": "Pakete",
-            "text": "",
-            "btn_text": "Alle anzeigen",
-            "image": "shopify://shop_images/a8e9f7ef556f09917041953654d98435.jpg",
-            "link": "shopify://collections/jetzt-im-set-sparen"
-          }
         }
       },
       "block_order": [
+        "item_3EWnyb",
         "item_FzLRBi",
         "item_K7NCmg",
-        "item_jEQh9H",
-        "item_3EWnyb"
+        "item_jEQh9H"
       ],
       "name": "link block",
       "settings": {
-        "title": "Design trifft auf Ergonomie",
-        "text": "<p>Weil dein Arbeitsplatz mehr verdient als Standard.</p>"
+        "title": "Finde deinen perfekten Arbeitsplatz",
+        "text": "<p>Entdecke Tische, Stühle und mehr für komfortables Arbeiten</p>"
       }
     },
     "polka_dot_swiper_4yRfwn": {
