@@ -109,7 +109,7 @@
         "description": "Maidesites Engagement für Innovation und Qualität hat bei Kunden auf der ganzen Welt Anklang gefunden. Unsere Produkte sind mittlerweile eine willkommene Ergänzung für Arbeitsplätze in über 27 Ländern, ein Beweis für den positiven Einfluss, den wir auf das Arbeitsleben der Menschen haben.",
         "file_position": "right",
         "file_type": "image",
-        "file_image": "shopify://shop_images/Maidesite-standing-desk-design-hand-drawing-1600x1200.jpg",
+        "file_image": "shopify://shop_images/Maidesite-warehouse.jpg",
         "video_url": "",
         "btn_text": "",
         "link_url": "",
@@ -130,12 +130,12 @@
         "description": "Investieren Sie in Ihr Wohlbefinden und entdecken Sie den Unterschied, den Maidesite machen kann. Unsere ergonomischen Lösungen sind darauf ausgelegt, Ihr Arbeitserlebnis zu verbessern, eine gesunde Körperhaltung zu fördern und dafür zu sorgen, dass Sie sich den ganzen Tag über wohl und energiegeladen fühlen. Verwandeln Sie Ihren Arbeitsplatz mit Maidesite in eine Oase der Produktivität und des Wohlbefindens.",
         "file_position": "left",
         "file_type": "image",
-        "file_image": "shopify://shop_images/Maidesite-standing-desk-design-hand-drawing-1600x1200.jpg",
+        "file_image": "shopify://shop_images/A_young_lady_working_at_Maidesite_standing_desk_4d3fd12d-25b4-428b-9a8a-8e9908d2ea53.jpg",
         "video_url": "",
         "btn_text": "",
         "link_url": "",
         "padding_top": 0,
-        "padding_bottom": 0,
+        "padding_bottom": 52,
         "background_color": "transparent"
       }
     },
@@ -355,6 +355,7 @@
         "swiper_EnDd8n",
         "swiper_4kYG3r"
       ],
+      "disabled": true,
       "custom_css": [
         ".maidesite_swiper_section {padding-top: 0; background-color: transparent;}",
         ".maidesite_swiper_section .maidesite_swiper_title {text-align: center;}"
@@ -403,6 +404,7 @@
         "swiper_mexwM6",
         "swiper_xWLxVC"
       ],
+      "disabled": true,
       "custom_css": [
         ".celebrity_swiper {padding-bottom: 12rem; background-color: transparent;}"
       ],
