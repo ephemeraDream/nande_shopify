@@ -259,6 +259,58 @@
         "padding_bottom": 120
       }
     },
+    "compare_simple_KneENq": {
+      "type": "compare-simple",
+      "blocks": {
+        "item_rtQPr7": {
+          "type": "item",
+          "settings": {
+            "select_product": "elektrisch-hohenverstellbarer-gestell-t1-basic"
+          }
+        },
+        "item_Wnfjbc": {
+          "type": "item",
+          "settings": {
+            "select_product": "maidesite-elektrisch-hohenverstellbarer-gestell-t2-pro"
+          }
+        },
+        "item_E3FYAD": {
+          "type": "item",
+          "settings": {
+            "select_product": "maidesite-tischgestell-elektrisch-hohenverstellbar-t2-pro-plus"
+          }
+        },
+        "item_thUd64": {
+          "type": "item",
+          "settings": {
+            "select_product": "maidesite-th2-pro-plus-tischgestell-elektrisch-hohenverstellbar"
+          }
+        },
+        "item_TyVfMb": {
+          "type": "item",
+          "settings": {
+            "select_product": "maidesite-t2-pro-max-tischgestell-elektrisch-hohenverstellbar"
+          }
+        }
+      },
+      "block_order": [
+        "item_rtQPr7",
+        "item_Wnfjbc",
+        "item_E3FYAD",
+        "item_thUd64",
+        "item_TyVfMb"
+      ],
+      "name": "compare simple",
+      "settings": {
+        "title": "<h3>Welcher höhenverstellbare Schreibtisch passt zu Ihrem Team?</h3>",
+        "text": "",
+        "link_text": "",
+        "link_url": "",
+        "padding_top": 120,
+        "padding_bottom": 120,
+        "slides_per_view": 4
+      }
+    },
     "product_carousel": {
       "type": "product-carousel",
       "blocks": {
@@ -300,6 +352,7 @@
         "item_AHnCzP",
         "item_z9X7dd"
       ],
+      "disabled": true,
       "name": "product_carousel",
       "settings": {
         "title": "Spezielle Rabatte Bei GroßEinkäUfen"
@@ -377,6 +430,7 @@
         "file_with_text_JJXCp8",
         "file_with_text_THJTyK"
       ],
+      "disabled": true,
       "name": "file box simplicity",
       "settings": {
         "spec_id": "",
@@ -425,6 +479,7 @@
         "swiper_EnDd8n",
         "swiper_4kYG3r"
       ],
+      "disabled": true,
       "custom_css": [
         ".maidesite_swiper_section {background-color: #e2ded6;}"
       ],
@@ -476,6 +531,7 @@
         "tab_fiwUXL",
         "tab_AUd88N"
       ],
+      "disabled": true,
       "custom_css": [
         ".img_with_text_tab .img_with_text_tab_title {text-align: left; margin-bottom: 6rem;}"
       ],
@@ -530,6 +586,7 @@
         "swiper_RR3AVA",
         "swiper_xwgRwF"
       ],
+      "disabled": true,
       "custom_css": [
         ".polka_dot_swiper {padding-bottom: 6rem;}"
       ],
@@ -594,6 +651,7 @@
     "contact_form_two",
     "img_with_text_box_simplicity_KeYW6M",
     "b2b_spezielle_rabatte",
+    "compare_simple_KneENq",
     "product_carousel",
     "img_with_text_box_simplicity_qrzG6W",
     "maidesite_swiper_QhkQG8",
