@@ -229,8 +229,8 @@
       ],
       "name": "polka dot swiper",
       "settings": {
-        "title": "<p>Entdecke Deinen Stil Und Lass Dich </p><p>Inspirieren</p>",
-        "text": "<p>Gestalte deinen Maidesite-Arbeitsbereich mit unseren </p><p>inspirierten Räumen und Produkten</p>",
+        "title": "<p>Dein inspirierter Arbeitsplatz<br/></p>",
+        "text": "<p>Smarte Tische und Zubehör für dein perfektes Büro<br/></p>",
         "show_info": true,
         "padding_top": 120,
         "padding_bottom": 36
