@@ -39,15 +39,22 @@
         "group_W7PUa6": {
           "type": "group",
           "settings": {
-            "label": "",
-            "key": ""
+            "label": "Website-Probleme",
+            "key": "website-Probleme"
           }
         },
         "group_7c43kq": {
           "type": "group",
           "settings": {
-            "label": "",
-            "key": ""
+            "label": "B2B-Anfragen",
+            "key": "B2B-Anfragen"
+          }
+        },
+        "group_qPEpJt": {
+          "type": "group",
+          "settings": {
+            "label": "Sonstige",
+            "key": "sonstige"
           }
         },
         "option_01": {
@@ -97,6 +104,70 @@
             "value": "Garantie",
             "group_key": "produktinfo"
           }
+        },
+        "option_k447hi": {
+          "type": "option",
+          "settings": {
+            "label": "Technisches Detail zum Produkt",
+            "value": "Technisches Detail zum Produkt",
+            "group_key": "produktinfo"
+          }
+        },
+        "option_PWU9Dh": {
+          "type": "option",
+          "settings": {
+            "label": "Beratung bei Produktausfall",
+            "value": "Beratung bei Produktausfall",
+            "group_key": "produktinfo"
+          }
+        },
+        "option_DGQyCw": {
+          "type": "option",
+          "settings": {
+            "label": "Installation",
+            "value": "Installation",
+            "group_key": "produktinfo"
+          }
+        },
+        "option_7DAdYg": {
+          "type": "option",
+          "settings": {
+            "label": "Probleme beim Anmelden",
+            "value": "Probleme beim Anmelden",
+            "group_key": "website-Probleme"
+          }
+        },
+        "option_FeU9BL": {
+          "type": "option",
+          "settings": {
+            "label": "Sonstige Ausfälle",
+            "value": "Sonstige Ausfälle",
+            "group_key": "website-Probleme"
+          }
+        },
+        "option_X9Yejn": {
+          "type": "option",
+          "settings": {
+            "label": "Großbestellungen & Firmenkunden",
+            "value": "Großbestellungen & Firmenkunden",
+            "group_key": "B2B-Anfragen"
+          }
+        },
+        "option_8N4V37": {
+          "type": "option",
+          "settings": {
+            "label": "Richtlinien & AGB",
+            "value": "Richtlinien & AGB",
+            "group_key": "sonstige"
+          }
+        },
+        "option_4F3KXe": {
+          "type": "option",
+          "settings": {
+            "label": "Sonstige",
+            "value": "Sonstige",
+            "group_key": "sonstige"
+          }
         }
       },
       "block_order": [
@@ -104,12 +175,21 @@
         "group_02",
         "group_W7PUa6",
         "group_7c43kq",
+        "group_qPEpJt",
         "option_01",
         "option_02",
         "option_03",
         "option_4HLqie",
         "option_PTRNjy",
-        "option_pRbH4z"
+        "option_pRbH4z",
+        "option_k447hi",
+        "option_PWU9Dh",
+        "option_DGQyCw",
+        "option_7DAdYg",
+        "option_FeU9BL",
+        "option_X9Yejn",
+        "option_8N4V37",
+        "option_4F3KXe"
       ],
       "name": "contact_form_three",
       "settings": {
