@@ -23,10 +23,11 @@
             "file_position": "middle_left",
             "overlay_text_align": "text-start",
             "transparent_content_color": "#ffffff",
-            "file_type": "image",
+            "file_type": "video",
             "file_image": "shopify://shop_images/Banner_0a355c62-7d1a-4c62-808a-e74e71a042b1.jpg",
             "video_url": "",
-            "show_countdown": true,
+            "url_upload": "shopify://files/videos/space-旗舰款四腿桌视频-3 - 定稿 +音频(1).mp4",
+            "show_countdown": false,
             "countdown": "summer-sale"
           }
         },
@@ -41,15 +42,17 @@
             "file_position": "bottom_right",
             "overlay_text_align": "text-end",
             "transparent_content_color": "#ffffff",
-            "file_type": "image",
+            "file_type": "video",
             "file_image": "shopify://shop_images/Banner_-_YOGA_-_1.jpg",
             "video_url": "",
+            "url_upload": "shopify://files/videos/修改Banner 尺寸-1_cc5e7670-5c6b-4de6-8a69-f73a0b091b11.mp4",
             "show_countdown": false,
             "countdown": "summer-sale"
           }
         },
         "banner_item_e7J8AA": {
           "type": "banner_item",
+          "disabled": true,
           "settings": {
             "sub_title": "",
             "title": "",
