@@ -89,7 +89,7 @@
         "transition": "slide-fade",
         "autoplay": true,
         "slider_pause": true,
-        "autoplay_speed": 9
+        "autoplay_speed": 25
       }
     },
     "link_block_ygbQVD": {

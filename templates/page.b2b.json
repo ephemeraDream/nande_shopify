@@ -144,12 +144,23 @@
             "label": "测试分组一 第一项",
             "value": "测试分组一 第一项"
           }
+        },
+        "custom_field_d6f6Pa": {
+          "type": "custom_field",
+          "settings": {
+            "field_name": "",
+            "field_type": "textarea",
+            "placeholder": "",
+            "required": false,
+            "rows": 4
+          }
         }
       },
       "block_order": [
         "dropdown_YyVNpn",
         "group_cXh8BJ",
-        "option_twJk9y"
+        "option_twJk9y",
+        "custom_field_d6f6Pa"
       ],
       "name": "Contact Form Five",
       "settings": {
@@ -158,6 +169,8 @@
         "desc": "",
         "text_content": "",
         "btn_text": "提交",
+        "success_message": "Your message has been sent successfully.",
+        "error_message": "There was an error sending the form. Please check your input.",
         "show_email": true,
         "mail_placeholder": "邮箱*",
         "show_company": true,
