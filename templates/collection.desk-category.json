@@ -26,6 +26,7 @@
       "name": "collection compare",
       "settings": {
         "show_banner": true,
+        "image": "shopify://shop_images/2_-_0731_-_2.jpg",
         "products_per_page": 23,
         "enable_compare": true,
         "show_layout_toggle": true,
