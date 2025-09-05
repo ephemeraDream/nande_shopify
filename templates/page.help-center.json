@@ -106,22 +106,30 @@
         "faq_AXAcgA": {
           "type": "faq",
           "settings": {
-            "question": "<p>Was ist, wenn ich mit jemandem sprechen mochte?</p>",
-            "answer": "<p>Maidesite bietet durch seine produkten von höhenverstellbaren Schreibtischen, die Funktionsintegration, Szenenvielfalt und Personalisierung bieten, Ihnen die Möglichkeit, einfach zwischen verschiedenen Heimat-Aktivitätsmodi zu wechseln, die eine Desktop-Assistenten erfordern. <br/><br/>Dies ermöglicht Anhängern des modernen intelligenten Heimlebens, sich noch bequemer und müheloser in ihre vielfältigen Lebensstile einzuleben.<br/></p>"
+            "question": "<p>Warum habe ich nur einen Teil der Artikel aus meiner Bestellung erhalten?</p>",
+            "answer": "<p>Wenn Sie ein Set aus Tischplatte und Rahmen gekauft haben, werden diese in zwei separaten Paketen versendet, die möglicherweise nicht gleichzeitig ankommen. Falls Sie die Sendungsnummer für das andere Paket nicht erhalten haben, kontaktieren Sie uns bitte, damit wir die Lieferung für Sie nachverfolgen können.<br/></p>"
           }
         },
         "faq_W9Mzyn": {
           "type": "faq",
           "settings": {
-            "question": "<p>Ist das Bestellen im Internet sicher? Was passiert mit meinen Daten?</p>",
-            "answer": "<p>Maidesite bietet durch seine produkten von höhenverstellbaren Schreibtischen, die Funktionsintegration, Szenenvielfalt und Personalisierung bieten, Ihnen die Möglichkeit, einfach zwischen verschiedenen Heimat-Aktivitätsmodi zu wechseln, die eine Desktop-Assistenten erfordern. <br/><br/>Dies ermöglicht Anhängern des modernen intelligenten Heimlebens, sich noch bequemer und müheloser in ihre vielfältigen Lebensstile einzuleben.<br/></p>"
+            "question": "<p>Wie setze ich meinen Maidesite Schreibtisch zurück?</p>",
+            "answer": "<p>1. RST-Modus aktivieren:<br/><br/>Halten Sie die Taste „AB“ 5 Sekunden lang gedrückt, während sich die Tischplatte in der niedrigsten Position befindet (andernfalls senken Sie die Tischplatte zuerst ab). Die Digitalanzeige zeigt „ASR“ an. Das System wechselt nun in den RST-Modus.<br/><br/>2. RST-Modus beenden:<br/><br/>Halten Sie die Taste „AB“ erneut gedrückt, bis sich die Tischplatte leicht absenkt und anschließend leicht anhebt. Die aktuelle Höhe wird im Display angezeigt. Das System beendet den RST-Modus.</p>"
+          }
+        },
+        "faq_xqPjNH": {
+          "type": "faq",
+          "settings": {
+            "question": "<p>Ich habe vergessen, meinen Gutschein einzulösen. Was kann ich jetzt tun?</p>",
+            "answer": "<p>Bitte stellen Sie uns den entsprechenden Gutscheincode zur Verfügung. Solange die Aktion noch nicht abgelaufen ist, können wir Ihnen den Differenzbetrag nach Erhalt des Pakets zurückerstatten.</p>"
           }
         }
       },
       "block_order": [
         "faq_E4jP4F",
         "faq_AXAcgA",
-        "faq_W9Mzyn"
+        "faq_W9Mzyn",
+        "faq_xqPjNH"
       ],
       "custom_css": [],
       "name": "faq simple",
