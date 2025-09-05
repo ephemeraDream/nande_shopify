@@ -22,16 +22,16 @@
     <div class="faq_simple_text_contain">
       <div class="faq_simple_text">{{ section.settings.text }}</div>
       {% if section.settings.show_btn %}
-        <div class="nd-btn faq_simple_more_btn">
+        <a href="{{ section.settings.more_faqs_link }}" class="nd-btn faq_simple_more_btn">
           {{ 'common.view_more_faqs' | t }}
           {{ 'icon-right-arrow.svg' | inline_asset_content }}
-        </div>
+        </a>
       {% endif %}
       {% if section.settings.contact_us %}
-        <div class="nd-btn faq_contact_us">
+        <a href="{{ section.settings.contact_us_link }}" class="nd-btn faq_contact_us">
           {{ 'common.contact_us' | t }}
           {{ 'icon_contact_1.svg' | inline_asset_content }}
-        </div>
+        </a>
       {% endif %}
     </div>
     <div class="faq_simple_list">
@@ -122,21 +122,31 @@
     },
     {
       "type": "checkbox",
-      "id": "show_btn",
-      "label": "show more faqs",
-      "default": false
-    },
-    {
-      "type": "checkbox",
       "id": "learn_more",
       "label": "show learn more",
       "default": false
     },
     {
       "type": "checkbox",
+      "id": "show_btn",
+      "label": "show more faqs",
+      "default": false
+    },
+    {
+      "type": "url",
+      "id": "more_faqs_link",
+      "label": "more faqs links"
+    },
+    {
+      "type": "checkbox",
       "id": "contact_us",
       "label": "show contact us",
       "default": false
+    },
+    {
+      "type": "url",
+      "id": "contact_us_link",
+      "label": "contact us links"
     },
     {
       "type": "range",
