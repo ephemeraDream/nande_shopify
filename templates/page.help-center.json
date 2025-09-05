@@ -27,14 +27,14 @@
           "settings": {
             "image": "shopify://shop_images/track.jpg",
             "title": "Meine Bestellung und Zahlung",
-            "text": "<p>Bestellinformationen, Bearbeitung, Stornierung, allgemeine Zahlungsfragen.</p>",
+            "text": "<p>Bestellinformationen, Bearbeitung, Stornierung + allgemeine Zahlungsangelegenheiten</p>",
             "blog": "meine-bestellung-und-zahlung"
           }
         },
         "item_02": {
           "type": "item",
           "settings": {
-            "image": "shopify://shop_images/shipping.jpg",
+            "image": "shopify://shop_images/shipping_1.jpg",
             "title": "Logistik und Lieferung",
             "text": "<p>Versandorte, Lieferzeiten, Steuern, allgemeine Versandanfragen.</p>",
             "blog": "logistik-und-lieferung"
@@ -70,9 +70,9 @@
         "item_06": {
           "type": "item",
           "settings": {
-            "image": "shopify://shop_images/cooperate.png",
+            "image": "shopify://shop_images/cooperation_1.jpg",
             "title": "Drittanbieter",
-            "text": "<p>Richtlinien & allgemeine Fragen zu Drittanbietern.</p>",
+            "text": "<p>Unternehmenskooperationen, Großbestellungen, Individuelle Angebote,  Firmenkundenservice </p>",
             "blog": "werbung-und-zusammenarbeit"
           }
         }
@@ -129,9 +129,11 @@
         "spec_id": "",
         "heading": "<p>FAQ</p>",
         "text": "<p>Häufig gestellte Fragen</p>",
-        "show_btn": false,
         "learn_more": false,
+        "show_btn": false,
+        "more_faqs_link": "",
         "contact_us": false,
+        "contact_us_link": "",
         "padding_top": 120,
         "padding_bottom": 120,
         "background_color": "rgba(0,0,0,0)"
