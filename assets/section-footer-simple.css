@@ -177,6 +177,12 @@
   .footer_simple .footer_simple_link_list_item:last-child {
     border-bottom: none;
   }
+  .footer_simple .footer_simple_link_list{
+    padding-top: 0;
+  }
+  .footer_simple .footer_simple_company_info{
+    padding-bottom: 2rem;
+  }
 }
 
 /* 桌面端隐藏展开/收起图标 */
@@ -188,4 +194,5 @@
   .footer_simple .footer_simple_link_list_title {
     cursor: default;
   }
+  
 }
