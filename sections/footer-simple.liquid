@@ -44,17 +44,22 @@
             </div>
           {%- when 'link_list' -%}
             <div class="footer_simple_link_list">
-              <div class="footer_simple_link_list_title">{{ block.settings.heading }}</div>
-              {%- if block.settings.menu != blank -%}
-                {%- for link in block.settings.menu.links -%}
-                  <a
-                    href="{{ link.url }}"
-                    class="footer_simple_link_list_item{% if link.active %} footer_simple_link_list_item_active{% endif %}"
-                  >
-                    {{ link.title | escape }}
-                  </a>
-                {%- endfor -%}
-              {%- endif -%}
+              <div class="footer_simple_link_list_title" data-toggle="footer-link-list-{{ forloop.index }}">
+                {{ block.settings.heading }}
+                <span class="footer_simple_toggle_icon">+</span>
+              </div>
+              <div class="footer_simple_link_list_items" id="footer-link-list-{{ forloop.index }}">
+                {%- if block.settings.menu != blank -%}
+                  {%- for link in block.settings.menu.links -%}
+                    <a
+                      href="{{ link.url }}"
+                      class="footer_simple_link_list_item{% if link.active %} footer_simple_link_list_item_active{% endif %}"
+                    >
+                      {{ link.title | escape }}
+                    </a>
+                  {%- endfor -%}
+                {%- endif -%}
+              </div>
             </div>
         {%- endcase -%}
       {% endfor %}
@@ -70,6 +75,71 @@
     </div>
   </div>
 </div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  // 检查是否为移动设备
+  function isMobile() {
+    return window.innerWidth <= 767;
+  }
+  
+  // 初始化移动端展开/收起功能
+  function initMobileToggle() {
+    if (!isMobile()) return;
+    
+    const toggleElements = document.querySelectorAll('[data-toggle^="footer-link-list"]');
+    
+    toggleElements.forEach(function(toggleElement) {
+      const targetId = toggleElement.getAttribute('data-toggle');
+      const targetElement = document.getElementById(targetId);
+      const iconElement = toggleElement.querySelector('.footer_simple_toggle_icon');
+      
+      if (targetElement && iconElement) {
+        // 初始状态：隐藏链接
+        targetElement.style.display = 'none';
+        
+        // 添加点击事件
+        toggleElement.addEventListener('click', function() {
+          if (targetElement.style.display === 'none') {
+            // 展开
+            targetElement.style.display = 'block';
+            iconElement.textContent = '−';
+            iconElement.classList.add('footer_simple_toggle_icon_expanded');
+          } else {
+            // 收起
+            targetElement.style.display = 'none';
+            iconElement.textContent = '+';
+            iconElement.classList.remove('footer_simple_toggle_icon_expanded');
+          }
+        });
+      }
+    });
+  }
+  
+  // 页面加载时初始化
+  initMobileToggle();
+  
+  // 窗口大小改变时重新初始化
+  window.addEventListener('resize', function() {
+    if (isMobile()) {
+      initMobileToggle();
+    } else {
+      // 桌面端恢复默认显示
+      const linkItems = document.querySelectorAll('.footer_simple_link_list_items');
+      const icons = document.querySelectorAll('.footer_simple_toggle_icon');
+      
+      linkItems.forEach(function(item) {
+        item.style.display = 'block';
+      });
+      
+      icons.forEach(function(icon) {
+        icon.textContent = '+';
+        icon.classList.remove('footer_simple_toggle_icon_expanded');
+      });
+    }
+  });
+});
+</script>
 
 {% schema %}
 {

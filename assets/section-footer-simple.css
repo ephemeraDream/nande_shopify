@@ -61,6 +61,29 @@
   font-variation-settings: "opsz" auto;
   color: #FFFFFF;
   margin-bottom: 1.8rem;
+  position: relative;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer_simple .footer_simple_toggle_icon {
+  font-size: 2.4rem;
+  font-weight: bold;
+  color: #FFFFFF;
+  transition: transform 0.3s ease;
+  user-select: none;
+  min-width: 3rem;
+  text-align: center;
+}
+
+.footer_simple .footer_simple_toggle_icon_expanded {
+  transform: rotate(0deg);
+}
+
+.footer_simple .footer_simple_link_list_items {
+  transition: all 0.3s ease;
 }
 
 .footer_simple .footer_simple_link_list_item {
@@ -120,5 +143,49 @@
   }
   .footer_simple .footer_simple_company_info {
     width: 100%;
+  }
+  
+  /* 移动端展开/收起功能样式 */
+  .footer_simple .footer_simple_link_list {
+    width: 100%;
+    margin-bottom: 2rem;
+  }
+  
+  .footer_simple .footer_simple_link_list_title {
+    font-size: 2.4rem;
+    margin-bottom: 0;
+    padding: 1.5rem 0;
+    border-bottom: 1px solid rgba(216, 216, 216, 0.2);
+  }
+  
+  .footer_simple .footer_simple_toggle_icon {
+    font-size: 2rem;
+    transition: transform 0.3s ease;
+  }
+  
+  .footer_simple .footer_simple_link_list_items {
+    padding: 1rem 0;
+    overflow: hidden;
+  }
+  
+  .footer_simple .footer_simple_link_list_item {
+    font-size: 1.6rem;
+    padding: 0.8rem 0;
+    border-bottom: 1px solid rgba(216, 216, 216, 0.1);
+  }
+  
+  .footer_simple .footer_simple_link_list_item:last-child {
+    border-bottom: none;
+  }
 }
+
+/* 桌面端隐藏展开/收起图标 */
+@media only screen and (min-width: 768px) {
+  .footer_simple .footer_simple_toggle_icon {
+    display: none;
+  }
+  
+  .footer_simple .footer_simple_link_list_title {
+    cursor: default;
+  }
 }
