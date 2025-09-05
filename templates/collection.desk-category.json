@@ -22,10 +22,10 @@
     },
     "collection_compare_khmbzE": {
       "type": "collection-compare",
+      "custom_css": [],
       "name": "collection compare",
       "settings": {
         "show_banner": true,
-        "video": "shopify://files/videos/修改Banner 尺寸-1_cc5e7670-5c6b-4de6-8a69-f73a0b091b11.mp4",
         "products_per_page": 23,
         "enable_compare": true,
         "show_layout_toggle": true,
