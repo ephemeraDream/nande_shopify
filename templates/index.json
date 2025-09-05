@@ -34,9 +34,9 @@
         "banner_item_ykwd4B": {
           "type": "banner_item",
           "settings": {
-            "sub_title": "<p>Eleganz, die sich bewegt</p>",
+            "sub_title": "",
             "title": "<p>Maidesite Yoga</p>",
-            "text": "<p>Sanftes Design trifft auf ergonomische Innovation: Der höhenverstellbare Schreibtisch mit <br/>Schublade & kabelloser Qi-Ladestation – für einen flexiblen, gesunden Alltag.</p>",
+            "text": "<p>Stilvoll. Ergonomisch. Flexibel. – Dein Schreibtisch mit Qi-Ladestation</p>",
             "btn_text": "Jetzt kaufen",
             "link": "shopify://products/maidesite-yoga-hohenverstellbarer-schreibtisch-mit-tischplatte",
             "file_position": "bottom_right",
@@ -78,7 +78,7 @@
       "custom_css": [],
       "name": "banner",
       "settings": {
-        "height_mode": "fixed",
+        "height_mode": "screen",
         "fixed_height_desktop": 800,
         "fixed_height_mobile": 250,
         "mobile_stacked": true,
