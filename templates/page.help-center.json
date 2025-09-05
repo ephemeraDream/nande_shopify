@@ -123,13 +123,21 @@
             "question": "<p>Ich habe vergessen, meinen Gutschein einzulösen. Was kann ich jetzt tun?</p>",
             "answer": "<p>Bitte stellen Sie uns den entsprechenden Gutscheincode zur Verfügung. Solange die Aktion noch nicht abgelaufen ist, können wir Ihnen den Differenzbetrag nach Erhalt des Pakets zurückerstatten.</p>"
           }
+        },
+        "faq_WYegiJ": {
+          "type": "faq",
+          "settings": {
+            "question": "<p>Wie kann ich meine Bestellung verfolgen?</p>",
+            "answer": "<p>Nach dem Versand erhalten Sie eine E-Mail mit der Sendungsnummer. Falls Sie diese E-Mail nicht erhalten haben, überprüfen Sie bitte Ihren Spam-Ordner. Alternativ können Sie den Status auch auf unserer Website unter folgendem Link verfolgen: https://www.maidesite.de/apps/17TRACK?nums</p>"
+          }
         }
       },
       "block_order": [
         "faq_E4jP4F",
         "faq_AXAcgA",
         "faq_W9Mzyn",
-        "faq_xqPjNH"
+        "faq_xqPjNH",
+        "faq_WYegiJ"
       ],
       "custom_css": [],
       "name": "faq simple",
