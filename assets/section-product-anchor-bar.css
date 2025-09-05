@@ -81,3 +81,8 @@
     overflow-x: auto;
   }
 }
+@media screen and (max-width: 767px) {
+  .product_anchor_bar .product_anchor_bar_btn {
+    display: none;
+  }
+}

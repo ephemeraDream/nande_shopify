@@ -1511,4 +1511,24 @@
   .product_info .common_modal_body .contact-btn button {
     width: 100%;
   }
+  /***new***/
+  .product_info_section .product_infor_simplicity_right_select_title{
+    display: none;
+  }
+  .product_info_section .product_info_bottom_bar .product_info_price {
+    font-size: 2rem;
+  }
+  .product_info_section .product_info_bottom_bar_contain_right,
+  .product_info_section .product_info_bottom_bar .product_info_bottom_bar_contain_right_buybox{
+    width: 100%;
+  }
+  .product_info_section .product_info_bottom_bar_contain_right{
+    flex-direction: column;
+  }
+  .product_info_section .product_info_bottom_bar .product_info_buybox_btns_btn{
+    width: 50%;
+  }
+  .product_info_section .product_info_bottom_bar .product_info_bottom_bar_contain_right_buybox{
+    padding-bottom: 1rem;
+  }
 }
