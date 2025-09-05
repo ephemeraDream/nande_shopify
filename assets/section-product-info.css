@@ -1532,6 +1532,7 @@
     width: 50%;
     text-align: center;
     display: inline-block;
+    height: 3.4rem;
   }
   .product_info_section .product_info_bottom_bar .product_info_bottom_bar_contain_right_buybox{
     padding-bottom: 1rem;
