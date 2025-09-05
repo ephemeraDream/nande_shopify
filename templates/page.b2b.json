@@ -117,6 +117,59 @@
         "message_placeholder": "Nachricht"
       }
     },
+    "contact_form_five_6kic7z": {
+      "type": "contact-form-five",
+      "blocks": {
+        "dropdown_YyVNpn": {
+          "type": "dropdown",
+          "settings": {
+            "key": "测试",
+            "label": "测试",
+            "field_name": "测试",
+            "required": true
+          }
+        },
+        "group_cXh8BJ": {
+          "type": "group",
+          "settings": {
+            "dropdown_key": "测试",
+            "label": "测试分组一",
+            "key": "测试分组一"
+          }
+        },
+        "option_twJk9y": {
+          "type": "option",
+          "settings": {
+            "group_key": "测试分组一",
+            "label": "测试分组一 第一项",
+            "value": "测试分组一 第一项"
+          }
+        }
+      },
+      "block_order": [
+        "dropdown_YyVNpn",
+        "group_cXh8BJ",
+        "option_twJk9y"
+      ],
+      "name": "Contact Form Five",
+      "settings": {
+        "style": "style1",
+        "title": "",
+        "desc": "",
+        "text_content": "",
+        "btn_text": "提交",
+        "show_email": true,
+        "mail_placeholder": "邮箱*",
+        "show_company": true,
+        "company_placeholder": "公司名称",
+        "show_name": true,
+        "name_placeholder": "姓名",
+        "show_phone": true,
+        "phone_placeholder": "电话",
+        "show_message": true,
+        "message_placeholder": "消息"
+      }
+    },
     "img_with_text_box_simplicity_KeYW6M": {
       "type": "img-with-text-box-simplicity",
       "blocks": {
@@ -752,12 +805,14 @@
         "spec_id": "",
         "heading": "<p>FAQ – Häufig gestellte Fragen</p>",
         "text": "",
-        "show_btn": false,
         "learn_more": false,
+        "show_btn": false,
+        "more_faqs_link": "",
         "contact_us": false,
+        "contact_us_link": "",
         "padding_top": 120,
         "padding_bottom": 120,
-        "background_color": "transparent"
+        "background_color": "rgba(0,0,0,0)"
       }
     }
   },
@@ -765,6 +820,7 @@
     "breadcrumbs",
     "contact_form_one",
     "contact_form_two",
+    "contact_form_five_6kic7z",
     "img_with_text_box_simplicity_KeYW6M",
     "b2b_spezielle_rabatte",
     "compare_simple_KneENq",
