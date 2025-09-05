@@ -98,11 +98,17 @@
     width: 100%;
 }
 .blogs_simple .blogs_simple_item img {
-  height: auto;
+  height: 30rem;
 }
 .blogs_simple .swiper_btn_white.swiper_btn_white_next,
   .blogs_simple .swiper_btn_white.swiper_btn_white_prev {
     display: none;
   }
+ 
+}
+@media only screen and (max-width: 375px) {
+.blogs_simple .blogs_simple_item img {
+  height: 20rem;
+}
  
 }
