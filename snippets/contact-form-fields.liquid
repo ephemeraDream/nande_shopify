@@ -7,11 +7,11 @@ Contact Form Fields Snippet - 可复用的表单字段组件
 
 {%- if form.posted_successfully? -%}
   <p class="form-status form__message success" tabindex="-1" autofocus>
-    您的消息已成功发送。
+    {{ section.settings.success_message | default: 'Your message has been sent successfully.' }}
   </p>
 {%- elsif form.errors -%}
   <div class="form__message error" role="alert" tabindex="-1" autofocus>
-    发送表单时出错。请检查您的输入。
+    {{ section.settings.error_message | default: 'There was an error sending the form. Please check your input.' }}
   </div>
 {%- endif -%}
 
@@ -82,6 +82,38 @@ Contact Form Fields Snippet - 可复用的表单字段组件
     </div>
   {%- endif -%}
 </div>
+
+{%- comment -%} 处理自定义字段 {%- endcomment -%}
+{%- assign custom_fields = section.blocks | where: "type", "custom_field" -%}
+
+{%- for field in custom_fields -%}
+  <div class="form-grid">
+    <div class="form-grid-field{% if field.settings.field_type == 'textarea' %} all-row{% endif %}">
+      {%- if field.settings.field_type == 'textarea' -%}
+        <textarea
+          id="ContactFormFive-{{ field.settings.field_name }}"
+          name="contact[{{ field.settings.field_name }}]"
+          class="text-area field__input"
+          rows="{{ field.settings.rows | default: 4 }}"
+          placeholder="{{ field.settings.placeholder }}"
+          {% if field.settings.required %}required{% endif %}
+        ></textarea>
+      {%- else -%}
+        <input
+          type="{{ field.settings.field_type | default: 'text' }}"
+          id="ContactFormFive-{{ field.settings.field_name }}"
+          name="contact[{{ field.settings.field_name }}]"
+          class="field__input"
+          placeholder="{{ field.settings.placeholder }}"
+          {% if field.settings.required %}required{% endif %}
+          {% if field.settings.field_type == 'email' %}autocomplete="email"{% endif %}
+          {% if field.settings.field_type == 'tel' %}autocomplete="tel"{% endif %}
+          {% if field.settings.field_type == 'name' %}autocomplete="name"{% endif %}
+        >
+      {%- endif -%}
+    </div>
+  </div>
+{%- endfor -%}
 
 {%- comment -%} 处理下拉菜单 {%- endcomment -%}
 {%- assign dropdowns = section.blocks | where: "type", "dropdown" -%}

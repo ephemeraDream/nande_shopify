@@ -423,7 +423,19 @@ aria-label="contact"
       "type": "text",
       "id": "btn_text",
       "label": "按钮文字",
-      "default": "提交"
+      "default": "Submit"
+    },
+    {
+      "type": "text",
+      "id": "success_message",
+      "label": "成功消息",
+      "default": "Your message has been sent successfully."
+    },
+    {
+      "type": "text",
+      "id": "error_message",
+      "label": "错误消息",
+      "default": "There was an error sending the form. Please check your input."
     },
     {
       "type": "header",
@@ -439,7 +451,7 @@ aria-label="contact"
       "type": "text",
       "id": "mail_placeholder",
       "label": "邮箱占位符",
-      "default": "邮箱*"
+      "default": "Email*"
     },
     {
       "type": "checkbox",
@@ -451,7 +463,7 @@ aria-label="contact"
       "type": "text",
       "id": "company_placeholder",
       "label": "公司名称占位符",
-      "default": "公司名称"
+      "default": "Company Name"
     },
     {
       "type": "checkbox",
@@ -463,7 +475,7 @@ aria-label="contact"
       "type": "text",
       "id": "name_placeholder",
       "label": "姓名占位符",
-      "default": "姓名"
+      "default": "Name"
     },
     {
       "type": "checkbox",
@@ -475,7 +487,7 @@ aria-label="contact"
       "type": "text",
       "id": "phone_placeholder",
       "label": "电话占位符",
-      "default": "电话"
+      "default": "Phone"
     },
     {
       "type": "checkbox",
@@ -487,10 +499,72 @@ aria-label="contact"
       "type": "text",
       "id": "message_placeholder",
       "label": "消息占位符",
-      "default": "消息"
+      "default": "Message"
     }
   ],
   "blocks": [
+    {
+      "type": "custom_field",
+      "name": "自定义字段",
+      "settings": [
+        {
+          "type": "text",
+          "id": "field_name",
+          "label": "字段名称（用于表单提交）",
+          "info": "例如：custom_field_1"
+        },
+        {
+          "type": "select",
+          "id": "field_type",
+          "label": "字段类型",
+          "options": [
+            {
+              "value": "text",
+              "label": "文本输入框"
+            },
+            {
+              "value": "email",
+              "label": "邮箱输入框"
+            },
+            {
+              "value": "tel",
+              "label": "电话输入框"
+            },
+            {
+              "value": "number",
+              "label": "数字输入框"
+            },
+            {
+              "value": "url",
+              "label": "网址输入框"
+            },
+            {
+              "value": "textarea",
+              "label": "多行文本框"
+            }
+          ],
+          "default": "text"
+        },
+        {
+          "type": "text",
+          "id": "placeholder",
+          "label": "占位符文字"
+        },
+        {
+          "type": "checkbox",
+          "id": "required",
+          "label": "是否为必填项",
+          "default": false
+        },
+        {
+          "type": "number",
+          "id": "rows",
+          "label": "多行文本框行数（仅多行文本框使用）",
+          "default": 4,
+          "info": "仅当字段类型为多行文本框时有效"
+        }
+      ]
+    },
     {
       "type": "dropdown",
       "name": "下拉菜单",
