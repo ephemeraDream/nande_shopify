@@ -100,6 +100,36 @@ function initSwiper() {
       swiper: videothumbSwiper,
     }
   });
+
+  modelthumbSwiper = new Swiper(".modelthumb_swiper", {
+    // loop: true,
+    spaceBetween: 8,
+    slidesPerView: 4,
+    observer: true,
+    observeParents: true,
+    watchSlidesProgress: true,
+    navigation: {
+      nextEl: ".modelthumb_swiper_box .modelthumb_swiper_next",
+      prevEl: ".modelthumb_swiper_box .modelthumb_swiper_prev",
+    },
+  });
+  modelboxSwiper = new Swiper(".modelmain_swiper", {
+    // loop: true,
+    effect: "fade",
+    fadeEffect: {
+      crossFade: true,
+    },
+    observer: true,
+    observeParents: true,
+    spaceBetween: 0,
+    navigation: {
+      nextEl: ".modelmain_swiper .modelmain_swiper_next",
+      prevEl: ".modelmain_swiper .modelmain_swiper_prev",
+    },
+    thumbs: {
+      swiper: modelthumbSwiper,
+    }
+  });
 }
 // 优惠倒计时
 const sale_info_box = document.querySelector(".product_info_saleinfo")
