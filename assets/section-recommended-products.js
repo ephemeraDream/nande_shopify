@@ -176,4 +176,8 @@ product_items.forEach(item => {
       },
     ];
   }
+
+  function getSectionInnerHTML(html, selector) {
+    return new DOMParser().parseFromString(html, 'text/html').querySelector(selector).innerHTML;
+  }
 })
