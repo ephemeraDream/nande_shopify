@@ -968,7 +968,7 @@ document.querySelectorAll(".product_info_bundle_product").forEach(item => {
     // item.querySelector(".product_info_bundle_product_img img").src = currVariant.featured_image.src
     // item.querySelector(".product_info_bundle_product_price").innerHTML = `+${moneyWithoutTrailingZeros(currVariant.price)}`
     // item.setAttribute("data-variant-id", currVariant.id)
-    handleProductClick(true)
+    handleProductClick()
     modal.style.display = "none";
     document.body.style.overflowY = "auto";
   })
