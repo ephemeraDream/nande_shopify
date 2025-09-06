@@ -119,7 +119,7 @@ product_items.forEach(item => {
 
     const body = JSON.stringify({
       ...cartFormData,
-      sections: this.getSectionsToRender().map((section) => section.section),
+      sections: getSectionsToRender().map((section) => section.section),
       sections_url: window.location.pathname,
     });
 
