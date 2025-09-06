@@ -27,14 +27,14 @@
             </div>
             <div class="recommended_products_info">
               {% assign product_title_top = product.metafields.custom.product_title_top %}
-              <h3 class="product_title_top">
+              <h4 class="product_title_top">
                 {% if product_title_top != blank %}
                   {{ product_title_top }}
                 {% else %}
                   Maidesite
                 {% endif %}
-              </h3>
-              <h3 class="recommended_products_info_title">{{ product.title }}</h3>
+              </h4>
+              <h4 class="recommended_products_info_title">{{ product.title }}</h4>
               <h4 class="recommended_products_info_price">
                 {{ product.selected_or_first_available_variant.price | money_without_trailing_zeros }}
               </h4>
@@ -115,29 +115,6 @@
   </div>
 </div>
 
-<script type="application/json" id="recommended_products_data">
-  {% for currency in shop.enabled_currencies %}
-    {% if currency.iso_code == shop.currency %}
-      {%- assign currency_symbol = currency.symbol -%}
-      {% break %}
-    {% endif %}
-  {% endfor %}
-  {
-    {% for product in section.settings.product_list %}
-      "{{ product.id }}": {
-        "product": {{- product | json -}},
-        "metafields": {
-          "custom": {
-            "product_model": {{ product.metafields.custom.product_model | json }}
-          }
-        },
-        "variant": {{ product.selected_or_first_available_variant | json }},
-        "symbol": {{ currency_symbol | json }}
-      }{% unless forloop.last %},{% endunless %}
-    {% endfor %}
-  }
-</script>
-<script src="{{ 'section-recommended-products.js' | asset_url }}"></script>
 <script>
   (() => {
     new Swiper('.recommended_products_section .swiper', {
@@ -232,6 +209,29 @@
     }
   })()
 </script>
+<script type="application/json" id="recommended_products_data">
+  {% for currency in shop.enabled_currencies %}
+    {% if currency.iso_code == shop.currency %}
+      {%- assign currency_symbol = currency.symbol -%}
+      {% break %}
+    {% endif %}
+  {% endfor %}
+  {
+    {% for product in section.settings.product_list %}
+      "{{ product.id }}": {
+        "product": {{- product | json -}},
+        "metafields": {
+          "custom": {
+            "product_model": {{ product.metafields.custom.product_model | json }}
+          }
+        },
+        "variant": {{ product.selected_or_first_available_variant | json }},
+        "symbol": {{ currency_symbol | json }}
+      }{% unless forloop.last %},{% endunless %}
+    {% endfor %}
+  }
+</script>
+<script src="{{ 'section-recommended-products.js' | asset_url }}"></script>
 
 {% schema %}
 {
