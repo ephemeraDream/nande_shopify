@@ -574,12 +574,26 @@
                         {% endfor %}
                         <div class="product_info_bundle_product_title">{{ bundled_product.title }}</div>
                         <div class="product_info_bundle_product_price">
-                          +
-                          {{-
-                            bundled_product.selected_or_first_available_variant.price
-                            | default: bundled_product.price
-                            | money_without_trailing_zeros
-                          }}
+                          <div class="product_info_bundle_product_price_dp">
+                            +
+                            {{-
+                              bundled_product.selected_or_first_available_variant.price
+                              | default: bundled_product.price
+                              | money_without_trailing_zeros
+                            }}
+                          </div>
+                          {% if bundled_product.selected_or_first_available_variant.compare_at_price != blank
+                            and bundled_product.selected_or_first_available_variant.compare_at_price
+                              > bundled_product.selected_or_first_available_variant.price
+                          %}
+                            <div class="product_info_bundle_product_price_op">
+                              {{
+                                bundled_product.selected_or_first_available_variant.compare_at_price
+                                | default: bundled_product.compare_at_price
+                                | money_without_trailing_zeros
+                              }}
+                            </div>
+                          {% endif %}
                         </div>
                       </div>
                       <div class="common_modal">
@@ -605,13 +619,18 @@
                                     | money_without_trailing_zeros
                                   }}
                                 </div>
-                                <div class="product_info_bundle_modal_price_op">
-                                  {{
-                                    bundled_product.selected_or_first_available_variant.compare_at_price
-                                    | default: bundled_product.compare_at_price
-                                    | money_without_trailing_zeros
-                                  }}
-                                </div>
+                                {% if bundled_product.selected_or_first_available_variant.compare_at_price != blank
+                                  and bundled_product.selected_or_first_available_variant.compare_at_price
+                                    > bundled_product.selected_or_first_available_variant.price
+                                %}
+                                  <div class="product_info_bundle_modal_price_op">
+                                    {{
+                                      bundled_product.selected_or_first_available_variant.compare_at_price
+                                      | default: bundled_product.compare_at_price
+                                      | money_without_trailing_zeros
+                                    }}
+                                  </div>
+                                {% endif %}
                               </div>
 
                               <div class="product_info_bundle_modal_contain">
