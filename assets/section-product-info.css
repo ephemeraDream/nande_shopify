@@ -999,7 +999,8 @@
 }
 
 .product_info_section .product_info_bundle_product {
-  flex: 0 0 calc((100% - 2.4rem) / 5);
+  flex: 0 0 auto;
+  width: calc((100% - 2.4rem) / 5);
   display: flex;
   flex-direction: column;
   background-color: #FFF;
@@ -1060,6 +1061,9 @@
   font-variation-settings: "opsz" auto;
   color: #1F1F1F;
   padding: 0.6rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .product_info_section .product_info_bundle_product_price {
