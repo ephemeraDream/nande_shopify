@@ -105,13 +105,21 @@
             "value": "Wie viele Produkte möchten Sie anfragen?"
           }
         },
-        "dropdown_UkHpPj": {
+        "dropdown_NeCQJ4": {
           "type": "dropdown",
           "settings": {
             "key": "Wo haben Sie von uns gehört",
             "label": "Wo haben Sie von uns gehört",
             "field_name": "Wo haben Sie von uns gehört",
             "required": false
+          }
+        },
+        "group_EWnkcE": {
+          "type": "group",
+          "settings": {
+            "dropdown_key": "Wo haben Sie von uns gehört",
+            "label": "Wo haben Sie von uns gehört",
+            "key": "Wo haben Sie von uns gehört"
           }
         },
         "option_VdJrVq": {
@@ -204,7 +212,8 @@
         "option_nQXDDE",
         "option_mHB9md",
         "option_3zABAx",
-        "dropdown_UkHpPj",
+        "dropdown_NeCQJ4",
+        "group_EWnkcE",
         "option_VdJrVq",
         "option_NwnXYf",
         "option_xhpbzw",
