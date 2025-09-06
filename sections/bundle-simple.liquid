@@ -24,24 +24,24 @@
           <div class="bundle_simple_product" data-id="{{ product.id }}">
             <div class="bundle_simple_product_img">
               <a href="{{ product.url }}">
-              <img
-                src="{{ product.selected_or_first_available_variant.featured_image.src | image_url }}"
-                alt="{{ product.title }}"
-              >
+                <img
+                  src="{{ product.selected_or_first_available_variant.featured_image.src | image_url }}"
+                  alt="{{ product.title }}"
+                >
               </a>
             </div>
             <div class="bundle_simple_product_info">
               <div>
                 {% assign product_model = product.metafields.custom.product_model %}
                 <a href="{{ product.url }}">
-                <h4 class="bundle_simple_product_model">
-                  {% if product_model != blank %}
-                    {{ product_model }}
-                  {% else %}
-                    Model
-                  {% endif %}
-                </h4>
-                <h4 class="bundle_simple_product_title">{{ product.title }}</h4>
+                  <h4 class="bundle_simple_product_model">
+                    {% if product_model != blank %}
+                      {{ product_model }}
+                    {% else %}
+                      Model
+                    {% endif %}
+                  </h4>
+                  <h4 class="bundle_simple_product_title">{{ product.title }}</h4>
                 </a>
                 <h4 class="bundle_simple_product_price">
                   {{ product.selected_or_first_available_variant.price | money_without_trailing_zeros }}
@@ -60,15 +60,19 @@
                         {% if available_variant.size > 0 %}
                           {% if color_label contains option.name %}
                             {% assign color = '' %}
+                            {% assign color_img = '' %}
                             {% for color_item in product.metafields.custom.color_option.value %}
                               {% if color_item.name == value.name %}
                                 {% assign color = color_item.value %}
+                                {% assign color_img = color_item.image %}
                               {% endif %}
                             {% endfor %}
                             <div
                               data-value="{{ value }}"
                               class="bundle_simple_option_select_item{% if color == '' %} bundle_simple_option_select_item_none{% endif %}{% if value.selected %} bundle_simple_option_select_item_select{% endif %}"
-                              {% if color != '' %}
+                              {% if color_img != blank %}
+                                style="background: url({{ color_img | image_url }}) no-repeat no-repeat center center"
+                              {% elsif color != '' %}
                                 style="background-color: {{ color }}"
                               {% endif %}
                               title="{{ value }}"
@@ -211,7 +215,7 @@
       "unit": "px",
       "label": "t:sections.all.padding.padding_bottom",
       "default": 0
-    },
+    }
   ],
   "presets": [
     {

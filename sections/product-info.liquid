@@ -449,9 +449,11 @@
                   {%- for value in option.values -%}
                     {% if option_hanlde contains 'farbe' %}
                       {% assign color = '' %}
+                      {% assign color_img = '' %}
                       {% for color_item in bundle_tabletop.metafields.custom.color_option.value %}
                         {% if color_item.name == value.name %}
                           {% assign color = color_item.value %}
+                          {% assign color_img = color_item.image %}
                         {% endif %}
                       {% endfor %}
                       <div
@@ -461,7 +463,9 @@
                       >
                         <div
                           class="product_info_option_select_item_circle{% if color == '' %} product_info_option_select_item_none{% endif %}"
-                          {% if color != '' %}
+                          {% if color_img != blank %}
+                            style="background: url({{ color_img | image_url }}) no-repeat no-repeat center center"
+                          {% elsif color != '' %}
                             style="background-color: {{ color }}"
                           {% endif %}
                         ></div>
@@ -540,9 +544,11 @@
                                   %}
                                   {% if available_variant.size > 0 %}
                                     {% assign color = '' %}
+                                    {% assign color_img = '' %}
                                     {% for color_item in bundled_product.metafields.custom.color_option.value %}
                                       {% if color_item.name == value.name %}
                                         {% assign color = color_item.value %}
+                                        {% assign color_img = color_item.image %}
                                       {% endif %}
                                     {% endfor %}
                                     <div
@@ -553,7 +559,9 @@
                                     >
                                       <div
                                         class="product_info_bundle_modal_select_item_circle{% if color == '' %} product_info_bundle_modal_select_item_none{% endif %}"
-                                        {% if color != '' %}
+                                        {% if color_img != blank %}
+                                          style="background: url({{ color_img | image_url }}) no-repeat no-repeat center center"
+                                        {% elsif color != '' %}
                                           style="background-color: {{ color }}"
                                         {% endif %}
                                       ></div>
@@ -632,9 +640,11 @@
                                         {% if available_variant.size > 0 %}
                                           {% if option_hanlde contains 'farbe' %}
                                             {% assign color = '' %}
+                                            {% assign color_img = '' %}
                                             {% for color_item in bundled_product.metafields.custom.color_option.value %}
                                               {% if color_item.name == value.name %}
                                                 {% assign color = color_item.value %}
+                                                {% assign color_img = color_item.image %}
                                               {% endif %}
                                             {% endfor %}
                                             <div
@@ -644,7 +654,9 @@
                                             >
                                               <div
                                                 class="product_info_bundle_modal_select_item_circle{% if color == '' %} product_info_bundle_modal_select_item_none{% endif %}"
-                                                {% if color != '' %}
+                                                {% if color_img != blank %}
+                                                  style="background: url({{ color_img | image_url }}) no-repeat no-repeat center center"
+                                                {% elsif color != '' %}
                                                   style="background-color: {{ color }}"
                                                 {% endif %}
                                               ></div>

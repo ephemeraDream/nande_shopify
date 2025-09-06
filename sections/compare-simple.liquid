@@ -61,18 +61,18 @@
                       {% assign product_title_top = block.settings.select_product.metafields.custom.product_title_top %}
                       <h4 class="compare_simple_item_title">
                         <a href="{{ block.settings.select_product.url }}">
-                        <span class="product_title_top">
-                          {% if product_title_top != blank %}
-                            {{ product_title_top }}
+                          <span class="product_title_top">
+                            {% if product_title_top != blank %}
+                              {{ product_title_top }}
+                            {% else %}
+                              Maidesite
+                            {% endif %}
+                          </span>
+                          {% if product_model != blank %}
+                            <span class="product_title">{{ product_model }}</span>
                           {% else %}
-                            Maidesite
+                            <span class="product_title">{{ block.settings.select_product.title }}</span>
                           {% endif %}
-                        </span>
-                        {% if product_model != blank %}
-                          <span class="product_title">{{ product_model }}</span>
-                        {% else %}
-                          <span class="product_title">{{ block.settings.select_product.title }}</span>
-                        {% endif %}
                         </a>
                       </h4>
                     </div>
@@ -82,14 +82,18 @@
                           {%- when 'Farbe Tischplatte' -%}
                             {% for value in option.values %}
                               {% assign color = '' %}
+                              {% assign color_img = '' %}
                               {% for color_item in block.settings.select_product.metafields.custom.color_option.value %}
                                 {% if color_item.name == value.name %}
                                   {% assign color = color_item.value %}
+                                  {% assign color_img = color_item.image %}
                                 {% endif %}
                               {% endfor %}
                               <div
                                 class="compare_simple_item_color_circle{% if color == '' %} compare_simple_item_color_circle_none{% endif %}"
-                                {% if color != '' %}
+                                {% if color_img != blank %}
+                                  style="background: url({{ color_img | image_url }}) no-repeat no-repeat center center"
+                                {% elsif color != '' %}
                                   style="background-color: {{ color }}"
                                 {% endif %}
                                 title="{{ value }}"
