@@ -209,11 +209,11 @@
       ],
       "name": "Contact Form Five",
       "settings": {
-        "style": "style1",
-        "title": "",
+        "style": "style2",
+        "title": "Optimieren Sie Ihre Büros mit Maidesite – Wir unterstützen Sie von Anfang bis Ende!",
         "desc": "",
-        "text_content": "",
-        "btn_text": "Submit",
+        "text_content": "<p>Ergonomische Arbeitsplätze, die Ihre Mitarbeiter begeistern und Ihre Produktivität steigern. Erhalten Sie jetzt ein unverbindliches Angebot und profitieren Sie von unserer umfassenden Beratung und Betreuung</p><p>Sie können das gewünschte<strong> Produktmodell </strong>und die <strong>Menge</strong> eingeben, um den genauen Preis und die verfügbare Zeit zu erfahren.</p>",
+        "btn_text": "Absenden",
         "success_message": "Your message has been sent successfully.",
         "error_message": "There was an error sending the form. Please check your input.",
         "show_email": true,
@@ -223,9 +223,9 @@
         "show_name": true,
         "name_placeholder": "Name",
         "show_phone": true,
-        "phone_placeholder": "Phone",
+        "phone_placeholder": "Telefonnummer",
         "show_message": true,
-        "message_placeholder": "Message"
+        "message_placeholder": "Nachricht"
       }
     },
     "contact_form_two": {
@@ -296,6 +296,7 @@
         "option_MmFUiC",
         "option_N7abKE"
       ],
+      "disabled": true,
       "custom_css": [],
       "name": "contact_form_two",
       "settings": {
