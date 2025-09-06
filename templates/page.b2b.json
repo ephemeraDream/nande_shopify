@@ -118,7 +118,7 @@
           "type": "group",
           "settings": {
             "dropdown_key": "Wo haben Sie von uns gehört",
-            "label": "Wo haben Sie von uns gehört",
+            "label": "Woher kennst du uns?",
             "key": "Wo haben Sie von uns gehört"
           }
         },
