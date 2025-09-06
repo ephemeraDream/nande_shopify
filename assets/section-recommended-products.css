@@ -63,7 +63,7 @@
   flex: 1;
   flex-direction: column;
   display: flex;
-  /* justify-content: space-between; */
+  justify-content: space-between;
   gap: 2.6rem;
   background-color: #fff;
   padding: 0.5rem 2rem 2rem 2rem;
