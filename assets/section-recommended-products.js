@@ -170,7 +170,7 @@ product_items.forEach(item => {
         {
           id: 'main-cart-items',
           section: document.getElementById('main-cart-items').dataset.id,
-          selector: '.shopify-section',
+          selector: '#main-cart-items',
         },
         {
           id: 'cart-icon-bubble',
