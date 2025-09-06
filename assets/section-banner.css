@@ -364,7 +364,7 @@ svg.page-btn__circle {
 }
 
 .section_banner:hover .swiper_btn_white {
-  display: block;
+  display: flex;
 }
 
 @media screen and (max-width: 1440px) {

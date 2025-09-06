@@ -351,6 +351,14 @@
     });
   }
 
+  document.querySelector(".section_banner_swiper_prev").addEventListener("click", () => {
+    swiper.slidePrev()
+  })
+
+  document.querySelector(".section_banner_swiper_next").addEventListener("click", () => {
+    swiper.slideNext()
+  })
+
 
     const countdownEl = document.querySelectorAll('.section_banner_countdown_box');
     if (!countdownEl.length) return;
