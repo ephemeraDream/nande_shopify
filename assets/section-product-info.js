@@ -937,8 +937,14 @@ document.querySelectorAll(".product_info_bundle_product").forEach(item => {
   // 捆绑产品弹窗
   const viewdetail = item.querySelector(".product_info_bundle_product_viewdetail")
   const modal = item.querySelector(".common_modal")
+  const confirm_btn = item.querySelector(".product_info_bundle_modal_btn")
   viewdetail.addEventListener("click", (e) => {
     e.stopPropagation()
+    if (item.classList.contains("selected")) {
+      confirm_btn.innerHTML = "Entfernen"
+    } else {
+      confirm_btn.innerHTML = "Auswählen"
+    }
     modal.style.display = "block";
     document.body.style.overflowY = "hidden";
 
@@ -958,7 +964,6 @@ document.querySelectorAll(".product_info_bundle_product").forEach(item => {
     });
   })
   // 捆绑弹窗确定
-  const confirm_btn = item.querySelector(".product_info_bundle_modal_btn")
   confirm_btn.addEventListener("click", () => {
     // item.querySelector(".product_info_bundle_product_img img").src = currVariant.featured_image.src
     // item.querySelector(".product_info_bundle_product_price").innerHTML = `+${moneyWithoutTrailingZeros(currVariant.price)}`
