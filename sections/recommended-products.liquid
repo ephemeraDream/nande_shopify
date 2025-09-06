@@ -115,6 +115,29 @@
   </div>
 </div>
 
+<script type="application/json" id="recommended_products_data">
+  {% for currency in shop.enabled_currencies %}
+    {% if currency.iso_code == shop.currency %}
+      {%- assign currency_symbol = currency.symbol -%}
+      {% break %}
+    {% endif %}
+  {% endfor %}
+  {
+    {% for product in section.settings.product_list %}
+      "{{ product.id }}": {
+        "product": {{- product | json -}},
+        "metafields": {
+          "custom": {
+            "product_model": {{ product.metafields.custom.product_model | json }}
+          }
+        },
+        "variant": {{ product.selected_or_first_available_variant | json }},
+        "symbol": {{ currency_symbol | json }}
+      }{% unless forloop.last %},{% endunless %}
+    {% endfor %}
+  }
+</script>
+<script src="{{ 'section-recommended-products.js' | asset_url }}"></script>
 <script>
   (() => {
     new Swiper('.recommended_products_section .swiper', {
