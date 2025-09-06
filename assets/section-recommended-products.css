@@ -64,7 +64,7 @@
   flex-direction: column;
   display: flex;
   justify-content: space-between;
-  gap: 2.6rem;
+  /* gap: 2.6rem; */
   background-color: #fff;
   padding: 0.5rem 2rem 2rem 2rem;
   position: relative;
@@ -104,6 +104,7 @@
   letter-spacing: 0px;
   font-variation-settings: "opsz" auto;
   color: #1A1A1A;
+  margin-top: 0.8rem;
 }
 
 .recommended_products .recommended_products_info_price_op {
