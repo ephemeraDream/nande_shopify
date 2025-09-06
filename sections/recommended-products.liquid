@@ -26,7 +26,7 @@
               <img src="{{ product.featured_image | image_url }}" alt="{{ product.title }}">
             </div>
             <div class="recommended_products_info">
-              {% assign product_title_top = block.settings.select_product.metafields.custom.product_title_top %}
+              {% assign product_title_top = product.metafields.custom.product_title_top %}
               <h3 class="product_title_top">
                 {% if product_title_top != blank %}
                   {{ product_title_top }}
@@ -35,22 +35,72 @@
                 {% endif %}
               </h3>
               <h3 class="recommended_products_info_title">{{ product.title }}</h3>
-              <div class="recommended_products_info_flex">
-                <div class="recommended_products_info_price">
-                  {{ product.price | money_without_trailing_zeros }}
-                  {% if product.compare_at_price %}
-                    <span class="recommended_products_info_price_op">
-                      {{- product.compare_at_price | money_without_trailing_zeros -}}
-                    </span>
-                  {% endif %}
+              <h4 class="recommended_products_info_price">
+                {{ product.selected_or_first_available_variant.price | money_without_trailing_zeros }}
+              </h4>
+              {% comment %}
+                <div class="recommended_products_info_flex">
+                  <div class="recommended_products_info_price">
+                    {{ product.price | money_without_trailing_zeros }}
+                    {% if product.compare_at_price %}
+                      <span class="recommended_products_info_price_op">
+                        {{- product.compare_at_price | money_without_trailing_zeros -}}
+                      </span>
+                    {% endif %}
+                  </div>
+                  <div
+                    class="recommended_products_info_btn"
+                    data-value="{{ product.selected_or_first_available_variant.id }}"
+                  >
+                    {{- 'icon-faq-close.svg' | inline_asset_content -}}
+                  </div>
                 </div>
-                <div
-                  class="recommended_products_info_btn"
-                  data-value="{{ product.selected_or_first_available_variant.id }}"
-                >
-                  {{- 'icon-faq-close.svg' | inline_asset_content -}}
+              {% endcomment %}
+              {%- for option in product.options_with_values -%}
+                {% assign option_hanlde = option.name | handle %}
+                <div class="recommended_products_option_item">
+                  <div class="recommended_products_option_label">{{ option.name }}</div>
+                  <div
+                    class="recommended_products_option_select"
+                    select-type="{% if option_hanlde contains "farbe" %}circle{% else %}box{% endif %}"
+                    data-index="{{ forloop.index0 }}"
+                  >
+                    {% assign index = 'option' | append: forloop.index %}
+                    {%- for value in option.values -%}
+                      {% assign available_variant = product.variants | where: index, value | where: 'available' %}
+                      {% if available_variant.size > 0 %}
+                        {% if option_hanlde contains 'farbe' %}
+                          {% assign color = '' %}
+                          {% assign color_img = '' %}
+                          {% for color_item in product.metafields.custom.color_option.value %}
+                            {% if color_item.name == value.name %}
+                              {% assign color = color_item.value %}
+                              {% assign color_img = color_item.image %}
+                            {% endif %}
+                          {% endfor %}
+                          <div
+                            data-value="{{ value }}"
+                            class="recommended_products_option_select_item{% if color == '' %} recommended_products_option_select_item_none{% endif %}{% if value.selected %} recommended_products_option_select_item_select{% endif %}"
+                            {% if color_img != blank %}
+                              style="background: url({{ color_img | image_url }}) no-repeat no-repeat center center"
+                            {% elsif color != '' %}
+                              style="background-color: {{ color }}"
+                            {% endif %}
+                            title="{{ value }}"
+                          ></div>
+                        {% else %}
+                          <div
+                            class="recommended_products_option_select_item{% if value.selected %} recommended_products_option_select_item_select{% endif %}"
+                            data-value="{{ value }}"
+                          >
+                            {{ value }}
+                          </div>
+                        {% endif %}
+                      {% endif %}
+                    {% endfor %}
+                  </div>
                 </div>
-              </div>
+              {% endfor %}
             </div>
           </a>
         {% endfor %}
