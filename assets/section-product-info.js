@@ -304,12 +304,18 @@ document.querySelectorAll(".product_info_left_thumb_select_item").forEach(btn =>
     } else {
       videothumb_swiper_box.style.display = "none"
     }
+    const modelthumb_swiper_box = document.querySelector(".modelthumb_swiper_box")
+    if (type === "model") {
+      modelthumb_swiper_box.style.display = "flex"
+    } else {
+      modelthumb_swiper_box.style.display = "none"
+    }
 
     document.querySelectorAll(".product_info_left_contain_group").forEach(group => {
       group.dataset.type === type ? group.classList.add("show") : group.classList.remove("show");
     });
 
-    if (type !== "image") {
+    if (type !== "video") {
       resetAllVideos()
     }
   });

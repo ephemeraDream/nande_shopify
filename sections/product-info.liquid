@@ -117,19 +117,39 @@
             </div>
           {% endif %}
           {% if type == 'model' %}
-            <div
-              class="product_info_left_contain_group"
-              data-type="{{ type }}"
-            >
-              {% assign is_first = false %}
-              {% for media in product.media %}
-                {% if media.media_type == type and is_first == false %}
-                  {% assign has_model = true %}
-                  {% assign is_first = true %}
-                  {{ media | media_tag: class: 'product_info_left_contain_group_item' }}
-                {% endif %}
-              {% endfor %}
+            <div class="swiper modelmain_swiper product_info_left_contain_group" data-type="{{ type }}">
+              <div class="swiper-wrapper">
+                {% for media in product.media %}
+                  {% if media.media_type == type %}
+                    {% assign has_model = true %}
+                    <div class="swiper-slide">
+                      {{ media | media_tag: class: 'product_info_left_contain_group_item' }}
+                    </div>
+                  {% endif %}
+                {% endfor %}
+              </div>
+              <div class="modelmain_swiper_prev">
+                {{- 'swiper-left.svg' | inline_asset_content -}}
+              </div>
+              <div class="modelmain_swiper_next">
+                {{- 'swiper-right.svg' | inline_asset_content -}}
+              </div>
             </div>
+            {% comment %}
+              <div
+                class="product_info_left_contain_group"
+                data-type="{{ type }}"
+              >
+                {% assign is_first = false %}
+                {% for media in product.media %}
+                  {% if media.media_type == type and is_first == false %}
+                    {% assign has_model = true %}
+                    {% assign is_first = true %}
+                    {{ media | media_tag: class: 'product_info_left_contain_group_item' }}
+                  {% endif %}
+                {% endfor %}
+              </div>
+            {% endcomment %}
           {% endif %}
         {% endfor %}
       </div>
@@ -190,6 +210,28 @@
               </div>
             </div>
             <div class="videothumb_swiper_next">
+              {{- 'swiper-right.svg' | inline_asset_content -}}
+            </div>
+          </div>
+          <div class="modelthumb_swiper_box" data-type="model">
+            <div class="modelthumb_swiper_prev">
+              {{- 'swiper-left.svg' | inline_asset_content -}}
+            </div>
+            <div class="swiper modelthumb_swiper">
+              <div class="swiper-wrapper">
+                {% for media in product.media %}
+                  {% if media.media_type == 'model' %}
+                    <div class="swiper-slide">
+                      <img
+                        src="{{ media.preview_image | image_url: width: 120 }}"
+                        alt="{{ product.title }}"
+                      >
+                    </div>
+                  {% endif %}
+                {% endfor %}
+              </div>
+            </div>
+            <div class="modelthumb_swiper_next">
               {{- 'swiper-right.svg' | inline_asset_content -}}
             </div>
           </div>
@@ -808,7 +850,6 @@
                   </clipPath>
                   </defs>
                 </svg>
-                  
               </div>
             </div>
           {%- when 'custom-liquid' -%}
