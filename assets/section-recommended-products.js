@@ -149,12 +149,6 @@ product_items.forEach(item => {
             section.selector
           );
         });
-        document.body.classList.add('overflow-hidden');
-        const theme_cart = document.querySelector('cart-notification') || document.querySelector('cart-drawer');
-        if (theme_cart && theme_cart.classList.contains('is-empty')) theme_cart.classList.remove('is-empty');
-        setTimeout(() => {
-          theme_cart.classList.add('animate', 'active');
-        });
       })
       .catch((e) => {
         console.error('Error updating cart sections:', e);
