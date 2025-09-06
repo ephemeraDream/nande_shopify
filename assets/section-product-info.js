@@ -602,7 +602,7 @@ document.querySelectorAll(".product_info_option_select_item").forEach(el => {
     if (has_tabletop && parent_index == 0) {
       updateImagesByVariantMedia()
     }
-    if (has_tabletop) {
+    if (document.querySelector(".product_info_left_thumb_select_item.active").dataset.type != 'image') {
       document.querySelector(".product_info_left_thumb_select_item[data-type='image']").click()
     }
     updateVariantPrice()
