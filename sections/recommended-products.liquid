@@ -21,7 +21,7 @@
     <div class="recommended_products_contain swiper">
       <div class="swiper-wrapper">
         {% for product in section.settings.product_list %}
-          <a class="swiper-slide" href="{{ product.url }}">
+          <a class="swiper-slide recommended_products_product" href="{{ product.url }}">
             <div class="recommended_products_img">
               <img src="{{ product.featured_image | image_url }}" alt="{{ product.title }}">
             </div>
