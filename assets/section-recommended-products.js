@@ -163,7 +163,7 @@ product_items.forEach(item => {
   })
 
   function getSectionsToRender() {
-    if (location.pathname.indexOf('/cart')) {
+    if (location.pathname.indexOf('/cart') > -1) {
       return [
         {
           id: 'main-cart-items',
