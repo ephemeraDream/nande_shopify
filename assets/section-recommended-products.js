@@ -75,6 +75,7 @@ product_items.forEach(item => {
 
   select_item.forEach(el => {
     el.addEventListener("click", (event) => {
+      event.preventDefault()
       const target = event.target
       if (target.classList.contains("recommended_products_option_select_item_select")) return
       const parent = target.closest(".recommended_products_option_select")
