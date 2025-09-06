@@ -211,12 +211,12 @@
         if (diff <= 0) {
           updateCountdownInnerHTML(days, hours, minutes, seconds);
           if (itemClassName === 'activity_products_tab_product_saleinfo_countdown_item') {
-            const parent = item.closet(".activity_products_tab_product")
+            const parent = item.closest(".activity_products_tab_product")
             parent.querySelector(".activity_products_tab_product_saleinfo").classList.add("hidden")
             parent.querySelector(".activity_products_tab_product_saleinfo_code").classList.add("hidden")
             parent.querySelector(".activity_products_tab_product_saleinfo_countdown").classList.add("hidden")
           } else {
-            item.closet('.activity_products_tab_saleinfo').classList.add("hidden")
+            item.closest('.activity_products_tab_saleinfo').classList.add("hidden")
           }
           return;
         }

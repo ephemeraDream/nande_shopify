@@ -149,7 +149,7 @@
 
           if (diff <= 0) {
             updateCountdownInnerHTML(days, hours, minutes, seconds);
-            const parent = item.closet(".activity_products_normal_product")
+            const parent = item.closest(".activity_products_normal_product")
             parent.querySelector(".activity_products_normal_product_saleinfo").classList.add("hidden")
             parent.querySelector(".activity_products_normal_product_saleinfo_code").classList.add("hidden")
             parent.querySelector(".activity_products_normal_product_saleinfo_countdown").classList.add("hidden")
