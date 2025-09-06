@@ -265,7 +265,7 @@ function toggleBottomBar() {
   }
 
   waitForElement(targetSelector, (target) => {
-    initObserver(target, 0.4);
+    initObserver(target, 0.3);
   });
 }
 // 等待元素dom加载
