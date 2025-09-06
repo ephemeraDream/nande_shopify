@@ -604,6 +604,7 @@ document.querySelectorAll(".product_info_option_select_item").forEach(el => {
     }
     if (document.querySelector(".product_info_left_thumb_select_item.active").dataset.type != 'image') {
       document.querySelector(".product_info_left_thumb_select_item[data-type='image']").click()
+      resetAllVideos()
     }
     updateVariantPrice()
     updateBuyBtns()
@@ -694,7 +695,13 @@ function updateImagesByVariantMedia() {
   imgboxSwiper.slideTo(0);
   imgthumbSwiper.slideTo(0);
 }
-
+function resetAllVideos() {
+  const videos = document.querySelectorAll('.videomain_swiper video');
+  videos.forEach(video => {
+    video.pause();
+    video.currentTime = 0;
+  });
+}
 
 
 // 捆绑步骤切换
