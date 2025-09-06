@@ -1076,6 +1076,14 @@
   color: #1F1F1F;
   padding: 0.6rem;
   padding-top: 0;
+  display: flex;
+  align-items: baseline;
+  gap: 0.6rem;
+}
+
+.product_info_section .product_info_bundle_product_price_op {
+  text-decoration: line-through;
+  color: #7f7e75;
 }
 
 .product_info_section .product_info_bundle_product_info {
