@@ -48,28 +48,64 @@
             "rows": 4
           }
         },
-        "dropdown_GQRFdX": {
+        "dropdown_FjD8LM": {
           "type": "dropdown",
           "settings": {
             "key": "Wie viele Produkte möchten Sie anfragen?",
             "label": "Wie viele Produkte möchten Sie anfragen?",
-            "field_name": "",
+            "field_name": "Wie viele Produkte möchten Sie anfragen?",
             "required": false
           }
         },
-        "option_LPgzxM": {
-          "type": "option",
+        "group_G4PCVk": {
+          "type": "group",
           "settings": {
-            "group_key": "3-10",
+            "dropdown_key": "Wie viele Produkte möchten Sie anfragen?",
             "label": "3-10",
-            "value": "Wie viele Produkte möchten Sie anfragen?"
+            "key": "Wie viele Produkte möchten Sie anfragen?"
+          }
+        },
+        "group_BBMy3q": {
+          "type": "group",
+          "settings": {
+            "dropdown_key": "Wie viele Produkte möchten Sie anfragen?",
+            "label": "10-30",
+            "key": "Wie viele Produkte möchten Sie anfragen?"
+          }
+        },
+        "group_XpBD4t": {
+          "type": "group",
+          "settings": {
+            "dropdown_key": "Wie viele Produkte möchten Sie anfragen?",
+            "label": "31-50",
+            "key": "Wie viele Produkte möchten Sie anfragen?"
+          }
+        },
+        "group_7VK8Rd": {
+          "type": "group",
+          "settings": {
+            "dropdown_key": "Wie viele Produkte möchten Sie anfragen?",
+            "label": "51-100",
+            "key": "Wie viele Produkte möchten Sie anfragen?"
+          }
+        },
+        "group_Dzew6K": {
+          "type": "group",
+          "settings": {
+            "dropdown_key": "Wie viele Produkte möchten Sie anfragen?",
+            "label": "100+",
+            "key": "Wie viele Produkte möchten Sie anfragen?"
           }
         }
       },
       "block_order": [
         "custom_field_3BE87g",
-        "dropdown_GQRFdX",
-        "option_LPgzxM"
+        "dropdown_FjD8LM",
+        "group_G4PCVk",
+        "group_BBMy3q",
+        "group_XpBD4t",
+        "group_7VK8Rd",
+        "group_Dzew6K"
       ],
       "name": "Contact Form Five",
       "settings": {
