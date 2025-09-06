@@ -91,6 +91,11 @@ function initSwiper() {
       nextEl: ".videomain_swiper .videomain_swiper_next",
       prevEl: ".videomain_swiper .videomain_swiper_prev",
     },
+    on: {
+      slideChange: function () {
+        resetAllVideos()
+      }
+    },
     thumbs: {
       swiper: videothumbSwiper,
     }
@@ -254,6 +259,7 @@ function waitForElement(selector, callback) {
 // 产品媒体切换
 document.querySelectorAll(".product_info_left_thumb_select_item").forEach(btn => {
   btn.addEventListener("click", () => {
+    if (btn.classList.contains("active")) return
     const type = btn.getAttribute("data-type");
 
     document.querySelectorAll(".product_info_left_thumb_select_item").forEach(b => b.classList.remove("active"));
@@ -302,6 +308,10 @@ document.querySelectorAll(".product_info_left_thumb_select_item").forEach(btn =>
     document.querySelectorAll(".product_info_left_contain_group").forEach(group => {
       group.dataset.type === type ? group.classList.add("show") : group.classList.remove("show");
     });
+
+    if (type !== "image") {
+      resetAllVideos()
+    }
   });
 });
 // 数量切换&加购和购买
