@@ -109,4 +109,71 @@ product_items.forEach(item => {
       }
     })
   })
+
+  item.querySelector(".recommended_products_info_btn").addEventListener("click", (e) => {
+    e.stopPropagation()
+    e.preventDefault()
+    const cartFormData = {
+      items: [{ id: currVariant.id, quantity: 1 }],
+    };
+
+    const body = JSON.stringify({
+      ...cartFormData,
+      sections: this.getSectionsToRender().map((section) => section.section),
+      sections_url: window.location.pathname,
+    });
+
+    fetch(`${routes.cart_add_url}`, { ...fetchConfig(), ...{ body } })
+      .then((response) => response.text())
+      .then((state) => {
+        const parsedState = JSON.parse(state);
+        // const sectionIds = ['cart-drawer'];
+        // for (const sectionId of sectionIds) {
+        //   const htmlString = sections[sectionId];
+        //   const html = new DOMParser().parseFromString(htmlString, 'text/html');
+        //   const sourceElement = html.querySelector(`${sectionId}`);
+        //   const targetElement = document.querySelector(`${sectionId}`);
+        //   if (targetElement && sourceElement) {
+        //     targetElement.replaceWith(sourceElement);
+        //   }
+        // }
+        if (parsedState.errors) {
+          alert(parsedState.errors)
+          return
+        }
+        getSectionsToRender().forEach((section) => {
+          const elementToReplace =
+            document.getElementById(section.id).querySelector(section.selector) || document.getElementById(section.id);
+          elementToReplace.innerHTML = getSectionInnerHTML(
+            parsedState.sections[section.section],
+            section.selector
+          );
+        });
+        document.body.classList.add('overflow-hidden');
+        const theme_cart = document.querySelector('cart-notification') || document.querySelector('cart-drawer');
+        if (theme_cart && theme_cart.classList.contains('is-empty')) theme_cart.classList.remove('is-empty');
+        setTimeout(() => {
+          theme_cart.classList.add('animate', 'active');
+        });
+      })
+      .catch((e) => {
+        console.error('Error updating cart sections:', e);
+      }).finally(() => {
+      });
+  })
+
+  function getSectionsToRender() {
+    return [
+      {
+        id: 'CartDrawer',
+        section: 'cart-drawer',
+        selector: '.drawer__inner',
+      },
+      {
+        id: 'cart-icon-bubble',
+        section: 'cart-icon-bubble',
+        selector: '.shopify-section',
+      },
+    ];
+  }
 })
