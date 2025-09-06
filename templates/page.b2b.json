@@ -61,7 +61,7 @@
           "type": "group",
           "settings": {
             "dropdown_key": "Wie viele Produkte möchten Sie anfragen?",
-            "label": "Wie viele Produkte möchten Sie anfragen?",
+            "label": "Bitte wählen Sie Ihre Menge aus",
             "key": "Wie viele Produkte möchten Sie anfragen?"
           }
         },
