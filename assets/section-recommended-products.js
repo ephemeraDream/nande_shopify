@@ -163,18 +163,33 @@ product_items.forEach(item => {
   })
 
   function getSectionsToRender() {
-    return [
-      {
-        id: 'CartDrawer',
-        section: 'cart-drawer',
-        selector: '.drawer__inner',
-      },
-      {
-        id: 'cart-icon-bubble',
-        section: 'cart-icon-bubble',
-        selector: '.shopify-section',
-      },
-    ];
+    if (location.pathname.indexOf('/cart')) {
+      return [
+        {
+          id: 'main-cart-items',
+          section: document.getElementById('main-cart-items').dataset.id,
+          selector: '.shopify-section',
+        },
+        {
+          id: 'cart-icon-bubble',
+          section: 'cart-icon-bubble',
+          selector: '.shopify-section',
+        },
+      ];
+    } else {
+      return [
+        {
+          id: 'CartDrawer',
+          section: 'cart-drawer',
+          selector: '.drawer__inner',
+        },
+        {
+          id: 'cart-icon-bubble',
+          section: 'cart-icon-bubble',
+          selector: '.shopify-section',
+        },
+      ];
+    }
   }
 
   function getSectionInnerHTML(html, selector) {
