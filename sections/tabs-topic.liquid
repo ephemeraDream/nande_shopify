@@ -114,17 +114,19 @@
 </div>
 
 <script>
+// 将switchTab函数定义为全局函数
+function switchTab(idx) {
+  // nav
+  document.querySelectorAll('.tabs_topic .tab-titles li').forEach(li=>{
+    li.classList.toggle('active', li.dataset.tab == idx);
+  });
+  // pannel
+  document.querySelectorAll('.tabs_topic [data-tab-panel]').forEach(p=>{
+    p.classList.toggle('hidden', p.dataset.tabPanel != idx);
+  });
+}
+
 (() => {
-  function switchTab(idx) {
-    // nav
-    document.querySelectorAll('.tabs_topic .tab-titles li').forEach(li=>{
-      li.classList.toggle('active', li.dataset.tab == idx);
-    });
-    // pannel
-    document.querySelectorAll('.tabs_topic [data-tab-panel]').forEach(p=>{
-      p.classList.toggle('hidden', p.dataset.tabPanel != idx);
-    });
-  }
   const sectionId = '{{ section.id }}';
   document.addEventListener('DOMContentLoaded', () => {
     const sectionEl = document.getElementById('polka_dot_tabs-' + sectionId);
