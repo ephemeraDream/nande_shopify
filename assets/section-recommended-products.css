@@ -273,4 +273,12 @@
     right: 0rem;
     display: none;
   }
+  .recommended_products .recommended_products_info_btn{
+    font-size: 2rem;
+  }
+}
+@media screen and (max-width: 768px) {
+  .recommended_products .recommended_products_info_btn{
+    font-size: 1.6rem;
+  }
 }
