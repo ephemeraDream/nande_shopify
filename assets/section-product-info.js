@@ -292,8 +292,8 @@ function toggleBottomBar() {
     initObserver(target, 0.3);
   });
 
-  // 直接查询 footer 标签（主题中通常为 <footer>），存在则监听
-  const footerEl = document.querySelector('footer');
+  // 监听自定义页脚容器，避免遮挡
+  const footerEl = document.querySelector('.footer_simple_section');
   if (footerEl) {
     initFooterObserver(footerEl);
   }
