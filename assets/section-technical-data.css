@@ -100,6 +100,9 @@
 .technical_data_contain_info_item_value{
   width: 40%;
 }
+.technical_data .technical_data_contain_info_item .technical_data_contain_info_item_value a{
+  color: #1F1F1F;
+}
 @media screen and (max-width: 1024px) {
 .technical_data .technical_data_head_item {
   font-size: 1.8rem;
