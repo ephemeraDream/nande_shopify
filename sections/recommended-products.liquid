@@ -126,7 +126,7 @@
     new Swiper('.recommended_products_section .swiper', {
       loop: true,
       slidesPerView: 1.2,
-      spaceBetween: 46,
+      spaceBetween: 10,
       navigation: {
         nextEl: '.recommended_products_next',
         prevEl: '.recommended_products_prev',
@@ -134,12 +134,15 @@
       breakpoints: {
         768: {
           slidesPerView: 2.2,
+          spaceBetween: 20,
         },
         1024: {
           slidesPerView: 3,
+          spaceBetween: 40,
         },
         1440: {
           slidesPerView: {{ section.settings.number | json }},
+          spaceBetween: 40,
         }
       }
     });
