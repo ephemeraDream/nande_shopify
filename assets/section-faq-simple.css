@@ -165,4 +165,7 @@
   .faq_simple .faq_simple_item.active .faq_simple_answer {
     padding-bottom: 2rem;
   }
+  .faq_simple .faq_simple_text_contain {
+    flex-direction: column;
+}
 }
