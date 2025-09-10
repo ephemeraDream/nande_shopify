@@ -146,6 +146,9 @@
   .celebrity_swiper .swiper_btn_white.swiper_btn_white_prev {
     display: none;
   }
+  .celebrity_swiper .celebrity_swiper_item_name {
+    font-size: 2.6rem;
+}
 }
 
 /* .celebrity_swiper .celebrity_swiper_prev,
