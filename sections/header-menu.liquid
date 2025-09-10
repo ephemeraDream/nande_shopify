@@ -325,15 +325,15 @@
                               </div>
                               <div class="header_menu_item_submenu_product_info">
                                 <div>
-                                  <div class="header_menu_item_submenu_product_title">
+                                  <h4 class="header_menu_item_submenu_product_title">
                                     {% if show_info.title.value != blank %}
                                       {{ show_info.title.value }}
                                     {% else %}
                                       Maidesite
                                     {% endif %}
-                                  </div>
+                                  </h4>
 
-                                  <div class="header_menu_item_submenu_product_desc">
+                                  <div class="header_menu_item_submenu_product_desc text-body">
                                     {% if show_info.description.value != blank %}
                                       {{ show_info.description | metafield_tag }}
                                     {% else %}
@@ -450,8 +450,7 @@
       product_collections.forEach((item) => {
         new Swiper(item.querySelector('.swiper'), {
           slidesPerView: 1,
-          loop: true,
-          loopFillGroupWithBlank: true,
+          loop: false,
           observer: true,
         });
       });
