@@ -72,7 +72,8 @@
 }
 
 .technical_data .technical_data_contain_info_item {
-  height: 43px;
+  min-height: 43px;
+  height: auto;
   display: flex;
   align-items: center;
   background-color: #F2F1ED;
