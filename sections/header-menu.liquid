@@ -386,18 +386,18 @@
       product_collections.forEach((item) => {
         const swiperWrapper = item.querySelector('.swiper .swiper-wrapper');
         const slides = swiperWrapper.querySelectorAll('.swiper-slide');
-        const perView = 3;
+        {% comment %} const perView = 3;
 
         if (slides.length < perView * 2) {
           const cloneCount = perView * 2 - slides.length;
           for (let i = 0; i < cloneCount; i++) {
             swiperWrapper.appendChild(slides[i % slides.length].cloneNode(true));
           }
-        }
+        } {% endcomment %}
         new Swiper(item.querySelector('.swiper'), {
           slidesPerView: 3,
           spaceBetween: 30,
-          slidesPerGroup: 3,
+          {% comment %} slidesPerGroup: 3, {% endcomment %}
           {% comment %} loop: true,
           loopFillGroupWithBlank: true, {% endcomment %}
           navigation: {
