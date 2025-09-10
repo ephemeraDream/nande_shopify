@@ -119,7 +119,7 @@
                     <div>
                       {{ product.price | money_without_trailing_zeros }}
                     </div>
-                    {% if product.compare_at_price != blank %}
+                    {% if product.compare_at_price != blank and product.compare_at_price > product.price %}
                       <div class="activity_products_tab_product_price_cap">
                         {{ product.compare_at_price | money_without_trailing_zeros }}
                       </div>
@@ -157,94 +157,101 @@
 </div>
 
 <script>
-  (() => {
-    document.querySelectorAll('.activity_products_tab_head_item').forEach((item) => {
-      item.addEventListener('click', () => {
-        if (item.classList.contains('active')) return;
-        document.querySelector('.activity_products_tab_head_item.active').classList.remove('active');
-        item.classList.add('active');
-        const value = item.dataset.value;
-        document.querySelector('.activity_products_tab_contain.active').classList.remove('active');
-        document.querySelector(`.activity_products_tab_contain[data-value="${value}"]`).classList.add('active');
-      });
+(() => {
+  document.querySelectorAll('#shopify-section-{{ section.id }} .activity_products_tab_head_item').forEach((item) => {
+    item.addEventListener('click', () => {
+      if (item.classList.contains('active')) return;
+      document.querySelector('.activity_products_tab_head_item.active').classList.remove('active');
+      item.classList.add('active');
+      const value = item.dataset.value;
+      document.querySelector('.activity_products_tab_contain.active').classList.remove('active');
+      document.querySelector(`.activity_products_tab_contain[data-value="${value}"]`).classList.add('active');
     });
+  });
 
-    const initCountDown = (countdownEl, itemClassName) => {
-      {% comment %} const countdownEl = document.querySelectorAll('.activity_products_tab_product_saleinfo_countdown'); {% endcomment %}
-      if (!countdownEl.length) return;
+  const initCountDown = (countdownEl, itemClassName) => {
+    {% comment %} const countdownEl = document.querySelectorAll('.activity_products_tab_product_saleinfo_countdown'); {% endcomment %}
+    if (!countdownEl.length) return;
 
-      countdownEl.forEach((item) => {
-        const endDateStr = item.getAttribute('data-end-date');
-        const endDate = new Date(endDateStr);
+    countdownEl.forEach((item) => {
+      const endDateStr = item.getAttribute('data-end-date');
+      const endDate = new Date(endDateStr);
 
-        const updateCountdownInnerHTML = (days, hours, minutes, seconds) => {
-          if (days > 0) {
-            item.querySelector(`.${itemClassName}[data-type='day']`).innerHTML =
-              String(days).padStart(2, '0');
-          }
-          item.querySelector(`.${itemClassName}[data-type='hour']`).innerHTML =
-            String(hours).padStart(2, '0');
-          item.querySelector(`.${itemClassName}[data-type='minute']`).innerHTML =
-            String(minutes).padStart(2, '0');
-          item.querySelector(`.${itemClassName}[data-type='second']`).innerHTML =
-            String(seconds).padStart(2, '0');
+      const updateCountdownInnerHTML = (days, hours, minutes, seconds) => {
+        if (days > 0) {
+          item.querySelector(`.${itemClassName}[data-type='day']`).innerHTML =
+            String(days).padStart(2, '0');
+        }
+        item.querySelector(`.${itemClassName}[data-type='hour']`).innerHTML =
+          String(hours).padStart(2, '0');
+        item.querySelector(`.${itemClassName}[data-type='minute']`).innerHTML =
+          String(minutes).padStart(2, '0');
+        item.querySelector(`.${itemClassName}[data-type='second']`).innerHTML =
+          String(seconds).padStart(2, '0');
 
-          if (
-            days == 0 &&
-            item.querySelector(`.${itemClassName}[data-type='day']`)
-          ) {
-            item
-              .querySelector(`.${itemClassName}[data-type='day'] + span`)
-              .remove();
-            item.querySelector(`.${itemClassName}[data-type='day']`).remove();
-          }
-        };
+        if (
+          days == 0 &&
+          item.querySelector(`.${itemClassName}[data-type='day']`)
+        ) {
+          item
+            .querySelector(`.${itemClassName}[data-type='day'] + span`)
+            .remove();
+          item.querySelector(`.${itemClassName}[data-type='day']`).remove();
+        }
+      };
 
-        function updateCountdown() {
-          const now = new Date();
-          const diff = endDate - now;
-          let days = 0,
-            hours = 0,
-            minutes = 0,
-            seconds = 0;
+      function updateCountdown() {
+        const now = new Date();
+        const diff = endDate - now;
+        let days = 0,
+          hours = 0,
+          minutes = 0,
+          seconds = 0;
 
-          if (diff <= 0) {
-            updateCountdownInnerHTML(days, hours, minutes, seconds);
-            item.classList.add("hidden")
-            return;
-          }
-
-          days = Math.floor(diff / (1000 * 60 * 60 * 24));
-          hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
-          minutes = Math.floor((diff / (1000 * 60)) % 60);
-          seconds = Math.floor((diff / 1000) % 60);
-
+        if (diff <= 0) {
           updateCountdownInnerHTML(days, hours, minutes, seconds);
+          if (itemClassName === 'activity_products_tab_product_saleinfo_countdown_item') {
+            const parent = item.closest(".activity_products_tab_product")
+            parent.querySelector(".activity_products_tab_product_saleinfo").classList.add("hidden")
+            parent.querySelector(".activity_products_tab_product_saleinfo_code").classList.add("hidden")
+            parent.querySelector(".activity_products_tab_product_saleinfo_countdown").classList.add("hidden")
+          } else {
+            item.closest('.activity_products_tab_saleinfo').classList.add("hidden")
+          }
+          return;
         }
 
-        updateCountdown();
-        setInterval(updateCountdown, 1000);
-      });
-    };
+        days = Math.floor(diff / (1000 * 60 * 60 * 24));
+        hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
+        minutes = Math.floor((diff / (1000 * 60)) % 60);
+        seconds = Math.floor((diff / 1000) % 60);
 
-    initCountDown(document.querySelectorAll('.activity_products_tab_product_saleinfo_countdown'), "activity_products_tab_product_saleinfo_countdown_item");
-    initCountDown(document.querySelectorAll('.activity_products_tab_saleinfo_countdown'), "activity_products_tab_saleinfo_countdown_item");
+        updateCountdownInnerHTML(days, hours, minutes, seconds);
+      }
 
-    document.querySelectorAll(".activity_products_tab_saleinfo_btn").forEach(item => {
-      item.addEventListener('click', async (e) => {
-        e.preventDefault();
-        const code = item.getAttribute('data-code');
-        await navigator.clipboard.writeText(code);
-
-        const originalText = item.innerHTML;
-        item.innerHTML = 'Copied';
-
-        setTimeout(() => {
-          item.innerHTML = originalText;
-        }, 5000);
-      });
+      updateCountdown();
+      setInterval(updateCountdown, 1000);
     });
-  })();
+  };
+
+  initCountDown(document.querySelectorAll('#shopify-section-{{ section.id }} .activity_products_tab_product_saleinfo_countdown'), "activity_products_tab_product_saleinfo_countdown_item");
+  initCountDown(document.querySelectorAll('#shopify-section-{{ section.id }} .activity_products_tab_saleinfo_countdown'), "activity_products_tab_saleinfo_countdown_item");
+
+  document.querySelectorAll("#shopify-section-{{ section.id }} .activity_products_tab_saleinfo_btn").forEach(item => {
+    item.addEventListener('click', async (e) => {
+      e.preventDefault();
+      const code = item.getAttribute('data-code');
+      await navigator.clipboard.writeText(code);
+
+      const originalText = item.innerHTML;
+      item.innerHTML = 'Copied';
+
+      setTimeout(() => {
+        item.innerHTML = originalText;
+      }, 5000);
+    });
+  });
+})();
 </script>
 
 {% schema %}

@@ -1,86 +1,90 @@
-
 {%- style -%}
-{%- if section.settings.height_mode == 'fixed' -%}
-  .section_banner .swiper-wrapper.fixed-height{
-    height: {{ section.settings.fixed_height_desktop }}px;
-  }
+  {%- if section.settings.height_mode == 'fixed' -%}
+    .section_banner .swiper-wrapper.fixed-height{
+      height: {{ section.settings.fixed_height_desktop }}px;
+    }
+    {%- if section.settings.mobile_stacked -%}
+      @media screen and (max-width: 768px) {
+        .section_banner .swiper-wrapper.fixed-height img,.section_banner .swiper-wrapper.fixed-height video{
+          height: {{ section.settings.fixed_height_mobile }}px;
+        }
+        .section_banner .swiper-wrapper.fixed-height {
+          height: auto;
+        }
+      }
+    {%- else -%}
+      @media screen and (max-width: 768px) {
+        .section_banner .swiper-wrapper.fixed-height{
+          height: {{ section.settings.fixed_height_mobile }}px;
+        }
+      }
+    {%- endif -%}
+  {%- endif -%}
   {%- if section.settings.mobile_stacked -%}
     @media screen and (max-width: 768px) {
-      .section_banner .swiper-wrapper.fixed-height img,.section_banner .swiper-wrapper.fixed-height video{
-        height: {{ section.settings.fixed_height_mobile }}px;
-      }
-      .section_banner .swiper-wrapper.fixed-height {
-        height: auto;
-      }
+    .section_banner .swiper-slide .session-box-padding.mobile-stacked{
+      position: relative;
+      height: auto;
+      min-height: 280px;
+      padding-top:2rem;
+      padding-bottom:2rem;
     }
-  {%- else -%}
-    @media screen and (max-width: 768px) {
-      .section_banner .swiper-wrapper.fixed-height{
-        height: {{ section.settings.fixed_height_mobile }}px;
-      }
+    .section_banner .swiper-slide .session-box-padding.mobile-stacked .section_banner_info{
+      top:unset;left:unset;bottom:unset;right:unset;transform:unset;
     }
+  }
   {%- endif -%}
-{%- endif -%}
-{%- if section.settings.mobile_stacked -%}
-  @media screen and (max-width: 768px) {
-  .section_banner .swiper-slide .session-box-padding.mobile-stacked{ 
-    position: relative;
-    height: auto;
-    min-height: 280px;
-    padding-top:2rem;
-    padding-bottom:2rem;
-  }
-  .section_banner .swiper-slide .session-box-padding.mobile-stacked .section_banner_info{
-    top:unset;left:unset;bottom:unset;right:unset;transform:unset;
-  }
-}
-{%- endif -%}
 
-{%- if section.settings.autoplay -%}
-  .section_banner {
-    --duration: {{ section.settings.autoplay_speed }}s;
-    --play-state: paused;
+  {%- if section.settings.autoplay -%}
+    .section_banner {
+      --duration: {{ section.settings.autoplay_speed }}s;
+      --play-state: paused;
+    }
+
+  {%- endif -%}
+
+  .slideshow-ctrl {
+    --text-color: {{ section.settings.pagination_color.red }} {{ section.settings.pagination_color.green }} {{ section.settings.pagination_color.blue }};
   }
-  
-{%- endif -%}
 
-.slideshow-ctrl {
-  --text-color: {{ section.settings.pagination_color.red }} {{ section.settings.pagination_color.green }} {{ section.settings.pagination_color.blue }};
-}
-
-.bg_color {
-  background-color: {{ section.settings.background_color }};
-}
-@media screen and (min-width: 768px) {
   .bg_color {
-  background-color:transparent;
- }
-}
+    background-color: {{ section.settings.background_color }};
+  }
+  @media screen and (min-width: 768px) {
+    .bg_color {
+    background-color:transparent;
+   }
+  }
 {%- endstyle -%}
 
 {{ 'section-banner.css' | asset_url | stylesheet_tag }}
 
-<div class="section_banner swiper bg_color" data-autoplay="{{ section.settings.autoplay }}" data-speed="{{ section.settings.autoplay_speed }}" data-transition="{{ section.settings.transition }}" >
+<div
+  class="section_banner swiper bg_color"
+  data-autoplay="{{ section.settings.autoplay }}"
+  data-speed="{{ section.settings.autoplay_speed }}"
+  data-transition="{{ section.settings.transition }}"
+>
   <div class="swiper-wrapper {{ section.settings.height_mode }}-height" aria-live="polite">
     {% for block in section.blocks %}
       <div class="swiper-slide">
         {% if block.settings.file_type == 'image' %}
           {% if block.settings.file_image != blank %}
             <a href="{{ block.settings.link }}">
-            {{-
-              block.settings.file_image
-              | image_url: width: block.settings.file_image.width
-              | image_tag: alt: block.settings.file_image.alt, class: 'swiper-slide_img_pc'
-            -}}
+              {{-
+                block.settings.file_image
+                | image_url: width: block.settings.file_image.width
+                | image_tag: alt: block.settings.file_image.alt, class: 'swiper-slide_img_pc'
+              -}}
             </a>
           {% endif %}
           {% if block.settings.file_image_pe != blank %}
             <a href="{{ block.settings.link }}">
-            {{-
-              block.settings.file_image_pe
-              | image_url: width: block.settings.file_image_pe.width
-              | image_tag: alt: block.settings.file_image_pe.alt, class: 'swiper-slide_img_pe'
-            -}}
+              {{-
+                block.settings.file_image_pe
+                | image_url: width: block.settings.file_image_pe.width
+                | image_tag: alt: block.settings.file_image_pe.alt, class: 'swiper-slide_img_pe'
+              -}}
             </a>
           {% endif %}
         {% else %}
@@ -115,7 +119,10 @@
         {% endif %}
         <div class="session-box-padding {% if section.settings.mobile_stacked %}mobile-stacked{% endif %}">
           <div class="session-box-inner">
-            <div class="section_banner_info section_banner_info_{{ block.settings.file_position }} {{ block.settings.overlay_text_align }}" style="color: {{ block.settings.transparent_content_color }};">
+            <div
+              class="section_banner_info section_banner_info_{{ block.settings.file_position }} {{ block.settings.overlay_text_align }}"
+              style="color: {{ block.settings.transparent_content_color }};"
+            >
               <h5 class="section_banner_sub_title">{{ block.settings.sub_title }}</h5>
               <h2 class="section_banner_info_title">{{ block.settings.title }}</h2>
               <div class="section_banner_info_text text-body">{{ block.settings.text }}</div>
@@ -147,14 +154,34 @@
       </div>
     {% endfor %}
   </div>
+  <div class="section_banner_swiper_prev swiper_btn_white swiper_btn_white_prev">
+    {{- 'swiper-left.svg' | inline_asset_content -}}
+  </div>
+  <div class="section_banner_swiper_next swiper_btn_white swiper_btn_white_next">
+    {{- 'swiper-right.svg' | inline_asset_content -}}
+  </div>
   {% comment %} 控件组 {% endcomment %}
   {%- if section.blocks.size > 0 -%}
     <div class="slideshow-ctrl {{ section.settings.nav_position }}">
-      {%- if section.settings.nav_style == 'slideshow_nav_dots' or section.settings.nav_style == 'slideshow_nav_lines' -%}
+      {%- if section.settings.nav_style == 'slideshow_nav_dots'
+        or section.settings.nav_style == 'slideshow_nav_lines'
+      -%}
         <div class="slideshow-pagination flex items-center">
           {%- for block in section.blocks -%}
-            <div class="page-btn" data-index="{{ forloop.index0 }}" aria-controls="slideshow-{{ section.id }}"{% if forloop.first %} aria-current="true"{% endif %}>
-              <span class="visually-hidden">{{ 'sections.slideshow.load_slide' | t }} {{ forloop.index }} {{ 'general.slider.of' | t }} {{ forloop.length }}</span>
+            <div
+              class="page-btn"
+              data-index="{{ forloop.index0 }}"
+              aria-controls="slideshow-{{ section.id }}"
+              {% if forloop.first %}
+                aria-current="true"
+              {% endif %}
+            >
+              <span class="visually-hidden">
+                {{- 'sections.slideshow.load_slide' | t }}
+                {{ forloop.index }}
+                {{ 'general.slider.of' | t }}
+                {{ forloop.length -}}
+              </span>
               {%- if section.settings.nav_style == 'slideshow_nav_lines' -%}
                 <span class="page-btn__line block relative overflow-hidden"></span>
               {%- else -%}
@@ -323,7 +350,15 @@
       console.log(playing);
     });
   }
-    
+
+  document.querySelector(".section_banner_swiper_prev").addEventListener("click", () => {
+    swiper.slidePrev()
+  })
+
+  document.querySelector(".section_banner_swiper_next").addEventListener("click", () => {
+    swiper.slideNext()
+  })
+
 
     const countdownEl = document.querySelectorAll('.section_banner_countdown_box');
     if (!countdownEl.length) return;
@@ -366,6 +401,7 @@
 
         if (diff <= 0) {
           updateCountdownInnerHTML(days, hours, minutes, seconds);
+          item.classList.add("hidden")
           return;
         }
 
@@ -541,7 +577,7 @@
       "step": 1,
       "unit": "s",
       "default": 5
-    },
+    }
   ],
   "blocks": [
     {
@@ -712,5 +748,3 @@
   ]
 }
 {% endschema %}
-
-

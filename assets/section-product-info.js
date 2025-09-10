@@ -91,8 +91,43 @@ function initSwiper() {
       nextEl: ".videomain_swiper .videomain_swiper_next",
       prevEl: ".videomain_swiper .videomain_swiper_prev",
     },
+    on: {
+      slideChange: function () {
+        resetAllVideos()
+      }
+    },
     thumbs: {
       swiper: videothumbSwiper,
+    }
+  });
+
+  modelthumbSwiper = new Swiper(".modelthumb_swiper", {
+    // loop: true,
+    spaceBetween: 8,
+    slidesPerView: 4,
+    observer: true,
+    observeParents: true,
+    watchSlidesProgress: true,
+    navigation: {
+      nextEl: ".modelthumb_swiper_box .modelthumb_swiper_next",
+      prevEl: ".modelthumb_swiper_box .modelthumb_swiper_prev",
+    },
+  });
+  modelboxSwiper = new Swiper(".modelmain_swiper", {
+    // loop: true,
+    effect: "fade",
+    fadeEffect: {
+      crossFade: true,
+    },
+    observer: true,
+    observeParents: true,
+    spaceBetween: 0,
+    navigation: {
+      nextEl: ".modelmain_swiper .modelmain_swiper_next",
+      prevEl: ".modelmain_swiper .modelmain_swiper_prev",
+    },
+    thumbs: {
+      swiper: modelthumbSwiper,
     }
   });
 }
@@ -230,7 +265,7 @@ function toggleBottomBar() {
   }
 
   waitForElement(targetSelector, (target) => {
-    initObserver(target, 0.4);
+    initObserver(target, 0.3);
   });
 }
 // 等待元素dom加载
@@ -254,6 +289,7 @@ function waitForElement(selector, callback) {
 // 产品媒体切换
 document.querySelectorAll(".product_info_left_thumb_select_item").forEach(btn => {
   btn.addEventListener("click", () => {
+    if (btn.classList.contains("active")) return
     const type = btn.getAttribute("data-type");
 
     document.querySelectorAll(".product_info_left_thumb_select_item").forEach(b => b.classList.remove("active"));
@@ -298,10 +334,20 @@ document.querySelectorAll(".product_info_left_thumb_select_item").forEach(btn =>
     } else {
       videothumb_swiper_box.style.display = "none"
     }
+    const modelthumb_swiper_box = document.querySelector(".modelthumb_swiper_box")
+    if (type === "model") {
+      modelthumb_swiper_box.style.display = "flex"
+    } else {
+      modelthumb_swiper_box.style.display = "none"
+    }
 
     document.querySelectorAll(".product_info_left_contain_group").forEach(group => {
       group.dataset.type === type ? group.classList.add("show") : group.classList.remove("show");
     });
+
+    if (type !== "video") {
+      resetAllVideos()
+    }
   });
 });
 // 数量切换&加购和购买
@@ -602,8 +648,9 @@ document.querySelectorAll(".product_info_option_select_item").forEach(el => {
     if (has_tabletop && parent_index == 0) {
       updateImagesByVariantMedia()
     }
-    if (has_tabletop) {
+    if (document.querySelector(".product_info_left_thumb_select_item.active").dataset.type != 'image') {
       document.querySelector(".product_info_left_thumb_select_item[data-type='image']").click()
+      resetAllVideos()
     }
     updateVariantPrice()
     updateBuyBtns()
@@ -694,7 +741,13 @@ function updateImagesByVariantMedia() {
   imgboxSwiper.slideTo(0);
   imgthumbSwiper.slideTo(0);
 }
-
+function resetAllVideos() {
+  const videos = document.querySelectorAll('.videomain_swiper video');
+  videos.forEach(video => {
+    video.pause();
+    video.currentTime = 0;
+  });
+}
 
 
 // 捆绑步骤切换
@@ -884,8 +937,14 @@ document.querySelectorAll(".product_info_bundle_product").forEach(item => {
   // 捆绑产品弹窗
   const viewdetail = item.querySelector(".product_info_bundle_product_viewdetail")
   const modal = item.querySelector(".common_modal")
+  const confirm_btn = item.querySelector(".product_info_bundle_modal_btn")
   viewdetail.addEventListener("click", (e) => {
     e.stopPropagation()
+    if (item.classList.contains("selected")) {
+      confirm_btn.innerHTML = "Entfernen"
+    } else {
+      confirm_btn.innerHTML = "Auswählen"
+    }
     modal.style.display = "block";
     document.body.style.overflowY = "hidden";
 
@@ -905,12 +964,11 @@ document.querySelectorAll(".product_info_bundle_product").forEach(item => {
     });
   })
   // 捆绑弹窗确定
-  const confirm_btn = item.querySelector(".product_info_bundle_modal_btn")
   confirm_btn.addEventListener("click", () => {
     // item.querySelector(".product_info_bundle_product_img img").src = currVariant.featured_image.src
     // item.querySelector(".product_info_bundle_product_price").innerHTML = `+${moneyWithoutTrailingZeros(currVariant.price)}`
     // item.setAttribute("data-variant-id", currVariant.id)
-    handleProductClick(true)
+    handleProductClick()
     modal.style.display = "none";
     document.body.style.overflowY = "auto";
   })

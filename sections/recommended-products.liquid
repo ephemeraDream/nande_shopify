@@ -21,35 +21,91 @@
     <div class="recommended_products_contain swiper">
       <div class="swiper-wrapper">
         {% for product in section.settings.product_list %}
-          <a class="swiper-slide" href="{{ product.url }}">
+          <a class="swiper-slide recommended_products_product" href="{{ product.url }}" data-id="{{ product.id }}">
             <div class="recommended_products_img">
               <img src="{{ product.featured_image | image_url }}" alt="{{ product.title }}">
             </div>
             <div class="recommended_products_info">
-              {% assign product_title_top = block.settings.select_product.metafields.custom.product_title_top %}
-              <h3 class="product_title_top">
-                {% if product_title_top != blank %}
-                  {{ product_title_top }}
-                {% else %}
-                  Maidesite
-                {% endif %}
-              </h3>
-              <h3 class="recommended_products_info_title">{{ product.title }}</h3>
-              <div class="recommended_products_info_flex">
-                <div class="recommended_products_info_price">
-                  {{ product.price | money_without_trailing_zeros }}
-                  {% if product.compare_at_price %}
-                    <span class="recommended_products_info_price_op">
-                      {{- product.compare_at_price | money_without_trailing_zeros -}}
-                    </span>
+              <div>
+                {% assign product_title_top = product.metafields.custom.product_title_top %}
+                <h4 class="product_title_top">
+                  {% if product_title_top != blank %}
+                    {{ product_title_top }}
+                  {% else %}
+                    Maidesite
                   {% endif %}
-                </div>
-                <div
-                  class="recommended_products_info_btn"
-                  data-value="{{ product.selected_or_first_available_variant.id }}"
-                >
-                  {{- 'icon-faq-close.svg' | inline_asset_content -}}
-                </div>
+                </h4>
+                <h4 class="recommended_products_info_title">{{ product.title }}</h4>
+                <h4 class="recommended_products_info_price">
+                  {{ product.selected_or_first_available_variant.price | money_without_trailing_zeros }}
+                </h4>
+                {% comment %}
+                  <div class="recommended_products_info_flex">
+                    <div class="recommended_products_info_price">
+                      {{ product.price | money_without_trailing_zeros }}
+                      {% if product.compare_at_price %}
+                        <span class="recommended_products_info_price_op">
+                          {{- product.compare_at_price | money_without_trailing_zeros -}}
+                        </span>
+                      {% endif %}
+                    </div>
+                    <div
+                      class="recommended_products_info_btn"
+                      data-value="{{ product.selected_or_first_available_variant.id }}"
+                    >
+                      {{- 'icon-faq-close.svg' | inline_asset_content -}}
+                    </div>
+                  </div>
+                {% endcomment %}
+                {%- for option in product.options_with_values -%}
+                  {% assign option_hanlde = option.name | handle %}
+                  <div class="recommended_products_option_item">
+                    <div class="recommended_products_option_label">{{ option.name }}</div>
+                    <div
+                      class="recommended_products_option_select"
+                      select-type="{% if option_hanlde contains "farbe" %}circle{% else %}box{% endif %}"
+                      data-index="{{ forloop.index0 }}"
+                    >
+                      {% assign index = 'option' | append: forloop.index %}
+                      {%- for value in option.values -%}
+                        {% assign available_variant = product.variants | where: index, value | where: 'available' %}
+                        {% if available_variant.size > 0 %}
+                          {% if option_hanlde contains 'farbe' %}
+                            {% assign color = '' %}
+                            {% assign color_img = '' %}
+                            {% for color_item in product.metafields.custom.color_option.value %}
+                              {% if color_item.name == value.name %}
+                                {% assign color = color_item.value %}
+                                {% assign color_img = color_item.image %}
+                              {% endif %}
+                            {% endfor %}
+                            <div
+                              data-value="{{ value }}"
+                              class="recommended_products_option_select_item{% if color == '' %} recommended_products_option_select_item_none{% endif %}{% if value.selected %} recommended_products_option_select_item_select{% endif %}"
+                              {% if color_img != blank %}
+                                style="background: url({{ color_img | image_url }}) no-repeat no-repeat center center"
+                              {% elsif color != '' %}
+                                style="background-color: {{ color }}"
+                              {% endif %}
+                              title="{{ value }}"
+                            ></div>
+                          {% else %}
+                            <div
+                              class="recommended_products_option_select_item{% if value.selected %} recommended_products_option_select_item_select{% endif %}"
+                              data-value="{{ value }}"
+                            >
+                              {{ value }}
+                            </div>
+                          {% endif %}
+                        {% endif %}
+                      {% endfor %}
+                    </div>
+                  </div>
+                {% endfor %}
+              </div>
+              <div class="recommended_products_info_btn nd-btn">
+                {{ 'products.product.add_to_cart' | t }}
+                {{ 'icon-right-arrow.svg' | inline_asset_content }}
               </div>
             </div>
           </a>
@@ -87,78 +143,31 @@
         }
       }
     });
-
-    document.querySelectorAll(".recommended_products .swiper-slide .recommended_products_info_btn").forEach(item => {
-      item.addEventListener("click", (e) => {
-        e.stopPropagation()
-        e.preventDefault()
-        const id = item.dataset.value
-        const cartFormData = {
-          items: [{ id: id, quantity: 1 }],
-        };
-
-        const body = JSON.stringify({
-          ...cartFormData,
-          sections: this.getSectionsToRender().map((section) => section.section),
-          sections_url: window.location.pathname,
-        });
-
-        fetch(`${routes.cart_add_url}`, { ...fetchConfig(), ...{ body } })
-          .then((response) => response.text())
-          .then((state) => {
-            const parsedState = JSON.parse(state);
-            // const sectionIds = ['cart-drawer'];
-            // for (const sectionId of sectionIds) {
-            //   const htmlString = sections[sectionId];
-            //   const html = new DOMParser().parseFromString(htmlString, 'text/html');
-            //   const sourceElement = html.querySelector(`${sectionId}`);
-            //   const targetElement = document.querySelector(`${sectionId}`);
-            //   if (targetElement && sourceElement) {
-            //     targetElement.replaceWith(sourceElement);
-            //   }
-            // }
-            if (parsedState.errors) {
-              alert(parsedState.errors)
-              return
-            }
-            getSectionsToRender().forEach((section) => {
-              const elementToReplace =
-                document.getElementById(section.id).querySelector(section.selector) || document.getElementById(section.id);
-              elementToReplace.innerHTML = getSectionInnerHTML(
-                parsedState.sections[section.section],
-                section.selector
-              );
-            });
-            document.body.classList.add('overflow-hidden');
-            const theme_cart = document.querySelector('cart-notification') || document.querySelector('cart-drawer');
-            if (theme_cart && theme_cart.classList.contains('is-empty')) theme_cart.classList.remove('is-empty');
-            setTimeout(() => {
-              theme_cart.classList.add('animate', 'active');
-            });
-          })
-          .catch((e) => {
-            console.error('Error updating cart sections:', e);
-          }).finally(() => {
-          });
-      })
-    })
-
-    function getSectionsToRender() {
-      return [
-        {
-          id: 'CartDrawer',
-          section: 'cart-drawer',
-          selector: '.drawer__inner',
-        },
-        {
-          id: 'cart-icon-bubble',
-          section: 'cart-icon-bubble',
-          selector: '.shopify-section',
-        },
-      ];
-    }
   })()
 </script>
+<script type="application/json" id="recommended_products_data">
+  {% for currency in shop.enabled_currencies %}
+    {% if currency.iso_code == shop.currency %}
+      {%- assign currency_symbol = currency.symbol -%}
+      {% break %}
+    {% endif %}
+  {% endfor %}
+  {
+    {% for product in section.settings.product_list %}
+      "{{ product.id }}": {
+        "product": {{- product | json -}},
+        "metafields": {
+          "custom": {
+            "product_model": {{ product.metafields.custom.product_model | json }}
+          }
+        },
+        "variant": {{ product.selected_or_first_available_variant | json }},
+        "symbol": {{ currency_symbol | json }}
+      }{% unless forloop.last %},{% endunless %}
+    {% endfor %}
+  }
+</script>
+<script src="{{ 'section-recommended-products.js' | asset_url }}"></script>
 
 {% schema %}
 {

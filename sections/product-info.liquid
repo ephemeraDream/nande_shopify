@@ -117,19 +117,39 @@
             </div>
           {% endif %}
           {% if type == 'model' %}
-            <div
-              class="product_info_left_contain_group"
-              data-type="{{ type }}"
-            >
-              {% assign is_first = false %}
-              {% for media in product.media %}
-                {% if media.media_type == type and is_first == false %}
-                  {% assign has_model = true %}
-                  {% assign is_first = true %}
-                  {{ media | media_tag: class: 'product_info_left_contain_group_item' }}
-                {% endif %}
-              {% endfor %}
+            <div class="swiper modelmain_swiper product_info_left_contain_group" data-type="{{ type }}">
+              <div class="swiper-wrapper">
+                {% for media in product.media %}
+                  {% if media.media_type == type %}
+                    {% assign has_model = true %}
+                    <div class="swiper-slide">
+                      {{ media | media_tag: class: 'product_info_left_contain_group_item' }}
+                    </div>
+                  {% endif %}
+                {% endfor %}
+              </div>
+              <div class="modelmain_swiper_prev">
+                {{- 'swiper-left.svg' | inline_asset_content -}}
+              </div>
+              <div class="modelmain_swiper_next">
+                {{- 'swiper-right.svg' | inline_asset_content -}}
+              </div>
             </div>
+            {% comment %}
+              <div
+                class="product_info_left_contain_group"
+                data-type="{{ type }}"
+              >
+                {% assign is_first = false %}
+                {% for media in product.media %}
+                  {% if media.media_type == type and is_first == false %}
+                    {% assign has_model = true %}
+                    {% assign is_first = true %}
+                    {{ media | media_tag: class: 'product_info_left_contain_group_item' }}
+                  {% endif %}
+                {% endfor %}
+              </div>
+            {% endcomment %}
           {% endif %}
         {% endfor %}
       </div>
@@ -190,6 +210,28 @@
               </div>
             </div>
             <div class="videothumb_swiper_next">
+              {{- 'swiper-right.svg' | inline_asset_content -}}
+            </div>
+          </div>
+          <div class="modelthumb_swiper_box" data-type="model">
+            <div class="modelthumb_swiper_prev">
+              {{- 'swiper-left.svg' | inline_asset_content -}}
+            </div>
+            <div class="swiper modelthumb_swiper">
+              <div class="swiper-wrapper">
+                {% for media in product.media %}
+                  {% if media.media_type == 'model' %}
+                    <div class="swiper-slide">
+                      <img
+                        src="{{ media.preview_image | image_url: width: 120 }}"
+                        alt="{{ product.title }}"
+                      >
+                    </div>
+                  {% endif %}
+                {% endfor %}
+              </div>
+            </div>
+            <div class="modelthumb_swiper_next">
               {{- 'swiper-right.svg' | inline_asset_content -}}
             </div>
           </div>
@@ -334,9 +376,11 @@
                 {%- for value in option.values -%}
                   {% if option_hanlde contains 'farbe' %}
                     {% assign color = '' %}
+                    {% assign color_img = '' %}
                     {% for color_item in product.metafields.custom.color_option.value %}
                       {% if color_item.name == value.name %}
                         {% assign color = color_item.value %}
+                        {% assign color_img = color_item.image %}
                       {% endif %}
                     {% endfor %}
                     <div
@@ -346,7 +390,9 @@
                     >
                       <div
                         class="product_info_option_select_item_circle{% if color == '' %} product_info_option_select_item_none{% endif %}"
-                        {% if color != '' %}
+                        {% if color_img != blank %}
+                          style="background: url({{ color_img | image_url }}) no-repeat no-repeat center center"
+                        {% elsif color != '' %}
                           style="background-color: {{ color }}"
                         {% endif %}
                       ></div>
@@ -403,9 +449,11 @@
                   {%- for value in option.values -%}
                     {% if option_hanlde contains 'farbe' %}
                       {% assign color = '' %}
+                      {% assign color_img = '' %}
                       {% for color_item in bundle_tabletop.metafields.custom.color_option.value %}
                         {% if color_item.name == value.name %}
                           {% assign color = color_item.value %}
+                          {% assign color_img = color_item.image %}
                         {% endif %}
                       {% endfor %}
                       <div
@@ -415,7 +463,9 @@
                       >
                         <div
                           class="product_info_option_select_item_circle{% if color == '' %} product_info_option_select_item_none{% endif %}"
-                          {% if color != '' %}
+                          {% if color_img != blank %}
+                            style="background: url({{ color_img | image_url }}) no-repeat no-repeat center center"
+                          {% elsif color != '' %}
                             style="background-color: {{ color }}"
                           {% endif %}
                         ></div>
@@ -494,9 +544,11 @@
                                   %}
                                   {% if available_variant.size > 0 %}
                                     {% assign color = '' %}
+                                    {% assign color_img = '' %}
                                     {% for color_item in bundled_product.metafields.custom.color_option.value %}
                                       {% if color_item.name == value.name %}
                                         {% assign color = color_item.value %}
+                                        {% assign color_img = color_item.image %}
                                       {% endif %}
                                     {% endfor %}
                                     <div
@@ -507,7 +559,9 @@
                                     >
                                       <div
                                         class="product_info_bundle_modal_select_item_circle{% if color == '' %} product_info_bundle_modal_select_item_none{% endif %}"
-                                        {% if color != '' %}
+                                        {% if color_img != blank %}
+                                          style="background: url({{ color_img | image_url }}) no-repeat no-repeat center center"
+                                        {% elsif color != '' %}
                                           style="background-color: {{ color }}"
                                         {% endif %}
                                       ></div>
@@ -520,12 +574,26 @@
                         {% endfor %}
                         <div class="product_info_bundle_product_title">{{ bundled_product.title }}</div>
                         <div class="product_info_bundle_product_price">
-                          +
-                          {{-
-                            bundled_product.selected_or_first_available_variant.price
-                            | default: bundled_product.price
-                            | money_without_trailing_zeros
-                          }}
+                          <div class="product_info_bundle_product_price_dp">
+                            +
+                            {{-
+                              bundled_product.selected_or_first_available_variant.price
+                              | default: bundled_product.price
+                              | money_without_trailing_zeros
+                            }}
+                          </div>
+                          {% if bundled_product.selected_or_first_available_variant.compare_at_price != blank
+                            and bundled_product.selected_or_first_available_variant.compare_at_price
+                              > bundled_product.selected_or_first_available_variant.price
+                          %}
+                            <div class="product_info_bundle_product_price_op">
+                              {{
+                                bundled_product.selected_or_first_available_variant.compare_at_price
+                                | default: bundled_product.compare_at_price
+                                | money_without_trailing_zeros
+                              }}
+                            </div>
+                          {% endif %}
                         </div>
                       </div>
                       <div class="common_modal">
@@ -551,13 +619,18 @@
                                     | money_without_trailing_zeros
                                   }}
                                 </div>
-                                <div class="product_info_bundle_modal_price_op">
-                                  {{
-                                    bundled_product.selected_or_first_available_variant.compare_at_price
-                                    | default: bundled_product.compare_at_price
-                                    | money_without_trailing_zeros
-                                  }}
-                                </div>
+                                {% if bundled_product.selected_or_first_available_variant.compare_at_price != blank
+                                  and bundled_product.selected_or_first_available_variant.compare_at_price
+                                    > bundled_product.selected_or_first_available_variant.price
+                                %}
+                                  <div class="product_info_bundle_modal_price_op">
+                                    {{
+                                      bundled_product.selected_or_first_available_variant.compare_at_price
+                                      | default: bundled_product.compare_at_price
+                                      | money_without_trailing_zeros
+                                    }}
+                                  </div>
+                                {% endif %}
                               </div>
 
                               <div class="product_info_bundle_modal_contain">
@@ -586,9 +659,11 @@
                                         {% if available_variant.size > 0 %}
                                           {% if option_hanlde contains 'farbe' %}
                                             {% assign color = '' %}
+                                            {% assign color_img = '' %}
                                             {% for color_item in bundled_product.metafields.custom.color_option.value %}
                                               {% if color_item.name == value.name %}
                                                 {% assign color = color_item.value %}
+                                                {% assign color_img = color_item.image %}
                                               {% endif %}
                                             {% endfor %}
                                             <div
@@ -598,7 +673,9 @@
                                             >
                                               <div
                                                 class="product_info_bundle_modal_select_item_circle{% if color == '' %} product_info_bundle_modal_select_item_none{% endif %}"
-                                                {% if color != '' %}
+                                                {% if color_img != blank %}
+                                                  style="background: url({{ color_img | image_url }}) no-repeat no-repeat center center"
+                                                {% elsif color != '' %}
                                                   style="background-color: {{ color }}"
                                                 {% endif %}
                                               ></div>
@@ -617,7 +694,7 @@
                                   </div>
                                 {% endfor %}
                               </div>
-                              <div class="product_info_bundle_modal_btn">{{ 'common.jetzt_kaufen' | t }}</div>
+                              <div class="product_info_bundle_modal_btn">{{ 'common.choose' | t }}</div>
                             </div>
                           </div>
                         </div>
@@ -808,7 +885,6 @@
                   </clipPath>
                   </defs>
                 </svg>
-                  
               </div>
             </div>
           {%- when 'custom-liquid' -%}

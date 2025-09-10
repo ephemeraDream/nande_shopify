@@ -284,18 +284,81 @@
         "spec_id": "",
         "heading": "<p>FAQ</p>",
         "text": "<p>Häufig gestellte Fragen</p>",
-        "show_btn": true,
         "learn_more": false,
+        "show_btn": true,
+        "more_faqs_link": "",
         "contact_us": false,
+        "contact_us_link": "",
         "padding_top": 120,
         "padding_bottom": 120,
         "background_color": "#ffffff"
+      }
+    },
+    "contact_form_five_dVH3V7": {
+      "type": "contact-form-five",
+      "blocks": {
+        "dropdown_kaXCnK": {
+          "type": "dropdown",
+          "settings": {
+            "key": "456",
+            "label": "4545",
+            "field_name": "45454",
+            "required": false
+          }
+        },
+        "dropdown_VGgTjt": {
+          "type": "dropdown",
+          "settings": {
+            "key": "",
+            "label": "",
+            "field_name": "",
+            "required": false
+          }
+        },
+        "custom_field_pRQ4Hx": {
+          "type": "custom_field",
+          "settings": {
+            "field_name": "",
+            "field_type": "email",
+            "placeholder": "",
+            "required": false,
+            "rows": 4
+          }
+        }
+      },
+      "block_order": [
+        "dropdown_kaXCnK",
+        "dropdown_VGgTjt",
+        "custom_field_pRQ4Hx"
+      ],
+      "disabled": true,
+      "name": "Contact Form Five",
+      "settings": {
+        "style": "style3",
+        "title": "dsfsd",
+        "image": "shopify://shop_images/cooperate.png",
+        "desc": "545454454554",
+        "text_content": "<p>Maidesite bietet durch seine produkten von hohenverstellbaren Schreibtischen, die Funktionsintegration,Szenenvielfalt und Personalisierung bieten, lhnen die Möglichkeit. einfach zwischen verschiedenen Heimat-Aktivitatsmodizuwechseln, die eine Desktop-Assistenten erfordern. Dies ermoglicht Anhängern des modernen intelligenten Heimlebens. sich noch beguemer und müheloser in ihre vielfaltigen Lebensstile einzuleben.<br/><br/></p>",
+        "btn_text": "Submit",
+        "success_message": "Your message has been sent successfully.",
+        "error_message": "There was an error sending the form. Please check your input.",
+        "show_email": true,
+        "mail_placeholder": "Email*",
+        "show_company": true,
+        "company_placeholder": "Company Name",
+        "show_name": true,
+        "name_placeholder": "Name",
+        "show_phone": true,
+        "phone_placeholder": "Phone",
+        "show_message": true,
+        "message_placeholder": "Message"
       }
     }
   },
   "order": [
     "breadcrumbs",
     "contact_form_three",
-    "faq_simple_kxTbhc"
+    "faq_simple_kxTbhc",
+    "contact_form_five_dVH3V7"
   ]
 }

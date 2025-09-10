@@ -27,14 +27,14 @@
           "settings": {
             "image": "shopify://shop_images/track.jpg",
             "title": "Meine Bestellung und Zahlung",
-            "text": "<p>Bestellinformationen, Bearbeitung, Stornierung, allgemeine Zahlungsfragen.</p>",
+            "text": "<p>Bestellinformationen, Bearbeitung, Stornierung + allgemeine Zahlungsangelegenheiten</p>",
             "blog": "meine-bestellung-und-zahlung"
           }
         },
         "item_02": {
           "type": "item",
           "settings": {
-            "image": "shopify://shop_images/shipping.jpg",
+            "image": "shopify://shop_images/shipping_1.jpg",
             "title": "Logistik und Lieferung",
             "text": "<p>Versandorte, Lieferzeiten, Steuern, allgemeine Versandanfragen.</p>",
             "blog": "logistik-und-lieferung"
@@ -55,7 +55,7 @@
             "image": "shopify://shop_images/products.jpg",
             "title": "Produkte und Fehlerbehebung",
             "text": "<p>Allgemeine Produktfragen, Zusatzprodukte, Tipps zur Fehlerbehebung.</p>",
-            "blog": "produkte-fehlerbehebung"
+            "blog": "haufige-after-sales-probleme-und-losungen"
           }
         },
         "item_05": {
@@ -64,15 +64,15 @@
             "image": "shopify://shop_images/Promotion.jpg",
             "title": "Aktionen",
             "text": "<p>Empfehlungsprämien, Affiliate-Belohnungen, Store-Guthaben, Rabattcodes.</p>",
-            "blog": "haufige-after-sales-probleme-und-losungen"
+            "blog": "produkte-fehlerbehebung"
           }
         },
         "item_06": {
           "type": "item",
           "settings": {
-            "image": "shopify://shop_images/cooperate.png",
+            "image": "shopify://shop_images/cooperation_1.jpg",
             "title": "Drittanbieter",
-            "text": "<p>Richtlinien & allgemeine Fragen zu Drittanbietern.</p>",
+            "text": "<p>Unternehmenskooperationen, Großbestellungen, Individuelle Angebote,  Firmenkundenservice </p>",
             "blog": "werbung-und-zusammenarbeit"
           }
         }
@@ -106,22 +106,38 @@
         "faq_AXAcgA": {
           "type": "faq",
           "settings": {
-            "question": "<p>Was ist, wenn ich mit jemandem sprechen mochte?</p>",
-            "answer": "<p>Maidesite bietet durch seine produkten von höhenverstellbaren Schreibtischen, die Funktionsintegration, Szenenvielfalt und Personalisierung bieten, Ihnen die Möglichkeit, einfach zwischen verschiedenen Heimat-Aktivitätsmodi zu wechseln, die eine Desktop-Assistenten erfordern. <br/><br/>Dies ermöglicht Anhängern des modernen intelligenten Heimlebens, sich noch bequemer und müheloser in ihre vielfältigen Lebensstile einzuleben.<br/></p>"
+            "question": "<p>Warum habe ich nur einen Teil der Artikel aus meiner Bestellung erhalten?</p>",
+            "answer": "<p>Wenn Sie ein Set aus Tischplatte und Rahmen gekauft haben, werden diese in zwei separaten Paketen versendet, die möglicherweise nicht gleichzeitig ankommen. Falls Sie die Sendungsnummer für das andere Paket nicht erhalten haben, kontaktieren Sie uns bitte, damit wir die Lieferung für Sie nachverfolgen können.<br/></p>"
           }
         },
         "faq_W9Mzyn": {
           "type": "faq",
           "settings": {
-            "question": "<p>Ist das Bestellen im Internet sicher? Was passiert mit meinen Daten?</p>",
-            "answer": "<p>Maidesite bietet durch seine produkten von höhenverstellbaren Schreibtischen, die Funktionsintegration, Szenenvielfalt und Personalisierung bieten, Ihnen die Möglichkeit, einfach zwischen verschiedenen Heimat-Aktivitätsmodi zu wechseln, die eine Desktop-Assistenten erfordern. <br/><br/>Dies ermöglicht Anhängern des modernen intelligenten Heimlebens, sich noch bequemer und müheloser in ihre vielfältigen Lebensstile einzuleben.<br/></p>"
+            "question": "<p>Wie setze ich meinen Maidesite Schreibtisch zurück?</p>",
+            "answer": "<p>1. RST-Modus aktivieren:<br/><br/>Halten Sie die Taste „AB“ 5 Sekunden lang gedrückt, während sich die Tischplatte in der niedrigsten Position befindet (andernfalls senken Sie die Tischplatte zuerst ab). Die Digitalanzeige zeigt „ASR“ an. Das System wechselt nun in den RST-Modus.<br/><br/>2. RST-Modus beenden:<br/><br/>Halten Sie die Taste „AB“ erneut gedrückt, bis sich die Tischplatte leicht absenkt und anschließend leicht anhebt. Die aktuelle Höhe wird im Display angezeigt. Das System beendet den RST-Modus.</p>"
+          }
+        },
+        "faq_xqPjNH": {
+          "type": "faq",
+          "settings": {
+            "question": "<p>Ich habe vergessen, meinen Gutschein einzulösen. Was kann ich jetzt tun?</p>",
+            "answer": "<p>Bitte stellen Sie uns den entsprechenden Gutscheincode zur Verfügung. Solange die Aktion noch nicht abgelaufen ist, können wir Ihnen den Differenzbetrag nach Erhalt des Pakets zurückerstatten.</p>"
+          }
+        },
+        "faq_WYegiJ": {
+          "type": "faq",
+          "settings": {
+            "question": "<p>Wie kann ich meine Bestellung verfolgen?</p>",
+            "answer": "<p>Nach dem Versand erhalten Sie eine E-Mail mit der Sendungsnummer. Falls Sie diese E-Mail nicht erhalten haben, überprüfen Sie bitte Ihren Spam-Ordner. Alternativ können Sie den Status auch auf unserer Website unter folgendem Link verfolgen: https://www.maidesite.de/apps/17TRACK?nums</p>"
           }
         }
       },
       "block_order": [
         "faq_E4jP4F",
         "faq_AXAcgA",
-        "faq_W9Mzyn"
+        "faq_W9Mzyn",
+        "faq_xqPjNH",
+        "faq_WYegiJ"
       ],
       "custom_css": [],
       "name": "faq simple",
@@ -129,9 +145,11 @@
         "spec_id": "",
         "heading": "<p>FAQ</p>",
         "text": "<p>Häufig gestellte Fragen</p>",
-        "show_btn": false,
         "learn_more": false,
+        "show_btn": false,
+        "more_faqs_link": "",
         "contact_us": false,
+        "contact_us_link": "",
         "padding_top": 120,
         "padding_bottom": 120,
         "background_color": "rgba(0,0,0,0)"
@@ -147,7 +165,7 @@
             "title": "Live-Chat",
             "text": "<p>Montag–Freitag <br>07:00–16:00 Uhr (MEZ)</p>",
             "btn_text": "Konto erstellen",
-            "btn_link": ""
+            "btn_link": "#tidio-chat"
           }
         },
         "item_02": {
@@ -177,7 +195,7 @@
             "title": "E-Mail schreiben",
             "text": "<p>Wählen Sie ein Anliegen aus, und wir antworten so schnell wie möglich.</p>",
             "btn_text": "Get in touch",
-            "btn_link": ""
+            "btn_link": "mailto:contact@maidesite.de"
           }
         }
       },

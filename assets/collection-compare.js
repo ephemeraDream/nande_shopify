@@ -26,12 +26,12 @@ function initCollectionCompareCountdown() {
         // 当没有天数时，隐藏天数相关的元素
         const dayElement = item.querySelector(".collection_compare_product_saleinfo_countdown_item[data-type='day']");
         const daySpan = item.querySelector(".collection_compare_product_saleinfo_countdown_item[data-type='day'] + span");
-        
+
         if (dayElement && daySpan) {
           daySpan.remove();
           dayElement.remove();
         }
-        
+
         // 更新剩余时间显示
         item.querySelector(".collection_compare_product_saleinfo_countdown_item[data-type='hour']").innerHTML = String(hours).padStart(
           2,
@@ -57,6 +57,8 @@ function initCollectionCompareCountdown() {
       if (diff <= 0) {
         updateCountdownInnerHTML(days, hours, minutes, seconds);
         item.classList.add("hidden")
+        const parent = item.closest(".collection_compare_product")
+        parent.querySelector(".collection_compare_product_saleinfo").classList.add("hidden")
         return;
       }
 

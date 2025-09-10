@@ -116,6 +116,7 @@
         "fixed_height_desktop": 600,
         "fixed_height_mobile": 350,
         "mobile_stacked": false,
+        "background_color": "#dddddd",
         "nav_style": "slideshow_nav_lines",
         "pagination_color": "#ffffff",
         "nav_position": "justify-center",
@@ -163,9 +164,9 @@
           "settings": {
             "belong_tab": "0",
             "image": "shopify://shop_images/YOGA_-_1_80dbac95-bdf1-4531-a898-05e1c0987d43.jpg",
-            "title": "",
-            "text": "",
-            "btn_text": "",
+            "title": "123",
+            "text": "123",
+            "btn_text": "123",
             "link": ""
           }
         },
@@ -174,9 +175,9 @@
           "settings": {
             "belong_tab": "1",
             "image": "shopify://shop_images/Banner_-_YOGA_-_1.jpg",
-            "title": "",
-            "text": "",
-            "btn_text": "",
+            "title": "456",
+            "text": "456",
+            "btn_text": "456",
             "link": ""
           }
         },
@@ -726,9 +727,11 @@
         "spec_id": "faq_simple",
         "heading": "<p>FAQ</p>",
         "text": "<p>Häufig gestellte Fragen</p>",
-        "show_btn": true,
         "learn_more": true,
+        "show_btn": true,
+        "more_faqs_link": "",
         "contact_us": false,
+        "contact_us_link": "",
         "padding_top": 120,
         "padding_bottom": 120,
         "background_color": "rgba(0,0,0,0)"

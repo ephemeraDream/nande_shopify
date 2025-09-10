@@ -10,46 +10,120 @@
       </a>
     </div>
     <div class="wrapper">
-    <div class="product_compare_selectbox">
-      <select id="productSelectOne" class="product_compare_select">
-        {% for product in section.settings.product_list %}
-          <option value="{{ product.metafields.custom.product_model.value }}">
-            {{- product.metafields.custom.product_model.value }}
-          </option>
-        {% endfor %}
-      </select>
-      <select id="productSelectTwo" class="product_compare_select">
-        {% for product in section.settings.product_list %}
-          <option
-            value="{{ product.metafields.custom.product_model.value }}"
-            {% if forloop.index0 == 1 %}
-              selected
-            {% endif %}
+      <div class="product_compare_selectbox">
+        <select id="productSelectOne" class="product_compare_select">
+          {% for product in section.settings.product_list %}
+            <option value="{{ product.metafields.custom.product_model.value }}">
+              {{- product.metafields.custom.product_model.value }}
+            </option>
+          {% endfor %}
+        </select>
+        <select id="productSelectTwo" class="product_compare_select">
+          {% for product in section.settings.product_list %}
+            <option
+              value="{{ product.metafields.custom.product_model.value }}"
+              {% if forloop.index0 == 1 %}
+                selected
+              {% endif %}
+            >
+              {{- product.metafields.custom.product_model.value }}
+            </option>
+          {% endfor %}
+        </select>
+        <select id="productSelectThr" class="product_compare_select">
+          {% for product in section.settings.product_list %}
+            <option
+              value="{{ product.metafields.custom.product_model.value }}"
+              {% if forloop.index0 == 2 %}
+                selected
+              {% endif %}
+            >
+              {{- product.metafields.custom.product_model.value }}
+            </option>
+          {% endfor %}
+        </select>
+      </div>
+      <div class="product_compare_contain product_compare_contain_twoline">
+        {% for product in section.settings.product_list limit: 3 %}
+          <div
+            class="product_compare_product{% if forloop.index0 == 0 %} product_compare_product_showtitle{% endif %}"
+            data-value="{{ product.metafields.custom.product_model.value }}"
           >
-            {{- product.metafields.custom.product_model.value }}
-          </option>
+            <div class="product_compare_product_sticky">
+              <div class="swiper">
+                <div class="swiper-wrapper">
+                  {% for option in product.options_with_values %}
+                    {%- case option.name -%}
+                      {%- when 'Farbe Tischplatte' -%}
+                        {% assign index = 'option' | append: forloop.index %}
+                        {% for value in option.values %}
+                          {% assign first_variant = product.variants | where: index, value | first %}
+                          <div class="swiper-slide">
+                            <img
+                              src="{{ first_variant.featured_image | image_url }}"
+                              alt="{{ value.variant.title }}"
+                            >
+                          </div>
+                        {%- endfor %}
+                    {%- endcase -%}
+                  {%- endfor %}
+                </div>
+              </div>
+              {% comment %}
+                <div class="product_compare_item_color">
+                  {% for option in product.options_with_values %}
+                    {%- case option.name -%}
+                      {%- when 'Farbe Tischplatte' -%}
+                        {% for value in option.values %}
+                          {% assign color = '' %}
+                          {% for color_item in product.metafields.custom.color_option.value %}
+                            {% if color_item.name == value.name %}
+                              {% assign color = color_item.value %}
+                            {% endif %}
+                          {% endfor %}
+                          <div
+                            class="product_compare_item_color_circle{% if color == '' %} product_compare_item_color_circle_none{% endif %}"
+                            {% if color != '' %}
+                              style="background-color: {{ color }}"
+                            {% endif %}
+                            title="{{ value }}"
+                          ></div>
+                        {%- endfor %}
+                    {%- endcase -%}
+                  {%- endfor %}
+                </div>
+              {% endcomment %}
+              <div class="product_compare_item_price">
+                {% comment %}
+                  {% if block.settings.select_product.compare_at_price != blank %}
+                    {% assign price = block.settings.select_product.compare_at_price | money_without_trailing_zeros %}
+                  {% else %}
+                    {% assign price = block.settings.select_product.price | money_without_trailing_zeros %}
+                  {% endif %}
+                {% endcomment %}
+                {% assign price = product.price | money_without_trailing_zeros %}
+                {{ 'products.product.price.from_price_html' | t: price: price }}
+              </div>
+              <a class="product_compare_product_shop_now" href="{{ product.url }}">
+                {{ 'common.en_savoir_plus' | t }}
+                {{ 'icon-right-arrow.svg' | inline_asset_content }}
+              </a>
+            </div>
+            {% for item in product.metafields.custom.compare_simple.value.data.value %}
+              <div class="product_compare_product_card" data-type="{{ item.label | handle }}">
+                <h3 class="product_compare_product_head">{{ item.label }}</h3>
+                <div class="product_compare_product_body">
+                  <div class="product_compare_product_label">{{ item.label }}</div>
+                  <div class="product_compare_product_contain">{{ item.value }}</div>
+                </div>
+              </div>
+            {% endfor %}
+          </div>
         {% endfor %}
-      </select>
-      <select id="productSelectThr" class="product_compare_select">
-        {% for product in section.settings.product_list %}
-          <option
-            value="{{ product.metafields.custom.product_model.value }}"
-            {% if forloop.index0 == 2 %}
-              selected
-            {% endif %}
-          >
-            {{- product.metafields.custom.product_model.value }}
-          </option>
-        {% endfor %}
-      </select>
-    </div>
-    <div class="product_compare_contain product_compare_contain_twoline">
-      {% for product in section.settings.product_list limit: 3 %}
-        <div
-          class="product_compare_product{% if forloop.index0 == 0 %} product_compare_product_showtitle{% endif %}"
-          data-value="{{ product.metafields.custom.product_model.value }}"
-        >
-          <div class="product_compare_product_sticky">
+      </div>
+      <div class="product_compare_contain_other">
+        {% for product in section.settings.product_list offset: 3 %}
+          <div class="product_compare_product" data-value="{{ product.metafields.custom.product_model.value }}">
             <div class="swiper">
               <div class="swiper-wrapper">
                 {% for option in product.options_with_values %}
@@ -69,30 +143,32 @@
                 {%- endfor %}
               </div>
             </div>
-            {% comment %}
-              <div class="product_compare_item_color">
-                {% for option in product.options_with_values %}
-                  {%- case option.name -%}
-                    {%- when 'Farbe Tischplatte' -%}
-                      {% for value in option.values %}
-                        {% assign color = '' %}
-                        {% for color_item in product.metafields.custom.color_option.value %}
-                          {% if color_item.name == value.name %}
-                            {% assign color = color_item.value %}
-                          {% endif %}
-                        {% endfor %}
-                        <div
-                          class="product_compare_item_color_circle{% if color == '' %} product_compare_item_color_circle_none{% endif %}"
-                          {% if color != '' %}
-                            style="background-color: {{ color }}"
-                          {% endif %}
-                          title="{{ value }}"
-                        ></div>
-                      {%- endfor %}
-                  {%- endcase -%}
-                {%- endfor %}
-              </div>
-            {% endcomment %}
+            <div class="product_compare_item_color">
+              {% for option in product.options_with_values %}
+                {%- case option.name -%}
+                  {%- when 'Farbe Tischplatte' -%}
+                    {% for value in option.values %}
+                      {% assign color = '' %}
+                      {% assign color_img = '' %}
+                      {% for color_item in product.metafields.custom.color_option.value %}
+                        {% if color_item.name == value.name %}
+                          {% assign color = color_item.value %}
+                          {% assign color_img = color_item.image %}
+                        {% endif %}
+                      {% endfor %}
+                      <div
+                        class="product_compare_item_color_circle{% if color == '' %} product_compare_item_color_circle_none{% endif %}"
+                        {% if color_img != blank %}
+                          style="background: url({{ color_img | image_url }}) no-repeat no-repeat center center"
+                        {% elsif color != '' %}
+                          style="background-color: {{ color }}"
+                        {% endif %}
+                        title="{{ value }}"
+                      ></div>
+                    {%- endfor %}
+                {%- endcase -%}
+              {%- endfor %}
+            </div>
             <div class="product_compare_item_price">
               {% comment %}
                 {% if block.settings.select_product.compare_at_price != blank %}
@@ -108,90 +184,18 @@
               {{ 'common.en_savoir_plus' | t }}
               {{ 'icon-right-arrow.svg' | inline_asset_content }}
             </a>
-          </div>
-          {% for item in product.metafields.custom.compare_simple.value.data.value %}
-            <div class="product_compare_product_card" data-type="{{ item.label | handle }}">
-              <h3 class="product_compare_product_head">{{ item.label }}</h3>
-              <div class="product_compare_product_body">
-                <div class="product_compare_product_label">{{ item.label }}</div>
-                <div class="product_compare_product_contain">{{ item.value }}</div>
+            {% for item in product.metafields.custom.compare_simple.value.data.value %}
+              <div class="product_compare_product_card" data-type="{{ item.label | handle }}">
+                <div class="product_compare_product_head">{{ item.label }}</div>
+                <div class="product_compare_product_body">
+                  <div class="product_compare_product_label">{{ item.label }}</div>
+                  <div class="product_compare_product_contain">{{ item.value }}</div>
+                </div>
               </div>
-            </div>
-          {% endfor %}
-        </div>
-      {% endfor %}
-    </div>
-    <div class="product_compare_contain_other">
-      {% for product in section.settings.product_list offset: 3 %}
-        <div class="product_compare_product" data-value="{{ product.metafields.custom.product_model.value }}">
-          <div class="swiper">
-            <div class="swiper-wrapper">
-              {% for option in product.options_with_values %}
-                {%- case option.name -%}
-                  {%- when 'Farbe Tischplatte' -%}
-                    {% assign index = 'option' | append: forloop.index %}
-                    {% for value in option.values %}
-                      {% assign first_variant = product.variants | where: index, value | first %}
-                      <div class="swiper-slide">
-                        <img
-                          src="{{ first_variant.featured_image | image_url }}"
-                          alt="{{ value.variant.title }}"
-                        >
-                      </div>
-                    {%- endfor %}
-                {%- endcase -%}
-              {%- endfor %}
-            </div>
+            {% endfor %}
           </div>
-          <div class="product_compare_item_color">
-            {% for option in product.options_with_values %}
-              {%- case option.name -%}
-                {%- when 'Farbe Tischplatte' -%}
-                  {% for value in option.values %}
-                    {% assign color = '' %}
-                    {% for color_item in product.metafields.custom.color_option.value %}
-                      {% if color_item.name == value.name %}
-                        {% assign color = color_item.value %}
-                      {% endif %}
-                    {% endfor %}
-                    <div
-                      class="product_compare_item_color_circle{% if color == '' %} product_compare_item_color_circle_none{% endif %}"
-                      {% if color != '' %}
-                        style="background-color: {{ color }}"
-                      {% endif %}
-                      title="{{ value }}"
-                    ></div>
-                  {%- endfor %}
-              {%- endcase -%}
-            {%- endfor %}
-          </div>
-          <div class="product_compare_item_price">
-            {% comment %}
-              {% if block.settings.select_product.compare_at_price != blank %}
-                {% assign price = block.settings.select_product.compare_at_price | money_without_trailing_zeros %}
-              {% else %}
-                {% assign price = block.settings.select_product.price | money_without_trailing_zeros %}
-              {% endif %}
-            {% endcomment %}
-            {% assign price = product.price | money_without_trailing_zeros %}
-            {{ 'products.product.price.from_price_html' | t: price: price }}
-          </div>
-          <a class="product_compare_product_shop_now" href="{{ product.url }}">
-            {{ 'common.en_savoir_plus' | t }}
-            {{ 'icon-right-arrow.svg' | inline_asset_content }}
-          </a>
-          {% for item in product.metafields.custom.compare_simple.value.data.value %}
-            <div class="product_compare_product_card" data-type="{{ item.label | handle }}">
-              <div class="product_compare_product_head">{{ item.label }}</div>
-              <div class="product_compare_product_body">
-                <div class="product_compare_product_label">{{ item.label }}</div>
-                <div class="product_compare_product_contain">{{ item.value }}</div>
-              </div>
-            </div>
-          {% endfor %}
-        </div>
-      {% endfor %}
-    </div>
+        {% endfor %}
+      </div>
     </div>
   </div>
 </div>

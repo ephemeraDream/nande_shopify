@@ -60,7 +60,7 @@
                 <div>
                   {{ product.price | money_without_trailing_zeros }}
                 </div>
-                {% if product.compare_at_price != blank %}
+                {% if product.compare_at_price != blank and product.compare_at_price > product.price %}
                   <div class="activity_products_normal_product_price_cap">
                     {{ product.compare_at_price | money_without_trailing_zeros }}
                   </div>
@@ -97,7 +97,7 @@
 
 <script>
   (() => {
-    document.querySelectorAll('.activity_products_normal_head_item').forEach((item) => {
+    document.querySelectorAll('#shopify-section-{{ section.id }} .activity_products_normal_head_item').forEach((item) => {
       item.addEventListener('click', () => {
         if (item.classList.contains('active')) return;
         document.querySelector('.activity_products_normal_head_item.active').classList.remove('active');
@@ -149,7 +149,10 @@
 
           if (diff <= 0) {
             updateCountdownInnerHTML(days, hours, minutes, seconds);
-            item.classList.add("hidden")
+            const parent = item.closest(".activity_products_normal_product")
+            parent.querySelector(".activity_products_normal_product_saleinfo").classList.add("hidden")
+            parent.querySelector(".activity_products_normal_product_saleinfo_code").classList.add("hidden")
+            parent.querySelector(".activity_products_normal_product_saleinfo_countdown").classList.add("hidden")
             return;
           }
 
@@ -166,7 +169,7 @@
       });
     };
 
-    initCountDown(document.querySelectorAll('.activity_products_normal_product_saleinfo_countdown'), "activity_products_normal_product_saleinfo_countdown_item");
+    initCountDown(document.querySelectorAll('#shopify-section-{{ section.id }} .activity_products_normal_product_saleinfo_countdown'), "activity_products_normal_product_saleinfo_countdown_item");
 
     document.querySelectorAll("#shopify-section-{{ section.id }} .activity_products_normal_saleinfo_btn").forEach(item => {
       item.addEventListener('click', async (e) => {
