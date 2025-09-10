@@ -1521,7 +1521,7 @@
   }
 
   .product_info_section .product_info_bottom_bar .product_info_buybox_btns_btn[data-type="buy_it_now"] {
-    font-size: 2rem;
+    font-size: 1.6rem;
   }
 
 
@@ -1544,7 +1544,8 @@
   }
 
   .product_info_section .product_info_steps_item {
-    font-size: 1.6rem;
+    font-size: 1.4rem;
+    padding: 0.8rem 0;
   }
 
   .product_info .common_modal_body .contact-btn button {
@@ -1583,4 +1584,9 @@
     padding-bottom: 1rem;
     padding-top: 1rem;
   }
+
+  .product_info_section .product_info_steps {
+    height: auto;
+}
+
 }
