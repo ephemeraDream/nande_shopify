@@ -1588,5 +1588,10 @@
   .product_info_section .product_info_steps {
     height: auto;
 }
+.product_info_steps_item:not(.active)+.product_info_steps_item:not(.active):before {
+  content: "";
+  width: .1rem;
+  height: 2.4rem;
+}
 
 }
