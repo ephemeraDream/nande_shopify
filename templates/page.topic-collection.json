@@ -22,23 +22,6 @@
     "banner_topic": {
       "type": "banner",
       "blocks": {
-        "banner_item_f7J8AA": {
-          "type": "banner_item",
-          "disabled": true,
-          "settings": {
-            "sub_title": "",
-            "title": "<p>Maidesite Spaces</p>",
-            "text": "<p>Lassen Sie sich inspirieren und gestalten Sie Ihren perfekten Maidesite-Arbeitsplatz <br/>mit unseren sorgfältig kuratierten Räumen.</p>",
-            "btn_text": "En savoir plus",
-            "link": "",
-            "file_position": "middle_left",
-            "file_type": "image",
-            "file_image": "shopify://shop_images/banner-2.webp",
-            "video_url": "",
-            "show_countdown": false,
-            "countdown": ""
-          }
-        },
         "banner_item_ckwd4B": {
           "type": "banner_item",
           "settings": {
@@ -48,6 +31,8 @@
             "btn_text": "En savoir plus",
             "link": "",
             "file_position": "middle_left",
+            "overlay_text_align": "text-start",
+            "transparent_content_color": "#ffffff",
             "file_type": "image",
             "file_image": "shopify://shop_images/banner-3.webp",
             "video_url": "",
@@ -57,11 +42,23 @@
         }
       },
       "block_order": [
-        "banner_item_f7J8AA",
         "banner_item_ckwd4B"
       ],
       "name": "banner",
-      "settings": {}
+      "settings": {
+        "height_mode": "auto",
+        "fixed_height_desktop": 600,
+        "fixed_height_mobile": 350,
+        "mobile_stacked": false,
+        "background_color": "#dddddd",
+        "nav_style": "slideshow_nav_lines",
+        "pagination_color": "#ffffff",
+        "nav_position": "justify-center",
+        "transition": "slide-fade",
+        "autoplay": true,
+        "slider_pause": false,
+        "autoplay_speed": 5
+      }
     },
     "image_with_text_polka_dot": {
       "type": "image-with-text-polka-dot",
