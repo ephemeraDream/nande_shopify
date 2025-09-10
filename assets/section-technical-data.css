@@ -127,11 +127,17 @@
 }
 .technical_data .technical_data_contain_info_item_label{
   min-width: 0;
+        width: 100%;
+        padding-left: 1rem;
 }
 .technical_data .technical_data_title {
   font-size: 3.4rem;
 }
+.technical_data .technical_data_contain_info_item {
+  flex-direction: column;
+}
 .technical_data_contain_info_item_value {
-  width: 50%;
+  width: 100%;
+  padding: 1rem;
 }
 }
