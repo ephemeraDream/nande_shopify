@@ -266,9 +266,11 @@
 @media screen and (max-width: 1024px) {
   .recommended_products .recommended_products_prev {
     left: 0rem;
+    display: none;
   }
 
   .recommended_products .recommended_products_next {
     right: 0rem;
+    display: none;
   }
 }
