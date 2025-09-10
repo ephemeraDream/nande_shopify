@@ -131,4 +131,7 @@
 .technical_data .technical_data_title {
   font-size: 3.4rem;
 }
+.technical_data_contain_info_item_value {
+  width: 50%;
+}
 }
