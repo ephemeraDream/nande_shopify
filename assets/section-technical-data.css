@@ -85,6 +85,7 @@
   font-variation-settings: "opsz" auto;
   color: #1F1F1F;
   justify-content: space-between;
+  padding: 0.8rem 0;
 }
 
 .technical_data .technical_data_contain_info_item:nth-child(2n) {
