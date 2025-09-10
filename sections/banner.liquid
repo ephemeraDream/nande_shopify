@@ -274,12 +274,12 @@
   let timer = null;
 
   const swiper = new Swiper(".section_banner", {
-    loop: true,
+    loop: {% if section.blocks.size > 1 %}true{% else %}false{% endif %},
     effect: "{{ section.settings.transition }}".replace("-", ""), // slide, fade
-    autoplay: {
+    autoplay: {% if section.blocks.size > 1 and section.settings.autoplay %}{
       delay: {{ section.settings.autoplay_speed | times: 1000 }},
       disableOnInteraction: false,
-    },
+    }{% else %}false{% endif %},
     navigation: {
       nextEl: ".slideshow-nav__btn[name='next']",
       prevEl: ".slideshow-nav__btn[name='prev']",
@@ -290,6 +290,14 @@
         if (bannerEl) bannerEl.style.setProperty("--play-state", "running");
         updatePaginationHighlight(this.realIndex);
         updateCounter(this.realIndex);
+        
+        // 如果只有一个slide，隐藏导航按钮
+        if (this.slides.length <= 1) {
+          const navButtons = bannerEl.querySelectorAll('.slideshow-nav__btn[name="prev"], .slideshow-nav__btn[name="next"]');
+          navButtons.forEach(btn => {
+            btn.style.display = 'none';
+          });
+        }
       },
       slideChange: function () {
         updatePaginationHighlight(this.realIndex);
@@ -306,8 +314,8 @@
     }
   });
 
-  // 鼠标悬停暂停 autoplay
-  if (bannerEl) {
+  // 鼠标悬停暂停 autoplay（仅当有多个slide时）
+  if (bannerEl && swiper.slides.length > 1) {
     bannerEl.addEventListener("mouseenter", () => {
       const autoplay = bannerEl.getAttribute("data-autoplay");
       if (autoplay === "true") {
@@ -333,8 +341,8 @@
     });
   }
 
-  // 播放/暂停按钮切换
-  if (autoplayBtn) {
+  // 播放/暂停按钮切换（仅当有多个slide时）
+  if (autoplayBtn && swiper.slides.length > 1) {
     let playing = true;
     autoplayBtn.addEventListener("click", () => {
       if (playing) {
@@ -349,15 +357,27 @@
       playing = !playing;
       console.log(playing);
     });
+  } else if (autoplayBtn && swiper.slides.length <= 1) {
+    // 如果只有一个slide，隐藏autoplay按钮
+    autoplayBtn.style.display = 'none';
   }
 
-  document.querySelector(".section_banner_swiper_prev").addEventListener("click", () => {
-    swiper.slidePrev()
-  })
+  // 底部导航按钮（仅当有多个slide时）
+  if (swiper.slides.length > 1) {
+    document.querySelector(".section_banner_swiper_prev").addEventListener("click", () => {
+      swiper.slidePrev()
+    })
 
-  document.querySelector(".section_banner_swiper_next").addEventListener("click", () => {
-    swiper.slideNext()
-  })
+    document.querySelector(".section_banner_swiper_next").addEventListener("click", () => {
+      swiper.slideNext()
+    })
+  } else {
+    // 如果只有一个slide，隐藏底部导航按钮
+    const bottomNavButtons = document.querySelectorAll(".section_banner_swiper_prev, .section_banner_swiper_next");
+    bottomNavButtons.forEach(btn => {
+      if (btn) btn.style.display = 'none';
+    });
+  }
 
 
     const countdownEl = document.querySelectorAll('.section_banner_countdown_box');
