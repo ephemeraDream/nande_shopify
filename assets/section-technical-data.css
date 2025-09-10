@@ -104,7 +104,7 @@
   color: #1F1F1F;
 }
 .technical_data .technical_data_contain_info_item .technical_data_contain_info_item_value a:hover{
-  color: #BDFF00;
+  text-decoration: underline;
 }
 @media screen and (max-width: 1024px) {
 .technical_data .technical_data_head_item {
