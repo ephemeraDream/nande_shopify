@@ -264,9 +264,39 @@ function toggleBottomBar() {
     observer.observe(target);
   }
 
+  // 当 footer 进入视窗时，隐藏底部悬浮条以避免遮挡
+  function initFooterObserver(footerEl) {
+    const footerObserver = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            // footer 可见，收起并禁用交互
+            bottomBar.style.transform = 'translateY(100%)';
+            bottomBar.style.pointerEvents = 'none';
+          } else {
+            // footer 不可见，还原
+            bottomBar.style.transform = '';
+            bottomBar.style.pointerEvents = '';
+          }
+        });
+      },
+      {
+        root: null,
+        threshold: 0,
+      }
+    );
+    footerObserver.observe(footerEl);
+  }
+
   waitForElement(targetSelector, (target) => {
     initObserver(target, 0.3);
   });
+
+  // 直接查询 footer 标签（主题中通常为 <footer>），存在则监听
+  const footerEl = document.querySelector('footer');
+  if (footerEl) {
+    initFooterObserver(footerEl);
+  }
 }
 // 等待元素dom加载
 function waitForElement(selector, callback) {
