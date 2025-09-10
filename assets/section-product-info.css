@@ -1591,5 +1591,9 @@
 .product_info_section .product_info_steps_item:not(.active)+.product_info_steps_item:not(.active):before{
   height: 2.4rem;
 }
+.product_info .product_info_left_contain:hover .imgmain_swiper_prev, .product_info .product_info_left_contain:hover .imgmain_swiper_next {
+  display: none!important;
+;
+}
 
 }
