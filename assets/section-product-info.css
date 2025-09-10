@@ -1591,11 +1591,5 @@
 .product_info_section .product_info_steps_item:not(.active)+.product_info_steps_item:not(.active):before{
   height: 2.4rem;
 }
-.technical_data .technical_data_contain_info_item_label{
-  min-width: none;
-}
-.technical_data .technical_data_title {
-  font-size: 3.4rem;
-}
 
 }

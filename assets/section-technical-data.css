@@ -125,4 +125,10 @@
   width: 100%;
   
 }
+.technical_data .technical_data_contain_info_item_label{
+  min-width: 0;
+}
+.technical_data .technical_data_title {
+  font-size: 3.4rem;
+}
 }
