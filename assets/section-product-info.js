@@ -669,7 +669,7 @@ document.querySelectorAll(".product_info_option_select_item").forEach(el => {
       updateImagesByVariantMedia()
     } else {
       if (curr_bundle_tabletop_variant) {
-        document.querySelector(".product_info_bundle_tabletop_img").src = curr_bundle_tabletop_variant.featured_image.src
+        document.querySelector(".product_info_bundle_tabletop_img").src = curr_bundle_tabletop_variant.featured_image.src + '&width=2400&height=1800'
         document.querySelector(".product_info_bundle_tabletop_img").classList.remove("hidden")
       } else {
         document.querySelector(".product_info_bundle_tabletop_img").classList.add("hidden")
