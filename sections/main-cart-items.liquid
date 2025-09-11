@@ -113,11 +113,10 @@
                     {%- endif -%}
                   {%- endfor -%}
 
-                  {%- assign parent_ids_array = parent_ids | split: ',' -%}
                   {%- assign checked_child_items = '' | split: '' -%}
 
                   {%- for child in child_items -%}
-                    {%- if parent_ids_array contains child.properties.bundle_parent_id -%}
+                    {%- if parent_ids contains child.properties.bundle_parent_id -%}
                       {%- assign checked_child_items = checked_child_items | concat: child -%}
                     {%- else -%}
                       {%- assign parent_items = parent_items | concat: child -%}
