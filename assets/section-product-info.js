@@ -777,6 +777,11 @@ function resetAllVideos() {
     video.pause();
     video.currentTime = 0;
   });
+
+  const iframes = document.querySelectorAll('.videomain_swiper iframe');
+  iframes.forEach(iframe => {
+    iframe.src = iframe.src;
+  });
 }
 
 
