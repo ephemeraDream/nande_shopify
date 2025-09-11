@@ -90,7 +90,8 @@
       "name": "product info",
       "settings": {
         "media_ratio": "1.33",
-        "show_tax_and_shipping": true
+        "show_tax_and_shipping": true,
+        "product_specs": ""
       }
     },
     "product_anchor_bar_atcVF4": {
@@ -438,6 +439,9 @@
         "description": "",
         "title": "<p>Maidesite-Schreibtische sind stabiler und langlebiger</p>",
         "show_tab_head": true,
+        "loop": true,
+        "autoplay_enable": true,
+        "autoplay_delay": 5000,
         "layout": "image-left"
       }
     },
@@ -492,6 +496,10 @@
       "settings": {
         "title": "<p>Die Presse Liebt Maidesite</p>",
         "text": "",
+        "show_buttons": true,
+        "loop": true,
+        "autoplay_enable": true,
+        "autoplay_delay": 3000,
         "padding_top": 120,
         "padding_bottom": 0
       }
@@ -633,9 +641,11 @@
         "spec_id": "",
         "heading": "<p>FAQ</p>",
         "text": "<p>Häufig gestellte Fragen</p>",
-        "show_btn": true,
         "learn_more": true,
+        "show_btn": true,
+        "more_faqs_link": "",
         "contact_us": false,
+        "contact_us_link": "",
         "padding_top": 120,
         "padding_bottom": 120,
         "background_color": "rgba(0,0,0,0)"
@@ -683,6 +693,15 @@
         "padding_top": 120,
         "padding_bottom": 120
       }
+    },
+    "technical_data_J33ErA": {
+      "type": "technical-data",
+      "name": "technical data",
+      "settings": {
+        "spec_id": "",
+        "title": "",
+        "select_product": "maidesite-elektrisch-hohenverstellbarer-gestell-t2-pro"
+      }
     }
   },
   "order": [
@@ -702,6 +721,7 @@
     "celebrity_swiper_aGymw9",
     "faq_simple_kxTbhc",
     "product_comment_GV7BHg",
-    "recommended_products_yEVJQ9"
+    "recommended_products_yEVJQ9",
+    "technical_data_J33ErA"
   ]
 }
