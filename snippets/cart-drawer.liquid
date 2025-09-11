@@ -51,7 +51,6 @@
               <a href="{{ routes.all_products_collection_url }}" class="button">
                 {{ 'common.continue_shopping' | t }}
               </a>
-              
 
               {% comment %}
                 {%- if shop.customer_accounts_enabled and customer == null -%}
@@ -73,7 +72,9 @@
       <div class="drawer__header">
         <h2 class="drawer__heading">{{ 'sections.cart.title' | t }}</h2>
         <div class="flex items-bottom gap-x-theme">
-          <a class="cart-drawer__view-cart link block text-sm" href="/cart" data-no-instant="">{{ 'common.view_cart' | t }}</a>
+          <a class="cart-drawer__view-cart link block text-sm" href="/cart" data-no-instant="">
+            {{- 'common.view_cart' | t -}}
+          </a>
           <button
             class="drawer__close"
             type="button"
@@ -85,7 +86,6 @@
             </span>
           </button>
         </div>
-        
       </div>
       {% if cart != empty and settings.show_info_bar %}
         <div class="cart_drawer_infobar_contain">
@@ -148,14 +148,27 @@
                       {%- assign bundle_parent_id = item.properties.bundle_parent_id -%}
                       {%- if bundle_parent_id == blank -%}
                         {%- assign parent_items = cart.items | slice: forloop.index0 | concat: parent_items -%}
-                      {%- else -%}
-                        {%- assign parent_ids = parent_ids | append: bundle_parent_id -%}
+                        {%- assign parent_ids = parent_ids | append: item.id -%}
                         {% unless forloop.last %}
                           {%- assign parent_ids = parent_ids | append: ',' -%}
                         {% endunless %}
+                      {%- else -%}
                         {%- assign child_items = cart.items | slice: forloop.index0 | concat: child_items -%}
                       {%- endif -%}
                     {%- endfor -%}
+
+                    {%- assign parent_ids_array = parent_ids | split: ',' -%}
+                    {%- assign checked_child_items = '' | split: '' -%}
+
+                    {%- for child in child_items -%}
+                      {%- if parent_ids_array contains child.properties.bundle_parent_id -%}
+                        {%- assign checked_child_items = checked_child_items | concat: child -%}
+                      {%- else -%}
+                        {%- assign parent_items = parent_items | concat: child -%}
+                      {%- endif -%}
+                    {%- endfor -%}
+
+                    {%- assign child_items = checked_child_items -%}
                     {% assign parent_items = parent_items | reverse %}
                     {% assign child_items = child_items | reverse %}
                     {%- for item in parent_items -%}

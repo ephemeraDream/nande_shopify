@@ -104,14 +104,27 @@
                     {%- assign bundle_parent_id = item.properties.bundle_parent_id -%}
                     {%- if bundle_parent_id == blank -%}
                       {%- assign parent_items = cart.items | slice: forloop.index0 | concat: parent_items -%}
-                    {%- else -%}
-                      {%- assign parent_ids = parent_ids | append: bundle_parent_id -%}
+                      {%- assign parent_ids = parent_ids | append: item.id -%}
                       {% unless forloop.last %}
                         {%- assign parent_ids = parent_ids | append: ',' -%}
                       {% endunless %}
+                    {%- else -%}
                       {%- assign child_items = cart.items | slice: forloop.index0 | concat: child_items -%}
                     {%- endif -%}
                   {%- endfor -%}
+
+                  {%- assign parent_ids_array = parent_ids | split: ',' -%}
+                  {%- assign checked_child_items = '' | split: '' -%}
+
+                  {%- for child in child_items -%}
+                    {%- if parent_ids_array contains child.properties.bundle_parent_id -%}
+                      {%- assign checked_child_items = checked_child_items | concat: child -%}
+                    {%- else -%}
+                      {%- assign parent_items = parent_items | concat: child -%}
+                    {%- endif -%}
+                  {%- endfor -%}
+
+                  {%- assign child_items = checked_child_items -%}
                   {% assign parent_items = parent_items | reverse %}
                   {% assign child_items = child_items | reverse %}
                   {%- for item in parent_items -%}
