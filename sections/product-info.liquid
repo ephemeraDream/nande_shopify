@@ -82,7 +82,7 @@
           </div>
           {% if has_tabletop %}
             <img
-              src="{{ bundle_tabletop.selected_or_first_available_variant.featured_media | image_url: width: 2400, height: 1800 }}"
+              src="{{ bundle_tabletop.selected_or_first_available_variant.featured_media | image_url }}"
               class="product_info_bundle_tabletop_img hidden"
               data-fancybox="product_info_img"
               href="{{ bundle_tabletop.selected_or_first_available_variant.featured_media | image_url }}"
