@@ -140,10 +140,10 @@
       "name": "video simplicity",
       "settings": {
         "spec_id": "Produkt",
-        "show_playicon": "true",
+        "show_playicon": "false",
         "cover_image": "shopify://shop_images/product_info_video_cover.webp",
         "video_url": "",
-        "url_upload": "shopify://files/videos/TO1-Pro-anti-collision_2b6db0d3-82b5-44c0-876a-e5095807f303.mp4",
+        "url_upload": "shopify://files/videos/Yoga Hochverstellbare elektrische Stehtisch.mp4",
         "title": "Alle Produkte Im üBerblick",
         "description": "",
         "padding_top": 120,
