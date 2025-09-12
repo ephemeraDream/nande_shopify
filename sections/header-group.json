@@ -96,6 +96,31 @@
             "page_six_link": ""
           }
         },
+        "img_width_text_MF3Mtg": {
+          "type": "img_width_text",
+          "settings": {
+            "name": "111",
+            "link": "shopify://collections/2024-new-year-sale-desk",
+            "page_one_title": "专题二",
+            "page_one_text": "专题二",
+            "page_one_link": "",
+            "page_two_title": "",
+            "page_two_text": "",
+            "page_two_link": "",
+            "page_thr_title": "",
+            "page_thr_text": "",
+            "page_thr_link": "",
+            "page_four_title": "",
+            "page_four_text": "",
+            "page_four_link": "",
+            "page_five_title": "",
+            "page_five_text": "",
+            "page_five_link": "",
+            "page_six_title": "",
+            "page_six_text": "",
+            "page_six_link": ""
+          }
+        },
         "product_collection_eEzYM8": {
           "type": "product_collection",
           "settings": {
@@ -161,6 +186,7 @@
       },
       "block_order": [
         "img_width_text_Dh6yzR",
+        "img_width_text_MF3Mtg",
         "product_collection_eEzYM8",
         "product_collection_dkDC4b",
         "product_collection_RDMYxc",
