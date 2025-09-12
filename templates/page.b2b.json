@@ -70,7 +70,7 @@
           "settings": {
             "group_key": "Wie viele Produkte möchten Sie anfragen?",
             "label": "3-10",
-            "value": "Wie viele Produkte möchten Sie anfragen?"
+            "value": "3-10"
           }
         },
         "option_Y74Hfx": {
@@ -86,7 +86,7 @@
           "settings": {
             "group_key": "Wie viele Produkte möchten Sie anfragen?",
             "label": "31-50",
-            "value": "Wie viele Produkte möchten Sie anfragen?"
+            "value": "31-50"
           }
         },
         "option_mHB9md": {
@@ -94,7 +94,7 @@
           "settings": {
             "group_key": "Wie viele Produkte möchten Sie anfragen?",
             "label": "51-100",
-            "value": "Wie viele Produkte möchten Sie anfragen?"
+            "value": "51-100"
           }
         },
         "option_3zABAx": {
@@ -102,7 +102,7 @@
           "settings": {
             "group_key": "Wie viele Produkte möchten Sie anfragen?",
             "label": "100+",
-            "value": "Wie viele Produkte möchten Sie anfragen?"
+            "value": "100+"
           }
         },
         "dropdown_NeCQJ4": {
@@ -127,7 +127,7 @@
           "settings": {
             "group_key": "Wo haben Sie von uns gehört",
             "label": "Google",
-            "value": "Wo haben Sie von uns gehört"
+            "value": "Google"
           }
         },
         "option_NwnXYf": {
@@ -135,7 +135,7 @@
           "settings": {
             "group_key": "Wo haben Sie von uns gehört",
             "label": "Youtube",
-            "value": "Wo haben Sie von uns gehört"
+            "value": "Youtube"
           }
         },
         "option_xhpbzw": {
@@ -143,7 +143,7 @@
           "settings": {
             "group_key": "Wo haben Sie von uns gehört",
             "label": "Facebook",
-            "value": "Wo haben Sie von uns gehört"
+            "value": "Facebook"
           }
         },
         "option_3xMxEa": {
@@ -151,15 +151,15 @@
           "settings": {
             "group_key": "Wo haben Sie von uns gehört",
             "label": "Reddit",
-            "value": "Wo haben Sie von uns gehört"
+            "value": "Reddit"
           }
         },
         "option_caX38E": {
           "type": "option",
           "settings": {
             "group_key": "Wo haben Sie von uns gehört",
-            "label": "Amazone",
-            "value": "Wo haben Sie von uns gehört"
+            "label": "Amazon",
+            "value": "Amazon"
           }
         },
         "option_9VXQGM": {
@@ -167,7 +167,7 @@
           "settings": {
             "group_key": "Wo haben Sie von uns gehört",
             "label": "eBay",
-            "value": "Wo haben Sie von uns gehört"
+            "value": "eBay"
           }
         },
         "option_yUxTM6": {
@@ -175,7 +175,7 @@
           "settings": {
             "group_key": "Wo haben Sie von uns gehört",
             "label": "Online Review / Blog / Media",
-            "value": "Wo haben Sie von uns gehört"
+            "value": "Online Review / Blog / Media"
           }
         },
         "option_DPU6HH": {
@@ -183,7 +183,7 @@
           "settings": {
             "group_key": "Wo haben Sie von uns gehört",
             "label": "Friend/Colleague",
-            "value": "Wo haben Sie von uns gehört"
+            "value": "Friend/Colleague"
           }
         },
         "option_tFkTDx": {
@@ -191,7 +191,7 @@
           "settings": {
             "group_key": "Wo haben Sie von uns gehört",
             "label": "Influencer Recommendation",
-            "value": "Wo haben Sie von uns gehört"
+            "value": "Influencer Recommendation"
           }
         },
         "option_zQkKrF": {
@@ -199,7 +199,7 @@
           "settings": {
             "group_key": "Wo haben Sie von uns gehört",
             "label": "Other (please specify)",
-            "value": "Wo haben Sie von uns gehört"
+            "value": "Other (please specify)"
           }
         }
       },
