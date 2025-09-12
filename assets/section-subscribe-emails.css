@@ -82,6 +82,10 @@
   background-color: #BDFF00;
 }
 
+.subscribe_emails .newsletter-form__button:hover {
+  background-color: #a1d808!important;
+}
+
 .subscribe_emails .subscribe_emails_confirm {
   display: flex;
   margin-top: 0.3rem;
