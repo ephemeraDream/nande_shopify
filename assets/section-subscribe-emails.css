@@ -1,6 +1,6 @@
 .subscribe_emails_section {
   width: 100%;
-  height: 10.6rem;
+  /* height: 10.6rem; */
   background-color: #1F1F1F;
 }
 
@@ -12,6 +12,7 @@
   justify-content: space-between;
   border-bottom: 0.1rem solid #7F7E75;
   height: 100%;
+  padding: 1.6rem 0;
 }
 
 .subscribe_emails .subscribe_emails_title {
@@ -62,7 +63,17 @@
   padding: 1.5rem;
   padding-right: 40%;
 }
-.subscribe_emails .newsletter-form__message{color: #7f7e75;}
+.subscribe_emails .newsletter-form__message{margin-top: 0;padding: 0.3rem;color: #bdff00;
+  font-weight: bold;}
+  .subscribe_emails .newsletter-form__message.newsletter-form__message--error{
+    color: #ff4d4f;
+    border:1px solid #ff4d4f;
+    background-color:rgb(250 199 201);
+  }
+  .subscribe_emails .newsletter-form__message.newsletter-form__message--success{
+    border:1px solid #bdff00;
+    background-color:rgb(105 114 80);
+  }
 .subscribe_emails .newsletter-form__button {
   max-width: 31.1rem;
   background-color: #BDFF00;
