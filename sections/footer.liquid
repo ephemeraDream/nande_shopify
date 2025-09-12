@@ -207,6 +207,14 @@
                       <span class="svg-wrapper">
                         {{- 'icon-arrow.svg' | inline_asset_content -}}
                       </span>
+                      <span class="loading__spinner hidden">
+                        <svg class="spinner" viewBox="0 0 24 24">
+                          <circle class="path" cx="12" cy="12" r="10" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-dasharray="31.416" stroke-dashoffset="31.416">
+                            <animate attributeName="stroke-dasharray" dur="2s" values="0 31.416;15.708 15.708;0 31.416" repeatCount="indefinite"/>
+                            <animate attributeName="stroke-dashoffset" dur="2s" values="0;-15.708;-31.416" repeatCount="indefinite"/>
+                          </circle>
+                        </svg>
+                      </span>
                     </button>
                   </div>
                   {%- if form.errors -%}
@@ -320,6 +328,65 @@
     </div>
   </div>
 </footer>
+
+<style>
+.newsletter-form__button.loading {
+  position: relative;
+  pointer-events: none;
+}
+
+.newsletter-form__button .loading__spinner {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 20px;
+  height: 20px;
+}
+
+.newsletter-form__button .loading__spinner .spinner {
+  width: 100%;
+  height: 100%;
+  animation: spin 1s linear infinite;
+}
+
+.newsletter-form__button .loading__spinner .path {
+  stroke: currentColor;
+  stroke-width: 2;
+  stroke-linecap: round;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.newsletter-form__button.loading .svg-wrapper {
+  opacity: 0;
+}
+</style>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const form = document.getElementById('ContactFooter');
+  const submitBtn = document.getElementById('Subscribe');
+  const btnIcon = submitBtn.querySelector('.svg-wrapper');
+  const loadingSpinner = submitBtn.querySelector('.loading__spinner');
+  
+  if (form && submitBtn) {
+    form.addEventListener('submit', function() {
+      // 添加loading状态
+      submitBtn.classList.add('loading');
+      submitBtn.setAttribute('aria-disabled', 'true');
+      submitBtn.disabled = true;
+      
+      // 显示loading spinner，隐藏图标
+      loadingSpinner.classList.remove('hidden');
+      if (btnIcon) btnIcon.style.display = 'none';
+    });
+  }
+});
+</script>
 
 {% schema %}
 {
