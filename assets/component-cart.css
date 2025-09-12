@@ -494,4 +494,14 @@ cart-items {
 .cart_section {
   flex-direction: column;
 }
+.cart_section .cart-item__media {
+  flex: 0 0 8rem;
+  height: 8rem;
+}
+.cart-item {
+  flex-direction: column;
+}
+.drawer__cart-items-wrapper-right-bottom {
+  flex-direction: column;
+}
 }
