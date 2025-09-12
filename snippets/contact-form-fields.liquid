@@ -5,16 +5,6 @@ Contact Form Fields Snippet - 可复用的表单字段组件
 ------------------------------------------------------------
 {% endcomment %}
 
-{%- if form.posted_successfully? -%}
-  <p class="form-status form__message success" tabindex="-1" autofocus>
-    {{ section.settings.success_message | default: 'Your message has been sent successfully.' }}
-  </p>
-{%- elsif form.errors -%}
-  <div class="form__message error" role="alert" tabindex="-1" autofocus>
-    {{ section.settings.error_message | default: 'There was an error sending the form. Please check your input.' }}
-  </div>
-{%- endif -%}
-
 <div class="form-grid">
   {%- if section.settings.show_email -%}
     <div class="form-grid-field field--with-error">
@@ -158,6 +148,21 @@ Contact Form Fields Snippet - 可复用的表单字段组件
       name="contact[body]"
       placeholder="{{ section.settings.message_placeholder }}"
     >{{- form.body -}}</textarea>
+  </div>
+{%- endif -%}
+<p class="form-status form__message success" tabindex="-1" autofocus>
+  {{ section.settings.success_message | default: 'Your message has been sent successfully.' }}
+</p>
+<div class="form__message error" role="alert" tabindex="-1" autofocus>
+  {{ section.settings.error_message | default: 'There was an error sending the form. Please check your input.' }}
+</div>
+{%- if form.posted_successfully? -%}
+  <p class="form-status form__message success" tabindex="-1" autofocus>
+    {{ section.settings.success_message | default: 'Your message has been sent successfully.' }}
+  </p>
+{%- elsif form.errors -%}
+  <div class="form__message error" role="alert" tabindex="-1" autofocus>
+    {{ section.settings.error_message | default: 'There was an error sending the form. Please check your input.' }}
   </div>
 {%- endif -%}
 
