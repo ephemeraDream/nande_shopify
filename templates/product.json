@@ -141,9 +141,8 @@
       "settings": {
         "spec_id": "Produkt",
         "show_playicon": "true",
-        "cover_image": "shopify://shop_images/product_info_video_cover.webp",
-        "video_url": "",
-        "url_upload": "shopify://files/videos/TO1-Pro-anti-collision_2b6db0d3-82b5-44c0-876a-e5095807f303.mp4",
+        "cover_image": "shopify://shop_images/Space_Max_supports_200kg_max_loading_capactity.jpg",
+        "video_url": "https://www.youtube.com/watch?v=_-AS5DtDeqs",
         "title": "Alle Produkte Im üBerblick",
         "description": "",
         "padding_top": 120,
