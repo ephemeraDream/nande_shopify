@@ -698,8 +698,8 @@
       "type": "technical-data",
       "name": "technical data",
       "settings": {
-        "spec_id": "",
-        "title": "",
+        "spec_id": "123",
+        "title": "<p>123</p>",
         "select_product": "maidesite-elektrisch-hohenverstellbarer-gestell-t2-pro"
       }
     }

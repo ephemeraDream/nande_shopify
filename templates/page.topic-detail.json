@@ -164,9 +164,9 @@
           "settings": {
             "belong_tab": "0",
             "image": "shopify://shop_images/YOGA_-_1_80dbac95-bdf1-4531-a898-05e1c0987d43.jpg",
-            "title": "123",
-            "text": "123",
-            "btn_text": "123",
+            "title": "",
+            "text": "",
+            "btn_text": "",
             "link": ""
           }
         },
@@ -175,9 +175,9 @@
           "settings": {
             "belong_tab": "1",
             "image": "shopify://shop_images/Banner_-_YOGA_-_1.jpg",
-            "title": "456",
-            "text": "456",
-            "btn_text": "456",
+            "title": "",
+            "text": "",
+            "btn_text": "",
             "link": ""
           }
         },
