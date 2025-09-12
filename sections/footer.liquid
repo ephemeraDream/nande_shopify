@@ -202,8 +202,11 @@
                       class="newsletter-form__button field__button"
                       name="commit"
                       id="Subscribe"
-                    >
-                      <span class="btn-text">{{ 'newsletter.button_label' | t }}</span>
+                      aria-label="{{ 'newsletter.button_label' | t }}"
+                    >1111
+                      <span class="svg-wrapper">
+                        {{- 'icon-arrow.svg' | inline_asset_content -}}
+                      </span>
                       <span class="loading__spinner hidden">
                         <svg class="spinner" viewBox="0 0 24 24">
                           <circle class="path" cx="12" cy="12" r="10" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-dasharray="31.416" stroke-dashoffset="31.416">
@@ -211,9 +214,6 @@
                             <animate attributeName="stroke-dashoffset" dur="2s" values="0;-15.708;-31.416" repeatCount="indefinite"/>
                           </circle>
                         </svg>
-                      </span>
-                      <span class="svg-wrapper">
-                        {{- 'icon-arrow.svg' | inline_asset_content -}}
                       </span>
                     </button>
                   </div>
