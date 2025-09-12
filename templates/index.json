@@ -92,62 +92,6 @@
         "autoplay_speed": 25
       }
     },
-    "link_block_ygbQVD": {
-      "type": "link-block",
-      "blocks": {
-        "item_3EWnyb": {
-          "type": "item",
-          "settings": {
-            "title": "Höhenverstellbarer Schreibtisch",
-            "text": "",
-            "btn_text": "Alle anzeigen",
-            "image": "shopify://shop_images/a8e9f7ef556f09917041953654d98435.jpg",
-            "link": "shopify://collections/hohenverstellbarer-schreibtisch"
-          }
-        },
-        "item_FzLRBi": {
-          "type": "item",
-          "settings": {
-            "title": "Tischgestell Höhenverstellbar",
-            "text": "",
-            "btn_text": "Alle anzeigen",
-            "image": "shopify://shop_images/b84cd3454131b39178552983962b7c41_3b248903-d17d-46f5-90bc-200051a58bae.jpg",
-            "link": "shopify://collections/hohenverstellbarer-schreibtisch"
-          }
-        },
-        "item_K7NCmg": {
-          "type": "item",
-          "settings": {
-            "title": "Ergonomische Bürostühle",
-            "text": "",
-            "btn_text": "Alle anzeigen",
-            "image": "shopify://shop_images/6a6194c936e3b796ca017bcb427d0844_1bc72ad3-3dd4-46b1-af1e-79aebaabbbf6.jpg",
-            "link": "shopify://collections/ergonomischer-burostuhl"
-          }
-        },
-        "item_jEQh9H": {
-          "type": "item",
-          "settings": {
-            "title": "Bürozubehör",
-            "text": "",
-            "btn_text": "Alle anzeigen",
-            "image": "shopify://shop_images/05c749914ceb6f0e401d50aac1cec636.jpg",
-            "link": "shopify://collections/maidesite-burozubehor"
-          }
-        }
-      },
-      "block_order": [
-        "item_3EWnyb",
-        "item_FzLRBi",
-        "item_K7NCmg",
-        "item_jEQh9H"
-      ],
-      "name": "link block",
-      "settings": {
-        "title": "Finde deinen perfekten Arbeitsplatz",
-        "text": "<p>Entdecke Tische, Stühle und mehr für komfortables Arbeiten</p>"
-      }
-    },
     "polka_dot_swiper_4yRfwn": {
       "type": "polka-dot-swiper",
       "blocks": {
@@ -234,6 +178,62 @@
         "show_info": true,
         "padding_top": 120,
         "padding_bottom": 36
+      }
+    },
+    "link_block_ygbQVD": {
+      "type": "link-block",
+      "blocks": {
+        "item_3EWnyb": {
+          "type": "item",
+          "settings": {
+            "title": "Höhenverstellbarer Schreibtisch",
+            "text": "",
+            "btn_text": "Alle anzeigen",
+            "image": "shopify://shop_images/a8e9f7ef556f09917041953654d98435.jpg",
+            "link": "shopify://collections/hohenverstellbarer-schreibtisch"
+          }
+        },
+        "item_FzLRBi": {
+          "type": "item",
+          "settings": {
+            "title": "Tischgestell Höhenverstellbar",
+            "text": "",
+            "btn_text": "Alle anzeigen",
+            "image": "shopify://shop_images/b84cd3454131b39178552983962b7c41_3b248903-d17d-46f5-90bc-200051a58bae.jpg",
+            "link": "shopify://collections/hohenverstellbarer-schreibtisch"
+          }
+        },
+        "item_K7NCmg": {
+          "type": "item",
+          "settings": {
+            "title": "Ergonomische Bürostühle",
+            "text": "",
+            "btn_text": "Alle anzeigen",
+            "image": "shopify://shop_images/6a6194c936e3b796ca017bcb427d0844_1bc72ad3-3dd4-46b1-af1e-79aebaabbbf6.jpg",
+            "link": "shopify://collections/ergonomischer-burostuhl"
+          }
+        },
+        "item_jEQh9H": {
+          "type": "item",
+          "settings": {
+            "title": "Bürozubehör",
+            "text": "",
+            "btn_text": "Alle anzeigen",
+            "image": "shopify://shop_images/05c749914ceb6f0e401d50aac1cec636.jpg",
+            "link": "shopify://collections/maidesite-burozubehor"
+          }
+        }
+      },
+      "block_order": [
+        "item_3EWnyb",
+        "item_FzLRBi",
+        "item_K7NCmg",
+        "item_jEQh9H"
+      ],
+      "name": "link block",
+      "settings": {
+        "title": "Finde deinen perfekten Arbeitsplatz",
+        "text": "<p>Entdecke Tische, Stühle und mehr für komfortables Arbeiten</p>"
       }
     },
     "compare_simple_8gK3g4": {
@@ -585,8 +585,8 @@
   },
   "order": [
     "banner_8A7fgF",
-    "link_block_ygbQVD",
     "polka_dot_swiper_4yRfwn",
+    "link_block_ygbQVD",
     "compare_simple_8gK3g4",
     "image_comparison_JHgace",
     "bundle_simple_WFrNiX",
