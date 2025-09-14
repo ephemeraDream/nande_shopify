@@ -110,9 +110,8 @@
                       {{- 'common.en_savoir_plus' | t }}
                       {{ 'icon-right-arrow.svg' | inline_asset_content -}}
                     </a>
-                    {% for item in block.settings.select_product.metafields.custom.compare_simple.value.data.value
-                      limit: 4
-                    %}
+                    {% assign compare_data = block.settings.select_product.metafields.custom.compare_simple.value %}
+                    {% for item in compare_data.data limit: 4 %}
                       <div class="compare_simple_item_line">
                         <div class="compare_simple_item_line_label">{{ item.label }}</div>
                         <div class="compare_simple_item_line_value">{{ item.value }}</div>

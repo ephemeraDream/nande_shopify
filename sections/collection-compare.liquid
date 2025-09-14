@@ -22,79 +22,122 @@
   <div class="collection_compare_contain padding-sider">
     <div class="collection_compare_contain_head">
       {%- if section.settings.enable_filtering -%}
-      <div class="collection_compare_contain_switchfilter" data-type="open">
-        <span>{{ 'common.filter' | t }}</span>
-        {{- 'icon-filter.svg' | inline_asset_content -}}
-      </div>
+        <div class="collection_compare_contain_switchfilter" data-type="open">
+          <span>{{ 'common.filter' | t }}</span>
+          {{- 'icon-filter.svg' | inline_asset_content -}}
+        </div>
       {% endif %}
       <div class="collection_compare_contain_head_right">
         <div class="flex_center">
           {%- if section.settings.enable_sorting -%}
-          <span class="collection_compare_contain_head_label">{{ 'common.sortieren_nach' | t }}</span>
-          <div class="collection_compare_contain_sort">
-            {%- assign sort_by = collection.sort_by | default: collection.default_sort_by -%}
-            {%- for option in collection.sort_options %}
-              {%- if option.value == sort_by %}
-                {% assign sort_by_name = option.name %}
-              {%- endif %}
-            {% endfor -%}
-            <span class="collection_compare_contain_sort_label">{{ sort_by_name }}</span>
-            {{- 'icon-select-down.svg' | inline_asset_content -}}
-            <div class="collection_compare_contain_sort_select">
+            <span class="collection_compare_contain_head_label">{{ 'common.sortieren_nach' | t }}</span>
+            <div class="collection_compare_contain_sort">
+              {%- assign sort_by = collection.sort_by | default: collection.default_sort_by -%}
               {%- for option in collection.sort_options %}
-                <div
-                  value="{{ option.value }}"
-                  {%- if option.value == sort_by %}
-                    selected="selected"
-                  {%- endif %}
-                  class="collection_compare_contain_sort_select_item"
-                >
-                  {{ option.name }}
-                </div>
+                {%- if option.value == sort_by %}
+                  {% assign sort_by_name = option.name %}
+                {%- endif %}
               {% endfor -%}
+              <span class="collection_compare_contain_sort_label">{{ sort_by_name }}</span>
+              {{- 'icon-select-down.svg' | inline_asset_content -}}
+              <div class="collection_compare_contain_sort_select">
+                {%- for option in collection.sort_options %}
+                  <div
+                    value="{{ option.value }}"
+                    {%- if option.value == sort_by %}
+                      selected="selected"
+                    {%- endif %}
+                    class="collection_compare_contain_sort_select_item"
+                  >
+                    {{ option.name }}
+                  </div>
+                {% endfor -%}
+              </div>
             </div>
-          </div>
           {% endif %}
         </div>
-      
+
         <div class="flex_center">
           {%- if section.settings.enable_compare -%}
-          <div class="flex_center collection_compare_contain_select_switch_box">
-            <span class="collection_compare_contain_head_label">{{ 'common.vergleichen' | t }}</span>
-            <div class="collection_compare_contain_select_switch"></div>
-          </div>
-         {% endif %}
-         {%- if section.settings.show_layout_toggle -%}
-          <span class="collection_compare_contain_head_label">{{ 'common.ansicht_als' | t }}</span>
-          <div class="collection_compare_contain_showtype" data-type="list">
-            {{- 'icon-list.svg' | inline_asset_content -}}
-          </div>
-          <div class="collection_compare_contain_showtype active" data-type="grid">
-            {{- 'icon-grid.svg' | inline_asset_content -}}
-          </div>
-         {% endif %}
+            <div class="flex_center collection_compare_contain_select_switch_box">
+              <span class="collection_compare_contain_head_label">{{ 'common.vergleichen' | t }}</span>
+              <div class="collection_compare_contain_select_switch"></div>
+            </div>
+          {% endif %}
+          {%- if section.settings.show_layout_toggle -%}
+            <span class="collection_compare_contain_head_label">{{ 'common.ansicht_als' | t }}</span>
+            <div class="collection_compare_contain_showtype" data-type="list">
+              {{- 'icon-list.svg' | inline_asset_content -}}
+            </div>
+            <div class="collection_compare_contain_showtype active" data-type="grid">
+              {{- 'icon-grid.svg' | inline_asset_content -}}
+            </div>
+          {% endif %}
         </div>
       </div>
     </div>
     <div class="collection_compare_contain_body">
       {%- if section.settings.enable_filtering -%}
-      <div class="collection_compare_contain_body_left facets-vertical">
-        {% render 'collection-facets', results: collection, filter_type: 'vertical' %}
-      </div>
-     {% endif %}
+        <div class="collection_compare_contain_body_left facets-vertical">
+          {% render 'collection-facets', results: collection, filter_type: 'vertical' %}
+        </div>
+      {% endif %}
       <div class="collection_compare_contain_body_right" data-id="{{ section.id }}">
         {% paginate collection.products by section.settings.products_per_page %}
           <div class="collection_compare_product_contain">
             {% for product in collection.products %}
               {% assign sale_info = product.metafields.custom.sale_info.value %}
+              {% liquid
+                assign featured_image = product.featured_image
+                assign second_image = null
+
+                if featured_image
+                  assign found = false
+                  for img in product.images
+                    if found
+                      assign second_image = img
+                      break
+                    endif
+                    if img.src == featured_image.src
+                      assign found = true
+                    endif
+                  endfor
+
+                  if second_image == null
+                    for img in product.images
+                      if img.src != featured_image.src
+                        assign second_image = img
+                        break
+                      endif
+                    endfor
+                  endif
+                else
+                  assign second_image = product.images[1]
+                endif
+              %}
               <a
-                class="collection_compare_product"
+                class="collection_compare_product{% if second_image != blank %} collection_compare_product_hoverchange{% endif %}"
                 data-type="{{ product.type | handleize }}"
                 href="{{ product.url }}"
                 data-id="{{ product.id }}"
               >
                 <div class="collection_compare_product_img">
-                  <img src="{{ product.featured_media | image_url }}" alt="{{ product.title }}">
+                  {% if featured_image %}
+                    {{
+                      featured_image
+                      | image_url: width: featured_image.width
+                      | image_tag: alt: product.title, class: 'collection_compare_product_img_first'
+                    }}
+                  {% endif %}
+
+                  {% if second_image and second_image.src != featured_image.src %}
+                    {{
+                      second_image
+                      | image_url: width: second_image.width
+                      | image_tag: alt: product.title, class: 'collection_compare_product_img_second'
+                    }}
+                  {% endif %}
+                  {% comment %} <img src="{{ product.featured_media | image_url }}" alt="{{ product.title }}"> {% endcomment %}
                   <div class="collection_compare_product_select">
                     {{- 'icon-selected.svg' | inline_asset_content -}}
                   </div>
@@ -275,9 +318,7 @@
       "id": "enable_sorting",
       "label": "Enable sorting",
       "default": true
-    },
-
-
+    }
   ],
   "presets": [
     {

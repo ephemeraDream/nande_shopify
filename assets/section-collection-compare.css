@@ -264,13 +264,24 @@
 .collection_compare .collection_compare_product_img img {
   width: 100%;
   height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
   object-fit: contain;
   object-position: center center;
-  transition: transform .3s ease;
+  transition: opacity 0.8s ease;
 }
 
-.collection_compare .collection_compare_product:hover img {
-  transform: scale(1.1);
+.collection_compare .collection_compare_product_img_second {
+  opacity: 0;
+}
+
+.collection_compare .collection_compare_product_hoverchange:hover .collection_compare_product_img_first {
+  opacity: 0;
+}
+
+.collection_compare .collection_compare_product_hoverchange:hover .collection_compare_product_img_second {
+  opacity: 1;
 }
 
 .collection_compare .collection_compare_product_info {
