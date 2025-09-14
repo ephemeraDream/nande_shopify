@@ -322,7 +322,7 @@ document.querySelector(".collection_compare_select_contain_body_btn").addEventLi
         if (!grouped[item.category]) {
           grouped[item.category] = [];
         }
-        grouped[item.category].push(item);
+        grouped[item.category].push(item.list);
       });
 
       // 遍历分组生成 HTML
