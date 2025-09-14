@@ -216,6 +216,10 @@
   margin-top: 0.8rem;
 }
 
+.product_compare .product_compare_product_label+.product_compare_product_contain {
+  margin-top: 3rem;
+}
+
 .product_compare .product_compare_product_showtitle .product_compare_product_head {
   opacity: 1;
 }
