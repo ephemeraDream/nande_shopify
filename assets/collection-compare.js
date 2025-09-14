@@ -316,16 +316,34 @@ document.querySelector(".collection_compare_select_contain_body_btn").addEventLi
 
     let compare_info_html = '';
     if (compare_simple) {
+      const grouped = {};
+
       compare_simple.forEach(item => {
+        if (!grouped[item.category]) {
+          grouped[item.category] = [];
+        }
+        grouped[item.category].push(item);
+      });
+
+      // 遍历分组生成 HTML
+      Object.keys(grouped).forEach(category => {
         compare_info_html += `
-        <div class="product_compare_product_card" data-type="${item.label}" data-value="${item.value}">
-          <div class="product_compare_product_head">${item.label}</div>
-          <div class="product_compare_product_body">
-            <div class="product_compare_product_label">${item.label}</div>
-            <div class="product_compare_product_contain">${item.value}</div>
-          </div>
-        </div>
+      <div class="product_compare_product_card" data-type="${category}">
+        <div class="product_compare_product_head">${category}</div>
+        <div class="product_compare_product_body">
+    `;
+
+        grouped[category].forEach(valueItem => {
+          compare_info_html += `
+          <div class="product_compare_product_label">${valueItem.label}</div>
+          <div class="product_compare_product_contain">${valueItem.value}</div>
       `;
+        });
+
+        compare_info_html += `
+        </div>
+      </div>
+    `;
       });
     }
 
