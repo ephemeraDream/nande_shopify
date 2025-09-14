@@ -94,9 +94,9 @@
   font-size: 2rem;
 }
 
-.compare_simple .compare_simple_item_title .product_title{
+.compare_simple .compare_simple_item_title .product_title {
   display: -webkit-box;
-  -webkit-line-clamp: 1; 
+  -webkit-line-clamp: 1;
   -webkit-box-orient: vertical;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -115,10 +115,13 @@
   min-width: fit-content;
   color: #BDFF00;
 }
-.compare_simple .compare_simple_item:hover .compare_simple_item_title,.compare_simple .compare_simple_item:hover .compare_simple_item_title .product_title_top {
+
+.compare_simple .compare_simple_item:hover .compare_simple_item_title,
+.compare_simple .compare_simple_item:hover .compare_simple_item_title .product_title_top {
   background-color: #BDFF00;
   color: #1F1F1F;
 }
+
 .compare_simple .compare_simple_item:hover .compare_simple_item_title .product_title {
   color: #1F1F1F;
 }
@@ -171,7 +174,27 @@
   border-bottom: 0.1rem solid #F3F3F3;
 }
 
+.compare_simple .compare_simple_item_category_label {
+  font-family: PP Right Grotesk;
+  font-size: 3rem;
+  font-weight: 500;
+  line-height: 94%;
+  letter-spacing: 0px;
+  font-variation-settings: "opsz" auto;
+  color: #1F1F1F;
+}
+
 .compare_simple .compare_simple_item_line_label {
+  font-family: PP Right Grotesk;
+  font-size: 2.4rem;
+  font-weight: 500;
+  line-height: 94%;
+  letter-spacing: 0px;
+  font-variation-settings: "opsz" auto;
+  color: #1F1F1F;
+}
+
+.compare_simple .compare_simple_item_line_value {
   font-family: "PP Right Grotesk";
   font-size: 1.6rem;
   font-weight: normal;
@@ -181,42 +204,54 @@
   color: #7F7E75;
 }
 
-.compare_simple .compare_simple_item_line_value {
-  font-family: PP Right Grotesk;
-  font-size: 2.4rem;
-  font-weight: 500;
-  line-height: 94%;
-  letter-spacing: 0px;
-  font-variation-settings: "opsz" auto;
-  color: #1F1F1F;
+.compare_simple .nd-btn {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin: 0;
 }
-.compare_simple .nd-btn{width:100%;display: flex;justify-content: space-between;margin:0;}
-.compare_simple .compare_simple_outer_prev{
+
+.compare_simple .compare_simple_outer_prev {
   left: -6.5rem;
 }
-.compare_simple .compare_simple_outer_next{
+
+.compare_simple .compare_simple_outer_next {
   right: -6.5rem;
 }
+
 @media screen and (max-width: 1440px) {
-  .compare_simple .compare_simple_item_title{font-size: 2rem;}
-  .compare_simple .compare_simple_item_line_value{font-size: 2rem;}
-  .compare_simple .compare_simple_item_price{font-size: 2rem;}
+  .compare_simple .compare_simple_item_title {
+    font-size: 2rem;
+  }
+
+  .compare_simple .compare_simple_item_line_value {
+    font-size: 2rem;
+  }
+
+  .compare_simple .compare_simple_item_price {
+    font-size: 2rem;
+  }
+
   .compare_simple .compare_simple_contain {
     padding: 3rem;
   }
 }
+
 @media screen and (max-width: 1024px) {
-  .compare_simple .compare_simple_outer_prev{
+  .compare_simple .compare_simple_outer_prev {
     left: -4.5rem;
   }
-  .compare_simple .compare_simple_outer_next{
+
+  .compare_simple .compare_simple_outer_next {
     right: -4.5rem;
   }
+
   .compare_simple .compare_simple_outer_prev,
-    .compare_simple .compare_simple_outer_next {
-      display: none;
-    }
+  .compare_simple .compare_simple_outer_next {
+    display: none;
+  }
 }
+
 @media screen and (max-width: 768px) {
   .compare_simple .compare_simple_contain_head {
     flex-direction: column;
