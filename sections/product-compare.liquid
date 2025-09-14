@@ -113,12 +113,12 @@
             {% for item in compare_data.data.value %}
               <div class="product_compare_product_card" data-type="{{ item.category | handle }}">
                 <div class="product_compare_product_head">{{ item.category }}</div>
-                {% for value in item.list %}
-                  <div class="product_compare_product_body">
+                <div class="product_compare_product_body">
+                  {% for value in item.list %}
                     <div class="product_compare_product_label">{{ value.label }}</div>
                     <div class="product_compare_product_contain">{{ value.value }}</div>
-                  </div>
-                {% endfor %}
+                  {% endfor %}
+                </div>
               </div>
             {% endfor %}
           </div>
