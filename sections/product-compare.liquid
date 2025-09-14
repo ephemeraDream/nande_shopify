@@ -109,13 +109,16 @@
                 {{ 'icon-right-arrow.svg' | inline_asset_content }}
               </a>
             </div>
-            {% for item in product.metafields.custom.compare_simple.value.data.value %}
-              <div class="product_compare_product_card" data-type="{{ item.label | handle }}">
-                <h3 class="product_compare_product_head">{{ item.label }}</h3>
-                <div class="product_compare_product_body">
-                  <div class="product_compare_product_label">{{ item.label }}</div>
-                  <div class="product_compare_product_contain">{{ item.value }}</div>
-                </div>
+            {% assign compare_data = product.metafields.custom.compare_simple.value %}
+            {% for item in compare_data.data.value %}
+              <div class="product_compare_product_card" data-type="{{ item.category | handle }}">
+                <div class="product_compare_product_head">{{ item.category }}</div>
+                {% for value in item.list %}
+                  <div class="product_compare_product_body">
+                    <div class="product_compare_product_label">{{ value.label }}</div>
+                    <div class="product_compare_product_contain">{{ value.value }}</div>
+                  </div>
+                {% endfor %}
               </div>
             {% endfor %}
           </div>
@@ -184,13 +187,16 @@
               {{ 'common.en_savoir_plus' | t }}
               {{ 'icon-right-arrow.svg' | inline_asset_content }}
             </a>
-            {% for item in product.metafields.custom.compare_simple.value.data.value %}
-              <div class="product_compare_product_card" data-type="{{ item.label | handle }}">
-                <div class="product_compare_product_head">{{ item.label }}</div>
-                <div class="product_compare_product_body">
-                  <div class="product_compare_product_label">{{ item.label }}</div>
-                  <div class="product_compare_product_contain">{{ item.value }}</div>
-                </div>
+            {% assign compare_data = product.metafields.custom.compare_simple.value %}
+            {% for item in compare_data.data.value %}
+              <div class="product_compare_product_card" data-type="{{ item.category | handle }}">
+                <div class="product_compare_product_head">{{ item.category }}</div>
+                {% for value in item.list %}
+                  <div class="product_compare_product_body">
+                    <div class="product_compare_product_label">{{ value.label }}</div>
+                    <div class="product_compare_product_contain">{{ value.value }}</div>
+                  </div>
+                {% endfor %}
               </div>
             {% endfor %}
           </div>
