@@ -216,7 +216,7 @@
   margin-top: 0.8rem;
 }
 
-.product_compare .product_compare_product_label+.product_compare_product_contain {
+.product_compare .product_compare_product_contain+.product_compare_product_label {
   margin-top: 3rem;
 }
 
