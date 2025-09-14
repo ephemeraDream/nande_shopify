@@ -12,9 +12,56 @@
     {% paginate collection.products by 12 %}
       <div class="collection_default_contain">
         {% for product in collection.products %}
-          <a class="collection_default_product" data-type="{{ product.type | handleize }}" href="{{ product.url }}">
+          {% liquid
+            assign featured_image = product.featured_image
+            assign second_image = null
+
+            if featured_image
+              assign found = false
+              for img in product.images
+                if found
+                  assign second_image = img
+                  break
+                endif
+                if img.src == featured_image.src
+                  assign found = true
+                endif
+              endfor
+
+              if second_image == null
+                for img in product.images
+                  if img.src != featured_image.src
+                    assign second_image = img
+                    break
+                  endif
+                endfor
+              endif
+            else
+              assign second_image = product.images[1]
+            endif
+          %}
+          <a
+            class="collection_default_product{% if second_image != blank %} collection_default_product_hoverchange{% endif %}"
+            data-type="{{ product.type | handleize }}"
+            href="{{ product.url }}"
+          >
             <div class="collection_default_product_img">
-              <img src="{{ product.featured_media | image_url }}" alt="{{ product.title }}">
+              {% if featured_image %}
+                {{
+                  featured_image
+                  | image_url: width: featured_image.width
+                  | image_tag: alt: product.title, class: 'collection_default_product_img_first'
+                }}
+              {% endif %}
+
+              {% if second_image and second_image.src != featured_image.src %}
+                {{
+                  second_image
+                  | image_url: width: second_image.width
+                  | image_tag: alt: product.title, class: 'collection_default_product_img_second'
+                }}
+              {% endif %}
+              {% comment %} <img src="{{ product.featured_media | image_url }}" alt="{{ product.title }}"> {% endcomment %}
             </div>
             <div class="collection_default_product_info">
               <h4 class="collection_default_product_title">{{ product.title }}</h4>
