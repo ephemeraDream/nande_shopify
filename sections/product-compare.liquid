@@ -146,32 +146,34 @@
                 {%- endfor %}
               </div>
             </div>
-            <div class="product_compare_item_color">
-              {% for option in product.options_with_values %}
-                {%- case option.name -%}
-                  {%- when 'Farbe Tischplatte' -%}
-                    {% for value in option.values %}
-                      {% assign color = '' %}
-                      {% assign color_img = '' %}
-                      {% for color_item in product.metafields.custom.color_option.value %}
-                        {% if color_item.name == value.name %}
-                          {% assign color = color_item.value %}
-                          {% assign color_img = color_item.image %}
-                        {% endif %}
-                      {% endfor %}
-                      <div
-                        class="product_compare_item_color_circle{% if color == '' %} product_compare_item_color_circle_none{% endif %}"
-                        {% if color_img != blank %}
-                          style="background: url({{ color_img | image_url }}) no-repeat no-repeat center center"
-                        {% elsif color != '' %}
-                          style="background-color: {{ color }}"
-                        {% endif %}
-                        title="{{ value }}"
-                      ></div>
-                    {%- endfor %}
-                {%- endcase -%}
-              {%- endfor %}
-            </div>
+            {% comment %}
+              <div class="product_compare_item_color">
+                {% for option in product.options_with_values %}
+                  {%- case option.name -%}
+                    {%- when 'Farbe Tischplatte' -%}
+                      {% for value in option.values %}
+                        {% assign color = '' %}
+                        {% assign color_img = '' %}
+                        {% for color_item in product.metafields.custom.color_option.value %}
+                          {% if color_item.name == value.name %}
+                            {% assign color = color_item.value %}
+                            {% assign color_img = color_item.image %}
+                          {% endif %}
+                        {% endfor %}
+                        <div
+                          class="product_compare_item_color_circle{% if color == '' %} product_compare_item_color_circle_none{% endif %}"
+                          {% if color_img != blank %}
+                            style="background: url({{ color_img | image_url }}) no-repeat no-repeat center center"
+                          {% elsif color != '' %}
+                            style="background-color: {{ color }}"
+                          {% endif %}
+                          title="{{ value }}"
+                        ></div>
+                      {%- endfor %}
+                  {%- endcase -%}
+                {%- endfor %}
+              </div>
+            {% endcomment %}
             <div class="product_compare_item_price">
               {% comment %}
                 {% if block.settings.select_product.compare_at_price != blank %}
