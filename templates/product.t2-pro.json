@@ -492,6 +492,7 @@
         "swiper_EnDd8n",
         "swiper_4kYG3r"
       ],
+      "disabled": true,
       "name": "maidesite swiper",
       "settings": {
         "title": "<p>Die Presse Liebt Maidesite</p>",
@@ -510,30 +511,41 @@
         "swiper_mexwM6": {
           "type": "swiper",
           "settings": {
-            "name": "@Suli-Man",
-            "introduce": "<p>17.1 Million YouTube Followers</p>",
-            "description": "<p>\" I really liked it, and it looks really cool. It's just perfect for long workdays or gaming sessions where comfort and ergonomics are important.\"</p>",
+            "name": "@EFRALINK",
+            "introduce": "",
+            "description": "<p>\"Wenn wir im Stehen arbeiten wollen, ist das besonders interessant. Das Arbeiten im Stehen hift uns, unsere Beine zu strecken und die Position unseres Ruckens zu andern, was vorteilhaft ist. Mit diesen Schreibtischen konnen wir nicht nur fur kurze Zeit, sondern auch fur langere Zeit im Stehen arbeiten.\"</p>",
             "link": "",
-            "cover_image": "shopify://shop_images/celebrity-img-1.webp",
             "video_url": "",
-            "url_upload": "shopify://files/videos/TO1-Pro-spine-healthy-mode_a586d928-0c0c-459d-99a8-75d2ab5cc36d.mp4"
+            "url_upload": "shopify://files/videos/T2 Pro Plus.mp4"
+          }
+        },
+        "swiper_87wBtG": {
+          "type": "swiper",
+          "settings": {
+            "name": "@LauraBC",
+            "introduce": "",
+            "description": "<p>\"Hier ist mein neues minimalistisches Schreibtisch-Setup als Fotograf und Content Creator fur lange Bearbeitungsstunden. Ich bearbeite sowohl Fotos als auch Videos, daher ist ein komfortabler Arbeitsplatz ein Muss.<br/>Hier zeige ich Ihnen die wesentlichen Dinge, die Sie als Fotograf und Content Creator unbedingt haben sollten! : )\"</p>",
+            "link": "",
+            "cover_image": "shopify://shop_images/Laura_BC.png",
+            "video_url": "",
+            "url_upload": "shopify://files/videos/My Desk Setup as a Photographer and Content Creator for Long Hours of Editing.mp4"
           }
         },
         "swiper_xWLxVC": {
           "type": "swiper",
           "settings": {
-            "name": "@EFRALINK",
+            "name": "@CH3 - Charly Charles Check",
             "introduce": "<p>17.1 Million YouTube Followers</p>",
-            "description": "<p>\" Here is my new minimalist desk setup as a photographer and content creator for long editing sessions.\"</p>",
+            "description": "<p>'lch fand es besonders gut und es sieht wirklich cool aus. Es ist einfach ideal fur lange Arbeitstage oder GamingSessions, bei denen Komfort und Ergonomie wichtig sind.\"</p>",
             "link": "",
-            "cover_image": "shopify://shop_images/celebrity-img-2.webp",
             "video_url": "",
-            "url_upload": "shopify://files/videos/TO1-Pro-spine-healthy-mode_a586d928-0c0c-459d-99a8-75d2ab5cc36d.mp4"
+            "url_upload": "shopify://files/videos/EC2.mp4"
           }
         }
       },
       "block_order": [
         "swiper_mexwM6",
+        "swiper_87wBtG",
         "swiper_xWLxVC"
       ],
       "name": "celebrity swiper",
