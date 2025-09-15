@@ -120,22 +120,22 @@
         "item_qaC4iV": {
           "type": "item",
           "settings": {
-            "title": "Beschreibung",
-            "anchor_name": "Beschreibung"
+            "title": "Produktinfo",
+            "anchor_name": "Produktinfo"
           }
         },
         "item_RrNzfE": {
           "type": "item",
           "settings": {
-            "title": "Specs",
-            "anchor_name": "Technische_Daten"
+            "title": "Technische Daten",
+            "anchor_name": "Technische Daten"
           }
         },
         "item_Vt9rJN": {
           "type": "item",
           "settings": {
-            "title": "Empfehlungen",
-            "anchor_name": "Empfehlungen"
+            "title": "Tests",
+            "anchor_name": "Tests"
           }
         },
         "item_DECJU4": {
@@ -307,7 +307,7 @@
       ],
       "name": "file box simplicity",
       "settings": {
-        "spec_id": "",
+        "spec_id": "Produktinfo",
         "main_title": "<p>Warum T2 Pro Max wählen?</p>",
         "row_num": 3,
         "padding_top": 100,
@@ -577,7 +577,7 @@
       ],
       "name": "img with foldtext",
       "settings": {
-        "spec_id": "",
+        "spec_id": "Technische Daten",
         "title": "<p>Maidesite-Schreibtisch stabiler und zuverlässiger</p>",
         "padding_top": 120,
         "padding_bottom": 120
@@ -815,7 +815,7 @@
       ],
       "name": "product comment",
       "settings": {
-        "spec_id": "Kundenbewertungen",
+        "spec_id": "Bewertungen",
         "title": "<p>100%  Authentische Bewertungen</p>"
       }
     },
