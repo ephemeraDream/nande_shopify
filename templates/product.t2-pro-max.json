@@ -463,27 +463,13 @@
     "img_with_text_tab_emEWU8": {
       "type": "img-with-text-tab",
       "blocks": {
-        "tab_fiwUXL": {
-          "type": "tab",
-          "settings": {
-            "tabname": "CE-ZERTIFIZIERUNG",
-            "sub_title": "",
-            "title": "<p>ce-zertifikat höhenverstellbarer tisch</p>",
-            "description": "<p>Perfekt für zwei Familienmitglieder, um ihre individuelle Körpergröße anzupassen oder um zwei neue Höheneinstellungen <br/>für vielfältigere Körperhaltungen zu ermöglichen.Der Standard-USB-Ladeanschluss lädt deine digitalen Geräte zuverlässig auf, <br/>genau dann, wenn du es brauchst.</p>",
-            "file_type": "image",
-            "file_image": "shopify://shop_images/J-S2D-2-EU_MD_Certificate_of_Compliance_00.jpg",
-            "video_url": "",
-            "btn_text": "",
-            "link": ""
-          }
-        },
         "tab_AUd88N": {
           "type": "tab",
           "settings": {
             "tabname": "Sitzende Erinnerung",
             "sub_title": "",
             "title": "<p>Fortschrittliche Technologie</p>",
-            "description": "<p>Perfekt für zwei Familienmitglieder, um ihre individuelle Körpergröße anzupassen oder um zwei neue Höheneinstellungen <br/>für vielfältigere Körperhaltungen zu ermöglichen.Der Standard-USB-Ladeanschluss lädt deine digitalen Geräte zuverlässig auf, <br/>genau dann, wenn du es brauchst.</p>",
+            "description": "<div style=\"text-align:left; direction:ltr;\" lang=\"de\">\n  <p>\n    Perfekt für zwei Familienmitglieder, um ihre individuelle Körpergröße anzupassen oder um zwei neue Höheneinstellungen\n    für vielfältigere Körperhaltungen zu ermöglichen.<br/>\n    Der Standard-USB-Ladeanschluss lädt deine digitalen Geräte zuverlässig auf, <br/>\n    genau dann, wenn du es brauchst.\n  </p>\n</div>",
             "file_type": "image",
             "file_image": "shopify://shop_images/006.jpg",
             "video_url": "",
@@ -497,7 +483,7 @@
             "tabname": "Sitzende Erinnerung",
             "sub_title": "",
             "title": "<p>Fortschrittliche Technologie</p>",
-            "description": "<p>Perfekt für zwei Familienmitglieder, um ihre individuelle Körpergröße anzupassen oder um zwei neue Höheneinstellungen <br/>für vielfältigere Körperhaltungen zu ermöglichen.Der Standard-USB-Ladeanschluss lädt deine digitalen Geräte zuverlässig auf, <br/>genau dann, wenn du es brauchst.</p>",
+            "description": "<div style=\"text-align:left; direction:ltr;\" lang=\"de\">\n  <p>\n    Perfekt für zwei Familienmitglieder, um ihre individuelle Körpergröße anzupassen oder um zwei neue Höheneinstellungen <br/>\n    für vielfältigere Körperhaltungen zu ermöglichen.<br/>\n    Der Standard-USB-Ladeanschluss lädt deine digitalen Geräte zuverlässig auf, <br/>\n    genau dann, wenn du es brauchst.\n  </p>\n</div>",
             "file_type": "image",
             "file_image": "shopify://shop_images/006.jpg",
             "video_url": "",
@@ -511,7 +497,7 @@
             "tabname": "Sitzende Erinnerung",
             "sub_title": "",
             "title": "<p>Fortschrittliche Technologie</p>",
-            "description": "<p>Perfekt für zwei Familienmitglieder, um ihre individuelle Körpergröße anzupassen oder um zwei neue Höheneinstellungen <br/>für vielfältigere Körperhaltungen zu ermöglichen.Der Standard-USB-Ladeanschluss lädt deine digitalen Geräte zuverlässig auf, <br/>genau dann, wenn du es brauchst.</p>",
+            "description": "<div style=\"text-align:left; direction:ltr;\" lang=\"de\">\n  <p>\n    Perfekt für zwei Familienmitglieder, um ihre individuelle Körpergröße anzupassen oder um zwei neue Höheneinstellungen\n    für vielfältigere Körperhaltungen zu ermöglichen.<br/>\n    Der Standard-USB-Ladeanschluss lädt deine digitalen Geräte zuverlässig auf, <br/>\n    genau dann, wenn du es brauchst.\n  </p>\n</div>",
             "file_type": "image",
             "file_image": "shopify://shop_images/006.jpg",
             "video_url": "",
@@ -521,7 +507,6 @@
         }
       },
       "block_order": [
-        "tab_fiwUXL",
         "tab_AUd88N",
         "tab_JyxzQm",
         "tab_LmGatL"
@@ -530,7 +515,7 @@
       "settings": {
         "spec_id": "",
         "description": "",
-        "title": "<p>CE/FSC-zertifizierter höhenverstellbarer Schreibtisch und Tischplatte</p>",
+        "title": "<p>CE/FSC-zertifizierter </p>",
         "show_tab_head": true,
         "loop": true,
         "autoplay_enable": true,
