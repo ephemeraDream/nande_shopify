@@ -691,9 +691,11 @@
         "spec_id": "",
         "heading": "<p>FAQ</p>",
         "text": "<h3>Schreibtisch Höhenverstellbar T2 Pro Plus Technical</h3>",
-        "show_btn": true,
         "learn_more": true,
+        "show_btn": true,
+        "more_faqs_link": "shopify://pages/maidesite-faq",
         "contact_us": false,
+        "contact_us_link": "",
         "padding_top": 120,
         "padding_bottom": 120,
         "background_color": "rgba(0,0,0,0)"
