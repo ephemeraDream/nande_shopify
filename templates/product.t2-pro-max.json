@@ -103,7 +103,7 @@
       "settings": {
         "media_ratio": "1.33",
         "show_tax_and_shipping": true,
-        "product_specs": "Höhenverstellbarkeit: 62–127 cm\nMotor: Elektroantrieb mit 2 leistungsstarken Motoren\nStabilitätsbewertung: CE-Zertifikat\nBelastbarkeit: 180 kg\nGeschwindigkeit: 40 mm pro Sekunde\nGeräuschemission: 45 dB\nMaterial: Pulverbeschichteter Stahl\nFarben: Schwarz, Grau, Weiß"
+        "product_specs": "<div class=\"product-specs\">\n  <p><strong>Höhenverstellbarkeit:</strong> 62–127 cm</p>\n  <p><strong>Motor:</strong> Elektroantrieb mit 2 leistungsstarken Motoren</p>\n  <p><strong>Stabilitätsbewertung:</strong> CE-Zertifikat</p>\n  <p><strong>Belastbarkeit:</strong> 180 kg</p>\n  <p><strong>Geschwindigkeit:</strong> 40 mm pro Sekunde</p>\n  <p><strong>Geräuschemission:</strong> 45 dB</p>\n  <p><strong>Material:</strong> Pulverbeschichteter Stahl</p>\n  <p><strong>Farben:</strong> Schwarz, Grau, Weiß</p>\n</div>"
       }
     },
     "product_anchor_bar_atcVF4": {
