@@ -140,9 +140,10 @@
       "name": "video simplicity",
       "settings": {
         "spec_id": "Produkt",
-        "show_playicon": "false",
-        "cover_image": "shopify://shop_images/PCB_board_production_line.jpg",
-        "video_url": "https://www.youtube.com/watch?v=_-AS5DtDeqs",
+        "show_playicon": "true",
+        "cover_image": "shopify://shop_images/Laura_BC.png",
+        "video_url": "",
+        "url_upload": "shopify://files/videos/My Desk Setup as a Photographer and Content Creator for Long Hours of Editing.mp4",
         "title": "Alle Produkte Im üBerblick",
         "description": "",
         "padding_top": 120,
