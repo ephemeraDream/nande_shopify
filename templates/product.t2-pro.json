@@ -450,7 +450,7 @@
       "name": "technical data",
       "settings": {
         "spec_id": "Technische_Daten",
-        "title": "<p>Technische Daten Des HöHenverstellbaren </p><p>Schreibtisches-T2 Pro Plus</p>",
+        "title": "<p>Technische Daten Des HöHenverstellbaren </p><p>Schreibtisches-T2 Pro</p>",
         "select_product": ""
       }
     },
@@ -705,15 +705,6 @@
         "padding_top": 120,
         "padding_bottom": 120
       }
-    },
-    "technical_data_J33ErA": {
-      "type": "technical-data",
-      "name": "technical data",
-      "settings": {
-        "spec_id": "123",
-        "title": "<p>123</p>",
-        "select_product": "maidesite-elektrisch-hohenverstellbarer-gestell-t2-pro"
-      }
     }
   },
   "order": [
@@ -733,7 +724,6 @@
     "celebrity_swiper_aGymw9",
     "faq_simple_kxTbhc",
     "product_comment_GV7BHg",
-    "recommended_products_yEVJQ9",
-    "technical_data_J33ErA"
+    "recommended_products_yEVJQ9"
   ]
 }
