@@ -582,11 +582,23 @@
             "video_url": "",
             "url_upload": "shopify://files/videos/My Desk Setup as a Photographer and Content Creator for Long Hours of Editing.mp4"
           }
+        },
+        "swiper_X6UKfg": {
+          "type": "swiper",
+          "settings": {
+            "name": "@CH3 - Charly Charles Check",
+            "introduce": "",
+            "description": "<p>'lch fand es besonders gut und es sieht wirklich cool aus. Es ist einfach ideal fur lange Arbeitstage oder GamingSessions, bei denen Komfort und Ergonomie wichtig sind.\"</p>",
+            "link": "",
+            "video_url": "",
+            "url_upload": "shopify://files/videos/EC2.mp4"
+          }
         }
       },
       "block_order": [
         "swiper_mexwM6",
-        "swiper_xWLxVC"
+        "swiper_xWLxVC",
+        "swiper_X6UKfg"
       ],
       "name": "celebrity swiper",
       "settings": {
