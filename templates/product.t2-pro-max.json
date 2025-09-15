@@ -630,6 +630,7 @@
         "swiper_EnDd8n",
         "swiper_4kYG3r"
       ],
+      "disabled": true,
       "name": "maidesite swiper",
       "settings": {
         "title": "<p>Die Presse Liebt Maidesite</p>",
@@ -668,11 +669,23 @@
             "video_url": "",
             "url_upload": "shopify://files/videos/My Desk Setup as a Photographer and Content Creator for Long Hours of Editing.mp4"
           }
+        },
+        "swiper_8gK7Be": {
+          "type": "swiper",
+          "settings": {
+            "name": "@CH3 - Charly Charles Check",
+            "introduce": "",
+            "description": "<p>'lch fand es besonders gut und es sieht wirklich cool aus. Es ist einfach ideal fur lange Arbeitstage oder GamingSessions, bei denen Komfort und Ergonomie wichtig sind.\"</p>",
+            "link": "",
+            "video_url": "",
+            "url_upload": "shopify://files/videos/EC2.mp4"
+          }
         }
       },
       "block_order": [
         "swiper_mexwM6",
-        "swiper_xWLxVC"
+        "swiper_xWLxVC",
+        "swiper_8gK7Be"
       ],
       "name": "celebrity swiper",
       "settings": {
@@ -786,7 +799,7 @@
         "text": "<h3>Schreibtisch Höhenverstellbar T2 Pro Max Technical</h3>",
         "learn_more": true,
         "show_btn": true,
-        "more_faqs_link": "",
+        "more_faqs_link": "shopify://pages/maidesite-faq",
         "contact_us": false,
         "contact_us_link": "",
         "padding_top": 120,
