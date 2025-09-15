@@ -111,6 +111,7 @@
       "blocks": {
         "item_q4KMRQ": {
           "type": "item",
+          "disabled": true,
           "settings": {
             "title": "Produkt",
             "anchor_name": "Produkt"
@@ -119,22 +120,29 @@
         "item_qaC4iV": {
           "type": "item",
           "settings": {
-            "title": "Produktbeschreibung",
-            "anchor_name": "Produktbeschreibung"
+            "title": "Beschreibung",
+            "anchor_name": "Beschreibung"
           }
         },
         "item_RrNzfE": {
           "type": "item",
           "settings": {
-            "title": "Technische Daten",
+            "title": "Specs",
             "anchor_name": "Technische_Daten"
           }
         },
         "item_Vt9rJN": {
           "type": "item",
           "settings": {
-            "title": "Kundenbewertungen",
-            "anchor_name": "Kundenbewertungen"
+            "title": "Empfehlungen",
+            "anchor_name": "Empfehlungen"
+          }
+        },
+        "item_DECJU4": {
+          "type": "item",
+          "settings": {
+            "title": "Bewertungen",
+            "anchor_name": "Bewertungen"
           }
         }
       },
@@ -142,7 +150,8 @@
         "item_q4KMRQ",
         "item_qaC4iV",
         "item_RrNzfE",
-        "item_Vt9rJN"
+        "item_Vt9rJN",
+        "item_DECJU4"
       ],
       "name": "product anchor bar",
       "settings": {}
@@ -776,9 +785,11 @@
         "spec_id": "",
         "heading": "<p>FAQ</p>",
         "text": "<h3>Schreibtisch Höhenverstellbar T2 Pro Max Technical</h3>",
-        "show_btn": true,
         "learn_more": true,
+        "show_btn": true,
+        "more_faqs_link": "",
         "contact_us": false,
+        "contact_us_link": "",
         "padding_top": 120,
         "padding_bottom": 120,
         "background_color": "rgba(0,0,0,0)"
