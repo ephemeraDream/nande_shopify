@@ -585,7 +585,6 @@
     },
     "technical_data_L3gXUm": {
       "type": "technical-data",
-      "disabled": true,
       "name": "technical data",
       "settings": {
         "spec_id": "Technische_Daten",
