@@ -358,15 +358,35 @@
 
 <script>
 document.addEventListener('DOMContentLoaded', function() {
-  const form = document.getElementById('ContactFooter');
-  const submitBtn = document.getElementById('Subscribe');
-  if (form && submitBtn) {
-    form.addEventListener('submit', function() {
-      submitBtn.classList.add('loading');
-      submitBtn.setAttribute('aria-disabled', 'true');
-      submitBtn.disabled = true;
-    });
+  function initNewsletterLoading(root) {
+    const container = root && root.querySelector ? root : document;
+    const form = container.getElementById ? container.getElementById('ContactFooter') : document.getElementById('ContactFooter');
+    const submitBtn = container.getElementById ? container.getElementById('Subscribe') : document.getElementById('Subscribe');
+    if (!form || !submitBtn) return;
+
+    if (!submitBtn.dataset.loadingBound) {
+      submitBtn.addEventListener('click', function() {
+        submitBtn.classList.add('loading');
+        submitBtn.setAttribute('aria-disabled', 'true');
+        submitBtn.disabled = true;
+      });
+      form.addEventListener('submit', function() {
+        submitBtn.classList.add('loading');
+        submitBtn.setAttribute('aria-disabled', 'true');
+        submitBtn.disabled = true;
+      });
+      submitBtn.dataset.loadingBound = 'true';
+    }
   }
+
+  initNewsletterLoading(document);
+
+  document.addEventListener('shopify:section:load', function(e) {
+    initNewsletterLoading(e.target);
+  });
+  document.addEventListener('shopify:section:select', function(e) {
+    initNewsletterLoading(e.target);
+  });
 });
 </script>
 
