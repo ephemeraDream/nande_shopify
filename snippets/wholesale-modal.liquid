@@ -51,7 +51,15 @@
             </textarea>
           <div class="contact-btn">
             <button type="submit" class="submit-button-t" id="ContactForm-submit">
-              {{ 'common.absenden' | t -}}
+              <span class="btn-text"> {{ 'common.absenden' | t -}}</span>
+              <span class="loading__spinner hidden">
+                <svg class="spinner" viewBox="0 0 24 24">
+                  <circle class="path" cx="12" cy="12" r="10" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-dasharray="31.416" stroke-dashoffset="31.416">
+                    <animate attributeName="stroke-dasharray" dur="2s" values="0 31.416;15.708 15.708;0 31.416" repeatCount="indefinite"/>
+                    <animate attributeName="stroke-dashoffset" dur="2s" values="0;-15.708;-31.416" repeatCount="indefinite"/>
+                  </circle>
+                </svg>
+              </span>
               {{- 'icon-commit.svg' | inline_asset_content }}
             </button>
           </div>
@@ -112,26 +120,37 @@
   .submit-button-t.loading {
     position: relative;
     pointer-events: none;
-    color: transparent;
   }
   
-  .submit-button-t.loading::after {
-    content: '';
+  .submit-button-t .loading__spinner {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     width: 20px;
     height: 20px;
-    border: 2px solid transparent;
-    border-top: 2px solid currentColor;
-    border-radius: 50%;
+  }
+  
+  .submit-button-t .loading__spinner .spinner {
+    width: 100%;
+    height: 100%;
     animation: spin 1s linear infinite;
   }
   
+  .submit-button-t .loading__spinner .path {
+    stroke: currentColor;
+    stroke-width: 2;
+    stroke-linecap: round;
+  }
+  
   @keyframes spin {
-    0% { transform: translate(-50%, -50%) rotate(0deg); }
-    100% { transform: translate(-50%, -50%) rotate(360deg); }
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  
+  .submit-button-t.loading .btn-text,
+  .submit-button-t.loading svg:not(.spinner) {
+    opacity: 0;
   }
   </style>
 
@@ -139,6 +158,9 @@
     document.addEventListener('DOMContentLoaded', function() {
       const form = document.getElementById('ContactForm');
       const submitBtn = document.getElementById('ContactForm-submit');
+      const btnText = submitBtn.querySelector('.btn-text');
+      const loadingSpinner = submitBtn.querySelector('.loading__spinner');
+      const btnIcon = submitBtn.querySelector('svg:not(.spinner)');
       
       if (form && submitBtn) {
         form.addEventListener('submit', function() {
@@ -146,6 +168,11 @@
           submitBtn.classList.add('loading');
           submitBtn.setAttribute('aria-disabled', 'true');
           submitBtn.disabled = true;
+          
+          // 显示loading spinner，隐藏文字和图标
+          loadingSpinner.classList.remove('hidden');
+          btnText.style.display = 'none';
+          if (btnIcon) btnIcon.style.display = 'none';
         });
       }
     });
