@@ -378,8 +378,11 @@ document.addEventListener('DOMContentLoaded', function() {
       submitBtn.dataset.loadingBound = 'true';
     }
   }
-
-  initNewsletterLoading(document);
+  
+  // 延迟初始化，避免首屏渲染或异步注入导致未绑定
+  setTimeout(function() {
+    initNewsletterLoading(document);
+  }, 1500);
 
   document.addEventListener('shopify:section:load', function(e) {
     initNewsletterLoading(e.target);
