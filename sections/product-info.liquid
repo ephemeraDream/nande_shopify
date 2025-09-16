@@ -854,7 +854,9 @@
               title: block.settings.title,
               modal_tip: block.settings.modal_tip,
               modal_title: block.settings.modal_title,
-              modal_content: block.settings.modal_content
+              modal_content: block.settings.modal_content,
+              success_message: block.settings.success_message,
+              error_message: block.settings.error_message
             %}
           {%- when 'modal' -%}
             {% render 'product-info-modal',
@@ -1127,6 +1129,18 @@
           "type": "richtext",
           "id": "modal_tip",
           "label": "modal tip"
+        },
+        {
+          "type": "text",
+          "id": "success_message",
+          "label": "成功消息",
+          "default": "Your message has been sent successfully."
+        },
+        {
+          "type": "text",
+          "id": "error_message",
+          "label": "错误消息",
+          "default": "There was an error sending the form. Please check your input."
         }
       ]
     },

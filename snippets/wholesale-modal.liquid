@@ -49,17 +49,16 @@
           >
               {{- form.body -}}
             </textarea>
-            <p class="form-status form__message success" tabindex="-1" autofocus>
-              {{ section.settings.success_message | default: 'Your message has been sent successfully.' }}
-            </p>
             {%- if form.posted_successfully? -%}
               <p class="form-status form__message success" tabindex="-1" autofocus>
-                {{ section.settings.success_message | default: 'Your message has been sent successfully.' }}
+                {{ success_message | default: 'Your message has been sent successfully.' }}
               </p>
             {%- elsif form.errors -%}
               <div class="form__message error" role="alert" tabindex="-1" autofocus>
-                {{ section.settings.error_message | default: 'There was an error sending the form. Please check your input.' }}
+                {{ error_message | default: 'There was an error sending the form. Please check your input.' }}
               </div>
+            {%- else -%}
+              <div id="ContactForm-message" class="form__message" style="display:none;"></div>
             {%- endif -%}
           <div class="contact-btn">
             <button type="submit" class="submit-button-t" id="ContactForm-submit">
@@ -121,7 +120,6 @@
           </form>
         {% endcomment %}
 
-        <div id="ContactForm-message" style="display:none;"></div>
         <div class="product_info_modal_tip">{{ modal_tip }}</div>
       </div>
     </div>
@@ -190,11 +188,28 @@
     document.addEventListener('DOMContentLoaded', function() {
       const form = document.getElementById('ContactForm');
       const submitBtn = document.getElementById('ContactForm-submit');
+      const messageEl = document.getElementById('ContactForm-message');
       const btnText = submitBtn.querySelector('.btn-text');
       const loadingSpinner = submitBtn.querySelector('.loading__spinner');
       const btnIcon = submitBtn.querySelector('svg:not(.spinner)');
       
       if (form && submitBtn) {
+        // 检查URL参数显示消息（用于弹窗刷新后显示）
+        const urlParams = new URLSearchParams(window.location.search);
+        const formStatus = urlParams.get('contact_posted');
+        
+        if (formStatus === 'true') {
+          // 显示成功消息
+          messageEl.innerHTML = '{{ section.settings.success_message | default: "Your message has been sent successfully." }}';
+          messageEl.className = 'form__message success';
+          messageEl.style.display = 'block';
+        } else if (formStatus === 'false') {
+          // 显示错误消息
+          messageEl.innerHTML = '{{ section.settings.error_message | default: "There was an error sending the form. Please check your input." }}';
+          messageEl.className = 'form__message error';
+          messageEl.style.display = 'block';
+        }
+        
         form.addEventListener('submit', function() {
           // 添加loading状态
           submitBtn.classList.add('loading');
@@ -205,6 +220,11 @@
           loadingSpinner.classList.remove('hidden');
           btnText.style.display = 'none';
           if (btnIcon) btnIcon.style.display = 'none';
+          
+          // 隐藏之前的消息
+          if (messageEl) {
+            messageEl.style.display = 'none';
+          }
         });
       }
     });
