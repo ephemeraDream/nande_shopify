@@ -49,6 +49,18 @@
           >
               {{- form.body -}}
             </textarea>
+            <p class="form-status form__message success" tabindex="-1" autofocus>
+              {{ section.settings.success_message | default: 'Your message has been sent successfully.' }}
+            </p>
+            {%- if form.posted_successfully? -%}
+              <p class="form-status form__message success" tabindex="-1" autofocus>
+                {{ section.settings.success_message | default: 'Your message has been sent successfully.' }}
+              </p>
+            {%- elsif form.errors -%}
+              <div class="form__message error" role="alert" tabindex="-1" autofocus>
+                {{ section.settings.error_message | default: 'There was an error sending the form. Please check your input.' }}
+              </div>
+            {%- endif -%}
           <div class="contact-btn">
             <button type="submit" class="submit-button-t" id="ContactForm-submit">
               <span class="btn-text"> {{ 'common.absenden' | t -}}</span>
