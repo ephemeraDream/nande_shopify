@@ -35,7 +35,7 @@
               id="Subscribe"
               aria-label="{{ 'newsletter.button_label' | t }}"
             >
-              <span class="btn-text"> {{ section.settings.btn_text }}</span>1111
+              <span class="btn-text"> {{ section.settings.btn_text }}</span>
             </button>
           </div>
           <div class="subscribe_emails_confirm">
@@ -164,7 +164,6 @@
 
 <style>
 .subscribe_emails_section .newsletter-form__button.loading {
-  position: relative;
   pointer-events: none;
   color: transparent;
 }
@@ -176,8 +175,8 @@
   transform: translate(-50%, -50%);
   width: 20px;
   height: 20px;
-  border: 2px solid transparent;
-  border-top: 2px solid currentColor;
+  border: 2px solid rgb(6, 19, 43);
+  border-top: 2px solid transparent;
   border-radius: 50%;
   animation: subscribe-btn-spin 1s linear infinite;
 }
