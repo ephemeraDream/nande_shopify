@@ -363,17 +363,19 @@ document.addEventListener('DOMContentLoaded', function() {
     const form = container.getElementById ? container.getElementById('ContactFooter') : document.getElementById('ContactFooter');
     const submitBtn = container.getElementById ? container.getElementById('Subscribe') : document.getElementById('Subscribe');
     if (!form || !submitBtn) return;
-
+    console.log('initNewsletterLoading', form, submitBtn);
     if (!submitBtn.dataset.loadingBound) {
       submitBtn.addEventListener('click', function() {
         submitBtn.classList.add('loading');
         submitBtn.setAttribute('aria-disabled', 'true');
         submitBtn.disabled = true;
+        console.log('click loading', submitBtn);
       });
       form.addEventListener('submit', function() {
         submitBtn.classList.add('loading');
         submitBtn.setAttribute('aria-disabled', 'true');
         submitBtn.disabled = true;
+        console.log('submit loading', submitBtn);
       });
       submitBtn.dataset.loadingBound = 'true';
     }
