@@ -1,6 +1,6 @@
 {{ 'section-subscribe-emails.css' | asset_url | stylesheet_tag }}
 
-<div class="subscribe_emails_section session-box-padding">
+<div class="subscribe_emails_section session-box-padding" id="subscribe-emails-{{ section.id }}">
   <div class="subscribe_emails">
     <div class="subscribe_emails_body">
       <div class="subscribe_emails_title">{{ section.settings.title }}</div>
@@ -35,7 +35,7 @@
               id="Subscribe"
               aria-label="{{ 'newsletter.button_label' | t }}"
             >
-              {{ section.settings.btn_text }}
+              <span class="btn-text"> {{ section.settings.btn_text }}</span>
             </button>
           </div>
           <div class="subscribe_emails_confirm">
@@ -161,6 +161,64 @@
     </ul>
   </div>
 </div>
+
+<style>
+.subscribe_emails_section .newsletter-form__button.loading {
+  position: relative;
+  pointer-events: none;
+  color: transparent;
+}
+.subscribe_emails_section .newsletter-form__button.loading::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 20px;
+  height: 20px;
+  border: 2px solid transparent;
+  border-top: 2px solid currentColor;
+  border-radius: 50%;
+  animation: subscribe-btn-spin 1s linear infinite;
+}
+@keyframes subscribe-btn-spin {
+  0% { transform: translate(-50%, -50%) rotate(0deg); }
+  100% { transform: translate(-50%, -50%) rotate(360deg); }
+}
+</style>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  function initSubscribeEmailsLoading(root) {
+    const container = root && root.querySelector ? root : document;
+    const sectionEl = container.getElementById ? container.getElementById('subscribe-emails-{{ section.id }}') : document.getElementById('subscribe-emails-{{ section.id }}');
+    if (!sectionEl) return;
+    const form = sectionEl.querySelector('#ContactFooter');
+    const submitBtn = sectionEl.querySelector('#Subscribe') || sectionEl.querySelector('button.newsletter-form__button');
+    if (!form || !submitBtn) return;
+    if (!submitBtn.dataset.loadingBound) {
+      submitBtn.addEventListener('click', function() {
+        submitBtn.classList.add('loading');
+        submitBtn.setAttribute('aria-disabled', 'true');
+        submitBtn.disabled = true;
+      });
+      form.addEventListener('submit', function() {
+        submitBtn.classList.add('loading');
+        submitBtn.setAttribute('aria-disabled', 'true');
+        submitBtn.disabled = true;
+      });
+      submitBtn.dataset.loadingBound = 'true';
+    }
+  }
+
+  // 延迟初始化与即时初始化二者兼顾
+  initSubscribeEmailsLoading(document);
+  setTimeout(function(){ initSubscribeEmailsLoading(document); }, 1500);
+
+  document.addEventListener('shopify:section:load', function(e){ initSubscribeEmailsLoading(e.target); });
+  document.addEventListener('shopify:section:select', function(e){ initSubscribeEmailsLoading(e.target); });
+});
+</script>
 
 {% schema %}
 {
