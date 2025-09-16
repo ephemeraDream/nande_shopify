@@ -544,6 +544,10 @@ const curr_bundle_tabletop_options = curr_bundle_tabletop_variant ? [...curr_bun
 
 if (!has_tabletop) {
   setVariantOption()
+} else {
+  document.querySelector(".product_info_bundle_tabletop_img").addEventListener("click", () => {
+    imgboxSwiper.slides[1].querySelector("img").click()
+  })
 }
 updateImagesByVariantMedia()
 function setVariantOption() {
