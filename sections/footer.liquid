@@ -333,36 +333,26 @@
 .newsletter-form__button.loading {
   position: relative;
   pointer-events: none;
+  color: transparent;
 }
 
-.newsletter-form__button .loading__spinner {
+.newsletter-form__button.loading::after {
+  content: '';
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   width: 20px;
   height: 20px;
+  border: 2px solid transparent;
+  border-top: 2px solid currentColor;
+  border-radius: 50%;
+  animation: footer-btn-spin 1s linear infinite;
 }
 
-.newsletter-form__button .loading__spinner .spinner {
-  width: 100%;
-  height: 100%;
-  animation: spin 1s linear infinite;
-}
-
-.newsletter-form__button .loading__spinner .path {
-  stroke: currentColor;
-  stroke-width: 2;
-  stroke-linecap: round;
-}
-
-@keyframes spin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
-}
-
-.newsletter-form__button.loading .svg-wrapper {
-  opacity: 0;
+@keyframes footer-btn-spin {
+  0% { transform: translate(-50%, -50%) rotate(0deg); }
+  100% { transform: translate(-50%, -50%) rotate(360deg); }
 }
 </style>
 
@@ -370,19 +360,11 @@
 document.addEventListener('DOMContentLoaded', function() {
   const form = document.getElementById('ContactFooter');
   const submitBtn = document.getElementById('Subscribe');
-  const btnIcon = submitBtn.querySelector('.svg-wrapper');
-  const loadingSpinner = submitBtn.querySelector('.loading__spinner');
-  
   if (form && submitBtn) {
     form.addEventListener('submit', function() {
-      // 添加loading状态
       submitBtn.classList.add('loading');
       submitBtn.setAttribute('aria-disabled', 'true');
       submitBtn.disabled = true;
-      
-      // 显示loading spinner，隐藏图标
-      loadingSpinner.classList.remove('hidden');
-      if (btnIcon) btnIcon.style.display = 'none';
     });
   }
 });
