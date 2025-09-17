@@ -195,19 +195,41 @@
       
       if (form && submitBtn) {
         // 检查URL参数显示消息（用于弹窗刷新后显示）
-        const urlParams = new URLSearchParams(window.location.search);
-        const formStatus = urlParams.get('contact_posted');
+        let formStatus = null;
+        try {
+          const urlParams = new URLSearchParams(window.location.search);
+          formStatus = urlParams.get('contact_posted');
+        } catch (e) {
+          console.log('URL parsing error:', e);
+        }
         
-        if (formStatus === 'true') {
-          // 显示成功消息
-          messageEl.innerHTML = '{{ section.settings.success_message | default: "Your message has been sent successfully." }}';
-          messageEl.className = 'form__message success';
+        if (formStatus === 'true' || formStatus === 'false') {
+          // 显示消息
+          if (formStatus === 'true') {
+            messageEl.innerHTML = '{{ success_message | default: "Your message has been sent successfully." | escape }}';
+            messageEl.className = 'form__message success';
+          } else {
+            messageEl.innerHTML = '{{ error_message | default: "There was an error sending the form. Please check your input." | escape }}';
+            messageEl.className = 'form__message error';
+          }
           messageEl.style.display = 'block';
-        } else if (formStatus === 'false') {
-          // 显示错误消息
-          messageEl.innerHTML = '{{ section.settings.error_message | default: "There was an error sending the form. Please check your input." }}';
-          messageEl.className = 'form__message error';
-          messageEl.style.display = 'block';
+          
+          // 自动打开弹窗
+          const modal = document.querySelector('.common_modal');
+          if (modal) {
+            modal.style.display = 'block';
+            {% comment %} document.body.style.overflowY = 'hidden';
+            
+            // 添加关闭按钮事件监听器
+            const closeBtn = modal.querySelector('.common_modal_close');
+            if (closeBtn && !closeBtn.dataset.autoCloseBound) {
+              closeBtn.addEventListener('click', function() {
+                modal.style.display = 'none';
+                document.body.style.overflowY = 'auto';
+              });
+              closeBtn.dataset.autoCloseBound = 'true';
+            } {% endcomment %}
+          }
         }
         
         form.addEventListener('submit', function() {
