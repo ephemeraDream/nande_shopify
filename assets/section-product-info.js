@@ -319,8 +319,8 @@ function waitForElement(selector, callback) {
 // 产品媒体切换
 document.querySelectorAll(".product_info_left_thumb_select_item").forEach(btn => {
   btn.addEventListener("click", () => {
-    if (btn.classList.contains("active")) return
     const type = btn.getAttribute("data-type");
+    if (btn.classList.contains("active") && type !== "specs") return
 
     document.querySelectorAll(".product_info_left_thumb_select_item").forEach(b => b.classList.remove("active"));
     btn.classList.add("active");
