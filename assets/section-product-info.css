@@ -1500,6 +1500,7 @@
 @media screen and (max-width: 767px) {
   .product_info {
     flex-direction: column;
+    gap: 3rem;
   }
   .product_info .product_info_left,.product_info .product_info_right {
     top: 0;
