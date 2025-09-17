@@ -495,10 +495,11 @@
       ],
       "name": "maidesite swiper",
       "settings": {
+        "spec_id": "",
         "title": "<p>Die Presse Liebt Maidesite</p>",
         "text": "",
         "show_buttons": true,
-        "loop": true,
+        "loop": false,
         "autoplay_enable": true,
         "autoplay_delay": 3000,
         "padding_top": 120,

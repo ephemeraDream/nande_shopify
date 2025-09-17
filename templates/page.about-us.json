@@ -73,7 +73,7 @@
         "link_url": "",
         "padding_top": 0,
         "padding_bottom": 0,
-        "background_color": "transparent"
+        "background_color": "rgba(0,0,0,0)"
       }
     },
     "img_with_text_simplicity_L7gzPR": {
@@ -94,7 +94,7 @@
         "link_url": "",
         "padding_top": 0,
         "padding_bottom": 0,
-        "background_color": "transparent"
+        "background_color": "rgba(0,0,0,0)"
       }
     },
     "img_with_text_simplicity_Aaq73m": {
@@ -115,7 +115,7 @@
         "link_url": "",
         "padding_top": 0,
         "padding_bottom": 0,
-        "background_color": "transparent"
+        "background_color": "rgba(0,0,0,0)"
       }
     },
     "img_with_text_simplicity_fpq6an": {
@@ -136,7 +136,7 @@
         "link_url": "",
         "padding_top": 0,
         "padding_bottom": 52,
-        "background_color": "transparent"
+        "background_color": "rgba(0,0,0,0)"
       }
     },
     "image_with_text_aboutus": {
@@ -231,7 +231,6 @@
         "timeline_4kYG32",
         "timeline_4kYG31"
       ],
-      "disabled": true,
       "name": "time_line",
       "settings": {
         "title": "Unsere Reise In Etappen",
@@ -362,6 +361,7 @@
       ],
       "name": "maidesite swiper",
       "settings": {
+        "spec_id": "",
         "title": "<p>Die Presse Liebt Maidesite</p>",
         "text": "",
         "show_buttons": true,
