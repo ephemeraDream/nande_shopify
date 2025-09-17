@@ -19,6 +19,214 @@
         "custom_breadcrumb": ""
       }
     },
+    "contact_form_five_Atfzbj": {
+      "type": "contact-form-five",
+      "blocks": {
+        "dropdown_epqkih": {
+          "type": "dropdown",
+          "settings": {
+            "key": "Wie können wir helfen?",
+            "label": "Wie können wir helfen?",
+            "field_name": "Wie können wir helfen?",
+            "required": false
+          }
+        },
+        "group_Yjp3RX": {
+          "type": "group",
+          "settings": {
+            "dropdown_key": "Wie können wir helfen?",
+            "label": "Bestellung",
+            "key": "Bestellung"
+          }
+        },
+        "option_YmF7ar": {
+          "type": "option",
+          "settings": {
+            "group_key": "Bestellung",
+            "label": "Umtausch",
+            "value": "Umtausch"
+          }
+        },
+        "option_UqyMqD": {
+          "type": "option",
+          "settings": {
+            "group_key": "Bestellung",
+            "label": "Rückgabe & Widerruf",
+            "value": "Rückgabe & Widerruf"
+          }
+        },
+        "option_HJYcbA": {
+          "type": "option",
+          "settings": {
+            "group_key": "Bestellung",
+            "label": "Rechnungsanfrage",
+            "value": "Rechnungsanfrage"
+          }
+        },
+        "option_MhxXHH": {
+          "type": "option",
+          "settings": {
+            "group_key": "Bestellung",
+            "label": "Steuerbefreiung",
+            "value": "Steuerbefreiung"
+          }
+        },
+        "option_LWmMdP": {
+          "type": "option",
+          "settings": {
+            "group_key": "Bestellung",
+            "label": "Versand & Lieferung",
+            "value": "Versand & Lieferung"
+          }
+        },
+        "group_Tqk9jK": {
+          "type": "group",
+          "settings": {
+            "dropdown_key": "Wie können wir helfen?",
+            "label": "Produktinfo",
+            "key": "Produktinfo"
+          }
+        },
+        "option_Wtnmyw": {
+          "type": "option",
+          "settings": {
+            "group_key": "Produktinfo",
+            "label": "Garantie",
+            "value": "Garantie"
+          }
+        },
+        "option_d93fPr": {
+          "type": "option",
+          "settings": {
+            "group_key": "Produktinfo",
+            "label": "Technisches Detail zum Produkt",
+            "value": "Technisches Detail zum Produkt"
+          }
+        },
+        "option_JftiRq": {
+          "type": "option",
+          "settings": {
+            "group_key": "Produktinfo",
+            "label": "Beratung bei Produktausfall",
+            "value": "Beratung bei Produktausfall"
+          }
+        },
+        "option_ybBmm3": {
+          "type": "option",
+          "settings": {
+            "group_key": "Produktinfo",
+            "label": "Installation",
+            "value": "Installation"
+          }
+        },
+        "group_LxKMmN": {
+          "type": "group",
+          "settings": {
+            "dropdown_key": "Wie können wir helfen?",
+            "label": "Website-Probleme",
+            "key": "Website-Probleme"
+          }
+        },
+        "option_dQLxwp": {
+          "type": "option",
+          "settings": {
+            "group_key": "Website-Probleme",
+            "label": "Probleme beim Anmelden",
+            "value": "Probleme beim Anmelden"
+          }
+        },
+        "option_jGFnzY": {
+          "type": "option",
+          "settings": {
+            "group_key": "Website-Probleme",
+            "label": "Sonstige Ausfälle",
+            "value": "Sonstige Ausfälle"
+          }
+        },
+        "group_A6fEtC": {
+          "type": "group",
+          "settings": {
+            "dropdown_key": "Wie können wir helfen?",
+            "label": "B2B-Anfragen",
+            "key": "B2B-Anfragen"
+          }
+        },
+        "option_qqCRE8": {
+          "type": "option",
+          "settings": {
+            "group_key": "B2B-Anfragen",
+            "label": "Großbestellungen & Firmenkunden",
+            "value": "Großbestellungen & Firmenkunden"
+          }
+        },
+        "group_qfADRj": {
+          "type": "group",
+          "settings": {
+            "dropdown_key": "Wie können wir helfen?",
+            "label": "sonstige",
+            "key": "sonstige"
+          }
+        },
+        "option_B4P8H8": {
+          "type": "option",
+          "settings": {
+            "group_key": "sonstige",
+            "label": "Richtlinien & AGB",
+            "value": "Richtlinien & AGB"
+          }
+        },
+        "option_t96eRK": {
+          "type": "option",
+          "settings": {
+            "group_key": "sonstige",
+            "label": "Sonstige",
+            "value": "Sonstige"
+          }
+        }
+      },
+      "block_order": [
+        "dropdown_epqkih",
+        "group_Yjp3RX",
+        "option_YmF7ar",
+        "option_UqyMqD",
+        "option_HJYcbA",
+        "option_MhxXHH",
+        "option_LWmMdP",
+        "group_Tqk9jK",
+        "option_Wtnmyw",
+        "option_d93fPr",
+        "option_JftiRq",
+        "option_ybBmm3",
+        "group_LxKMmN",
+        "option_dQLxwp",
+        "option_jGFnzY",
+        "group_A6fEtC",
+        "option_qqCRE8",
+        "group_qfADRj",
+        "option_B4P8H8",
+        "option_t96eRK"
+      ],
+      "name": "Contact Form Five",
+      "settings": {
+        "style": "style3",
+        "title": "Fragen, Wünsche, Anliegen? Wir Haben Immer Ein Offenes Ohr!",
+        "desc": "Kontaktiere uns einfach über das Kontaktformular und erhalte innerhalb 24 Stunden Rückmeldung. Unser geschulter Kundenservice und unsere internen Firmenberatern kümmern sich darum.",
+        "text_content": "<p>Sie können uns auch auf folgende Weise kontaktieren, Sie erhalten innerhalb von 24 Stunden eine Rückmeldung<br/><br/><strong>Unser E-Mail</strong>: contact@maidesite.de<br/><strong>Beratung</strong>: Mo.-Fr. 9-17 Uhr</p>",
+        "btn_text": "Submit",
+        "success_message": "Your message has been sent successfully.",
+        "error_message": "There was an error sending the form. Please check your input.",
+        "show_email": true,
+        "mail_placeholder": "Email*",
+        "show_company": false,
+        "company_placeholder": "Company Name",
+        "show_name": true,
+        "name_placeholder": "Name",
+        "show_phone": false,
+        "phone_placeholder": "Phone",
+        "show_message": true,
+        "message_placeholder": "Kommentar"
+      }
+    },
     "contact_form_three": {
       "type": "contact-form-three",
       "blocks": {
@@ -191,6 +399,7 @@
         "option_8N4V37",
         "option_4F3KXe"
       ],
+      "disabled": true,
       "name": "contact_form_three",
       "settings": {
         "title": "<p>Fragen, Wünsche, Anliegen?<br/> Wir Haben Immer Ein Offenes Ohr!</p>",
@@ -356,6 +565,7 @@
   },
   "order": [
     "breadcrumbs",
+    "contact_form_five_Atfzbj",
     "contact_form_three",
     "faq_simple_kxTbhc",
     "contact_form_five_dVH3V7"
