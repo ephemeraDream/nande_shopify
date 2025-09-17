@@ -45,7 +45,7 @@
             {{ article.image | image_url: width: article.image.width | image_tag: alt: article.title }}
             <div class="blogs_simple_item_info">
               <div class="blogs_simple_item_info_tag">{{ 'common.neueste' | t }}</div>
-              <h4 class="blogs_simple_item_info_title">{{ article.title }}</h4>
+              <h4 class="blogs_simple_item_info_title truncate-2-lines">{{ article.title }}</h4>
               <div class="blogs_simple_item_info_date text-body">
                 {{ article.updated_at | date: '%-d %B. %Y' }}
               </div>
