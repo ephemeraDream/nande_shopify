@@ -102,7 +102,7 @@ body:has(.section-header .drawer-menu) .announcement-bar-section .page-width {
 .page-width--narrow h4,
 .page-width--narrow h5,
 .page-width--narrow h3 {
-  margin: 2rem 0 1.4rem;
+  margin: 2rem 0 1rem;
 }
 .page-width--narrow p{
   font-family: "PP Right Grotesk";
