@@ -213,6 +213,7 @@
             </div>
             <div class="header_menu_item_submenu_contain">
               {% assign page_index_list = 'one, two, thr, four, five, six' | split: ',' %}
+              {{ page_index_list | json }}
               {%- for index in page_index_list -%}
                 {% capture image_id %}page_{{ index }}_image{% endcapture %}
                 {% capture title_id %}page_{{ index }}_title{% endcapture %}
