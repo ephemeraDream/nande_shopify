@@ -42,7 +42,6 @@
       e.preventDefault();
       const href = item.getAttribute('href');
       if (href === '#tidio-chat') {
-        window.tidioChatApi.show();
         window.tidioChatApi.open();
       } else {
         location.href = href;
