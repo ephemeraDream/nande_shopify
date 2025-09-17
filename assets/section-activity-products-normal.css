@@ -300,6 +300,7 @@
   gap: 2rem;
   background-color: #fff;
   padding: 1.4rem 1.1rem 1.4rem 1.4rem;
+  position: relative;
 }
 
 .activity_products_normal .activity_products_normal_product_title {
@@ -353,7 +354,7 @@
   color: #FF7500;
   margin-top: 1.2rem;
   position: absolute;
-  bottom: -2rem;
+  bottom: -3rem;
 }
 
 .activity_products_normal .activity_products_normal_product_saleinfo {
