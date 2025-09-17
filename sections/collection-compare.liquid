@@ -1,7 +1,7 @@
 {{ 'section-collection-compare.css' | asset_url | stylesheet_tag }}
 
 {% assign product_list = collection.products %}
-<div class="collection_compare">
+<div class="collection_compare" style="--product-img-ratio: {{ section.settings.image_aspect_ratio | default: '1' }};">
   {% if section.settings.show_banner %}
     <div class="collection_compare_banner padding-sider">
       {% if section.settings.image != blank %}
@@ -295,6 +295,30 @@
       "id": "show_layout_toggle",
       "label": "Show grid/list layout buttons",
       "default": true
+    },
+    {
+      "type": "select",
+      "id": "image_aspect_ratio",
+      "label": "Product image aspect ratio",
+      "options": [
+        {
+          "value": "1",
+          "label": "1:1 (Square)"
+        },
+        {
+          "value": "1.33",
+          "label": "4:3 (Landscape)"
+        },
+        {
+          "value": "0.75",
+          "label": "3:4 (Portrait)"
+        },
+        {
+          "value": "1.5",
+          "label": "3:2 (Wide)"
+        }
+      ],
+      "default": "1"
     },
 
     {
