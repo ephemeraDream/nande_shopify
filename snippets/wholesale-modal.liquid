@@ -1,4 +1,4 @@
-<div class="product_info_modal_item">
+<div class="product_info_modal_item wholesale_modal_item">
   <div class="product_info_modal_item_left">
     {{ icon }}
     <span class="product_info_modal_item_title">{{ title }}</span>
@@ -201,7 +201,7 @@
         try {
           const urlParams = new URLSearchParams(window.location.search);
           formStatus = urlParams.get('contact_posted');
-          
+          console.log('formStatus', formStatus);
           // 检查锚点是否为 #ContactForm（确保是弹窗表单，不是页脚表单）
           const hash = window.location.hash;
           if (hash === '#ContactForm') {
@@ -215,12 +215,12 @@
         // 这样可以避免与页脚的ContactFooter表单冲突
         if ((formStatus === 'true' || formStatus === 'false') && shouldOpenModal) {
           // 自动打开弹窗
-          const modal = document.querySelector('.common_modal');
+          const modal = document.querySelector('.wholesale_modal_item .common_modal');
           if (modal) {
             modal.style.display = 'block';
             document.body.style.overflowY = 'hidden';
             
-            // 添加关闭按钮事件监听器
+            {% comment %} // 添加关闭按钮事件监听器
             const closeBtn = modal.querySelector('.common_modal_close');
             if (closeBtn && !closeBtn.dataset.autoCloseBound) {
               closeBtn.addEventListener('click', function() {
@@ -228,7 +228,7 @@
                 document.body.style.overflowY = 'auto';
               });
               closeBtn.dataset.autoCloseBound = 'true';
-            }
+            } {% endcomment %}
           }
         }
         
