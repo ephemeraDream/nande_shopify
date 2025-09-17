@@ -48,6 +48,10 @@
   letter-spacing: 0px;
   font-variation-settings: "opsz" auto;
   color: #7F7E75;
+}
+
+.img_with_foldtext .img_with_foldtext_item.active .img_with_foldtext_item_head {
+  cursor: default;
   gap: 2rem;
   padding: 1rem 0;
 }
