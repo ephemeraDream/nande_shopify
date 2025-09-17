@@ -104,6 +104,9 @@ body:has(.section-header .drawer-menu) .announcement-bar-section .page-width {
 .page-width--narrow h3 {
   margin: 1rem 0 2rem;
 }
+.page-width--narrow p{
+  font-family: "PP Right Grotesk";
+}
 @media screen and (min-width: 750px) {
   .page-width {
     padding: 0 5rem;
