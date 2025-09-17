@@ -22,6 +22,26 @@
     "contact_form_five_Atfzbj": {
       "type": "contact-form-five",
       "blocks": {
+        "custom_field_BMjNbU": {
+          "type": "custom_field",
+          "settings": {
+            "field_name": "Telefon (optional)",
+            "field_type": "tel",
+            "placeholder": "Telefon (optional)",
+            "required": false,
+            "rows": 4
+          }
+        },
+        "custom_field_K9nC8f": {
+          "type": "custom_field",
+          "settings": {
+            "field_name": "Unternehmen (optional)",
+            "field_type": "text",
+            "placeholder": "Unternehmen (optional)",
+            "required": false,
+            "rows": 4
+          }
+        },
         "dropdown_epqkih": {
           "type": "dropdown",
           "settings": {
@@ -185,6 +205,8 @@
         }
       },
       "block_order": [
+        "custom_field_BMjNbU",
+        "custom_field_K9nC8f",
         "dropdown_epqkih",
         "group_Yjp3RX",
         "option_YmF7ar",
