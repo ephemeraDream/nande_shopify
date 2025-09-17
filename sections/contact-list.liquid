@@ -37,14 +37,6 @@
   </div>
 </div>
 <script>
-  function onTidioChatApiReady() {
-    window.tidioChatApi.hide();
-  }
-
-  if (window.tidioChatApi) {
-    window.tidioChatApi.on('ready', onTidioChatApiReady);
-  }
-
   document.querySelectorAll('#shopify-section-{{ section.id }} .nd-btn').forEach((item) => {
     item.addEventListener('click', (e) => {
       e.preventDefault();

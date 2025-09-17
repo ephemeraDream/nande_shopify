@@ -326,14 +326,11 @@
     <script>
       (function () {
         function onTidioChatApiReady() {
-          (function () {
-            window.tidioChatApi.open();
-          })();
+          window.tidioChatApi.hide();
         }
+
         if (window.tidioChatApi) {
           window.tidioChatApi.on('ready', onTidioChatApiReady);
-        } else {
-          document.addEventListener('tidioChat-ready', onTidioChatApiReady);
         }
       })();
     </script>
