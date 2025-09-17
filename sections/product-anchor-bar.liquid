@@ -22,7 +22,83 @@
 
 <script>
   const links = document.querySelectorAll('.product_anchor_bar_left_item');
-  document.querySelector('.product_anchor_bar_section').parentElement.classList.add('is-sticky');
+  const anchorBarSection = document.querySelector('.product_anchor_bar_section');
+  const anchorBarParent = anchorBarSection.parentElement;
+  
+  // 添加sticky类
+  anchorBarParent.classList.add('is-sticky');
+  
+  // 隐藏主导航（三部分：announcement-bar, header-simple, header-menu）
+  const headerSections = document.querySelectorAll('.shopify-section-group-header-group');
+  headerSections.forEach(section => {
+    section.style.display = 'none';
+  });
+  
+  // 监听滚动事件
+  let isScrolling = false;
+  let scrollTimeout;
+  let lastScrollTop = 0;
+  let anchorBarOriginalTop = 0;
+  let isInitialized = false;
+  
+  function getAnchorBarOriginalTop() {
+    if (anchorBarOriginalTop === 0) {
+      const rect = anchorBarSection.getBoundingClientRect();
+      anchorBarOriginalTop = rect.top + window.pageYOffset;
+    }
+    return anchorBarOriginalTop;
+  }
+  
+  function handleScroll() {
+    if (isScrolling) return;
+    isScrolling = true;
+    
+    const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    const originalTop = getAnchorBarOriginalTop();
+    
+    // 添加缓冲区域，避免在边界附近闪烁
+    const buffer = 10;
+    
+    // 如果滚动到子导航的原始位置或更上方，显示主导航，隐藏子导航
+    if (scrollTop <= originalTop - buffer) {
+      // 显示主导航的三部分
+      headerSections.forEach(section => {
+        if (section.style.display !== 'block') {
+          section.style.display = 'block';
+        }
+      });
+      if (anchorBarParent.classList.contains('is-sticky')) {
+        anchorBarParent.classList.remove('is-sticky');
+      }
+    } else if (scrollTop > originalTop + buffer) {
+      // 如果滚动超过子导航原始位置，隐藏主导航，显示子导航
+      headerSections.forEach(section => {
+        if (section.style.display !== 'none') {
+          section.style.display = 'none';
+        }
+      });
+      if (!anchorBarParent.classList.contains('is-sticky')) {
+        anchorBarParent.classList.add('is-sticky');
+      }
+    }
+    
+    lastScrollTop = scrollTop;
+    
+    clearTimeout(scrollTimeout);
+    scrollTimeout = setTimeout(() => {
+      isScrolling = false;
+    }, 16); // 约60fps
+  }
+  
+  // 添加滚动监听
+  window.addEventListener('scroll', handleScroll, { passive: true });
+  
+  // 初始化检查
+  setTimeout(() => {
+    handleScroll();
+    isInitialized = true;
+  }, 100);
+  
   links.forEach((item) => {
     item.addEventListener('click', () => {
       if (item.classList.contains('active')) return;
