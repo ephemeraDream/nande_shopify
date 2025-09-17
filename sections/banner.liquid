@@ -117,6 +117,7 @@
             }}
           {% endif %}
         {% endif %}
+        <a href="{{ block.settings.link }}">
         <div class="session-box-padding {% if section.settings.mobile_stacked %}mobile-stacked{% endif %}">
           <div class="session-box-inner">
             <div
@@ -127,10 +128,10 @@
               <h2 class="section_banner_info_title">{{ block.settings.title }}</h2>
               <div class="section_banner_info_text text-body">{{ block.settings.text }}</div>
               {% if block.settings.btn_text != blank %}
-                <a class="section_banner_info_btn nd-btn" href="{{ block.settings.link }}">
+                <div class="section_banner_info_btn nd-btn" href="{{ block.settings.link }}">
                   {{ block.settings.btn_text }}
                   {{ 'icon-right-arrow.svg' | inline_asset_content }}
-                </a>
+                </div>
               {% endif %}
               {% if block.settings.show_countdown %}
                 {%- assign countdown = block.settings.countdown -%}
@@ -151,6 +152,7 @@
             </div>
           </div>
         </div>
+        </a>
       </div>
     {% endfor %}
   </div>
