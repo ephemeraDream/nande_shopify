@@ -352,6 +352,8 @@
   font-variation-settings: "opsz" auto;
   color: #FF7500;
   margin-top: 1.2rem;
+  position: absolute;
+  bottom: -2rem;
 }
 
 .activity_products_normal .activity_products_normal_product_saleinfo {
