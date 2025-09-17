@@ -64,8 +64,17 @@
     const imgSwiper = new Swiper(imgEl, {
       slidesPerView: 2.5,
       spaceBetween: 20,
-      //watchSlidesProgress: true,
       slideToClickedSlide: true,
+      allowTouchMove: true,
+      on: {
+        click: function(swiper, event) {
+          const clickedSlide = event.target.closest('.swiper-slide');
+          if (clickedSlide) {
+            const slideIndex = Array.from(swiper.slides).indexOf(clickedSlide);
+            swiper.slideTo(slideIndex);
+          }
+        }
+      },
       breakpoints: {
         320: {
           slidesPerView: 2.5,
