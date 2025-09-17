@@ -632,7 +632,7 @@
 
 .header_menu_mobile .header_menu_item[data-type=product_collection] .header_menu_item_submenu_product_info {
   position: relative;
-  min-height: 12.5rem;
+  min-height: 10rem;
   background-color: #7f7e75;
   padding: 0 1.2rem 1.2rem;
   display: flex;
@@ -670,7 +670,7 @@
 
 .header_menu_mobile .header_menu_item[data-type=product_collection] .header_menu_item_submenu_product_title {
   font-family: PP Right Grotesk;
-  font-size: 2rem;
+  font-size: 1.6rem;
   font-weight: 500;
   line-height: 94%;
   letter-spacing: 0px;
@@ -682,7 +682,7 @@
 
 .header_menu_mobile .header_menu_item[data-type=product_collection] .header_menu_item_submenu_product_desc {
   font-family: PP Right Grotesk;
-  font-size: 2rem;
+  font-size: 1.2rem;
   font-weight: 400;
   line-height: 112%;
   letter-spacing: 0px;
@@ -693,7 +693,7 @@
 
 .header_menu_mobile .header_menu_item[data-type=product_collection] .header_menu_item_submenu_product_price {
   font-family: PP Right Grotesk;
-  font-size: 3rem;
+  font-size: 2rem;
   font-weight: 500;
   line-height: 94%;
   letter-spacing: 0px;
