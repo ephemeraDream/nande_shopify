@@ -449,7 +449,8 @@
       const product_collections = menu.querySelectorAll('.header_menu_item_submenu_tabcontent');
       product_collections.forEach((item) => {
         new Swiper(item.querySelector('.swiper'), {
-          slidesPerView: 1,
+          slidesPerView: 1.1,
+          spaceBetween: 10,
           loop: false,
           observer: true,
         });
