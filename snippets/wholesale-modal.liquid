@@ -188,37 +188,37 @@
     document.addEventListener('DOMContentLoaded', function() {
       const form = document.getElementById('ContactForm');
       const submitBtn = document.getElementById('ContactForm-submit');
-      const messageEl = document.getElementById('ContactForm-message');
+      {% comment %} const messageEl = document.getElementById('ContactForm-message'); {% endcomment %}
       const btnText = submitBtn.querySelector('.btn-text');
       const loadingSpinner = submitBtn.querySelector('.loading__spinner');
       const btnIcon = submitBtn.querySelector('svg:not(.spinner)');
       
       if (form && submitBtn) {
-        // 检查URL参数显示消息（用于弹窗刷新后显示）
+        // 检查URL参数和锚点（用于弹窗刷新后显示）
         let formStatus = null;
+        let shouldOpenModal = false;
+        
         try {
           const urlParams = new URLSearchParams(window.location.search);
           formStatus = urlParams.get('contact_posted');
+          
+          // 检查锚点是否为 #ContactForm（确保是弹窗表单，不是页脚表单）
+          const hash = window.location.hash;
+          if (hash === '#ContactForm') {
+            shouldOpenModal = true;
+          }
         } catch (e) {
           console.log('URL parsing error:', e);
         }
         
-        if (formStatus === 'true' || formStatus === 'false') {
-          // 显示消息
-          if (formStatus === 'true') {
-            messageEl.innerHTML = '{{ success_message | default: "Your message has been sent successfully." | escape }}';
-            messageEl.className = 'form__message success';
-          } else {
-            messageEl.innerHTML = '{{ error_message | default: "There was an error sending the form. Please check your input." | escape }}';
-            messageEl.className = 'form__message error';
-          }
-          messageEl.style.display = 'block';
-          
+        // 只有当URL参数存在且锚点是#ContactForm时才打开弹窗
+        // 这样可以避免与页脚的ContactFooter表单冲突
+        if ((formStatus === 'true' || formStatus === 'false') && shouldOpenModal) {
           // 自动打开弹窗
           const modal = document.querySelector('.common_modal');
           if (modal) {
             modal.style.display = 'block';
-            {% comment %} document.body.style.overflowY = 'hidden';
+            document.body.style.overflowY = 'hidden';
             
             // 添加关闭按钮事件监听器
             const closeBtn = modal.querySelector('.common_modal_close');
@@ -228,7 +228,7 @@
                 document.body.style.overflowY = 'auto';
               });
               closeBtn.dataset.autoCloseBound = 'true';
-            } {% endcomment %}
+            }
           }
         }
         
