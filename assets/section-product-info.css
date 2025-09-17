@@ -1501,7 +1501,9 @@
   .product_info {
     flex-direction: column;
   }
-
+  .product_info .product_info_left,.product_info .product_info_right {
+    top: 0;
+  }
   .product_info_section .product_info_bundle_product {
     flex: 0 0 calc((100% - 0.6rem) / 2);
   }
