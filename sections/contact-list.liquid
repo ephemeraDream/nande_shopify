@@ -1,105 +1,122 @@
 {% comment %}
-------------------------------------------------------------
-Contact List - 各种联系方式
-------------------------------------------------------------
+  ------------------------------------------------------------
+  Contact List - 各种联系方式
+  ------------------------------------------------------------
 {% endcomment %}
 
 <div class="contact-list session-box-padding padding-top-120 padding-bottom-120">
-    <div class="session-box-inner">
-      {% if section.settings.title != blank %}
-        <h2 class="steps-title padding-bottom-30">{{ section.settings.title }}</h2>
-      {% endif %}
-      {% if section.settings.description != blank %}
-        <div class="text-body padding-bottom-30">{{ section.settings.description }}</div>
-      {% endif %}
-      
-      <div class="steps-grid padding-top-30">
-        {% for block in section.blocks %}
-          <div class="influencer-step">
-            <div>
-              <h3>{{ block.settings.title }}</h3>
-              <div class="text-body step-desc">{{ block.settings.text }}</div>
-            </div>
-            <div class="bottom">
-              <a href="{{ block.settings.btn_link }}" class="nd-btn">
-                {{ block.settings.btn_text }}
-                {{ 'icon-right-arrow.svg' | inline_asset_content }}
-              </a>
-              {{-
-                block.settings.icon
-                | image_url: width: block.settings.icon.width
-                | image_tag: alt: block.settings.title, class: 'influencer-step-icon'
-              -}}
-            </div>
+  <div class="session-box-inner">
+    {% if section.settings.title != blank %}
+      <h2 class="steps-title padding-bottom-30">{{ section.settings.title }}</h2>
+    {% endif %}
+    {% if section.settings.description != blank %}
+      <div class="text-body padding-bottom-30">{{ section.settings.description }}</div>
+    {% endif %}
+
+    <div class="steps-grid padding-top-30">
+      {% for block in section.blocks %}
+        <div class="influencer-step">
+          <div>
+            <h3>{{ block.settings.title }}</h3>
+            <div class="text-body step-desc">{{ block.settings.text }}</div>
           </div>
-        {% endfor %}
-      </div>
+          <div class="bottom">
+            <a href="{{ block.settings.btn_link }}" class="nd-btn">
+              {{ block.settings.btn_text }}
+              {{ 'icon-right-arrow.svg' | inline_asset_content }}
+            </a>
+            {{-
+              block.settings.icon
+              | image_url: width: block.settings.icon.width
+              | image_tag: alt: block.settings.title, class: 'influencer-step-icon'
+            -}}
+          </div>
+        </div>
+      {% endfor %}
     </div>
   </div>
+</div>
+<script>
+  document.querySelectorAll('#shopify-section-{{ section.id }} .nd-btn').forEach((item) => {
+    item.addEventListener('click', (e) => {
+      e.preventDefault();
+      const href = item.getAttribute('href');
+      if (href === '#tidio-chat') {
+        window.tidioChatApi.open();
+      } else {
+        location.href = href;
+      }
+    });
+  });
+</script>
 <style>
-.contact-list {
-background: #E2DED6;
-}
+  .contact-list {
+    background: #e2ded6;
+  }
 
-.contact-list .steps-grid {
-display: grid;
-grid-template-columns: repeat(4, 1fr);
-gap: 1.7rem;
-position: relative;
-}
+  .contact-list .steps-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.7rem;
+    position: relative;
+  }
 
-.contact-list .influencer-step {
+  .contact-list .influencer-step {
     display: flex;
     flex-direction: column;
     position: relative;
     gap: 1rem;
-    padding:1.5rem 0.9rem 1.5rem 2.4rem;
+    padding: 1.5rem 0.9rem 1.5rem 2.4rem;
     background: #fff;
     min-height: 250px;
     justify-content: space-between;
-}
-.contact-list .influencer-step .bottom{display:flex;flex-direction: row;
-  justify-content: space-between;
-  align-content: center;
-  align-items: center;}
-  .contact-list .influencer-step .nd-btn{margin-top:0;}
-.contact-list .influencer-step-icon{
-width: 40px;
-height: 40px;
-object-fit: contain;
-}
+  }
+  .contact-list .influencer-step .bottom {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-content: center;
+    align-items: center;
+  }
+  .contact-list .influencer-step .nd-btn {
+    margin-top: 0;
+  }
+  .contact-list .influencer-step-icon {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+  }
 
-.contact-list .step-desc{
-color: #1F1F1F;
-line-height: 1.3em;
-margin-top: 1rem;
-}
+  .contact-list .step-desc {
+    color: #1f1f1f;
+    line-height: 1.3em;
+    margin-top: 1rem;
+  }
 
-.featured-program .step-arrow {
+  .featured-program .step-arrow {
     position: absolute;
     right: -40px;
     top: 50%;
     transform: translateY(-50%);
     font-size: 1.5rem;
     font-weight: bold;
-    color: #1F1F1F;
-}
-.featured-program .influencer-step:nth-child(3n) .step-arrow {
+    color: #1f1f1f;
+  }
+  .featured-program .influencer-step:nth-child(3n) .step-arrow {
     display: none;
   }
-@media screen and (max-width: 1024px) {
-  .contact-list .steps-grid {
+  @media screen and (max-width: 1024px) {
+    .contact-list .steps-grid {
       grid-template-columns: repeat(2, 1fr);
     }
   }
-  
+
   @media screen and (max-width: 768px) {
     .contact-list .steps-grid {
       grid-template-columns: 1fr;
       gap: 3rem;
     }
-}
-      
+  }
 </style>
 {% schema %}
 {
@@ -113,7 +130,7 @@ margin-top: 1rem;
     {
       "type": "textarea",
       "id": "description",
-      "label": "Description",
+      "label": "Description"
     }
   ],
   "blocks": [
@@ -127,10 +144,10 @@ margin-top: 1rem;
           "label": "Icon"
         },
         {
-            "type": "text",
-            "id": "title",
-            "label": "Title"
-          },
+          "type": "text",
+          "id": "title",
+          "label": "Title"
+        },
         {
           "type": "textarea",
           "id": "text",
