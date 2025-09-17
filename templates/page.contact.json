@@ -421,6 +421,7 @@
         "option_8N4V37",
         "option_4F3KXe"
       ],
+      "disabled": true,
       "name": "contact_form_three",
       "settings": {
         "title": "<p>Fragen, Wünsche, Anliegen?<br/> Wir Haben Immer Ein Offenes Ohr!</p>",
