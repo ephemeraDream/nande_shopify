@@ -44,7 +44,7 @@
   endcomment
 %}
 
-<div class="product_info_section padding-sider">
+<div class="product_info_section padding-sider" id="{{ section.settings.spec_id }}">
   <div class="product_info">
     <div class="product_info_left">
       {% assign has_video = false %}
@@ -1028,6 +1028,11 @@
     "groups": ["header", "footer"]
   },
   "settings": [
+    {
+      "type": "text",
+      "id": "spec_id",
+      "label": "specId"
+    },
     {
       "type": "select",
       "id": "media_ratio",
