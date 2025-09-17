@@ -1,7 +1,13 @@
 {%- if section.settings.show_back_to_top -%}
 <div class="back-to-top" id="back-to-top" style="display: none;">
   <button type="button" class="back-to-top__button" aria-label="Back to top">
-    {{- 'icon-arrow-up.svg' | inline_asset_content -}}
+    {%- if section.settings.custom_icon != blank -%}
+      {{ section.settings.custom_icon }}
+    {%- else -%}
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M12 4L4 12H8V20H16V12H20L12 4Z" fill="currentColor"/>
+      </svg>
+    {%- endif -%}
   </button>
 </div>
 
@@ -9,28 +15,44 @@
   .back-to-top {
     position: fixed;
     z-index: 1000;
-    {%- case section.settings.position -%}
-      {%- when 'bottom-right' -%}
-        bottom: 2rem;
-        right: 2rem;
-      {%- when 'bottom-left' -%}
-        bottom: 2rem;
-        left: 2rem;
-      {%- when 'bottom-center' -%}
-        bottom: 2rem;
+    {%- if section.settings.position_type == 'custom' -%}
+      {%- if section.settings.position_vertical == 'top' -%}
+        top: {{ section.settings.position_top | default: 20 }}px;
+      {%- else -%}
+        bottom: {{ section.settings.position_bottom | default: 20 }}px;
+      {%- endif -%}
+      {%- if section.settings.position_horizontal == 'left' -%}
+        left: {{ section.settings.position_left | default: 20 }}px;
+      {%- elsif section.settings.position_horizontal == 'right' -%}
+        right: {{ section.settings.position_right | default: 20 }}px;
+      {%- else -%}
         left: 50%;
         transform: translateX(-50%);
-      {%- when 'top-right' -%}
-        top: 2rem;
-        right: 2rem;
-      {%- when 'top-left' -%}
-        top: 2rem;
-        left: 2rem;
-      {%- when 'top-center' -%}
-        top: 2rem;
-        left: 50%;
-        transform: translateX(-50%);
-    {%- endcase -%}
+      {%- endif -%}
+    {%- else -%}
+      {%- case section.settings.position -%}
+        {%- when 'bottom-right' -%}
+          bottom: 2rem;
+          right: 2rem;
+        {%- when 'bottom-left' -%}
+          bottom: 2rem;
+          left: 2rem;
+        {%- when 'bottom-center' -%}
+          bottom: 2rem;
+          left: 50%;
+          transform: translateX(-50%);
+        {%- when 'top-right' -%}
+          top: 2rem;
+          right: 2rem;
+        {%- when 'top-left' -%}
+          top: 2rem;
+          left: 2rem;
+        {%- when 'top-center' -%}
+          top: 2rem;
+          left: 50%;
+          transform: translateX(-50%);
+      {%- endcase -%}
+    {%- endif -%}
   }
 
   .back-to-top__button {
@@ -92,28 +114,44 @@
 
   @media screen and (max-width: 768px) {
     .back-to-top {
-      {%- case section.settings.position -%}
-        {%- when 'bottom-right' -%}
-          bottom: 1.5rem;
-          right: 1.5rem;
-        {%- when 'bottom-left' -%}
-          bottom: 1.5rem;
-          left: 1.5rem;
-        {%- when 'bottom-center' -%}
-          bottom: 1.5rem;
+      {%- if section.settings.position_type == 'custom' -%}
+        {%- if section.settings.position_vertical == 'top' -%}
+          top: {{ section.settings.position_top_mobile | default: section.settings.position_top | default: 15 }}px;
+        {%- else -%}
+          bottom: {{ section.settings.position_bottom_mobile | default: section.settings.position_bottom | default: 15 }}px;
+        {%- endif -%}
+        {%- if section.settings.position_horizontal == 'left' -%}
+          left: {{ section.settings.position_left_mobile | default: section.settings.position_left | default: 15 }}px;
+        {%- elsif section.settings.position_horizontal == 'right' -%}
+          right: {{ section.settings.position_right_mobile | default: section.settings.position_right | default: 15 }}px;
+        {%- else -%}
           left: 50%;
           transform: translateX(-50%);
-        {%- when 'top-right' -%}
-          top: 1.5rem;
-          right: 1.5rem;
-        {%- when 'top-left' -%}
-          top: 1.5rem;
-          left: 1.5rem;
-        {%- when 'top-center' -%}
-          top: 1.5rem;
-          left: 50%;
-          transform: translateX(-50%);
-      {%- endcase -%}
+        {%- endif -%}
+      {%- else -%}
+        {%- case section.settings.position -%}
+          {%- when 'bottom-right' -%}
+            bottom: 1.5rem;
+            right: 1.5rem;
+          {%- when 'bottom-left' -%}
+            bottom: 1.5rem;
+            left: 1.5rem;
+          {%- when 'bottom-center' -%}
+            bottom: 1.5rem;
+            left: 50%;
+            transform: translateX(-50%);
+          {%- when 'top-right' -%}
+            top: 1.5rem;
+            right: 1.5rem;
+          {%- when 'top-left' -%}
+            top: 1.5rem;
+            left: 1.5rem;
+          {%- when 'top-center' -%}
+            top: 1.5rem;
+            left: 50%;
+            transform: translateX(-50%);
+        {%- endcase -%}
+      {%- endif -%}
     }
 
     .back-to-top__button {

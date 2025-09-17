@@ -239,8 +239,24 @@ document.addEventListener('DOMContentLoaded', function() {
     },
     {
       "type": "select",
+      "id": "position_type",
+      "label": "位置设置方式",
+      "options": [
+        {
+          "value": "preset",
+          "label": "预设位置"
+        },
+        {
+          "value": "custom",
+          "label": "自定义位置"
+        }
+      ],
+      "default": "preset"
+    },
+    {
+      "type": "select",
       "id": "position",
-      "label": "按钮位置",
+      "label": "预设位置",
       "options": [
         {
           "value": "bottom-right",
@@ -270,6 +286,98 @@ document.addEventListener('DOMContentLoaded', function() {
       "default": "bottom-right"
     },
     {
+      "type": "header",
+      "content": "自定义位置设置"
+    },
+    {
+      "type": "select",
+      "id": "position_vertical",
+      "label": "垂直位置",
+      "options": [
+        {
+          "value": "top",
+          "label": "距离顶部"
+        },
+        {
+          "value": "bottom",
+          "label": "距离底部"
+        }
+      ],
+      "default": "bottom"
+    },
+    {
+      "type": "number",
+      "id": "position_top",
+      "label": "距离顶部 (px)",
+      "default": 20
+    },
+    {
+      "type": "number",
+      "id": "position_bottom",
+      "label": "距离底部 (px)",
+      "default": 20
+    },
+    {
+      "type": "select",
+      "id": "position_horizontal",
+      "label": "水平位置",
+      "options": [
+        {
+          "value": "left",
+          "label": "距离左边"
+        },
+        {
+          "value": "right",
+          "label": "距离右边"
+        },
+        {
+          "value": "center",
+          "label": "水平居中"
+        }
+      ],
+      "default": "right"
+    },
+    {
+      "type": "number",
+      "id": "position_left",
+      "label": "距离左边 (px)",
+      "default": 20
+    },
+    {
+      "type": "number",
+      "id": "position_right",
+      "label": "距离右边 (px)",
+      "default": 20
+    },
+    {
+      "type": "header",
+      "content": "移动端位置设置"
+    },
+    {
+      "type": "number",
+      "id": "position_top_mobile",
+      "label": "移动端距离顶部 (px)",
+      "info": "留空则使用桌面端设置"
+    },
+    {
+      "type": "number",
+      "id": "position_bottom_mobile",
+      "label": "移动端距离底部 (px)",
+      "info": "留空则使用桌面端设置"
+    },
+    {
+      "type": "number",
+      "id": "position_left_mobile",
+      "label": "移动端距离左边 (px)",
+      "info": "留空则使用桌面端设置"
+    },
+    {
+      "type": "number",
+      "id": "position_right_mobile",
+      "label": "移动端距离右边 (px)",
+      "info": "留空则使用桌面端设置"
+    },
+    {
       "type": "range",
       "id": "scroll_threshold",
       "min": 100,
@@ -296,6 +404,12 @@ document.addEventListener('DOMContentLoaded', function() {
       "id": "icon_color",
       "label": "图标颜色",
       "default": "#1F1F1F"
+    },
+    {
+      "type": "textarea",
+      "id": "custom_icon",
+      "label": "自定义图标 (SVG代码)",
+      "info": "留空则使用默认的向上箭头图标"
     }
   ],
   "presets": [
