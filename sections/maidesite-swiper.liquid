@@ -114,6 +114,26 @@
         }
       } {% endcomment %}
     });
+
+    // 为导航按钮添加点击效果
+    const nextBtn = sectionEl.querySelector('.maidesite_swiper_next');
+    const prevBtn = sectionEl.querySelector('.maidesite_swiper_prev');
+    
+    if (nextBtn) {
+      nextBtn.addEventListener('click', function() {
+        const currentIndex = imgSwiper.activeIndex;
+        const nextIndex = Math.min(currentIndex + 1, imgSwiper.slides.length - 1);
+        imgSwiper.slideTo(nextIndex);
+      });
+    }
+    
+    if (prevBtn) {
+      prevBtn.addEventListener('click', function() {
+        const currentIndex = imgSwiper.activeIndex;
+        const prevIndex = Math.max(currentIndex - 1, 0);
+        imgSwiper.slideTo(prevIndex);
+      });
+    }
     
   })();
 </script>
