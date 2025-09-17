@@ -28,11 +28,11 @@
   // 添加sticky类
   anchorBarParent.classList.add('is-sticky');
   
-  // 隐藏主导航
-  const header = document.querySelector('header');
-  if (header) {
-    header.style.display = 'none';
-  }
+  // 隐藏主导航（三部分：announcement-bar, header-simple, header-menu）
+  const headerSections = document.querySelectorAll('.shopify-section-group-header-group');
+  headerSections.forEach(section => {
+    section.style.display = 'none';
+  });
   
   // 监听滚动事件
   let isScrolling = false;
@@ -61,17 +61,22 @@
     
     // 如果滚动到子导航的原始位置或更上方，显示主导航，隐藏子导航
     if (scrollTop <= originalTop - buffer) {
-      if (header && header.style.display !== 'block') {
-        header.style.display = 'block';
-      }
+      // 显示主导航的三部分
+      headerSections.forEach(section => {
+        if (section.style.display !== 'block') {
+          section.style.display = 'block';
+        }
+      });
       if (anchorBarParent.classList.contains('is-sticky')) {
         anchorBarParent.classList.remove('is-sticky');
       }
     } else if (scrollTop > originalTop + buffer) {
       // 如果滚动超过子导航原始位置，隐藏主导航，显示子导航
-      if (header && header.style.display !== 'none') {
-        header.style.display = 'none';
-      }
+      headerSections.forEach(section => {
+        if (section.style.display !== 'none') {
+          section.style.display = 'none';
+        }
+      });
       if (!anchorBarParent.classList.contains('is-sticky')) {
         anchorBarParent.classList.add('is-sticky');
       }
