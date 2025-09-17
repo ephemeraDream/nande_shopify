@@ -72,24 +72,25 @@
               </div>
               
             </div>
+            {% if sale_info != blank %}
+              <div
+                class="activity_products_normal_product_saleinfo_countdown"
+                data-end-date="{{ sale_info.datetime | date: "%Y-%m-%dT%H:%M:%SZ" }}"
+              >
+                <span class="activity_products_normal_product_saleinfo_countdown_text">
+                  {{- 'common.ends_in' | t -}}
+                </span>
+                <div class="activity_products_normal_product_saleinfo_countdown_item" data-type="day"></div>
+                <span>:</span>
+                <div class="activity_products_normal_product_saleinfo_countdown_item" data-type="hour"></div>
+                <span>:</span>
+                <div class="activity_products_normal_product_saleinfo_countdown_item" data-type="minute"></div>
+                <span>:</span>
+                <div class="activity_products_normal_product_saleinfo_countdown_item" data-type="second"></div>
+              </div>
+            {% endif %}
           </div>
-          {% if sale_info != blank %}
-            <div
-              class="activity_products_normal_product_saleinfo_countdown"
-              data-end-date="{{ sale_info.datetime | date: "%Y-%m-%dT%H:%M:%SZ" }}"
-            >
-              <span class="activity_products_normal_product_saleinfo_countdown_text">
-                {{- 'common.ends_in' | t -}}
-              </span>
-              <div class="activity_products_normal_product_saleinfo_countdown_item" data-type="day"></div>
-              <span>:</span>
-              <div class="activity_products_normal_product_saleinfo_countdown_item" data-type="hour"></div>
-              <span>:</span>
-              <div class="activity_products_normal_product_saleinfo_countdown_item" data-type="minute"></div>
-              <span>:</span>
-              <div class="activity_products_normal_product_saleinfo_countdown_item" data-type="second"></div>
-            </div>
-          {% endif %}
+          
         </a>
       {% endfor %}
     </div>
