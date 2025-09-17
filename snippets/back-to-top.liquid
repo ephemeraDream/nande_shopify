@@ -1,0 +1,176 @@
+{%- if section.settings.show_back_to_top -%}
+<div class="back-to-top" id="back-to-top" style="display: none;">
+  <button type="button" class="back-to-top__button" aria-label="Back to top">
+    {{- 'icon-arrow-up.svg' | inline_asset_content -}}
+  </button>
+</div>
+
+<style>
+  .back-to-top {
+    position: fixed;
+    z-index: 1000;
+    {%- case section.settings.position -%}
+      {%- when 'bottom-right' -%}
+        bottom: 2rem;
+        right: 2rem;
+      {%- when 'bottom-left' -%}
+        bottom: 2rem;
+        left: 2rem;
+      {%- when 'bottom-center' -%}
+        bottom: 2rem;
+        left: 50%;
+        transform: translateX(-50%);
+      {%- when 'top-right' -%}
+        top: 2rem;
+        right: 2rem;
+      {%- when 'top-left' -%}
+        top: 2rem;
+        left: 2rem;
+      {%- when 'top-center' -%}
+        top: 2rem;
+        left: 50%;
+        transform: translateX(-50%);
+    {%- endcase -%}
+  }
+
+  .back-to-top__button {
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+    background-color: {{ section.settings.background_color | default: '#BDFF00' }};
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0.4rem 1.2rem rgba(0, 0, 0, 0.15);
+    transition: all 0.3s ease;
+  }
+
+  .back-to-top__button:hover {
+    background-color: {{ section.settings.hover_background_color | default: '#8ebe09' }};
+    transform: translateY(-0.2rem);
+    box-shadow: 0 0.6rem 1.6rem rgba(0, 0, 0, 0.2);
+  }
+
+  .back-to-top__button svg {
+    width: 2rem;
+    height: 2rem;
+    fill: {{ section.settings.icon_color | default: '#1F1F1F' }};
+  }
+
+  .back-to-top.show {
+    display: block;
+    animation: fadeInUp 0.3s ease;
+  }
+
+  .back-to-top.hide {
+    animation: fadeOutDown 0.3s ease;
+  }
+
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(2rem);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes fadeOutDown {
+    from {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    to {
+      opacity: 0;
+      transform: translateY(2rem);
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    .back-to-top {
+      {%- case section.settings.position -%}
+        {%- when 'bottom-right' -%}
+          bottom: 1.5rem;
+          right: 1.5rem;
+        {%- when 'bottom-left' -%}
+          bottom: 1.5rem;
+          left: 1.5rem;
+        {%- when 'bottom-center' -%}
+          bottom: 1.5rem;
+          left: 50%;
+          transform: translateX(-50%);
+        {%- when 'top-right' -%}
+          top: 1.5rem;
+          right: 1.5rem;
+        {%- when 'top-left' -%}
+          top: 1.5rem;
+          left: 1.5rem;
+        {%- when 'top-center' -%}
+          top: 1.5rem;
+          left: 50%;
+          transform: translateX(-50%);
+      {%- endcase -%}
+    }
+
+    .back-to-top__button {
+      width: 4.5rem;
+      height: 4.5rem;
+    }
+
+    .back-to-top__button svg {
+      width: 1.8rem;
+      height: 1.8rem;
+    }
+  }
+</style>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const backToTop = document.getElementById('back-to-top');
+    const backToTopButton = backToTop.querySelector('.back-to-top__button');
+    const scrollThreshold = {{ section.settings.scroll_threshold | default: 300 }};
+
+    // 显示/隐藏回到顶部按钮
+    function toggleBackToTop() {
+      if (window.pageYOffset > scrollThreshold) {
+        if (!backToTop.classList.contains('show')) {
+          backToTop.style.display = 'block';
+          backToTop.classList.add('show');
+          backToTop.classList.remove('hide');
+        }
+      } else {
+        if (backToTop.classList.contains('show')) {
+          backToTop.classList.add('hide');
+          backToTop.classList.remove('show');
+          setTimeout(() => {
+            if (backToTop.classList.contains('hide')) {
+              backToTop.style.display = 'none';
+            }
+          }, 300);
+        }
+      }
+    }
+
+    // 回到顶部功能
+    function scrollToTop() {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    }
+
+    // 监听滚动事件
+    window.addEventListener('scroll', toggleBackToTop);
+
+    // 点击事件
+    backToTopButton.addEventListener('click', scrollToTop);
+
+    // 初始化检查
+    toggleBackToTop();
+  });
+</script>
+{%- endif -%}

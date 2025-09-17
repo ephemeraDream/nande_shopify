@@ -76,6 +76,8 @@
   </div>
 </div>
 
+{%- render 'back-to-top', section: section -%}
+
 <script>
 document.addEventListener('DOMContentLoaded', function() {
   // 检查是否为移动设备
@@ -150,7 +152,6 @@ document.addEventListener('DOMContentLoaded', function() {
     "groups": ["header"],
     "templates": ["*"]
   },
-  "settings": [],
   "blocks": [
     {
       "type": "company_info",
@@ -223,6 +224,78 @@ document.addEventListener('DOMContentLoaded', function() {
           "label": "menu"
         }
       ]
+    }
+  ],
+  "settings": [
+    {
+      "type": "header",
+      "content": "回到顶部设置"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_back_to_top",
+      "label": "显示回到顶部按钮",
+      "default": true
+    },
+    {
+      "type": "select",
+      "id": "position",
+      "label": "按钮位置",
+      "options": [
+        {
+          "value": "bottom-right",
+          "label": "右下角"
+        },
+        {
+          "value": "bottom-left",
+          "label": "左下角"
+        },
+        {
+          "value": "bottom-center",
+          "label": "底部居中"
+        },
+        {
+          "value": "top-right",
+          "label": "右上角"
+        },
+        {
+          "value": "top-left",
+          "label": "左上角"
+        },
+        {
+          "value": "top-center",
+          "label": "顶部居中"
+        }
+      ],
+      "default": "bottom-right"
+    },
+    {
+      "type": "range",
+      "id": "scroll_threshold",
+      "min": 100,
+      "max": 1000,
+      "step": 50,
+      "unit": "px",
+      "label": "显示按钮的滚动距离",
+      "default": 300
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "按钮背景色",
+      "default": "#BDFF00"
+    },
+    {
+      "type": "color",
+      "id": "hover_background_color",
+      "label": "按钮悬停背景色",
+      "default": "#8ebe09"
+    },
+    {
+      "type": "color",
+      "id": "icon_color",
+      "label": "图标颜色",
+      "default": "#1F1F1F"
     }
   ],
   "presets": [
