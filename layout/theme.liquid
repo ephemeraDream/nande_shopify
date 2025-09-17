@@ -323,6 +323,20 @@
     {{ 'swiper-bundle.min.css' | asset_url | stylesheet_tag }}
     <script src="{{ 'swiper-bundle.min.js' | asset_url }}"></script>
     <script src="//code.tidio.co/0dsiqfbh8rere8cg3foc5szhrleoyfvg.js" async></script>
+    <script>
+      (function () {
+        function onTidioChatApiReady() {
+          (function () {
+            window.tidioChatApi.open();
+          })();
+        }
+        if (window.tidioChatApi) {
+          window.tidioChatApi.on('ready', onTidioChatApiReady);
+        } else {
+          document.addEventListener('tidioChat-ready', onTidioChatApiReady);
+        }
+      })();
+    </script>
   </head>
 
   <body class="gradient{% if settings.animations_hover_elements != 'none' %} animate--hover-{{ settings.animations_hover_elements }}{% endif %}">
