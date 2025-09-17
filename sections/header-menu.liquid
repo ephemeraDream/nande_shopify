@@ -157,6 +157,11 @@
                                     {% render 'product-rating', product: product %}
                                     <h4 class="header_menu_item_submenu_product_price">
                                       {{ product.price | money_without_trailing_zeros }}
+                                      {% if product.compare_at_price != blank and product.compare_at_price > product.price %}
+                                        <span class="header_menu_item_submenu_product_price_cap">
+                                          {{ product.compare_at_price | money_without_trailing_zeros }}
+                                        </span>
+                                      {% endif %}
                                     </h4>
                                   </div>
                                 </div>
