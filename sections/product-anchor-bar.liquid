@@ -94,14 +94,14 @@
   {% comment %} window.addEventListener('scroll', handleScroll, { passive: true }); {% endcomment %}
   
   // 初始化检查
-  setTimeout(() => {
+  {% comment %} setTimeout(() => {
     // 只有在页面有滚动距离时才执行handleScroll
     const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
     if (scrollTop > 300) {
       handleScroll();
     }
     isInitialized = true;
-  }, 100);
+  }, 100); {% endcomment %}
   
   links.forEach((item) => {
     item.addEventListener('click', () => {
