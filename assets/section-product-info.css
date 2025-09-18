@@ -1611,6 +1611,7 @@
 
 .product_info .product_info_saleinfo {
   padding: 1.6rem;
+  width: 100%;
 }
 .product_info .product_info_saleinfo_left {
   padding-right: 1.4rem;
