@@ -1507,6 +1507,7 @@
   .product_info {
     flex-direction: column;
     gap: 3rem;
+    padding-top:10rem;
   }
   .product_info .product_info_left,.product_info .product_info_right {
     top: 0;
