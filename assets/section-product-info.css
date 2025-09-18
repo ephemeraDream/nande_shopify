@@ -1609,4 +1609,23 @@
 ;
 }
 
+.product_info .product_info_saleinfo {
+  padding: 1.6rem;
+}
+.product_info .product_info_saleinfo_left {
+  padding-right: 1.4rem;
+  flex-grow: 1;
+}
+.product_info .product_info_saleinfo_name {
+  font-size: 3rem;
+}
+.product_info .product_info_saleinfo_countdown {
+  gap: .3rem;
+  font-size: 1.2rem;
+  justify-content: flex-start;
+}
+.product_info .product_info_saleinfo_countdown_text {
+  font-size: 1.2rem;
+}
+
 }
