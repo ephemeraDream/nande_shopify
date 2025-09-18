@@ -111,7 +111,7 @@
                       {{ 'icon-right-arrow.svg' | inline_asset_content -}}
                     </a>
                     {% assign compare_data = block.settings.select_product.metafields.custom.compare_simple.value %}
-                    {% for item in compare_data.data.value %}
+                    {% for item in compare_data.short_data.value %}
                       <div class="compare_simple_item_category">
                         <div class="compare_simple_item_category_label">{{ item.category }}</div>
                         {% for value in item.list %}
