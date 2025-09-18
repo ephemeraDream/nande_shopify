@@ -60,5 +60,11 @@
 }
 
 @media screen and (max-width: 768px) {
-  
+  .video_simplicity .video_simplicity_contain{
+    height: 56vw;
+  }
+  .video_simplicity .video_simplicity_playicon {
+    width: 6rem;
+    height: 6rem;
+}
 }
