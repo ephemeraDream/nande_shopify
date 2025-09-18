@@ -63,7 +63,14 @@
       "of": "von",
       "next_slide": "Nach rechts schieben",
       "previous_slide": "Nach links schieben",
-      "name": "Slider"
+      "name": "Slider",
+      "previous": "",
+      "next": "",
+      "load_slide": "",
+      "pause": "",
+      "play": "",
+      "carousel": "",
+      "slide": ""
     }
   },
   "newsletter": {
@@ -188,7 +195,7 @@
       "duties_included": "Inkl. Zollgebühren.",
       "duties_and_taxes_included": "Inkl. Zollgebühren und Steuern.",
       "include_taxes": "inkl. MwSt.",
-      "preorder": "Vorbestellung",
+      "preorder": "Vorbestellung"
     },
     "modal": {
       "label": "Medien-Galerie"
@@ -578,7 +585,7 @@
     "overview": "Überblick",
     "shipment": "Versand",
     "free": "Kostenlos",
-    "buy_more_save_more": "Mehr kaufen mehr sparen",
+    "buy_more_save_more": "Mehr",
     "checkout_now_safely": "Jetzt sicher zur Kasse",
     "contact_us": "Kontaktiere uns",
     "anwenden": "Anwenden",
