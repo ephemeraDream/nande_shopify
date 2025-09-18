@@ -1615,6 +1615,9 @@
 .product_info .product_info_saleinfo_left {
   padding-right: 1.4rem;
   flex-grow: 1;
+  display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 .product_info .product_info_saleinfo_name {
   font-size: 3rem;
