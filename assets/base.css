@@ -4488,6 +4488,6 @@ body.gradient #wheelify-spin_a_sale_cc_store_front_module span#cc-spin-a-sale-co
 display: none;
 }
 #tidio-chat-iframe{
-  bottom: 100px;
+  bottom: 100px!important;
 }
 }
