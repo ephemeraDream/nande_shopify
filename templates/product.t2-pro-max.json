@@ -519,8 +519,8 @@
         "description": "",
         "title": "<p>CE/FSC-zertifizierter </p>",
         "show_tab_head": true,
-        "loop": true,
-        "autoplay_enable": true,
+        "loop": false,
+        "autoplay_enable": false,
         "autoplay_delay": 5000,
         "layout": "image-left"
       }
