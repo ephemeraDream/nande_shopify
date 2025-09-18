@@ -590,6 +590,9 @@
   cursor: pointer;
   width: 100%;
 }
+.product_info .product_info_modal_item_title:hover {
+  color: #000000;
+}
 
 .product_info .product_info_modal_item .product_info_modal_item_left {
   display: flex;
