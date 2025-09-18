@@ -42,7 +42,18 @@
       e.preventDefault();
       const href = item.getAttribute('href');
       if (href === '#tidio-chat') {
-        window.tidioChatApi.open();
+        // 封装打开函数
+        function openChat() {
+          window.tidioChatApi.open();
+        }
+
+        if (window.tidioChatApi && window.tidioChatApi.readyEventWasFired) {
+          // 已经 ready，直接打开
+          openChat();
+        } else {
+          // 没有 ready，监听事件
+          document.addEventListener('tidioChat-ready', openChat, { once: true });
+        }
       } else {
         location.href = href;
       }

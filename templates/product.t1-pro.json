@@ -54,7 +54,9 @@
             "icon": "<svg xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" version=\"1.1\" width=\"19.98046875\" height=\"20\" viewbox=\"0 0 19.98046875 20\" xmlns:xlink=\"http://www.w3.org/1999/xlink\"><g><g><path d=\"M19.9799,16.3531L18.8445,16.3531L18.8445,9.15646C18.844,8.61559,18.4059,8.17725,17.8652,8.17676L14.7579,8.17676L14.7579,0.979703C14.7574,0.438825,14.3192,0.000485712,13.7785,0L6.20137,0C5.66069,0.000485712,5.22251,0.438836,5.22202,0.979703L5.22202,8.17675L2.11471,8.17675C1.57403,8.17724,1.13584,8.61557,1.13536,9.15645L1.13536,16.3531L0,16.3531L0,17.7183L1.13536,17.7183L1.13536,20L2.49743,20L2.49743,17.7183L17.4825,17.7183L17.4825,20L18.8445,20L18.8445,17.7183L19.9799,17.7183L19.9799,16.3531ZM6.58498,1.36257L9.30957,1.36257L9.30957,3.74773L10.6721,3.74773L10.6721,1.36257L13.3967,1.36257L13.3967,8.17676L6.58498,8.17676L6.58498,1.36257ZM2.49743,9.53932L5.22202,9.53932L5.22202,11.924L6.58498,11.924L6.58498,9.53932L9.30957,9.53932L9.30957,16.3531L2.49743,16.3531L2.49743,9.53932ZM10.6734,9.53932L13.398,9.53932L13.398,11.924L14.7601,11.924L14.7601,9.53932L17.4847,9.53932L17.4847,16.3531L10.6712,16.3531L10.6734,9.53932Z\" fill=\"#1F1F1F\" fill-opacity=\"1\"></path></g></g></svg>",
             "modal_title": "<p><strong>Optimieren Sie Ihre Büros mit Maidesite</strong></p>",
             "modal_content": "<p>Ergonomische Arbeitsplätze, die Ihre Mitarbeiter begeistern und Ihre Produktivität steigern. Erhalten Sie jetzt ein unverbindliches Angebot und profitieren Sie von unserer umfassenden Beratung und Betreuung</p>",
-            "modal_tip": "<p>Durch das Absenden des Formulars speichern wir die von Ihnen eingegebenen Daten, um Ihre Anfrage zu bearbeiten. In keinem Fall werden diese Daten weitergegeben. Weitere Informationen finden Sie in unserer Datenschutzerklärung.</p>"
+            "modal_tip": "<p>Durch das Absenden des Formulars speichern wir die von Ihnen eingegebenen Daten, um Ihre Anfrage zu bearbeiten. In keinem Fall werden diese Daten weitergegeben. Weitere Informationen finden Sie in unserer Datenschutzerklärung.</p>",
+            "success_message": "Your message has been sent successfully.",
+            "error_message": "There was an error sending the form. Please check your input."
           }
         },
         "modal_KiCBrG": {
@@ -103,7 +105,7 @@
       "settings": {
         "media_ratio": "1.33",
         "show_tax_and_shipping": true,
-        "product_specs": ""
+        "product_specs": "<div class=\"product-specs\">\n  <p><strong>Höhenverstellbarkeit:</strong> 72–120 cm</p>\n  <p><strong>Motor:</strong> Elektroantrieb mit 1 leistungsstarken Motoren</p>\n  <p><strong>Stabilitätsbewertung:</strong> CE-Zertifikat</p>\n  <p><strong>Belastbarkeit:</strong> 90 kg</p>\n  <p><strong>Geschwindigkeit:</strong> 40 mm pro Sekunde</p>\n  <p><strong>Geräuschemission:</strong> <50 dB</p>\n  <p><strong>Material:</strong> Pulverbeschichteter Stahl</p>\n  <p><strong>Farben:</strong> Schwarz, Weiß, Grau</p>\n</div>"
       }
     },
     "product_anchor_bar_atcVF4": {
