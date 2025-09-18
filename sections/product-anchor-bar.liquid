@@ -97,7 +97,7 @@
   setTimeout(() => {
     // 只有在页面有滚动距离时才执行handleScroll
     const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-    if (scrollTop > 0) {
+    if (scrollTop > 100) {
       handleScroll();
     }
     isInitialized = true;
