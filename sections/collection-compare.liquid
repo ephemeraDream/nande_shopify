@@ -116,12 +116,12 @@
                 endif
               %}
               <a
-                class="collection_compare_product{% if second_image != blank %} collection_compare_product_hoverchange{% endif %}"
+                class="collection_compare_product"
                 data-type="{{ product.type | handleize }}"
                 href="{{ product.url }}"
                 data-id="{{ product.id }}"
               >
-                <div class="collection_compare_product_img">
+                <div class="collection_compare_product_img {% if second_image != blank %} collection_compare_product_hoverchange{% endif %}">
                   {% if featured_image %}
                     {{
                       featured_image
