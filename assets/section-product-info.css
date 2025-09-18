@@ -591,7 +591,7 @@
   width: 100%;
 }
 .product_info .product_info_modal_item_title_c:hover {
-  color: #000000;
+  background: #eaeaea;
 }
 
 .product_info .product_info_modal_item .product_info_modal_item_left {
