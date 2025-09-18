@@ -574,7 +574,7 @@
 .product_info .product_info_modal_item {
   padding-right: 0.8rem;
 }
-.product_info .product_info_modal_item_title {
+.product_info .product_info_modal_item_title_c {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -590,7 +590,7 @@
   cursor: pointer;
   width: 100%;
 }
-.product_info .product_info_modal_item_title:hover {
+.product_info .product_info_modal_item_title_c:hover {
   color: #000000;
 }
 
