@@ -54,13 +54,6 @@
     isScrolling = true;
     
     const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-    
-    // 如果页面没有滚动距离，不执行任何操作
-    if (scrollTop === 0) {
-      isScrolling = false;
-      return;
-    }
-    
     const originalTop = getAnchorBarOriginalTop();
     
     // 添加缓冲区域，避免在边界附近闪烁
@@ -102,7 +95,11 @@
   
   // 初始化检查
   setTimeout(() => {
-    handleScroll();
+    // 只有在页面有滚动距离时才执行handleScroll
+    const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    if (scrollTop > 0) {
+      handleScroll();
+    }
     isInitialized = true;
   }, 100);
   
