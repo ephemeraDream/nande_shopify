@@ -169,7 +169,7 @@
       ],
       "name": "activity products tab",
       "settings": {
-        "specId": "",
+        "specId": "Produkt",
         "title": "<p>2025 FrüHlingsrabatt</p>",
         "text": "<p>Je mehr Sie kaufen, desto mehr sparen Sie!</p>"
       }
