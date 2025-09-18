@@ -1339,6 +1339,7 @@ class CartPerformance {
   let headerHeights = []; // 缓存每个header的高度
   let totalHeight = 0;    // 总高度
   let firstCalc = true;   // 是否第一次计算高度
+  delta=totalHeight;//改成总高度
 
   const navbarList = document.querySelectorAll('.shopify-section-group-header-group');
   const mainContent = document.querySelector('#MainContent');
