@@ -239,43 +239,15 @@ class PredictiveSearch extends SearchForm {
 
     console.log('Generated categories HTML:', categoriesHtml);
 
-    // 尝试更新分类列表，如果找不到元素则延迟重试
-    const updateCategories = () => {
-      const categoriesList = this.querySelector('#help-center-categories-list');
-      console.log('Categories list element found:', categoriesList);
-      
-      if (categoriesList) {
-        categoriesList.innerHTML = categoriesHtml;
-        console.log('Categories list updated successfully');
-        return true;
-      } else {
-        console.log('Categories list element not found, will retry...');
-        return false;
-      }
-    };
-
-    // 立即尝试一次
-    if (!updateCategories()) {
-      // 如果失败，延迟重试几次
-      let retryCount = 0;
-      const maxRetries = 5;
-      const retryInterval = 50; // 50ms
-
-      const retry = () => {
-        if (retryCount < maxRetries) {
-          retryCount++;
-          console.log(`Retry ${retryCount}/${maxRetries} to find categories list`);
-          setTimeout(() => {
-            if (!updateCategories()) {
-              retry();
-            }
-          }, retryInterval);
-        } else {
-          console.log('Max retries reached, giving up');
-        }
-      };
-
-      retry();
+    // 查找分类列表元素
+    const categoriesList = document.querySelector('#help-center-categories-list');
+    console.log('Categories list element found:', categoriesList);
+    
+    if (categoriesList) {
+      categoriesList.innerHTML = categoriesHtml;
+      console.log('Categories list updated successfully');
+    } else {
+      console.log('Categories list element not found');
     }
   }
 
@@ -285,6 +257,12 @@ class PredictiveSearch extends SearchForm {
 
     if (this.cachedResults[queryKey]) {
       this.renderSearchResults(this.cachedResults[queryKey]);
+      // 如果是帮助中心搜索，也需要填充分类列表
+      if (this.classList.contains('help-center-predictive-search')) {
+        setTimeout(() => {
+          this.populateHelpCenterCategories(this.cachedResults[queryKey]);
+        }, 0);
+      }
       return;
     }
 
@@ -320,16 +298,19 @@ class PredictiveSearch extends SearchForm {
           .parseFromString(text, 'text/html')
           .querySelector(sectionSelector).innerHTML;
         
-        // 如果是帮助中心搜索，动态填充分类列表
-        if (isHelpCenterSearch) {
-          this.populateHelpCenterCategories(resultsMarkup);
-        }
-        
         // Save bandwidth keeping the cache in all instances synced
         this.allPredictiveSearchInstances.forEach((predictiveSearchInstance) => {
           predictiveSearchInstance.cachedResults[queryKey] = resultsMarkup;
         });
         this.renderSearchResults(resultsMarkup);
+        
+        // 如果是帮助中心搜索，在DOM更新后动态填充分类列表
+        if (isHelpCenterSearch) {
+          // 使用 setTimeout 确保DOM已经更新
+          setTimeout(() => {
+            this.populateHelpCenterCategories(resultsMarkup);
+          }, 0);
+        }
       })
       .catch((error) => {
         if (error?.code === 20) {
