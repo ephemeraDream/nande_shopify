@@ -239,15 +239,43 @@ class PredictiveSearch extends SearchForm {
 
     console.log('Generated categories HTML:', categoriesHtml);
 
-    // 更新分类列表
-    const categoriesList = this.querySelector('#help-center-categories-list');
-    console.log('Categories list element found:', categoriesList);
-    
-    if (categoriesList) {
-      categoriesList.innerHTML = categoriesHtml;
-      console.log('Categories list updated successfully');
-    } else {
-      console.log('Categories list element not found');
+    // 尝试更新分类列表，如果找不到元素则延迟重试
+    const updateCategories = () => {
+      const categoriesList = this.querySelector('#help-center-categories-list');
+      console.log('Categories list element found:', categoriesList);
+      
+      if (categoriesList) {
+        categoriesList.innerHTML = categoriesHtml;
+        console.log('Categories list updated successfully');
+        return true;
+      } else {
+        console.log('Categories list element not found, will retry...');
+        return false;
+      }
+    };
+
+    // 立即尝试一次
+    if (!updateCategories()) {
+      // 如果失败，延迟重试几次
+      let retryCount = 0;
+      const maxRetries = 5;
+      const retryInterval = 50; // 50ms
+
+      const retry = () => {
+        if (retryCount < maxRetries) {
+          retryCount++;
+          console.log(`Retry ${retryCount}/${maxRetries} to find categories list`);
+          setTimeout(() => {
+            if (!updateCategories()) {
+              retry();
+            }
+          }, retryInterval);
+        } else {
+          console.log('Max retries reached, giving up');
+        }
+      };
+
+      retry();
     }
   }
 
