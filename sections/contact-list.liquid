@@ -53,21 +53,49 @@
             
             if (window.tidioChatApi) {
               console.log('Tidio API available, trying methods...');
+              console.log('Available methods:', Object.getOwnPropertyNames(window.tidioChatApi));
               
-              // 尝试所有可用的方法
+              // 尝试所有可用的方法，包括带参数的方法
               const methods = [
-                () => window.tidioChatApi.popUpOpen && window.tidioChatApi.popUpOpen(),
-                () => window.tidioChatApi.chatDisplay && window.tidioChatApi.chatDisplay(),
-                () => window.tidioChatApi.open && window.tidioChatApi.open(),
-                () => window.tidioChatApi.show && window.tidioChatApi.show(),
-                () => window.tidioChatApi.display && window.tidioChatApi.display(),
-                () => window.tidioChatApi.toggle && window.tidioChatApi.toggle()
+                () => {
+                  console.log('Trying popUpOpen()');
+                  return window.tidioChatApi.popUpOpen && window.tidioChatApi.popUpOpen();
+                },
+                () => {
+                  console.log('Trying popUpOpen(true)');
+                  return window.tidioChatApi.popUpOpen && window.tidioChatApi.popUpOpen(true);
+                },
+                () => {
+                  console.log('Trying chatDisplay()');
+                  return window.tidioChatApi.chatDisplay && window.tidioChatApi.chatDisplay();
+                },
+                () => {
+                  console.log('Trying chatDisplay(true)');
+                  return window.tidioChatApi.chatDisplay && window.tidioChatApi.chatDisplay(true);
+                },
+                () => {
+                  console.log('Trying open()');
+                  return window.tidioChatApi.open && window.tidioChatApi.open();
+                },
+                () => {
+                  console.log('Trying show()');
+                  return window.tidioChatApi.show && window.tidioChatApi.show();
+                },
+                () => {
+                  console.log('Trying display()');
+                  return window.tidioChatApi.display && window.tidioChatApi.display();
+                },
+                () => {
+                  console.log('Trying toggle()');
+                  return window.tidioChatApi.toggle && window.tidioChatApi.toggle();
+                }
               ];
               
               for (let i = 0; i < methods.length; i++) {
                 try {
                   const result = methods[i]();
-                  if (result !== undefined) {
+                  console.log(`Method ${i + 1} result:`, result);
+                  if (result !== undefined && result !== false) {
                     console.log(`Tidio method ${i + 1} called successfully`);
                     return true;
                   }
@@ -77,6 +105,46 @@
               }
               
               console.log('All Tidio API methods failed');
+              
+              // 尝试直接调用全局Tidio方法
+              console.log('Trying global Tidio methods...');
+              if (window.tidio) {
+                try {
+                  window.tidio.show();
+                  console.log('Called window.tidio.show()');
+                  return true;
+                } catch (error) {
+                  console.log('window.tidio.show() failed:', error.message);
+                }
+              }
+              
+              // 最后的尝试：直接操作Tidio的iframe
+              console.log('Trying to interact with Tidio iframe directly...');
+              const tidioIframe = document.querySelector('#tidio-chat-iframe');
+              if (tidioIframe) {
+                try {
+                  // 尝试通过postMessage与iframe通信
+                  tidioIframe.contentWindow.postMessage({
+                    type: 'tidio-chat-open',
+                    action: 'open'
+                  }, '*');
+                  console.log('Sent postMessage to Tidio iframe');
+                  
+                  // 尝试触发iframe的点击事件
+                  const clickEvent = new MouseEvent('click', {
+                    view: window,
+                    bubbles: true,
+                    cancelable: true
+                  });
+                  tidioIframe.dispatchEvent(clickEvent);
+                  console.log('Dispatched click event to Tidio iframe');
+                  
+                  return true;
+                } catch (error) {
+                  console.log('Failed to interact with Tidio iframe:', error.message);
+                }
+              }
+              
               return false;
             } else {
               console.log('Tidio API not available');
