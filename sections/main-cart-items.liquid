@@ -104,12 +104,14 @@
                     {%- assign bundle_parent_id = item.properties.bundle_parent_id -%}
                     {%- if bundle_parent_id == blank -%}
                       {%- assign parent_items = cart.items | slice: forloop.index0 | concat: parent_items -%}
-                      {%- assign parent_ids = parent_ids | append: item.id -%}
-                      {% unless forloop.last %}
-                        {%- assign parent_ids = parent_ids | append: ',' -%}
-                      {% endunless %}
                     {%- else -%}
                       {%- assign child_items = cart.items | slice: forloop.index0 | concat: child_items -%}
+                      {% unless parent_ids contains bundle_parent_id %}
+                        {%- assign parent_ids = parent_ids | append: bundle_parent_id -%}
+                        {% unless forloop.last %}
+                          {%- assign parent_ids = parent_ids | append: ',' -%}
+                        {% endunless %}
+                      {% endunless %}
                     {%- endif -%}
                   {%- endfor -%}
 
