@@ -52,51 +52,20 @@
             console.log('Trying to open Tidio chat via API...');
             
             if (window.tidioChatApi) {
-              console.log('Tidio API available, trying methods...');
-              const methods = Object.getOwnPropertyNames(window.tidioChatApi);
-              console.log('Available methods count:', methods.length);
-              methods.forEach((method, index) => {
-                console.log(`Method ${index + 1}: ${method}`);
-              });
+              console.log('Tidio API available');
+              console.log('popUpOpen:', typeof window.tidioChatApi.popUpOpen);
+              console.log('chatDisplay:', typeof window.tidioChatApi.chatDisplay);
+              console.log('ready:', window.tidioChatApi.readyEventWasFired);
               
-              // 检查关键方法是否存在
-              console.log('popUpOpen exists:', typeof window.tidioChatApi.popUpOpen);
-              console.log('chatDisplay exists:', typeof window.tidioChatApi.chatDisplay);
-              console.log('readyEventWasFired:', window.tidioChatApi.readyEventWasFired);
-              
-              // 尝试所有可用的方法，包括带参数的方法
+              // 尝试关键方法
               const apiMethods = [
                 () => {
                   console.log('Trying popUpOpen()');
-                  return window.tidioChatApi.popUpOpen && window.tidioChatApi.popUpOpen();
-                },
-                () => {
-                  console.log('Trying popUpOpen(true)');
-                  return window.tidioChatApi.popUpOpen && window.tidioChatApi.popUpOpen(true);
+                  return window.tidioChatApi.popUpOpen();
                 },
                 () => {
                   console.log('Trying chatDisplay()');
-                  return window.tidioChatApi.chatDisplay && window.tidioChatApi.chatDisplay();
-                },
-                () => {
-                  console.log('Trying chatDisplay(true)');
-                  return window.tidioChatApi.chatDisplay && window.tidioChatApi.chatDisplay(true);
-                },
-                () => {
-                  console.log('Trying open()');
-                  return window.tidioChatApi.open && window.tidioChatApi.open();
-                },
-                () => {
-                  console.log('Trying show()');
-                  return window.tidioChatApi.show && window.tidioChatApi.show();
-                },
-                () => {
-                  console.log('Trying display()');
-                  return window.tidioChatApi.display && window.tidioChatApi.display();
-                },
-                () => {
-                  console.log('Trying toggle()');
-                  return window.tidioChatApi.toggle && window.tidioChatApi.toggle();
+                  return window.tidioChatApi.chatDisplay();
                 }
               ];
               
