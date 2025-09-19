@@ -1,0 +1,74 @@
+{% comment %} 帮助中心专用的predictive-search模板 {% endcomment %}
+{%- if predictive_search.performed -%}
+  <div id="help-center-predictive-search-results" role="listbox">
+    <div class="help-center-predictive-search__wrapper">
+      {%- comment -%} 左侧：博客分类 {%- endcomment -%}
+      <div class="help-center-predictive-search__categories">
+        <h3 class="help-center-predictive-search__heading">Categories</h3>
+        <ul class="help-center-predictive-search__categories-list">
+          {%- comment -%} 从main-help-center-search section获取博客分类 {%- endcomment -%}
+          {%- assign help_center_section = sections['main-help-center-search'] -%}
+          {%- if help_center_section != blank -%}
+            {%- for block in help_center_section.blocks -%}
+              {%- assign blog_handle = block.settings.blog -%}
+              {%- if blogs[blog_handle] != blank -%}
+                <li class="help-center-predictive-search__category-item">
+                  <a href="{{ blogs[blog_handle].url }}" class="help-center-predictive-search__category-link">
+                    {{ blogs[blog_handle].title }}
+                  </a>
+                </li>
+              {%- endif -%}
+            {%- endfor -%}
+          {%- endif -%}
+        </ul>
+      </div>
+
+      {%- comment -%} 右侧：匹配的文章 {%- endcomment -%}
+      <div class="help-center-predictive-search__articles">
+        <h3 class="help-center-predictive-search__heading">Articles</h3>
+        {%- if predictive_search.resources.articles.size > 0 -%}
+          <ul class="help-center-predictive-search__articles-list">
+            {%- for article in predictive_search.resources.articles -%}
+              <li class="help-center-predictive-search__article-item">
+                <a href="{{ article.url }}" class="help-center-predictive-search__article-link">
+                  <div class="help-center-predictive-search__article-content">
+                    <h4 class="help-center-predictive-search__article-title">{{ article.title | escape }}</h4>
+                    {%- if article.excerpt != blank -%}
+                      <p class="help-center-predictive-search__article-excerpt">{{ article.excerpt | strip_html | truncate: 100 }}</p>
+                    {%- endif -%}
+                    <span class="help-center-predictive-search__article-blog">{{ article.blog.title }}</span>
+                  </div>
+                </a>
+              </li>
+            {%- endfor -%}
+          </ul>
+        {%- else -%}
+          <p class="help-center-predictive-search__no-results">No articles found</p>
+        {%- endif -%}
+      </div>
+    </div>
+
+    {%- comment -%} 搜索所有结果的按钮 {%- endcomment -%}
+    <div class="help-center-predictive-search__search-all">
+      <button
+        class="help-center-predictive-search__search-all-button"
+        tabindex="-1"
+        role="option"
+        aria-selected="false"
+      >
+        <span>Search for "{{ predictive_search.terms }}"</span>
+        <span class="svg-wrapper">
+          {{- 'icon-arrow.svg' | inline_asset_content -}}
+        </span>
+      </button>
+    </div>
+  </div>
+
+  <span class="hidden" data-predictive-search-live-region-count-value>
+    {%- if predictive_search.resources.articles.size == 0 -%}
+      No results found
+    {%- else -%}
+      Found {{ predictive_search.resources.articles.size }} articles
+    {%- endif -%}
+  </span>
+{%- endif -%}
