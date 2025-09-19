@@ -33,7 +33,7 @@
             "transparent_content_color": "#ffffff",
             "file_type": "image",
             "file_image": "shopify://shop_images/1_5137a06d-f47c-4748-8556-f940d8bf8966.jpg",
-            "file_image_pe": "shopify://shop_images/1_b4fc81ce-ffed-4f42-ba55-b090d76e4e53.jpg",
+            "file_image_pe": "shopify://shop_images/1_c26fb083-d100-4f17-93a4-e8b408715ecc.jpg",
             "video_url": "",
             "show_countdown": true,
             "countdown": "summer-sale"
@@ -47,8 +47,8 @@
       "settings": {
         "height_mode": "fixed",
         "fixed_height_desktop": 700,
-        "fixed_height_mobile": 500,
-        "mobile_stacked": false,
+        "fixed_height_mobile": 400,
+        "mobile_stacked": true,
         "background_color": "#dddddd",
         "nav_style": "slideshow_nav_lines",
         "pagination_color": "#ffffff",
