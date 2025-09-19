@@ -16,42 +16,25 @@
       {%- comment -%} 右侧：匹配的文章 {%- endcomment -%}
       <div class="help-center-predictive-search__articles">
         <h3 class="help-center-predictive-search__heading">Articles</h3>
-        {%- comment -%} 获取配置的博客列表 {%- endcomment -%}
-        {%- assign configured_blogs_param = request.query.configured_blogs -%}
-        {%- assign configured_blogs = '' -%}
-        {%- if configured_blogs_param != blank -%}
-          {%- assign configured_blogs = configured_blogs_param | split: ',' -%}
-        {%- endif -%}
-
-        {%- comment -%} 显示匹配的文章，如果有配置则只显示配置的博客中的文章 {%- endcomment -%}
-        {%- assign has_matching_articles = false -%}
-        {%- for article in predictive_search.resources.articles -%}
-          {%- if configured_blogs == blank or configured_blogs contains article.blog.handle -%}
-            {%- assign has_matching_articles = true -%}
-            {%- break -%}
-          {%- endif -%}
-        {%- endfor -%}
-
-        {%- if has_matching_articles -%}
+        {%- comment -%} 显示所有匹配的文章，JavaScript会负责过滤 {%- endcomment -%}
+        {%- if predictive_search.resources.articles.size > 0 -%}
           <ul class="help-center-predictive-search__articles-list">
             {%- for article in predictive_search.resources.articles -%}
-              {%- if configured_blogs == blank or configured_blogs contains article.blog.handle -%}
-                <li class="help-center-predictive-search__article-item">
-                  <a href="{{ article.url }}" class="help-center-predictive-search__article-link">
-                    <div class="help-center-predictive-search__article-content">
-                      <h4 class="help-center-predictive-search__article-title">{{ article.title | escape }}</h4>
-                      {%- if article.excerpt != blank -%}
-                        <p class="help-center-predictive-search__article-excerpt">{{ article.excerpt | strip_html | truncate: 100 }}</p>
-                      {%- endif -%}
-                      <span class="help-center-predictive-search__article-blog">{{ article.blog.title }}</span>
-                    </div>
-                  </a>
-                </li>
-              {%- endif -%}
+              <li class="help-center-predictive-search__article-item">
+                <a href="{{ article.url }}" class="help-center-predictive-search__article-link">
+                  <div class="help-center-predictive-search__article-content">
+                    <h4 class="help-center-predictive-search__article-title">{{ article.title | escape }}</h4>
+                    {%- if article.excerpt != blank -%}
+                      <p class="help-center-predictive-search__article-excerpt">{{ article.excerpt | strip_html | truncate: 100 }}</p>
+                    {%- endif -%}
+                    <span class="help-center-predictive-search__article-blog">{{ article.blog.title }}</span>
+                  </div>
+                </a>
+              </li>
             {%- endfor -%}
           </ul>
         {%- else -%}
-          <p class="help-center-predictive-search__no-results">No articles found in configured categories</p>
+          <p class="help-center-predictive-search__no-results">No articles found</p>
         {%- endif -%}
       </div>
     </div>

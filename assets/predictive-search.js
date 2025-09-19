@@ -239,7 +239,7 @@ class PredictiveSearch extends SearchForm {
 
     console.log('Generated categories HTML:', categoriesHtml);
 
-    // 查找分类列表元素
+    // 查找分类列表元素并更新
     const categoriesList = document.querySelector('#help-center-categories-list');
     console.log('Categories list element found:', categoriesList);
     
@@ -249,6 +249,76 @@ class PredictiveSearch extends SearchForm {
     } else {
       console.log('Categories list element not found');
     }
+
+    // 过滤右侧文章列表
+    this.filterArticlesByConfiguredBlogs(blogsData);
+  }
+
+  filterArticlesByConfiguredBlogs(blogsData) {
+    // 获取配置的博客handles
+    const configuredHandles = blogsData.map(blog => blog.handle);
+    console.log('Configured blog handles for filtering:', configuredHandles);
+
+    // 查找文章列表
+    const articlesList = document.querySelector('.help-center-predictive-search__articles-list');
+    console.log('Articles list found:', articlesList);
+
+    if (!articlesList) {
+      console.log('Articles list not found');
+      return;
+    }
+
+    // 获取所有文章项
+    const articleItems = articlesList.querySelectorAll('.help-center-predictive-search__article-item');
+    console.log('Total article items found:', articleItems.length);
+
+    let visibleCount = 0;
+
+    // 遍历每个文章项，检查是否属于配置的博客
+    articleItems.forEach((item, index) => {
+      const articleLink = item.querySelector('.help-center-predictive-search__article-link');
+      if (articleLink) {
+        const href = articleLink.getAttribute('href');
+        console.log(`Article ${index + 1} href:`, href);
+        
+        // 从URL中提取博客handle
+        const blogHandle = this.extractBlogHandleFromUrl(href);
+        console.log(`Article ${index + 1} blog handle:`, blogHandle);
+        
+        if (configuredHandles.includes(blogHandle)) {
+          item.style.display = 'block';
+          visibleCount++;
+          console.log(`Article ${index + 1} is visible (matches configured blog)`);
+        } else {
+          item.style.display = 'none';
+          console.log(`Article ${index + 1} is hidden (doesn't match configured blog)`);
+        }
+      }
+    });
+
+    console.log(`Filtered articles: ${visibleCount} visible out of ${articleItems.length} total`);
+
+    // 如果没有可见文章，显示"无结果"消息
+    const noResultsMsg = document.querySelector('.help-center-predictive-search__no-results');
+    if (visibleCount === 0) {
+      if (!noResultsMsg) {
+        const articlesContainer = document.querySelector('.help-center-predictive-search__articles');
+        if (articlesContainer) {
+          const noResults = document.createElement('p');
+          noResults.className = 'help-center-predictive-search__no-results';
+          noResults.textContent = 'No articles found in configured categories';
+          articlesContainer.appendChild(noResults);
+        }
+      }
+    } else if (noResultsMsg) {
+      noResultsMsg.remove();
+    }
+  }
+
+  extractBlogHandleFromUrl(url) {
+    // 从URL中提取博客handle，例如：/blogs/meine-bestellung-und-zahlung/article-title
+    const match = url.match(/\/blogs\/([^\/]+)/);
+    return match ? match[1] : null;
   }
 
   getSearchResults(searchTerm) {
@@ -273,12 +343,7 @@ class PredictiveSearch extends SearchForm {
     // 如果是帮助中心搜索，获取配置的博客信息
     let url = `${routes.predictive_search_url}?q=${encodeURIComponent(searchTerm)}&section_id=${sectionId}`;
     
-    if (isHelpCenterSearch) {
-      const configuredBlogs = this.getConfiguredBlogs();
-      if (configuredBlogs.length > 0) {
-        url += `&configured_blogs=${encodeURIComponent(configuredBlogs.join(','))}`;
-      }
-    }
+    // 帮助中心搜索不需要URL参数，JavaScript会处理过滤
 
     fetch(url, {
       signal: this.abortController.signal,
