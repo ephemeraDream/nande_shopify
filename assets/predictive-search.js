@@ -190,25 +190,43 @@ class PredictiveSearch extends SearchForm {
   getConfiguredBlogsData() {
     // 获取完整的博客数据（包括标题和URL）
     const helpCenterSection = document.querySelector('[data-section-type="main-help-center-search"]');
-    if (!helpCenterSection) return [];
+    console.log('Help center section found:', helpCenterSection);
+    
+    if (!helpCenterSection) {
+      console.log('No help center section found');
+      return [];
+    }
 
     const configuredBlogsContainer = helpCenterSection.querySelector('[data-configured-blogs]');
+    console.log('Configured blogs container found:', configuredBlogsContainer);
+    
     if (configuredBlogsContainer) {
+      console.log('Raw data attribute:', configuredBlogsContainer.dataset.configuredBlogs);
       try {
-        return JSON.parse(configuredBlogsContainer.dataset.configuredBlogs);
+        const parsedData = JSON.parse(configuredBlogsContainer.dataset.configuredBlogs);
+        console.log('Parsed blogs data:', parsedData);
+        return parsedData;
       } catch (e) {
         console.error('Error parsing configured blogs data:', e);
         return [];
       }
     }
 
+    console.log('No configured blogs container found');
     return [];
   }
 
   populateHelpCenterCategories(resultsMarkup) {
+    console.log('populateHelpCenterCategories called');
+    
     // 获取配置的博客数据
     const blogsData = this.getConfiguredBlogsData();
-    if (blogsData.length === 0) return;
+    console.log('Blogs data received:', blogsData);
+    
+    if (blogsData.length === 0) {
+      console.log('No blogs data, returning');
+      return;
+    }
 
     // 创建分类HTML
     const categoriesHtml = blogsData.map(blog => 
@@ -219,10 +237,17 @@ class PredictiveSearch extends SearchForm {
       </li>`
     ).join('');
 
+    console.log('Generated categories HTML:', categoriesHtml);
+
     // 更新分类列表
     const categoriesList = this.querySelector('#help-center-categories-list');
+    console.log('Categories list element found:', categoriesList);
+    
     if (categoriesList) {
       categoriesList.innerHTML = categoriesHtml;
+      console.log('Categories list updated successfully');
+    } else {
+      console.log('Categories list element not found');
     }
   }
 
