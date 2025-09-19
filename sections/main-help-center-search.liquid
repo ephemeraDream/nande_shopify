@@ -55,24 +55,28 @@
     </div>
     <div class="result_list">
       <!-- 隐藏的配置信息，供JavaScript使用 -->
-      <div style="display: none;" data-configured-blogs>
+      <div style="display: none;" data-configured-blogs='[
         {% for block in section.blocks %}
-          {% assign blog_handle = block.settings.blog %}
-          {% if blog_handle != blank %}
-            <span data-blog-handle="{{ blog_handle }}" data-blog-title="{{ blogs[blog_handle].title | default: blog_handle }}"></span>
+          {% assign blog_item = block.settings.blog %}
+          {% if blog_item != blank %}
+            {
+              "handle": "{{ blog_item.handle }}",
+              "title": "{{ blog_item.title | escape }}",
+              "url": "{{ blog_item.url }}"
+            }{% unless forloop.last %},{% endunless %}
           {% endif %}
         {% endfor %}
-      </div>
+      ]'></div>
       
       <ul id="search-results">
         {% for block in section.blocks %}
-          {% assign blog_handle = block.settings.blog %}
-          {% if blogs[blog_handle] != blank %}
-            {% for article in blogs[blog_handle].articles %}
+          {% assign blog_item = block.settings.blog %}
+          {% if blog_item != blank %}
+            {% for article in blog_item.articles %}
               <li 
                 data-title="{{ article.title | downcase }}" 
                 data-content="{{ article.content | strip_html | downcase }}"
-                data-blog="{{ blog_handle }}"
+                data-blog="{{ blog_item.handle }}"
                 style="display:none;"
               >
                 <a href="{{ article.url }}">{{ article.title }}</a>

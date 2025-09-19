@@ -172,21 +172,58 @@ class PredictiveSearch extends SearchForm {
     const helpCenterSection = document.querySelector('[data-section-type="main-help-center-search"]');
     if (!helpCenterSection) return [];
 
-    const configuredBlogs = [];
-    
-    // 查找隐藏的配置信息
+    // 获取JSON格式的博客配置数据
     const configuredBlogsContainer = helpCenterSection.querySelector('[data-configured-blogs]');
     if (configuredBlogsContainer) {
-      const blogSpans = configuredBlogsContainer.querySelectorAll('span[data-blog-handle]');
-      blogSpans.forEach(span => {
-        const blogHandle = span.dataset.blogHandle;
-        if (blogHandle) {
-          configuredBlogs.push(blogHandle);
-        }
-      });
+      try {
+        const blogsData = JSON.parse(configuredBlogsContainer.dataset.configuredBlogs);
+        return blogsData.map(blog => blog.handle);
+      } catch (e) {
+        console.error('Error parsing configured blogs:', e);
+        return [];
+      }
     }
 
-    return configuredBlogs;
+    return [];
+  }
+
+  getConfiguredBlogsData() {
+    // 获取完整的博客数据（包括标题和URL）
+    const helpCenterSection = document.querySelector('[data-section-type="main-help-center-search"]');
+    if (!helpCenterSection) return [];
+
+    const configuredBlogsContainer = helpCenterSection.querySelector('[data-configured-blogs]');
+    if (configuredBlogsContainer) {
+      try {
+        return JSON.parse(configuredBlogsContainer.dataset.configuredBlogs);
+      } catch (e) {
+        console.error('Error parsing configured blogs data:', e);
+        return [];
+      }
+    }
+
+    return [];
+  }
+
+  populateHelpCenterCategories(resultsMarkup) {
+    // 获取配置的博客数据
+    const blogsData = this.getConfiguredBlogsData();
+    if (blogsData.length === 0) return;
+
+    // 创建分类HTML
+    const categoriesHtml = blogsData.map(blog => 
+      `<li class="help-center-predictive-search__category-item">
+        <a href="${blog.url}" class="help-center-predictive-search__category-link">
+          ${blog.title}
+        </a>
+      </li>`
+    ).join('');
+
+    // 更新分类列表
+    const categoriesList = this.querySelector('#help-center-categories-list');
+    if (categoriesList) {
+      categoriesList.innerHTML = categoriesHtml;
+    }
   }
 
   getSearchResults(searchTerm) {
@@ -229,6 +266,12 @@ class PredictiveSearch extends SearchForm {
         const resultsMarkup = new DOMParser()
           .parseFromString(text, 'text/html')
           .querySelector(sectionSelector).innerHTML;
+        
+        // 如果是帮助中心搜索，动态填充分类列表
+        if (isHelpCenterSearch) {
+          this.populateHelpCenterCategories(resultsMarkup);
+        }
+        
         // Save bandwidth keeping the cache in all instances synced
         this.allPredictiveSearchInstances.forEach((predictiveSearchInstance) => {
           predictiveSearchInstance.cachedResults[queryKey] = resultsMarkup;

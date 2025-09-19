@@ -5,43 +5,11 @@
       {%- comment -%} 左侧：博客分类 {%- endcomment -%}
       <div class="help-center-predictive-search__categories">
         <h3 class="help-center-predictive-search__heading">Categories</h3>
-        <ul class="help-center-predictive-search__categories-list">
-          {%- comment -%} 从URL参数中获取配置的博客 {%- endcomment -%}
-          {%- assign configured_blogs_param = request.query.configured_blogs -%}
-          {%- assign found_categories = false -%}
-          
-          {%- if configured_blogs_param != blank -%}
-            {%- assign configured_blogs = configured_blogs_param | split: ',' -%}
-            {%- for blog_handle in configured_blogs -%}
-              {%- assign blog_handle = blog_handle | strip -%}
-              {%- if blogs[blog_handle] != blank -%}
-                <li class="help-center-predictive-search__category-item">
-                  <a href="{{ blogs[blog_handle].url }}" class="help-center-predictive-search__category-link">
-                    {{ blogs[blog_handle].title }}
-                  </a>
-                </li>
-                {%- assign found_categories = true -%}
-              {%- endif -%}
-            {%- endfor -%}
-          {%- else -%}
-            {%- comment -%} 如果没有配置参数，显示所有博客 {%- endcomment -%}
-            {%- for blog in blogs -%}
-              {%- if blog.articles.size > 0 -%}
-                <li class="help-center-predictive-search__category-item">
-                  <a href="{{ blog.url }}" class="help-center-predictive-search__category-link">
-                    {{ blog.title }}
-                  </a>
-                </li>
-                {%- assign found_categories = true -%}
-              {%- endif -%}
-            {%- endfor -%}
-          {%- endif -%}
-          
-          {%- unless found_categories -%}
-            <li class="help-center-predictive-search__category-item">
-              <span style="color: #999; font-style: italic;">No categories available</span>
-            </li>
-          {%- endunless -%}
+        <ul class="help-center-predictive-search__categories-list" id="help-center-categories-list">
+          <!-- 分类将通过JavaScript动态填充 -->
+          <li class="help-center-predictive-search__category-item">
+            <span style="color: #999; font-style: italic;">Loading categories...</span>
+          </li>
         </ul>
       </div>
 
