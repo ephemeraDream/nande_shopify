@@ -722,10 +722,12 @@
           <span>{{ 'common.subtotal' | t }}</span>
           <span>{{ cart.original_total_price | money }}</span>
         </div>
-        <div class="cart_section_left_item">
-          <span>{{ 'common.shipment' | t }}</span>
-          <span>{{ 'common.free' | t }}</span>
-        </div>
+        {% comment %}
+          <div class="cart_section_left_item">
+            <span>{{ 'common.shipment' | t }}</span>
+            <span>{{ 'common.free' | t }}</span>
+          </div>
+        {% endcomment %}
         <div class="cart_section_left_item">
           <span>{{ 'common.buy_more_save_more' | t }}</span>
           <span>{{ cart.total_discount | money }}</span>
