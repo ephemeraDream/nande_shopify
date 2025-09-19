@@ -48,7 +48,9 @@
             </div>
           </form>
           
-          <div data-predictive-search></div>
+          <div class="predictive-search predictive-search--help-center" tabindex="-1" data-predictive-search>
+            {%- render 'loading-spinner', class: 'predictive-search__loading-state' -%}
+          </div>
         </predictive-search>
         
         {%- comment -%} 配置的博客数据，用于JavaScript过滤 {%- endcomment -%}
@@ -95,6 +97,166 @@
         background: transparent;
         border: none;
         padding: 0.5rem;
+      }
+
+      /* 帮助中心predictive-search样式 */
+      .help-center-predictive-search {
+        position: relative;
+      }
+
+      .predictive-search--help-center {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: #fff;
+        border: 1px solid #E2DED6;
+        border-radius: 6px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        z-index: 1000;
+        max-height: 400px;
+        overflow-y: auto;
+      }
+
+      .help-center-predictive-search__wrapper {
+        display: flex;
+        min-height: 200px;
+      }
+
+      .help-center-predictive-search__categories {
+        flex: 0 0 200px;
+        border-right: 1px solid #E2DED6;
+        padding: 1rem;
+        background: #f8f8f8;
+      }
+
+      .help-center-predictive-search__articles {
+        flex: 1;
+        padding: 1rem;
+      }
+
+      .help-center-predictive-search__heading {
+        font-size: 1.2rem;
+        font-weight: 600;
+        margin: 0 0 1rem 0;
+        color: #1F1F1F;
+      }
+
+      .help-center-predictive-search__categories-list {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+      }
+
+      .help-center-predictive-search__category-item {
+        margin-bottom: 0.5rem;
+      }
+
+      .help-center-predictive-search__category-link {
+        display: block;
+        padding: 0.5rem;
+        color: #1F1F1F;
+        text-decoration: none;
+        border-radius: 4px;
+        transition: background-color 0.2s;
+      }
+
+      .help-center-predictive-search__category-link:hover {
+        background-color: #E2DED6;
+      }
+
+      .help-center-predictive-search__articles-list {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+      }
+
+      .help-center-predictive-search__article-item {
+        margin-bottom: 1rem;
+      }
+
+      .help-center-predictive-search__article-link {
+        display: block;
+        padding: 1rem;
+        border: 1px solid #E2DED6;
+        border-radius: 6px;
+        text-decoration: none;
+        color: #1F1F1F;
+        transition: all 0.2s;
+      }
+
+      .help-center-predictive-search__article-link:hover {
+        background-color: #f8f8f8;
+        border-color: #ccc;
+      }
+
+      .help-center-predictive-search__article-title {
+        font-size: 1.1rem;
+        font-weight: 600;
+        margin: 0 0 0.5rem 0;
+        color: #1F1F1F;
+      }
+
+      .help-center-predictive-search__article-excerpt {
+        font-size: 0.9rem;
+        color: #666;
+        margin: 0 0 0.5rem 0;
+        line-height: 1.4;
+      }
+
+      .help-center-predictive-search__article-blog {
+        font-size: 0.8rem;
+        color: #999;
+        font-style: italic;
+      }
+
+      .help-center-predictive-search__no-results {
+        color: #999;
+        font-style: italic;
+        text-align: center;
+        padding: 2rem;
+      }
+
+      .help-center-predictive-search__search-all {
+        border-top: 1px solid #E2DED6;
+        padding: 1rem;
+        background: #f8f8f8;
+      }
+
+      .help-center-predictive-search__search-all-button {
+        width: 100%;
+        padding: 0.8rem 1rem;
+        background: #1F1F1F;
+        color: #fff;
+        border: none;
+        border-radius: 4px;
+        font-size: 1rem;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        transition: background-color 0.2s;
+      }
+
+      .help-center-predictive-search__search-all-button:hover {
+        background: #333;
+      }
+
+      .help-center-predictive-search__search-all-button .svg-wrapper {
+        width: 16px;
+        height: 16px;
+      }
+
+      @media screen and (max-width: 768px) {
+        .help-center-predictive-search__wrapper {
+          flex-direction: column;
+        }
+        
+        .help-center-predictive-search__categories {
+          flex: none;
+          border-right: none;
+          border-bottom: 1px solid #E2DED6;
+        }
       }
     </style>
     
