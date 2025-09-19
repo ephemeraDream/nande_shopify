@@ -6,8 +6,13 @@
       {% for block in section.blocks %}
         <a
           class="product_anchor_bar_left_item{% if forloop.first %} active{% endif %}"
-          href="#{{ block.settings.anchor_name }}"
-          data-watch="{{ block.settings.anchor_name }}"
+          {% if forloop.first %}
+            href="#"
+            data-watch="top"
+          {% else %}
+            href="#{{ block.settings.anchor_name }}"
+            data-watch="{{ block.settings.anchor_name }}"
+          {% endif %}
         >
           {{- block.settings.title -}}
         </a>
@@ -105,7 +110,18 @@
   }, 100); 
   
   links.forEach((item) => {
-    item.addEventListener('click', () => {
+    item.addEventListener('click', (e) => {
+      // 如果是第一个链接（回到顶部）
+      if (item.getAttribute('data-watch') === 'top') {
+        e.preventDefault();
+        // 平滑滚动到顶部
+        window.scrollTo({
+          top: 0,
+          behavior: 'smooth'
+        });
+        return;
+      }
+      
       if (item.classList.contains('active')) return;
       document.querySelector('.product_anchor_bar_left_item.active').classList.remove('active');
       item.classList.add('active');
@@ -154,6 +170,30 @@
 
     sections.forEach((section) => {
       sectionsObserver.observe(section);
+    });
+    
+    // 监听滚动事件，当页面在顶部时激活第一个链接
+    let isAtTop = false;
+    window.addEventListener('scroll', () => {
+      const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+      const shouldBeAtTop = scrollTop < 100; // 距离顶部100px内认为是在顶部
+      
+      if (shouldBeAtTop && !isAtTop) {
+        // 在顶部，激活第一个链接
+        links.forEach((link) => link.classList.remove('active'));
+        const firstLink = document.querySelector('.product_anchor_bar_left_item[data-watch="top"]');
+        if (firstLink) {
+          firstLink.classList.add('active');
+        }
+        isAtTop = true;
+      } else if (!shouldBeAtTop && isAtTop) {
+        // 不在顶部，取消第一个链接的激活状态
+        const firstLink = document.querySelector('.product_anchor_bar_left_item[data-watch="top"]');
+        if (firstLink) {
+          firstLink.classList.remove('active');
+        }
+        isAtTop = false;
+      }
     });
   }
 

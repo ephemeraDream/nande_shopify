@@ -48,7 +48,6 @@
             <h4 class="activity_products_normal_product_title">{{ product.title }}</h4>
 
             <div>
-              {% render 'product-rating', product: product %}
               {% if sale_info != blank %}
                 <div class="activity_products_normal_product_saleinfo_code">
                   {{ 'common.code' | t -}}
@@ -56,6 +55,8 @@
                   <div class="activity_products_normal_saleinfo_btn" data-code="{{ sale_info.code }}">COPY</div>
                 </div>
               {% endif %}
+              {% render 'product-rating', product: product %}
+              
               <div class="activity_products_normal_product_price">
                 <div>
                   {{ product.price | money_without_trailing_zeros }}
