@@ -14,10 +14,10 @@
               {%- if section.blocks.size > 0 -%}
                 {%- for block in section.blocks -%}
                   {%- assign blog_handle = block.settings.blog -%}
-                  {%- if blog_handle != blank and blogs[blog_handle] != blank -%}
+                  {%- if blog_handle != blank -%}
                     <li class="help-center-predictive-search__category-item">
-                      <a href="{{ blogs[blog_handle].url }}" class="help-center-predictive-search__category-link">
-                        {{ blogs[blog_handle].title }}
+                      <a href="{{ blog_handle.url }}" class="help-center-predictive-search__category-link">
+                        {{ blog_handle.title }}
                       </a>
                     </li>
                   {%- else -%}
