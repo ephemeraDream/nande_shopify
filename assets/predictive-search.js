@@ -168,8 +168,14 @@ class PredictiveSearch extends SearchForm {
   }
 
   getConfiguredBlogs() {
-    // 查找页面上的main-help-center-search section
-    const helpCenterSection = document.querySelector('[data-section-type="main-help-center-search"]');
+    // 先尝试查找 main-help-center-search section
+    let helpCenterSection = document.querySelector('[data-section-type="main-help-center-search"]');
+    
+    // 如果没找到，尝试查找 main-help-center section
+    if (!helpCenterSection) {
+      helpCenterSection = document.querySelector('[data-section-type="main-help-center"]');
+    }
+    
     if (!helpCenterSection) return [];
 
     // 获取JSON格式的博客配置数据
@@ -189,8 +195,15 @@ class PredictiveSearch extends SearchForm {
 
   getConfiguredBlogsData() {
     // 获取完整的博客数据（包括标题和URL）
-    const helpCenterSection = document.querySelector('[data-section-type="main-help-center-search"]');
-    console.log('Help center section found:', helpCenterSection);
+    // 先尝试查找 main-help-center-search section
+    let helpCenterSection = document.querySelector('[data-section-type="main-help-center-search"]');
+    console.log('Help center search section found:', helpCenterSection);
+    
+    // 如果没找到，尝试查找 main-help-center section
+    if (!helpCenterSection) {
+      helpCenterSection = document.querySelector('[data-section-type="main-help-center"]');
+      console.log('Help center section found:', helpCenterSection);
+    }
     
     if (!helpCenterSection) {
       console.log('No help center section found');
