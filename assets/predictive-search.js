@@ -409,11 +409,18 @@ class PredictiveSearch extends SearchForm {
   }
 
   setLiveRegionText(statusText) {
+    if (!this.statusElement) {
+      console.log('Status element not found, skipping live region update');
+      return;
+    }
+    
     this.statusElement.setAttribute('aria-hidden', 'false');
     this.statusElement.textContent = statusText;
 
     setTimeout(() => {
-      this.statusElement.setAttribute('aria-hidden', 'true');
+      if (this.statusElement) {
+        this.statusElement.setAttribute('aria-hidden', 'true');
+      }
     }, 1000);
   }
 
@@ -427,7 +434,10 @@ class PredictiveSearch extends SearchForm {
 
   setLiveRegionResults() {
     this.removeAttribute('loading');
-    this.setLiveRegionText(this.querySelector('[data-predictive-search-live-region-count-value]').textContent);
+    const countElement = this.querySelector('[data-predictive-search-live-region-count-value]');
+    if (countElement) {
+      this.setLiveRegionText(countElement.textContent);
+    }
   }
 
   getResultsMaxHeight() {
