@@ -6,20 +6,50 @@
       <div class="help-center-predictive-search__categories">
         <h3 class="help-center-predictive-search__heading">Categories</h3>
         <ul class="help-center-predictive-search__categories-list">
-          {%- comment -%} 显示在main-help-center-search中配置的博客分类 {%- endcomment -%}
-          {%- assign found_categories = false -%}
+          {%- comment -%} 测试代码 - 显示调试信息 {%- endcomment -%}
+          <li class="help-center-predictive-search__category-item">
+            <span style="color: #999; font-style: italic;">Debug: sections count = {{ sections.size }}</span>
+          </li>
           
-          {%- comment -%} 从当前页面的main-help-center-search section获取配置的博客 {%- endcomment -%}
+          {%- assign found_categories = false -%}
+          {%- assign section_count = 0 -%}
+          {%- assign block_count = 0 -%}
+          
           {%- for section in sections -%}
+            {%- assign section_count = section_count | plus: 1 -%}
+            <li class="help-center-predictive-search__category-item">
+              <span style="color: #999; font-style: italic;">Section {{ section_count }}: type = "{{ section.type }}"</span>
+            </li>
+            
             {%- if section.type == 'main-help-center-search' -%}
+              <li class="help-center-predictive-search__category-item">
+                <span style="color: #999; font-style: italic;">Found main-help-center-search section! Blocks count = {{ section.blocks.size }}</span>
+              </li>
+              
               {%- for block in section.blocks -%}
+                {%- assign block_count = block_count | plus: 1 -%}
                 {%- assign blog_item = block.settings.blog -%}
+                
                 <li class="help-center-predictive-search__category-item">
+                  <span style="color: #999; font-style: italic;">Block {{ block_count }}: blog_item = "{{ blog_item | default: 'empty' }}"</span>
+                </li>
+                
+                {%- if blog_item != blank -%}
+                  <li class="help-center-predictive-search__category-item">
+                    <span style="color: #999; font-style: italic;">Blog item found: title = "{{ blog_item.title }}", url = "{{ blog_item.url }}"</span>
+                  </li>
+                  
+                  <li class="help-center-predictive-search__category-item">
                     <a href="{{ blog_item.url }}" class="help-center-predictive-search__category-link">
                       {{ blog_item.title }}
                     </a>
                   </li>
                   {%- assign found_categories = true -%}
+                {%- else -%}
+                  <li class="help-center-predictive-search__category-item">
+                    <span style="color: #999; font-style: italic;">Block {{ block_count }}: blog_item is blank</span>
+                  </li>
+                {%- endif -%}
               {%- endfor -%}
               {%- break -%}
             {%- endif -%}
@@ -27,7 +57,7 @@
           
           {%- unless found_categories -%}
             <li class="help-center-predictive-search__category-item">
-              <span style="color: #999; font-style: italic;">No categories configured</span>
+              <span style="color: #999; font-style: italic;">No categories found. Total sections: {{ section_count }}, Total blocks: {{ block_count }}</span>
             </li>
           {%- endunless -%}
         </ul>
