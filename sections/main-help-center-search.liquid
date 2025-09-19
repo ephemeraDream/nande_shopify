@@ -1,5 +1,5 @@
 {% comment %} 帮助中心 搜索页 模版 {% endcomment %}
-<div class="help_center_search session-box-padding padding-top-60 padding-bottom-120">
+<div class="help_center_search session-box-padding padding-top-60 padding-bottom-120" data-section-type="main-help-center-search">
   <div class="session-box-inner">
     <div class="help_center_search_title">
       <h2 class="padding-bottom-30" id="search_title">Search:</h2>
@@ -54,21 +54,31 @@
       </div>
     </div>
     <div class="result_list">
+      <!-- 隐藏的配置信息，供JavaScript使用 -->
+      <div style="display: none;" data-configured-blogs='[
+        {% for block in section.blocks %}
+          {% assign blog_item = block.settings.blog %}
+          {
+              "handle": "{{ blog_item.handle }}",
+              "title": "{{ blog_item.title | escape }}",
+              "url": "{{ blog_item.url }}"
+            }{% unless forloop.last %},{% endunless %}
+        {% endfor %}
+      ]'></div>
+      
       <ul id="search-results">
         {% for block in section.blocks %}
-          {% assign blog_handle = block.settings.blog %}
-          {% if blogs[blog_handle] != blank %}
-            {% for article in blogs[blog_handle].articles %}
-              <li 
-                data-title="{{ article.title | downcase }}" 
-                data-content="{{ article.content | strip_html | downcase }}"
-                data-blog="{{ blog_handle }}"
-                style="display:none;"
-              >
-                <a href="{{ article.url }}">{{ article.title }}</a>
-              </li>
-            {% endfor %}
-          {% endif %}
+          {% assign blog_item = block.settings.blog %}
+          {% for article in blog_item.articles %}
+            <li 
+              data-title="{{ article.title | downcase }}" 
+              data-content="{{ article.content | strip_html | downcase }}"
+              data-blog="{{ blog_item.handle }}"
+              style="display:none;"
+            >
+              <a href="{{ article.url }}">{{ article.title }}</a>
+            </li>
+          {% endfor %}
         {% endfor %}
       </ul>
 
