@@ -7,19 +7,35 @@
         <h2>{{ section.settings.title }}</h2>
       {% endif %}
       <div class="search_box">
-        <main-search>
-          <form id="help-search-form" action="javascript:void(0);" role="search" class="search">
+        <predictive-search class="help-center-predictive-search">
+          <form id="help-search-form" action="{{ routes.search_url }}" role="search" class="search">
             <div class="field">
               <input
                 class="search__input field__input"
                 id="Search-In-Template"
                 type="search"
                 name="q"
+                value="{{ search.terms | escape }}"
                 placeholder="{{ 'general.search.search' | t }}"
+                role="combobox"
+                aria-expanded="false"
+                aria-owns="help-center-predictive-search-results"
+                aria-controls="help-center-predictive-search-results"
+                aria-haspopup="listbox"
+                aria-autocomplete="list"
+                autocorrect="off"
+                autocomplete="off"
+                autocapitalize="off"
+                spellcheck="false"
               >
               <label class="field__label" for="Search-In-Template">{{ 'general.search.search' | t }}</label>
               <input name="options[prefix]" type="hidden" value="last">
 
+              <button type="submit" class="search__button field__button" aria-label="{{ 'general.search.search' | t }}">
+                <span class="svg-wrapper">
+                  {{- 'icon-search.svg' | inline_asset_content -}}
+                </span>
+              </button>
               <button
                 type="reset"
                 class="reset__button field__button{% if search.terms == blank %} hidden{% endif %}"
@@ -29,16 +45,58 @@
                   {{- 'icon-reset.svg' | inline_asset_content -}}
                 </span>
               </button>
-              <button type="submit" class="search__button field__button" aria-label="{{ 'general.search.search' | t }}">
-                <span class="svg-wrapper">
-                  {{- 'icon-search.svg' | inline_asset_content -}}
-                </span>
-              </button>
             </div>
           </form>
-        </main-search>
+          
+          <div data-predictive-search></div>
+        </predictive-search>
+        
+        {%- comment -%} 配置的博客数据，用于JavaScript过滤 {%- endcomment -%}
+        <div style="display: none;" data-configured-blogs='[
+          {% for block in section.blocks %}
+            {% assign blog_item = block.settings.blog %}
+            {
+              "handle": "{{ blog_item.handle }}",
+              "title": "{{ blog_item.title | escape }}",
+              "url": "{{ blog_item.url }}"
+            }{% unless forloop.last %},{% endunless %}
+          {% endfor %}
+        ]'></div>
       </div>
     </div>
+    
+    <style>
+      .help_center_title .field {
+        position: relative;
+      }
+      .help_center_title .search__input {
+        padding-left: 5rem; /* 为左边的搜索按钮留出空间 */
+        padding-right: 3rem; /* 为右边的重置按钮留出空间 */
+      }
+      .help_center_title .field__input:not(:placeholder-shown)~.field__label{
+        left: 5rem;
+      }
+      .help_center_title .search__button {
+        position: absolute;
+        left: 0.5rem;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 2;
+        background: transparent;
+        border: none;
+        padding: 0.5rem;
+      }
+      .help_center_title .reset__button {
+        position: absolute;
+        right: 0.5rem;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 2;
+        background: transparent;
+        border: none;
+        padding: 0.5rem;
+      }
+    </style>
     
     <div class="steps-grid padding-top-60">
       {% for block in section.blocks %}
