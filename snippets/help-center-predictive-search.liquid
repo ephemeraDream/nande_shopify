@@ -6,20 +6,22 @@
       <div class="help-center-predictive-search__categories">
         <h3 class="help-center-predictive-search__heading">Categories</h3>
         <ul class="help-center-predictive-search__categories-list">
-          {%- comment -%} 从main-help-center-search section获取博客分类 {%- endcomment -%}
-          {%- assign help_center_section = sections['main-help-center-search'] -%}
-          {%- if help_center_section != blank -%}
-            {%- for block in help_center_section.blocks -%}
-              {%- assign blog_handle = block.settings.blog -%}
-              {%- if blogs[blog_handle] != blank -%}
-                <li class="help-center-predictive-search__category-item">
-                  <a href="{{ blogs[blog_handle].url }}" class="help-center-predictive-search__category-link">
-                    {{ blogs[blog_handle].title }}
-                  </a>
-                </li>
-              {%- endif -%}
-            {%- endfor -%}
-          {%- endif -%}
+          {%- comment -%} 从当前页面的main-help-center-search section获取博客分类 {%- endcomment -%}
+          {%- for section in sections -%}
+            {%- if section.type == 'main-help-center-search' -%}
+              {%- for block in section.blocks -%}
+                {%- assign blog_handle = block.settings.blog -%}
+                {%- if blogs[blog_handle] != blank -%}
+                  <li class="help-center-predictive-search__category-item">
+                    <a href="{{ blogs[blog_handle].url }}" class="help-center-predictive-search__category-link">
+                      {{ blogs[blog_handle].title }}
+                    </a>
+                  </li>
+                {%- endif -%}
+              {%- endfor -%}
+              {%- break -%}
+            {%- endif -%}
+          {%- endfor -%}
         </ul>
       </div>
 
