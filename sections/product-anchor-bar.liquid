@@ -128,7 +128,7 @@
     });
   });
 
-  const sectionIds = Array.from(links).map((link) => link.getAttribute('data-watch'));
+  const sectionIds = Array.from(links).map((link) => link.getAttribute('data-watch')).filter(id => id !== 'top');
   let sectionsLoaded = 0;
   let sectionsObserver;
   let sections = [];
@@ -155,7 +155,9 @@
             `.product_anchor_bar_left_item[data-watch="${targetSection.id}"]`
           );
           if (entry.isIntersecting) {
+            // 移除所有链接的active状态
             links.forEach((link) => link.classList.remove('active'));
+            // 激活对应的链接
             if (correspondingLink) {
               correspondingLink.classList.add('active');
             }
@@ -164,7 +166,8 @@
       },
       {
         root: null,
-        threshold: 0.9,
+        threshold: 0.3, // 降低阈值，更容易触发
+        rootMargin: '-50px 0px -50px 0px' // 添加边距，避免在边界处频繁切换
       }
     );
 
@@ -174,7 +177,7 @@
     
     // 监听滚动事件，当页面在顶部时激活第一个链接
     let isAtTop = false;
-    window.addEventListener('scroll', () => {
+    let topScrollHandler = () => {
       const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
       const shouldBeAtTop = scrollTop < 100; // 距离顶部100px内认为是在顶部
       
@@ -194,7 +197,14 @@
         }
         isAtTop = false;
       }
-    });
+    };
+    
+    // 使用节流来优化性能
+    let topScrollTimeout;
+    window.addEventListener('scroll', () => {
+      clearTimeout(topScrollTimeout);
+      topScrollTimeout = setTimeout(topScrollHandler, 50);
+    }, { passive: true });
   }
 
   initializeObserver();
