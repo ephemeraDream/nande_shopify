@@ -1,6 +1,7 @@
 {{ 'section-product-anchor-bar.css' | asset_url | stylesheet_tag }}
 
-<div class="product_anchor_bar_section padding-sider">
+<!-- Product Anchor Bar Section - ID: {{ section.id }} -->
+<div class="product_anchor_bar_section padding-sider" data-section-id="{{ section.id }}">
   <div class="product_anchor_bar">
     <div class="product_anchor_bar_left">
       {% for block in section.blocks %}
@@ -26,11 +27,28 @@
 </div>
 
 <script>
-  document.addEventListener('DOMContentLoaded', function() {
-    console.log('Product anchor bar script loaded');
+  console.log('Product Anchor Bar Script starting...');
+  
+  // 等待DOM加载完成
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initAnchorBar);
+  } else {
+    initAnchorBar();
+  }
+  
+  function initAnchorBar() {
+    console.log('Initializing Product Anchor Bar...');
     
     const links = document.querySelectorAll('.product_anchor_bar_left_item');
+    console.log('Found anchor links:', links.length);
+    
+    if (links.length === 0) {
+      console.log('No anchor links found, script will not run');
+      return;
+    }
+    
     const anchorBarSection = document.querySelector('.product_anchor_bar_section');
+    console.log('Anchor bar section found:', !!anchorBarSection);
     
     if (!anchorBarSection) {
       console.error('Anchor bar section not found');
