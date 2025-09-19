@@ -4492,8 +4492,9 @@ display: none;
 }
 .product_price_cap{
   text-decoration: line-through;
-  color: #7F7E75;
-  font-size: 1.6rem;
+  color: #7F7E75!important;
+  font-size: 1.6rem!important;
+  font-weight: normal!important;
 }
 .has_product_price_cap{
   display: flex;

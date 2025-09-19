@@ -39,7 +39,7 @@
                 <h4 class="recommended_products_info_price has_product_price_cap">
                   {{ product.selected_or_first_available_variant.price | money_without_trailing_zeros }}
                   {% if product.selected_or_first_available_variant.compare_at_price != blank and product.selected_or_first_available_variant.compare_at_price > product.selected_or_first_available_variant.price %}
-                    <span class="header_menu_item_submenu_product_price_cap">
+                    <span class="product_price_cap">
                       {{ product.selected_or_first_available_variant.compare_at_price | money_without_trailing_zeros }}
                     </span>
                   {% endif %}
