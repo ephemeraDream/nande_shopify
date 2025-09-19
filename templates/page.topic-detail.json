@@ -112,9 +112,9 @@
       ],
       "name": "banner",
       "settings": {
-        "height_mode": "auto",
-        "fixed_height_desktop": 600,
-        "fixed_height_mobile": 350,
+        "height_mode": "fixed",
+        "fixed_height_desktop": 820,
+        "fixed_height_mobile": 480,
         "mobile_stacked": false,
         "background_color": "#dddddd",
         "nav_style": "slideshow_nav_lines",
