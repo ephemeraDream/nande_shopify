@@ -45,145 +45,62 @@
         console.log('Button clicked, href:', href);
         
         if (href === '#tidio-chat') {
-          console.log('Attempting to open Tidio chat...');
+          console.log('Attempting to open Tidio chat by clicking the widget...');
           
-          // 调试：显示所有Tidio相关的对象
-          console.log('=== Tidio Debug Info ===');
-          console.log('window.tidioChatApi:', window.tidioChatApi);
-          console.log('window.tidio:', window.tidio);
-          console.log('window.tidioChat:', window.tidioChat);
+          // 直接查找并点击页面上可见的Tidio聊天按钮
+          const tidioSelectors = [
+            '#tidio-chat-iframe',           // Tidio聊天iframe
+            '#tidio-chat',                  // Tidio聊天容器
+            '[data-tidio-widget]',          // Tidio widget
+            '.tidio-widget',                // Tidio widget class
+            '#tidio-chat-widget',           // Tidio chat widget
+            'iframe[title*="Tidio"]',       // Tidio iframe
+            'iframe[id*="tidio"]',          // 任何包含tidio的iframe
+            '[class*="tidio"]',             // 任何包含tidio的class
+            '[id*="tidio"]'                 // 任何包含tidio的id
+          ];
           
-          if (window.tidioChatApi) {
-            console.log('tidioChatApi methods:', Object.getOwnPropertyNames(window.tidioChatApi));
-            console.log('tidioChatApi.readyEventWasFired:', window.tidioChatApi.readyEventWasFired);
-          }
+          let clicked = false;
           
-          // 查找Tidio相关的DOM元素
-          const tidioElements = document.querySelectorAll('[class*="tidio"], [id*="tidio"], [data-tidio]');
-          console.log('Tidio DOM elements found:', tidioElements.length);
-          tidioElements.forEach((el, index) => {
-            console.log(`Tidio element ${index}:`, el);
-          });
-          console.log('=== End Debug Info ===');
-          
-          // 封装打开函数
-          function openChat() {
-            console.log('Opening Tidio chat...');
-            
-            // 尝试多种可能的Tidio API方法
-            const methods = [
-              () => window.tidioChatApi && window.tidioChatApi.popUpOpen(),
-              () => window.tidioChatApi && window.tidioChatApi.chatDisplay(),
-              () => window.tidioChatApi && window.tidioChatApi.open(),
-              () => window.tidioChatApi && window.tidioChatApi.show(),
-              () => window.tidio && window.tidio.show(),
-              () => window.tidio && window.tidio.open(),
-              () => window.tidioChat && window.tidioChat.show(),
-              () => window.tidioChat && window.tidioChat.open(),
-              () => window.tidioChatApi && window.tidioChatApi.display(),
-              () => window.tidioChatApi && window.tidioChatApi.toggle(),
-              () => {
-                // 尝试直接调用Tidio的全局方法
-                if (typeof window.tidioChatApi === 'object' && window.tidioChatApi) {
-                  for (let method of ['popUpOpen', 'chatDisplay', 'open', 'show', 'display', 'toggle']) {
-                    if (typeof window.tidioChatApi[method] === 'function') {
-                      console.log(`Trying tidioChatApi.${method}()`);
-                      return window.tidioChatApi[method]();
-                    }
-                  }
-                }
-                return false;
-              }
-            ];
-            
-            for (let i = 0; i < methods.length; i++) {
+          for (let selector of tidioSelectors) {
+            const element = document.querySelector(selector);
+            if (element) {
+              console.log(`Found Tidio element with selector "${selector}":`, element);
+              
               try {
-                const result = methods[i]();
-                if (result !== false) {
-                  console.log(`Tidio chat opened successfully using method ${i + 1}`);
-                  return;
-                }
+                // 确保元素可见
+                element.style.display = 'block';
+                element.style.visibility = 'visible';
+                element.style.zIndex = '999999999';
+                
+                // 滚动到元素位置
+                element.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                
+                // 等待一下再点击
+                setTimeout(() => {
+                  element.click();
+                  console.log(`Successfully clicked Tidio element: ${selector}`);
+                }, 100);
+                
+                clicked = true;
+                break;
               } catch (error) {
-                console.log(`Method ${i + 1} failed:`, error.message);
+                console.log(`Failed to click element with selector "${selector}":`, error.message);
               }
             }
-            
-            console.error('All Tidio API methods failed');
-            
-            // 最后的尝试：检查是否有Tidio的DOM元素
-            const tidioWidget = document.querySelector('[data-tidio-widget]') || 
-                               document.querySelector('.tidio-widget') ||
-                               document.querySelector('#tidio-chat-widget');
-            
-            if (tidioWidget) {
-              console.log('Found Tidio widget element, trying to click it');
-              tidioWidget.click();
-            } else {
-              console.log('No Tidio widget element found');
-            }
           }
-
-          // 检查Tidio是否已经加载
-          if (window.tidioChatApi) {
-            console.log('Tidio API found');
-            if (window.tidioChatApi.readyEventWasFired) {
-              console.log('Tidio is ready, opening chat directly');
-              openChat();
-            } else {
-              console.log('Tidio not ready, waiting for ready event');
-              
-              // 监听ready事件
-              const readyHandler = () => {
-                console.log('Tidio ready event fired');
-                openChat();
-              };
-              
-              // 监听tidioChat-ready事件
-              document.addEventListener('tidioChat-ready', readyHandler, { once: true });
-              
-              // 备用方案：轮询检查
-              let attempts = 0;
-              const maxAttempts = 50; // 5秒
-              const checkReady = setInterval(() => {
-                attempts++;
-                console.log(`Checking Tidio ready status, attempt ${attempts}`);
-                
-                if (window.tidioChatApi && window.tidioChatApi.readyEventWasFired) {
-                  console.log('Tidio became ready via polling');
-                  clearInterval(checkReady);
-                  openChat();
-                } else if (attempts >= maxAttempts) {
-                  console.log('Max attempts reached, trying to open anyway');
-                  clearInterval(checkReady);
-                  openChat();
-                }
-              }, 100);
-            }
-          } else {
-            console.log('Tidio API not found, trying alternative methods');
+          
+          if (!clicked) {
+            console.log('No Tidio elements found to click, trying API methods...');
             
-            // 尝试其他可能的Tidio API方法
-            if (window.tidio) {
-              console.log('Found window.tidio, trying to open');
-              window.tidio.show();
-            } else if (window.tidioChat) {
-              console.log('Found window.tidioChat, trying to open');
-              window.tidioChat.show();
-            } else {
-              console.log('No Tidio API found, waiting for it to load...');
-              // 等待Tidio加载
-              const checkTidio = setInterval(() => {
-                if (window.tidioChatApi) {
-                  clearInterval(checkTidio);
-                  openChat();
-                }
-              }, 100);
-              
-              // 10秒后停止检查
-              setTimeout(() => {
-                clearInterval(checkTidio);
-                console.log('Timeout waiting for Tidio to load');
-              }, 10000);
+            // 如果找不到可点击的元素，尝试API方法
+            if (window.tidioChatApi && typeof window.tidioChatApi.popUpOpen === 'function') {
+              try {
+                window.tidioChatApi.popUpOpen();
+                console.log('Called tidioChatApi.popUpOpen()');
+              } catch (error) {
+                console.log('Error calling popUpOpen:', error.message);
+              }
             }
           }
         } else {
