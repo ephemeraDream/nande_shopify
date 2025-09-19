@@ -26,9 +26,18 @@
 </div>
 
 <script>
-  const links = document.querySelectorAll('.product_anchor_bar_left_item');
-  const anchorBarSection = document.querySelector('.product_anchor_bar_section');
-  const anchorBarParent = anchorBarSection.parentElement;
+  document.addEventListener('DOMContentLoaded', function() {
+    console.log('Product anchor bar script loaded');
+    
+    const links = document.querySelectorAll('.product_anchor_bar_left_item');
+    const anchorBarSection = document.querySelector('.product_anchor_bar_section');
+    
+    if (!anchorBarSection) {
+      console.error('Anchor bar section not found');
+      return;
+    }
+    
+    const anchorBarParent = anchorBarSection.parentElement;
   
   // 添加sticky类
   anchorBarParent.classList.add('is-sticky');
@@ -238,6 +247,8 @@
 
     observer.observe(document.body, { childList: true, subtree: true });
   }
+  
+  }); // 结束 DOMContentLoaded
 </script>
 
 {% schema %}
