@@ -47,14 +47,77 @@
         if (href === '#tidio-chat') {
           console.log('Attempting to open Tidio chat...');
           
+          // 调试：显示所有Tidio相关的对象
+          console.log('=== Tidio Debug Info ===');
+          console.log('window.tidioChatApi:', window.tidioChatApi);
+          console.log('window.tidio:', window.tidio);
+          console.log('window.tidioChat:', window.tidioChat);
+          
+          if (window.tidioChatApi) {
+            console.log('tidioChatApi methods:', Object.getOwnPropertyNames(window.tidioChatApi));
+            console.log('tidioChatApi.readyEventWasFired:', window.tidioChatApi.readyEventWasFired);
+          }
+          
+          // 查找Tidio相关的DOM元素
+          const tidioElements = document.querySelectorAll('[class*="tidio"], [id*="tidio"], [data-tidio]');
+          console.log('Tidio DOM elements found:', tidioElements.length);
+          tidioElements.forEach((el, index) => {
+            console.log(`Tidio element ${index}:`, el);
+          });
+          console.log('=== End Debug Info ===');
+          
           // 封装打开函数
           function openChat() {
             console.log('Opening Tidio chat...');
-            if (window.tidioChatApi && typeof window.tidioChatApi.open === 'function') {
-              window.tidioChatApi.open();
-              console.log('Tidio chat opened successfully');
+            
+            // 尝试多种可能的Tidio API方法
+            const methods = [
+              () => window.tidioChatApi && window.tidioChatApi.open(),
+              () => window.tidioChatApi && window.tidioChatApi.show(),
+              () => window.tidio && window.tidio.show(),
+              () => window.tidio && window.tidio.open(),
+              () => window.tidioChat && window.tidioChat.show(),
+              () => window.tidioChat && window.tidioChat.open(),
+              () => window.tidioChatApi && window.tidioChatApi.display(),
+              () => window.tidioChatApi && window.tidioChatApi.toggle(),
+              () => {
+                // 尝试直接调用Tidio的全局方法
+                if (typeof window.tidioChatApi === 'object' && window.tidioChatApi) {
+                  for (let method of ['open', 'show', 'display', 'toggle']) {
+                    if (typeof window.tidioChatApi[method] === 'function') {
+                      console.log(`Trying tidioChatApi.${method}()`);
+                      return window.tidioChatApi[method]();
+                    }
+                  }
+                }
+                return false;
+              }
+            ];
+            
+            for (let i = 0; i < methods.length; i++) {
+              try {
+                const result = methods[i]();
+                if (result !== false) {
+                  console.log(`Tidio chat opened successfully using method ${i + 1}`);
+                  return;
+                }
+              } catch (error) {
+                console.log(`Method ${i + 1} failed:`, error.message);
+              }
+            }
+            
+            console.error('All Tidio API methods failed');
+            
+            // 最后的尝试：检查是否有Tidio的DOM元素
+            const tidioWidget = document.querySelector('[data-tidio-widget]') || 
+                               document.querySelector('.tidio-widget') ||
+                               document.querySelector('#tidio-chat-widget');
+            
+            if (tidioWidget) {
+              console.log('Found Tidio widget element, trying to click it');
+              tidioWidget.click();
             } else {
-              console.error('Tidio API not available or open method not found');
+              console.log('No Tidio widget element found');
             }
           }
 
