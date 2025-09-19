@@ -176,11 +176,7 @@ class PredictiveSearch extends SearchForm {
       return;
     }
 
-    // 检查是否是帮助中心搜索
-    const isHelpCenterSearch = this.classList.contains('help-center-predictive-search');
-    const sectionId = isHelpCenterSearch ? 'help-center-predictive-search' : 'predictive-search';
-
-    fetch(`${routes.predictive_search_url}?q=${encodeURIComponent(searchTerm)}&section_id=${sectionId}`, {
+    fetch(`${routes.predictive_search_url}?q=${encodeURIComponent(searchTerm)}&section_id=predictive-search`, {
       signal: this.abortController.signal,
     })
       .then((response) => {
@@ -193,10 +189,9 @@ class PredictiveSearch extends SearchForm {
         return response.text();
       })
       .then((text) => {
-        const sectionSelector = isHelpCenterSearch ? '#shopify-section-help-center-predictive-search' : '#shopify-section-predictive-search';
         const resultsMarkup = new DOMParser()
           .parseFromString(text, 'text/html')
-          .querySelector(sectionSelector).innerHTML;
+          .querySelector('#shopify-section-predictive-search').innerHTML;
         // Save bandwidth keeping the cache in all instances synced
         this.allPredictiveSearchInstances.forEach((predictiveSearchInstance) => {
           predictiveSearchInstance.cachedResults[queryKey] = resultsMarkup;

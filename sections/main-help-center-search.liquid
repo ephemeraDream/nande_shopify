@@ -7,11 +7,6 @@
         <predictive-search class="help-center-predictive-search" data-loading-text="{{ 'accessibility.loading' | t }}">
           <form id="help-search-form" action="{{ routes.search_url }}" method="get" role="search" class="search">
             <div class="field">
-              <button type="submit" class="search__button field__button" aria-label="{{ 'general.search.search' | t }}">
-                <span class="svg-wrapper">
-                  {{- 'icon-search.svg' | inline_asset_content -}}
-                </span>
-              </button>
               <input
                 class="search__input field__input"
                 id="Search-In-Template"
@@ -33,6 +28,11 @@
               <label class="field__label" for="Search-In-Template">{{ 'general.search.search' | t }}</label>
               <input name="options[prefix]" type="hidden" value="last">
 
+              <button type="submit" class="search__button field__button" aria-label="{{ 'general.search.search' | t }}">
+                <span class="svg-wrapper">
+                  {{- 'icon-search.svg' | inline_asset_content -}}
+                </span>
+              </button>
               <button
                 type="reset"
                 class="reset__button field__button{% if search.terms == blank %} hidden{% endif %}"
@@ -94,26 +94,36 @@
   .help_center_search .result_list ul li a{padding:1.8rem 2rem;border-bottom: 2px solid #E2DED6;color:#1F1F1F;font-size: 2rem;display:block;}
   .help_center_search .result_list ul li a:hover{background-color: #E2DED6;}
 
-  /* 搜索按钮在前面的样式 */
+  /* 搜索按钮在输入框左边的样式 */
   .help_center_search .field {
-    display: flex;
-    align-items: center;
     position: relative;
   }
 
-  .help_center_search .search__button {
-    order: 1;
-    margin-right: 0.5rem;
+  .help_center_search .search__input {
+    padding-left: 3rem; /* 为左边的搜索按钮留出空间 */
+    padding-right: 3rem; /* 为右边的重置按钮留出空间 */
   }
 
-  .help_center_search .search__input {
-    order: 2;
-    flex: 1;
+  .help_center_search .search__button {
+    position: absolute;
+    left: 0.5rem;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 2;
+    background: transparent;
+    border: none;
+    padding: 0.5rem;
   }
 
   .help_center_search .reset__button {
-    order: 3;
-    margin-left: 0.5rem;
+    position: absolute;
+    right: 0.5rem;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 2;
+    background: transparent;
+    border: none;
+    padding: 0.5rem;
   }
 
   /* 帮助中心predictive-search样式 */
