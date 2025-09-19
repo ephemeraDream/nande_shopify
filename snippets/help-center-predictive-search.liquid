@@ -6,42 +6,107 @@
       <div class="help-center-predictive-search__categories">
         <h3 class="help-center-predictive-search__heading">Categories</h3>
         <ul class="help-center-predictive-search__categories-list">
-          {%- comment -%} 从当前页面的main-help-center-search section获取博客分类 {%- endcomment -%}
+          {%- comment -%} 尝试多种方法获取博客分类 {%- endcomment -%}
+          {%- assign found_categories = false -%}
+          
+          {%- comment -%} 方法1: 从sections中查找 {%- endcomment -%}
           {%- for section in sections -%}
             {%- if section.type == 'main-help-center-search' -%}
-              {%- for block in section.blocks -%}
-                {%- assign blog_handle = block.settings.blog -%}
-                {%- if blogs[blog_handle] != blank -%}
-                  <li class="help-center-predictive-search__category-item">
-                    <a href="{{ blogs[blog_handle].url }}" class="help-center-predictive-search__category-link">
-                      {{ blogs[blog_handle].title }}
-                    </a>
-                  </li>
-                {%- endif -%}
-              {%- endfor -%}
+              {%- if section.blocks.size > 0 -%}
+                {%- for block in section.blocks -%}
+                  {%- assign blog_handle = block.settings.blog -%}
+                  {%- if blog_handle != blank and blogs[blog_handle] != blank -%}
+                    <li class="help-center-predictive-search__category-item">
+                      <a href="{{ blogs[blog_handle].url }}" class="help-center-predictive-search__category-link">
+                        {{ blogs[blog_handle].title }}
+                      </a>
+                    </li>
+                    {%- assign found_categories = true -%}
+                  {%- endif -%}
+                {%- endfor -%}
+              {%- endif -%}
               {%- break -%}
             {%- endif -%}
           {%- endfor -%}
+          
+          {%- comment -%} 方法2: 如果没找到，尝试从所有博客中获取 {%- endcomment -%}
+          {%- unless found_categories -%}
+            {%- for blog in blogs -%}
+              {%- if blog.articles.size > 0 -%}
+                <li class="help-center-predictive-search__category-item">
+                  <a href="{{ blog.url }}" class="help-center-predictive-search__category-link">
+                    {{ blog.title }}
+                  </a>
+                </li>
+                {%- assign found_categories = true -%}
+              {%- endif -%}
+            {%- endfor -%}
+          {%- endunless -%}
+          
+          {%- comment -%} 如果还是没找到，显示调试信息 {%- endcomment -%}
+          {%- unless found_categories -%}
+            <li class="help-center-predictive-search__category-item">
+              <span style="color: #999; font-style: italic;">No categories available</span>
+            </li>
+          {%- endunless -%}
         </ul>
       </div>
 
       {%- comment -%} 右侧：匹配的文章 {%- endcomment -%}
       <div class="help-center-predictive-search__articles">
         <h3 class="help-center-predictive-search__heading">Articles</h3>
+        {%- comment -%} 获取允许的博客handle列表 {%- endcomment -%}
+        {%- assign allowed_blog_handles = '' -%}
+        {%- assign has_configured_blogs = false -%}
+        
+        {%- comment -%} 方法1: 从sections中获取配置的博客 {%- endcomment -%}
+        {%- for section in sections -%}
+          {%- if section.type == 'main-help-center-search' -%}
+            {%- for block in section.blocks -%}
+              {%- assign blog_handle = block.settings.blog -%}
+              {%- if blog_handle != blank -%}
+                {%- if allowed_blog_handles == blank -%}
+                  {%- assign allowed_blog_handles = blog_handle -%}
+                {%- else -%}
+                  {%- assign allowed_blog_handles = allowed_blog_handles | append: ',' | append: blog_handle -%}
+                {%- endif -%}
+                {%- assign has_configured_blogs = true -%}
+              {%- endif -%}
+            {%- endfor -%}
+            {%- break -%}
+          {%- endif -%}
+        {%- endfor -%}
+        
+        {%- comment -%} 方法2: 如果没有配置的博客，使用所有博客 {%- endcomment -%}
+        {%- unless has_configured_blogs -%}
+          {%- for blog in blogs -%}
+            {%- if blog.articles.size > 0 -%}
+              {%- if allowed_blog_handles == blank -%}
+                {%- assign allowed_blog_handles = blog.handle -%}
+              {%- else -%}
+                {%- assign allowed_blog_handles = allowed_blog_handles | append: ',' | append: blog.handle -%}
+              {%- endif -%}
+            {%- endif -%}
+          {%- endfor -%}
+        {%- endunless -%}
+
+        {%- comment -%} 显示文章 {%- endcomment -%}
         {%- if predictive_search.resources.articles.size > 0 -%}
           <ul class="help-center-predictive-search__articles-list">
             {%- for article in predictive_search.resources.articles -%}
-              <li class="help-center-predictive-search__article-item">
-                <a href="{{ article.url }}" class="help-center-predictive-search__article-link">
-                  <div class="help-center-predictive-search__article-content">
-                    <h4 class="help-center-predictive-search__article-title">{{ article.title | escape }}</h4>
-                    {%- if article.excerpt != blank -%}
-                      <p class="help-center-predictive-search__article-excerpt">{{ article.excerpt | strip_html | truncate: 100 }}</p>
-                    {%- endif -%}
-                    <span class="help-center-predictive-search__article-blog">{{ article.blog.title }}</span>
-                  </div>
-                </a>
-              </li>
+              {%- if allowed_blog_handles == blank or allowed_blog_handles contains article.blog.handle -%}
+                <li class="help-center-predictive-search__article-item">
+                  <a href="{{ article.url }}" class="help-center-predictive-search__article-link">
+                    <div class="help-center-predictive-search__article-content">
+                      <h4 class="help-center-predictive-search__article-title">{{ article.title | escape }}</h4>
+                      {%- if article.excerpt != blank -%}
+                        <p class="help-center-predictive-search__article-excerpt">{{ article.excerpt | strip_html | truncate: 100 }}</p>
+                      {%- endif -%}
+                      <span class="help-center-predictive-search__article-blog">{{ article.blog.title }}</span>
+                    </div>
+                  </a>
+                </li>
+              {%- endif -%}
             {%- endfor -%}
           </ul>
         {%- else -%}
