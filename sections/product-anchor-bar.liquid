@@ -134,12 +134,15 @@
   let sections = [];
 
   function initializeObserver() {
+    console.log('Initializing observer for sections:', sectionIds);
     sectionIds.forEach((sectionId) => {
       waitForElement(`#${sectionId}`, (element) => {
+        console.log('Found section element:', sectionId, element);
         sections.push(element);
         sectionsLoaded++;
 
         if (sectionsLoaded === sectionIds.length) {
+          console.log('All sections loaded, starting observer');
           startIntersectionObserver(sections);
         }
       });
@@ -147,6 +150,7 @@
   }
 
   function startIntersectionObserver(sections) {
+    console.log('Starting IntersectionObserver with sections:', sections);
     sectionsObserver = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
@@ -154,12 +158,18 @@
           const correspondingLink = document.querySelector(
             `.product_anchor_bar_left_item[data-watch="${targetSection.id}"]`
           );
+          console.log('IntersectionObserver entry:', {
+            target: targetSection.id,
+            isIntersecting: entry.isIntersecting,
+            correspondingLink: correspondingLink
+          });
           if (entry.isIntersecting) {
             // 移除所有链接的active状态
             links.forEach((link) => link.classList.remove('active'));
             // 激活对应的链接
             if (correspondingLink) {
               correspondingLink.classList.add('active');
+              console.log('Activated link for section:', targetSection.id);
             }
           }
         });
@@ -183,6 +193,7 @@
       
       if (shouldBeAtTop && !isAtTop) {
         // 在顶部，激活第一个链接
+        console.log('At top, activating first link');
         links.forEach((link) => link.classList.remove('active'));
         const firstLink = document.querySelector('.product_anchor_bar_left_item[data-watch="top"]');
         if (firstLink) {
@@ -191,6 +202,7 @@
         isAtTop = true;
       } else if (!shouldBeAtTop && isAtTop) {
         // 不在顶部，取消第一个链接的激活状态
+        console.log('Not at top, deactivating first link');
         const firstLink = document.querySelector('.product_anchor_bar_left_item[data-watch="top"]');
         if (firstLink) {
           firstLink.classList.remove('active');
