@@ -167,6 +167,28 @@ class PredictiveSearch extends SearchForm {
     if (selectedOption) selectedOption.click();
   }
 
+  getConfiguredBlogs() {
+    // 查找页面上的main-help-center-search section
+    const helpCenterSection = document.querySelector('[data-section-type="main-help-center-search"]');
+    if (!helpCenterSection) return [];
+
+    const configuredBlogs = [];
+    
+    // 查找隐藏的配置信息
+    const configuredBlogsContainer = helpCenterSection.querySelector('[data-configured-blogs]');
+    if (configuredBlogsContainer) {
+      const blogSpans = configuredBlogsContainer.querySelectorAll('span[data-blog-handle]');
+      blogSpans.forEach(span => {
+        const blogHandle = span.dataset.blogHandle;
+        if (blogHandle) {
+          configuredBlogs.push(blogHandle);
+        }
+      });
+    }
+
+    return configuredBlogs;
+  }
+
   getSearchResults(searchTerm) {
     const queryKey = searchTerm.replace(' ', '-').toLowerCase();
     this.setLiveRegionLoadingState();
@@ -180,7 +202,17 @@ class PredictiveSearch extends SearchForm {
     const isHelpCenterSearch = this.classList.contains('help-center-predictive-search');
     const sectionId = isHelpCenterSearch ? 'help-center-predictive-search' : 'predictive-search';
 
-    fetch(`${routes.predictive_search_url}?q=${encodeURIComponent(searchTerm)}&section_id=${sectionId}`, {
+    // 如果是帮助中心搜索，获取配置的博客信息
+    let url = `${routes.predictive_search_url}?q=${encodeURIComponent(searchTerm)}&section_id=${sectionId}`;
+    
+    if (isHelpCenterSearch) {
+      const configuredBlogs = this.getConfiguredBlogs();
+      if (configuredBlogs.length > 0) {
+        url += `&configured_blogs=${encodeURIComponent(configuredBlogs.join(','))}`;
+      }
+    }
+
+    fetch(url, {
       signal: this.abortController.signal,
     })
       .then((response) => {
