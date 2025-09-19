@@ -4483,13 +4483,6 @@ body.gradient #wheelify-spin_a_sale_cc_store_front_module span#cc-spin-a-sale-co
 /*****************************  whelify end *****************************/
 
 /*****************************  other *****************************/
-@media only screen and (max-width: 767px) {
-.section-breadcrumb{
-display: none;
-}
-#tidio-chat-iframe{
-  bottom: 100px!important;
-}
 .product_price_cap{
   text-decoration: line-through;
   color: #7F7E75!important;
@@ -4500,5 +4493,12 @@ display: none;
   display: flex;
   align-items: baseline;
   gap: 1rem;
+}
+@media only screen and (max-width: 767px) {
+.section-breadcrumb{
+display: none;
+}
+#tidio-chat-iframe{
+  bottom: 100px!important;
 }
 }
