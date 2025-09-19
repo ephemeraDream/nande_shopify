@@ -66,7 +66,36 @@
               openChat();
             } else {
               console.log('Tidio not ready, waiting for ready event');
-              document.addEventListener('tidioChat-ready', openChat, { once: true });
+              
+              // 同时监听多个可能的事件
+              const readyHandler = () => {
+                console.log('Tidio ready event fired');
+                openChat();
+              };
+              
+              // 监听不同的事件名称
+              document.addEventListener('tidioChat-ready', readyHandler, { once: true });
+              document.addEventListener('tidioReady', readyHandler, { once: true });
+              window.addEventListener('tidioChat-ready', readyHandler, { once: true });
+              window.addEventListener('tidioReady', readyHandler, { once: true });
+              
+              // 备用方案：轮询检查
+              let attempts = 0;
+              const maxAttempts = 50; // 5秒
+              const checkReady = setInterval(() => {
+                attempts++;
+                console.log(`Checking Tidio ready status, attempt ${attempts}`);
+                
+                if (window.tidioChatApi && window.tidioChatApi.readyEventWasFired) {
+                  console.log('Tidio became ready via polling');
+                  clearInterval(checkReady);
+                  openChat();
+                } else if (attempts >= maxAttempts) {
+                  console.log('Max attempts reached, trying to open anyway');
+                  clearInterval(checkReady);
+                  openChat();
+                }
+              }, 100);
             }
           } else {
             console.log('Tidio API not found, trying alternative methods');
