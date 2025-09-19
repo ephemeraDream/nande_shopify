@@ -37,145 +37,26 @@
   </div>
 </div>
 <script>
-  document.addEventListener('DOMContentLoaded', function() {
-    document.querySelectorAll('#shopify-section-{{ section.id }} .nd-btn').forEach((item) => {
-      item.addEventListener('click', (e) => {
-        e.preventDefault();
-        const href = item.getAttribute('href');
-        console.log('Button clicked, href:', href);
-        
-        if (href === '#tidio-chat') {
-          console.log('Attempting to open Tidio chat via API...');
-          
-          // 封装打开聊天函数
-          function openTidioChat() {
-            console.log('Trying to open Tidio chat via API...');
-            
-            if (window.tidioChatApi) {
-              console.log('Tidio API available');
-              console.log('popUpOpen:', typeof window.tidioChatApi.popUpOpen);
-              console.log('chatDisplay:', typeof window.tidioChatApi.chatDisplay);
-              console.log('ready:', window.tidioChatApi.readyEventWasFired);
-              
-              // 尝试关键方法
-              const apiMethods = [
-                () => {
-                  console.log('Trying popUpOpen()');
-                  return window.tidioChatApi.popUpOpen();
-                },
-                () => {
-                  console.log('Trying chatDisplay()');
-                  return window.tidioChatApi.chatDisplay();
-                }
-              ];
-              
-              for (let i = 0; i < apiMethods.length; i++) {
-                try {
-                  const result = apiMethods[i]();
-                  console.log(`Method ${i + 1} result:`, result);
-                  if (result !== undefined && result !== false) {
-                    console.log(`Tidio method ${i + 1} called successfully`);
-                    return true;
-                  }
-                } catch (error) {
-                  console.log(`Tidio method ${i + 1} failed:`, error.message);
-                }
-              }
-              
-              console.log('All Tidio API methods failed');
-              
-              // 尝试直接调用全局Tidio方法
-              console.log('Trying global Tidio methods...');
-              if (window.tidio) {
-                try {
-                  window.tidio.show();
-                  console.log('Called window.tidio.show()');
-                  return true;
-                } catch (error) {
-                  console.log('window.tidio.show() failed:', error.message);
-                }
-              }
-              
-              // 最后的尝试：直接操作Tidio的iframe
-              console.log('Trying to interact with Tidio iframe directly...');
-              const tidioIframe = document.querySelector('#tidio-chat-iframe');
-              if (tidioIframe) {
-                try {
-                  // 尝试通过postMessage与iframe通信
-                  tidioIframe.contentWindow.postMessage({
-                    type: 'tidio-chat-open',
-                    action: 'open'
-                  }, '*');
-                  console.log('Sent postMessage to Tidio iframe');
-                  
-                  // 尝试触发iframe的点击事件
-                  const clickEvent = new MouseEvent('click', {
-                    view: window,
-                    bubbles: true,
-                    cancelable: true
-                  });
-                  tidioIframe.dispatchEvent(clickEvent);
-                  console.log('Dispatched click event to Tidio iframe');
-                  
-                  return true;
-                } catch (error) {
-                  console.log('Failed to interact with Tidio iframe:', error.message);
-                }
-              }
-              
-              return false;
-            } else {
-              console.log('Tidio API not available');
-              return false;
-            }
-          }
-          
-          // 检查Tidio是否已经ready
-          if (window.tidioChatApi && window.tidioChatApi.readyEventWasFired) {
-            console.log('Tidio is ready, opening chat directly');
-            openTidioChat();
-          } else {
-            console.log('Tidio not ready, waiting for ready event...');
-            
-            // 监听ready事件
-            const readyHandler = () => {
-              console.log('Tidio ready event received');
-              openTidioChat();
-            };
-            
-            // 监听多个可能的事件
-            document.addEventListener('tidioChat-ready', readyHandler, { once: true });
-            window.addEventListener('tidioChat-ready', readyHandler, { once: true });
-            
-            // 轮询检查ready状态
-            let attempts = 0;
-            const maxAttempts = 100; // 10秒
-            const checkInterval = setInterval(() => {
-              attempts++;
-              console.log(`Checking Tidio ready status, attempt ${attempts}`);
-              
-              if (window.tidioChatApi && window.tidioChatApi.readyEventWasFired) {
-                console.log('Tidio became ready via polling');
-                clearInterval(checkInterval);
-                openTidioChat();
-              } else if (attempts >= maxAttempts) {
-                console.log('Max attempts reached, trying to open anyway');
-                clearInterval(checkInterval);
-                openTidioChat();
-              }
-            }, 100);
-            
-            // 备用方案：直接尝试打开（不等待ready）
-            setTimeout(() => {
-              console.log('Trying to open Tidio chat without waiting for ready...');
-              openTidioChat();
-            }, 2000); // 2秒后尝试
-          }
-        } else {
-          console.log('Redirecting to:', href);
-          location.href = href;
+  document.querySelectorAll('#shopify-section-{{ section.id }} .nd-btn').forEach((item) => {
+    item.addEventListener('click', (e) => {
+      e.preventDefault();
+      const href = item.getAttribute('href');
+      if (href === '#tidio-chat') {
+        // 封装打开函数
+        function openChat() {
+          window.tidioChatApi.open();
         }
-      });
+
+        if (window.tidioChatApi && window.tidioChatApi.readyEventWasFired) {
+          // 已经 ready，直接打开
+          openChat();
+        } else {
+          // 没有 ready，监听事件
+          document.addEventListener('tidioChat-ready', openChat, { once: true });
+        }
+      } else {
+        location.href = href;
+      }
     });
   });
 </script>
