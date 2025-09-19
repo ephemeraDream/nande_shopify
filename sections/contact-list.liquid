@@ -72,6 +72,8 @@
             
             // 尝试多种可能的Tidio API方法
             const methods = [
+              () => window.tidioChatApi && window.tidioChatApi.popUpOpen(),
+              () => window.tidioChatApi && window.tidioChatApi.chatDisplay(),
               () => window.tidioChatApi && window.tidioChatApi.open(),
               () => window.tidioChatApi && window.tidioChatApi.show(),
               () => window.tidio && window.tidio.show(),
@@ -83,7 +85,7 @@
               () => {
                 // 尝试直接调用Tidio的全局方法
                 if (typeof window.tidioChatApi === 'object' && window.tidioChatApi) {
-                  for (let method of ['open', 'show', 'display', 'toggle']) {
+                  for (let method of ['popUpOpen', 'chatDisplay', 'open', 'show', 'display', 'toggle']) {
                     if (typeof window.tidioChatApi[method] === 'function') {
                       console.log(`Trying tidioChatApi.${method}()`);
                       return window.tidioChatApi[method]();
@@ -130,17 +132,14 @@
             } else {
               console.log('Tidio not ready, waiting for ready event');
               
-              // 同时监听多个可能的事件
+              // 监听ready事件
               const readyHandler = () => {
                 console.log('Tidio ready event fired');
                 openChat();
               };
               
-              // 监听不同的事件名称
+              // 监听tidioChat-ready事件
               document.addEventListener('tidioChat-ready', readyHandler, { once: true });
-              document.addEventListener('tidioReady', readyHandler, { once: true });
-              window.addEventListener('tidioChat-ready', readyHandler, { once: true });
-              window.addEventListener('tidioReady', readyHandler, { once: true });
               
               // 备用方案：轮询检查
               let attempts = 0;
