@@ -197,12 +197,10 @@ class PredictiveSearch extends SearchForm {
     // 获取完整的博客数据（包括标题和URL）
     // 先尝试查找 main-help-center-search section
     let helpCenterSection = document.querySelector('[data-section-type="main-help-center-search"]');
-    console.log('Help center search section found:', helpCenterSection);
     
     // 如果没找到，尝试查找 main-help-center section
     if (!helpCenterSection) {
       helpCenterSection = document.querySelector('[data-section-type="main-help-center"]');
-      console.log('Help center section found:', helpCenterSection);
     }
     
     if (!helpCenterSection) {
@@ -211,13 +209,11 @@ class PredictiveSearch extends SearchForm {
     }
 
     const configuredBlogsContainer = helpCenterSection.querySelector('[data-configured-blogs]');
-    console.log('Configured blogs container found:', configuredBlogsContainer);
     
     if (configuredBlogsContainer) {
-      console.log('Raw data attribute:', configuredBlogsContainer.dataset.configuredBlogs);
       try {
         const parsedData = JSON.parse(configuredBlogsContainer.dataset.configuredBlogs);
-        console.log('Parsed blogs data:', parsedData);
+        console.log('Found configured blogs:', parsedData);
         return parsedData;
       } catch (e) {
         console.error('Error parsing configured blogs data:', e);
@@ -230,14 +226,11 @@ class PredictiveSearch extends SearchForm {
   }
 
   populateHelpCenterCategories(resultsMarkup) {
-    console.log('populateHelpCenterCategories called');
-    
     // 获取配置的博客数据
     const blogsData = this.getConfiguredBlogsData();
-    console.log('Blogs data received:', blogsData);
     
     if (blogsData.length === 0) {
-      console.log('No blogs data, returning');
+      console.log('No blogs data found');
       return;
     }
 
@@ -250,15 +243,12 @@ class PredictiveSearch extends SearchForm {
       </li>`
     ).join('');
 
-    console.log('Generated categories HTML:', categoriesHtml);
-
     // 查找分类列表元素并更新
     const categoriesList = document.querySelector('#help-center-categories-list');
-    console.log('Categories list element found:', categoriesList);
     
     if (categoriesList) {
       categoriesList.innerHTML = categoriesHtml;
-      console.log('Categories list updated successfully');
+      console.log('Categories list updated with', blogsData.length, 'items');
     } else {
       console.log('Categories list element not found');
     }
