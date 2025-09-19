@@ -27,7 +27,7 @@
           "settings": {
             "sub_title": "",
             "title": "<p>Ergonomische Arbeitsplatzlösungen</p>",
-            "text": "<p>Ergonomische Arbeitsplatzlösungen für mehr Komfort, Gesundheit und Produktivität – im Büro oder Homeoffice.</p>",
+            "text": "<p>Ergonomische Arbeitsplatzlösungen für mehr Komfort</p>",
             "btn_text": "En savoir plus",
             "link": "",
             "file_position": "middle_left",
@@ -46,7 +46,7 @@
       ],
       "name": "banner",
       "settings": {
-        "height_mode": "auto",
+        "height_mode": "fixed",
         "fixed_height_desktop": 600,
         "fixed_height_mobile": 350,
         "mobile_stacked": false,
