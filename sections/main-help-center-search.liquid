@@ -58,31 +58,27 @@
       <div style="display: none;" data-configured-blogs='[
         {% for block in section.blocks %}
           {% assign blog_item = block.settings.blog %}
-          {% if blog_item != blank %}
-            {
+          {
               "handle": "{{ blog_item.handle }}",
               "title": "{{ blog_item.title | escape }}",
               "url": "{{ blog_item.url }}"
             }{% unless forloop.last %},{% endunless %}
-          {% endif %}
         {% endfor %}
       ]'></div>
       
       <ul id="search-results">
         {% for block in section.blocks %}
           {% assign blog_item = block.settings.blog %}
-          {% if blog_item != blank %}
-            {% for article in blog_item.articles %}
-              <li 
-                data-title="{{ article.title | downcase }}" 
-                data-content="{{ article.content | strip_html | downcase }}"
-                data-blog="{{ blog_item.handle }}"
-                style="display:none;"
-              >
-                <a href="{{ article.url }}">{{ article.title }}</a>
-              </li>
-            {% endfor %}
-          {% endif %}
+          {% for article in blog_item.articles %}
+            <li 
+              data-title="{{ article.title | downcase }}" 
+              data-content="{{ article.content | strip_html | downcase }}"
+              data-blog="{{ blog_item.handle }}"
+              style="display:none;"
+            >
+              <a href="{{ article.url }}">{{ article.title }}</a>
+            </li>
+          {% endfor %}
         {% endfor %}
       </ul>
 
