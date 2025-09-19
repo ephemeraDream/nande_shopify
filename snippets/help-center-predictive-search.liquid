@@ -14,14 +14,12 @@
             {%- if section.type == 'main-help-center-search' -%}
               {%- for block in section.blocks -%}
                 {%- assign blog_item = block.settings.blog -%}
-                {%- if blog_item != blank -%}
-                  <li class="help-center-predictive-search__category-item">
+                <li class="help-center-predictive-search__category-item">
                     <a href="{{ blog_item.url }}" class="help-center-predictive-search__category-link">
                       {{ blog_item.title }}
                     </a>
                   </li>
                   {%- assign found_categories = true -%}
-                {%- endif -%}
               {%- endfor -%}
               {%- break -%}
             {%- endif -%}
