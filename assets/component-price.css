@@ -14,9 +14,9 @@
   visibility: hidden;
 }
 
-.price--end {
+/* .price--end {
   text-align: right;
-}
+} */
 
 .price .price-item {
   display: inline-block;
