@@ -43,8 +43,13 @@
                   </h4>
                   <h4 class="bundle_simple_product_title">{{ product.title }}</h4>
                 </a>
-                <h4 class="bundle_simple_product_price">
+                <h4 class="bundle_simple_product_price has_product_price_cap">
                   {{ product.selected_or_first_available_variant.price | money_without_trailing_zeros }}
+                  {% if product.selected_or_first_available_variant.compare_at_price != blank and product.selected_or_first_available_variant.compare_at_price > product.selected_or_first_available_variant.price %}
+                    <span class="product_price_cap">
+                      {{ product.selected_or_first_available_variant.compare_at_price | money_without_trailing_zeros }}
+                    </span>
+                  {% endif %}
                 </h4>
                 {%- for option in product.options_with_values -%}
                   <div class="bundle_simple_option_item">
