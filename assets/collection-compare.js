@@ -261,12 +261,16 @@ document.querySelectorAll(".collection_compare_contain_sort_select_item").forEac
   item.addEventListener("click", () => {
     const value = item.getAttribute("value")
     document.querySelector(".collection_compare_contain_sort_label").innerHTML = item.innerHTML
-    const input = document.querySelector(`input[name="sort_by"][value="${value}"]`);
-    if (input) {
-      input.checked = true;
-      const event = new Event('input', { bubbles: true });
-      input.dispatchEvent(event);
-    }
+    const urlParams = new URLSearchParams(window.location.search);
+    urlParams.set("sort_by", value);
+    const searchParams = urlParams.toString();
+    location.href = `${window.location.pathname}?${searchParams}`;
+    // const input = document.querySelector(`input[name="sort_by"][value="${value}"]`);
+    // if (input) {
+    //   input.checked = true;
+    //   const event = new Event('input', { bubbles: true });
+    //   input.dispatchEvent(event);
+    // }
   })
 })
 
