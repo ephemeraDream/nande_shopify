@@ -89,69 +89,82 @@
           </div>
         </div> {% endcomment %}
         <div class="activity_products_tab_contain_products">
-          {% comment %} {% for product in block.settings.product_list offset: 1 %}{% endcomment %}
-           {% for product in block.settings.product_list %} 
-            {% assign sale_info = product.metafields.custom.sale_info.value %}
-            <a
-              class="activity_products_tab_product"
-              data-type="{{ product.type | handleize }}"
-              href="{{ product.url }}"
-              data-id="{{ product.id }}"
-            >
-              <div class="activity_products_tab_product_img">
-                <img src="{{ product.featured_media | image_url }}" alt="{{ product.title }}">
-                {% if sale_info != blank %}
-                  <div class="activity_products_tab_product_saleinfo">{{ sale_info.name }}</div>
-                {% endif %}
-              </div>
-              <div class="activity_products_tab_product_info">
-                <h4 class="activity_products_tab_product_title">{{ product.title }}</h4>
-
-                <div>
-                  {% if sale_info != blank %}
-                    <div class="activity_products_tab_product_saleinfo_code">
-                      {{ 'common.code' | t -}}
-                      {{- sale_info.code }}
-                      <div class="activity_products_tab_saleinfo_btn" data-code="{{ sale_info.code }}">COPY</div>
-                    </div>
-                  {% endif %}
-                  {% render 'product-rating', product: product %}
-                  <div class="activity_products_tab_product_price">
-                    <div>
-                      {{ product.price | money_without_trailing_zeros }}
-                    </div>
-                    {% if product.compare_at_price != blank and product.compare_at_price > product.price %}
-                      <div class="activity_products_tab_product_price_cap">
-                        {{ product.compare_at_price | money_without_trailing_zeros }}
-                      </div>
-                    {% endif %}
-                  </div>
-                  <div class="activity_products_tab_product_btn nd-btn">
-                    {{ 'common.jetzt_konfigurieren' | t }}
-                    {{ 'icon-right-arrow.svg' | inline_asset_content }}
-                  </div>
-                  
-                </div>
-                {% if sale_info != blank %}
-                  <div
-                    class="activity_products_tab_product_saleinfo_countdown"
-                    data-end-date="{{ sale_info.datetime | date: "%Y-%m-%dT%H:%M:%SZ" }}"
+          <div class="swiper activity_products_tab_swiper">
+            <div class="swiper-wrapper">
+              {% comment %} {% for product in block.settings.product_list offset: 1 %}{% endcomment %}
+               {% for product in block.settings.product_list %} 
+                {% assign sale_info = product.metafields.custom.sale_info.value %}
+                <div class="swiper-slide">
+                  <a
+                    class="activity_products_tab_product"
+                    data-type="{{ product.type | handleize }}"
+                    href="{{ product.url }}"
+                    data-id="{{ product.id }}"
                   >
-                    <span class="activity_products_tab_product_saleinfo_countdown_text">
-                      {{- 'common.ends_in' | t -}}
-                    </span>
-                    <div class="activity_products_tab_product_saleinfo_countdown_item" data-type="day"></div>
-                    <span>:</span>
-                    <div class="activity_products_tab_product_saleinfo_countdown_item" data-type="hour"></div>
-                    <span>:</span>
-                    <div class="activity_products_tab_product_saleinfo_countdown_item" data-type="minute"></div>
-                    <span>:</span>
-                    <div class="activity_products_tab_product_saleinfo_countdown_item" data-type="second"></div>
-                  </div>
-                {% endif %}
-              </div>
-            </a>
-          {% endfor %}
+                    <div class="activity_products_tab_product_img">
+                      <img src="{{ product.featured_media | image_url }}" alt="{{ product.title }}">
+                      {% if sale_info != blank %}
+                        <div class="activity_products_tab_product_saleinfo">{{ sale_info.name }}</div>
+                      {% endif %}
+                    </div>
+                    <div class="activity_products_tab_product_info">
+                      <h4 class="activity_products_tab_product_title">{{ product.title }}</h4>
+
+                      <div>
+                        {% if sale_info != blank %}
+                          <div class="activity_products_tab_product_saleinfo_code">
+                            {{ 'common.code' | t -}}
+                            {{- sale_info.code }}
+                            <div class="activity_products_tab_saleinfo_btn" data-code="{{ sale_info.code }}">COPY</div>
+                          </div>
+                        {% endif %}
+                        {% render 'product-rating', product: product %}
+                        <div class="activity_products_tab_product_price">
+                          <div>
+                            {{ product.price | money_without_trailing_zeros }}
+                          </div>
+                          {% if product.compare_at_price != blank and product.compare_at_price > product.price %}
+                            <div class="activity_products_tab_product_price_cap">
+                              {{ product.compare_at_price | money_without_trailing_zeros }}
+                            </div>
+                          {% endif %}
+                        </div>
+                        <div class="activity_products_tab_product_btn nd-btn">
+                          {{ 'common.jetzt_konfigurieren' | t }}
+                          {{ 'icon-right-arrow.svg' | inline_asset_content }}
+                        </div>
+                        
+                      </div>
+                      {% if sale_info != blank %}
+                        <div
+                          class="activity_products_tab_product_saleinfo_countdown"
+                          data-end-date="{{ sale_info.datetime | date: "%Y-%m-%dT%H:%M:%SZ" }}"
+                        >
+                          <span class="activity_products_tab_product_saleinfo_countdown_text">
+                            {{- 'common.ends_in' | t -}}
+                          </span>
+                          <div class="activity_products_tab_product_saleinfo_countdown_item" data-type="day"></div>
+                          <span>:</span>
+                          <div class="activity_products_tab_product_saleinfo_countdown_item" data-type="hour"></div>
+                          <span>:</span>
+                          <div class="activity_products_tab_product_saleinfo_countdown_item" data-type="minute"></div>
+                          <span>:</span>
+                          <div class="activity_products_tab_product_saleinfo_countdown_item" data-type="second"></div>
+                        </div>
+                      {% endif %}
+                    </div>
+                  </a>
+                </div>
+              {% endfor %}
+            </div>
+            <!-- 添加导航按钮 -->
+            <div class="activity_products_tab_swiper_prev">
+              {{- 'swiper-left.svg' | inline_asset_content -}}
+            </div>
+            <div class="activity_products_tab_swiper_next">
+              {{- 'swiper-right.svg' | inline_asset_content -}}
+            </div>
+          </div>
         </div>
       </div>
     {% endfor %}
@@ -299,6 +312,48 @@
       }, 5000);
     });
   });
+
+  // 初始化Swiper
+  function initSwiper() {
+    const swiperContainers = document.querySelectorAll('#shopify-section-{{ section.id }} .activity_products_tab_swiper');
+    
+    swiperContainers.forEach((container, index) => {
+      const swiper = new Swiper(container, {
+        slidesPerView: 'auto',
+        spaceBetween: 20,
+        loop: false,
+        navigation: {
+          nextEl: container.querySelector('.activity_products_tab_swiper_next'),
+          prevEl: container.querySelector('.activity_products_tab_swiper_prev'),
+        },
+        breakpoints: {
+          320: {
+            slidesPerView: 1,
+            spaceBetween: 20,
+          },
+          768: {
+            slidesPerView: 2,
+            spaceBetween: 20,
+          },
+          1024: {
+            slidesPerView: 3,
+            spaceBetween: 20,
+          },
+          1440: {
+            slidesPerView: 4,
+            spaceBetween: 20,
+          }
+        }
+      });
+    });
+  }
+
+  // 等待DOM加载完成后初始化Swiper
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initSwiper);
+  } else {
+    initSwiper();
+  }
 })();
 </script>
 

@@ -403,6 +403,62 @@
   bottom: -2.5rem;
 }
 
+/* Swiper样式 */
+.activity_products_tab .activity_products_tab_swiper {
+  position: relative;
+  overflow: hidden;
+}
+
+.activity_products_tab .activity_products_tab_swiper .swiper-slide {
+  width: auto;
+  height: auto;
+}
+
+.activity_products_tab .activity_products_tab_product {
+  width: 100%;
+  height: 100%;
+}
+
+/* 导航按钮样式 */
+.activity_products_tab .activity_products_tab_swiper_prev,
+.activity_products_tab .activity_products_tab_swiper_next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 4rem;
+  height: 4rem;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 10;
+  transition: all 0.3s ease;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.activity_products_tab .activity_products_tab_swiper_prev {
+  left: 1rem;
+}
+
+.activity_products_tab .activity_products_tab_swiper_next {
+  right: 1rem;
+}
+
+.activity_products_tab .activity_products_tab_swiper:hover .activity_products_tab_swiper_prev,
+.activity_products_tab .activity_products_tab_swiper:hover .activity_products_tab_swiper_next {
+  opacity: 1;
+  visibility: visible;
+}
+
+.activity_products_tab .activity_products_tab_swiper_prev:hover,
+.activity_products_tab .activity_products_tab_swiper_next:hover {
+  background: rgba(255, 255, 255, 1);
+  transform: translateY(-50%) scale(1.1);
+}
+
 @media (max-width: 1024px) {
   .activity_products_tab .activity_products_tab_product {
     width: calc((100% - 2.8rem) / 2);
@@ -427,6 +483,12 @@
     height: 3.6rem;
     font-size: 2rem;
     padding: 0 0.8rem;
+  }
+
+  /* 移动端隐藏Swiper导航按钮 */
+  .activity_products_tab .activity_products_tab_swiper_prev,
+  .activity_products_tab .activity_products_tab_swiper_next {
+    display: none !important;
   }
 
 .activity_products_tab .activity_products_tab_contain_first_product{
