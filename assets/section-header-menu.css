@@ -743,7 +743,11 @@
   gap: 1rem;
   padding-right: 1rem;
 }
-
+@media screen and (max-width: 1400px) {
+  .header_menu .header_menu_item[data-type="product_collection"] .header_menu_item_submenu_product_title {
+    font-size: 2rem;
+  }
+}
 @media screen and (max-width: 1024px) {
   .header_menu_section {
     display: none;
@@ -760,4 +764,8 @@
     padding: 16.6rem 2rem 1.6rem;
     overflow: auto;
   }
+
+  /* .header_menu .header_menu_item[data-type="product_collection"] .header_menu_item_submenu_product_title {
+    font-size: 1.6rem;
+  } */
 }
