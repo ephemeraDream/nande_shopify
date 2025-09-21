@@ -504,4 +504,5 @@ cart-items {
 .drawer__cart-items-wrapper-right-bottom {
   flex-direction: column;
 }
+.cart_section .cart__warnings .button,.cart_section>.gradient{width: 100%;}
 }
