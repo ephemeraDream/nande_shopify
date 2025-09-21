@@ -402,6 +402,12 @@ svg.page-btn__circle {
     display: block;
   }
 
+  /* 移动端隐藏左右导航按钮 */
+  .section_banner .section_banner_swiper_prev,
+  .section_banner .section_banner_swiper_next {
+    display: none !important;
+  }
+
   .section_banner .swiper-slide img,
   .section_banner .swiper-slide video {
     min-height: 10rem;
