@@ -100,15 +100,17 @@ function initAnchorBar() {
     const showAnchorBarThreshold = Math.max(minThreshold, Math.min(originalTop - 50, headerThreshold));
     
     // 确保在页面顶部时总是显示主导航
+    let offset = 0;
     if (scrollTop <= minThreshold) {
       // 在页面顶部，显示主导航，隐藏锚点导航栏
       headerSections.forEach((section, idx) => {
         section.style.position = 'fixed';
-        section.style.top = 0 + 'px';
+        section.style.top = offset + 'px';
         section.style.left = '0';
         section.style.right = '0';
         section.style.transition = 'transform 0.2s ease-in-out';
         section.style.transform = 'translateY(0px)'; // 显示主导航
+        offset += section.getBoundingClientRect().height;
       });
       if (anchorBarParent.classList.contains('is-sticky')) {
         anchorBarParent.classList.remove('is-sticky');
@@ -148,18 +150,22 @@ function initAnchorBar() {
   window.addEventListener('scroll', handleScroll, { passive: true });
   
   // 初始化检查
-  {% comment %} setTimeout(() => {
+  setTimeout(() => {
     // 检查MainContent的margin-top
-    const mainContent = document.getElementById('MainContent');
+    {% comment %} const mainContent = document.getElementById('MainContent');
     if (mainContent) {
       const computedStyle = window.getComputedStyle(mainContent);
       const marginTop = parseFloat(computedStyle.marginTop);
       if (marginTop > 50) {
         handleScroll();
       }
-    }
+    } {% endcomment %}
+    const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+      if(scrollTop > 0) {
+        handleScroll();
+      }
     
-  }, 100);  {% endcomment %}
+  }, 100); 
   
   links.forEach((item) => {
     item.addEventListener('click', (e) => {
