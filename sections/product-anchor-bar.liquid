@@ -103,7 +103,7 @@ function initAnchorBar() {
     if (scrollTop <= minThreshold) {
       // 在页面顶部，显示主导航，隐藏锚点导航栏
       headerSections.forEach((section, idx) => {
-        section.style.position = 'relative';
+        section.style.position = 'fixed';
         section.style.top = 0 + 'px';
         section.style.left = '0';
         section.style.right = '0';
@@ -149,27 +149,16 @@ function initAnchorBar() {
   
   // 初始化检查
   setTimeout(() => {
-    {% comment %} // 检查初始滚动位置
-    const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-    const originalTop = getAnchorBarOriginalTop();
-    const minThreshold = 280;
-    
-    // 获取主导航的高度
-    let headerHeight = 0;
-    if (headerSections.length > 0) {
-      headerSections.forEach(section => {
-        const rect = section.getBoundingClientRect();
-        headerHeight += rect.height;
-      });
+    // 检查MainContent的margin-top
+    const mainContent = document.getElementById('MainContent');
+    if (mainContent) {
+      const computedStyle = window.getComputedStyle(mainContent);
+      const marginTop = parseFloat(computedStyle.marginTop);
+      if (marginTop > 50) {
+        handleScroll();
+      }
     }
     
-    // 计算显示阈值
-    const headerThreshold = headerHeight + 50;
-    const showAnchorBarThreshold = Math.max(minThreshold, Math.min(originalTop - 50, headerThreshold));
-     {% endcomment %}
-    // 直接调用handleScroll来处理初始状态
-    handleScroll();
-    isInitialized = true;
   }, 100); 
   
   links.forEach((item) => {
