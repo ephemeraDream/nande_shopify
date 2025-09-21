@@ -152,7 +152,10 @@
 .img_with_text_tab .img_with_text_tab_swiper_next {
   left: 13rem;
 } */
-
+@media only screen and (max-width: 1024px) {
+  .img_with_text_tab .img_with_text_tab_head{
+    justify-content: flex-start;
+  }}
 @media only screen and (max-width: 767px) {
   .img_with_text_tab .img_with_text_tab_head{
     justify-content: flex-start;
