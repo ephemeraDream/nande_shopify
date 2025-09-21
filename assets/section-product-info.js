@@ -19,6 +19,9 @@ function initSwiper() {
       prevEl: ".imgthumb_swiper_box .imgthumb_swiper_prev",
     },
     on: {
+      init: function (swiper) {
+        swiper.slides[0].classList.add("swiper-slide-actived")
+      },
       click: function (swiper) {
         const clickedSlide = swiper.slides[swiper.clickedIndex];
         if (!clickedSlide || clickedSlide.style.display === 'none') return;
