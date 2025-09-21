@@ -1087,6 +1087,10 @@
 }
 
 @media screen and (max-width: 749px) {
+  .collection_compare_banner {
+    height: auto;
+    padding-top: 1rem;
+}
   .collection_compare .collection_compare_contain_head_right {
     justify-content: space-evenly;
     flex-direction: column;
