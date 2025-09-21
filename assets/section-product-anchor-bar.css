@@ -85,6 +85,11 @@
     padding-right: 4rem;
   }
 }
+@media screen and (max-width: 1024px) {
+  .product_anchor_bar_section {
+    padding-top: 0px;
+  }
+}
 @media screen and (max-width: 767px) {
   .product_anchor_bar .product_anchor_bar_btn {
     display: none;
