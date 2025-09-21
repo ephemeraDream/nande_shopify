@@ -89,4 +89,8 @@
   .product_anchor_bar .product_anchor_bar_btn {
     display: none;
   }
+  .product_anchor_bar_section.padding-sider {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
 }
