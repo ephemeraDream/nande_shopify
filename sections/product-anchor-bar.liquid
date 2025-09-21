@@ -214,13 +214,15 @@ function initAnchorBar() {
             closestSection = section;
             closestDistance = distance;
           }
+          console.log('distance', distance);
+          console.log('sectionTop', sectionTop);
+        console.log('sectionBottom', sectionBottom);
         });
         console.log('closestSection', closestSection);//
-        console.log('distance', distance);
+        
         console.log('closestDistance', closestDistance);
-        console.log('sectionTop', sectionTop);
+        
         console.log('viewportCenter', viewportCenter);
-        console.log('sectionBottom', sectionBottom);
         // 激活最接近的section对应的链接
         if (closestSection) {
           console.log('closestSection2', closestSection);
