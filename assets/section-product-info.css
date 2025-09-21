@@ -1050,7 +1050,7 @@
 }
 
 .product_info_section .product_info_bundle_product.selected {
-  border: 0.2rem solid #BDFF00;
+  border: 0.2rem solid #BDFF00!important;
 }
 
 .product_info_section .product_info_bundle_product_img {
@@ -1533,7 +1533,9 @@
     position: relative;
     max-width: 100%;
   }
-
+  .product_info_section .product_info_bundle_product:not(.product_info_bundle_product_disabled):hover {
+    border-color: transparent;
+  }
   .product_info_section .product_infor_simplicity_right_select_title,
   .product_info_section .product_info_bottom_bar .product_info_buybox_btns_btn,
   .product_info_section .product_info_bottom_bar .product_info_buybox_btns_btn {
