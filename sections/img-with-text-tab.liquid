@@ -110,6 +110,10 @@
       {% endif %}
       loop: {{ section.settings.loop }},
       on: {
+        init: function () {
+          // 初始化时统一高度
+          {% comment %} equalizeSlideHeights(); {% endcomment %}
+        },
         slideChange: function () {
           tabItems.forEach((el, index) => {
             el.classList.remove('active');
@@ -144,6 +148,31 @@
         scrollToActiveTab(item);
       });
     });
+    
+    // 统一slide高度的函数
+    function equalizeSlideHeights() {
+      const slides = sectionEl.querySelectorAll('.swiper-slide');
+      if (slides.length === 0) return;
+      
+      // 重置所有slide的高度
+      slides.forEach(slide => {
+        slide.style.height = 'auto';
+      });
+      
+      // 找到最高的slide
+      let maxHeight = 0;
+      slides.forEach(slide => {
+        const height = slide.offsetHeight;
+        if (height > maxHeight) {
+          maxHeight = height;
+        }
+      });
+      
+      // 设置所有slide为相同高度
+      slides.forEach(slide => {
+        slide.style.height = maxHeight + 'px';
+      });
+    }
     
     // 添加滚动到激活tab的函数
     function scrollToActiveTab(activeItem) {
@@ -186,6 +215,11 @@
         behavior: 'smooth'
       });
     }
+    
+    // 窗口大小改变时重新计算高度
+    window.addEventListener('resize', () => {
+      setTimeout(equalizeSlideHeights, 100);
+    });
   })();
 </script>
 

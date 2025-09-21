@@ -67,15 +67,21 @@
   position: relative;
 }
 
+/* 确保Swiper容器有足够的高度 */
+.img_with_text_tab .img_with_text_tab_contain .swiper {
+  height: auto;
+}
+
 .img_with_text_tab .img_with_text_tab_contain .swiper-slide {
   display: flex;
   align-items: stretch;
-  height: 100%; /* 让所有slide保持相同高度 */
+  height: auto; /* 让所有slide保持相同高度 */
 }
 
 /* 确保swiper-wrapper也有统一高度 */
 .img_with_text_tab .img_with_text_tab_contain .swiper-wrapper {
   align-items: stretch;
+  display: flex;
 }
 .img_with_text_tab .img_with_text_tab_contain .swiper-slide.right {
   flex-direction: row-reverse;
@@ -167,7 +173,7 @@
     justify-content: flex-start;
   }
   .img_with_text_tab .img_with_text_tab_contain .swiper-slide{
-    align-items: flex-start;
+    align-items: stretch;
     flex-direction: column;
   }
   .img_with_text_tab .img_with_text_tab_contain_filebox{
