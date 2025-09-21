@@ -100,7 +100,7 @@ function initAnchorBar() {
     const showAnchorBarThreshold = Math.max(minThreshold, Math.min(originalTop - 50, headerThreshold));
     
     // 确保在页面顶部时总是显示主导航
-    if (scrollTop <= 50) {
+    if (scrollTop <= showAnchorBarThreshold) {
       // 在页面顶部，显示主导航，隐藏锚点导航栏
       headerSections.forEach(section => {
         section.style.display = 'block';
@@ -140,7 +140,7 @@ function initAnchorBar() {
     // 检查初始滚动位置
     const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
     const originalTop = getAnchorBarOriginalTop();
-    const minThreshold = 200;
+    const minThreshold = 280;
     
     // 获取主导航的高度
     let headerHeight = 0;
@@ -155,24 +155,8 @@ function initAnchorBar() {
     const headerThreshold = headerHeight + 50;
     const showAnchorBarThreshold = Math.max(minThreshold, Math.min(originalTop - 50, headerThreshold));
     
-    // 确保在顶部时显示主导航
-    if (scrollTop <= 50) {
-      // 在顶部，显示主导航
-      headerSections.forEach(section => {
-        section.style.display = 'block';
-        section.style.position = 'static'; // 重置position
-        section.style.top = 'auto'; // 重置top
-        section.style.left = 'auto'; // 重置left
-        section.style.right = 'auto'; // 重置right
-        section.style.transform = 'translateY(0px)'; // 重置transform
-        section.style.transition = 'none'; // 重置transition
-      });
-      if (anchorBarParent.classList.contains('is-sticky')) {
-        anchorBarParent.classList.remove('is-sticky');
-      }
-    } else if (scrollTop > showAnchorBarThreshold) {
-      handleScroll();
-    }
+    // 直接调用handleScroll来处理初始状态
+    handleScroll();
     isInitialized = true;
   }, 100); 
   
