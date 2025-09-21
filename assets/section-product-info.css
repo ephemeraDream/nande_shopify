@@ -1661,6 +1661,16 @@
     ;
   }
 
+  /* 移动端禁用hover放大镜效果 */
+  .product_info .product_info_left_contain:hover .imgmain_swiper {
+    cursor: default;
+  }
+
+  .product_info .product_info_left_contain:hover .imgmain_swiper .swiper-slide img,
+  .product_info .product_info_left_contain:hover .product_info_bundle_tabletop_img {
+    transform: none;
+  }
+
   .product_info .product_info_saleinfo {
     padding: 1.6rem;
     width: 100%;
