@@ -1655,10 +1655,14 @@
     height: 2.4rem;
   }
 
+  /* 移动端隐藏所有hover时的导航箭头 */
   .product_info .product_info_left_contain:hover .imgmain_swiper_prev,
-  .product_info .product_info_left_contain:hover .imgmain_swiper_next {
+  .product_info .product_info_left_contain:hover .imgmain_swiper_next,
+  .product_info .product_info_left_contain:hover .videomain_swiper_prev,
+  .product_info .product_info_left_contain:hover .videomain_swiper_next,
+  .product_info .product_info_left_contain:hover .modelmain_swiper_prev,
+  .product_info .product_info_left_contain:hover .modelmain_swiper_next {
     display: none !important;
-    ;
   }
 
   /* 移动端禁用hover放大镜效果 */
