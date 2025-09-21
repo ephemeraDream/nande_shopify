@@ -18,9 +18,12 @@ function initSwiper() {
       nextEl: ".imgthumb_swiper_box .imgthumb_swiper_next",
       prevEl: ".imgthumb_swiper_box .imgthumb_swiper_prev",
     },
+    observer: true,
     on: {
-      init: function (swiper) {
-        swiper.slides[0].classList.add("swiper-slide-actived")
+      observerUpdate: function () {
+        if (imgthumbSwiper.slides[0]) {
+          imgthumbSwiper.slides[0].classList.add("swiper-slide-actived")
+        }
       },
       click: function (swiper) {
         const clickedSlide = swiper.slides[swiper.clickedIndex];
