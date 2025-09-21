@@ -102,22 +102,37 @@ function initAnchorBar() {
     // 确保在页面顶部时总是显示主导航
     if (scrollTop <= showAnchorBarThreshold) {
       // 在页面顶部，显示主导航，隐藏锚点导航栏
-      headerSections.forEach(section => {
-        section.style.display = 'block';
-        section.style.position = 'relative'; // 重置position
-        section.style.top = 'auto'; // 重置top
-        section.style.left = 'auto'; // 重置left
-        section.style.right = 'auto'; // 重置right
-        section.style.transform = 'translateY(0px)'; // 重置transform
-        section.style.transition = 'none'; // 重置transition
+      // 使用与global.js相同的方式：translateY(0px)显示
+      let offset = 0;
+      headerSections.forEach((section, idx) => {
+        section.style.position = 'fixed';
+        section.style.top = offset + 'px';
+        section.style.left = '0';
+        section.style.right = '0';
+        section.style.transition = 'transform 0.2s ease-in-out';
+        section.style.transform = 'translateY(0px)'; // 显示主导航
+        offset += section.getBoundingClientRect().height;
       });
       if (anchorBarParent.classList.contains('is-sticky')) {
         anchorBarParent.classList.remove('is-sticky');
       }
     } else {
       // 滚动超过阈值，隐藏主导航，显示锚点导航栏
+      // 使用与global.js相同的方式：translateY(-${totalHeight}px)隐藏
+      let totalHeight = 0;
       headerSections.forEach(section => {
-        section.style.display = 'none';
+        totalHeight += section.getBoundingClientRect().height;
+      });
+      
+      let offset = 0;
+      headerSections.forEach((section, idx) => {
+        section.style.position = 'fixed';
+        section.style.top = offset + 'px';
+        section.style.left = '0';
+        section.style.right = '0';
+        section.style.transition = 'transform 0.2s ease-in-out';
+        section.style.transform = `translateY(-${totalHeight}px)`; // 隐藏主导航
+        offset += section.getBoundingClientRect().height;
       });
       if (!anchorBarParent.classList.contains('is-sticky')) {
         anchorBarParent.classList.add('is-sticky');
