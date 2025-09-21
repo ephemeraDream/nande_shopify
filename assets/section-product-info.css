@@ -1556,7 +1556,7 @@
   }
 
   .product_info_section .product_info_bundle_product {
-    flex: 0 0 calc((100% - 0.6rem) / 2);
+    flex: 0 0 calc((84% - 0.6rem) / 2);
   }
 
   .product_info .product_info_buybox_quantity_box {
