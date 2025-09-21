@@ -24,9 +24,9 @@ function initSwiper() {
         if (!clickedSlide || clickedSlide.style.display === 'none') return;
         swiper.slides.forEach((item, index) => {
           if (index !== swiper.clickedIndex) {
-            item.classList.remove("swiper-slide-active")
+            item.classList.remove("swiper-slide-actived")
           } else {
-            item.classList.add("swiper-slide-active")
+            item.classList.add("swiper-slide-actived")
           }
         })
         const mediaId = clickedSlide.dataset.mediaId;
