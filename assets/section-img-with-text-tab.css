@@ -70,6 +70,12 @@
 .img_with_text_tab .img_with_text_tab_contain .swiper-slide {
   display: flex;
   align-items: stretch;
+  height: 100%; /* 让所有slide保持相同高度 */
+}
+
+/* 确保swiper-wrapper也有统一高度 */
+.img_with_text_tab .img_with_text_tab_contain .swiper-wrapper {
+  align-items: stretch;
 }
 .img_with_text_tab .img_with_text_tab_contain .swiper-slide.right {
   flex-direction: row-reverse;
