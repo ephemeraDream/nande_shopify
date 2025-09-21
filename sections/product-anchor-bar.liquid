@@ -193,15 +193,15 @@ function initAnchorBar() {
 
   function initializeObserver() {
     sectionIds.forEach((sectionId) => {
-      waitForElement(`#${sectionId}`, (element) => {
+      const element = document.querySelector(`#${sectionId}`);
+      if (element) {
         sections.push(element);
         sectionsLoaded++;
-
-        if (sectionsLoaded === sectionIds.length) {
-          startIntersectionObserver(sections);
-        }
-      });
+      }
     });
+    
+    // 直接启动观察器，不管找到多少个元素
+    startIntersectionObserver(sections);
   } 
 
   function startIntersectionObserver(sections) {
@@ -270,23 +270,6 @@ function initAnchorBar() {
 
   initializeObserver();
 
-  function waitForElement(selector, callback) {
-    const element = document.querySelector(selector);
-    if (element) {
-      callback(element);
-      return;
-    }
-
-    const observer = new MutationObserver((mutations, obs) => {
-      const element = document.querySelector(selector);
-      if (element) {
-        obs.disconnect();
-        callback(element);
-      }
-    });
-
-    observer.observe(document.body, { childList: true, subtree: true });
-  }
   
 } // 结束 initAnchorBar 函数
 </script>
