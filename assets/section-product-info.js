@@ -23,7 +23,7 @@ function initSwiper() {
         const clickedSlide = swiper.slides[swiper.clickedIndex];
         if (!clickedSlide || clickedSlide.style.display === 'none') return;
         swiper.slides.forEach((item, index) => {
-          if (index !== swiper.activeIndex) {
+          if (index !== swiper.clickedIndex) {
             item.classList.remove("swiper-slide-active")
           } else {
             item.classList.add("swiper-slide-active")
