@@ -2,7 +2,7 @@ Fancybox.bind('[data-fancybox="product_info_img"]', {
   // Your custom options for a specific gallery
 });
 // swiper相关
-let imgthumbSwiper, imgboxSwiper, videothumbSwiper, videoboxSwiper;
+let imgthumbSwiper, imgboxSwiper, videothumbSwiper, videoboxSwiper, modelthumbSwiper, modelboxSwiper;
 initSwiper()
 // 在页面加载时就存一份原始 slides 数据
 const originSlides = {
@@ -96,6 +96,31 @@ function initSwiper() {
       nextEl: ".videothumb_swiper_box .videothumb_swiper_next",
       prevEl: ".videothumb_swiper_box .videothumb_swiper_prev",
     },
+    on: {
+      init: function (swiper) {
+        if (swiper.slides[0]) {
+          swiper.slides[0].classList.add("swiper-slide-actived")
+        }
+      },
+      click: function (swiper) {
+        swiper.slides.forEach((item, index) => {
+          if (index !== swiper.clickedIndex) {
+            item.classList.remove("swiper-slide-actived")
+          } else {
+            item.classList.add("swiper-slide-actived")
+          }
+        })
+      },
+      slideChange: function (swiper) {
+        swiper.slides.forEach((item, index) => {
+          if (index !== swiper.activeIndex) {
+            item.classList.remove("swiper-slide-actived")
+          } else {
+            item.classList.add("swiper-slide-actived")
+          }
+        })
+      }
+    },
   });
   videoboxSwiper = new Swiper(".videomain_swiper", {
     // loop: true,
@@ -130,6 +155,31 @@ function initSwiper() {
     navigation: {
       nextEl: ".modelthumb_swiper_box .modelthumb_swiper_next",
       prevEl: ".modelthumb_swiper_box .modelthumb_swiper_prev",
+    },
+    on: {
+      init: function (swiper) {
+        if (swiper.slides[0]) {
+          swiper.slides[0].classList.add("swiper-slide-actived")
+        }
+      },
+      click: function (swiper) {
+        swiper.slides.forEach((item, index) => {
+          if (index !== swiper.clickedIndex) {
+            item.classList.remove("swiper-slide-actived")
+          } else {
+            item.classList.add("swiper-slide-actived")
+          }
+        })
+      },
+      slideChange: function (swiper) {
+        swiper.slides.forEach((item, index) => {
+          if (index !== swiper.activeIndex) {
+            item.classList.remove("swiper-slide-actived")
+          } else {
+            item.classList.add("swiper-slide-actived")
+          }
+        })
+      }
     },
   });
   modelboxSwiper = new Swiper(".modelmain_swiper", {
