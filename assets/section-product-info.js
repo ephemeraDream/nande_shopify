@@ -97,23 +97,14 @@ function initSwiper() {
       prevEl: ".videothumb_swiper_box .videothumb_swiper_prev",
     },
     on: {
-      init: function (swiper) {
-        if (swiper.slides[0]) {
-          swiper.slides[0].classList.add("swiper-slide-actived")
+      observerUpdate: function () {
+        if (videothumbSwiper.slides[0]) {
+          videothumbSwiper.slides[0].classList.add("swiper-slide-actived")
         }
       },
       click: function (swiper) {
         swiper.slides.forEach((item, index) => {
           if (index !== swiper.clickedIndex) {
-            item.classList.remove("swiper-slide-actived")
-          } else {
-            item.classList.add("swiper-slide-actived")
-          }
-        })
-      },
-      slideChange: function (swiper) {
-        swiper.slides.forEach((item, index) => {
-          if (index !== swiper.activeIndex) {
             item.classList.remove("swiper-slide-actived")
           } else {
             item.classList.add("swiper-slide-actived")
@@ -136,8 +127,15 @@ function initSwiper() {
       prevEl: ".videomain_swiper .videomain_swiper_prev",
     },
     on: {
-      slideChange: function () {
+      slideChange: function (swiper) {
         resetAllVideos()
+        videothumbSwiper.slides.forEach((item, index) => {
+          if (index !== swiper.activeIndex) {
+            item.classList.remove("swiper-slide-actived")
+          } else {
+            item.classList.add("swiper-slide-actived")
+          }
+        })
       }
     },
     thumbs: {
@@ -157,23 +155,14 @@ function initSwiper() {
       prevEl: ".modelthumb_swiper_box .modelthumb_swiper_prev",
     },
     on: {
-      init: function (swiper) {
-        if (swiper.slides[0]) {
-          swiper.slides[0].classList.add("swiper-slide-actived")
+      observerUpdate: function () {
+        if (modelthumbSwiper.slides[0]) {
+          modelthumbSwiper.slides[0].classList.add("swiper-slide-actived")
         }
       },
       click: function (swiper) {
         swiper.slides.forEach((item, index) => {
           if (index !== swiper.clickedIndex) {
-            item.classList.remove("swiper-slide-actived")
-          } else {
-            item.classList.add("swiper-slide-actived")
-          }
-        })
-      },
-      slideChange: function (swiper) {
-        swiper.slides.forEach((item, index) => {
-          if (index !== swiper.activeIndex) {
             item.classList.remove("swiper-slide-actived")
           } else {
             item.classList.add("swiper-slide-actived")
@@ -194,6 +183,17 @@ function initSwiper() {
     navigation: {
       nextEl: ".modelmain_swiper .modelmain_swiper_next",
       prevEl: ".modelmain_swiper .modelmain_swiper_prev",
+    },
+    on: {
+      slideChange: function (swiper) {
+        modelthumbSwiper.slides.forEach((item, index) => {
+          if (index !== swiper.activeIndex) {
+            item.classList.remove("swiper-slide-actived")
+          } else {
+            item.classList.add("swiper-slide-actived")
+          }
+        })
+      }
     },
     thumbs: {
       swiper: modelthumbSwiper,
