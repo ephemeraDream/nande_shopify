@@ -393,12 +393,22 @@ svg.page-btn__circle {
 }
 
 @media screen and (max-width: 768px) {
-  /* 移动端显示移动端图片，隐藏PC端图片 */
+  /* 移动端默认显示PC端图片 */
   .section_banner .swiper-slide_img_pc {
+    display: block;
+  }
+  
+  /* 移动端图片默认隐藏 */
+  .section_banner .swiper-slide_img_pe {
     display: none;
   }
   
-  .section_banner .swiper-slide_img_pe {
+  /* 如果slide有移动端图片，则显示移动端图片并隐藏PC端图片 */
+  .section_banner .swiper-slide.has-mobile-img .swiper-slide_img_pc {
+    display: none;
+  }
+  
+  .section_banner .swiper-slide.has-mobile-img .swiper-slide_img_pe {
     display: block;
   }
 

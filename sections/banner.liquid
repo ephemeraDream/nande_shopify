@@ -67,7 +67,7 @@
 >
   <div class="swiper-wrapper {{ section.settings.height_mode }}-height" aria-live="polite">
     {% for block in section.blocks %}
-      <div class="swiper-slide">
+      <div class="swiper-slide{% if block.settings.file_image_pe != blank %} has-mobile-img{% endif %}">
         {% if block.settings.file_type == 'image' %}
           {% if block.settings.file_image != blank %}
             <a href="{{ block.settings.link }}">
