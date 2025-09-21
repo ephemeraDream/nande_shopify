@@ -148,7 +148,7 @@ function initAnchorBar() {
   window.addEventListener('scroll', handleScroll, { passive: true });
   
   // 初始化检查
-  setTimeout(() => {
+  {% comment %} setTimeout(() => {
     // 检查MainContent的margin-top
     const mainContent = document.getElementById('MainContent');
     if (mainContent) {
@@ -159,7 +159,7 @@ function initAnchorBar() {
       }
     }
     
-  }, 100); 
+  }, 100);  {% endcomment %}
   
   links.forEach((item) => {
     item.addEventListener('click', (e) => {
