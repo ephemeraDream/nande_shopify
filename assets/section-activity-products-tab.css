@@ -264,6 +264,7 @@
   align-self: stretch;
   margin-top: 3rem;
   gap: 2.8rem;
+  row-gap: 4rem;
 }
 
 .activity_products_tab .activity_products_tab_product {
