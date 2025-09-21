@@ -406,7 +406,7 @@
 /* Swiper样式 */
 .activity_products_tab .activity_products_tab_swiper {
   position: relative;
-  overflow: hidden;
+  /* overflow: hidden; */
   width: 100%;
 }
 
@@ -421,43 +421,13 @@
 }
 
 /* 导航按钮样式 */
-.activity_products_tab .activity_products_tab_swiper_prev,
-.activity_products_tab .activity_products_tab_swiper_next {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 4rem;
-  height: 4rem;
-  background: rgba(255, 255, 255, 0.9);
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  z-index: 10;
-  transition: all 0.3s ease;
-  opacity: 0;
-  visibility: hidden;
-}
 
 .activity_products_tab .activity_products_tab_swiper_prev {
-  left: 1rem;
+  left: -4rem;
 }
 
 .activity_products_tab .activity_products_tab_swiper_next {
-  right: 1rem;
-}
-
-.activity_products_tab .activity_products_tab_swiper:hover .activity_products_tab_swiper_prev,
-.activity_products_tab .activity_products_tab_swiper:hover .activity_products_tab_swiper_next {
-  opacity: 1;
-  visibility: visible;
-}
-
-.activity_products_tab .activity_products_tab_swiper_prev:hover,
-.activity_products_tab .activity_products_tab_swiper_next:hover {
-  background: rgba(255, 255, 255, 1);
-  transform: translateY(-50%) scale(1.1);
+  right: -4rem;
 }
 
 @media (max-width: 1024px) {
