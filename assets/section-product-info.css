@@ -1524,7 +1524,9 @@
   .product_info_section .product_info_bundle_product {
     flex: 0 0 calc((84% - 1.8rem) / 4);
   }
-
+  .product_info .product_info_right {
+    width: 100%;
+  }
   .product_info .product_info_left {
     width: 100%;
     min-width: 30rem;
@@ -1554,7 +1556,9 @@
   .product_info .product_info_right {
     top: 0;
   }
-
+  .product_info .product_info_right {
+    width: 100%;
+  }
   .product_info_section .product_info_bundle_product {
     flex: 0 0 calc((84% - 0.6rem) / 2);
   }
