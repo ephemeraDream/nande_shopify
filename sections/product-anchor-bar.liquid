@@ -1,7 +1,6 @@
 {{ 'section-product-anchor-bar.css' | asset_url | stylesheet_tag }}
 
-<!-- Product Anchor Bar Section - ID: {{ section.id }} -->
-<div class="product_anchor_bar_section padding-sider" data-section-id="{{ section.id }}">
+<div class="product_anchor_bar_section padding-sider">
   <div class="product_anchor_bar">
     <div class="product_anchor_bar_left">
       {% for block in section.blocks %}
@@ -19,12 +18,16 @@
         </a>
       {% endfor %}
     </div>
-    <button class="product_anchor_bar_btn product_info_buybox_btns_btn nd-btn" data-type="buy_it_now">
-      {{ 'common.jetzt_kaufen' | t }}
-      {{ 'icon-right-arrow.svg' | inline_asset_content }}
-    </button>
+    <a class="product_anchor_bar_btn product_info_buybox_btns_btn nd-btn" 
+       href="{{ section.settings.button_url | default: '#' }}"
+       {% if section.settings.button_target_blank %}target="_blank"{% endif %}>
+      {{ section.settings.button_text | default: 'Jetzt kaufen' }}
+      {% if section.settings.show_icon %}
+        {{ 'icon-right-arrow.svg' | inline_asset_content }}
+      {% endif %}
+    </a>
   </div>
-</div>
+</div>  
 
 <script>
   
@@ -37,18 +40,14 @@
   
 function initAnchorBar() {
     const links = document.querySelectorAll('.product_anchor_bar_left_item');
-    {% comment %} console.log('Found anchor links:', links.length); {% endcomment %}
     
     if (links.length === 0) {
-      console.log('No anchor links found, script will not run');
       return;
     }
     
     const anchorBarSection = document.querySelector('.product_anchor_bar_section');
-    console.log('Anchor bar section found:', !!anchorBarSection);
     
     if (!anchorBarSection) {
-      console.error('Anchor bar section not found');
       return;
     } 
     
@@ -59,9 +58,6 @@ function initAnchorBar() {
   
   // 隐藏主导航（三部分：announcement-bar, header-simple, header-menu）
   const headerSections = document.querySelectorAll('.shopify-section-group-header-group');
-  {% comment %} headerSections.forEach(section => {
-    section.style.display = 'none';
-  }); {% endcomment %}
   
   // 监听滚动事件
   let isScrolling = false;
@@ -174,13 +170,7 @@ function initAnchorBar() {
     
     function updateActiveLink() {
       const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-      const shouldBeAtTop = scrollTop < 100; // 距离顶部100px内认为是在顶部
-      
-      // 调试：打印所有链接的data-watch值
-      console.log('All links data-watch values:');
-      links.forEach((link, index) => {
-        console.log(`Link ${index}:`, link.getAttribute('data-watch'));
-      });
+      const shouldBeAtTop = scrollTop < 100;
       
       // 移除所有链接的active状态
       links.forEach((link) => link.classList.remove('active'));
@@ -214,31 +204,16 @@ function initAnchorBar() {
             closestSection = section;
             closestDistance = distance;
           }
-          console.log('distance', distance);
-          console.log('sectionTop', sectionTop);
-        console.log('sectionBottom', sectionBottom);
         });
-        console.log('closestSection', closestSection);//
         
-        console.log('closestDistance', closestDistance);
-        
-        console.log('viewportCenter', viewportCenter);
         // 激活最接近的section对应的链接
         if (closestSection) {
-          console.log('closestSection2', closestSection);
-          console.log('Looking for link with data-watch:', closestSection.id);
           const correspondingLink = document.querySelector(
             `.product_anchor_bar_left_item[data-watch="${closestSection.id}"]`
           );
-          console.log('correspondingLink', correspondingLink);
           if (correspondingLink) {
-            console.log('Adding active class to:', correspondingLink);
             correspondingLink.classList.add('active');
-          } else {
-            console.log('No corresponding link found for section:', closestSection.id);
           }
-        } else {
-          console.log('No closest section found');
         }
       }
     }
@@ -284,7 +259,31 @@ function initAnchorBar() {
   "disabled_on": {
     "groups": ["header", "footer"]
   },
-  "settings": [],
+  "settings": [
+    {
+      "type": "text",
+      "id": "button_text",
+      "label": "Button Text",
+      "default": "Jetzt kaufen"
+    },
+    {
+      "type": "url",
+      "id": "button_url",
+      "label": "Button URL"
+    },
+    {
+      "type": "checkbox",
+      "id": "button_target_blank",
+      "label": "Open in new tab",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "show_icon",
+      "label": "Show arrow icon",
+      "default": true
+    }
+  ],
   "blocks": [
     {
       "type": "item",
