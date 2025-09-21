@@ -84,7 +84,7 @@ function initAnchorBar() {
     const buffer = 10;
     
     // 计算显示锚点导航栏的阈值
-    const minThreshold = 250; // 最小阈值200px
+    const minThreshold = 280; // 最小阈值200px
     
     // 获取主导航的高度
     let headerHeight = 0;
@@ -104,7 +104,7 @@ function initAnchorBar() {
       // 在页面顶部，显示主导航，隐藏锚点导航栏
       headerSections.forEach(section => {
         section.style.display = 'block';
-        section.style.position = 'static'; // 重置position
+        section.style.position = 'relative'; // 重置position
         section.style.top = 'auto'; // 重置top
         section.style.left = 'auto'; // 重置left
         section.style.right = 'auto'; // 重置right
