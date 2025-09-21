@@ -115,6 +115,8 @@
             el.classList.remove('active');
             if (index === this.realIndex) {
               el.classList.add('active');
+              // 滚动到激活的tab位置
+              scrollToActiveTab(el);
             }
           });
         },
@@ -132,8 +134,53 @@
         tabItems.forEach((el) => el.classList.remove('active'));
         item.classList.add('active');
         img_with_text_tab_swiper.slideTo(index);
+        
+        // 滚动到激活的tab位置
+        scrollToActiveTab(item);
       });
     });
+    
+    // 添加滚动到激活tab的函数
+    function scrollToActiveTab(activeItem) {
+      const tabHead = sectionEl.querySelector('.img_with_text_tab_head');
+      if (!tabHead) return;
+      
+      // 检查是否有横向滚动条（内容宽度超过容器宽度）
+      const hasHorizontalScroll = tabHead.scrollWidth > tabHead.clientWidth;
+      if (!hasHorizontalScroll) return; // 没有滚动条就不需要滚动
+      
+      const tabHeadRect = tabHead.getBoundingClientRect();
+      const activeItemRect = activeItem.getBoundingClientRect();
+      
+      // 计算激活tab相对于容器的位置
+      const activeItemLeft = activeItemRect.left - tabHeadRect.left;
+      const activeItemRight = activeItemRect.right - tabHeadRect.left;
+      const containerWidth = tabHeadRect.width;
+      
+      let targetScrollLeft = tabHead.scrollLeft;
+      
+      // 如果激活的tab在可视区域左边，滚动到左边对齐
+      if (activeItemLeft < 0) {
+        targetScrollLeft = tabHead.scrollLeft + activeItemLeft;
+      }
+      // 如果激活的tab在可视区域右边，滚动到右边对齐
+      else if (activeItemRight > containerWidth) {
+        targetScrollLeft = tabHead.scrollLeft + (activeItemRight - containerWidth);
+      }
+      // 如果激活的tab已经在可视区域内，不需要滚动
+      else {
+        return;
+      }
+      
+      // 确保滚动位置不超出边界
+      targetScrollLeft = Math.max(0, Math.min(targetScrollLeft, tabHead.scrollWidth - tabHead.clientWidth));
+      
+      // 平滑滚动到目标位置
+      tabHead.scrollTo({
+        left: targetScrollLeft,
+        behavior: 'smooth'
+      });
+    }
   })();
 </script>
 
