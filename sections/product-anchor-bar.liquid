@@ -217,6 +217,7 @@ function initAnchorBar() {
         console.log('sectionBottom', sectionBottom);
         // 激活最接近的section对应的链接
         if (closestSection) {
+          console.log('closestSection2', closestSection);
           const correspondingLink = document.querySelector(
             `.product_anchor_bar_left_item[data-watch="${closestSection.id}"]`
           );
