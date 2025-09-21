@@ -652,6 +652,25 @@
   left: 1.4rem;
 }
 
+.collection_compare .collection_compare_product_tag {
+  padding: 0.6rem;
+  background-color: #FF7500;
+  font-family: "PP Right Grotesk";
+  font-size: 1.8rem;
+  font-weight: 500;
+  line-height: 80%;
+  letter-spacing: 0px;
+  font-variation-settings: "opsz" auto;
+  color: #FFFFFF;
+  position: absolute;
+  top: 1.4rem;
+  left: 1.4rem;
+}
+
+.collection_compare .collection_compare_product_saleinfo+.collection_compare_product_tag {
+  top: 4.4rem;
+}
+
 .collection_compare .collection_compare_product_saleinfo_countdown {
   font-family: "PP Right Grotesk";
   font-size: 1.6rem;

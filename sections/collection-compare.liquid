@@ -144,6 +144,9 @@
                   {% if sale_info != blank %}
                     <div class="collection_compare_product_saleinfo">{{ sale_info.name }}</div>
                   {% endif %}
+                  {% if product.metafields.custom.product_tag.value != blank %}
+                    <div class="collection_compare_product_tag">{{ product.metafields.custom.product_tag.value }}</div>
+                  {% endif %}
                 </div>
                 <div class="collection_compare_product_info">
                   <h4 class="collection_compare_product_title">{{ product.title }}</h4>
