@@ -105,7 +105,7 @@
       {% if section.settings.autoplay_enable %}
         autoplay: {
           delay: {{ section.settings.autoplay_delay }},
-          disableOnInteraction: false
+          disableOnInteraction: true
         },
       {% endif %}
       loop: {{ section.settings.loop }},
@@ -131,6 +131,11 @@
   
     tabItems.forEach((item, index) => {
       item.addEventListener('click', () => {
+        // 停止自动播放
+        if (img_with_text_tab_swiper.autoplay) {
+          img_with_text_tab_swiper.autoplay.stop();
+        }
+        
         tabItems.forEach((el) => el.classList.remove('active'));
         item.classList.add('active');
         img_with_text_tab_swiper.slideTo(index);
