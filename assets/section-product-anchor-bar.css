@@ -80,6 +80,10 @@
   .product_anchor_bar .product_anchor_bar_left {
     overflow-x: auto;
   }
+  .product_anchor_bar_section.padding-sider {
+    padding-left: 4rem;
+    padding-right: 4rem;
+  }
 }
 @media screen and (max-width: 767px) {
   .product_anchor_bar .product_anchor_bar_btn {
