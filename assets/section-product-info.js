@@ -34,6 +34,15 @@ function initSwiper() {
           // imgboxSwiper.slideTo(targetIndex);
           imgboxSwiper.slideToLoop(targetIndex, 0, false);
         }
+      },
+      slideChange: function (swiper) {
+        swiper.slides.forEach((item, index) => {
+          if (index !== swiper.activeIndex) {
+            item.classList.remove("swiper-slide-active")
+          } else {
+            item.classList.add("swiper-slide-active")
+          }
+        })
       }
     },
   });
