@@ -393,6 +393,14 @@ svg.page-btn__circle {
 }
 
 @media screen and (max-width: 768px) {
+  /* 移动端显示移动端图片，隐藏PC端图片 */
+  .section_banner .swiper-slide_img_pc {
+    display: none;
+  }
+  
+  .section_banner .swiper-slide_img_pe {
+    display: block;
+  }
 
   .section_banner .swiper-slide img,
   .section_banner .swiper-slide video {
