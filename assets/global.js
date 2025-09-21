@@ -1371,8 +1371,8 @@ class CartPerformance {
     // 检查是否有锚点导航栏
     const hasAnchorBar = document.querySelector('.product_anchor_bar_section');
     
-    if (scrollTop > lastScrollTop && scrollTop > 250) {
-      // 向下滚动且距离顶部超过300px：隐藏
+    if (scrollTop > lastScrollTop && scrollTop > 50) {
+      // 向下滚动且距离顶部超过50px：隐藏
       // 如果有锚点导航栏，需要更谨慎地处理
       if (hasAnchorBar) {
         // 检查锚点导航栏是否处于sticky状态
