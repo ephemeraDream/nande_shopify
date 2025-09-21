@@ -1456,6 +1456,19 @@
   width: 31.6rem;
 }
 
+.product_info .product_info_price_saletag {
+  background-color: #ff7500;
+  font-family: PP Right Grotesk;
+  font-size: 2rem;
+  font-weight: 500;
+  line-height: 94%;
+  letter-spacing: 0px;
+  font-variation-settings: "opsz" auto;
+  color: #fff;
+  padding: 1rem;
+  border-radius: 0.4rem;
+}
+
 @media screen and (max-width: 1440px) {
   .product_info_section .product_info_bundle_product {
     flex: 0 0 calc((100% - 1.8rem) / 4);

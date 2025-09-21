@@ -43,6 +43,7 @@
     endif
   endcomment
 %}
+{% assign sale_info = product.metafields.custom.sale_info.value %}
 
 <div class="product_info_section padding-sider" id="{{ section.settings.spec_id }}">
   <div class="product_info">
@@ -290,6 +291,9 @@
           <div class="product_info_price_op{% unless price_op > price_dp %} hidden{% endunless %}">
             {{ price_op | money_without_trailing_zeros }}
           </div>
+          {% if sale_info != blank and sale_info.code == blank %}
+            <div class="product_info_price_saletag">{{ sale_info.name }}</div>
+          {% endif %}
           {%- if section.settings.show_tax_and_shipping -%}
             {%- if cart.taxes_included or shop.shipping_policy.body != blank -%}
               <div class="product_info_policies">
@@ -305,8 +309,7 @@
             {%- endif -%}
           {%- endif -%}
         </div>
-        {% assign sale_info = product.metafields.custom.sale_info.value %}
-        {% if sale_info != blank %}
+        {% if sale_info != blank and sale_info.code != blank %}
           <div class="product_info_saleinfo">
             <div class="product_info_saleinfo_left">
               <div class="product_info_saleinfo_name">{{ sale_info.name }}</div>
