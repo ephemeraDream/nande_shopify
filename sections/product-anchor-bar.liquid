@@ -220,6 +220,7 @@ function initAnchorBar() {
           const correspondingLink = document.querySelector(
             `.product_anchor_bar_left_item[data-watch="${closestSection.id}"]`
           );
+          console.log('correspondingLink', correspondingLink);
           if (correspondingLink) {
             correspondingLink.classList.add('active');
           }
