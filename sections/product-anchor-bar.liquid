@@ -53,8 +53,7 @@ function initAnchorBar() {
     
     const anchorBarParent = anchorBarSection.parentElement;
   
-  // 添加sticky类
-  anchorBarParent.classList.add('is-sticky');
+  // 初始时不添加sticky类，等待滚动触发
   
   // 隐藏主导航（三部分：announcement-bar, header-simple, header-menu）
   const headerSections = document.querySelectorAll('.shopify-section-group-header-group');
@@ -84,9 +83,24 @@ function initAnchorBar() {
     // 添加缓冲区域，避免在边界附近闪烁
     const buffer = 10;
     
-    // 如果滚动到子导航的原始位置或更上方，显示主导航，隐藏子导航
-    if (scrollTop <= originalTop - buffer) {
-      // 显示主导航的三部分
+    // 计算显示锚点导航栏的阈值
+    const minThreshold = 200; // 最小阈值200px
+    
+    // 获取主导航的高度
+    let headerHeight = 0;
+    if (headerSections.length > 0) {
+      headerSections.forEach(section => {
+        const rect = section.getBoundingClientRect();
+        headerHeight += rect.height;
+      });
+    }
+    
+    // 如果锚点导航栏在主导航下面很近，使用主导航高度作为阈值
+    const headerThreshold = headerHeight + 50; // 主导航高度 + 50px缓冲
+    const showAnchorBarThreshold = Math.max(minThreshold, Math.min(originalTop - 50, headerThreshold));
+    
+    if (scrollTop <= showAnchorBarThreshold) {
+      // 在阈值以下，显示主导航，隐藏锚点导航栏
       headerSections.forEach(section => {
         if (section.style.display !== 'block') {
           section.style.display = 'block';
@@ -95,8 +109,8 @@ function initAnchorBar() {
       if (anchorBarParent.classList.contains('is-sticky')) {
         anchorBarParent.classList.remove('is-sticky');
       }
-    } else if (scrollTop > originalTop + buffer) {
-      // 如果滚动超过子导航原始位置，隐藏主导航，显示子导航
+    } else {
+      // 滚动超过阈值，隐藏主导航，显示锚点导航栏
       headerSections.forEach(section => {
         if (section.style.display !== 'none') {
           section.style.display = 'none';
@@ -120,9 +134,25 @@ function initAnchorBar() {
   
   // 初始化检查
   setTimeout(() => {
-    // 只有在页面有滚动距离时才执行handleScroll
+    // 检查初始滚动位置
     const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-    if (scrollTop > 300) {
+    const originalTop = getAnchorBarOriginalTop();
+    const minThreshold = 200;
+    
+    // 获取主导航的高度
+    let headerHeight = 0;
+    if (headerSections.length > 0) {
+      headerSections.forEach(section => {
+        const rect = section.getBoundingClientRect();
+        headerHeight += rect.height;
+      });
+    }
+    
+    // 计算显示阈值
+    const headerThreshold = headerHeight + 50;
+    const showAnchorBarThreshold = Math.max(minThreshold, Math.min(originalTop - 50, headerThreshold));
+    
+    if (scrollTop > showAnchorBarThreshold) {
       handleScroll();
     }
     isInitialized = true;
