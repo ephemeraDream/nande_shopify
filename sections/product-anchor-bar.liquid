@@ -102,16 +102,13 @@ function initAnchorBar() {
     // 确保在页面顶部时总是显示主导航
     if (scrollTop <= minThreshold) {
       // 在页面顶部，显示主导航，隐藏锚点导航栏
-      // 使用与global.js相同的方式：translateY(0px)显示
-      let offset = 0;
       headerSections.forEach((section, idx) => {
         section.style.position = 'relative';
-        section.style.top = offset + 'px';
+        section.style.top = 0 + 'px';
         section.style.left = '0';
         section.style.right = '0';
         section.style.transition = 'transform 0.2s ease-in-out';
         section.style.transform = 'translateY(0px)'; // 显示主导航
-        offset += section.getBoundingClientRect().height;
       });
       if (anchorBarParent.classList.contains('is-sticky')) {
         anchorBarParent.classList.remove('is-sticky');
