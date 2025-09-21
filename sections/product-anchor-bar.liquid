@@ -209,6 +209,7 @@ function initAnchorBar() {
     
     function updateActiveLink() {
       const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+      console.log(scrollTop);
       const shouldBeAtTop = scrollTop < 100;
       
       // 移除所有链接的active状态
