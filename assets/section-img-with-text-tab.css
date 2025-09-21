@@ -107,6 +107,7 @@
   background-color: #fff;
   padding: 3.4rem 2.2rem 14rem 3.8rem;
   position: relative;
+  flex-grow: 1;
 }
 .img_with_text_tab .img_with_text_tab_contain .swiper-slide.right .img_with_text_tab_contain_info {
   text-align: left;

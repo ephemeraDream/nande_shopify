@@ -150,7 +150,7 @@
     });
     
     // 统一slide高度的函数
-    function equalizeSlideHeights() {
+    {% comment %} function equalizeSlideHeights() {
       const slides = sectionEl.querySelectorAll('.swiper-slide');
       if (slides.length === 0) return;
       
@@ -172,7 +172,7 @@
       slides.forEach(slide => {
         slide.style.height = maxHeight + 'px';
       });
-    }
+    } {% endcomment %}
     
     // 添加滚动到激活tab的函数
     function scrollToActiveTab(activeItem) {
