@@ -397,6 +397,10 @@
   text-decoration: underline;
   color: #FF7500;
 }
+.activity_products_tab .activity_products_tab_product_saleinfo_countdown{
+  position: absolute;
+  bottom: -2.5rem;
+}
 
 @media (max-width: 1024px) {
   .activity_products_tab .activity_products_tab_product {

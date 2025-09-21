@@ -108,7 +108,6 @@
                 <h4 class="activity_products_tab_product_title">{{ product.title }}</h4>
 
                 <div>
-                  {% render 'product-rating', product: product %}
                   {% if sale_info != blank %}
                     <div class="activity_products_tab_product_saleinfo_code">
                       {{ 'common.code' | t -}}
@@ -116,6 +115,7 @@
                       <div class="activity_products_tab_saleinfo_btn" data-code="{{ sale_info.code }}">COPY</div>
                     </div>
                   {% endif %}
+                  {% render 'product-rating', product: product %}
                   <div class="activity_products_tab_product_price">
                     <div>
                       {{ product.price | money_without_trailing_zeros }}
@@ -130,24 +130,25 @@
                     {{ 'common.jetzt_konfigurieren' | t }}
                     {{ 'icon-right-arrow.svg' | inline_asset_content }}
                   </div>
-                  {% if sale_info != blank %}
-                    <div
-                      class="activity_products_tab_product_saleinfo_countdown"
-                      data-end-date="{{ sale_info.datetime | date: "%Y-%m-%dT%H:%M:%SZ" }}"
-                    >
-                      <span class="activity_products_tab_product_saleinfo_countdown_text">
-                        {{- 'common.ends_in' | t -}}
-                      </span>
-                      <div class="activity_products_tab_product_saleinfo_countdown_item" data-type="day"></div>
-                      <span>:</span>
-                      <div class="activity_products_tab_product_saleinfo_countdown_item" data-type="hour"></div>
-                      <span>:</span>
-                      <div class="activity_products_tab_product_saleinfo_countdown_item" data-type="minute"></div>
-                      <span>:</span>
-                      <div class="activity_products_tab_product_saleinfo_countdown_item" data-type="second"></div>
-                    </div>
-                  {% endif %}
+                  
                 </div>
+                {% if sale_info != blank %}
+                  <div
+                    class="activity_products_tab_product_saleinfo_countdown"
+                    data-end-date="{{ sale_info.datetime | date: "%Y-%m-%dT%H:%M:%SZ" }}"
+                  >
+                    <span class="activity_products_tab_product_saleinfo_countdown_text">
+                      {{- 'common.ends_in' | t -}}
+                    </span>
+                    <div class="activity_products_tab_product_saleinfo_countdown_item" data-type="day"></div>
+                    <span>:</span>
+                    <div class="activity_products_tab_product_saleinfo_countdown_item" data-type="hour"></div>
+                    <span>:</span>
+                    <div class="activity_products_tab_product_saleinfo_countdown_item" data-type="minute"></div>
+                    <span>:</span>
+                    <div class="activity_products_tab_product_saleinfo_countdown_item" data-type="second"></div>
+                  </div>
+                {% endif %}
               </div>
             </a>
           {% endfor %}
