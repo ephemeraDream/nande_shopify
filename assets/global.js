@@ -1368,22 +1368,42 @@ class CartPerformance {
       return;
     }
 
-    if (scrollTop > lastScrollTop && scrollTop > 300) {
-      // 向下滚动且距离顶部超过200px：隐藏
-      let offset = 0;
-      navbarList.forEach((el, idx) => {
-        el.style.position = 'fixed';
-        el.style.top = offset + 'px';
-        el.style.left = 0;
-        el.style.right = 0;
-        // el.style.zIndex = 1000 + idx;
-        el.style.transition = 'transform 0.2s ease-in-out';
-        el.style.transform = `translateY(-${totalHeight}px)`;
-        offset += headerHeights[idx];
-      });
-      // if (document.querySelector('.product_anchor_bar_section')) {
-      //   document.querySelector('.product_anchor_bar_section').parentElement.style.top = '0px';
-      // }
+    // 检查是否有锚点导航栏
+    const hasAnchorBar = document.querySelector('.product_anchor_bar_section');
+    
+    if (scrollTop > lastScrollTop && scrollTop > 250) {
+      // 向下滚动且距离顶部超过300px：隐藏
+      // 如果有锚点导航栏，需要更谨慎地处理
+      if (hasAnchorBar) {
+        // 检查锚点导航栏是否处于sticky状态
+        const anchorBarParent = hasAnchorBar.parentElement;
+        if (anchorBarParent && anchorBarParent.classList.contains('is-sticky')) {
+          // 锚点导航栏处于sticky状态，隐藏主导航
+          let offset = 0;
+          navbarList.forEach((el, idx) => {
+            el.style.position = 'fixed';
+            el.style.top = offset + 'px';
+            el.style.left = 0;
+            el.style.right = 0;
+            el.style.transition = 'transform 0.2s ease-in-out';
+            el.style.transform = `translateY(-${totalHeight}px)`;
+            offset += headerHeights[idx];
+          });
+        }
+        // 如果锚点导航栏不在sticky状态，不隐藏主导航
+      } else {
+        // 没有锚点导航栏，正常隐藏
+        let offset = 0;
+        navbarList.forEach((el, idx) => {
+          el.style.position = 'fixed';
+          el.style.top = offset + 'px';
+          el.style.left = 0;
+          el.style.right = 0;
+          el.style.transition = 'transform 0.2s ease-in-out';
+          el.style.transform = `translateY(-${totalHeight}px)`;
+          offset += headerHeights[idx];
+        });
+      }
     } else {
       // 向上滚动：恢复原位
       let offset = 0;
