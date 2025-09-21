@@ -99,7 +99,18 @@ function initAnchorBar() {
     const headerThreshold = headerHeight + 50; // 主导航高度 + 50px缓冲
     const showAnchorBarThreshold = Math.max(minThreshold, Math.min(originalTop - 50, headerThreshold));
     
-    if (scrollTop <= showAnchorBarThreshold) {
+    // 确保在页面顶部时总是显示主导航
+    if (scrollTop <= 50) {
+      // 在页面顶部，显示主导航，隐藏锚点导航栏
+      headerSections.forEach(section => {
+        if (section.style.display !== 'block') {
+          section.style.display = 'block';
+        }
+      });
+      if (anchorBarParent.classList.contains('is-sticky')) {
+        anchorBarParent.classList.remove('is-sticky');
+      }
+    } else if (scrollTop <= showAnchorBarThreshold) {
       // 在阈值以下，显示主导航，隐藏锚点导航栏
       headerSections.forEach(section => {
         if (section.style.display !== 'block') {
@@ -152,7 +163,18 @@ function initAnchorBar() {
     const headerThreshold = headerHeight + 50;
     const showAnchorBarThreshold = Math.max(minThreshold, Math.min(originalTop - 50, headerThreshold));
     
-    if (scrollTop > showAnchorBarThreshold) {
+    // 确保在顶部时显示主导航
+    if (scrollTop <= 50) {
+      // 在顶部，显示主导航
+      headerSections.forEach(section => {
+        if (section.style.display !== 'block') {
+          section.style.display = 'block';
+        }
+      });
+      if (anchorBarParent.classList.contains('is-sticky')) {
+        anchorBarParent.classList.remove('is-sticky');
+      }
+    } else if (scrollTop > showAnchorBarThreshold) {
       handleScroll();
     }
     isInitialized = true;
