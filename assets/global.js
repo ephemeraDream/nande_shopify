@@ -1368,7 +1368,7 @@ class CartPerformance {
       return;
     }
 
-    if (scrollTop > lastScrollTop && scrollTop > 200) {
+    if (scrollTop > lastScrollTop && scrollTop > 250) {
       // 向下滚动且距离顶部超过200px：隐藏
       let offset = 0;
       navbarList.forEach((el, idx) => {
