@@ -407,6 +407,7 @@
 .activity_products_tab .activity_products_tab_swiper {
   position: relative;
   overflow: hidden;
+  width: 100%;
 }
 
 .activity_products_tab .activity_products_tab_swiper .swiper-slide {
