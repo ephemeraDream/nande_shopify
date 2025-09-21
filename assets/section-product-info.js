@@ -57,6 +57,13 @@ function initSwiper() {
     on: {
       slideChange: function (swiper) {
         imgthumbSwiper.slideTo(swiper.activeIndex)
+        imgthumbSwiper.slides.forEach((item, index) => {
+          if (index !== swiper.activeIndex) {
+            item.classList.remove("swiper-slide-actived")
+          } else {
+            item.classList.add("swiper-slide-actived")
+          }
+        })
         const bundleImg = document.querySelector('.product_info_bundle_tabletop_img');
         if (!bundleImg || !swiper || !swiper.slides || swiper.slides.length === 0) return;
 
