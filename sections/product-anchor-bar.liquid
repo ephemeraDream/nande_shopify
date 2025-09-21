@@ -27,7 +27,6 @@
 </div>
 
 <script>
-  console.log('Product Anchor Bar Script starting...');
   
   // 等待DOM加载完成
   if (document.readyState === 'loading') {
@@ -36,11 +35,9 @@
     initAnchorBar();
   }
   
-  function initAnchorBar() {
-    console.log('Initializing Product Anchor Bar...');
-    
+function initAnchorBar() {
     const links = document.querySelectorAll('.product_anchor_bar_left_item');
-    console.log('Found anchor links:', links.length);
+    {% comment %} console.log('Found anchor links:', links.length); {% endcomment %}
     
     if (links.length === 0) {
       console.log('No anchor links found, script will not run');
@@ -53,7 +50,7 @@
     if (!anchorBarSection) {
       console.error('Anchor bar section not found');
       return;
-    }
+    } 
     
     const anchorBarParent = anchorBarSection.parentElement;
   
@@ -82,7 +79,6 @@
   }
   
   function handleScroll() {
-    console.log('handleScroll');
     if (isScrolling) return;
     isScrolling = true;
     
@@ -171,46 +167,62 @@
         }
       });
     });
-  }
+  } 
 
   function startIntersectionObserver(sections) {
-    // 使用滚动监听来检测当前最接近视口中心的section
     let scrollTimeout;
+    
     function updateActiveLink() {
       const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-      const windowHeight = window.innerHeight;
-      const viewportCenter = scrollTop + windowHeight / 2;
-      
-      let closestSection = null;
-      let closestDistance = Infinity;
-      
-      // 检查每个section与视口中心的距离
-      sections.forEach((section) => {
-        const rect = section.getBoundingClientRect();
-        const sectionTop = rect.top + scrollTop;
-        const sectionBottom = sectionTop + rect.height;
-        const sectionCenter = sectionTop + rect.height / 2;
-        
-        // 计算section中心与视口中心的距离
-        const distance = Math.abs(sectionCenter - viewportCenter);
-        
-        // 如果section在视口内且距离更近，则选择它
-        if (sectionTop <= viewportCenter && sectionBottom >= viewportCenter && distance < closestDistance) {
-          closestSection = section;
-          closestDistance = distance;
-        }
-      });
+      const shouldBeAtTop = scrollTop < 100; // 距离顶部100px内认为是在顶部
       
       // 移除所有链接的active状态
       links.forEach((link) => link.classList.remove('active'));
       
-      // 激活最接近的section对应的链接
-      if (closestSection) {
-        const correspondingLink = document.querySelector(
-          `.product_anchor_bar_left_item[data-watch="${closestSection.id}"]`
-        );
-        if (correspondingLink) {
-          correspondingLink.classList.add('active');
+      if (shouldBeAtTop) {
+        // 在顶部，激活第一个链接（回到顶部）
+        const firstLink = document.querySelector('.product_anchor_bar_left_item[data-watch="top"]');
+        if (firstLink) {
+          firstLink.classList.add('active');
+        }
+      } else {
+        // 不在顶部，找到最接近视口中心的section
+        const windowHeight = window.innerHeight;
+        const viewportCenter = scrollTop + windowHeight / 2;
+        
+        let closestSection = null;
+        let closestDistance = Infinity;
+        
+        // 检查每个section与视口中心的距离
+        sections.forEach((section) => {
+          const rect = section.getBoundingClientRect();
+          const sectionTop = rect.top + scrollTop;
+          const sectionBottom = sectionTop + rect.height;
+          const sectionCenter = sectionTop + rect.height / 2;
+          
+          // 计算section中心与视口中心的距离
+          const distance = Math.abs(sectionCenter - viewportCenter);
+          
+          // 如果section在视口内且距离更近，则选择它
+          if (sectionTop <= viewportCenter && sectionBottom >= viewportCenter && distance < closestDistance) {
+            closestSection = section;
+            closestDistance = distance;
+          }
+        });
+        console.log('closestSection', closestSection);
+        console.log('distance', distance);
+        onsole.log('closestDistance', closestDistance);
+        console.log('sectionTop', sectionTop);
+        console.log('viewportCenter', viewportCenter);
+        console.log('sectionBottom', sectionBottom);
+        // 激活最接近的section对应的链接
+        if (closestSection) {
+          const correspondingLink = document.querySelector(
+            `.product_anchor_bar_left_item[data-watch="${closestSection.id}"]`
+          );
+          if (correspondingLink) {
+            correspondingLink.classList.add('active');
+          }
         }
       }
     }
@@ -223,25 +235,6 @@
     
     // 初始调用
     updateActiveLink();
-    
-    // 修改updateActiveLink函数，添加顶部处理逻辑
-    const originalUpdateActiveLink = updateActiveLink;
-    updateActiveLink = function() {
-      const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-      const shouldBeAtTop = scrollTop < 100; // 距离顶部100px内认为是在顶部
-      
-      if (shouldBeAtTop) {
-        // 在顶部，激活第一个链接
-        links.forEach((link) => link.classList.remove('active'));
-        const firstLink = document.querySelector('.product_anchor_bar_left_item[data-watch="top"]');
-        if (firstLink) {
-          firstLink.classList.add('active');
-        }
-      } else {
-        // 不在顶部，使用原来的逻辑
-        originalUpdateActiveLink();
-      }
-    };
   }
 
   initializeObserver();
@@ -264,7 +257,7 @@
     observer.observe(document.body, { childList: true, subtree: true });
   }
   
-  } // 结束 initAnchorBar 函数
+} // 结束 initAnchorBar 函数
 </script>
 
 {% schema %}
