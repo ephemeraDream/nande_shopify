@@ -19,7 +19,7 @@
         class="activity_products_tab_contain{% if forloop.first %} active{% endif %}"
         data-value="{{ block.settings.title }}"
       >
-        {% assign first_product = block.settings.product_list | first %}
+        {% comment %} {% assign first_product = block.settings.product_list | first %}
         <div class="activity_products_tab_contain_first_product">
           <div class="activity_products_tab_contain_first_product_img">
             <img
@@ -87,9 +87,10 @@
               {{ 'icon-right-arrow.svg' | inline_asset_content }}
             </a>
           </div>
-        </div>
+        </div> {% endcomment %}
         <div class="activity_products_tab_contain_products">
-          {% for product in block.settings.product_list offset: 1 %}
+          {% comment %} {% for product in block.settings.product_list offset: 1 %}{% endcomment %}
+           {% for product in block.settings.product_list %} 
             {% assign sale_info = product.metafields.custom.sale_info.value %}
             <a
               class="activity_products_tab_product"
@@ -163,11 +164,57 @@
       if (item.classList.contains('active')) return;
       document.querySelector('.activity_products_tab_head_item.active').classList.remove('active');
       item.classList.add('active');
+      
+      // 滚动到激活的tab位置
+      scrollToActiveTab(item);
+      
       const value = item.dataset.value;
       document.querySelector('.activity_products_tab_contain.active').classList.remove('active');
       document.querySelector(`.activity_products_tab_contain[data-value="${value}"]`).classList.add('active');
     });
   });
+
+  // 添加滚动到激活tab的函数
+  function scrollToActiveTab(activeItem) {
+    const tabHead = document.querySelector('#shopify-section-{{ section.id }} .activity_products_tab_head');
+    if (!tabHead) return;
+    
+    // 检查是否有横向滚动条（内容宽度超过容器宽度）
+    const hasHorizontalScroll = tabHead.scrollWidth > tabHead.clientWidth;
+    if (!hasHorizontalScroll) return; // 没有滚动条就不需要滚动
+    
+    const tabHeadRect = tabHead.getBoundingClientRect();
+    const activeItemRect = activeItem.getBoundingClientRect();
+    
+    // 计算激活tab相对于容器的位置
+    const activeItemLeft = activeItemRect.left - tabHeadRect.left;
+    const activeItemRight = activeItemRect.right - tabHeadRect.left;
+    const containerWidth = tabHeadRect.width;
+    
+    let targetScrollLeft = tabHead.scrollLeft;
+    
+    // 如果激活的tab在可视区域左边，滚动到左边对齐
+    if (activeItemLeft < 0) {
+      targetScrollLeft = tabHead.scrollLeft + activeItemLeft;
+    }
+    // 如果激活的tab在可视区域右边，滚动到右边对齐
+    else if (activeItemRight > containerWidth) {
+      targetScrollLeft = tabHead.scrollLeft + (activeItemRight - containerWidth);
+    }
+    // 如果激活的tab已经在可视区域内，不需要滚动
+    else {
+      return;
+    }
+    
+    // 确保滚动位置不超出边界
+    targetScrollLeft = Math.max(0, Math.min(targetScrollLeft, tabHead.scrollWidth - tabHead.clientWidth));
+    
+    // 平滑滚动到目标位置
+    tabHead.scrollTo({
+      left: targetScrollLeft,
+      behavior: 'smooth'
+    });
+  }
 
   const initCountDown = (countdownEl, itemClassName) => {
     {% comment %} const countdownEl = document.querySelectorAll('.activity_products_tab_product_saleinfo_countdown'); {% endcomment %}

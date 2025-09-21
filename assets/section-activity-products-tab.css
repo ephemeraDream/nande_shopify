@@ -31,9 +31,17 @@
 .activity_products_tab .activity_products_tab_head {
   display: flex;
   justify-content: center;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   gap: 2.8rem;
   margin-top: 3rem;
+  overflow-x: auto;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
+  padding: 0 2rem;
+}
+
+.activity_products_tab .activity_products_tab_head::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera */
 }
 
 .activity_products_tab .activity_products_tab_head_item {
@@ -52,6 +60,8 @@
   font-variation-settings: "opsz" auto;
   color: #FFFFFF;
   cursor: pointer;
+  flex: 0 0 auto;
+  white-space: nowrap;
 }
 
 .activity_products_tab .activity_products_tab_head_item.active {
@@ -400,6 +410,20 @@
   }
 }
 @media (max-width: 767px) {
+  /* 移动端tab导航优化 */
+  .activity_products_tab .activity_products_tab_head {
+    gap: 1.5rem;
+    padding: 0 1rem;
+    justify-content: flex-start;
+  }
+  
+  .activity_products_tab .activity_products_tab_head_item {
+    min-width: 20rem;
+    height: 3.6rem;
+    font-size: 2rem;
+    padding: 0 0.8rem;
+  }
+
 .activity_products_tab .activity_products_tab_contain_first_product{
   flex-direction: column;
 }
