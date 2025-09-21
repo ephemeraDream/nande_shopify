@@ -22,7 +22,13 @@ function initSwiper() {
       click: function (swiper) {
         const clickedSlide = swiper.slides[swiper.clickedIndex];
         if (!clickedSlide || clickedSlide.style.display === 'none') return;
-
+        swiper.slides.forEach((item, index) => {
+          if (index !== swiper.activeIndex) {
+            item.classList.remove("swiper-slide-active")
+          } else {
+            item.classList.add("swiper-slide-active")
+          }
+        })
         const mediaId = clickedSlide.dataset.mediaId;
 
         const visibleSlides = Array.from(document.querySelectorAll('.imgmain_swiper .swiper-slide'))
@@ -34,15 +40,6 @@ function initSwiper() {
           // imgboxSwiper.slideTo(targetIndex);
           imgboxSwiper.slideToLoop(targetIndex, 0, false);
         }
-      },
-      slideChange: function (swiper) {
-        swiper.slides.forEach((item, index) => {
-          if (index !== swiper.activeIndex) {
-            item.classList.remove("swiper-slide-active")
-          } else {
-            item.classList.add("swiper-slide-active")
-          }
-        })
       }
     },
   });
