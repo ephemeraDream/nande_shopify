@@ -4,6 +4,58 @@
 ------------------------------------------------------------
 {% endcomment %}
 
+<style>
+/* Tab导航横向滚动样式 */
+.tabs_topic .tab-titles {
+  display: flex;
+  overflow-x: auto;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
+  white-space: nowrap;
+  gap: 2rem;
+  padding: 0 2rem;
+}
+
+.tabs_topic .tab-titles::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera */
+}
+
+.tabs_topic .tab-titles li {
+  flex: 0 0 auto;
+  cursor: pointer;
+  padding: 1rem 2rem;
+  border-radius: 0.5rem;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
+
+.tabs_topic .tab-titles li.active {
+  background-color: #1F1F1F;
+  color: #BDFF00;
+}
+
+.tabs_topic .tab-titles li:hover {
+  background-color: #f0f0f0;
+}
+
+.tabs_topic .tab-titles li.active:hover {
+  background-color: #1F1F1F;
+}
+
+/* 移动端优化 */
+@media screen and (max-width: 768px) {
+  .tabs_topic .tab-titles {
+    gap: 1rem;
+    padding: 0 1rem;
+  }
+  
+  .tabs_topic .tab-titles li {
+    padding: 0.8rem 1.5rem;
+    font-size: 1.4rem;
+  }
+}
+</style>
+
 <div class="padding-top-120 tabs_topic" id="{{ section.settings.spec_id }}">
   <div class="session-box-padding padding-bottom-60">
     {% unless section.settings.title == blank %}
@@ -117,12 +169,62 @@
 // 将switchTab函数定义为全局函数
 function switchTab(idx) {
   // nav
-  document.querySelectorAll('.tabs_topic .tab-titles li').forEach(li=>{
+  const tabItems = document.querySelectorAll('.tabs_topic .tab-titles li');
+  tabItems.forEach(li=>{
     li.classList.toggle('active', li.dataset.tab == idx);
   });
+  
+  // 滚动到激活的tab位置
+  const activeTab = document.querySelector(`.tabs_topic .tab-titles li[data-tab="${idx}"]`);
+  if (activeTab) {
+    scrollToActiveTab(activeTab);
+  }
+  
   // pannel
   document.querySelectorAll('.tabs_topic [data-tab-panel]').forEach(p=>{
     p.classList.toggle('hidden', p.dataset.tabPanel != idx);
+  });
+}
+
+// 添加滚动到激活tab的函数
+function scrollToActiveTab(activeItem) {
+  const tabTitles = document.querySelector('.tabs_topic .tab-titles');
+  if (!tabTitles) return;
+  
+  // 检查是否有横向滚动条（内容宽度超过容器宽度）
+  const hasHorizontalScroll = tabTitles.scrollWidth > tabTitles.clientWidth;
+  if (!hasHorizontalScroll) return; // 没有滚动条就不需要滚动
+  
+  const tabTitlesRect = tabTitles.getBoundingClientRect();
+  const activeItemRect = activeItem.getBoundingClientRect();
+  
+  // 计算激活tab相对于容器的位置
+  const activeItemLeft = activeItemRect.left - tabTitlesRect.left;
+  const activeItemRight = activeItemRect.right - tabTitlesRect.left;
+  const containerWidth = tabTitlesRect.width;
+  
+  let targetScrollLeft = tabTitles.scrollLeft;
+  
+  // 如果激活的tab在可视区域左边，滚动到左边对齐
+  if (activeItemLeft < 0) {
+    targetScrollLeft = tabTitles.scrollLeft + activeItemLeft;
+  }
+  // 如果激活的tab在可视区域右边，滚动到右边对齐
+  else if (activeItemRight > containerWidth) {
+    targetScrollLeft = tabTitles.scrollLeft + (activeItemRight - containerWidth);
+  }
+  // 如果激活的tab已经在可视区域内，不需要滚动
+  else {
+    return;
+  }
+  
+  // 确保滚动位置不超出边界
+  targetScrollLeft = Math.max(0, Math.min(targetScrollLeft, tabTitles.scrollWidth - tabTitles.clientWidth));
+  
+  // 平滑滚动到目标位置
+  tabTitles.scrollTo({
+    left: targetScrollLeft,
+    behavior: 'smooth'
   });
 }
 
