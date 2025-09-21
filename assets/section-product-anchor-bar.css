@@ -14,7 +14,7 @@
   align-items: center;
   justify-content: space-between;
 }
-.is_sticky .product_anchor_bar {
+.is-sticky .product_anchor_bar {
   border:none!important;
 }
 
