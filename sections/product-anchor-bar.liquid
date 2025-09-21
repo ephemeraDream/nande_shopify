@@ -105,7 +105,7 @@ function initAnchorBar() {
       // 使用与global.js相同的方式：translateY(0px)显示
       let offset = 0;
       headerSections.forEach((section, idx) => {
-        section.style.position = 'fixed';
+        section.style.position = 'relative';
         section.style.top = offset + 'px';
         section.style.left = '0';
         section.style.right = '0';
