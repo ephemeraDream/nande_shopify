@@ -176,6 +176,12 @@ function initAnchorBar() {
       const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
       const shouldBeAtTop = scrollTop < 100; // 距离顶部100px内认为是在顶部
       
+      // 调试：打印所有链接的data-watch值
+      console.log('All links data-watch values:');
+      links.forEach((link, index) => {
+        console.log(`Link ${index}:`, link.getAttribute('data-watch'));
+      });
+      
       // 移除所有链接的active状态
       links.forEach((link) => link.classList.remove('active'));
       
@@ -209,22 +215,28 @@ function initAnchorBar() {
             closestDistance = distance;
           }
         });
-        console.log('closestSection', closestSection);
+        console.log('closestSection', closestSection);//
         console.log('distance', distance);
-        onsole.log('closestDistance', closestDistance);
+        console.log('closestDistance', closestDistance);
         console.log('sectionTop', sectionTop);
         console.log('viewportCenter', viewportCenter);
         console.log('sectionBottom', sectionBottom);
         // 激活最接近的section对应的链接
         if (closestSection) {
           console.log('closestSection2', closestSection);
+          console.log('Looking for link with data-watch:', closestSection.id);
           const correspondingLink = document.querySelector(
             `.product_anchor_bar_left_item[data-watch="${closestSection.id}"]`
           );
           console.log('correspondingLink', correspondingLink);
           if (correspondingLink) {
+            console.log('Adding active class to:', correspondingLink);
             correspondingLink.classList.add('active');
+          } else {
+            console.log('No corresponding link found for section:', closestSection.id);
           }
+        } else {
+          console.log('No closest section found');
         }
       }
     }
