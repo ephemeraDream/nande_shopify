@@ -1389,6 +1389,17 @@ class CartPerformance {
             el.style.transform = `translateY(-${totalHeight}px)`;
             offset += headerHeights[idx];
           });
+        }else{
+          navbarList.forEach((el, idx) => {
+            el.style.display = 'block';
+            el.style.position = 'relative';
+            el.style.top = 0;
+            el.style.left = 0;
+            el.style.right = 0;
+            el.style.transition = 'transform 0.2s ease-in-out';
+            el.style.transform = `translateY(-${totalHeight}px)`;
+            offset += headerHeights[idx];
+          });
         }
         // 如果锚点导航栏不在sticky状态，不隐藏主导航
       } else {
