@@ -103,19 +103,13 @@ function initAnchorBar() {
     if (scrollTop <= 50) {
       // 在页面顶部，显示主导航，隐藏锚点导航栏
       headerSections.forEach(section => {
-        if (section.style.display !== 'block') {
-          section.style.display = 'block';
-        }
-      });
-      if (anchorBarParent.classList.contains('is-sticky')) {
-        anchorBarParent.classList.remove('is-sticky');
-      }
-    } else if (scrollTop <= showAnchorBarThreshold) {
-      // 在阈值以下，显示主导航，隐藏锚点导航栏
-      headerSections.forEach(section => {
-        if (section.style.display !== 'block') {
-          section.style.display = 'block';
-        }
+        section.style.display = 'block';
+        section.style.position = 'static'; // 重置position
+        section.style.top = 'auto'; // 重置top
+        section.style.left = 'auto'; // 重置left
+        section.style.right = 'auto'; // 重置right
+        section.style.transform = 'translateY(0px)'; // 重置transform
+        section.style.transition = 'none'; // 重置transition
       });
       if (anchorBarParent.classList.contains('is-sticky')) {
         anchorBarParent.classList.remove('is-sticky');
@@ -123,9 +117,7 @@ function initAnchorBar() {
     } else {
       // 滚动超过阈值，隐藏主导航，显示锚点导航栏
       headerSections.forEach(section => {
-        if (section.style.display !== 'none') {
-          section.style.display = 'none';
-        }
+        section.style.display = 'none';
       });
       if (!anchorBarParent.classList.contains('is-sticky')) {
         anchorBarParent.classList.add('is-sticky');
@@ -167,9 +159,13 @@ function initAnchorBar() {
     if (scrollTop <= 50) {
       // 在顶部，显示主导航
       headerSections.forEach(section => {
-        if (section.style.display !== 'block') {
-          section.style.display = 'block';
-        }
+        section.style.display = 'block';
+        section.style.position = 'static'; // 重置position
+        section.style.top = 'auto'; // 重置top
+        section.style.left = 'auto'; // 重置left
+        section.style.right = 'auto'; // 重置right
+        section.style.transform = 'translateY(0px)'; // 重置transform
+        section.style.transition = 'none'; // 重置transition
       });
       if (anchorBarParent.classList.contains('is-sticky')) {
         anchorBarParent.classList.remove('is-sticky');
