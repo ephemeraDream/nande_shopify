@@ -100,7 +100,7 @@ function initAnchorBar() {
     const showAnchorBarThreshold = Math.max(minThreshold, Math.min(originalTop - 50, headerThreshold));
     
     // 确保在页面顶部时总是显示主导航
-    if (scrollTop <= headerThreshold) {
+    if (scrollTop <= minThreshold) {
       // 在页面顶部，显示主导航，隐藏锚点导航栏
       // 使用与global.js相同的方式：translateY(0px)显示
       let offset = 0;
