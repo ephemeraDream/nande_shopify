@@ -1470,6 +1470,17 @@
   margin-left: 1rem;
 }
 
+.product_info .product_info_tag {
+  font-family: PP Right Grotesk;
+  font-size: 4rem;
+  font-weight: 500;
+  line-height: 94%;
+  letter-spacing: 0px;
+  font-variation-settings: "opsz" auto;
+  color: #ff7500;
+  margin-bottom: 1rem;
+}
+
 @media screen and (max-width: 1440px) {
   .product_info_section .product_info_bundle_product {
     flex: 0 0 calc((100% - 1.8rem) / 4);

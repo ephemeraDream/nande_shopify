@@ -278,6 +278,9 @@
         </div>
       {% endif %}
       <div class="product_info_steps_contain" data-index="0">
+        {% if product.metafields.custom.product_tag.value != blank %}
+          <div class="product_info_tag">{{ product.metafields.custom.product_tag.value }}</div>
+        {% endif %}
         <div class="product_info_title">{{ product.title }}</div>
         {%- for block in section.blocks -%}
           {%- if block.type == '@app' and forloop.index == 1 -%}
