@@ -424,7 +424,13 @@
   .bundle_simple .bundle_simple_contain {
     flex-direction: column;
   }
-
+  .bundle_simple .bundle_simple_product_img {
+    padding-bottom: 0;
+  } 
+  .bundle_simple .bundle_simple_product_img img {
+    height: auto;
+    position: relative;
+}
   .bundle_simple .bundle_simple_contain_right {
     width: 100%;
     bottom:0;
