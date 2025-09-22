@@ -24,19 +24,18 @@
           "type": "banner_item",
           "settings": {
             "sub_title": "",
-            "title": "",
+            "title": "<h2>5 Jahre Maidesite – Angebote</h2>",
             "text": "",
             "btn_text": "",
             "link": "",
-            "file_position": "middle_left",
+            "file_position": "top_center",
             "overlay_text_align": "text-start",
-            "transparent_content_color": "#ffffff",
+            "transparent_content_color": "#121212",
             "file_type": "image",
-            "file_image": "shopify://shop_images/1_5137a06d-f47c-4748-8556-f940d8bf8966.jpg",
-            "file_image_pe": "shopify://shop_images/1_c26fb083-d100-4f17-93a4-e8b408715ecc.jpg",
+            "file_image": "shopify://shop_images/3200x1800.jpg",
             "video_url": "",
             "show_countdown": true,
-            "countdown": "summer-sale"
+            "countdown": "anniversary"
           }
         }
       },
@@ -46,15 +45,15 @@
       "name": "banner",
       "settings": {
         "height_mode": "fixed",
-        "fixed_height_desktop": 700,
-        "fixed_height_mobile": 400,
+        "fixed_height_desktop": 400,
+        "fixed_height_mobile": 250,
         "mobile_stacked": false,
         "background_color": "#dddddd",
         "nav_style": "slideshow_nav_lines",
         "pagination_color": "#ffffff",
         "nav_position": "justify-center",
         "transition": "slide-fade",
-        "autoplay": true,
+        "autoplay": false,
         "slider_pause": false,
         "autoplay_speed": 5
       }
@@ -319,6 +318,16 @@
         "padding_top": 120,
         "padding_bottom": 120
       }
+    },
+    "custom_liquid_KW88ix": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid": "<!DOCTYPE html>\n<html lang=\"de\">\n<head>\n  <meta charset=\"UTF-8\" />\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\" />\n  <title>Gutscheincodes & Kontaktformular</title>\n  <style>\n    body {\n      margin: 0;\n      padding: 0;\n      font-family: Arial, sans-serif;\n    }\n\n    .coupon-section {\n      background-color: #ffffff;\n      color: #000;\n      padding: 60px 20px;\n      text-align: center;\n    }\n\n    .coupon-section h2 {\n      font-size: 36px;\n      font-weight: bold;\n      margin-bottom: 12px;\n    }\n\n    .coupon-section p {\n      font-size: 18px;\n      margin-bottom: 40px;\n    }\n\n    .coupon-cards {\n      display: flex;\n      flex-wrap: wrap;\n      justify-content: space-between;\n      max-width: 2160px;\n      margin: 0 auto;\n      gap: 30px;\n    }\n\n    .coupon-card {\n      background-color: #f03d0d; /* 修改背景色 */\n      color: white;\n      padding: 40px 30px;\n      border-radius: 12px;\n      width: calc(25% - 23px);\n      min-width: 280px;\n      box-sizing: border-box;\n      display: flex;\n      flex-direction: column;\n      justify-content: space-between;\n      font-size: 18px;\n      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);\n      transition: transform 0.2s ease;\n    }\n\n    .coupon-card:hover {\n      transform: translateY(-4px);\n    }\n\n    .coupon-card h3 {\n      font-size: 32px;\n      margin: 0;\n    }\n\n    .coupon-card p {\n      margin: 12px 0 25px;\n      font-size: 18px;\n    }\n\n    .coupon-footer {\n      background-color: white;\n      border-radius: 8px;\n      padding: 12px 15px;\n      display: flex;\n      justify-content: space-between;\n      align-items: center;\n    }\n\n    .coupon-footer.center {\n      justify-content: center;\n    }\n\n    .coupon-code {\n      color: #FF7500;\n      font-weight: bold;\n      font-size: 18px;\n    }\n\n    .copy-btn,\n    .inquiry-btn {\n      background-color: #bdff00; /* 按钮颜色 */\n      color: #000;\n      padding: 8px 14px;\n      border: none;\n      border-radius: 6px;\n      cursor: pointer;\n      font-weight: bold;\n      font-size: 14px;\n      white-space: nowrap;\n      transition: background-color 0.3s ease;\n      text-decoration: none;\n      display: inline-block;\n    }\n\n    .copy-btn.copied {\n      background-color: #28a745;\n      color: #fff;\n    }\n\n    .copy-btn:hover,\n    .inquiry-btn:hover {\n      background-color: #a4e100; /* hover颜色 */\n    }\n\n    @media (max-width: 1024px) {\n      .coupon-card {\n        width: calc(50% - 15px);\n      }\n    }\n\n    @media (max-width: 600px) {\n      .coupon-card {\n        width: 100%;\n      }\n    }\n\n    /* 弹窗样式 */\n    .modal {\n      display: none;\n      position: fixed;\n      z-index: 9999;\n      left: 0;\n      top: 0;\n      width: 100%;\n      height: 100%;\n      overflow: auto;\n      background-color: rgba(0, 0, 0, 0.5);\n    }\n\n    .modal-content {\n      position: relative;\n      background-color: white;\n      margin: 10% auto;\n      padding: 30px 40px;\n      border-radius: 12px;\n      width: 90%;\n      max-width: 500px;\n      text-align: left;\n      box-sizing: border-box;\n    }\n\n    .modal-content h3 {\n      font-size: 22px;\n      margin-bottom: 20px;\n      text-align: center;\n    }\n\n    .modal-content label {\n      font-weight: bold;\n      display: block;\n      margin-bottom: 6px;\n    }\n\n    .modal-content textarea {\n      width: 100%;\n      padding: 10px;\n      margin-bottom: 20px;\n      border-radius: 6px;\n      border: 1px solid #ccc;\n      font-size: 16px;\n      box-sizing: border-box;\n      resize: vertical;\n    }\n\n    .modal-btns {\n      display: flex;\n      justify-content: flex-end;\n    }\n\n    .modal-btns button {\n      background-color: #f03d0d; /* 弹窗发送按钮颜色 */\n      color: #fff;\n      border: none;\n      padding: 10px 20px;\n      border-radius: 6px;\n      font-weight: bold;\n      cursor: pointer;\n      font-size: 14px;\n      transition: background-color 0.3s ease;\n    }\n\n    .modal-btns button:hover {\n      background-color: #cc5e00;\n    }\n\n    .close-btn {\n      position: absolute;\n      top: 16px;\n      right: 16px;\n      background: transparent;\n      color: #000;\n      font-size: 24px;\n      border: none;\n      cursor: pointer;\n      font-weight: bold;\n      line-height: 1;\n    }\n\n    .close-btn:hover {\n      color: #FF7500;\n    }\n  </style>\n</head>\n<body>\n\n<!-- 优惠券模块 -->\n<div class=\"coupon-section\">\n  <h2>Mehr kaufen, mehr sparen</h2>\n  <p>Code kopieren und sofort Rabatt sichern</p>\n\n  <div class=\"coupon-cards\">\n    <div class=\"coupon-card\">\n      <h3>60 € Rabatt</h3>\n      <p>ab 499 € Einkaufswert</p>\n      <div class=\"coupon-footer\">\n        <span class=\"coupon-code\" id=\"code1\">MD60</span>\n        <button class=\"copy-btn\" type=\"button\">Kopieren</button>\n      </div>\n    </div>\n\n    <div class=\"coupon-card\">\n      <h3>120 € Rabatt</h3>\n      <p>ab 999 € Einkaufswert</p>\n      <div class=\"coupon-footer\">\n        <span class=\"coupon-code\" id=\"code2\">MD120</span>\n        <button class=\"copy-btn\" type=\"button\">Kopieren</button>\n      </div>\n    </div>\n\n    <div class=\"coupon-card\">\n      <h3>200 € Rabatt</h3>\n      <p>ab 1599 € Einkaufswert</p>\n      <div class=\"coupon-footer\">\n        <span class=\"coupon-code\" id=\"code3\">MD200</span>\n        <button class=\"copy-btn\" type=\"button\">Kopieren</button>\n      </div>\n    </div>\n\n    <div class=\"coupon-card\">\n      <h3>?</h3>\n      <p>ab 1999 € Einkaufswert</p>\n      <div class=\"coupon-footer center\">\n        <button class=\"inquiry-btn\" type=\"button\">Jetzt Angebot anfragen</button>\n      </div>\n    </div>\n  </div>\n</div>\n\n<!-- 弹窗表单 -->\n<div id=\"contactModal\" class=\"modal\" aria-hidden=\"true\" role=\"dialog\" aria-modal=\"true\">\n  <div class=\"modal-content\" role=\"document\" tabindex=\"-1\">\n    <button type=\"button\" id=\"closeModalBtn\" class=\"close-btn\" aria-label=\"Schließen\">×</button>\n    <h3>Individuelles Rabattangebot anfragen</h3>\n\n    <label for=\"message\">Ihre Anfrage</label>\n    <textarea id=\"message\" name=\"message\" rows=\"5\" placeholder=\"Ihre Anfrage hier eingeben\" required></textarea>\n\n    <div class=\"modal-btns\">\n      <button type=\"button\" id=\"sendBtn\">Senden</button>\n    </div>\n  </div>\n</div>\n\n<script>\n  // 复制优惠码按钮功能\n  document.querySelectorAll('.copy-btn').forEach(button => {\n    button.addEventListener('click', () => {\n      const codeSpan = button.previousElementSibling;\n      if (codeSpan) {\n        const code = codeSpan.innerText;\n        navigator.clipboard.writeText(code).then(() => {\n          button.classList.add('copied');\n          button.innerText = '✔ Kopiert';\n          setTimeout(() => {\n            button.classList.remove('copied');\n            button.innerText = 'Kopieren';\n          }, 3000);\n        });\n      }\n    });\n  });\n\n  document.addEventListener(\"DOMContentLoaded\", () => {\n    const openBtn = document.querySelector(\".inquiry-btn\");\n    const modal = document.getElementById(\"contactModal\");\n    const closeBtn = document.getElementById(\"closeModalBtn\");\n    const sendBtn = document.getElementById(\"sendBtn\");\n\n    function openModal() {\n      modal.style.display = \"block\";\n      document.body.style.overflow = \"hidden\";\n      document.body.style.height = \"100vh\";\n      modal.setAttribute(\"aria-hidden\", \"false\");\n      modal.querySelector(\".modal-content\").focus();\n    }\n\n    function closeModal() {\n      modal.style.display = \"none\";\n      document.body.style.overflow = \"\";\n      document.body.style.height = \"\";\n      modal.setAttribute(\"aria-hidden\", \"true\");\n    }\n\n    openBtn.addEventListener(\"click\", openModal);\n    closeBtn.addEventListener(\"click\", closeModal);\n\n    modal.addEventListener(\"click\", (e) => {\n      if (e.target === modal) closeModal();\n    });\n\n    modal.querySelector(\".modal-content\").addEventListener(\"click\", e => e.stopPropagation());\n\n    sendBtn.addEventListener(\"click\", () => {\n      const message = document.getElementById(\"message\").value.trim();\n      if (!message) {\n        alert(\"Bitte geben Sie Ihre Anfrage ein.\");\n        return;\n      }\n\n      const subject = encodeURIComponent(\"Anfrage zu individuellem Rabatt\");\n      const body = encodeURIComponent(message);\n\n      window.location.href = `mailto:contact@maidesite.de?subject=${subject}&body=${body}`;\n\n      closeModal();\n    });\n  });\n</script>\n\n</body>\n</html>",
+        "color_scheme": "",
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
     }
   },
   "order": [
@@ -332,6 +341,7 @@
     "activity_products_normal_8qJYJt",
     "activity_subscribe_top_tV4gHF",
     "activity_subscribe_tV4gHF",
-    "blogs_simple_XBYLNU"
+    "blogs_simple_XBYLNU",
+    "custom_liquid_KW88ix"
   ]
 }
