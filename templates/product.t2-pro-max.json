@@ -129,8 +129,8 @@
         "item_RrNzfE": {
           "type": "item",
           "settings": {
-            "title": "Technische Daten",
-            "anchor_name": "Technische Daten"
+            "title": "Technische-Daten",
+            "anchor_name": "Technische-Daten"
           }
         },
         "item_Vt9rJN": {
@@ -576,7 +576,7 @@
       "type": "technical-data",
       "name": "technical data",
       "settings": {
-        "spec_id": "Technische Daten",
+        "spec_id": "Technische-Daten",
         "title": "<p>Technische Daten Des HöHenverstellbaren </p><p>Schreibtisches-T1 Pro</p>",
         "select_product": "elektrisch-hohenverstellbarer-gestell-t1-basic"
       }
