@@ -165,6 +165,7 @@
     },
     "video_wPHLA8": {
       "type": "video",
+      "disabled": true,
       "name": "t:sections.video.presets.name",
       "settings": {
         "heading": "Maidesite mobiler Schreibtisch T1 Pro Ausrüstung",
@@ -179,14 +180,22 @@
         "padding_bottom": 36
       }
     },
+    "custom_liquid_RP9FWa": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid": "<!-- 隐形锚点，用于导航定位 -->\n<div id=\"Produkt\" style=\"height:0; margin:0; padding:0; visibility:hidden;\"></div>",
+        "color_scheme": "",
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
     "video_simplicity_XyW7NC": {
       "type": "video-simplicity",
-      "disabled": true,
       "name": "video simplicity",
       "settings": {
         "spec_id": "Produktinfo",
-        "show_playicon": "true",
-        "cover_image": "shopify://shop_images/H3I0nDhMly_mid.jpg",
+        "show_playicon": "false",
         "video_url": "https://youtu.be/CpglzDtEiXA",
         "title": "",
         "description": "",
@@ -279,6 +288,7 @@
     },
     "img_with_text_simplicity_R8thEq": {
       "type": "img-with-text-simplicity",
+      "disabled": true,
       "custom_css": [
         ".img_with_text_simplicity_section {background-color: #e2ded6; padding-top: 12rem;}",
         ".img_with_text_simplicity_filebox {height: 48rem;}"
@@ -290,11 +300,11 @@
         "header_content": "",
         "title": "<h2>Extrem praktisch Höhenverstellbarer Schreibtisch</h2>",
         "sub_title": "<p>666</p>",
-        "description": "99969",
+        "description": "<p></p><p></p>",
         "file_position": "right",
-        "file_type": "video",
+        "file_type": "image",
+        "file_image": "shopify://shop_images/T1-Pro-hohenverstellbarer-Schreibtisch-Handsteuerung.jpg",
         "video_url": "",
-        "url_upload": "shopify://files/videos/Space adjustable height desk video 0808.mp4",
         "btn_text": "",
         "link_url": "",
         "padding_top": 0,
@@ -769,6 +779,7 @@
     "product_info_NXNt6g",
     "product_anchor_bar_atcVF4",
     "video_wPHLA8",
+    "custom_liquid_RP9FWa",
     "video_simplicity_XyW7NC",
     "img_with_text_box_simplicity_qrzG6W",
     "img_with_text_simplicity_R8thEq",
