@@ -23,13 +23,13 @@
         "banner_item_kEfP4k": {
           "type": "banner_item",
           "settings": {
-            "sub_title": "",
-            "title": "<h2>5 Jahre Maidesite – Angebote</h2>",
+            "sub_title": "<h3>5 Jahre Maidesite – Angebote</h3>",
+            "title": "",
             "text": "",
             "btn_text": "",
             "link": "",
-            "file_position": "top_center",
-            "overlay_text_align": "text-start",
+            "file_position": "middle_center",
+            "overlay_text_align": "text-center",
             "transparent_content_color": "#121212",
             "file_type": "image",
             "file_image": "shopify://shop_images/3200x1800.jpg",
@@ -112,6 +112,7 @@
         "item_Cgh74t",
         "item_fLi8Gn"
       ],
+      "disabled": true,
       "custom_css": [
         ".product_anchor_bar_btn {display: none;}",
         ".product_anchor_bar_left {flex: 0 0 100%; gap: 2rem; justify-content: space-between;}"
@@ -130,26 +131,24 @@
         "tab_EgLUp3": {
           "type": "tab",
           "settings": {
-            "title": "Sitzende Erinnerung",
+            "title": "Bis zu 60€ Rabatt",
             "product_list": [
-              "maidesite-to1-pro-elektrisch-hohenverstellbarer-schreibtisch",
+              "maidesite-t2-pro-max-tischgestell-elektrisch-hohenverstellbar",
+              "maidesite-tischgestell-elektrisch-hohenverstellbar-t2-pro-plus",
               "maidesite-th2-pro-plus-tischgestell-elektrisch-hohenverstellbar",
-              "maidesite-el2-pro-art-tischgestell-elektrisch-hohenverstellbar",
               "maidesite-sn1-basic-elektrisch-hohenverstellbarer-schreibtisch-100x60cm-120x60-cm",
-              "maidesite-schreibtisch-hohenverstellbar-180x80-cm-sc2-pro"
+              "maidesite-yoga-hohenverstellbarer-schreibtisch-mit-tischplatte"
             ]
           }
         },
         "tab_bgF4yF": {
           "type": "tab",
           "settings": {
-            "title": "Sitzende",
+            "title": "Bis zu 30€ Rabatt",
             "product_list": [
               "maidesite-th2-pro-plus-tischgestell-elektrisch-hohenverstellbar",
               "maidesite-el2-pro-art-tischgestell-elektrisch-hohenverstellbar",
-              "maidesite-to1-pro-elektrisch-hohenverstellbarer-schreibtisch",
-              "ergoset-sc2-schreibtisch-ec6-burostuhl",
-              "ergoset-sn1-schreibtisch-ec5-burostuhl"
+              "maidesite-to1-pro-elektrisch-hohenverstellbarer-schreibtisch"
             ]
           }
         },
@@ -175,8 +174,8 @@
       "name": "activity products tab",
       "settings": {
         "specId": "Produkt",
-        "title": "<p>2025 FrüHlingsrabatt</p>",
-        "text": "<p>Je mehr Sie kaufen, desto mehr sparen Sie!</p>"
+        "title": "<p>Top Angebote</p>",
+        "text": ""
       }
     },
     "activity_products_normal_REbAHP": {
