@@ -103,6 +103,7 @@
       "custom_css": [],
       "name": "product info",
       "settings": {
+        "spec_id": "",
         "media_ratio": "1.33",
         "show_tax_and_shipping": true,
         "product_specs": "<div class=\"product-specs\">\n  <p><strong>Höhenverstellbarkeit:</strong> 72–120 cm</p>\n  <p><strong>Motor:</strong> Elektroantrieb mit 1 leistungsstarken Motoren</p>\n  <p><strong>Stabilitätsbewertung:</strong> CE-Zertifikat</p>\n  <p><strong>Belastbarkeit:</strong> 90 kg</p>\n  <p><strong>Geschwindigkeit:</strong> 40 mm pro Sekunde</p>\n  <p><strong>Geräuschemission:</strong> <50 dB</p>\n  <p><strong>Material:</strong> Pulverbeschichteter Stahl</p>\n  <p><strong>Farben:</strong> Schwarz, Weiß, Grau</p>\n</div>"
@@ -121,8 +122,8 @@
         "item_qaC4iV": {
           "type": "item",
           "settings": {
-            "title": "Produktbeschreibung",
-            "anchor_name": "Produktbeschreibung"
+            "title": "Produktinfo",
+            "anchor_name": "Produktinfo"
           }
         },
         "item_RrNzfE": {
@@ -132,11 +133,18 @@
             "anchor_name": "Technische_Daten"
           }
         },
+        "item_hzwpxn": {
+          "type": "item",
+          "settings": {
+            "title": "Tests",
+            "anchor_name": "Tests"
+          }
+        },
         "item_Vt9rJN": {
           "type": "item",
           "settings": {
-            "title": "Kundenbewertungen",
-            "anchor_name": "Kundenbewertungen"
+            "title": "Bewertungen",
+            "anchor_name": "Bewertungen"
           }
         }
       },
@@ -144,13 +152,20 @@
         "item_q4KMRQ",
         "item_qaC4iV",
         "item_RrNzfE",
+        "item_hzwpxn",
         "item_Vt9rJN"
       ],
       "name": "product anchor bar",
-      "settings": {}
+      "settings": {
+        "button_text": "Jetzt kaufen",
+        "button_url": "",
+        "button_target_blank": false,
+        "show_icon": true
+      }
     },
     "video_wPHLA8": {
       "type": "video",
+      "disabled": true,
       "name": "t:sections.video.presets.name",
       "settings": {
         "heading": "Maidesite mobiler Schreibtisch T1 Pro Ausrüstung",
@@ -163,6 +178,20 @@
         "color_scheme": "",
         "padding_top": 36,
         "padding_bottom": 36
+      }
+    },
+    "video_simplicity_XyW7NC": {
+      "type": "video-simplicity",
+      "name": "video simplicity",
+      "settings": {
+        "spec_id": "Produktinfo",
+        "show_playicon": "true",
+        "video_url": "https://youtu.be/CpglzDtEiXA",
+        "title": "",
+        "description": "",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "background_color": "#f2f1ed"
       }
     },
     "img_with_text_box_simplicity_qrzG6W": {
@@ -522,9 +551,9 @@
         "swiper_EnDd8n",
         "swiper_4kYG3r"
       ],
-      "disabled": true,
       "name": "maidesite swiper",
       "settings": {
+        "spec_id": "Tests",
         "title": "<p>Die Presse Liebt Maidesite</p>",
         "text": "",
         "show_buttons": true,
@@ -740,6 +769,7 @@
     "product_info_NXNt6g",
     "product_anchor_bar_atcVF4",
     "video_wPHLA8",
+    "video_simplicity_XyW7NC",
     "img_with_text_box_simplicity_qrzG6W",
     "img_with_text_simplicity_R8thEq",
     "img_with_text_simplicity_nJFALq",
