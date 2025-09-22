@@ -40,7 +40,8 @@
                   loop
                   muted
                   playsinline
-                  preload="none"
+                  webkit-playsinline
+                  preload="metadata"
                   class="img_with_text_box_simplicity_filebox_video"
                   {% if poster_image != blank %}
                     poster="{{ poster_image }}"
@@ -56,7 +57,8 @@
                     loop: true,
                     muted: true,
                     playsinline: true,
-                    preload: 'none',
+                    webkit_playsinline: true,
+                    preload: 'metadata',
                     poster: poster_image
                 }}
               {% endif %}
@@ -71,6 +73,60 @@
     </div>
   </div>
 </div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  // 处理移动端视频播放
+  const videos = document.querySelectorAll('#shopify-section-{{ section.id }} .img_with_text_box_simplicity_filebox_video');
+  
+  videos.forEach(video => {
+    // 确保视频在移动端能正确显示和播放
+    video.addEventListener('loadedmetadata', function() {
+      // 视频元数据加载完成后，尝试播放
+      if (video.paused) {
+        video.play().catch(e => {
+          console.log('Video autoplay failed:', e);
+          // 如果自动播放失败，显示poster图片
+          if (video.poster) {
+            video.style.backgroundImage = `url(${video.poster})`;
+            video.style.backgroundSize = 'cover';
+            video.style.backgroundPosition = 'center';
+          }
+        });
+      }
+    });
+    
+    // 处理视频加载错误
+    video.addEventListener('error', function() {
+      console.log('Video load error');
+      // 如果视频加载失败，显示poster图片
+      if (video.poster) {
+        video.style.backgroundImage = `url(${video.poster})`;
+        video.style.backgroundSize = 'cover';
+        video.style.backgroundPosition = 'center';
+      }
+    });
+    
+    // 移动端触摸时尝试播放
+    video.addEventListener('touchstart', function() {
+      if (video.paused) {
+        video.play().catch(e => console.log('Touch play failed:', e));
+      }
+    });
+    
+    // 确保视频在视口中时尝试播放
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting && entry.target.paused) {
+          entry.target.play().catch(e => console.log('Intersection play failed:', e));
+        }
+      });
+    }, { threshold: 0.5 });
+    
+    observer.observe(video);
+  });
+});
+</script>
 
 {% schema %}
 {
