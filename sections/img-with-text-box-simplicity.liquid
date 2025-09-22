@@ -80,20 +80,93 @@ document.addEventListener('DOMContentLoaded', function() {
   const videos = document.querySelectorAll('#shopify-section-{{ section.id }} .img_with_text_box_simplicity_filebox_video');
   
   videos.forEach(video => {
-    // 确保视频在移动端能正确显示和播放
-    video.addEventListener('loadedmetadata', function() {
-      // 视频元数据加载完成后，尝试播放
-      if (video.paused) {
-        video.play().catch(e => {
-          console.log('Video autoplay failed:', e);
-          // 如果自动播放失败，显示poster图片
-          if (video.poster) {
-            video.style.backgroundImage = `url(${video.poster})`;
-            video.style.backgroundSize = 'cover';
-            video.style.backgroundPosition = 'center';
-          }
+    let hasUserInteracted = false;
+    let playButton = null;
+    
+    // 创建播放按钮覆盖层
+    function createPlayButton() {
+      if (playButton) return;
+      
+      playButton = document.createElement('div');
+      playButton.className = 'video-play-overlay';
+      playButton.innerHTML = `
+        <div class="video-play-button">
+          <svg width="60" height="60" viewBox="0 0 60 60" fill="none">
+            <circle cx="30" cy="30" r="30" fill="rgba(0,0,0,0.7)"/>
+            <path d="M25 20L25 40L40 30L25 20Z" fill="white"/>
+          </svg>
+        </div>
+      `;
+      
+      // 添加样式
+      playButton.style.cssText = `
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: rgba(0,0,0,0.3);
+        cursor: pointer;
+        z-index: 10;
+        transition: opacity 0.3s ease;
+      `;
+      
+      playButton.addEventListener('click', function() {
+        hasUserInteracted = true;
+        video.play().then(() => {
+          playButton.style.opacity = '0';
+          setTimeout(() => {
+            if (playButton && playButton.parentNode) {
+              playButton.parentNode.removeChild(playButton);
+            }
+          }, 300);
+        }).catch(e => {
+          console.log('Manual play failed:', e);
         });
-      }
+      });
+      
+      // 移动端触摸事件
+      playButton.addEventListener('touchstart', function(e) {
+        e.preventDefault();
+        hasUserInteracted = true;
+        video.play().then(() => {
+          playButton.style.opacity = '0';
+          setTimeout(() => {
+            if (playButton && playButton.parentNode) {
+              playButton.parentNode.removeChild(playButton);
+            }
+          }, 300);
+        }).catch(e => {
+          console.log('Touch play failed:', e);
+        });
+      });
+      
+      video.parentNode.style.position = 'relative';
+      video.parentNode.appendChild(playButton);
+    }
+    
+    // 视频加载完成后处理
+    video.addEventListener('loadeddata', function() {
+      console.log('Video loaded, attempting to play...');
+      
+      // 尝试自动播放
+      video.play().then(() => {
+        console.log('Autoplay successful');
+        if (playButton) {
+          playButton.style.opacity = '0';
+          setTimeout(() => {
+            if (playButton && playButton.parentNode) {
+              playButton.parentNode.removeChild(playButton);
+            }
+          }, 300);
+        }
+      }).catch(e => {
+        console.log('Autoplay failed, showing play button:', e);
+        createPlayButton();
+      });
     });
     
     // 处理视频加载错误
@@ -107,18 +180,29 @@ document.addEventListener('DOMContentLoaded', function() {
       }
     });
     
-    // 移动端触摸时尝试播放
-    video.addEventListener('touchstart', function() {
-      if (video.paused) {
-        video.play().catch(e => console.log('Touch play failed:', e));
+    // 视频暂停时显示播放按钮
+    video.addEventListener('pause', function() {
+      if (!hasUserInteracted && !playButton) {
+        createPlayButton();
       }
     });
+    
+    // 强制设置视频属性
+    video.setAttribute('playsinline', '');
+    video.setAttribute('webkit-playsinline', '');
+    video.setAttribute('muted', '');
+    video.muted = true;
     
     // 确保视频在视口中时尝试播放
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
-        if (entry.isIntersecting && entry.target.paused) {
-          entry.target.play().catch(e => console.log('Intersection play failed:', e));
+        if (entry.isIntersecting && !hasUserInteracted) {
+          video.play().catch(e => {
+            console.log('Intersection play failed:', e);
+            if (!playButton) {
+              createPlayButton();
+            }
+          });
         }
       });
     }, { threshold: 0.5 });
