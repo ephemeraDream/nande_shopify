@@ -138,7 +138,7 @@
       "name": "product anchor bar",
       "settings": {
         "button_text": "Jetzt kaufen",
-        "button_url": "",
+        "button_url": "shopify://products/maidesite-elektrisch-hohenverstellbarer-gestell-t2-pro",
         "button_target_blank": false,
         "show_icon": true
       }
