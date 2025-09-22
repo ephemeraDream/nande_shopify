@@ -167,7 +167,7 @@
       "type": "custom-liquid",
       "name": "t:sections.custom-liquid.presets.name",
       "settings": {
-        "custom_liquid": "<div id=\"Produktinfo\" style=\"height:80px; margin-top:-80px;\"></div>",
+        "custom_liquid": "<!-- 隐形锚点 -->\n<div id=\"Produktinfo\" style=\"position: relative; top: -80px; height: 1px; opacity: 0;\"></div>",
         "color_scheme": "",
         "padding_top": 40,
         "padding_bottom": 52
