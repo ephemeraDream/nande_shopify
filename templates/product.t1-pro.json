@@ -279,7 +279,6 @@
     },
     "img_with_text_simplicity_R8thEq": {
       "type": "img-with-text-simplicity",
-      "disabled": true,
       "custom_css": [
         ".img_with_text_simplicity_section {background-color: #e2ded6; padding-top: 12rem;}",
         ".img_with_text_simplicity_filebox {height: 48rem;}"
@@ -293,9 +292,9 @@
         "sub_title": "<p>666</p>",
         "description": "<p></p><p></p>",
         "file_position": "right",
-        "file_type": "image",
+        "file_type": "video",
         "file_image": "shopify://shop_images/T1-Pro-hohenverstellbarer-Schreibtisch-Handsteuerung.jpg",
-        "video_url": "",
+        "video_url": "https://youtu.be/CpglzDtEiXA",
         "btn_text": "",
         "link_url": "",
         "padding_top": 0,
