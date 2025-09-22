@@ -157,7 +157,7 @@
           "type": "product_dot",
           "settings": {
             "swiper_id": "3",
-            "select_product": "maidesite-th2-pro-plus-tischgestell-elektrisch-hohenverstellbar",
+            "select_product": "maidesite-space-elektrisch-hohenverstellbares-schreibtisch",
             "product_X": 42,
             "product_Y": 45
           }
@@ -302,16 +302,13 @@
         "title": "<p>Stelle dein Traum-Büro zusammen</p>",
         "text": "<p>Tische, Stühle & Zubehör – alles in einem Schritt auswählen</p>",
         "product_list": [
-          "maidesite-elektrisch-hohenverstellbarer-gestell-t2-pro",
-          "maidesite-tischgestell-elektrisch-hohenverstellbar-t2-pro-plus",
           "maidesite-t2-pro-max-tischgestell-elektrisch-hohenverstellbar",
-          "maidesite-ec6-ergonomischer-burostuhl-mit-kopfstutze-ruckenlehne-und-fussstutze",
-          "maidesite-3-fach-tischsteckdose-mit-usb-c-und-a-1-8m-kabel-steckdosenleiste",
+          "maidesite-t4-pro-plus-vierbeinige-elliptische-saule-elektrisch-hohenverstellbares-gestell",
           "maidesite-serpentine-kabelrohr"
         ],
         "product_link_text": "Zum Set",
         "bundle_title": "<p>Bestes Bundle</p>",
-        "bundle_text": "<p>Fügen Sie mindestens 2 Artikel hinzu und erhalten Sie 33 % Rabatt</p>",
+        "bundle_text": "<p>Kabelschlange gratis zum Gestell (bitte ‚Zum Set‘ klicken)</p>",
         "bundle_link_text": "In den Warenkorb",
         "color_label": "Farbe Gestel,Farbe Tischplatte,Farbe",
         "padding_top": 120,
