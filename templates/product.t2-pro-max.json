@@ -525,7 +525,7 @@
         "title": "<p>CE/FSC-zertifizierter </p>",
         "show_tab_head": true,
         "loop": true,
-        "autoplay_enable": false,
+        "autoplay_enable": true,
         "autoplay_delay": 5000,
         "layout": "image-left"
       }
@@ -774,7 +774,7 @@
         "spec_id": "",
         "heading": "<p>FAQ</p>",
         "text": "<h3>Schreibtisch Höhenverstellbar T2 Pro Max Technical</h3>",
-        "learn_more": true,
+        "learn_more": false,
         "show_btn": true,
         "more_faqs_link": "",
         "contact_us": false,
