@@ -154,6 +154,7 @@
         },
         "tab_6qFKiy": {
           "type": "tab",
+          "disabled": true,
           "settings": {
             "title": "Erinnerung",
             "product_list": [
@@ -180,6 +181,7 @@
     },
     "activity_products_normal_REbAHP": {
       "type": "activity-products-normal",
+      "disabled": true,
       "name": "activity products normal",
       "settings": {
         "specId": "",
@@ -197,6 +199,7 @@
     },
     "activity_reorder_VwgQAM": {
       "type": "activity-reorder",
+      "disabled": true,
       "name": "activity reorder",
       "settings": {
         "specId": "",
@@ -222,12 +225,14 @@
       "block_order": [
         "wheelify_spin_wheel_email_pop_wheelify_app_section_yFCWeq"
       ],
+      "disabled": true,
       "settings": {
         "include_margins": true
       }
     },
     "activity_products_normal_8qJYJt": {
       "type": "activity-products-normal",
+      "disabled": true,
       "name": "activity products normal",
       "settings": {
         "specId": "",
@@ -275,6 +280,7 @@
         "top_left_TNQyCH",
         "top_right_fceWw8"
       ],
+      "disabled": true,
       "name": "activity subscribe",
       "settings": {
         "specId": "",
@@ -300,6 +306,7 @@
       "block_order": [
         "bottom_6MFfEX"
       ],
+      "disabled": true,
       "name": "activity subscribe",
       "settings": {
         "specId": "",
@@ -309,6 +316,7 @@
     },
     "blogs_simple_XBYLNU": {
       "type": "blogs-simple",
+      "disabled": true,
       "name": "blogs simple",
       "settings": {
         "title": "<p>Blogs</p>",
