@@ -53,7 +53,12 @@
         ".product_anchor_bar_section {padding-top: 7px;}"
       ],
       "name": "product anchor bar",
-      "settings": {}
+      "settings": {
+        "button_text": "Jetzt kaufen",
+        "button_url": "",
+        "button_target_blank": false,
+        "show_icon": true
+      }
     },
     "breadcrumbs": {
       "type": "breadcrumbs",

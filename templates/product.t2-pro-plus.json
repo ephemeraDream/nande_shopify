@@ -156,10 +156,32 @@
         "item_fcAwRw"
       ],
       "name": "product anchor bar",
-      "settings": {}
+      "settings": {
+        "button_text": "Jetzt kaufen",
+        "button_url": "",
+        "button_target_blank": false,
+        "show_icon": true
+      }
+    },
+    "video_simplicity_6L9XNm": {
+      "type": "video-simplicity",
+      "name": "video simplicity",
+      "settings": {
+        "spec_id": "Produktbeschreibung",
+        "show_playicon": "true",
+        "cover_image": "shopify://shop_images/Maidesite-T2-Pro-Plus-hohenverstellbarer-Schreibtisch-mit-USB-Ladegerat.gif",
+        "video_url": "",
+        "url_upload": "shopify://files/videos/T2 Pro Plus_59bd46e4-5cc5-48a4-9f85-092bf564cf7f.mp4",
+        "title": "",
+        "description": "",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "background_color": "#f2f1ed"
+      }
     },
     "video_wPHLA8": {
       "type": "video",
+      "disabled": true,
       "name": "t:sections.video.presets.name",
       "settings": {
         "heading": "Maidesite mobiler Schreibtisch T2 Pro Plus Ausrüstung",
@@ -774,6 +796,7 @@
     "breadcrumbs",
     "product_info_NXNt6g",
     "product_anchor_bar_atcVF4",
+    "video_simplicity_6L9XNm",
     "video_wPHLA8",
     "img_with_text_box_simplicity_qrzG6W",
     "img_with_foldtext_RcBrkw",
