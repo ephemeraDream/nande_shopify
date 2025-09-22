@@ -163,6 +163,16 @@
         "show_icon": true
       }
     },
+    "custom_liquid_RP9FWa": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid": "<!-- 隐形锚点，用于导航定位 -->\n<div id=\"Produktinfo\" style=\"height:0; margin:0; padding:0; visibility:hidden;\"></div>",
+        "color_scheme": "",
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
     "video_wPHLA8": {
       "type": "video",
       "name": "t:sections.video.presets.name",
@@ -177,16 +187,6 @@
         "color_scheme": "",
         "padding_top": 36,
         "padding_bottom": 36
-      }
-    },
-    "custom_liquid_RP9FWa": {
-      "type": "custom-liquid",
-      "name": "t:sections.custom-liquid.presets.name",
-      "settings": {
-        "custom_liquid": "<!-- 隐形锚点，用于导航定位 -->\n<div id=\"Produkt\" style=\"height:0; margin:0; padding:0; visibility:hidden;\"></div>",
-        "color_scheme": "",
-        "padding_top": 40,
-        "padding_bottom": 52
       }
     },
     "video_simplicity_XyW7NC": {
