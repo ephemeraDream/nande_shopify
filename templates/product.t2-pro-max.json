@@ -156,7 +156,12 @@
         "item_DECJU4"
       ],
       "name": "product anchor bar",
-      "settings": {}
+      "settings": {
+        "button_text": "Jetzt kaufen",
+        "button_url": "",
+        "button_target_blank": false,
+        "show_icon": true
+      }
     },
     "video_wPHLA8": {
       "type": "video",
@@ -519,7 +524,7 @@
         "description": "",
         "title": "<p>CE/FSC-zertifizierter </p>",
         "show_tab_head": true,
-        "loop": false,
+        "loop": true,
         "autoplay_enable": false,
         "autoplay_delay": 5000,
         "layout": "image-left"
