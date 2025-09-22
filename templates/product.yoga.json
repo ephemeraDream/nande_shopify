@@ -155,16 +155,6 @@
         "show_icon": true
       }
     },
-    "custom_liquid_EYD74e": {
-      "type": "custom-liquid",
-      "name": "t:sections.custom-liquid.presets.name",
-      "settings": {
-        "custom_liquid": "<!-- 隐形锚点 -->\n<div id=\"Produktbeschreibung\" style=\"position: relative; top: -80px; height: 1px; opacity: 0;\"></div>",
-        "color_scheme": "",
-        "padding_top": 40,
-        "padding_bottom": 52
-      }
-    },
     "video_wPHLA8": {
       "type": "video",
       "name": "t:sections.video.presets.name",
@@ -255,7 +245,7 @@
       ],
       "name": "file box simplicity",
       "settings": {
-        "spec_id": "Produkt",
+        "spec_id": "Produktbeschreibung",
         "main_title": "<p>Warum Yoga wählen?</p>",
         "row_num": 3,
         "padding_top": 100,
@@ -781,7 +771,6 @@
     "breadcrumbs",
     "product_info_NXNt6g",
     "product_anchor_bar_atcVF4",
-    "custom_liquid_EYD74e",
     "video_wPHLA8",
     "img_with_text_box_simplicity_qrzG6W",
     "img_with_foldtext_RcBrkw",
