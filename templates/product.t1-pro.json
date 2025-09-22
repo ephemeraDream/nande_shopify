@@ -167,7 +167,7 @@
       "type": "custom-liquid",
       "name": "t:sections.custom-liquid.presets.name",
       "settings": {
-        "custom_liquid": "<!-- 隐形锚点，用于导航定位 -->\n<div id=\"Produktinfo\" style=\"height:0; margin:0; padding:0; visibility:hidden;\"></div>",
+        "custom_liquid": "<div id=\"Produktinfo\" style=\"height:1px; margin:0; padding:0; opacity:0;\"></div>\n</div>",
         "color_scheme": "",
         "padding_top": 40,
         "padding_bottom": 52
