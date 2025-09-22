@@ -118,7 +118,12 @@
         ".product_anchor_bar_left {flex: 0 0 100%; gap: 2rem; justify-content: space-between;}"
       ],
       "name": "product anchor bar",
-      "settings": {}
+      "settings": {
+        "button_text": "Jetzt kaufen",
+        "button_url": "",
+        "button_target_blank": false,
+        "show_icon": true
+      }
     },
     "activity_products_tab_aUGewm": {
       "type": "activity-products-tab",
@@ -131,8 +136,8 @@
               "maidesite-to1-pro-elektrisch-hohenverstellbarer-schreibtisch",
               "maidesite-th2-pro-plus-tischgestell-elektrisch-hohenverstellbar",
               "maidesite-el2-pro-art-tischgestell-elektrisch-hohenverstellbar",
-              "ergoset-sc2-schreibtisch-ec6-burostuhl",
-              "ergoset-sn1-schreibtisch-ec5-burostuhl"
+              "maidesite-sn1-basic-elektrisch-hohenverstellbarer-schreibtisch-100x60cm-120x60-cm",
+              "maidesite-schreibtisch-hohenverstellbar-180x80-cm-sc2-pro"
             ]
           }
         },
