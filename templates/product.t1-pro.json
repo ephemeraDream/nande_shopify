@@ -163,16 +163,6 @@
         "show_icon": true
       }
     },
-    "custom_liquid_RP9FWa": {
-      "type": "custom-liquid",
-      "name": "t:sections.custom-liquid.presets.name",
-      "settings": {
-        "custom_liquid": "<!-- 隐形锚点 -->\n<div id=\"Produktinfo\" style=\"position: relative; top: -80px; height: 1px; opacity: 0;\"></div>",
-        "color_scheme": "",
-        "padding_top": 40,
-        "padding_bottom": 52
-      }
-    },
     "video_wPHLA8": {
       "type": "video",
       "name": "t:sections.video.presets.name",
@@ -778,7 +768,6 @@
     "breadcrumbs",
     "product_info_NXNt6g",
     "product_anchor_bar_atcVF4",
-    "custom_liquid_RP9FWa",
     "video_wPHLA8",
     "video_simplicity_XyW7NC",
     "img_with_text_box_simplicity_qrzG6W",
