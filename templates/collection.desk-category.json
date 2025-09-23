@@ -30,7 +30,7 @@
         "enable_compare": true,
         "show_layout_toggle": true,
         "image_aspect_ratio": "1.33",
-        "enable_filtering": true,
+        "enable_filtering": false,
         "enable_sorting": true
       }
     },
