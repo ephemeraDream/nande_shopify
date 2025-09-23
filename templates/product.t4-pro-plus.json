@@ -165,6 +165,7 @@
     },
     "video_wPHLA8": {
       "type": "video",
+      "disabled": true,
       "name": "t:sections.video.presets.name",
       "settings": {
         "heading": "Maidesite mobiler Schreibtisch T2 Pro Max Ausrüstung",
@@ -576,8 +577,8 @@
       "name": "technical data",
       "settings": {
         "spec_id": "Technische-Daten",
-        "title": "<p>Technische Daten Des HöHenverstellbaren </p><p>Schreibtisches-T1 Pro</p>",
-        "select_product": "elektrisch-hohenverstellbarer-gestell-t1-basic"
+        "title": "<p>Technische Daten Des HöHenverstellbaren </p><p>Schreibtisches-T4 Pro Plus</p>",
+        "select_product": "maidesite-t4-pro-plus-vierbeinige-elliptische-saule-elektrisch-hohenverstellbares-gestell"
       }
     },
     "maidesite_swiper_QhkQG8": {
@@ -618,6 +619,7 @@
         "swiper_EnDd8n",
         "swiper_4kYG3r"
       ],
+      "disabled": true,
       "name": "maidesite swiper",
       "settings": {
         "spec_id": "Tests",
