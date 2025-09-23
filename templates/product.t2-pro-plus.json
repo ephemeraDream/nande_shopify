@@ -104,7 +104,7 @@
       "name": "product info",
       "settings": {
         "spec_id": "Produkt",
-        "media_ratio": "1",
+        "media_ratio": "1.33",
         "show_tax_and_shipping": true,
         "product_specs": ""
       }
