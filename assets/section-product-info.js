@@ -201,9 +201,9 @@ function initSwiper() {
   });
 }
 // 优惠倒计时
-const sale_info_box = document.querySelector(".product_info_saleinfo")
+const sale_info_box = document.querySelector(".product_info_bottom_bar_saleinfo")
 if (sale_info_box) {
-  const endDateStr = sale_info_box.querySelector(".product_info_saleinfo_countdown").getAttribute('data-end-date');
+  const endDateStr = sale_info_box.getAttribute('data-end-date');
   const endDate = new Date(endDateStr);
 
   const updateCountdownInnerHTML = (days, hours, minutes, seconds) => {
@@ -231,7 +231,7 @@ if (sale_info_box) {
     if (diff <= 0) {
       updateCountdownInnerHTML(days, hours, minutes, seconds);
       sale_info_box.classList.add("hidden")
-      document.querySelector(".product_info_bottom_bar_saleinfo").classList.add("hidden")
+      document.querySelector(".product_info_saleinfo") && document.querySelector(".product_info_saleinfo").classList.add("hidden")
       return;
     }
 

@@ -908,7 +908,10 @@
       <div class="product_info_bottom_bar_contain_right">
         <div>
           {% if sale_info != blank %}
-            <div class="product_info_bottom_bar_saleinfo">
+            <div
+              class="product_info_bottom_bar_saleinfo"
+              data-end-date="{{ sale_info.datetime | date: "%Y-%m-%dT%H:%M:%SZ" }}"
+            >
               <span class="product_info_saleinfo_countdown_text">{{ 'common.ends_in' | t }}</span>
               <div class="product_info_saleinfo_countdown_item" data-type="day"></div>
               <span>:</span>
