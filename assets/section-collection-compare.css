@@ -637,6 +637,15 @@
   cursor: pointer;
 }
 
+.collection_compare .collection_compare_product_tagbox {
+  position: absolute;
+  top: 1.4rem;
+  left: 1.4rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
 .collection_compare .collection_compare_product_saleinfo {
   padding: 0.6rem;
   background-color: #FF7500;
@@ -647,9 +656,6 @@
   letter-spacing: 0px;
   font-variation-settings: "opsz" auto;
   color: #FFFFFF;
-  position: absolute;
-  top: 1.4rem;
-  left: 1.4rem;
 }
 
 .collection_compare .collection_compare_product_tag {
@@ -662,13 +668,6 @@
   letter-spacing: 0px;
   font-variation-settings: "opsz" auto;
   color: #FFFFFF;
-  position: absolute;
-  top: 1.4rem;
-  left: 1.4rem;
-}
-
-.collection_compare .collection_compare_product_saleinfo+.collection_compare_product_tag {
-  top: 4.4rem;
 }
 
 .collection_compare .collection_compare_product_saleinfo_countdown {
