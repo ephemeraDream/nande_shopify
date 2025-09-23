@@ -155,6 +155,7 @@
         "item_Vt9rJN",
         "item_DECJU4"
       ],
+      "disabled": true,
       "name": "product anchor bar",
       "settings": {
         "button_text": "Jetzt kaufen",
@@ -317,6 +318,7 @@
         "file_with_text_nGfFNW",
         "file_with_text_NhMLJD"
       ],
+      "disabled": true,
       "name": "file box simplicity",
       "settings": {
         "spec_id": "Produktinfo",
@@ -372,6 +374,7 @@
     },
     "img_with_text_simplicity_R8thEq": {
       "type": "img-with-text-simplicity",
+      "disabled": true,
       "custom_css": [],
       "name": "img with text simplicity",
       "settings": {
@@ -394,6 +397,7 @@
     },
     "img_with_text_simplicity_YLCpmN": {
       "type": "img-with-text-simplicity",
+      "disabled": true,
       "custom_css": [],
       "name": "img with text simplicity",
       "settings": {
@@ -767,6 +771,7 @@
         "faq_mFDf3d",
         "faq_whBqrf"
       ],
+      "disabled": true,
       "custom_css": [
         ".faq_simple_section {background-color: #fafafa;}"
       ],
