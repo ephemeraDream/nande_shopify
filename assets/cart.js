@@ -251,7 +251,7 @@ class CartItems extends HTMLElement {
       .finally(() => {
         const productLength = document.querySelectorAll("#main-cart-items .cart-items").length
         if (productLength === 0) {
-          document.querySelector("#main-cart-items .cart_drawer_infobar_contain").classList.add("hidden")
+          document.querySelector("#main-cart-items .cart_drawer_infobar_contain") && document.querySelector("#main-cart-items .cart_drawer_infobar_contain").classList.add("hidden")
           document.querySelector("#main-cart-items .cart_section_left").classList.add("hidden")
         }
         this.disableLoading(line);
@@ -430,7 +430,7 @@ class CartItems extends HTMLElement {
       .finally(() => {
         const productLength = document.querySelectorAll("#main-cart-items .cart-items").length
         if (productLength === 0) {
-          document.querySelector("#main-cart-items .cart_drawer_infobar_contain").classList.add("hidden")
+          document.querySelector("#main-cart-items .cart_drawer_infobar_contain") && document.querySelector("#main-cart-items .cart_drawer_infobar_contain").classList.add("hidden")
           document.querySelector("#main-cart-items .cart_section_left").classList.add("hidden")
         }
       });
