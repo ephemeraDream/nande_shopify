@@ -643,7 +643,8 @@
   left: 1.4rem;
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  gap: .6rem;
+  align-items: flex-start;
 }
 
 .collection_compare .collection_compare_product_saleinfo {
