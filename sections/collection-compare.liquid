@@ -144,7 +144,7 @@
                   <div class="collection_compare_product_tagbox">
                     {% if product.compare_at_price != blank and product.compare_at_price > product.price %}
                       <div class="collection_compare_product_tag">
-                        {{ product.compare_at_price | minus: product.price | money_without_trailing_zeros }}
+                        Save {{ product.compare_at_price | minus: product.price | money_without_trailing_zeros }}
                       </div>
                     {% endif %}
                     {% if sale_info != blank %}
