@@ -278,57 +278,34 @@
     const newItemClone = newItemInOther.cloneNode(true);
     const oldItemClone = currentMainItem.cloneNode(true);
     
-    // 确保新克隆的元素保持正确的类名
+    // 为新克隆的产品添加 sticky 包裹结构
+    const swiperElement = newItemClone.querySelector('.swiper');
+    const priceElement = newItemClone.querySelector('.product_compare_item_price');
+    const shopNowElement = newItemClone.querySelector('.product_compare_product_shop_now');
+    
+    if (swiperElement && priceElement && shopNowElement) {
+      // 创建 sticky 包裹容器
+      const stickyWrapper = document.createElement('div');
+      stickyWrapper.className = 'product_compare_product_sticky';
+      
+      // 将需要固定的元素移动到 sticky 包裹中
+      const parent = swiperElement.parentNode;
+      parent.insertBefore(stickyWrapper, swiperElement);
+      
+      // 移动元素到 sticky 包裹中
+      stickyWrapper.appendChild(swiperElement);
+      stickyWrapper.appendChild(priceElement);
+      stickyWrapper.appendChild(shopNowElement);
+    }
+    
     if (index === 0) {
       newItemClone.classList.add('product_compare_product_showtitle');
     } else {
       newItemClone.classList.remove('product_compare_product_showtitle');
     }
-    
-    // 确保 sticky 元素保持正确的样式
-    const stickyElement = newItemClone.querySelector('.product_compare_product_sticky');
-    if (stickyElement) {
-      // 强制重新应用 sticky 样式
-      stickyElement.style.position = 'sticky';
-      stickyElement.style.top = '8rem';
-      stickyElement.style.backgroundColor = '#f2f1ed';
-      stickyElement.style.paddingRight = '4.6rem';
-      stickyElement.style.paddingTop = '3.2rem';
-      stickyElement.style.zIndex = '10';
-      
-      // 强制浏览器重新计算样式
-      stickyElement.offsetHeight;
-      
-      // 使用 requestAnimationFrame 确保样式应用
-      requestAnimationFrame(() => {
-        stickyElement.style.position = 'sticky';
-        stickyElement.style.top = '8rem';
-      });
-    }
-    
     // 替换目标位置的卡片
     containerMain.replaceChild(newItemClone, currentMainItem);
     containerOther.replaceChild(oldItemClone, newItemInOther);
-
-    // 替换后强制重新应用 sticky 样式
-    setTimeout(() => {
-      const newStickyElement = newItemClone.querySelector('.product_compare_product_sticky');
-      if (newStickyElement) {
-        // 临时移除 sticky 属性
-        newStickyElement.style.position = 'static';
-        
-        // 强制重排
-        newStickyElement.offsetHeight;
-        
-        // 重新应用 sticky 属性
-        newStickyElement.style.position = 'sticky';
-        newStickyElement.style.top = '8rem';
-        newStickyElement.style.backgroundColor = '#f2f1ed';
-        newStickyElement.style.paddingRight = '4.6rem';
-        newStickyElement.style.paddingTop = '3.2rem';
-        newStickyElement.style.zIndex = '10';
-      }
-    }, 10);
 
     // 替换后同步高度
     unifyComparisonHeightsByType('.product_compare_contain');
