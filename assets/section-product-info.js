@@ -787,16 +787,25 @@ function updateVariantPrice() {
   total_price = total_price - old_price_dp + price_dp
   total_price_el.forEach(item => item.innerHTML = moneyWithoutTrailingZeros(total_price))
   const price_op = (has_tabletop && curr_bundle_tabletop_variant) ? curr_bundle_tabletop_variant.compare_at_price + currVariant.compare_at_price : currVariant.compare_at_price
+  const saletag = document.querySelector(".product_info_price_saletag")
   if (price_op && price_op > price_dp) {
     const compare_at_price = moneyWithoutTrailingZeros(price_op)
     document.querySelectorAll(".product_info_price_op").forEach(item => {
       item.innerHTML = compare_at_price
       item.classList.remove("hidden")
-      document.querySelector(".product_info_price_saletag").classList.remove("hidden")
+      if (saletag) {
+        saletag.classList.remove("hidden")
+      } else {
+        document.querySelector(".product_info_steps_contain .product_info_price .product_info_price_op").insertAdjacentHTML('afterend', `
+          <div class="product_info_price_saletag">
+            Save ${compare_at_price}
+          </div>
+        `);
+      }
     })
   } else {
     document.querySelectorAll(".product_info_price_op").forEach(item => item.classList.add("hidden"))
-    document.querySelector(".product_info_price_saletag").classList.add("hidden")
+    saletag && saletag.classList.add("hidden")
   }
 }
 function moneyWithoutTrailingZeros(cents) {
