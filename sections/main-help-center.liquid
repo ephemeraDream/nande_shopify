@@ -337,12 +337,24 @@
   document.addEventListener("DOMContentLoaded", function () {
     const form = document.getElementById('help-search-form');
     const input = document.getElementById('Search-In-Template');
+    
+    // 从 schema 设置中获取搜索页面URL
+    const searchPageUrl = '{{ section.settings.search_page_url | default: "/pages/help-search" }}';
   
     form.addEventListener('submit', function (e) {
       e.preventDefault(); 
       const keyword = input.value.trim();
       if (keyword) {
-        const targetURL = `https://www.maidesite.de/pages/topic-collection?view=help-search&keyword=${encodeURIComponent(keyword)}`;
+        // 构建完整的搜索URL
+        let targetURL;
+        if (searchPageUrl.startsWith('http')) {
+          // 如果是完整URL，直接使用
+          targetURL = `${searchPageUrl}?keyword=${encodeURIComponent(keyword)}`;
+        } else {
+          // 如果是相对路径，使用当前域名
+          const currentDomain = window.location.origin;
+          targetURL = `${currentDomain}${searchPageUrl}?keyword=${encodeURIComponent(keyword)}`;
+        }
         window.location.href = targetURL;
       }
     });
@@ -373,6 +385,13 @@
       "type": "url",
       "id": "btn_link",
       "label": "Button Link"
+    },
+    {
+      "type": "url",
+      "id": "search_page_url",
+      "label": "Search Page URL",
+      "default": "/pages/help-search",
+      "info": "设置搜索页面的URL地址"
     }
   ],
   "blocks": [
