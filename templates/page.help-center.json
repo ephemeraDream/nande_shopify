@@ -90,7 +90,8 @@
         "title": "Wie KöNnen Wir Ihnen Helfen?",
         "description": "",
         "btn_text": "",
-        "btn_link": ""
+        "btn_link": "",
+        "search_page_url": "shopify://pages/help-search"
       }
     },
     "faq_simple_kxTbhc": {
