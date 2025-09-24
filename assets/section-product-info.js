@@ -784,8 +784,8 @@ function updateVariantPrice() {
   const price = moneyWithoutTrailingZeros(price_dp)
   document.querySelectorAll(".product_info_price_dp:not(.product_info_bundle_info_total)").forEach(item => item.innerHTML = price)
   let total_price = moneyStringToCents(total_price_el[0].innerHTML)
-  total_price = total_price - old_price_dp + price
-  total_price_el.forEach(item => item.innerHTML = total_price)
+  total_price = total_price - old_price_dp + price_dp
+  total_price_el.forEach(item => item.innerHTML = moneyWithoutTrailingZeros(total_price))
   const price_op = (has_tabletop && curr_bundle_tabletop_variant) ? curr_bundle_tabletop_variant.compare_at_price + currVariant.compare_at_price : currVariant.compare_at_price
   if (price_op && price_op > price_dp) {
     const compare_at_price = moneyWithoutTrailingZeros(price_op)
