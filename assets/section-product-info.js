@@ -792,9 +792,11 @@ function updateVariantPrice() {
     document.querySelectorAll(".product_info_price_op").forEach(item => {
       item.innerHTML = compare_at_price
       item.classList.remove("hidden")
+      document.querySelector(".product_info_price_saletag").classList.remove("hidden")
     })
   } else {
     document.querySelectorAll(".product_info_price_op").forEach(item => item.classList.add("hidden"))
+    document.querySelector(".product_info_price_saletag").classList.add("hidden")
   }
 }
 function moneyWithoutTrailingZeros(cents) {
