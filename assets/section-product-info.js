@@ -793,16 +793,16 @@ function updateVariantPrice() {
     document.querySelectorAll(".product_info_price_op").forEach(item => {
       item.innerHTML = compare_at_price
       item.classList.remove("hidden")
-      if (saletag) {
-        saletag.classList.remove("hidden")
-      } else {
-        document.querySelector(".product_info_steps_contain .product_info_price .product_info_price_op").insertAdjacentHTML('afterend', `
-          <div class="product_info_price_saletag">
-            Save ${compare_at_price}
-          </div>
-        `);
-      }
     })
+    if (saletag) {
+      saletag.classList.remove("hidden")
+    } else {
+      document.querySelector(".product_info_steps_contain .product_info_price .product_info_price_op").insertAdjacentHTML('afterend', `
+        <div class="product_info_price_saletag">
+          Save ${moneyWithoutTrailingZeros(price_op - price_dp)}
+        </div>
+      `);
+    }
   } else {
     document.querySelectorAll(".product_info_price_op").forEach(item => item.classList.add("hidden"))
     saletag && saletag.classList.add("hidden")
