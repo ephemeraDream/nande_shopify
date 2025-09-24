@@ -294,11 +294,41 @@
       stickyElement.style.backgroundColor = '#f2f1ed';
       stickyElement.style.paddingRight = '4.6rem';
       stickyElement.style.paddingTop = '3.2rem';
+      stickyElement.style.zIndex = '10';
+      
+      // 强制浏览器重新计算样式
+      stickyElement.offsetHeight;
+      
+      // 使用 requestAnimationFrame 确保样式应用
+      requestAnimationFrame(() => {
+        stickyElement.style.position = 'sticky';
+        stickyElement.style.top = '8rem';
+      });
     }
     
     // 替换目标位置的卡片
     containerMain.replaceChild(newItemClone, currentMainItem);
     containerOther.replaceChild(oldItemClone, newItemInOther);
+
+    // 替换后强制重新应用 sticky 样式
+    setTimeout(() => {
+      const newStickyElement = newItemClone.querySelector('.product_compare_product_sticky');
+      if (newStickyElement) {
+        // 临时移除 sticky 属性
+        newStickyElement.style.position = 'static';
+        
+        // 强制重排
+        newStickyElement.offsetHeight;
+        
+        // 重新应用 sticky 属性
+        newStickyElement.style.position = 'sticky';
+        newStickyElement.style.top = '8rem';
+        newStickyElement.style.backgroundColor = '#f2f1ed';
+        newStickyElement.style.paddingRight = '4.6rem';
+        newStickyElement.style.paddingTop = '3.2rem';
+        newStickyElement.style.zIndex = '10';
+      }
+    }, 10);
 
     // 替换后同步高度
     unifyComparisonHeightsByType('.product_compare_contain');
