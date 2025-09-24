@@ -825,7 +825,10 @@ function moneyWithoutTrailingZeros(cents) {
 }
 function updateBuyBtns() {
   const btns = document.querySelectorAll(".product_info_buybox_btns_btn")
-  btns.forEach(item => item.toggleAttribute("disabled", (has_tabletop && curr_bundle_tabletop_variant) ? !currVariant.available || !curr_bundle_tabletop_variant.available : !currVariant.available))
+  btns.forEach(item => {
+    item.toggleAttribute("disabled", (has_tabletop && curr_bundle_tabletop_variant) ? !currVariant.available || !curr_bundle_tabletop_variant.available : !currVariant.available)
+    item.firstChild.textContent = (has_tabletop && curr_bundle_tabletop_variant) ? !currVariant.available || !curr_bundle_tabletop_variant.available ? 'Ausverkauft' : 'In den Warenkorb legen' : !currVariant.available ? 'Ausverkauft' : 'In den Warenkorb legen'; 
+  })
 }
 function updateUrl() {
   const url = new URL(window.location.href);
