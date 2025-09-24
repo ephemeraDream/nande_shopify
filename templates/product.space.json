@@ -147,6 +147,7 @@
         "item_RrNzfE",
         "item_Vt9rJN"
       ],
+      "disabled": true,
       "name": "product anchor bar",
       "settings": {
         "button_text": "Jetzt kaufen",
@@ -157,6 +158,7 @@
     },
     "video_wPHLA8": {
       "type": "video",
+      "disabled": true,
       "name": "t:sections.video.presets.name",
       "settings": {
         "heading": "Maidesite mobiler Schreibtisch T2 Pro Max Ausrüstung",
