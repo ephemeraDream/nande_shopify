@@ -109,66 +109,33 @@
 
 
 <script>
-(function() {
-  'use strict';
-  
+document.addEventListener('DOMContentLoaded', function() {
   // 检查是否为移动设备
   function isMobile() {
     return window.innerWidth <= 767;
   }
   
-  // 防抖函数
-  function debounce(func, wait) {
-    let timeout;
-    return function executedFunction(...args) {
-      const later = () => {
-        clearTimeout(timeout);
-        func(...args);
-      };
-      clearTimeout(timeout);
-      timeout = setTimeout(later, wait);
-    };
-  }
-  
   // 初始化移动端展开/收起功能
   function initMobileToggle() {
-    // 清除之前的事件监听器
+    if (!isMobile()) return;
+    
     const toggleElements = document.querySelectorAll('[data-toggle^="footer-link-list"]');
     
     toggleElements.forEach(function(toggleElement) {
-      // 移除之前的事件监听器
-      const newToggleElement = toggleElement.cloneNode(true);
-      toggleElement.parentNode.replaceChild(newToggleElement, toggleElement);
-    });
-    
-    // 重新获取元素并绑定事件
-    const freshToggleElements = document.querySelectorAll('[data-toggle^="footer-link-list"]');
-    
-    freshToggleElements.forEach(function(toggleElement) {
       const targetId = toggleElement.getAttribute('data-toggle');
       const targetElement = document.getElementById(targetId);
       const iconElement = toggleElement.querySelector('.footer_simple_toggle_icon');
       
       if (targetElement && iconElement) {
-        // 设置初始状态
-        if (isMobile()) {
-          targetElement.style.display = 'none';
-          iconElement.textContent = '+';
-          iconElement.classList.remove('footer_simple_toggle_icon_expanded');
-        } else {
-          targetElement.style.display = 'block';
-        }
+        // 初始状态：隐藏链接
+        targetElement.style.display = 'none';
         
-        // 添加点击事件 - 使用事件委托
+        // 添加点击事件
         toggleElement.addEventListener('click', function(e) {
           e.preventDefault();
           e.stopPropagation();
           
-          if (!isMobile()) return;
-          
-          const isHidden = targetElement.style.display === 'none';
-          
-          if (isHidden) {
+          if (targetElement.style.display === 'none') {
             // 展开
             targetElement.style.display = 'block';
             iconElement.textContent = '−';
@@ -179,71 +146,34 @@
             iconElement.textContent = '+';
             iconElement.classList.remove('footer_simple_toggle_icon_expanded');
           }
-        }, { passive: false });
-        
-        // 添加触摸事件支持
-        toggleElement.addEventListener('touchstart', function(e) {
-          e.preventDefault();
-        }, { passive: false });
+        });
       }
     });
   }
   
-  // 重置为桌面端状态
-  function resetToDesktop() {
-    const linkItems = document.querySelectorAll('.footer_simple_link_list_items');
-    const icons = document.querySelectorAll('.footer_simple_toggle_icon');
-    
-    linkItems.forEach(function(item) {
-      item.style.display = 'block';
-    });
-    
-    icons.forEach(function(icon) {
-      icon.textContent = '+';
-      icon.classList.remove('footer_simple_toggle_icon_expanded');
-    });
-  }
+  // 页面加载时初始化
+  initMobileToggle();
   
-  // 防抖的resize处理函数
-  const debouncedResize = debounce(function() {
+  // 窗口大小改变时重新初始化
+  window.addEventListener('resize', function() {
     if (isMobile()) {
       initMobileToggle();
     } else {
-      resetToDesktop();
-    }
-  }, 150);
-  
-  // 页面加载完成后初始化
-  function initializeFooter() {
-    // 等待DOM完全加载
-    if (document.readyState === 'loading') {
-      document.addEventListener('DOMContentLoaded', function() {
-        setTimeout(initMobileToggle, 100);
+      // 桌面端恢复默认显示
+      const linkItems = document.querySelectorAll('.footer_simple_link_list_items');
+      const icons = document.querySelectorAll('.footer_simple_toggle_icon');
+      
+      linkItems.forEach(function(item) {
+        item.style.display = 'block';
       });
-    } else {
-      setTimeout(initMobileToggle, 100);
-    }
-  }
-  
-  // 初始化
-  initializeFooter();
-  
-  // 窗口大小改变时重新初始化
-  window.addEventListener('resize', debouncedResize);
-  
-  // 页面可见性改变时重新初始化（处理移动端浏览器切换）
-  document.addEventListener('visibilitychange', function() {
-    if (!document.hidden) {
-      setTimeout(function() {
-        if (isMobile()) {
-          initMobileToggle();
-        } else {
-          resetToDesktop();
-        }
-      }, 100);
+      
+      icons.forEach(function(icon) {
+        icon.textContent = '+';
+        icon.classList.remove('footer_simple_toggle_icon_expanded');
+      });
     }
   });
-})();
+});
 </script>
 
 {% schema %}
