@@ -86,7 +86,11 @@
         </a>
       {%- endif -%}
       <a href="{{ routes.cart_url }}" class="header_simple_icon_item" id="cart-icon-bubble">
-        {{ 'icon-cart-empty.svg' | inline_asset_content }}
+        {%- if section.settings.cart_icon_svg != blank -%}
+          {{ section.settings.cart_icon_svg }}
+        {%- else -%}
+          {{ 'icon-cart-empty.svg' | inline_asset_content }}
+        {%- endif -%}
         {%- if cart != empty -%}
           <div class="cart-count-bubble">
             {%- if cart.item_count < 100 -%}
@@ -97,17 +101,33 @@
         {%- endif -%}
       </a>
       <a href="mailto:{{ shop.email }}" class="header_simple_icon_item">
-        {{- 'icon-email.svg' | inline_asset_content -}}
+        {%- if section.settings.email_icon_svg != blank -%}
+          {{ section.settings.email_icon_svg }}
+        {%- else -%}
+          {{- 'icon-email.svg' | inline_asset_content -}}
+        {%- endif -%}
       </a>
       <a href="{{ section.settings.customer_service_url }}" class="header_simple_icon_item">
-        {{- 'icon-message.svg' | inline_asset_content -}}
+        {%- if section.settings.message_icon_svg != blank -%}
+          {{ section.settings.message_icon_svg }}
+        {%- else -%}
+          {{- 'icon-message.svg' | inline_asset_content -}}
+        {%- endif -%}
       </a>
       <a class="header_simple_icon_item header_simple_hamburger">
         <div open>
-          {{- 'icon-hamburger.svg' | inline_asset_content -}}
+          {%- if section.settings.hamburger_icon_svg != blank -%}
+            {{ section.settings.hamburger_icon_svg }}
+          {%- else -%}
+            {{- 'icon-hamburger.svg' | inline_asset_content -}}
+          {%- endif -%}
         </div>
         <div close>
-          {{- 'icon-close.svg' | inline_asset_content -}}
+          {%- if section.settings.close_icon_svg != blank -%}
+            {{ section.settings.close_icon_svg }}
+          {%- else -%}
+            {{- 'icon-close.svg' | inline_asset_content -}}
+          {%- endif -%}
         </div>
       </a>
     </div>
@@ -128,6 +148,40 @@
       "type": "text",
       "id": "customer_service_url",
       "label": "Customer Service URL"
+    },
+    {
+      "type": "header",
+      "content": "图标设置"
+    },
+    {
+      "type": "textarea",
+      "id": "cart_icon_svg",
+      "label": "购物车图标 SVG",
+      "info": "留空则使用默认图标"
+    },
+    {
+      "type": "textarea",
+      "id": "email_icon_svg",
+      "label": "邮箱图标 SVG",
+      "info": "留空则使用默认图标"
+    },
+    {
+      "type": "textarea",
+      "id": "message_icon_svg",
+      "label": "消息图标 SVG",
+      "info": "留空则使用默认图标"
+    },
+    {
+      "type": "textarea",
+      "id": "hamburger_icon_svg",
+      "label": "汉堡菜单图标 SVG",
+      "info": "留空则使用默认图标"
+    },
+    {
+      "type": "textarea",
+      "id": "close_icon_svg",
+      "label": "关闭图标 SVG",
+      "info": "留空则使用默认图标"
     }
   ],
   "presets": [
