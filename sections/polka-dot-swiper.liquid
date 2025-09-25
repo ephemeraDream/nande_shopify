@@ -378,3 +378,27 @@
   ]
 }
 {% endschema %}
+
+<style>
+/* PC端：鼠标悬停时显示导航按钮 */
+@media screen and (min-width: 768px) {
+  .polka_dot_swiper_prev,
+  .polka_dot_swiper_next {
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  
+  .polka_dot_swiper:hover .polka_dot_swiper_prev,
+  .polka_dot_swiper:hover .polka_dot_swiper_next {
+    opacity: 1;
+  }
+}
+
+/* 移动端：隐藏导航按钮 */
+@media screen and (max-width: 767px) {
+  .polka_dot_swiper_prev,
+  .polka_dot_swiper_next {
+    display: none !important;
+  }
+}
+</style>
