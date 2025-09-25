@@ -208,18 +208,47 @@ document.addEventListener('DOMContentLoaded', function() {
     if (!sectionEl) return;
     const form = sectionEl.querySelector('#ContactFooter');
     const submitBtn = sectionEl.querySelector('#Subscribe') || sectionEl.querySelector('button.newsletter-form__button');
-    if (!form || !submitBtn) return;
+    const checkbox = sectionEl.querySelector('#subscribe_confirm_checkbox');
+    const errorMessage = sectionEl.querySelector('#subscribe_error_message');
+    
+    if (!form || !submitBtn || !checkbox || !errorMessage) return;
+    
     if (!submitBtn.dataset.loadingBound) {
-      submitBtn.addEventListener('click', function() {
+      // 按钮点击验证
+      submitBtn.addEventListener('click', function(e) {
+        if (!checkbox.checked) {
+          e.preventDefault();
+          errorMessage.style.display = 'flex';
+          checkbox.focus();
+          return false;
+        }
+        // 只有勾选了才执行 loading
         submitBtn.classList.add('loading');
         submitBtn.setAttribute('aria-disabled', 'true');
         submitBtn.disabled = true;
       });
-      form.addEventListener('submit', function() {
+      
+      // 表单提交验证
+      form.addEventListener('submit', function(e) {
+        if (!checkbox.checked) {
+          e.preventDefault();
+          errorMessage.style.display = 'flex';
+          checkbox.focus();
+          return false;
+        }
+        // 只有勾选了才执行 loading
         submitBtn.classList.add('loading');
         submitBtn.setAttribute('aria-disabled', 'true');
         submitBtn.disabled = true;
       });
+      
+      // 勾选框状态改变时隐藏错误信息
+      checkbox.addEventListener('change', function() {
+        if (this.checked) {
+          errorMessage.style.display = 'none';
+        }
+      });
+      
       submitBtn.dataset.loadingBound = 'true';
     }
   }
@@ -349,42 +378,3 @@ document.addEventListener('DOMContentLoaded', function() {
 }
 </style>
 
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-  const form = document.querySelector('#shopify-section-{{ section.id }} .newsletter-form');
-  const checkbox = document.querySelector('#subscribe_confirm_checkbox');
-  const errorMessage = document.querySelector('#subscribe_error_message');
-  const submitButton = document.querySelector('#Subscribe');
-  
-  if (form && checkbox && errorMessage && submitButton) {
-    // 表单提交验证
-    form.addEventListener('submit', function(e) {
-      if (!checkbox.checked) {
-        e.preventDefault();
-        errorMessage.style.display = 'flex';
-        checkbox.focus();
-        return false;
-      } else {
-        errorMessage.style.display = 'none';
-      }
-    });
-    
-    // 勾选框状态改变时隐藏错误信息
-    checkbox.addEventListener('change', function() {
-      if (this.checked) {
-        errorMessage.style.display = 'none';
-      }
-    });
-    
-    // 按钮点击验证
-    submitButton.addEventListener('click', function(e) {
-      if (!checkbox.checked) {
-        e.preventDefault();
-        errorMessage.style.display = 'flex';
-        checkbox.focus();
-        return false;
-      }
-    });
-  }
-});
-</script>
