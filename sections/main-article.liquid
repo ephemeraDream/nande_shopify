@@ -334,15 +334,14 @@
       <h3>Unsere beliebten Blogs</h3>
       {% assign related_articles = article.metafields.custom.related_articles.value %}
       {% comment %} Debug: {{ article.metafields.custom.related_articles.value | json }} {% endcomment %}
-      {% comment %} Debug size: {{ related_articles.size }} {% endcomment %}
       {% if related_articles != blank %}
-        {% assign recommended = related_articles | slice: 0, 5 %}
+        {% assign recommended = related_articles %}
       {% else %}
         {% assign other_articles = blog.articles | where_exp: "item", "item.id != article.id" %}
         {% assign recommended = other_articles | slice: 0, 2 %}
       {% endif %}
 
-      {% for item in recommended %}
+      {% for item in recommended limit: 5 %}
           <a href="{{ item.url }}" class="article_card">
             <div class="article_card__img">
             {% if item.image %}
@@ -358,12 +357,12 @@
       <h3>Featured Products</h3>
       {% assign related_products = article.metafields.custom.related_products.value %}
       {% if related_products != blank %}
-        {% assign recommended_products = related_products | slice: 0, 5 %}
+        {% assign recommended_products = related_products %}
       {% else %}
         {% assign recommended_products = collections.all.products | reverse | slice: 0, 2 %}
       {% endif %}
 
-      {% for product in recommended_products %}
+      {% for product in recommended_products limit: 5 %}
         <a href="{{ product.url }}" class="product_card">
           <div class="product_card__img">
             {{-
