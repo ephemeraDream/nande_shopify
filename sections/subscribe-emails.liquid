@@ -246,7 +246,7 @@ document.addEventListener('DOMContentLoaded', function() {
         // 只有邮箱和勾选框都满足条件才执行 loading
         submitBtn.classList.add('loading');
         submitBtn.setAttribute('aria-disabled', 'true');
-        submitBtn.disabled = true;
+        // 不设置 disabled，让表单能够正常提交
       });
       
       // 表单提交验证
@@ -274,7 +274,7 @@ document.addEventListener('DOMContentLoaded', function() {
         // 只有邮箱和勾选框都满足条件才执行 loading
         submitBtn.classList.add('loading');
         submitBtn.setAttribute('aria-disabled', 'true');
-        submitBtn.disabled = true;
+        // 不设置 disabled，让表单能够正常提交
       });
       
       // 勾选框状态改变时隐藏错误信息
