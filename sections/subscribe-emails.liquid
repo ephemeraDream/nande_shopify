@@ -56,6 +56,12 @@
             </span>
             <span>{{ section.settings.checkbox_error_message | default: "Please check the agreement first" }}</span>
           </div>
+          <div class="subscribe_emails_error_message" id="email_error_message" style="display: none;">
+            <span class="svg-wrapper">
+              {{- 'icon-error.svg' | inline_asset_content -}}
+            </span>
+            <span>{{ section.settings.email_error_message | default: "Please enter your email address" }}</span>
+          </div>
           {%- if form.errors -%}
             <small class="newsletter-form__message form__message" id="ContactFooter-error">
               <span class="svg-wrapper">
@@ -209,9 +215,10 @@ document.addEventListener('DOMContentLoaded', function() {
     const form = sectionEl.querySelector('#ContactFooter');
     const submitBtn = sectionEl.querySelector('#Subscribe') || sectionEl.querySelector('button.newsletter-form__button');
     const checkbox = sectionEl.querySelector('#subscribe_confirm_checkbox');
-    const errorMessage = sectionEl.querySelector('#subscribe_error_message');
+    const checkboxErrorMessage = sectionEl.querySelector('#subscribe_error_message');
+    const emailErrorMessage = sectionEl.querySelector('#email_error_message');
     
-    if (!form || !submitBtn || !checkbox || !errorMessage) return;
+    if (!form || !submitBtn || !checkbox || !checkboxErrorMessage || !emailErrorMessage) return;
     
     if (!submitBtn.dataset.loadingBound) {
       // 按钮点击验证
@@ -219,15 +226,20 @@ document.addEventListener('DOMContentLoaded', function() {
         const emailInput = sectionEl.querySelector('#NewsletterForm--{{ section.id }}');
         const emailValue = emailInput ? emailInput.value.trim() : '';
         
+        // 隐藏所有错误信息
+        checkboxErrorMessage.style.display = 'none';
+        emailErrorMessage.style.display = 'none';
+        
         if (!emailValue) {
           e.preventDefault();
+          emailErrorMessage.style.display = 'flex';
           emailInput.focus();
           return false;
         }
         
         if (!checkbox.checked) {
           e.preventDefault();
-          errorMessage.style.display = 'flex';
+          checkboxErrorMessage.style.display = 'flex';
           checkbox.focus();
           return false;
         }
@@ -242,15 +254,20 @@ document.addEventListener('DOMContentLoaded', function() {
         const emailInput = sectionEl.querySelector('#NewsletterForm--{{ section.id }}');
         const emailValue = emailInput ? emailInput.value.trim() : '';
         
+        // 隐藏所有错误信息
+        checkboxErrorMessage.style.display = 'none';
+        emailErrorMessage.style.display = 'none';
+        
         if (!emailValue) {
           e.preventDefault();
+          emailErrorMessage.style.display = 'flex';
           emailInput.focus();
           return false;
         }
         
         if (!checkbox.checked) {
           e.preventDefault();
-          errorMessage.style.display = 'flex';
+          checkboxErrorMessage.style.display = 'flex';
           checkbox.focus();
           return false;
         }
@@ -263,9 +280,19 @@ document.addEventListener('DOMContentLoaded', function() {
       // 勾选框状态改变时隐藏错误信息
       checkbox.addEventListener('change', function() {
         if (this.checked) {
-          errorMessage.style.display = 'none';
+          checkboxErrorMessage.style.display = 'none';
         }
       });
+      
+      // 邮箱输入时隐藏错误信息
+      const emailInput = sectionEl.querySelector('#NewsletterForm--{{ section.id }}');
+      if (emailInput) {
+        emailInput.addEventListener('input', function() {
+          if (this.value.trim()) {
+            emailErrorMessage.style.display = 'none';
+          }
+        });
+      }
       
       submitBtn.dataset.loadingBound = 'true';
     }
@@ -311,6 +338,13 @@ document.addEventListener('DOMContentLoaded', function() {
       "label": "Checkbox Error Message",
       "default": "Please check the agreement first",
       "info": "Error message shown when checkbox is not checked"
+    },
+    {
+      "type": "text",
+      "id": "email_error_message",
+      "label": "Email Error Message",
+      "default": "Please enter your email address",
+      "info": "Error message shown when email is not entered"
     }
   ],
   "presets": [
