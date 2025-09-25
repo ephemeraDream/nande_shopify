@@ -183,6 +183,9 @@
   .footer_simple .footer_simple_company_info{
     padding-bottom: 2rem;
   }
+  .footer_simple .footer_simple_body {
+    border-bottom: none;
+}
 }
 
 /* 桌面端隐藏展开/收起图标 */
