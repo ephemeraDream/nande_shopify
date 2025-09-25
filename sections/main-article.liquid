@@ -332,20 +332,11 @@
     </div>
     <div class="featured_article">
       <h3>Unsere beliebten Blogs</h3>
-      {% assign recommended = '' | split: '' %}
-      
-      {% comment %} metafields设置的文章 {% endcomment %}
       {% assign related_articles = article.metafields.custom.related_articles %}
       {% if related_articles and related_articles.size > 0 %}
         {% assign recommended = related_articles | slice: 0, 2 %}
       {% else %}
-        {% comment %} 如果没有设置，则使用同博客下的其他文章 {% endcomment %}
-        {% assign other_articles = '' | split: '' %}
-        {% for blog_article in blog.articles %}
-          {% unless blog_article.id == article.id %}
-            {% assign other_articles = other_articles | concat: blog_article %}
-          {% endunless %}
-        {% endfor %}
+        {% assign other_articles = blog.articles | where_exp: "item", "item.id != article.id" %}
         {% assign recommended = other_articles | slice: 0, 2 %}
       {% endif %}
 
@@ -353,7 +344,7 @@
           <a href="{{ item.url }}" class="article_card">
             <div class="article_card__img">
             {% if item.image %}
-              <img src="{{ item.image | image_url: width: 400 }}" alt="{{ item.image.alt | escape }}" loading="lazy" width="400" height="{{ 400 | divided_by: item.image.aspect_ratio | ceil }}">
+              <img src="{{ item.image | image_url: width: 400 }}" alt="{{ item.image.alt | escape }}" loading="lazy">
             {% endif %}
             </div>
             <h4>{{ item.title }}</h4>
@@ -363,14 +354,10 @@
     </div>
     <div class="featured_pro">
       <h3>Featured Products</h3>
-      {% assign recommended_products = '' | split: '' %}
-      
-      {% comment %} metafields设置的产品 {% endcomment %}
       {% assign related_products = article.metafields.custom.related_products %}
       {% if related_products and related_products.size > 0 %}
         {% assign recommended_products = related_products | slice: 0, 2 %}
       {% else %}
-        {% comment %} 如果没有设置，则使用所有产品集合中的最新产品 {% endcomment %}
         {% assign recommended_products = collections.all.products | reverse | slice: 0, 2 %}
       {% endif %}
 
@@ -412,7 +399,6 @@
   "name": "t:sections.main-article.name",
   "tag": "section",
   "class": "section",
-  "settings": [],
   "blocks": [
     {
       "type": "@app"
@@ -518,7 +504,7 @@
           "id": "share_email",
           "label": "显示邮件分享",
           "default": false
-        }
+        }        
       ]
     },
     {

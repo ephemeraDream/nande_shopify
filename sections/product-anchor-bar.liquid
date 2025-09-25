@@ -10,8 +10,8 @@
             href="#"
             data-watch="top"
           {% else %}
-            href="#{{ block.settings.anchor_name }}"
-            data-watch="{{ block.settings.anchor_name }}"
+          href="#{{ block.settings.anchor_name }}"
+          data-watch="{{ block.settings.anchor_name }}"
           {% endif %}
         >
           {{- block.settings.title -}}
@@ -23,11 +23,11 @@
        {% if section.settings.button_target_blank %}target="_blank"{% endif %}>
       {{ section.settings.button_text | default: 'Jetzt kaufen' }}
       {% if section.settings.show_icon %}
-        {{ 'icon-right-arrow.svg' | inline_asset_content }}
+      {{ 'icon-right-arrow.svg' | inline_asset_content }}
       {% endif %}
     </a>
   </div>
-</div>  
+</div>
 
 <script>
   
@@ -39,7 +39,7 @@
   }
   
 function initAnchorBar() {
-    const links = document.querySelectorAll('.product_anchor_bar_left_item');
+  const links = document.querySelectorAll('.product_anchor_bar_left_item');
     
     if (links.length === 0) {
       return;
@@ -197,12 +197,12 @@ function initAnchorBar() {
       if (element) {
         sections.push(element);
         sectionsLoaded++;
-      }
+        }
     });
     
     // 直接启动观察器，不管找到多少个元素
     startIntersectionObserver(sections);
-  } 
+  }
 
   function startIntersectionObserver(sections) {
     let scrollTimeout;
@@ -251,10 +251,10 @@ function initAnchorBar() {
           const correspondingLink = document.querySelector(
             `.product_anchor_bar_left_item[data-watch="${closestSection.id}"]`
           );
-          if (correspondingLink) {
-            correspondingLink.classList.add('active');
+            if (correspondingLink) {
+              correspondingLink.classList.add('active');
+            }
           }
-        }
       }
     }
     
