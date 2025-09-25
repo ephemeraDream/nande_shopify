@@ -348,7 +348,7 @@
             "title": "<h3>Nachhaltige Bürolösungen für eine grüne Zukunft</h3>",
             "description": "<p>Maidesite: Nachhaltige & effiziente Büromöbel mit FSC-Zertifizierung<br/><br/></p>",
             "file_type": "image",
-            "file_image": "shopify://shop_images/P7.jpg",
+            "file_image": "shopify://shop_images/fsc.png",
             "video_url": ""
           }
         },
@@ -698,6 +698,7 @@
       ],
       "name": "maidesite swiper",
       "settings": {
+        "spec_id": "",
         "title": "<p>Erfahrungen Unserer GeschäFtskunden Mit<br/> Maidesite</p>",
         "text": "",
         "show_buttons": true,
