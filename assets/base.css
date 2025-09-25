@@ -4488,7 +4488,7 @@ body.gradient #wheelify-spin_a_sale_cc_store_front_module span#cc-spin-a-sale-co
   font-size: 1.6rem!important;
   font-weight: normal!important;
 }
-.cartdrawer_bundle_product_item_price_op{
+.cartdrawer_bundle_product_item_price_op,.cart-item__compare-price{
   text-decoration: line-through;
   color: #7F7E55!important;
   font-size: 1.4rem!important;
