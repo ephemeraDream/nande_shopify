@@ -1,71 +1,77 @@
 {% comment %}
-------------------------------------------------------------
-Product Tab Compare Section - 产品对比 tab切换
-------------------------------------------------------------
+  ------------------------------------------------------------
+  Product Tab Compare Section - 产品对比 tab切换
+  ------------------------------------------------------------
 {% endcomment %}
-<div class="product-tab-compare session-box-padding overflow-hidden padding-top-120 padding-bottom-120" id="product-tab-compare-{{ section.id }}" data-section-id="{{ section.id }}">
-    {% unless section.settings.title == blank %}
-      <h2 class="padding-bottom-30 session-box-inner">{{ section.settings.title }}</h2>
-    {% endunless %}
-    <div class="session-box-inner">
-      <div class="tab-header">
-        <div class="session-box-padding">
-          <ul class="tab-titles session-box-inner">
-            {% assign tab_index = 0 %}
-            {% for block in section.blocks %}
-              {% if block.type == 'tab' %}
-                <li data-tab="{{ tab_index }}"
-                    onclick="switchTab({{ tab_index }}, '{{ section.id }}')"
-                    class="{% if forloop.first %}active{% endif %}"
-                    {{ block.shopify_attributes }}>
-                  {{ block.settings.tab_title | escape }}
-                </li>
-                {% assign tab_index = tab_index | plus: 1 %}
-              {% endif %}
-            {% endfor %}
-          </ul>
-        </div>
-      </div>
-      <div class="tab-content session-box-inner">
-        {% for block in section.blocks %}
+<div
+  class="product-tab-compare session-box-padding overflow-hidden padding-top-120 padding-bottom-120"
+  id="product-tab-compare-{{ section.id }}"
+  data-section-id="{{ section.id }}"
+>
+  {% unless section.settings.title == blank %}
+    <h2 class="padding-bottom-30 session-box-inner">{{ section.settings.title }}</h2>
+  {% endunless %}
+  <div class="session-box-inner">
+    <div class="tab-header">
+      <div class="session-box-padding">
+        <ul class="tab-titles session-box-inner">
+          {% assign tab_index = 0 %}
+          {% for block in section.blocks %}
             {% if block.type == 'tab' %}
-          <div class="swiper tab-panel tab-panel-{{ section.id }} {% if forloop.first %}active{% endif %}" data-tab="{{ forloop.index0 }}" id="tab-swiper-{{ section.id }}-{{ forloop.index0 }}">
+              <li
+                data-tab="{{ tab_index }}"
+                onclick="switchTab({{ tab_index }}, '{{ section.id }}')"
+                class="{% if forloop.first %}active{% endif %}"
+                {{ block.shopify_attributes }}
+              >
+                {{ block.settings.tab_title | escape }}
+              </li>
+              {% assign tab_index = tab_index | plus: 1 %}
+            {% endif %}
+          {% endfor %}
+        </ul>
+      </div>
+    </div>
+    <div class="tab-content session-box-inner">
+      {% for block in section.blocks %}
+        {% if block.type == 'tab' %}
+          <div
+            class="swiper tab-panel tab-panel-{{ section.id }} {% if forloop.first %}active{% endif %}"
+            data-tab="{{ forloop.index0 }}"
+            id="tab-swiper-{{ section.id }}-{{ forloop.index0 }}"
+          >
             <div class="tab-products swiper-wrapper">
               {% for product in block.settings.product_list %}
-                  <div class="tab-product-card swiper-slide">
+                <div class="tab-product-card swiper-slide">
+                  <a href="{{ product.url }}">
+                    <img
+                      src="{{ product.featured_image | image_url: width: 400 }}"
+                      alt="{{ product.title }}"
+                      class="product_img"
+                    >
+                  </a>
+                  {% assign product_model = product.metafields.custom.product_model %}
+                  {% assign product_title_top = product.metafields.custom.product_title_top %}
+                  <div class="tab-product-title text-body">
                     <a href="{{ product.url }}">
-                      <img src="{{ product.featured_image | image_url: width: 400 }}" alt="{{ product.title }}" class="product_img">
-                    </a>
-                      {% assign product_model = product.metafields.custom.product_model %}
-                      {% assign product_title_top = product.metafields.custom.product_title_top %}
-                      <div class="tab-product-title text-body">
-                        <a href="{{ product.url }}">
-                        <span class="product_title_top">
-                          {% if product_title_top != blank %}
-                            {{ product_title_top }}
-                          {% else %}
-                            Maidesite
-                          {% endif %}
-                        </span>
-                        {% if product_model != blank %}
-                          <span class="text-title">{{ product_model }}</span>
+                      <span class="product_title_top">
+                        {% if product_title_top != blank %}
+                          {{ product_title_top }}
                         {% else %}
-                          <span class="text-title">{{ product.title  }}</span>
+                          Maidesite
                         {% endif %}
-                        </a>
-                      </div>
-                      {% comment %} <div class="compare_simple_item_line">
-                        <div class="compare_simple_item_line_label">Preis: </div>
-                        <div class="compare_simple_item_line_value">
-                          {% if product.compare_at_price != blank %}
-                            {% assign price = product.compare_at_price | money_without_trailing_zeros %}
-                          {% else %}
-                            {% assign price = product.price | money_without_trailing_zeros %}
-                          {% endif %}
-                          {{ 'products.product.price.from_price_html' | t: price: price }}
-                        </div>
-                      </div> {% endcomment %}
-                      <div class="compare_simple_item_price">
+                      </span>
+                      {% if product_model != blank %}
+                        <span class="text-title">{{ product_model }}</span>
+                      {% else %}
+                        <span class="text-title">{{ product.title }}</span>
+                      {% endif %}
+                    </a>
+                  </div>
+                  {% comment %}
+                    <div class="compare_simple_item_line">
+                      <div class="compare_simple_item_line_label">Preis: </div>
+                      <div class="compare_simple_item_line_value">
                         {% if product.compare_at_price != blank %}
                           {% assign price = product.compare_at_price | money_without_trailing_zeros %}
                         {% else %}
@@ -73,212 +79,233 @@ Product Tab Compare Section - 产品对比 tab切换
                         {% endif %}
                         {{ 'products.product.price.from_price_html' | t: price: price }}
                       </div>
-                      <a href="{{ product.url }}" class="nd-btn">{{ 'common.en_savoir_plus' | t }} {{ 'icon-right-arrow.svg' | inline_asset_content }}</a>
-                      {% for item in product.metafields.custom.compare_simple.value.data.value %}
-                        <div class="compare_simple_item_line text-body">
-                          <div class="compare_simple_item_line_label">{{ item.label }}</div>
-                          <div class="compare_simple_item_line_value">{{ item.value }}</div>
-                        </div>
-                      {%- endfor %}
+                    </div>
+                  {% endcomment %}
+                  <div class="compare_simple_item_price">
+                    {% if product.compare_at_price != blank %}
+                      {% assign price = product.compare_at_price | money_without_trailing_zeros %}
+                    {% else %}
+                      {% assign price = product.price | money_without_trailing_zeros %}
+                    {% endif %}
+                    {{ 'products.product.price.from_price_html' | t: price: price }}
                   </div>
+                  <a href="{{ product.url }}" class="nd-btn">
+                    {{- 'common.en_savoir_plus' | t }}
+                    {{ 'icon-right-arrow.svg' | inline_asset_content -}}
+                  </a>
+                  {% assign compare_data = block.settings.select_product.metafields.custom.compare_simple.value %}
+                  {% for item in compare_data.short_data.value %}
+                    <div class="compare_simple_item_category">
+                      <div class="compare_simple_item_category_label">{{ item.category }}</div>
+                      {% for value in item.list %}
+                        <div class="compare_simple_item_line">
+                          <div class="compare_simple_item_line_label">{{ value.label }}</div>
+                          <div class="compare_simple_item_line_value">{{ value.value }}</div>
+                        </div>
+                      {% endfor %}
+                    </div>
+                  {%- endfor %}
+                </div>
               {% endfor %}
             </div>
-              <!-- 导航按钮 -->
-              <div class="tab-swiper-button-prev">{{- 'swiper-left.svg' | inline_asset_content -}}</div>
-              <div class="tab-swiper-button-next">{{- 'swiper-right.svg' | inline_asset_content -}}</div>
+            <!-- 导航按钮 -->
+            <div class="tab-swiper-button-prev">{{- 'swiper-left.svg' | inline_asset_content -}}</div>
+            <div class="tab-swiper-button-next">{{- 'swiper-right.svg' | inline_asset_content -}}</div>
           </div>
         {% endif %}
-        {% endfor %}
-      </div>
+      {% endfor %}
     </div>
+  </div>
 </div>
 <style>
-    .product-tab-compare{background: #fff;}
-.product-tab-compare .tab-titles{
-    display:flex;gap:8%;list-style:none;margin-bottom:30px;    justify-content: center;
-    }
-.product-tab-compare .tab-titles li{
-        padding-bottom:10px;color:#7F7E75;font-size:2.4rem;font-weight:700;
-        border-bottom:2px solid transparent;cursor:pointer;transition:all .3s;
-        font-variation-settings:"opsz" auto
-}
-.product-tab-compare .tab-titles li.active,
-.product-tab-compare .tab-titles li:hover{
-    color:#1F1F1F;border-bottom-color:#BDFF00
-}
+      .product-tab-compare{background: #fff;}
+  .product-tab-compare .tab-titles{
+      display:flex;gap:8%;list-style:none;margin-bottom:30px;    justify-content: center;
+      }
+  .product-tab-compare .tab-titles li{
+          padding-bottom:10px;color:#7F7E75;font-size:2.4rem;font-weight:700;
+          border-bottom:2px solid transparent;cursor:pointer;transition:all .3s;
+          font-variation-settings:"opsz" auto
+  }
+  .product-tab-compare .tab-titles li.active,
+  .product-tab-compare .tab-titles li:hover{
+      color:#1F1F1F;border-bottom-color:#BDFF00
+  }
 
-.product-tab-compare .tab-panel { display: none; }
-.product-tab-compare .tab-panel.active { display: block; }
-.product-tab-compare .tab-products { display: flex; flex-wrap: nowrap; }
-.product-tab-compare .tab-product-card { width: 25%; }
-{% comment %} .product-tab-compare .tab-product-title { font-size: 1.6rem; margin: 1rem 0 0.5rem; } {% endcomment %}
-.product-tab-compare .product_img{width:100%;height:auto;padding-bottom: 3rem;}
-.product-tab-compare .tab-product-title {
-    position:relative;
-    padding:0.4rem 1.2rem 0.8rem;
-    background-color: #7F7E75;
-    font-weight:500;
-    transition:all .3s ease;
-}
-.product-tab-compare .tab-product-title .product_title_top {
-    width: 50%;
-    background-color: #7F7E75;
-    position: absolute;
-    top: 0;
-    left: 0;
-    transform: translateY(-100%);
-    padding: 0.3rem 1.2rem 0;
-    color:#BDFF00;
-    transition: background-color .3s ease;
-    line-height: 1em;
+  .product-tab-compare .tab-panel { display: none; }
+  .product-tab-compare .tab-panel.active { display: block; }
+  .product-tab-compare .tab-products { display: flex; flex-wrap: nowrap; }
+  .product-tab-compare .tab-product-card { width: 25%; }
+  {% comment %} .product-tab-compare .tab-product-title { font-size: 1.6rem; margin: 1rem 0 0.5rem; } {% endcomment %}
+  .product-tab-compare .product_img{width:100%;height:auto;padding-bottom: 3rem;}
+  .product-tab-compare .tab-product-title {
+      position:relative;
+      padding:0.4rem 1.2rem 0.8rem;
+      background-color: #7F7E75;
+      font-weight:500;
+      transition:all .3s ease;
   }
-  .product-tab-compare .tab-product-title .text-title{
-     display: -webkit-box;
-    -webkit-line-clamp: 1;      
-    -webkit-box-orient: vertical;
-    text-overflow: ellipsis;
-    line-height: 1em;
-    min-height: calc(1em * 1);
-    overflow:hidden;
-    color:#BDFF00;
-  }
-  .product-tab-compare .tab-product-card:hover .tab-product-title,
-  .product-tab-compare .tab-product-card:hover .product_title_top{
-    background-color: #BDFF00;
-    color:#1a1a1a;
-  }
-  .product-tab-compare .tab-product-card:hover .tab-product-title .text-title{
-    color:#1a1a1a;
-  }
-  .product-tab-compare .tab-product-colors{min-height: 30px;}
-  .product-tab-compare  .tab-product-color-circle {
-    display: inline-block;
-    width: 20px; height: 20px;
-    border-radius: 50%;
-    border: 1px solid #eee;
-    margin-right: 6px;
-    vertical-align: middle;
-  }
-  .product-tab-compare  .tab-product-color-circle-none {
-    background: repeating-linear-gradient(45deg, #eee, #eee 4px, #fff 4px, #fff 8px);
-  }
-.product-tab-compare .nd-btn{width:100%;display: flex;justify-content: space-between;margin:0;}
-.product-tab-compare .compare_simple_item_price{
-  padding: 0.1rem 1rem;
-  font-weight: 700;
-  font-size: 2rem;
-}
-.product-tab-compare .compare_simple_item_line {
-    padding: 1.1rem;
-    border-bottom: 0.1rem solid #F3F3F3;
-  }
-  
-  .product-tab-compare .compare_simple_item_line_label {
-    font-size: 1.6rem;
-    font-weight: normal;
-    line-height: 1.1em;
-    letter-spacing: 0px;
-    {% comment %} font-variation-settings: "opsz" auto; {% endcomment %}
-    color: #7F7E75;
-  }
-  
-  .product-tab-compare .compare_simple_item_line_value{
+  .product-tab-compare .tab-product-title .product_title_top {
+      width: 50%;
+      background-color: #7F7E75;
+      position: absolute;
+      top: 0;
+      left: 0;
+      transform: translateY(-100%);
+      padding: 0.3rem 1.2rem 0;
+      color:#BDFF00;
+      transition: background-color .3s ease;
+      line-height: 1em;
+    }
+    .product-tab-compare .tab-product-title .text-title{
+       display: -webkit-box;
+      -webkit-line-clamp: 1;
+      -webkit-box-orient: vertical;
+      text-overflow: ellipsis;
+      line-height: 1em;
+      min-height: calc(1em * 1);
+      overflow:hidden;
+      color:#BDFF00;
+    }
+    .product-tab-compare .tab-product-card:hover .tab-product-title,
+    .product-tab-compare .tab-product-card:hover .product_title_top{
+      background-color: #BDFF00;
+      color:#1a1a1a;
+    }
+    .product-tab-compare .tab-product-card:hover .tab-product-title .text-title{
+      color:#1a1a1a;
+    }
+    .product-tab-compare .tab-product-colors{min-height: 30px;}
+    .product-tab-compare  .tab-product-color-circle {
+      display: inline-block;
+      width: 20px; height: 20px;
+      border-radius: 50%;
+      border: 1px solid #eee;
+      margin-right: 6px;
+      vertical-align: middle;
+    }
+    .product-tab-compare  .tab-product-color-circle-none {
+      background: repeating-linear-gradient(45deg, #eee, #eee 4px, #fff 4px, #fff 8px);
+    }
+  .product-tab-compare .nd-btn{width:100%;display: flex;justify-content: space-between;margin:0;}
+  .product-tab-compare .compare_simple_item_price{
+    padding: 0.1rem 1rem;
+    font-weight: 700;
     font-size: 2rem;
-    font-weight: 400;
-    line-height: 1em;
-    letter-spacing: 0px;
-    {% comment %} font-variation-settings: "opsz" auto; {% endcomment %}
-    color: #1F1F1F;
   }
-  .product-tab-compare .tab-swiper-button-prev,
-  .product-tab-compare .tab-swiper-button-next {
-    width: 5rem;
-    height: 5rem;
-    background-color:rgba(255, 255, 255, .3);
-    cursor: pointer;
-    display:none;
-    position: absolute;
-    top: var(--swiper-navigation-top-offset,50%);
-    transform: translateY(-50%);
-    z-index: 10;
+  .product-tab-compare .compare_simple_item_line {
+      padding: 1.1rem;
+      border-bottom: 0.1rem solid #F3F3F3;
+    }
+
+    .product-tab-compare .compare_simple_item_line_label {
+      font-size: 1.6rem;
+      font-weight: normal;
+      line-height: 1.1em;
+      letter-spacing: 0px;
+      {% comment %} font-variation-settings: "opsz" auto; {% endcomment %}
+      color: #7F7E75;
+    }
+
+    .product-tab-compare .compare_simple_item_line_value{
+      font-size: 2rem;
+      font-weight: 400;
+      line-height: 1em;
+      letter-spacing: 0px;
+      {% comment %} font-variation-settings: "opsz" auto; {% endcomment %}
+      color: #1F1F1F;
+    }
+    .product-tab-compare .tab-swiper-button-prev,
+    .product-tab-compare .tab-swiper-button-next {
+      width: 5rem;
+      height: 5rem;
+      background-color:rgba(255, 255, 255, .3);
+      cursor: pointer;
+      display:none;
+      position: absolute;
+      top: var(--swiper-navigation-top-offset,50%);
+      transform: translateY(-50%);
+      z-index: 10;
+    }
+    .product-tab-compare  .tab-swiper-button-prev {
+      left: var(--swiper-navigation-sides-offset, 10px);
+      right: auto;
+    }
+    .product-tab-compare  .tab-swiper-button-next {
+      right: var(--swiper-navigation-sides-offset, 10px);
+      left: auto;
+    }
+
+    .product-tab-compare .tab-swiper-button-prev:hover,
+    .product-tab-compare .tab-swiper-button-next:hover {
+      background-color: rgba(31, 31, 31, .6);
+    }
+
+    .product-tab-compare .tab-swiper-button-prev:hover svg path,
+    .product-tab-compare .tab-swiper-button-next:hover svg path {
+      fill: #BDFF00;
+    }
+  @media(max-width:1440px){
+    .product-tab-compare .tab-swiper-button-prev,
+    .product-tab-compare .tab-swiper-button-next {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
   }
-  .product-tab-compare  .tab-swiper-button-prev {
-    left: var(--swiper-navigation-sides-offset, 10px);
-    right: auto;
+  @media(max-width:1024px){
+    .product-tab-compare .tab-swiper-button-prev,
+    .product-tab-compare .tab-swiper-button-next {
+      display: none;
+    }
   }
-  .product-tab-compare  .tab-swiper-button-next {
-    right: var(--swiper-navigation-sides-offset, 10px);
-    left: auto;
+  @media(max-width:750px){
+      .product-tab-compare .tab-titles{flex-direction:column}
   }
-  
-  .product-tab-compare .tab-swiper-button-prev:hover,
-  .product-tab-compare .tab-swiper-button-next:hover {
-    background-color: rgba(31, 31, 31, .6);
-  }
-  
-  .product-tab-compare .tab-swiper-button-prev:hover svg path,
-  .product-tab-compare .tab-swiper-button-next:hover svg path {
-    fill: #BDFF00;
-  }
-@media(max-width:1440px){
-  .product-tab-compare .tab-swiper-button-prev,
-  .product-tab-compare .tab-swiper-button-next {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-}
-@media(max-width:1024px){
-  .product-tab-compare .tab-swiper-button-prev,
-  .product-tab-compare .tab-swiper-button-next {
-    display: none;
-  }
-}
-@media(max-width:750px){
-    .product-tab-compare .tab-titles{flex-direction:column}
-}
 </style>
 
 <script>
-    function switchTab(tabIndex, sectionId) {
-      var section = document.querySelector('.product-tab-compare[data-section-id="' + sectionId + '"]') || document.getElementById('product-tab-compare-' + sectionId);
-      if (!section) section = document.querySelector('.product-tab-compare'); // fallback
-      var tabs = section.querySelectorAll('.tab-titles li');
-      var panels = section.querySelectorAll('.tab-panel-' + sectionId);
-    
-      tabs.forEach(function(tab, idx) {
-        tab.classList.toggle('active', idx === tabIndex);
-      });
-      panels.forEach(function(panel, idx) {
-        panel.classList.toggle('active', idx === tabIndex);
-        //swiper-update
-        if (idx === tabIndex) {
-          const swiperContainer = panel.querySelector('.tab-products-wrapper.swiper');
-          if (swiperContainer && swiperContainer.swiper) {
-            swiperContainer.swiper.update();
-          }
-        }
-      });
-    }
+  function switchTab(tabIndex, sectionId) {
+    var section =
+      document.querySelector('.product-tab-compare[data-section-id="' + sectionId + '"]') ||
+      document.getElementById('product-tab-compare-' + sectionId);
+    if (!section) section = document.querySelector('.product-tab-compare'); // fallback
+    var tabs = section.querySelectorAll('.tab-titles li');
+    var panels = section.querySelectorAll('.tab-panel-' + sectionId);
 
-    document.addEventListener('DOMContentLoaded', function () {
-      document.querySelectorAll('.tab-panel.swiper').forEach(function(el, index) {
-        new Swiper(el, {
-          slidesPerView: 1.5,
-          spaceBetween: 20,
-          navigation: {
-            nextEl: el.querySelector('.tab-swiper-button-next'),
-            prevEl: el.querySelector('.tab-swiper-button-prev'),
-          },
-          breakpoints: {
-            0: { slidesPerView: 1.5 },
-            768: { slidesPerView: 2.5 },
-            1024: { slidesPerView: 4 },
-            1440: { slidesPerView: 5 }
-          }
-        });
+    tabs.forEach(function (tab, idx) {
+      tab.classList.toggle('active', idx === tabIndex);
+    });
+    panels.forEach(function (panel, idx) {
+      panel.classList.toggle('active', idx === tabIndex);
+      //swiper-update
+      if (idx === tabIndex) {
+        const swiperContainer = panel.querySelector('.tab-products-wrapper.swiper');
+        if (swiperContainer && swiperContainer.swiper) {
+          swiperContainer.swiper.update();
+        }
+      }
+    });
+  }
+
+  document.addEventListener('DOMContentLoaded', function () {
+    document.querySelectorAll('.tab-panel.swiper').forEach(function (el, index) {
+      new Swiper(el, {
+        slidesPerView: 1.5,
+        spaceBetween: 20,
+        navigation: {
+          nextEl: el.querySelector('.tab-swiper-button-next'),
+          prevEl: el.querySelector('.tab-swiper-button-prev'),
+        },
+        breakpoints: {
+          0: { slidesPerView: 1.5 },
+          768: { slidesPerView: 2.5 },
+          1024: { slidesPerView: 4 },
+          1440: { slidesPerView: 5 },
+        },
       });
     });
+  });
 </script>
 
 {% schema %}
@@ -301,16 +328,14 @@ Product Tab Compare Section - 产品对比 tab切换
       "settings": [
         { "type": "text", "id": "tab_title", "label": "Tab title" },
         {
-            "type": "product_list",
-            "id": "product_list",
-            "label": "product list 5",
-            "info": "最多只能选择5个产品"
+          "type": "product_list",
+          "id": "product_list",
+          "label": "product list 5",
+          "info": "最多只能选择5个产品"
         }
       ]
-    },
+    }
   ],
-  "presets": [
-    { "name": "Product Tab Compare (default)" }
-  ]
+  "presets": [{ "name": "Product Tab Compare (default)" }]
 }
 {% endschema %}
