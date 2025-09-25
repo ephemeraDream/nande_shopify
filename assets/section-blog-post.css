@@ -283,6 +283,13 @@
 .article-template__content div:has(> table) {
   overflow-x: auto;
 }
+.nd_article_left .article-template__content h2,
+.nd_article_left .article-template__content h3,
+.nd_article_left .article-template__content h4,
+.nd_article_left .article-template__content h5{
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
+}
 
 
 @media screen and (max-width: 768px) {
