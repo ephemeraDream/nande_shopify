@@ -93,12 +93,12 @@
                     {{- 'common.en_savoir_plus' | t }}
                     {{ 'icon-right-arrow.svg' | inline_asset_content -}}
                   </a>
-                  {% assign compare_data = block.settings.select_product.metafields.custom.compare_simple.value %}
+                  {% assign compare_data = product.metafields.custom.compare_simple.value %}
                   {% for item in compare_data.short_data.value %}
                     <div class="compare_simple_item_category">
                       <div class="compare_simple_item_category_label">{{ item.category }}</div>
                       {% for value in item.list %}
-                        <div class="compare_simple_item_line">
+                        <div class="compare_simple_item_line text-body">
                           <div class="compare_simple_item_line_label">{{ value.label }}</div>
                           <div class="compare_simple_item_line_value">{{ value.value }}</div>
                         </div>
