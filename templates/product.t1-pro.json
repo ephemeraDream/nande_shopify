@@ -175,7 +175,6 @@
     },
     "video_wPHLA8": {
       "type": "video",
-      "disabled": true,
       "name": "t:sections.video.presets.name",
       "settings": {
         "heading": "Maidesite mobiler Schreibtisch T1 Pro Ausrüstung",
@@ -192,6 +191,7 @@
     },
     "video_simplicity_XyW7NC": {
       "type": "video-simplicity",
+      "disabled": true,
       "name": "video simplicity",
       "settings": {
         "spec_id": "Produktinfo",
@@ -288,7 +288,6 @@
     },
     "img_with_text_simplicity_R8thEq": {
       "type": "img-with-text-simplicity",
-      "disabled": true,
       "custom_css": [
         ".img_with_text_simplicity_section {background-color: #e2ded6; padding-top: 12rem;}",
         ".img_with_text_simplicity_filebox {height: 48rem;}"
@@ -302,9 +301,8 @@
         "sub_title": "<p>666</p>",
         "description": "<p></p><p></p>",
         "file_position": "right",
-        "file_type": "image",
-        "file_image": "shopify://shop_images/T1-Pro-hohenverstellbarer-Schreibtisch-Handsteuerung.jpg",
-        "video_url": "",
+        "file_type": "video",
+        "video_url": "https://youtu.be/KSZNf2B1VoQ",
         "btn_text": "",
         "link_url": "",
         "padding_top": 0,
