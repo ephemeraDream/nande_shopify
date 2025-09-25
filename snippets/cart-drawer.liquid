@@ -72,7 +72,7 @@
       <div class="drawer__header">
         <h2 class="drawer__heading">{{ 'sections.cart.title' | t }}</h2>
         <div class="flex items-bottom gap-x-theme">
-          <a class="cart-drawer__view-cart link block text-sm" href="/cart" data-no-instant="">
+          <a class="cart-drawer__view-cart link block text-sm" href="{{ routes.cart_url }}" data-no-instant="">
             {{- 'common.view_cart' | t -}}
           </a>
           <button
@@ -298,22 +298,18 @@
                                         <s class="cart-item__old-price price price--end">
                                           {{ item.original_price | money }}
                                         </s>
-                                        {% comment %}
-                                          {% if item.variant.compare_at_price > item.variant.price %}
-                                            <s class="cart-item__old-price price price--end">
-                                              {{ item.variant.compare_at_price | money }}
-                                            </s>
-                                          {% else %}
-                                            <s class="cart-item__old-price price price--end">
-                                              {{ item.original_line_price | money }}
-                                            </s>
-                                          {% endif %}
-                                        {% endcomment %}
                                       </div>
                                     {%- else -%}
-                                      <span class="price price--end">
-                                        {{ item.original_price | money }}
-                                      </span>
+                                      <div class="cart-item__price-container">
+                                        <span class="price price--end">
+                                          {{ item.original_price | money }}
+                                        </span>
+                                        {%- if item.variant.compare_at_price != blank and item.variant.compare_at_price > item.variant.price -%}
+                                          <s class="cart-item__compare-price price price--end">
+                                            {{ item.variant.compare_at_price | money }}
+                                          </s>
+                                        {%- endif -%}
+                                      </div>
                                     {%- endif -%}
 
                                     {%- if item.variant.available and item.unit_price_measurement -%}
@@ -526,7 +522,7 @@
                                 {% assign bundle_parent_id = child.properties.bundle_parent_id | times: 1.0 %}
                                 {%- if bundle_parent_id == item.variant_id -%}
                                   <div class="cartdrawer_bundle_product_item">
-                                    <img src="{{ child.image | image_url: width: 300 }}">
+                                    <img src="{{ child.image | image_url: width: 300 }}" width="300" height="300" alt="{{ child.product.title | escape }}">
                                     <div class="cartdrawer_bundle_product_item_info">
                                       <div class="cartdrawer_bundle_product_item_title">
                                         {{ child.product.title }}
@@ -553,18 +549,11 @@
                                             <div class="cartdrawer_bundle_product_item_price_op">
                                               {{ child.original_price | money }}
                                             </div>
+                                          {% elsif child.variant.compare_at_price != blank and child.variant.compare_at_price > child.variant.price %}
+                                            <div class="cartdrawer_bundle_product_item_price_op">
+                                              {{ child.variant.compare_at_price | money }}
+                                            </div>
                                           {% endif %}
-                                          {% comment %}
-                                            {% if child.variant.compare_at_price > child.variant.price %}
-                                              <div class="cartdrawer_bundle_product_item_price_op">
-                                                {{ child.variant.compare_at_price | money }}
-                                              </div>
-                                            {% elsif child.original_line_price != child.final_line_price %}
-                                              <div class="cartdrawer_bundle_product_item_price_op">
-                                                {{ child.original_line_price | money }}
-                                              </div>
-                                            {% endif %}
-                                          {% endcomment %}
                                         </div>
                                         {%- liquid
                                           assign has_qty_rules = false
@@ -774,6 +763,8 @@
                     <img
                       src="{{ product.featured_media | image_url }}"
                       alt="{{ product.title }}"
+                      width="{{ product.featured_media.width }}"
+                      height="{{ product.featured_media.height }}"
                     >
                     <div class="cart_recommendations_product_info">
                       <div class="cart_recommendations_product_info_title">{{ product.title }}</div>
