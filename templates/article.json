@@ -63,6 +63,12 @@
           "settings": {
             "blog": "news"
           }
+        },
+        "author_profiles_ruffruff_author_profiles_rzz9QJ": {
+          "type": "shopify://apps/author-profiles/blocks/ruffruff-author-profiles/9f6ec6de-dd1a-4a83-aa08-519e82caa0f0",
+          "settings": {
+            "title": ""
+          }
         }
       },
       "block_order": [
@@ -71,7 +77,8 @@
         "table_of_contents_theme_extension_KNEHJ7",
         "content",
         "blog_item_01",
-        "blog_item_02"
+        "blog_item_02",
+        "author_profiles_ruffruff_author_profiles_rzz9QJ"
       ],
       "settings": {}
     },
