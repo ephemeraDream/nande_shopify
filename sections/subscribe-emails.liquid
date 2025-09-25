@@ -216,13 +216,22 @@ document.addEventListener('DOMContentLoaded', function() {
     if (!submitBtn.dataset.loadingBound) {
       // 按钮点击验证
       submitBtn.addEventListener('click', function(e) {
+        const emailInput = sectionEl.querySelector('#NewsletterForm--{{ section.id }}');
+        const emailValue = emailInput ? emailInput.value.trim() : '';
+        
+        if (!emailValue) {
+          e.preventDefault();
+          emailInput.focus();
+          return false;
+        }
+        
         if (!checkbox.checked) {
           e.preventDefault();
           errorMessage.style.display = 'flex';
           checkbox.focus();
           return false;
         }
-        // 只有勾选了才执行 loading
+        // 只有邮箱和勾选框都满足条件才执行 loading
         submitBtn.classList.add('loading');
         submitBtn.setAttribute('aria-disabled', 'true');
         submitBtn.disabled = true;
@@ -230,13 +239,22 @@ document.addEventListener('DOMContentLoaded', function() {
       
       // 表单提交验证
       form.addEventListener('submit', function(e) {
+        const emailInput = sectionEl.querySelector('#NewsletterForm--{{ section.id }}');
+        const emailValue = emailInput ? emailInput.value.trim() : '';
+        
+        if (!emailValue) {
+          e.preventDefault();
+          emailInput.focus();
+          return false;
+        }
+        
         if (!checkbox.checked) {
           e.preventDefault();
           errorMessage.style.display = 'flex';
           checkbox.focus();
           return false;
         }
-        // 只有勾选了才执行 loading
+        // 只有邮箱和勾选框都满足条件才执行 loading
         submitBtn.classList.add('loading');
         submitBtn.setAttribute('aria-disabled', 'true');
         submitBtn.disabled = true;
