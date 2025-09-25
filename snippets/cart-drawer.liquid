@@ -305,9 +305,9 @@
                                           {{ item.original_price | money }}
                                         </span>
                                         {%- if item.variant.compare_at_price != blank and item.variant.compare_at_price > item.variant.price -%}
-                                          <s class="cart-item__compare-price price price--end">
+                                          <span  class="cart-item__compare-price price price--end">
                                             {{ item.variant.compare_at_price | money }}
-                                          </s>
+                                          </span>
                                         {%- endif -%}
                                       </div>
                                     {%- endif -%}
