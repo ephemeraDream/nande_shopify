@@ -280,6 +280,11 @@
   background-color: #fff;
 }
 
+.article-template__content div:has(> table) {
+  overflow-x: auto;
+}
+
+
 @media screen and (max-width: 768px) {
   .nd_article{
     flex-direction: column;

@@ -332,10 +332,10 @@
     </div>
     <div class="featured_article">
       <h3>Unsere beliebten Blogs</h3>
-      {% assign related_articles = article.metafields.custom.related_articles %}
-      <pre>{{ article.metafields.custom.related_articles | json }}</pre>
+      {% assign related_articles = article.metafields.custom.related_articles.value %}
+      {% comment %} Debug: {{ article.metafields.custom.related_articles.value | json }} {% endcomment %}
       {% if related_articles and related_articles.size > 0 %}
-        {% assign recommended = related_articles | slice: 0, 6 %}
+        {% assign recommended = related_articles | slice: 0, 5 %}
       {% else %}
         {% assign other_articles = blog.articles | where_exp: "item", "item.id != article.id" %}
         {% assign recommended = other_articles | slice: 0, 2 %}
@@ -355,9 +355,9 @@
     </div>
     <div class="featured_pro">
       <h3>Featured Products</h3>
-      {% assign related_products = article.metafields.custom.related_products %}
+      {% assign related_products = article.metafields.custom.related_products.value %}
       {% if related_products and related_products.size > 0 %}
-        {% assign recommended_products = related_products | slice: 0, 6 %}
+        {% assign recommended_products = related_products | slice: 0, 5 %}
       {% else %}
         {% assign recommended_products = collections.all.products | reverse | slice: 0, 2 %}
       {% endif %}
