@@ -159,7 +159,7 @@
       "type": "video",
       "name": "t:sections.video.presets.name",
       "settings": {
-        "heading": "Maidesite mobiler Schreibtisch T2 Pro Plus Ausrüstung",
+        "heading": "Maidesite mobiler Schreibtisch Yoga",
         "heading_size": "h1",
         "enable_video_looping": false,
         "video_url": "https://www.youtube.com/watch?v=pGd9OwWrLhA",
@@ -516,7 +516,7 @@
       "name": "technical data",
       "settings": {
         "spec_id": "Technische_Daten",
-        "title": "<p>Technische Daten Des HöHenverstellbaren </p><p>Schreibtisches-T1 Pro</p>",
+        "title": "<p>Technische Daten Des HöHenverstellbaren </p><p>Schreibtisches-Yoga</p>",
         "select_product": "elektrisch-hohenverstellbarer-gestell-t1-basic"
       }
     },
