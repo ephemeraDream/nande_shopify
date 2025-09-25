@@ -39,8 +39,22 @@
             </button>
           </div>
           <div class="subscribe_emails_confirm">
-            <div class="subscribe_emails_confirm_checkbox">{{- 'icon-email-check.svg' | inline_asset_content -}}</div>
-            {{ section.settings.confirm_text }}
+            <label class="subscribe_emails_confirm_label">
+              <input 
+                type="checkbox" 
+                class="subscribe_emails_confirm_checkbox_input" 
+                id="subscribe_confirm_checkbox"
+                required
+              >
+              <span class="subscribe_emails_confirm_checkbox_custom"></span>
+              <span class="subscribe_emails_confirm_text">{{ section.settings.confirm_text }}</span>
+            </label>
+          </div>
+          <div class="subscribe_emails_error_message" id="subscribe_error_message" style="display: none;">
+            <span class="svg-wrapper">
+              {{- 'icon-error.svg' | inline_asset_content -}}
+            </span>
+            <span>{{ section.settings.checkbox_error_message | default: "Please check the agreement first" }}</span>
           </div>
           {%- if form.errors -%}
             <small class="newsletter-form__message form__message" id="ContactFooter-error">
@@ -252,3 +266,116 @@ document.addEventListener('DOMContentLoaded', function() {
   ]
 }
 {% endschema %}
+
+<style>
+/* 自定义勾选框样式 */
+.subscribe_emails_confirm_label {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  cursor: pointer;
+  font-size: 1.4rem;
+  line-height: 1.4;
+}
+
+.subscribe_emails_confirm_checkbox_input {
+  display: none;
+}
+
+.subscribe_emails_confirm_checkbox_custom {
+  width: 1.4rem;
+  height: 1.4rem;
+  border: 1px solid #ccc;
+  border-radius: 2px;
+  display: inline-block;
+  position: relative;
+  flex-shrink: 0;
+  margin-top: 0.2rem;
+  transition: all 0.2s ease;
+}
+
+.subscribe_emails_confirm_checkbox_input:checked + .subscribe_emails_confirm_checkbox_custom {
+  background-color: #bdff0;
+  border-color: #bdff0;
+}
+
+.subscribe_emails_confirm_checkbox_input:checked + .subscribe_emails_confirm_checkbox_custom::after {
+  content: '';
+  position: absolute;
+  left: 0.4rem;
+  top: 0.1rem;
+  width: 0.4rem;
+  height: 0.8rem;
+  border: solid #000;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+
+.subscribe_emails_confirm_text {
+  flex: 1;
+}
+
+.subscribe_emails_error_message {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  color: #e74c3c;
+  font-size: 1.2rem;
+  margin-top: 1rem;
+  padding: 0.8rem 1.2rem;
+  background-color: #fdf2f2;
+  border: 1px solid #fecaca;
+  border-radius: 4px;
+}
+
+.subscribe_emails_error_message .svg-wrapper {
+  width: 1.6rem;
+  height: 1.6rem;
+  flex-shrink: 0;
+}
+
+.subscribe_emails_error_message .svg-wrapper svg {
+  width: 100%;
+  height: 100%;
+}
+</style>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const form = document.querySelector('#shopify-section-{{ section.id }} .newsletter-form');
+  const checkbox = document.querySelector('#subscribe_confirm_checkbox');
+  const errorMessage = document.querySelector('#subscribe_error_message');
+  const submitButton = document.querySelector('#Subscribe');
+  
+  if (form && checkbox && errorMessage && submitButton) {
+    // 表单提交验证
+    form.addEventListener('submit', function(e) {
+      if (!checkbox.checked) {
+        e.preventDefault();
+        errorMessage.style.display = 'flex';
+        checkbox.focus();
+        return false;
+      } else {
+        errorMessage.style.display = 'none';
+      }
+    });
+    
+    // 勾选框状态改变时隐藏错误信息
+    checkbox.addEventListener('change', function() {
+      if (this.checked) {
+        errorMessage.style.display = 'none';
+      }
+    });
+    
+    // 按钮点击验证
+    submitButton.addEventListener('click', function(e) {
+      if (!checkbox.checked) {
+        e.preventDefault();
+        errorMessage.style.display = 'flex';
+        checkbox.focus();
+        return false;
+      }
+    });
+  }
+});
+</script>
