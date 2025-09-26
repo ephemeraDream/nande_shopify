@@ -147,6 +147,40 @@
   width: 100%;
 }
 
+.collection_default .collection_default_product_tagbox {
+  position: absolute;
+  top: 1.4rem;
+  left: 1.4rem;
+  display: flex;
+  flex-direction: column;
+  gap: .6rem;
+  align-items: flex-start;
+}
+
+.collection_default .collection_default_product_saleinfo {
+  padding: 0.6rem;
+  background-color: #FF7500;
+  font-family: "PP Right Grotesk";
+  font-size: 1.8rem;
+  font-weight: 500;
+  line-height: 80%;
+  letter-spacing: 0px;
+  font-variation-settings: "opsz" auto;
+  color: #FFFFFF;
+}
+
+.collection_default .collection_default_product_tag {
+  padding: 0.6rem;
+  background-color: #FF7500;
+  font-family: "PP Right Grotesk";
+  font-size: 1.8rem;
+  font-weight: 500;
+  line-height: 80%;
+  letter-spacing: 0px;
+  font-variation-settings: "opsz" auto;
+  color: #FFFFFF;
+}
+
 @media screen and (max-width: 1440px) {
   .collection_default .collection_default_head_item {
     font-size: 2rem;
