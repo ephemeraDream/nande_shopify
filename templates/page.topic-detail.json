@@ -160,6 +160,7 @@
         },
         "tab_8ikfAr": {
           "type": "tab",
+          "disabled": true,
           "settings": {
             "tab_title": "Sunset Pop"
           }
@@ -210,6 +211,7 @@
         },
         "slide_bLQ3Me": {
           "type": "slide",
+          "disabled": true,
           "settings": {
             "belong_tab": "4",
             "image": "shopify://shop_images/YOGA_-_1.jpg",
