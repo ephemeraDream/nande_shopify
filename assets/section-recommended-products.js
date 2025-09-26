@@ -100,6 +100,7 @@ product_items.forEach(item => {
           }
         } else {
           price_contain.innerHTML = moneyWithoutTrailingZeros(currVariant.price)
+          saleinfo_tag && saleinfo_tag.classList.add("hidden")
         }
         setVariantOption()
       }
@@ -132,6 +133,7 @@ product_items.forEach(item => {
             }
           } else {
             price_contain.innerHTML = moneyWithoutTrailingZeros(currVariant.price)
+            saleinfo_tag && saleinfo_tag.classList.add("hidden")
           }
           setVariantOption()
         }
