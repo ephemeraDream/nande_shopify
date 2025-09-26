@@ -17,7 +17,9 @@
       "settings": {
         "title": "<p>ERHALTEN SIE 5% RABATT</p>",
         "btn_text": "Abonnieren",
-        "confirm_text": "Mit Ihrer Anmeldung stimmen Sie den Nutzungsbedingungen und der Datenschutzrichtlinie von Maidesite zu."
+        "confirm_text": "Mit Ihrer Anmeldung stimmen Sie den Nutzungsbedingungen und der   Datenschutzrichtlinie von Maidesite zu.",
+        "checkbox_error_message": "Bitte gib die gültige E-Mail-Adresse ein!",
+        "email_error_message": "Bitte E-Mail Adresse eingeben"
       }
     },
     "footer_simple_eAwcpi": {
@@ -75,7 +77,22 @@
         "link_list_CHcGwy"
       ],
       "name": "footer simple",
-      "settings": {}
+      "settings": {
+        "show_back_to_top": true,
+        "position_type": "preset",
+        "position": "bottom-right",
+        "position_vertical": "bottom",
+        "position_top": 20,
+        "position_bottom": 20,
+        "position_horizontal": "right",
+        "position_left": 20,
+        "position_right": 20,
+        "scroll_threshold": 300,
+        "background_color": "#bdff00",
+        "hover_background_color": "#8ebe09",
+        "icon_color": "#1f1f1f",
+        "custom_icon": ""
+      }
     },
     "footer": {
       "type": "footer",
