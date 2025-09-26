@@ -191,6 +191,7 @@
     },
     "video_simplicity_XyW7NC": {
       "type": "video-simplicity",
+      "disabled": true,
       "name": "video simplicity",
       "settings": {
         "spec_id": "Produktinfo",
@@ -287,6 +288,7 @@
     },
     "img_with_text_simplicity_R8thEq": {
       "type": "img-with-text-simplicity",
+      "disabled": true,
       "custom_css": [
         ".img_with_text_simplicity_section {background-color: #e2ded6; padding-top: 12rem;}",
         ".img_with_text_simplicity_filebox {height: 48rem;}"
