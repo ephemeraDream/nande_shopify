@@ -191,7 +191,6 @@
     },
     "video_simplicity_XyW7NC": {
       "type": "video-simplicity",
-      "disabled": true,
       "name": "video simplicity",
       "settings": {
         "spec_id": "Produktinfo",
