@@ -796,6 +796,7 @@ function updateVariantPrice() {
     })
     if (saletag) {
       saletag.classList.remove("hidden")
+      saletag.innerHTML = `Save ${moneyWithoutTrailingZeros(price_op - price_dp)}`
     } else {
       document.querySelector(".product_info_steps_contain .product_info_price .product_info_price_op").insertAdjacentHTML('afterend', `
         <div class="product_info_price_saletag">
