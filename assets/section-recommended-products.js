@@ -85,7 +85,11 @@ product_items.forEach(item => {
       currVariant = product.variants.find(el => areArraysEqual(curr_options, el.options) && el.available)
       if (currVariant) {
         img_contain.src = currVariant.featured_image.src
-        price_contain.innerHTML = moneyWithoutTrailingZeros(currVariant.price)
+        if (currVariant.compare_at_price && currVariant.compare_at_price > currVariant.price) {
+          price_contain.innerHTML = `${moneyWithoutTrailingZeros(currVariant.price)}<span class="product_price_cap">${moneyWithoutTrailingZeros(currVariant.compare_at_price)}</span>`
+        } else {
+          price_contain.innerHTML = moneyWithoutTrailingZeros(currVariant.price)
+        }
         setVariantOption()
       }
       if (!currVariant && curr_options.length === 3) {
@@ -103,7 +107,11 @@ product_items.forEach(item => {
             }
           });
           img_contain.src = currVariant.featured_image.src
-          price_contain.innerHTML = moneyWithoutTrailingZeros(currVariant.price)
+          if (currVariant.compare_at_price && currVariant.compare_at_price > currVariant.price) {
+            price_contain.innerHTML = `${moneyWithoutTrailingZeros(currVariant.price)}<span class="product_price_cap">${moneyWithoutTrailingZeros(currVariant.compare_at_price)}</span>`
+          } else {
+            price_contain.innerHTML = moneyWithoutTrailingZeros(currVariant.price)
+          }
           setVariantOption()
         }
       }
