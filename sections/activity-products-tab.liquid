@@ -19,80 +19,82 @@
         class="activity_products_tab_contain{% if forloop.first %} active{% endif %}"
         data-value="{{ block.settings.title }}"
       >
-        {% comment %} {% assign first_product = block.settings.product_list | first %}
-        <div class="activity_products_tab_contain_first_product">
-          <div class="activity_products_tab_contain_first_product_img">
-            <img
-              src="{{ first_product.featured_media | image_url }}"
-              alt="{{ first_product.title }}"
-            >
-          </div>
-          <div class="activity_products_tab_contain_first_product_info">
-            <div class="activity_products_tab_contain_first_product_title">{{ first_product.title }}</div>
-            {% assign key_features = first_product.metafields.custom.key_features.value %}
-            {% if key_features != blank %}
-              <div class="activity_products_tab_contain_first_product_desc">
-                {{ key_features.description | metafield_tag }}
-              </div>
-            {% endif %}
-            {% assign sale_info = first_product.metafields.custom.sale_info.value %}
-            {% if sale_info != blank %}
-              <div class="activity_products_tab_saleinfo">
-                <div class="activity_products_tab_saleinfo_left">
-                  <div class="activity_products_tab_saleinfo_name">{{ sale_info.name }}</div>
-                  <div
-                    class="activity_products_tab_saleinfo_countdown"
-                    data-end-date="{{ sale_info.datetime | date: "%Y-%m-%dT%H:%M:%SZ" }}"
-                  >
-                    <span class="activity_products_tab_saleinfo_countdown_text">{{ 'common.ends_in' | t }}</span>
-                    <div class="activity_products_tab_saleinfo_countdown_item" data-type="day"></div>
-                    <span>:</span>
-                    <div class="activity_products_tab_saleinfo_countdown_item" data-type="hour"></div>
-                    <span>:</span>
-                    <div class="activity_products_tab_saleinfo_countdown_item" data-type="minute"></div>
-                    <span>:</span>
-                    <div class="activity_products_tab_saleinfo_countdown_item" data-type="second"></div>
-                  </div>
-                </div>
-                <div class="activity_products_tab_saleinfo_right">
-                  <div class="activity_products_tab_saleinfo_code">
-                    {{ 'common.code' | t -}}
-                    {{- sale_info.code }}
-                  </div>
-                  <div class="activity_products_tab_saleinfo_btn" data-code="{{ sale_info.code }}">
-                    {{ 'common.copy_and_use' | t }}
-                  </div>
-                </div>
-              </div>
-            {% endif %}
-            <div class="activity_products_tab_contain_first_product_price">
-              <div class="activity_products_tab_contain_first_product_price_dp">
-                {{ first_product.price | money_without_trailing_zeros }}
-              </div>
-              <div class="activity_products_tab_contain_first_product_price_op{% unless first_product.compare_at_price > first_product.price %} hidden{% endunless %}">
-                {{ first_product.compare_at_price | money_without_trailing_zeros }}
-              </div>
-              {%- if section.settings.show_tax_and_shipping -%}
-                {%- if cart.taxes_included or shop.shipping_policy.body != blank -%}
-                  <div class="activity_products_tab_contain_first_product_policies">
-                    {%- if cart.taxes_included -%}
-                      {{ 'products.product.include_taxes' | t }}
-                    {%- endif -%}
-                  </div>
-                {%- endif -%}
-              {%- endif -%}
+        {% comment %}
+          {% assign first_product = block.settings.product_list | first %}
+          <div class="activity_products_tab_contain_first_product">
+            <div class="activity_products_tab_contain_first_product_img">
+              <img
+                src="{{ first_product.featured_media | image_url }}"
+                alt="{{ first_product.title }}"
+              >
             </div>
-            <a class="activity_products_tab_contain_first_product_btn nd-btn" href="{{ first_product.url }}">
-              {{ 'common.jetzt_konfigurieren' | t }}
-              {{ 'icon-right-arrow.svg' | inline_asset_content }}
-            </a>
+            <div class="activity_products_tab_contain_first_product_info">
+              <div class="activity_products_tab_contain_first_product_title">{{ first_product.title }}</div>
+              {% assign key_features = first_product.metafields.custom.key_features.value %}
+              {% if key_features != blank %}
+                <div class="activity_products_tab_contain_first_product_desc">
+                  {{ key_features.description | metafield_tag }}
+                </div>
+              {% endif %}
+              {% assign sale_info = first_product.metafields.custom.sale_info.value %}
+              {% if sale_info != blank %}
+                <div class="activity_products_tab_saleinfo">
+                  <div class="activity_products_tab_saleinfo_left">
+                    <div class="activity_products_tab_saleinfo_name">{{ sale_info.name }}</div>
+                    <div
+                      class="activity_products_tab_saleinfo_countdown"
+                      data-end-date="{{ sale_info.datetime | date: "%Y-%m-%dT%H:%M:%SZ" }}"
+                    >
+                      <span class="activity_products_tab_saleinfo_countdown_text">{{ 'common.ends_in' | t }}</span>
+                      <div class="activity_products_tab_saleinfo_countdown_item" data-type="day"></div>
+                      <span>:</span>
+                      <div class="activity_products_tab_saleinfo_countdown_item" data-type="hour"></div>
+                      <span>:</span>
+                      <div class="activity_products_tab_saleinfo_countdown_item" data-type="minute"></div>
+                      <span>:</span>
+                      <div class="activity_products_tab_saleinfo_countdown_item" data-type="second"></div>
+                    </div>
+                  </div>
+                  <div class="activity_products_tab_saleinfo_right">
+                    <div class="activity_products_tab_saleinfo_code">
+                      {{ 'common.code' | t -}}
+                      {{- sale_info.code }}
+                    </div>
+                    <div class="activity_products_tab_saleinfo_btn" data-code="{{ sale_info.code }}">
+                      {{ 'common.copy_and_use' | t }}
+                    </div>
+                  </div>
+                </div>
+              {% endif %}
+              <div class="activity_products_tab_contain_first_product_price">
+                <div class="activity_products_tab_contain_first_product_price_dp">
+                  {{ first_product.price | money_without_trailing_zeros }}
+                </div>
+                <div class="activity_products_tab_contain_first_product_price_op{% unless first_product.compare_at_price > first_product.price %} hidden{% endunless %}">
+                  {{ first_product.compare_at_price | money_without_trailing_zeros }}
+                </div>
+                {%- if section.settings.show_tax_and_shipping -%}
+                  {%- if cart.taxes_included or shop.shipping_policy.body != blank -%}
+                    <div class="activity_products_tab_contain_first_product_policies">
+                      {%- if cart.taxes_included -%}
+                        {{ 'products.product.include_taxes' | t }}
+                      {%- endif -%}
+                    </div>
+                  {%- endif -%}
+                {%- endif -%}
+              </div>
+              <a class="activity_products_tab_contain_first_product_btn nd-btn" href="{{ first_product.url }}">
+                {{ 'common.jetzt_konfigurieren' | t }}
+                {{ 'icon-right-arrow.svg' | inline_asset_content }}
+              </a>
+            </div>
           </div>
-        </div> {% endcomment %}
+        {% endcomment %}
         <div class="activity_products_tab_contain_products">
           <div class="swiper activity_products_tab_swiper">
             <div class="swiper-wrapper">
               {% comment %} {% for product in block.settings.product_list offset: 1 %}{% endcomment %}
-               {% for product in block.settings.product_list %} 
+              {% for product in block.settings.product_list %}
                 {% assign sale_info = product.metafields.custom.sale_info.value %}
                 <div class="swiper-slide">
                   <a
@@ -103,9 +105,21 @@
                   >
                     <div class="activity_products_tab_product_img">
                       <img src="{{ product.featured_media | image_url }}" alt="{{ product.title }}">
-                      {% if sale_info != blank %}
-                        <div class="activity_products_tab_product_saleinfo">{{ sale_info.name }}</div>
-                      {% endif %}
+                      <div class="activity_products_tab_product_tagbox">
+                        {% if product.compare_at_price != blank and product.compare_at_price > product.price %}
+                          <div class="activity_products_tab_product_tag">
+                            Save {{ product.compare_at_price | minus: product.price | money_without_trailing_zeros }}
+                          </div>
+                        {% endif %}
+                        {% if sale_info != blank %}
+                          <div class="activity_products_tab_product_saleinfo">{{ sale_info.name }}</div>
+                        {% endif %}
+                        {% if product.metafields.custom.product_tag.value != blank %}
+                          <div class="activity_products_tab_product_tag">
+                            {{ product.metafields.custom.product_tag.value }}
+                          </div>
+                        {% endif %}
+                      </div>
                     </div>
                     <div class="activity_products_tab_product_info">
                       <h4 class="activity_products_tab_product_title">{{ product.title }}</h4>
@@ -133,7 +147,6 @@
                           {{ 'common.jetzt_konfigurieren' | t }}
                           {{ 'icon-right-arrow.svg' | inline_asset_content }}
                         </div>
-                        
                       </div>
                       {% if sale_info != blank %}
                         <div
