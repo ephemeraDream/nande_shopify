@@ -136,6 +136,7 @@
       "blocks": {
         "tab1": {
           "type": "tab",
+          "disabled": true,
           "settings": {
             "tab_title": "Midnight Marble"
           }
@@ -166,6 +167,7 @@
         },
         "slide1_2": {
           "type": "slide",
+          "disabled": true,
           "settings": {
             "belong_tab": "0",
             "image": "shopify://shop_images/YOGA_-_1_80dbac95-bdf1-4531-a898-05e1c0987d43.jpg",
