@@ -390,9 +390,9 @@
   letter-spacing: 0px;
   font-variation-settings: "opsz" auto;
   color: #fff;
-  position: absolute;
+  /* position: absolute;
   top: 1.4rem;
-  left: 1.4rem;
+  left: 1.4rem; */
 }
 
 .activity_products_normal .activity_products_normal_product_saleinfo_code {
