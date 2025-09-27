@@ -4519,10 +4519,10 @@ display: none;
   align-items: flex-start;
 }
 .activity_products_tab .activity_products_tab_product_tag, .activity_products_tab .activity_products_tab_product_saleinfo {
-  padding: .6rem;
+  padding: .4rem;
   background-color: #ff7500;
   font-family: PP Right Grotesk;
-  font-size: 1.8rem;
+  font-size: 1.6rem;
   font-weight: 500;
   line-height: 80%;
   letter-spacing: 0px;
