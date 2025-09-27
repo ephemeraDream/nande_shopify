@@ -361,7 +361,7 @@
   margin-top: 1.2rem;
 }
 
-.activity_products_tab .activity_products_tab_product_tagbox {
+/* .activity_products_tab .activity_products_tab_product_tagbox {
   position: absolute;
   top: 1.4rem;
   left: 1.4rem;
@@ -393,7 +393,7 @@
   letter-spacing: 0px;
   font-variation-settings: "opsz" auto;
   color: #fff;
-}
+} */
 
 .activity_products_tab .activity_products_tab_product_saleinfo_code {
   display: flex;
