@@ -1,6 +1,6 @@
 {{ 'section-collection-default.css' | asset_url | stylesheet_tag }}
 
-<div class="collection_default_section padding-sider">
+<div class="collection_default_section padding-sider" style="--product-img-ratio: {{ section.settings.image_aspect_ratio | default: '1' }};">
   <div class="collection_default">
     <h2 class="collection_default_title">{{ section.settings.title }}</h2>
     <div class="collection_default_text text-body">{{ section.settings.text }}</div>
@@ -209,6 +209,34 @@
       "type": "collection_list",
       "id": "collection_list",
       "label": "collection list"
+    },
+    {
+      "type": "header",
+      "content": "Layout"
+    },
+    {
+      "type": "select",
+      "id": "image_aspect_ratio",
+      "label": "Product image aspect ratio",
+      "options": [
+        {
+          "value": "1",
+          "label": "1:1 (Square)"
+        },
+        {
+          "value": "1.33",
+          "label": "4:3 (Landscape)"
+        },
+        {
+          "value": "0.75",
+          "label": "3:4 (Portrait)"
+        },
+        {
+          "value": "1.5",
+          "label": "3:2 (Wide)"
+        }
+      ],
+      "default": "1.33"
     }
   ],
   "presets": [
