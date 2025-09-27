@@ -243,6 +243,40 @@
   cursor: pointer;
 }
 
+.recommended_products .recommended_products_product_tagbox {
+  position: absolute;
+  top: 1.4rem;
+  left: 1.4rem;
+  display: flex;
+  flex-direction: column;
+  gap: .6rem;
+  align-items: flex-start;
+}
+
+.recommended_products .recommended_products_product_saleinfo {
+  padding: 0.6rem;
+  background-color: #FF7500;
+  font-family: "PP Right Grotesk";
+  font-size: 1.8rem;
+  font-weight: 500;
+  line-height: 80%;
+  letter-spacing: 0px;
+  font-variation-settings: "opsz" auto;
+  color: #FFFFFF;
+}
+
+.recommended_products .recommended_products_product_tag {
+  padding: 0.6rem;
+  background-color: #FF7500;
+  font-family: "PP Right Grotesk";
+  font-size: 1.8rem;
+  font-weight: 500;
+  line-height: 80%;
+  letter-spacing: 0px;
+  font-variation-settings: "opsz" auto;
+  color: #FFFFFF;
+}
+
 @media screen and (max-width: 1600px) {
   .recommended_products .recommended_products_prev {
     left: -6rem;

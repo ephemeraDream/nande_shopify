@@ -35,13 +35,16 @@
   gap: 2.8rem;
   margin-top: 3rem;
   overflow-x: auto;
-  scrollbar-width: none; /* Firefox */
-  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none;
+  /* Firefox */
+  -ms-overflow-style: none;
+  /* IE and Edge */
   padding: 0 2rem;
 }
 
 .activity_products_tab .activity_products_tab_head::-webkit-scrollbar {
-  display: none; /* Chrome, Safari, Opera */
+  display: none;
+  /* Chrome, Safari, Opera */
 }
 
 .activity_products_tab .activity_products_tab_head_item {
@@ -357,6 +360,28 @@
   margin-top: 1.2rem;
 }
 
+.activity_products_tab .activity_products_tab_product_tagbox {
+  position: absolute;
+  top: 1.4rem;
+  left: 1.4rem;
+  display: flex;
+  flex-direction: column;
+  gap: .6rem;
+  align-items: flex-start;
+}
+
+.activity_products_tab .activity_products_tab_product_tag {
+  padding: 0.6rem;
+  background-color: #FF7500;
+  font-family: "PP Right Grotesk";
+  font-size: 1.8rem;
+  font-weight: 500;
+  line-height: 80%;
+  letter-spacing: 0px;
+  font-variation-settings: "opsz" auto;
+  color: #FFFFFF;
+}
+
 .activity_products_tab .activity_products_tab_product_saleinfo {
   padding: .6rem;
   background-color: #ff7500;
@@ -367,9 +392,6 @@
   letter-spacing: 0px;
   font-variation-settings: "opsz" auto;
   color: #fff;
-  position: absolute;
-  top: 1.4rem;
-  left: 1.4rem;
 }
 
 .activity_products_tab .activity_products_tab_product_saleinfo_code {
@@ -398,7 +420,8 @@
   text-decoration: underline;
   color: #FF7500;
 }
-.activity_products_tab .activity_products_tab_product_saleinfo_countdown{
+
+.activity_products_tab .activity_products_tab_product_saleinfo_countdown {
   position: absolute;
   bottom: -2.5rem;
 }
@@ -434,21 +457,24 @@
   .activity_products_tab .activity_products_tab_product {
     /* width: calc((100% - 2.8rem) / 2); */
   }
-  .activity_products_tab .activity_products_tab_saleinfo_name{
+
+  .activity_products_tab .activity_products_tab_saleinfo_name {
     font-size: 2.6rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
   }
 }
+
 @media (max-width: 767px) {
+
   /* 移动端tab导航优化 */
   .activity_products_tab .activity_products_tab_head {
     gap: 1.5rem;
     padding: 0 1rem;
     justify-content: flex-start;
   }
-  
+
   .activity_products_tab .activity_products_tab_head_item {
     min-width: 20rem;
     height: 3.6rem;
@@ -462,34 +488,40 @@
     display: none !important;
   }
 
-.activity_products_tab .activity_products_tab_contain_first_product{
-  flex-direction: column;
-}
-.activity_products_tab .activity_products_tab_contain_first_product_img {
-  width: 100%;
-  min-height: auto;
-}
-.activity_products_tab .activity_products_tab_contain_first_product_info {
-  width: 100%;
-  min-height: auto;
-}
-.activity_products_tab .activity_products_tab_saleinfo{
-  flex-direction: column;
-  width: 100%;
-  text-align: center;
-  align-items: center;
-}
-.activity_products_tab .activity_products_tab_saleinfo_left{
-  border-right: none;
-  border-bottom: 0.1rem dashed #FFFFFF;
-  padding-right: 0;
-  padding-bottom: 1rem;
-}
-.activity_products_tab .activity_products_tab_saleinfo_right{
-  padding-left: 0;
-  padding-top: 1rem;
-}
-.activity_products_tab .activity_products_tab_product {
-  width: 100%;
-}
+  .activity_products_tab .activity_products_tab_contain_first_product {
+    flex-direction: column;
+  }
+
+  .activity_products_tab .activity_products_tab_contain_first_product_img {
+    width: 100%;
+    min-height: auto;
+  }
+
+  .activity_products_tab .activity_products_tab_contain_first_product_info {
+    width: 100%;
+    min-height: auto;
+  }
+
+  .activity_products_tab .activity_products_tab_saleinfo {
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+    align-items: center;
+  }
+
+  .activity_products_tab .activity_products_tab_saleinfo_left {
+    border-right: none;
+    border-bottom: 0.1rem dashed #FFFFFF;
+    padding-right: 0;
+    padding-bottom: 1rem;
+  }
+
+  .activity_products_tab .activity_products_tab_saleinfo_right {
+    padding-left: 0;
+    padding-top: 1rem;
+  }
+
+  .activity_products_tab .activity_products_tab_product {
+    width: 100%;
+  }
 }

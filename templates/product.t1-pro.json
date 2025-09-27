@@ -276,6 +276,7 @@
         "file_with_text_JJXCp8",
         "file_with_text_THJTyK"
       ],
+      "disabled": true,
       "name": "file box simplicity",
       "settings": {
         "spec_id": "",
@@ -302,9 +303,8 @@
         "sub_title": "<p>666</p>",
         "description": "<p></p><p></p>",
         "file_position": "right",
-        "file_type": "image",
-        "file_image": "shopify://shop_images/T1-Pro-hohenverstellbarer-Schreibtisch-Handsteuerung.jpg",
-        "video_url": "",
+        "file_type": "video",
+        "video_url": "https://youtu.be/KSZNf2B1VoQ",
         "btn_text": "",
         "link_url": "",
         "padding_top": 0,
@@ -762,7 +762,6 @@
         "title": "<p>Das GefäLlt Dir Vielleicht Auch</p>",
         "product_list": [
           "maidesite-3-fach-tischsteckdose-mit-usb-c-und-a-1-8m-kabel-steckdosenleiste",
-          "maidesite-ergonomischer-stuhl-mit-kopfstutze-und-ruckenlehne",
           "maidesite-ec5-ergonomischer-burostuhl-mit-ruckenlehne",
           "maidesite-ec6-ergonomischer-burostuhl-mit-kopfstutze-ruckenlehne-und-fussstutze",
           "maidesite-th2-pro-plus-tischgestell-elektrisch-hohenverstellbar",

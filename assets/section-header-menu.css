@@ -309,6 +309,16 @@
   transition: all .3s ease;
 }
 
+.header_menu .header_menu_item[data-type=product_collection] .header_menu_item_submenu_product_tagbox {
+  position: absolute;
+  top: 1.4rem;
+  left: 1.4rem;
+  display: flex;
+  flex-direction: column;
+  gap: .6rem;
+  align-items: flex-start;
+}
+
 .header_menu .header_menu_item[data-type="product_collection"] .header_menu_item_submenu_product_tag {
   padding: 0.6rem;
   font-family: "PP Right Grotesk";
@@ -319,9 +329,6 @@
   font-variation-settings: "opsz" auto;
   color: #FFFFFF;
   background-color: #FF7500;
-  position: absolute;
-  top: 1.2rem;
-  left: 1.2rem;
 }
 
 .header_menu .header_menu_item[data-type="product_collection"] .header_menu_item_submenu_product_info {
@@ -363,6 +370,7 @@
   color: #FFFFFF;
   margin-top: 0.8rem;
 }
+
 .header_menu .header_menu_item[data-type="product_collection"] .header_menu_item_submenu_product_price_cap {
   font-size: 1.6rem;
   font-weight: 400;
@@ -649,6 +657,16 @@
   transition: all .3s ease;
 }
 
+.header_menu_mobile .header_menu_item[data-type=product_collection] .header_menu_item_submenu_product_tagbox {
+  position: absolute;
+  top: 1.4rem;
+  left: 1.4rem;
+  display: flex;
+  flex-direction: column;
+  gap: .6rem;
+  align-items: flex-start;
+}
+
 .header_menu_mobile .header_menu_item[data-type=product_collection] .header_menu_item_submenu_product_tag {
   padding: .6rem;
   font-family: PP Right Grotesk;
@@ -659,9 +677,6 @@
   font-variation-settings: "opsz" auto;
   color: #fff;
   background-color: #ff7500;
-  position: absolute;
-  top: 1.2rem;
-  left: 1.2rem;
 }
 
 .header_menu_mobile .header_menu_item[data-type=product_collection] .header_menu_item_submenu_product_info:before {
@@ -708,6 +723,7 @@
   color: #fff;
   margin-top: .8rem;
 }
+
 .header_menu_mobile .header_menu_item[data-type="product_collection"] .header_menu_item_submenu_product_price_cap {
   font-size: 1.2rem;
   font-weight: 400;
@@ -715,6 +731,7 @@
   text-decoration: line-through;
   color: #d2d2d2;
 }
+
 .header_menu_mobile .header_menu_item[data-type=product_collection] .header_menu_item_submenu_swiper_prev,
 .header_menu_mobile .header_menu_item[data-type=product_collection] .header_menu_item_submenu_swiper_next {
   display: none;
@@ -743,11 +760,13 @@
   gap: 1rem;
   padding-right: 1rem;
 }
+
 @media screen and (max-width: 1440px) {
   .header_menu .header_menu_item[data-type="product_collection"] .header_menu_item_submenu_product_title {
     font-size: 2rem;
   }
 }
+
 @media screen and (max-width: 1024px) {
   .header_menu_section {
     display: none;

@@ -131,9 +131,23 @@
                               <a class="swiper-slide" href="{{ product.url }}">
                                 <div class="header_menu_item_submenu_product_img">
                                   <img src="{{ product.featured_image | image_url }}">
-                                  {% if show_info.tag.value != blank %}
-                                    <div class="header_menu_item_submenu_product_tag">{{ show_info.tag.value }}</div>
-                                  {% endif %}
+                                  <div class="header_menu_item_submenu_product_tagbox">
+                                    {% if product.compare_at_price != blank
+                                      and product.compare_at_price > product.price
+                                    %}
+                                      <div class="header_menu_item_submenu_product_tag">
+                                        Save
+                                        {{
+                                          product.compare_at_price
+                                          | minus: product.price
+                                          | money_without_trailing_zeros
+                                        }}
+                                      </div>
+                                    {% endif %}
+                                    {% if show_info.tag.value != blank %}
+                                      <div class="header_menu_item_submenu_product_tag">{{ show_info.tag.value }}</div>
+                                    {% endif %}
+                                  </div>
                                 </div>
                                 <div class="header_menu_item_submenu_product_info">
                                   <div>
@@ -157,7 +171,9 @@
                                     {% render 'product-rating', product: product %}
                                     <h4 class="header_menu_item_submenu_product_price">
                                       {{ product.price | money_without_trailing_zeros }}
-                                      {% if product.compare_at_price != blank and product.compare_at_price > product.price %}
+                                      {% if product.compare_at_price != blank
+                                        and product.compare_at_price > product.price
+                                      %}
                                         <span class="header_menu_item_submenu_product_price_cap">
                                           {{ product.compare_at_price | money_without_trailing_zeros }}
                                         </span>
@@ -324,9 +340,23 @@
                             <a class="swiper-slide" href="{{ product.url }}">
                               <div class="header_menu_item_submenu_product_img">
                                 <img src="{{ product.featured_image | image_url }}">
-                                {% if show_info.tag.value != blank %}
-                                  <div class="header_menu_item_submenu_product_tag">{{ show_info.tag.value }}</div>
-                                {% endif %}
+                                <div class="header_menu_item_submenu_product_tagbox">
+                                  {% if product.compare_at_price != blank
+                                    and product.compare_at_price > product.price
+                                  %}
+                                    <div class="header_menu_item_submenu_product_tag">
+                                      Save
+                                      {{
+                                        product.compare_at_price
+                                        | minus: product.price
+                                        | money_without_trailing_zeros
+                                      }}
+                                    </div>
+                                  {% endif %}
+                                  {% if show_info.tag.value != blank %}
+                                    <div class="header_menu_item_submenu_product_tag">{{ show_info.tag.value }}</div>
+                                  {% endif %}
+                                </div>
                               </div>
                               <div class="header_menu_item_submenu_product_info">
                                 <div>
@@ -350,7 +380,9 @@
                                   {% render 'product-rating', product: product %}
                                   <h4 class="header_menu_item_submenu_product_price">
                                     {{ product.price | money_without_trailing_zeros }}
-                                    {% if product.compare_at_price != blank and product.compare_at_price > product.price %}
+                                    {% if product.compare_at_price != blank
+                                      and product.compare_at_price > product.price
+                                    %}
                                       <span class="header_menu_item_submenu_product_price_cap">
                                         {{ product.compare_at_price | money_without_trailing_zeros }}
                                       </span>

@@ -11,6 +11,7 @@ product_items.forEach(item => {
   const price_contain = item.querySelector(".recommended_products_info_price")
   const select_option = item.querySelectorAll(".recommended_products_option_select")
   const select_item = item.querySelectorAll(".recommended_products_option_select_item")
+  const saleinfo_tag = item.querySelector(".recommended_products_product_tag")
 
   const setVariantOption = () => {
     select_option.forEach((selector, selectorIndex) => {
@@ -85,7 +86,22 @@ product_items.forEach(item => {
       currVariant = product.variants.find(el => areArraysEqual(curr_options, el.options) && el.available)
       if (currVariant) {
         img_contain.src = currVariant.featured_image.src
-        price_contain.innerHTML = moneyWithoutTrailingZeros(currVariant.price)
+        if (currVariant.compare_at_price && currVariant.compare_at_price > currVariant.price) {
+          price_contain.innerHTML = `${moneyWithoutTrailingZeros(currVariant.price)}<span class="product_price_cap">${moneyWithoutTrailingZeros(currVariant.compare_at_price)}</span>`
+          if (saleinfo_tag) {
+            saleinfo_tag.classList.remove("hidden")
+            saleinfo_tag.innerHTML = `Save ${moneyWithoutTrailingZeros(currVariant.compare_at_price - currVariant.price)}`
+          } else {
+            const container = document.createElement('div');
+            container.className = 'recommended_products_product_tag';
+
+            container.innerHTML = `Save ${moneyWithoutTrailingZeros(currVariant.compare_at_price - currVariant.price)}`;
+            document.querySelector(".recommended_products_product_tagbox").prepend(container);
+          }
+        } else {
+          price_contain.innerHTML = moneyWithoutTrailingZeros(currVariant.price)
+          saleinfo_tag && saleinfo_tag.classList.add("hidden")
+        }
         setVariantOption()
       }
       if (!currVariant && curr_options.length === 3) {
@@ -103,7 +119,22 @@ product_items.forEach(item => {
             }
           });
           img_contain.src = currVariant.featured_image.src
-          price_contain.innerHTML = moneyWithoutTrailingZeros(currVariant.price)
+          if (currVariant.compare_at_price && currVariant.compare_at_price > currVariant.price) {
+            price_contain.innerHTML = `${moneyWithoutTrailingZeros(currVariant.price)}<span class="product_price_cap">${moneyWithoutTrailingZeros(currVariant.compare_at_price)}</span>`
+            if (saleinfo_tag) {
+              saleinfo_tag.classList.remove("hidden")
+              saleinfo_tag.innerHTML = `Save ${moneyWithoutTrailingZeros(currVariant.compare_at_price - currVariant.price)}`
+            } else {
+              const container = document.createElement('div');
+              container.className = 'recommended_products_product_tag';
+
+              container.innerHTML = `Save ${moneyWithoutTrailingZeros(currVariant.compare_at_price - currVariant.price)}`;
+              document.querySelector(".recommended_products_product_tagbox").prepend(container);
+            }
+          } else {
+            price_contain.innerHTML = moneyWithoutTrailingZeros(currVariant.price)
+            saleinfo_tag && saleinfo_tag.classList.add("hidden")
+          }
           setVariantOption()
         }
       }

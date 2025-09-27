@@ -24,6 +24,22 @@
           <a class="swiper-slide recommended_products_product" href="{{ product.url }}" data-id="{{ product.id }}">
             <div class="recommended_products_img">
               <img src="{{ product.featured_image | image_url }}" alt="{{ product.title }}">
+              {% assign sale_info = product.metafields.custom.sale_info.value %}
+              <div class="recommended_products_product_tagbox">
+                {% if product.compare_at_price != blank and product.compare_at_price > product.price %}
+                  <div class="recommended_products_product_tag">
+                    Save {{ product.compare_at_price | minus: product.price | money_without_trailing_zeros }}
+                  </div>
+                {% endif %}
+                {% if sale_info != blank %}
+                  <div class="recommended_products_product_saleinfo">{{ sale_info.name }}</div>
+                {% endif %}
+                {% if product.metafields.custom.product_tag.value != blank %}
+                  <div class="recommended_products_product_tag">
+                    {{ product.metafields.custom.product_tag.value }}
+                  </div>
+                {% endif %}
+              </div>
             </div>
             <div class="recommended_products_info">
               <div>
@@ -38,7 +54,10 @@
                 <h4 class="recommended_products_info_title">{{ product.title }}</h4>
                 <h4 class="recommended_products_info_price has_product_price_cap">
                   {{ product.selected_or_first_available_variant.price | money_without_trailing_zeros }}
-                  {% if product.selected_or_first_available_variant.compare_at_price != blank and product.selected_or_first_available_variant.compare_at_price > product.selected_or_first_available_variant.price %}
+                  {% if product.selected_or_first_available_variant.compare_at_price != blank
+                    and product.selected_or_first_available_variant.compare_at_price
+                      > product.selected_or_first_available_variant.price
+                  %}
                     <span class="product_price_cap">
                       {{ product.selected_or_first_available_variant.compare_at_price | money_without_trailing_zeros }}
                     </span>

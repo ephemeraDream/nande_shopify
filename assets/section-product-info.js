@@ -614,9 +614,9 @@ const curr_bundle_tabletop_options = curr_bundle_tabletop_variant ? [...curr_bun
 if (!has_tabletop) {
   setVariantOption()
 } else {
-  document.querySelector(".product_info_bundle_tabletop_img").addEventListener("click", () => {
-    imgboxSwiper.slides[1].querySelector("img").click()
-  })
+  // document.querySelector(".product_info_bundle_tabletop_img").addEventListener("click", () => {
+  //   imgboxSwiper.slides[1].querySelector("img").click()
+  // })
 }
 updateImagesByVariantMedia()
 function setVariantOption() {
@@ -796,6 +796,7 @@ function updateVariantPrice() {
     })
     if (saletag) {
       saletag.classList.remove("hidden")
+      saletag.innerHTML = `Save ${moneyWithoutTrailingZeros(price_op - price_dp)}`
     } else {
       document.querySelector(".product_info_steps_contain .product_info_price .product_info_price_op").insertAdjacentHTML('afterend', `
         <div class="product_info_price_saletag">
