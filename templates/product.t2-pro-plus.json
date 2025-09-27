@@ -22,6 +22,10 @@
     "product_info_NXNt6g": {
       "type": "product-info",
       "blocks": {
+        "title_Wi7aAH": {
+          "type": "title",
+          "settings": {}
+        },
         "loox_reviews_loox_rating_qF3bkU": {
           "type": "shopify://apps/loox-reviews/blocks/loox-rating/5c3b337f-fd14-4df5-b1d6-80ec13e6e28e",
           "settings": {
@@ -36,6 +40,18 @@
             "looxOpenFloatingWidget": false,
             "emptyRatingWidget": false
           }
+        },
+        "price_PkxC9a": {
+          "type": "price",
+          "settings": {}
+        },
+        "key_feature_9kcieg": {
+          "type": "key_feature",
+          "settings": {}
+        },
+        "options_RY3qMg": {
+          "type": "options",
+          "settings": {}
         },
         "wholesale_modal_CBqFgt": {
           "type": "wholesale_modal",
@@ -92,7 +108,11 @@
         }
       },
       "block_order": [
+        "title_Wi7aAH",
         "loox_reviews_loox_rating_qF3bkU",
+        "price_PkxC9a",
+        "key_feature_9kcieg",
+        "options_RY3qMg",
         "wholesale_modal_CBqFgt",
         "modal_KiCBrG",
         "modal_TaRbWz",
@@ -344,6 +364,7 @@
         "file_type": "image",
         "file_image": "shopify://shop_images/P5-2_07252258-88de-4015-8096-f6c03a53dc31.jpg",
         "video_url": "",
+        "video_aspect_ratio": "4/3",
         "btn_text": "",
         "link_url": "",
         "padding_top": 120,
@@ -368,6 +389,7 @@
         "file_type": "image",
         "file_image": "shopify://shop_images/P6-2_8365033d-bb4d-495e-b25f-1985352dcace.jpg",
         "video_url": "",
+        "video_aspect_ratio": "4/3",
         "btn_text": "",
         "link_url": "",
         "padding_top": 60,
@@ -390,6 +412,7 @@
         "file_type": "image",
         "file_image": "shopify://shop_images/P6-3.jpg",
         "video_url": "",
+        "video_aspect_ratio": "4/3",
         "btn_text": "",
         "link_url": "",
         "padding_top": 60,
@@ -414,6 +437,7 @@
         "file_type": "image",
         "file_image": "shopify://shop_images/P6-1.jpg",
         "video_url": "",
+        "video_aspect_ratio": "4/3",
         "btn_text": "",
         "link_url": "",
         "padding_top": 60,
