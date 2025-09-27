@@ -69,7 +69,7 @@
 .collection_default .collection_default_product_img {
   width: 100%;
   /* height: 30.3rem; */
-  aspect-ratio: 1.12;
+  aspect-ratio: var(--product-img-ratio);
   background-color: #FAFAFA;
   position: relative;
 }
