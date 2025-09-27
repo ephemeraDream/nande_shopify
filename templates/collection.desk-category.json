@@ -302,8 +302,8 @@
       "name": "faq simple",
       "settings": {
         "spec_id": "",
-        "heading": "<h3>Versand</h3>",
-        "text": "",
+        "heading": "",
+        "text": "<p>Versand</p>",
         "learn_more": false,
         "show_btn": false,
         "more_faqs_link": "",
