@@ -173,10 +173,10 @@
             
           </div>
           <!-- 添加导航按钮 -->
-          <div class="swiper_btn_white swiper_btn_white_prev activity_products_tab_swiper_prev">
+          <div class="swiper_btn_white swiper_btn_white_prev activity_products_tab_swiper_prev" data-swiper-index="{{ forloop.index0 }}">
             {{- 'swiper-left.svg' | inline_asset_content -}}
           </div>
-          <div class="swiper_btn_white swiper_btn_white_next activity_products_tab_swiper_next">
+          <div class="swiper_btn_white swiper_btn_white_next activity_products_tab_swiper_next" data-swiper-index="{{ forloop.index0 }}">
             {{- 'swiper-right.svg' | inline_asset_content -}}
           </div>
         </div>
@@ -332,13 +332,20 @@
     const swiperContainers = document.querySelectorAll('#shopify-section-{{ section.id }} .activity_products_tab_swiper');
     
     swiperContainers.forEach((container, index) => {
+      // 为每个swiper找到对应的按钮
+      const sectionId = '{{ section.id }}';
+      const nextButton = document.querySelector(`#shopify-section-${sectionId} .activity_products_tab_swiper_next[data-swiper-index="${index}"]`) || 
+                        document.querySelector(`#shopify-section-${sectionId} .activity_products_tab_swiper_next:nth-of-type(${index + 1})`);
+      const prevButton = document.querySelector(`#shopify-section-${sectionId} .activity_products_tab_swiper_prev[data-swiper-index="${index}"]`) || 
+                        document.querySelector(`#shopify-section-${sectionId} .activity_products_tab_swiper_prev:nth-of-type(${index + 1})`);
+      
       const swiper = new Swiper(container, {
         slidesPerView: 'auto',
         spaceBetween: 20,
         loop: false,
         navigation: {
-          nextEl: container.querySelector('.activity_products_tab_swiper_next'),
-          prevEl: container.querySelector('.activity_products_tab_swiper_prev'),
+          nextEl: nextButton,
+          prevEl: prevButton,
         },
         breakpoints: {
           320: {
