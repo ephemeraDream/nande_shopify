@@ -357,44 +357,6 @@
   bottom: -2.5rem;
 }
 
-.activity_products_normal .activity_products_normal_product_tagbox {
-  position: absolute;
-  top: 1.4rem;
-  left: 1.4rem;
-  display: flex;
-  flex-direction: column;
-  gap: .6rem;
-  align-items: flex-start;
-}
-
-.activity_products_normal .activity_products_normal_product_tag {
-  padding: 0.6rem;
-  background-color: #FF7500;
-  font-family: "PP Right Grotesk";
-  font-size: 1.8rem;
-  font-weight: 500;
-  line-height: 80%;
-  letter-spacing: 0px;
-  font-variation-settings: "opsz" auto;
-  color: #FFFFFF;
-}
-
-
-.activity_products_normal .activity_products_normal_product_saleinfo {
-  padding: .6rem;
-  background-color: #ff7500;
-  font-family: "PP Right Grotesk";
-  font-size: 1.8rem;
-  font-weight: 500;
-  line-height: 80%;
-  letter-spacing: 0px;
-  font-variation-settings: "opsz" auto;
-  color: #fff;
-  /* position: absolute;
-  top: 1.4rem;
-  left: 1.4rem; */
-}
-
 .activity_products_normal .activity_products_normal_product_saleinfo_code {
   display: flex;
   align-items: baseline;
