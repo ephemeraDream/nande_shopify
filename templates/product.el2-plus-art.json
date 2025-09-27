@@ -181,6 +181,20 @@
         "padding_bottom": 0
       }
     },
+    "video_simplicity_K7YLnT": {
+      "type": "video-simplicity",
+      "name": "video simplicity",
+      "settings": {
+        "spec_id": "",
+        "show_playicon": "true",
+        "video_url": "https://www.youtube.com/watch?v=YstPRgITxvk&t=6s",
+        "title": "",
+        "description": "",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "background_color": "#f2f1ed"
+      }
+    },
     "img_with_text_box_simplicity_qrzG6W": {
       "type": "img-with-text-box-simplicity",
       "blocks": {
@@ -785,6 +799,7 @@
     "product_anchor_bar_atcVF4",
     "custom_liquid_XbQtBY",
     "video_wPHLA8",
+    "video_simplicity_K7YLnT",
     "img_with_text_box_simplicity_qrzG6W",
     "img_with_foldtext_RcBrkw",
     "img_with_text_simplicity_R8thEq",
