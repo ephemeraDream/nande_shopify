@@ -183,6 +183,7 @@
     },
     "video_simplicity_K7YLnT": {
       "type": "video-simplicity",
+      "disabled": true,
       "name": "video simplicity",
       "settings": {
         "spec_id": "",
@@ -333,9 +334,9 @@
         "sub_title": "<h3>Sitzende Erinnerung</h3>",
         "description": "<ul><li>Erinnerung an langes Sitzen: Intervallfunktion erinnert Sie daran, nach 0,5, 1 oder 2 Stunden aufzustehen.</li><li>Verbessert Ihre Haltung und steigert die Produktivität.</li></ul>",
         "file_position": "right",
-        "file_type": "image",
+        "file_type": "video",
         "file_image": "shopify://shop_images/Maidesite-TH2-Pro-Plus-standing-desk-_29_5776133d-cc2f-43c8-9d97-893d30c012a6.jpg",
-        "video_url": "",
+        "video_url": "https://www.youtube.com/watch?v=YstPRgITxvk&t=6s",
         "btn_text": "",
         "link_url": "",
         "padding_top": 120,
