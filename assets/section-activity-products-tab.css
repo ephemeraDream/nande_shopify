@@ -447,18 +447,24 @@
 /* 导航按钮样式 */
 
 .activity_products_tab .activity_products_tab_swiper_prev {
-  left: -4rem;
+  left: -6rem;
 }
 
 .activity_products_tab .activity_products_tab_swiper_next {
-  right: -4rem;
+  right: -6rem;
 }
 
 @media (max-width: 1024px) {
   .activity_products_tab .activity_products_tab_product {
     /* width: calc((100% - 2.8rem) / 2); */
   }
-
+  .activity_products_tab .activity_products_tab_swiper_prev {
+    left: -4rem;
+  }
+  
+  .activity_products_tab .activity_products_tab_swiper_next {
+    right: -4rem;
+  }
   .activity_products_tab .activity_products_tab_saleinfo_name {
     font-size: 2.6rem;
     display: flex;
