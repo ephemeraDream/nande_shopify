@@ -183,6 +183,7 @@
     },
     "video_simplicity_K7YLnT": {
       "type": "video-simplicity",
+      "disabled": true,
       "name": "video simplicity",
       "settings": {
         "spec_id": "",
