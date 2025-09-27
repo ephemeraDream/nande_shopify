@@ -168,4 +168,7 @@
   .faq_simple .faq_simple_text_contain {
     flex-direction: column;
 }
+.faq_simple .faq_simple_text {
+  font-size: 2.8rem;
+}
 }
