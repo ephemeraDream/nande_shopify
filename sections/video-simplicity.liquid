@@ -21,6 +21,15 @@
     display: none !important;
   }
   
+  /* 普通视频播放时的样式 */
+  .video_simplicity_contain.video-playing::after {
+    display: none !important;
+  }
+  
+  .video_simplicity_contain.video-playing .video_simplicity_playicon {
+    display: none !important;
+  }
+  
   /* YouTube封面图片样式 */
   .youtube-poster {
     position: absolute;
@@ -90,10 +99,11 @@
           section.settings.url_upload
           | video_tag:
             class: 'video_simplicity_video',
-            loop: true,
-            muted: true,
+            loop: false,
+            muted: false,
             playsinline: true,
-            preload: 'none',
+            preload: 'metadata',
+            controls: true,
             poster: poster_image
         }}
       {% endif %}
@@ -144,10 +154,48 @@
           if (video.paused) {
             video.style.zIndex = 2;
             video.play();
+            // 隐藏播放按钮
+            playIcon.style.display = 'none';
+            // 移除遮罩层
+            const videoContainer = document.querySelector('.video_simplicity_contain');
+            if (videoContainer) {
+              videoContainer.classList.add('video-playing');
+            }
           } else {
             video.pause();
+            // 显示播放按钮
+            playIcon.style.display = 'block';
+            // 恢复遮罩层
+            const videoContainer = document.querySelector('.video_simplicity_contain');
+            if (videoContainer) {
+              videoContainer.classList.remove('video-playing');
+            }
           }
         }
+      });
+    }
+    
+    // 监听视频播放状态变化
+    if (video) {
+      video.addEventListener('play', function() {
+        const playIcon = document.querySelector('.video_simplicity_playicon');
+        const videoContainer = document.querySelector('.video_simplicity_contain');
+        if (playIcon) playIcon.style.display = 'none';
+        if (videoContainer) videoContainer.classList.add('video-playing');
+      });
+      
+      video.addEventListener('pause', function() {
+        const playIcon = document.querySelector('.video_simplicity_playicon');
+        const videoContainer = document.querySelector('.video_simplicity_contain');
+        if (playIcon) playIcon.style.display = 'block';
+        if (videoContainer) videoContainer.classList.remove('video-playing');
+      });
+      
+      video.addEventListener('ended', function() {
+        const playIcon = document.querySelector('.video_simplicity_playicon');
+        const videoContainer = document.querySelector('.video_simplicity_contain');
+        if (playIcon) playIcon.style.display = 'block';
+        if (videoContainer) videoContainer.classList.remove('video-playing');
       });
     }
   })();
