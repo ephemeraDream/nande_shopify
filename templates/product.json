@@ -136,7 +136,12 @@
         "item_Vt9rJN"
       ],
       "name": "product anchor bar",
-      "settings": {}
+      "settings": {
+        "button_text": "Jetzt kaufen",
+        "button_url": "",
+        "button_target_blank": false,
+        "show_icon": true
+      }
     },
     "video_simplicity_zX8daC": {
       "type": "video-simplicity",
@@ -249,6 +254,7 @@
         "file_type": "image",
         "file_image": "shopify://shop_images/product_info_demo_img_1.webp",
         "video_url": "",
+        "video_aspect_ratio": "4/3",
         "btn_text": "",
         "link_url": "",
         "padding_top": 120,
@@ -273,6 +279,7 @@
         "file_type": "image",
         "file_image": "shopify://shop_images/product_info_demo_img_2.webp",
         "video_url": "",
+        "video_aspect_ratio": "4/3",
         "btn_text": "",
         "link_url": "",
         "padding_top": 60,
@@ -295,6 +302,7 @@
         "file_type": "image",
         "file_image": "shopify://shop_images/product_info_demo_img_1.webp",
         "video_url": "",
+        "video_aspect_ratio": "4/3",
         "btn_text": "",
         "link_url": "",
         "padding_top": 60,
@@ -319,6 +327,7 @@
         "file_type": "image",
         "file_image": "shopify://shop_images/product_info_demo_img_1.webp",
         "video_url": "",
+        "video_aspect_ratio": "4/3",
         "btn_text": "",
         "link_url": "",
         "padding_top": 60,
