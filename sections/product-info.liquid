@@ -280,7 +280,7 @@
       <div class="product_info_steps_contain" data-index="0">
         {%- for block in section.blocks -%}
           {%- case block.type -%}
-            {%- when '@app' -%}
+            {%- when '@app' and block. -%}
               {% render block %}
             {%- when 'title' -%}
               {% if product.metafields.custom.product_tag.value != blank %}
@@ -860,6 +860,7 @@
           {%- assign app_count = app_count | plus: 1 -%}
           {%- if app_count == 2 -%}
             {% render block %}
+            {{ block.id }}
           {%- endif -%}
         {%- endif -%}
       {%- endfor -%}
