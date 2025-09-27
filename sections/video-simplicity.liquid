@@ -20,6 +20,22 @@
   .video_simplicity_contain.youtube-playing .video_simplicity_playicon {
     display: none !important;
   }
+  
+  /* YouTube封面图片样式 */
+  .youtube-poster {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+  }
+  
+  .youtube-poster img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
 {%- endstyle -%}
 <div class="video_simplicity_section padding-sider section-{{ section.id }}-padding" id="{{ section.settings.spec_id }}"
   style="background-color: {{ section.settings.background_color }};">
@@ -48,8 +64,14 @@
           {% assign video_id = '' %}
         {% endif %}
         {% if video_id != '' %}
+          {% if poster_image != blank %}
+            <!-- 显示封面图片 -->
+            <div class="youtube-poster" id="youtube-poster-{{ section.id }}">
+              <img src="{{ poster_image }}" alt="Video poster" style="width: 100%; height: 100%; object-fit: cover;">
+            </div>
+          {% endif %}
           <iframe id="youtube-iframe-{{ section.id }}" width="100%" height="100%" src="https://www.youtube.com/embed/{{ video_id }}?enablejsapi=1&autoplay=0&controls=0&showinfo=0&rel=0"
-            title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen style="{% if poster_image != blank %}display: none;{% endif %}"></iframe>
         {% else %}
           <video
             loop
@@ -89,6 +111,7 @@
     const video = document.querySelector('.video_simplicity_video');
     const playIcon = document.querySelector('.video_simplicity_playicon');
     const youtubeIframe = document.querySelector('#youtube-iframe-{{ section.id }}');
+    const youtubePoster = document.querySelector('#youtube-poster-{{ section.id }}');
     
     if (playIcon) {
       playIcon.addEventListener('click', function () {
@@ -96,6 +119,14 @@
         if (youtubeIframe) {
           // 隐藏播放按钮
           playIcon.style.display = 'none';
+          
+          // 隐藏封面图片
+          if (youtubePoster) {
+            youtubePoster.style.display = 'none';
+          }
+          
+          // 显示YouTube iframe
+          youtubeIframe.style.display = 'block';
           
           // 移除遮罩层
           const videoContainer = document.querySelector('.video_simplicity_contain');
