@@ -22,7 +22,7 @@
     "product_info_NXNt6g": {
       "type": "product-info",
       "blocks": {
-        "title_ypeQJ9": {
+        "title_jQEQDz": {
           "type": "title",
           "settings": {}
         },
@@ -41,15 +41,15 @@
             "emptyRatingWidget": false
           }
         },
-        "price_kfbiNe": {
+        "price_VWPLiF": {
           "type": "price",
           "settings": {}
         },
-        "key_feature_L7qAYR": {
+        "key_feature_DLDr4k": {
           "type": "key_feature",
           "settings": {}
         },
-        "options_6Xt9cf": {
+        "options_QwCtjJ": {
           "type": "options",
           "settings": {}
         },
@@ -108,11 +108,11 @@
         }
       },
       "block_order": [
-        "title_ypeQJ9",
+        "title_jQEQDz",
         "loox_reviews_loox_rating_qF3bkU",
-        "price_kfbiNe",
-        "key_feature_L7qAYR",
-        "options_6Xt9cf",
+        "price_VWPLiF",
+        "key_feature_DLDr4k",
+        "options_QwCtjJ",
         "wholesale_modal_CBqFgt",
         "klarna_on_site_messaging_app_block_JH6nhp",
         "modal_KiCBrG",
