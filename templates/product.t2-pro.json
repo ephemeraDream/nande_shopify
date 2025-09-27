@@ -22,6 +22,10 @@
     "product_info_NXNt6g": {
       "type": "product-info",
       "blocks": {
+        "title_jRyBjp": {
+          "type": "title",
+          "settings": {}
+        },
         "loox_reviews_loox_rating_qF3bkU": {
           "type": "shopify://apps/loox-reviews/blocks/loox-rating/5c3b337f-fd14-4df5-b1d6-80ec13e6e28e",
           "settings": {
@@ -36,6 +40,18 @@
             "looxOpenFloatingWidget": false,
             "emptyRatingWidget": false
           }
+        },
+        "price_h4jqt8": {
+          "type": "price",
+          "settings": {}
+        },
+        "key_feature_bDBQz8": {
+          "type": "key_feature",
+          "settings": {}
+        },
+        "options_YYCgAU": {
+          "type": "options",
+          "settings": {}
         },
         "wholesale_modal_CBqFgt": {
           "type": "wholesale_modal",
@@ -82,7 +98,11 @@
         }
       },
       "block_order": [
+        "title_jRyBjp",
         "loox_reviews_loox_rating_qF3bkU",
+        "price_h4jqt8",
+        "key_feature_bDBQz8",
+        "options_YYCgAU",
         "wholesale_modal_CBqFgt",
         "modal_KiCBrG",
         "modal_TaRbWz",
@@ -325,6 +345,7 @@
         "file_type": "image",
         "file_image": "shopify://shop_images/Sitz-Steh-Erinnerung-an-den-Maidesite-Stehschreibtisch-1200x800.png",
         "video_url": "",
+        "video_aspect_ratio": "4/3",
         "btn_text": "",
         "link_url": "",
         "padding_top": 120,
@@ -349,6 +370,7 @@
         "file_type": "image",
         "file_image": "shopify://shop_images/Maidesite-hohenverstellbarer-Schreibtisch-mit-Kollisionsschutz-fur-mehr-Sicherheit-1200x800.png",
         "video_url": "",
+        "video_aspect_ratio": "4/3",
         "btn_text": "",
         "link_url": "",
         "padding_top": 60,
@@ -371,6 +393,7 @@
         "file_type": "image",
         "file_image": "shopify://shop_images/child-lock-for-T2-Pro-T2-Pro-Plus.jpg",
         "video_url": "",
+        "video_aspect_ratio": "4/3",
         "btn_text": "",
         "link_url": "",
         "padding_top": 60,
@@ -395,6 +418,7 @@
         "file_type": "image",
         "file_image": "shopify://shop_images/T2-Pro-standing-desk-with-safety-round-corner-1200x800.png",
         "video_url": "",
+        "video_aspect_ratio": "4/3",
         "btn_text": "",
         "link_url": "",
         "padding_top": 60,
