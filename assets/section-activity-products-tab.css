@@ -458,12 +458,10 @@
   .activity_products_tab .activity_products_tab_product {
     /* width: calc((100% - 2.8rem) / 2); */
   }
-  .activity_products_tab .activity_products_tab_swiper_prev {
-    left: -4rem;
-  }
-  
+  /* 移动端隐藏Swiper导航按钮 */
+  .activity_products_tab .activity_products_tab_swiper_prev,
   .activity_products_tab .activity_products_tab_swiper_next {
-    right: -4rem;
+    display: none !important;
   }
   .activity_products_tab .activity_products_tab_saleinfo_name {
     font-size: 2.6rem;
