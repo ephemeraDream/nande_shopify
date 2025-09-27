@@ -355,8 +355,8 @@
       "name": "faq simple",
       "settings": {
         "spec_id": "",
-        "heading": "<h3>Zahlung, Rückgabe und Service</h3>",
-        "text": "",
+        "heading": "",
+        "text": "<p>Zahlung, Rückgabe und Service</p>",
         "learn_more": false,
         "show_btn": false,
         "more_faqs_link": "",
