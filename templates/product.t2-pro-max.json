@@ -22,6 +22,10 @@
     "product_info_NXNt6g": {
       "type": "product-info",
       "blocks": {
+        "title_qce6bm": {
+          "type": "title",
+          "settings": {}
+        },
         "loox_reviews_loox_rating_qF3bkU": {
           "type": "shopify://apps/loox-reviews/blocks/loox-rating/5c3b337f-fd14-4df5-b1d6-80ec13e6e28e",
           "settings": {
@@ -36,6 +40,18 @@
             "looxOpenFloatingWidget": false,
             "emptyRatingWidget": false
           }
+        },
+        "price_dYD8Yx": {
+          "type": "price",
+          "settings": {}
+        },
+        "key_feature_URMAXc": {
+          "type": "key_feature",
+          "settings": {}
+        },
+        "options_3ab3tn": {
+          "type": "options",
+          "settings": {}
         },
         "klarna_on_site_messaging_app_block_JH6nhp": {
           "type": "shopify://apps/klarna-on-site-messaging/blocks/app-block/b95936a9-74b6-4a95-8103-6a1b6459c25e",
@@ -92,7 +108,11 @@
         }
       },
       "block_order": [
+        "title_qce6bm",
         "loox_reviews_loox_rating_qF3bkU",
+        "price_dYD8Yx",
+        "key_feature_URMAXc",
+        "options_3ab3tn",
         "klarna_on_site_messaging_app_block_JH6nhp",
         "wholesale_modal_CBqFgt",
         "modal_KiCBrG",
@@ -384,6 +404,7 @@
         "file_type": "image",
         "file_image": "shopify://shop_images/T2-Pro-Max-is-ultra-solid.jpg",
         "video_url": "",
+        "video_aspect_ratio": "4/3",
         "btn_text": "",
         "link_url": "",
         "padding_top": 120,
@@ -406,6 +427,7 @@
         "file_type": "image",
         "file_image": "shopify://shop_images/T2-Pro-Max-is-super-stable-with-precise-gasket.jpg",
         "video_url": "",
+        "video_aspect_ratio": "4/3",
         "btn_text": "",
         "link_url": "",
         "padding_top": 60,
@@ -431,6 +453,7 @@
         "file_type": "image",
         "file_image": "shopify://shop_images/222.jpg",
         "video_url": "",
+        "video_aspect_ratio": "4/3",
         "btn_text": "",
         "link_url": "",
         "padding_top": 60,
@@ -458,6 +481,7 @@
         "file_type": "image",
         "file_image": "shopify://shop_images/Maidesite-TH2-Pro-Plus-ovaler-hohenverstellbarer-Schreibtisch-mit-Holz-Arbeitsplatte_182e6972-2959-4113-a847-066c479b2bbd.jpg",
         "video_url": "",
+        "video_aspect_ratio": "4/3",
         "btn_text": "",
         "link_url": "",
         "padding_top": 0,
