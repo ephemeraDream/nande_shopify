@@ -22,6 +22,10 @@
     "product_info_NXNt6g": {
       "type": "product-info",
       "blocks": {
+        "title_6Lc8DB": {
+          "type": "title",
+          "settings": {}
+        },
         "loox_reviews_loox_rating_qF3bkU": {
           "type": "shopify://apps/loox-reviews/blocks/loox-rating/5c3b337f-fd14-4df5-b1d6-80ec13e6e28e",
           "settings": {
@@ -36,6 +40,18 @@
             "looxOpenFloatingWidget": false,
             "emptyRatingWidget": false
           }
+        },
+        "price_w7Fktm": {
+          "type": "price",
+          "settings": {}
+        },
+        "key_feature_7xGtPt": {
+          "type": "key_feature",
+          "settings": {}
+        },
+        "options_dTJUkX": {
+          "type": "options",
+          "settings": {}
         },
         "wholesale_modal_CBqFgt": {
           "type": "wholesale_modal",
@@ -82,7 +98,11 @@
         }
       },
       "block_order": [
+        "title_6Lc8DB",
         "loox_reviews_loox_rating_qF3bkU",
+        "price_w7Fktm",
+        "key_feature_7xGtPt",
+        "options_dTJUkX",
         "wholesale_modal_CBqFgt",
         "modal_KiCBrG",
         "modal_TaRbWz",
