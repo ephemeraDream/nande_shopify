@@ -23,7 +23,7 @@
         "banner_item_kEfP4k": {
           "type": "banner_item",
           "settings": {
-            "sub_title": "<h3>5 Jahre Maidesite – Angebote</h3>",
+            "sub_title": "<h3>Maidesite Große Angebots-Tage</h3>",
             "title": "",
             "text": "",
             "btn_text": "",
@@ -35,7 +35,7 @@
             "file_image": "shopify://shop_images/3200x1800.jpg",
             "video_url": "",
             "show_countdown": true,
-            "countdown": "anniversary"
+            "countdown": "big-deal-sale"
           }
         }
       },

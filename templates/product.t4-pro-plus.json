@@ -211,18 +211,17 @@
             "description": "<p>Kein Wackeln – zuverlässig in jeder Höhe</p>",
             "file_type": "video",
             "video_url": "",
-            "url_upload": "shopify://files/videos/稳定性 - 0818 - Grey C 灰底.mp4"
+            "url_upload": "shopify://files/videos/圆腿颜值.mp4"
           }
         },
         "file_with_text_f9yPAD": {
           "type": "file_with_text",
           "settings": {
-            "title": "<p>Großer Höhenbereich</p>",
-            "description": "<p>Höhenverstellbar von 650 mm bis 1350 mm – passend für jede Arbeitshöhe<br/></p>",
+            "title": "<p>Extra starke Tragkraft 240 kg</p>",
+            "description": "<p>Trägt Monitore, PC und Zubehör bis 240 kg mühelos<br/></p>",
             "file_type": "video",
-            "file_image": "shopify://shop_images/8d62567f3976a249cabee9308f1d71fa.jpg",
             "video_url": "",
-            "url_upload": "shopify://files/videos/高度 - 0825 - Grey C 灰底 - 变暗.mp4"
+            "url_upload": "shopify://files/videos/承重.mp4"
           }
         },
         "file_with_text_Q8tJKk": {
@@ -231,13 +230,13 @@
             "title": "<p>Extra starke Tragkraft 180 kg</p>",
             "description": "<p>Trägt Monitore, PC und Zubehör bis 180 kg mühelos</p>",
             "file_type": "video",
-            "file_image": "shopify://shop_images/Schwarz-06.jpg",
             "video_url": "",
-            "url_upload": "shopify://files/videos/承重 - 0818 - Grey C 灰底.mp4"
+            "url_upload": "shopify://files/videos/稳定性.mp4"
           }
         },
         "file_with_text_McHwGa": {
           "type": "file_with_text",
+          "disabled": true,
           "settings": {
             "title": "<p>Farbwechsel-Handset</p>",
             "description": "<p>Wechselnde Farben für einen coolen, individuellen Look</p>",
@@ -249,6 +248,7 @@
         },
         "file_with_text_ykc3D8": {
           "type": "file_with_text",
+          "disabled": true,
           "settings": {
             "title": "<p>Schnelle Montage in Minuten</p>",
             "description": "<p>Einfach aufgebaut – in wenigen Minuten einsatzbereit</p>",
@@ -260,6 +260,7 @@
         },
         "file_with_text_THJTyK": {
           "type": "file_with_text",
+          "disabled": true,
           "settings": {
             "title": "<p>Premium-Qualität für Jahre</p>",
             "description": "<p>Robuste Materialien – langlebig und zuverlässig</p>",
@@ -338,11 +339,10 @@
         "file_with_text_nGfFNW",
         "file_with_text_NhMLJD"
       ],
-      "disabled": true,
       "name": "file box simplicity",
       "settings": {
         "spec_id": "Produktinfo",
-        "main_title": "<p>Warum T2 Pro Max wählen?</p>",
+        "main_title": "<p>Warum T4 Pro Plus wählen?</p>",
         "row_num": 3,
         "padding_top": 100,
         "padding_bottom": 120,
