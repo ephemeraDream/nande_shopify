@@ -68,12 +68,50 @@
             "show_countdown": false,
             "countdown": ""
           }
+        },
+        "banner_item_irPjtT": {
+          "type": "banner_item",
+          "settings": {
+            "sub_title": "",
+            "title": "<p>Große Angebots-Tage</p>",
+            "text": "<p>7.–8. Oktober</p>",
+            "btn_text": "Jetzt kaufen",
+            "link": "",
+            "file_position": "top_center",
+            "overlay_text_align": "text-start",
+            "transparent_content_color": "#ffffff",
+            "file_type": "image",
+            "file_image": "shopify://shop_images/Banner_1fdd4ada-6b68-4cc7-8541-8148bda52609.jpg",
+            "video_url": "",
+            "show_countdown": false,
+            "countdown": ""
+          }
+        },
+        "banner_item_t4GakG": {
+          "type": "banner_item",
+          "settings": {
+            "sub_title": "",
+            "title": "",
+            "text": "",
+            "btn_text": "",
+            "link": "",
+            "file_position": "middle_left",
+            "overlay_text_align": "text-start",
+            "transparent_content_color": "#ffffff",
+            "file_type": "image",
+            "file_image": "shopify://shop_images/1dfad7a1cd6b1cacf8c076c3fea603da.jpg",
+            "video_url": "",
+            "show_countdown": false,
+            "countdown": ""
+          }
         }
       },
       "block_order": [
         "banner_item_V4RHqa",
         "banner_item_ykwd4B",
-        "banner_item_e7J8AA"
+        "banner_item_e7J8AA",
+        "banner_item_irPjtT",
+        "banner_item_t4GakG"
       ],
       "custom_css": [],
       "name": "banner",
