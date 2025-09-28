@@ -32,7 +32,7 @@
             "overlay_text_align": "text-center",
             "transparent_content_color": "#121212",
             "file_type": "image",
-            "file_image": "shopify://shop_images/3200x1800.jpg",
+            "file_image": "shopify://shop_images/big_deal_sale.jpg",
             "video_url": "",
             "show_countdown": true,
             "countdown": "big-deal-sale"
