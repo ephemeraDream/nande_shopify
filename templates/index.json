@@ -71,6 +71,7 @@
         },
         "banner_item_irPjtT": {
           "type": "banner_item",
+          "disabled": true,
           "settings": {
             "sub_title": "",
             "title": "<p>Große Angebots-Tage</p>",
@@ -89,6 +90,7 @@
         },
         "banner_item_t4GakG": {
           "type": "banner_item",
+          "disabled": true,
           "settings": {
             "sub_title": "",
             "title": "",
