@@ -23,14 +23,14 @@
         "banner_item_kEfP4k": {
           "type": "banner_item",
           "settings": {
-            "sub_title": "<h3>Maidesite Große Angebots-Tage</h3>",
-            "title": "",
+            "sub_title": "",
+            "title": "<p>Maidesite Große Angebots-Tage</p>",
             "text": "",
             "btn_text": "",
             "link": "",
             "file_position": "middle_center",
             "overlay_text_align": "text-center",
-            "transparent_content_color": "#121212",
+            "transparent_content_color": "#ffffff",
             "file_type": "image",
             "file_image": "shopify://shop_images/3200x1800_51f1f967-0676-453c-8943-d146950eba61.jpg",
             "video_url": "",
@@ -154,9 +154,8 @@
         },
         "tab_6qFKiy": {
           "type": "tab",
-          "disabled": true,
           "settings": {
-            "title": "Erinnerung",
+            "title": "Bis zu 120€ Rabatt",
             "product_list": [
               "maidesite-to1-pro-elektrisch-hohenverstellbarer-schreibtisch",
               "maidesite-th2-pro-plus-tischgestell-elektrisch-hohenverstellbar",
