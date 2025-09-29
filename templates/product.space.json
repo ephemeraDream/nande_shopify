@@ -211,9 +211,9 @@
           "settings": {
             "title": "<p>Super Duale Motoren</p>",
             "description": "<p>Maidesite Duale Motorensystem ist besser als andere Produkt mit nur einem Motor.</p>",
-            "file_type": "image",
-            "file_image": "shopify://shop_images/Schwarz-06.jpg",
-            "video_url": ""
+            "file_type": "video",
+            "video_url": "",
+            "url_upload": "shopify://files/videos/承重  新材质.mp4"
           }
         },
         "file_with_text_McHwGa": {
@@ -221,20 +221,19 @@
           "settings": {
             "title": "<p>Max. Verstellhöhe</p>",
             "description": "<p>Der 3-stufige tischgestell höhenverstellbar, der über den größten Höhenverstellbereich von 65-135 cm auf dem Markt verfügt<br/><br/></p>",
-            "file_type": "image",
-            "file_image": "shopify://shop_images/T2-Pro-Max-gray-desk-height-adjustable-65-135-cm.jpg",
-            "video_url": ""
+            "file_type": "video",
+            "video_url": "",
+            "url_upload": "shopify://files/videos/大桌面 新材质.mp4"
           }
         },
         "file_with_text_f9yPAD": {
           "type": "file_with_text",
-          "disabled": true,
           "settings": {
             "title": "<p>Belastbar bis 180 kg</p>",
             "description": "<p>Deren Material 20 % mehr als andere Produkte, stark und stabil. Der Traglast bis zu 180 kg.</p>",
             "file_type": "image",
-            "file_image": "shopify://shop_images/8d62567f3976a249cabee9308f1d71fa.jpg",
-            "video_url": ""
+            "video_url": "",
+            "url_upload": "shopify://files/videos/百变.mp4"
           }
         },
         "file_with_text_B39ehq": {
@@ -272,7 +271,7 @@
       "settings": {
         "spec_id": "",
         "main_title": "<p>Warum Space wählen?</p>",
-        "row_num": 3,
+        "row_num": 4,
         "padding_top": 100,
         "padding_bottom": 120,
         "background_color": "rgba(0,0,0,0)"
