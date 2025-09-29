@@ -339,8 +339,10 @@ document.querySelector(".collection_compare_select_contain_body_btn").addEventLi
 
         grouped[category].forEach(valueItem => {
           compare_info_html += `
-          <div class="product_compare_product_label">${valueItem.label}</div>
-          <div class="product_compare_product_contain">${valueItem.value}</div>
+          <div class="product_compare_product_item" data-type="${valueItem.label}" data-value="${valueItem.value}">
+            <div class="product_compare_product_label">${valueItem.label}</div>
+            <div class="product_compare_product_contain">${valueItem.value}</div>
+          </div>
       `;
         });
 
@@ -409,7 +411,7 @@ document.querySelector(".collection_compare_modal_return").addEventListener("cli
 document.querySelector(".collection_compare_modal_show_diff").addEventListener("click", (e) => {
   const item = e.target.closest(".collection_compare_modal_show_diff")
   item.classList.toggle("active")
-  const cards = document.querySelectorAll('.product_compare_product_card');
+  const cards = document.querySelectorAll('.product_compare_product_item');
   if (item.classList.contains("active")) {
     const groups = {};
     cards.forEach(card => {
