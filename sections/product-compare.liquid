@@ -284,18 +284,23 @@
     const shopNowElement = newItemClone.querySelector('.product_compare_product_shop_now');
     
     if (swiperElement && priceElement && shopNowElement) {
-      // 创建 sticky 包裹容器
-      const stickyWrapper = document.createElement('div');
-      stickyWrapper.className = 'product_compare_product_sticky';
+      // 检查是否已经存在 sticky 包裹容器
+      let stickyWrapper = newItemClone.querySelector('.product_compare_product_sticky');
       
-      // 将需要固定的元素移动到 sticky 包裹中
-      const parent = swiperElement.parentNode;
-      parent.insertBefore(stickyWrapper, swiperElement);
-      
-      // 移动元素到 sticky 包裹中
-      stickyWrapper.appendChild(swiperElement);
-      stickyWrapper.appendChild(priceElement);
-      stickyWrapper.appendChild(shopNowElement);
+      if (!stickyWrapper) {
+        // 如果没有 stickyWrapper，就创建并添加它
+        stickyWrapper = document.createElement('div');
+        stickyWrapper.className = 'product_compare_product_sticky';
+        
+        // 将需要固定的元素移动到 sticky 包裹中
+        const parent = swiperElement.parentNode;
+        parent.insertBefore(stickyWrapper, swiperElement);
+        
+        // 移动元素到 sticky 包裹中
+        stickyWrapper.appendChild(swiperElement);
+        stickyWrapper.appendChild(priceElement);
+        stickyWrapper.appendChild(shopNowElement);
+      }
     }
     
     if (index === 0) {
