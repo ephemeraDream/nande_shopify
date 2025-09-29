@@ -201,9 +201,9 @@
           "settings": {
             "title": "<p>Schnell aufgebaut</p>",
             "description": "<p>Nur 15-20 Minuten Montagezeit!</p>",
-            "file_type": "image",
-            "file_image": "shopify://shop_images/T2-Pro-Max-is-fast-assembly-desk.jpg",
-            "video_url": ""
+            "file_type": "video",
+            "video_url": "",
+            "url_upload": "shopify://files/videos/大桌面 新材质.mp4"
           }
         },
         "file_with_text_Q8tJKk": {
@@ -228,6 +228,7 @@
         },
         "file_with_text_f9yPAD": {
           "type": "file_with_text",
+          "disabled": true,
           "settings": {
             "title": "<p>Belastbar bis 180 kg</p>",
             "description": "<p>Deren Material 20 % mehr als andere Produkte, stark und stabil. Der Traglast bis zu 180 kg.</p>",
@@ -238,6 +239,7 @@
         },
         "file_with_text_B39ehq": {
           "type": "file_with_text",
+          "disabled": true,
           "settings": {
             "title": "<p>Einfache Bedienfreude</p>",
             "description": "<p>Klaviertasten und eine intuitive grafische Oberfläche machen die Einrichtung zum Kinderspiel.</p>",
@@ -248,6 +250,7 @@
         },
         "file_with_text_THJTyK": {
           "type": "file_with_text",
+          "disabled": true,
           "settings": {
             "title": "<p>FSC-zertifizierte Tischplatte</p>",
             "description": "<p>Optionale FSC-zertifizierte Tischplatten in 120x60cm, 140x70cm und 160x80cm mit vorgebohrten Löchern.</p>",
@@ -265,7 +268,6 @@
         "file_with_text_B39ehq",
         "file_with_text_THJTyK"
       ],
-      "disabled": true,
       "name": "file box simplicity",
       "settings": {
         "spec_id": "",
