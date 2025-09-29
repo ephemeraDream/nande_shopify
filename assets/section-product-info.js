@@ -609,7 +609,7 @@ const has_tabletop = bundle_tabletop_data.has_tabletop
 const bundle_tabletop = bundle_tabletop_data.product
 const bundle_tabletop_preorder_text = bundle_tabletop_data.preorder_text
 let curr_bundle_tabletop_variant
-const curr_bundle_tabletop_options = curr_bundle_tabletop_variant ? [...curr_bundle_tabletop_variant.options] : []
+const curr_bundle_tabletop_options = curr_bundle_tabletop_variant ? [...bundle_tabletop_data.variant.options] : []
 
 if (!has_tabletop) {
   setVariantOption()
