@@ -192,6 +192,20 @@
         "padding_bottom": 36
       }
     },
+    "video_simplicity_Wgfp6r": {
+      "type": "video-simplicity",
+      "name": "video simplicity",
+      "settings": {
+        "spec_id": "",
+        "show_playicon": "true",
+        "video_url": "https://www.youtube.com/watch?v=YwjxZG2eDuQ",
+        "title": "",
+        "description": "",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "background_color": "#f2f1ed"
+      }
+    },
     "img_with_text_box_simplicity_qrzG6W": {
       "type": "img-with-text-box-simplicity",
       "blocks": {
@@ -322,7 +336,6 @@
     },
     "img_with_text_simplicity_R8thEq": {
       "type": "img-with-text-simplicity",
-      "disabled": true,
       "custom_css": [],
       "name": "img with text simplicity",
       "settings": {
@@ -333,9 +346,9 @@
         "sub_title": "",
         "description": "<ul><li>Dreiecksunterstützungsstruktur ist extrem stabil im Vergleich zu anderen Schreibtischdesigns.</li><li>Dank verstärktem Querträger, Seitenstreben und Füßen bietet der Rahmen extra Stabilität.</li></ul>",
         "file_position": "right",
-        "file_type": "image",
+        "file_type": "video",
         "file_image": "shopify://shop_images/T2-Pro-Max-is-ultra-solid.jpg",
-        "video_url": "",
+        "video_url": "https://www.youtube.com/watch?v=YwjxZG2eDuQ",
         "video_aspect_ratio": "4/3",
         "btn_text": "",
         "link_url": "",
@@ -807,6 +820,7 @@
     "product_info_NXNt6g",
     "product_anchor_bar_atcVF4",
     "video_wPHLA8",
+    "video_simplicity_Wgfp6r",
     "img_with_text_box_simplicity_qrzG6W",
     "img_with_foldtext_RcBrkw",
     "img_with_text_simplicity_R8thEq",
