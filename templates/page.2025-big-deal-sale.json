@@ -174,7 +174,7 @@
       "name": "activity products tab",
       "settings": {
         "specId": "Produkt",
-        "title": "<p>Top Angebote</p>",
+        "title": "<p>Große Angebots-Tage</p>",
         "text": ""
       }
     },
