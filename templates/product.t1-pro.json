@@ -215,7 +215,7 @@
       "name": "video simplicity",
       "settings": {
         "spec_id": "Produktinfo",
-        "show_playicon": "false",
+        "show_playicon": "true",
         "video_url": "https://youtu.be/CpglzDtEiXA",
         "title": "",
         "description": "",
