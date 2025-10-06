@@ -195,6 +195,7 @@
     },
     "video_wPHLA8": {
       "type": "video",
+      "disabled": true,
       "name": "t:sections.video.presets.name",
       "settings": {
         "heading": "Maidesite mobiler Schreibtisch T1 Pro Ausrüstung",
@@ -211,7 +212,6 @@
     },
     "video_simplicity_XyW7NC": {
       "type": "video-simplicity",
-      "disabled": true,
       "name": "video simplicity",
       "settings": {
         "spec_id": "Produktinfo",
