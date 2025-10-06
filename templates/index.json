@@ -19,7 +19,7 @@
             "title": "<p>Große Angebots-Tage</p>",
             "text": "<p>Bis zu 39% Rabatt</p>",
             "btn_text": "Jetzt sparen",
-            "link": "shopify://pages/5-jahre-maidesite-angebote",
+            "link": "https://www.maidesite.de/pages/maidesite-grosse-angebots-tage",
             "file_position": "top_center",
             "overlay_text_align": "text-end",
             "transparent_content_color": "#ffffff",
