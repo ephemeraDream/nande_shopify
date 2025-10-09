@@ -145,7 +145,7 @@
               preload: 'metadata',
               controls: true,
               poster: poster_image,
-              style: 'aspect-ratio: ' | append: section.settings.video_aspect_ratio | default: '16/9' | append: ';'
+              style: 'aspect-ratio: ' | append: (section.settings.video_aspect_ratio | default: '16/9') | append: ';'
           }}
         {% endif %}
       {% endif %}
