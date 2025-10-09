@@ -332,3 +332,39 @@
   ]
 }
 {% endschema %}
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  // 解决 Chrome 浏览器视频控件遮罩层问题
+  const videos = document.querySelectorAll('#{{ section.id }} .img_with_text_simplicity_filebox_video');
+  
+  videos.forEach(function(video) {
+    // 监听视频事件
+    video.addEventListener('loadedmetadata', function() {
+      removeChromeOverlay();
+    });
+    
+    video.addEventListener('pause', function() {
+      removeChromeOverlay();
+    });
+    
+    video.addEventListener('mouseenter', function() {
+      removeChromeOverlay();
+    });
+    
+    // 定期检查并移除遮罩层
+    setInterval(removeChromeOverlay, 100);
+    
+    function removeChromeOverlay() {
+      // 移除 Chrome 的遮罩层
+      const overlay = video.querySelector('::-webkit-media-controls-overlay-enclosure');
+      if (overlay) {
+        overlay.style.display = 'none';
+      }
+      
+      // 通过 CSS 变量强制隐藏遮罩层
+      video.style.setProperty('--webkit-media-controls-overlay-enclosure-display', 'none');
+    }
+  });
+});
+</script>
