@@ -334,7 +334,7 @@
 {% endschema %}
 
 <script>
-document.addEventListener('DOMContentLoaded', function() {
+{% comment %} document.addEventListener('DOMContentLoaded', function() {
   // 解决 Chrome 浏览器视频控件遮罩层问题
   const videos = document.querySelectorAll('#{{ section.id }} .img_with_text_simplicity_filebox_video');
   
@@ -366,5 +366,5 @@ document.addEventListener('DOMContentLoaded', function() {
       video.style.setProperty('--webkit-media-controls-overlay-enclosure-display', 'none');
     }
   });
-});
+}); {% endcomment %}
 </script>
