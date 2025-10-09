@@ -12,8 +12,27 @@
     "banner_8A7fgF": {
       "type": "banner",
       "blocks": {
+        "banner_item_NCLJWQ": {
+          "type": "banner_item",
+          "settings": {
+            "sub_title": "<p>new release</p>",
+            "title": "<p>Maidesite T4 Pro Plus</p>",
+            "text": "<p>Good stability and Loading</p>",
+            "btn_text": "Order now",
+            "link": "shopify://products/maidesite-t4-pro-plus-vierbeinige-elliptische-saule-elektrisch-hohenverstellbares-gestell",
+            "file_position": "bottom_right",
+            "overlay_text_align": "text-start",
+            "transparent_content_color": "#ffffff",
+            "file_type": "image",
+            "file_image": "shopify://shop_images/Banner_ddecc0e9-8cb1-4ebe-a57b-a1e69186e9f2.jpg",
+            "video_url": "",
+            "show_countdown": false,
+            "countdown": ""
+          }
+        },
         "banner_item_e7J8AA": {
           "type": "banner_item",
+          "disabled": true,
           "settings": {
             "sub_title": "<p>7.–8. Oktober</p>",
             "title": "<p>Große Angebots-Tage</p>",
@@ -69,24 +88,6 @@
             "countdown": "summer-sale"
           }
         },
-        "banner_item_NCLJWQ": {
-          "type": "banner_item",
-          "settings": {
-            "sub_title": "<p>new release</p>",
-            "title": "<p>Maidesite T4 Pro Plus</p>",
-            "text": "<p>Good stability and Loading</p>",
-            "btn_text": "Order now",
-            "link": "shopify://products/maidesite-t4-pro-plus-vierbeinige-elliptische-saule-elektrisch-hohenverstellbares-gestell",
-            "file_position": "bottom_right",
-            "overlay_text_align": "text-start",
-            "transparent_content_color": "#ffffff",
-            "file_type": "image",
-            "file_image": "shopify://shop_images/Banner_ddecc0e9-8cb1-4ebe-a57b-a1e69186e9f2.jpg",
-            "video_url": "",
-            "show_countdown": false,
-            "countdown": ""
-          }
-        },
         "banner_item_ykwd4B": {
           "type": "banner_item",
           "settings": {
@@ -108,10 +109,10 @@
         }
       },
       "block_order": [
+        "banner_item_NCLJWQ",
         "banner_item_e7J8AA",
         "banner_item_t4GakG",
         "banner_item_V4RHqa",
-        "banner_item_NCLJWQ",
         "banner_item_ykwd4B"
       ],
       "custom_css": [],
