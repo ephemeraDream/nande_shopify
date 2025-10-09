@@ -41,6 +41,31 @@
   position: relative;
 }
 
+/* 防止视频悬停时变暗 - 隐藏浏览器默认的控件遮罩 */
+.img_with_text_simplicity .img_with_text_simplicity_filebox_video:hover {
+  filter: none;
+  opacity: 1;
+}
+
+/* 隐藏视频控件的遮罩层 */
+.img_with_text_simplicity .img_with_text_simplicity_filebox_video::-webkit-media-controls-overlay-play-button {
+  display: none;
+}
+
+.img_with_text_simplicity .img_with_text_simplicity_filebox_video::-webkit-media-controls-overlay-enclosure {
+  display: none;
+}
+
+/* 确保视频在暂停和悬停时不会变暗 */
+.img_with_text_simplicity .img_with_text_simplicity_filebox_video::-webkit-media-controls-panel {
+  background: transparent;
+}
+
+/* 隐藏视频控件的背景遮罩 */
+.img_with_text_simplicity .img_with_text_simplicity_filebox_video::-webkit-media-controls-enclosure {
+  background: transparent;
+}
+
 .img_with_text_simplicity_left {
   display: flex;
   flex-direction: row-reverse;
