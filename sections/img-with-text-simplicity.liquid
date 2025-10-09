@@ -134,7 +134,8 @@
             ></video>
           {% endif %}
         {% else %}
-          {% assign video_style = 'aspect-ratio: ' | append: (section.settings.video_aspect_ratio | default: '16/9') | append: ';' %}
+          {% assign aspect_ratio = section.settings.video_aspect_ratio | default: '16/9' %}
+          {% assign video_style = 'aspect-ratio: ' | append: aspect_ratio | append: ';' %}
           {{
             section.settings.url_upload
             | video_tag:
