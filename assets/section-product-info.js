@@ -246,6 +246,7 @@ if (sale_info_box) {
   updateCountdown();
   setInterval(updateCountdown, 1000);
 
+  //修改倒计时bug
   const saleInfoBtn = document.querySelector(".product_info_saleinfo_btn");
   if (saleInfoBtn) {
     saleInfoBtn.addEventListener('click', async (e) => {
