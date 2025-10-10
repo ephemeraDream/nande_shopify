@@ -285,10 +285,10 @@
   letter-spacing: 0px;
   font-variation-settings: "opsz" auto;
   color: #FF7500;
-  position: absolute;
+  /* position: absolute; */
   width: 100%;
   bottom: 0;
-  transform: translateY(calc(100% + 0.7rem));
+  transform: translateY(50%);
   display: flex;
   justify-content: center;
   gap: 0.2rem;
