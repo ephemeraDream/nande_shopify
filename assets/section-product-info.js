@@ -246,17 +246,20 @@ if (sale_info_box) {
   updateCountdown();
   setInterval(updateCountdown, 1000);
 
-  document.querySelector(".product_info_saleinfo_btn").addEventListener('click', async (e) => {
-    const code = e.target.getAttribute('data-code');
-    await navigator.clipboard.writeText(code);
+  const saleInfoBtn = document.querySelector(".product_info_saleinfo_btn");
+  if (saleInfoBtn) {
+    saleInfoBtn.addEventListener('click', async (e) => {
+      const code = e.target.getAttribute('data-code');
+      await navigator.clipboard.writeText(code);
 
-    const originalText = e.target.innerHTML;
-    e.target.innerHTML = 'Copied';
+      const originalText = e.target.innerHTML;
+      e.target.innerHTML = 'Copied';
 
-    setTimeout(() => {
-      e.target.innerHTML = originalText;
-    }, 5000);
-  });
+      setTimeout(() => {
+        e.target.innerHTML = originalText;
+      }, 5000);
+    });
+  }
 }
 // feature弹窗
 const key_features_modal = document.querySelector(".key_features_modal");
