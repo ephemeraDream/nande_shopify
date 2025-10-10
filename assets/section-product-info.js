@@ -675,6 +675,7 @@ document.querySelectorAll(".product_info_option_select_item").forEach(el => {
             }
           })
           document.querySelector(".product_info_option_select[data-index='2']").closest(".product_info_option_item").querySelector(".product_info_option_label_select").innerHTML = target.getAttribute("data-value")
+          document.querySelectorAll(".product_info_steps_contain_item_box[data-type='option'] .product_info_steps_contain_item_box_line")[2].querySelector(".product_info_steps_contain_item_box_line_value").innerHTML = target.getAttribute("data-value")
         }
         curr_bundle_tabletop_variant = null
         document.querySelector("input[name='bundle_tabletop_id']").value = ""
