@@ -751,12 +751,9 @@
             <div class="product_info_steps_contain_item_box_line">
               <span>{{ option.name }}:</span>
               <span class="product_info_steps_contain_item_box_line_value">
-                {% comment %}
-                  {%- for value in option.values -%}
-                    {%- if value.selected %}{{ value }}{% endif -%}
-                  {% endfor -%}
-                {% endcomment %}
-                {{ 'common.nur_tischgestell' | t }}
+                {%- for value in option.values -%}
+                  {%- if value.selected %}{{ value }}{% endif -%}
+                {% endfor -%}
               </span>
             </div>
           {%- endfor -%}
@@ -765,9 +762,12 @@
               <div class="product_info_steps_contain_item_box_line">
                 <span>{{ option.name }}:</span>
                 <span class="product_info_steps_contain_item_box_line_value">
-                  {%- for value in option.values -%}
-                    {%- if value.selected %}{{ value }}{% endif -%}
-                  {% endfor -%}
+                  {% comment %}
+                    {%- for value in option.values -%}
+                      {%- if value.selected %}{{ value }}{% endif -%}
+                    {% endfor -%}
+                  {% endcomment %}
+                  {{ 'common.nur_tischgestell' | t }}
                 </span>
               </div>
             {%- endfor -%}
