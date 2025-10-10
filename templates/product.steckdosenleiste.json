@@ -22,6 +22,10 @@
     "product_info_NXNt6g": {
       "type": "product-info",
       "blocks": {
+        "title_KyHmba": {
+          "type": "title",
+          "settings": {}
+        },
         "loox_reviews_loox_rating_qF3bkU": {
           "type": "shopify://apps/loox-reviews/blocks/loox-rating/5c3b337f-fd14-4df5-b1d6-80ec13e6e28e",
           "settings": {
@@ -37,6 +41,24 @@
             "emptyRatingWidget": false
           }
         },
+        "price_nChxBe": {
+          "type": "price",
+          "settings": {}
+        },
+        "key_feature_yHpLHB": {
+          "type": "key_feature",
+          "settings": {}
+        },
+        "options_fqfFAn": {
+          "type": "options",
+          "settings": {}
+        },
+        "custom_liquid_REgUce": {
+          "type": "custom-liquid",
+          "settings": {
+            "custom_liquid": "<!DOCTYPE html>\n<html lang=\"en-GB\">\n<head>\n  <meta charset=\"UTF-8\" />\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\" />\n  <title>Limited Time Discount Countdown</title>\n  <style>\n    .deal-row {\n      font-family: Arial, sans-serif;\n      color: #ff0022;\n      background-color: #fff0f2;\n      padding: 10px 16px;\n      font-size: 14px;\n      display: flex;\n      flex-direction: column;\n      gap: 8px;\n      text-align: left;\n      align-items: flex-start;\n    }\n\n    .deal-text {\n      font-weight: bold;\n    }\n\n    .bottom-row {\n      display: flex;\n      flex-wrap: wrap;\n      gap: 10px;\n      align-items: center;\n    }\n\n    .countdown-group {\n      display: flex;\n      align-items: center;\n      gap: 6px;\n      flex-wrap: nowrap;\n    }\n\n    .countdown-label {\n      font-weight: bold;\n      white-space: nowrap;\n    }\n\n    .countdown-wrapper {\n      display: flex;\n      align-items: center;\n      gap: 4px;\n    }\n\n    .time-box {\n      background-color: #ff0022;\n      color: #ffffff;\n      padding: 2px 6px;\n      border-radius: 3px;\n      font-weight: bold;\n      font-size: 13px;\n      min-width: 28px;\n      text-align: center;\n    }\n\n    .colon {\n      font-weight: bold;\n      font-size: 13px;\n      color: #ff0022;\n    }\n\n    .code-wrapper {\n      display: flex;\n      align-items: center;\n      gap: 6px;\n    }\n\n    .code-wrapper input {\n      border: 1px solid #ccc;\n      border-radius: 4px;\n      padding: 4px 8px;\n      font-size: 13px;\n      width: 90px;\n      text-align: center;\n    }\n\n    .copy-btn {\n      background-color: #ff0022;\n      color: #fff;\n      border: none;\n      border-radius: 4px;\n      padding: 4px 10px;\n      font-size: 12px;\n      cursor: pointer;\n      font-weight: bold;\n      transition: background-color 0.3s ease;\n    }\n\n    .copy-btn.copied {\n      background-color: #28a745;\n    }\n\n    @media (max-width: 600px) {\n      .bottom-row {\n        flex-direction: column;\n        align-items: flex-start;\n      }\n\n      .countdown-group {\n        flex-wrap: nowrap;\n      }\n\n      .code-wrapper {\n        margin-top: 4px;\n      }\n    }\n  </style>\n</head>\n<body>\n  <div class=\"deal-row\" id=\"deal-row\">\n    <div class=\"deal-text\">Limited Time Discount – Copy Code & Save!</div>\n    <div class=\"bottom-row\">\n      <div class=\"countdown-group\">\n        <div class=\"countdown-label\">Ends in</div>\n        <div class=\"countdown-wrapper\">\n          <div id=\"days\" class=\"time-box\">00</div><div class=\"colon\">:</div>\n          <div id=\"hours\" class=\"time-box\">00</div><div class=\"colon\">:</div>\n          <div id=\"minutes\" class=\"time-box\">00</div><div class=\"colon\">:</div>\n          <div id=\"seconds\" class=\"time-box\">00</div>\n        </div>\n      </div>\n      <div class=\"code-wrapper\">\n        <input type=\"text\" id=\"discountCode\" value=\"TH40\" readonly />\n        <button class=\"copy-btn\" id=\"copyBtn\">Copy</button>\n      </div>\n    </div>\n  </div>\n\n  <script>\n    const cycleStart = new Date(\"2025-07-01T00:00:00\").getTime();\n    const cycleDuration = 3 * 24 * 60 * 60 * 1000; // 3 days\n    const hiddenDuration = 5 * 60 * 1000; // 5 minutes\n\n    function updateCountdown() {\n      const now = Date.now();\n      const elapsed = now - cycleStart;\n      const cycleTotal = cycleDuration + hiddenDuration;\n      const currentCyclePosition = elapsed % cycleTotal;\n\n      const dealRow = document.getElementById(\"deal-row\");\n\n      if (currentCyclePosition > cycleDuration) {\n        dealRow.style.display = \"none\";\n        return;\n      } else {\n        dealRow.style.display = \"flex\";\n      }\n\n      const remaining = cycleDuration - currentCyclePosition;\n\n      const days = Math.floor(remaining / (1000 * 60 * 60 * 24));\n      const hours = Math.floor((remaining / (1000 * 60 * 60)) % 24);\n      const minutes = Math.floor((remaining / (1000 * 60)) % 60);\n      const seconds = Math.floor((remaining / 1000) % 60);\n\n      document.getElementById(\"days\").textContent = String(days).padStart(2, \"0\");\n      document.getElementById(\"hours\").textContent = String(hours).padStart(2, \"0\");\n      document.getElementById(\"minutes\").textContent = String(minutes).padStart(2, \"0\");\n      document.getElementById(\"seconds\").textContent = String(seconds).padStart(2, \"0\");\n    }\n\n    setInterval(updateCountdown, 1000);\n    updateCountdown();\n\n    document.getElementById('copyBtn').addEventListener('click', async function() {\n      const codeInput = document.getElementById('discountCode');\n      try {\n        await navigator.clipboard.writeText(codeInput.value);\n        this.textContent = '✔ Copied!';\n        this.classList.add('copied');\n        setTimeout(() => {\n          this.textContent = 'Copy';\n          this.classList.remove('copied');\n        }, 2000);\n      } catch (err) {\n        alert('Copy failed. Please copy manually.');\n      }\n    });\n  </script>\n</body>\n</html>"
+          }
+        },
         "wholesale_modal_CBqFgt": {
           "type": "wholesale_modal",
           "settings": {
@@ -44,7 +66,9 @@
             "icon": "<svg xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" version=\"1.1\" width=\"19.98046875\" height=\"20\" viewbox=\"0 0 19.98046875 20\" xmlns:xlink=\"http://www.w3.org/1999/xlink\"><g><g><path d=\"M19.9799,16.3531L18.8445,16.3531L18.8445,9.15646C18.844,8.61559,18.4059,8.17725,17.8652,8.17676L14.7579,8.17676L14.7579,0.979703C14.7574,0.438825,14.3192,0.000485712,13.7785,0L6.20137,0C5.66069,0.000485712,5.22251,0.438836,5.22202,0.979703L5.22202,8.17675L2.11471,8.17675C1.57403,8.17724,1.13584,8.61557,1.13536,9.15645L1.13536,16.3531L0,16.3531L0,17.7183L1.13536,17.7183L1.13536,20L2.49743,20L2.49743,17.7183L17.4825,17.7183L17.4825,20L18.8445,20L18.8445,17.7183L19.9799,17.7183L19.9799,16.3531ZM6.58498,1.36257L9.30957,1.36257L9.30957,3.74773L10.6721,3.74773L10.6721,1.36257L13.3967,1.36257L13.3967,8.17676L6.58498,8.17676L6.58498,1.36257ZM2.49743,9.53932L5.22202,9.53932L5.22202,11.924L6.58498,11.924L6.58498,9.53932L9.30957,9.53932L9.30957,16.3531L2.49743,16.3531L2.49743,9.53932ZM10.6734,9.53932L13.398,9.53932L13.398,11.924L14.7601,11.924L14.7601,9.53932L17.4847,9.53932L17.4847,16.3531L10.6712,16.3531L10.6734,9.53932Z\" fill=\"#1F1F1F\" fill-opacity=\"1\"></path></g></g></svg>",
             "modal_title": "<p><strong>Optimieren Sie Ihre Büros mit Maidesite</strong></p>",
             "modal_content": "<p>Ergonomische Arbeitsplätze, die Ihre Mitarbeiter begeistern und Ihre Produktivität steigern. Erhalten Sie jetzt ein unverbindliches Angebot und profitieren Sie von unserer umfassenden Beratung und Betreuung</p>",
-            "modal_tip": "<p>Durch das Absenden des Formulars speichern wir die von Ihnen eingegebenen Daten, um Ihre Anfrage zu bearbeiten. In keinem Fall werden diese Daten weitergegeben. Weitere Informationen finden Sie in unserer Datenschutzerklärung.</p>"
+            "modal_tip": "<p>Durch das Absenden des Formulars speichern wir die von Ihnen eingegebenen Daten, um Ihre Anfrage zu bearbeiten. In keinem Fall werden diese Daten weitergegeben. Weitere Informationen finden Sie in unserer Datenschutzerklärung.</p>",
+            "success_message": "Your message has been sent successfully.",
+            "error_message": "There was an error sending the form. Please check your input."
           }
         },
         "klarna_on_site_messaging_app_block_JH6nhp": {
@@ -90,7 +114,12 @@
         }
       },
       "block_order": [
+        "title_KyHmba",
         "loox_reviews_loox_rating_qF3bkU",
+        "price_nChxBe",
+        "key_feature_yHpLHB",
+        "options_fqfFAn",
+        "custom_liquid_REgUce",
         "wholesale_modal_CBqFgt",
         "klarna_on_site_messaging_app_block_JH6nhp",
         "modal_KiCBrG",
@@ -101,8 +130,10 @@
       "custom_css": [],
       "name": "product info",
       "settings": {
+        "spec_id": "",
         "media_ratio": "1.33",
-        "show_tax_and_shipping": true
+        "show_tax_and_shipping": true,
+        "product_specs": ""
       }
     },
     "product_anchor_bar_atcVF4": {
@@ -144,7 +175,12 @@
         "item_Vt9rJN"
       ],
       "name": "product anchor bar",
-      "settings": {}
+      "settings": {
+        "button_text": "Jetzt kaufen",
+        "button_url": "",
+        "button_target_blank": false,
+        "show_icon": true
+      }
     },
     "video_wPHLA8": {
       "type": "video",
@@ -161,6 +197,20 @@
         "color_scheme": "",
         "padding_top": 36,
         "padding_bottom": 36
+      }
+    },
+    "video_simplicity_Wgfp6r": {
+      "type": "video-simplicity",
+      "name": "video simplicity",
+      "settings": {
+        "spec_id": "",
+        "show_playicon": "true",
+        "video_url": "https://www.youtube.com/watch?v=YwjxZG2eDuQ",
+        "title": "",
+        "description": "",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "background_color": "#f2f1ed"
       }
     },
     "img_with_text_box_simplicity_qrzG6W": {
@@ -293,7 +343,6 @@
     },
     "img_with_text_simplicity_R8thEq": {
       "type": "img-with-text-simplicity",
-      "disabled": true,
       "custom_css": [],
       "name": "img with text simplicity",
       "settings": {
@@ -304,9 +353,10 @@
         "sub_title": "",
         "description": "<ul><li>Dreiecksunterstützungsstruktur ist extrem stabil im Vergleich zu anderen Schreibtischdesigns.</li><li>Dank verstärktem Querträger, Seitenstreben und Füßen bietet der Rahmen extra Stabilität.</li></ul>",
         "file_position": "right",
-        "file_type": "image",
+        "file_type": "video",
         "file_image": "shopify://shop_images/T2-Pro-Max-is-ultra-solid.jpg",
-        "video_url": "",
+        "video_url": "https://www.youtube.com/watch?v=YwjxZG2eDuQ",
+        "video_aspect_ratio": "4/3",
         "btn_text": "",
         "link_url": "",
         "padding_top": 120,
@@ -332,6 +382,7 @@
         "file_type": "image",
         "file_image": "shopify://shop_images/T2-Pro-Max-ultra-solid-lift-column-feet.jpg",
         "video_url": "",
+        "video_aspect_ratio": "4/3",
         "btn_text": "",
         "link_url": "",
         "padding_top": 60,
@@ -355,6 +406,7 @@
         "file_type": "image",
         "file_image": "shopify://shop_images/T2-Pro-Max-is-super-stable-with-precise-gasket.jpg",
         "video_url": "",
+        "video_aspect_ratio": "4/3",
         "btn_text": "",
         "link_url": "",
         "padding_top": 60,
@@ -382,6 +434,7 @@
         "file_type": "image",
         "file_image": "shopify://shop_images/Maidesite-TH2-Pro-Plus-ovaler-hohenverstellbarer-Schreibtisch-mit-Holz-Arbeitsplatte_182e6972-2959-4113-a847-066c479b2bbd.jpg",
         "video_url": "",
+        "video_aspect_ratio": "4/3",
         "btn_text": "",
         "link_url": "",
         "padding_top": 0,
@@ -462,6 +515,9 @@
         "description": "",
         "title": "<p>CE/FSC-zertifizierter höhenverstellbarer Schreibtisch und Tischplatte</p>",
         "show_tab_head": true,
+        "loop": true,
+        "autoplay_enable": true,
+        "autoplay_delay": 5000,
         "layout": "image-left"
       }
     },
@@ -558,8 +614,13 @@
       "disabled": true,
       "name": "maidesite swiper",
       "settings": {
+        "spec_id": "",
         "title": "<p>Die Presse Liebt Maidesite</p>",
         "text": "",
+        "show_buttons": true,
+        "loop": true,
+        "autoplay_enable": true,
+        "autoplay_delay": 3000,
         "padding_top": 120,
         "padding_bottom": 0
       }
@@ -707,9 +768,11 @@
         "spec_id": "",
         "heading": "<p>FAQ</p>",
         "text": "<h3>Schreibtisch Höhenverstellbar T2 Pro Max Technical</h3>",
-        "show_btn": true,
         "learn_more": true,
+        "show_btn": true,
+        "more_faqs_link": "",
         "contact_us": false,
+        "contact_us_link": "",
         "padding_top": 120,
         "padding_bottom": 120,
         "background_color": "rgba(0,0,0,0)"
@@ -764,6 +827,7 @@
     "product_info_NXNt6g",
     "product_anchor_bar_atcVF4",
     "video_wPHLA8",
+    "video_simplicity_Wgfp6r",
     "img_with_text_box_simplicity_qrzG6W",
     "img_with_foldtext_RcBrkw",
     "img_with_text_simplicity_R8thEq",

@@ -22,6 +22,10 @@
     "product_info_NXNt6g": {
       "type": "product-info",
       "blocks": {
+        "title_DJ8XTg": {
+          "type": "title",
+          "settings": {}
+        },
         "loox_reviews_loox_rating_qF3bkU": {
           "type": "shopify://apps/loox-reviews/blocks/loox-rating/5c3b337f-fd14-4df5-b1d6-80ec13e6e28e",
           "settings": {
@@ -36,6 +40,18 @@
             "looxOpenFloatingWidget": false,
             "emptyRatingWidget": false
           }
+        },
+        "price_RbaDRg": {
+          "type": "price",
+          "settings": {}
+        },
+        "key_feature_cmtHrP": {
+          "type": "key_feature",
+          "settings": {}
+        },
+        "options_hmp9bw": {
+          "type": "options",
+          "settings": {}
         },
         "klarna_on_site_messaging_app_block_JH6nhp": {
           "type": "shopify://apps/klarna-on-site-messaging/blocks/app-block/b95936a9-74b6-4a95-8103-6a1b6459c25e",
@@ -92,7 +108,11 @@
         }
       },
       "block_order": [
+        "title_DJ8XTg",
         "loox_reviews_loox_rating_qF3bkU",
+        "price_RbaDRg",
+        "key_feature_cmtHrP",
+        "options_hmp9bw",
         "klarna_on_site_messaging_app_block_JH6nhp",
         "wholesale_modal_CBqFgt",
         "modal_KiCBrG",
@@ -195,7 +215,7 @@
       "name": "video simplicity",
       "settings": {
         "spec_id": "Produktinfo",
-        "show_playicon": "false",
+        "show_playicon": "true",
         "video_url": "https://youtu.be/CpglzDtEiXA",
         "title": "",
         "description": "",
@@ -304,7 +324,9 @@
         "description": "<p></p><p></p>",
         "file_position": "right",
         "file_type": "video",
-        "video_url": "https://youtu.be/KSZNf2B1VoQ",
+        "video_url": "https://www.youtube.com/watch?v=YstPRgITxvk&t=6s",
+        "url_upload": "shopify://files/videos/无线充-插座.mp4",
+        "video_aspect_ratio": "4/3",
         "btn_text": "",
         "link_url": "",
         "padding_top": 0,
@@ -332,6 +354,7 @@
         "file_type": "image",
         "file_image": "shopify://shop_images/product_info_demo_img_2.webp",
         "video_url": "",
+        "video_aspect_ratio": "4/3",
         "btn_text": "",
         "link_url": "",
         "padding_top": 0,
@@ -358,6 +381,7 @@
         "file_type": "image",
         "file_image": "shopify://shop_images/product_info_demo_img_1.webp",
         "video_url": "",
+        "video_aspect_ratio": "4/3",
         "btn_text": "",
         "link_url": "",
         "padding_top": 0,
@@ -385,6 +409,7 @@
         "file_type": "image",
         "file_image": "shopify://shop_images/product_info_demo_img_1.webp",
         "video_url": "",
+        "video_aspect_ratio": "4/3",
         "btn_text": "",
         "link_url": "",
         "padding_top": 0,

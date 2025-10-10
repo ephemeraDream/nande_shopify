@@ -11,6 +11,43 @@
       padding-bottom: {{ section.settings.padding_bottom }}px;
     }
   }
+  
+  /* 视频容器样式 */
+  #{{ section.id }} .img_with_text_simplicity_filebox {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  #{{ section.id }} .img_with_text_simplicity_filebox iframe,
+  #{{ section.id }} .img_with_text_simplicity_filebox video {
+    width: 100%;
+    height: auto;
+    aspect-ratio: {{ section.settings.video_aspect_ratio | default: '16/9' }};
+    object-fit: cover;
+  }
+  
+  /* 视频控件样式 */
+  #{{ section.id }} .img_with_text_simplicity_filebox video {
+    background: #000;
+  }
+  
+  #{{ section.id }} .img_with_text_simplicity_filebox video::-webkit-media-controls {
+    display: flex;
+  }
+  
+  #{{ section.id }} .img_with_text_simplicity_filebox video::-webkit-media-controls-panel {
+    background: rgba(0, 0, 0, 0.7);
+  }
+  
+  #{{ section.id }} .img_with_text_simplicity_filebox video::-webkit-media-controls-play-button,
+  #{{ section.id }} .img_with_text_simplicity_filebox video::-webkit-media-controls-timeline,
+  #{{ section.id }} .img_with_text_simplicity_filebox video::-webkit-media-controls-current-time-display,
+  #{{ section.id }} .img_with_text_simplicity_filebox video::-webkit-media-controls-time-remaining-display,
+  #{{ section.id }} .img_with_text_simplicity_filebox video::-webkit-media-controls-mute-button,
+  #{{ section.id }} .img_with_text_simplicity_filebox video::-webkit-media-controls-volume-slider,
+  #{{ section.id }} .img_with_text_simplicity_filebox video::-webkit-media-controls-fullscreen-button {
+    display: block;
+  }
 {%- endstyle -%}
 <div
   class="img_with_text_simplicity_section padding-sider section-{{ section.id }}-padding"
@@ -72,12 +109,13 @@
             <iframe
               width="100%"
               height="100%"
-              src="https://www.youtube.com/embed/{{ video_id }}"
+              src="https://www.youtube.com/embed/{{ video_id }}?enablejsapi=1&autoplay=0&controls=1&showinfo=0&rel=0"
               title="YouTube video player"
               frameborder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
               referrerpolicy="strict-origin-when-cross-origin"
               allowfullscreen
+              style="aspect-ratio: {{ section.settings.video_aspect_ratio | default: '16/9' }};"
             ></iframe>
           {% else %}
             <video
@@ -85,25 +123,31 @@
               loop
               muted
               playsinline
-              preload="none"
+              preload="metadata"
+              controls
               class="img_with_text_simplicity_filebox_video"
               {% if poster_image != blank %}
                 poster="{{ poster_image }}"
               {% endif %}
               src="{{ section.settings.video_url }}"
+              style="aspect-ratio: {{ section.settings.video_aspect_ratio | default: '16/9' }};"
             ></video>
           {% endif %}
         {% else %}
+          {% assign aspect_ratio = section.settings.video_aspect_ratio | default: '16/9' %}
+          {% assign video_style = 'aspect-ratio: ' | append: aspect_ratio | append: ';' %}
           {{
             section.settings.url_upload
             | video_tag:
               class: 'img_with_text_simplicity_filebox_video',
-              autoplay: true,
-              loop: true,
-              muted: true,
+              autoplay: false,
+              loop: false,
+              muted: false,
               playsinline: true,
-              preload: 'none',
-              poster: poster_image
+              preload: 'metadata',
+              controls: true,
+              poster: poster_image,
+              style: video_style
           }}
         {% endif %}
       {% endif %}
@@ -211,6 +255,22 @@
       "label": "video upload"
     },
     {
+      "type": "select",
+      "id": "video_aspect_ratio",
+      "label": "Video aspect ratio",
+      "options": [
+        {
+          "value": "16/9",
+          "label": "16:9 (Widescreen)"
+        },
+        {
+          "value": "4/3",
+          "label": "4:3 (Standard)"
+        }
+      ],
+      "default": "4/3"
+    },
+    {
       "type": "text",
       "id": "btn_text",
       "label": "button text"
@@ -272,3 +332,39 @@
   ]
 }
 {% endschema %}
+
+<script>
+{% comment %} document.addEventListener('DOMContentLoaded', function() {
+  // 解决 Chrome 浏览器视频控件遮罩层问题
+  const videos = document.querySelectorAll('#{{ section.id }} .img_with_text_simplicity_filebox_video');
+  
+  videos.forEach(function(video) {
+    // 监听视频事件
+    video.addEventListener('loadedmetadata', function() {
+      removeChromeOverlay();
+    });
+    
+    video.addEventListener('pause', function() {
+      removeChromeOverlay();
+    });
+    
+    video.addEventListener('mouseenter', function() {
+      removeChromeOverlay();
+    });
+    
+    // 定期检查并移除遮罩层
+    setInterval(removeChromeOverlay, 100);
+    
+    function removeChromeOverlay() {
+      // 移除 Chrome 的遮罩层
+      const overlay = video.querySelector('::-webkit-media-controls-overlay-enclosure');
+      if (overlay) {
+        overlay.style.display = 'none';
+      }
+      
+      // 通过 CSS 变量强制隐藏遮罩层
+      video.style.setProperty('--webkit-media-controls-overlay-enclosure-display', 'none');
+    }
+  });
+}); {% endcomment %}
+</script>

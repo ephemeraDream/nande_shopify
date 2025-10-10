@@ -41,6 +41,56 @@
   position: relative;
 }
 
+/* 防止视频悬停时变暗 - 隐藏浏览器默认的控件遮罩 */
+.img_with_text_simplicity .img_with_text_simplicity_filebox_video:hover {
+  filter: none !important;
+  opacity: 1 !important;
+}
+
+/* 隐藏视频控件的遮罩层 */
+.img_with_text_simplicity .img_with_text_simplicity_filebox_video::-webkit-media-controls-overlay-play-button {
+  display: none !important;
+}
+
+.img_with_text_simplicity .img_with_text_simplicity_filebox_video::-webkit-media-controls-overlay-enclosure {
+  display: none !important;
+}
+
+/* 确保视频在暂停和悬停时不会变暗 */
+.img_with_text_simplicity .img_with_text_simplicity_filebox_video::-webkit-media-controls-panel {
+  background: transparent !important;
+}
+
+/* 隐藏视频控件的背景遮罩 */
+.img_with_text_simplicity .img_with_text_simplicity_filebox_video::-webkit-media-controls-enclosure {
+  background: transparent !important;
+}
+
+/* 隐藏视频控件的遮罩层 - 更全面的选择器 */
+.img_with_text_simplicity .img_with_text_simplicity_filebox_video::-webkit-media-controls-overlay {
+  display: none !important;
+}
+
+/* 隐藏视频控件的遮罩层 - 针对不同浏览器 */
+.img_with_text_simplicity .img_with_text_simplicity_filebox_video::-webkit-media-controls-start-playback-button {
+  display: none !important;
+}
+
+/* 确保视频控件不会添加遮罩 */
+.img_with_text_simplicity .img_with_text_simplicity_filebox_video::-webkit-media-controls-fullscreen-button {
+  background: transparent !important;
+}
+
+/* 隐藏视频控件的遮罩层 - 针对暂停状态 */
+.img_with_text_simplicity .img_with_text_simplicity_filebox_video[controls]::-webkit-media-controls-overlay-enclosure {
+  display: none !important;
+}
+
+/* 确保视频在暂停时不会变暗 */
+.img_with_text_simplicity .img_with_text_simplicity_filebox_video[controls]::-webkit-media-controls-panel {
+  background: transparent !important;
+}
+
 .img_with_text_simplicity_left {
   display: flex;
   flex-direction: row-reverse;

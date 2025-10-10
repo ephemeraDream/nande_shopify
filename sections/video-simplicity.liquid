@@ -11,6 +11,40 @@
       padding-bottom: {{ section.settings.padding_bottom }}px;
     }
   }
+  
+  /* YouTube视频播放时的样式 */
+  .video_simplicity_contain.youtube-playing::after {
+    display: none !important;
+  }
+  
+  .video_simplicity_contain.youtube-playing .video_simplicity_playicon {
+    display: none !important;
+  }
+  
+  /* 普通视频播放时的样式 */
+  .video_simplicity_contain.video-playing::after {
+    display: none !important;
+  }
+  
+  .video_simplicity_contain.video-playing .video_simplicity_playicon {
+    display: none !important;
+  }
+  
+  /* YouTube封面图片样式 */
+  .youtube-poster {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+  }
+  
+  .youtube-poster img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
 {%- endstyle -%}
 <div class="video_simplicity_section padding-sider section-{{ section.id }}-padding" id="{{ section.settings.spec_id }}"
   style="background-color: {{ section.settings.background_color }};">
@@ -39,8 +73,14 @@
           {% assign video_id = '' %}
         {% endif %}
         {% if video_id != '' %}
-          <iframe width="100%" height="100%" src="https://www.youtube.com/embed/{{ video_id }}"
-            title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+          {% if poster_image != blank %}
+            <!-- 显示封面图片 -->
+            <div class="youtube-poster" id="youtube-poster-{{ section.id }}">
+              <img src="{{ poster_image }}" alt="Video poster" style="width: 100%; height: 100%; object-fit: cover;">
+            </div>
+          {% endif %}
+          <iframe id="youtube-iframe-{{ section.id }}" width="100%" height="100%" src="https://www.youtube.com/embed/{{ video_id }}?enablejsapi=1&autoplay=0&controls=0&showinfo=0&rel=0"
+            title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen style="{% if poster_image != blank %}display: none;{% endif %}"></iframe>
         {% else %}
           <video
             loop
@@ -59,10 +99,11 @@
           section.settings.url_upload
           | video_tag:
             class: 'video_simplicity_video',
-            loop: true,
-            muted: true,
+            loop: false,
+            muted: false,
             playsinline: true,
-            preload: 'none',
+            preload: 'metadata',
+            controls: true,
             poster: poster_image
         }}
       {% endif %}
@@ -79,14 +120,82 @@
   (() => {
     const video = document.querySelector('.video_simplicity_video');
     const playIcon = document.querySelector('.video_simplicity_playicon');
+    const youtubeIframe = document.querySelector('#youtube-iframe-{{ section.id }}');
+    const youtubePoster = document.querySelector('#youtube-poster-{{ section.id }}');
+    
     if (playIcon) {
       playIcon.addEventListener('click', function () {
-        if (video.paused) {
-          video.style.zIndex = 2;
-          video.play();
-        } else {
-          video.pause();
+        // 如果是YouTube视频
+        if (youtubeIframe) {
+          // 隐藏播放按钮
+          playIcon.style.display = 'none';
+          
+          // 隐藏封面图片
+          if (youtubePoster) {
+            youtubePoster.style.display = 'none';
+          }
+          
+          // 显示YouTube iframe
+          youtubeIframe.style.display = 'block';
+          
+          // 移除遮罩层
+          const videoContainer = document.querySelector('.video_simplicity_contain');
+          if (videoContainer) {
+            videoContainer.classList.add('youtube-playing');
+          }
+          
+          // 播放YouTube视频
+          const videoId = '{{ video_id }}';
+          const newSrc = `https://www.youtube.com/embed/${videoId}?enablejsapi=1&autoplay=1&controls=1&showinfo=0&rel=0`;
+          youtubeIframe.src = newSrc;
         }
+        // 如果是普通视频
+        else if (video) {
+          if (video.paused) {
+            video.style.zIndex = 2;
+            video.play();
+            // 隐藏播放按钮
+            playIcon.style.display = 'none';
+            // 移除遮罩层
+            const videoContainer = document.querySelector('.video_simplicity_contain');
+            if (videoContainer) {
+              videoContainer.classList.add('video-playing');
+            }
+          } else {
+            video.pause();
+            // 显示播放按钮
+            playIcon.style.display = 'block';
+            // 恢复遮罩层
+            const videoContainer = document.querySelector('.video_simplicity_contain');
+            if (videoContainer) {
+              videoContainer.classList.remove('video-playing');
+            }
+          }
+        }
+      });
+    }
+    
+    // 监听视频播放状态变化
+    if (video) {
+      video.addEventListener('play', function() {
+        const playIcon = document.querySelector('.video_simplicity_playicon');
+        const videoContainer = document.querySelector('.video_simplicity_contain');
+        if (playIcon) playIcon.style.display = 'none';
+        if (videoContainer) videoContainer.classList.add('video-playing');
+      });
+      
+      video.addEventListener('pause', function() {
+        const playIcon = document.querySelector('.video_simplicity_playicon');
+        const videoContainer = document.querySelector('.video_simplicity_contain');
+        if (playIcon) playIcon.style.display = 'block';
+        if (videoContainer) videoContainer.classList.remove('video-playing');
+      });
+      
+      video.addEventListener('ended', function() {
+        const playIcon = document.querySelector('.video_simplicity_playicon');
+        const videoContainer = document.querySelector('.video_simplicity_contain');
+        if (playIcon) playIcon.style.display = 'block';
+        if (videoContainer) videoContainer.classList.remove('video-playing');
       });
     }
   })();

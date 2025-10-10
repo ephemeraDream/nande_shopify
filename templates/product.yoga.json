@@ -22,6 +22,10 @@
     "product_info_NXNt6g": {
       "type": "product-info",
       "blocks": {
+        "title_jQEQDz": {
+          "type": "title",
+          "settings": {}
+        },
         "loox_reviews_loox_rating_qF3bkU": {
           "type": "shopify://apps/loox-reviews/blocks/loox-rating/5c3b337f-fd14-4df5-b1d6-80ec13e6e28e",
           "settings": {
@@ -36,6 +40,18 @@
             "looxOpenFloatingWidget": false,
             "emptyRatingWidget": false
           }
+        },
+        "price_VWPLiF": {
+          "type": "price",
+          "settings": {}
+        },
+        "key_feature_DLDr4k": {
+          "type": "key_feature",
+          "settings": {}
+        },
+        "options_QwCtjJ": {
+          "type": "options",
+          "settings": {}
         },
         "wholesale_modal_CBqFgt": {
           "type": "wholesale_modal",
@@ -92,7 +108,11 @@
         }
       },
       "block_order": [
+        "title_jQEQDz",
         "loox_reviews_loox_rating_qF3bkU",
+        "price_VWPLiF",
+        "key_feature_DLDr4k",
+        "options_QwCtjJ",
         "wholesale_modal_CBqFgt",
         "klarna_on_site_messaging_app_block_JH6nhp",
         "modal_KiCBrG",
@@ -207,8 +227,8 @@
         "file_with_text_f9yPAD": {
           "type": "file_with_text",
           "settings": {
-            "title": "<p>Belastbar bis 180 kg</p>",
-            "description": "<p>Deren Material 20 % mehr als andere Produkte, stark und stabil. Der Traglast bis zu 180 kg.</p>",
+            "title": "<p>Kabelloses Laden, mühelose Energie:</p>",
+            "description": "<p>Vergiss störende Kabel und lästiges Ein- und Ausstecken. Mit unserer kabellosen Ladefunktion bleibst du jederzeit flexibel</p>",
             "file_type": "image",
             "file_image": "shopify://shop_images/4_9834589d-e501-4428-be42-5b7d7eacca0d.jpg",
             "video_url": ""
@@ -311,6 +331,7 @@
         "file_type": "image",
         "file_image": "shopify://shop_images/7.jpg",
         "video_url": "",
+        "video_aspect_ratio": "4/3",
         "btn_text": "",
         "link_url": "",
         "padding_top": 120,
@@ -335,6 +356,7 @@
         "file_type": "image",
         "file_image": "shopify://shop_images/01af9531-9158-4ede-87be-26818b919ab6.__CR0_0_1464_600_PT0_SX1464_V1.jpg",
         "video_url": "",
+        "video_aspect_ratio": "4/3",
         "btn_text": "",
         "link_url": "",
         "padding_top": 60,
@@ -357,6 +379,7 @@
         "file_type": "image",
         "file_image": "shopify://shop_images/01af9531-9158-4ede-87be-26818b919ab6.__CR0_0_1464_600_PT0_SX1464_V1____1.jpg",
         "video_url": "",
+        "video_aspect_ratio": "4/3",
         "btn_text": "",
         "link_url": "",
         "padding_top": 60,
@@ -384,6 +407,7 @@
         "file_type": "image",
         "file_image": "shopify://shop_images/Maidesite-TH2-Pro-Plus-ovaler-hohenverstellbarer-Schreibtisch-mit-Holz-Arbeitsplatte_182e6972-2959-4113-a847-066c479b2bbd.jpg",
         "video_url": "",
+        "video_aspect_ratio": "4/3",
         "btn_text": "",
         "link_url": "",
         "padding_top": 0,

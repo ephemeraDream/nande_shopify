@@ -27,7 +27,7 @@
           "settings": {
             "image": "shopify://shop_images/track.jpg",
             "title": "Meine Bestellung und Zahlung",
-            "text": "<p>Bestellinformationen, Bearbeitung, Stornierung + allgemeine Zahlungsangelegenheiten</p>",
+            "text": "<p>Bestellung, Bearbeitung & Zahlungsangelegenheiten</p>",
             "blog": "meine-bestellung-und-zahlung"
           }
         },

@@ -268,6 +268,7 @@
   margin-top: 3rem;
   gap: 2.8rem;
   row-gap: 4rem;
+  position: relative;
 }
 
 .activity_products_tab .activity_products_tab_product {
@@ -360,40 +361,6 @@
   margin-top: 1.2rem;
 }
 
-.activity_products_tab .activity_products_tab_product_tagbox {
-  position: absolute;
-  top: 1.4rem;
-  left: 1.4rem;
-  display: flex;
-  flex-direction: column;
-  gap: .6rem;
-  align-items: flex-start;
-}
-
-.activity_products_tab .activity_products_tab_product_tag {
-  padding: 0.6rem;
-  background-color: #FF7500;
-  font-family: "PP Right Grotesk";
-  font-size: 1.8rem;
-  font-weight: 500;
-  line-height: 80%;
-  letter-spacing: 0px;
-  font-variation-settings: "opsz" auto;
-  color: #FFFFFF;
-}
-
-.activity_products_tab .activity_products_tab_product_saleinfo {
-  padding: .6rem;
-  background-color: #ff7500;
-  font-family: "PP Right Grotesk";
-  font-size: 1.8rem;
-  font-weight: 500;
-  line-height: 80%;
-  letter-spacing: 0px;
-  font-variation-settings: "opsz" auto;
-  color: #fff;
-}
-
 .activity_products_tab .activity_products_tab_product_saleinfo_code {
   display: flex;
   align-items: baseline;
@@ -446,18 +413,22 @@
 /* 导航按钮样式 */
 
 .activity_products_tab .activity_products_tab_swiper_prev {
-  left: -4rem;
+  left: -6rem;
 }
 
 .activity_products_tab .activity_products_tab_swiper_next {
-  right: -4rem;
+  right: -6rem;
 }
 
 @media (max-width: 1024px) {
   .activity_products_tab .activity_products_tab_product {
     /* width: calc((100% - 2.8rem) / 2); */
   }
-
+  /* 移动端隐藏Swiper导航按钮 */
+  .activity_products_tab .activity_products_tab_swiper_prev,
+  .activity_products_tab .activity_products_tab_swiper_next {
+    display: none !important;
+  }
   .activity_products_tab .activity_products_tab_saleinfo_name {
     font-size: 2.6rem;
     display: flex;

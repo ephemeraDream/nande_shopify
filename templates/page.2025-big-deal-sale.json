@@ -1,0 +1,352 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 28,
+        "padding_bottom": 28
+      }
+    },
+    "banner_8AcyUY": {
+      "type": "banner",
+      "blocks": {
+        "banner_item_kEfP4k": {
+          "type": "banner_item",
+          "settings": {
+            "sub_title": "",
+            "title": "<p>Große Angebots-Tage</p>",
+            "text": "",
+            "btn_text": "",
+            "link": "",
+            "file_position": "middle_center",
+            "overlay_text_align": "text-center",
+            "transparent_content_color": "#ffffff",
+            "file_type": "image",
+            "file_image": "shopify://shop_images/3200x1800_51f1f967-0676-453c-8943-d146950eba61.jpg",
+            "video_url": "",
+            "show_countdown": true,
+            "countdown": "big-deal-sale"
+          }
+        }
+      },
+      "block_order": [
+        "banner_item_kEfP4k"
+      ],
+      "name": "banner",
+      "settings": {
+        "height_mode": "fixed",
+        "fixed_height_desktop": 400,
+        "fixed_height_mobile": 250,
+        "mobile_stacked": false,
+        "background_color": "#dddddd",
+        "nav_style": "slideshow_nav_lines",
+        "pagination_color": "#ffffff",
+        "nav_position": "justify-center",
+        "transition": "slide-fade",
+        "autoplay": false,
+        "slider_pause": false,
+        "autoplay_speed": 5
+      }
+    },
+    "product_anchor_bar_J93iqp": {
+      "type": "product-anchor-bar",
+      "blocks": {
+        "item_rJbyPf": {
+          "type": "item",
+          "settings": {
+            "title": "Produkt",
+            "anchor_name": "Produkt"
+          }
+        },
+        "item_WxFQeX": {
+          "type": "item",
+          "settings": {
+            "title": "Produktbeschreibung",
+            "anchor_name": "Produktbeschreibung"
+          }
+        },
+        "item_63GYQw": {
+          "type": "item",
+          "settings": {
+            "title": "Technische Daten",
+            "anchor_name": "Technische Daten"
+          }
+        },
+        "item_mArfYh": {
+          "type": "item",
+          "settings": {
+            "title": "Kundenbewertungen",
+            "anchor_name": "Kundenbewertungen"
+          }
+        },
+        "item_Cgh74t": {
+          "type": "item",
+          "settings": {
+            "title": "Kundenbewertungen",
+            "anchor_name": "Kundenbewertungen"
+          }
+        },
+        "item_fLi8Gn": {
+          "type": "item",
+          "settings": {
+            "title": "Kundenbewertungen",
+            "anchor_name": "Kundenbewertungen"
+          }
+        }
+      },
+      "block_order": [
+        "item_rJbyPf",
+        "item_WxFQeX",
+        "item_63GYQw",
+        "item_mArfYh",
+        "item_Cgh74t",
+        "item_fLi8Gn"
+      ],
+      "disabled": true,
+      "custom_css": [
+        ".product_anchor_bar_btn {display: none;}",
+        ".product_anchor_bar_left {flex: 0 0 100%; gap: 2rem; justify-content: space-between;}"
+      ],
+      "name": "product anchor bar",
+      "settings": {
+        "button_text": "Jetzt kaufen",
+        "button_url": "",
+        "button_target_blank": false,
+        "show_icon": true
+      }
+    },
+    "activity_products_tab_aUGewm": {
+      "type": "activity-products-tab",
+      "blocks": {
+        "tab_EgLUp3": {
+          "type": "tab",
+          "settings": {
+            "title": "Bis zu 39% Rabatt",
+            "product_list": [
+              "maidesite-t2-pro-max-tischgestell-elektrisch-hohenverstellbar",
+              "maidesite-tischgestell-elektrisch-hohenverstellbar-t2-pro-plus",
+              "maidesite-th2-pro-plus-tischgestell-elektrisch-hohenverstellbar",
+              "maidesite-sn1-basic-elektrisch-hohenverstellbarer-schreibtisch-100x60cm-120x60-cm"
+            ]
+          }
+        },
+        "tab_bgF4yF": {
+          "type": "tab",
+          "settings": {
+            "title": "Bis zu 19% Rabatt",
+            "product_list": [
+              "maidesite-th2-pro-plus-tischgestell-elektrisch-hohenverstellbar",
+              "maidesite-elektrisch-hohenverstellbarer-gestell-t2-pro"
+            ]
+          }
+        },
+        "tab_6qFKiy": {
+          "type": "tab",
+          "disabled": true,
+          "settings": {
+            "title": "Bis zu 120€ Rabatt",
+            "product_list": [
+              "maidesite-to1-pro-elektrisch-hohenverstellbarer-schreibtisch",
+              "maidesite-th2-pro-plus-tischgestell-elektrisch-hohenverstellbar",
+              "maidesite-el2-pro-art-tischgestell-elektrisch-hohenverstellbar",
+              "ergoset-sc2-schreibtisch-ec6-burostuhl",
+              "ergoset-sn1-schreibtisch-ec5-burostuhl"
+            ]
+          }
+        }
+      },
+      "block_order": [
+        "tab_EgLUp3",
+        "tab_bgF4yF",
+        "tab_6qFKiy"
+      ],
+      "name": "activity products tab",
+      "settings": {
+        "specId": "Produkt",
+        "title": "<p>Große Angebots-Tage</p>",
+        "text": ""
+      }
+    },
+    "activity_products_normal_REbAHP": {
+      "type": "activity-products-normal",
+      "disabled": true,
+      "name": "activity products normal",
+      "settings": {
+        "specId": "",
+        "style": "1",
+        "title": "<p>2025 FrüHlingsrabatt</p>",
+        "text": "<p>Je mehr Sie kaufen,desto mehr sparen Sie!</p>",
+        "product_list": [
+          "maidesite-th2-pro-plus-tischgestell-elektrisch-hohenverstellbar",
+          "maidesite-el2-pro-art-tischgestell-elektrisch-hohenverstellbar",
+          "maidesite-to1-pro-elektrisch-hohenverstellbarer-schreibtisch",
+          "ergoset-sc2-schreibtisch-ec6-burostuhl"
+        ],
+        "rule": ""
+      }
+    },
+    "activity_reorder_VwgQAM": {
+      "type": "activity-reorder",
+      "disabled": true,
+      "name": "activity reorder",
+      "settings": {
+        "specId": "",
+        "title": "<p>50% Cashback Auf 100 Valide Bestellunge</p>",
+        "text": "<p>Sie können während Black Friday 50% Cashback auf 100 Bestellungen erhalten!</p>",
+        "quota": "100",
+        "reorder_proportion": "50%",
+        "explanation": "<p>Sind Sie bereit, 50% Cashback für Ihre </p><p>FlexiSpot-Bestellung zu gewinnen?</p>",
+        "right_img": "shopify://shop_images/YOGA_-_1_80dbac95-bdf1-4531-a898-05e1c0987d43.jpg",
+        "rule": "<h1>GARANTIE</h1><p>Ihre Zufriedenheit hat bei FlexiSpot oberste Priorität. Deshalb freuen wir uns, Ihnen eine eingeschränkte Garantie anbieten zu können, die Material- und Verarbeitungsfehler bei allen neuen FlexiSpot-Produkten abdeckt. Diese Garantie gilt ausschließlich für Sie als ursprüngliche Käuferin oder ursprünglichen Käufer und ist nicht übertragbar. Käufe bei autorisierten FlexiSpot-Händlern oder Wiederverkäufern können ebenfalls von unserer eingeschränkten Garantie profitieren. Die Garantie tritt mit dem Datum der Lieferung Ihres Kaufs in Kraft.Was ist abgedeckt?FlexiSpot Höhenverstellbare TischgestelleFür alle höhenverstellbaren Schreibtische von FlexiSpot, die am oder nach dem 1. Juli 2024 gekauft wurden, gilt eine eingeschränkte, nicht übertragbare Garantie. Die Garantiezeit beträgt:<span style=\"text-decoration:underline\">20 Jahre Garantie:</span></p><ul><li>FlexiSpot Flaggschiff unter den höhenverstellbaren Schreibtischen: E9</li></ul><p><span style=\"text-decoration:underline\">10 Jahre Garantie:</span></p><ul><li>FlexiSpot Premium-Höhenverstellbare Schreibtische: Q8, E7 Pro, E7 Plus (E7Q Lite / E5Q), E7Q</li></ul><p><span style=\"text-decoration:underline\">7 Jahre Garantie:</span></p><ul><li>FlexiSpot Höhenverstellbare Schreibtische: E7, E7H, E8, E7L, SD8</li></ul><p><span style=\"text-decoration:underline\">5 Jahre Garantie:</span></p><ul><li>FlexiSpot Standard-Höhenverstellbare Schreibtische: E5, E2Q, SD2</li></ul><p><span style=\"text-decoration:underline\">3 Jahre Garantie:</span></p><ul><li>FlexiSpot Essential-Höhenverstellbare Schreibtische: Q1, Q3, Q1L, EG1, EF1, E1 Pro, E1Q, EW8, SD1</li></ul><p>Für alle nicht oben aufgeführten höhenverstellbaren Schreibtische von FlexiSpot gilt eine Garantie von drei Jahren.FlexiSpot StühleAlle FlexiSpot-Stühle, die am oder nach dem 3. Juni 2024 gekauft wurden, verfügen über eine eingeschränkte, nicht übertragbare Garantie. Wir gewähren hiermit eine Garantie für alle FlexiSpot-Stühle für einen Zeitraum von:<span style=\"text-decoration:underline\">5 Jahre Garantie:</span></p><ul><li>FlexiSpot Premium Ergonomischer Stuhl: C7 Morpher, C7 MAX, C7, BS14, Sheer</li><li>FlexiSpot Leder-Bürostuhl: LC7</li></ul><p><span style=\"text-decoration:underline\">3 Jahre Garantie:</span></p><ul><li>FlexiSpot Standard Ergonomischer Stuhl: BS12 PRO, BS8 PRO, BS7, C3, BS6, BS5, BS4</li><li>FlexiSpot verbesserter Kinderstuhl: SC05</li></ul><p><span style=\"text-decoration:underline\">2 Jahre Garantie:</span></p><ul><li>FlexiSpot wesentlicher Ergonomischer Stuhl: BS3</li><li>FlexiSpot Gaming-Stuhl: R1</li><li>FlexiSpot aktiver Hocker: BH6, BH4, BH05</li><li>FlexiSpot Standard Kinderstuhl: SC01</li><li>FlexiSpot Esszimmerstuhl: DC5, DC4, DC3</li><li>FlexiSpot Heimstuhl: HC3, HC1</li></ul><p>Alle oben nicht genannten FlexiSpot-Stühle verfügen über eine zweijährige Garantie.FlexiSpot Sofas<span style=\"text-decoration:underline\">5 Jahre Garantie:</span></p><ul><li>FlexiSpot elektrischer Relaxsessel X7</li></ul><p><span style=\"text-decoration:underline\">3 Jahre Garantie:</span></p><ul><li>FlexiSpot Lotus Relaxsessel Basic/Standard/Pro/Smart</li><li>FlexiSpot Elektrischer Dreh-Schaukel-Relaxsessel Waffle</li><li>FlexiSpot elektrischer Relaxsessel X2/XR5</li></ul><p><span style=\"text-decoration:underline\">2 Jahre Garantie:</span></p><ul><li>FlexiSpot DreamSpot Sofa SF7</li><li>FlexiSpot Pushback-Relaxsessel XP1</li><li>FlexiSpot Elektrischer Relaxsessel X1</li><li>FlexiSpot 2-Sitzer Sofa SF2</li></ul><p>FlexiSpot Aufbewahrung & OrganisationFür alle FlexiSpot-Produkte im Bereich Aufbewahrung und Organisation – wie Metallschränke, Schubladen und Sideboards – die am oder nach dem 1. Juli 2024 gekauft wurden, gilt eine zweijährige Garantie.FlexiSpot Waschbare TeppicheFür alle waschbaren Teppiche von FlexiSpot, die am oder nach dem 1. Juli 2024 gekauft wurden, gilt ebenfalls eine zweijährige Garantie.FlexiSpot FitnessFür alle Fitnessgeräte von FlexiSpot – wie Laufband oder Deskbike – die am oder nach dem 1. Juli 2024 gekauft wurden, gilt eine Garantie von zwei Jahren.FlexiSpot ZubehörFür alle Zubehörprodukte von FlexiSpot – wie Monitorhalterungen, Desktop-Workstations und CPU-Halter – die am oder nach dem 1. Juli 2024 gekauft wurden, gilt eine Garantie von zwei Jahren.Wenn Sie das Produkt vor dem 1. Juli 2024 gekauft haben, gelten die Angaben in der damaligen Garantiebeschreibung<a href=\"https://s3.springbeetle.eu/dev-de-s3-flexispot/commodity/item/warranty-de.pdf\" target=\"_blank\">https://s3.springbeetle.eu/dev-de-s3-flexispot/commodity/item/warranty-de.pdf</a>Was ist nicht versichert?Unsere beschränkte Garantie deckt keine Probleme ab, die durch folgende Umstände verursacht werden:</p><ul><li>Zustände, Fehlfunktionen oder Schäden, die nicht auf Material- oder Verarbeitungsfehler zurückzuführen sind.</li><li>Zustände, Fehlfunktionen oder Schäden, die durch normalen Verschleiß, unsachgemäße Installation, unsachgemäße Wartung, Missbrauch, falsche Verwendung, Fahrlässigkeit, Unfall oder Veränderung entstanden sind.</li><li>Zubehör, verbundene Materialien und Produkte oder verwandte Produkte, die nicht von FlexiSpot hergestellt wurden.</li><li>Zustände, Fehlfunktionen oder Schäden, die durch Nichtbeachtung der Anweisungen und Richtlinien zur beabsichtigten Verwendung des Produkts entstanden sind.</li><li>Unsere beschränkte Garantie erlischt, wenn ein Produkt mit entfernten, beschädigten oder manipulierten Etiketten oder Veränderungen (einschließlich Entfernen von Komponenten oder externen Abdeckungen) zurückgesandt wird.</li></ul><p>Was passiert, wenn mein Produkt defekt ist?FlexiSpot ersetzt (kostenlos für Sie) die defekten Teile eines unserer Produkte, wenn der Defekt auf unsachgemäße Verarbeitung und/oder Materialmängel zurückzuführen ist. Sollte FlexiSpot keine Ersatzteile bereitstellen können oder die Reparatur nicht praktikabel oder rechtzeitig durchführen sein, behält sich FlexiSpot das Recht vor, den Kaufpreis gegen Rücksendung des Produkts zu erstatten.Wie mache ich einen Garantieanspruch geltend?Die Einreichung eines Garantieanspruchs ist ganz einfach. Bitte kontaktieren Sie unser Kundenserviceteam unter<a href=\"mailto:info@flexispot.de\">info@flexispot.de</a>oder rufen Sie uns kostenlos unter 0211-368-74223 an.Damit wir Ihren Anspruch zügig bearbeiten können, benötigen wir folgende Informationen von Ihnen:</p><ul><li>Einen gültigen Kaufnachweis (z. B. eine Quittung oder Rechnung) von einem autorisierten FlexiSpot-Händler oder Wiederverkäufer;</li><li>Das Kaufdatum und den Kaufort;</li><li>Eine kurze Beschreibung des Problems, idealerweise mit Foto- oder Videomaterial als Nachweis.</li></ul><p>Sobald wir Ihre Anfrage erhalten haben, wird unser Team Ihren Fall prüfen und Ihnen innerhalb von 5 Werktagen eine Rückmeldung geben.Rückgaben – VerpackungsanforderungenWenn Sie einen Artikel zurücksenden, stellen Sie bitte sicher, dass dieser vor Schäden oder Verschmutzungen geschützt ist. Idealerweise sollte das Produkt in der Originalverpackung inklusive sämtlichem Zubehör zurückgesendet werden. Falls die Originalverpackung nicht mehr vorhanden ist, verwenden Sie bitte eine geeignete alternative Verpackung, die einen ausreichenden Schutz während des Transports gewährleistet. Dies hilft, mögliche Schadenersatzansprüche aufgrund unzureichender Verpackung zu vermeiden.Muss ich die Versandkosten für ein Ersatzprodukt bezahlen?Im seltenen Fall, dass Ihr FlexiSpot-Produkt defekt ist, erhalten Sie von uns ein Ersatzprodukt nach Deutschland und Österreich kostenlos zugestellt. Wir verwenden DHL, GEL oder GLS für den Versand von Ersatzprodukten. Wenn Sie jedoch den Expressversand wählen möchten, können zusätzlichen Kosten anfallen, die von Ihnen getragen werden müssen. Wenn Sie ein Ersatzprodukt an eine Adresse außerhalb der oben genannten Länder liefern lassen möchten, sind Sie für die Versandkosten verantwortlich.Gewährleistungsausschluss; SchadensbegrenzungSofern nicht durch geltendes Recht untersagt, sind alle stillschweigenden Garantien (einschließlich Garantien der Marktgängigkeit und Eignung für einen bestimmten Zweck) auf die Dauer dieser Garantie beschränkt. FlexiSpot haftet nicht für zufällige, indirekte, spezielle oder Folgeschäden, einschließlich, aber nicht beschränkt auf Gewinn- oder Umsatzverluste, die aus einer Verletzung einer ausdrücklichen oder stillschweigenden Garantie oder Bedingung oder unter einer anderen Rechtstheorie resultieren, selbst wenn FlexiSpot über die Möglichkeit solcher Schäden hingewiesen wurde. In einigen Gerichtsbarkeiten sind keine Beschränkungen der Dauer stillschweigender Garantien oder der Ausschluss oder die Beschränkung von besonderen, indirekten, zufälligen oder Folgeschäden nicht zulässig. Daher gelten die oben genannten Einschränkungen oder Ausschlüsse möglicherweise nicht für Sie.Anwendbares Recht und rechtliche VerfahrenDiese Bedingungen sowie alle damit verbundenen Streitigkeiten unterliegen dem deutschen Recht. Etwaige Kollisionsnormen, die die Anwendung einer anderen Rechtsordnung vorsehen würden, finden keine Anwendung.<br/><br/></p>",
+        "btn_two": "Gewinnerliste",
+        "btn_two_link": ""
+      }
+    },
+    "1756630419fbe27307": {
+      "type": "apps",
+      "blocks": {
+        "wheelify_spin_wheel_email_pop_wheelify_app_section_yFCWeq": {
+          "type": "shopify://apps/wheelify-spin-wheel-email-pop/blocks/wheelify-app-section/505ff42c-abce-4466-9558-7e1d3b2cfcd7",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "wheelify_spin_wheel_email_pop_wheelify_app_section_yFCWeq"
+      ],
+      "disabled": true,
+      "settings": {
+        "include_margins": true
+      }
+    },
+    "activity_products_normal_8qJYJt": {
+      "type": "activity-products-normal",
+      "disabled": true,
+      "name": "activity products normal",
+      "settings": {
+        "specId": "",
+        "style": "2",
+        "title": "<p>1€ Blitzverkauf</p>",
+        "text": "<p>Sie können während Black Friday 50% Cashback auf 100 Bestellungen erhalten!</p>",
+        "product_list": [
+          "maidesite-th2-pro-plus-tischgestell-elektrisch-hohenverstellbar",
+          "maidesite-el2-pro-art-tischgestell-elektrisch-hohenverstellbar",
+          "maidesite-to1-pro-elektrisch-hohenverstellbarer-schreibtisch",
+          "ergoset-sc2-schreibtisch-ec6-burostuhl"
+        ],
+        "rule": "<p>asdasdasdasdads</p>"
+      }
+    },
+    "activity_subscribe_top_tV4gHF": {
+      "type": "activity-subscribe-top",
+      "blocks": {
+        "top_left_TNQyCH": {
+          "type": "top-left",
+          "settings": {
+            "title": "<p>Sofortige Zahlung oder Ratenzahlung mit </p>",
+            "text": "<p>Sofortige Zahlung oder Ratenzahlung mit Klarna<br/>Sofortige Zahlung </p>",
+            "icon": "<svg xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" version=\"1.1\" width=\"128.8000030517578\" height=\"117.26470184326172\" viewbox=\"0 0 128.8000030517578 117.26470184326172\" xmlns:xlink=\"http://www.w3.org/1999/xlink\"><g><path d=\"M91.067,117.265C89.0759,117.263,87.2083,116.299,86.054,114.677L75.4631,99.7606L6.14855,99.7606C2.75253,99.7559,0.00157068,97.0024,0,93.6063L0,6.14855C0.00471563,2.75475,2.75475,0.00471524,6.14855,0L122.649,0C126.044,0.00314049,128.795,2.75364,128.8,6.14855L128.8,93.6063C128.795,97.0012,126.044,99.7517,122.649,99.7549L106.671,99.7549L96.08,114.671C94.927,116.296,93.0592,117.262,91.067,117.265ZM8.79628,90.9615L80.0053,90.9615L91.067,106.54L102.143,90.9615L120.004,90.9615L120.004,8.79057L8.79628,8.79057L8.79628,90.9615Z\" fill=\"#000000\" fill-opacity=\"1\" style=\"mix-blend-mode:passthrough\"></path></g></svg>",
+            "btn_one": "Regeln",
+            "btn_one_link": "",
+            "btn_two": "Gewinnerliste",
+            "btn_two_link": ""
+          }
+        },
+        "top_right_fceWw8": {
+          "type": "top-right",
+          "settings": {
+            "title": "<p>TITLE TITLE<br/>TITLE TITLETITLE TITLE</p>",
+            "text": "<p>Sofortige Zahlung oder Ratenzahlung mit Klarna<br/>Sofortige Zahlung </p>",
+            "icon": "<svg xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" version=\"1.1\" width=\"128.8000030517578\" height=\"117.26470184326172\" viewbox=\"0 0 128.8000030517578 117.26470184326172\" xmlns:xlink=\"http://www.w3.org/1999/xlink\"><g><path d=\"M91.067,117.265C89.0759,117.263,87.2083,116.299,86.054,114.677L75.4631,99.7606L6.14855,99.7606C2.75253,99.7559,0.00157068,97.0024,0,93.6063L0,6.14855C0.00471563,2.75475,2.75475,0.00471524,6.14855,0L122.649,0C126.044,0.00314049,128.795,2.75364,128.8,6.14855L128.8,93.6063C128.795,97.0012,126.044,99.7517,122.649,99.7549L106.671,99.7549L96.08,114.671C94.927,116.296,93.0592,117.262,91.067,117.265ZM8.79628,90.9615L80.0053,90.9615L91.067,106.54L102.143,90.9615L120.004,90.9615L120.004,8.79057L8.79628,8.79057L8.79628,90.9615Z\" fill=\"#000000\" fill-opacity=\"1\" style=\"mix-blend-mode:passthrough\"></path></g></svg>",
+            "btn_one": "Regeln",
+            "btn_one_link": "",
+            "btn_two": "Gewinnerliste",
+            "btn_two_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "top_left_TNQyCH",
+        "top_right_fceWw8"
+      ],
+      "disabled": true,
+      "name": "activity subscribe",
+      "settings": {
+        "specId": "",
+        "title": "<p>tet</p>",
+        "text": "<p>tet</p>",
+        "padding_top": 120,
+        "padding_bottom": 0
+      }
+    },
+    "activity_subscribe_tV4gHF": {
+      "type": "activity-subscribe",
+      "blocks": {
+        "bottom_6MFfEX": {
+          "type": "bottom",
+          "settings": {
+            "background": "shopify://shop_images/a8e9f7ef556f09917041953654d98435.jpg",
+            "title": "<p>Fortschrittliche Technologie</p>",
+            "subtitle": "<p>Extrem stabiler </p>",
+            "text": "<p>Perfekt für zwei Familienmitglieder, um ihre individuelle Körpergröße anzupassen </p><p>oder um zwei neue Höheneinstellungen </p>"
+          }
+        }
+      },
+      "block_order": [
+        "bottom_6MFfEX"
+      ],
+      "disabled": true,
+      "name": "activity subscribe",
+      "settings": {
+        "specId": "",
+        "padding_top": 60,
+        "padding_bottom": 0
+      }
+    },
+    "blogs_simple_XBYLNU": {
+      "type": "blogs-simple",
+      "disabled": true,
+      "name": "blogs simple",
+      "settings": {
+        "title": "<p>Blogs</p>",
+        "text": "<p>Sie können während Black Friday 50% Cashback auf 100 Bestellungen erhalten!</p>",
+        "blog": "maidesite-blog",
+        "padding_top": 120,
+        "padding_bottom": 120
+      }
+    },
+    "custom_liquid_KW88ix": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid": "<!DOCTYPE html>\n<html lang=\"de\">\n<head>\n  <meta charset=\"UTF-8\" />\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\" />\n  <title>Gutscheincodes & Kontaktformular</title>\n  <style>\n    body {\n      margin: 0;\n      padding: 0;\n      font-family: Arial, sans-serif;\n    }\n\n    .coupon-section {\n      background-color: #ffffff;\n      color: #000;\n      padding: 60px 20px;\n      text-align: center;\n    }\n\n    .coupon-section h2 {\n      font-size: 36px;\n      font-weight: bold;\n      margin-bottom: 12px;\n    }\n\n    .coupon-section p {\n      font-size: 18px;\n      margin-bottom: 40px;\n    }\n\n    .coupon-cards {\n      display: flex;\n      flex-wrap: wrap;\n      justify-content: space-between;\n      max-width: 2160px;\n      margin: 0 auto;\n      gap: 30px;\n    }\n\n    .coupon-card {\n      background-color: #006eff; /* 修改为蓝色 */\n      color: white;\n      padding: 40px 30px;\n      border-radius: 12px;\n      width: calc(25% - 23px);\n      min-width: 280px;\n      box-sizing: border-box;\n      display: flex;\n      flex-direction: column;\n      justify-content: space-between;\n      font-size: 18px;\n      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);\n      transition: transform 0.2s ease;\n    }\n\n    .coupon-card:hover {\n      transform: translateY(-4px);\n    }\n\n    .coupon-card h3 {\n      font-size: 32px;\n      margin: 0;\n    }\n\n    .coupon-card p {\n      margin: 12px 0 25px;\n      font-size: 18px;\n    }\n\n    .coupon-footer {\n      background-color: white;\n      border-radius: 8px;\n      padding: 12px 15px;\n      display: flex;\n      justify-content: space-between;\n      align-items: center;\n    }\n\n    .coupon-footer.center {\n      justify-content: center;\n    }\n\n    .coupon-code {\n      color: #FF7500;\n      font-weight: bold;\n      font-size: 18px;\n    }\n\n    .copy-btn,\n    .inquiry-btn {\n      background-color: #bdff00; /* 按钮颜色 */\n      color: #000;\n      padding: 8px 14px;\n      border: none;\n      border-radius: 6px;\n      cursor: pointer;\n      font-weight: bold;\n      font-size: 14px;\n      white-space: nowrap;\n      transition: background-color 0.3s ease;\n      text-decoration: none;\n      display: inline-block;\n    }\n\n    .copy-btn.copied {\n      background-color: #28a745;\n      color: #fff;\n    }\n\n    .copy-btn:hover,\n    .inquiry-btn:hover {\n      background-color: #a4e100; /* hover颜色 */\n    }\n\n    @media (max-width: 1024px) {\n      .coupon-card {\n        width: calc(50% - 15px);\n      }\n    }\n\n    @media (max-width: 600px) {\n      .coupon-card {\n        width: 100%;\n      }\n    }\n\n    /* 弹窗样式 */\n    .modal {\n      display: none;\n      position: fixed;\n      z-index: 9999;\n      left: 0;\n      top: 0;\n      width: 100%;\n      height: 100%;\n      overflow: auto;\n      background-color: rgba(0, 0, 0, 0.5);\n    }\n\n    .modal-content {\n      position: relative;\n      background-color: white;\n      margin: 10% auto;\n      padding: 30px 40px;\n      border-radius: 12px;\n      width: 90%;\n      max-width: 500px;\n      text-align: left;\n      box-sizing: border-box;\n    }\n\n    .modal-content h3 {\n      font-size: 22px;\n      margin-bottom: 20px;\n      text-align: center;\n    }\n\n    .modal-content label {\n      font-weight: bold;\n      display: block;\n      margin-bottom: 6px;\n    }\n\n    .modal-content textarea {\n      width: 100%;\n      padding: 10px;\n      margin-bottom: 20px;\n      border-radius: 6px;\n      border: 1px solid #ccc;\n      font-size: 16px;\n      box-sizing: border-box;\n      resize: vertical;\n    }\n\n    .modal-btns {\n      display: flex;\n      justify-content: flex-end;\n    }\n\n    .modal-btns button {\n      background-color: #f03d0d; /* 弹窗发送按钮颜色 */\n      color: #fff;\n      border: none;\n      padding: 10px 20px;\n      border-radius: 6px;\n      font-weight: bold;\n      cursor: pointer;\n      font-size: 14px;\n      transition: background-color 0.3s ease;\n    }\n\n    .modal-btns button:hover {\n      background-color: #cc5e00;\n    }\n\n    .close-btn {\n      position: absolute;\n      top: 16px;\n      right: 16px;\n      background: transparent;\n      color: #000;\n      font-size: 24px;\n      border: none;\n      cursor: pointer;\n      font-weight: bold;\n      line-height: 1;\n    }\n\n    .close-btn:hover {\n      color: #FF7500;\n    }\n  </style>\n</head>\n<body>\n\n<!-- 优惠券模块 -->\n<div class=\"coupon-section\">\n  <h2>Mehr kaufen, mehr sparen</h2>\n  <p>Code kopieren und sofort Rabatt sichern</p>\n\n  <div class=\"coupon-cards\">\n    <div class=\"coupon-card\">\n      <h3>60 € Rabatt</h3>\n      <p>ab 499 € Einkaufswert</p>\n      <div class=\"coupon-footer\">\n        <span class=\"coupon-code\" id=\"code1\">MD60</span>\n        <button class=\"copy-btn\" type=\"button\">Kopieren</button>\n      </div>\n    </div>\n\n    <div class=\"coupon-card\">\n      <h3>120 € Rabatt</h3>\n      <p>ab 999 € Einkaufswert</p>\n      <div class=\"coupon-footer\">\n        <span class=\"coupon-code\" id=\"code2\">MD120</span>\n        <button class=\"copy-btn\" type=\"button\">Kopieren</button>\n      </div>\n    </div>\n\n    <div class=\"coupon-card\">\n      <h3>200 € Rabatt</h3>\n      <p>ab 1599 € Einkaufswert</p>\n      <div class=\"coupon-footer\">\n        <span class=\"coupon-code\" id=\"code3\">MD200</span>\n        <button class=\"copy-btn\" type=\"button\">Kopieren</button>\n      </div>\n    </div>\n\n    <div class=\"coupon-card\">\n      <h3>?</h3>\n      <p>ab 1999 € Einkaufswert</p>\n      <div class=\"coupon-footer center\">\n        <button class=\"inquiry-btn\" type=\"button\">Jetzt Angebot anfragen</button>\n      </div>\n    </div>\n  </div>\n</div>\n\n<!-- 弹窗表单 -->\n<div id=\"contactModal\" class=\"modal\" aria-hidden=\"true\" role=\"dialog\" aria-modal=\"true\">\n  <div class=\"modal-content\" role=\"document\" tabindex=\"-1\">\n    <button type=\"button\" id=\"closeModalBtn\" class=\"close-btn\" aria-label=\"Schließen\">×</button>\n    <h3>Individuelles Rabattangebot anfragen</h3>\n\n    <label for=\"message\">Ihre Anfrage</label>\n    <textarea id=\"message\" name=\"message\" rows=\"5\" placeholder=\"Ihre Anfrage hier eingeben\" required></textarea>\n\n    <div class=\"modal-btns\">\n      <button type=\"button\" id=\"sendBtn\">Senden</button>\n    </div>\n  </div>\n</div>\n\n<script>\n  // 复制优惠码按钮功能\n  document.querySelectorAll('.copy-btn').forEach(button => {\n    button.addEventListener('click', () => {\n      const codeSpan = button.previousElementSibling;\n      if (codeSpan) {\n        const code = codeSpan.innerText;\n        navigator.clipboard.writeText(code).then(() => {\n          button.classList.add('copied');\n          button.innerText = '✔ Kopiert';\n          setTimeout(() => {\n            button.classList.remove('copied');\n            button.innerText = 'Kopieren';\n          }, 3000);\n        });\n      }\n    });\n  });\n\n  document.addEventListener(\"DOMContentLoaded\", () => {\n    const openBtn = document.querySelector(\".inquiry-btn\");\n    const modal = document.getElementById(\"contactModal\");\n    const closeBtn = document.getElementById(\"closeModalBtn\");\n    const sendBtn = document.getElementById(\"sendBtn\");\n\n    function openModal() {\n      modal.style.display = \"block\";\n      document.body.style.overflow = \"hidden\";\n      document.body.style.height = \"100vh\";\n      modal.setAttribute(\"aria-hidden\", \"false\");\n      modal.querySelector(\".modal-content\").focus();\n    }\n\n    function closeModal() {\n      modal.style.display = \"none\";\n      document.body.style.overflow = \"\";\n      document.body.style.height = \"\";\n      modal.setAttribute(\"aria-hidden\", \"true\");\n    }\n\n    openBtn.addEventListener(\"click\", openModal);\n    closeBtn.addEventListener(\"click\", closeModal);\n\n    modal.addEventListener(\"click\", (e) => {\n      if (e.target === modal) closeModal();\n    });\n\n    modal.querySelector(\".modal-content\").addEventListener(\"click\", e => e.stopPropagation());\n\n    sendBtn.addEventListener(\"click\", () => {\n      const message = document.getElementById(\"message\").value.trim();\n      if (!message) {\n        alert(\"Bitte geben Sie Ihre Anfrage ein.\");\n        return;\n      }\n\n      const subject = encodeURIComponent(\"Anfrage zu individuellem Rabatt\");\n      const body = encodeURIComponent(message);\n\n      window.location.href = `mailto:contact@maidesite.de?subject=${subject}&body=${body}`;\n\n      closeModal();\n    });\n  });\n</script>\n\n</body>\n</html>",
+        "color_scheme": "",
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    }
+  },
+  "order": [
+    "main",
+    "banner_8AcyUY",
+    "product_anchor_bar_J93iqp",
+    "activity_products_tab_aUGewm",
+    "activity_products_normal_REbAHP",
+    "activity_reorder_VwgQAM",
+    "1756630419fbe27307",
+    "activity_products_normal_8qJYJt",
+    "activity_subscribe_top_tV4gHF",
+    "activity_subscribe_tV4gHF",
+    "blogs_simple_XBYLNU",
+    "custom_liquid_KW88ix"
+  ]
+}

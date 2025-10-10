@@ -22,6 +22,10 @@
     "product_info_NXNt6g": {
       "type": "product-info",
       "blocks": {
+        "title_tcECrc": {
+          "type": "title",
+          "settings": {}
+        },
         "loox_reviews_loox_rating_qF3bkU": {
           "type": "shopify://apps/loox-reviews/blocks/loox-rating/5c3b337f-fd14-4df5-b1d6-80ec13e6e28e",
           "settings": {
@@ -36,6 +40,18 @@
             "looxOpenFloatingWidget": false,
             "emptyRatingWidget": false
           }
+        },
+        "price_tNqmPe": {
+          "type": "price",
+          "settings": {}
+        },
+        "key_feature_Nyt7Wq": {
+          "type": "key_feature",
+          "settings": {}
+        },
+        "options_E6H6qX": {
+          "type": "options",
+          "settings": {}
         },
         "klarna_on_site_messaging_app_block_JH6nhp": {
           "type": "shopify://apps/klarna-on-site-messaging/blocks/app-block/b95936a9-74b6-4a95-8103-6a1b6459c25e",
@@ -92,7 +108,11 @@
         }
       },
       "block_order": [
+        "title_tcECrc",
         "loox_reviews_loox_rating_qF3bkU",
+        "price_tNqmPe",
+        "key_feature_Nyt7Wq",
+        "options_E6H6qX",
         "klarna_on_site_messaging_app_block_JH6nhp",
         "wholesale_modal_CBqFgt",
         "modal_KiCBrG",
@@ -187,37 +207,36 @@
         "file_with_text_JJXCp8": {
           "type": "file_with_text",
           "settings": {
-            "title": "<p>Maximale Stabilität</p>",
-            "description": "<p>Kein Wackeln – zuverlässig in jeder Höhe</p>",
+            "title": "<p>Ovalbein-Design</p>",
+            "description": "<p>Eleganz im Spiel von Licht und Schatten – vielseitig und unverwechselbar</p>",
             "file_type": "video",
             "video_url": "",
-            "url_upload": "shopify://files/videos/稳定性 - 0818 - Grey C 灰底.mp4"
+            "url_upload": "shopify://files/videos/圆腿颜值.mp4"
           }
         },
         "file_with_text_f9yPAD": {
           "type": "file_with_text",
           "settings": {
-            "title": "<p>Großer Höhenbereich</p>",
-            "description": "<p>Höhenverstellbar von 650 mm bis 1350 mm – passend für jede Arbeitshöhe<br/></p>",
+            "title": "<p>Extra starke Tragkraft 240 kg</p>",
+            "description": "<p>Trägt Monitore, PC und Zubehör bis zu 240 kg mühelos – selbst voll ausgestattet mit mehreren Bildschirmen, Rechner und schwerem Zubehör bleibt der Tisch souverän und stabil.<br/></p>",
             "file_type": "video",
-            "file_image": "shopify://shop_images/8d62567f3976a249cabee9308f1d71fa.jpg",
             "video_url": "",
-            "url_upload": "shopify://files/videos/高度 - 0825 - Grey C 灰底 - 变暗.mp4"
+            "url_upload": "shopify://files/videos/承重.mp4"
           }
         },
         "file_with_text_Q8tJKk": {
           "type": "file_with_text",
           "settings": {
-            "title": "<p>Extra starke Tragkraft 180 kg</p>",
-            "description": "<p>Trägt Monitore, PC und Zubehör bis 180 kg mühelos</p>",
+            "title": "<p>Maximale Stabilität</p>",
+            "description": "<p>Kein Wackeln – zuverlässig in jeder Höhe. Selbst ein Kartenhaus bleibt während des Hoch- und Runterfahrens vollkommen stabil.</p>",
             "file_type": "video",
-            "file_image": "shopify://shop_images/Schwarz-06.jpg",
             "video_url": "",
-            "url_upload": "shopify://files/videos/承重 - 0818 - Grey C 灰底.mp4"
+            "url_upload": "shopify://files/videos/稳定性.mp4"
           }
         },
         "file_with_text_McHwGa": {
           "type": "file_with_text",
+          "disabled": true,
           "settings": {
             "title": "<p>Farbwechsel-Handset</p>",
             "description": "<p>Wechselnde Farben für einen coolen, individuellen Look</p>",
@@ -229,6 +248,7 @@
         },
         "file_with_text_ykc3D8": {
           "type": "file_with_text",
+          "disabled": true,
           "settings": {
             "title": "<p>Schnelle Montage in Minuten</p>",
             "description": "<p>Einfach aufgebaut – in wenigen Minuten einsatzbereit</p>",
@@ -240,6 +260,7 @@
         },
         "file_with_text_THJTyK": {
           "type": "file_with_text",
+          "disabled": true,
           "settings": {
             "title": "<p>Premium-Qualität für Jahre</p>",
             "description": "<p>Robuste Materialien – langlebig und zuverlässig</p>",
@@ -318,11 +339,10 @@
         "file_with_text_nGfFNW",
         "file_with_text_NhMLJD"
       ],
-      "disabled": true,
       "name": "file box simplicity",
       "settings": {
         "spec_id": "Produktinfo",
-        "main_title": "<p>Warum T2 Pro Max wählen?</p>",
+        "main_title": "<p>Warum T4 Pro Plus wählen?</p>",
         "row_num": 3,
         "padding_top": 100,
         "padding_bottom": 120,
@@ -388,6 +408,7 @@
         "file_type": "image",
         "file_image": "shopify://shop_images/T2-Pro-Max-is-ultra-solid.jpg",
         "video_url": "",
+        "video_aspect_ratio": "4/3",
         "btn_text": "",
         "link_url": "",
         "padding_top": 120,
@@ -411,6 +432,7 @@
         "file_type": "image",
         "file_image": "shopify://shop_images/T2-Pro-Max-is-super-stable-with-precise-gasket.jpg",
         "video_url": "",
+        "video_aspect_ratio": "4/3",
         "btn_text": "",
         "link_url": "",
         "padding_top": 60,
@@ -436,6 +458,7 @@
         "file_type": "image",
         "file_image": "shopify://shop_images/222.jpg",
         "video_url": "",
+        "video_aspect_ratio": "4/3",
         "btn_text": "",
         "link_url": "",
         "padding_top": 60,
@@ -463,6 +486,7 @@
         "file_type": "image",
         "file_image": "shopify://shop_images/Maidesite-TH2-Pro-Plus-ovaler-hohenverstellbarer-Schreibtisch-mit-Holz-Arbeitsplatte_182e6972-2959-4113-a847-066c479b2bbd.jpg",
         "video_url": "",
+        "video_aspect_ratio": "4/3",
         "btn_text": "",
         "link_url": "",
         "padding_top": 0,

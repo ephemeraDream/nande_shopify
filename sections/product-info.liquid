@@ -281,7 +281,9 @@
         {%- for block in section.blocks -%}
           {%- case block.type -%}
             {%- when '@app' -%}
-              {% render block %}
+              {% unless block.id contains 'klarna' %}
+                {% render block %}
+              {% endunless %}
             {%- when 'title' -%}
               {% if product.metafields.custom.product_tag.value != blank %}
                 <div class="product_info_tag">{{ product.metafields.custom.product_tag.value }}</div>
@@ -854,13 +856,9 @@
         </button>
         {% comment %} {{ form | payment_button }} {% endcomment %}
       </div>
-      {%- assign app_count = 0 -%}
       {%- for block in section.blocks -%}
-        {%- if block.type == '@app' -%}
-          {%- assign app_count = app_count | plus: 1 -%}
-          {%- if app_count == 2 -%}
-            {% render block %}
-          {%- endif -%}
+        {%- if block.type == '@app' and block.id contains 'klarna' -%}
+          {% render block %}
         {%- endif -%}
       {%- endfor -%}
       {%- for block in section.blocks -%}
