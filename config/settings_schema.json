@@ -1472,5 +1472,15 @@
         "label": "cart info bar desc",
       }
     ]
+  },
+  {
+    "name": "login text",
+    "settings": [
+      {
+        "type": "textarea",
+        "id": "login_text",
+        "label": "login text",
+      }
+    ]
   }
 ]

@@ -21,8 +21,11 @@
 <div class="customer login section-{{ section.id }}-padding padding-sider">
   <div class="login_section_title">{{ 'common.start_now' | t }}</div>
   <div class="login_section_text">
-    {{ 'common.receive' | t }}
-    <span class="login_section_text_discount">6%</span> {{ 'common.discount_on_your_order' | t }}
+    {{ settings.login_text }}
+    {% comment %}
+      {{ 'common.receive' | t }}
+      <span class="login_section_text_discount">6%</span> {{ 'common.discount_on_your_order' | t }}
+    {% endcomment %}
   </div>
   <div class="login_section_tabs">
     <div class="login_section_tabs_item active" data-value="login">{{ 'common.login' | t }}</div>
