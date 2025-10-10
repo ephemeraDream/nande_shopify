@@ -299,7 +299,7 @@
                 </div>
                 {% if price_op != blank and price_op > price_dp %}
                   <div class="product_info_price_saletag">
-                    Save {{ price_op | minus: price_dp | money_without_trailing_zeros }}
+                    - {{ price_op | minus: price_dp | money_without_trailing_zeros }}
                   </div>
                 {% endif %}
                 {%- if section.settings.show_tax_and_shipping -%}

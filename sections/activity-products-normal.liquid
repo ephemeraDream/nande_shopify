@@ -43,7 +43,7 @@
             <div class="activity_products_normal_product_tagbox">
               {% if product.compare_at_price != blank and product.compare_at_price > product.price %}
                 <div class="activity_products_normal_product_tag">
-                  Save {{ product.compare_at_price | minus: product.price | money_without_trailing_zeros }}
+                  - {{ product.compare_at_price | minus: product.price | money_without_trailing_zeros }}
                 </div>
               {% endif %}
               {% if sale_info != blank %}
