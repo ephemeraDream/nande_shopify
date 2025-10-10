@@ -277,6 +277,23 @@
   color: #FFFFFF;
 }
 
+.recommended_products .recommended_products_saleinfo_countdown {
+  font-family: "PP Right Grotesk";
+  font-size: 1.6rem;
+  font-weight: normal;
+  line-height: 130%;
+  letter-spacing: 0px;
+  font-variation-settings: "opsz" auto;
+  color: #FF7500;
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  transform: translateY(calc(100% + 0.7rem));
+  display: flex;
+  justify-content: center;
+  gap: 0.2rem;
+}
+
 @media screen and (max-width: 1600px) {
   .recommended_products .recommended_products_prev {
     left: -6rem;
@@ -307,12 +324,14 @@
     right: 0rem;
     display: none;
   }
-  .recommended_products .recommended_products_info_btn{
+
+  .recommended_products .recommended_products_info_btn {
     font-size: 2rem;
   }
 }
+
 @media screen and (max-width: 768px) {
-  .recommended_products .recommended_products_info_btn{
+  .recommended_products .recommended_products_info_btn {
     font-size: 1.6rem;
   }
 }
