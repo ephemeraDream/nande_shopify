@@ -317,6 +317,7 @@
     },
     "img_with_text_simplicity_R8thEq": {
       "type": "img-with-text-simplicity",
+      "disabled": true,
       "custom_css": [
         ".img_with_text_simplicity_section {background-color: #e2ded6; padding-top: 12rem;}",
         ".img_with_text_simplicity_filebox {height: 48rem;}"
@@ -326,9 +327,9 @@
         "spec_id": "",
         "header_title": "",
         "header_content": "",
-        "title": "<h2>Extrem praktisch Höhenverstellbarer Schreibtisch</h2>",
-        "sub_title": "<p>666</p>",
-        "description": "<p></p><p></p>",
+        "title": "<h6>Extrem praktisch Höhenverstellbarer Schreibtisch</h6>",
+        "sub_title": "",
+        "description": "",
         "file_position": "right",
         "file_type": "video",
         "video_url": "",
@@ -343,7 +344,6 @@
     },
     "img_with_text_simplicity_nJFALq": {
       "type": "img-with-text-simplicity",
-      "disabled": true,
       "custom_css": [
         ".img_with_text_simplicity_section {background-color: #e2ded6; padding-top: 6rem;}",
         ".img_with_text_simplicity_filebox {height: 48rem;}",
@@ -358,9 +358,10 @@
         "sub_title": "<p>Extrem stabiler </p>",
         "description": "<p>Dreiecksunterstützungsstruktur ist extrem stabil im Vergleich zu anderen Schreibtischdesigns.<br/>Sie ist auch in der höchsten Höhe von ausgezeichneter Stabilität.Neben den strukturellen Verbesserungen trägt auch die präzise Verarbeitung und Konstruktion <br/>zur Stabilität bei.Der Spalt zwischen den Säulen beträgt weniger als 0,03 mm. Die dreiteiligen Säulen gleiten nahtlos ineinander, <br/>wodurch jegliches Wackeln verhindert wird.</p>",
         "file_position": "left",
-        "file_type": "image",
+        "file_type": "video",
         "file_image": "shopify://shop_images/product_info_demo_img_2.webp",
         "video_url": "",
+        "url_upload": "shopify://files/videos/百变.mp4",
         "video_aspect_ratio": "4/3",
         "btn_text": "",
         "link_url": "",
