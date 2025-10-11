@@ -15,10 +15,10 @@
         "banner_item_NCLJWQ": {
           "type": "banner_item",
           "settings": {
-            "sub_title": "<p>new release</p>",
+            "sub_title": "<p>Neuerscheinung</p>",
             "title": "<p>Maidesite T4 Pro Plus</p>",
-            "text": "<p>Good stability and Loading</p>",
-            "btn_text": "Order now",
+            "text": "<p>Hohe Stabilität und Ladeleistung</p>",
+            "btn_text": "Jetzt bestellen",
             "link": "shopify://products/maidesite-t4-pro-plus-vierbeinige-elliptische-saule-elektrisch-hohenverstellbares-gestell",
             "file_position": "bottom_right",
             "overlay_text_align": "text-start",
