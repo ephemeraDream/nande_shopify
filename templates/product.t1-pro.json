@@ -317,7 +317,6 @@
     },
     "img_with_text_simplicity_R8thEq": {
       "type": "img-with-text-simplicity",
-      "disabled": true,
       "custom_css": [
         ".img_with_text_simplicity_section {background-color: #e2ded6; padding-top: 12rem;}",
         ".img_with_text_simplicity_filebox {height: 48rem;}"
@@ -332,8 +331,8 @@
         "description": "<p></p><p></p>",
         "file_position": "right",
         "file_type": "video",
-        "video_url": "https://www.youtube.com/watch?v=YstPRgITxvk&t=6s",
-        "url_upload": "shopify://files/videos/无线充-插座.mp4",
+        "video_url": "",
+        "url_upload": "shopify://files/videos/百变.mp4",
         "video_aspect_ratio": "4/3",
         "btn_text": "",
         "link_url": "",
