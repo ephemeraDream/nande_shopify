@@ -320,7 +320,6 @@ document.querySelector(".collection_compare_select_contain_body_btn").addEventLi
     
     // 为container添加基于数量的CSS类
     container.classList.add(`item_length_${length}`)
-    console.log(length)
 
     let compare_info_html = '';
     if (compare_simple) {
