@@ -324,6 +324,7 @@ document.querySelector(".collection_compare_select_contain_body_btn").addEventLi
       item.classList.remove(...Array.from(item.classList).filter(cls => cls.startsWith('item_length_')))
       // 添加新的长度类
       item.classList.add(`item_length_${length}`)
+      console.log(length)
     })
 
     let compare_info_html = '';
