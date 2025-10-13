@@ -160,8 +160,8 @@ function initSelectCompare() {
 function onProductSelectClick(event) {
   event.preventDefault();
   event.stopPropagation()
-  if (select_num === 8) {
-    alert("Sie können nur 8 Produkte vergleichen.")
+  if (select_num === 5) {
+    alert("Sie können nur 5 Produkte vergleichen.")
     return
   }
   const collection_compare_select_num = document.querySelectorAll(".collection_compare_select_num")
