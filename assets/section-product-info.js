@@ -802,11 +802,11 @@ function updateVariantPrice() {
     })
     if (saletag) {
       saletag.classList.remove("hidden")
-      saletag.innerHTML = `- ${moneyWithoutTrailingZeros(price_op - price_dp)}`
+      saletag.innerHTML = `${window.theme?.settings?.discount_symbol || '-'} ${moneyWithoutTrailingZeros(price_op - price_dp)}`
     } else {
       document.querySelector(".product_info_steps_contain .product_info_price .product_info_price_op").insertAdjacentHTML('afterend', `
         <div class="product_info_price_saletag">
-          - ${moneyWithoutTrailingZeros(price_op - price_dp)}
+          ${window.theme?.settings?.discount_symbol || '-'} ${moneyWithoutTrailingZeros(price_op - price_dp)}
         </div>
       `);
     }

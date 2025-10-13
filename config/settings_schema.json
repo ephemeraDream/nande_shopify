@@ -1482,5 +1482,17 @@
         "label": "login text",
       }
     ]
+  },
+  {
+    "name": "Product Labels",
+    "settings": [
+      {
+        "type": "text",
+        "id": "discount_symbol",
+        "label": "Discount Symbol",
+        "default": "-",
+        "info": "Symbol displayed before discount amount (e.g., -, Save, etc.)"
+      }
+    ]
   }
 ]

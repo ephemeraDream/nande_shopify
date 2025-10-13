@@ -90,12 +90,12 @@ product_items.forEach(item => {
           price_contain.innerHTML = `${moneyWithoutTrailingZeros(currVariant.price)}<span class="product_price_cap">${moneyWithoutTrailingZeros(currVariant.compare_at_price)}</span>`
           if (saleinfo_tag) {
             saleinfo_tag.classList.remove("hidden")
-            saleinfo_tag.innerHTML = `- ${moneyWithoutTrailingZeros(currVariant.compare_at_price - currVariant.price)}`
+            saleinfo_tag.innerHTML = `${window.theme?.settings?.discount_symbol || '-'} ${moneyWithoutTrailingZeros(currVariant.compare_at_price - currVariant.price)}`
           } else {
             const container = document.createElement('div');
             container.className = 'recommended_products_product_tag';
 
-            container.innerHTML = `- ${moneyWithoutTrailingZeros(currVariant.compare_at_price - currVariant.price)}`;
+            container.innerHTML = `${window.theme?.settings?.discount_symbol || '-'} ${moneyWithoutTrailingZeros(currVariant.compare_at_price - currVariant.price)}`;
             document.querySelector(".recommended_products_product_tagbox").prepend(container);
           }
         } else {
@@ -123,12 +123,12 @@ product_items.forEach(item => {
             price_contain.innerHTML = `${moneyWithoutTrailingZeros(currVariant.price)}<span class="product_price_cap">${moneyWithoutTrailingZeros(currVariant.compare_at_price)}</span>`
             if (saleinfo_tag) {
               saleinfo_tag.classList.remove("hidden")
-              saleinfo_tag.innerHTML = `- ${moneyWithoutTrailingZeros(currVariant.compare_at_price - currVariant.price)}`
+              saleinfo_tag.innerHTML = `${window.theme?.settings?.discount_symbol || '-'} ${moneyWithoutTrailingZeros(currVariant.compare_at_price - currVariant.price)}`
             } else {
               const container = document.createElement('div');
               container.className = 'recommended_products_product_tag';
 
-              container.innerHTML = `- ${moneyWithoutTrailingZeros(currVariant.compare_at_price - currVariant.price)}`;
+              container.innerHTML = `${window.theme?.settings?.discount_symbol || '-'} ${moneyWithoutTrailingZeros(currVariant.compare_at_price - currVariant.price)}`;
               document.querySelector(".recommended_products_product_tagbox").prepend(container);
             }
           } else {
