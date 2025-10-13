@@ -46,7 +46,7 @@
                   {{ settings.discount_symbol | default: "-" }} {{ product.compare_at_price | minus: product.price | money_without_trailing_zeros }}
                 </div>
               {% endif %}
-              {% if sale_info != blank %}
+              {% if sale_info != blank and sale_info.name != blank %}
                 <div class="activity_products_normal_product_saleinfo">{{ sale_info.name }}</div>
               {% endif %}
               {% if product.metafields.custom.product_tag.value != blank %}

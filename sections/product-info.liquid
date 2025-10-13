@@ -320,7 +320,9 @@
               {% if sale_info != blank and sale_info.code != blank %}
                 <div class="product_info_saleinfo">
                   <div class="product_info_saleinfo_left">
-                    <div class="product_info_saleinfo_name">{{ sale_info.name }}</div>
+                    {% if sale_info.name != blank %}
+                      <div class="product_info_saleinfo_name">{{ sale_info.name }}</div>
+                    {% endif %}
                     <div
                       class="product_info_saleinfo_countdown"
                       data-end-date="{{ sale_info.datetime | date: "%Y-%m-%dT%H:%M:%SZ" }}"
