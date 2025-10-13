@@ -682,7 +682,7 @@
 .header_menu_mobile .header_menu_item[data-type=product_collection] .header_menu_item_submenu_product_info:before {
   position: absolute;
   content: "";
-  width: 50%;
+  width: 65%;
   height: 3.6rem;
   background-color: #7f7e75;
   left: 0;
