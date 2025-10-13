@@ -1703,10 +1703,18 @@
   }
 
   .product_info .product_info_price .product_info_price_dp {
-    font-size: 2rem;
+    font-size: 2.2rem;
+  }
+  .product_info .product_info_price_op{
+    margin-left: 0.6rem;
   }
   .product_info .product_info_price_saletag{
     font-size: 1.4rem;
+    margin-left: 0.6rem;
+    padding: .4rem;
+  }
+  .product_info .product_info_policies{
+    margin-left: 0.6rem;
   }
 
 }
