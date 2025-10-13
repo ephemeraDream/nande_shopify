@@ -316,7 +316,15 @@ document.querySelector(".collection_compare_select_contain_body_btn").addEventLi
       container.className = 'collection_compare_modal_contain_item';
     }
     const length = document.querySelectorAll(".collection_compare_select_contain_body_list_item").length
-    container.style.width = `calc((100% - ${46 * (length - 1)}px) / ${length})`
+    container.style.width = `calc((100% - ${40 * (length - 1)}px) / ${length})`
+    
+    // 为每个item添加基于数量的CSS类
+    document.querySelectorAll(".collection_compare_select_contain_body_list_item").forEach(item => {
+      // 移除之前的长度类
+      item.classList.remove(...Array.from(item.classList).filter(cls => cls.startsWith('item_length_')))
+      // 添加新的长度类
+      item.classList.add(`item_length_${length}`)
+    })
 
     let compare_info_html = '';
     if (compare_simple) {

@@ -781,6 +781,9 @@
   justify-content: center;
   /* margin-top: 3rem; */
   padding: 0 4.6rem;
+  max-width: 144rem;
+  margin: 0 auto;
+  box-sizing: content-box;
 }
 
 .collection_compare .collection_compare_modal_contain_item {
