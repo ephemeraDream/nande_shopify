@@ -316,7 +316,8 @@ document.querySelector(".collection_compare_select_contain_body_btn").addEventLi
       container.className = 'collection_compare_modal_contain_item';
     }
     const length = document.querySelectorAll(".collection_compare_select_contain_body_list_item").length
-    container.style.width = `calc((100% - ${40 * (length - 1)}px) / ${length})`
+    // container.style.width = `calc((100% - ${40 * (length - 1)}px) / ${length})`;
+    container.style.width = `calc((100%  / ${length})`;
     
     // 为container添加基于数量的CSS类
     container.classList.add(`item_length_${length}`)
