@@ -1702,4 +1702,11 @@
     font-size: 1.2rem;
   }
 
+  .product_info .product_info_price .product_info_price_dp {
+    font-size: 2rem;
+  }
+  .product_info .product_info_price_saletag{
+    font-size: 1.4rem;
+  }
+
 }
