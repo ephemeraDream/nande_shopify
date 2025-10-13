@@ -854,6 +854,7 @@
 
 .collection_compare .product_compare_product_card {
   padding-top: 6rem;
+  padding-right: 20px;
 }
 
 .collection_compare .product_compare_product_head {
@@ -917,6 +918,17 @@
   top: -1.2rem;
   padding-right: 4.6rem;
   padding-top: 3rem;
+}
+
+.collection_compare .item_length_5 .product_compare_product_sticky {
+  padding-right: 3rem;
+  padding-top: 3rem;
+}
+.collection_compare .item_length_5 .compare_simple_item_title{
+font-size: 2rem;
+}
+.collection_compare .item_length_5 .product_compare_product_contain{
+  font-size: 2rem;
 }
 
 @media screen and (max-width: 1440px) {
