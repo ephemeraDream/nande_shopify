@@ -119,7 +119,7 @@
       "custom_css": [],
       "name": "banner",
       "settings": {
-        "height_mode": "fixed",
+        "height_mode": "screen",
         "fixed_height_desktop": 800,
         "fixed_height_mobile": 340,
         "mobile_stacked": true,
