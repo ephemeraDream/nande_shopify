@@ -274,6 +274,68 @@
         "padding_top": 40,
         "padding_bottom": 52
       }
+    },
+    "collapsible_content_QzDWLz": {
+      "type": "collapsible-content",
+      "blocks": {
+        "collapsible_row_arW3TU": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Einklappbare Reihe",
+            "icon": "check_mark",
+            "row_content": "",
+            "page": ""
+          }
+        },
+        "collapsible_row_Q7PG9f": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Einklappbare Reihe",
+            "icon": "check_mark",
+            "row_content": "",
+            "page": ""
+          }
+        },
+        "collapsible_row_7znNUe": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Einklappbare Reihe",
+            "icon": "check_mark",
+            "row_content": "",
+            "page": ""
+          }
+        },
+        "collapsible_row_VfiiUM": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Einklappbare Reihe",
+            "icon": "check_mark",
+            "row_content": "",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "collapsible_row_arW3TU",
+        "collapsible_row_Q7PG9f",
+        "collapsible_row_7znNUe",
+        "collapsible_row_VfiiUM"
+      ],
+      "name": "t:sections.collapsible_content.presets.name",
+      "settings": {
+        "caption": "",
+        "heading": "Increase your Productivity",
+        "heading_size": "h1",
+        "heading_alignment": "center",
+        "layout": "none",
+        "container_color_scheme": "",
+        "color_scheme": "",
+        "open_first_collapsible_row": false,
+        "image_ratio": "adapt",
+        "desktop_layout": "image_second",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
     }
   },
   "order": [
@@ -282,6 +344,7 @@
     "rich_text_7GwPQX",
     "collapsible_content_8gGAmh",
     "collapsible_content_maEw7B",
-    "rich_text_ADyRc6"
+    "rich_text_ADyRc6",
+    "collapsible_content_QzDWLz"
   ]
 }
