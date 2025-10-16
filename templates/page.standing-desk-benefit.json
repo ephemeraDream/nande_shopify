@@ -218,8 +218,8 @@
       ],
       "name": "t:sections.collapsible_content.presets.name",
       "settings": {
-        "caption": "5 benefit for your Mental",
-        "heading": "Einklappbarer Inhalt",
+        "caption": "",
+        "heading": "5 benefit for your Mental",
         "heading_size": "h1",
         "heading_alignment": "center",
         "layout": "none",
