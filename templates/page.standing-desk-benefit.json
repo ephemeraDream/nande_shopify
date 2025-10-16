@@ -11,13 +11,81 @@
   "sections": {
     "main": {
       "type": "main-page",
+      "disabled": true,
       "settings": {
         "padding_top": 56,
         "padding_bottom": 56
       }
+    },
+    "image_banner_G3RUEr": {
+      "type": "image-banner",
+      "blocks": {
+        "heading_id7RrW": {
+          "type": "heading",
+          "settings": {
+            "heading": "Bild-Banner",
+            "heading_size": "h1"
+          }
+        },
+        "text_DGNErm": {
+          "type": "text",
+          "settings": {
+            "text": "Stelle Kunden Details zu Banner-Bildern oder Inhalt auf der Vorlage zur Verfügung.",
+            "text_style": "body"
+          }
+        },
+        "buttons_7HzVbQ": {
+          "type": "buttons",
+          "settings": {
+            "button_label_1": "Schaltflächenbeschriftung",
+            "button_link_1": "",
+            "button_style_secondary_1": false,
+            "button_label_2": "Schaltflächenbeschriftung",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_id7RrW",
+        "text_DGNErm",
+        "buttons_7HzVbQ"
+      ],
+      "name": "t:sections.image-banner.presets.name",
+      "settings": {
+        "image_overlay_opacity": 0,
+        "image_height": "medium",
+        "image_behavior": "none",
+        "desktop_content_position": "middle-center",
+        "desktop_content_alignment": "center",
+        "show_text_box": true,
+        "color_scheme": "",
+        "stack_images_on_mobile": true,
+        "mobile_content_alignment": "center",
+        "show_text_below": true
+      }
+    },
+    "topic_text_img_GtwTkX": {
+      "type": "topic-text-img",
+      "name": "Topic Text Img",
+      "settings": {
+        "title": "For Home office People",
+        "spec_id": ""
+      }
+    },
+    "topic_text_img_KFJm8q": {
+      "type": "topic-text-img",
+      "name": "Topic Text Img",
+      "settings": {
+        "title": "For Company",
+        "spec_id": ""
+      }
     }
   },
   "order": [
-    "main"
+    "main",
+    "image_banner_G3RUEr",
+    "topic_text_img_GtwTkX",
+    "topic_text_img_KFJm8q"
   ]
 }
