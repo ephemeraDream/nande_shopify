@@ -232,49 +232,6 @@
         "padding_bottom": 36
       }
     },
-    "rich_text_ADyRc6": {
-      "type": "rich-text",
-      "blocks": {
-        "heading_rCxqD8": {
-          "type": "heading",
-          "settings": {
-            "heading": "For company",
-            "heading_size": "h1"
-          }
-        },
-        "text_hCgnFx": {
-          "type": "text",
-          "settings": {
-            "text": "<p>Teile Infos über deine Marke mit deinen Kunden. Beschreibe ein Produkt, kündige etwas an oder heiße Kunden willkommen.</p>"
-          }
-        },
-        "button_daGLdn": {
-          "type": "button",
-          "settings": {
-            "button_label": "Schaltflächenbeschriftung",
-            "button_link": "",
-            "button_style_secondary": false,
-            "button_label_2": "",
-            "button_link_2": "",
-            "button_style_secondary_2": false
-          }
-        }
-      },
-      "block_order": [
-        "heading_rCxqD8",
-        "text_hCgnFx",
-        "button_daGLdn"
-      ],
-      "name": "t:sections.rich-text.presets.name",
-      "settings": {
-        "desktop_content_position": "center",
-        "content_alignment": "center",
-        "color_scheme": "",
-        "full_width": true,
-        "padding_top": 40,
-        "padding_bottom": 52
-      }
-    },
     "collapsible_content_QzDWLz": {
       "type": "collapsible-content",
       "blocks": {
@@ -336,6 +293,103 @@
         "padding_top": 36,
         "padding_bottom": 36
       }
+    },
+    "rich_text_ADyRc6": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_rCxqD8": {
+          "type": "heading",
+          "settings": {
+            "heading": "Additional Benefit For Company",
+            "heading_size": "h1"
+          }
+        },
+        "text_hCgnFx": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Teile Infos über deine Marke mit deinen Kunden. Beschreibe ein Produkt, kündige etwas an oder heiße Kunden willkommen.</p>"
+          }
+        },
+        "button_daGLdn": {
+          "type": "button",
+          "settings": {
+            "button_label": "Schaltflächenbeschriftung",
+            "button_link": "",
+            "button_style_secondary": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_rCxqD8",
+        "text_hCgnFx",
+        "button_daGLdn"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "multicolumn_rXHCkg": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_XGxGp8": {
+          "type": "column",
+          "settings": {
+            "title": "Spalte",
+            "text": "<p>Kombiniere Text mit einem Bild, um den Fokus auf dein Produkt, deine Kollektion oder deinen Blog-Beitrag zu richten. Du kannst außerdem weitere Details über die Verfügbarkeit oder den Stil und sogar eine Bewertung hinzufügen.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_hX4jDC": {
+          "type": "column",
+          "settings": {
+            "title": "Spalte",
+            "text": "<p>Kombiniere Text mit einem Bild, um den Fokus auf dein Produkt, deine Kollektion oder deinen Blog-Beitrag zu richten. Du kannst außerdem weitere Details über die Verfügbarkeit oder den Stil und sogar eine Bewertung hinzufügen.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_JCctfm": {
+          "type": "column",
+          "settings": {
+            "title": "Spalte",
+            "text": "<p>Kombiniere Text mit einem Bild, um den Fokus auf dein Produkt, deine Kollektion oder deinen Blog-Beitrag zu richten. Du kannst außerdem weitere Details über die Verfügbarkeit oder den Stil und sogar eine Bewertung hinzufügen.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_XGxGp8",
+        "column_hX4jDC",
+        "column_JCctfm"
+      ],
+      "name": "t:sections.multicolumn.presets.name",
+      "settings": {
+        "title": "Mit mehreren Spalten",
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "button_label": "Schaltflächenbeschriftung",
+        "button_link": "",
+        "columns_desktop": 3,
+        "column_alignment": "left",
+        "background_style": "primary",
+        "color_scheme": "",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
     }
   },
   "order": [
@@ -344,7 +398,8 @@
     "rich_text_7GwPQX",
     "collapsible_content_8gGAmh",
     "collapsible_content_maEw7B",
+    "collapsible_content_QzDWLz",
     "rich_text_ADyRc6",
-    "collapsible_content_QzDWLz"
+    "multicolumn_rXHCkg"
   ]
 }
