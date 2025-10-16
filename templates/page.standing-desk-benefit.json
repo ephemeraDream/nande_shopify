@@ -103,32 +103,20 @@
         "heading_yDhRd4": {
           "type": "heading",
           "settings": {
-            "heading": "For Home Office Users",
+            "heading": "Die Vorteile für Homeoffice-Arbeitnehmer",
             "heading_size": "h1"
           }
         },
         "text_7mr3Yp": {
           "type": "text",
           "settings": {
-            "text": "<p>Teile Infos über deine Marke mit deinen Kunden. Beschreibe ein Produkt, kündige etwas an oder heiße Kunden willkommen.</p>"
-          }
-        },
-        "button_rjAGMH": {
-          "type": "button",
-          "settings": {
-            "button_label": "Schaltflächenbeschriftung",
-            "button_link": "",
-            "button_style_secondary": false,
-            "button_label_2": "",
-            "button_link_2": "",
-            "button_style_secondary_2": false
+            "text": "<p>Höhenverstellbare Schreibtische ermöglichen es den Nutzern, die von der Arbeitsmedizin geforderte Steh-Sitz-Dynamik umzusetzen und so ganzheitliche Vorteile für Körper, Psyche und kognitive Leistung zu erzielen.</p>"
           }
         }
       },
       "block_order": [
         "heading_yDhRd4",
-        "text_7mr3Yp",
-        "button_rjAGMH"
+        "text_7mr3Yp"
       ],
       "name": "t:sections.rich-text.presets.name",
       "settings": {
