@@ -108,6 +108,130 @@
         "padding_bottom": 52
       }
     },
+    "collapsible_content_8gGAmh": {
+      "type": "collapsible-content",
+      "blocks": {
+        "collapsible_row_FwwGP8": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Einklappbare Reihe",
+            "icon": "check_mark",
+            "row_content": "",
+            "page": ""
+          }
+        },
+        "collapsible_row_9DUzyq": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Einklappbare Reihe",
+            "icon": "check_mark",
+            "row_content": "",
+            "page": ""
+          }
+        },
+        "collapsible_row_VfHgb4": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Einklappbare Reihe",
+            "icon": "check_mark",
+            "row_content": "",
+            "page": ""
+          }
+        },
+        "collapsible_row_j98zkk": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Einklappbare Reihe",
+            "icon": "check_mark",
+            "row_content": "",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "collapsible_row_FwwGP8",
+        "collapsible_row_9DUzyq",
+        "collapsible_row_VfHgb4",
+        "collapsible_row_j98zkk"
+      ],
+      "name": "t:sections.collapsible_content.presets.name",
+      "settings": {
+        "caption": "",
+        "heading": "7 benefits for your body",
+        "heading_size": "h1",
+        "heading_alignment": "center",
+        "layout": "none",
+        "container_color_scheme": "",
+        "color_scheme": "",
+        "open_first_collapsible_row": false,
+        "image_ratio": "adapt",
+        "desktop_layout": "image_second",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "collapsible_content_maEw7B": {
+      "type": "collapsible-content",
+      "blocks": {
+        "collapsible_row_Ve48MU": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Einklappbare Reihe",
+            "icon": "check_mark",
+            "row_content": "",
+            "page": ""
+          }
+        },
+        "collapsible_row_AR8eiq": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Einklappbare Reihe",
+            "icon": "check_mark",
+            "row_content": "",
+            "page": ""
+          }
+        },
+        "collapsible_row_DABCme": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Einklappbare Reihe",
+            "icon": "check_mark",
+            "row_content": "",
+            "page": ""
+          }
+        },
+        "collapsible_row_z88MgA": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Einklappbare Reihe",
+            "icon": "check_mark",
+            "row_content": "",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "collapsible_row_Ve48MU",
+        "collapsible_row_AR8eiq",
+        "collapsible_row_DABCme",
+        "collapsible_row_z88MgA"
+      ],
+      "name": "t:sections.collapsible_content.presets.name",
+      "settings": {
+        "caption": "5 benefit for your Mental",
+        "heading": "Einklappbarer Inhalt",
+        "heading_size": "h1",
+        "heading_alignment": "center",
+        "layout": "none",
+        "container_color_scheme": "",
+        "color_scheme": "",
+        "open_first_collapsible_row": false,
+        "image_ratio": "adapt",
+        "desktop_layout": "image_second",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
     "rich_text_ADyRc6": {
       "type": "rich-text",
       "blocks": {
@@ -156,6 +280,8 @@
     "main",
     "image_banner_G3RUEr",
     "rich_text_7GwPQX",
+    "collapsible_content_8gGAmh",
+    "collapsible_content_maEw7B",
     "rich_text_ADyRc6"
   ]
 }
