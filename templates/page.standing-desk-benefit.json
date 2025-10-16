@@ -184,15 +184,6 @@
             "row_content": "<p>Wenn du schon einmal mit dem Laptop auf dem Schoß gearbeitet hast, hast du vielleicht gemerkt, dass deine Handgelenke nach unten fallen und auf der Tastatur liegen. Das kann zu Schmerzen oder einer Überlastung der Handgelenke führen. Menschen mit <strong>Karpaltunnelsyndrom</strong> – also einem eingeklemmten Nerv im Handgelenk – spüren solche Beschwerden oft stärker. Auch wenn viele das denken: Häufiges Tippen verursacht kein Karpaltunnelsyndrom, eine <a href=\"https://www.ohow.com/2020/05/26/carpal-tunnel-syndrome-identification-and-treatment/\" title=\"https://www.ohow.com/2020/05/26/carpal-tunnel-syndrome-identification-and-treatment/\">falsche Handhaltung kann die Schmerzen aber verschlimmern</a>.</p>",
             "page": ""
           }
-        },
-        "collapsible_row_9DUzyq": {
-          "type": "collapsible_row",
-          "settings": {
-            "heading": "Lassen Sie Ihrer Energie freien Lauf",
-            "icon": "check_mark",
-            "row_content": "<p>Eine Untersuchung von <a href=\"https://www.sciencedirect.com/science/article/abs/pii/S0003687019300304\" target=\"_blank\" title=\"https://www.sciencedirect.com/science/article/abs/pii/S0003687019300304\">53 Studien zeigte</a>, dass Menschen mit Stehschreibtisch öfter stehen und sich wacher fühlen. In Großbritannien sagten 66 % der Befragten, dass sie dadurch produktiver sind, und 87 % fühlten sich schon nach einer Stunde Stehen am Tag energiegeladener. </p><p>Diese Ergebnisse waren so positiv, dass Forscher das Programm <strong>„</strong>Smart Work and Life“<strong> </strong>starteten, um Büroangestellte zu mehr Bewegung im Alltag zu motivieren.</p>",
-            "page": ""
-          }
         }
       },
       "block_order": [
@@ -201,8 +192,7 @@
         "collapsible_row_j98zkk",
         "collapsible_row_cY9y9x",
         "collapsible_row_3kb3RD",
-        "collapsible_row_xcEBgR",
-        "collapsible_row_9DUzyq"
+        "collapsible_row_xcEBgR"
       ],
       "name": "t:sections.collapsible_content.presets.name",
       "settings": {
@@ -226,9 +216,9 @@
         "collapsible_row_Ve48MU": {
           "type": "collapsible_row",
           "settings": {
-            "heading": "Einklappbare Reihe",
+            "heading": "Lassen Sie Ihrer Energie freien Lauf",
             "icon": "check_mark",
-            "row_content": "",
+            "row_content": "<p>Eine Untersuchung von <a href=\"https://www.sciencedirect.com/science/article/abs/pii/S0003687019300304\" target=\"_blank\" title=\"https://www.sciencedirect.com/science/article/abs/pii/S0003687019300304\">53 Studien zeigte</a>, dass Menschen mit Stehschreibtisch öfter stehen und sich wacher fühlen. In Großbritannien sagten 66 % der Befragten, dass sie dadurch produktiver sind, und 87 % fühlten sich schon nach einer Stunde Stehen am Tag energiegeladener. </p><p>Diese Ergebnisse waren so positiv, dass Forscher das Programm <strong>„</strong>Smart Work and Life“<strong> </strong>starteten, um Büroangestellte zu mehr Bewegung im Alltag zu motivieren.</p>",
             "page": ""
           }
         },
