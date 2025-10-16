@@ -58,6 +58,45 @@
         "autoplay_speed": 5
       }
     },
+    "image_with_text_8qhbLT": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_ajVTMd": {
+          "type": "heading",
+          "settings": {
+            "heading": "Langes Sitzen: Unsichtbare Gefahr für Körper und Geist",
+            "heading_size": "h1"
+          }
+        },
+        "text_KK8Mpy": {
+          "type": "text",
+          "settings": {
+            "text": "<ul><li>In Deutschland verbringen Arbeitnehmer durchschnittlich rund 10 Stunden täglich im Sitzen – bei der Arbeit, im Auto oder in der Freizeit. Dieses lange, unbewegte Sitzen versetzt den Körper in einen „Sparmodus“: Stoffwechsel und Durchblutung verlangsamen sich, Muskeln werden geschwächt. </li></ul><p></p><ul><li>Die Folgen sind gravierend – ein erhöhtes Risiko für Herz-Kreislauf-Erkrankungen, Diabetes Typ 2, Übergewicht, Depressionen sowie chronische Rücken- und Nackenschmerzen. Kein Wunder, dass die WHO langes Sitzen als neues Rauchen bezeichnet. </li></ul><p></p><ul><li>Ein höhenverstellbarer Schreibtisch hilft, Bewegung in den Arbeitsalltag zu bringen und Körper sowie Geist langfristig gesund zu halten.<br/></li></ul>",
+            "text_style": "body"
+          }
+        }
+      },
+      "block_order": [
+        "heading_ajVTMd",
+        "text_KK8Mpy"
+      ],
+      "name": "t:sections.image-with-text.presets.name",
+      "settings": {
+        "image": "shopify://shop_images/ai-generated-8927202_1920.png",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "image_behavior": "none",
+        "content_layout": "no-overlap",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "mobile_content_alignment": "left",
+        "section_color_scheme": "",
+        "color_scheme": "",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
     "rich_text_7GwPQX": {
       "type": "rich-text",
       "blocks": {
@@ -388,6 +427,7 @@
   "order": [
     "main",
     "banner_HNLdAt",
+    "image_with_text_8qhbLT",
     "rich_text_7GwPQX",
     "collapsible_content_8gGAmh",
     "collapsible_content_maEw7B",
