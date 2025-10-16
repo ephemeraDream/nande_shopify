@@ -166,18 +166,48 @@
             "row_content": "<p>Viele Menschen denken, Rückenschmerzen kommen einfach vom Sitzen – aber das muss nicht so sein. Mit einem bequemen Stuhl, der den Rücken gut stützt, und kurzen Stehpausen kannst du leichte Rückenschmerzen oft vermeiden oder lindern. </p><p>Laut <a href=\"https://medlineplus.gov/backpain.html\" title=\"https://medlineplus.gov/backpain.html\">dem National Institute of Arthritis and Musculoskeletal and Skin Diseases</a> (NIH)<strong> </strong>haben 8 von 10 Menschen im Laufe ihres Lebens Rückenschmerzen. Wenn deine Beschwerden trotz besserer Haltung nicht nachlassen, solltest du einen Orthopäden aufsuchen, um die Ursache genauer zu prüfen.</p>",
             "page": ""
           }
+        },
+        "collapsible_row_xcEBgR": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Bessere Handgelenksposition",
+            "icon": "check_mark",
+            "row_content": "<p>Wenn du schon einmal mit dem Laptop auf dem Schoß gearbeitet hast, hast du vielleicht gemerkt, dass deine Handgelenke nach unten fallen und auf der Tastatur liegen. Das kann zu Schmerzen oder einer Überlastung der Handgelenke führen. Menschen mit <strong>Karpaltunnelsyndrom</strong> – also einem eingeklemmten Nerv im Handgelenk – spüren solche Beschwerden oft stärker. Auch wenn viele das denken: Häufiges Tippen verursacht kein Karpaltunnelsyndrom, eine <a href=\"https://www.ohow.com/2020/05/26/carpal-tunnel-syndrome-identification-and-treatment/\" title=\"https://www.ohow.com/2020/05/26/carpal-tunnel-syndrome-identification-and-treatment/\">falsche Handhaltung kann die Schmerzen aber verschlimmern</a>.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_cY9y9x": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Sorgt für eine gute Durchblutung",
+            "icon": "check_mark",
+            "row_content": "<p>Unser Körper ist dafür gemacht, sich zu bewegen. Wenn wir stehen, stärken wir unsere Beinmuskeln, unser Gleichgewicht und unsere Körpermitte. Außerdem hilft Stehen, Blutgerinnsel in den Beinen zu vermeiden. Wer lange sitzt – zum Beispiel im Flugzeug – riskiert, dass das Blut langsamer fließt und sich in den Beinen sammelt. Im schlimmsten Fall kann <a href=\"https://hbr.org/2010/08/the-many-benefits-of-standing.html\" title=\"https://hbr.org/2010/08/the-many-benefits-of-standing.html\">sich daraus ein Blutgerinnsel bilden</a>. </p><p>Wenn wir aufstehen, bewegen wir die Beine und regen die Durchblutung an. Studien zeigen: Menschen, die viel sitzen, leben oft kürzer, weil ihr Herz-Kreislauf-System leidet. Regelmäßiges Stehen gehört also zu einem gesunden Lebensstil.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_3kb3RD": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Weniger Risiko für Krankheiten",
+            "icon": "check_mark",
+            "row_content": "<p>Langes Sitzen erhöht die Gefahr für <a href=\"https://www.mayoclinic.org/healthy-lifestyle/adult-health/expert-answers/sitting/faq-20058005\" title=\"https://www.mayoclinic.org/healthy-lifestyle/adult-health/expert-answers/sitting/faq-20058005\">Herzprobleme</a>, Übergewicht und Diabetes Typ 2. Mit einem Stehschreibtisch kannst du deinen Blutzucker senken und dieses Risiko verringern.</p>",
+            "page": ""
+          }
         }
       },
       "block_order": [
         "collapsible_row_FwwGP8",
         "collapsible_row_9DUzyq",
         "collapsible_row_VfHgb4",
-        "collapsible_row_j98zkk"
+        "collapsible_row_j98zkk",
+        "collapsible_row_xcEBgR",
+        "collapsible_row_cY9y9x",
+        "collapsible_row_3kb3RD"
       ],
       "name": "t:sections.collapsible_content.presets.name",
       "settings": {
         "caption": "",
-        "heading": "6 Vorteile für Ihren Körper",
+        "heading": "7 Vorteile für Ihren Körper",
         "heading_size": "h1",
         "heading_alignment": "center",
         "layout": "none",
