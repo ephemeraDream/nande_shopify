@@ -17,52 +17,45 @@
         "padding_bottom": 56
       }
     },
-    "image_banner_G3RUEr": {
-      "type": "image-banner",
+    "banner_HNLdAt": {
+      "type": "banner",
       "blocks": {
-        "heading_id7RrW": {
-          "type": "heading",
+        "banner_item_MT4BtT": {
+          "type": "banner_item",
           "settings": {
-            "heading": "Bild-Banner",
-            "heading_size": "h1"
-          }
-        },
-        "text_DGNErm": {
-          "type": "text",
-          "settings": {
-            "text": "Stelle Kunden Details zu Banner-Bildern oder Inhalt auf der Vorlage zur Verfügung.",
-            "text_style": "body"
-          }
-        },
-        "buttons_7HzVbQ": {
-          "type": "buttons",
-          "settings": {
-            "button_label_1": "Schaltflächenbeschriftung",
-            "button_link_1": "",
-            "button_style_secondary_1": false,
-            "button_label_2": "Schaltflächenbeschriftung",
-            "button_link_2": "",
-            "button_style_secondary_2": false
+            "sub_title": "",
+            "title": "<p>The benefits of adjustable height desk</p>",
+            "text": "",
+            "btn_text": "",
+            "link": "",
+            "file_position": "top_right",
+            "overlay_text_align": "text-center",
+            "transparent_content_color": "#bdff00",
+            "file_type": "image",
+            "file_image": "shopify://shop_images/thestandingdesk-JoHD6SSI_Ig-unsplash.jpg",
+            "video_url": "",
+            "show_countdown": false,
+            "countdown": ""
           }
         }
       },
       "block_order": [
-        "heading_id7RrW",
-        "text_DGNErm",
-        "buttons_7HzVbQ"
+        "banner_item_MT4BtT"
       ],
-      "name": "t:sections.image-banner.presets.name",
+      "name": "banner",
       "settings": {
-        "image_overlay_opacity": 0,
-        "image_height": "medium",
-        "image_behavior": "none",
-        "desktop_content_position": "middle-center",
-        "desktop_content_alignment": "center",
-        "show_text_box": true,
-        "color_scheme": "",
-        "stack_images_on_mobile": true,
-        "mobile_content_alignment": "center",
-        "show_text_below": true
+        "height_mode": "fixed",
+        "fixed_height_desktop": 620,
+        "fixed_height_mobile": 400,
+        "mobile_stacked": false,
+        "background_color": "#dddddd",
+        "nav_style": "slideshow_nav_lines",
+        "pagination_color": "#ffffff",
+        "nav_position": "justify-center",
+        "transition": "slide-fade",
+        "autoplay": true,
+        "slider_pause": false,
+        "autoplay_speed": 5
       }
     },
     "rich_text_7GwPQX": {
@@ -104,8 +97,8 @@
         "content_alignment": "center",
         "color_scheme": "",
         "full_width": true,
-        "padding_top": 40,
-        "padding_bottom": 52
+        "padding_top": 20,
+        "padding_bottom": 20
       }
     },
     "collapsible_content_8gGAmh": {
@@ -394,7 +387,7 @@
   },
   "order": [
     "main",
-    "image_banner_G3RUEr",
+    "banner_HNLdAt",
     "rich_text_7GwPQX",
     "collapsible_content_8gGAmh",
     "collapsible_content_maEw7B",
