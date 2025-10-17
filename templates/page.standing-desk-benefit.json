@@ -268,9 +268,9 @@
         "collapsible_row_arW3TU": {
           "type": "collapsible_row",
           "settings": {
-            "heading": "Einklappbare Reihe",
+            "heading": "Bessere Konzentration",
             "icon": "check_mark",
-            "row_content": "",
+            "row_content": "<p>Wenn man steht, bewegt sich der Körper. Das verbessert die Durchblutung. Dadurch kommt mehr Sauerstoff ins Gehirn. Das hilft, wach zu bleiben und sich besser zu konzentrieren.﻿</p>",
             "page": ""
           }
         },
@@ -282,31 +282,11 @@
             "row_content": "",
             "page": ""
           }
-        },
-        "collapsible_row_7znNUe": {
-          "type": "collapsible_row",
-          "settings": {
-            "heading": "Einklappbare Reihe",
-            "icon": "check_mark",
-            "row_content": "",
-            "page": ""
-          }
-        },
-        "collapsible_row_VfiiUM": {
-          "type": "collapsible_row",
-          "settings": {
-            "heading": "Einklappbare Reihe",
-            "icon": "check_mark",
-            "row_content": "",
-            "page": ""
-          }
         }
       },
       "block_order": [
         "collapsible_row_arW3TU",
-        "collapsible_row_Q7PG9f",
-        "collapsible_row_7znNUe",
-        "collapsible_row_VfiiUM"
+        "collapsible_row_Q7PG9f"
       ],
       "name": "t:sections.collapsible_content.presets.name",
       "settings": {
