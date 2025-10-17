@@ -218,16 +218,16 @@
           "settings": {
             "heading": "Verbesserte Stimmung",
             "icon": "check_mark",
-            "row_content": "<p>Wenn man steht, werden mehr Muskeln aktiv. Das kann Glückshormone freisetzen und die Stimmung verbessern. </p><p>Eine <a href=\"https://bmcpublichealth.biomedcentral.com/articles/10.1186/s12889-025-22912-z\" title=\"https://bmcpublichealth.biomedcentral.com/articles/10.1186/s12889-025-22912-z\">neue Studie der spanischen Universität UCLM </a>zeigt: Wer weniger Zeit im Sitzen verbringt, hat oft weniger Probleme mit Depression und Angst. Das gilt für Studenten und Dozenten an der Universität.﻿</p>",
+            "row_content": "<p>Wenn man steht, werden mehr Muskeln aktiv. Das kann Glückshormone freisetzen und die Stimmung verbessern. </p><p>Eine<a href=\"https://bmcpublichealth.biomedcentral.com/articles/10.1186/s12889-025-22912-z\" title=\"https://bmcpublichealth.biomedcentral.com/articles/10.1186/s12889-025-22912-z\"> im Mai 2025 von der spanischen Universität UCLM veröffentlichte Studie</a> zeigt, Wer weniger Zeit im Sitzen verbringt, hat oft weniger Probleme mit Depression und Angst. Das gilt für Studenten und Dozenten an der Universität.﻿</p>",
             "page": ""
           }
         },
         "collapsible_row_DABCme": {
           "type": "collapsible_row",
           "settings": {
-            "heading": "Einklappbare Reihe",
+            "heading": "Weniger Stress und Müdigkeit",
             "icon": "check_mark",
-            "row_content": "",
+            "row_content": "<p>Wenn man zwischen Sitzen und Stehen wechselt, werden Muskeln und Gelenke entlastet. Das führt zu weniger Stress und man fühlt sich nicht so müde.﻿</p>",
             "page": ""
           }
         },
@@ -236,7 +236,7 @@
           "settings": {
             "heading": "Lassen Sie Ihrer Energie freien Lauf",
             "icon": "check_mark",
-            "row_content": "<p>Eine Untersuchung von <a href=\"https://www.sciencedirect.com/science/article/abs/pii/S0003687019300304\" target=\"_blank\" title=\"https://www.sciencedirect.com/science/article/abs/pii/S0003687019300304\">53 Studien zeigte</a>, dass Menschen mit Stehschreibtisch öfter stehen und sich wacher fühlen. In Großbritannien sagten 66 % der Befragten, dass sie dadurch produktiver sind, und 87 % fühlten sich schon nach einer Stunde Stehen am Tag energiegeladener. </p><p>Diese Ergebnisse waren so positiv, dass Forscher das Programm <strong>„</strong>Smart Work and Life“<strong> </strong>starteten, um Büroangestellte zu mehr Bewegung im Alltag zu motivieren.</p>",
+            "row_content": "<p>Wenn man steht, fließt das Blut besser und mehr Sauerstoff kommt ins Gehirn und in den Körper. Dadurch fühlt man sich wacher und hat mehr Energie.﻿</p><p>Eine Untersuchung von <a href=\"https://www.sciencedirect.com/science/article/abs/pii/S0003687019300304\" target=\"_blank\" title=\"https://www.sciencedirect.com/science/article/abs/pii/S0003687019300304\">53 Studien zeigte</a>, dass Menschen mit Stehschreibtisch öfter stehen und sich wacher fühlen. </p><p>In <a href=\"https://www.bmj.com/content/363/bmj.k3870\" title=\"https://www.bmj.com/content/363/bmj.k3870\">Großbritannien sagten</a> 66 % der Befragten, dass sie dadurch produktiver sind, und 87 % fühlten sich schon nach einer Stunde Stehen am Tag energiegeladener. Diese Ergebnisse waren so positiv, dass Forscher das Programm <strong>„</strong>Smart Work and Life“<strong> </strong>starteten, um Büroangestellte zu mehr Bewegung im Alltag zu motivieren.</p>",
             "page": ""
           }
         }
