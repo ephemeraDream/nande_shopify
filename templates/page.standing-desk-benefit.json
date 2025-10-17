@@ -216,7 +216,7 @@
         "collapsible_row_AR8eiq": {
           "type": "collapsible_row",
           "settings": {
-            "heading": "Einklappbare Reihe",
+            "heading": "Verbesserte Stimmung",
             "icon": "check_mark",
             "row_content": "<p>Wenn man steht, werden mehr Muskeln aktiv. Das kann Glückshormone freisetzen und die Stimmung verbessern. </p><p>Eine <a href=\"https://bmcpublichealth.biomedcentral.com/articles/10.1186/s12889-025-22912-z\" title=\"https://bmcpublichealth.biomedcentral.com/articles/10.1186/s12889-025-22912-z\">neue Studie der spanischen Universität UCLM </a>zeigt: Wer weniger Zeit im Sitzen verbringt, hat oft weniger Probleme mit Depression und Angst. Das gilt für Studenten und Dozenten an der Universität.﻿</p>",
             "page": ""
@@ -249,7 +249,7 @@
       "name": "t:sections.collapsible_content.presets.name",
       "settings": {
         "caption": "",
-        "heading": "",
+        "heading": "3 Vorteile für Ihre Psyche",
         "heading_size": "h1",
         "heading_alignment": "center",
         "layout": "none",
