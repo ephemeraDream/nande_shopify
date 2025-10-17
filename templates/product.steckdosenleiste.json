@@ -201,6 +201,7 @@
     },
     "video_simplicity_Wgfp6r": {
       "type": "video-simplicity",
+      "disabled": true,
       "name": "video simplicity",
       "settings": {
         "spec_id": "",
@@ -343,6 +344,7 @@
     },
     "img_with_text_simplicity_R8thEq": {
       "type": "img-with-text-simplicity",
+      "disabled": true,
       "custom_css": [],
       "name": "img with text simplicity",
       "settings": {
