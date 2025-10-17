@@ -108,28 +108,6 @@
         "background_color": "#ffffff"
       }
     },
-    "img_with_text_simplicity_dDeThj": {
-      "type": "img-with-text-simplicity",
-      "name": "img with text simplicity",
-      "settings": {
-        "spec_id": "",
-        "header_title": "",
-        "header_content": "",
-        "title": "<p>7 Kriterien für den Kauf eines verstellbaren Schreibtisches</p>",
-        "sub_title": "",
-        "description": "1. Gestaltung: Wählen Sie ein Design, das zu Ihrem Arbeitsbereich passt und Ihren persönlichen Vorlieben entspricht.<br><br>2. Dimensionen: Achten Sie darauf, dass die tisch höhenverstellbar Ihren Anforderungen entspricht und genügend Arbeitsfläche bietet.<br><br>3. Kompatibilität: Überprüfen Sie, ob der Tisch mit Ihren bestehenden Möbelstücken und Ihrem Arbeitsplatz konform ist.<br><br>4. Qualität: Stellen Sie sicher, dass der Tisch aus robustem Material ist und gut verarbeitet ist.<br><br>5. Preis-Leistung: Berücksichtigen Sie die Kosten im Verhältnis zu den Funktionen und der Qualität.<br><br>6. Service: Informieren Sie sich über den Kundenservice und die Garantie des Herstellers.<br><br>7. Nachhaltigkeit: Bedenken Sie, ob der Tisch aus nachhaltlichen Materialien gefertigt ist und ob der Hersteller umweltfreundliche Praktiken verfolgt.",
-        "file_position": "left",
-        "file_type": "image",
-        "file_image": "shopify://shop_images/Vergleichen_Sie_Maidesite-Modelle_img_3.webp",
-        "video_url": "",
-        "video_aspect_ratio": "4/3",
-        "btn_text": "",
-        "link_url": "",
-        "padding_top": 0,
-        "padding_bottom": 0,
-        "background_color": "#ffffff"
-      }
-    },
     "img_with_text_simplicity_CehiJc": {
       "type": "img-with-text-simplicity",
       "name": "img with text simplicity",
@@ -140,7 +118,7 @@
         "title": "<p>Die Vorteile eines Schreibtisch Verstellbar</p>",
         "sub_title": "",
         "description": "1. Komfort und Anpassungsfähigkeit: Stellen Sie Ihre Arbeitsfläche individuell ein und vermeiden Sie Schmerzen.<br><br>2. Gesundheitliche Vorteile: Reduzieren Sie das Risiko für Rückenschmerzen, Fettleibigkeit und Herz-Kreislauf-Erkrankungen.<br><br>3. Körperhaltung: Eine korrekte Haltung reduziert Muskelspannung und Schmerzen.<br><br>4. Beweglichkeit: Wechseln zwischen Sitz- und Stehen fördert Gelenks- und Muskelbeweglichkeit.<br><br>5. Moderne Arbeitsweise: Ein ansprechender Arbeitsplatz, der Kreativität und Motivation fördert.6. Produktivität: Stehtätigkeit fördert Aufmerksamkeit und Energie, steigert die Leistung.",
-        "file_position": "right",
+        "file_position": "left",
         "file_type": "image",
         "file_image": "shopify://shop_images/Vergleichen_Sie_Maidesite-Modelle_img_2.webp",
         "video_url": "",
@@ -149,6 +127,28 @@
         "link_url": "",
         "padding_top": 0,
         "padding_bottom": 120,
+        "background_color": "#ffffff"
+      }
+    },
+    "img_with_text_simplicity_dDeThj": {
+      "type": "img-with-text-simplicity",
+      "name": "img with text simplicity",
+      "settings": {
+        "spec_id": "",
+        "header_title": "",
+        "header_content": "",
+        "title": "<p>7 Kriterien für den Kauf eines verstellbaren Schreibtisches</p>",
+        "sub_title": "",
+        "description": "1. Gestaltung: Wählen Sie ein Design, das zu Ihrem Arbeitsbereich passt und Ihren persönlichen Vorlieben entspricht.<br><br>2. Dimensionen: Achten Sie darauf, dass die tisch höhenverstellbar Ihren Anforderungen entspricht und genügend Arbeitsfläche bietet.<br><br>3. Kompatibilität: Überprüfen Sie, ob der Tisch mit Ihren bestehenden Möbelstücken und Ihrem Arbeitsplatz konform ist.<br><br>4. Qualität: Stellen Sie sicher, dass der Tisch aus robustem Material ist und gut verarbeitet ist.<br><br>5. Preis-Leistung: Berücksichtigen Sie die Kosten im Verhältnis zu den Funktionen und der Qualität.<br><br>6. Service: Informieren Sie sich über den Kundenservice und die Garantie des Herstellers.<br><br>7. Nachhaltigkeit: Bedenken Sie, ob der Tisch aus nachhaltlichen Materialien gefertigt ist und ob der Hersteller umweltfreundliche Praktiken verfolgt.",
+        "file_position": "right",
+        "file_type": "image",
+        "file_image": "shopify://shop_images/Vergleichen_Sie_Maidesite-Modelle_img_3.webp",
+        "video_url": "",
+        "video_aspect_ratio": "4/3",
+        "btn_text": "",
+        "link_url": "",
+        "padding_top": 0,
+        "padding_bottom": 0,
         "background_color": "#ffffff"
       }
     },
@@ -373,8 +373,8 @@
     "collection_compare_khmbzE",
     "compare_simple_YrUqUG",
     "img_with_text_simplicity_URDzRN",
-    "img_with_text_simplicity_dDeThj",
     "img_with_text_simplicity_CehiJc",
+    "img_with_text_simplicity_dDeThj",
     "faq_simple_MFhhga",
     "faq_simple_7h3eKd",
     "faq_simple_Fbi4Kx"
