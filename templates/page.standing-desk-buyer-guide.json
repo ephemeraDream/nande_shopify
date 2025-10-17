@@ -11,13 +11,115 @@
   "sections": {
     "main": {
       "type": "main-page",
+      "disabled": true,
       "settings": {
         "padding_top": 56,
         "padding_bottom": 56
       }
+    },
+    "banner_JURqqE": {
+      "type": "banner",
+      "blocks": {
+        "banner_item_ycaNwN": {
+          "type": "banner_item",
+          "settings": {
+            "sub_title": "",
+            "title": "<p>Ratgeber zum Kauf eines höhenverstellbaren Schreibtisches</p>",
+            "text": "",
+            "btn_text": "",
+            "link": "",
+            "file_position": "middle_left",
+            "overlay_text_align": "text-start",
+            "transparent_content_color": "#ffffff",
+            "file_type": "image",
+            "file_image": "shopify://shop_images/ikea-4048229_1920.jpg",
+            "video_url": "",
+            "show_countdown": false,
+            "countdown": ""
+          }
+        }
+      },
+      "block_order": [
+        "banner_item_ycaNwN"
+      ],
+      "name": "banner",
+      "settings": {
+        "height_mode": "auto",
+        "fixed_height_desktop": 600,
+        "fixed_height_mobile": 350,
+        "mobile_stacked": false,
+        "background_color": "#dddddd",
+        "nav_style": "slideshow_nav_lines",
+        "pagination_color": "#ffffff",
+        "nav_position": "justify-center",
+        "transition": "slide-fade",
+        "autoplay": true,
+        "slider_pause": false,
+        "autoplay_speed": 5
+      }
+    },
+    "multirow_ewHkEp": {
+      "type": "multirow",
+      "blocks": {
+        "row_WVrx3P": {
+          "type": "row",
+          "settings": {
+            "image": "shopify://shop_images/Maidesite_electric_standing_desk_setup.jpg",
+            "caption": "Bildtext",
+            "heading": "Reihe",
+            "text": "<p>Kombiniere Text mit einem Bild, um den Fokus auf dein Produkt, deine Kollektion oder deinen Blog-Beitrag zu richten. Du kannst außerdem weitere Details über die Verfügbarkeit oder den Stil und sogar eine Bewertung hinzufügen.</p>",
+            "button_label": "Schaltflächenbeschriftung",
+            "button_link": ""
+          }
+        },
+        "row_Pk8Uyz": {
+          "type": "row",
+          "settings": {
+            "image": "shopify://shop_images/markus-winkler-w8vPcVdSlF8-unsplash.jpg",
+            "caption": "Bildtext",
+            "heading": "Reihe",
+            "text": "<p>Kombiniere Text mit einem Bild, um den Fokus auf dein Produkt, deine Kollektion oder deinen Blog-Beitrag zu richten. Du kannst außerdem weitere Details über die Verfügbarkeit oder den Stil und sogar eine Bewertung hinzufügen.</p>",
+            "button_label": "Schaltflächenbeschriftung",
+            "button_link": ""
+          }
+        },
+        "row_N7AF3h": {
+          "type": "row",
+          "settings": {
+            "caption": "Bildtext",
+            "heading": "Reihe",
+            "text": "<p>Kombiniere Text mit einem Bild, um den Fokus auf dein Produkt, deine Kollektion oder deinen Blog-Beitrag zu richten. Du kannst außerdem weitere Details über die Verfügbarkeit oder den Stil und sogar eine Bewertung hinzufügen.</p>",
+            "button_label": "Schaltflächenbeschriftung",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "row_WVrx3P",
+        "row_Pk8Uyz",
+        "row_N7AF3h"
+      ],
+      "name": "t:sections.multirow.presets.name",
+      "settings": {
+        "image_height": "medium",
+        "desktop_image_width": "medium",
+        "image_layout": "alternate-left",
+        "heading_size": "h1",
+        "text_style": "body",
+        "button_style": "secondary",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "mobile_content_alignment": "left",
+        "section_color_scheme": "",
+        "row_color_scheme": "",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
     }
   },
   "order": [
-    "main"
+    "main",
+    "banner_JURqqE",
+    "multirow_ewHkEp"
   ]
 }
