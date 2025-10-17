@@ -351,7 +351,7 @@
           "type": "column",
           "settings": {
             "title": "Ergonomische Anforderungen erfüllen",
-            "text": "<p>Das deutsche Arbeitsrecht sagt: Arbeitgeber müssen für die Sicherheit und Gesundheit der Mitarbeitenden sorgen. Das gilt besonders beim Gestalten von Arbeitsplätzen. Wichtige Regeln kommen aus dem Arbeitsschutzgesetz (ArbSchG) und der Arbeitsstättenverordnung (ArbStättV). Diese Regeln helfen, Arbeitsplätze so zu machen, dass sie sicher und gesund sind.</p>",
+            "text": "<p>Das deutsche Arbeitsrecht sagt: Arbeitgeber müssen für die Sicherheit und Gesundheit der Mitarbeitenden sorgen. Das gilt besonders beim Gestalten von Arbeitsplätzen. </p><p>Wichtige Regeln kommen aus dem Arbeitsschutzgesetz (ArbSchG) und der Arbeitsstättenverordnung (ArbStättV). Diese Regeln helfen, Arbeitsplätze so zu machen, dass sie sicher und gesund sind.</p>",
             "link_label": "",
             "link": ""
           }
@@ -359,8 +359,8 @@
         "column_hX4jDC": {
           "type": "column",
           "settings": {
-            "title": "Spalte",
-            "text": "<p>Kombiniere Text mit einem Bild, um den Fokus auf dein Produkt, deine Kollektion oder deinen Blog-Beitrag zu richten. Du kannst außerdem weitere Details über die Verfügbarkeit oder den Stil und sogar eine Bewertung hinzufügen.</p>",
+            "title": "Möglichkeit der Steuerabzugsfähigkeit",
+            "text": "<ul><li>In Deutschland können Firmen Büromöbel von der Steuer absetzen, auch höhenverstellbare Schreibtische. Diese Kosten zählen als Betriebsausgaben.</li><li>Für Dinge, die als \"geringwertige Wirtschaftsgüter\" (GWG) gelten und bis zu 800 Euro netto kosten, kann man oft den ganzen Kaufpreis im gleichen Jahr absetzen.</li><li>Die meisten <a href=\"https://www.maidesite.de/collections/hohenverstellbarer-schreibtisch\" title=\"https://www.maidesite.de/collections/hohenverstellbarer-schreibtisch\">höhenverstellbaren Schreibtische von maidesite</a> kosten weniger als 800 Euro. Deshalb können Sie diese Ausgabe am Jahresende komplett absetzen.</li></ul>",
             "link_label": "",
             "link": ""
           }
