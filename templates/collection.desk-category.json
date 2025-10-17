@@ -101,8 +101,8 @@
         "file_image": "shopify://shop_images/image_3e826893-51d9-435e-9191-f8a9e8456c5b.png",
         "video_url": "",
         "video_aspect_ratio": "4/3",
-        "btn_text": "",
-        "link_url": "",
+        "btn_text": "Weiterlesen",
+        "link_url": "https://www.maidesite.de/pages/die-vorteile-eines-hohenverstellbaren-schreibtisches",
         "padding_top": 120,
         "padding_bottom": 0,
         "background_color": "#ffffff"
