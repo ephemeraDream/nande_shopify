@@ -310,14 +310,14 @@
         "heading_rCxqD8": {
           "type": "heading",
           "settings": {
-            "heading": "Additional Benefit For Company",
+            "heading": "Zusätzlicher Vorteil für Unternehmen",
             "heading_size": "h1"
           }
         },
         "text_hCgnFx": {
           "type": "text",
           "settings": {
-            "text": "<p>Teile Infos über deine Marke mit deinen Kunden. Beschreibe ein Produkt, kündige etwas an oder heiße Kunden willkommen.</p>"
+            "text": ""
           }
         }
       },
