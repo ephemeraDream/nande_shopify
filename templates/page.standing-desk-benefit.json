@@ -338,6 +338,15 @@
     "multicolumn_rXHCkg": {
       "type": "multicolumn",
       "blocks": {
+        "column_JCctfm": {
+          "type": "column",
+          "settings": {
+            "title": "Talente gewinnen und binden",
+            "text": "<p>Wenn ein Unternehmen moderne, ergonomische Arbeitsmittel bereitstellt, zeigt es damit, dass ihm das Wohlbefinden seiner Mitarbeiter am Herzen liegt. Das macht den Arbeitsplatz für Talente und gut ausgebildete Fachkräfte attraktiver.﻿</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
         "column_XGxGp8": {
           "type": "column",
           "settings": {
@@ -355,21 +364,12 @@
             "link_label": "",
             "link": ""
           }
-        },
-        "column_JCctfm": {
-          "type": "column",
-          "settings": {
-            "title": "Spalte",
-            "text": "<p>Kombiniere Text mit einem Bild, um den Fokus auf dein Produkt, deine Kollektion oder deinen Blog-Beitrag zu richten. Du kannst außerdem weitere Details über die Verfügbarkeit oder den Stil und sogar eine Bewertung hinzufügen.</p>",
-            "link_label": "",
-            "link": ""
-          }
         }
       },
       "block_order": [
+        "column_JCctfm",
         "column_XGxGp8",
-        "column_hX4jDC",
-        "column_JCctfm"
+        "column_hX4jDC"
       ],
       "name": "t:sections.multicolumn.presets.name",
       "settings": {
