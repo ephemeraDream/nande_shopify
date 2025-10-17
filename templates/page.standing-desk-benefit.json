@@ -213,21 +213,12 @@
     "collapsible_content_maEw7B": {
       "type": "collapsible-content",
       "blocks": {
-        "collapsible_row_Ve48MU": {
-          "type": "collapsible_row",
-          "settings": {
-            "heading": "Lassen Sie Ihrer Energie freien Lauf",
-            "icon": "check_mark",
-            "row_content": "<p>Eine Untersuchung von <a href=\"https://www.sciencedirect.com/science/article/abs/pii/S0003687019300304\" target=\"_blank\" title=\"https://www.sciencedirect.com/science/article/abs/pii/S0003687019300304\">53 Studien zeigte</a>, dass Menschen mit Stehschreibtisch öfter stehen und sich wacher fühlen. In Großbritannien sagten 66 % der Befragten, dass sie dadurch produktiver sind, und 87 % fühlten sich schon nach einer Stunde Stehen am Tag energiegeladener. </p><p>Diese Ergebnisse waren so positiv, dass Forscher das Programm <strong>„</strong>Smart Work and Life“<strong> </strong>starteten, um Büroangestellte zu mehr Bewegung im Alltag zu motivieren.</p>",
-            "page": ""
-          }
-        },
         "collapsible_row_AR8eiq": {
           "type": "collapsible_row",
           "settings": {
             "heading": "Einklappbare Reihe",
             "icon": "check_mark",
-            "row_content": "",
+            "row_content": "<p>Wenn man steht, werden mehr Muskeln aktiv. Das kann Glückshormone freisetzen und die Stimmung verbessern. </p><p>Eine <a href=\"https://bmcpublichealth.biomedcentral.com/articles/10.1186/s12889-025-22912-z\" title=\"https://bmcpublichealth.biomedcentral.com/articles/10.1186/s12889-025-22912-z\">neue Studie der spanischen Universität UCLM </a>zeigt: Wer weniger Zeit im Sitzen verbringt, hat oft weniger Probleme mit Depression und Angst. Das gilt für Studenten und Dozenten an der Universität.﻿</p>",
             "page": ""
           }
         },
@@ -240,26 +231,25 @@
             "page": ""
           }
         },
-        "collapsible_row_z88MgA": {
+        "collapsible_row_Ve48MU": {
           "type": "collapsible_row",
           "settings": {
-            "heading": "Einklappbare Reihe",
+            "heading": "Lassen Sie Ihrer Energie freien Lauf",
             "icon": "check_mark",
-            "row_content": "",
+            "row_content": "<p>Eine Untersuchung von <a href=\"https://www.sciencedirect.com/science/article/abs/pii/S0003687019300304\" target=\"_blank\" title=\"https://www.sciencedirect.com/science/article/abs/pii/S0003687019300304\">53 Studien zeigte</a>, dass Menschen mit Stehschreibtisch öfter stehen und sich wacher fühlen. In Großbritannien sagten 66 % der Befragten, dass sie dadurch produktiver sind, und 87 % fühlten sich schon nach einer Stunde Stehen am Tag energiegeladener. </p><p>Diese Ergebnisse waren so positiv, dass Forscher das Programm <strong>„</strong>Smart Work and Life“<strong> </strong>starteten, um Büroangestellte zu mehr Bewegung im Alltag zu motivieren.</p>",
             "page": ""
           }
         }
       },
       "block_order": [
-        "collapsible_row_Ve48MU",
         "collapsible_row_AR8eiq",
         "collapsible_row_DABCme",
-        "collapsible_row_z88MgA"
+        "collapsible_row_Ve48MU"
       ],
       "name": "t:sections.collapsible_content.presets.name",
       "settings": {
         "caption": "",
-        "heading": "5 benefit for your Mental",
+        "heading": "",
         "heading_size": "h1",
         "heading_alignment": "center",
         "layout": "none",
