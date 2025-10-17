@@ -80,6 +80,7 @@
         "heading_ajVTMd",
         "text_KK8Mpy"
       ],
+      "disabled": true,
       "name": "t:sections.image-with-text.presets.name",
       "settings": {
         "image": "shopify://shop_images/ai-generated-8927202_1920.png",
