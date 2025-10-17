@@ -110,6 +110,18 @@
     },
     "img_with_text_simplicity_CehiJc": {
       "type": "img-with-text-simplicity",
+      "blocks": {
+        "append_info_jM37QN": {
+          "type": "appendInfo",
+          "settings": {
+            "subtitle": "",
+            "text": ""
+          }
+        }
+      },
+      "block_order": [
+        "append_info_jM37QN"
+      ],
       "name": "img with text simplicity",
       "settings": {
         "spec_id": "",
@@ -123,8 +135,8 @@
         "file_image": "shopify://shop_images/Vergleichen_Sie_Maidesite-Modelle_img_2.webp",
         "video_url": "",
         "video_aspect_ratio": "4/3",
-        "btn_text": "",
-        "link_url": "",
+        "btn_text": "Weiterlesen",
+        "link_url": "https://www.maidesite.de/pages/die-vorteile-eines-hohenverstellbaren-schreibtisches",
         "padding_top": 0,
         "padding_bottom": 120,
         "background_color": "#ffffff"
