@@ -86,6 +86,7 @@
         "row_N7AF3h": {
           "type": "row",
           "settings": {
+            "image": "shopify://shop_images/iec-55014-61000-and-din-1335-testing-standard.jpg",
             "caption": "Bildtext",
             "heading": "Reihe",
             "text": "<p>Kombiniere Text mit einem Bild, um den Fokus auf dein Produkt, deine Kollektion oder deinen Blog-Beitrag zu richten. Du kannst außerdem weitere Details über die Verfügbarkeit oder den Stil und sogar eine Bewertung hinzufügen.</p>",
@@ -115,11 +116,71 @@
         "padding_top": 36,
         "padding_bottom": 36
       }
+    },
+    "multirow_NmYkgA": {
+      "type": "multirow",
+      "blocks": {
+        "row_KHBVhk": {
+          "type": "row",
+          "settings": {
+            "image": "shopify://shop_images/uplift-desk-campus.png",
+            "caption": "Bildtext",
+            "heading": "Reihe",
+            "text": "<p>Kombiniere Text mit einem Bild, um den Fokus auf dein Produkt, deine Kollektion oder deinen Blog-Beitrag zu richten. Du kannst außerdem weitere Details über die Verfügbarkeit oder den Stil und sogar eine Bewertung hinzufügen.</p>",
+            "button_label": "Schaltflächenbeschriftung",
+            "button_link": ""
+          }
+        },
+        "row_azgGk3": {
+          "type": "row",
+          "settings": {
+            "image": "shopify://shop_images/pars-sahin-Hqo4lkFBQ2E-unsplash.jpg",
+            "caption": "Bildtext",
+            "heading": "Reihe",
+            "text": "<p>Kombiniere Text mit einem Bild, um den Fokus auf dein Produkt, deine Kollektion oder deinen Blog-Beitrag zu richten. Du kannst außerdem weitere Details über die Verfügbarkeit oder den Stil und sogar eine Bewertung hinzufügen.</p>",
+            "button_label": "Schaltflächenbeschriftung",
+            "button_link": ""
+          }
+        },
+        "row_kY4z3Q": {
+          "type": "row",
+          "settings": {
+            "image": "shopify://shop_images/sumup-ShB9pI4mpRg-unsplash.jpg",
+            "caption": "Bildtext",
+            "heading": "Reihe",
+            "text": "<p>Kombiniere Text mit einem Bild, um den Fokus auf dein Produkt, deine Kollektion oder deinen Blog-Beitrag zu richten. Du kannst außerdem weitere Details über die Verfügbarkeit oder den Stil und sogar eine Bewertung hinzufügen.</p>",
+            "button_label": "Schaltflächenbeschriftung",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "row_KHBVhk",
+        "row_azgGk3",
+        "row_kY4z3Q"
+      ],
+      "name": "t:sections.multirow.presets.name",
+      "settings": {
+        "image_height": "medium",
+        "desktop_image_width": "medium",
+        "image_layout": "alternate-left",
+        "heading_size": "h1",
+        "text_style": "body",
+        "button_style": "secondary",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "mobile_content_alignment": "left",
+        "section_color_scheme": "",
+        "row_color_scheme": "",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
     }
   },
   "order": [
     "main",
     "banner_JURqqE",
-    "multirow_ewHkEp"
+    "multirow_ewHkEp",
+    "multirow_NmYkgA"
   ]
 }
