@@ -396,7 +396,6 @@
     },
     "img_with_text_simplicity_YLCpmN": {
       "type": "img-with-text-simplicity",
-      "disabled": true,
       "custom_css": [],
       "name": "img with text simplicity",
       "settings": {
@@ -411,8 +410,8 @@
         "file_image": "shopify://shop_images/T2-Pro-Max-is-super-stable-with-precise-gasket.jpg",
         "video_url": "",
         "video_aspect_ratio": "4/3",
-        "btn_text": "",
-        "link_url": "",
+        "btn_text": "Learn More",
+        "link_url": "shopify://pages/die-vorteile-eines-hohenverstellbaren-schreibtisches",
         "padding_top": 60,
         "padding_bottom": 120,
         "background_color": "#e2ded6"
