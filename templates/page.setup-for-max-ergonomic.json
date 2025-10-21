@@ -48,6 +48,54 @@
         "padding_bottom": 52
       }
     },
+    "image_with_text_je8f9k": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_bJrdiM": {
+          "type": "heading",
+          "settings": {
+            "heading": "Die beste Vorgehensweise für den Wechsel zwischen Sitzen und Stehen:",
+            "heading_size": "h1"
+          }
+        },
+        "text_TMrWgX": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Wechseln Sie alle 30 bis 60 Minuten die Position. Die meisten Experten empfehlen ein Verhältnis zwischen 1:1 und 2:1 zwischen Sitz- und Stehzeit.</p>",
+            "text_style": "body"
+          }
+        },
+        "button_8gKfXw": {
+          "type": "button",
+          "settings": {
+            "button_label": "Weiterlesen",
+            "button_link": "",
+            "button_style_secondary": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_bJrdiM",
+        "text_TMrWgX",
+        "button_8gKfXw"
+      ],
+      "name": "t:sections.image-with-text.presets.name",
+      "settings": {
+        "image": "shopify://shop_images/adjustable-height-desk-Yoga.jpg",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "image_behavior": "none",
+        "content_layout": "no-overlap",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "center",
+        "mobile_content_alignment": "left",
+        "section_color_scheme": "",
+        "color_scheme": "",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
     "multirow_KtcExB": {
       "type": "multirow",
       "blocks": {
@@ -92,7 +140,7 @@
       "settings": {
         "image_height": "medium",
         "desktop_image_width": "medium",
-        "image_layout": "alternate-left",
+        "image_layout": "alternate-right",
         "heading_size": "h1",
         "text_style": "body",
         "button_style": "secondary",
@@ -104,59 +152,12 @@
         "padding_top": 36,
         "padding_bottom": 36
       }
-    },
-    "image_with_text_je8f9k": {
-      "type": "image-with-text",
-      "blocks": {
-        "heading_bJrdiM": {
-          "type": "heading",
-          "settings": {
-            "heading": "Bild mit Text",
-            "heading_size": "h1"
-          }
-        },
-        "text_TMrWgX": {
-          "type": "text",
-          "settings": {
-            "text": "<p>Kombiniere Text mit einem Bild, um den Fokus auf dein Produkt, deine Kollektion oder deinen Blog-Beitrag zu richten. Du kannst außerdem weitere Details über die Verfügbarkeit oder den Stil und sogar eine Bewertung hinzufügen.</p>",
-            "text_style": "body"
-          }
-        },
-        "button_8gKfXw": {
-          "type": "button",
-          "settings": {
-            "button_label": "Schaltflächenbeschriftung",
-            "button_link": "",
-            "button_style_secondary": false
-          }
-        }
-      },
-      "block_order": [
-        "heading_bJrdiM",
-        "text_TMrWgX",
-        "button_8gKfXw"
-      ],
-      "name": "t:sections.image-with-text.presets.name",
-      "settings": {
-        "height": "adapt",
-        "desktop_image_width": "medium",
-        "layout": "image_first",
-        "image_behavior": "none",
-        "content_layout": "no-overlap",
-        "desktop_content_position": "top",
-        "desktop_content_alignment": "left",
-        "mobile_content_alignment": "left",
-        "section_color_scheme": "",
-        "color_scheme": "",
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
     }
   },
   "order": [
     "main",
     "rich_text_K94cMb",
-    "multirow_KtcExB",
-    "image_with_text_je8f9k"
+    "image_with_text_je8f9k",
+    "multirow_KtcExB"
   ]
 }
