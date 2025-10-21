@@ -124,10 +124,11 @@
         "row_wFBNeA": {
           "type": "row",
           "settings": {
+            "image": "shopify://shop_images/nubelson-fernandes-tJdHJ7XzlL4-unsplash_2.jpg",
             "caption": "",
             "heading": "Das Zubehör zur Verbesserung des Arbeitserlebnisses",
-            "text": "<p>1,Monitorarme und Laptopständer<br/>2,Fußstützen und Anti-Ermüdungsmatten<br/>3,Handgelenk- und Armstützen<br/>4,Kabelmanagement und Schreibtischunterlagen</p>",
-            "button_label": "Schaltflächenbeschriftung",
+            "text": "<p>1,Monitorarme und Laptopständer<br/>2,Fußstützen und Anti-Ermüdungsmatten<br/>3,Ergonomische Tastaturen und Mäuse<br/>4,Handgelenk- und Armstützen<br/>5,Kabelmanagement und Schreibtischunterlagen</p>",
+            "button_label": "Weiterlesen",
             "button_link": ""
           }
         }
