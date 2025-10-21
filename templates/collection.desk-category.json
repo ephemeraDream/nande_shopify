@@ -164,53 +164,26 @@
         "background_color": "#ffffff"
       }
     },
-    "image_with_text_yyKVqe": {
-      "type": "image-with-text",
-      "blocks": {
-        "heading_8MPqb4": {
-          "type": "heading",
-          "settings": {
-            "heading": "Einrichtung für maximale Ergonomie",
-            "heading_size": "h1"
-          }
-        },
-        "text_8iwWJN": {
-          "type": "text",
-          "settings": {
-            "text": "<p>Einrichtung für maximale Ergonomie<br/>Wie hoch sollte dein höhenverstellbarer Schreibtisch beim Sitzen und Stehen sein?<br/>Wie oft solltest du im Arbeitsalltag zwischen Sitzen und Stehen wechseln?<br/>Welche Zubehörteile machen dein Arbeiten bequemer und effizienter?</p>",
-            "text_style": "body"
-          }
-        },
-        "button_cVVL78": {
-          "type": "button",
-          "settings": {
-            "button_label": "Finde es heraus!",
-            "button_link": "https://www.maidesite.de/pages/stellen-sie-ihren-hohenverstellbaren-schreibtisch-fur-optimale-ergonomie-ein",
-            "button_style_secondary": false
-          }
-        }
-      },
-      "block_order": [
-        "heading_8MPqb4",
-        "text_8iwWJN",
-        "button_cVVL78"
-      ],
-      "disabled": true,
-      "name": "t:sections.image-with-text.presets.name",
+    "img_with_text_simplicity_YPmYnJ": {
+      "type": "img-with-text-simplicity",
+      "name": "img with text simplicity",
       "settings": {
-        "image": "shopify://shop_images/adjustable-height-desk-Yoga.jpg",
-        "height": "adapt",
-        "desktop_image_width": "medium",
-        "layout": "image_first",
-        "image_behavior": "none",
-        "content_layout": "no-overlap",
-        "desktop_content_position": "top",
-        "desktop_content_alignment": "left",
-        "mobile_content_alignment": "left",
-        "section_color_scheme": "",
-        "color_scheme": "",
-        "padding_top": 36,
-        "padding_bottom": 36
+        "spec_id": "",
+        "header_title": "",
+        "header_content": "",
+        "title": "<p>Einrichtung für maximale Ergonomie</p>",
+        "sub_title": "",
+        "description": "Einrichtung für maximale ErgonomieWie hoch sollte dein höhenverstellbarer Schreibtisch beim Sitzen und Stehen sein?Wie oft solltest du im Arbeitsalltag zwischen Sitzen und Stehen wechseln?Welche Zubehörteile machen dein Arbeiten bequemer und effizienter?",
+        "file_position": "left",
+        "file_type": "image",
+        "file_image": "shopify://shop_images/adjustable-height-desk-Yoga.jpg",
+        "video_url": "",
+        "video_aspect_ratio": "4/3",
+        "btn_text": "Finde es heraus!",
+        "link_url": "https://www.maidesite.de/pages/stellen-sie-ihren-hohenverstellbaren-schreibtisch-fur-optimale-ergonomie-ein",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "background_color": "transparent"
       }
     },
     "faq_simple_MFhhga": {
@@ -436,7 +409,7 @@
     "img_with_text_simplicity_URDzRN",
     "img_with_text_simplicity_CehiJc",
     "img_with_text_simplicity_dDeThj",
-    "image_with_text_yyKVqe",
+    "img_with_text_simplicity_YPmYnJ",
     "faq_simple_MFhhga",
     "faq_simple_7h3eKd",
     "faq_simple_Fbi4Kx"
