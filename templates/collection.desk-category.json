@@ -214,7 +214,7 @@
           "type": "faq",
           "settings": {
             "question": "<p>Welcher verstellbare Schreibtisch bietet die beste Leistung?</p>",
-            "answer": "<p>Momentan empfehlen wir Ihnen den<a href=\"https://www.maidesite.de/products/maidesite-tischgestell-elektrisch-hohenverstellbar-t2-pro-plus\" title=\"Maidesite T2 Pro Plus - Tischgestell Elektrisch Höhenverstellbar\">T2 Pro Plus Schreibtisch</a>. Er ist sehr stabil, arbeitet mit einer Tischplattengröße von 110-200 cm, passt für Menschen von 1,4-1,9 m Körpergröße, hat eine Belastbarkeit von 160 kg, eine Bewegungsgeschwindigkeit von 40 mm/s und ist sehr leise. Auch der Preis ist im Vergleich zu anderen Wettbewerbern vernünftig.</p>"
+            "answer": "<p>Momentan empfehlen wir Ihnen den <a href=\"https://www.maidesite.de/products/maidesite-t2-pro-max-tischgestell-elektrisch-hohenverstellbar\" title=\"https://www.maidesite.de/products/maidesite-t2-pro-max-tischgestell-elektrisch-hohenverstellbar\">T2 Pro  Max Schreibtisch</a>. Er ist sehr stabil, arbeitet mit einer Tischplattengröße von 110-200 cm, passt für Menschen von 1,4-2,1 m Körpergröße, hat eine Belastbarkeit von 180 kg, eine Bewegungsgeschwindigkeit von 40 mm/s und ist sehr leise. Auch der Preis ist im Vergleich zu anderen Wettbewerbern vernünftig.</p>"
           }
         },
         "faq_FencKG": {
@@ -247,16 +247,10 @@
         },
         "faq_8giLdz": {
           "type": "faq",
+          "disabled": true,
           "settings": {
             "question": "<p>Was ist der Unterschied zwischen dem T2 Pro Plus und dem S2 Pro Plus?</p>",
             "answer": "<p>Der T2 Pro Plus ist ein separater tischgestell höhenverstellbar, während der S2 Pro Plus ein Bausatz ist, der den T2 Pro Plus gestell und eine Platte enthält.</p>"
-          }
-        },
-        "faq_ym6PJW": {
-          "type": "faq",
-          "settings": {
-            "question": "<p>Was ist der Unterschied zwischen dem T1 Pro und dem T2 Pro?</p>",
-            "answer": "<p>T1 Basic ist ein Einzelmotorantrieb, er ist nicht so gut wie die T2 Pro in Bezug auf Stabilität, Lebensdauer und Hubgeschwindigkeit, aber er ist kostengünstiger.</p>"
           }
         },
         "faq_CLRDtP": {
@@ -264,6 +258,13 @@
           "settings": {
             "question": "<p>Was ist der Unterschied zwischen T1 Pro und SN1?</p>",
             "answer": "<p>T1 Pro ist ein separater Rahmen, während SN1 ein Bausatz ist. Außerdem kann der Rahmen des T1 Pro von 96 cm auf 160 cm erweitert werden, während die Größe des SN1-Rahmens fest ist und nicht verändert werden kann.</p>"
+          }
+        },
+        "faq_ym6PJW": {
+          "type": "faq",
+          "settings": {
+            "question": "<p>Was ist der Unterschied zwischen dem T1 Pro und dem T2 Pro?</p>",
+            "answer": "<p>T1 Basic ist ein Einzelmotorantrieb, er ist nicht so gut wie die T2 Pro in Bezug auf Stabilität, Lebensdauer und Hubgeschwindigkeit, aber er ist kostengünstiger.</p>"
           }
         }
       },
@@ -277,8 +278,8 @@
         "faq_X7bLVD",
         "faq_tWHY6b",
         "faq_8giLdz",
-        "faq_ym6PJW",
-        "faq_CLRDtP"
+        "faq_CLRDtP",
+        "faq_ym6PJW"
       ],
       "name": "faq simple",
       "settings": {
