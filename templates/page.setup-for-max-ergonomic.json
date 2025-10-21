@@ -113,19 +113,20 @@
         "row_LKNwer": {
           "type": "row",
           "settings": {
-            "caption": "Bildtext",
-            "heading": "Reihe",
-            "text": "<p>Kombiniere Text mit einem Bild, um den Fokus auf dein Produkt, deine Kollektion oder deinen Blog-Beitrag zu richten. Du kannst außerdem weitere Details über die Verfügbarkeit oder den Stil und sogar eine Bewertung hinzufügen.</p>",
-            "button_label": "Schaltflächenbeschriftung",
+            "image": "shopify://shop_images/maidesite-bamboo-top-standing-desk-s2B-pro-140x70cm-workstation-desk-for-home-office.jpg",
+            "caption": "Was ist",
+            "heading": "Die optimale Höhe Ihres Arbeitsplatzes:",
+            "text": "<p>Tastatur und Maus/Bildschirm/Laptop/Konferenzkamera</p>",
+            "button_label": "Finden Sie es heraus",
             "button_link": ""
           }
         },
         "row_wFBNeA": {
           "type": "row",
           "settings": {
-            "caption": "Bildtext",
-            "heading": "Reihe",
-            "text": "<p>Kombiniere Text mit einem Bild, um den Fokus auf dein Produkt, deine Kollektion oder deinen Blog-Beitrag zu richten. Du kannst außerdem weitere Details über die Verfügbarkeit oder den Stil und sogar eine Bewertung hinzufügen.</p>",
+            "caption": "",
+            "heading": "Das Zubehör zur Verbesserung des Arbeitserlebnisses",
+            "text": "<p>1,Monitorarme und Laptopständer<br/>2,Fußstützen und Anti-Ermüdungsmatten<br/>3,Handgelenk- und Armstützen<br/>4,Kabelmanagement und Schreibtischunterlagen</p>",
             "button_label": "Schaltflächenbeschriftung",
             "button_link": ""
           }
