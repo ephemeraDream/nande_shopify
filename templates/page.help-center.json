@@ -161,6 +161,7 @@
       "blocks": {
         "item_01": {
           "type": "item",
+          "disabled": true,
           "settings": {
             "icon": "shopify://shop_images/contact-list-01.webp",
             "title": "Live-Chat",
@@ -171,6 +172,7 @@
         },
         "item_02": {
           "type": "item",
+          "disabled": true,
           "settings": {
             "icon": "shopify://shop_images/contact-list-02.webp",
             "title": "WhatsApp",
