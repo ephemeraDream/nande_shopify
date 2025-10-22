@@ -71,7 +71,7 @@
       <h2 class="img_with_text_simplicity_title">{{ section.settings.title }}</h2>
       <div class="img_with_text_simplicity_desc text-body">{{ section.settings.description }}</div>
       {% if section.settings.btn_text != blank %}
-        <a class="nd-btn" href="{{ section.settings.link }}">
+        <a class="nd-btn" href="{{ section.settings.link_url }}">
           {{ section.settings.btn_text }}
           {{ 'icon-right-arrow.svg' | inline_asset_content }}
         </a>
