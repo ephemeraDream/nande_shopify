@@ -250,7 +250,6 @@
 }
 .product_compare .product_compare_product {
   padding: 0 20px;
-  overflow: hidden;
 }
 .product_compare .product_compare_select {
   width: calc((100%) / 3);
@@ -282,7 +281,9 @@
   .product_compare .product_compare_product_contain {
     font-size: 1.8rem;
   }
-
+  .product_compare .product_compare_product {
+    overflow: hidden;
+  }
   .wrapper {
     overflow-x: auto;
   }
