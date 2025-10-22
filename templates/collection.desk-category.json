@@ -136,7 +136,7 @@
         "video_url": "",
         "video_aspect_ratio": "4/3",
         "btn_text": "Weiterlesen",
-        "link_url": "shopify://products/maidesite-to1-pro-elektrisch-hohenverstellbarer-schreibtisch",
+        "link_url": "https://www.maidesite.de/pages/die-vorteile-eines-hohenverstellbaren-schreibtisches",
         "padding_top": 0,
         "padding_bottom": 120,
         "background_color": "#ffffff"
@@ -183,7 +183,7 @@
         "link_url": "https://www.maidesite.de/pages/stellen-sie-ihren-hohenverstellbaren-schreibtisch-fur-optimale-ergonomie-ein",
         "padding_top": 0,
         "padding_bottom": 0,
-        "background_color": "transparent"
+        "background_color": "rgba(0,0,0,0)"
       }
     },
     "faq_simple_MFhhga": {
