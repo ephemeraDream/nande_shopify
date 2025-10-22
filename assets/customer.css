@@ -1151,11 +1151,20 @@ li[data-address]>h2 {
   .account_section_exit {
     font-size: 1.2rem;
   }
-
-  .account_section_account_head_info_flex+div {
-    font-size: 1.6rem;
+  .account_section_account_head_info_flex {
+    height: 5.2rem;
+    font-size: 3rem;
   }
-
+  .account_section_account_head_info_flex+div {
+    font-size: 1.2rem;
+    margin-top: 0rem;
+  }
+  .account_section_account_head {
+    height: 7.8rem;
+  }
+  .account_section_account_head:before {
+    height: 3.2rem;
+  }
   .account_section_tabs_contain tr {
     padding: 0 1.4rem;
   }
