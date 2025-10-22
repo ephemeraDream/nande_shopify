@@ -1168,4 +1168,7 @@ li[data-address]>h2 {
   .account_section_tabs_contain tr {
     padding: 0 1.4rem;
   }
+  .account_section_account_body {
+    flex-direction: column;
+}
 }
