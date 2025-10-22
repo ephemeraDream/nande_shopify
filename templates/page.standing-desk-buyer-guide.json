@@ -1,0 +1,186 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 56,
+        "padding_bottom": 56
+      }
+    },
+    "banner_JURqqE": {
+      "type": "banner",
+      "blocks": {
+        "banner_item_ycaNwN": {
+          "type": "banner_item",
+          "settings": {
+            "sub_title": "",
+            "title": "<p>Ratgeber zum Kauf eines höhenverstellbaren Schreibtisches</p>",
+            "text": "",
+            "btn_text": "",
+            "link": "",
+            "file_position": "middle_left",
+            "overlay_text_align": "text-start",
+            "transparent_content_color": "#ffffff",
+            "file_type": "image",
+            "file_image": "shopify://shop_images/ikea-4048229_1920.jpg",
+            "video_url": "",
+            "show_countdown": false,
+            "countdown": ""
+          }
+        }
+      },
+      "block_order": [
+        "banner_item_ycaNwN"
+      ],
+      "name": "banner",
+      "settings": {
+        "height_mode": "auto",
+        "fixed_height_desktop": 600,
+        "fixed_height_mobile": 350,
+        "mobile_stacked": false,
+        "background_color": "#dddddd",
+        "nav_style": "slideshow_nav_lines",
+        "pagination_color": "#ffffff",
+        "nav_position": "justify-center",
+        "transition": "slide-fade",
+        "autoplay": true,
+        "slider_pause": false,
+        "autoplay_speed": 5
+      }
+    },
+    "multirow_ewHkEp": {
+      "type": "multirow",
+      "blocks": {
+        "row_WVrx3P": {
+          "type": "row",
+          "settings": {
+            "image": "shopify://shop_images/Maidesite_electric_standing_desk_setup.jpg",
+            "caption": "",
+            "heading": "Was ist ein höhenverstellbarer Schreibtisch?",
+            "text": "<p>Ein höhenverstellbarer Schreibtisch ist ein Bürotisch, der sich in der Höhe verstellen lässt, so dass Sie im Arbeitsbereich vom Sitzen zum Stehen wechseln können. </p><p>Es gibt in der Regel 4 Arten von höhenverstellbaren Schreibtischen:</p><ul><li>Elektrisch höhenverstellbarer schreibtisch</li><li>schreibtisch höhenverstellbar kurbel</li><li>Pneumatischer schreibtisch</li><li>Schreibtischaufsätze höhenverstellbar</li></ul>",
+            "button_label": "Weiterlesen",
+            "button_link": "https://www.maidesite.de/blogs/maidesite-blog/was-ist-ein-hohenverstellbarer-schreibtisch"
+          }
+        },
+        "row_Pk8Uyz": {
+          "type": "row",
+          "settings": {
+            "image": "shopify://shop_images/markus-winkler-w8vPcVdSlF8-unsplash.jpg",
+            "caption": "Checkliste für Deutschland:",
+            "heading": "8 Kriterien, die Sie vor Ihrer Entscheidung beachten sollten",
+            "text": "<p>Mit diesen acht Kriterien in der Hand sind Sie bestens gerüstet, um einen perfekten Schreibtisch für Ihr Zuhause oder Büro zu finden.</p>",
+            "button_label": "Weiterlesen",
+            "button_link": "https://www.maidesite.de/blogs/maidesite-blog/schreibtisch-checkliste-8-kriterien-fur-klugen-online-kauf"
+          }
+        },
+        "row_N7AF3h": {
+          "type": "row",
+          "settings": {
+            "image": "shopify://shop_images/iec-55014-61000-and-din-1335-testing-standard.jpg",
+            "caption": "Höhenverstellbarer Schreibtisch",
+            "heading": "Rechtliche Aspekte und Normen",
+            "text": "<p>Elektrisch höhenverstellbare Schreibtische, die auf dem EU-Markt vertrieben werden, müssen strenge Sicherheits- und Qualitätsstandards erfüllen. Die CE-Kennzeichnung ist dabei ein verpflichtendes Symbol.</p><p>Es gibt weitere Normen für höhenverstellbare Schreibtische wie DIN EN 527-1:2011 (definiert Maße für Schreibtische und Arbeitstische), DIN EN 1335 (ergonomische Anforderungen an die Arbeitsplatzgestaltung), DIN 4556 (spezielle Anforderungen an motorisch höhenverstellbare Schreibtische) und DIN 68877 (Anforderungen an Tragfähigkeit und Standsicherheit).</p>",
+            "button_label": "Weiterlesen",
+            "button_link": "https://www.maidesite.de/blogs/maidesite-blog/ergonomische-standards-hohenverstellbare-tische-im-fokus"
+          }
+        }
+      },
+      "block_order": [
+        "row_WVrx3P",
+        "row_Pk8Uyz",
+        "row_N7AF3h"
+      ],
+      "name": "t:sections.multirow.presets.name",
+      "settings": {
+        "image_height": "medium",
+        "desktop_image_width": "medium",
+        "image_layout": "alternate-left",
+        "heading_size": "h1",
+        "text_style": "body",
+        "button_style": "secondary",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "mobile_content_alignment": "left",
+        "section_color_scheme": "",
+        "row_color_scheme": "",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "multirow_NmYkgA": {
+      "type": "multirow",
+      "blocks": {
+        "row_KHBVhk": {
+          "type": "row",
+          "settings": {
+            "image": "shopify://shop_images/uplift-desk-campus.png",
+            "caption": "Deutschland",
+            "heading": "Höhenverstellbarer Schreibtisch Markenleitfaden",
+            "text": "<p>Diese Marken sind auf dem deutschen Markt für höhenverstellbare Schreibtische sehr beliebt, sowohl im Laden als auch im Internet:</p><p>Sedus Stoll AG/König + Neurath/Steelcase/Hund Büromöbel</p><p>IKEA/Flexispot/Maideiste/Fully/Ergotopia/Boho/Desktronic/Yaasa </p><p>Herman Miller/Autonomous/LINAK</p>",
+            "button_label": "Markenleitfaden",
+            "button_link": "https://www.maidesite.de/blogs/maidesite-blog/hohenverstellbare-schreibtische-in-deutschland-der-grosse-marken-guide"
+          }
+        },
+        "row_azgGk3": {
+          "type": "row",
+          "settings": {
+            "image": "shopify://shop_images/pars-sahin-Hqo4lkFBQ2E-unsplash.jpg",
+            "caption": "",
+            "heading": "Bezugsquellen für Ihren höhenverstellbaren Schreibtisch",
+            "text": "<p>Wo deinen höhenverstellbaren Schreibtisch kaufen? Online-Spezialist, Marktplatz oder Möbelhaus? Alle Optionen verglichen – spare Geld und finde Qualität Schreibtisch!</p>",
+            "button_label": "Kanal finden",
+            "button_link": "https://www.maidesite.de/blogs/maidesite-blog/wo-kann-man-in-deutschland-hoehenverstellbare-schreibtische-kaufen"
+          }
+        },
+        "row_kY4z3Q": {
+          "type": "row",
+          "settings": {
+            "image": "shopify://shop_images/sumup-ShB9pI4mpRg-unsplash.jpg",
+            "caption": "Deutscher Markt",
+            "heading": "Kaufberatung für höhenverstellbare Schreibtische",
+            "text": "<p>Finden Sie den richtigen höhenverstellbaren Schreibtisch nach Ihrem Budget und Verwendungszweck aus einer Auswahl der beliebtesten Modelle in Deutschland.</p>",
+            "button_label": "Weiterlesen",
+            "button_link": "https://www.maidesite.de/blogs/maidesite-blog/deutschland-ultimative-kaufratgeber-fur-hohenverstellbaren-schreibtischs"
+          }
+        }
+      },
+      "block_order": [
+        "row_KHBVhk",
+        "row_azgGk3",
+        "row_kY4z3Q"
+      ],
+      "name": "t:sections.multirow.presets.name",
+      "settings": {
+        "image_height": "medium",
+        "desktop_image_width": "medium",
+        "image_layout": "alternate-right",
+        "heading_size": "h1",
+        "text_style": "body",
+        "button_style": "secondary",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "mobile_content_alignment": "left",
+        "section_color_scheme": "",
+        "row_color_scheme": "",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    }
+  },
+  "order": [
+    "main",
+    "banner_JURqqE",
+    "multirow_ewHkEp",
+    "multirow_NmYkgA"
+  ]
+}

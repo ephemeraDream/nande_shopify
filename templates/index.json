@@ -31,26 +31,6 @@
             "countdown": ""
           }
         },
-        "banner_item_e7J8AA": {
-          "type": "banner_item",
-          "disabled": true,
-          "settings": {
-            "sub_title": "<p>7.–8. Oktober</p>",
-            "title": "<p>Große Angebots-Tage</p>",
-            "text": "<p>Bis zu 39% Rabatt</p>",
-            "btn_text": "Jetzt sparen",
-            "link": "https://www.maidesite.de/pages/maidesite-grosse-angebots-tage",
-            "file_position": "top_center",
-            "overlay_text_align": "text-end",
-            "transparent_content_color": "#ffffff",
-            "file_type": "image",
-            "file_image": "shopify://shop_images/Banner_a60806e8-98f2-4336-a6ad-7505a295760a.jpg",
-            "file_image_pe": "shopify://shop_images/Banner_bbe8a9bf-2160-451a-a683-46f0bcc6589a.jpg",
-            "video_url": "",
-            "show_countdown": false,
-            "countdown": ""
-          }
-        },
         "banner_item_t4GakG": {
           "type": "banner_item",
           "settings": {
@@ -65,6 +45,25 @@
             "file_type": "image",
             "file_image": "shopify://shop_images/728e5ca6a1162c30c0732fc581656e23.jpg",
             "file_image_pe": "shopify://shop_images/c1883716f24d43cf6bfe51729db2ed71_6ebac678-2277-471f-9333-56d5f9ffd9e7.jpg",
+            "video_url": "",
+            "show_countdown": false,
+            "countdown": ""
+          }
+        },
+        "banner_item_e7J8AA": {
+          "type": "banner_item",
+          "settings": {
+            "sub_title": "<p>7.–8. Oktober</p>",
+            "title": "<p>Große Angebots-Tage</p>",
+            "text": "<p>Bis zu 39% Rabatt</p>",
+            "btn_text": "Jetzt sparen",
+            "link": "https://www.maidesite.de/pages/maidesite-grosse-angebots-tage",
+            "file_position": "top_center",
+            "overlay_text_align": "text-end",
+            "transparent_content_color": "#ffffff",
+            "file_type": "image",
+            "file_image": "shopify://shop_images/Banner_a60806e8-98f2-4336-a6ad-7505a295760a.jpg",
+            "file_image_pe": "shopify://shop_images/Banner_bbe8a9bf-2160-451a-a683-46f0bcc6589a.jpg",
             "video_url": "",
             "show_countdown": false,
             "countdown": ""
@@ -91,6 +90,7 @@
         },
         "banner_item_ykwd4B": {
           "type": "banner_item",
+          "disabled": true,
           "settings": {
             "sub_title": "",
             "title": "<p>Maidesite Yoga</p>",
@@ -111,8 +111,8 @@
       },
       "block_order": [
         "banner_item_NCLJWQ",
-        "banner_item_e7J8AA",
         "banner_item_t4GakG",
+        "banner_item_e7J8AA",
         "banner_item_V4RHqa",
         "banner_item_ykwd4B"
       ],
@@ -120,8 +120,8 @@
       "name": "banner",
       "settings": {
         "height_mode": "fixed",
-        "fixed_height_desktop": 800,
-        "fixed_height_mobile": 340,
+        "fixed_height_desktop": 700,
+        "fixed_height_mobile": 400,
         "mobile_stacked": true,
         "background_color": "#dddddd",
         "nav_style": "slideshow_nav_dots",

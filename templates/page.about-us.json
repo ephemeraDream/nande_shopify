@@ -69,6 +69,7 @@
         "file_type": "image",
         "file_image": "shopify://shop_images/Maidesite-desk-story.jpg",
         "video_url": "",
+        "video_aspect_ratio": "4/3",
         "btn_text": "",
         "link_url": "",
         "padding_top": 0,
@@ -90,6 +91,7 @@
         "file_type": "image",
         "file_image": "shopify://shop_images/Maidesite-standing-desk-design-hand-drawing-1600x1200.jpg",
         "video_url": "",
+        "video_aspect_ratio": "4/3",
         "btn_text": "",
         "link_url": "",
         "padding_top": 0,
@@ -111,6 +113,7 @@
         "file_type": "image",
         "file_image": "shopify://shop_images/Maidesite-warehouse.jpg",
         "video_url": "",
+        "video_aspect_ratio": "4/3",
         "btn_text": "",
         "link_url": "",
         "padding_top": 0,
@@ -132,8 +135,9 @@
         "file_type": "image",
         "file_image": "shopify://shop_images/A_young_lady_working_at_Maidesite_standing_desk_4d3fd12d-25b4-428b-9a8a-8e9908d2ea53.jpg",
         "video_url": "",
+        "video_aspect_ratio": "4/3",
         "btn_text": "",
-        "link_url": "",
+        "link_url": "shopify://products/maidesite-ec6-ergonomischer-burostuhl-mit-kopfstutze-ruckenlehne-und-fussstutze",
         "padding_top": 0,
         "padding_bottom": 52,
         "background_color": "rgba(0,0,0,0)"
@@ -148,9 +152,9 @@
         "small_title": "Maidesite – Ihr Partner für gesundes und produktives Arbeiten",
         "title": "Ergonomisches Arbeiten Neu Definiert",
         "text": "<p>Maidesite gehört zu den führenden Anbietern ergonomischer Büromöbel in Europa. <br/>Mit einem Team aus Designern, Ingenieuren und Ergonomie-Experten entwickeln wir innovative Lösungen, die Ihre Gesundheit, <br/>Ihren Komfort und Ihre Produktivität steigern. Unser Ziel: Eine Arbeitsumgebung, die sich perfekt an Ihre Bedürfnisse anpasst – für mehr Wohlbefinden und Effizienz im Alltag.</p>",
-        "btn_text": "",
+        "btn_text": "6999",
         "image": "shopify://shop_images/Maidesite_manufacture_base.jpg",
-        "link": ""
+        "link": "shopify://products/ergoset-yoga-schreibtisch-ec6-burostuhl"
       }
     },
     "time_line": {

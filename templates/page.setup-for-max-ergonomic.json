@@ -1,0 +1,165 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 56,
+        "padding_bottom": 56
+      }
+    },
+    "rich_text_K94cMb": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_xRcPEQ": {
+          "type": "heading",
+          "settings": {
+            "heading": "Einrichtung für optimale Ergonomie",
+            "heading_size": "h1"
+          }
+        },
+        "text_RQTqGt": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Stellen Sie Ihren höhenverstellbaren Schreibtisch und Bürostuhl richtig ein, wechseln Sie zwischen Sitzen und Stehen und nutzen Sie Zubehör für komfortables und produktives Arbeiten.<br/></p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_xRcPEQ",
+        "text_RQTqGt"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "image_with_text_je8f9k": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_bJrdiM": {
+          "type": "heading",
+          "settings": {
+            "heading": "Die beste Vorgehensweise für den Wechsel zwischen Sitzen und Stehen:",
+            "heading_size": "h1"
+          }
+        },
+        "text_TMrWgX": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Wechseln Sie alle 30 bis 60 Minuten die Position. Die meisten Experten empfehlen ein Verhältnis zwischen 1:1 und 2:1 zwischen Sitz- und Stehzeit.</p>",
+            "text_style": "body"
+          }
+        },
+        "button_8gKfXw": {
+          "type": "button",
+          "settings": {
+            "button_label": "Weiterlesen",
+            "button_link": "https://www.maidesite.de/blogs/maidesite-blog/mude-bei-der-arbeit-wie-abwechselndes-sitzen-und-stehen-hilft",
+            "button_style_secondary": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_bJrdiM",
+        "text_TMrWgX",
+        "button_8gKfXw"
+      ],
+      "name": "t:sections.image-with-text.presets.name",
+      "settings": {
+        "image": "shopify://shop_images/adjustable-height-desk-Yoga.jpg",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "image_behavior": "none",
+        "content_layout": "no-overlap",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "center",
+        "mobile_content_alignment": "left",
+        "section_color_scheme": "",
+        "color_scheme": "",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "multirow_KtcExB": {
+      "type": "multirow",
+      "blocks": {
+        "row_aY4yzL": {
+          "type": "row",
+          "settings": {
+            "image": "shopify://shop_images/Maidesite_desk_height_adjustable.jpg",
+            "caption": "",
+            "heading": "Wie hoch sollte Ihr höhenverstellbarer Schreibtisch sein?",
+            "text": "<p>Finden Sie die richtige Höhe zum Sitzen und Stehen für Ihren höhenverstellbaren Schreibtisch und genießen Sie komfortables Arbeiten.</p>",
+            "button_label": "Weiterlesen",
+            "button_link": "https://www.maidesite.de/blogs/maidesite-blog/die-richtige-schreibtisch-und-stuhlh-he-fur-sie"
+          }
+        },
+        "row_LKNwer": {
+          "type": "row",
+          "settings": {
+            "image": "shopify://shop_images/maidesite-bamboo-top-standing-desk-s2B-pro-140x70cm-workstation-desk-for-home-office.jpg",
+            "caption": "Was ist",
+            "heading": "Die optimale Höhe Ihres Arbeitsplatzes:",
+            "text": "<p>Tastatur und Maus/Bildschirm/Laptop/Konferenzkamera</p>",
+            "button_label": "Finden Sie es heraus",
+            "button_link": "https://www.maidesite.de/blogs/maidesite-blog/ergonomischer-arbeitsplatz-einrichten-der-ultimative-guide"
+          }
+        },
+        "row_wFBNeA": {
+          "type": "row",
+          "settings": {
+            "image": "shopify://shop_images/nubelson-fernandes-tJdHJ7XzlL4-unsplash_2.jpg",
+            "caption": "",
+            "heading": "Das Zubehör zur Verbesserung des Arbeitserlebnisses",
+            "text": "<p>1,Monitorarme und Laptopständer<br/>2,Fußstützen und Anti-Ermüdungsmatten<br/>3,Ergonomische Tastaturen und Mäuse<br/>4,Handgelenk- und Armstützen<br/>5,Kabelmanagement und Schreibtischunterlagen</p>",
+            "button_label": "Weiterlesen",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "row_aY4yzL",
+        "row_LKNwer",
+        "row_wFBNeA"
+      ],
+      "name": "t:sections.multirow.presets.name",
+      "settings": {
+        "image_height": "medium",
+        "desktop_image_width": "medium",
+        "image_layout": "alternate-right",
+        "heading_size": "h1",
+        "text_style": "body",
+        "button_style": "primary",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "mobile_content_alignment": "left",
+        "section_color_scheme": "scheme-1",
+        "row_color_scheme": "",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    }
+  },
+  "order": [
+    "main",
+    "rich_text_K94cMb",
+    "image_with_text_je8f9k",
+    "multirow_KtcExB"
+  ]
+}

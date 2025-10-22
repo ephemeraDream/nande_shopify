@@ -108,6 +108,40 @@
         "background_color": "#ffffff"
       }
     },
+    "img_with_text_simplicity_CehiJc": {
+      "type": "img-with-text-simplicity",
+      "blocks": {
+        "append_info_jM37QN": {
+          "type": "appendInfo",
+          "settings": {
+            "subtitle": "",
+            "text": ""
+          }
+        }
+      },
+      "block_order": [
+        "append_info_jM37QN"
+      ],
+      "name": "img with text simplicity",
+      "settings": {
+        "spec_id": "",
+        "header_title": "",
+        "header_content": "",
+        "title": "<p>Die Vorteile eines Schreibtisch Verstellbar</p>",
+        "sub_title": "",
+        "description": "1. Komfort und Anpassungsfähigkeit: Stellen Sie Ihre Arbeitsfläche individuell ein und vermeiden Sie Schmerzen.<br><br>2. Gesundheitliche Vorteile: Reduzieren Sie das Risiko für Rückenschmerzen, Fettleibigkeit und Herz-Kreislauf-Erkrankungen.<br><br>3. Körperhaltung: Eine korrekte Haltung reduziert Muskelspannung und Schmerzen.<br><br>4. Beweglichkeit: Wechseln zwischen Sitz- und Stehen fördert Gelenks- und Muskelbeweglichkeit.<br><br>5. Moderne Arbeitsweise: Ein ansprechender Arbeitsplatz, der Kreativität und Motivation fördert.<br><br>6. Produktivität: Stehtätigkeit fördert Aufmerksamkeit und Energie, steigert die Leistung.",
+        "file_position": "left",
+        "file_type": "image",
+        "file_image": "shopify://shop_images/Vergleichen_Sie_Maidesite-Modelle_img_2.webp",
+        "video_url": "",
+        "video_aspect_ratio": "4/3",
+        "btn_text": "Weiterlesen",
+        "link_url": "shopify://products/maidesite-to1-pro-elektrisch-hohenverstellbarer-schreibtisch",
+        "padding_top": 0,
+        "padding_bottom": 120,
+        "background_color": "#ffffff"
+      }
+    },
     "img_with_text_simplicity_dDeThj": {
       "type": "img-with-text-simplicity",
       "name": "img with text simplicity",
@@ -115,41 +149,41 @@
         "spec_id": "",
         "header_title": "",
         "header_content": "",
-        "title": "<p>Vergleichen Sie </p><p>Maidesite-Modelle</p>",
+        "title": "<p>5 Kriterien für den Kauf eines verstellbaren Schreibtisches</p>",
         "sub_title": "",
-        "description": "<p>Vergleichen Sie die verschiedenen Maidesite-Modelle und finden Sie den </p><p>perfekten höhenverstellbaren Schreibtisch für Ihre Bedürfnisse.</p>",
-        "file_position": "left",
+        "description": "1.Kompatibilität: Überprüfen Sie, ob der Tisch mit Ihren bestehenden Möbelstücken und Ihrem Arbeitsplatz konform ist.<br><br>2. Dimensionen: Achten Sie darauf, dass die tisch höhenverstellbar Ihren Anforderungen entspricht und genügend Arbeitsfläche bietet.<br><br>3. Qualität: Stellen Sie sicher, dass der Tisch aus robustem Material ist und gut verarbeitet ist.<br><br>4. Preis-Leistung: Berücksichtigen Sie die Kosten im Verhältnis zu den Funktionen und der Qualität.<br><br>5. Service: Informieren Sie sich über den Kundenservice und die Garantie des Herstellers.",
+        "file_position": "right",
         "file_type": "image",
-        "file_image": "shopify://shop_images/Vergleichen_Sie_Maidesite-Modelle_img_2.webp",
+        "file_image": "shopify://shop_images/Vergleichen_Sie_Maidesite-Modelle_img_3.webp",
         "video_url": "",
         "video_aspect_ratio": "4/3",
-        "btn_text": "",
-        "link_url": "",
+        "btn_text": "Richtigen Schreibtisch finden",
+        "link_url": "shopify://pages/ratgeber-zum-kauf-eines-hohenverstellbaren-schreibtisches",
         "padding_top": 0,
         "padding_bottom": 0,
         "background_color": "#ffffff"
       }
     },
-    "img_with_text_simplicity_CehiJc": {
+    "img_with_text_simplicity_YPmYnJ": {
       "type": "img-with-text-simplicity",
       "name": "img with text simplicity",
       "settings": {
         "spec_id": "",
         "header_title": "",
         "header_content": "",
-        "title": "<p>Vergleichen Sie </p><p>Maidesite-Modelle</p>",
+        "title": "<p>Einrichtung für maximale Ergonomie</p>",
         "sub_title": "",
-        "description": "<p>Vergleichen Sie die verschiedenen Maidesite-Modelle und finden Sie den </p><p>perfekten höhenverstellbaren Schreibtisch für Ihre Bedürfnisse.</p>",
-        "file_position": "right",
+        "description": "Wie hoch sollte dein höhenverstellbarer Schreibtisch beim Sitzen und Stehen sein?<br><br>\nWie oft solltest du im Arbeitsalltag zwischen Sitzen und Stehen wechseln?<br><br>Welche Zubehörteile machen dein Arbeiten bequemer und effizienter?",
+        "file_position": "left",
         "file_type": "image",
-        "file_image": "shopify://shop_images/Vergleichen_Sie_Maidesite-Modelle_img_3.webp",
+        "file_image": "shopify://shop_images/adjustable-height-desk-Yoga.jpg",
         "video_url": "",
         "video_aspect_ratio": "4/3",
-        "btn_text": "",
-        "link_url": "",
+        "btn_text": "Finde es heraus!",
+        "link_url": "https://www.maidesite.de/pages/stellen-sie-ihren-hohenverstellbaren-schreibtisch-fur-optimale-ergonomie-ein",
         "padding_top": 0,
-        "padding_bottom": 120,
-        "background_color": "#ffffff"
+        "padding_bottom": 0,
+        "background_color": "transparent"
       }
     },
     "faq_simple_MFhhga": {
@@ -159,14 +193,14 @@
           "type": "faq",
           "settings": {
             "question": "<p>Welches Modell ist Ihr stabilster höhenverstellbarer Schreibtisch?</p>",
-            "answer": "<p>Der<a href=\"https://www.maidesite.de/products/maidesite-t4-pro-plus-vierbeinige-elliptische-saule-elektrisch-hohenverstellbares-gestell\" title=\"Maidesite T4 Pro Plus - Vierbeinige elliptische Säule Elektrisch Höhenverstellbares Gestell\">T4 Pro Plus</a>ist unser stabilster verstellbarer Bürotisch. Er verfügt über 4 Beine mit zwei leistungsstarken Motoren, die den Arbeitstisch so stabil wie möglich halten und aufwärts/abwärts reibungslos bewegen.</p>"
+            "answer": "<p>Der <a href=\"https://www.maidesite.de/products/maidesite-t4-pro-plus-vierbeinige-elliptische-saule-elektrisch-hohenverstellbares-gestell\" title=\"Maidesite T4 Pro Plus - Vierbeinige elliptische Säule Elektrisch Höhenverstellbares Gestell\">T4 Pro Plus</a>ist unser stabilster verstellbarer Bürotisch. Er verfügt über 4 Beine mit zwei leistungsstarken Motoren, die den Arbeitstisch so stabil wie möglich halten und aufwärts/abwärts reibungslos bewegen.</p>"
           }
         },
         "faq_mhXwKg": {
           "type": "faq",
           "settings": {
             "question": "<p>Welches Modell ist für Sie der günstigste höhenverstellbare Schreibtisch?</p>",
-            "answer": "<p>Wenn Sie einen Schreibtisch mit einer kompakten Tischplatte bevorzugen, ist die<a href=\"https://www.maidesite.de/products/maidesite-sn1-basic-elektrisch-hohenverstellbarer-schreibtisch-100x60cm-120x60-cm\" title=\"Maidesite SN1 - Elektrisch Höhenverstellbarer Schreibtisch\">SN1</a>Ihre beste Wahl. Mit Schreibtischgestell, Tischplatte, Rollen, Schubladen und einer Zetteltafel – alle notwendigen Zubehörteile sind in einem Paket enthalten, sodass Sie ihn sofort zusammenbauen und nutzen können.<br/><br/>Wenn Sie Ihre bestehende Tischplatte weiterverwenden möchten, empfehlen wir Ihnen den Kauf des<a href=\"https://www.maidesite.de/products/elektrisch-hohenverstellbarer-gestell-t1-basic\" title=\"Maidesite T1 Pro - Elektrisch Höhenverstellbarer Gestell\">T1 Pro</a>. Es ist der leistungsstärkste und leichtest zu bedienende elektrische Schreibtisch in seinem Preissegment.<br/><br/></p>"
+            "answer": "<p>Wenn Sie einen Schreibtisch mit einer kompakten Tischplatte bevorzugen, ist die <a href=\"https://www.maidesite.de/products/maidesite-sn1-basic-elektrisch-hohenverstellbarer-schreibtisch-100x60cm-120x60-cm\" title=\"Maidesite SN1 - Elektrisch Höhenverstellbarer Schreibtisch\">SN1 </a>Ihre beste Wahl. Mit Schreibtischgestell, Tischplatte, Rollen, Schubladen und einer Zetteltafel – alle notwendigen Zubehörteile sind in einem Paket enthalten, sodass Sie ihn sofort zusammenbauen und nutzen können.<br/><br/>Wenn Sie Ihre bestehende Tischplatte weiterverwenden möchten, empfehlen wir Ihnen den Kauf des <a href=\"https://www.maidesite.de/products/elektrisch-hohenverstellbarer-gestell-t1-basic\" title=\"Maidesite T1 Pro - Elektrisch Höhenverstellbarer Gestell\">T1 Pro</a>. Es ist der leistungsstärkste und leichtest zu bedienende elektrische Schreibtisch in seinem Preissegment.</p>"
           }
         },
         "faq_9xFbr6": {
@@ -180,7 +214,7 @@
           "type": "faq",
           "settings": {
             "question": "<p>Welcher verstellbare Schreibtisch bietet die beste Leistung?</p>",
-            "answer": "<p>Momentan empfehlen wir Ihnen den<a href=\"https://www.maidesite.de/products/maidesite-tischgestell-elektrisch-hohenverstellbar-t2-pro-plus\" title=\"Maidesite T2 Pro Plus - Tischgestell Elektrisch Höhenverstellbar\">T2 Pro Plus Schreibtisch</a>. Er ist sehr stabil, arbeitet mit einer Tischplattengröße von 110-200 cm, passt für Menschen von 1,4-1,9 m Körpergröße, hat eine Belastbarkeit von 125 kg, eine Bewegungsgeschwindigkeit von 40 mm/s und ist sehr leise. Auch der Preis ist im Vergleich zu anderen Wettbewerbern vernünftig.</p>"
+            "answer": "<p>Momentan empfehlen wir Ihnen den <a href=\"https://www.maidesite.de/products/maidesite-t2-pro-max-tischgestell-elektrisch-hohenverstellbar\" title=\"https://www.maidesite.de/products/maidesite-t2-pro-max-tischgestell-elektrisch-hohenverstellbar\">T2 Pro  Max Schreibtisch</a>. Er ist sehr stabil, arbeitet mit einer Tischplattengröße von 110-200 cm, passt für Menschen von 1,4-2,1 m Körpergröße, hat eine Belastbarkeit von 180 kg, eine Bewegungsgeschwindigkeit von 40 mm/s und ist sehr leise. Wenn Sie einen robusten und langlebigen Schreibtisch benötigen, ist dieses Modell definitiv die beste Wahl.</p>"
           }
         },
         "faq_FencKG": {
@@ -194,42 +228,43 @@
           "type": "faq",
           "settings": {
             "question": "<p>Was ist der Unterschied zwischen dem T2 Pro Max und dem T2 Pro Plus?</p>",
-            "answer": "<p>Provide an answer to the question here, with as much detail as possible to help your customers.</p>"
+            "answer": "<p>Der <a href=\"https://www.maidesite.de/products/maidesite-t2-pro-max-tischgestell-elektrisch-hohenverstellbar\" title=\"https://www.maidesite.de/products/maidesite-t2-pro-max-tischgestell-elektrisch-hohenverstellbar\">T2 Pro Max</a> hat eine bessere Leistung als der T2 Pro Plus, der Höhenverstellbereich beträgt 65-135 cm, beim <a href=\"https://www.maidesite.de/products/maidesite-tischgestell-elektrisch-hohenverstellbar-t2-pro-plus\" title=\"https://www.maidesite.de/products/maidesite-tischgestell-elektrisch-hohenverstellbar-t2-pro-plus\">T2 Pro Plus</a> sind es 62-127 cm. Der T2 Pro Max eignet sich am besten für besonders große Benutzer. Die Tragkraft des T2 Pro Max beträgt bis zu 180 kg, die des T2 Pro Plus 160 kg.<br/>Das T2 Pro Max lässt sich schnell zusammenbauen, in 15 bis 30 Minuten, während das T2 Pro Plus 30 bis 60 Minuten benötigt.<br/>Das T2 Pro Max verfügt über eine leistungsstärkere Steuerung als das T2 Pro Plus. Sie können die Beleuchtung für jede Taste ändern und Ihren Schreibtisch durch Drücken der Tasten im Klavierstil nach oben und unten verstell</p>"
           }
         },
         "faq_X7bLVD": {
           "type": "faq",
           "settings": {
-            "question": "<p>Was ist der Unterschied zwischen T2 Pro Plus und TH2 Pro Plus?</p>",
-            "answer": "<p>Der TH2 Pro Plus verfügt über eine ovale Hubsäule und ovale Füße für stabileres Heben und Senken, bessere Tragfähigkeit und ein schlankeres, eleganteres Aussehen.</p>"
+            "question": "<p>Was ist der Unterschied zwischen T2 Pro Plus und EL2 Plus Art?</p>",
+            "answer": "<p>Der <a href=\"https://www.maidesite.de/products/maidesite-th2-pro-plus-tischgestell-elektrisch-hohenverstellbar\" title=\"https://www.maidesite.de/products/maidesite-th2-pro-plus-tischgestell-elektrisch-hohenverstellbar\">EL2 Plus Art</a> verfügt über eine ovale Hubsäule und ovale Füße für stabileres Heben und Senken, bessere Tragfähigkeit und ein schlankeres, eleganteres Aussehen.</p>"
           }
         },
         "faq_tWHY6b": {
           "type": "faq",
           "settings": {
             "question": "<p>Was ist der Unterschied zwischen dem T2 Pro und dem T2 Pro Plus?</p>",
-            "answer": "<p>Der T2 Pro ist für Personen mit einer Körpergröße zwischen 1,55 und 2,1 m geeignet, der T2 Pro Plus für Personen mit einer Körpergröße zwischen 1,4 und 1,9 m. Sie können je nach Ihren Bedürfnissen und Vorlieben wählen.</p>"
+            "answer": "<p>Der <a href=\"https://www.maidesite.de/products/maidesite-elektrisch-hohenverstellbarer-gestell-t2-pro\" title=\"https://www.maidesite.de/products/maidesite-elektrisch-hohenverstellbarer-gestell-t2-pro\">T2 Pro</a> ist für Personen mit einer Körpergröße zwischen 1,55 und 2,1 m geeignet, der T2 Pro Plus für Personen mit einer Körpergröße zwischen 1,4 und 1,9 m. Sie können je nach Ihren Bedürfnissen und Vorlieben wählen.</p>"
           }
         },
         "faq_8giLdz": {
           "type": "faq",
+          "disabled": true,
           "settings": {
             "question": "<p>Was ist der Unterschied zwischen dem T2 Pro Plus und dem S2 Pro Plus?</p>",
             "answer": "<p>Der T2 Pro Plus ist ein separater tischgestell höhenverstellbar, während der S2 Pro Plus ein Bausatz ist, der den T2 Pro Plus gestell und eine Platte enthält.</p>"
-          }
-        },
-        "faq_ym6PJW": {
-          "type": "faq",
-          "settings": {
-            "question": "<p>Was ist der Unterschied zwischen dem T1 Pro und dem T2 Pro?</p>",
-            "answer": "<p>T1 Basic ist ein Einzelmotorantrieb, er ist nicht so gut wie die T2 Pro in Bezug auf Stabilität, Lebensdauer und Hubgeschwindigkeit, aber er ist kostengünstiger.</p>"
           }
         },
         "faq_CLRDtP": {
           "type": "faq",
           "settings": {
             "question": "<p>Was ist der Unterschied zwischen T1 Pro und SN1?</p>",
-            "answer": "<p>T1 Pro ist ein separater Rahmen, während SN1 ein Bausatz ist. Außerdem kann der Rahmen des T1 Pro von 96 cm auf 160 cm erweitert werden, während die Größe des SN1-Rahmens fest ist und nicht verändert werden kann.</p>"
+            "answer": "<p><a href=\"/products/elektrisch-hohenverstellbarer-gestell-t1-basic\" title=\"Maidesite T1 Pro - Elektrisch Höhenverstellbarer Gestell\">T1 Pro</a> ist ein separater Rahmen, während SN1 ein Bausatz ist. Außerdem kann der Rahmen des T1 Pro von 96 cm auf 160 cm erweitert werden, während die Größe des SN1-Rahmens fest ist und nicht verändert werden kann.</p>"
+          }
+        },
+        "faq_ym6PJW": {
+          "type": "faq",
+          "settings": {
+            "question": "<p>Was ist der Unterschied zwischen dem T1 Pro und dem T2 Pro?</p>",
+            "answer": "<p>T1 Pro ist ein Einzelmotorantrieb, er ist nicht so gut wie die <a href=\"/products/maidesite-elektrisch-hohenverstellbarer-gestell-t2-pro\" title=\"Maidesite T2 Pro - Elektrisch Höhenverstellbares Gestell\">T2 Pro</a> in Bezug auf Stabilität, Lebensdauer und Hubgeschwindigkeit, aber er ist kostengünstiger.</p>"
           }
         }
       },
@@ -243,8 +278,8 @@
         "faq_X7bLVD",
         "faq_tWHY6b",
         "faq_8giLdz",
-        "faq_ym6PJW",
-        "faq_CLRDtP"
+        "faq_CLRDtP",
+        "faq_ym6PJW"
       ],
       "name": "faq simple",
       "settings": {
@@ -373,8 +408,9 @@
     "collection_compare_khmbzE",
     "compare_simple_YrUqUG",
     "img_with_text_simplicity_URDzRN",
-    "img_with_text_simplicity_dDeThj",
     "img_with_text_simplicity_CehiJc",
+    "img_with_text_simplicity_dDeThj",
+    "img_with_text_simplicity_YPmYnJ",
     "faq_simple_MFhhga",
     "faq_simple_7h3eKd",
     "faq_simple_Fbi4Kx"
