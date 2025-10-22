@@ -244,12 +244,22 @@
   .product_compare .product_compare_product_sticky {
     background-color: #f2f1ed;
     position: sticky;
-    top: 0rem;
-    padding-right: 0rem;
+    top: 5rem;
+    padding-right: 2rem;
+    padding-left: 2rem;
     padding-top:0rem;
 }
 .product_compare .product_compare_product {
-  padding: 0 20px;
+  padding: 0 0px;
+}
+product_compare .product_compare_product_card {
+  padding-top: 4rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+.product_compare .product_compare_product_body {
+  margin-top: 1rem;
+  padding-top: 1rem;
 }
 .product_compare .product_compare_select {
   width: calc((100%) / 3);
