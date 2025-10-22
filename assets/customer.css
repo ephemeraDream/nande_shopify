@@ -1152,9 +1152,9 @@ li[data-address]>h2 {
     font-size: 1.2rem;
   }
   .account_section_account_head_info_flex {
-    height: 5.2rem;
-    font-size: 3rem;
-  }
+    height: 3rem;
+    font-size: 2.4rem;
+}
   .account_section_account_head_info_flex+div {
     font-size: 1.2rem;
     margin-top: 0rem;
