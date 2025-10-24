@@ -694,6 +694,84 @@
         "spec_id": ""
       }
     },
+    "img_with_text_tab_Wra4W3": {
+      "type": "img-with-text-tab",
+      "blocks": {
+        "tab_EkiTWd": {
+          "type": "tab",
+          "settings": {
+            "tabname": "RGB-Beleuchtung",
+            "sub_title": "",
+            "title": "",
+            "description": "Mit aktivierter RGB-Beleuchtung genießen Sie ein beeindruckendes Ambiente. Die farbigen Lichtstreifen schaffen eine angenehme Atmosphäre, die den Arbeitsplatz optisch aufwertet und das Arbeiten oder Zocken noch intensiver macht.",
+            "file_type": "image",
+            "file_image": "shopify://shop_images/15_-_RGB.jpg",
+            "video_url": "",
+            "btn_text": "",
+            "link": ""
+          }
+        },
+        "tab_FGBd79": {
+          "type": "tab",
+          "settings": {
+            "tabname": "Erinnerung zum Aufstehen",
+            "sub_title": "",
+            "title": "",
+            "description": "Das integrierte Reminder-System erinnert regelmäßig daran, aufzustehen und die Sitzposition zu wechseln. So fördern Sie ein gesünderes Arbeiten im Stehen und beugen langfristigen Rückenproblemen oder Verspannungen vor.",
+            "file_type": "image",
+            "file_image": "shopify://shop_images/17.jpg",
+            "video_url": "",
+            "btn_text": "",
+            "link": ""
+          }
+        },
+        "tab_hmFgnY": {
+          "type": "tab",
+          "settings": {
+            "tabname": "10 W USB-C-Ladeanschluss",
+            "sub_title": "",
+            "title": "",
+            "description": "Bietet besonders schnelle Ladegeschwindigkeiten für Smartphones, Tablets oder andere USB-C-Geräte. Damit können Sie mehrere Geräte gleichzeitig effizient laden, ohne zusätzliche Ladegeräte zu benötigen.",
+            "file_type": "image",
+            "file_image": "shopify://shop_images/18.jpg",
+            "video_url": "",
+            "btn_text": "",
+            "link": ""
+          }
+        },
+        "tab_QnJXkK": {
+          "type": "tab",
+          "settings": {
+            "tabname": "Kindersicherung",
+            "sub_title": "",
+            "title": "",
+            "description": "Verhindert unbeabsichtigtes Betätigen der Tasten und schützt Kinder zuverlässig vor möglichen Verletzungen, sodass der Tisch auch in Haushalten mit kleinen Kindern sicher genutzt werden kann.",
+            "file_type": "image",
+            "file_image": "shopify://shop_images/16_b29f66f5-cd56-434c-ad7d-b350ea17f97b.jpg",
+            "video_url": "",
+            "btn_text": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "tab_EkiTWd",
+        "tab_FGBd79",
+        "tab_hmFgnY",
+        "tab_QnJXkK"
+      ],
+      "name": "img with text tab",
+      "settings": {
+        "spec_id": "",
+        "description": "",
+        "title": "<p>Multifunktionaler Handcontroller</p>",
+        "show_tab_head": true,
+        "loop": true,
+        "autoplay_enable": true,
+        "autoplay_delay": 5000,
+        "layout": "image-left"
+      }
+    },
     "technical_data_L3gXUm": {
       "type": "technical-data",
       "name": "technical data",
@@ -966,6 +1044,7 @@
     "img_with_text_tab_emEWU8",
     "img_with_foldtext_LzqrtY",
     "tabs_topic_bGPHaj",
+    "img_with_text_tab_Wra4W3",
     "technical_data_L3gXUm",
     "maidesite_swiper_QhkQG8",
     "celebrity_swiper_aGymw9",
