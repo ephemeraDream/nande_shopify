@@ -363,7 +363,7 @@
           "type": "foldtext",
           "settings": {
             "title": "<p><strong>Vier Querstreben</strong></p>",
-            "description": ">Die quer verlaufenden Verstrebungen erhöhen die Widerstandskraft der Tischplatte gegen Durchbiegen um beeindruckende 56 %. Selbst bei voller Ausstattung mit schweren Geräten sorgt dieses zusätzliche Stützsystem dafür, dass die Platte ihre Form behält und Belastungen gleichmäßig verteilt werden.",
+            "description": "Die quer verlaufenden Verstrebungen erhöhen die Widerstandskraft der Tischplatte gegen Durchbiegen um beeindruckende 56 %. Selbst bei voller Ausstattung mit schweren Geräten sorgt dieses zusätzliche Stützsystem dafür, dass die Platte ihre Form behält und Belastungen gleichmäßig verteilt werden.",
             "image": "shopify://shop_images/10.jpg"
           }
         },
@@ -378,8 +378,8 @@
         "foldtext_yeFeyr": {
           "type": "foldtext",
           "settings": {
-            "title": "",
-            "description": "",
+            "title": "<p><strong>Verdickte Standrohre:</strong> </p>",
+            "description": "Die Standrohre aus Kaltstahl wurden um 40 % verstärkt und bieten so maximale Festigkeit und Langlebigkeit. Sie garantieren eine gleichmäßige Lastverteilung und halten selbst extremen Belastungen stand, sodass der Tisch auch nach jahrelangem Gebrauch sicher und stabil bleibt.",
             "image": "shopify://shop_images/13.jpg"
           }
         }
