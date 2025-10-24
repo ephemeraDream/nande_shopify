@@ -215,54 +215,54 @@
             "url_upload": "shopify://files/videos/圆腿颜值.mp4"
           }
         },
-        "file_with_text_f9yPAD": {
-          "type": "file_with_text",
-          "settings": {
-            "title": "<p>Extra starke Tragkraft 240 kg</p>",
-            "description": "<p>Trägt Monitore, PC und Zubehör bis zu 240 kg mühelos – selbst voll ausgestattet mit mehreren Bildschirmen, Rechner und schwerem Zubehör bleibt der Tisch souverän und stabil.<br/></p>",
-            "file_type": "video",
-            "video_url": "",
-            "url_upload": "shopify://files/videos/承重.mp4"
-          }
-        },
         "file_with_text_Q8tJKk": {
           "type": "file_with_text",
           "settings": {
             "title": "<p>Maximale Stabilität</p>",
-            "description": "<p>Kein Wackeln – zuverlässig in jeder Höhe. Selbst ein Kartenhaus bleibt während des Hoch- und Runterfahrens vollkommen stabil.</p>",
+            "description": "<p>Kein Wackeln – absolut stabil in allen Höhenlagen, auch beim schnellen Höhenwechsel.</p>",
             "file_type": "image",
             "file_image": "shopify://shop_images/2_-_1200x800_e53aa359-eb2d-4bb1-b149-5cc4fde00971.jpg",
             "video_url": "",
             "url_upload": "shopify://files/videos/稳定性.mp4"
           }
         },
-        "file_with_text_ykc3D8": {
+        "file_with_text_f9yPAD": {
           "type": "file_with_text",
           "settings": {
-            "title": "<p>Schnelle Montage in Minuten</p>",
-            "description": "<p>Einfach aufgebaut – in wenigen Minuten einsatzbereit</p>",
-            "file_type": "image",
-            "file_image": "shopify://shop_images/5_d49d75a7-b7a8-44fe-8d8e-0fcbfc3d9b44.jpg",
+            "title": "<p>Extra starke Tragkraft 240 kg</p>",
+            "description": "<p>Trägt bis zu 240 kg – auch mit mehreren Bildschirmen, Rechnern und schwerem Zubehör bleibt der Tisch stabil.<br/><br/><br/></p>",
+            "file_type": "video",
             "video_url": "",
-            "url_upload": "shopify://files/videos/组装 - 0821 - Grey C 灰底.mp4"
+            "url_upload": "shopify://files/videos/承重.mp4"
           }
         },
         "file_with_text_McHwGa": {
           "type": "file_with_text",
           "settings": {
-            "title": "<p>Farbwechsel-Handset</p>",
-            "description": "<p>Wechselnde Farben für einen coolen, individuellen Look</p>",
+            "title": "<p>Vielseitig einsetzbar</p>",
+            "description": "<p>Flexibel für größere Platten und verschiedene Szenarien.</p>",
             "file_type": "video",
             "file_image": "shopify://shop_images/T2-Pro-Max-gray-desk-height-adjustable-65-135-cm.jpg",
             "video_url": "",
             "url_upload": "shopify://files/videos/14 - 多场景 - 视频.mp4"
           }
         },
+        "file_with_text_ykc3D8": {
+          "type": "file_with_text",
+          "settings": {
+            "title": "<p>RGB-Touchpanel</p>",
+            "description": "<p>Smart. Farblich. Präzise.</p>",
+            "file_type": "image",
+            "file_image": "shopify://shop_images/5_d49d75a7-b7a8-44fe-8d8e-0fcbfc3d9b44.jpg",
+            "video_url": "",
+            "url_upload": "shopify://files/videos/组装 - 0821 - Grey C 灰底.mp4"
+          }
+        },
         "file_with_text_THJTyK": {
           "type": "file_with_text",
           "settings": {
-            "title": "<p>Premium-Qualität für Jahre</p>",
-            "description": "<p>Robuste Materialien – langlebig und zuverlässig</p>",
+            "title": "<p>Großer Kabelkanal</p>",
+            "description": "<p>Organisiert Steckdosenleisten und Kabel mühelos.</p>",
             "file_type": "image",
             "file_image": "shopify://shop_images/6_8b94026b-eb39-4799-8c04-906d86601721.jpg",
             "video_url": "",
@@ -327,10 +327,10 @@
       },
       "block_order": [
         "file_with_text_JJXCp8",
-        "file_with_text_f9yPAD",
         "file_with_text_Q8tJKk",
-        "file_with_text_ykc3D8",
+        "file_with_text_f9yPAD",
         "file_with_text_McHwGa",
+        "file_with_text_ykc3D8",
         "file_with_text_THJTyK",
         "file_with_text_PnqAPd",
         "file_with_text_G8PtXG",
@@ -381,12 +381,10 @@
         "foldtext_HWP39G",
         "foldtext_iGWkAs"
       ],
-      "disabled": true,
       "name": "img with foldtext",
       "settings": {
         "spec_id": "",
-        "title": "<p>Extrem stabiler T2 Pro Plus</p>",
-        "image": "shopify://shop_images/featured-spaces-5.webp",
+        "title": "",
         "padding_top": 120,
         "padding_bottom": 120
       }
@@ -597,6 +595,94 @@
         "title": "<p>Maidesite-Schreibtisch stabiler und zuverlässiger</p>",
         "padding_top": 120,
         "padding_bottom": 120
+      }
+    },
+    "tabs_topic_bGPHaj": {
+      "type": "tabs-topic",
+      "blocks": {
+        "tab_D7d8qp": {
+          "type": "tab",
+          "settings": {
+            "tab_title": "Schreibtisch"
+          }
+        },
+        "tab_RVm6tw": {
+          "type": "tab",
+          "settings": {
+            "tab_title": "Konferenztisch"
+          }
+        },
+        "tab_FqHjEf": {
+          "type": "tab",
+          "settings": {
+            "tab_title": "Esstisch"
+          }
+        },
+        "tab_U9hiCw": {
+          "type": "tab",
+          "settings": {
+            "tab_title": "Arbeitstisch"
+          }
+        },
+        "slide_Dd8RDL": {
+          "type": "slide",
+          "settings": {
+            "belong_tab": "0",
+            "image": "shopify://shop_images/14_-_1.jpg",
+            "title": "",
+            "text": "",
+            "btn_text": "",
+            "link": ""
+          }
+        },
+        "slide_6GMWFp": {
+          "type": "slide",
+          "settings": {
+            "belong_tab": "1",
+            "image": "shopify://shop_images/14_-_3.jpg",
+            "title": "",
+            "text": "",
+            "btn_text": "",
+            "link": ""
+          }
+        },
+        "slide_UNAbXB": {
+          "type": "slide",
+          "settings": {
+            "belong_tab": "2",
+            "image": "shopify://shop_images/14_-_2.jpg",
+            "title": "",
+            "text": "",
+            "btn_text": "",
+            "link": ""
+          }
+        },
+        "slide_m9pXk4": {
+          "type": "slide",
+          "settings": {
+            "belong_tab": "3",
+            "image": "shopify://shop_images/14_-_4.jpg",
+            "title": "",
+            "text": "",
+            "btn_text": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "tab_D7d8qp",
+        "tab_RVm6tw",
+        "tab_FqHjEf",
+        "tab_U9hiCw",
+        "slide_Dd8RDL",
+        "slide_6GMWFp",
+        "slide_UNAbXB",
+        "slide_m9pXk4"
+      ],
+      "name": "Tabs Topic (default)",
+      "settings": {
+        "title": "Flexibel für größere Platten und verschiedene Szenarien.",
+        "spec_id": ""
       }
     },
     "technical_data_L3gXUm": {
@@ -870,6 +956,7 @@
     "img_with_text_simplicity_JRCJ4f",
     "img_with_text_tab_emEWU8",
     "img_with_foldtext_LzqrtY",
+    "tabs_topic_bGPHaj",
     "technical_data_L3gXUm",
     "maidesite_swiper_QhkQG8",
     "celebrity_swiper_aGymw9",
