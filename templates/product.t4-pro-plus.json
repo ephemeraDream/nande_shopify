@@ -209,7 +209,8 @@
           "settings": {
             "title": "<p>Ovalbein-Design</p>",
             "description": "<p>Eleganz im Spiel von Licht und Schatten – vielseitig und unverwechselbar</p>",
-            "file_type": "video",
+            "file_type": "image",
+            "file_image": "shopify://shop_images/1_0fa188d4-4270-49a1-b48a-7c999eff38f2.jpg",
             "video_url": "",
             "url_upload": "shopify://files/videos/圆腿颜值.mp4"
           }
@@ -229,43 +230,41 @@
           "settings": {
             "title": "<p>Maximale Stabilität</p>",
             "description": "<p>Kein Wackeln – zuverlässig in jeder Höhe. Selbst ein Kartenhaus bleibt während des Hoch- und Runterfahrens vollkommen stabil.</p>",
-            "file_type": "video",
+            "file_type": "image",
+            "file_image": "shopify://shop_images/2_ae7e71b7-c854-4589-8e69-c35387f90bf5.jpg",
             "video_url": "",
             "url_upload": "shopify://files/videos/稳定性.mp4"
           }
         },
+        "file_with_text_ykc3D8": {
+          "type": "file_with_text",
+          "settings": {
+            "title": "<p>Schnelle Montage in Minuten</p>",
+            "description": "<p>Einfach aufgebaut – in wenigen Minuten einsatzbereit</p>",
+            "file_type": "image",
+            "file_image": "shopify://shop_images/5_d49d75a7-b7a8-44fe-8d8e-0fcbfc3d9b44.jpg",
+            "video_url": "",
+            "url_upload": "shopify://files/videos/组装 - 0821 - Grey C 灰底.mp4"
+          }
+        },
         "file_with_text_McHwGa": {
           "type": "file_with_text",
-          "disabled": true,
           "settings": {
             "title": "<p>Farbwechsel-Handset</p>",
             "description": "<p>Wechselnde Farben für einen coolen, individuellen Look</p>",
             "file_type": "video",
             "file_image": "shopify://shop_images/T2-Pro-Max-gray-desk-height-adjustable-65-135-cm.jpg",
             "video_url": "",
-            "url_upload": "shopify://files/videos/手控器 - 0825 - Grey C 灰底.mp4"
-          }
-        },
-        "file_with_text_ykc3D8": {
-          "type": "file_with_text",
-          "disabled": true,
-          "settings": {
-            "title": "<p>Schnelle Montage in Minuten</p>",
-            "description": "<p>Einfach aufgebaut – in wenigen Minuten einsatzbereit</p>",
-            "file_type": "video",
-            "file_image": "shopify://shop_images/T2-Pro-Max-black-control-panel-with-Maid-OS_9ae8a8ff-e2b8-48aa-bd7c-3e6c54d59f49.jpg",
-            "video_url": "",
-            "url_upload": "shopify://files/videos/组装 - 0821 - Grey C 灰底.mp4"
+            "url_upload": "shopify://files/videos/14 - 多场景 - 视频.mp4"
           }
         },
         "file_with_text_THJTyK": {
           "type": "file_with_text",
-          "disabled": true,
           "settings": {
             "title": "<p>Premium-Qualität für Jahre</p>",
             "description": "<p>Robuste Materialien – langlebig und zuverlässig</p>",
-            "file_type": "video",
-            "file_image": "shopify://shop_images/P7.jpg",
+            "file_type": "image",
+            "file_image": "shopify://shop_images/6_8b94026b-eb39-4799-8c04-906d86601721.jpg",
             "video_url": "",
             "url_upload": "shopify://files/videos/稳定性 - 0818 - Grey C 灰底.mp4"
           }
@@ -330,8 +329,8 @@
         "file_with_text_JJXCp8",
         "file_with_text_f9yPAD",
         "file_with_text_Q8tJKk",
-        "file_with_text_McHwGa",
         "file_with_text_ykc3D8",
+        "file_with_text_McHwGa",
         "file_with_text_THJTyK",
         "file_with_text_PnqAPd",
         "file_with_text_G8PtXG",
