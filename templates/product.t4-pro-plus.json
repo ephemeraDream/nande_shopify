@@ -364,13 +364,13 @@
           "settings": {
             "title": "<p><strong>Vier Querstreben</strong></p>",
             "description": "Die quer verlaufenden Verstrebungen erhöhen die Widerstandskraft der Tischplatte gegen Durchbiegen um beeindruckende 56 %. Selbst bei voller Ausstattung mit schweren Geräten sorgt dieses zusätzliche Stützsystem dafür, dass die Platte ihre Form behält und Belastungen gleichmäßig verteilt werden.",
-            "image": "shopify://shop_images/10.jpg"
+            "image": "shopify://shop_images/11_4b55f6ad-356b-48b6-81a2-73cef6d7031c.jpg"
           }
         },
         "foldtext_iGWkAs": {
           "type": "foldtext",
           "settings": {
-            "title": "<p><strong>Verstärkte Seitenplatten:</strong></p>",
+            "title": "<p><strong>Verstärkte Seitenplatten</strong></p>",
             "description": "Verstärkte Seitenplatten: Die breiteren und dickeren Seitenplatten schaffen mehr Auflagefläche für die Tischplatte und tragen erheblich zur Gesamtkonstruktion bei. Sie stabilisieren den Tisch seitlich und verhindern jegliches Wackeln oder Verziehen, selbst unter intensiver Nutzung.",
             "image": "shopify://shop_images/12_12fb55d9-c25c-45e8-bffe-8d63cd41b27a.jpg"
           }
@@ -378,7 +378,7 @@
         "foldtext_yeFeyr": {
           "type": "foldtext",
           "settings": {
-            "title": "<p><strong>Verdickte Standrohre:</strong> </p>",
+            "title": "<p><strong>Verdickte Standrohre</strong></p>",
             "description": "Die Standrohre aus Kaltstahl wurden um 40 % verstärkt und bieten so maximale Festigkeit und Langlebigkeit. Sie garantieren eine gleichmäßige Lastverteilung und halten selbst extremen Belastungen stand, sodass der Tisch auch nach jahrelangem Gebrauch sicher und stabil bleibt.",
             "image": "shopify://shop_images/13.jpg"
           }
@@ -865,6 +865,7 @@
         "swiper_mexwM6",
         "swiper_xWLxVC"
       ],
+      "disabled": true,
       "name": "celebrity swiper",
       "settings": {
         "title": "<p>Empfehlen Von</p>",
