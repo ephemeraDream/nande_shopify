@@ -766,7 +766,7 @@
         "description": "",
         "title": "<p>Multifunktionaler Handcontroller</p>",
         "show_tab_head": true,
-        "loop": false,
+        "loop": true,
         "autoplay_enable": true,
         "autoplay_delay": 5000,
         "layout": "image-left"
