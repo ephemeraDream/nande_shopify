@@ -252,7 +252,7 @@
 .product_compare .product_compare_product {
   padding: 0 0px;
 }
-product_compare .product_compare_product_card {
+.product_compare .product_compare_product_card {
   padding-top: 4rem;
   padding-left: 2rem;
   padding-right: 2rem;
@@ -272,6 +272,7 @@ product_compare .product_compare_product_card {
   .product_compare .product_compare_title {
     width: 100%;
     padding-left: 2.4rem;
+    overflow: hidden;
   }
 
   .product_compare .product_compare_flex {
