@@ -155,6 +155,7 @@
         },
         "item_Vt9rJN": {
           "type": "item",
+          "disabled": true,
           "settings": {
             "title": "Tests",
             "anchor_name": "Tests"
@@ -175,7 +176,6 @@
         "item_Vt9rJN",
         "item_DECJU4"
       ],
-      "disabled": true,
       "name": "product anchor bar",
       "settings": {
         "button_text": "Jetzt kaufen",
