@@ -178,10 +178,10 @@
       ],
       "name": "product anchor bar",
       "settings": {
-        "button_text": "Jetzt kaufen",
+        "button_text": "",
         "button_url": "",
         "button_target_blank": false,
-        "show_icon": true
+        "show_icon": false
       }
     },
     "video_wPHLA8": {
