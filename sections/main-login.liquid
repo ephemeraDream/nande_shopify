@@ -332,39 +332,18 @@
         const formData = new FormData(registerForm);
         // 自定义表单提交逻辑（例如使用 AJAX 提交表单）
         // 使用 fetch 发送表单数据
-        fetch('/account/register', {
+        fetch('/account', {
           method: 'POST',
           body: formData,
         })
-        .then(response => response.text()) // 使用 response.text() 来获取返回的原始 HTML
+        .then(response => response.json()) // 使用 response.text() 来获取返回的原始 HTML
         .then(data => {
-          /// 检查返回的数据
-          const successMessageElement = document.querySelector('.form__message.success-message');
-          const errorMessageElement = document.querySelector('.form__message.error-message');
-
-          // 如果没有找到成功消息元素，则动态创建
-          if (!successMessageElement) {
-            
-            const successMessage = document.createElement('div');
-            successMessage.classList.add('form__message', 'success-message');
-            successMessage.textContent = '注册成功！'; // 根据实际情况替换消息内容
-            document.body.appendChild(successMessage); // 将消息添加到页面中
-          }
-
+          console.log('提交后:', data);
           // 如果返回的数据包含成功消息
           if (data.includes('success')) {
             console.log('注册成功:', data);
             {% comment %} successMessageElement.classList.add('show'); {% endcomment %}
           }
-
-          // 如果没有找到错误消息元素，则动态创建
-          if (!errorMessageElement) {
-            const errorMessage = document.createElement('div');
-            errorMessage.classList.add('form__message', 'error-message');
-            errorMessage.textContent = '发生错误，请重试。'; // 根据实际情况替换错误消息
-            document.body.appendChild(errorMessage); // 将消息添加到页面中
-          }
-
           // 处理错误消息
           if (data.includes('error')) {
             console.log('注册失败:', data);
