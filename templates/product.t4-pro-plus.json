@@ -768,7 +768,7 @@
         "show_tab_head": true,
         "loop": true,
         "autoplay_enable": true,
-        "autoplay_delay": 5000,
+        "autoplay_delay": 6000,
         "layout": "image-left"
       }
     },
