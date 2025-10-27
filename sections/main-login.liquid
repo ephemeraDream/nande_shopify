@@ -332,7 +332,7 @@
         const formData = new FormData(registerForm);
         // 自定义表单提交逻辑（例如使用 AJAX 提交表单）
         // 使用 fetch 发送表单数据
-        fetch(registerForm.action, {
+        fetch('/account/register', {
           method: 'POST',
           body: formData,
         })
