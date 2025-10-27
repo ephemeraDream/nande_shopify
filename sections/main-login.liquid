@@ -324,6 +324,34 @@
       document.querySelector(`.login_section_tabs_contain[data-value=${type}]`).classList.add('active');
     });
   });
+  document.addEventListener('DOMContentLoaded', function () {
+    const registerForm = document.querySelector('form[action="/account"]'); // 或者根据你的实际情况调整选择器
+    if (registerForm) {
+      registerForm.addEventListener('submit', function (event) {
+        event.preventDefault(); // 阻止默认的表单提交
+        const formData = new FormData(registerForm);
+        // 自定义表单提交逻辑（例如使用 AJAX 提交表单）
+        fetch(registerForm.action, {
+          method: 'POST',
+          body: formData,
+        })
+          .then(response => response.json())
+          .then(data => {
+            if (data.status === 'success') {
+              // 显示成功消息
+              document.querySelector('.form__message.success-message').classList.add('show');
+            } else {
+              // 处理错误消息
+              document.querySelector('.form__message.error-message').classList.add('show');
+            }
+          })
+          .catch(error => {
+            console.error('Error:', error);
+          });
+      });
+    }
+  });
+  
 </script>
 
 {% schema %}
