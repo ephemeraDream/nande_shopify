@@ -331,23 +331,28 @@
         event.preventDefault(); // 阻止默认的表单提交
         const formData = new FormData(registerForm);
         // 自定义表单提交逻辑（例如使用 AJAX 提交表单）
+        // 使用 fetch 发送表单数据
         fetch(registerForm.action, {
           method: 'POST',
           body: formData,
         })
-          .then(response => response.json())
-          .then(data => {
-            if (data.status === 'success') {
-              // 显示成功消息
-              document.querySelector('.form__message.success-message').classList.add('show');
-            } else {
-              // 处理错误消息
-              document.querySelector('.form__message.error-message').classList.add('show');
-            }
-          })
-          .catch(error => {
-            console.error('Error:', error);
-          });
+        .then(response => response.text()) // 使用 response.text() 来获取返回的原始 HTML
+        .then(data => {
+          // 如果返回的数据是 HTML，检查它是否包含成功或错误消息
+          if (data.includes('success')) {
+            // 显示成功消息
+            document.querySelector('.form__message.success-message').classList.add('show');
+          } else if (data.includes('error')) {
+            // 处理错误消息
+            document.querySelector('.form__message.error-message').classList.add('show');
+          } else {
+            // 处理无法解析的响应
+            console.error('无法处理的响应:', data);
+          }
+        })
+        .catch(error => {
+          console.error('提交表单时出错:', error);
+        });
       });
     }
   });
