@@ -324,7 +324,7 @@
       document.querySelector(`.login_section_tabs_contain[data-value=${type}]`).classList.add('active');
     });
   });
-  document.addEventListener('DOMContentLoaded', function () {
+  {% comment %} document.addEventListener('DOMContentLoaded', function () {
     const registerForm = document.querySelector('form[action="/account"]'); // 或者根据你的实际情况调整选择器
     if (registerForm) {
       registerForm.addEventListener('submit', function (event) {
@@ -356,7 +356,7 @@
         });
       });
     }
-  });
+  }); {% endcomment %}
   
 </script>
 
