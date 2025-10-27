@@ -364,7 +364,7 @@
           "settings": {
             "title": "<p><strong>Vier Querstreben</strong></p>",
             "description": "Die quer verlaufenden Verstrebungen erhöhen die Widerstandskraft der Tischplatte gegen Durchbiegen um beeindruckende 56 %. Selbst bei voller Ausstattung mit schweren Geräten sorgt dieses zusätzliche Stützsystem dafür, dass die Platte ihre Form behält und Belastungen gleichmäßig verteilt werden.",
-            "image": "shopify://shop_images/11_4b55f6ad-356b-48b6-81a2-73cef6d7031c.jpg"
+            "image": "shopify://shop_images/10.jpg"
           }
         },
         "foldtext_iGWkAs": {
@@ -745,7 +745,7 @@
             "tabname": "Kindersicherung",
             "sub_title": "",
             "title": "",
-            "description": "Verhindert unbeabsichtigtes Betätigen der Tasten und schützt Kinder zuverlässig vor möglichen Verletzungen, sodass der Tisch auch in Haushalten mit kleinen Kindern sicher genutzt werden kann.",
+            "description": "<p class=\"left-text\">\n    Verhindert unbeabsichtigtes Betätigen der Tasten und schützt Kinder zuverlässig vor möglichen Verletzungen,\n    sodass der Tisch auch in Haushalten mit kleinen Kindern sicher genutzt werden kann.\n</p>\n\n<style>\n.left-text {\n    text-align: left;\n    margin: 0;\n    padding: 0;\n}\n</style>",
             "file_type": "image",
             "file_image": "shopify://shop_images/16_b29f66f5-cd56-434c-ad7d-b350ea17f97b.jpg",
             "video_url": "",
