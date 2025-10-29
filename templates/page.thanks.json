@@ -19,8 +19,8 @@
         "custom_breadcrumb": ""
       }
     },
-    "thakns": {
-      "type": "thakns",
+    "thanks": {
+      "type": "thanks",
       "name": "thanks",
       "settings": {
         "title": "Thank you for registering!",
@@ -32,6 +32,6 @@
   },
   "order": [
     "breadcrumbs",
-    "thakns"
+    "thanks"
   ]
 }
