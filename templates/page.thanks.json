@@ -9,29 +9,15 @@
  */
 {
   "sections": {
-    "breadcrumbs": {
-      "type": "breadcrumbs",
-      "disabled": true,
-      "custom_css": [
-        ".breadcrumb-con {top: 0;}"
-      ],
+    "main": {
+      "type": "main-page",
       "settings": {
-        "custom_breadcrumb": ""
-      }
-    },
-    "thanks": {
-      "type": "thanks",
-      "name": "thanks",
-      "settings": {
-        "title": "Thank you for registering!",
-        "text": "Your account has been successfully created. You can now enjoy shopping with us.",
-        "btn_text": "Return to Shop",
-        "link": ""
+        "padding_top": 56,
+        "padding_bottom": 56
       }
     }
   },
   "order": [
-    "breadcrumbs",
-    "thanks"
+    "main"
   ]
 }
