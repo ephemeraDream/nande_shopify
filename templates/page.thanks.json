@@ -9,28 +9,32 @@
  */
 {
   "sections": {
-    "breadcrumbs": {
+    "breadcrumbs_ja9VhQ": {
       "type": "breadcrumbs",
       "custom_css": [
         ".breadcrumb-con {top: 0;}"
       ],
+      "name": "Breadcrumb",
       "settings": {
         "custom_breadcrumb": ""
       }
     },
-    "thanks": {
+    "thanks_TkiYkb": {
       "type": "thanks",
       "name": "thanks",
       "settings": {
         "title": "Thank you for registering!",
-        "text": "Your account has been successfully created. You can now enjoy shopping with us.",
+        "text": "<p>Your account has been successfully created. You can now enjoy shopping with us.</p>",
         "btn_text": "Return to Shop",
-        "link": ""
+        "link": "",
+        "padding_top": 36,
+        "padding_bottom": 36
       }
     }
   },
   "order": [
-    "breadcrumbs",
-    "thanks"
+    "main",
+    "breadcrumbs_ja9VhQ",
+    "thanks_TkiYkb"
   ]
 }
