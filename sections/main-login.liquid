@@ -189,7 +189,7 @@
       {% comment %} {{ 'customer.register.title' | t }} {% endcomment %}
     </h1>
     
-    {%- form 'create_customer', novalidate: 'novalidate' -%}
+    {%- form 'create_customer', novalidate: 'novalidate',return_to: '/pages/thanks' -%}
       {%- if form.errors -%}
         <h2 class="form__message" tabindex="-1" autofocus>
           <span class="svg-wrapper">
