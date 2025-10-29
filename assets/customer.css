@@ -1153,7 +1153,7 @@ li[data-address]>h2 {
   }
   .account_section_account_head_info_flex {
     height: 3rem;
-    font-size: 2.4rem;
+    font-size: 2.2rem;
 }
   .account_section_account_head_info_flex+div {
     font-size: 1.2rem;
@@ -1164,6 +1164,7 @@ li[data-address]>h2 {
   }
   .account_section_account_head:before {
     height: 3.2rem;
+    width: 14%;
   }
   .account_section_tabs_contain tr {
     padding: 0 1.4rem;
