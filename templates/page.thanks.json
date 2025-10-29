@@ -9,11 +9,16 @@
  */
 {
   "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 56,
+        "padding_bottom": 56
+      }
+    },
     "breadcrumbs_ja9VhQ": {
       "type": "breadcrumbs",
-      "custom_css": [
-        ".breadcrumb-con {top: 0;}"
-      ],
       "name": "Breadcrumb",
       "settings": {
         "custom_breadcrumb": ""
@@ -26,7 +31,7 @@
         "title": "Thank you for registering!",
         "text": "<p>Your account has been successfully created. You can now enjoy shopping with us.</p>",
         "btn_text": "Return to Shop",
-        "link": "",
+        "link": "https://www.maidesite.de/",
         "padding_top": 100,
         "padding_bottom": 100
       }
