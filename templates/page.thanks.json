@@ -1,0 +1,37 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "breadcrumbs": {
+      "type": "breadcrumbs",
+      "disabled": true,
+      "custom_css": [
+        ".breadcrumb-con {top: 0;}"
+      ],
+      "settings": {
+        "custom_breadcrumb": ""
+      }
+    },
+    "thakns": {
+      "type": "thakns",
+      "name": "thanks",
+      "settings": {
+        "title": "Thank you for registering!",
+        "text": "Your account has been successfully created. You can now enjoy shopping with us.",
+        "btn_text": "Return to Shop",
+        "link": ""
+      }
+    }
+  },
+  "order": [
+    "breadcrumbs",
+    "thakns"
+  ]
+}
