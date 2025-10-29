@@ -1172,4 +1172,15 @@ li[data-address]>h2 {
   .account_section_account_body {
     flex-direction: column;
 }
+.account_section_account_body_item_title{
+  font-size: 2.2rem;
+}
+.account_section_account_body_item_text,
+.account_section_account_body_item_btn,
+.customer a.account_section_account_body_item_btn{
+  font-size: 1.8rem;
+}
+.customer button{
+  font-size: 2rem;
+}
 }
