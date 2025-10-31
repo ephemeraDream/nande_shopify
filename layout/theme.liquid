@@ -1,14 +1,14 @@
 <!doctype html>
 <html class="js" lang="{{ request.locale.iso_code }}">
-  {% if template.name == 'page' and template.suffix == '2025-black-friday-sale' %}
+  {% if template.suffix == '2025-black-friday-sale' %}
   <style>
-    html, body { background: #000 !important; color: #fff; }
-    .shopify-section, .section, .content-for-layout { background: transparent !important; }
-    a { color: #fff; }
-    .button, .btn { background: #fff; color: #000; border-color: #fff; }
-    .button:hover, .btn:hover { opacity: .9; }
-    header, .header, .site-header,
-    footer, .footer, .site-footer { background: transparent !important; color: #fff; }
+    :root {
+      --color-background: 0, 0, 0;      /* 黑底 RGB */
+      --color-foreground: 255, 255, 255; /* 白字 RGB */
+      --gradient-background: #000;
+    }
+    /* 强制覆盖可能的分区设置 */
+    .shopify-section { background: transparent !important; }
   </style>
 {% endif %}
   <head>
