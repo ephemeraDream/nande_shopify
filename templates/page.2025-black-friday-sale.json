@@ -216,13 +216,13 @@
       "settings": {
         "specId": "",
         "style": "1",
-        "title": "<p>2025 FrüHlingsrabatt</p>",
+        "title": "",
         "text": "<p>Je mehr Sie kaufen,desto mehr sparen Sie!</p>",
         "product_list": [
-          "maidesite-th2-pro-plus-tischgestell-elektrisch-hohenverstellbar",
           "maidesite-el2-pro-art-tischgestell-elektrisch-hohenverstellbar",
-          "maidesite-to1-pro-elektrisch-hohenverstellbarer-schreibtisch",
-          "ergoset-sc2-schreibtisch-ec6-burostuhl"
+          "maidesite-ec5-ergonomischer-burostuhl-mit-ruckenlehne",
+          "maidesite-schreibtisch-hohenverstellbar-180x80-cm-sc2-pro",
+          "maidesite-sn1-basic-elektrisch-hohenverstellbarer-schreibtisch-100x60cm-120x60-cm"
         ],
         "rule": ""
       }
