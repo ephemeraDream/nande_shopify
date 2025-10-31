@@ -43,6 +43,7 @@
       "block_order": [
         "banner_item_kEfP4k"
       ],
+      "disabled": true,
       "name": "banner",
       "settings": {
         "height_mode": "fixed",
@@ -92,6 +93,7 @@
         },
         "item_Cgh74t": {
           "type": "item",
+          "disabled": true,
           "settings": {
             "title": "Kundenbewertungen",
             "anchor_name": "Kundenbewertungen"
@@ -99,6 +101,7 @@
         },
         "item_fLi8Gn": {
           "type": "item",
+          "disabled": true,
           "settings": {
             "title": "Kundenbewertungen",
             "anchor_name": "Kundenbewertungen"
