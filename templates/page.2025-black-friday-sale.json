@@ -17,16 +17,6 @@
         "padding_bottom": 28
       }
     },
-    "custom_liquid_dRzNXU": {
-      "type": "custom-liquid",
-      "name": "t:sections.custom-liquid.presets.name",
-      "settings": {
-        "custom_liquid": "<div style=\"width:100%; max-width:480px; height:175px; margin:0 auto; overflow:hidden; position:relative;\">\n  <img \n    src=\"https://cdn.shopify.com/s/files/1/0574/9728/8897/files/Black_Friday_hero_img.png?v=1761900929\" \n    alt=\"Hero Banner\" \n    style=\"width:100%; height:100%; object-fit:cover; display:block;\">\n</div>",
-        "color_scheme": "",
-        "padding_top": 40,
-        "padding_bottom": 52
-      }
-    },
     "banner_8AcyUY": {
       "type": "banner",
       "blocks": {
@@ -136,6 +126,17 @@
         "button_url": "",
         "button_target_blank": false,
         "show_icon": true
+      }
+    },
+    "custom_liquid_dRzNXU": {
+      "type": "custom-liquid",
+      "disabled": true,
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid": "",
+        "color_scheme": "",
+        "padding_top": 40,
+        "padding_bottom": 52
       }
     },
     "activity_products_tab_aUGewm": {
