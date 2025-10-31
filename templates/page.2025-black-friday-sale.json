@@ -60,6 +60,23 @@
         "autoplay_speed": 5
       }
     },
+    "image_banner_jTy6rU": {
+      "type": "image-banner",
+      "name": "t:sections.image-banner.presets.name",
+      "settings": {
+        "image": "shopify://shop_images/5_b97467be-d95e-4ab7-8826-2192082e8b57.jpg",
+        "image_overlay_opacity": 0,
+        "image_height": "small",
+        "image_behavior": "none",
+        "desktop_content_position": "top-center",
+        "desktop_content_alignment": "center",
+        "show_text_box": false,
+        "color_scheme": "",
+        "stack_images_on_mobile": false,
+        "mobile_content_alignment": "center",
+        "show_text_below": false
+      }
+    },
     "product_anchor_bar_J93iqp": {
       "type": "product-anchor-bar",
       "blocks": {
@@ -128,17 +145,6 @@
         "show_icon": true
       }
     },
-    "custom_liquid_dRzNXU": {
-      "type": "custom-liquid",
-      "disabled": true,
-      "name": "t:sections.custom-liquid.presets.name",
-      "settings": {
-        "custom_liquid": "",
-        "color_scheme": "",
-        "padding_top": 40,
-        "padding_bottom": 52
-      }
-    },
     "activity_products_tab_aUGewm": {
       "type": "activity-products-tab",
       "blocks": {
@@ -190,8 +196,18 @@
       "name": "activity products tab",
       "settings": {
         "specId": "Produkt",
-        "title": "<p>2025 FrüHlingsrabatt</p>",
-        "text": "<p>Je mehr Sie kaufen, desto mehr sparen Sie!</p>"
+        "title": "<p><strong>Black Friday Frühbucher-Rabatt</strong></p>",
+        "text": "<p>Shoppen Sie die Black Friday Deals schon jetzt!</p>"
+      }
+    },
+    "custom_liquid_FbyXpK": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid": "<!DOCTYPE html>\n<html lang=\"de\">\n<head>\n  <meta charset=\"UTF-8\" />\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\" />\n  <title>Black Friday Staffelrabatte & Angebote</title>\n  <style>\n    /* 推荐引入一个更匹配的字体，例如 Google Fonts 的 'Poppins' */\n    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700;900&display=swap');\n\n    body {\n      margin: 0;\n      padding: 0;\n      font-family: 'Poppins', Arial, sans-serif;\n      background: #0d0d0d;\n    }\n\n    .coupon-section {\n      background-color: #000000;\n      color: #ffffff;\n      padding: 60px 20px;\n      text-align: center;\n    }\n\n    .coupon-section h2 {\n      font-size: 42px;\n      font-weight: 700;\n      margin-bottom: 20px;\n      color: #ffffff; /* 确保标题为纯白色 */\n    }\n\n    .coupon-section > p { /* 只选择 coupon-section 下的直接子p元素 */\n      font-size: 18px;\n      margin-bottom: 50px;\n      color: #ccc;\n    }\n\n    .coupon-cards {\n      display: flex;\n      flex-wrap: wrap;\n      justify-content: center;\n      max-width: 1400px; /* 宽度调整以容纳4个卡片 */\n      margin: 0 auto;\n      gap: 30px;\n    }\n\n    .coupon-card {\n      /* 玻璃拟物效果 */\n      background-color: rgba(26, 26, 26, 0.5);\n      backdrop-filter: blur(10px);\n      -webkit-backdrop-filter: blur(10px);\n      border: 1px solid rgba(255, 255, 255, 0.2);\n      \n      padding: 40px 30px;\n      border-radius: 20px;\n      width: calc(25% - 23px); /* 调整宽度以适应4个卡片 */\n      min-width: 280px;\n      box-sizing: border-box;\n      display: flex;\n      flex-direction: column; /* 确保内容垂直排列 */\n      justify-content: space-between; /* 使footer能推到底部 */\n      box-shadow: 0 0 20px rgba(255, 255, 255, 0.05), 0 0 40px rgba(255, 215, 0, 0.1);\n      transition: transform 0.3s ease, box-shadow 0.3s ease;\n      min-height: 300px; /* 设置一个最小高度，让卡片对齐 */\n    }\n\n    .coupon-card:hover {\n      transform: translateY(-8px) scale(1.02);\n      box-shadow: 0 0 30px rgba(255, 255, 255, 0.1), 0 0 60px rgba(255, 215, 0, 0.2);\n    }\n\n    /* 卡片主内容样式 */\n    .coupon-card h3 {\n      font-size: 64px; /* 调整字号以适应内容 */\n      font-weight: 900;\n      margin: 0;\n      line-height: 1.1;\n      /* 金色渐变文字 */\n      background: linear-gradient(180deg, #f0e6d2 0%, #c89b3c 100%);\n      -webkit-background-clip: text;\n      -webkit-text-fill-color: transparent;\n      background-clip: text;\n      text-fill-color: transparent;\n      text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);\n    }\n    \n    .coupon-card p {\n      font-size: 18px;\n      color: #cccccc;\n      margin: 10px 0 0 0;\n    }\n    \n    /* 针对第四个卡片的特殊样式 */\n    .coupon-card.inquiry-card h3 {\n      font-size: 80px;\n      color: #fff; /* 使用白色而不是金色 */\n      background: none;\n      -webkit-text-fill-color: initial;\n      text-fill-color: initial;\n    }\n\n    /* 卡片底部样式 - 已适配新风格 */\n    .coupon-footer {\n      margin-top: 30px;\n      padding-top: 20px;\n      border-top: 1px solid rgba(255, 255, 255, 0.2); /* 顶部分隔线 */\n      display: flex;\n      justify-content: space-between;\n      align-items: center;\n      width: 100%;\n    }\n    \n    .coupon-footer.center {\n        justify-content: center;\n    }\n\n    .coupon-code {\n      color: #fff; /* 折扣码使用白色 */\n      font-weight: bold;\n      font-size: 18px;\n    }\n\n    /* 按钮通用样式 */\n    .copy-btn,\n    .inquiry-btn {\n      padding: 10px 18px;\n      border-radius: 6px;\n      cursor: pointer;\n      font-weight: bold;\n      font-size: 14px;\n      white-space: nowrap;\n      transition: all 0.3s ease;\n      text-decoration: none;\n      display: inline-block;\n      border: 1px solid #fff;\n    }\n\n    /* 复制按钮 - 线框样式 */\n    .copy-btn {\n      background-color: transparent;\n      color: #fff;\n    }\n    .copy-btn:hover {\n      background-color: #fff;\n      color: #000;\n    }\n    .copy-btn.copied {\n      background-color: #28a745;\n      color: #fff;\n      border-color: #28a745;\n    }\n\n    /* 询价按钮 - 实心样式，更醒目 */\n    .inquiry-btn {\n      background-color: #fff;\n      color: #000;\n      border-color: #fff;\n      width: 100%; /* 占满底部空间 */\n      text-align: center;\n    }\n    .inquiry-btn:hover {\n      background-color: #ccc;\n      border-color: #ccc;\n    }\n\n    /* 媒体查询 */\n    @media (max-width: 1200px) {\n        .coupon-card {\n            width: calc(50% - 15px);\n        }\n    }\n    @media (max-width: 600px) {\n        .coupon-card {\n            width: 100%;\n        }\n    }\n\n    /* 弹窗样式 - 深色主题 */\n    .modal {\n      display: none;\n      position: fixed;\n      z-index: 9999;\n      left: 0;\n      top: 0;\n      width: 100%;\n      height: 100%;\n      overflow: auto;\n      background-color: rgba(0, 0, 0, 0.7);\n    }\n    .modal-content {\n      position: relative;\n      background-color: #1e1e1e; /* 深灰色背景 */\n      color: #fff; /* 白色文字 */\n      margin: 10% auto;\n      padding: 30px 40px;\n      border-radius: 12px;\n      width: 90%;\n      max-width: 500px;\n      text-align: left;\n      box-sizing: border-box;\n      border: 1px solid rgba(255, 255, 255, 0.2);\n    }\n    .modal-content h3 {\n      font-size: 22px;\n      margin-bottom: 20px;\n      text-align: center;\n    }\n    .modal-content label {\n      font-weight: bold;\n      display: block;\n      margin-bottom: 6px;\n    }\n    .modal-content textarea {\n      width: 100%;\n      padding: 12px;\n      margin-bottom: 20px;\n      border-radius: 6px;\n      border: 1px solid #555;\n      font-size: 16px;\n      box-sizing: border-box;\n      resize: vertical;\n      background-color: #333; /* 输入框背景 */\n      color: #fff; /* 输入文字颜色 */\n    }\n    .modal-btns {\n      display: flex;\n      justify-content: flex-end;\n    }\n    .modal-btns button {\n      background-color: #f03d0d;\n      color: #fff;\n      border: none;\n      padding: 10px 20px;\n      border-radius: 6px;\n      font-weight: bold;\n      cursor: pointer;\n      font-size: 14px;\n      transition: background-color 0.3s ease;\n    }\n    .modal-btns button:hover {\n      background-color: #d9370c;\n    }\n    .close-btn {\n      position: absolute;\n      top: 16px;\n      right: 16px;\n      background: transparent;\n      color: #aaa;\n      font-size: 28px;\n      border: none;\n      cursor: pointer;\n      font-weight: bold;\n      line-height: 1;\n    }\n    .close-btn:hover {\n      color: #fff;\n    }\n  </style>\n</head>\n<body>\n\n<!-- 优惠券模块 -->\n<div class=\"coupon-section\">\n  <h2>Mehr kaufen, mehr sparen</h2>\n  <p>Code kopieren und sofort Rabatt sichern oder individuelles Angebot anfragen</p>\n\n  <div class=\"coupon-cards\">\n    <!-- 卡片 1 -->\n    <div class=\"coupon-card\">\n      <div>\n        <h3>60 € Rabatt</h3>\n        <p>ab 499 € Einkaufswert</p>\n      </div>\n      <div class=\"coupon-footer\">\n        <span class=\"coupon-code\" id=\"code1\">MD60</span>\n        <button class=\"copy-btn\" type=\"button\">Kopieren</button>\n      </div>\n    </div>\n    \n    <!-- 卡片 2 -->\n    <div class=\"coupon-card\">\n      <div>\n        <h3>120 € Rabatt</h3>\n        <p>ab 999 € Einkaufswert</p>\n      </div>\n      <div class=\"coupon-footer\">\n        <span class=\"coupon-code\" id=\"code2\">MD120</span>\n        <button class=\"copy-btn\" type=\"button\">Kopieren</button>\n      </div>\n    </div>\n    \n    <!-- 卡片 3 -->\n    <div class=\"coupon-card\">\n      <div>\n        <h3>200 € Rabatt</h3>\n        <p>ab 1599 € Einkaufswert</p>\n      </div>\n      <div class=\"coupon-footer\">\n        <span class=\"coupon-code\" id=\"code3\">MD200</span>\n        <button class=\"copy-btn\" type=\"button\">Kopieren</button>\n      </div>\n    </div>\n\n    <!-- 卡片 4 (询价卡片) -->\n    <div class=\"coupon-card inquiry-card\">\n      <div>\n        <h3>?</h3>\n        <p>ab 1999 € Einkaufswert</p>\n      </div>\n      <div class=\"coupon-footer center\">\n        <button class=\"inquiry-btn\" type=\"button\">Jetzt Angebot anfragen</button>\n      </div>\n    </div>\n  </div>\n</div>\n\n<!-- 弹窗表单 -->\n<div id=\"contactModal\" class=\"modal\" aria-hidden=\"true\" role=\"dialog\" aria-modal=\"true\">\n  <div class=\"modal-content\" role=\"document\" tabindex=\"-1\">\n    <button type=\"button\" id=\"closeModalBtn\" class=\"close-btn\" aria-label=\"Schließen\">×</button>\n    <h3>Individuelles Rabattangebot anfragen</h3>\n\n    <label for=\"message\">Ihre Anfrage</label>\n    <textarea id=\"message\" name=\"message\" rows=\"5\" placeholder=\"Ihre Anfrage hier eingeben...\" required></textarea>\n\n    <div class=\"modal-btns\">\n      <button type=\"button\" id=\"sendBtn\">Senden</button>\n    </div>\n  </div>\n</div>\n\n<script>\n  // 等待DOM加载完成\n  document.addEventListener(\"DOMContentLoaded\", () => {\n    // 1. 复制优惠码按钮功能\n    document.querySelectorAll('.copy-btn').forEach(button => {\n      button.addEventListener('click', () => {\n        const codeSpan = button.previousElementSibling;\n        if (codeSpan) {\n          const code = codeSpan.innerText;\n          navigator.clipboard.writeText(code).then(() => {\n            button.classList.add('copied');\n            button.innerText = '✔ Kopiert';\n            setTimeout(() => {\n              button.classList.remove('copied');\n              button.innerText = 'Kopieren';\n            }, 3000);\n          });\n        }\n      });\n    });\n\n    // 2. 弹窗功能\n    const openBtn = document.querySelector(\".inquiry-btn\");\n    const modal = document.getElementById(\"contactModal\");\n    const closeBtn = document.getElementById(\"closeModalBtn\");\n    const sendBtn = document.getElementById(\"sendBtn\");\n\n    if (openBtn && modal && closeBtn && sendBtn) {\n        function openModal() {\n            modal.style.display = \"block\";\n            document.body.style.overflow = \"hidden\";\n            modal.setAttribute(\"aria-hidden\", \"false\");\n            modal.querySelector(\".modal-content\").focus();\n        }\n\n        function closeModal() {\n            modal.style.display = \"none\";\n            document.body.style.overflow = \"\";\n            modal.setAttribute(\"aria-hidden\", \"true\");\n        }\n\n        openBtn.addEventListener(\"click\", openModal);\n        closeBtn.addEventListener(\"click\", closeModal);\n\n        modal.addEventListener(\"click\", (e) => {\n            if (e.target === modal) closeModal();\n        });\n\n        sendBtn.addEventListener(\"click\", () => {\n            const message = document.getElementById(\"message\").value.trim();\n            if (!message) {\n                alert(\"Bitte geben Sie Ihre Anfrage ein.\");\n                return;\n            }\n\n            const subject = encodeURIComponent(\"Anfrage zu individuellem Rabatt\");\n            const body = encodeURIComponent(message);\n\n            window.location.href = `mailto:contact@maidesite.de?subject=${subject}&body=${body}`;\n\n            closeModal();\n        });\n    }\n  });\n</script>\n\n</body>\n</html>",
+        "color_scheme": "",
+        "padding_top": 40,
+        "padding_bottom": 52
       }
     },
     "activity_products_normal_REbAHP": {
@@ -338,9 +354,10 @@
   "order": [
     "main",
     "banner_8AcyUY",
+    "image_banner_jTy6rU",
     "product_anchor_bar_J93iqp",
-    "custom_liquid_dRzNXU",
     "activity_products_tab_aUGewm",
+    "custom_liquid_FbyXpK",
     "activity_products_normal_REbAHP",
     "activity_reorder_VwgQAM",
     "1756630419fbe27307",
