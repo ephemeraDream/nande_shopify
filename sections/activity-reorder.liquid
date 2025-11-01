@@ -15,7 +15,9 @@
         </div>
         <div class="activity_reorder_contain_left_text">{{ section.settings.explanation }}</div>
         <div class="activity_reorder_contain_left_btnline">
-          <div class="activity_reorder_contain_left_btn">
+          
+          <!-- 规则按钮 (Regulate Button) - 保持不变，用于弹出规则弹窗 -->
+          <div class="activity_reorder_contain_left_btn rule-trigger">
             {{ 'common.regulate' | t }}
             {{ 'icon-right-arrow.svg' | inline_asset_content }}
           </div>
@@ -32,8 +34,14 @@
             </div>
           </div>
 
+          <!-- 第二个按钮 (Gewinnerliste Button) - 修改为触发 Omnisend 弹窗 -->
           {% if section.settings.btn_two != blank %}
-            <a class="activity_reorder_contain_left_btntwo" href="{{ section.settings.btn_two_link }}">
+            <a 
+              class="activity_reorder_contain_left_btntwo omnisend-popup-trigger" 
+              href="#" 
+              id="omnisend-trigger-btn"
+              data-omnisend-id="6905740fb127c51a5d21d0dc"
+            >
               {{- section.settings.btn_two -}}
             </a>
           {% endif %}
@@ -46,35 +54,61 @@
 
 <script>
   (() => {
-    const rule_btn = document.querySelector('.activity_reorder_contain_left_btn');
+    // 规则弹窗逻辑 (Regulate Button Logic)
+    const rule_btn = document.querySelector('.activity_reorder_contain_left_btn.rule-trigger');
     if (rule_btn) {
+      // 保持原有的规则弹窗逻辑不变
       rule_btn.addEventListener('click', () => {
         const parent = rule_btn.closest('.activity_reorder_contain_left_btnline');
         const modal = parent.querySelector('.common_modal');
         const originalParent = modal.parentElement;
         const nextSibling = modal.nextElementSibling;
+        
+        // 将弹窗移动到 body
         document.body.appendChild(modal);
         modal.style.display = 'block';
         document.body.style.overflowY = 'hidden';
+
+        const closeModal = () => {
+            modal.style.display = 'none';
+            document.body.style.overflowY = 'auto';
+
+            // 恢复弹窗到原始位置
+            if (nextSibling) {
+                originalParent.insertBefore(modal, nextSibling);
+            } else {
+                originalParent.appendChild(modal);
+            }
+        };
 
         modal.querySelector('.common_modal_close').addEventListener('click', closeModal);
 
         modal.addEventListener('click', (e) => {
           if (e.target === modal) closeModal();
         });
+      });
+    }
 
-        function closeModal() {
-          modal.style.display = 'none';
-          document.body.style.overflowY = 'auto';
+    // Omnisend 触发逻辑 (Gewinnerliste Button Logic)
+    const omnisendBtn = document.getElementById('omnisend-trigger-btn');
+    if (omnisendBtn) {
+      omnisendBtn.addEventListener('click', (e) => {
+        e.preventDefault(); // 阻止链接跳转
 
-          if (nextSibling) {
-            originalParent.insertBefore(modal, nextSibling);
-          } else {
-            originalParent.appendChild(modal);
-          }
+        const formId = omnisendBtn.getAttribute('data-omnisend-id');
+
+        if (formId) {
+          // 确保 Omnisend 队列存在
+          window.omnisend = window.omnisend || [];
+          
+          // 执行触发 Omnisend 弹窗的代码
+          window.omnisend.push(['openForm', formId]);
+        } else {
+          console.error("Omnisend Form ID not found on the button.");
         }
       });
     }
+
   })();
 </script>
 
