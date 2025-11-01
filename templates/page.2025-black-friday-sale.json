@@ -212,6 +212,7 @@
     },
     "activity_products_normal_REbAHP": {
       "type": "activity-products-normal",
+      "disabled": true,
       "name": "activity products normal",
       "settings": {
         "specId": "",
@@ -229,6 +230,7 @@
     },
     "activity_products_normal_8qJYJt": {
       "type": "activity-products-normal",
+      "disabled": true,
       "name": "activity products normal",
       "settings": {
         "specId": "",
