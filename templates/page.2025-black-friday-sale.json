@@ -258,6 +258,7 @@
     },
     "activity_reorder_VwgQAM": {
       "type": "activity-reorder",
+      "disabled": true,
       "name": "activity reorder",
       "settings": {
         "specId": "",
