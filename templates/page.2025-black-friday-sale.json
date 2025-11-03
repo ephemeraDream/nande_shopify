@@ -273,6 +273,16 @@
         "btn_two_link": "shopify://pages/die-vorteile-eines-hohenverstellbaren-schreibtisches"
       }
     },
+    "custom_liquid_hRzy8F": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid": "<!-- Omnisend Spin Wheel (Embedded v2) -->\n<div id=\"omnisend-embedded-v2-69084a42a4d433ba5d000824\" style=\"max-width:680px;margin:0 auto;\"></div>\n\n<style>\n  /* 可选：让容器在活动页居中并留白 */\n  #omnisend-embedded-v2-69084a42a4d433ba5d000824 { padding: 8px 0; }\n  .osw-cta-wrap { text-align:center; margin-top: 14px; }\n  .osw-cta-wrap a { display:inline-block; padding:12px 20px; border-radius:8px; text-decoration:none; }\n</style>\n\n<script>\n  (function loadOmnisendSpinOnce() {\n    // 避免重复插入脚本\n    if (!document.getElementById('omnisend-embedded-v2-loader')) {\n      var s = document.createElement('script');\n      s.id = 'omnisend-embedded-v2-loader';\n      s.async = true;\n      s.src = 'https://emails.omnisend.com/omnisend-embedded-v2.js';\n      var x = document.getElementsByTagName('script')[0];\n      x.parentNode.insertBefore(s, x);\n    }\n  })();\n</script>\n\n<div class=\"osw-cta-wrap\">\n  <a href=\"/collections/all\" class=\"osw-cta\" style=\"background:#111;color:#fff;\">\n    去抢限时优惠 🔥\n  </a>\n</div>",
+        "color_scheme": "",
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
     "1756630419fbe27307": {
       "type": "apps",
       "blocks": {
@@ -377,6 +387,7 @@
     "activity_products_normal_8qJYJt",
     "custom_liquid_Pq7Rwt",
     "activity_reorder_VwgQAM",
+    "custom_liquid_hRzy8F",
     "1756630419fbe27307",
     "activity_subscribe_top_tV4gHF",
     "activity_subscribe_tV4gHF",
