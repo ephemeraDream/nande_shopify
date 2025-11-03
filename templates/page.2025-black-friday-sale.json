@@ -369,6 +369,7 @@
     },
     "blogs_simple_XBYLNU": {
       "type": "blogs-simple",
+      "disabled": true,
       "name": "blogs simple",
       "settings": {
         "title": "<p>Blogs</p>",
