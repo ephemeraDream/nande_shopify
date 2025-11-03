@@ -64,7 +64,7 @@
       "type": "image-banner",
       "name": "t:sections.image-banner.presets.name",
       "settings": {
-        "image": "shopify://shop_images/5_b97467be-d95e-4ab7-8826-2192082e8b57.jpg",
+        "image": "shopify://shop_images/1920_x_600.jpg",
         "image_overlay_opacity": 0,
         "image_height": "small",
         "image_behavior": "none",
@@ -150,26 +150,24 @@
         "tab_EgLUp3": {
           "type": "tab",
           "settings": {
-            "title": "3.–10. November.",
+            "title": "Early-Bird-Bestseller",
             "product_list": [
-              "maidesite-to1-pro-elektrisch-hohenverstellbarer-schreibtisch",
+              "maidesite-tischgestell-elektrisch-hohenverstellbar-t2-pro-plus",
               "maidesite-th2-pro-plus-tischgestell-elektrisch-hohenverstellbar",
-              "maidesite-el2-pro-art-tischgestell-elektrisch-hohenverstellbar",
-              "maidesite-sn1-basic-elektrisch-hohenverstellbarer-schreibtisch-100x60cm-120x60-cm",
-              "maidesite-schreibtisch-hohenverstellbar-180x80-cm-sc2-pro"
+              "elektrisch-hohenverstellbarer-gestell-t1-basic",
+              "maidesite-t2-pro-max-tischgestell-elektrisch-hohenverstellbar",
+              "maidesite-elektrisch-hohenverstellbarer-gestell-t2-pro"
             ]
           }
         },
         "tab_bgF4yF": {
           "type": "tab",
           "settings": {
-            "title": "11.–19. November.",
+            "title": "Flaggschiff-Angebote",
             "product_list": [
-              "maidesite-th2-pro-plus-tischgestell-elektrisch-hohenverstellbar",
-              "maidesite-el2-pro-art-tischgestell-elektrisch-hohenverstellbar",
-              "maidesite-to1-pro-elektrisch-hohenverstellbarer-schreibtisch",
-              "ergoset-sc2-schreibtisch-ec6-burostuhl",
-              "ergoset-sn1-schreibtisch-ec5-burostuhl"
+              "maidesite-t4-pro-plus-vierbeinige-elliptische-saule-elektrisch-hohenverstellbares-gestell",
+              "maidesite-yoga-hohenverstellbarer-schreibtisch-mit-tischplatte",
+              "maidesite-space-elektrisch-hohenverstellbares-schreibtisch"
             ]
           }
         },
