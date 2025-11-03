@@ -83,36 +83,35 @@
         "item_rJbyPf": {
           "type": "item",
           "settings": {
-            "title": "Produkt",
+            "title": "Rabatt",
             "anchor_name": "Produkt"
           }
         },
         "item_WxFQeX": {
           "type": "item",
           "settings": {
-            "title": "Produktbeschreibung",
+            "title": "Sparen",
             "anchor_name": "Produktbeschreibung"
           }
         },
         "item_63GYQw": {
           "type": "item",
           "settings": {
-            "title": "Technische Daten",
+            "title": "9,99€",
             "anchor_name": "Technische Daten"
           }
         },
         "item_mArfYh": {
           "type": "item",
           "settings": {
-            "title": "Kundenbewertungen",
+            "title": "Gewinn",
             "anchor_name": "Kundenbewertungen"
           }
         },
         "item_Cgh74t": {
           "type": "item",
-          "disabled": true,
           "settings": {
-            "title": "Kundenbewertungen",
+            "title": "Empf.",
             "anchor_name": "Kundenbewertungen"
           }
         },
