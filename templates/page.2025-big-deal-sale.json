@@ -338,7 +338,7 @@
       "type": "custom-liquid",
       "name": "t:sections.custom-liquid.presets.name",
       "settings": {
-        "custom_liquid": "",
+        "custom_liquid": "<!-- Omnisend Trigger Button -->\n<button id=\"open-omni-popup\" \n  style=\"\n    padding: 12px 26px;\n    background:#111;\n    color:#fff;\n    border: none;\n    border-radius: 6px;\n    cursor: pointer;\n    font-weight: 500;\n    transition: all .2s ease;\n  \"\n  onmouseover=\"this.style.opacity='0.8'\"\n  onmouseout=\"this.style.opacity='1'\"\n>\n  🎁 测试 Omnisend 弹窗\n</button>\n\n<script>\n  document.addEventListener(\"DOMContentLoaded\", function () {\n    const btn = document.getElementById(\"open-omni-popup\");\n\n    if (btn) {\n      btn.addEventListener(\"click\", function () {\n        // 安全防止未加载导致报错\n        window.omnisend = window.omnisend || [];\n        window.omnisend.push(['openForm', '6909c32e097a9d73aaf628b0']);\n        console.log(\"Omnisend form triggered\");\n      });\n    }\n  });\n</script>",
         "color_scheme": "",
         "padding_top": 40,
         "padding_bottom": 52
