@@ -333,6 +333,16 @@
         "padding_top": 40,
         "padding_bottom": 52
       }
+    },
+    "custom_liquid_49P4PN": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid": "",
+        "color_scheme": "",
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
     }
   },
   "order": [
@@ -347,6 +357,7 @@
     "activity_subscribe_top_tV4gHF",
     "activity_subscribe_tV4gHF",
     "blogs_simple_XBYLNU",
-    "custom_liquid_KW88ix"
+    "custom_liquid_KW88ix",
+    "custom_liquid_49P4PN"
   ]
 }
