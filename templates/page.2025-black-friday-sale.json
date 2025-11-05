@@ -137,7 +137,7 @@
           "type": "item",
           "settings": {
             "title": "Empf.",
-            "anchor_name": "Kundenbewertungen"
+            "anchor_name": "Empf."
           }
         },
         "item_fLi8Gn": {
@@ -396,6 +396,16 @@
         "padding_bottom": 120
       }
     },
+    "custom_liquid_pXrnq7": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid": "<!-- 隐形锚点 -->\n<div id=\"Empf.\" style=\"position: relative; top: -80px; height: 1px; opacity: 0;\"></div>",
+        "color_scheme": "",
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
     "1762304809ddc07571": {
       "type": "apps",
       "blocks": {
@@ -436,6 +446,7 @@
     "activity_subscribe_top_tV4gHF",
     "activity_subscribe_tV4gHF",
     "blogs_simple_XBYLNU",
+    "custom_liquid_pXrnq7",
     "1762304809ddc07571"
   ]
 }
