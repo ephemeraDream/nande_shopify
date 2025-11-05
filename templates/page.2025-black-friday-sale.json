@@ -402,6 +402,7 @@
       "blocks": {
         "loox_reviews_loox_referrals_section_ar6bwx": {
           "type": "shopify://apps/loox-reviews/blocks/loox-referrals-section/5c3b337f-fd14-4df5-b1d6-80ec13e6e28e",
+          "disabled": true,
           "settings": {
             "max_width": 1100,
             "layout": "with-photo",
