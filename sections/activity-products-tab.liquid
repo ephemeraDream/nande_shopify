@@ -127,7 +127,7 @@
                       <h4 class="activity_products_tab_product_title">{{ product.title }}</h4>
 
                       <div>
-                        {% if sale_info != blank %}
+                        {% if sale_info and sale_info.code != blank %}
                           <div class="activity_products_tab_product_saleinfo_code">
                             {{ 'common.code' | t -}}
                             {{- sale_info.code }}
