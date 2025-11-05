@@ -28,9 +28,9 @@
       "type": "thanks",
       "name": "thanks",
       "settings": {
-        "title": "Thank you for registering!",
-        "text": "<p>Your account has been successfully created. You can now enjoy shopping with us.</p>",
-        "btn_text": "Return to Shop",
+        "title": "Willkommen bei Maidesite!",
+        "text": "<p>Dein Konto wurde erfolgreich erstellt.<br/>Wir senden dir deine exklusive Neukunden-Gutscheincodes per E-Mail zu.<br/>Entdecke jetzt unsere eleganten höhenverstellbaren Schreibtische.</p>",
+        "btn_text": "Zur Startseite",
         "link": "https://www.maidesite.de/",
         "padding_top": 100,
         "padding_bottom": 100
