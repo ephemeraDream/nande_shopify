@@ -186,6 +186,13 @@
             ]
           }
         },
+        "tab_6qFKiy": {
+          "type": "tab",
+          "settings": {
+            "title": "24-Stunden-Deal",
+            "product_list": []
+          }
+        },
         "tab_bgF4yF": {
           "type": "tab",
           "settings": {
@@ -196,26 +203,12 @@
               "maidesite-space-elektrisch-hohenverstellbares-schreibtisch"
             ]
           }
-        },
-        "tab_6qFKiy": {
-          "type": "tab",
-          "disabled": true,
-          "settings": {
-            "title": "Erinnerung",
-            "product_list": [
-              "maidesite-to1-pro-elektrisch-hohenverstellbarer-schreibtisch",
-              "maidesite-th2-pro-plus-tischgestell-elektrisch-hohenverstellbar",
-              "maidesite-el2-pro-art-tischgestell-elektrisch-hohenverstellbar",
-              "ergoset-sc2-schreibtisch-ec6-burostuhl",
-              "ergoset-sn1-schreibtisch-ec5-burostuhl"
-            ]
-          }
         }
       },
       "block_order": [
         "tab_EgLUp3",
-        "tab_bgF4yF",
-        "tab_6qFKiy"
+        "tab_6qFKiy",
+        "tab_bgF4yF"
       ],
       "name": "activity products tab",
       "settings": {
@@ -407,6 +400,7 @@
       "blocks": {
         "loox_reviews_loox_referrals_section_ar6bwx": {
           "type": "shopify://apps/loox-reviews/blocks/loox-referrals-section/5c3b337f-fd14-4df5-b1d6-80ec13e6e28e",
+          "disabled": true,
           "settings": {
             "max_width": 1100,
             "layout": "with-photo",
