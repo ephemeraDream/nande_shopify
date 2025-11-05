@@ -403,6 +403,28 @@
         "padding_top": 120,
         "padding_bottom": 120
       }
+    },
+    "1762304809ddc07571": {
+      "type": "apps",
+      "blocks": {
+        "loox_reviews_loox_referrals_section_ar6bwx": {
+          "type": "shopify://apps/loox-reviews/blocks/loox-referrals-section/5c3b337f-fd14-4df5-b1d6-80ec13e6e28e",
+          "settings": {
+            "max_width": 1100,
+            "layout": "with-photo",
+            "primary_color": "",
+            "text_color": "#000000",
+            "text_field_border_color": "#C9CDD4",
+            "background": ""
+          }
+        }
+      },
+      "block_order": [
+        "loox_reviews_loox_referrals_section_ar6bwx"
+      ],
+      "settings": {
+        "include_margins": true
+      }
     }
   },
   "order": [
@@ -420,6 +442,7 @@
     "1756630419fbe27307",
     "activity_subscribe_top_tV4gHF",
     "activity_subscribe_tV4gHF",
-    "blogs_simple_XBYLNU"
+    "blogs_simple_XBYLNU",
+    "1762304809ddc07571"
   ]
 }
