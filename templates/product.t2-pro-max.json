@@ -610,21 +610,21 @@
           "type": "item",
           "settings": {
             "image": "shopify://shop_images/10_03dc35a9-183f-484d-ae3b-c0d335ea080d.jpg",
-            "title": "step1"
+            "title": "Schritt 1"
           }
         },
         "item_6RjWMz": {
           "type": "item",
           "settings": {
             "image": "shopify://shop_images/11_4ee3fa95-7ebe-4e84-9ce9-c193cd1bcdea.jpg",
-            "title": "step2"
+            "title": "Schritt 2"
           }
         },
         "item_Nh8fL9": {
           "type": "item",
           "settings": {
             "image": "shopify://shop_images/12_ea6b2580-571d-48c2-87b7-8e5931623c7c.jpg",
-            "title": "step3"
+            "title": "Schritt 3"
           }
         }
       },
