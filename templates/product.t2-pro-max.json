@@ -185,6 +185,7 @@
     },
     "video_wPHLA8": {
       "type": "video",
+      "disabled": true,
       "name": "t:sections.video.presets.name",
       "settings": {
         "heading": "Maidesite mobiler Schreibtisch T2 Pro Max Ausrüstung",
@@ -206,7 +207,7 @@
           "type": "file_with_text",
           "settings": {
             "title": "<p>Maximale Stabilität</p>",
-            "description": "<p>Kein Wackeln – zuverlässig in jeder Höhe</p>",
+            "description": "<p>• <strong>In Bewegung:</strong> Sanftes Heben & Senken ohne Wackeln – der Kartenstapel bleibt stehen.<br/>• <strong>Im Stillstand:</strong> Hohe Tragkraft, kein Schwanken bei voller Last.<br/>• <strong>Auf höchster Stufe:</strong> Auch ganz oben ruhig – ideal zum Arbeiten.</p>",
             "file_type": "video",
             "video_url": "",
             "url_upload": "shopify://files/videos/稳定性 - 0818 - Grey C 灰底.mp4"
@@ -216,7 +217,7 @@
           "type": "file_with_text",
           "settings": {
             "title": "<p>Großer Höhenbereich</p>",
-            "description": "<p>Höhenverstellbar von 650 mm bis 1350 mm – passend für jede Arbeitshöhe<br/></p>",
+            "description": "<p>Höhenverstellbar von 650 mm bis 1350 mm – perfekt für jede Körpergröße und jeden Arbeitsplatz.<br/>Schneller Wechsel zwischen Sitzen und Stehen, ob für konzentrierte Arbeit oder kurze Bewegungspausen.<br/>Mehr Flexibilität, mehr Ergonomie – ganz nach deinem Tagesrhythmus.<br/></p>",
             "file_type": "video",
             "file_image": "shopify://shop_images/8d62567f3976a249cabee9308f1d71fa.jpg",
             "video_url": "",
@@ -227,7 +228,7 @@
           "type": "file_with_text",
           "settings": {
             "title": "<p>Extra starke Tragkraft 180 kg</p>",
-            "description": "<p>Trägt Monitore, PC und Zubehör bis 180 kg mühelos</p>",
+            "description": "<p>Robust gebaut für schwere Setups: Mehrere Monitore, Desktop-PC, Lautsprecher oder Zubehör – alles sicher getragen.Keine Durchbiegung, kein Schwanken – volle Stabilität auch unter hoher Last.<br/>Ideal für professionelle Workstations und anspruchsvolle Homeoffice-Setups.</p>",
             "file_type": "video",
             "file_image": "shopify://shop_images/Schwarz-06.jpg",
             "video_url": "",
@@ -259,12 +260,11 @@
         "file_with_text_THJTyK": {
           "type": "file_with_text",
           "settings": {
-            "title": "<p>Premium-Qualität für Jahre</p>",
-            "description": "<p>Robuste Materialien – langlebig und zuverlässig</p>",
-            "file_type": "video",
-            "file_image": "shopify://shop_images/P7.jpg",
-            "video_url": "",
-            "url_upload": "shopify://files/videos/稳定性 - 0818 - Grey C 灰底.mp4"
+            "title": "<p>Dual-Motor-System</p>",
+            "description": "<p>Dank der leistungsstarken Motoren lässt sich die Tischplatte schnell und fließend an Ihre ideale Sitz- oder Stehhöhe anpassen, ohne zu wackeln oder zu stocken. Perfekt für den täglichen Einsatz im Homeoffice oder Büro, wo Komfort und Verlässlichkeit zählen.</p>",
+            "file_type": "image",
+            "file_image": "shopify://shop_images/6_960f161b-2c2f-4579-a4a4-97220d38f728.jpg",
+            "video_url": ""
           }
         },
         "file_with_text_PnqAPd": {
