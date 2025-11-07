@@ -109,7 +109,7 @@
           "type": "item",
           "settings": {
             "title": "Rabatt",
-            "anchor_name": "Produkt"
+            "anchor_name": "Rabatt"
           }
         },
         "item_WxFQeX": {
@@ -213,7 +213,7 @@
       ],
       "name": "activity products tab",
       "settings": {
-        "specId": "Produkt",
+        "specId": "Rabatt",
         "title": "<p><strong>Black Friday Frühbucher-Rabatt</strong></p>",
         "text": "<p>Shoppen Sie die Black Friday Deals schon jetzt!</p>"
       }
