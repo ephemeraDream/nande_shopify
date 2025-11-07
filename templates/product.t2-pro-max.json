@@ -594,36 +594,27 @@
         "padding_bottom": 120
       }
     },
-    "technical_data_L3gXUm": {
-      "type": "technical-data",
-      "name": "technical data",
-      "settings": {
-        "spec_id": "Technische-Daten",
-        "title": "<p>Technische Daten Des HöHenverstellbaren </p><p>Schreibtisches-T1 Pro</p>",
-        "select_product": "elektrisch-hohenverstellbarer-gestell-t1-basic"
-      }
-    },
     "accordion_gallery_WGrbmy": {
       "type": "accordion-gallery",
       "blocks": {
         "item_GYFiC3": {
           "type": "item",
           "settings": {
-            "image": "shopify://shop_images/10_03dc35a9-183f-484d-ae3b-c0d335ea080d.jpg",
+            "image": "shopify://shop_images/10_1acba723-3add-4912-b4d1-e8ea41ab1d2c.jpg",
             "title": "Schritt 1"
           }
         },
         "item_6RjWMz": {
           "type": "item",
           "settings": {
-            "image": "shopify://shop_images/11_4ee3fa95-7ebe-4e84-9ce9-c193cd1bcdea.jpg",
+            "image": "shopify://shop_images/11_651c4adc-96be-4783-ba5b-cbd6a35d4ea0.jpg",
             "title": "Schritt 2"
           }
         },
         "item_Nh8fL9": {
           "type": "item",
           "settings": {
-            "image": "shopify://shop_images/12_ea6b2580-571d-48c2-87b7-8e5931623c7c.jpg",
+            "image": "shopify://shop_images/12_2688ce82-462a-442a-8571-e99592044330.jpg",
             "title": "Schritt 3"
           }
         }
@@ -637,6 +628,15 @@
       "settings": {
         "spec_id": "",
         "title": "3 Schritte zur schnellen Montage"
+      }
+    },
+    "technical_data_L3gXUm": {
+      "type": "technical-data",
+      "name": "technical data",
+      "settings": {
+        "spec_id": "Technische-Daten",
+        "title": "<p>Technische Daten Des HöHenverstellbaren </p><p>Schreibtisches-T1 Pro</p>",
+        "select_product": "elektrisch-hohenverstellbarer-gestell-t1-basic"
       }
     },
     "maidesite_swiper_QhkQG8": {
@@ -899,8 +899,8 @@
     "img_with_text_simplicity_JRCJ4f",
     "img_with_text_tab_emEWU8",
     "img_with_foldtext_LzqrtY",
-    "technical_data_L3gXUm",
     "accordion_gallery_WGrbmy",
+    "technical_data_L3gXUm",
     "maidesite_swiper_QhkQG8",
     "celebrity_swiper_aGymw9",
     "faq_simple_kxTbhc",
