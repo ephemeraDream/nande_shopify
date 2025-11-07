@@ -352,25 +352,25 @@
         "foldtext_HQhGDk": {
           "type": "foldtext",
           "settings": {
-            "title": "<h3>Stabileres Design</h3>",
-            "description": "<ul><li>Dreiecksunterstützungsstruktur ist extrem stabil im Vergleich zu anderen Schreibtischdesigns.</li><li>Sie ist auch in der höchsten Höhe von ausgezeichneter Stabilität.</li></ul>",
-            "image": "shopify://shop_images/Triangle-support-structurer-on-T2-pro-plus-standing-desk-1.png"
+            "title": "<p>Pyramidenförmige-Säulenstruktur</p>",
+            "description": "<ul><li>Diese Konstruktion sorgt für eine deutlich größere Auflagefläche und verteilt die Kräfte optimal nach unten und außen. So bleibt der Tisch selbst in der höchsten Position außergewöhnlich stabil und verhindert effektiv Wackeln oder Kippen.</li></ul>",
+            "image": "shopify://shop_images/7_0884c4c1-439e-4537-ba56-f6578da62adc.jpg"
           }
         },
         "foldtext_HWP39G": {
           "type": "foldtext",
           "settings": {
-            "title": "<h3>Stabilere Säule</h3>",
-            "description": "<ul><li>Neben den strukturellen Verbesserungen trägt auch die präzise Verarbeitung und Konstruktion zur Stabilität bei.</li><li>Der Spalt zwischen den Säulen beträgt weniger als 0,03 mm. Die dreiteiligen Säulen gleiten nahtlos ineinander, wodurch jegliches Wackeln verhindert wird.</li></ul>",
-            "image": "shopify://shop_images/T2-Pro-hohenverstellbares-Tischbein-mit-kleinem-Abstand-2.png"
+            "title": "<p>Verstärkte Fußkonstruktion</p>",
+            "description": "<ul><li>Die 30 mm starken Standfüße bestehen aus massivem Metall und erhöhen die Gesamtsteifigkeit des Tischgestells spürbar.\nDank der hohen Materialstärke werden Bewegungsenergie und Vibrationen wesentlich besser aufgenommen und abgeleitet – so bleibt der Tisch auch bei Belastung ruhig und stabil.</li><li></li></ul>",
+            "image": "shopify://shop_images/8_e173d64a-df3a-44d8-a09f-410a5af98812.jpg"
           }
         },
         "foldtext_iGWkAs": {
           "type": "foldtext",
           "settings": {
-            "title": "<h3>Stärkere Füße</h3>",
+            "title": "<p>Kleinere Spalten</p>",
             "description": "<ul><li>Schwere Schreibtischfüße haben einen niedrigeren Schwerpunkt, was die Stabilität erhöht.</li><li>Jedes T2 Pro Plus Tischbein wiegt 2,55 kg, was 50 % mehr ist als herkömmliche Beine.</li><li>Dadurch ist es stabiler als andere Tischgestelle.</li></ul>",
-            "image": "shopify://shop_images/T2-Pro-hohenverstellbarer-Tischfuss-2.jpg"
+            "image": "shopify://shop_images/9_8c0920c4-4bc0-447f-835f-761def9d40e0.jpg"
           }
         }
       },
@@ -379,12 +379,10 @@
         "foldtext_HWP39G",
         "foldtext_iGWkAs"
       ],
-      "disabled": true,
       "name": "img with foldtext",
       "settings": {
         "spec_id": "",
-        "title": "<p>Extrem stabiler T2 Pro Plus</p>",
-        "image": "shopify://shop_images/featured-spaces-5.webp",
+        "title": "<p>So garantieren wir maximale Stabilität</p>",
         "padding_top": 120,
         "padding_bottom": 120
       }
