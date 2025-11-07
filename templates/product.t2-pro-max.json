@@ -495,12 +495,12 @@
         "tab_AUd88N": {
           "type": "tab",
           "settings": {
-            "tabname": "Sitzende Erinnerung",
+            "tabname": "Klavier-Look",
             "sub_title": "",
-            "title": "<p>Fortschrittliche Technologie</p>",
-            "description": "<div style=\"text-align:left; direction:ltr;\" lang=\"de\">\n  <p>\n    Perfekt für zwei Familienmitglieder, um ihre individuelle Körpergröße anzupassen oder um zwei neue Höheneinstellungen\n    für vielfältigere Körperhaltungen zu ermöglichen.<br/>\n    Der Standard-USB-Ladeanschluss lädt deine digitalen Geräte zuverlässig auf, <br/>\n    genau dann, wenn du es brauchst.\n  </p>\n</div>",
+            "title": "<p>Klavier-Look</p>",
+            "description": "<div style=\"text-align:left; direction:ltr;\" lang=\"de\">\n  <p>\n    Das Bedienfeld überzeugt durch sein hochwertiges Klavier-Design, das eine angenehme Haptik und einfache Bedienung kombiniert – für ein besonderes Nutzererlebnis.<br/>\n  </p>\n</div>",
             "file_type": "image",
-            "file_image": "shopify://shop_images/006.jpg",
+            "file_image": "shopify://shop_images/13_ce6a0fba-acc0-44bb-8b70-3fa3a3eb9dd2.jpg",
             "video_url": "",
             "btn_text": "",
             "link": ""
@@ -509,12 +509,12 @@
         "tab_JyxzQm": {
           "type": "tab",
           "settings": {
-            "tabname": "Sitzende Erinnerung",
+            "tabname": "RGB-Tasten",
             "sub_title": "",
-            "title": "<p>Fortschrittliche Technologie</p>",
-            "description": "<div style=\"text-align:left; direction:ltr;\" lang=\"de\">\n  <p>\n    Perfekt für zwei Familienmitglieder, um ihre individuelle Körpergröße anzupassen oder um zwei neue Höheneinstellungen <br/>\n    für vielfältigere Körperhaltungen zu ermöglichen.<br/>\n    Der Standard-USB-Ladeanschluss lädt deine digitalen Geräte zuverlässig auf, <br/>\n    genau dann, wenn du es brauchst.\n  </p>\n</div>",
+            "title": "<p>RGB-Tasten</p>",
+            "description": "<div style=\"text-align:left; direction:ltr;\" lang=\"de\">\n  <p>\n   Die Tasten sind mit RGB-Beleuchtung ausgestattet und bieten 8 verschiedene Farben zur Auswahl. So können Sie die Beleuchtung ganz einfach per Knopfdruck an Ihre Vorlieben anpassen – ohne komplizierte Einstellungen.<br/>\n  </p>\n</div>",
             "file_type": "image",
-            "file_image": "shopify://shop_images/006.jpg",
+            "file_image": "shopify://shop_images/14.jpg",
             "video_url": "",
             "btn_text": "",
             "link": ""
@@ -523,12 +523,12 @@
         "tab_LmGatL": {
           "type": "tab",
           "settings": {
-            "tabname": "Sitzende Erinnerung",
+            "tabname": "Eigenes UI-System",
             "sub_title": "",
-            "title": "<p>Fortschrittliche Technologie</p>",
-            "description": "<div style=\"text-align:left; direction:ltr;\" lang=\"de\">\n  <p>\n    Perfekt für zwei Familienmitglieder, um ihre individuelle Körpergröße anzupassen oder um zwei neue Höheneinstellungen\n    für vielfältigere Körperhaltungen zu ermöglichen.<br/>\n    Der Standard-USB-Ladeanschluss lädt deine digitalen Geräte zuverlässig auf, <br/>\n    genau dann, wenn du es brauchst.\n  </p>\n</div>",
+            "title": "<p>Eigenes UI-System</p>",
+            "description": "<div style=\"text-align:left; direction:ltr;\" lang=\"de\">\n  <p>\n   Das speziell entwickelte Bedienfeld sorgt für eine einfache, schnelle und präzise Steuerung der Tischhöhe und macht die Nutzung unseres elektrischen Schreibtisches besonders angenehm.<br/>\n</div>",
             "file_type": "image",
-            "file_image": "shopify://shop_images/006.jpg",
+            "file_image": "shopify://shop_images/15_-_UI.jpg",
             "video_url": "",
             "btn_text": "",
             "link": ""
@@ -544,7 +544,7 @@
       "settings": {
         "spec_id": "",
         "description": "",
-        "title": "<p>CE/FSC-zertifizierter </p>",
+        "title": "<p>Piano-Style Controller</p>",
         "show_tab_head": true,
         "loop": true,
         "autoplay_enable": true,
