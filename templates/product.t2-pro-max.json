@@ -540,7 +540,6 @@
         "tab_JyxzQm",
         "tab_LmGatL"
       ],
-      "disabled": true,
       "name": "img with text tab",
       "settings": {
         "spec_id": "",
@@ -602,6 +601,42 @@
         "spec_id": "Technische-Daten",
         "title": "<p>Technische Daten Des HöHenverstellbaren </p><p>Schreibtisches-T1 Pro</p>",
         "select_product": "elektrisch-hohenverstellbarer-gestell-t1-basic"
+      }
+    },
+    "accordion_gallery_WGrbmy": {
+      "type": "accordion-gallery",
+      "blocks": {
+        "item_GYFiC3": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/10_03dc35a9-183f-484d-ae3b-c0d335ea080d.jpg",
+            "title": "step1"
+          }
+        },
+        "item_6RjWMz": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/11_4ee3fa95-7ebe-4e84-9ce9-c193cd1bcdea.jpg",
+            "title": "step2"
+          }
+        },
+        "item_Nh8fL9": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/12_ea6b2580-571d-48c2-87b7-8e5931623c7c.jpg",
+            "title": "step3"
+          }
+        }
+      },
+      "block_order": [
+        "item_GYFiC3",
+        "item_6RjWMz",
+        "item_Nh8fL9"
+      ],
+      "name": "Accordion Gallery",
+      "settings": {
+        "spec_id": "",
+        "title": "Fast Assemble"
       }
     },
     "maidesite_swiper_QhkQG8": {
@@ -865,6 +900,7 @@
     "img_with_text_tab_emEWU8",
     "img_with_foldtext_LzqrtY",
     "technical_data_L3gXUm",
+    "accordion_gallery_WGrbmy",
     "maidesite_swiper_QhkQG8",
     "celebrity_swiper_aGymw9",
     "faq_simple_kxTbhc",
