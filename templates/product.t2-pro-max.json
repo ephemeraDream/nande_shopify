@@ -705,6 +705,7 @@
         },
         "swiper_xWLxVC": {
           "type": "swiper",
+          "disabled": true,
           "settings": {
             "name": "@LauraBC",
             "introduce": "",
