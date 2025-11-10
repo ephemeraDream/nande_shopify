@@ -58,7 +58,8 @@ function initCollectionCompareCountdown() {
         updateCountdownInnerHTML(days, hours, minutes, seconds);
         item.classList.add("hidden")
         const parent = item.closest(".collection_compare_product")
-        parent.querySelector(".collection_compare_product_saleinfo").classList.add("hidden")
+        const saleinfo = parent.querySelector(".collection_compare_product_saleinfo");
+        if (saleinfo) saleinfo.classList.add("hidden");
         return;
       }
 
