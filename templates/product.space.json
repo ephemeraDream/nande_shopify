@@ -193,6 +193,151 @@
         "padding_bottom": 36
       }
     },
+    "banner_6K9jqA": {
+      "type": "banner",
+      "blocks": {
+        "banner_item_yjQGwz": {
+          "type": "banner_item",
+          "settings": {
+            "sub_title": "",
+            "title": "",
+            "text": "",
+            "btn_text": "",
+            "link": "",
+            "file_position": "middle_left",
+            "overlay_text_align": "text-start",
+            "transparent_content_color": "#ffffff",
+            "file_type": "image",
+            "file_image": "shopify://shop_images/1_-_Banner_634614a9-1a46-4e84-811a-1118ea027dc3.jpg",
+            "file_image_pe": "shopify://shop_images/8_-_2.jpg",
+            "video_url": "",
+            "show_countdown": false,
+            "countdown": ""
+          }
+        }
+      },
+      "block_order": [
+        "banner_item_yjQGwz"
+      ],
+      "name": "banner",
+      "settings": {
+        "height_mode": "auto",
+        "fixed_height_desktop": 600,
+        "fixed_height_mobile": 350,
+        "mobile_stacked": false,
+        "background_color": "#dddddd",
+        "nav_style": "slideshow_nav_lines",
+        "pagination_color": "#ffffff",
+        "nav_position": "justify-center",
+        "transition": "slide-fade",
+        "autoplay": true,
+        "slider_pause": false,
+        "autoplay_speed": 5
+      }
+    },
+    "img_with_text_simplicity_4kKfAr": {
+      "type": "img-with-text-simplicity",
+      "name": "img with text simplicity",
+      "settings": {
+        "spec_id": "",
+        "header_title": "<p>L-förmige Erweiterungsplatte</p>",
+        "header_content": "",
+        "title": "",
+        "sub_title": "<h3>Mehr Platz dank intelligenter Eckstruktur<br/><br/></h3>",
+        "description": "Die L-Form eröffnet eine großzügige Arbeitsfläche und nutzt den Raum effizienter aus. Perfekt für Multitasking, kreative Projekte oder duale Workstations.",
+        "file_position": "right",
+        "file_type": "image",
+        "file_image": "shopify://shop_images/2_2c4b0111-7442-450e-a0b1-40e0c826ce6f.jpg",
+        "video_url": "",
+        "video_aspect_ratio": "4/3",
+        "btn_text": "",
+        "link_url": "",
+        "padding_top": 32,
+        "padding_bottom": 0,
+        "background_color": "transparent"
+      }
+    },
+    "img_with_text_simplicity_eE7PqF": {
+      "type": "img-with-text-simplicity",
+      "name": "img with text simplicity",
+      "settings": {
+        "spec_id": "",
+        "header_title": "",
+        "header_content": "",
+        "title": "<h3>Flexible Montage – links oder rechts</h3>",
+        "sub_title": "",
+        "description": "Die Erweiterungsplatte lässt sich je nach Raumsituation frei auf der linken oder rechten Seite montieren. So passt sich der Tisch Ihrem individuellen Setup optimal an.",
+        "file_position": "left",
+        "file_type": "image",
+        "file_image": "shopify://shop_images/3_ae3e50dd-41b2-476b-8e98-a8e6f8125faa.jpg",
+        "video_url": "",
+        "video_aspect_ratio": "4/3",
+        "btn_text": "",
+        "link_url": "",
+        "padding_top": 0,
+        "padding_bottom": 24,
+        "background_color": "transparent"
+      }
+    },
+    "img_with_text_simplicity_iiPLAi": {
+      "type": "img-with-text-simplicity",
+      "name": "img with text simplicity",
+      "settings": {
+        "spec_id": "",
+        "header_title": "",
+        "header_content": "",
+        "title": "<h3>Kürzere Wege, höhere Effizienz</h3>",
+        "sub_title": "",
+        "description": "Durch das ergonomische Eckdesign verkürzt sich der Bewegungsradius. Dokumente, Geräte oder Zubehör sind mit einer schnellen Drehbewegung sofort griffbereit.",
+        "file_position": "right",
+        "file_type": "image",
+        "file_image": "shopify://shop_images/4_66d14f04-febd-40e9-b380-106a1837231c.jpg",
+        "video_url": "",
+        "video_aspect_ratio": "4/3",
+        "btn_text": "",
+        "link_url": "",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "background_color": "transparent"
+      }
+    },
+    "accordion_gallery_9yfNeM": {
+      "type": "accordion-gallery",
+      "blocks": {
+        "item_KxRdMJ": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/2_2c4b0111-7442-450e-a0b1-40e0c826ce6f.jpg",
+            "title": "Mehr Platz dank intelligenter Eckstruktur"
+          }
+        },
+        "item_gMjgBM": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/3_ae3e50dd-41b2-476b-8e98-a8e6f8125faa.jpg",
+            "title": ""
+          }
+        },
+        "item_wcgFqt": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/4_66d14f04-febd-40e9-b380-106a1837231c.jpg",
+            "title": ""
+          }
+        }
+      },
+      "block_order": [
+        "item_KxRdMJ",
+        "item_gMjgBM",
+        "item_wcgFqt"
+      ],
+      "disabled": true,
+      "name": "Accordion Gallery",
+      "settings": {
+        "spec_id": "",
+        "title": "L-förmige Erweiterungsplatte"
+      }
+    },
     "img_with_text_box_simplicity_qrzG6W": {
       "type": "img-with-text-box-simplicity",
       "blocks": {
@@ -268,6 +413,7 @@
         "file_with_text_B39ehq",
         "file_with_text_THJTyK"
       ],
+      "disabled": true,
       "name": "file box simplicity",
       "settings": {
         "spec_id": "",
@@ -278,64 +424,20 @@
         "background_color": "rgba(0,0,0,0)"
       }
     },
-    "img_with_foldtext_RcBrkw": {
-      "type": "img-with-foldtext",
-      "blocks": {
-        "foldtext_HQhGDk": {
-          "type": "foldtext",
-          "settings": {
-            "title": "<h3>Stabileres Design</h3>",
-            "description": "<ul><li>Dreiecksunterstützungsstruktur ist extrem stabil im Vergleich zu anderen Schreibtischdesigns.</li><li>Sie ist auch in der höchsten Höhe von ausgezeichneter Stabilität.</li></ul>",
-            "image": "shopify://shop_images/Triangle-support-structurer-on-T2-pro-plus-standing-desk-1.png"
-          }
-        },
-        "foldtext_HWP39G": {
-          "type": "foldtext",
-          "settings": {
-            "title": "<h3>Stabilere Säule</h3>",
-            "description": "<ul><li>Neben den strukturellen Verbesserungen trägt auch die präzise Verarbeitung und Konstruktion zur Stabilität bei.</li><li>Der Spalt zwischen den Säulen beträgt weniger als 0,03 mm. Die dreiteiligen Säulen gleiten nahtlos ineinander, wodurch jegliches Wackeln verhindert wird.</li></ul>",
-            "image": "shopify://shop_images/T2-Pro-hohenverstellbares-Tischbein-mit-kleinem-Abstand-2.png"
-          }
-        },
-        "foldtext_iGWkAs": {
-          "type": "foldtext",
-          "settings": {
-            "title": "<h3>Stärkere Füße</h3>",
-            "description": "<ul><li>Schwere Schreibtischfüße haben einen niedrigeren Schwerpunkt, was die Stabilität erhöht.</li><li>Jedes T2 Pro Plus Tischbein wiegt 2,55 kg, was 50 % mehr ist als herkömmliche Beine.</li><li>Dadurch ist es stabiler als andere Tischgestelle.</li></ul>",
-            "image": "shopify://shop_images/T2-Pro-hohenverstellbarer-Tischfuss-2.jpg"
-          }
-        }
-      },
-      "block_order": [
-        "foldtext_HQhGDk",
-        "foldtext_HWP39G",
-        "foldtext_iGWkAs"
-      ],
-      "disabled": true,
-      "name": "img with foldtext",
-      "settings": {
-        "spec_id": "",
-        "title": "<p>Extrem stabiler T2 Pro Plus</p>",
-        "image": "shopify://shop_images/featured-spaces-5.webp",
-        "padding_top": 120,
-        "padding_bottom": 120
-      }
-    },
     "img_with_text_simplicity_R8thEq": {
       "type": "img-with-text-simplicity",
-      "disabled": true,
       "custom_css": [],
       "name": "img with text simplicity",
       "settings": {
         "spec_id": "",
-        "header_title": "<p>Extrem stabiler höhenverstellbarer Schreibtisch</p>",
+        "header_title": "<p>4-Konstruktion — Entwickelt für maximale Stabilität</p>",
         "header_content": "",
-        "title": "<h3>Stabileres Design</h3>",
+        "title": "<h3>Stabiler als herkömmliche Drei-Bein-L-Tische</h3>",
         "sub_title": "",
-        "description": "<ul><li>Dreiecksunterstützungsstruktur ist extrem stabil im Vergleich zu anderen Schreibtischdesigns.</li><li>Dank verstärktem Querträger, Seitenstreben und Füßen bietet der Rahmen extra Stabilität.</li></ul>",
+        "description": "<ul><li>Die robuste Vierbein-Struktur sorgt für deutlich weniger Wackeln und höhere Gesamtsteifigkeit. Ideal für große Tischplatten, L-Form-Setups und produktive Workflows.",
         "file_position": "right",
         "file_type": "image",
-        "file_image": "shopify://shop_images/T2-Pro-Max-is-ultra-solid.jpg",
+        "file_image": "shopify://shop_images/5_971484f2-f467-46a8-bd5e-adf1d337b0ff.jpg",
         "video_url": "",
         "video_aspect_ratio": "4/3",
         "btn_text": "",
@@ -347,7 +449,6 @@
     },
     "img_with_text_simplicity_nJFALq": {
       "type": "img-with-text-simplicity",
-      "disabled": true,
       "custom_css": [
         ".img_with_text_simplicity_info {padding-left: 3rem;}"
       ],
@@ -356,12 +457,12 @@
         "spec_id": "",
         "header_title": "",
         "header_content": "",
-        "title": "<h3>Stärkere Füße</h3>",
+        "title": "<h3>Belastbarkeit bis zu 200 kg</h3>",
         "sub_title": "",
-        "description": "<ul><li>Schwere Schreibtischfüße haben einen niedrigeren Schwerpunkt, was die Stabilität erhöht.</li><li>Jedes T2 Pro Max Tischbein was 50 % mehr ist als herkömmliche Beine.</li><li>Dadurch ist es stabiler als andere Tischgestelle.</li></ul>",
+        "description": "<ul><li>Das verstärkte Stahlgestell trägt bis zu 200 kg Gesamtgewicht – perfekt für mehr Monitore, schwere PCs oder professionelle Studio-Ausstattung.",
         "file_position": "left",
         "file_type": "image",
-        "file_image": "shopify://shop_images/T2-Pro-Max-ultra-solid-lift-column-feet.jpg",
+        "file_image": "shopify://shop_images/3_c44a59ea-ee63-4574-8e83-95b8e6874354.jpg",
         "video_url": "",
         "video_aspect_ratio": "4/3",
         "btn_text": "",
@@ -429,12 +530,12 @@
         "tab_fiwUXL": {
           "type": "tab",
           "settings": {
-            "tabname": "CE-ZERTIFIZIERUNG",
+            "tabname": "Kabelloses Bluetooth-Design",
             "sub_title": "",
-            "title": "<p>ce-zertifikat höhenverstellbarer tisch</p>",
-            "description": "<p>Perfekt für zwei Familienmitglieder, um ihre individuelle Körpergröße anzupassen oder um zwei neue Höheneinstellungen <br/>für vielfältigere Körperhaltungen zu ermöglichen.Der Standard-USB-Ladeanschluss lädt deine digitalen Geräte zuverlässig auf, <br/>genau dann, wenn du es brauchst.</p>",
+            "title": "<p>Kabelloses Bluetooth-Design</p>",
+            "description": "<div style=\"text-align:left; direction:ltr;\" lang=\"de\">\n  <p>\n   Aus der Vogelperspektive zeigt der Controller sein kreuzförmiges Layout, das Bewegungen aus allen Richtungen ermöglicht. Mit Bluetooth-Signalicon und bis zu 10 Metern Funkreichweite bleibt Ihr Arbeitsplatz frei von Kabeln<br/>\n  </p>\n</div>",
             "file_type": "image",
-            "file_image": "shopify://shop_images/J-S2D-2-EU_MD_Certificate_of_Compliance_00.jpg",
+            "file_image": "shopify://shop_images/7_6a8a57d1-010d-4459-8c56-3493754cdf00.jpg",
             "video_url": "",
             "btn_text": "",
             "link": ""
@@ -443,12 +544,12 @@
         "tab_AUd88N": {
           "type": "tab",
           "settings": {
-            "tabname": "Sitzende Erinnerung",
+            "tabname": "Knopfanhebung",
             "sub_title": "",
-            "title": "<p>Fortschrittliche Technologie</p>",
-            "description": "<p>Perfekt für zwei Familienmitglieder, um ihre individuelle Körpergröße anzupassen oder um zwei neue Höheneinstellungen <br/>für vielfältigere Körperhaltungen zu ermöglichen.Der Standard-USB-Ladeanschluss lädt deine digitalen Geräte zuverlässig auf, <br/>genau dann, wenn du es brauchst.</p>",
+            "title": "<p>Knopfanhebung</p>",
+            "description": "<div style=\"text-align:left; direction:ltr;\" lang=\"de\">\n  <p>\n   Über den ergonomischen Drehknopf steuern Sie die Auf- und Abbewegung millimetergenau – schnell, leise und intuitiv.<br/>\n  </p>\n</div>",
             "file_type": "image",
-            "file_image": "shopify://shop_images/006.jpg",
+            "file_image": "shopify://shop_images/8_74faa2a4-5b17-41d8-b534-29a1b2973cee.jpg",
             "video_url": "",
             "btn_text": "",
             "link": ""
@@ -457,26 +558,12 @@
         "tab_JyxzQm": {
           "type": "tab",
           "settings": {
-            "tabname": "Sitzende Erinnerung",
+            "tabname": "Extra-lange Akkulaufzeit",
             "sub_title": "",
-            "title": "<p>Fortschrittliche Technologie</p>",
-            "description": "<p>Perfekt für zwei Familienmitglieder, um ihre individuelle Körpergröße anzupassen oder um zwei neue Höheneinstellungen <br/>für vielfältigere Körperhaltungen zu ermöglichen.Der Standard-USB-Ladeanschluss lädt deine digitalen Geräte zuverlässig auf, <br/>genau dann, wenn du es brauchst.</p>",
+            "title": "<p>Extra-lange Akkulaufzeit</p>",
+            "description": "<div style=\"text-align:left; direction:ltr;\" lang=\"de\">\n  <p>\n    Der energiesparende Controller hält im Alltag bis zu 45 Tage durch, bevor er wieder geladen werden muss.<br/>\n  </p>\n</div>",
             "file_type": "image",
-            "file_image": "shopify://shop_images/006.jpg",
-            "video_url": "",
-            "btn_text": "",
-            "link": ""
-          }
-        },
-        "tab_LmGatL": {
-          "type": "tab",
-          "settings": {
-            "tabname": "Sitzende Erinnerung",
-            "sub_title": "",
-            "title": "<p>Fortschrittliche Technologie</p>",
-            "description": "<p>Perfekt für zwei Familienmitglieder, um ihre individuelle Körpergröße anzupassen oder um zwei neue Höheneinstellungen <br/>für vielfältigere Körperhaltungen zu ermöglichen.Der Standard-USB-Ladeanschluss lädt deine digitalen Geräte zuverlässig auf, <br/>genau dann, wenn du es brauchst.</p>",
-            "file_type": "image",
-            "file_image": "shopify://shop_images/006.jpg",
+            "file_image": "shopify://shop_images/9_72f2c59a-b99f-4a49-9a2e-d5a391617cee.jpg",
             "video_url": "",
             "btn_text": "",
             "link": ""
@@ -486,20 +573,60 @@
       "block_order": [
         "tab_fiwUXL",
         "tab_AUd88N",
-        "tab_JyxzQm",
-        "tab_LmGatL"
+        "tab_JyxzQm"
       ],
-      "disabled": true,
       "name": "img with text tab",
       "settings": {
         "spec_id": "",
         "description": "",
-        "title": "<p>CE/FSC-zertifizierter höhenverstellbarer Schreibtisch und Tischplatte</p>",
+        "title": "<p>Kabelloser Drehknopf-Controller</p>",
         "show_tab_head": true,
         "loop": true,
         "autoplay_enable": true,
         "autoplay_delay": 5000,
         "layout": "image-left"
+      }
+    },
+    "img_with_foldtext_RcBrkw": {
+      "type": "img-with-foldtext",
+      "blocks": {
+        "foldtext_HQhGDk": {
+          "type": "foldtext",
+          "settings": {
+            "title": "<h3>Versenkbare Steckdose</h3>",
+            "description": "<ul><li>Eine elegante Lift-Steckdose verschwindet bei Nichtgebrauch im Tisch und liefert Strom genau dort, wo Sie ihn brauchen.",
+            "image": "shopify://shop_images/10_68365d79-09c4-42ca-bb09-4cd17f260d9f.jpg"
+          }
+        },
+        "foldtext_iGWkAs": {
+          "type": "foldtext",
+          "settings": {
+            "title": "<h3>Praktisches 10W-Wireless-Charging</h3>",
+            "description": "<ul><li>Schwere Das integrierte kabellose Ladefeld lädt Smartphones bequem und griffbereit – ohne zusätzliche Ladegeräte.",
+            "image": "shopify://shop_images/11_ee79bd21-c1a9-4fbe-9d4c-511abade286d.jpg"
+          }
+        },
+        "foldtext_HWP39G": {
+          "type": "foldtext",
+          "settings": {
+            "title": "<h3>Größere Arbeitsfläche</h3>",
+            "description": "<ul><li>Die erweiterte Tech-Platte schafft zusätzliche Nutzfläche und damit mehr Raum für kreative Tools, Dokumente oder Zubehör. Sie bringt spürbar mehr Freiheit in Ihr tägliches Arbeiten.</li></ul>",
+            "image": "shopify://shop_images/12_9ae36754-9d46-46dd-b65e-a2ad6e8232a6.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "foldtext_HQhGDk",
+        "foldtext_iGWkAs",
+        "foldtext_HWP39G"
+      ],
+      "name": "img with foldtext",
+      "settings": {
+        "spec_id": "",
+        "title": "<p>Tech-Erweiterungsmodul </p>",
+        "image": "shopify://shop_images/featured-spaces-5.webp",
+        "padding_top": 120,
+        "padding_bottom": 120
       }
     },
     "img_with_foldtext_LzqrtY": {
@@ -809,13 +936,18 @@
     "product_info_NXNt6g",
     "product_anchor_bar_atcVF4",
     "video_wPHLA8",
+    "banner_6K9jqA",
+    "img_with_text_simplicity_4kKfAr",
+    "img_with_text_simplicity_eE7PqF",
+    "img_with_text_simplicity_iiPLAi",
+    "accordion_gallery_9yfNeM",
     "img_with_text_box_simplicity_qrzG6W",
-    "img_with_foldtext_RcBrkw",
     "img_with_text_simplicity_R8thEq",
     "img_with_text_simplicity_nJFALq",
     "img_with_text_simplicity_YLCpmN",
     "img_with_text_simplicity_JRCJ4f",
     "img_with_text_tab_emEWU8",
+    "img_with_foldtext_RcBrkw",
     "img_with_foldtext_LzqrtY",
     "technical_data_L3gXUm",
     "maidesite_swiper_QhkQG8",
