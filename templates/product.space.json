@@ -258,7 +258,7 @@
           "type": "foldtext",
           "settings": {
             "title": "<h3>Kürzere Wege, höhere Effizienz</h3>",
-            "description": "Durch das ergonomische Eckdesign verkürzt sich der Bewegungsradius. Dokumente, Geräte oder Zubehör sind mit einer schnellen Drehbewegung sofort griffbereit.",
+            "description": "Durch das ergonomische Eckdesign werden Bewegungen minimiert – ein kurzer Dreh des Körpers genügt, und alles Wichtige liegt direkt zur Hand.",
             "image": "shopify://shop_images/4_66d14f04-febd-40e9-b380-106a1837231c.jpg"
           }
         }
@@ -468,69 +468,6 @@
         "background_color": "rgba(0,0,0,0)"
       }
     },
-    "img_with_text_tab_emEWU8": {
-      "type": "img-with-text-tab",
-      "blocks": {
-        "tab_fiwUXL": {
-          "type": "tab",
-          "settings": {
-            "tabname": "Kabelloses Bluetooth-Design",
-            "sub_title": "",
-            "title": "<p>Kabelloses Bluetooth-Design</p>",
-            "description": "<div style=\"text-align:left; direction:ltr;\" lang=\"de\">\n  <p>\n  Mit einer beeindruckenden Laufzeit von bis zu 45 Tagen bleibt der Controller dauerhaft einsatzbereit – ideal für den modernen, kabellosen Arbeitsplatz.<br/>\n  </p>\n</div>",
-            "file_type": "image",
-            "file_image": "shopify://shop_images/7_6a8a57d1-010d-4459-8c56-3493754cdf00.jpg",
-            "video_url": "",
-            "btn_text": "",
-            "link": ""
-          }
-        },
-        "tab_AUd88N": {
-          "type": "tab",
-          "settings": {
-            "tabname": "Knopfanhebung",
-            "sub_title": "",
-            "title": "<p>Knopfanhebung</p>",
-            "description": "<div style=\"text-align:left; direction:ltr;\" lang=\"de\">\n  <p>\n   Über den ergonomischen Drehknopf steuern Sie die Auf- und Abbewegung millimetergenau – schnell, leise und intuitiv.<br/>\n  </p>\n</div>",
-            "file_type": "image",
-            "file_image": "shopify://shop_images/8_74faa2a4-5b17-41d8-b534-29a1b2973cee.jpg",
-            "video_url": "",
-            "btn_text": "",
-            "link": ""
-          }
-        },
-        "tab_JyxzQm": {
-          "type": "tab",
-          "settings": {
-            "tabname": "Extra-lange Akkulaufzeit",
-            "sub_title": "",
-            "title": "<p>Extra-lange Akkulaufzeit</p>",
-            "description": "<div style=\"text-align:left; direction:ltr;\" lang=\"de\">\n  <p>\n    Der energiesparende Controller hält im Alltag bis zu 45 Tage durch, bevor er wieder geladen werden muss.<br/>\n  </p>\n</div>",
-            "file_type": "image",
-            "file_image": "shopify://shop_images/9_72f2c59a-b99f-4a49-9a2e-d5a391617cee.jpg",
-            "video_url": "",
-            "btn_text": "",
-            "link": ""
-          }
-        }
-      },
-      "block_order": [
-        "tab_fiwUXL",
-        "tab_AUd88N",
-        "tab_JyxzQm"
-      ],
-      "name": "img with text tab",
-      "settings": {
-        "spec_id": "",
-        "description": "",
-        "title": "<p>Kabelloser Drehknopf-Controller</p>",
-        "show_tab_head": true,
-        "loop": true,
-        "autoplay_enable": true,
-        "autoplay_delay": 5000,
-        "layout": "image-left"
-      }
-    },
     "img_with_text_simplicity_R8thEq": {
       "type": "img-with-text-simplicity",
       "custom_css": [],
@@ -629,6 +566,69 @@
         "padding_top": 0,
         "padding_bottom": 0,
         "background_color": "rgba(0,0,0,0)"
+      }
+    },
+    "img_with_text_tab_emEWU8": {
+      "type": "img-with-text-tab",
+      "blocks": {
+        "tab_fiwUXL": {
+          "type": "tab",
+          "settings": {
+            "tabname": "Kabelloses Bluetooth-Design",
+            "sub_title": "",
+            "title": "<p>Kabelloses Bluetooth-Design</p>",
+            "description": "<div style=\"text-align:left; direction:ltr;\" lang=\"de\">\n  <p>\n  Mit einer beeindruckenden Laufzeit von bis zu 45 Tagen bleibt der Controller dauerhaft einsatzbereit – ideal für den modernen, kabellosen Arbeitsplatz.<br/>\n  </p>\n</div>",
+            "file_type": "image",
+            "file_image": "shopify://shop_images/7_6a8a57d1-010d-4459-8c56-3493754cdf00.jpg",
+            "video_url": "",
+            "btn_text": "",
+            "link": ""
+          }
+        },
+        "tab_AUd88N": {
+          "type": "tab",
+          "settings": {
+            "tabname": "Knopfanhebung",
+            "sub_title": "",
+            "title": "<p>Knopfanhebung</p>",
+            "description": "<div style=\"text-align:left; direction:ltr;\" lang=\"de\">\n  <p>\n   Über den ergonomischen Drehknopf steuern Sie die Auf- und Abbewegung millimetergenau – schnell, leise und intuitiv.<br/>\n  </p>\n</div>",
+            "file_type": "image",
+            "file_image": "shopify://shop_images/8_74faa2a4-5b17-41d8-b534-29a1b2973cee.jpg",
+            "video_url": "",
+            "btn_text": "",
+            "link": ""
+          }
+        },
+        "tab_JyxzQm": {
+          "type": "tab",
+          "settings": {
+            "tabname": "Extra-lange Akkulaufzeit",
+            "sub_title": "",
+            "title": "<p>Extra-lange Akkulaufzeit</p>",
+            "description": "<div style=\"text-align:left; direction:ltr;\" lang=\"de\">\n  <p>\n    Der energiesparende Controller hält im Alltag bis zu 45 Tage durch, bevor er wieder geladen werden muss.<br/>\n  </p>\n</div>",
+            "file_type": "image",
+            "file_image": "shopify://shop_images/9_72f2c59a-b99f-4a49-9a2e-d5a391617cee.jpg",
+            "video_url": "",
+            "btn_text": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "tab_fiwUXL",
+        "tab_AUd88N",
+        "tab_JyxzQm"
+      ],
+      "name": "img with text tab",
+      "settings": {
+        "spec_id": "",
+        "description": "",
+        "title": "<p>Kabelloser Drehknopf-Controller</p>",
+        "show_tab_head": true,
+        "loop": true,
+        "autoplay_enable": true,
+        "autoplay_delay": 5000,
+        "layout": "image-left"
       }
     },
     "img_with_foldtext_RcBrkw": {
