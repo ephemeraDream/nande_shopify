@@ -235,8 +235,50 @@
         "autoplay_speed": 5
       }
     },
+    "img_with_foldtext_cCLPBE": {
+      "type": "img-with-foldtext",
+      "blocks": {
+        "foldtext_9Y9iUM": {
+          "type": "foldtext",
+          "settings": {
+            "title": "<h3>Mehr Platz dank intelligenter Eckstruktur</h3>",
+            "description": "Die L-Form eröffnet eine großzügige Arbeitsfläche und nutzt den Raum effizienter aus. Perfekt für Multitasking, kreative Projekte oder duale Workstations.",
+            "image": "shopify://shop_images/2_2c4b0111-7442-450e-a0b1-40e0c826ce6f.jpg"
+          }
+        },
+        "foldtext_BJmYDi": {
+          "type": "foldtext",
+          "settings": {
+            "title": "<h3>Flexible Montage – links oder rechts</h3>",
+            "description": "Die Erweiterungsplatte lässt sich je nach Raumsituation frei auf der linken oder rechten Seite montieren. So passt sich der Tisch Ihrem individuellen Setup optimal an.",
+            "image": "shopify://shop_images/3_ae3e50dd-41b2-476b-8e98-a8e6f8125faa.jpg"
+          }
+        },
+        "foldtext_aQFerM": {
+          "type": "foldtext",
+          "settings": {
+            "title": "<h3>Kürzere Wege, höhere Effizienz</h3>",
+            "description": "Durch das ergonomische Eckdesign verkürzt sich der Bewegungsradius. Dokumente, Geräte oder Zubehör sind mit einer schnellen Drehbewegung sofort griffbereit.",
+            "image": "shopify://shop_images/4_66d14f04-febd-40e9-b380-106a1837231c.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "foldtext_9Y9iUM",
+        "foldtext_BJmYDi",
+        "foldtext_aQFerM"
+      ],
+      "name": "img with foldtext",
+      "settings": {
+        "spec_id": "",
+        "title": "<p>L-förmige Erweiterungsplatte</p>",
+        "padding_top": 120,
+        "padding_bottom": 120
+      }
+    },
     "img_with_text_simplicity_4kKfAr": {
       "type": "img-with-text-simplicity",
+      "disabled": true,
       "name": "img with text simplicity",
       "settings": {
         "spec_id": "",
@@ -259,6 +301,7 @@
     },
     "img_with_text_simplicity_eE7PqF": {
       "type": "img-with-text-simplicity",
+      "disabled": true,
       "name": "img with text simplicity",
       "settings": {
         "spec_id": "",
@@ -281,6 +324,7 @@
     },
     "img_with_text_simplicity_iiPLAi": {
       "type": "img-with-text-simplicity",
+      "disabled": true,
       "name": "img with text simplicity",
       "settings": {
         "spec_id": "",
@@ -525,7 +569,7 @@
         "description": "<ul><li>Das verstärkte Stahlgestell trägt bis zu 200 kg Gesamtgewicht – perfekt für mehr Monitore, schwere PCs oder professionelle Studio-Ausstattung.",
         "file_position": "left",
         "file_type": "image",
-        "file_image": "shopify://shop_images/3_c44a59ea-ee63-4574-8e83-95b8e6874354.jpg",
+        "file_image": "shopify://shop_images/6_-_200KG.jpg",
         "video_url": "",
         "video_aspect_ratio": "4/3",
         "btn_text": "",
@@ -937,16 +981,17 @@
     "product_anchor_bar_atcVF4",
     "video_wPHLA8",
     "banner_6K9jqA",
+    "img_with_foldtext_cCLPBE",
     "img_with_text_simplicity_4kKfAr",
     "img_with_text_simplicity_eE7PqF",
     "img_with_text_simplicity_iiPLAi",
     "accordion_gallery_9yfNeM",
     "img_with_text_box_simplicity_qrzG6W",
-    "img_with_text_tab_emEWU8",
     "img_with_text_simplicity_R8thEq",
     "img_with_text_simplicity_nJFALq",
     "img_with_text_simplicity_YLCpmN",
     "img_with_text_simplicity_JRCJ4f",
+    "img_with_text_tab_emEWU8",
     "img_with_foldtext_RcBrkw",
     "img_with_foldtext_LzqrtY",
     "technical_data_L3gXUm",
