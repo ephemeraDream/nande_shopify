@@ -133,19 +133,18 @@
             "anchor_name": "maidesite-spin-module"
           }
         },
+        "item_fLi8Gn": {
+          "type": "item",
+          "settings": {
+            "title": "Neuheit",
+            "anchor_name": "bf-wrapper"
+          }
+        },
         "item_Cgh74t": {
           "type": "item",
           "settings": {
             "title": "Empf.",
             "anchor_name": "Empf."
-          }
-        },
-        "item_fLi8Gn": {
-          "type": "item",
-          "disabled": true,
-          "settings": {
-            "title": "Kundenbewertungen",
-            "anchor_name": "Kundenbewertungen"
           }
         }
       },
@@ -154,8 +153,8 @@
         "item_WxFQeX",
         "item_63GYQw",
         "item_mArfYh",
-        "item_Cgh74t",
-        "item_fLi8Gn"
+        "item_fLi8Gn",
+        "item_Cgh74t"
       ],
       "custom_css": [
         ".product_anchor_bar_btn {display: none;}",
