@@ -568,6 +568,17 @@
         "background_color": "rgba(0,0,0,0)"
       }
     },
+    "custom_liquid_TB8BBm": {
+      "type": "custom-liquid",
+      "disabled": true,
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid": "<style>\n  .comparison-table {\n    width: 100%;\n    border-collapse: collapse;\n    font-family: Arial, sans-serif;\n  }\n  .comparison-table th,\n  .comparison-table td {\n    border: 1px solid #ddd;\n    padding: 12px 15px;\n    text-align: center;\n  }\n  .comparison-table th {\n    background-color: #f4f4f4;\n    font-weight: 700;\n  }\n  .comparison-table tr:nth-child(even) {\n    background-color: #fafafa;\n  }\n  .comparison-table .feature-name {\n    text-align: left;\n    font-weight: 600;\n  }\n  .highlight {\n    color: #007acc; /* 主色调，突出优势 */\n    font-weight: 700;\n  }\n</style>\n\n<table class=\"comparison-table\">\n  <thead>\n    <tr>\n      <th>特点</th>\n      <th>Space L</th>\n      <th>Space L Max</th>\n    </tr>\n  </thead>\n  <tbody>\n    <tr>\n      <td class=\"feature-name\">桌面尺寸</td>\n      <td>120 x 60 cm</td>\n      <td class=\"highlight\">140 x 70 cm</td>\n    </tr>\n    <tr>\n      <td class=\"feature-name\">最大承重</td>\n      <td>80 kg</td>\n      <td class=\"highlight\">100 kg</td>\n    </tr>\n    <tr>\n      <td class=\"feature-name\">高度调节范围</td>\n      <td>65 - 125 cm</td>\n      <td>65 - 130 cm</td>\n    </tr>\n    <tr>\n      <td class=\"feature-name\">控制面板</td>\n      <td>标准多功能手控器</td>\n      <td class=\"highlight\">高级触控面板，带记忆功能</td>\n    </tr>\n    <tr>\n      <td class=\"feature-name\">理线系统</td>\n      <td>基础理线槽</td>\n      <td class=\"highlight\">大空间理线器</td>\n    </tr>\n    <tr>\n      <td class=\"feature-name\">适用场景</td>\n      <td>家庭和办公</td>\n      <td class=\"highlight\">专业办公和多场景</td>\n    </tr>\n    <tr>\n      <td class=\"feature-name\">价格</td>\n      <td>499 €</td>\n      <td class=\"highlight\">699 €</td>\n    </tr>\n  </tbody>\n</table>",
+        "color_scheme": "",
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
     "img_with_text_tab_emEWU8": {
       "type": "img-with-text-tab",
       "blocks": {
@@ -991,6 +1002,7 @@
     "img_with_text_simplicity_nJFALq",
     "img_with_text_simplicity_YLCpmN",
     "img_with_text_simplicity_JRCJ4f",
+    "custom_liquid_TB8BBm",
     "img_with_text_tab_emEWU8",
     "img_with_foldtext_RcBrkw",
     "img_with_foldtext_LzqrtY",
