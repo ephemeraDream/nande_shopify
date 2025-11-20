@@ -75,8 +75,8 @@
             "overlay_text_align": "text-start",
             "transparent_content_color": "#ffffff",
             "file_type": "image",
-            "file_image": "shopify://shop_images/1_-_1920_x_600.jpg",
-            "file_image_pe": "shopify://shop_images/1_-_1920_x_600_0f302485-05e9-4f7c-9b8e-447609277121.jpg",
+            "file_image": "shopify://shop_images/1920_x_600_d4a813f9-f205-4c71-83f0-049ef814b681.jpg",
+            "file_image_pe": "shopify://shop_images/1920_x_600_4c95080e-73e0-4f9d-a2d1-225eacab6119.jpg",
             "video_url": "",
             "show_countdown": false,
             "countdown": ""
@@ -86,7 +86,6 @@
       "block_order": [
         "banner_item_eHw8yc"
       ],
-      "disabled": true,
       "name": "banner",
       "settings": {
         "height_mode": "fixed",
@@ -185,15 +184,6 @@
             ]
           }
         },
-        "tab_6qFKiy": {
-          "type": "tab",
-          "settings": {
-            "title": "24-Stunden-Deal",
-            "product_list": [
-              "maidesite-sn1-basic-elektrisch-hohenverstellbarer-schreibtisch-100x60cm-120x60-cm"
-            ]
-          }
-        },
         "tab_bgF4yF": {
           "type": "tab",
           "settings": {
@@ -204,12 +194,19 @@
               "maidesite-space-elektrisch-hohenverstellbares-schreibtisch"
             ]
           }
+        },
+        "tab_6qFKiy": {
+          "type": "tab",
+          "settings": {
+            "title": "Weitere Deals folgen!",
+            "product_list": []
+          }
         }
       },
       "block_order": [
         "tab_EgLUp3",
-        "tab_6qFKiy",
-        "tab_bgF4yF"
+        "tab_bgF4yF",
+        "tab_6qFKiy"
       ],
       "name": "activity products tab",
       "settings": {
