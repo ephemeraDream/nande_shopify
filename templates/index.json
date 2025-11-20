@@ -24,8 +24,8 @@
             "overlay_text_align": "text-end",
             "transparent_content_color": "#ffffff",
             "file_type": "image",
-            "file_image": "shopify://shop_images/1_0fa800d7-927d-498c-9f14-d813840a2759.jpg",
-            "file_image_pe": "shopify://shop_images/1_ff3a0dc2-b289-4031-9518-74720065e9a5.jpg",
+            "file_image": "shopify://shop_images/1_8bac08be-c3a8-4543-a301-73076f7dc298.jpg",
+            "file_image_pe": "shopify://shop_images/1_53fd9934-9e95-48f2-aba6-f7fca589900e.jpg",
             "video_url": "",
             "show_countdown": false,
             "countdown": ""
@@ -65,6 +65,82 @@
             "file_type": "image",
             "file_image": "shopify://shop_images/2_e57bbb89-69b4-4d36-81b6-852f3c53edcd.jpg",
             "file_image_pe": "shopify://shop_images/2_b6298f36-346f-4891-a3a6-3b4523e0bb9c.jpg",
+            "video_url": "",
+            "show_countdown": false,
+            "countdown": ""
+          }
+        },
+        "banner_item_gBm9dP": {
+          "type": "banner_item",
+          "settings": {
+            "sub_title": "",
+            "title": "",
+            "text": "",
+            "btn_text": "",
+            "link": "shopify://products/elektrisch-hohenverstellbarer-gestell-t1-basic",
+            "file_position": "middle_left",
+            "overlay_text_align": "text-start",
+            "transparent_content_color": "#ffffff",
+            "file_type": "image",
+            "file_image": "shopify://shop_images/2_-_T1_Pro.jpg",
+            "file_image_pe": "shopify://shop_images/2_-_T1_Pro_21e7dc12-33e3-4315-bb22-5bf6bc3e3f11.jpg",
+            "video_url": "",
+            "show_countdown": false,
+            "countdown": ""
+          }
+        },
+        "banner_item_UAJhHy": {
+          "type": "banner_item",
+          "settings": {
+            "sub_title": "",
+            "title": "",
+            "text": "",
+            "btn_text": "",
+            "link": "",
+            "file_position": "middle_left",
+            "overlay_text_align": "text-start",
+            "transparent_content_color": "#ffffff",
+            "file_type": "image",
+            "file_image": "shopify://shop_images/3_-_3.jpg",
+            "file_image_pe": "shopify://shop_images/4_-_T2_Pro_Max_9d1d2c7f-8937-42f3-bd4c-991d0e055504.jpg",
+            "video_url": "",
+            "show_countdown": false,
+            "countdown": ""
+          }
+        },
+        "banner_item_K6bYLF": {
+          "type": "banner_item",
+          "settings": {
+            "sub_title": "",
+            "title": "",
+            "text": "",
+            "btn_text": "",
+            "link": "",
+            "file_position": "middle_left",
+            "overlay_text_align": "text-start",
+            "transparent_content_color": "#ffffff",
+            "file_type": "image",
+            "file_image": "shopify://shop_images/3_-_3.jpg",
+            "file_image_pe": "shopify://shop_images/3_-_3_11478633-533a-4c31-9468-34135ff827c9.jpg",
+            "video_url": "",
+            "show_countdown": false,
+            "countdown": ""
+          }
+        },
+        "banner_item_4c4kPY": {
+          "type": "banner_item",
+          "settings": {
+            "sub_title": "",
+            "title": "",
+            "text": "",
+            "btn_text": "",
+            "link": "",
+            "file_position": "middle_left",
+            "overlay_text_align": "text-start",
+            "transparent_content_color": "#ffffff",
+            "file_type": "image",
+            "file_image": "shopify://shop_images/4_3aaba831-583a-49e2-baa7-b6b22538c485.jpg",
+            "file_image_pe": "shopify://shop_images/4_143f99f0-bf28-4907-bcd4-587a511f6d6b.jpg",
             "video_url": "",
             "show_countdown": false,
             "countdown": ""
@@ -114,6 +190,10 @@
         "banner_item_e7J8AA",
         "banner_item_ykwd4B",
         "banner_item_t4GakG",
+        "banner_item_gBm9dP",
+        "banner_item_UAJhHy",
+        "banner_item_K6bYLF",
+        "banner_item_4c4kPY",
         "banner_item_NCLJWQ",
         "banner_item_V4RHqa"
       ],
