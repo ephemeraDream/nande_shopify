@@ -86,6 +86,7 @@
       "block_order": [
         "banner_item_eHw8yc"
       ],
+      "disabled": true,
       "name": "banner",
       "settings": {
         "height_mode": "fixed",
