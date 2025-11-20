@@ -31,6 +31,14 @@
             "font_color": "#bdff00"
           }
         },
+        "img_with_text_K8NMwf": {
+          "type": "img_with_text",
+          "settings": {
+            "text": "<p><a href=\"/pages/black-friday-2025\" title=\"Black Friday 2025\"><strong>Black Friday Deal</strong></a><strong> – bis zu 52 % Rabatt！</strong></p>",
+            "link": "",
+            "font_color": "#bdff00"
+          }
+        },
         "countdown_77kmfi": {
           "type": "countdown",
           "disabled": true,
@@ -46,6 +54,7 @@
       "block_order": [
         "announcement-bar-0",
         "img_with_text_QJDYxJ",
+        "img_with_text_K8NMwf",
         "countdown_77kmfi"
       ],
       "custom_css": [],
