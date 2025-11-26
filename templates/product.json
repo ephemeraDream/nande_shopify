@@ -755,6 +755,44 @@
       "settings": {
         "include_margins": true
       }
+    },
+    "1764139624b86cf7ce": {
+      "type": "apps",
+      "blocks": {
+        "webrex_seo_schema_faq_section_im83c8": {
+          "type": "shopify://apps/webrex-seo-schema/blocks/FAQSection/283875bf-bf86-4e78-831b-502ad0c4a5c2",
+          "settings": {
+            "section_align": "align-center",
+            "max_width": 800,
+            "box_border": 4,
+            "faq_border_thickness": 1,
+            "faq_border_color": "#ddd",
+            "faq_border_style": "solid",
+            "icon_color": "#333333",
+            "top_margin": 20,
+            "bottom_margin": 20,
+            "top_padding": 20,
+            "bottom_padding": 20,
+            "left_padding": 20,
+            "right_padding": 20,
+            "heading_title": "Frequently asked questions",
+            "heading_align": "center",
+            "heading_font_size": 20,
+            "heading_color": "#333333",
+            "question_color": "#333333",
+            "question_font_size": 16,
+            "answer_color": "#666666",
+            "answer_font_size": 14,
+            "hover_color": "#007BFF"
+          }
+        }
+      },
+      "block_order": [
+        "webrex_seo_schema_faq_section_im83c8"
+      ],
+      "settings": {
+        "include_margins": true
+      }
     }
   },
   "order": [
@@ -775,6 +813,7 @@
     "faq_simple_kxTbhc",
     "product_comment_GV7BHg",
     "recommended_products_yEVJQ9",
-    "176095029670cc7d32"
+    "176095029670cc7d32",
+    "1764139624b86cf7ce"
   ]
 }
