@@ -176,11 +176,21 @@
           "settings": {
             "title": "Bestseller",
             "product_list": [
-              "maidesite-tischgestell-elektrisch-hohenverstellbar-t2-pro-plus",
-              "maidesite-th2-pro-plus-tischgestell-elektrisch-hohenverstellbar",
-              "elektrisch-hohenverstellbarer-gestell-t1-basic",
+              "maidesite-elektrisch-hohenverstellbarer-gestell-t2-pro",
               "maidesite-t2-pro-max-tischgestell-elektrisch-hohenverstellbar",
-              "maidesite-elektrisch-hohenverstellbarer-gestell-t2-pro"
+              "maidesite-th2-pro-plus-tischgestell-elektrisch-hohenverstellbar",
+              "maidesite-tischgestell-elektrisch-hohenverstellbar-t2-pro-plus",
+              "maidesite-el2-pro-art-tischgestell-elektrisch-hohenverstellbar",
+              "maidesite-yoga-hohenverstellbarer-schreibtisch-mit-tischplatte",
+              "maidesite-t4-pro-plus-vierbeinige-elliptische-saule-elektrisch-hohenverstellbares-gestell",
+              "elektrisch-hohenverstellbarer-gestell-t1-basic",
+              "maidesite-space-elektrisch-hohenverstellbares-schreibtisch",
+              "maidesite-sc2-pro-schreibtisch-hohenverstellbar-160-80-180x80-cm-unwiderstehliches-blitzangebot",
+              "maidesite-serpentine-kabelrohr",
+              "maidesite-sn1-basic-elektrisch-hohenverstellbarer-schreibtisch-100x60cm-120x60-cm",
+              "maidesite-3-fach-tischsteckdose-mit-usb-c-und-a-1-8m-kabel-steckdosenleiste",
+              "maidesite-ec6-ergonomischer-burostuhl-mit-kopfstutze-ruckenlehne-und-fussstutze-unwiderstehliches-blitzangebot",
+              "maidesite-ec5-ergonomischer-burostuhl-mit-ruckenlehne"
             ]
           }
         },
@@ -198,8 +208,13 @@
         "tab_6qFKiy": {
           "type": "tab",
           "settings": {
-            "title": "Weitere Deals folgen!",
-            "product_list": []
+            "title": "Unser 24-Stunden-Blitzverkauf",
+            "product_list": [
+              "elektrisch-hohenverstellbarer-gestell-t1-basic",
+              "maidesite-tischgestell-elektrisch-hohenverstellbar-t2-pro-plus",
+              "maidesite-sn1-basic-elektrisch-hohenverstellbarer-schreibtisch-100x60cm-120x60-cm",
+              "maidesite-sc2-pro-schreibtisch-hohenverstellbar-160-80-180x80-cm-unwiderstehliches-blitzangebot"
+            ]
           }
         }
       },
