@@ -11,6 +11,17 @@
   "name": "t:sections.header.name",
   "type": "header",
   "sections": {
+    "custom_liquid_wmXK7t": {
+      "type": "custom-liquid",
+      "disabled": true,
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid": "366666366666366666366666366666366666366666366666366666366666366666366666",
+        "color_scheme": "",
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
     "announcement-bar": {
       "type": "announcement-bar",
       "blocks": {
@@ -209,6 +220,7 @@
     }
   },
   "order": [
+    "custom_liquid_wmXK7t",
     "announcement-bar",
     "header_simple_ULLndz",
     "header_menu_KJeiwA",
