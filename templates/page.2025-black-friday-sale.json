@@ -171,10 +171,33 @@
     "activity_products_tab_aUGewm": {
       "type": "activity-products-tab",
       "blocks": {
+        "tab_6qFKiy": {
+          "type": "tab",
+          "settings": {
+            "title": "Unser 24-Stunden-Blitzverkauf",
+            "product_list": [
+              "elektrisch-hohenverstellbarer-gestell-t1-basic",
+              "maidesite-tischgestell-elektrisch-hohenverstellbar-t2-pro-plus",
+              "maidesite-sn1-basic-elektrisch-hohenverstellbarer-schreibtisch-100x60cm-120x60-cm",
+              "maidesite-sc2-pro-schreibtisch-hohenverstellbar-160-80-180x80-cm-unwiderstehliches-blitzangebot"
+            ]
+          }
+        },
+        "tab_bgF4yF": {
+          "type": "tab",
+          "settings": {
+            "title": "Flaggschiff-Angebote",
+            "product_list": [
+              "maidesite-t4-pro-plus-vierbeinige-elliptische-saule-elektrisch-hohenverstellbares-gestell",
+              "maidesite-yoga-hohenverstellbarer-schreibtisch-mit-tischplatte",
+              "maidesite-space-elektrisch-hohenverstellbares-schreibtisch"
+            ]
+          }
+        },
         "tab_EgLUp3": {
           "type": "tab",
           "settings": {
-            "title": "Bestseller",
+            "title": "Alle Produkte",
             "product_list": [
               "maidesite-elektrisch-hohenverstellbarer-gestell-t2-pro",
               "maidesite-t2-pro-max-tischgestell-elektrisch-hohenverstellbar",
@@ -193,35 +216,12 @@
               "maidesite-ec5-ergonomischer-burostuhl-mit-ruckenlehne"
             ]
           }
-        },
-        "tab_bgF4yF": {
-          "type": "tab",
-          "settings": {
-            "title": "Flaggschiff-Angebote",
-            "product_list": [
-              "maidesite-t4-pro-plus-vierbeinige-elliptische-saule-elektrisch-hohenverstellbares-gestell",
-              "maidesite-yoga-hohenverstellbarer-schreibtisch-mit-tischplatte",
-              "maidesite-space-elektrisch-hohenverstellbares-schreibtisch"
-            ]
-          }
-        },
-        "tab_6qFKiy": {
-          "type": "tab",
-          "settings": {
-            "title": "Unser 24-Stunden-Blitzverkauf",
-            "product_list": [
-              "elektrisch-hohenverstellbarer-gestell-t1-basic",
-              "maidesite-tischgestell-elektrisch-hohenverstellbar-t2-pro-plus",
-              "maidesite-sn1-basic-elektrisch-hohenverstellbarer-schreibtisch-100x60cm-120x60-cm",
-              "maidesite-sc2-pro-schreibtisch-hohenverstellbar-160-80-180x80-cm-unwiderstehliches-blitzangebot"
-            ]
-          }
         }
       },
       "block_order": [
-        "tab_EgLUp3",
+        "tab_6qFKiy",
         "tab_bgF4yF",
-        "tab_6qFKiy"
+        "tab_EgLUp3"
       ],
       "name": "activity products tab",
       "settings": {
