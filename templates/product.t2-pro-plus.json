@@ -249,18 +249,18 @@
         "file_with_text_Q8tJKk": {
           "type": "file_with_text",
           "settings": {
-            "title": "<p>Super Duale Motoren</p>",
-            "description": "<p>Maidesite Duale Motorensystem ist besser als andere Produkt mit nur einem Motor.</p>",
+            "title": "<p>Extra großer Höhenbereich</p>",
+            "description": "<p>Unser Tisch bietet einen außergewöhnlich weiten Verstellbereich – niedriger als viele Modelle für kleinere Nutzer und höher als der Durchschnitt für große Menschen. So passt sich der Tisch perfekt an jede Körpergröße und Arbeitsweise an. Für ergonomisches Arbeiten ohne Kompromisse.</p>",
             "file_type": "image",
-            "file_image": "shopify://shop_images/3_1.png",
+            "file_image": "shopify://shop_images/A_-_15.jpg",
             "video_url": ""
           }
         },
         "file_with_text_JJXCp8": {
           "type": "file_with_text",
           "settings": {
-            "title": "<p>Extrem stabiler</p>",
-            "description": "<p>Sie ist auch in der höchsten Höhe von ausgezeichneter Stabilität.</p>",
+            "title": "<p>Innovative Stabilität</p>",
+            "description": "<p>•<strong>In Bewegung:</strong>Sanftes Heben & Senken ohne Wackeln – der Kartenstapel bleibt stehen.<br/>•<strong>Im Stillstand:</strong>Hohe Tragkraft, kein Schwanken bei voller Last.<br/>•<strong>Auf höchster Stufe:</strong>Auch ganz oben ruhig – ideal zum Arbeiten.</p>",
             "file_type": "image",
             "file_image": "shopify://shop_images/A_-_1_21e207db-008d-4213-a786-ced32551c980.jpg",
             "video_url": ""
@@ -269,8 +269,8 @@
         "file_with_text_McHwGa": {
           "type": "file_with_text",
           "settings": {
-            "title": "<p>Max. Verstellhöhe</p>",
-            "description": "<p>Der 3-stufige tischgestell höhenverstellbar, der über den größten Höhenverstellbereich von 62-125 cm auf dem Markt verfügt<br/><br/></p>",
+            "title": "<p>Bis zu 160 kg Tragkraft</p>",
+            "description": "<p><strong>Ideal für schwere Arbeitsplätze:</strong><br/>Die hohe Tragkraft von 160 kg bietet genügend Reserven für große Monitore, PCs, Studioequipment oder anspruchsvolle Setups – perfekt für Profis und Power-User.</p>",
             "file_type": "image",
             "file_image": "shopify://shop_images/A_-_2_554e72a6-f64c-47b5-9c4b-9283be8492d3.jpg",
             "video_url": ""
@@ -279,8 +279,8 @@
         "file_with_text_f9yPAD": {
           "type": "file_with_text",
           "settings": {
-            "title": "<p>Belastbar bis 160 kg</p>",
-            "description": "<p>Deren Material 20 % mehr als andere Produkte, stark und stabil. Der Traglast bis zu 160 kg.</p>",
+            "title": "<p>Smart Controller</p>",
+            "description": "<p><strong>Alles steuern – einfach, schnell, intuitiv:</strong><br/>Mit vier Memory-Positionen, zwei Ladeanschlüssen, Kindersicherung und Sit-Stand-Erinnerung steuern Sie Ihren Arbeitsplatz komfortabel und präzise – mit nur einem Fingertipp.</p>",
             "file_type": "image",
             "file_image": "shopify://shop_images/A_-_3_1da60034-3732-4070-959a-7dc174ddb6e7.jpg",
             "video_url": ""
@@ -289,8 +289,8 @@
         "file_with_text_B39ehq": {
           "type": "file_with_text",
           "settings": {
-            "title": "<p>Multifunktions-Bedienfeld</p>",
-            "description": "<p>4-Memory-Speicherplätze, die entsprechen unterschiedliche voreingestellte Höhe. Sie können 0,5h,1h,2h Erinnerung einstellen.</p>",
+            "title": "<p>Metall-Kabelhalter</p>",
+            "description": "<p><strong>Für mehr Ordnung am Schreibtisch:</strong><br/>Der mitgelieferte Metall-Kabelhalter hilft Ihnen, Kabel sauber zu bündeln und unter der Tischplatte zu verstauen – für einen aufgeräumten und professionellen Arbeitsplatz.</p>",
             "file_type": "image",
             "file_image": "shopify://shop_images/A_-_6_162c7af4-2767-4e14-bd29-a908bd52a60a.jpg",
             "video_url": ""
@@ -299,8 +299,8 @@
         "file_with_text_THJTyK": {
           "type": "file_with_text",
           "settings": {
-            "title": "<p>FSC Tischplatte</p>",
-            "description": "<p>Optionale FSC-zertifizierte Tischplatten in 120x60cm, 140x70cm und 160x80cm mit vorgebohrten Löchern.</p>",
+            "title": "<p>Qualität geprüft</p>",
+            "description": "<p><strong>Über 10.000 Belastungstests:</strong><br/>Jeder Tischrahmen wird strengen Qualitäts- und Belastungstests unterzogen. Mehr als 10.000 Zyklen garantieren eine langlebige, robuste und zuverlässige Performance im täglichen Einsatz.</p>",
             "file_type": "image",
             "file_image": "shopify://shop_images/A_-_5_6d43702d-3f0c-4ead-9d40-c7b07fa69d43.jpg",
             "video_url": ""
@@ -577,7 +577,7 @@
             "tabname": "4 Speicherhöhen",
             "sub_title": "",
             "title": "<p><strong>4 Speicherhöhen</strong></p>",
-            "description": "",
+            "description": "<div class=\"controller-features\">\n  <ul>\n    <li>Merke dir vier Lieblingshöhen – für Sitzen, Stehen oder gemeinsame Nutzung.\n    Ein Knopfdruck genügt und der Tisch fährt präzise in die gespeicherte Position.</li>\n  </ul>\n</div>\n\n<style>\n  /* 让这个模块内的 li 左对齐，不影响其他地方 */\n  .controller-features ul li {\n    text-align: left !important;\n    list-style-position: inside;\n  }\n</style>",
             "file_type": "image",
             "file_image": "shopify://shop_images/A_-_10_b468c503-1d00-4069-a2f4-fabb4746802f.jpg",
             "video_url": "",
@@ -591,7 +591,7 @@
             "tabname": "Erinnerung zum Aufstehen",
             "sub_title": "",
             "title": "<p><strong>Erinnerung zum Aufstehen</strong></p>",
-            "description": "",
+            "description": "<div class=\"controller-features\">\n  <ul>\n    <li>Das integrierte Reminder-System erinnert regelmasig daran, aufzustehen und die Sitzposition zu wechseln. So fordern Sie ein gesunderes Arbeiten im Stehen und beugen langfristigen Ruckenproblemen oder Verspannungen vor.</li>\n  </ul>\n</div>\n\n<style>\n  /* 让这个模块内的 li 左对齐，不影响其他地方 */\n  .controller-features ul li {\n    text-align: left !important;\n    list-style-position: inside;\n  }\n</style>",
             "file_type": "image",
             "file_image": "shopify://shop_images/A_-_12_a124c050-627c-426b-92bd-a7416dd3e974.jpg",
             "video_url": "",
@@ -605,7 +605,7 @@
             "tabname": "Kindersicherung",
             "sub_title": "",
             "title": "<p><strong>Kindersicherung</strong></p>",
-            "description": "",
+            "description": "<div class=\"controller-features\">\n  <ul>\n    <li>Schützt vor unbeabsichtigtem Verstellen.\nMit der Kindersicherung bleibt die Tischhöhe sicher fixiert – ideal für Haushalte mit Kindern oder Haustieren.</li>\n  </ul>\n</div>\n\n<style>\n  /* 让这个模块内的 li 左对齐，不影响其他地方 */\n  .controller-features ul li {\n    text-align: left !important;\n    list-style-position: inside;\n  }\n</style>",
             "file_type": "image",
             "file_image": "shopify://shop_images/A_-_13_3d579a66-558e-4537-8529-ad4af75c555a.jpg",
             "video_url": "",
