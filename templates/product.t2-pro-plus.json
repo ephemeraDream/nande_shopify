@@ -331,32 +331,32 @@
         "foldtext_HQhGDk": {
           "type": "foldtext",
           "settings": {
-            "title": "<h3>Stabileres Design</h3>",
-            "description": "<ul><li>Dreiecksunterstützungsstruktur ist extrem stabil im Vergleich zu anderen Schreibtischdesigns.</li><li>Sie ist auch in der höchsten Höhe von ausgezeichneter Stabilität.</li></ul>",
+            "title": "<p>Mikro-Dreiecksstruktur</p>",
+            "description": "<p>Die Säulen verfügen über eine feine Mikrodreiecksstruktur – inspiriert von der berühmten Loschwitzer Brücke („Blaues Wunder“) in Dresden.\nDiese Bauweise sorgt für eine höhere Verformungssteifigkeit und verleiht dem Tisch spürbar mehr Stabilität im täglichen Einsatz./p>",
             "image": "shopify://shop_images/A_-_7_d99421e4-a6de-4b0e-9e7f-d79b08ba376a.jpg"
           }
         },
         "foldtext_HWP39G": {
           "type": "foldtext",
           "settings": {
-            "title": "<h3>Stabilere Säule</h3>",
-            "description": "<ul><li>Neben den strukturellen Verbesserungen trägt auch die präzise Verarbeitung und Konstruktion zur Stabilität bei.</li><li>Der Spalt zwischen den Säulen beträgt weniger als 0,03 mm. Die dreiteiligen Säulen gleiten nahtlos ineinander, wodurch jegliches Wackeln verhindert wird.</li></ul>",
+            "title": "<h3>Verstärkte Säulen</h3>",
+            "description": "<ul><li>Die Standbeine verfügen über eine erhöhte Wandstärke und besonders robuste Stahlprofile.\nMehr Material = mehr Stabilität, bessere Lastverteilung und eine langlebige Gesamtstruktur.</li></ul>",
             "image": "shopify://shop_images/A_-_8_16c5c9c8-6974-4c27-a403-3ebf4fd63bea.jpg"
-          }
-        },
-        "foldtext_iGWkAs": {
-          "type": "foldtext",
-          "settings": {
-            "title": "<h3>Stärkere Füße</h3>",
-            "description": "<ul><li>Schwere Schreibtischfüße haben einen niedrigeren Schwerpunkt, was die Stabilität erhöht.</li><li>Jedes T2 Pro Plus Tischbein wiegt 2,55 kg, was 50 % mehr ist als herkömmliche Beine.</li><li>Dadurch ist es stabiler als andere Tischgestelle.</li></ul>",
-            "image": "shopify://shop_images/A_-_14.jpg"
           }
         },
         "foldtext_pxGTDz": {
           "type": "foldtext",
           "settings": {
-            "title": "",
-            "description": "",
+            "title": "<p>Verstärkte Standfüße</p>",
+            "description": "<ul><li>Die extra dick konstruierten Standfüße verbessern die Bodenauflage deutlich und erhöhen die Stabilität spürbar – auch bei voller Belastung./li></ul>",
+            "image": "shopify://shop_images/A_-_14.jpg"
+          }
+        },
+        "foldtext_iGWkAs": {
+          "type": "foldtext",
+          "settings": {
+            "title": "<p>Minimale Toleranzen</p>",
+            "description": "<ul><li>Der Abstand zwischen Innen- und Außensäule wurde deutlich reduziert.\nDie enge Passform verringert seitliches Spiel während der Höhenverstellung und sorgt für eine ruhigere, angenehm solide Bewegung.</li></ul>",
             "image": "shopify://shop_images/A_-_9_353113a8-2766-417c-b306-be3a585a5dff.jpg"
           }
         }
@@ -364,13 +364,13 @@
       "block_order": [
         "foldtext_HQhGDk",
         "foldtext_HWP39G",
-        "foldtext_iGWkAs",
-        "foldtext_pxGTDz"
+        "foldtext_pxGTDz",
+        "foldtext_iGWkAs"
       ],
       "name": "img with foldtext",
       "settings": {
         "spec_id": "",
-        "title": "<p>Warum T2 Pro Plus wählen?</p>",
+        "title": "<p>Ingenieursstärke trifft auf maximale Stabilität</p>",
         "padding_top": 120,
         "padding_bottom": 120
       }
