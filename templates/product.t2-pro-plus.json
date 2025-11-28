@@ -228,6 +228,7 @@
     },
     "video_wPHLA8": {
       "type": "video",
+      "disabled": true,
       "name": "t:sections.video.presets.name",
       "settings": {
         "heading": "Maidesite mobiler Schreibtisch T2 Pro Plus Ausrüstung",
@@ -245,16 +246,6 @@
     "img_with_text_box_simplicity_qrzG6W": {
       "type": "img-with-text-box-simplicity",
       "blocks": {
-        "file_with_text_JJXCp8": {
-          "type": "file_with_text",
-          "settings": {
-            "title": "<p>Extrem stabiler</p>",
-            "description": "<p>Sie ist auch in der höchsten Höhe von ausgezeichneter Stabilität.</p>",
-            "file_type": "image",
-            "file_image": "shopify://shop_images/Triangle-support-structurer-on-T2-pro-plus-standing-desk-1.png",
-            "video_url": ""
-          }
-        },
         "file_with_text_Q8tJKk": {
           "type": "file_with_text",
           "settings": {
@@ -265,13 +256,23 @@
             "video_url": ""
           }
         },
+        "file_with_text_JJXCp8": {
+          "type": "file_with_text",
+          "settings": {
+            "title": "<p>Extrem stabiler</p>",
+            "description": "<p>Sie ist auch in der höchsten Höhe von ausgezeichneter Stabilität.</p>",
+            "file_type": "image",
+            "file_image": "shopify://shop_images/A_-_1_21e207db-008d-4213-a786-ced32551c980.jpg",
+            "video_url": ""
+          }
+        },
         "file_with_text_McHwGa": {
           "type": "file_with_text",
           "settings": {
             "title": "<p>Max. Verstellhöhe</p>",
             "description": "<p>Der 3-stufige tischgestell höhenverstellbar, der über den größten Höhenverstellbereich von 62-125 cm auf dem Markt verfügt<br/><br/></p>",
             "file_type": "image",
-            "file_image": "shopify://shop_images/P4-1_aa2ffea5-a6a3-4294-97d9-10a46810a61b.jpg",
+            "file_image": "shopify://shop_images/A_-_2_554e72a6-f64c-47b5-9c4b-9283be8492d3.jpg",
             "video_url": ""
           }
         },
@@ -281,7 +282,7 @@
             "title": "<p>Belastbar bis 160 kg</p>",
             "description": "<p>Deren Material 20 % mehr als andere Produkte, stark und stabil. Der Traglast bis zu 160 kg.</p>",
             "file_type": "image",
-            "file_image": "shopify://shop_images/Maidesite-standing-desk-T2-Pro-with-160kg-loading-capacity_1200x800_77bc9297-af7b-4d54-838d-14b4e90c837d.jpg",
+            "file_image": "shopify://shop_images/A_-_3_1da60034-3732-4070-959a-7dc174ddb6e7.jpg",
             "video_url": ""
           }
         },
@@ -291,7 +292,7 @@
             "title": "<p>Multifunktions-Bedienfeld</p>",
             "description": "<p>4-Memory-Speicherplätze, die entsprechen unterschiedliche voreingestellte Höhe. Sie können 0,5h,1h,2h Erinnerung einstellen.</p>",
             "file_type": "image",
-            "file_image": "shopify://shop_images/Control-panel-RJ32-socket-T2-Pro-Plus-DE_a477a1f9-43c6-4c54-8515-5f43d32e5be1_1.jpg",
+            "file_image": "shopify://shop_images/A_-_6_162c7af4-2767-4e14-bd29-a908bd52a60a.jpg",
             "video_url": ""
           }
         },
@@ -301,14 +302,14 @@
             "title": "<p>FSC Tischplatte</p>",
             "description": "<p>Optionale FSC-zertifizierte Tischplatten in 120x60cm, 140x70cm und 160x80cm mit vorgebohrten Löchern.</p>",
             "file_type": "image",
-            "file_image": "shopify://shop_images/P7.jpg",
+            "file_image": "shopify://shop_images/A_-_5_6d43702d-3f0c-4ead-9d40-c7b07fa69d43.jpg",
             "video_url": ""
           }
         }
       },
       "block_order": [
-        "file_with_text_JJXCp8",
         "file_with_text_Q8tJKk",
+        "file_with_text_JJXCp8",
         "file_with_text_McHwGa",
         "file_with_text_f9yPAD",
         "file_with_text_B39ehq",
@@ -332,7 +333,7 @@
           "settings": {
             "title": "<h3>Stabileres Design</h3>",
             "description": "<ul><li>Dreiecksunterstützungsstruktur ist extrem stabil im Vergleich zu anderen Schreibtischdesigns.</li><li>Sie ist auch in der höchsten Höhe von ausgezeichneter Stabilität.</li></ul>",
-            "image": "shopify://shop_images/Triangle-support-structurer-on-T2-pro-plus-standing-desk-1.png"
+            "image": "shopify://shop_images/A_-_7_d99421e4-a6de-4b0e-9e7f-d79b08ba376a.jpg"
           }
         },
         "foldtext_HWP39G": {
@@ -340,7 +341,7 @@
           "settings": {
             "title": "<h3>Stabilere Säule</h3>",
             "description": "<ul><li>Neben den strukturellen Verbesserungen trägt auch die präzise Verarbeitung und Konstruktion zur Stabilität bei.</li><li>Der Spalt zwischen den Säulen beträgt weniger als 0,03 mm. Die dreiteiligen Säulen gleiten nahtlos ineinander, wodurch jegliches Wackeln verhindert wird.</li></ul>",
-            "image": "shopify://shop_images/T2-Pro-hohenverstellbares-Tischbein-mit-kleinem-Abstand-2.png"
+            "image": "shopify://shop_images/A_-_8_16c5c9c8-6974-4c27-a403-3ebf4fd63bea.jpg"
           }
         },
         "foldtext_iGWkAs": {
@@ -348,25 +349,35 @@
           "settings": {
             "title": "<h3>Stärkere Füße</h3>",
             "description": "<ul><li>Schwere Schreibtischfüße haben einen niedrigeren Schwerpunkt, was die Stabilität erhöht.</li><li>Jedes T2 Pro Plus Tischbein wiegt 2,55 kg, was 50 % mehr ist als herkömmliche Beine.</li><li>Dadurch ist es stabiler als andere Tischgestelle.</li></ul>",
-            "image": "shopify://shop_images/T2-Pro-hohenverstellbarer-Tischfuss-2.jpg"
+            "image": "shopify://shop_images/A_-_14.jpg"
+          }
+        },
+        "foldtext_pxGTDz": {
+          "type": "foldtext",
+          "settings": {
+            "title": "",
+            "description": "",
+            "image": "shopify://shop_images/A_-_9_353113a8-2766-417c-b306-be3a585a5dff.jpg"
           }
         }
       },
       "block_order": [
         "foldtext_HQhGDk",
         "foldtext_HWP39G",
-        "foldtext_iGWkAs"
+        "foldtext_iGWkAs",
+        "foldtext_pxGTDz"
       ],
       "name": "img with foldtext",
       "settings": {
         "spec_id": "",
-        "title": "<p>Extrem stabiler T2 Pro Plus</p>",
+        "title": "<p>Warum T2 Pro Plus wählen?</p>",
         "padding_top": 120,
         "padding_bottom": 120
       }
     },
     "img_with_text_simplicity_R8thEq": {
       "type": "img-with-text-simplicity",
+      "disabled": true,
       "custom_css": [],
       "name": "img with text simplicity",
       "settings": {
@@ -390,6 +401,7 @@
     },
     "img_with_text_simplicity_nJFALq": {
       "type": "img-with-text-simplicity",
+      "disabled": true,
       "custom_css": [
         ".img_with_text_simplicity_info {padding-left: 3rem;}"
       ],
@@ -415,6 +427,7 @@
     },
     "img_with_text_simplicity_YLCpmN": {
       "type": "img-with-text-simplicity",
+      "disabled": true,
       "custom_css": [],
       "name": "img with text simplicity",
       "settings": {
@@ -438,6 +451,7 @@
     },
     "img_with_text_simplicity_JRCJ4f": {
       "type": "img-with-text-simplicity",
+      "disabled": true,
       "custom_css": [
         ".img_with_text_simplicity_info {padding-left: 3rem;}"
       ],
@@ -540,6 +554,84 @@
         "layout": "image-left"
       }
     },
+    "img_with_text_tab_PKWtaQ": {
+      "type": "img-with-text-tab",
+      "blocks": {
+        "tab_AEzAba": {
+          "type": "tab",
+          "settings": {
+            "tabname": "2× 18W-Ports (USB-A & USB-C)",
+            "sub_title": "",
+            "title": "<p><strong>2× 18W-Ports (USB-A & USB-C)</strong></p>",
+            "description": "<div class=\"controller-features\">\n  <ul>\n    <li>Smartphones, Tablets oder Kopfhörer jederzeit griffbereit laden.\nDie beiden Ports versorgen deine Geräte zuverlässig, ohne zusätzliches Ladegerät auf dem Tisch.</li>\n  </ul>\n</div>\n\n<style>\n  /* 让这个模块内的 li 左对齐，不影响其他地方 */\n  .controller-features ul li {\n    text-align: left !important;\n    list-style-position: inside;\n  }\n</style>",
+            "file_type": "image",
+            "file_image": "shopify://shop_images/A_-_11_e8e4e9aa-a289-47d9-9dd8-e83318c2b0f4.jpg",
+            "video_url": "",
+            "btn_text": "",
+            "link": ""
+          }
+        },
+        "tab_znDLdq": {
+          "type": "tab",
+          "settings": {
+            "tabname": "4 Speicherhöhen",
+            "sub_title": "",
+            "title": "<p><strong>4 Speicherhöhen</strong></p>",
+            "description": "",
+            "file_type": "image",
+            "file_image": "shopify://shop_images/A_-_10_b468c503-1d00-4069-a2f4-fabb4746802f.jpg",
+            "video_url": "",
+            "btn_text": "",
+            "link": ""
+          }
+        },
+        "tab_fhRGXd": {
+          "type": "tab",
+          "settings": {
+            "tabname": "Erinnerung zum Aufstehen",
+            "sub_title": "",
+            "title": "<p><strong>Erinnerung zum Aufstehen</strong></p>",
+            "description": "",
+            "file_type": "image",
+            "file_image": "shopify://shop_images/A_-_12_a124c050-627c-426b-92bd-a7416dd3e974.jpg",
+            "video_url": "",
+            "btn_text": "",
+            "link": ""
+          }
+        },
+        "tab_kgTXzP": {
+          "type": "tab",
+          "settings": {
+            "tabname": "Kindersicherung",
+            "sub_title": "",
+            "title": "<p><strong>Kindersicherung</strong></p>",
+            "description": "",
+            "file_type": "image",
+            "file_image": "shopify://shop_images/A_-_13_3d579a66-558e-4537-8529-ad4af75c555a.jpg",
+            "video_url": "",
+            "btn_text": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "tab_AEzAba",
+        "tab_znDLdq",
+        "tab_fhRGXd",
+        "tab_kgTXzP"
+      ],
+      "name": "img with text tab",
+      "settings": {
+        "spec_id": "",
+        "description": "",
+        "title": "<p>Sicher und smart gesteuert</p>",
+        "show_tab_head": true,
+        "loop": true,
+        "autoplay_enable": true,
+        "autoplay_delay": 5000,
+        "layout": "image-left"
+      }
+    },
     "img_with_foldtext_LzqrtY": {
       "type": "img-with-foldtext",
       "blocks": {
@@ -573,6 +665,7 @@
         "foldtext_7BhWHC",
         "foldtext_UUEbi9"
       ],
+      "disabled": true,
       "name": "img with foldtext",
       "settings": {
         "spec_id": "",
@@ -857,6 +950,7 @@
     "img_with_text_simplicity_YLCpmN",
     "img_with_text_simplicity_JRCJ4f",
     "img_with_text_tab_emEWU8",
+    "img_with_text_tab_PKWtaQ",
     "img_with_foldtext_LzqrtY",
     "technical_data_L3gXUm",
     "maidesite_swiper_QhkQG8",
