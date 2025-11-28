@@ -199,6 +199,7 @@
     },
     "video_Dwgr3Q": {
       "type": "video",
+      "disabled": true,
       "name": "t:sections.video.presets.name",
       "settings": {
         "heading": "Alle Produkte Im üBerblick",
@@ -220,9 +221,9 @@
           "type": "file_with_text",
           "settings": {
             "title": "<p>Solide und stabil</p>",
-            "description": "<p>T2 Pro höhenverstellbar – auch in Maximalhöhe absolut stabil, kein Wackeln </p>",
+            "description": "<p>•<strong>In Bewegung:</strong>Sanftes Heben & Senken ohne Wackeln – der Kartenstapel bleibt stehen.<br/>•<strong>Im Stillstand:</strong>Hohe Tragkraft, kein Schwanken bei voller Last.<br/>•<strong>Auf höchster Stufe:</strong>Auch ganz oben ruhig – ideal zum Arbeiten.</p>",
             "file_type": "image",
-            "file_image": "shopify://shop_images/Maidesite-T2-Pro-Plus-Hohenverstellbarer-Schreibtisch-zu-Hause-1200x800.png",
+            "file_image": "shopify://shop_images/A_-_1.jpg",
             "video_url": ""
           }
         },
@@ -230,49 +231,49 @@
           "type": "file_with_text",
           "settings": {
             "title": "<p>Bis zu 160 kg Tragkraft</p>",
-            "description": "<ul><li>Platzieren Sie 2-3 27-Zoll-Monitore, Drucker, PC-Tower und andere Bürogeräte ohne Sorgen.</li></ul>",
+            "description": "<p><strong>Ideal für schwere Arbeitsplätze:</strong><br/>Die hohe Tragkraft von 160 kg bietet genügend Reserven für große Monitore, PCs, Studioequipment oder anspruchsvolle Setups – perfekt für Profis und Power-User.</p>",
             "file_type": "image",
-            "file_image": "shopify://shop_images/Maidesite-standing-desk-T2-Pro-with-160kg-loading-capacity_1200x800_77bc9297-af7b-4d54-838d-14b4e90c837d.jpg",
+            "file_image": "shopify://shop_images/A_-_2.jpg",
             "video_url": ""
           }
         },
         "file_with_text_Q8tJKk": {
           "type": "file_with_text",
           "settings": {
-            "title": "<p>Unterstützt 110-200 cm Tischplatte</p>",
-            "description": "<p>Ausziehbarer Steh-Schreibtischrahmen passt sich ideal an Tischplatten von 110 bis 200 x 60 bis 80 cm an.</p>",
+            "title": "<p>Smart Controller</p>",
+            "description": "<p><strong>Alles steuern – einfach, schnell, intuitiv:</strong><br/>Mit vier Memory-Positionen, zwei Ladeanschlüssen, Kindersicherung und Sit-Stand-Erinnerung steuern Sie Ihren Arbeitsplatz komfortabel und präzise – mit nur einem Fingertipp.</p>",
             "file_type": "image",
-            "file_image": "shopify://shop_images/Maidesite-T2-Pro-Hohenverstellbarer-Tisch-Weiss-Nutzungs-Tisch-1100mm-2000mm-1200x800_3ab849dd-da36-4ae4-879f-2261e2db5885.jpg",
+            "file_image": "shopify://shop_images/A_-_3.jpg",
             "video_url": ""
           }
         },
         "file_with_text_f9yPAD": {
           "type": "file_with_text",
           "settings": {
-            "title": "<p>Höhenverstellbar für Kinder und Erwachsene</p>",
-            "description": "<ul><li>Dieser höhenverstellbare Schreibtisch passt perfekt für Personen mit einer Körpergröße von 1,5 bis 1,83 Metern, da er sich von 72 bis 120 cm in der Höhe verstellen lässt.</li></ul>",
+            "title": "<p>Metall-Kabelhalter</p>",
+            "description": "<p><strong>Für mehr Ordnung am Schreibtisch:</strong><br/>Der mitgelieferte Metall-Kabelhalter hilft Ihnen, Kabel sauber zu bündeln und unter der Tischplatte zu verstauen – für einen aufgeräumten und professionellen Arbeitsplatz.</p>",
             "file_type": "image",
-            "file_image": "shopify://shop_images/T2-Pro-hohenverstellbarer-schreibtischbereich-62-125cm.jpg",
+            "file_image": "shopify://shop_images/A_-_6.jpg",
             "video_url": ""
           }
         },
         "file_with_text_B39ehq": {
           "type": "file_with_text",
           "settings": {
-            "title": "<p>4 Voreingestellte Speicherhöhen</p>",
-            "description": "<p>4 Speicherplätze für Familie & Haltungen, plus USB-Ladepunkt</p>",
+            "title": "<p>Großer Verstellbereich</p>",
+            "description": "<p>Der breite Längenverstellbereich von 1000 bis 1800 mm macht das Gestell besonders vielseitig. So passt es zu einer großen Auswahl an Tischplattengrößen und eignet sich für unterschiedlichste Arbeits- und Wohnsituationen.<br/><br/></p>",
             "file_type": "image",
-            "file_image": "shopify://shop_images/Control_panel_with_USB-C_for_T2_Series-2.jpg",
+            "file_image": "shopify://shop_images/A_-_4.jpg",
             "video_url": ""
           }
         },
         "file_with_text_JJXCp8": {
           "type": "file_with_text",
           "settings": {
-            "title": "<p>Kostenloser und Schneller Versand</p>",
-            "description": "<p>Normalerweise beträgt die optimale Schreibtischhöhe im Sitzen Ihre Körpergröße x 0,4 und im Stehen Ihre Körpergröße x 0,62. Höhenverstellbarer Schreibtisch mit 2 stufigen Säulen ist nur für die Körpergröße von 1,75-1,95 m geeignet. </p>",
+            "title": "<p>Qualität geprüft</p>",
+            "description": "<p><strong>Über 10.000 Belastungstests:</strong><br/>Jeder Tischrahmen wird strengen Qualitäts- und Belastungstests unterzogen. Mehr als 10.000 Zyklen garantieren eine langlebige, robuste und zuverlässige Performance im täglichen Einsatz.<br/><br/></p>",
             "file_type": "image",
-            "file_image": "shopify://shop_images/FSC_certificate_table_top.jpg",
+            "file_image": "shopify://shop_images/A_-_5.jpg",
             "video_url": ""
           }
         }
@@ -288,7 +289,7 @@
       "name": "file box simplicity",
       "settings": {
         "spec_id": "Produktbeschreibung",
-        "main_title": "<p>Warum Maidesite T2 Pro Plus Höhenverstellbarer Schreibtisch?</p>",
+        "main_title": "<p>Warum T2 Pro wählen?</p>",
         "row_num": 3,
         "padding_top": 120,
         "padding_bottom": 120,
@@ -301,25 +302,25 @@
         "foldtext_HQhGDk": {
           "type": "foldtext",
           "settings": {
-            "title": "<h3>Stabileres Design</h3>",
-            "description": "<p>Dreieck-Konstruktion: Extrem stabil, auch in Maximalhöhe</p>",
-            "image": "shopify://shop_images/Triangle-support-structurer-on-T2-pro-plus-standing-desk-1.png"
+            "title": "<p>Mikro-Dreiecksstruktur</p>",
+            "description": "<p>Die Säulen verfügen über eine feine Mikrodreiecksstruktur – inspiriert von der berühmten Loschwitzer Brücke („Blaues Wunder“) in Dresden.\nDiese Bauweise sorgt für eine höhere Verformungssteifigkeit und verleiht dem Tisch spürbar mehr Stabilität im täglichen Einsatz./p>",
+            "image": "shopify://shop_images/A_-_7.jpg"
           }
         },
         "foldtext_HWP39G": {
           "type": "foldtext",
           "settings": {
-            "title": "<h3>Stabilere Säule</h3>",
-            "description": "<p>Präzise Verarbeitung: Spalt &lt;0,03 mm, 2-teilige Säulen gleiten formschlüssig – garantiert wackelfrei.</p>",
-            "image": "shopify://shop_images/T2-Pro-hohenverstellbares-Tischbein-mit-kleinem-Abstand-2.png"
+            "title": "<h3>Verstärkte Säulen</h3>",
+            "description": "<ul><li>Die Standbeine verfügen über eine erhöhte Wandstärke und besonders robuste Stahlprofile.\nMehr Material = mehr Stabilität, bessere Lastverteilung und eine langlebige Gesamtstruktur.</li></ul>",
+            "image": "shopify://shop_images/A_-_8.jpg"
           }
         },
         "foldtext_iGWkAs": {
           "type": "foldtext",
           "settings": {
-            "title": "<h3>Stärkere Füße</h3>",
-            "description": "<ul><li>2,55 kg Beine, 50 % mehr Gewicht – tiefer Schwerpunkt, maximale Stabilität.</li></ul>",
-            "image": "shopify://shop_images/T2-Pro-hohenverstellbarer-Tischfuss-2.jpg"
+            "title": "<p>Minimale Toleranzen</p>",
+            "description": "<ul><li>Der Abstand zwischen Innen- und Außensäule wurde deutlich reduziert.\nDie enge Passform verringert seitliches Spiel während der Höhenverstellung und sorgt für eine ruhigere, angenehm solide Bewegung..</li></ul>",
+            "image": "shopify://shop_images/A_-_9.jpg"
           }
         }
       },
@@ -331,14 +332,14 @@
       "name": "img with foldtext",
       "settings": {
         "spec_id": "",
-        "title": "<p>Warum der höhenverstellbare Schreibtisch Maidesite T2 Pro stabiler ist</p>",
-        "image": "shopify://shop_images/featured-spaces-5.webp",
+        "title": "<p><br/>Stabilität auf einem neuen Niveau<br/><br/></p>",
         "padding_top": 120,
         "padding_bottom": 120
       }
     },
     "img_with_text_simplicity_R8thEq": {
       "type": "img-with-text-simplicity",
+      "disabled": true,
       "custom_css": [],
       "name": "img with text simplicity",
       "settings": {
@@ -363,6 +364,7 @@
     },
     "img_with_text_simplicity_nJFALq": {
       "type": "img-with-text-simplicity",
+      "disabled": true,
       "custom_css": [
         ".img_with_text_simplicity_info {padding-left: 3rem;}"
       ],
@@ -388,6 +390,7 @@
     },
     "img_with_text_simplicity_YLCpmN": {
       "type": "img-with-text-simplicity",
+      "disabled": true,
       "custom_css": [],
       "name": "img with text simplicity",
       "settings": {
@@ -411,6 +414,7 @@
     },
     "img_with_text_simplicity_JRCJ4f": {
       "type": "img-with-text-simplicity",
+      "disabled": true,
       "custom_css": [
         ".img_with_text_simplicity_info {padding-left: 3rem;}"
       ],
@@ -437,15 +441,29 @@
     "img_with_text_tab_emEWU8": {
       "type": "img-with-text-tab",
       "blocks": {
+        "tab_LmGatL": {
+          "type": "tab",
+          "settings": {
+            "tabname": "2× 18W-Ports (USB-A & USB-C)",
+            "sub_title": "",
+            "title": "<p>Zwei 18W integrierte Ladeanschlüsse</p>",
+            "description": "<div class=\"controller-features\">\n  <ul>\n    <li>Smartphones, Tablets oder Kopfhörer jederzeit griffbereit laden.\nDie beiden Ports versorgen deine Geräte zuverlässig, ohne zusätzliches Ladegerät auf dem Tisch.</li>\n  </ul>\n</div>\n\n<style>\n  /* 让这个模块内的 li 左对齐，不影响其他地方 */\n  .controller-features ul li {\n    text-align: left !important;\n    list-style-position: inside;\n  }\n</style>",
+            "file_type": "image",
+            "file_image": "shopify://shop_images/A_-_11.jpg",
+            "video_url": "",
+            "btn_text": "",
+            "link": ""
+          }
+        },
         "tab_fiwUXL": {
           "type": "tab",
           "settings": {
-            "tabname": "Hochwertiges Material",
-            "sub_title": "Erstklassig",
-            "title": "<h3>Hochwertiges Material und erstklassige Fertigung</h3>",
-            "description": "<ul><li>Unsere Schreibtische bestehen aus erstklassigen Industriematerialien von Fortune-500-Unternehmen. </li><li>Die höhenverstellbaren Maidesite-Tische werden in vollautomatisierten Produktionsprozessen gefertigt, um höchste Qualität sicherzustellen.</li></ul>",
+            "tabname": "4 Speicherhöhen",
+            "sub_title": "",
+            "title": "<p><br/>4 Speicherhöhen<br/><br/></p>",
+            "description": "<div class=\"controller-features\">\n  <ul>\n    <li>Merke dir vier Lieblingshöhen – für Sitzen, Stehen oder gemeinsame Nutzung.\n    Ein Knopfdruck genügt und der Tisch fährt präzise in die gespeicherte Position.</li>\n  </ul>\n</div>\n\n<style>\n  /* 让这个模块内的 li 左对齐，不影响其他地方 */\n  .controller-features ul li {\n    text-align: left !important;\n    list-style-position: inside;\n  }\n</style>",
             "file_type": "image",
-            "file_image": "shopify://shop_images/Material.jpg",
+            "file_image": "shopify://shop_images/A_-_10.jpg",
             "video_url": "",
             "btn_text": "",
             "link": ""
@@ -454,12 +472,12 @@
         "tab_AUd88N": {
           "type": "tab",
           "settings": {
-            "tabname": "100%-Prüfung",
-            "sub_title": "Verantwortungsbewusst",
-            "title": "<h3>Strenge 100%-Prüfung vor der Auslieferung</h3>",
-            "description": "<ul><li>Jedes Schreibtisch, das Sie erhalten, unterzieht sich einer strengen 100%-Prüfung, um sicherzustellen, dass es fehlerfrei ist.</li></ul>",
+            "tabname": "Erinnerung zum Aufstehen",
+            "sub_title": "",
+            "title": "<p>Erinnerung zum Aufstehen</p>",
+            "description": "<div class=\"controller-features\">\n  <ul>\n    <li>Das integrierte Reminder-System erinnert regelmasig daran, aufzustehen und die Sitzposition zu wechseln. So fordern Sie ein gesunderes Arbeiten im Stehen und beugen langfristigen Ruckenproblemen oder Verspannungen vor.</li>\n  </ul>\n</div>\n\n<style>\n  /* 让这个模块内的 li 左对齐，不影响其他地方 */\n  .controller-features ul li {\n    text-align: left !important;\n    list-style-position: inside;\n  }\n</style>",
             "file_type": "image",
-            "file_image": "shopify://shop_images/Quality_control.jpg",
+            "file_image": "shopify://shop_images/A_-_12.jpg",
             "video_url": "",
             "btn_text": "",
             "link": ""
@@ -468,27 +486,12 @@
         "tab_JyxzQm": {
           "type": "tab",
           "settings": {
-            "tabname": "Zertifizierungen",
-            "sub_title": "Zuverlässig",
-            "title": "<p>Zertifizierungen für Zuverlässigkeit</p>",
-            "description": "<ul><li>Mit Zertifizierungen wie CE, UKCA und FSC garantieren wir, dass unsere justierbaren Schreibtische von Maidesite funktional sind und den meisten Bürotischstandards entsprechen.</li></ul>",
-            "file_type": "image",
-            "file_image": "shopify://shop_images/certification.jpg",
-            "video_url": "",
-            "btn_text": "",
-            "link": ""
-          }
-        },
-        "tab_LmGatL": {
-          "type": "tab",
-          "disabled": true,
-          "settings": {
-            "tabname": "Sitzende Erinnerung",
+            "tabname": "",
             "sub_title": "",
-            "title": "<p>Fortschrittliche Technologie</p>",
-            "description": "<p>Perfekt für zwei Familienmitglieder, um ihre individuelle Körpergröße anzupassen oder um zwei neue Höheneinstellungen <br/>für vielfältigere Körperhaltungen zu ermöglichen.Der Standard-USB-Ladeanschluss lädt deine digitalen Geräte zuverlässig auf, <br/>genau dann, wenn du es brauchst.</p>",
+            "title": "<p>Kindersicherung</p>",
+            "description": "<div class=\"controller-features\">\n  <ul>\n    <li>Schützt vor unbeabsichtigtem Verstellen.\nMit der Kindersicherung bleibt die Tischhöhe sicher fixiert – ideal für Haushalte mit Kindern oder Haustieren.</li>\n  </ul>\n</div>\n\n<style>\n  /* 让这个模块内的 li 左对齐，不影响其他地方 */\n  .controller-features ul li {\n    text-align: left !important;\n    list-style-position: inside;\n  }\n</style>",
             "file_type": "image",
-            "file_image": "shopify://shop_images/006.jpg",
+            "file_image": "shopify://shop_images/A_-_13.jpg",
             "video_url": "",
             "btn_text": "",
             "link": ""
@@ -496,10 +499,10 @@
         }
       },
       "block_order": [
+        "tab_LmGatL",
         "tab_fiwUXL",
         "tab_AUd88N",
-        "tab_JyxzQm",
-        "tab_LmGatL"
+        "tab_JyxzQm"
       ],
       "name": "img with text tab",
       "settings": {
