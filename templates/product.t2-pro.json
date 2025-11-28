@@ -332,7 +332,7 @@
       "name": "img with foldtext",
       "settings": {
         "spec_id": "",
-        "title": "<p><br/>Stabilität auf einem neuen Niveau<br/><br/></p>",
+        "title": "<p>Stabilität auf einem neuen Niveau</p>",
         "padding_top": 120,
         "padding_bottom": 120
       }
