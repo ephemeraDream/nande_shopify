@@ -486,7 +486,7 @@
         "tab_JyxzQm": {
           "type": "tab",
           "settings": {
-            "tabname": "",
+            "tabname": "Kindersicherung",
             "sub_title": "",
             "title": "<p>Kindersicherung</p>",
             "description": "<div class=\"controller-features\">\n  <ul>\n    <li>Schützt vor unbeabsichtigtem Verstellen.\nMit der Kindersicherung bleibt die Tischhöhe sicher fixiert – ideal für Haushalte mit Kindern oder Haustieren.</li>\n  </ul>\n</div>\n\n<style>\n  /* 让这个模块内的 li 左对齐，不影响其他地方 */\n  .controller-features ul li {\n    text-align: left !important;\n    list-style-position: inside;\n  }\n</style>",
