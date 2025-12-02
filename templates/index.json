@@ -14,7 +14,6 @@
       "blocks": {
         "banner_item_e7J8AA": {
           "type": "banner_item",
-          "disabled": true,
           "settings": {
             "sub_title": "",
             "title": "",
@@ -25,8 +24,8 @@
             "overlay_text_align": "text-end",
             "transparent_content_color": "#ffffff",
             "file_type": "image",
-            "file_image": "shopify://shop_images/1_8bac08be-c3a8-4543-a301-73076f7dc298.jpg",
-            "file_image_pe": "shopify://shop_images/1_53fd9934-9e95-48f2-aba6-f7fca589900e.jpg",
+            "file_image": "shopify://shop_images/1_16172234-e105-4387-acbf-0a34578bd65a.jpg",
+            "file_image_pe": "shopify://shop_images/1_24e21552-b064-464d-b944-99d334cfbe4a.jpg",
             "video_url": "",
             "show_countdown": false,
             "countdown": ""
