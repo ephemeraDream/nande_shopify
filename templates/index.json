@@ -14,6 +14,7 @@
       "blocks": {
         "banner_item_e7J8AA": {
           "type": "banner_item",
+          "disabled": true,
           "settings": {
             "sub_title": "",
             "title": "",
@@ -33,6 +34,7 @@
         },
         "banner_item_ykwd4B": {
           "type": "banner_item",
+          "disabled": true,
           "settings": {
             "sub_title": "",
             "title": "",
@@ -72,6 +74,7 @@
         },
         "banner_item_gBm9dP": {
           "type": "banner_item",
+          "disabled": true,
           "settings": {
             "sub_title": "",
             "title": "",
@@ -91,6 +94,7 @@
         },
         "banner_item_UAJhHy": {
           "type": "banner_item",
+          "disabled": true,
           "settings": {
             "sub_title": "",
             "title": "",
@@ -110,6 +114,7 @@
         },
         "banner_item_K6bYLF": {
           "type": "banner_item",
+          "disabled": true,
           "settings": {
             "sub_title": "",
             "title": "",
@@ -129,6 +134,7 @@
         },
         "banner_item_4c4kPY": {
           "type": "banner_item",
+          "disabled": true,
           "settings": {
             "sub_title": "",
             "title": "",
