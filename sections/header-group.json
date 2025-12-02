@@ -36,6 +36,7 @@
         },
         "img_with_text_amdJT7": {
           "type": "img_with_text",
+          "disabled": true,
           "settings": {
             "text": "<p><a href=\"https://www.maidesite.de/pages/black-friday-2025#coupon-section\" title=\"https://www.maidesite.de/pages/black-friday-2025#coupon-section\">Unser 24-Stunden-Blitzverkauf</a> läuft – Verpasse nicht deine Chance!</p>",
             "link": "",
@@ -53,7 +54,7 @@
         "img_with_text_K8NMwf": {
           "type": "img_with_text",
           "settings": {
-            "text": "<p><a href=\"/pages/black-friday-2025\" title=\"Black Friday 2025\"><strong>Black Friday Deal</strong></a><strong> – bis zu 52 % Rabatt！</strong></p>",
+            "text": "<p><a href=\"/pages/black-friday-2025\" title=\"Black Friday 2025\"><strong>BF & CM Comeback</strong></a><strong> – bis zu 33% Rabatt！</strong></p>",
             "link": "",
             "font_color": "#bdff00"
           }
