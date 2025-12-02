@@ -323,16 +323,6 @@
         "padding_top": 120,
         "padding_bottom": 120
       }
-    },
-    "custom_liquid_49P4PN": {
-      "type": "custom-liquid",
-      "name": "t:sections.custom-liquid.presets.name",
-      "settings": {
-        "custom_liquid": "<button id=\"omni-reset-btn\"\n  style=\"margin-left:10px;padding:12px 26px;background:#eee;color:#111;border:none;border-radius:6px;cursor:pointer;\">\n  ♻️ Reset Popup Test\n</button>\n\n<script>\n  function resetOmniCookie() {\n    const formId = '6909c32e097a9d73aaf628b0';\n    const list = [\n      `omnisend-form-${formId}-closed-at`,\n      `omnisend-form-${formId}-filled-at`,\n      `omnisend-form-${formId}-teaser-closed-at`\n    ];\n    list.forEach(c => document.cookie = `${c}=;Max-Age=0;path=/;`);\n    alert(\"✅ 已清除记录，现在可以重新触发弹窗\");\n  }\n\n  document.getElementById(\"omni-reset-btn\")?.addEventListener(\"click\", resetOmniCookie);\n</script>",
-        "color_scheme": "",
-        "padding_top": 40,
-        "padding_bottom": 52
-      }
     }
   },
   "order": [
@@ -346,7 +336,6 @@
     "activity_products_normal_8qJYJt",
     "activity_subscribe_top_tV4gHF",
     "activity_subscribe_tV4gHF",
-    "blogs_simple_XBYLNU",
-    "custom_liquid_49P4PN"
+    "blogs_simple_XBYLNU"
   ]
 }
