@@ -119,7 +119,7 @@
     {%- comment -%}
     关键：真正写入 Shopify Customer 的字段
     {%- endcomment -%}
-    <input type="hidden" name="contact[tags]" value="newsletter,advent_calendar_2025">
+    <input type="hidden" name="contact[tags]" value="newsletter,advent_calendar_202">
 
     <div class="form-group">
     <label for="customerEmail">邮箱地址</label>
@@ -194,8 +194,10 @@
           <a href="{{ section.settings.shop_link | default: '/collections/all' }}" class="action-btn primary">
             立即购物 →
           </a>
-          
-
+          <button type="button" class="action-btn secondary" data-close-modal>
+            稍后再说
+          </button>
+        </div>
       </div>
     </div>
   </div>
