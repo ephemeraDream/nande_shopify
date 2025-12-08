@@ -1,0 +1,774 @@
+{% comment %}
+  圣诞倒数日历 - Omnisend 集成版
+  sections/christmas-calendar.liquid
+{% endcomment %}
+
+{{ 'christmas-calendar.css' | asset_url | stylesheet_tag }}
+
+<div class="christmas-calendar" id="adventCalendar">
+  <div class="calendar-container">
+    
+    <!-- 标题 -->
+    <div class="calendar-header">
+      <h2 class="calendar-title">{{ section.settings.title }}</h2>
+      <p class="calendar-subtitle">{{ section.settings.subtitle }}</p>
+    </div>
+
+    <!-- 日历网格 - 16个门 (12月8日-23日) -->
+    <div class="calendar-grid">
+      {% assign start_day = 8 %}
+      {% assign current_year = 'now' | date: '%Y' %}
+      {% assign today_str = 'now' | date: '%Y-%m-%d' %}
+      {% assign special_days = '8,15,22,24,25' | split: ',' %}
+      
+      {% for i in (0..17) %}
+      {% assign day = start_day | plus: i %}
+        {% assign day_str = day | prepend: '0' | slice: -2, 2 %}
+        {% assign date_str = current_year | append: '-12-' | append: day_str %}
+        
+        {% comment %} 判断状态 {% endcomment %}
+        {% assign status = 'locked' %}
+        {%- if section.settings.test_mode -%}
+        {%- assign status = 'available' -%}
+        {%- elsif today_str >= date_str -%}
+        {%- assign status = 'available' -%}
+        {%- endif -%}
+        
+        {% comment %} 判断是否大奖日 {% endcomment %}
+        {% assign is_special = false %}
+        {% assign day_check = day | append: '' %}
+        {% for special in special_days %}
+          {% if day_check == special %}
+            {% assign is_special = true %}
+          {% endif %}
+        {% endfor %}
+        
+        {% comment %} 获取奖品配置 {% endcomment %}
+        {% capture type_key %}day_{{ day }}_type{% endcapture %}
+        {% capture prize_key %}day_{{ day }}_prize{% endcapture %}
+        {% capture code_key %}day_{{ day }}_code{% endcapture %}
+        
+        {% assign prize_type = section.settings[type_key] | default: 'discount' %}
+        {% assign prize_value = section.settings[prize_key] | default: section.settings.default_prize %}
+        {% assign prize_code = section.settings[code_key] | default: section.settings.default_code %}
+
+        <div class="calendar-door {{ status }}{% if is_special %} special-door{% endif %}"
+             id="door-{{ day }}"
+             data-day="{{ day }}"
+             data-date="{{ date_str }}"
+             data-status="{{ status }}"
+             data-special="{{ is_special }}"
+             data-prize-type="{{ prize_type }}"
+             data-prize-value="{{ prize_value | escape }}"
+             data-prize-code="{{ prize_code }}">
+          
+          <div class="door-front">
+          <span class="door-number">{{ day }}</span>
+          {%- if day == 24 -%}
+          <span class="door-tag door-tag--eve">平安夜</span>
+          {%- elsif day == 25 -%}
+          <span class="door-tag door-tag--xmas">圣诞节</span>
+          {%- endif -%}
+
+          {% if is_special %}
+          <span class="special-badge">⭐</span>
+          {% endif %}
+          {% if status == 'locked' %}
+          <span class="lock-icon">🔒</span>
+          {% endif %}
+          <div class="door-handle"></div>
+          </div>
+          
+          <div class="door-back">
+            <div class="prize-preview">
+              <span class="prize-icon">{% if is_special %}🎁{% else %}🎅{% endif %}</span>
+              <span class="prize-text">{% if is_special %}大奖{% else %}惊喜{% endif %}</span>
+            </div>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+
+    <!-- 规则说明 -->
+    <div class="calendar-rules">
+      <p>{{ section.settings.rules_text }}</p>
+    </div>
+  </div>
+
+  <!-- 邮箱收集弹窗 -->
+  <div class="advent-modal" id="emailModal">
+    <div class="modal-overlay" data-close-modal></div>
+    <div class="modal-content">
+      <button class="modal-close" data-close-modal>&times;</button>
+      <div class="modal-body">
+        <div class="modal-header">
+          <span class="modal-icon">🎄</span>
+          <h3>开启 12月<span id="modalDay">--</span>日 惊喜!</h3>
+          <p id="modalSubtitle">输入邮箱，领取您的专属奖励</p>
+        </div>
+        
+    {% form 'customer', id: 'adventEmailForm', class: 'advent-form' %}
+    {%- comment -%}
+    下面这几个是给前端 JS 用的，不影响 Shopify 创建客户
+    {%- endcomment -%}
+    <input type="hidden" id="formDay" name="advent_day" value="">
+    <input type="hidden" id="formPrizeType" name="advent_prize_type" value="">
+    <input type="hidden" id="formPrizeValue" name="advent_prize_value" value="">
+    <input type="hidden" id="formPrizeCode" name="advent_prize_code" value="">
+
+    {%- comment -%}
+    关键：真正写入 Shopify Customer 的字段
+    {%- endcomment -%}
+    <input type="hidden" name="contact[tags]" value="newsletter,advent_calendar_2024">
+
+    <div class="form-group">
+    <label for="customerEmail">邮箱地址</label>
+    <input type="email" 
+    id="customerEmail" 
+    name="contact[email]" 
+    placeholder="your@email.com" 
+    required>
+    <span class="error-message">请输入有效的邮箱地址</span>
+    </div>
+          
+    <div class="form-group checkbox-group">
+    {%- comment -%}
+    这个勾选只是前端用，不参与 Shopify 字段
+    {%- endcomment -%}
+    <input type="checkbox" id="marketingConsent" name="marketing_consent" checked>
+    <span>我同意接收促销邮件和优惠信息</span>
+    </div>
+          
+    <button type="submit" class="submit-btn" id="submitBtn">
+    <span class="text">🎁 立即领取</span>
+    <span class="loading"><span class="spinner"></span> 处理中...</span>
+    </button>
+
+    {%- if form.errors -%}
+    <div class="form-error">
+    {{ form.errors | default_errors }}
+    </div>
+    {%- endif -%}
+    {% endform %}
+        
+        <p class="privacy-note">
+          🔒 您的信息安全受保护 · 
+          <a href="{{ section.settings.privacy_link | default: '/policies/privacy-policy' }}">隐私政策</a>
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- 奖品展示弹窗 -->
+  <div class="advent-modal prize-modal" id="prizeModal">
+    <div class="modal-overlay" data-close-modal></div>
+    <div class="modal-content">
+      <button class="modal-close" data-close-modal>&times;</button>
+      <div id="confettiContainer" class="confetti-container"></div>
+      <div class="modal-body">
+        <div class="prize-header">
+          <h3>🎉 恭喜您!</h3>
+          <p class="prize-date">12月<span id="prizeDayDisplay">--</span>日 惊喜</p>
+        </div>
+        
+        <div class="prize-reveal">
+          <span class="prize-icon-large" id="prizeIconLarge">🎁</span>
+          <p class="prize-title">您获得了：</p>
+          <p class="prize-value" id="prizeValueDisplay"></p>
+        </div>
+        
+        <div class="code-section" id="codeSection" style="display:none;">
+          <p class="code-label">您的专属折扣码：</p>
+          <div class="code-display">
+            <code id="discountCodeDisplay"></code>
+            <button type="button" class="copy-btn" id="copyCodeBtn">复制</button>
+          </div>
+          <p class="code-hint">在结账时输入此折扣码</p>
+        </div>
+        
+        <div class="big-prize-notice" id="bigPrizeNotice" style="display:none;">
+          <p>🌟 恭喜获得大奖！我们将在24小时内通过邮件与您联系。</p>
+        </div>
+        
+        <div class="prize-actions">
+          <a href="{{ section.settings.shop_link | default: '/collections/all' }}" class="action-btn primary">
+            立即购物 →
+          </a>
+          <button type="button" class="action-btn secondary" data-close-modal>
+            稍后再说
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast 容器 -->
+  <div class="toast-container" id="toastContainer"></div>
+</div>
+
+<!-- 配置 -->
+<script>
+  window.adventCalendarConfig = {
+    shopDomain: '{{ shop.permanent_domain }}',
+    customerEmail: '{{ customer.email | default: "" }}'
+  };
+</script>
+
+{{ 'christmas-calendar.js' | asset_url | script_tag }}
+
+{% schema %}
+{
+  "name": "🎄 圣诞倒数日历",
+  "tag": "section",
+  "class": "christmas-calendar-section",
+  "settings": [
+    {
+      "type": "header",
+      "content": "基本设置"
+    },
+    {
+      "type": "checkbox",
+      "id": "test_mode",
+      "label": "测试模式（全部门可打开）",
+      "default": false
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "标题",
+      "default": "🎄 圣诞惊喜倒数日历"
+    },
+    {
+      "type": "textarea",
+      "id": "subtitle",
+      "label": "副标题",
+      "default": "12月8日-23日，每天开启一扇门，领取专属惊喜！⭐标记为大奖日！"
+    },
+    {
+      "type": "textarea",
+      "id": "rules_text",
+      "label": "规则说明",
+      "default": "📋 每天可开启对应日期的门 · 输入邮箱即可领取 · ⭐标记日期为大奖日 · 每个邮箱每天限领一次"
+    },
+    {
+      "type": "url",
+      "id": "privacy_link",
+      "label": "隐私政策链接"
+    },
+    {
+      "type": "url",
+      "id": "shop_link",
+      "label": "购物链接",
+      "default": "/collections/all"
+    },
+    {
+      "type": "header",
+      "content": "默认奖品（非特殊日期）"
+    },
+    {
+      "type": "text",
+      "id": "default_prize",
+      "label": "默认奖品",
+      "default": "8% 折扣"
+    },
+    {
+      "type": "text",
+      "id": "default_code",
+      "label": "默认折扣码",
+      "default": "XMAS8"
+    },
+    {
+      "type": "header",
+      "content": "⭐ 12月8日 (大奖日)"
+    },
+    {
+      "type": "select",
+      "id": "day_8_type",
+      "label": "奖品类型",
+      "options": [
+        {"value": "discount", "label": "折扣码"},
+        {"value": "gift_card", "label": "礼品卡"},
+        {"value": "desk_board", "label": "桌板"}
+      ],
+      "default": "gift_card"
+    },
+    {
+      "type": "text",
+      "id": "day_8_prize",
+      "label": "奖品描述",
+      "default": "50€ 礼品卡"
+    },
+    {
+      "type": "text",
+      "id": "day_8_code",
+      "label": "折扣码",
+      "default": "XMASGIFT50"
+    },
+    {
+      "type": "header",
+      "content": "12月9日"
+    },
+    {
+      "type": "select",
+      "id": "day_9_type",
+      "label": "奖品类型",
+      "options": [
+        {"value": "discount", "label": "折扣码"},
+        {"value": "cable_tray", "label": "免费理线槽"},
+        {"value": "cable_tube", "label": "免费蛇形管"}
+      ],
+      "default": "discount"
+    },
+    {
+      "type": "text",
+      "id": "day_9_prize",
+      "label": "奖品描述",
+      "default": "8% 折扣"
+    },
+    {
+      "type": "text",
+      "id": "day_9_code",
+      "label": "折扣码",
+      "default": "XMAS8DEC9"
+    },
+    {
+      "type": "header",
+      "content": "12月10日"
+    },
+    {
+      "type": "select",
+      "id": "day_10_type",
+      "label": "奖品类型",
+      "options": [
+        {"value": "discount", "label": "折扣码"},
+        {"value": "cable_tray", "label": "免费理线槽"},
+        {"value": "cable_tube", "label": "免费蛇形管"}
+      ],
+      "default": "cable_tray"
+    },
+    {
+      "type": "text",
+      "id": "day_10_prize",
+      "label": "奖品描述",
+      "default": "免费理线槽"
+    },
+    {
+      "type": "text",
+      "id": "day_10_code",
+      "label": "折扣码",
+      "default": "FREECABLE10"
+    },
+    {
+      "type": "header",
+      "content": "12月11日"
+    },
+    {
+      "type": "select",
+      "id": "day_11_type",
+      "label": "奖品类型",
+      "options": [
+        {"value": "discount", "label": "折扣码"},
+        {"value": "cable_tray", "label": "免费理线槽"},
+        {"value": "cable_tube", "label": "免费蛇形管"}
+      ],
+      "default": "discount"
+    },
+    {
+      "type": "text",
+      "id": "day_11_prize",
+      "label": "奖品描述",
+      "default": "8% 折扣"
+    },
+    {
+      "type": "text",
+      "id": "day_11_code",
+      "label": "折扣码",
+      "default": "XMAS8DEC11"
+    },
+    {
+      "type": "header",
+      "content": "12月12日"
+    },
+    {
+      "type": "select",
+      "id": "day_12_type",
+      "label": "奖品类型",
+      "options": [
+        {"value": "discount", "label": "折扣码"},
+        {"value": "cable_tray", "label": "免费理线槽"},
+        {"value": "cable_tube", "label": "免费蛇形管"}
+      ],
+      "default": "cable_tube"
+    },
+    {
+      "type": "text",
+      "id": "day_12_prize",
+      "label": "奖品描述",
+      "default": "免费蛇形管"
+    },
+    {
+      "type": "text",
+      "id": "day_12_code",
+      "label": "折扣码",
+      "default": "FREETUBE12"
+    },
+    {
+      "type": "header",
+      "content": "12月13日"
+    },
+    {
+      "type": "select",
+      "id": "day_13_type",
+      "label": "奖品类型",
+      "options": [
+        {"value": "discount", "label": "折扣码"},
+        {"value": "cable_tray", "label": "免费理线槽"},
+        {"value": "cable_tube", "label": "免费蛇形管"}
+      ],
+      "default": "discount"
+    },
+    {
+      "type": "text",
+      "id": "day_13_prize",
+      "label": "奖品描述",
+      "default": "8% 折扣"
+    },
+    {
+      "type": "text",
+      "id": "day_13_code",
+      "label": "折扣码",
+      "default": "XMAS8DEC13"
+    },
+    {
+      "type": "header",
+      "content": "12月14日"
+    },
+    {
+      "type": "select",
+      "id": "day_14_type",
+      "label": "奖品类型",
+      "options": [
+        {"value": "discount", "label": "折扣码"},
+        {"value": "cable_tray", "label": "免费理线槽"},
+        {"value": "cable_tube", "label": "免费蛇形管"}
+      ],
+      "default": "cable_tray"
+    },
+    {
+      "type": "text",
+      "id": "day_14_prize",
+      "label": "奖品描述",
+      "default": "免费理线槽"
+    },
+    {
+      "type": "text",
+      "id": "day_14_code",
+      "label": "折扣码",
+      "default": "FREECABLE14"
+    },
+    {
+      "type": "header",
+      "content": "⭐ 12月15日 (大奖日)"
+    },
+    {
+      "type": "select",
+      "id": "day_15_type",
+      "label": "奖品类型",
+      "options": [
+        {"value": "discount", "label": "折扣码"},
+        {"value": "gift_card", "label": "礼品卡"},
+        {"value": "desk_board", "label": "桌板"}
+      ],
+      "default": "desk_board"
+    },
+    {
+      "type": "text",
+      "id": "day_15_prize",
+      "label": "奖品描述",
+      "default": "免费桌板"
+    },
+    {
+      "type": "text",
+      "id": "day_15_code",
+      "label": "折扣码",
+      "default": "FREEDESK15"
+    },
+    {
+      "type": "header",
+      "content": "12月16日"
+    },
+    {
+      "type": "select",
+      "id": "day_16_type",
+      "label": "奖品类型",
+      "options": [
+        {"value": "discount", "label": "折扣码"},
+        {"value": "cable_tray", "label": "免费理线槽"},
+        {"value": "cable_tube", "label": "免费蛇形管"}
+      ],
+      "default": "discount"
+    },
+    {
+      "type": "text",
+      "id": "day_16_prize",
+      "label": "奖品描述",
+      "default": "8% 折扣"
+    },
+    {
+      "type": "text",
+      "id": "day_16_code",
+      "label": "折扣码",
+      "default": "XMAS8DEC16"
+    },
+    {
+      "type": "header",
+      "content": "12月17日"
+    },
+    {
+      "type": "select",
+      "id": "day_17_type",
+      "label": "奖品类型",
+      "options": [
+        {"value": "discount", "label": "折扣码"},
+        {"value": "cable_tray", "label": "免费理线槽"},
+        {"value": "cable_tube", "label": "免费蛇形管"}
+      ],
+      "default": "cable_tube"
+    },
+    {
+      "type": "text",
+      "id": "day_17_prize",
+      "label": "奖品描述",
+      "default": "免费蛇形管"
+    },
+    {
+      "type": "text",
+      "id": "day_17_code",
+      "label": "折扣码",
+      "default": "FREETUBE17"
+    },
+    {
+      "type": "header",
+      "content": "12月18日"
+    },
+    {
+      "type": "select",
+      "id": "day_18_type",
+      "label": "奖品类型",
+      "options": [
+        {"value": "discount", "label": "折扣码"},
+        {"value": "cable_tray", "label": "免费理线槽"},
+        {"value": "cable_tube", "label": "免费蛇形管"}
+      ],
+      "default": "discount"
+    },
+    {
+      "type": "text",
+      "id": "day_18_prize",
+      "label": "奖品描述",
+      "default": "8% 折扣"
+    },
+    {
+      "type": "text",
+      "id": "day_18_code",
+      "label": "折扣码",
+      "default": "XMAS8DEC18"
+    },
+    {
+      "type": "header",
+      "content": "12月19日"
+    },
+    {
+      "type": "select",
+      "id": "day_19_type",
+      "label": "奖品类型",
+      "options": [
+        {"value": "discount", "label": "折扣码"},
+        {"value": "cable_tray", "label": "免费理线槽"},
+        {"value": "cable_tube", "label": "免费蛇形管"}
+      ],
+      "default": "cable_tray"
+    },
+    {
+      "type": "text",
+      "id": "day_19_prize",
+      "label": "奖品描述",
+      "default": "免费理线槽"
+    },
+    {
+      "type": "text",
+      "id": "day_19_code",
+      "label": "折扣码",
+      "default": "FREECABLE19"
+    },
+    {
+      "type": "header",
+      "content": "12月20日"
+    },
+    {
+      "type": "select",
+      "id": "day_20_type",
+      "label": "奖品类型",
+      "options": [
+        {"value": "discount", "label": "折扣码"},
+        {"value": "cable_tray", "label": "免费理线槽"},
+        {"value": "cable_tube", "label": "免费蛇形管"}
+      ],
+      "default": "discount"
+    },
+    {
+      "type": "text",
+      "id": "day_20_prize",
+      "label": "奖品描述",
+      "default": "8% 折扣"
+    },
+    {
+      "type": "text",
+      "id": "day_20_code",
+      "label": "折扣码",
+      "default": "XMAS8DEC20"
+    },
+    {
+      "type": "header",
+      "content": "12月21日"
+    },
+    {
+      "type": "select",
+      "id": "day_21_type",
+      "label": "奖品类型",
+      "options": [
+        {"value": "discount", "label": "折扣码"},
+        {"value": "cable_tray", "label": "免费理线槽"},
+        {"value": "cable_tube", "label": "免费蛇形管"}
+      ],
+      "default": "cable_tube"
+    },
+    {
+      "type": "text",
+      "id": "day_21_prize",
+      "label": "奖品描述",
+      "default": "免费蛇形管"
+    },
+    {
+      "type": "text",
+      "id": "day_21_code",
+      "label": "折扣码",
+      "default": "FREETUBE21"
+    },
+    {
+      "type": "header",
+      "content": "⭐ 12月22日 (大奖日)"
+    },
+    {
+      "type": "select",
+      "id": "day_22_type",
+      "label": "奖品类型",
+      "options": [
+        {"value": "discount", "label": "折扣码"},
+        {"value": "gift_card", "label": "礼品卡"},
+        {"value": "desk_board", "label": "桌板"}
+      ],
+      "default": "gift_card"
+    },
+    {
+      "type": "text",
+      "id": "day_22_prize",
+      "label": "奖品描述",
+      "default": "50€ 礼品卡"
+    },
+    {
+      "type": "text",
+      "id": "day_22_code",
+      "label": "折扣码",
+      "default": "XMASGIFT22"
+    },
+    {
+      "type": "header",
+      "content": "12月23日"
+    },
+    {
+      "type": "select",
+      "id": "day_23_type",
+      "label": "奖品类型",
+      "options": [
+        {"value": "discount", "label": "折扣码"},
+        {"value": "cable_tray", "label": "免费理线槽"},
+        {"value": "cable_tube", "label": "免费蛇形管"}
+      ],
+      "default": "discount"
+    },
+    {
+      "type": "text",
+      "id": "day_23_prize",
+      "label": "奖品描述",
+      "default": "10% 圣诞特别折扣"
+    },
+    {
+      "type": "text",
+      "id": "day_23_code",
+      "label": "折扣码",
+      "default": "XMAS10FINAL"
+    },
+    {
+  "type": "header",
+  "content": "⭐ 12月24日 (平安夜)"
+},
+{
+  "type": "select",
+  "id": "day_24_type",
+  "label": "奖品类型",
+  "options": [
+    { "value": "discount", "label": "折扣码" },
+    { "value": "gift_card", "label": "礼品卡" },
+    { "value": "free_product", "label": "免费产品" }
+  ],
+  "default": "discount"
+},
+{
+  "type": "text",
+  "id": "day_24_prize",
+  "label": "奖品描述",
+  "default": "15% 平安夜特别折扣"
+},
+{
+  "type": "text",
+  "id": "day_24_code",
+  "label": "折扣码",
+  "default": "XMASEVE15"
+},
+{
+  "type": "header",
+  "content": "🎄 12月25日 (圣诞节)"
+},
+{
+  "type": "select",
+  "id": "day_25_type",
+  "label": "奖品类型",
+  "options": [
+    { "value": "discount", "label": "折扣码" },
+    { "value": "gift_card", "label": "礼品卡" },
+    { "value": "desk_board", "label": "桌板" }
+  ],
+  "default": "gift_card"
+},
+{
+  "type": "text",
+  "id": "day_25_prize",
+  "label": "奖品描述",
+  "default": "100€ 圣诞礼品卡"
+},
+{
+  "type": "text",
+  "id": "day_25_code",
+  "label": "折扣码（如适用）",
+  "default": "XMASDAY25"
+}
+  ],
+  "presets": [
+    {
+      "name": "🎄 圣诞倒数日历",
+      "category": "促销活动"
+    }
+  ]
+}
+{% endschema %}
