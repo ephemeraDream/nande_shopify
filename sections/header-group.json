@@ -46,7 +46,7 @@
         "img_with_text_QJDYxJ": {
           "type": "img_with_text",
           "settings": {
-            "text": "<p><a href=\"https://www.maidesite.de/pages/extended-warranty?view=2025-anniversary-sale\" title=\"https://www.maidesite.de/pages/extended-warranty?view=2025-anniversary-sale\">Mehr kaufen, mehr sparen</a>：40€ Rabatt ab 499€ (Code: MD40); 120€ Rabatt ab 999€ (Code: MD120); 250€ Rabatt...<a href=\"/pages/black-friday-2025\" title=\"Black Friday 2025\">mehr</a></p>",
+            "text": "<p><a href=\"https://www.maidesite.de/pages/extended-warranty?view=2025-anniversary-sale\" title=\"https://www.maidesite.de/pages/extended-warranty?view=2025-anniversary-sale\">Mehr kaufen, mehr sparen</a>：40€ Rabatt ab 499€ (Code: MD40); 120€ Rabatt ab 999€ (Code: MD120); 250€ Rabatt...<a href=\"/pages/2025-weihnachtsaktion\" title=\"2025 Weihnachtsaktion\">mehr</a></p>",
             "link": "shopify://pages/black-friday-2025",
             "font_color": "#bdff00"
           }
@@ -54,7 +54,7 @@
         "img_with_text_K8NMwf": {
           "type": "img_with_text",
           "settings": {
-            "text": "<p><a href=\"/pages/black-friday-2025\" title=\"Black Friday 2025\"><strong>BF & CM Comeback</strong></a><strong> – bis zu 33% Rabatt！</strong></p>",
+            "text": "<p><a href=\"/pages/2025-weihnachtsaktion\" title=\"2025 Weihnachtsaktion\"><strong>Weihnachtsaktion-deal</strong></a><strong> – bis zu 20% Rabatt！</strong></p>",
             "link": "",
             "font_color": "#bdff00"
           }
