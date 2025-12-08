@@ -211,6 +211,7 @@
     },
     "video_wPHLA8": {
       "type": "video",
+      "disabled": true,
       "name": "t:sections.video.presets.name",
       "settings": {
         "heading": "Maidesite mobiler Schreibtisch T1 Pro Ausrüstung",
@@ -243,23 +244,13 @@
     "img_with_text_box_simplicity_qrzG6W": {
       "type": "img-with-text-box-simplicity",
       "blocks": {
-        "file_with_text_Q8tJKk": {
-          "type": "file_with_text",
-          "settings": {
-            "title": "<p>Kompatibel mit 100-180 cm Platten</p>",
-            "description": "<ul><li>Unterstützt Tischplatten in den Größen 100x60, 120x60, 140x70, 160x80 und 180x80 cm.</li></ul>",
-            "file_type": "image",
-            "file_image": "shopify://shop_images/T1-Pro-hohenverstellbarer-Schreibtisch-weiss-und-1000-1800mm-Tischplatte-1200x800.jpg",
-            "video_url": ""
-          }
-        },
         "file_with_text_McHwGa": {
           "type": "file_with_text",
           "settings": {
             "title": "<p>Höhenverstellbar für Kinder und Erwachsene</p>",
             "description": "<ul><li>Dieser höhenverstellbare Schreibtisch passt perfekt für Personen mit einer Körpergröße von 1,5 bis 1,83 Metern</li></ul>",
             "file_type": "image",
-            "file_image": "shopify://shop_images/Maidesite-T1-Basic-hohenverstellbar-Bereich-72-120cm_27f1dca0-074c-4c64-80a8-4112a4a7af04.jpg",
+            "file_image": "shopify://shop_images/2_56026fb1-66f6-4892-bb52-ace7eeecd8d8.jpg",
             "video_url": ""
           }
         },
@@ -269,7 +260,7 @@
             "title": "<p>Bürotisch belastbar bis 90 kg</p>",
             "description": "<ul><li>Sie können problemlos 2 Monitore, einen PC und andere Büroartikel darauf platzieren.</li></ul>",
             "file_type": "image",
-            "file_image": "shopify://shop_images/Maidesite-standing-desk-T1-Pro-with-90kg-loading-capacity-1200x800_bacabd7e-408d-4d8b-b5fe-7a71bc99010c.jpg",
+            "file_image": "shopify://shop_images/4_-_100KG.jpg",
             "video_url": ""
           }
         },
@@ -279,7 +270,7 @@
             "title": "<p>Vier Speicherhöhen&USB-Ladeanschlüsse</p>",
             "description": "<ul><li>4 Speicherplätze für Familie & Haltungen, plus USB-C Ladepunkt</li></ul>",
             "file_type": "image",
-            "file_image": "shopify://shop_images/T1_Pro_Control_Panel_with_USB-C.jpg",
+            "file_image": "shopify://shop_images/3_2edd8c83-a3ee-4edc-bd4f-69fc89bb6a1b.jpg",
             "video_url": ""
           }
         },
@@ -289,7 +280,17 @@
             "title": "<p>Freie Rollen und Haken</p>",
             "description": "<p>4 Rollen machen aus Ihrem Schreibtisch einen mobilen Schreibtisch</p>",
             "file_type": "image",
-            "file_image": "shopify://shop_images/Maidesite-T1-Pro-mit-Freilaufen-1200x800.jpg",
+            "file_image": "shopify://shop_images/6_0855a21f-dd89-4212-98bf-efca075cd8e1.jpg",
+            "video_url": ""
+          }
+        },
+        "file_with_text_Q8tJKk": {
+          "type": "file_with_text",
+          "settings": {
+            "title": "<p>Kompatibel mit 100-180 cm Platten</p>",
+            "description": "<ul><li>Unterstützt Tischplatten in den Größen 100x60, 120x60, 140x70, 160x80 und 180x80 cm.</li></ul>",
+            "file_type": "image",
+            "file_image": "shopify://shop_images/3_83f00b4d-1167-4d65-8939-500662c65ff3.jpg",
             "video_url": ""
           }
         },
@@ -299,24 +300,23 @@
             "title": "<p>FSC-zertifizierte Tischplatte</p>",
             "description": "<p>Optionale FSC-zertifizierte Tischplatten in 120x60cm, 140x70cm und 160x80cm mit vorgebohrten Löchern.</p>",
             "file_type": "image",
-            "file_image": "shopify://shop_images/P7.jpg",
+            "file_image": "shopify://shop_images/5_9ec8c6d8-efcf-41d0-8d8a-080e4a0bdf31.jpg",
             "video_url": ""
           }
         }
       },
       "block_order": [
-        "file_with_text_Q8tJKk",
         "file_with_text_McHwGa",
         "file_with_text_f9yPAD",
         "file_with_text_B39ehq",
         "file_with_text_JJXCp8",
+        "file_with_text_Q8tJKk",
         "file_with_text_THJTyK"
       ],
-      "disabled": true,
       "name": "file box simplicity",
       "settings": {
         "spec_id": "",
-        "main_title": "<p>Leistungsstarker, preiswerter höhenverstellbarer Schreibtisch</p>",
+        "main_title": "<p>Warum T1 Pro wählen?</p>",
         "row_num": 3,
         "padding_top": 100,
         "padding_bottom": 120,
@@ -442,7 +442,7 @@
           "settings": {
             "title": "<p>64-129cm hohenverstellbar</p>",
             "description": "<p>Normalerweise beträgt die optimale Schreibtischhöhe im Sitzen Ihre Körpergröße x 0,4 und im Stehen Ihre Körpergröße x 0,62. <br/>Höhenverstellbarer Schreibtisch mit 2 stufigen Säulen ist nur für die Körpergröße von 1,75-1,95 m geeignet. <br/>Vernal-Schreibtisch passt für Personen mit einer Körpergröße von 1,55-2,05 m.</p>",
-            "image": "shopify://shop_images/featured-spaces-5.webp"
+            "image": "shopify://shop_images/7_67af52f0-00ae-435a-b323-8bde83553f6b.jpg"
           }
         },
         "foldtext_HWP39G": {
@@ -450,7 +450,7 @@
           "settings": {
             "title": "<p>160 kg groBe Tragfahigkeit</p>",
             "description": "<p>Normalerweise beträgt die optimale Schreibtischhöhe im Sitzen Ihre Körpergröße x 0,4 und im Stehen Ihre Körpergröße x 0,62. <br/>Höhenverstellbarer Schreibtisch mit 2 stufigen Säulen ist nur für die Körpergröße von 1,75-1,95 m geeignet. <br/>Vernal-Schreibtisch passt für Personen mit einer Körpergröße von 1,55-2,05 m.</p>",
-            "image": "shopify://shop_images/product_info_demo_img_1.webp"
+            "image": "shopify://shop_images/10_d0f0d429-4ba4-4db8-bc9b-7885d1aa14e9.jpg"
           }
         },
         "foldtext_iGWkAs": {
@@ -458,16 +458,24 @@
           "settings": {
             "title": "<p>Flexible Einstellung und schnelle Reaktion</p>",
             "description": "<p>Normalerweise beträgt die optimale Schreibtischhöhe im Sitzen Ihre Körpergröße x 0,4 und im Stehen Ihre Körpergröße x 0,62. <br/>Höhenverstellbarer Schreibtisch mit 2 stufigen Säulen ist nur für die Körpergröße von 1,75-1,95 m geeignet. <br/>Vernal-Schreibtisch passt für Personen mit einer Körpergröße von 1,55-2,05 m.</p>",
-            "image": "shopify://shop_images/featured-spaces-5.webp"
+            "image": "shopify://shop_images/8_3066e67a-4c6a-4efb-92d8-2ee75cf59e36.jpg"
+          }
+        },
+        "foldtext_CtCPqT": {
+          "type": "foldtext",
+          "settings": {
+            "title": "",
+            "description": "",
+            "image": "shopify://shop_images/9_3c0814ea-26d3-4af6-84a4-c1286bd07654.jpg"
           }
         }
       },
       "block_order": [
         "foldtext_HQhGDk",
         "foldtext_HWP39G",
-        "foldtext_iGWkAs"
+        "foldtext_iGWkAs",
+        "foldtext_CtCPqT"
       ],
-      "disabled": true,
       "name": "img with foldtext",
       "settings": {
         "spec_id": "",
@@ -488,7 +496,7 @@
             "title": "<p>ce-zertifikat höhenverstellbarer tisch</p>",
             "description": "<p>Perfekt für zwei Familienmitglieder, um ihre individuelle Körpergröße anzupassen oder um zwei neue Höheneinstellungen <br/>für vielfältigere Körperhaltungen zu ermöglichen.Der Standard-USB-Ladeanschluss lädt deine digitalen Geräte zuverlässig auf, <br/>genau dann, wenn du es brauchst.</p>",
             "file_type": "image",
-            "file_image": "shopify://shop_images/J-S2D-2-EU_MD_Certificate_of_Compliance_00.jpg",
+            "file_image": "shopify://shop_images/12_6f948669-8d83-4f28-bcea-edad5bceb9b4.jpg",
             "video_url": "",
             "btn_text": "",
             "link": ""
@@ -502,7 +510,7 @@
             "title": "<p>Fortschrittliche Technologie</p>",
             "description": "<p>Perfekt für zwei Familienmitglieder, um ihre individuelle Körpergröße anzupassen oder um zwei neue Höheneinstellungen <br/>für vielfältigere Körperhaltungen zu ermöglichen.Der Standard-USB-Ladeanschluss lädt deine digitalen Geräte zuverlässig auf, <br/>genau dann, wenn du es brauchst.</p>",
             "file_type": "image",
-            "file_image": "shopify://shop_images/006.jpg",
+            "file_image": "shopify://shop_images/11_beab5e38-0d97-473e-b55d-502747c47999.jpg",
             "video_url": "",
             "btn_text": "",
             "link": ""
@@ -516,21 +524,7 @@
             "title": "<p>Fortschrittliche Technologie</p>",
             "description": "<p>Perfekt für zwei Familienmitglieder, um ihre individuelle Körpergröße anzupassen oder um zwei neue Höheneinstellungen <br/>für vielfältigere Körperhaltungen zu ermöglichen.Der Standard-USB-Ladeanschluss lädt deine digitalen Geräte zuverlässig auf, <br/>genau dann, wenn du es brauchst.</p>",
             "file_type": "image",
-            "file_image": "shopify://shop_images/006.jpg",
-            "video_url": "",
-            "btn_text": "",
-            "link": ""
-          }
-        },
-        "tab_LmGatL": {
-          "type": "tab",
-          "settings": {
-            "tabname": "Sitzende Erinnerung",
-            "sub_title": "",
-            "title": "<p>Fortschrittliche Technologie</p>",
-            "description": "<p>Perfekt für zwei Familienmitglieder, um ihre individuelle Körpergröße anzupassen oder um zwei neue Höheneinstellungen <br/>für vielfältigere Körperhaltungen zu ermöglichen.Der Standard-USB-Ladeanschluss lädt deine digitalen Geräte zuverlässig auf, <br/>genau dann, wenn du es brauchst.</p>",
-            "file_type": "image",
-            "file_image": "shopify://shop_images/006.jpg",
+            "file_image": "shopify://shop_images/13_11a91f2c-eb07-47b4-8097-623ea5d98994.jpg",
             "video_url": "",
             "btn_text": "",
             "link": ""
@@ -540,10 +534,8 @@
       "block_order": [
         "tab_fiwUXL",
         "tab_AUd88N",
-        "tab_JyxzQm",
-        "tab_LmGatL"
+        "tab_JyxzQm"
       ],
-      "disabled": true,
       "name": "img with text tab",
       "settings": {
         "spec_id": "",
