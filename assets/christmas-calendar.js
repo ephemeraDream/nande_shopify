@@ -12,8 +12,8 @@
 
     // 配置
     const config = window.adventCalendarConfig || {};
-    const STORAGE_KEY = 'advent_calendar_2024';
-    const EMAIL_KEY = 'advent_email_2024';
+    const STORAGE_KEY = 'advent_calendar_2025';
+    const EMAIL_KEY = 'advent_email_2025';
     const PENDING_KEY = 'advent_pending_prize';
 
     // 当前选中的门
