@@ -364,6 +364,14 @@
             "image": "shopify://shop_images/7_0884c4c1-439e-4537-ba56-f6578da62adc.jpg"
           }
         },
+        "foldtext_pKmxm4": {
+          "type": "foldtext",
+          "settings": {
+            "title": "",
+            "description": "",
+            "image": "shopify://shop_images/A_-_8_cdc39cc7-1fb2-4ce0-b336-8ab245f02d8b.jpg"
+          }
+        },
         "foldtext_HWP39G": {
           "type": "foldtext",
           "settings": {
@@ -383,6 +391,7 @@
       },
       "block_order": [
         "foldtext_HQhGDk",
+        "foldtext_pKmxm4",
         "foldtext_HWP39G",
         "foldtext_iGWkAs"
       ],
