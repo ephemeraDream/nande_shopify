@@ -145,7 +145,7 @@
           "type": "item",
           "settings": {
             "title": "Empf.",
-            "anchor_name": "Empf."
+            "anchor_name": "Weihnachtsgeschenk"
           }
         }
       },
@@ -259,7 +259,7 @@
       ],
       "name": "img with text simplicity",
       "settings": {
-        "spec_id": "",
+        "spec_id": "Weihnachtsgeschenk",
         "header_title": "",
         "header_content": "",
         "title": "",
