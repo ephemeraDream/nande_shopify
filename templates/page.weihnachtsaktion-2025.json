@@ -245,7 +245,18 @@
     },
     "img_with_text_simplicity_eVFBY7": {
       "type": "img-with-text-simplicity",
-      "disabled": true,
+      "blocks": {
+        "append_info_rjG84h": {
+          "type": "appendInfo",
+          "settings": {
+            "subtitle": "",
+            "text": ""
+          }
+        }
+      },
+      "block_order": [
+        "append_info_rjG84h"
+      ],
       "name": "img with text simplicity",
       "settings": {
         "spec_id": "",
@@ -253,10 +264,10 @@
         "header_content": "",
         "title": "",
         "sub_title": "",
-        "description": "",
+        "description": "<div style=\"max-width: 600px; margin: 0 auto; text-align: left; font-family: Arial, sans-serif; color: #333; display: flex; flex-direction: column; align-items: flex-start; justify-content: flex-start;\">\n  <h2 style=\"font-size: 28px; font-weight: bold; text-align: center; width: 100%; margin-bottom: 20px;\">\n    Weihnachtsgeschenk: Kostenlos Serpentine\n  </h2>\n\n  <p style=\"font-size: 16px; margin: 8px 0;\">\n    <strong>Aktionszeitraum:</strong> 09.12.2024 – 25.12.2024\n  </p>\n\n  <p style=\"font-size: 16px; margin: 8px 0;\">\n    <strong>Bedingung:</strong> Ab einem Bestellwert von 200 € erhältst du eine Kabelspirale gratis dazu (solange der Vorrat reicht).\n  </p>\n\n  <p style=\"font-size: 16px; margin: 8px 0;\">\n    <strong>Versand:</strong> Innerhalb Deutschlands versandkostenfrei; für andere Länder fallen Versandkosten an.\n  </p>\n\n  <p style=\"font-size: 16px; margin: 8px 0 20px;\">\n    <strong>Hinweis:</strong> Lege die Kabelspirale zusätzlich in den Warenkorb. Bei einem Bestellwert ab 200 € wird die Kabelspirale automatisch auf 0 € gesetzt.\n  </p>\n\n  <div style=\"width: 100%; text-align: center; margin-top: 30px;\">\n    <a href=\"https://www.maidesite.de/products/maidesite-serpentine-kabelrohr\" style=\"display: inline-block; padding: 12px 24px; background-color: #f03d0d; color: white; text-decoration: none; border-radius: 4px; font-weight: 600;\">\n      Zur Kabelspirale\n    </a>\n  </div>\n</div>",
         "file_position": "left",
         "file_type": "image",
-        "file_image": "shopify://shop_images/a_Ultra-clean_German_l.png",
+        "file_image": "shopify://shop_images/00ea960bc0e70a8e0bff6ef5b62f7d35.jpg",
         "video_url": "",
         "video_aspect_ratio": "4/3",
         "btn_text": "",
