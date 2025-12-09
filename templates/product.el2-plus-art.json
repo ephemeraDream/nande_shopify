@@ -231,8 +231,8 @@
         "file_with_text_JJXCp8": {
           "type": "file_with_text",
           "settings": {
-            "title": "<p>Elegantes Design</p>",
-            "description": "<p>Verfügt über ein elegantes Design, Säule und Fuß mit Arc-Stil, moderneres und häusliches Design.</p>",
+            "title": "<p>Harmonisches Ovaldesign</p>",
+            "description": "<p>Das durchgängige Ovaldesign – von den Bodenfüßen bis zu den Säulen – schafft eine harmonische, moderne Formensprache.Die sanften Konturen wirken weniger technisch und verleihen dem Tisch eine klare, hochwertige Möbelästhetik, die sich perfekt in moderne Wohn- und Arbeitsräume einfügt.</p>",
             "file_type": "image",
             "file_image": "shopify://shop_images/1_199dc946-5ffe-434f-817b-83b1cbf52bb0.jpg",
             "video_url": ""
@@ -356,11 +356,11 @@
       "name": "img with text simplicity",
       "settings": {
         "spec_id": "",
-        "header_title": "",
+        "header_title": "<p>Elegantes Design</p>",
         "header_content": "",
         "title": "",
-        "sub_title": "<h3>Sitzende Erinnerung</h3>",
-        "description": "<ul><li>Erinnerung an langes Sitzen: Intervallfunktion erinnert Sie daran, nach 0,5, 1 oder 2 Stunden aufzustehen.</li><li>Verbessert Ihre Haltung und steigert die Produktivität.</li></ul>",
+        "sub_title": "<h4>Elegantes Ovalprofil für mehr Stabilität und bessere Laufruhe</h4>",
+        "description": "Die Säulen mit Ovalprofil bestehen aus präzise verarbeitetem, hochwertigem Stahl und bieten eine deutlich höhere Steifigkeit als herkömmliche rechteckige Profile.\nDas Ergebnis: weniger Wackeln, ruhigerer Hub und ein eleganter, weich geformter Look.",
         "file_position": "left",
         "file_type": "image",
         "file_image": "shopify://shop_images/7_8dc6186a-8dc3-4297-b3c5-4eba378550b5.jpg",
@@ -384,8 +384,8 @@
         "header_title": "",
         "header_content": "",
         "title": "",
-        "sub_title": "<h3>Kollisionsschutz</h3>",
-        "description": "<p>Die eingebaute Gyroskop-gesteuerte Anti-Kollisions-Rückfederung schützt Ihr Gerät vor Schäden durch Stürze.</p>",
+        "sub_title": "<h4>Elegante Ovalfüße – stabil, leise, möbelgerecht</h4>",
+        "description": "Die breit ausgeformten, ovalen Bodenfüße sorgen für eine außergewöhnlich stabile Standfläche.\nSie verbessern die Gewichtsverteilung, reduzieren Vibrationen und fügen sich durch ihre sanfte Formensprache harmonisch in moderne Wohn- und Arbeitsräume ein.",
         "file_position": "right",
         "file_type": "image",
         "file_image": "shopify://shop_images/8_69a29eb6-269c-4d40-aae4-628670823e72.jpg",
