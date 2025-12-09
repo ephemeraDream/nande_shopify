@@ -454,32 +454,32 @@
         "foldtext_exzygz": {
           "type": "foldtext",
           "settings": {
-            "title": "<h3>Hochwertiges Material und erstklassige Fertigung</h3>",
-            "description": "<ul><li>Unser Schreibtisch wird aus Premium-Industriematerialien von Unternehmen der Fortune 500 hergestellt und in vollautomatisierten Produktionsprozessen gefertigt, um eine oberste Qualität zu gewährleisten.</li></ul>",
+            "title": "<h3>Pyramidenförmige-Säulenstruktur</h3>",
+            "description": "<ul><li>Diese Konstruktion sorgt für eine deutlich größere Auflagefläche und verteilt die Kräfte optimal nach unten und außen. So bleibt der Tisch selbst in der höchsten Position außergewöhnlich stabil und verhindert effektiv Wackeln oder Kippen.</li></ul>",
             "image": "shopify://shop_images/9_93804768-95d7-492a-ba3b-02a3bbcf7f8b.jpg"
           }
         },
         "foldtext_7BhWHC": {
           "type": "foldtext",
           "settings": {
-            "title": "<h3>Strenge 100%-Prüfung vor der Auslieferung</h3>",
-            "description": "<ul><li>Jedes Schreibtisch, das Sie erhalten, unterzieht sich einer strengen 100%-Prüfung, um sicherzustellen, dass es fehlerfrei ist.</li></ul>",
+            "title": "<h3>Verstärkte Säulen</h3>",
+            "description": "<ul><li>Die Standbeine verfügen über eine erhöhte Wandstärke und besonders robuste Stahlprofile.\nMehr Material = mehr Stabilität, bessere Lastverteilung und eine langlebige Gesamtstruktur.</li></ul>",
             "image": "shopify://shop_images/10_d677aa77-1448-49fe-8013-e96c84ecebe3.jpg"
           }
         },
         "foldtext_Gq6xTh": {
           "type": "foldtext",
           "settings": {
-            "title": "",
-            "description": "",
+            "title": "<h3>Verstärkte Fußkonstruktion</h3>",
+            "description": "<ul><li>Die 30 mm starken Standfüße bestehen aus massivem Metall und erhöhen die Gesamtsteifigkeit des Tischgestells spürbar.\nDank der hohen Materialstärke werden Bewegungsenergie und Vibrationen wesentlich besser aufgenommen und abgeleitet – so bleibt der Tisch auch bei Belastung ruhig und stabil.</li><li></li></ul>",
             "image": "shopify://shop_images/12_d3316a85-7078-43ae-99ba-26c17838ba33.jpg"
           }
         },
         "foldtext_UUEbi9": {
           "type": "foldtext",
           "settings": {
-            "title": "<h3>Zertifizierungen für Zuverlässigkeit</h3>",
-            "description": "<ul><li>Mit Zertifizierungen wie CE, UKCA und FSC garantieren wir, dass unsere justierbaren Schreibtische von Maidesite funktional sind und den meisten Bürotischstandards entsprechen.</li></ul>",
+            "title": "<h3>Kleinere Spalten</h3>",
+            "description": "<ul><li>Durch deutlich kleinere Spalten zwischen Innen- und Außensäulen wird das seitliche Spiel bei der Höhenverstellung effektiv minimiert.\nDie präzise Führung sorgt dafür, dass der Tisch selbst in hoher Position stabil bleibt und nicht wackelt – besonders wichtig bei Monitorarmen oder dynamischer Nutzung.</li><li></li></ul>",
             "image": "shopify://shop_images/11_73ebcafd-3363-4b68-be77-ae2c4476111d.jpg"
           }
         }
@@ -493,7 +493,7 @@
       "name": "img with foldtext",
       "settings": {
         "spec_id": "",
-        "title": "<p>Maidesite-Schreibtisch stabiler und zuverlässiger</p>",
+        "title": "<p>So garantieren wir maximale Stabilität</p>",
         "padding_top": 120,
         "padding_bottom": 120
       }
@@ -504,10 +504,10 @@
         "tab_fiwUXL": {
           "type": "tab",
           "settings": {
-            "tabname": "CE-ZERTIFIZIERUNG",
+            "tabname": "2× 18W-Ports (USB-A & USB-C)",
             "sub_title": "",
-            "title": "<p>ce-zertifikat höhenverstellbarer tisch</p>",
-            "description": "<p>Perfekt für zwei Familienmitglieder, um ihre individuelle Körpergröße anzupassen oder um zwei neue Höheneinstellungen <br/>für vielfältigere Körperhaltungen zu ermöglichen.Der Standard-USB-Ladeanschluss lädt deine digitalen Geräte zuverlässig auf, <br/>genau dann, wenn du es brauchst.</p>",
+            "title": "<p><strong>2× 18W-Ports (USB-A & USB-C)</strong></p>",
+            "description": "<div class=\"controller-features\">\n  <ul>\n    <li>Smartphones, Tablets oder Kopfhörer jederzeit griffbereit laden.\nDie beiden Ports versorgen deine Geräte zuverlässig, ohne zusätzliches Ladegerät auf dem Tisch.</li>\n  </ul>\n</div>\n\n<style>\n  /* 让这个模块内的 li 左对齐，不影响其他地方 */\n  .controller-features ul li {\n    text-align: left !important;\n    list-style-position: inside;\n  }\n</style>",
             "file_type": "image",
             "file_image": "shopify://shop_images/14_-_2_519c2a89-f4a4-4faf-bc34-47dc3738944d.jpg",
             "video_url": "",
@@ -518,10 +518,10 @@
         "tab_AUd88N": {
           "type": "tab",
           "settings": {
-            "tabname": "Sitzende Erinnerung",
+            "tabname": "Erinnerung zum Aufstehen",
             "sub_title": "",
-            "title": "<p>Fortschrittliche Technologie</p>",
-            "description": "<p>Perfekt für zwei Familienmitglieder, um ihre individuelle Körpergröße anzupassen oder um zwei neue Höheneinstellungen <br/>für vielfältigere Körperhaltungen zu ermöglichen.Der Standard-USB-Ladeanschluss lädt deine digitalen Geräte zuverlässig auf, <br/>genau dann, wenn du es brauchst.</p>",
+            "title": "<p><strong>Erinnerung zum Aufstehen</strong></p>",
+            "description": "<div class=\"controller-features\">\n  <ul>\n    <li>Das integrierte Reminder-System erinnert regelmasig daran, aufzustehen und die Sitzposition zu wechseln. So fordern Sie ein gesunderes Arbeiten im Stehen und beugen langfristigen Ruckenproblemen oder Verspannungen vor.</li>\n  </ul>\n</div>\n\n<style>\n  /* 让这个模块内的 li 左对齐，不影响其他地方 */\n  .controller-features ul li {\n    text-align: left !important;\n    list-style-position: inside;\n  }\n</style>",
             "file_type": "image",
             "file_image": "shopify://shop_images/15_4aae9167-537a-4ecc-898d-0fcedfdb2e75.jpg",
             "video_url": "",
@@ -532,10 +532,10 @@
         "tab_JyxzQm": {
           "type": "tab",
           "settings": {
-            "tabname": "Sitzende Erinnerung",
+            "tabname": "4 Speicherhöhen",
             "sub_title": "",
-            "title": "<p>Fortschrittliche Technologie</p>",
-            "description": "<p>Perfekt für zwei Familienmitglieder, um ihre individuelle Körpergröße anzupassen oder um zwei neue Höheneinstellungen <br/>für vielfältigere Körperhaltungen zu ermöglichen.Der Standard-USB-Ladeanschluss lädt deine digitalen Geräte zuverlässig auf, <br/>genau dann, wenn du es brauchst.</p>",
+            "title": "<p><strong>4 Speicherhöhen</strong></p>",
+            "description": "<div class=\"controller-features\">\n  <ul>\n    <li>Merke dir vier Lieblingshöhen – für Sitzen, Stehen oder gemeinsame Nutzung.\n    Ein Knopfdruck genügt und der Tisch fährt präzise in die gespeicherte Position.</li>\n  </ul>\n</div>\n\n<style>\n  /* 让这个模块内的 li 左对齐，不影响其他地方 */\n  .controller-features ul li {\n    text-align: left !important;\n    list-style-position: inside;\n  }\n</style>",
             "file_type": "image",
             "file_image": "shopify://shop_images/13_-_4.jpg",
             "video_url": "",
@@ -546,10 +546,10 @@
         "tab_LmGatL": {
           "type": "tab",
           "settings": {
-            "tabname": "Sitzende Erinnerung",
+            "tabname": "Kindersicherung",
             "sub_title": "",
-            "title": "<p>Fortschrittliche Technologie</p>",
-            "description": "<p>Perfekt für zwei Familienmitglieder, um ihre individuelle Körpergröße anzupassen oder um zwei neue Höheneinstellungen <br/>für vielfältigere Körperhaltungen zu ermöglichen.Der Standard-USB-Ladeanschluss lädt deine digitalen Geräte zuverlässig auf, <br/>genau dann, wenn du es brauchst.</p>",
+            "title": "<p><strong>Kindersicherung</strong></p>",
+            "description": "<div class=\"controller-features\">\n  <ul>\n    <li>Schützt vor unbeabsichtigtem Verstellen.\nMit der Kindersicherung bleibt die Tischhöhe sicher fixiert – ideal für Haushalte mit Kindern oder Haustieren.</li>\n  </ul>\n</div>\n\n<style>\n  /* 让这个模块内的 li 左对齐，不影响其他地方 */\n  .controller-features ul li {\n    text-align: left !important;\n    list-style-position: inside;\n  }\n</style>",
             "file_type": "image",
             "file_image": "shopify://shop_images/16_06880a5e-19ab-4d9a-add2-fb2c1994c63c.jpg",
             "video_url": "",
@@ -568,7 +568,7 @@
       "settings": {
         "spec_id": "",
         "description": "",
-        "title": "<p>CE/FSC-zertifizierter höhenverstellbarer Schreibtisch und Tischplatte</p>",
+        "title": "<p>Sicher und smart gesteuert</p>",
         "show_tab_head": true,
         "loop": true,
         "autoplay_enable": true,
