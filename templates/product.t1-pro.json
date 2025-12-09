@@ -490,10 +490,10 @@
         "tab_fiwUXL": {
           "type": "tab",
           "settings": {
-            "tabname": "CE-ZERTIFIZIERUNG",
+            "tabname": "18W USB-C Ports",
             "sub_title": "",
-            "title": "<p>ce-zertifikat höhenverstellbarer tisch</p>",
-            "description": "<div class=\"controller-features\">\n  <ul>\n    <li>Smartphones, Tablets oder Kopfhörer jederzeit griffbereit laden.\nDie beiden Ports versorgen deine Geräte zuverlässig, ohne zusätzliches Ladegerät auf dem Tisch.</li>\n  </ul>\n</div>\n\n<style>\n  /* 让这个模块内的 li 左对齐，不影响其他地方 */\n  .controller-features ul li {\n    text-align: left !important;\n    list-style-position: inside;\n  }\n</style>",
+            "title": "<p><strong>18W USB-C Ports </strong></p>",
+            "description": "<div class=\"controller-features\">\n  <ul>\n    <li>Smartphones, Tablets oder Kopfhörer jederzeit griffbereit laden.\nDie Ports versorgen deine Geräte zuverlässig, ohne zusätzliches Ladegerät auf dem Tisch.</li>\n  </ul>\n</div>\n\n<style>\n  /* 让这个模块内的 li 左对齐，不影响其他地方 */\n  .controller-features ul li {\n    text-align: left !important;\n    list-style-position: inside;\n  }\n</style>",
             "file_type": "image",
             "file_image": "shopify://shop_images/12_6f948669-8d83-4f28-bcea-edad5bceb9b4.jpg",
             "video_url": "",
@@ -504,10 +504,10 @@
         "tab_AUd88N": {
           "type": "tab",
           "settings": {
-            "tabname": "Sitzende Erinnerung",
+            "tabname": "4 Speicherhöhen",
             "sub_title": "",
-            "title": "<p>Fortschrittliche Technologie</p>",
-            "description": "<p>Perfekt für zwei Familienmitglieder, um ihre individuelle Körpergröße anzupassen oder um zwei neue Höheneinstellungen <br/>für vielfältigere Körperhaltungen zu ermöglichen.Der Standard-USB-Ladeanschluss lädt deine digitalen Geräte zuverlässig auf, <br/>genau dann, wenn du es brauchst.</p>",
+            "title": "<p><strong>4 Speicherhöhen</strong></p>",
+            "description": "<div class=\"controller-features\">\n  <ul>\n    <li>Merke dir vier Lieblingshöhen – für Sitzen, Stehen oder gemeinsame Nutzung.\n    Ein Knopfdruck genügt und der Tisch fährt präzise in die gespeicherte Position.</li>\n  </ul>\n</div>\n\n<style>\n  /* 让这个模块内的 li 左对齐，不影响其他地方 */\n  .controller-features ul li {\n    text-align: left !important;\n    list-style-position: inside;\n  }\n</style>",
             "file_type": "image",
             "file_image": "shopify://shop_images/11_beab5e38-0d97-473e-b55d-502747c47999.jpg",
             "video_url": "",
@@ -518,10 +518,10 @@
         "tab_JyxzQm": {
           "type": "tab",
           "settings": {
-            "tabname": "Sitzende Erinnerung",
+            "tabname": "Kindersicherung",
             "sub_title": "",
-            "title": "<p>Fortschrittliche Technologie</p>",
-            "description": "<p>Perfekt für zwei Familienmitglieder, um ihre individuelle Körpergröße anzupassen oder um zwei neue Höheneinstellungen <br/>für vielfältigere Körperhaltungen zu ermöglichen.Der Standard-USB-Ladeanschluss lädt deine digitalen Geräte zuverlässig auf, <br/>genau dann, wenn du es brauchst.</p>",
+            "title": "<p><strong>Kindersicherung</strong></p>",
+            "description": "<div class=\"controller-features\">\n  <ul>\n    <li>MSchützt vor unbeabsichtigtem Verstellen.\nMit der Kindersicherung bleibt die Tischhöhe sicher fixiert – ideal für Haushalte mit Kindern oder Haustieren.</li>\n  </ul>\n</div>\n\n<style>\n  /* 让这个模块内的 li 左对齐，不影响其他地方 */\n  .controller-features ul li {\n    text-align: left !important;\n    list-style-position: inside;\n  }\n</style>",
             "file_type": "image",
             "file_image": "shopify://shop_images/13_11a91f2c-eb07-47b4-8097-623ea5d98994.jpg",
             "video_url": "",
