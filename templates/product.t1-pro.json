@@ -441,7 +441,7 @@
           "type": "foldtext",
           "settings": {
             "title": "<p>64-129cm hohenverstellbar</p>",
-            "description": "<p>Normalerweise beträgt die optimale Schreibtischhöhe im Sitzen Ihre Körpergröße x 0,4 und im Stehen Ihre Körpergröße x 0,62. <br/>Höhenverstellbarer Schreibtisch mit 2 stufigen Säulen ist nur für die Körpergröße von 1,75-1,95 m geeignet. <br/>Vernal-Schreibtisch passt für Personen mit einer Körpergröße von 1,55-2,05 m.</p>",
+            "description": "<div class=\"controller-features\">\n  <ul>\n    <li>Smartphones, Tablets oder Kopfhörer jederzeit griffbereit laden.\nDie beiden Ports versorgen deine Geräte zuverlässig, ohne zusätzliches Ladegerät auf dem Tisch.</li>\n  </ul>\n</div>\n\n<style>\n  /* 让这个模块内的 li 左对齐，不影响其他地方 */\n  .controller-features ul li {\n    text-align: left !important;\n    list-style-position: inside;\n  }\n</style>",
             "image": "shopify://shop_images/7_67af52f0-00ae-435a-b323-8bde83553f6b.jpg"
           }
         },
@@ -493,7 +493,7 @@
             "tabname": "CE-ZERTIFIZIERUNG",
             "sub_title": "",
             "title": "<p>ce-zertifikat höhenverstellbarer tisch</p>",
-            "description": "<p>Perfekt für zwei Familienmitglieder, um ihre individuelle Körpergröße anzupassen oder um zwei neue Höheneinstellungen <br/>für vielfältigere Körperhaltungen zu ermöglichen.Der Standard-USB-Ladeanschluss lädt deine digitalen Geräte zuverlässig auf, <br/>genau dann, wenn du es brauchst.</p>",
+            "description": "<div class=\"controller-features\">\n  <ul>\n    <li>Smartphones, Tablets oder Kopfhörer jederzeit griffbereit laden.\nDie beiden Ports versorgen deine Geräte zuverlässig, ohne zusätzliches Ladegerät auf dem Tisch.</li>\n  </ul>\n</div>\n\n<style>\n  /* 让这个模块内的 li 左对齐，不影响其他地方 */\n  .controller-features ul li {\n    text-align: left !important;\n    list-style-position: inside;\n  }\n</style>",
             "file_type": "image",
             "file_image": "shopify://shop_images/12_6f948669-8d83-4f28-bcea-edad5bceb9b4.jpg",
             "video_url": "",

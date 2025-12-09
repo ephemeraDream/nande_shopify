@@ -303,7 +303,7 @@
           "type": "foldtext",
           "settings": {
             "title": "<p>Mikro-Dreiecksstruktur</p>",
-            "description": "<p>Die Säulen verfügen über eine feine Mikrodreiecksstruktur – inspiriert von der berühmten Loschwitzer Brücke („Blaues Wunder“) in Dresden.\nDiese Bauweise sorgt für eine höhere Verformungssteifigkeit und verleiht dem Tisch spürbar mehr Stabilität im täglichen Einsatz./p>",
+            "description": "<ul><li>Die Säulen verfügen über eine feine Mikrodreiecksstruktur – inspiriert von der berühmten Loschwitzer Brücke („Blaues Wunder“) in Dresden. Diese Bauweise sorgt für eine höhere Verformungssteifigkeit und verleiht dem Tisch spürbar mehr Stabilität im täglichen Einsatz.</li></ul>",
             "image": "shopify://shop_images/A_-_7.jpg"
           }
         },
