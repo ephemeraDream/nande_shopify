@@ -157,6 +157,7 @@
         "item_fLi8Gn",
         "item_Cgh74t"
       ],
+      "disabled": true,
       "custom_css": [
         ".product_anchor_bar_btn {display: none;}",
         ".product_anchor_bar_left {flex: 0 0 100%; gap: 2rem; justify-content: space-between;}"
