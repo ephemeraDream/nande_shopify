@@ -440,32 +440,32 @@
         "foldtext_HQhGDk": {
           "type": "foldtext",
           "settings": {
-            "title": "<p>64-129cm hohenverstellbar</p>",
-            "description": "<div class=\"controller-features\">\n  <ul>\n    <li>Smartphones, Tablets oder Kopfhörer jederzeit griffbereit laden.\nDie beiden Ports versorgen deine Geräte zuverlässig, ohne zusätzliches Ladegerät auf dem Tisch.</li>\n  </ul>\n</div>\n\n<style>\n  /* 让这个模块内的 li 左对齐，不影响其他地方 */\n  .controller-features ul li {\n    text-align: left !important;\n    list-style-position: inside;\n  }\n</style>",
+            "title": "<p>Hochwertiger Kaltstahl</p>",
+            "description": "<ul><li>Die Säulen verfügen über eine feine Mikrodreiecksstruktur – inspiriert von der berühmten Loschwitzer Brücke („Blaues Wunder“) in Dresden. Diese Bauweise sorgt für eine höhere Verformungssteifigkeit und verleiht dem Tisch spürbar mehr Stabilität im täglichen Einsatz.</li></ul>",
             "image": "shopify://shop_images/7_67af52f0-00ae-435a-b323-8bde83553f6b.jpg"
           }
         },
         "foldtext_HWP39G": {
           "type": "foldtext",
           "settings": {
-            "title": "<p>100 kg groBe Tragfahigkeit</p>",
-            "description": "<p>Normalerweise beträgt die optimale Schreibtischhöhe im Sitzen Ihre Körpergröße x 0,4 und im Stehen Ihre Körpergröße x 0,62. <br/>Höhenverstellbarer Schreibtisch mit 2 stufigen Säulen ist nur für die Körpergröße von 1,75-1,95 m geeignet. <br/>Vernal-Schreibtisch passt für Personen mit einer Körpergröße von 1,55-2,05 m.</p>",
+            "title": "<h3>Verstärkte Standfüße</h3>",
+            "description": "<ul><li>Die extra dick konstruierten Standfüße verbessern die Bodenauflage deutlich und erhöhen die Stabilität spürbar – auch bei voller Belastung.</li></ul>",
             "image": "shopify://shop_images/10_d0f0d429-4ba4-4db8-bc9b-7885d1aa14e9.jpg"
           }
         },
         "foldtext_iGWkAs": {
           "type": "foldtext",
           "settings": {
-            "title": "<p>Flexible Einstellung und schnelle Reaktion</p>",
-            "description": "<p>Normalerweise beträgt die optimale Schreibtischhöhe im Sitzen Ihre Körpergröße x 0,4 und im Stehen Ihre Körpergröße x 0,62. <br/>Höhenverstellbarer Schreibtisch mit 2 stufigen Säulen ist nur für die Körpergröße von 1,75-1,95 m geeignet. <br/>Vernal-Schreibtisch passt für Personen mit einer Körpergröße von 1,55-2,05 m.</p>",
+            "title": "<h3>Verstärkte Säulen</h3>",
+            "description": "<ul><li>Die Standbeine verfügen über eine erhöhte Wandstärke und besonders robuste Stahlprofile. Mehr Material = mehr Stabilität, bessere Lastverteilung und eine langlebige Gesamtstruktur.</li></ul>",
             "image": "shopify://shop_images/8_3066e67a-4c6a-4efb-92d8-2ee75cf59e36.jpg"
           }
         },
         "foldtext_CtCPqT": {
           "type": "foldtext",
           "settings": {
-            "title": "",
-            "description": "",
+            "title": "<h3>Minimale Toleranzen</h3>",
+            "description": "<ul><li>Der Abstand zwischen Innen- und Außensäule wurde deutlich reduziert. Die enge Passform verringert seitliches Spiel während der Höhenverstellung und sorgt für eine ruhigere, angenehm solide Bewegung.</li></ul>",
             "image": "shopify://shop_images/9_3c0814ea-26d3-4af6-84a4-c1286bd07654.jpg"
           }
         }
