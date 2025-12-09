@@ -332,7 +332,7 @@
           "type": "foldtext",
           "settings": {
             "title": "<p>Mikro-Dreiecksstruktur</p>",
-            "description": "<p>Die Säulen verfügen über eine feine Mikrodreiecksstruktur – inspiriert von der berühmten Loschwitzer Brücke („Blaues Wunder“) in Dresden.\nDiese Bauweise sorgt für eine höhere Verformungssteifigkeit und verleiht dem Tisch spürbar mehr Stabilität im täglichen Einsatz./p>",
+            "description": "<p>Die Säulen verfügen über eine feine Mikrodreiecksstruktur – inspiriert von der berühmten Loschwitzer Brücke („Blaues Wunder“) in Dresden.\nDiese Bauweise sorgt für eine höhere Verformungssteifigkeit und verleiht dem Tisch spürbar mehr Stabilität im täglichen Einsatz.",
             "image": "shopify://shop_images/A_-_7_d99421e4-a6de-4b0e-9e7f-d79b08ba376a.jpg"
           }
         },
@@ -347,7 +347,7 @@
         "foldtext_pxGTDz": {
           "type": "foldtext",
           "settings": {
-            "title": "<p>Verstärkte Standfüße</p>",
+            "title": "<h3>Verstärkte Standfüße</h3>",
             "description": "<ul><li>Die extra dick konstruierten Standfüße verbessern die Bodenauflage deutlich und erhöhen die Stabilität spürbar – auch bei voller Belastung./li></ul>",
             "image": "shopify://shop_images/A_-_14.jpg"
           }
@@ -355,7 +355,7 @@
         "foldtext_iGWkAs": {
           "type": "foldtext",
           "settings": {
-            "title": "<p>Minimale Toleranzen</p>",
+            "title": "<h3>Minimale Toleranzen</h3>",
             "description": "<ul><li>Der Abstand zwischen Innen- und Außensäule wurde deutlich reduziert.\nDie enge Passform verringert seitliches Spiel während der Höhenverstellung und sorgt für eine ruhigere, angenehm solide Bewegung.</li></ul>",
             "image": "shopify://shop_images/A_-_9_353113a8-2766-417c-b306-be3a585a5dff.jpg"
           }
