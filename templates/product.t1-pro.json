@@ -247,8 +247,8 @@
         "file_with_text_McHwGa": {
           "type": "file_with_text",
           "settings": {
-            "title": "<p>Höhenverstellbar für Kinder und Erwachsene</p>",
-            "description": "<ul><li>Dieser höhenverstellbare Schreibtisch passt perfekt für Personen mit einer Körpergröße von 1,5 bis 1,83 Metern</li></ul>",
+            "title": "<p>Solide und stabil</p>",
+            "description": "<p>•<strong>In Bewegung:</strong>Sanftes Heben & Senken ohne Wackeln – der Kartenstapel bleibt stehen.<br/>•<strong>Im Stillstand:</strong>Hohe Tragkraft, kein Schwanken bei voller Last.<br/>•<strong>Auf höchster Stufe:</strong>Auch ganz oben ruhig – ideal zum Arbeiten.</p>",
             "file_type": "image",
             "file_image": "shopify://shop_images/2_56026fb1-66f6-4892-bb52-ace7eeecd8d8.jpg",
             "video_url": ""
@@ -258,7 +258,7 @@
           "type": "file_with_text",
           "settings": {
             "title": "<p>Bürotisch belastbar bis 100 kg</p>",
-            "description": "<ul><li>Sie können problemlos 2 Monitore, einen PC und andere Büroartikel darauf platzieren.</li></ul>",
+            "description": "<p><strong>Ideal für schwere Arbeitsplätze:</strong>Die hohe Tragkraft von 100 kg bietet genügend Reserven für große Monitore, PCs, Studioequipment oder anspruchsvolle Setups – perfekt für Profis und Power-User.</p>",
             "file_type": "image",
             "file_image": "shopify://shop_images/4_-_100KG.jpg",
             "video_url": ""
@@ -267,8 +267,8 @@
         "file_with_text_B39ehq": {
           "type": "file_with_text",
           "settings": {
-            "title": "<p>Vier Speicherhöhen&USB-Ladeanschlüsse</p>",
-            "description": "<ul><li>4 Speicherplätze für Familie & Haltungen, plus USB-C Ladepunkt</li></ul>",
+            "title": "<p>Smart Controller</p>",
+            "description": "<p><strong>Alles steuern – einfach, schnell, intuitiv:</strong><br/>Mit vier Memory-Positionen, 1 Ladeanschlüssen, Kindersicherung steuern Sie Ihren Arbeitsplatz komfortabel und präzise – mit nur einem Fingertipp.</p>",
             "file_type": "image",
             "file_image": "shopify://shop_images/3_2edd8c83-a3ee-4edc-bd4f-69fc89bb6a1b.jpg",
             "video_url": ""
@@ -277,8 +277,8 @@
         "file_with_text_JJXCp8": {
           "type": "file_with_text",
           "settings": {
-            "title": "<p>Freie Rollen und Haken</p>",
-            "description": "<p>4 Rollen machen aus Ihrem Schreibtisch einen mobilen Schreibtisch</p>",
+            "title": "<p>Metall-Kabelhalter</p>",
+            "description": "<p><strong>Für mehr Ordnung am Schreibtisch:</strong>Der mitgelieferte Metall-Kabelhalter hilft Ihnen, Kabel sauber zu bündeln und unter der Tischplatte zu verstauen – für einen aufgeräumten und professionellen Arbeitsplatz.</p>",
             "file_type": "image",
             "file_image": "shopify://shop_images/6_0855a21f-dd89-4212-98bf-efca075cd8e1.jpg",
             "video_url": ""
@@ -287,8 +287,8 @@
         "file_with_text_Q8tJKk": {
           "type": "file_with_text",
           "settings": {
-            "title": "<p>Kompatibel mit 100-180 cm Platten</p>",
-            "description": "<ul><li>Unterstützt Tischplatten in den Größen 100x60, 120x60, 140x70, 160x80 und 180x80 cm.</li></ul>",
+            "title": "<p>Großer Verstellbereich</p>",
+            "description": "<p>Der breite Längenverstellbereich von 1000 bis 1800 mm macht das Gestell besonders vielseitig. So passt es zu einer großen Auswahl an Tischplattengrößen und eignet sich für unterschiedlichste Arbeits- und Wohnsituationen.<br/><br/></p>",
             "file_type": "image",
             "file_image": "shopify://shop_images/3_83f00b4d-1167-4d65-8939-500662c65ff3.jpg",
             "video_url": ""
@@ -297,8 +297,8 @@
         "file_with_text_THJTyK": {
           "type": "file_with_text",
           "settings": {
-            "title": "<p>FSC-zertifizierte Tischplatte</p>",
-            "description": "<p>Optionale FSC-zertifizierte Tischplatten in 120x60cm, 140x70cm und 160x80cm mit vorgebohrten Löchern.</p>",
+            "title": "<p>Qualität geprüft</p>",
+            "description": "<p><strong>Über 10.000 Belastungstests:</strong>Jeder Tischrahmen wird strengen Qualitäts- und Belastungstests unterzogen. Mehr als 10.000 Zyklen garantieren eine langlebige, robuste und zuverlässige Performance im täglichen Einsatz.</p>",
             "file_type": "image",
             "file_image": "shopify://shop_images/5_9ec8c6d8-efcf-41d0-8d8a-080e4a0bdf31.jpg",
             "video_url": ""
@@ -448,7 +448,7 @@
         "foldtext_HWP39G": {
           "type": "foldtext",
           "settings": {
-            "title": "<p>160 kg groBe Tragfahigkeit</p>",
+            "title": "<p>100 kg groBe Tragfahigkeit</p>",
             "description": "<p>Normalerweise beträgt die optimale Schreibtischhöhe im Sitzen Ihre Körpergröße x 0,4 und im Stehen Ihre Körpergröße x 0,62. <br/>Höhenverstellbarer Schreibtisch mit 2 stufigen Säulen ist nur für die Körpergröße von 1,75-1,95 m geeignet. <br/>Vernal-Schreibtisch passt für Personen mit einer Körpergröße von 1,55-2,05 m.</p>",
             "image": "shopify://shop_images/10_d0f0d429-4ba4-4db8-bc9b-7885d1aa14e9.jpg"
           }
@@ -479,8 +479,7 @@
       "name": "img with foldtext",
       "settings": {
         "spec_id": "",
-        "title": "<p>Title Title</p>",
-        "image": "shopify://shop_images/featured-spaces-5.webp",
+        "title": "",
         "padding_top": 120,
         "padding_bottom": 120
       }
