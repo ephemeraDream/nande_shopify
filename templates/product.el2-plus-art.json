@@ -194,6 +194,7 @@
     },
     "video_wPHLA8": {
       "type": "video",
+      "disabled": true,
       "name": "t:sections.video.presets.name",
       "settings": {
         "heading": "Maidesite mobiler Schreibtisch EL2 Plus  Art Ausrüstung",
@@ -233,7 +234,7 @@
             "title": "<p>Elegantes Design</p>",
             "description": "<p>Verfügt über ein elegantes Design, Säule und Fuß mit Arc-Stil, moderneres und häusliches Design.</p>",
             "file_type": "image",
-            "file_image": "shopify://shop_images/TH2-Pro-Plus-oval-leg-frame.jpg",
+            "file_image": "shopify://shop_images/1_199dc946-5ffe-434f-817b-83b1cbf52bb0.jpg",
             "video_url": ""
           }
         },
@@ -243,17 +244,7 @@
             "title": "<p>Super Duale Motoren</p>",
             "description": "<p>Maidesite Duale Motorensystem ist besser als andere Produkt mit nur einem Motor.</p>",
             "file_type": "image",
-            "file_image": "shopify://shop_images/dual-motor-stable-standing-desk-leg-black-TH2-Pro-plus.jpg",
-            "video_url": ""
-          }
-        },
-        "file_with_text_McHwGa": {
-          "type": "file_with_text",
-          "settings": {
-            "title": "<p>Max. Verstellhöhe</p>",
-            "description": "<p>Der 3-stufige tischgestell höhenverstellbar, der über den größten Höhenverstellbereich von 62-125 cm auf dem Markt verfügt<br/><br/></p>",
-            "file_type": "image",
-            "file_image": "shopify://shop_images/TH2-Pro-Plus-hohenverstellbarer-schreibtischbereich-62cm-125cm.jpg",
+            "file_image": "shopify://shop_images/2_08dd95b7-b7fc-4b7d-a7c4-0370213dfb93.jpg",
             "video_url": ""
           }
         },
@@ -263,7 +254,17 @@
             "title": "<p>Belastbar bis 180 kg</p>",
             "description": "<p>Deren Material 20 % mehr als andere Produkte, stark und stabil. Der Traglast bis zu 180 kg.</p>",
             "file_type": "image",
-            "file_image": "shopify://shop_images/Maidesite-standing-desk-TH2-Pro-Plus-with-180kg-loading-capacity_1_fc471cf5-86e4-4df5-ab87-6dee5f8004f2.jpg",
+            "file_image": "shopify://shop_images/4_3a652d88-94e6-42be-b6e6-449c16f385e8.jpg",
+            "video_url": ""
+          }
+        },
+        "file_with_text_McHwGa": {
+          "type": "file_with_text",
+          "settings": {
+            "title": "<p>Max. Verstellhöhe</p>",
+            "description": "<p>Der 3-stufige tischgestell höhenverstellbar, der über den größten Höhenverstellbereich von 62-125 cm auf dem Markt verfügt<br/><br/></p>",
+            "file_type": "image",
+            "file_image": "shopify://shop_images/6_ca4b48d4-ab75-4842-bd0b-8498c1bf6749.jpg",
             "video_url": ""
           }
         },
@@ -273,7 +274,7 @@
             "title": "<p>Multifunktions-Bedienfeld</p>",
             "description": "<p>4-Memory-Speicherplätze, die entsprechen unterschiedliche voreingestellte Höhe. Sie können 0,5h,1h,2h Erinnerung einstellen.</p>",
             "file_type": "image",
-            "file_image": "shopify://shop_images/Control-panel-RJ32-socket-T2-Pro-Plus-DE_a477a1f9-43c6-4c54-8515-5f43d32e5be1_1.jpg",
+            "file_image": "shopify://shop_images/3_04b4753b-386b-41ce-bd6d-53ade224bcf9.jpg",
             "video_url": ""
           }
         },
@@ -283,7 +284,7 @@
             "title": "<p>FSC-zertifizierte Tischplatte</p>",
             "description": "<p>Optionale FSC-zertifizierte Tischplatten in 120x60cm, 140x70cm und 160x80cm mit vorgebohrten Löchern.</p>",
             "file_type": "image",
-            "file_image": "shopify://shop_images/P7.jpg",
+            "file_image": "shopify://shop_images/5_87cadca2-c73c-4e87-b87b-ca357dbabf3c.jpg",
             "video_url": ""
           }
         }
@@ -291,8 +292,8 @@
       "block_order": [
         "file_with_text_JJXCp8",
         "file_with_text_Q8tJKk",
-        "file_with_text_McHwGa",
         "file_with_text_f9yPAD",
+        "file_with_text_McHwGa",
         "file_with_text_B39ehq",
         "file_with_text_THJTyK"
       ],
@@ -363,8 +364,8 @@
         "description": "<ul><li>Erinnerung an langes Sitzen: Intervallfunktion erinnert Sie daran, nach 0,5, 1 oder 2 Stunden aufzustehen.</li><li>Verbessert Ihre Haltung und steigert die Produktivität.</li></ul>",
         "file_position": "right",
         "file_type": "image",
-        "file_image": "shopify://shop_images/P5-2_07252258-88de-4015-8096-f6c03a53dc31.jpg",
-        "video_url": "",
+        "file_image": "shopify://shop_images/Maidesite-TH2-Pro-Plus-standing-desk-_29_5776133d-cc2f-43c8-9d97-893d30c012a6.jpg",
+        "video_url": "https://www.youtube.com/watch?v=YstPRgITxvk&t=6s",
         "video_aspect_ratio": "4/3",
         "btn_text": "",
         "link_url": "",
@@ -389,7 +390,7 @@
         "description": "<p>Die eingebaute Gyroskop-gesteuerte Anti-Kollisions-Rückfederung schützt Ihr Gerät vor Schäden durch Stürze.</p>",
         "file_position": "left",
         "file_type": "image",
-        "file_image": "shopify://shop_images/P6-2_8365033d-bb4d-495e-b25f-1985352dcace.jpg",
+        "file_image": "shopify://shop_images/TH2-Pro-Plus-Antikollisionssystem.jpg",
         "video_url": "",
         "video_aspect_ratio": "4/3",
         "btn_text": "",
@@ -439,7 +440,7 @@
         "description": "<p>Die Abgerundeten Ecken der Tischplatte verringern die Verletzungsgefahr bei Stößen oder Stürzen.</p>",
         "file_position": "left",
         "file_type": "image",
-        "file_image": "shopify://shop_images/P6-1.jpg",
+        "file_image": "shopify://shop_images/Maidesite-TH2-Pro-Plus-ovaler-hohenverstellbarer-Schreibtisch-mit-Holz-Arbeitsplatte_182e6972-2959-4113-a847-066c479b2bbd.jpg",
         "video_url": "",
         "video_aspect_ratio": "4/3",
         "btn_text": "",
@@ -515,7 +516,6 @@
         "tab_JyxzQm",
         "tab_LmGatL"
       ],
-      "disabled": true,
       "name": "img with text tab",
       "settings": {
         "spec_id": "",
