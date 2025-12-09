@@ -33,21 +33,19 @@
         },
         "banner_item_ykwd4B": {
           "type": "banner_item",
-          "disabled": true,
           "settings": {
             "sub_title": "",
             "title": "",
             "text": "",
             "btn_text": "",
-            "link": "https://www.maidesite.de/pages/black-friday-2025#flash-sale-section",
+            "link": "https://www.maidesite.de/pages/2025-weihnachtsaktion#Weihnachtsgeschenk",
             "file_position": "bottom_right",
             "overlay_text_align": "text-center",
             "transparent_content_color": "#000000",
             "file_type": "image",
-            "file_image": "shopify://shop_images/3_388d5320-2c43-43c3-a87b-50cd848f1d27.jpg",
-            "file_image_pe": "shopify://shop_images/3_d59d98ce-1d7c-4f20-928b-93523328874b.jpg",
+            "file_image": "shopify://shop_images/4_69da96c1-3e7b-451d-8a52-498512be47e5.jpg",
+            "file_image_pe": "shopify://shop_images/4_b46f284a-7f33-467e-b4dd-7f97f004f7bb.jpg",
             "video_url": "",
-            "url_upload": "shopify://files/videos/修改Banner 尺寸-1_cc5e7670-5c6b-4de6-8a69-f73a0b091b11.mp4",
             "show_countdown": false,
             "countdown": "summer-sale"
           }
