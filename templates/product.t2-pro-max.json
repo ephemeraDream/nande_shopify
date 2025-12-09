@@ -359,7 +359,7 @@
         "foldtext_HQhGDk": {
           "type": "foldtext",
           "settings": {
-            "title": "<p>Pyramidenförmige-Säulenstruktur</p>",
+            "title": "<h3>Pyramidenförmige-Säulenstruktur</h3>",
             "description": "<ul><li>Diese Konstruktion sorgt für eine deutlich größere Auflagefläche und verteilt die Kräfte optimal nach unten und außen. So bleibt der Tisch selbst in der höchsten Position außergewöhnlich stabil und verhindert effektiv Wackeln oder Kippen.</li></ul>",
             "image": "shopify://shop_images/7_0884c4c1-439e-4537-ba56-f6578da62adc.jpg"
           }
@@ -367,15 +367,15 @@
         "foldtext_pKmxm4": {
           "type": "foldtext",
           "settings": {
-            "title": "",
-            "description": "",
+            "title": "<h3>Verstärkte Säulen</h3>",
+            "description": "<ul><li>Die Standbeine verfügen über eine erhöhte Wandstärke und besonders robuste Stahlprofile.\nMehr Material = mehr Stabilität, bessere Lastverteilung und eine langlebige Gesamtstruktur.</li></ul>",
             "image": "shopify://shop_images/A_-_8_cdc39cc7-1fb2-4ce0-b336-8ab245f02d8b.jpg"
           }
         },
         "foldtext_HWP39G": {
           "type": "foldtext",
           "settings": {
-            "title": "<p>Verstärkte Fußkonstruktion</p>",
+            "title": "<h3>Verstärkte Fußkonstruktion</h3>",
             "description": "<ul><li>Die 30 mm starken Standfüße bestehen aus massivem Metall und erhöhen die Gesamtsteifigkeit des Tischgestells spürbar.\nDank der hohen Materialstärke werden Bewegungsenergie und Vibrationen wesentlich besser aufgenommen und abgeleitet – so bleibt der Tisch auch bei Belastung ruhig und stabil.</li><li></li></ul>",
             "image": "shopify://shop_images/8_e173d64a-df3a-44d8-a09f-410a5af98812.jpg"
           }
@@ -383,7 +383,7 @@
         "foldtext_iGWkAs": {
           "type": "foldtext",
           "settings": {
-            "title": "<p>Kleinere Spalten</p>",
+            "title": "<h3>Kleinere Spalten</h3>",
             "description": "<ul><li>Durch deutlich kleinere Spalten zwischen Innen- und Außensäulen wird das seitliche Spiel bei der Höhenverstellung effektiv minimiert.\nDie präzise Führung sorgt dafür, dass der Tisch selbst in hoher Position stabil bleibt und nicht wackelt – besonders wichtig bei Monitorarmen oder dynamischer Nutzung.</li><li></li></ul>",
             "image": "shopify://shop_images/9_8c0920c4-4bc0-447f-835f-761def9d40e0.jpg"
           }
