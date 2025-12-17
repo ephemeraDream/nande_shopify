@@ -449,7 +449,7 @@
           "type": "foldtext",
           "settings": {
             "title": "<h3>Verstärkte Standfüße</h3>",
-            "description": "<ul><li>Die extra dick konstruierten Standfüße verbessern die Bodenauflage deutlich und erhöhen die Stabilität spürbar – auch bei voller Belastung.</li></ul>",
+            "description": "Die extra dick konstruierten Standfüße verbessern die Bodenauflage deutlich und erhöhen die Stabilität spürbar – auch bei voller Belastung.",
             "image": "shopify://shop_images/10_d0f0d429-4ba4-4db8-bc9b-7885d1aa14e9.jpg"
           }
         },
