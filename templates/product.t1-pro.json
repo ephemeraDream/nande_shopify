@@ -449,7 +449,7 @@
           "type": "foldtext",
           "settings": {
             "title": "<h3>Verstärkte Standfüße</h3>",
-            "description": "Die extra dick konstruierten Standfüße verbessern die Bodenauflage deutlich und erhöhen die Stabilität spürbar – auch bei voller Belastung.",
+            "description": "<ul><li>Die extra dick konstruierten Standfüße verbessern die Bodenauflage deutlich und erhöhen die Stabilität spürbar – auch bei voller Belastung.</li></ul>",
             "image": "shopify://shop_images/10_d0f0d429-4ba4-4db8-bc9b-7885d1aa14e9.jpg"
           }
         },
@@ -468,13 +468,21 @@
             "description": "<ul><li>Der Abstand zwischen Innen- und Außensäule wurde deutlich reduziert. Die enge Passform verringert seitliches Spiel während der Höhenverstellung und sorgt für eine ruhigere, angenehm solide Bewegung.</li></ul>",
             "image": "shopify://shop_images/9_3c0814ea-26d3-4af6-84a4-c1286bd07654.jpg"
           }
+        },
+        "foldtext_89gNf4": {
+          "type": "foldtext",
+          "settings": {
+            "title": "<p>111</p>",
+            "description": "Der Abstand zwischen Innen- und Außensäule wurde deutlich reduziert. Die enge Passform verringert seitliches Spiel während der Höhenverstellung und sorgt für eine ruhigere, angenehm solide Bewegung."
+          }
         }
       },
       "block_order": [
         "foldtext_HQhGDk",
         "foldtext_HWP39G",
         "foldtext_iGWkAs",
-        "foldtext_CtCPqT"
+        "foldtext_CtCPqT",
+        "foldtext_89gNf4"
       ],
       "name": "img with foldtext",
       "settings": {
