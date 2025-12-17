@@ -740,6 +740,7 @@
         "faq_mFDf3d",
         "faq_whBqrf"
       ],
+      "disabled": true,
       "custom_css": [
         ".faq_simple_section {background-color: #fafafa;}"
       ],
