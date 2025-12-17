@@ -338,7 +338,7 @@
             "tabname": "Zwei Speicherpositionen",
             "sub_title": "",
             "title": "<p>Zwei Speicherpositionen</p>",
-            "description": "<div class=\"controller-features\">\n  <ul>\n    <liZwei individuell speicherbare Höhen ermöglichen einen schnellen Wechsel zwischen Sitz- und Stehposition. Ein Knopfdruck genügt, um die bevorzugte Arbeitshöhe wiederherzustellen – einfach, zuverlässig und alltagstauglich.</li>\n  </ul>\n</div>\n\n<style>\n  /* 让这个模块内的 li 左对齐，不影响其他地方 */\n  .controller-features ul li {\n    text-align: left !important;\n    list-style-position: inside;\n  }\n</style>",
+            "description": "<div class=\"controller-features\">\n  <ul>\n    <li>Zwei individuell speicherbare Höhen ermöglichen einen schnellen Wechsel zwischen Sitz- und Stehposition. Ein Knopfdruck genügt, um die bevorzugte Arbeitshöhe wiederherzustellen – einfach, zuverlässig und alltagstauglich.</li>\n  </ul>\n</div>\n\n<style>\n  /* 让这个模块内的 li 左对齐，不影响其他地方 */\n  .controller-features ul li {\n    text-align: left !important;\n    list-style-position: inside;\n  }\n</style>",
             "file_type": "image",
             "file_image": "shopify://shop_images/14_-_2_aad7dd51-3d87-4ced-98e0-284a2701ea41.jpg",
             "video_url": "",
