@@ -468,21 +468,13 @@
             "description": "<ul><li>Der Abstand zwischen Innen- und Außensäule wurde deutlich reduziert. Die enge Passform verringert seitliches Spiel während der Höhenverstellung und sorgt für eine ruhigere, angenehm solide Bewegung.</li></ul>",
             "image": "shopify://shop_images/9_3c0814ea-26d3-4af6-84a4-c1286bd07654.jpg"
           }
-        },
-        "foldtext_89gNf4": {
-          "type": "foldtext",
-          "settings": {
-            "title": "<p>111</p>",
-            "description": "Der Abstand zwischen Innen- und Außensäule wurde deutlich reduziert. Die enge Passform verringert seitliches Spiel während der Höhenverstellung und sorgt für eine ruhigere, angenehm solide Bewegung."
-          }
         }
       },
       "block_order": [
         "foldtext_HQhGDk",
         "foldtext_HWP39G",
         "foldtext_iGWkAs",
-        "foldtext_CtCPqT",
-        "foldtext_89gNf4"
+        "foldtext_CtCPqT"
       ],
       "name": "img with foldtext",
       "settings": {
