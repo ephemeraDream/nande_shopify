@@ -177,6 +177,7 @@
     },
     "video_wPHLA8": {
       "type": "video",
+      "disabled": true,
       "name": "t:sections.video.presets.name",
       "settings": {
         "heading": "Maidesite mobiler Schreibtisch Yoga",
@@ -197,68 +198,68 @@
         "file_with_text_JJXCp8": {
           "type": "file_with_text",
           "settings": {
-            "title": "<p>Wohnungsfreundliches Design</p>",
-            "description": "<p>Bietet eine flexible und energiegeladene Lösung für Heimbüros mit begrenztem Platzangebot.</p>",
+            "title": "<p>Echtes Möbeldesign</p>",
+            "description": "<p>Yoga wurde nicht als klassisches Bürogerät entworfen, sondern als vollwertiges Möbelstück. Die klaren Linien, die harmonischen Proportionen und die hochwertige Oberflächenanmutung sorgen dafür, dass sich der Tisch nahtlos in Wohn- und Arbeitsräume integriert. Unaufdringlich, zeitlos und hochwertig.</p>",
             "file_type": "image",
-            "file_image": "shopify://shop_images/1_87d9a4e3-d4b5-4a7a-8659-77631f33e78a.jpg",
-            "video_url": ""
-          }
-        },
-        "file_with_text_Q8tJKk": {
-          "type": "file_with_text",
-          "settings": {
-            "title": "<p>Geschäftliche Nutzung</p>",
-            "description": "<p>Sein elegantes, modernes Design macht es zu einer stilvollen Wahl für jedes Büro oder jeden gemeinsam genutzten Arbeitsbereich.</p>",
-            "file_type": "image",
-            "file_image": "shopify://shop_images/2_f5829681-3871-4296-bcdc-9d4fc81ecf5b.jpg",
+            "file_image": "shopify://shop_images/1_c7ab8f9d-c15c-48ae-a14e-9af2831663af.jpg",
             "video_url": ""
           }
         },
         "file_with_text_McHwGa": {
           "type": "file_with_text",
           "settings": {
-            "title": "<p>Kinderleichte Montage</p>",
-            "description": "<p><strong>Montage in drei Schritten</strong>: Allein in 10 Minuten erledigt<br/>Beine an Tischplatte, Füße an Beine schrauben.<br/></p>",
+            "title": "<p>All-in-One-Design</p>",
+            "description": "<p>Qi-Ladefläche, verdeckte Schublade und Kabelmanagement sind direkt in die Tischplatte eingebettet. Das Ergebnis ist ein aufgeräumter Arbeitsplatz ohne sichtbare Technik – funktional im Alltag und visuell ruhig, wie es von einem hochwertigen Möbelstück erwartet wird.</p>",
             "file_type": "image",
-            "file_image": "shopify://shop_images/3_87080359-a5b6-4bb5-89f7-b206ed389e43.jpg",
+            "file_image": "shopify://shop_images/2_43fef87c-7999-4213-8016-357af1e5a928.jpg",
+            "video_url": ""
+          }
+        },
+        "file_with_text_Q8tJKk": {
+          "type": "file_with_text",
+          "settings": {
+            "title": "<p>Ergonomisch gesteuert</p>",
+            "description": "<p>Die Handsteuerung wurde mit Fokus auf Alltagstauglichkeit und ergonomisches Arbeiten entwickelt. Höhenverstellungen erfolgen kontrolliert und flüssig, sodass Positionswechsel bewusst und regelmäßig in den Arbeitsablauf integriert werden können. Den Tisch aktiv zu nutzen – statt ihn nur gelegentlich zu verstellen.</p>",
+            "file_type": "image",
+            "file_image": "shopify://shop_images/13_0f3053c0-460b-4f71-b6bd-6ae74593344d.jpg",
             "video_url": ""
           }
         },
         "file_with_text_f9yPAD": {
           "type": "file_with_text",
           "settings": {
-            "title": "<p>Kabelloses Laden, mühelose Energie:</p>",
-            "description": "<p>Vergiss störende Kabel und lästiges Ein- und Ausstecken. Mit unserer kabellosen Ladefunktion bleibst du jederzeit flexibel</p>",
+            "title": "<p>Schnelle Montage ohne Umwege</p>",
+            "description": "<p>Der Aufbau ist klar strukturiert und benutzerfreundlich konzipiert. Dank Steck- und Klickverbindungen lassen sich die wichtigsten Komponenten ohne Werkzeug montieren. Das spart Zeit, reduziert Fehlerquellen und macht den Einstieg besonders angenehm.</p>",
             "file_type": "image",
-            "file_image": "shopify://shop_images/4_9834589d-e501-4428-be42-5b7d7eacca0d.jpg",
+            "file_image": "shopify://shop_images/3_234fac0d-ce51-4c75-93ee-45b0cc0aea3f.jpg",
             "video_url": ""
           }
         },
         "file_with_text_B39ehq": {
           "type": "file_with_text",
           "settings": {
-            "title": "<p>Praktischer Stauraum</p>",
-            "description": "<p>Das integrierte Kabelmanagement-System auf der Rückseite sorgt für kabelfreie Arbeitsflächen.<br/>Praktischer Stauraum: Eine unauffällige Schublade unter der Tischplatte für Ihre kleinen Büroutensilien.</p>",
+            "title": "<p>Spürbar stabil</p>",
+            "description": "<p>•<strong>In Bewegung:</strong>Sanftes Heben & Senken ohne Wackeln – der Kartenstapel bleibt stehen.<br/>•<strong>Im Stillstand:</strong>Hohe Tragkraft, kein Schwanken bei voller Last.<br/>•<strong>Auf höchster Stufe:</strong>Auch ganz oben ruhig – ideal zum Arbeiten.</p>",
             "file_type": "image",
-            "file_image": "shopify://shop_images/5_bc69744f-d998-4f7f-b9fe-3c6ba832d648.jpg",
+            "file_image": "shopify://shop_images/5_aeb3a13b-253a-4d05-90f2-e2cca5d971cc.jpg",
             "video_url": ""
           }
         },
         "file_with_text_THJTyK": {
           "type": "file_with_text",
           "settings": {
-            "title": "<p>Ordnung leicht gemacht</p>",
-            "description": "<p>Das integrierte Kabelmanagement-System auf der Rückseite sorgt für kabelfreie Arbeitsflächen.</p>",
+            "title": "<p>Hohe Tragkraft</p>",
+            "description": "<p>Ob mehrere Monitore, schwere Technik oder umfangreiches Zubehör – die Konstruktion des Maidesite Yoga bietet ausreichend Reserven. Die hohe Tragfähigkeit sorgt dafür, dass der Tisch auch bei komplexen Setups zuverlässig arbeitet und langfristig stabil bleibt.</p>",
             "file_type": "image",
-            "file_image": "shopify://shop_images/6_c0de98bf-c38f-46ab-bb69-428dd4fbaa42.jpg",
+            "file_image": "shopify://shop_images/6_-_80_120KG_e8263458-c305-4cc6-baaa-c73cf1a2064f.jpg",
             "video_url": ""
           }
         }
       },
       "block_order": [
         "file_with_text_JJXCp8",
-        "file_with_text_Q8tJKk",
         "file_with_text_McHwGa",
+        "file_with_text_Q8tJKk",
         "file_with_text_f9yPAD",
         "file_with_text_B39ehq",
         "file_with_text_THJTyK"
@@ -341,6 +342,7 @@
     },
     "img_with_text_simplicity_nJFALq": {
       "type": "img-with-text-simplicity",
+      "disabled": true,
       "custom_css": [
         ".img_with_text_simplicity_info {padding-left: 3rem;}"
       ],
@@ -366,6 +368,7 @@
     },
     "img_with_text_simplicity_YLCpmN": {
       "type": "img-with-text-simplicity",
+      "disabled": true,
       "custom_css": [],
       "name": "img with text simplicity",
       "settings": {
