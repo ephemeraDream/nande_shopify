@@ -396,6 +396,7 @@
     },
     "img_with_text_simplicity_YLCpmN": {
       "type": "img-with-text-simplicity",
+      "disabled": true,
       "custom_css": [],
       "name": "img with text simplicity",
       "settings": {
@@ -763,6 +764,7 @@
         "faq_mFDf3d",
         "faq_whBqrf"
       ],
+      "disabled": true,
       "custom_css": [
         ".faq_simple_section {background-color: #fafafa;}"
       ],
