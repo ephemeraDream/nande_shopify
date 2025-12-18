@@ -1425,42 +1425,49 @@ class CartPerformance {
     }
   });
 })();
-// === MAIDESITE: Hide deleted variant option values (Dawn new version) ===
+// === MAIDESITE: Strictly hide removed variant option values (final) ===
 document.addEventListener('DOMContentLoaded', () => {
   const productInfo = document.querySelector('product-info');
-  if (!productInfo || !productInfo.dataset.product) return;
+  if (!productInfo) return;
 
-  const productData = JSON.parse(productInfo.dataset.product);
+  const productData = JSON.parse(
+    productInfo.querySelector('script[type="application/json"]').textContent
+  );
+
   const variants = productData.variants || [];
 
-  const validOptionValues = {};
+  // 收集“真实存在的 option value”
+  const validValuesByIndex = {};
 
   variants.forEach(variant => {
+    // 只认当前存在的变体（不管库存，只要没被删）
     variant.options.forEach((value, index) => {
-      if (!validOptionValues[index]) {
-        validOptionValues[index] = new Set();
+      if (!validValuesByIndex[index]) {
+        validValuesByIndex[index] = new Set();
       }
-      validOptionValues[index].add(value);
+      validValuesByIndex[index].add(value);
     });
   });
 
-  const fieldsets = document.querySelectorAll('fieldset.product-form__input');
+  // 找到所有变体选项区域
+  const optionFieldsets = document.querySelectorAll(
+    '.product-form__input'
+  );
 
-  fieldsets.forEach((fieldset, optionIndex) => {
-    const allowedValues = validOptionValues[optionIndex];
+  optionFieldsets.forEach((fieldset, index) => {
+    const allowedValues = validValuesByIndex[index];
     if (!allowedValues) return;
 
-    const inputs = fieldset.querySelectorAll('input[type="radio"]');
+    const radios = fieldset.querySelectorAll('input[type="radio"]');
 
-    inputs.forEach(input => {
-      const value = input.value;
-      const label = fieldset.querySelector(`label[for="${input.id}"]`);
+    radios.forEach(radio => {
+      const value = radio.value;
+      const label = fieldset.querySelector(`label[for="${radio.id}"]`);
 
       if (!allowedValues.has(value)) {
         if (label) label.style.display = 'none';
-        input.style.display = 'none';
+        radio.style.display = 'none';
       }
     });
   });
 });
-
