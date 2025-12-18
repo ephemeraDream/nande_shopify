@@ -414,3 +414,46 @@ if (!customElements.get('product-info')) {
     }
   );
 }
+document.addEventListener('DOMContentLoaded', function() {
+  const variantSelectors = document.querySelectorAll('select[name^="options"]');
+  if (variantSelectors.length < 2) return;
+
+  const modellSelect = variantSelectors[0]; // 型号 select
+  const sizeSelect = variantSelectors[1];  // 尺寸 select
+
+  // 从 window.meta.product 获取所有变体数据
+  const variants = window.meta && window.meta.product && window.meta.product.variants ? window.meta.product.variants : [];
+
+  function filterSizesByModell(selectedModell) {
+    const validSizes = new Set();
+
+    variants.forEach(variant => {
+      if (variant.option1 === selectedModell) {
+        validSizes.add(variant.option2);
+      }
+    });
+
+    Array.from(sizeSelect.options).forEach(option => {
+      option.style.display = validSizes.has(option.value) ? 'block' : 'none';
+    });
+
+    // 如果当前尺寸选项不合法，重置为第一个合法尺寸
+    if (!validSizes.has(sizeSelect.value)) {
+      for (const option of sizeSelect.options) {
+        if (validSizes.has(option.value)) {
+          sizeSelect.value = option.value;
+          break;
+        }
+      }
+      sizeSelect.dispatchEvent(new Event('change'));
+    }
+  }
+
+  // 页面加载时先执行一次，初始化尺寸筛选
+  filterSizesByModell(modellSelect.value);
+
+  // 监听型号变化，动态更新尺寸
+  modellSelect.addEventListener('change', function() {
+    filterSizesByModell(this.value);
+  });
+});
