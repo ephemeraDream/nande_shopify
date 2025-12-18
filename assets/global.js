@@ -1425,4 +1425,42 @@ class CartPerformance {
     }
   });
 })();
+// === MAIDESITE: Hide deleted variant option values (Dawn new version) ===
+document.addEventListener('DOMContentLoaded', () => {
+  const productInfo = document.querySelector('product-info');
+  if (!productInfo || !productInfo.dataset.product) return;
+
+  const productData = JSON.parse(productInfo.dataset.product);
+  const variants = productData.variants || [];
+
+  const validOptionValues = {};
+
+  variants.forEach(variant => {
+    variant.options.forEach((value, index) => {
+      if (!validOptionValues[index]) {
+        validOptionValues[index] = new Set();
+      }
+      validOptionValues[index].add(value);
+    });
+  });
+
+  const fieldsets = document.querySelectorAll('fieldset.product-form__input');
+
+  fieldsets.forEach((fieldset, optionIndex) => {
+    const allowedValues = validOptionValues[optionIndex];
+    if (!allowedValues) return;
+
+    const inputs = fieldset.querySelectorAll('input[type="radio"]');
+
+    inputs.forEach(input => {
+      const value = input.value;
+      const label = fieldset.querySelector(`label[for="${input.id}"]`);
+
+      if (!allowedValues.has(value)) {
+        if (label) label.style.display = 'none';
+        input.style.display = 'none';
+      }
+    });
+  });
+});
 
