@@ -414,4 +414,45 @@ if (!customElements.get('product-info')) {
     }
   );
 }
+document.addEventListener('DOMContentLoaded', function() {
+  const variantSelectors = document.querySelectorAll('select[name^="options"]');
+  if (variantSelectors.length < 2) return;
 
+  const modellSelect = variantSelectors[0];
+  const sizeSelect = variantSelectors[1];
+
+  // 取产品变体数据
+  const productJsonScript = document.querySelector('script[type="application/json"][data-product-json]');
+  const productData = productJsonScript ? JSON.parse(productJsonScript.textContent) : null;
+  const variants = productData ? productData.variants : [];
+
+  function filterSizesByModell(selectedModell) {
+    const validSizes = new Set();
+
+    variants.forEach(variant => {
+      if (variant.option1 === selectedModell) {
+        validSizes.add(variant.option2);
+      }
+    });
+
+    Array.from(sizeSelect.options).forEach(option => {
+      option.style.display = validSizes.has(option.value) ? 'block' : 'none';
+    });
+
+    if (!validSizes.has(sizeSelect.value)) {
+      for (const option of sizeSelect.options) {
+        if (validSizes.has(option.value)) {
+          sizeSelect.value = option.value;
+          break;
+        }
+      }
+      sizeSelect.dispatchEvent(new Event('change'));
+    }
+  }
+
+  filterSizesByModell(modellSelect.value);
+
+  modellSelect.addEventListener('change', function() {
+    filterSizesByModell(this.value);
+  });
+});
