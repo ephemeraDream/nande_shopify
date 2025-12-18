@@ -414,3 +414,49 @@ if (!customElements.get('product-info')) {
     }
   );
 }
+document.addEventListener('DOMContentLoaded', function() {
+  // 找到所有变体选项select，假设第一个是型号，第二个是尺寸
+  const variantSelectors = document.querySelectorAll('select[name^="options"]');
+  if (variantSelectors.length < 2) return;
+
+  const modellSelect = variantSelectors[0];
+  const sizeSelect = variantSelectors[1];
+
+  // 获取产品所有变体数据，window.product 或 theme.product
+  // 你可以打开商品页面，按F12控制台，输入window.product看看有没有这个对象
+  const variants = window.product && window.product.variants ? window.product.variants : [];
+
+  function filterSizesByModell(selectedModell) {
+    const validSizes = new Set();
+
+    variants.forEach(variant => {
+      if (variant.option1 === selectedModell) {
+        validSizes.add(variant.option2);
+      }
+    });
+
+    Array.from(sizeSelect.options).forEach(option => {
+      if (validSizes.has(option.value)) {
+        option.style.display = 'block';
+      } else {
+        option.style.display = 'none';
+      }
+    });
+
+    if (!validSizes.has(sizeSelect.value)) {
+      for (const option of sizeSelect.options) {
+        if (validSizes.has(option.value)) {
+          sizeSelect.value = option.value;
+          break;
+        }
+      }
+      sizeSelect.dispatchEvent(new Event('change'));
+    }
+  }
+
+  filterSizesByModell(modellSelect.value);
+
+  modellSelect.addEventListener('change', function() {
+    filterSizesByModell(this.value);
+  });
+});
