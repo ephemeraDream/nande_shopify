@@ -1425,38 +1425,37 @@ class CartPerformance {
     }
   });
 })();
-// === MAIDESITE: Strictly hide removed variant option values (final) ===
+// === MAIDESITE FINAL: Hide deleted variant option values (Shopify product source) ===
 document.addEventListener('DOMContentLoaded', () => {
-  const productInfo = document.querySelector('product-info');
-  if (!productInfo) return;
+  const product =
+    window.Shopify?.product ||
+    window.meta?.product ||
+    window.__st?.product;
 
-  const productData = JSON.parse(
-    productInfo.querySelector('script[type="application/json"]').textContent
-  );
+  if (!product || !product.variants) return;
 
-  const variants = productData.variants || [];
+  const variants = product.variants;
 
-  // 收集“真实存在的 option value”
-  const validValuesByIndex = {};
+  // 收集所有真实存在的 option values（按 option index）
+  const validValues = {};
 
   variants.forEach(variant => {
-    // 只认当前存在的变体（不管库存，只要没被删）
     variant.options.forEach((value, index) => {
-      if (!validValuesByIndex[index]) {
-        validValuesByIndex[index] = new Set();
+      if (!validValues[index]) {
+        validValues[index] = new Set();
       }
-      validValuesByIndex[index].add(value);
+      validValues[index].add(value);
     });
   });
 
-  // 找到所有变体选项区域
-  const optionFieldsets = document.querySelectorAll(
-    '.product-form__input'
+  // Dawn 的标准变体 fieldset
+  const fieldsets = document.querySelectorAll(
+    'fieldset.product-form__input'
   );
 
-  optionFieldsets.forEach((fieldset, index) => {
-    const allowedValues = validValuesByIndex[index];
-    if (!allowedValues) return;
+  fieldsets.forEach((fieldset, optionIndex) => {
+    const allowed = validValues[optionIndex];
+    if (!allowed) return;
 
     const radios = fieldset.querySelectorAll('input[type="radio"]');
 
@@ -1464,7 +1463,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const value = radio.value;
       const label = fieldset.querySelector(`label[for="${radio.id}"]`);
 
-      if (!allowedValues.has(value)) {
+      if (!allowed.has(value)) {
         if (label) label.style.display = 'none';
         radio.style.display = 'none';
       }
