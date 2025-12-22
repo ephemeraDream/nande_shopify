@@ -1,0 +1,662 @@
+<section
+  class="newyear-promo"
+  data-promo-section-id="{{ section.id }}"
+  data-end-time="{{ section.settings.end_time | replace: ' ', 'T' }}"
+>
+  <div class="newyear-promo__inner">
+    <div class="promo-header">
+      {% if section.settings.section_heading != blank %}
+        <h2 class="promo-title">
+          {{ section.settings.section_heading }}
+        </h2>
+      {% endif %}
+
+      <div class="promo-countdown">
+        {{ section.settings.countdown_label }}
+        <span id="promo-countdown-{{ section.id }}"></span>
+      </div>
+    </div>
+
+    <div class="promo-cards-wrapper">
+      {% for block in section.blocks %}
+        <div
+          class="discount-tier-card"
+          data-initial-qty="{{ block.settings.initial_qty }}"
+          data-block-id="{{ block.id }}"
+          {{ block.shopify_attributes }}
+        >
+          <div class="discount-percent">
+            {{ block.settings.discount_label }}
+          </div>
+
+          <div class="discount-qty">
+            Qty:
+            <span class="qty-total">{{ block.settings.initial_qty }}</span>
+            |
+            <span class="qty-left" data-qty-left>{{ block.settings.initial_qty }}</span>
+            left
+          </div>
+
+          <div class="discount-progress">
+            <div class="discount-progress-bar"></div>
+          </div>
+
+          <button
+            type="button"
+            class="discount-btn"
+            data-open-promo-modal
+            data-discount="{{ block.settings.discount_label }}"
+            data-code="{{ block.settings.coupon_code }}"
+          >
+            {{ block.settings.button_label }}
+          </button>
+        </div>
+      {% endfor %}
+    </div>
+
+    {% if section.settings.rules_content != blank %}
+      <details class="promo-rules">
+        <summary>{{ section.settings.rules_title }}</summary>
+        <div class="promo-rules-content">
+          {{ section.settings.rules_content | newline_to_br }}
+        </div>
+      </details>
+    {% endif %}
+
+    <!-- 弹框 Modal -->
+    <div class="promo-modal-overlay" data-promo-modal-overlay>
+      <div class="promo-modal">
+        <button
+          type="button"
+          class="promo-modal-close"
+          data-promo-modal-close
+          aria-label="Close"
+        >
+          &times;
+        </button>
+
+        <h3 class="promo-modal-title">Gutschein sichern</h3>
+
+        <p class="promo-modal-discount">
+          Rabatt:
+          <span id="promo-modal-discount-value"></span>
+        </p>
+
+        <div class="modal-countdown">
+          <span class="modal-countdown-label">Endet in</span>
+          <span id="promo-modal-countdown"></span>
+        </div>
+
+        <div class="promo-modal-code-box">
+          <div class="promo-modal-code-label">Dein Rabattcode</div>
+          <div class="promo-modal-code-row">
+            <span id="promo-modal-code-text"></span>
+            <button
+              type="button"
+              class="promo-modal-copy"
+              data-promo-modal-copy
+            >
+              Copy
+            </button>
+          </div>
+        </div>
+
+        <button
+          type="button"
+          class="promo-modal-cta"
+          data-promo-modal-cta
+        >
+          Jetzt shoppen (Code anwenden)
+        </button>
+
+        <p class="promo-modal-note">
+          Hinweis: Der Rabatt wird beim Öffnen des Links automatisch angewendet.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <style>
+    #shopify-section-{{ section.id }} .newyear-promo {
+      padding: 32px 16px 40px;
+      background: #260404;
+      color: #ffffff;
+      font-family: inherit;
+    }
+
+    #shopify-section-{{ section.id }} .newyear-promo__inner {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    #shopify-section-{{ section.id }} .promo-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      margin-bottom: 20px;
+      flex-wrap: wrap;
+    }
+
+    #shopify-section-{{ section.id }} .promo-title {
+      font-size: 24px;
+      font-weight: 700;
+      margin: 0;
+    }
+
+    #shopify-section-{{ section.id }} .promo-countdown {
+      font-size: 16px;
+      font-weight: 600;
+      white-space: nowrap;
+    }
+
+    /* 手机端倒计时一行显示，字号缩小 */
+    @media (max-width: 749px) {
+      #shopify-section-{{ section.id }} .promo-countdown {
+        font-size: 13px;
+        white-space: nowrap;
+      }
+    }
+
+    #shopify-section-{{ section.id }} .promo-cards-wrapper {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      justify-content: center;
+    }
+
+    #shopify-section-{{ section.id }} .discount-tier-card {
+      background: #146b3a;
+      border-radius: 16px;
+      padding: 18px 16px 20px;
+      width: 100%;
+      max-width: 230px;
+      color: #ffffff;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+      display: flex;
+      flex-direction: column;
+      align-items: stretch;
+    }
+
+    #shopify-section-{{ section.id }} .discount-percent {
+      font-size: 32px;
+      font-weight: 800;
+      line-height: 1;
+      margin-bottom: 10px;
+    }
+
+    #shopify-section-{{ section.id }} .discount-qty {
+      font-size: 13px;
+      margin-bottom: 10px;
+    }
+
+    #shopify-section-{{ section.id }} .discount-qty .qty-total {
+      font-weight: 700;
+    }
+
+    #shopify-section-{{ section.id }} .discount-progress {
+      position: relative;
+      width: 100%;
+      height: 4px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.18);
+      overflow: hidden;
+      margin: 6px 0 16px;
+    }
+
+    #shopify-section-{{ section.id }} .discount-progress-bar {
+      position: absolute;
+      left: 0;
+      top: 0;
+      height: 100%;
+      width: 0%;
+      background: #ff3b30;
+      transition: width 0.6s ease-out;
+    }
+
+    #shopify-section-{{ section.id }} .discount-btn {
+      margin-top: auto;
+      border: none;
+      border-radius: 999px;
+      padding: 8px 12px;
+      background: #ffffff;
+      color: #000000;
+      font-weight: 700;
+      font-size: 14px;
+      cursor: pointer;
+      text-align: center;
+    }
+
+    #shopify-section-{{ section.id }} .discount-btn.is-disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
+    }
+
+    /* 桌面端阶梯感：左高右低，折扣字号逐渐变小 */
+    @media (min-width: 990px) {
+      #shopify-section-{{ section.id }} .discount-tier-card:nth-child(1) .discount-percent {
+        font-size: 40px;
+      }
+      #shopify-section-{{ section.id }} .discount-tier-card:nth-child(2) .discount-percent {
+        font-size: 34px;
+      }
+      #shopify-section-{{ section.id }} .discount-tier-card:nth-child(3) .discount-percent {
+        font-size: 28px;
+      }
+      #shopify-section-{{ section.id }} .discount-tier-card:nth-child(4) .discount-percent {
+        font-size: 24px;
+      }
+
+      #shopify-section-{{ section.id }} .discount-tier-card:nth-child(1) {
+        padding-top: 18px;
+      }
+      #shopify-section-{{ section.id }} .discount-tier-card:nth-child(2) {
+        padding-top: 24px;
+      }
+      #shopify-section-{{ section.id }} .discount-tier-card:nth-child(3) {
+        padding-top: 30px;
+      }
+      #shopify-section-{{ section.id }} .discount-tier-card:nth-child(4) {
+        padding-top: 36px;
+      }
+    }
+
+    /* 规则折叠 */
+    #shopify-section-{{ section.id }} .promo-rules {
+      margin-top: 20px;
+      font-size: 13px;
+    }
+
+    #shopify-section-{{ section.id }} .promo-rules summary {
+      cursor: pointer;
+      font-weight: 600;
+      list-style: none;
+    }
+
+    #shopify-section-{{ section.id }} .promo-rules summary::-webkit-details-marker {
+      display: none;
+    }
+
+    #shopify-section-{{ section.id }} .promo-rules-content {
+      margin-top: 8px;
+      opacity: 0.9;
+    }
+
+    /* Modal 样式 */
+    #shopify-section-{{ section.id }} .promo-modal-overlay {
+      position: fixed;
+      inset: 0;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      background: rgba(0, 0, 0, 0.6);
+      z-index: 9999;
+    }
+
+    #shopify-section-{{ section.id }} .promo-modal-overlay.is-open {
+      display: flex;
+    }
+
+    #shopify-section-{{ section.id }} .promo-modal {
+      position: relative;
+      max-width: 420px;
+      width: 90%;
+      background: #111111;
+      color: #ffffff;
+      border-radius: 16px;
+      padding: 24px 20px 20px;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+    }
+
+    #shopify-section-{{ section.id }} .promo-modal-close {
+      position: absolute;
+      right: 14px;
+      top: 10px;
+      border: none;
+      background: transparent;
+      color: #ffffff;
+      font-size: 22px;
+      cursor: pointer;
+    }
+
+    #shopify-section-{{ section.id }} .promo-modal-title {
+      font-size: 20px;
+      font-weight: 700;
+      margin: 0 0 6px;
+    }
+
+    #shopify-section-{{ section.id }} .promo-modal-discount {
+      margin: 0 0 10px;
+      font-size: 14px;
+      opacity: 0.9;
+    }
+
+    #shopify-section-{{ section.id }} .modal-countdown {
+      margin-bottom: 12px;
+      font-size: 13px;
+      font-weight: 500;
+    }
+
+    #shopify-section-{{ section.id }} .modal-countdown-label {
+      margin-right: 6px;
+      opacity: 0.8;
+    }
+
+    #shopify-section-{{ section.id }} #promo-modal-countdown {
+      letter-spacing: 0.03em;
+    }
+
+    #shopify-section-{{ section.id }} .promo-modal-code-box {
+      background: #1d1d1d;
+      border-radius: 12px;
+      padding: 12px 12px 10px;
+      margin-bottom: 16px;
+    }
+
+    #shopify-section-{{ section.id }} .promo-modal-code-label {
+      font-size: 12px;
+      opacity: 0.75;
+      margin-bottom: 6px;
+    }
+
+    #shopify-section-{{ section.id }} .promo-modal-code-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+    }
+
+    #shopify-section-{{ section.id }} #promo-modal-code-text {
+      font-family: monospace;
+      font-size: 16px;
+      letter-spacing: 0.08em;
+    }
+
+    #shopify-section-{{ section.id }} .promo-modal-copy {
+      border-radius: 999px;
+      border: none;
+      padding: 6px 12px;
+      font-size: 13px;
+      font-weight: 600;
+      cursor: pointer;
+      background: #ffffff;
+      color: #000000;
+      white-space: nowrap;
+    }
+
+    #shopify-section-{{ section.id }} .promo-modal-cta {
+      width: 100%;
+      margin-top: 4px;
+      border-radius: 999px;
+      border: none;
+      padding: 10px 16px;
+      font-size: 14px;
+      font-weight: 700;
+      cursor: pointer;
+      background: #ff3b30;
+      color: #ffffff;
+    }
+
+    #shopify-section-{{ section.id }} .promo-modal-note {
+      margin-top: 8px;
+      font-size: 11px;
+      opacity: 0.75;
+    }
+  </style>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      var sectionEl = document.querySelector('[data-promo-section-id="{{ section.id }}"]');
+      if (!sectionEl) return;
+
+      var countdownEl = sectionEl.querySelector('#promo-countdown-{{ section.id }}');
+      var modalCountdownEl = sectionEl.querySelector('#promo-modal-countdown');
+      var endTimeStr = sectionEl.getAttribute('data-end-time');
+      var endTime = endTimeStr ? new Date(endTimeStr).getTime() : NaN;
+
+      // 48 小时活动
+      var durationHours = 48;
+      var durationMs = durationHours * 60 * 60 * 1000;
+      var startTime = isNaN(endTime) ? NaN : endTime - durationMs;
+
+      var cards = sectionEl.querySelectorAll('.discount-tier-card');
+
+      function clamp(value, min, max) {
+        return Math.min(Math.max(value, min), max);
+      }
+
+      function updateCountdownAndStock() {
+        if (isNaN(endTime)) return;
+
+        var now = Date.now();
+        var distance = endTime - now;
+
+        if (distance <= 0) {
+          if (countdownEl) countdownEl.textContent = 'Ended';
+          if (modalCountdownEl) modalCountdownEl.textContent = 'Ended';
+
+          cards.forEach(function (card) {
+            var btn = card.querySelector('[data-open-promo-modal]');
+            if (btn) {
+              btn.disabled = true;
+              btn.classList.add('is-disabled');
+            }
+          });
+
+          clearInterval(intervalId);
+          return;
+        }
+
+        // 倒计时
+        var hours = Math.floor(distance / (1000 * 60 * 60));
+        var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+        var hh = hours < 10 ? '0' + hours : String(hours);
+        var mm = minutes < 10 ? '0' + minutes : String(minutes);
+        var ss = seconds < 10 ? '0' + seconds : String(seconds);
+
+        var text = hh + ':' + mm + ':' + ss;
+
+        if (countdownEl) countdownEl.textContent = text;
+        if (modalCountdownEl) modalCountdownEl.textContent = text;
+
+        // 库存 & 进度条 —— 前 24h 掉得快一些，后 24h 慢一些
+        if (!isNaN(startTime)) {
+          var progress = clamp((now - startTime) / durationMs, 0, 1);
+          var consumedRatio;
+
+          if (progress <= 0.5) {
+            // 前 24 小时消耗 70%
+            consumedRatio = 0.7 * (progress / 0.5);
+          } else {
+            // 后 24 小时消耗剩余 30%
+            consumedRatio = 0.7 + 0.3 * ((progress - 0.5) / 0.5);
+          }
+
+          cards.forEach(function (card) {
+            var initialQty = parseInt(card.getAttribute('data-initial-qty'), 10);
+            if (!initialQty || initialQty <= 0) return;
+
+            var remaining = Math.round(initialQty * (1 - consumedRatio));
+            if (remaining < 0) remaining = 0;
+
+            var qtyLeftEl = card.querySelector('[data-qty-left]');
+            if (qtyLeftEl) qtyLeftEl.textContent = remaining;
+
+            var progressBar = card.querySelector('.discount-progress-bar');
+            if (progressBar) {
+              var sold = initialQty - remaining;
+              var percent = clamp((sold / initialQty) * 100, 0, 100);
+              progressBar.style.width = percent + '%';
+            }
+          });
+        }
+      }
+
+      var intervalId = setInterval(updateCountdownAndStock, 1000);
+      updateCountdownAndStock();
+
+      // Modal 逻辑
+      var modalOverlay = sectionEl.querySelector('[data-promo-modal-overlay]');
+      var closeBtn = sectionEl.querySelector('[data-promo-modal-close]');
+      var copyBtn = sectionEl.querySelector('[data-promo-modal-copy]');
+      var codeTextEl = sectionEl.querySelector('#promo-modal-code-text');
+      var discountValueEl = sectionEl.querySelector('#promo-modal-discount-value');
+      var ctaBtn = sectionEl.querySelector('[data-promo-modal-cta]');
+
+      function openModal(discountLabel, code) {
+        if (!modalOverlay) return;
+        modalOverlay.classList.add('is-open');
+
+        if (discountValueEl) discountValueEl.textContent = discountLabel || '';
+        if (codeTextEl) codeTextEl.textContent = code || '';
+        if (copyBtn) copyBtn.textContent = 'Copy';
+      }
+
+      function closeModal() {
+        if (!modalOverlay) return;
+        modalOverlay.classList.remove('is-open');
+      }
+
+      cards.forEach(function (card) {
+        var btn = card.querySelector('[data-open-promo-modal]');
+        if (!btn) return;
+
+        btn.addEventListener('click', function () {
+          var discount = btn.getAttribute('data-discount');
+          var code = btn.getAttribute('data-code');
+          openModal(discount, code);
+        });
+      });
+
+      if (closeBtn) {
+        closeBtn.addEventListener('click', closeModal);
+      }
+
+      if (modalOverlay) {
+        modalOverlay.addEventListener('click', function (e) {
+          if (e.target === modalOverlay) {
+            closeModal();
+          }
+        });
+      }
+
+      document.addEventListener('keyup', function (e) {
+        if (e.key === 'Escape') {
+          closeModal();
+        }
+      });
+
+      if (copyBtn && codeTextEl) {
+        copyBtn.addEventListener('click', function () {
+          var code = codeTextEl.textContent.trim();
+          if (!code) return;
+
+          if (navigator.clipboard && navigator.clipboard.writeText) {
+            navigator.clipboard.writeText(code).then(function () {
+              copyBtn.textContent = 'Copied';
+            }).catch(function () {
+              copyBtn.textContent = 'Copied';
+            });
+          } else {
+            // 兼容老浏览器
+            var tempInput = document.createElement('input');
+            tempInput.value = code;
+            document.body.appendChild(tempInput);
+            tempInput.select();
+            try {
+              document.execCommand('copy');
+            } catch (err) {}
+            document.body.removeChild(tempInput);
+            copyBtn.textContent = 'Copied';
+          }
+        });
+      }
+
+      // CTA 按钮：这里留空，你可以在主题编辑器里给这个 section 外层加链接，或用 data 属性扩展
+      if (ctaBtn) {
+        ctaBtn.addEventListener('click', function () {
+          // 可在这里自定义跳转逻辑
+        });
+      }
+    });
+  </script>
+
+  {% schema %}
+  {
+    "name": "New Year Tiered Promo",
+    "settings": [
+      {
+        "type": "text",
+        "id": "section_heading",
+        "label": "Titel",
+        "default": "2026 New Year Sale"
+      },
+      {
+        "type": "text",
+        "id": "countdown_label",
+        "label": "Countdown Text",
+        "default": "Deal endet in:"
+      },
+      {
+        "type": "text",
+        "id": "end_time",
+        "label": "Endzeit (Format: YYYY-MM-DD HH:MM)",
+        "default": "2026-01-03 23:59"
+      },
+      {
+        "type": "text",
+        "id": "rules_title",
+        "label": "Regeln – Überschrift",
+        "default": "Aktionsbedingungen anzeigen"
+      },
+      {
+        "type": "textarea",
+        "id": "rules_content",
+        "label": "Aktionsbedingungen Text",
+        "default": "Rabatt gilt nur für ausgewählte Produkte. Nicht kombinierbar mit anderen Aktionen."
+      }
+    ],
+    "blocks": [
+      {
+        "type": "tier",
+        "name": "Preis-Stufe",
+        "settings": [
+          {
+            "type": "text",
+            "id": "discount_label",
+            "label": "Rabatt (%)",
+            "default": "-50%"
+          },
+          {
+            "type": "number",
+            "id": "initial_qty",
+            "label": "Startmenge (Qty)",
+            "default": 200,
+        
+          },
+          {
+            "type": "text",
+            "id": "button_label",
+            "label": "Button-Text",
+            "default": "Gutschein sichern"
+          },
+          {
+            "type": "text",
+            "id": "coupon_code",
+            "label": "Gutscheincode",
+            "default": "WEIHNACHTEN"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "New Year Tiered Promo",
+        "category": "Promotions"
+      }
+    ]
+  }
+  {% endschema %}
+</section>
