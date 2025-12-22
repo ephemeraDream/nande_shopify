@@ -540,10 +540,14 @@
     });
   }
 
-  updateAll();
+    updateAll();
+  updateButtonState();
 
-  // 倒计时每秒
-  setInterval(updateCountdown, 1000);
+  // 倒计时每秒，同时检查按钮是否应启用
+  setInterval(function(){
+    updateCountdown();
+    updateButtonState();
+  }, 1000);
 
   // 库存/进度条每 30 秒更新一次即可
   setInterval(function(){
