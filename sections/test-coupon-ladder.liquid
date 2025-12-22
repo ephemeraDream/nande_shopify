@@ -525,11 +525,11 @@
     var progress = clamp01((now.getTime() - startD.getTime()) / (endD.getTime() - startD.getTime()));
     var baseDep = depletionRatio(progress); // 0..1
 
-// === 新增：阶梯权重控制 ===
-var weight = Number(card.getAttribute('data-clv3-weight') || 1);
+     // === 新增：阶梯权重控制 ===
+    var weight = Number(card.getAttribute('data-clv3-weight') || 1);
 
-// 左边消耗快，右边慢：
-// weight 越大，消耗越慢
+   // 左边消耗快，右边慢：
+     // weight 越大，消耗越慢
 var speedFactor = 1 / (0.6 + weight * 0.4); 
 // 你可以微调 0.6 / 0.4
 
