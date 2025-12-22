@@ -15,21 +15,17 @@
       {% endif %}
 
       {% if section.settings.desc != blank %}
-        <div class="clv4-desc rte">
-          {{ section.settings.desc }}
-        </div>
+        <div class="clv4-desc rte">{{ section.settings.desc }}</div>
       {% endif %}
 
-      <!-- Regeln: accordion -->
-      <button type="button"
-              class="clv4-rules"
+      <!-- Regeln accordion -->
+      <button class="clv4-rules"
               data-clv4-toggle-rules
-              aria-expanded="false"
-              aria-controls="clv4-rules-{{ sid }}">
+              aria-expanded="false">
         {{ section.settings.rules_text }}
       </button>
 
-      <div id="clv4-rules-{{ sid }}" class="clv4-rules-accordion" hidden>
+      <div class="clv4-rules-accordion" hidden>
         <div class="clv4-rules-accordion-inner rte">
           {{ section.settings.rules_content }}
         </div>
@@ -37,63 +33,52 @@
 
       <div class="clv4-time">
         <div class="clv4-time-row">
-          <span class="clv4-time-label">Start:</span>
-          <span class="clv4-time-value" data-clv4-start-text>--</span>
+          <span>Start:</span>
+          <span data-clv4-start-text>--</span>
         </div>
         <div class="clv4-time-row">
-          <span class="clv4-time-label">Ende:</span>
-          <span class="clv4-time-value" data-clv4-end-text>--</span>
+          <span>Ende:</span>
+          <span data-clv4-end-text>--</span>
         </div>
       </div>
 
-      <div class="clv4-countdown" aria-live="polite">
-        <div class="clv4-cd-label">{{ section.settings.countdown_label }}</div>
-        <div class="clv4-cd-boxes">
-          <div class="clv4-cd-box"><b data-clv4-dd>--</b><span>Tage</span></div>
-          <div class="clv4-cd-box"><b data-clv4-hh>--</b><span>Stunden</span></div>
-          <div class="clv4-cd-box"><b data-clv4-mm>--</b><span>Minuten</span></div>
-          <div class="clv4-cd-box"><b data-clv4-ss>--</b><span>Sekunden</span></div>
-        </div>
+      <div class="clv4-countdown">
+        <div class="clv4-cd-box"><b data-dd>00</b><span>Tage</span></div>
+        <div class="clv4-cd-box"><b data-hh>00</b><span>Std</span></div>
+        <div class="clv4-cd-box"><b data-mm>00</b><span>Min</span></div>
+        <div class="clv4-cd-box"><b data-ss>00</b><span>Sek</span></div>
       </div>
     </div>
 
     <!-- Right -->
     <div class="clv4-right">
-      <div class="clv4-ladder" role="list">
+      <div class="clv4-ladder">
         {% for block in section.blocks %}
-          {% liquid
-            assign pct = block.settings.percent | strip
-            assign code = block.settings.coupon_code | strip
-            assign redirect = block.settings.redirect_url | strip
-            assign total = block.settings.total_qty
-            assign w = block.settings.speed_weight
-          %}
           <div class="clv4-card clv4-level-{{ forloop.index }}"
-               role="listitem"
                data-clv4-card
-               data-clv4-percent="{{ pct }}"
-               data-clv4-code="{{ code | escape }}"
-               data-clv4-redirect="{{ redirect | escape }}"
-               data-clv4-total="{{ total }}"
-               data-clv4-weight="{{ w }}">
+               data-percent="{{ block.settings.percent }}"
+               data-code="{{ block.settings.coupon_code }}"
+               data-redirect="{{ block.settings.redirect_url }}"
+               data-total="{{ block.settings.total_qty }}"
+               data-weight="{{ block.settings.speed_weight }}">
+
             <div class="clv4-card-top">
-              <div class="clv4-percent">{{ pct }}</div>
+              <div class="clv4-percent">{{ block.settings.percent }}</div>
 
               <div class="clv4-qty">
-                <span>Qty:</span>
+                Qty:
                 <b data-clv4-qty>--</b>
-                <span>|</span>
-                <span data-clv4-left>--</span>
-                <span>left</span>
+                |
+                <span data-clv4-left>--</span> left
               </div>
 
-              <div class="clv4-bar" aria-hidden="true">
-                <div class="clv4-bar-in" data-clv4-bar style="width:0%"></div>
+              <div class="clv4-bar">
+                <div class="clv4-bar-in"></div>
               </div>
             </div>
 
-            <button type="button" class="clv4-btn" data-clv4-open-coupon>
-              <span class="clv4-btn-text">{{ section.settings.claim_button_text }}</span>
+            <button class="clv4-btn" data-clv4-open-coupon>
+              {{ section.settings.claim_button_text }}
             </button>
           </div>
         {% endfor %}
@@ -102,25 +87,19 @@
   </div>
 
   <!-- Coupon Modal -->
-  <div class="clv4-modal" data-clv4-coupon-modal hidden>
-    <div class="clv4-backdrop" data-clv4-close-coupon></div>
-    <div class="clv4-panel" role="dialog" aria-modal="true" aria-label="Gutschein">
-      <button class="clv4-x" type="button" aria-label="Close" data-clv4-close-coupon>×</button>
-
-      <div class="clv4-panel-head">
-        <div class="clv4-panel-title">{{ section.settings.coupon_modal_title }}</div>
-        <div class="clv4-panel-sub" data-clv4-modal-sub>Rabatt: --</div>
-      </div>
+  <div class="clv4-modal" hidden>
+    <div class="clv4-backdrop"></div>
+    <div class="clv4-panel">
+      <button class="clv4-x">×</button>
+      <div class="clv4-panel-title">{{ section.settings.coupon_modal_title }}</div>
+      <div class="clv4-panel-sub" data-modal-percent></div>
 
       <div class="clv4-codebox">
-        <div class="clv4-code-label">{{ section.settings.code_label }}</div>
-        <div class="clv4-code-row">
-          <code class="clv4-code" data-clv4-modal-code>--</code>
-          <button type="button" class="clv4-copy" data-clv4-copy>Copy</button>
-        </div>
+        <code data-modal-code>----</code>
+        <button data-copy>Copy</button>
       </div>
 
-      <a class="clv4-cta" data-clv4-modal-cta href="#">
+      <a class="clv4-cta" data-modal-cta>
         {{ section.settings.coupon_modal_cta_text }}
       </a>
 
@@ -132,563 +111,168 @@
 </section>
 
 <style>
-  #coupon-ladder-{{ sid }}{
-    --bg: {{ section.settings.bg_color }};
-    --card: {{ section.settings.card_bg }};
-    --text: {{ section.settings.text_color }};
-    --muted: rgba(255,255,255,.80);
-    --accent: {{ section.settings.accent_color }};
-    --radius: 18px;
+#coupon-ladder-{{ sid }}{
+  background: {{ section.settings.bg_color }};
+  color:#fff;
+  padding:48px 0;
+}
+#coupon-ladder-{{ sid }} .clv4-container{
+  max-width:1240px;
+  margin:auto;
+  display:grid;
+  grid-template-columns:1.1fr 1.9fr;
+  gap:32px;
+}
+#coupon-ladder-{{ sid }} .clv4-ladder{
+  display:flex;
+  align-items:flex-end;
+  gap:16px;
+}
+#coupon-ladder-{{ sid }} .clv4-card{
+  flex:1;
+  background: {{ section.settings.card_bg }};
+  border-radius:18px;
+  padding:16px;
+  display:flex;
+  flex-direction:column;
+}
+#coupon-ladder-{{ sid }} .clv4-card-top{
+  display:flex;
+  flex-direction:column;
+}
+#coupon-ladder-{{ sid }} .clv4-percent{
+  font-weight:900;
+  margin-bottom:10px;
+}
+#coupon-ladder-{{ sid }} .clv4-level-1 .clv4-percent{font-size:44px!important}
+#coupon-ladder-{{ sid }} .clv4-level-2 .clv4-percent{font-size:36px!important}
+#coupon-ladder-{{ sid }} .clv4-level-3 .clv4-percent{font-size:30px!important}
+#coupon-ladder-{{ sid }} .clv4-level-4 .clv4-percent{font-size:26px!important}
 
-    color: var(--text);
-    background: var(--bg);
-    padding: 44px 0;
-  }
+#coupon-ladder-{{ sid }} .clv4-bar{
+  height:6px;
+  background:rgba(255,255,255,.2);
+  margin-top:auto;
+  border-radius:99px;
+  overflow:hidden;
+}
+#coupon-ladder-{{ sid }} .clv4-bar-in{
+  height:100%;
+  background: {{ section.settings.accent_color }};
+  width:0;
+}
+#coupon-ladder-{{ sid }} .clv4-btn{
+  margin-top:14px;
+  border-radius:99px;
+  padding:12px;
+  font-weight:900;
+  cursor:pointer;
+}
+#coupon-ladder-{{ sid }} .clv4-btn.is-disabled{
+  background:#777;
+  color:#444;
+  cursor:not-allowed;
+}
 
-  #coupon-ladder-{{ sid }} .clv4-container{
-    width: min(1240px, calc(100% - 40px));
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: 1.1fr 1.9fr;
-    gap: 28px;
-    align-items: center;
-  }
-
-  #coupon-ladder-{{ sid }} .clv4-kicker{ color:#fff; opacity:.92; font-weight:700; margin-bottom:10px; }
-  #coupon-ladder-{{ sid }} .clv4-title{
-    color:#fff;
-    font-size: clamp(26px, 3.2vw, 42px);
-    line-height: 1.12;
-    margin: 0 0 14px;
-    font-weight: 900;
-  }
-  #coupon-ladder-{{ sid }} .clv4-desc{ color: var(--muted); font-size: 14px; line-height: 1.7; }
-
-  #coupon-ladder-{{ sid }} .clv4-rules{
-    margin-top: 10px;
-    padding: 0;
-    border: 0;
-    background: transparent;
-    color: var(--accent);
-    font-weight: 900;
-    text-decoration: underline;
-    cursor: pointer;
-  }
-
-  #coupon-ladder-{{ sid }} .clv4-rules-accordion{
-    margin-top: 10px;
-    padding: 12px 14px;
-    border-radius: 12px;
-    border: 1px solid rgba(255,255,255,.14);
-    background: rgba(0,0,0,.18);
-    color: rgba(255,255,255,.82);
-  }
-  #coupon-ladder-{{ sid }} .clv4-rules-accordion-inner{
-    font-size: 13px;
-    line-height: 1.7;
-  }
-
-  #coupon-ladder-{{ sid }} .clv4-time{
-    margin-top: 14px;
-    padding-top: 14px;
-    border-top: 1px solid rgba(255,255,255,.14);
-  }
-  #coupon-ladder-{{ sid }} .clv4-time-row{ display:flex; gap:10px; font-size: 13px; color: var(--muted); margin: 4px 0; }
-  #coupon-ladder-{{ sid }} .clv4-time-label{ min-width: 44px; opacity:.95; }
-
-  /* countdown: desktop single line */
-  #coupon-ladder-{{ sid }} .clv4-cd-boxes{
-    display:flex;
-    gap:10px;
-    flex-wrap: nowrap;
-    overflow:hidden;
-  }
-  #coupon-ladder-{{ sid }} .clv4-cd-box{
-    flex:0 0 auto;
-    min-width: 76px;
-    background: rgba(0,0,0,.24);
-    border: 1px solid rgba(255,255,255,.10);
-    border-radius: 12px;
-    padding: 10px 10px;
-    text-align:center;
-  }
-  #coupon-ladder-{{ sid }} .clv4-cd-label{ font-size: 13px; color: var(--muted); margin: 14px 0 8px; }
-  #coupon-ladder-{{ sid }} .clv4-cd-box b{ display:block; font-size: 18px; letter-spacing:.5px; color:#fff; }
-  #coupon-ladder-{{ sid }} .clv4-cd-box span{ font-size: 12px; color: var(--muted); }
-
-  /* Ladder */
-  #coupon-ladder-{{ sid }} .clv4-ladder{
-    display:flex;
-    align-items:flex-end; /* bottom aligned */
-    gap: 14px;
-    width: 100%;
-  }
-
-  #coupon-ladder-{{ sid }} .clv4-card{
-    flex: 1;
-    min-width: 0;
-    background: var(--card);
-    border: 1px solid rgba(255,255,255,.10);
-    border-radius: var(--radius);
-    padding: 16px;
-    box-shadow: 0 12px 30px rgba(0,0,0,.22);
-    display: grid;
-    grid-template-rows: 1fr auto;
-    gap: 14px;
-    overflow: visible;
-  }
-
-  #coupon-ladder-{{ sid }} .clv4-percent{
-    font-size: clamp(22px, 2.2vw, 44px);
- 
-
-    font-weight: 900;
-    margin-bottom: 10px;
-    color:#fff;
-  }
-      .clv4-level-1 .clv4-percent{ font-size: 44px !important; }
-.clv4-level-2 .clv4-percent{ font-size: 36px !important; }
-.clv4-level-3 .clv4-percent{ font-size: 30px !important; }
-.clv4-level-4 .clv4-percent{ font-size: 26px !important; }
-  #coupon-ladder-{{ sid }} .clv4-qty{
-    font-size: 13px;
-    color: rgba(255,255,255,.72);
-    display:flex;
-    gap:6px;
-    align-items: baseline;
-  }
-  #coupon-ladder-{{ sid }} .clv4-qty b{ color:#fff; font-size:14px; }
-
-  #coupon-ladder-{{ sid }} .clv4-bar{
-    height: 6px;
-    border-radius: 999px;
-    background: rgba(255,255,255,.18);
-    margin-top: auto;
-    overflow:hidden;
-  }
-  #coupon-ladder-{{ sid }} .clv4-bar-in{
-    height:100%;
-    background: var(--accent);
-    width: 0%;
-    transition: width .35s ease;
-  }
-
-  #coupon-ladder-{{ sid }} .clv4-btn{
-    width: 100%;
-    border: 0;
-    border-radius: 999px;
-    padding: 12px 12px;
-    background: #fff;
-    color: #111;
-    cursor: pointer;
-    min-height: 46px;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-  }
-  #coupon-ladder-{{ sid }} .clv4-btn-text{
-    font-weight: 900;
-    font-size: clamp(12px, 1.05vw, 16px);
-    line-height: 1;
-    white-space: nowrap;
-  }
-
-  /* Step heights (desktop) */
-  #coupon-ladder-{{ sid }} .clv4-level-1{ min-height: 230px; }
-  #coupon-ladder-{{ sid }} .clv4-level-2{ min-height: 210px; }
-  #coupon-ladder-{{ sid }} .clv4-level-3{ min-height: 195px; }
-  #coupon-ladder-{{ sid }} .clv4-level-4{ min-height: 182px; }
-  #coupon-ladder-{{ sid }} .clv4-level-5{ min-height: 172px; }
-  #coupon-ladder-{{ sid }} .clv4-level-6{ min-height: 164px; }
-
-  /* Coupon modal */
-  #coupon-ladder-{{ sid }} .clv4-modal[hidden]{ display:none; }
-  #coupon-ladder-{{ sid }} .clv4-modal{
-    position:fixed; inset:0; z-index:9999;
-    display:flex; align-items:center; justify-content:center;
-  }
-  #coupon-ladder-{{ sid }} .clv4-backdrop{
-    position:absolute; inset:0;
-    background: rgba(0,0,0,.68);
-    backdrop-filter: blur(2px);
-  }
-  #coupon-ladder-{{ sid }} .clv4-panel{
-    position:relative;
-    width: min(460px, calc(100% - 28px));
-    background:#0b0c0f; color:#fff;
-    border:1px solid rgba(255,255,255,.16);
-    border-radius:18px;
-    padding:20px;
-    box-shadow: 0 26px 80px rgba(0,0,0,.55);
-    max-height: min(76vh, 680px);
-    overflow:auto;
-  }
-  #coupon-ladder-{{ sid }} .clv4-x{
-    position:absolute; top:10px; right:12px;
-    width:38px; height:38px;
-    border-radius:12px;
-    border:1px solid rgba(255,255,255,.18);
-    background: rgba(255,255,255,.06);
-    color:#fff; font-size:22px; line-height:34px;
-    cursor:pointer;
-  }
-  #coupon-ladder-{{ sid }} .clv4-panel-head{
-    padding-bottom:12px;
-    border-bottom:1px solid rgba(255,255,255,.10);
-    margin-bottom:14px;
-  }
-  #coupon-ladder-{{ sid }} .clv4-panel-title{ font-weight:900; font-size:18px; margin-top:2px; }
-  #coupon-ladder-{{ sid }} .clv4-panel-sub{ margin-top:6px; color:rgba(255,255,255,.78); font-size:13px; }
-
-  #coupon-ladder-{{ sid }} .clv4-codebox{
-    background: rgba(255,255,255,.05);
-    border:1px solid rgba(255,255,255,.12);
-    border-radius:14px;
-    padding:14px;
-  }
-  #coupon-ladder-{{ sid }} .clv4-code-label{ font-size:12px; color:rgba(255,255,255,.70); margin-bottom:10px; }
-  #coupon-ladder-{{ sid }} .clv4-code-row{ display:flex; align-items:center; justify-content:space-between; gap:10px; }
-  #coupon-ladder-{{ sid }} .clv4-code{ font-size:16px; font-weight:900; letter-spacing:1px; color:#fff; }
-  #coupon-ladder-{{ sid }} .clv4-copy{
-    border:0; border-radius:12px;
-    padding:10px 12px;
-    background: rgba(255,255,255,.92);
-    color:#111; font-weight:900;
-    cursor:pointer; white-space:nowrap;
-  }
-  #coupon-ladder-{{ sid }} .clv4-cta{
-    display:block; margin-top:14px;
-    text-align:center;
-    border-radius:999px;
-    padding:13px 14px;
-    font-weight:900;
-    background: var(--accent);
-    color:#111; text-decoration:none;
-  }
-  #coupon-ladder-{{ sid }} .clv4-hint{ margin-top:10px; font-size:12px; color:rgba(255,255,255,.65); line-height:1.6; }
-
-  /* Mobile */
-  @media (max-width: 900px){
-    #coupon-ladder-{{ sid }} .clv4-container{ grid-template-columns:1fr; gap:18px; align-items:start; }
-    #coupon-ladder-{{ sid }} .clv4-ladder{ flex-direction:column; align-items:stretch; gap:12px; }
-    #coupon-ladder-{{ sid }} .clv4-card{ min-height: unset !important; }
-    #coupon-ladder-{{ sid }} .clv4-cd-boxes{ flex-wrap: wrap; }
-  }
+@media(max-width:900px){
+  #coupon-ladder-{{ sid }} .clv4-container{grid-template-columns:1fr}
+  #coupon-ladder-{{ sid }} .clv4-ladder{flex-direction:column}
+}
 </style>
 
 <script>
 (function(){
-  var root = document.getElementById('coupon-ladder-{{ sid }}');
-  if(!root) return;
+  const root=document.getElementById('coupon-ladder-{{ sid }}');
+  if(!root)return;
 
-  // ======================
-  // 时间配置
-  // ======================
-  var startAt = {{ section.settings.start_at | json }};
-  var endAt = {{ section.settings.end_at | json }};
-  var durationHours = Number({{ section.settings.duration_hours | json }}) || 48;
+  const start=new Date('{{ section.settings.start_at }}');
+  const endRaw='{{ section.settings.end_at }}';
+  const end=endRaw && endRaw!=='-' ? new Date(endRaw) : new Date(start.getTime()+{{ section.settings.duration_hours }}*3600*1000);
 
-  // fast part percent (0-100) => 0..1
-  var fastPart = Number({{ section.settings.fast_part_percent | json }});
-  if (isNaN(fastPart)) fastPart = 70;
-  fastPart = Math.max(0, Math.min(100, fastPart)) / 100;
+  const modal=root.querySelector('.clv4-modal');
+  const mCode=root.querySelector('[data-modal-code]');
+  const mPercent=root.querySelector('[data-modal-percent]');
+  const mCta=root.querySelector('[data-modal-cta]');
 
-  function pad2(n){ return String(n).padStart(2,'0'); }
-  function clamp01(x){ return Math.max(0, Math.min(1, x)); }
+  function update(){
+    const now=new Date();
 
-  function safeDate(s){
-    if(!s) return null;
-    var d = new Date(s);
-    if(!isNaN(d.getTime())) return d;
-    var t = String(s).replace(' ', 'T');
-    d = new Date(t);
-    if(!isNaN(d.getTime())) return d;
-    return null;
-  }
-  function fmt(d){
-    if(!d) return '--';
-    return pad2(d.getDate()) + '.' + pad2(d.getMonth()+1) + '.' + d.getFullYear() + ' ' + pad2(d.getHours()) + ':' + pad2(d.getMinutes());
-  }
+    root.querySelectorAll('[data-clv4-card]').forEach(card=>{
+      const total=+card.dataset.total;
+      const weight=+card.dataset.weight||100;
+      const btn=card.querySelector('.clv4-btn');
+      const bar=card.querySelector('.clv4-bar-in');
 
-  // easing
-  function easeOutQuad(t){ return 1 - (1 - t) * (1 - t); }
-  function easeInQuad(t){ return t * t; }
+      let progress=Math.min(1,Math.max(0,(now-start)/(end-start)));
+      let dep=Math.min(1,progress*(100/weight));
+      let left=Math.max(0,Math.round(total*(1-dep)));
 
-  var startD = safeDate(startAt);
-  var endD = safeDate(endAt);
+      card.querySelector('[data-clv4-qty]').textContent=total;
+      card.querySelector('[data-clv4-left]').textContent=left;
+      bar.style.width=(left/total*100)+'%';
 
-  // 如果没填 endAt，则用 start + durationHours
-  if(startD && !endD){
-    endD = new Date(startD.getTime() + durationHours * 3600 * 1000);
-  }
-
-  var startTextEl = root.querySelector('[data-clv4-start-text]');
-  var endTextEl = root.querySelector('[data-clv4-end-text]');
-  if(startTextEl) startTextEl.textContent = fmt(startD);
-  if(endTextEl) endTextEl.textContent = fmt(endD);
-
-  // ======================
-  // 倒计时（每秒）
-  // ======================
-  var ddEl = root.querySelector('[data-clv4-dd]');
-  var hhEl = root.querySelector('[data-clv4-hh]');
-  var mmEl = root.querySelector('[data-clv4-mm]');
-  var ssEl = root.querySelector('[data-clv4-ss]');
-
-  function updateCountdown(){
-    if(!ddEl || !hhEl || !mmEl || !ssEl) return;
-    if(!endD){
-      ddEl.textContent='00'; hhEl.textContent='00'; mmEl.textContent='00'; ssEl.textContent='00';
-      return;
-    }
-    var now = new Date();
-    var diff = Math.max(0, endD.getTime() - now.getTime());
-    var sec = Math.floor(diff/1000);
-    var dd = Math.floor(sec/86400); sec -= dd*86400;
-    var hh = Math.floor(sec/3600);  sec -= hh*3600;
-    var mm = Math.floor(sec/60);    sec -= mm*60;
-    ddEl.textContent = pad2(dd);
-    hhEl.textContent = pad2(hh);
-    mmEl.textContent = pad2(mm);
-    ssEl.textContent = pad2(sec);
-  }
-
-  // ======================
-  // 48h 自动递减 + 每卡 speed weight
-  // ======================
-  function depletionBase(progress01){
-    if(progress01 <= 0) return 0;
-    if(progress01 >= 1) return 1;
-
-    if(progress01 < 0.5){
-      var t = progress01 / 0.5;
-      return fastPart * easeOutQuad(t);
-    }else{
-      var t2 = (progress01 - 0.5) / 0.5;
-      return fastPart + (1 - fastPart) * easeInQuad(t2);
-    }
-  }
-
-  function applySimulatedQuota(card){
-    var total = Number(card.getAttribute('data-clv4-total') || 0);
-    if(total < 0) total = 0;
-
-    var qtyEl = card.querySelector('[data-clv4-qty]');
-    var leftEl = card.querySelector('[data-clv4-left]');
-    var barEl = card.querySelector('[data-clv4-bar]');
-
-    // 未开始 => 全量
-    var now = new Date();
-    if(startD && now < startD){
-      if(qtyEl) qtyEl.textContent = String(total);
-      if(leftEl) leftEl.textContent = String(total);
-      if(barEl) barEl.style.width = '100%';
-      return;
-    }
-
-    // 无法计算 => 全量
-    if(!startD || !endD || endD.getTime() <= startD.getTime()){
-      if(qtyEl) qtyEl.textContent = String(total);
-      if(leftEl) leftEl.textContent = String(total);
-      if(barEl) barEl.style.width = '100%';
-      return;
-    }
-
-    var progress = clamp01((now.getTime() - startD.getTime()) / (endD.getTime() - startD.getTime()));
-    var baseDep = depletionBase(progress); // 0..1
-
-    // ✅ 每卡速度权重：值越大，消耗越慢（条越“满”）
-    var weight = Number(card.getAttribute('data-clv4-weight') || 100);
-    if(isNaN(weight)) weight = 100;
-    weight = Math.max(10, Math.min(300, weight)); // 10-300
-
-    // 把 weight 映射为速度因子：100≈基准；更小更快；更大更慢
-    // 例：60 => 更快；180 => 更慢
-    var speedFactor = 100 / weight;
-
-    var dep = Math.min(1, baseDep * speedFactor);
-
-    var used = Math.round(total * dep);
-    var left = Math.max(0, total - used);
-    var pctLeft = (total > 0) ? (left / total * 100) : 0;
-
-    if(qtyEl) qtyEl.textContent = String(total);
-    if(leftEl) leftEl.textContent = String(left);
-    if(barEl) barEl.style.width = Math.max(0, Math.min(100, pctLeft)) + '%';
-  }
-
-  function updateQuotaAll(){
-    root.querySelectorAll('[data-clv4-card]').forEach(applySimulatedQuota);
-  }
-
-  // 初始渲染
-  updateCountdown();
-  updateQuotaAll();
-
-  // 倒计时：每秒
-  setInterval(updateCountdown, 1000);
-
-  // 配额/进度：每 30 秒即可（更省）
-  setInterval(updateQuotaAll, 30000);
-
-  // ======================
-  // Regeln accordion
-  // ======================
-  var rulesBtn = root.querySelector('[data-clv4-toggle-rules]');
-  var rulesPanel = root.querySelector('#clv4-rules-{{ sid }}');
-  if(rulesBtn && rulesPanel){
-    rulesBtn.addEventListener('click', function(){
-      var isOpen = rulesBtn.getAttribute('aria-expanded') === 'true';
-      rulesBtn.setAttribute('aria-expanded', isOpen ? 'false' : 'true');
-      rulesPanel.hidden = isOpen;
-    });
-  }
-
-  // ======================
-  // Coupon modal（点击才展示 code）
-  // ======================
-  function lockScroll(on){ document.documentElement.style.overflow = on ? 'hidden' : ''; }
-
-  var couponModal = root.querySelector('[data-clv4-coupon-modal]');
-  var modalSub = root.querySelector('[data-clv4-modal-sub]');
-  var modalCodeEl = root.querySelector('[data-clv4-modal-code]');
-  var modalCta = root.querySelector('[data-clv4-modal-cta]');
-  var copyBtn = root.querySelector('[data-clv4-copy]');
-
-  function openCouponModal(card){
-    if(!couponModal) return;
-    var percent = card.getAttribute('data-clv4-percent') || '';
-    var code = card.getAttribute('data-clv4-code') || '';
-    var redirect = card.getAttribute('data-clv4-redirect') || '/';
-
-    if(modalSub) modalSub.textContent = percent ? ('Rabatt: ' + percent) : 'Rabatt';
-    if(modalCodeEl) modalCodeEl.textContent = code ? code : '--';
-    if(modalCta) modalCta.href = '/discount/' + encodeURIComponent(code) + '?redirect=' + encodeURIComponent(redirect);
-
-    couponModal.hidden = false;
-    lockScroll(true);
-  }
-  function closeCouponModal(){
-    if(!couponModal) return;
-    couponModal.hidden = true;
-    lockScroll(false);
-  }
-
-  root.querySelectorAll('[data-clv4-open-coupon]').forEach(function(btn){
-    btn.addEventListener('click', function(e){
-      var card = e.currentTarget.closest('[data-clv4-card]');
-      if(card) openCouponModal(card);
-    });
-  });
-  root.querySelectorAll('[data-clv4-close-coupon]').forEach(function(el){
-    el.addEventListener('click', closeCouponModal);
-  });
-
-  document.addEventListener('keydown', function(e){
-    if(e.key === 'Escape'){
-      if(couponModal && !couponModal.hidden) closeCouponModal();
-    }
-  });
-
-  // Copy
-  if(copyBtn){
-    copyBtn.addEventListener('click', function(){
-      var text = (modalCodeEl && modalCodeEl.textContent) ? modalCodeEl.textContent.trim() : '';
-      if(!text || text === '--') return;
-
-      function flash(){
-        copyBtn.textContent = 'Copied';
-        setTimeout(function(){ copyBtn.textContent = 'Copy'; }, 900);
-      }
-      if(navigator.clipboard && navigator.clipboard.writeText){
-        navigator.clipboard.writeText(text).then(flash).catch(function(){});
+      if(now<start || now>end){
+        btn.classList.add('is-disabled');
+        btn.disabled=true;
       }else{
-        var ta = document.createElement('textarea');
-        ta.value = text;
-        ta.style.position = 'fixed';
-        ta.style.left = '-9999px';
-        document.body.appendChild(ta);
-        ta.select();
-        try{ document.execCommand('copy'); flash(); }catch(err){}
-        document.body.removeChild(ta);
+        btn.classList.remove('is-disabled');
+        btn.disabled=false;
       }
     });
   }
+
+  root.querySelectorAll('[data-clv4-open-coupon]').forEach(btn=>{
+    btn.onclick=e=>{
+      if(btn.disabled)return;
+      const card=e.target.closest('[data-clv4-card]');
+      modal.hidden=false;
+      mCode.textContent=card.dataset.code;
+      mPercent.textContent='Rabatt '+card.dataset.percent;
+      mCta.href='/discount/'+card.dataset.code+'?redirect='+card.dataset.redirect;
+    };
+  });
+
+  root.querySelector('.clv4-x').onclick=()=>modal.hidden=true;
+  root.querySelector('.clv4-backdrop').onclick=()=>modal.hidden=true;
+
+  update();
+  setInterval(update,30000);
 })();
 </script>
 
 {% schema %}
 {
-  "name": "Coupon Ladder Final V4",
+  "name": "Coupon Ladder Final",
   "settings": [
-    { "type": "text", "id": "kicker", "label": "Kicker", "default": "Schnell sein – Codes sichern & sparen!" },
-    { "type": "text", "id": "title", "label": "Title", "default": "Je schneller, desto mehr Rabatt – nur für Schnellentschlossene!" },
-    { "type": "richtext", "id": "desc", "label": "Description", "default": "<p>Klicke auf „Gutschein sichern“, kopiere den Code und gehe anschließend zum Checkout.</p>" },
-
-    { "type": "text", "id": "rules_text", "label": "Regeln button text", "default": "Regeln >" },
-    { "type": "richtext", "id": "rules_content", "label": "Regeln content", "default": "<p>1) Gültig solange der Vorrat reicht.<br>2) Nicht kombinierbar mit anderen Aktionen.<br>3) Rabatt wird im Checkout angewendet.</p>" },
-
-    { "type": "text", "id": "start_at", "label": "Start time (ISO or YYYY-MM-DD HH:MM)", "default": "2026-01-11 23:00" },
-    { "type": "text", "id": "end_at", "label": "End time (optional; empty => start + duration_hours)", "default": "-" },
-    { "type": "number", "id": "duration_hours", "label": "Duration hours (fallback)", "default": 48 },
-
-    {
-      "type": "range",
-      "id": "fast_part_percent",
-      "label": "Fast part consumed in first half (0-100)",
-      "min": 0,
-      "max": 100,
-      "step": 1,
-      "default": 70
-    },
-
-    { "type": "text", "id": "countdown_label", "label": "Countdown label", "default": "Die Aktion endet in" },
-
-    { "type": "text", "id": "claim_button_text", "label": "Card button text", "default": "Gutschein sichern" },
-    { "type": "text", "id": "coupon_modal_title", "label": "Coupon modal title", "default": "Gutschein sichern" },
-    { "type": "text", "id": "coupon_modal_cta_text", "label": "Coupon modal CTA text", "default": "Jetzt shoppen (Code anwenden)" },
-    { "type": "text", "id": "coupon_modal_hint", "label": "Coupon modal hint", "default": "Hinweis: Der Rabatt wird beim Öffnen des Links automatisch angewendet." },
-    { "type": "text", "id": "code_label", "label": "Code label", "default": "Dein Rabattcode" },
-
-    { "type": "color", "id": "bg_color", "label": "Background", "default": "#2a0d0d" },
-    { "type": "color", "id": "card_bg", "label": "Card background", "default": "#1d6a4c" },
-    { "type": "color", "id": "accent_color", "label": "Accent color", "default": "#ff3b30" },
-    { "type": "color", "id": "text_color", "label": "Text color", "default": "#ffffff" }
+    { "type":"text","id":"kicker","label":"Kicker","default":"Schnell sein – Codes sichern & sparen!" },
+    { "type":"text","id":"title","label":"Title","default":"Je schneller, desto mehr Rabatt" },
+    { "type":"richtext","id":"desc","label":"Description","default":"<p>Nur für kurze Zeit.</p>" },
+    { "type":"text","id":"rules_text","label":"Regeln text","default":"Regeln >" },
+    { "type":"richtext","id":"rules_content","label":"Regeln content","default":"<p>Nur solange der Vorrat reicht.</p>" },
+    { "type":"text","id":"start_at","label":"Start time","default":"2026-01-11 23:00" },
+    { "type":"text","id":"end_at","label":"End time","default":"-" },
+    { "type":"number","id":"duration_hours","label":"Duration hours","default":48 },
+    { "type":"text","id":"claim_button_text","label":"Button text","default":"Gutschein sichern" },
+    { "type":"text","id":"coupon_modal_title","label":"Modal title","default":"Gutschein sichern" },
+    { "type":"text","id":"coupon_modal_cta_text","label":"Modal CTA","default":"Jetzt shoppen" },
+    { "type":"text","id":"coupon_modal_hint","label":"Hint","default":"Rabatt wird automatisch angewendet" },
+    { "type":"color","id":"bg_color","label":"BG","default":"#2a0d0d" },
+    { "type":"color","id":"card_bg","label":"Card BG","default":"#1d6a4c" },
+    { "type":"color","id":"accent_color","label":"Accent","default":"#ff3b30" }
   ],
-  "blocks": [
+  "blocks":[
     {
-      "type": "tier",
-      "name": "Tier",
-      "settings": [
-        { "type": "text", "id": "percent", "label": "Percent text", "default": "-50%" },
-        { "type": "number", "id": "total_qty", "label": "Initial qty (you set)", "default": 200 },
-
-        {
-          "type": "range",
-          "id": "speed_weight",
-          "label": "Speed weight (smaller=faster, bigger=slower)",
-          "min": 10,
-          "max": 300,
-          "step": 5,
-          "default": 100
-        },
-
-        { "type": "text", "id": "coupon_code", "label": "Coupon code (per card)", "default": "WEIHNACHTEN" },
-        { "type": "text", "id": "redirect_url", "label": "Redirect URL (per card)", "default": "/collections/standing-desks" }
+      "type":"tier",
+      "name":"Tier",
+      "settings":[
+        { "type":"text","id":"percent","label":"Percent","default":"-50%" },
+        { "type":"number","id":"total_qty","label":"Total","default":100 },
+        { "type":"range","id":"speed_weight","label":"Speed","min":10,"max":300,"step":5,"default":100 },
+        { "type":"text","id":"coupon_code","label":"Code","default":"WEIHNACHTEN" },
+        { "type":"text","id":"redirect_url","label":"Redirect","default":"/collections/all" }
       ]
     }
   ],
-  "max_blocks": 6,
-  "presets": [
-    {
-      "name": "Coupon Ladder Final V4",
-      "blocks": [
-        { "type": "tier", "settings": { "percent": "-50%", "total_qty": 8, "speed_weight": 60, "coupon_code": "MD555", "redirect_url": "/collections/standing-desks" } },
-        { "type": "tier", "settings": { "percent": "-30%", "total_qty": 20, "speed_weight": 100, "coupon_code": "MD555", "redirect_url": "/collections/standing-desks" } },
-        { "type": "tier", "settings": { "percent": "-10%", "total_qty": 100, "speed_weight": 160, "coupon_code": "MD555", "redirect_url": "/collections/standing-desks" } },
-        { "type": "tier", "settings": { "percent": "-8%", "total_qty": 200, "speed_weight": 220, "coupon_code": "MD555", "redirect_url": "/collections/standing-desks" } }
-      ]
-    }
-  ]
+  "presets":[{"name":"Coupon Ladder Final"}]
 }
 {% endschema %}
