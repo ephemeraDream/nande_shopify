@@ -79,64 +79,64 @@
         "text": "<p>Weihnachtliche Deals für dich！</p>"
       }
     },
-    "test_coupon_ladder_Vp99qe": {
+    "test_coupon_ladder_VawPMy": {
       "type": "test-coupon-ladder",
       "blocks": {
-        "tier_RPinDf": {
+        "tier_cz74cc": {
           "type": "tier",
           "settings": {
             "percent": "-50%",
             "total_qty": 8,
-            "speed_weight": 95,
-            "coupon_code": "WEIHNACHTEN",
+            "speed_weight": 60,
+            "coupon_code": "MD555",
             "redirect_url": "/collections/standing-desks"
           }
         },
-        "tier_kYyQDb": {
+        "tier_d3HMpg": {
           "type": "tier",
           "settings": {
             "percent": "-30%",
             "total_qty": 20,
             "speed_weight": 100,
-            "coupon_code": "WEIHNACHTEN",
+            "coupon_code": "MD555",
             "redirect_url": "/collections/standing-desks"
           }
         },
-        "tier_qdhLRF": {
+        "tier_ejFgKU": {
           "type": "tier",
           "settings": {
             "percent": "-10%",
             "total_qty": 100,
-            "speed_weight": 120,
-            "coupon_code": "WEIHNACHTEN",
+            "speed_weight": 160,
+            "coupon_code": "MD555",
             "redirect_url": "/collections/standing-desks"
           }
         },
-        "tier_nmjRHt": {
+        "tier_xki7Bn": {
           "type": "tier",
           "settings": {
             "percent": "-8%",
             "total_qty": 200,
-            "speed_weight": 180,
-            "coupon_code": "WEIHNACHTEN",
+            "speed_weight": 220,
+            "coupon_code": "MD555",
             "redirect_url": "/collections/standing-desks"
           }
         }
       },
       "block_order": [
-        "tier_RPinDf",
-        "tier_kYyQDb",
-        "tier_qdhLRF",
-        "tier_nmjRHt"
+        "tier_cz74cc",
+        "tier_d3HMpg",
+        "tier_ejFgKU",
+        "tier_xki7Bn"
       ],
       "name": "Coupon Ladder Final V4",
       "settings": {
-        "kicker": "",
-        "title": "Schnell sein – Codes sichern & sparen!",
+        "kicker": "Schnell sein – Codes sichern & sparen!",
+        "title": "Je schneller, desto mehr Rabatt – nur für Schnellentschlossene!",
         "desc": "<p>Klicke auf „Gutschein sichern“, kopiere den Code und gehe anschließend zum Checkout.</p>",
         "rules_text": "Regeln >",
-        "rules_content": "<p>1) Gültig solange der Vorrat reicht.<br/>2) Nicht kombinierbar mit anderen Aktionen.<br/>3) Rabatt wird im Checkout angewendet.</p>",
-        "start_at": "2025-12-22 00:00",
+        "rules_content": "<p>1) Gültig solange der Vorrat reicht.<br>2) Nicht kombinierbar mit anderen Aktionen.<br>3) Rabatt wird im Checkout angewendet.</p>",
+        "start_at": "2026-01-11 23:00",
         "end_at": "-",
         "duration_hours": 48,
         "fast_part_percent": 70,
@@ -156,6 +156,6 @@
   "order": [
     "main",
     "activity_products_tab_aUGewm",
-    "test_coupon_ladder_Vp99qe"
+    "test_coupon_ladder_VawPMy"
   ]
 }
