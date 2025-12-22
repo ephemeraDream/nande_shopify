@@ -86,7 +86,7 @@
           "type": "tier",
           "settings": {
             "percent": "-50%",
-            "total_qty": 200,
+            "total_qty": 8,
             "coupon_code": "WEIHNACHTEN",
             "redirect_url": "/collections/standing-desks"
           }
@@ -94,8 +94,8 @@
         "tier_kYyQDb": {
           "type": "tier",
           "settings": {
-            "percent": "-50%",
-            "total_qty": 200,
+            "percent": "-30%",
+            "total_qty": 20,
             "coupon_code": "WEIHNACHTEN",
             "redirect_url": "/collections/standing-desks"
           }
@@ -103,8 +103,8 @@
         "tier_qdhLRF": {
           "type": "tier",
           "settings": {
-            "percent": "-50%",
-            "total_qty": 200,
+            "percent": "-10%",
+            "total_qty": 100,
             "coupon_code": "WEIHNACHTEN",
             "redirect_url": "/collections/standing-desks"
           }
@@ -112,7 +112,7 @@
         "tier_nmjRHt": {
           "type": "tier",
           "settings": {
-            "percent": "-50%",
+            "percent": "-8%",
             "total_qty": 200,
             "coupon_code": "WEIHNACHTEN",
             "redirect_url": "/collections/standing-desks"
