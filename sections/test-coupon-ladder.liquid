@@ -379,6 +379,16 @@
       font-size: 11px;
     }
   }
+  /* 按钮禁用状态：变灰，无手型，无悬停效果 */
+#coupon-ladder-{{ sid }} .clv3-btn--disabled,
+#coupon-ladder-{{ sid }} .clv3-btn[disabled] {
+  background: rgba(255,255,255,0.35);
+  color: rgba(0,0,0,0.4);
+  cursor: default !important;
+  pointer-events: none !important;
+  opacity: 1; /* 按需，可保持清晰 */
+}
+
 </style>
 
 <script>
