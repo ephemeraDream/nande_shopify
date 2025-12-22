@@ -79,10 +79,10 @@
         "text": "<p>Weihnachtliche Deals für dich！</p>"
       }
     },
-    "test_coupon_ladder_BKnXQG": {
+    "test_coupon_ladder_Vp99qe": {
       "type": "test-coupon-ladder",
       "blocks": {
-        "tier_kwQtjN": {
+        "tier_RPinDf": {
           "type": "tier",
           "settings": {
             "percent": "-50%",
@@ -91,7 +91,7 @@
             "redirect_url": "/collections/standing-desks"
           }
         },
-        "tier_mKVEYc": {
+        "tier_kYyQDb": {
           "type": "tier",
           "settings": {
             "percent": "-50%",
@@ -100,7 +100,7 @@
             "redirect_url": "/collections/standing-desks"
           }
         },
-        "tier_grfXfV": {
+        "tier_qdhLRF": {
           "type": "tier",
           "settings": {
             "percent": "-50%",
@@ -109,7 +109,7 @@
             "redirect_url": "/collections/standing-desks"
           }
         },
-        "tier_UYfzHR": {
+        "tier_nmjRHt": {
           "type": "tier",
           "settings": {
             "percent": "-50%",
@@ -120,24 +120,25 @@
         }
       },
       "block_order": [
-        "tier_kwQtjN",
-        "tier_mKVEYc",
-        "tier_grfXfV",
-        "tier_UYfzHR"
+        "tier_RPinDf",
+        "tier_kYyQDb",
+        "tier_qdhLRF",
+        "tier_nmjRHt"
       ],
-      "name": "Coupon Ladder Final V3",
+      "name": "Coupon Ladder Final V4",
       "settings": {
-        "kicker": "",
-        "title": "Je schneller, desto mehr Rabatt",
+        "kicker": "Schnell sein – Codes sichern & sparen!",
+        "title": "Je schneller, desto mehr Rabatt – nur für Schnellentschlossene!",
         "desc": "<p>Klicke auf „Gutschein sichern“, kopiere den Code und gehe anschließend zum Checkout.</p>",
         "rules_text": "Regeln >",
         "rules_modal_title": "Regeln",
-        "rules_modal_content": "<p>1) Gültig solange der Vorrat reicht.<br/>2) Nicht kombinierbar mit anderen Aktionen.<br/>3) Rabatt wird im Checkout angewendet.</p>",
+        "rules_modal_content": "<p>1) Gültig solange der Vorrat reicht.<br>2) Nicht kombinierbar mit anderen Aktionen.<br>3) Rabatt wird im Checkout angewendet.</p>",
         "start_at": "2026-01-12 00:00",
         "end_at": "-",
         "duration_hours": 48,
         "fast_part_percent": 70,
         "countdown_label": "Die Aktion endet in",
+        "modal_countdown_label": "Endet in",
         "claim_button_text": "Gutschein sichern",
         "coupon_modal_title": "Gutschein sichern",
         "coupon_modal_cta_text": "Jetzt shoppen (Code anwenden)",
@@ -153,6 +154,6 @@
   "order": [
     "main",
     "activity_products_tab_aUGewm",
-    "test_coupon_ladder_BKnXQG"
+    "test_coupon_ladder_Vp99qe"
   ]
 }
