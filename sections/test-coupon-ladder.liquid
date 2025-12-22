@@ -539,16 +539,21 @@
   }
     // 按钮状态：未开始/已结束都不能点击
   function updateButtonState(){
-    var now = new Date();
-    var beforeStart = startD && now < startD;
-    var afterEnd = endD && now > endD;
-    var disabled = beforeStart || afterEnd;
+  var now = new Date();
+  var beforeStart = startD && now < startD;
+  var afterEnd = endD && now > endD;
+  var disabled = beforeStart || afterEnd;
 
-    root.querySelectorAll('[data-clv3-open-coupon]').forEach(function(btn){
-      btn.disabled = disabled;
-      btn.classList.toggle('clv3-btn--disabled', disabled);
-    });
-  }
+  root.querySelectorAll('[data-clv3-open-coupon]').forEach(function(btn){
+    if(disabled){
+      btn.setAttribute('disabled', 'disabled');
+      btn.classList.add('clv3-btn--disabled');
+    }else{
+      btn.removeAttribute('disabled');
+      btn.classList.remove('clv3-btn--disabled');
+    }
+  });
+}
 
     updateAll();
   updateButtonState();
