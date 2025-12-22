@@ -99,6 +99,12 @@
         <div class="clv3-panel-sub" data-clv3-modal-sub>Rabatt: --</div>
       </div>
 
+      <!-- 新增：弹框倒计时，同步左侧总倒计时 -->
+      <div class="clv3-modal-cd">
+        <span class="clv3-modal-cd-label">{{ section.settings.modal_countdown_label }}</span>
+        <span class="clv3-modal-cd-value" data-clv3-modal-cd>--:--:--</span>
+      </div>
+
       <div class="clv3-codebox">
         <div class="clv3-code-label">{{ section.settings.code_label }}</div>
         <div class="clv3-code-row">
@@ -181,7 +187,7 @@
   #coupon-ladder-{{ sid }} .clv3-time-row{ display:flex; gap:10px; font-size: 13px; color: var(--muted); margin: 4px 0; }
   #coupon-ladder-{{ sid }} .clv3-time-label{ min-width: 44px; opacity:.95; }
 
-  /* countdown: desktop single line */
+  /* countdown 默认单行 */
   #coupon-ladder-{{ sid }} .clv3-cd-boxes{
     display:flex; gap:10px; flex-wrap: nowrap; overflow:hidden;
   }
@@ -221,6 +227,14 @@
     color:#fff;
   }
 
+  /* 电脑端阶梯效果：左高右低，字号依次变小 */
+  @media (min-width: 901px){
+    #coupon-ladder-{{ sid }} .clv3-level-1 .clv3-percent{ font-size: 40px; }
+    #coupon-ladder-{{ sid }} .clv3-level-2 .clv3-percent{ font-size: 34px; }
+    #coupon-ladder-{{ sid }} .clv3-level-3 .clv3-percent{ font-size: 28px; }
+    #coupon-ladder-{{ sid }} .clv3-level-4 .clv3-percent{ font-size: 24px; }
+  }
+
   #coupon-ladder-{{ sid }} .clv3-qty{
     font-size: 13px;
     color: rgba(255,255,255,.72);
@@ -258,7 +272,7 @@
   #coupon-ladder-{{ sid }} .clv3-level-3{ min-height: 190px; }
   #coupon-ladder-{{ sid }} .clv3-level-4{ min-height: 178px; }
 
-  /* Modal */
+  /* Modal 基础 */
   #coupon-ladder-{{ sid }} .clv3-modal[hidden]{ display:none; }
   #coupon-ladder-{{ sid }} .clv3-modal{
     position:fixed; inset:0; z-index:9999;
@@ -293,10 +307,27 @@
   #coupon-ladder-{{ sid }} .clv3-panel-head{
     padding-bottom:12px;
     border-bottom:1px solid rgba(255,255,255,.10);
-    margin-bottom:14px;
+    margin-bottom:10px;
   }
   #coupon-ladder-{{ sid }} .clv3-panel-title{ font-weight:900; font-size:18px; margin-top:2px; }
   #coupon-ladder-{{ sid }} .clv3-panel-sub{ margin-top:6px; color:rgba(255,255,255,.78); font-size:13px; }
+
+  /* Modal 倒计时样式：小一号但有紧迫感 */
+  #coupon-ladder-{{ sid }} .clv3-modal-cd{
+    margin: 4px 0 14px;
+    font-size: 12px;
+    font-weight: 600;
+    color: rgba(255,255,255,.9);
+    display:flex;
+    gap:6px;
+    align-items: baseline;
+  }
+  #coupon-ladder-{{ sid }} .clv3-modal-cd-label{
+    opacity:.8;
+  }
+  #coupon-ladder-{{ sid }} .clv3-modal-cd-value{
+    letter-spacing: .06em;
+  }
 
   #coupon-ladder-{{ sid }} .clv3-codebox{
     background: rgba(255,255,255,.05);
@@ -331,7 +362,22 @@
     #coupon-ladder-{{ sid }} .clv3-container{ grid-template-columns:1fr; gap:18px; align-items:start; }
     #coupon-ladder-{{ sid }} .clv3-ladder{ flex-direction:column; align-items:stretch; gap:12px; }
     #coupon-ladder-{{ sid }} .clv3-card{ min-height: unset !important; }
-    #coupon-ladder-{{ sid }} .clv3-cd-boxes{ flex-wrap: wrap; }
+
+    /* 手机端：倒计时强制一行，整体缩小 */
+    #coupon-ladder-{{ sid }} .clv3-cd-boxes{
+      flex-wrap: nowrap;
+      gap:6px;
+    }
+    #coupon-ladder-{{ sid }} .clv3-cd-box{
+      min-width: 64px;
+      padding: 8px 6px;
+    }
+    #coupon-ladder-{{ sid }} .clv3-cd-box b{
+      font-size: 15px;
+    }
+    #coupon-ladder-{{ sid }} .clv3-cd-box span{
+      font-size: 11px;
+    }
   }
 </style>
 
@@ -344,8 +390,9 @@
   var endAt = {{ section.settings.end_at | json }};
   var durationHours = Number({{ section.settings.duration_hours | json }}) || 48;
 
-  // fast-slow split
-  var fastPart = Math.max(0, Math.min(1, Number({{ section.settings.fast_part | json }}) || 0.7)); // first 24h consume 70% by default
+  // fast-slow split，使用百分比设置
+  var fastPartPercent = Number({{ section.settings.fast_part_percent | json }}) || 70;
+  var fastPart = Math.max(0, Math.min(1, fastPartPercent / 100));
 
   function pad2(n){ return String(n).padStart(2,'0'); }
   function clamp01(x){ return Math.max(0, Math.min(1, x)); }
@@ -386,28 +433,46 @@
   var hhEl = root.querySelector('[data-clv3-hh]');
   var mmEl = root.querySelector('[data-clv3-mm]');
   var ssEl = root.querySelector('[data-clv3-ss]');
+  var modalCdEl = root.querySelector('[data-clv3-modal-cd]');
 
   function updateCountdown(){
-    if(!ddEl || !hhEl || !mmEl || !ssEl) return;
     if(!endD){
-      ddEl.textContent='00'; hhEl.textContent='00'; mmEl.textContent='00'; ssEl.textContent='00';
+      if(ddEl){ ddEl.textContent='00'; }
+      if(hhEl){ hhEl.textContent='00'; }
+      if(mmEl){ mmEl.textContent='00'; }
+      if(ssEl){ ssEl.textContent='00'; }
+      if(modalCdEl){ modalCdEl.textContent='00:00:00'; }
       return;
     }
     var now = new Date();
     var diff = Math.max(0, endD.getTime() - now.getTime());
     var sec = Math.floor(diff/1000);
+
     var dd = Math.floor(sec/86400); sec -= dd*86400;
     var hh = Math.floor(sec/3600);  sec -= hh*3600;
     var mm = Math.floor(sec/60);    sec -= mm*60;
-    ddEl.textContent = pad2(dd);
-    hhEl.textContent = pad2(hh);
-    mmEl.textContent = pad2(mm);
-    ssEl.textContent = pad2(sec);
+    var ss = sec;
+
+    var ddStr = pad2(dd);
+    var hhStr = pad2(hh);
+    var mmStr = pad2(mm);
+    var ssStr = pad2(ss);
+
+    if(ddEl) ddEl.textContent = ddStr;
+    if(hhEl) hhEl.textContent = hhStr;
+    if(mmEl) mmEl.textContent = mmStr;
+    if(ssEl) ssEl.textContent = ssStr;
+
+    // 弹框倒计时显示：有天数则前面加 "xT "
+    if(modalCdEl){
+      var modalText = dd > 0 ? (dd + 'T ' + hhStr + ':' + mmStr + ':' + ssStr)
+                             : (hhStr + ':' + mmStr + ':' + ssStr);
+      modalCdEl.textContent = modalText;
+    }
   }
 
   // simulated depletion: fast first half, slow second half
   function depletionRatio(progress01){
-    // progress01: 0..1
     if(progress01 <= 0) return 0;
     if(progress01 >= 1) return 1;
 
@@ -463,13 +528,14 @@
     root.querySelectorAll('[data-clv3-card]').forEach(applySimulatedQuota);
   }
   updateAll();
- // 倒计时每秒
-setInterval(updateCountdown, 1000);
 
-// 库存/进度条每30秒更新一次即可
-setInterval(function(){
-  root.querySelectorAll('[data-clv3-card]').forEach(applySimulatedQuota);
-}, 30000);
+  // 倒计时每秒
+  setInterval(updateCountdown, 1000);
+
+  // 库存/进度条每 30 秒更新一次即可
+  setInterval(function(){
+    root.querySelectorAll('[data-clv3-card]').forEach(applySimulatedQuota);
+  }, 30000);
 
   // modal helpers
   function lockScroll(on){ document.documentElement.style.overflow = on ? 'hidden' : ''; }
@@ -572,16 +638,17 @@ setInterval(function(){
     { "type": "text", "id": "end_at", "label": "End time (optional; empty => start + duration_hours)", "default": "-" },
     { "type": "number", "id": "duration_hours", "label": "Duration hours (fallback)", "default": 48 },
     {
-  "type": "range",
-  "id": "fast_part_percent",
-  "label": "Fast part consumed in first half (0-100)",
-  "min": 0,
-  "max": 100,
-  "step": 1,
-  "default": 70
-},
+      "type": "range",
+      "id": "fast_part_percent",
+      "label": "Fast part consumed in first half (0-100)",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "default": 70
+    },
 
     { "type": "text", "id": "countdown_label", "label": "Countdown label", "default": "Die Aktion endet in" },
+    { "type": "text", "id": "modal_countdown_label", "label": "Modal countdown label", "default": "Endet in" },
 
     { "type": "text", "id": "claim_button_text", "label": "Card button text", "default": "Gutschein sichern" },
     { "type": "text", "id": "coupon_modal_title", "label": "Coupon modal title", "default": "Gutschein sichern" },
@@ -609,7 +676,7 @@ setInterval(function(){
   "max_blocks": 6,
   "presets": [
     {
-      "name": "Coupon Ladder Final V3",
+      "name": "Coupon Ladder Final V4",
       "blocks": [
         { "type": "tier" },
         { "type": "tier" },
