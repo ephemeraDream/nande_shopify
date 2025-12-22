@@ -87,7 +87,7 @@
           "settings": {
             "percent": "-50%",
             "total_qty": 8,
-            "speed_weight": 60,
+            "speed_weight": 90,
             "coupon_code": "MD555",
             "redirect_url": "/collections/standing-desks"
           }
@@ -107,7 +107,7 @@
           "settings": {
             "percent": "-10%",
             "total_qty": 100,
-            "speed_weight": 160,
+            "speed_weight": 140,
             "coupon_code": "MD555",
             "redirect_url": "/collections/standing-desks"
           }
@@ -117,7 +117,7 @@
           "settings": {
             "percent": "-8%",
             "total_qty": 200,
-            "speed_weight": 220,
+            "speed_weight": 255,
             "coupon_code": "MD555",
             "redirect_url": "/collections/standing-desks"
           }
