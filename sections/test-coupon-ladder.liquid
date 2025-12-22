@@ -110,6 +110,8 @@
       <div class="clv4-panel-head">
         <div class="clv4-panel-title">{{ section.settings.coupon_modal_title }}</div>
         <div class="clv4-panel-sub" data-clv4-modal-sub>Rabatt: --</div>
+        <!-- ✅ 同步总倒计时（弹框内） -->
+        <div class="clv4-modal-countdown" data-clv4-modal-countdown>Endet in --</div>
       </div>
 
       <div class="clv4-codebox">
@@ -240,16 +242,15 @@
 
   #coupon-ladder-{{ sid }} .clv4-percent{
     font-size: clamp(22px, 2.2vw, 44px);
- 
-
     font-weight: 900;
     margin-bottom: 10px;
     color:#fff;
   }
-      .clv4-level-1 .clv4-percent{ font-size: 44px !important; }
-.clv4-level-2 .clv4-percent{ font-size: 36px !important; }
-.clv4-level-3 .clv4-percent{ font-size: 30px !important; }
-.clv4-level-4 .clv4-percent{ font-size: 26px !important; }
+  .clv4-level-1 .clv4-percent{ font-size: 44px !important; }
+  .clv4-level-2 .clv4-percent{ font-size: 36px !important; }
+  .clv4-level-3 .clv4-percent{ font-size: 30px !important; }
+  .clv4-level-4 .clv4-percent{ font-size: 26px !important; }
+
   #coupon-ladder-{{ sid }} .clv4-qty{
     font-size: 13px;
     color: rgba(255,255,255,.72);
@@ -291,6 +292,15 @@
     font-size: clamp(12px, 1.05vw, 16px);
     line-height: 1;
     white-space: nowrap;
+  }
+
+  /* ✅ 未开始/已结束：灰色禁用、不可点击、无抓手 */
+  #coupon-ladder-{{ sid }} .clv4-btn.is-disabled{
+    background: rgba(255,255,255,.35) !important;
+    color: rgba(0,0,0,.55) !important;
+    cursor: not-allowed !important;
+    pointer-events: none !important;
+    opacity: .75;
   }
 
   /* Step heights (desktop) */
@@ -339,6 +349,7 @@
   }
   #coupon-ladder-{{ sid }} .clv4-panel-title{ font-weight:900; font-size:18px; margin-top:2px; }
   #coupon-ladder-{{ sid }} .clv4-panel-sub{ margin-top:6px; color:rgba(255,255,255,.78); font-size:13px; }
+  #coupon-ladder-{{ sid }} .clv4-modal-countdown{ margin-top:6px; font-size:13px; color:rgba(255,255,255,.75); }
 
   #coupon-ladder-{{ sid }} .clv4-codebox{
     background: rgba(255,255,255,.05);
@@ -398,11 +409,17 @@
 
   function safeDate(s){
     if(!s) return null;
-    var d = new Date(s);
+    var str = String(s).trim();
+    if(!str || str === '-' || str.toLowerCase() === 'null') return null;
+
+    var d = new Date(str);
     if(!isNaN(d.getTime())) return d;
-    var t = String(s).replace(' ', 'T');
+
+    // 兼容 "YYYY-MM-DD HH:MM"
+    var t = str.replace(' ', 'T');
     d = new Date(t);
     if(!isNaN(d.getTime())) return d;
+
     return null;
   }
   function fmt(d){
@@ -454,6 +471,31 @@
   }
 
   // ======================
+  // ✅ 活动状态：未开始/进行中/已结束 -> 控制按钮灰态&不可点
+  // ======================
+  function isCampaignActive(){
+    var now = new Date();
+    if(startD && now < startD) return false;
+    if(endD && now > endD) return false;
+    // 没有 endD 时也不建议开放（但你这里通常会有）
+    if(!endD) return false;
+    return true;
+  }
+
+  function updateButtonState(){
+    var active = isCampaignActive();
+    root.querySelectorAll('[data-clv4-open-coupon]').forEach(function(btn){
+      if(active){
+        btn.classList.remove('is-disabled');
+        btn.disabled = false;
+      }else{
+        btn.classList.add('is-disabled');
+        btn.disabled = true;
+      }
+    });
+  }
+
+  // ======================
   // 48h 自动递减 + 每卡 speed weight
   // ======================
   function depletionBase(progress01){
@@ -477,12 +519,21 @@
     var leftEl = card.querySelector('[data-clv4-left]');
     var barEl = card.querySelector('[data-clv4-bar]');
 
-    // 未开始 => 全量
     var now = new Date();
+
+    // 未开始 => 全量（条满）
     if(startD && now < startD){
       if(qtyEl) qtyEl.textContent = String(total);
       if(leftEl) leftEl.textContent = String(total);
       if(barEl) barEl.style.width = '100%';
+      return;
+    }
+
+    // 已结束 => 0（条空）
+    if(endD && now > endD){
+      if(qtyEl) qtyEl.textContent = String(total);
+      if(leftEl) leftEl.textContent = '0';
+      if(barEl) barEl.style.width = '0%';
       return;
     }
 
@@ -497,15 +548,12 @@
     var progress = clamp01((now.getTime() - startD.getTime()) / (endD.getTime() - startD.getTime()));
     var baseDep = depletionBase(progress); // 0..1
 
-    // ✅ 每卡速度权重：值越大，消耗越慢（条越“满”）
     var weight = Number(card.getAttribute('data-clv4-weight') || 100);
     if(isNaN(weight)) weight = 100;
     weight = Math.max(10, Math.min(300, weight)); // 10-300
 
-    // 把 weight 映射为速度因子：100≈基准；更小更快；更大更慢
-    // 例：60 => 更快；180 => 更慢
+    // weight 越大 => 越慢（剩余越多）
     var speedFactor = 100 / weight;
-
     var dep = Math.min(1, baseDep * speedFactor);
 
     var used = Math.round(total * dep);
@@ -521,16 +569,6 @@
     root.querySelectorAll('[data-clv4-card]').forEach(applySimulatedQuota);
   }
 
-  // 初始渲染
-  updateCountdown();
-  updateQuotaAll();
-
-  // 倒计时：每秒
-  setInterval(updateCountdown, 1000);
-
-  // 配额/进度：每 30 秒即可（更省）
-  setInterval(updateQuotaAll, 30000);
-
   // ======================
   // Regeln accordion
   // ======================
@@ -545,7 +583,7 @@
   }
 
   // ======================
-  // Coupon modal（点击才展示 code）
+  // Coupon modal（点击才展示 code） + 弹框倒计时
   // ======================
   function lockScroll(on){ document.documentElement.style.overflow = on ? 'hidden' : ''; }
 
@@ -554,20 +592,47 @@
   var modalCodeEl = root.querySelector('[data-clv4-modal-code]');
   var modalCta = root.querySelector('[data-clv4-modal-cta]');
   var copyBtn = root.querySelector('[data-clv4-copy]');
+  var modalCdEl = root.querySelector('[data-clv4-modal-countdown]');
+
+  function updateModalCountdown(){
+    if(!modalCdEl) return;
+    if(!endD){
+      modalCdEl.textContent = 'Endet in --';
+      return;
+    }
+    var now = new Date();
+    var diff = Math.max(0, endD.getTime() - now.getTime());
+    var sec = Math.floor(diff/1000);
+
+    var d = Math.floor(sec/86400); sec -= d*86400;
+    var h = Math.floor(sec/3600);  sec -= h*3600;
+    var m = Math.floor(sec/60);    sec -= m*60;
+
+    modalCdEl.textContent = 'Endet in ' + d + 'd ' + h + 'h ' + m + 'm ' + sec + 's';
+  }
 
   function openCouponModal(card){
     if(!couponModal) return;
+
+    // ✅ 不在活动期：绝不打开
+    if(!isCampaignActive()) return;
+
     var percent = card.getAttribute('data-clv4-percent') || '';
     var code = card.getAttribute('data-clv4-code') || '';
     var redirect = card.getAttribute('data-clv4-redirect') || '/';
 
     if(modalSub) modalSub.textContent = percent ? ('Rabatt: ' + percent) : 'Rabatt';
     if(modalCodeEl) modalCodeEl.textContent = code ? code : '--';
+
+    // ✅ 正确带上折扣码跳转（Shopify 标准写法）
     if(modalCta) modalCta.href = '/discount/' + encodeURIComponent(code) + '?redirect=' + encodeURIComponent(redirect);
+
+    updateModalCountdown();
 
     couponModal.hidden = false;
     lockScroll(true);
   }
+
   function closeCouponModal(){
     if(!couponModal) return;
     couponModal.hidden = true;
@@ -576,10 +641,14 @@
 
   root.querySelectorAll('[data-clv4-open-coupon]').forEach(function(btn){
     btn.addEventListener('click', function(e){
+      // ✅ 按钮被禁用时，不响应
+      if(btn.disabled || btn.classList.contains('is-disabled')) return;
+
       var card = e.currentTarget.closest('[data-clv4-card]');
       if(card) openCouponModal(card);
     });
   });
+
   root.querySelectorAll('[data-clv4-close-coupon]').forEach(function(el){
     el.addEventListener('click', closeCouponModal);
   });
@@ -614,6 +683,24 @@
       }
     });
   }
+
+  // ======================
+  // 初始渲染
+  // ======================
+  updateCountdown();
+  updateQuotaAll();
+  updateButtonState();
+  updateModalCountdown();
+
+  // ✅ 每秒：倒计时 + 按钮状态 + 弹框倒计时（弹框开着时也会同步）
+  setInterval(function(){
+    updateCountdown();
+    updateButtonState();
+    if(couponModal && !couponModal.hidden) updateModalCountdown();
+  }, 1000);
+
+  // 配额/进度：每 30 秒即可（更省）
+  setInterval(updateQuotaAll, 30000);
 })();
 </script>
 
