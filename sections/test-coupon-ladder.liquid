@@ -527,6 +527,19 @@
     updateCountdown();
     root.querySelectorAll('[data-clv3-card]').forEach(applySimulatedQuota);
   }
+    // 按钮状态：未开始/已结束都不能点击
+  function updateButtonState(){
+    var now = new Date();
+    var beforeStart = startD && now < startD;
+    var afterEnd = endD && now > endD;
+    var disabled = beforeStart || afterEnd;
+
+    root.querySelectorAll('[data-clv3-open-coupon]').forEach(function(btn){
+      btn.disabled = disabled;
+      btn.classList.toggle('clv3-btn--disabled', disabled);
+    });
+  }
+
   updateAll();
 
   // 倒计时每秒
