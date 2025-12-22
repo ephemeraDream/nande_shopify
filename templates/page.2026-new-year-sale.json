@@ -127,8 +127,8 @@
       ],
       "name": "Coupon Ladder Final V4",
       "settings": {
-        "kicker": "Schnell sein – Codes sichern & sparen!",
-        "title": "",
+        "kicker": "",
+        "title": "Schnell sein – Codes sichern & sparen!",
         "desc": "<p>Klicke auf „Gutschein sichern“, kopiere den Code und gehe anschließend zum Checkout.</p>",
         "rules_text": "Regeln >",
         "rules_modal_title": "Regeln",
