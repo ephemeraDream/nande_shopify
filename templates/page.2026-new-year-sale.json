@@ -87,9 +87,9 @@
           "settings": {
             "percent": "-50%",
             "total_qty": 8,
-            "speed_weight": 90,
+            "speed_weight": 150,
             "coupon_code": "MD555",
-            "redirect_url": "/collections/standing-desks"
+            "redirect_url": "/collections/hohenverstellbarer-schreibtisch"
           }
         },
         "tier_d3HMpg": {
