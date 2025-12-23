@@ -451,6 +451,17 @@
   if(endTextEl) endTextEl.textContent = fmt(endD);
 
   // ======================
+  // 活动是否进行中
+  // ======================
+  function getCampaignState(){
+    var now = new Date();
+    if(!startD || !endD) return 'invalid';
+    if(now < startD) return 'before';
+    if(now >= endD) return 'after';
+    return 'active';
+  }
+
+  // ======================
   // 倒计时（每秒）
   // ======================
   var ddEl = root.querySelector('[data-clv4-dd]');
@@ -460,45 +471,23 @@
 
   function updateCountdown(){
     if(!ddEl || !hhEl || !mmEl || !ssEl) return;
-    if(!endD){
+
+    if(!endD || getCampaignState() === 'invalid'){
       ddEl.textContent='00'; hhEl.textContent='00'; mmEl.textContent='00'; ssEl.textContent='00';
       return;
     }
+
     var now = new Date();
     var diff = Math.max(0, endD.getTime() - now.getTime());
     var sec = Math.floor(diff/1000);
     var dd = Math.floor(sec/86400); sec -= dd*86400;
     var hh = Math.floor(sec/3600);  sec -= hh*3600;
     var mm = Math.floor(sec/60);    sec -= mm*60;
+
     ddEl.textContent = pad2(dd);
     hhEl.textContent = pad2(hh);
     mmEl.textContent = pad2(mm);
     ssEl.textContent = pad2(sec);
-  }
-
-  // ======================
-  // ✅ 活动状态：未开始/进行中/已结束 -> 控制按钮灰态&不可点
-  // ======================
-  function isCampaignActive(){
-    var now = new Date();
-    if(startD && now < startD) return false;
-    if(endD && now > endD) return false;
-    // 没有 endD 时也不建议开放（但你这里通常会有）
-    if(!endD) return false;
-    return true;
-  }
-
-  function updateButtonState(){
-    var active = isCampaignActive();
-    root.querySelectorAll('[data-clv4-open-coupon]').forEach(function(btn){
-      if(active){
-        btn.classList.remove('is-disabled');
-        btn.disabled = false;
-      }else{
-        btn.classList.add('is-disabled');
-        btn.disabled = true;
-      }
-    });
   }
 
   // ======================
@@ -517,25 +506,9 @@
     }
   }
 
-  function applySimulatedQuota(card){
-    var total = Number(card.getAttribute('data-clv4-total') || 0);
-    if(total < 0) total = 0;
-
-    var qtyEl = card.querySelector('[data-clv4-qty]');
-    var leftEl = card.querySelector('[data-clv4-left]');
-    var barEl = card.querySelector('[data-clv4-bar]');
-        // ======================
-    // Button enable / disable logic
-    // ======================
-    var btn = card.querySelector('[data-clv4-open-coupon]');
+  function setBtnDisabled(btn, disabled){
     if(!btn) return;
-
-    var now2 = new Date();
-    var isBeforeStart = startD && now2 < startD;
-    var isAfterEnd = endD && now2 >= endD;
-    var isSoldOut = left <= 0;
-
-    if(isBeforeStart || isAfterEnd || isSoldOut){
+    if(disabled){
       btn.classList.add('is-disabled');
       btn.setAttribute('aria-disabled', 'true');
       btn.setAttribute('tabindex', '-1');
@@ -544,34 +517,40 @@
       btn.removeAttribute('aria-disabled');
       btn.removeAttribute('tabindex');
     }
+  }
 
+  function applySimulatedQuota(card){
+    var total = Number(card.getAttribute('data-clv4-total') || 0);
+    if(total < 0) total = 0;
 
+    var qtyEl = card.querySelector('[data-clv4-qty]');
+    var leftEl = card.querySelector('[data-clv4-left]');
+    var barEl = card.querySelector('[data-clv4-bar]');
+    var btn = card.querySelector('[data-clv4-open-coupon]');
+
+    var state = getCampaignState();
     var now = new Date();
 
-    // 未开始 => 全量（条满）
-    if(startD && now < startD){
-      if(qtyEl) qtyEl.textContent = String(total);
+    // 默认：先显示总量
+    if(qtyEl) qtyEl.textContent = String(total);
+
+    // ① 未开始：left=total，按钮禁用
+    if(state === 'before'){
       if(leftEl) leftEl.textContent = String(total);
       if(barEl) barEl.style.width = '100%';
+      setBtnDisabled(btn, true);
       return;
     }
 
-    // 已结束 => 0（条空）
-    if(endD && now > endD){
-      if(qtyEl) qtyEl.textContent = String(total);
+    // ② 已结束：left=0，按钮禁用
+    if(state === 'after' || state === 'invalid'){
       if(leftEl) leftEl.textContent = '0';
       if(barEl) barEl.style.width = '0%';
+      setBtnDisabled(btn, true);
       return;
     }
 
-    // 无法计算 => 全量
-    if(!startD || !endD || endD.getTime() <= startD.getTime()){
-      if(qtyEl) qtyEl.textContent = String(total);
-      if(leftEl) leftEl.textContent = String(total);
-      if(barEl) barEl.style.width = '100%';
-      return;
-    }
-
+    // ③ 进行中：计算递减库存
     var progress = clamp01((now.getTime() - startD.getTime()) / (endD.getTime() - startD.getTime()));
     var baseDep = depletionBase(progress); // 0..1
 
@@ -579,7 +558,6 @@
     if(isNaN(weight)) weight = 100;
     weight = Math.max(10, Math.min(300, weight)); // 10-300
 
-    // weight 越大 => 越慢（剩余越多）
     var speedFactor = 100 / weight;
     var dep = Math.min(1, baseDep * speedFactor);
 
@@ -587,9 +565,11 @@
     var left = Math.max(0, total - used);
     var pctLeft = (total > 0) ? (left / total * 100) : 0;
 
-    if(qtyEl) qtyEl.textContent = String(total);
     if(leftEl) leftEl.textContent = String(left);
     if(barEl) barEl.style.width = Math.max(0, Math.min(100, pctLeft)) + '%';
+
+    // ✅ 关键：库存=0 => 按钮禁用（这次 left 已经有值了）
+    setBtnDisabled(btn, left <= 0);
   }
 
   function updateQuotaAll(){
@@ -610,7 +590,7 @@
   }
 
   // ======================
-  // Coupon modal（点击才展示 code） + 弹框倒计时
+  // Coupon modal + 弹框倒计时同步
   // ======================
   function lockScroll(on){ document.documentElement.style.overflow = on ? 'hidden' : ''; }
 
@@ -623,7 +603,8 @@
 
   function updateModalCountdown(){
     if(!modalCdEl) return;
-    if(!endD){
+
+    if(!endD || getCampaignState() === 'invalid'){
       modalCdEl.textContent = 'Endet in --';
       return;
     }
@@ -642,7 +623,11 @@
     if(!couponModal) return;
 
     // ✅ 不在活动期：绝不打开
-    if(!isCampaignActive()) return;
+    if(getCampaignState() !== 'active') return;
+
+    // ✅ 卡片按钮如果已禁用（卖光），也绝不打开
+    var btn = card.querySelector('[data-clv4-open-coupon]');
+    if(btn && btn.classList.contains('is-disabled')) return;
 
     var percent = card.getAttribute('data-clv4-percent') || '';
     var code = card.getAttribute('data-clv4-code') || '';
@@ -651,7 +636,6 @@
     if(modalSub) modalSub.textContent = percent ? ('Rabatt: ' + percent) : 'Rabatt';
     if(modalCodeEl) modalCodeEl.textContent = code ? code : '--';
 
-    // ✅ 正确带上折扣码跳转（Shopify 标准写法）
     if(modalCta) modalCta.href = '/discount/' + encodeURIComponent(code) + '?redirect=' + encodeURIComponent(redirect);
 
     updateModalCountdown();
@@ -667,16 +651,15 @@
   }
 
   root.querySelectorAll('[data-clv4-open-coupon]').forEach(function(btn){
-  btn.addEventListener('click', function(e){
-    if(btn.classList.contains('is-disabled')){
-      e.preventDefault();
-      return;
-    }
-    var card = e.currentTarget.closest('[data-clv4-card]');
-    if(card) openCouponModal(card);
+    btn.addEventListener('click', function(e){
+      if(btn.classList.contains('is-disabled')){
+        e.preventDefault();
+        return;
+      }
+      var card = e.currentTarget.closest('[data-clv4-card]');
+      if(card) openCouponModal(card);
+    });
   });
-});
-
 
   root.querySelectorAll('[data-clv4-close-coupon]').forEach(function(el){
     el.addEventListener('click', closeCouponModal);
@@ -718,20 +701,17 @@
   // ======================
   updateCountdown();
   updateQuotaAll();
-  updateButtonState();
-  updateModalCountdown();
 
-  // ✅ 每秒：倒计时 + 按钮状态 + 弹框倒计时（弹框开着时也会同步）
+  // ✅ 每秒：倒计时 + 重新计算每张卡（最多6张，非常轻）
   setInterval(function(){
     updateCountdown();
-    updateButtonState();
+    updateQuotaAll();
     if(couponModal && !couponModal.hidden) updateModalCountdown();
   }, 1000);
 
-  // 配额/进度：每 30 秒即可（更省）
-  setInterval(updateQuotaAll, 30000);
 })();
 </script>
+
 
 {% schema %}
 {
