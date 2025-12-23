@@ -667,14 +667,16 @@
   }
 
   root.querySelectorAll('[data-clv4-open-coupon]').forEach(function(btn){
-    btn.addEventListener('click', function(e){
-      // ✅ 按钮被禁用时，不响应
-      if(btn.disabled || btn.classList.contains('is-disabled')) return;
-
-      var card = e.currentTarget.closest('[data-clv4-card]');
-      if(card) openCouponModal(card);
-    });
+  btn.addEventListener('click', function(e){
+    if(btn.classList.contains('is-disabled')){
+      e.preventDefault();
+      return;
+    }
+    var card = e.currentTarget.closest('[data-clv4-card]');
+    if(card) openCouponModal(card);
   });
+});
+
 
   root.querySelectorAll('[data-clv4-close-coupon]').forEach(function(el){
     el.addEventListener('click', closeCouponModal);
