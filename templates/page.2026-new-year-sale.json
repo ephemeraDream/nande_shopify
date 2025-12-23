@@ -132,7 +132,7 @@
       "name": "Coupon Ladder Final V4",
       "settings": {
         "kicker": "Schnell sein – Codes sichern & sparen!",
-        "title": "Je schneller, desto mehr Rabatt – nur für Schnellentschlossene!",
+        "title": "Je schneller, desto mehr Rabatt",
         "desc": "<p>Klicke auf „Gutschein sichern“, kopiere den Code und gehe anschließend zum Checkout.</p>",
         "rules_text": "Regeln >",
         "rules_content": "<p>1) Gültig solange der Vorrat reicht.<br/>2) Nicht kombinierbar mit anderen Aktionen.<br/>3) Rabatt wird im Checkout angewendet.</p>",
