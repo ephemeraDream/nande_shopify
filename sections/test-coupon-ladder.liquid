@@ -524,6 +524,27 @@
     var qtyEl = card.querySelector('[data-clv4-qty]');
     var leftEl = card.querySelector('[data-clv4-left]');
     var barEl = card.querySelector('[data-clv4-bar]');
+        // ======================
+    // Button enable / disable logic
+    // ======================
+    var btn = card.querySelector('[data-clv4-open-coupon]');
+    if(!btn) return;
+
+    var now2 = new Date();
+    var isBeforeStart = startD && now2 < startD;
+    var isAfterEnd = endD && now2 >= endD;
+    var isSoldOut = left <= 0;
+
+    if(isBeforeStart || isAfterEnd || isSoldOut){
+      btn.classList.add('is-disabled');
+      btn.setAttribute('aria-disabled', 'true');
+      btn.setAttribute('tabindex', '-1');
+    }else{
+      btn.classList.remove('is-disabled');
+      btn.removeAttribute('aria-disabled');
+      btn.removeAttribute('tabindex');
+    }
+
 
     var now = new Date();
 
