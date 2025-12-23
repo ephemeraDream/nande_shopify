@@ -86,7 +86,7 @@
           "type": "tier",
           "settings": {
             "percent": "-50%",
-            "total_qty": 8,
+            "total_qty": 0,
             "speed_weight": 150,
             "coupon_code": "MD555",
             "redirect_url": "/collections/hohenverstellbarer-schreibtisch"
