@@ -79,20 +79,20 @@
         "text": "<p>Weihnachtliche Deals für dich！</p>"
       }
     },
-    "test_coupon_ladder_VawPMy": {
+    "test_coupon_ladder_CHcAzQ": {
       "type": "test-coupon-ladder",
       "blocks": {
-        "tier_cz74cc": {
+        "tier_HxKe3b": {
           "type": "tier",
           "settings": {
             "percent": "-50%",
-            "total_qty": 0,
-            "speed_weight": 150,
+            "total_qty": 8,
+            "speed_weight": 60,
             "coupon_code": "MD555",
-            "redirect_url": "/collections/hohenverstellbarer-schreibtisch"
+            "redirect_url": "/collections/standing-desks"
           }
         },
-        "tier_d3HMpg": {
+        "tier_LDW78B": {
           "type": "tier",
           "settings": {
             "percent": "-30%",
@@ -102,41 +102,41 @@
             "redirect_url": "/collections/standing-desks"
           }
         },
-        "tier_ejFgKU": {
+        "tier_meEBJp": {
           "type": "tier",
           "settings": {
             "percent": "-10%",
             "total_qty": 100,
-            "speed_weight": 140,
+            "speed_weight": 160,
             "coupon_code": "MD555",
             "redirect_url": "/collections/standing-desks"
           }
         },
-        "tier_xki7Bn": {
+        "tier_a4RTMa": {
           "type": "tier",
           "settings": {
             "percent": "-8%",
             "total_qty": 200,
-            "speed_weight": 255,
+            "speed_weight": 220,
             "coupon_code": "MD555",
             "redirect_url": "/collections/standing-desks"
           }
         }
       },
       "block_order": [
-        "tier_cz74cc",
-        "tier_d3HMpg",
-        "tier_ejFgKU",
-        "tier_xki7Bn"
+        "tier_HxKe3b",
+        "tier_LDW78B",
+        "tier_meEBJp",
+        "tier_a4RTMa"
       ],
       "name": "Coupon Ladder Final V4",
       "settings": {
-        "kicker": "",
-        "title": "Je schneller, desto mehr Rabatt",
+        "kicker": "Schnell sein – Codes sichern & sparen!",
+        "title": "Je schneller, desto mehr Rabatt – nur für Schnellentschlossene!",
         "desc": "<p>Klicke auf „Gutschein sichern“, kopiere den Code und gehe anschließend zum Checkout.</p>",
         "rules_text": "Regeln >",
-        "rules_content": "<p>1) Gültig solange der Vorrat reicht.<br/>2) Nicht kombinierbar mit anderen Aktionen.<br/>3) Rabatt wird im Checkout angewendet.</p>",
-        "start_at": "2025-12-22 00:00",
+        "rules_content": "<p>1) Gültig solange der Vorrat reicht.<br>2) Nicht kombinierbar mit anderen Aktionen.<br>3) Rabatt wird im Checkout angewendet.</p>",
+        "start_at": "2026-01-11 23:00",
         "end_at": "-",
         "duration_hours": 48,
         "fast_part_percent": 70,
@@ -156,6 +156,6 @@
   "order": [
     "main",
     "activity_products_tab_aUGewm",
-    "test_coupon_ladder_VawPMy"
+    "test_coupon_ladder_CHcAzQ"
   ]
 }
