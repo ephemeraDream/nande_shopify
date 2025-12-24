@@ -42,15 +42,6 @@
             "font_color": "#bdff00"
           }
         },
-        "img_with_text_amdJT7": {
-          "type": "img_with_text",
-          "disabled": true,
-          "settings": {
-            "text": "",
-            "link": "https://www.maidesite.de/blogs/news/weihnachts-und-neujahrsferien",
-            "font_color": "#bdff00"
-          }
-        },
         "img_with_text_QJDYxJ": {
           "type": "img_with_text",
           "settings": {
@@ -82,7 +73,6 @@
       "block_order": [
         "announcement_R3cx4w",
         "announcement-bar-0",
-        "img_with_text_amdJT7",
         "img_with_text_QJDYxJ",
         "img_with_text_K8NMwf",
         "countdown_77kmfi"
