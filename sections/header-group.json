@@ -38,8 +38,8 @@
           "type": "img_with_text",
           "disabled": true,
           "settings": {
-            "text": "<p>Weihnachts-Pause: Kein Versand 24.–26.12. & 1.1. | Mehr Info 👉</p>",
-            "link": "",
+            "text": "<p>Weihnachts-Pause: Kein Versand 24.–26.12. & 1.1. | <a href=\"https://www.maidesite.de/blogs/news/weihnachts-und-neujahrsferien\" title=\"weihnachts und neujahrsferien\">Mehr Info</a> 👉</p>",
+            "link": "https://www.maidesite.de/blogs/news/weihnachts-und-neujahrsferien",
             "font_color": "#bdff00"
           }
         },
