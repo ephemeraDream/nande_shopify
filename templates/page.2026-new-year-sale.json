@@ -151,11 +151,53 @@
         "accent_color": "#ff3b30",
         "text_color": "#ffffff"
       }
+    },
+    "bundle_fixed_test_sam_CUQXFt": {
+      "type": "bundle-fixed-test-sam",
+      "blocks": {
+        "product_FBTWtH": {
+          "type": "product",
+          "settings": {
+            "product": "maidesite-tischgestell-elektrisch-hohenverstellbar-t2-pro-plus",
+            "badge": ""
+          }
+        },
+        "product_6cnyPb": {
+          "type": "product",
+          "settings": {
+            "product": "maidesite-tischplatte-160-180-cm-grosse-diy-tischplatte-fur-zuhause-und-buro",
+            "badge": ""
+          }
+        },
+        "product_PMtyat": {
+          "type": "product",
+          "settings": {
+            "product": "maidesite-3-fach-tischsteckdose-mit-usb-c-und-a-1-8m-kabel-steckdosenleiste",
+            "badge": ""
+          }
+        }
+      },
+      "block_order": [
+        "product_FBTWtH",
+        "product_6cnyPb",
+        "product_PMtyat"
+      ],
+      "name": "Bundle Final Pro",
+      "settings": {
+        "kicker": "Anker x tomtoc Christmas Collaboration 🎄",
+        "subheading": "Power your adventures and protect your gear.",
+        "hero_image": "shopify://shop_images/5_-_-_2.jpg",
+        "heading": "Power Up Every Outdoor Escape",
+        "side_desc": "Save up to 30% on outdoor adventure gifts.",
+        "add_button_text": "Add to Cart",
+        "buy_button_text": "Buy Now"
+      }
     }
   },
   "order": [
     "main",
     "activity_products_tab_aUGewm",
-    "test_coupon_ladder_CHcAzQ"
+    "test_coupon_ladder_CHcAzQ",
+    "bundle_fixed_test_sam_CUQXFt"
   ]
 }
