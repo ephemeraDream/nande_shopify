@@ -157,6 +157,16 @@
       "name": "Bundle Final Pro",
       "settings": {}
     },
+    "collection_default_Ejq3Bx": {
+      "type": "collection-default",
+      "name": "collection default",
+      "settings": {
+        "title": "",
+        "text": "",
+        "collection_list": [],
+        "image_aspect_ratio": "1.33"
+      }
+    },
     "bundle_fixed_test_sam_8Hn7tH": {
       "type": "bundle-fixed-test-sam",
       "blocks": {
@@ -206,6 +216,7 @@
     "activity_products_tab_aUGewm",
     "test_coupon_ladder_CHcAzQ",
     "bundle_fixed_test_sam_CUQXFt",
+    "collection_default_Ejq3Bx",
     "bundle_fixed_test_sam_8Hn7tH"
   ]
 }
