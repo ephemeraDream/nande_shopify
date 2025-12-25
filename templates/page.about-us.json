@@ -235,6 +235,7 @@
         "timeline_4kYG32",
         "timeline_4kYG31"
       ],
+      "disabled": true,
       "name": "time_line",
       "settings": {
         "title": "Unsere Reise In Etappen",
