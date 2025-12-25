@@ -1,8 +1,8 @@
 {% comment %}
-  Multi-Bundle System - Pro Version
-  - Terms button only on the first bundle.
-  - Hero image fully fills the container without gaps.
-  - Multi-block support.
+  Multi-Bundle System V3 - Fixed Compare Price
+  - Terms only on the first block.
+  - Hero image fully fills container.
+  - Fixed missing strike-through (compare) prices.
 {% endcomment %}
 
 <section id="bundle-container-{{ section.id }}" class="multi-bundle-section">
@@ -11,7 +11,7 @@
       <div class="bundle-collab" id="bundle-{{ block.id }}" {{ block.shopify_attributes }}>
         <div class="bundle-container">
           
-          {% comment %} Header - Only show Terms on the FIRST block {% endcomment %}
+          {% comment %} Header {% endcomment %}
           <div class="bundle-header">
             <div class="bundle-header-left">
               <h2 class="bundle-main-title">{{ block.settings.kicker }}</h2>
@@ -28,7 +28,6 @@
           <div class="bundle-main-outer-border">
             <div class="bundle-main-content">
               
-              {% comment %} Left Hero - Fills container perfectly {% endcomment %}
               <div class="bundle-hero-side">
                 {% if block.settings.hero_image != blank %}
                   <div class="bundle-hero-box">
@@ -37,7 +36,6 @@
                 {% endif %}
               </div>
 
-              {% comment %} Right Products {% endcomment %}
               <div class="bundle-product-side">
                 <div class="bundle-side-header">
                   <h3 class="bundle-side-heading">{{ block.settings.heading }}</h3>
@@ -52,7 +50,7 @@
                     
                     {% if p %}
                       {% assign v = p.selected_or_first_available_variant %}
-                      <div class="bundle-card" data-bundle-item data-variant-id="{{ v.id }}" data-price="{{ v.price }}">
+                      <div class="bundle-card" data-bundle-item data-variant-id="{{ v.id }}" data-price="{{ v.price }}" data-compare-price="{{ v.compare_at_price | default: v.price }}">
                         <div class="bundle-card-top">
                           {% if block.settings[badge_id] != blank %}
                             <span class="bundle-card-badge">{{ block.settings[badge_id] }}</span>
@@ -71,7 +69,8 @@
                           <h4 class="bundle-prod-title">{{ p.title }}</h4>
                           <div class="bundle-card-price">
                             <span class="price-now" data-price-now></span>
-                            <span class="price-compare">{{ v.compare_at_price | money }}</span>
+                            {% comment %} 单个产品划线原价 {% endcomment %}
+                            <span class="price-compare" data-price-compare>{{ v.compare_at_price | money }}</span>
                           </div>
                         </div>
                       </div>
@@ -82,7 +81,12 @@
                 {% comment %} Summary Bar {% endcomment %}
                 <div class="bundle-summary-bar">
                   <div class="bundle-summary-left">
-                    <span class="total-now" data-total-now></span>
+                    <div class="bundle-total-box">
+                      <span class="total-label">Total:</span>
+                      <span class="total-now" data-total-now></span>
+                      {% comment %} 底部总价划线原价 {% endcomment %}
+                      <span class="total-old" data-total-compare></span>
+                    </div>
                     <span class="save-badge" data-save-wrap hidden><span data-save-pill></span></span>
                   </div>
                   <div class="bundle-summary-right">
@@ -96,7 +100,6 @@
         </div>
       </div>
 
-      {% comment %} Terms Modal - Only render once for the whole section {% endcomment %}
       {% if forloop.first %}
         <div class="bundle-modal" id="modal-{{ section.id }}" aria-hidden="true">
           <div class="bundle-modal-overlay" data-terms-close></div>
@@ -109,7 +112,6 @@
                 <li>Buy 2 items to get 20% off, or buy 3 or more items to get 25% off.</li>
                 <li>Discounts apply to full-price items only.</li>
                 <li>Excludes Gift Cards, Plus Membership and products from Tomtoc.</li>
-                <li>Cannot be combined with other discounts, coupons, or codes.</li>
               </ol>
             </div>
           </div>
@@ -124,33 +126,23 @@
 .bundle-collab { margin-bottom: 60px; }
 .bundle-container { max-width: 1400px; margin: 0 auto; padding: 0 20px; }
 
-/* Header */
 .bundle-header { display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 20px; }
 .bundle-main-title { font-size: 36px; font-weight: 800; margin: 0; letter-spacing: -1px; }
 .bundle-main-desc { font-size: 16px; opacity: 0.7; margin: 5px 0 0; }
-.bundle-terms-trigger { background: none; border: none; text-decoration: underline; cursor: pointer; font-size: 14px; font-weight: 500; }
+.bundle-terms-trigger { background: none; border: none; text-decoration: underline; cursor: pointer; font-size: 14px; }
 
-/* Outer Border */
 .bundle-main-outer-border { border: 1px solid #000; overflow: hidden; background: #fff; }
 .bundle-main-content { display: flex; align-items: stretch; }
 
-/* Hero Side - No white spaces */
-.bundle-hero-side { flex: 0 0 30%; border-right: 1px solid #000; position: relative; }
-.bundle-hero-box { position: absolute; inset: 0; width: 100%; height: 100%; }
-.bundle-hero-img { 
-  width: 100%; 
-  height: 100%; 
-  object-fit: cover; /* 核心：填满高度并自动对齐宽度，不留死角 */
-  display: block; 
-}
+.bundle-hero-side { flex: 0 0 30%; border-right: 1px solid #000; position: relative; min-height: 400px; }
+.bundle-hero-box { position: absolute; inset: 0; }
+.bundle-hero-img { width: 100%; height: 100%; object-fit: cover; display: block; }
 
-/* Product Side */
 .bundle-product-side { flex: 1; display: flex; flex-direction: column; }
 .bundle-side-header { padding: 25px 20px; }
-.bundle-side-heading { font-size: 24px; font-weight: 700; margin: 0 0 5px; }
-.bundle-side-sub { font-size: 14px; opacity: 0.6; margin: 0; }
+.bundle-side-heading { font-size: 24px; font-weight: 700; margin: 0; }
+.bundle-side-sub { font-size: 14px; opacity: 0.6; margin: 5px 0 0; }
 
-/* Grid */
 .bundle-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: #000; border-top: 1px solid #000; border-bottom: 1px solid #000; }
 .bundle-card { background: #fff; padding: 15px; display: flex; flex-direction: column; }
 
@@ -159,7 +151,7 @@
 
 .bundle-check-wrapper { position: relative; width: 18px; height: 18px; }
 .bundle-hidden-check { opacity: 0; position: absolute; }
-.bundle-styled-check { display: block; width: 18px; height: 18px; border: 1.5px solid #1a2b56; border-radius: 2px; cursor: pointer; transition: 0.2s; }
+.bundle-styled-check { display: block; width: 18px; height: 18px; border: 1.5px solid #1a2b56; border-radius: 2px; cursor: pointer; }
 .bundle-hidden-check:checked + .bundle-styled-check { background: #1a2b56; }
 .bundle-hidden-check:checked + .bundle-styled-check::after {
   content: ''; position: absolute; left: 6px; top: 2px; width: 4px; height: 8px;
@@ -168,17 +160,22 @@
 
 .bundle-card-media { width: 100%; aspect-ratio: 4 / 3; display: flex; align-items: center; justify-content: center; background: #f4f4f4; margin-bottom: 15px; }
 .bundle-prod-img { max-width: 90%; max-height: 90%; object-fit: contain; }
-.bundle-prod-title { font-size: 13px; font-weight: 600; margin: 0 0 10px; min-height: 2.8em; line-height: 1.4; }
+.bundle-prod-title { font-size: 13px; font-weight: 600; margin: 0 0 10px; min-height: 2.8em; line-height: 1.4; overflow: hidden; }
 
-/* Summary Bar */
+.bundle-card-price { display: flex; align-items: baseline; gap: 8px; }
+.price-now { font-weight: 800; font-size: 16px; color: #000; }
+.price-compare { text-decoration: line-through; opacity: 0.3; font-size: 13px; }
+
 .bundle-summary-bar { display: flex; justify-content: space-between; align-items: center; padding: 20px; margin-top: auto; }
+.bundle-total-box { display: flex; align-items: baseline; gap: 8px; }
+.total-label { font-size: 16px; font-weight: 600; }
 .total-now { font-size: 24px; font-weight: 800; color: #1a2b56; }
+.total-old { text-decoration: line-through; opacity: 0.3; font-size: 16px; }
 .save-badge { background: #d92d20; color: #fff; padding: 3px 12px; border-radius: 20px; font-size: 12px; font-weight: 700; margin-left: 10px; }
 
-.btn-add, .btn-buy { padding: 12px 25px; font-weight: 700; cursor: pointer; border: 2px solid #000; transition: 0.3s; }
+.btn-add, .btn-buy { padding: 12px 25px; font-weight: 700; cursor: pointer; border: 2px solid #000; transition: 0.3s; font-size: 14px; }
 .btn-buy { background: #000; color: #fff; margin-left: 10px; }
 
-/* Mobile */
 @media (max-width: 1024px) {
   .bundle-main-content { flex-direction: column; }
   .bundle-hero-side { border-right: none; border-bottom: 1px solid #000; width: 100%; height: 350px; flex: none; }
@@ -191,7 +188,6 @@
   .btn-add, .btn-buy { flex: 1; text-align: center; }
 }
 
-/* Modal */
 .bundle-modal { position: fixed; inset: 0; z-index: 10000; display: flex; align-items: center; justify-content: center; visibility: hidden; opacity: 0; transition: 0.3s; }
 .bundle-modal[aria-hidden="false"] { visibility: visible; opacity: 1; }
 .bundle-modal-overlay { position: absolute; inset: 0; background: rgba(0,0,0,0.5); backdrop-filter: blur(4px); }
@@ -208,6 +204,7 @@
   const initBundle = (el) => {
     const items = el.querySelectorAll('[data-bundle-item]');
     const totalNow = el.querySelector('[data-total-now]');
+    const totalOld = el.querySelector('[data-total-compare]');
     const saveWrap = el.querySelector('[data-save-wrap]');
     const savePill = el.querySelector('[data-save-pill]');
 
@@ -221,14 +218,19 @@
         item.querySelector('[data-price-now]').textContent = formatMoney(price);
       });
 
+      // 阶梯折扣逻辑
       let discount = count === 2 ? 0.20 : (count >= 3 ? 0.25 : 0);
-      let final = rawTotal * (1 - discount);
+      let final = Math.round(rawTotal * (1 - discount));
+      
       totalNow.textContent = formatMoney(final);
       
       if (discount > 0) {
+        totalOld.textContent = formatMoney(rawTotal);
+        totalOld.style.display = 'inline';
         saveWrap.hidden = false;
         savePill.textContent = `Save ${formatMoney(rawTotal - final)}`;
       } else {
+        totalOld.style.display = 'none';
         saveWrap.hidden = true;
       }
     };
@@ -253,7 +255,7 @@
 
   document.querySelectorAll('.bundle-collab').forEach(initBundle);
 
-  // Term Modal Global logic
+  // Modal logic
   const termsTrigger = document.querySelector('[data-terms-open]');
   const modal = document.querySelector('.bundle-modal');
   if (termsTrigger && modal) {
@@ -267,7 +269,7 @@
 
 {% schema %}
 {
-  "name": "Multi Bundle System V2",
+  "name": "Multi Bundle System V3",
   "settings": [],
   "blocks": [
     {
@@ -290,6 +292,6 @@
       ]
     }
   ],
-  "presets": [{ "name": "Multi Bundle System V2" }]
+  "presets": [{ "name": "Multi Bundle System V3" }]
 }
 {% endschema %}
