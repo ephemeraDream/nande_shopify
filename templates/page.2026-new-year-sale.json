@@ -154,50 +154,58 @@
     },
     "bundle_fixed_test_sam_CUQXFt": {
       "type": "bundle-fixed-test-sam",
+      "name": "Bundle Final Pro",
+      "settings": {}
+    },
+    "bundle_fixed_test_sam_8Hn7tH": {
+      "type": "bundle-fixed-test-sam",
       "blocks": {
-        "product_FBTWtH": {
-          "type": "product",
+        "bundle_group_9MTEMW": {
+          "type": "bundle_group",
           "settings": {
-            "product": "maidesite-tischgestell-elektrisch-hohenverstellbar-t2-pro-plus",
-            "badge": ""
+            "kicker": "Limited Collaboration 🎄",
+            "subheading": "Power and protection combined.",
+            "hero_image": "shopify://shop_images/5_-_-_2.jpg",
+            "heading": "Bundle Package",
+            "side_desc": "",
+            "product_1": "maidesite-tischgestell-elektrisch-hohenverstellbar-t2-pro-plus",
+            "badge_1": "",
+            "product_2": "maidesite-tischplatte-160-180-cm-grosse-diy-tischplatte-fur-zuhause-und-buro",
+            "badge_2": "",
+            "product_3": "maidesite-3-fach-tischsteckdose-mit-usb-c-und-a-1-8m-kabel-steckdosenleiste",
+            "badge_3": ""
           }
         },
-        "product_6cnyPb": {
-          "type": "product",
+        "bundle_group_PYKcNW": {
+          "type": "bundle_group",
           "settings": {
-            "product": "maidesite-tischplatte-160-180-cm-grosse-diy-tischplatte-fur-zuhause-und-buro",
-            "badge": ""
-          }
-        },
-        "product_PMtyat": {
-          "type": "product",
-          "settings": {
-            "product": "maidesite-3-fach-tischsteckdose-mit-usb-c-und-a-1-8m-kabel-steckdosenleiste",
-            "badge": ""
+            "kicker": "Limited Collaboration 🎄",
+            "subheading": "Power and protection combined.",
+            "hero_image": "shopify://shop_images/5_-_-_3.jpg",
+            "heading": "Bundle Package",
+            "side_desc": "",
+            "product_1": "maidesite-tischgestell-elektrisch-hohenverstellbar-t2-pro-plus",
+            "badge_1": "",
+            "product_2": "maidesite-tischplatte-160-180-cm-grosse-diy-tischplatte-fur-zuhause-und-buro",
+            "badge_2": "",
+            "product_3": "maidesite-serpentine-kabelrohr",
+            "badge_3": ""
           }
         }
       },
       "block_order": [
-        "product_FBTWtH",
-        "product_6cnyPb",
-        "product_PMtyat"
+        "bundle_group_9MTEMW",
+        "bundle_group_PYKcNW"
       ],
-      "name": "Bundle Final Pro",
-      "settings": {
-        "kicker": "Maidesite Bundle Rabatt",
-        "subheading": "Power your adventures and protect your gear.",
-        "hero_image": "shopify://shop_images/5_-_-_2.jpg",
-        "heading": "Power Up Every Workspace Escape",
-        "side_desc": "Save up to 30% on outdoor adventure gifts.",
-        "add_button_text": "Add to Cart",
-        "buy_button_text": "Buy Now"
-      }
+      "name": "Multi Bundle System V2",
+      "settings": {}
     }
   },
   "order": [
     "main",
     "activity_products_tab_aUGewm",
     "test_coupon_ladder_CHcAzQ",
-    "bundle_fixed_test_sam_CUQXFt"
+    "bundle_fixed_test_sam_CUQXFt",
+    "bundle_fixed_test_sam_8Hn7tH"
   ]
 }
