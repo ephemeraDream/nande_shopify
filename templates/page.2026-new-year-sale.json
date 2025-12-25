@@ -157,14 +157,30 @@
       "name": "Bundle Final Pro",
       "settings": {}
     },
-    "collection_default_Ejq3Bx": {
-      "type": "collection-default",
-      "name": "collection default",
+    "activity_products_tab_b9qqDq": {
+      "type": "activity-products-tab",
+      "blocks": {
+        "tab_YjUhC3": {
+          "type": "tab",
+          "settings": {
+            "title": "",
+            "product_list": [
+              "100-gift-card",
+              "500-gift-card",
+              "gift-card",
+              "800-gift-card"
+            ]
+          }
+        }
+      },
+      "block_order": [
+        "tab_YjUhC3"
+      ],
+      "name": "activity products tab",
       "settings": {
+        "specId": "",
         "title": "",
-        "text": "",
-        "collection_list": [],
-        "image_aspect_ratio": "1.33"
+        "text": ""
       }
     },
     "bundle_fixed_test_sam_8Hn7tH": {
@@ -216,7 +232,7 @@
     "activity_products_tab_aUGewm",
     "test_coupon_ladder_CHcAzQ",
     "bundle_fixed_test_sam_CUQXFt",
-    "collection_default_Ejq3Bx",
+    "activity_products_tab_b9qqDq",
     "bundle_fixed_test_sam_8Hn7tH"
   ]
 }
