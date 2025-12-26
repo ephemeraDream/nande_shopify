@@ -348,6 +348,7 @@
         "faq_AXAcgA",
         "faq_W9Mzyn"
       ],
+      "disabled": true,
       "custom_css": [
         ".faq_simple_section {background-color: transparent; padding-bottom: 12rem;}"
       ],
