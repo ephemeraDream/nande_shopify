@@ -67,7 +67,11 @@
       "settings": {
         "title": "FüLle Dieses Formular Aus, Um Unsere Zusammenarbeit Zu Starten.",
         "image": "shopify://shop_images/pe_01.webp",
-        "desc": ""
+        "desc": "",
+        "btn_text": "Absenden",
+        "mail_placeholder": "Deine E-Mail",
+        "type_placeholder": "Deine Presse-/Blog-Seite",
+        "message_placeholder": "Nachricht (optional)"
       }
     },
     "brand_swiper": {
@@ -76,34 +80,7 @@
         "swiper_01": {
           "type": "swiper",
           "settings": {
-            "logo": "shopify://shop_images/pe_logo_01.webp",
-            "title": "Kostenloser und Schneller Versand",
-            "description": "<p>Normalerweise beträgt die optimale Schreibtischhöhe im Sitzen Ihre Körpergröße x 0,4 und im Stehen Ihre Körpergröße x 0,62. Höhenverstellbarer Schreibtisch mit 2 stufigen Säulen ist nur für die Körpergröße von 1,75-1,95 m geeignet. </p>",
-            "link": ""
-          }
-        },
-        "swiper_02": {
-          "type": "swiper",
-          "settings": {
-            "logo": "shopify://shop_images/pe_logo_01.webp",
-            "title": "Kostenloser und Schneller Versand",
-            "description": "<p>Normalerweise beträgt die optimale Schreibtischhöhe im Sitzen Ihre Körpergröße x 0,4 und im Stehen Ihre Körpergröße x 0,62. Höhenverstellbarer Schreibtisch mit 2 stufigen Säulen ist nur für die Körpergröße von 1,75-1,95 m geeignet. </p>",
-            "link": ""
-          }
-        },
-        "swiper_03": {
-          "type": "swiper",
-          "settings": {
-            "logo": "shopify://shop_images/pe_logo_01.webp",
-            "title": "Kostenloser und Schneller Versand",
-            "description": "<p>Normalerweise beträgt die optimale Schreibtischhöhe im Sitzen Ihre Körpergröße x 0,4 und im Stehen Ihre Körpergröße x 0,62. Höhenverstellbarer Schreibtisch mit 2 stufigen Säulen ist nur für die Körpergröße von 1,75-1,95 m geeignet. </p>",
-            "link": ""
-          }
-        },
-        "swiper_04": {
-          "type": "swiper",
-          "settings": {
-            "logo": "shopify://shop_images/pe_logo_01.webp",
+            "logo": "shopify://shop_images/lQLPJw279FHv_n1QzQETsOmcD6G94ZKFBfFXAvmUVAA_275_80.png",
             "title": "Kostenloser und Schneller Versand",
             "description": "<p>Normalerweise beträgt die optimale Schreibtischhöhe im Sitzen Ihre Körpergröße x 0,4 und im Stehen Ihre Körpergröße x 0,62. Höhenverstellbarer Schreibtisch mit 2 stufigen Säulen ist nur für die Körpergröße von 1,75-1,95 m geeignet. </p>",
             "link": ""
@@ -112,7 +89,16 @@
         "swiper_05": {
           "type": "swiper",
           "settings": {
-            "logo": "shopify://shop_images/pe_logo_01.webp",
+            "logo": "shopify://shop_images/appgefahren.png",
+            "title": "Kostenloser und Schneller Versand",
+            "description": "<p>Normalerweise beträgt die optimale Schreibtischhöhe im Sitzen Ihre Körpergröße x 0,4 und im Stehen Ihre Körpergröße x 0,62. Höhenverstellbarer Schreibtisch mit 2 stufigen Säulen ist nur für die Körpergröße von 1,75-1,95 m geeignet. </p>",
+            "link": ""
+          }
+        },
+        "swiper_02": {
+          "type": "swiper",
+          "settings": {
+            "logo": "shopify://shop_images/logo-ifun.de_ccc843f2-395b-49a5-a396-21c3e6eff12c.png",
             "title": "Kostenloser und Schneller Versand",
             "description": "<p>Normalerweise beträgt die optimale Schreibtischhöhe im Sitzen Ihre Körpergröße x 0,4 und im Stehen Ihre Körpergröße x 0,62. Höhenverstellbarer Schreibtisch mit 2 stufigen Säulen ist nur für die Körpergröße von 1,75-1,95 m geeignet. </p>",
             "link": ""
@@ -121,7 +107,25 @@
         "swiper_06": {
           "type": "swiper",
           "settings": {
-            "logo": "shopify://shop_images/pe_logo_01.webp",
+            "logo": "shopify://shop_images/de.png",
+            "title": "Kostenloser und Schneller Versand",
+            "description": "<p>Normalerweise beträgt die optimale Schreibtischhöhe im Sitzen Ihre Körpergröße x 0,4 und im Stehen Ihre Körpergröße x 0,62. Höhenverstellbarer Schreibtisch mit 2 stufigen Säulen ist nur für die Körpergröße von 1,75-1,95 m geeignet. </p>",
+            "link": ""
+          }
+        },
+        "swiper_03": {
+          "type": "swiper",
+          "settings": {
+            "logo": "shopify://shop_images/heise.png",
+            "title": "Kostenloser und Schneller Versand",
+            "description": "<p>Normalerweise beträgt die optimale Schreibtischhöhe im Sitzen Ihre Körpergröße x 0,4 und im Stehen Ihre Körpergröße x 0,62. Höhenverstellbarer Schreibtisch mit 2 stufigen Säulen ist nur für die Körpergröße von 1,75-1,95 m geeignet. </p>",
+            "link": ""
+          }
+        },
+        "swiper_04": {
+          "type": "swiper",
+          "settings": {
+            "logo": "shopify://shop_images/coupons-de-sparen-kann-so-einfach-sein-logo-weinstadt.jpg",
             "title": "Kostenloser und Schneller Versand",
             "description": "<p>Normalerweise beträgt die optimale Schreibtischhöhe im Sitzen Ihre Körpergröße x 0,4 und im Stehen Ihre Körpergröße x 0,62. Höhenverstellbarer Schreibtisch mit 2 stufigen Säulen ist nur für die Körpergröße von 1,75-1,95 m geeignet. </p>",
             "link": ""
@@ -139,13 +143,14 @@
       },
       "block_order": [
         "swiper_01",
+        "swiper_05",
         "swiper_02",
+        "swiper_06",
         "swiper_03",
         "swiper_04",
-        "swiper_05",
-        "swiper_06",
         "swiper_07"
       ],
+      "disabled": true,
       "custom_css": [
         ".brand_swiper {background-color: transparent;}"
       ],
@@ -187,6 +192,7 @@
         "swiper_mexwM6",
         "swiper_xWLxVC"
       ],
+      "disabled": true,
       "custom_css": [
         ".celebrity_swiper {background-color: transparent;}"
       ],
@@ -231,6 +237,7 @@
         "foldtext_HWP39G",
         "foldtext_iGWkAX"
       ],
+      "disabled": true,
       "custom_css": [
         ".img_with_foldtext_title {text-align: left;}"
       ],
@@ -306,7 +313,7 @@
       "name": "featured_program",
       "settings": {
         "title": "<p>So Verdienst Du Mit Dem Maidesite<br> Influencer Program</p>",
-        "description": "<p>We work with the afiliate network shareAsale. Visit their network, search for flexispot(1D:68890) on ShareAsale,then submit an afiliate request.<br> You can also send proposal to: rita@flexispot.com. Once it approved, it's easy to earn commission by referring shoppers.</p>",
+        "description": "Wie funktioniert Ihr Affiliate-Programm?\nWir arbeiten mit dem Affiliate-Netzwerk Impact zusammen. Besuchen Sie die Plattform und suchen Sie dort nach Maidesite (ID: 6061752). Reichen Sie Ihre Anfrage zur Teilnahme am Partnerprogramm ein.\nAlternativ können Sie Ihren Vorschlag auch per E-Mail an marketing1@maidesite.de senden.\nNach der Freigabe können Sie ganz einfach mit Produktempfehlungen Provisionen verdienen.\nSie können die Details auf dieser Seite einsehen: https://www.maidesite.de/en/pages/influencer-program",
         "btn_text": "Join Us",
         "btn_link": ""
       }
@@ -349,9 +356,11 @@
         "spec_id": "",
         "heading": "<p>FAQ</p>",
         "text": "<p>Häufig gestellte Fragen</p>",
-        "show_btn": false,
         "learn_more": false,
+        "show_btn": false,
+        "more_faqs_link": "",
         "contact_us": false,
+        "contact_us_link": "",
         "padding_top": 120,
         "padding_bottom": 120,
         "background_color": "rgba(0,0,0,0)"
