@@ -19,6 +19,100 @@
         "custom_breadcrumb": ""
       }
     },
+    "contact_form_five_LttC4G": {
+      "type": "contact-form-five",
+      "blocks": {
+        "custom_field_9NWdVA": {
+          "type": "custom_field",
+          "settings": {
+            "field_name": "",
+            "field_type": "text",
+            "placeholder": "Link zu deinem Social-Media-Kanal",
+            "required": true,
+            "rows": 4
+          }
+        },
+        "dropdown_4DWgEU": {
+          "type": "dropdown",
+          "settings": {
+            "key": "Ihr Land",
+            "label": "Ihr Land",
+            "field_name": "Ihr Land",
+            "required": false
+          }
+        },
+        "group_TLimGk": {
+          "type": "group",
+          "settings": {
+            "dropdown_key": "Ihr Land",
+            "label": "Ihr Land",
+            "key": "Ihr Land"
+          }
+        },
+        "option_k9Ldt9": {
+          "type": "option",
+          "settings": {
+            "group_key": "Ihr Land",
+            "label": "Deutschland",
+            "value": "Deutschland"
+          }
+        },
+        "option_q3Aipm": {
+          "type": "option",
+          "settings": {
+            "group_key": "Ihr Land",
+            "label": "Vereinigtes Königreich",
+            "value": "Vereinigtes Königreich"
+          }
+        },
+        "option_mXEHkM": {
+          "type": "option",
+          "settings": {
+            "group_key": "Ihr Land",
+            "label": "Frankreich",
+            "value": "Frankreich"
+          }
+        },
+        "option_bcaXyW": {
+          "type": "option",
+          "settings": {
+            "group_key": "Ihr Land",
+            "label": "Spanien",
+            "value": "Spanien"
+          }
+        }
+      },
+      "block_order": [
+        "custom_field_9NWdVA",
+        "dropdown_4DWgEU",
+        "group_TLimGk",
+        "option_k9Ldt9",
+        "option_q3Aipm",
+        "option_mXEHkM",
+        "option_bcaXyW"
+      ],
+      "name": "Contact Form Five",
+      "settings": {
+        "style": "style1",
+        "title": "",
+        "image": "shopify://shop_images/pe_01.webp",
+        "desc": "",
+        "text_content": "",
+        "btn_text": "Absenden",
+        "success_message": "Your message has been sent successfully.",
+        "error_message": "There was an error sending the form. Please check your input.",
+        "show_email": true,
+        "mail_placeholder": "Email*",
+        "show_company": false,
+        "company_placeholder": "Company Name",
+        "show_name": false,
+        "name_placeholder": "Name",
+        "show_phone": false,
+        "phone_placeholder": "Phone",
+        "show_message": true,
+        "message_placeholder": "Kooperationsidee"
+      }
+    },
     "contact_form_four": {
       "type": "contact-form-four",
       "blocks": {
@@ -63,6 +157,7 @@
         "dropdown_MqfBFN",
         "group_BtbHgz"
       ],
+      "disabled": true,
       "name": "contact_form_four",
       "settings": {
         "title": "FüLle Dieses Formular Aus, Um Unsere Zusammenarbeit Zu Starten.",
@@ -370,6 +465,7 @@
   },
   "order": [
     "breadcrumbs",
+    "contact_form_five_LttC4G",
     "contact_form_four",
     "brand_swiper",
     "celebrity_swiper_aGymw9",
