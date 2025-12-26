@@ -49,6 +49,14 @@
             "key": "Ihr Land"
           }
         },
+        "group_RzBymd": {
+          "type": "group",
+          "settings": {
+            "dropdown_key": "Ihr Land",
+            "label": "Ihr Land",
+            "key": "Ihr Land"
+          }
+        },
         "option_k9Ldt9": {
           "type": "option",
           "settings": {
@@ -86,6 +94,7 @@
         "custom_field_9NWdVA",
         "dropdown_4DWgEU",
         "group_TLimGk",
+        "group_RzBymd",
         "option_k9Ldt9",
         "option_q3Aipm",
         "option_mXEHkM",
@@ -408,7 +417,7 @@
       "name": "featured_program",
       "settings": {
         "title": "<p>So Verdienst Du Mit Dem Maidesite<br> Influencer Program</p>",
-        "description": "Wie funktioniert Ihr Affiliate-Programm?\nWir arbeiten mit dem Affiliate-Netzwerk Impact zusammen. Besuchen Sie die Plattform und suchen Sie dort nach Maidesite (ID: 6061752). Reichen Sie Ihre Anfrage zur Teilnahme am Partnerprogramm ein.\nAlternativ können Sie Ihren Vorschlag auch per E-Mail an marketing1@maidesite.de senden.\nNach der Freigabe können Sie ganz einfach mit Produktempfehlungen Provisionen verdienen.\nSie können die Details auf dieser Seite einsehen: https://www.maidesite.de/en/pages/influencer-program",
+        "description": "Wie funktioniert Ihr Affiliate-Programm?\nWir arbeiten mit dem Affiliate-Netzwerk Impact zusammen. Besuchen Sie die Plattform und suchen Sie dort nach Maidesite (ID: 6061752). Reichen Sie Ihre Anfrage zur Teilnahme am Partnerprogramm ein.\nAlternativ können Sie Ihren Vorschlag auch per E-Mail an marketing1@maidesite.de senden.\nNach der Freigabe können Sie ganz einfach mit Produktempfehlungen Provisionen verdienen.",
         "btn_text": "Begleiten Sie uns",
         "btn_link": "https://app.impact.com/campaign-campaign-info-v2/Maidesite-DE.brand"
       }
