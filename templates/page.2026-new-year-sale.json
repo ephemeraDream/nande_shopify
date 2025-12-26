@@ -152,36 +152,22 @@
         "text_color": "#ffffff"
       }
     },
+    "activity_products_normal_trrLmA": {
+      "type": "activity-products-normal",
+      "name": "activity products normal",
+      "settings": {
+        "specId": "",
+        "style": "1",
+        "title": "<p><strong>Spend Less, Gift More This New Year</strong></p>",
+        "text": "<p>The easiest gift you'll give this year.</p>",
+        "product_list": [],
+        "rule": ""
+      }
+    },
     "bundle_fixed_test_sam_CUQXFt": {
       "type": "bundle-fixed-test-sam",
       "name": "Bundle Final Pro",
       "settings": {}
-    },
-    "activity_products_tab_b9qqDq": {
-      "type": "activity-products-tab",
-      "blocks": {
-        "tab_YjUhC3": {
-          "type": "tab",
-          "settings": {
-            "title": "",
-            "product_list": [
-              "100-gift-card",
-              "500-gift-card",
-              "gift-card",
-              "800-gift-card"
-            ]
-          }
-        }
-      },
-      "block_order": [
-        "tab_YjUhC3"
-      ],
-      "name": "activity products tab",
-      "settings": {
-        "specId": "",
-        "title": "",
-        "text": ""
-      }
     },
     "bundle_fixed_test_sam_8Hn7tH": {
       "type": "bundle-fixed-test-sam",
@@ -231,8 +217,8 @@
     "main",
     "activity_products_tab_aUGewm",
     "test_coupon_ladder_CHcAzQ",
+    "activity_products_normal_trrLmA",
     "bundle_fixed_test_sam_CUQXFt",
-    "activity_products_tab_b9qqDq",
     "bundle_fixed_test_sam_8Hn7tH"
   ]
 }
