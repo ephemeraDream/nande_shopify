@@ -160,7 +160,12 @@
         "style": "1",
         "title": "<p><strong>Spend Less, Gift More This New Year</strong></p>",
         "text": "<p>The easiest gift you'll give this year.</p>",
-        "product_list": [],
+        "product_list": [
+          "100-gift-card",
+          "500-gift-card",
+          "gift-card",
+          "800-gift-card"
+        ],
         "rule": ""
       }
     },
