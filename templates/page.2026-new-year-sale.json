@@ -136,7 +136,7 @@
         "desc": "<p>Klicke auf „Gutschein sichern“, kopiere den Code und gehe anschließend zum Checkout.</p>",
         "rules_text": "Regeln >",
         "rules_content": "<p>1) Gültig solange der Vorrat reicht.<br/>2) Nicht kombinierbar mit anderen Aktionen.<br/>3) Rabatt wird im Checkout angewendet.</p>",
-        "start_at": "2025-12-25 23:00",
+        "start_at": "2025-12-28 23:00",
         "end_at": "-",
         "duration_hours": 48,
         "fast_part_percent": 70,
@@ -233,7 +233,7 @@
             "photo": "shopify://shop_images/c466df9df7a57088d4dfe9ee7c97e6cb.jpg",
             "primary_color": "",
             "text_color": "#000000",
-            "text_field_border_color": "#C9CDD4",
+            "text_field_border_color": "#c9cdd4",
             "background": "#bdff00"
           }
         }
