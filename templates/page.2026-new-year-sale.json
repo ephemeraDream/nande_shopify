@@ -169,11 +169,6 @@
         "rule": ""
       }
     },
-    "bundle_fixed_test_sam_CUQXFt": {
-      "type": "bundle-fixed-test-sam",
-      "name": "Bundle Final Pro",
-      "settings": {}
-    },
     "bundle_fixed_test_sam_8Hn7tH": {
       "type": "bundle-fixed-test-sam",
       "blocks": {
@@ -216,6 +211,39 @@
       ],
       "name": "Multi Bundle System V2",
       "settings": {}
+    },
+    "custom_liquid_xHtRYB": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid": "",
+        "color_scheme": "",
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "1766979169edcc032a": {
+      "type": "apps",
+      "blocks": {
+        "loox_reviews_loox_referrals_section_ahdxMC": {
+          "type": "shopify://apps/loox-reviews/blocks/loox-referrals-section/5c3b337f-fd14-4df5-b1d6-80ec13e6e28e",
+          "settings": {
+            "max_width": 1100,
+            "layout": "with-photo",
+            "photo": "shopify://shop_images/c466df9df7a57088d4dfe9ee7c97e6cb.jpg",
+            "primary_color": "",
+            "text_color": "#000000",
+            "text_field_border_color": "#C9CDD4",
+            "background": "#bdff00"
+          }
+        }
+      },
+      "block_order": [
+        "loox_reviews_loox_referrals_section_ahdxMC"
+      ],
+      "settings": {
+        "include_margins": true
+      }
     }
   },
   "order": [
@@ -223,7 +251,8 @@
     "activity_products_tab_aUGewm",
     "test_coupon_ladder_CHcAzQ",
     "activity_products_normal_trrLmA",
-    "bundle_fixed_test_sam_CUQXFt",
-    "bundle_fixed_test_sam_8Hn7tH"
+    "bundle_fixed_test_sam_8Hn7tH",
+    "custom_liquid_xHtRYB",
+    "1766979169edcc032a"
   ]
 }
