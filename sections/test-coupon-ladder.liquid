@@ -119,7 +119,6 @@
       <div class="clv4-panel-head">
         <div class="clv4-panel-title">{{ section.settings.coupon_modal_title }}</div>
         <div class="clv4-panel-sub" data-clv4-modal-sub>Rabatt: --</div>
-        <!-- ✅ 同步总倒计时(弹框内) -->
         <div class="clv4-modal-countdown" data-clv4-modal-countdown>Endet in --</div>
       </div>
 
@@ -194,7 +193,6 @@
   #coupon-ladder-{{ sid }} .clv4-time-row{ display:flex; gap:10px; font-size: 13px; color: var(--muted); margin: 4px 0; }
   #coupon-ladder-{{ sid }} .clv4-time-label{ min-width: 44px; opacity:.95; }
 
-  /* countdown: desktop single line */
   #coupon-ladder-{{ sid }} .clv4-cd-boxes{
     display:flex;
     gap:10px;
@@ -214,10 +212,9 @@
   #coupon-ladder-{{ sid }} .clv4-cd-box b{ display:block; font-size: 18px; letter-spacing:.5px; color:#fff; }
   #coupon-ladder-{{ sid }} .clv4-cd-box span{ font-size: 12px; color: var(--muted); }
 
-  /* Ladder */
   #coupon-ladder-{{ sid }} .clv4-ladder{
     display:flex;
-    align-items:flex-end; /* bottom aligned */
+    align-items:flex-end;
     gap: 14px;
     width: 100%;
   }
@@ -284,11 +281,12 @@
     justify-content:center;
   }
   #coupon-ladder-{{ sid }} .clv4-btn.is-disabled{
-  background: rgba(255,255,255,.4);
-  color: rgba(0,0,0,.45);
-  cursor: not-allowed;
-  pointer-events: none;
-}
+    background: rgba(255,255,255,.35) !important;
+    color: rgba(0,0,0,.55) !important;
+    cursor: not-allowed !important;
+    pointer-events: none !important;
+    opacity: .75;
+  }
   #coupon-ladder-{{ sid }} .clv4-btn-text{
     font-weight: 900;
     font-size: clamp(12px, 1.05vw, 16px);
@@ -296,16 +294,6 @@
     white-space: nowrap;
   }
 
-  /* ✅ 未开始/已结束:灰色禁用、不可点击、无抓手 */
-  #coupon-ladder-{{ sid }} .clv4-btn.is-disabled{
-    background: rgba(255,255,255,.35) !important;
-    color: rgba(0,0,0,.55) !important;
-    cursor: not-allowed !important;
-    pointer-events: none !important;
-    opacity: .75;
-  }
-
-  /* Step heights (desktop) */
   #coupon-ladder-{{ sid }} .clv4-level-1{ min-height: 230px; }
   #coupon-ladder-{{ sid }} .clv4-level-2{ min-height: 210px; }
   #coupon-ladder-{{ sid }} .clv4-level-3{ min-height: 195px; }
@@ -313,7 +301,6 @@
   #coupon-ladder-{{ sid }} .clv4-level-5{ min-height: 172px; }
   #coupon-ladder-{{ sid }} .clv4-level-6{ min-height: 164px; }
 
-  /* Modal 通用样式 */
   #coupon-ladder-{{ sid }} .clv4-modal[hidden]{ display:none; }
   #coupon-ladder-{{ sid }} .clv4-modal{
     position:fixed; inset:0; z-index:9999;
@@ -353,14 +340,12 @@
   #coupon-ladder-{{ sid }} .clv4-panel-sub{ margin-top:6px; color:rgba(255,255,255,.78); font-size:13px; }
   #coupon-ladder-{{ sid }} .clv4-modal-countdown{ margin-top:6px; font-size:13px; color:rgba(255,255,255,.75); }
 
-  /* Rules Modal 特定样式 */
   #coupon-ladder-{{ sid }} .clv4-rules-content{
     color: rgba(255,255,255,.88);
     font-size: 14px;
     line-height: 1.7;
   }
 
-  /* Coupon Modal 特定样式 */
   #coupon-ladder-{{ sid }} .clv4-codebox{
     background: rgba(255,255,255,.05);
     border:1px solid rgba(255,255,255,.12);
@@ -388,7 +373,6 @@
   }
   #coupon-ladder-{{ sid }} .clv4-hint{ margin-top:10px; font-size:12px; color:rgba(255,255,255,.65); line-height:1.6; }
 
-  /* Mobile */
   @media (max-width: 900px){
     #coupon-ladder-{{ sid }} .clv4-container{ grid-template-columns:1fr; gap:18px; align-items:start; }
     #coupon-ladder-{{ sid }} .clv4-ladder{ flex-direction:column; align-items:stretch; gap:12px; }
@@ -402,14 +386,10 @@
   var root = document.getElementById('coupon-ladder-{{ sid }}');
   if(!root) return;
 
-  // ======================
-  // 时间配置
-  // ======================
   var startAt = {{ section.settings.start_at | json }};
   var endAt = {{ section.settings.end_at | json }};
   var durationHours = Number({{ section.settings.duration_hours | json }}) || 48;
 
-  // fast part percent (0-100) => 0..1
   var fastPart = Number({{ section.settings.fast_part_percent | json }});
   if (isNaN(fastPart)) fastPart = 70;
   fastPart = Math.max(0, Math.min(100, fastPart)) / 100;
@@ -421,30 +401,25 @@
     if(!s) return null;
     var str = String(s).trim();
     if(!str || str === '-' || str.toLowerCase() === 'null') return null;
-
     var d = new Date(str);
     if(!isNaN(d.getTime())) return d;
-
-    // 兼容 "YYYY-MM-DD HH:MM"
     var t = str.replace(' ', 'T');
     d = new Date(t);
     if(!isNaN(d.getTime())) return d;
-
     return null;
   }
+  
   function fmt(d){
     if(!d) return '--';
     return pad2(d.getDate()) + '.' + pad2(d.getMonth()+1) + '.' + d.getFullYear() + ' ' + pad2(d.getHours()) + ':' + pad2(d.getMinutes());
   }
 
-  // easing
   function easeOutQuad(t){ return 1 - (1 - t) * (1 - t); }
   function easeInQuad(t){ return t * t; }
 
   var startD = safeDate(startAt);
   var endD = safeDate(endAt);
 
-  // 如果没填 endAt,则用 start + durationHours
   if(startD && !endD){
     endD = new Date(startD.getTime() + durationHours * 3600 * 1000);
   }
@@ -454,9 +429,6 @@
   if(startTextEl) startTextEl.textContent = fmt(startD);
   if(endTextEl) endTextEl.textContent = fmt(endD);
 
-  // ======================
-  // 活动是否进行中
-  // ======================
   function getCampaignState(){
     var now = new Date();
     if(!startD || !endD) return 'invalid';
@@ -465,9 +437,6 @@
     return 'active';
   }
 
-  // ======================
-  // 倒计时(每秒)
-  // ======================
   var ddEl = root.querySelector('[data-clv4-dd]');
   var hhEl = root.querySelector('[data-clv4-hh]');
   var mmEl = root.querySelector('[data-clv4-mm]');
@@ -475,32 +444,25 @@
 
   function updateCountdown(){
     if(!ddEl || !hhEl || !mmEl || !ssEl) return;
-
     if(!endD || getCampaignState() === 'invalid'){
       ddEl.textContent='00'; hhEl.textContent='00'; mmEl.textContent='00'; ssEl.textContent='00';
       return;
     }
-
     var now = new Date();
     var diff = Math.max(0, endD.getTime() - now.getTime());
     var sec = Math.floor(diff/1000);
     var dd = Math.floor(sec/86400); sec -= dd*86400;
     var hh = Math.floor(sec/3600);  sec -= hh*3600;
     var mm = Math.floor(sec/60);    sec -= mm*60;
-
     ddEl.textContent = pad2(dd);
     hhEl.textContent = pad2(hh);
     mmEl.textContent = pad2(mm);
     ssEl.textContent = pad2(sec);
   }
 
-  // ======================
-  // 48h 自动递减 + 每卡 speed weight
-  // ======================
   function depletionBase(progress01){
     if(progress01 <= 0) return 0;
     if(progress01 >= 1) return 1;
-
     if(progress01 < 0.5){
       var t = progress01 / 0.5;
       return fastPart * easeOutQuad(t);
@@ -526,53 +488,37 @@
   function applySimulatedQuota(card){
     var total = Number(card.getAttribute('data-clv4-total') || 0);
     if(total < 0) total = 0;
-
     var qtyEl = card.querySelector('[data-clv4-qty]');
     var leftEl = card.querySelector('[data-clv4-left]');
     var barEl = card.querySelector('[data-clv4-bar]');
     var btn = card.querySelector('[data-clv4-open-coupon]');
-
     var state = getCampaignState();
     var now = new Date();
-
-    // 默认:先显示总量
     if(qtyEl) qtyEl.textContent = String(total);
-
-    // ① 未开始:left=total,按钮禁用
     if(state === 'before'){
       if(leftEl) leftEl.textContent = String(total);
       if(barEl) barEl.style.width = '100%';
       setBtnDisabled(btn, true);
       return;
     }
-
-    // ② 已结束:left=0,按钮禁用
     if(state === 'after' || state === 'invalid'){
       if(leftEl) leftEl.textContent = '0';
       if(barEl) barEl.style.width = '0%';
       setBtnDisabled(btn, true);
       return;
     }
-
-    // ③ 进行中:计算递减库存
     var progress = clamp01((now.getTime() - startD.getTime()) / (endD.getTime() - startD.getTime()));
-    var baseDep = depletionBase(progress); // 0..1
-
+    var baseDep = depletionBase(progress);
     var weight = Number(card.getAttribute('data-clv4-weight') || 100);
     if(isNaN(weight)) weight = 100;
-    weight = Math.max(10, Math.min(300, weight)); // 10-300
-
+    weight = Math.max(10, Math.min(300, weight));
     var speedFactor = 100 / weight;
     var dep = Math.min(1, baseDep * speedFactor);
-
     var used = Math.round(total * dep);
     var left = Math.max(0, total - used);
     var pctLeft = (total > 0) ? (left / total * 100) : 0;
-
     if(leftEl) leftEl.textContent = String(left);
     if(barEl) barEl.style.width = Math.max(0, Math.min(100, pctLeft)) + '%';
-
-    // ✅ 关键:库存=0 => 按钮禁用(这次 left 已经有值了)
     setBtnDisabled(btn, left <= 0);
   }
 
@@ -580,9 +526,6 @@
     root.querySelectorAll('[data-clv4-card]').forEach(applySimulatedQuota);
   }
 
-  // ======================
-  // Rules Modal - 新增规则弹窗逻辑
-  // ======================
   function lockScroll(on){ document.documentElement.style.overflow = on ? 'hidden' : ''; }
 
   var rulesModal = root.querySelector('[data-clv4-rules-modal]');
@@ -608,9 +551,6 @@
     el.addEventListener('click', closeRulesModal);
   });
 
-  // ======================
-  // Coupon modal + 弹框倒计时同步
-  // ======================
   var couponModal = root.querySelector('[data-clv4-coupon-modal]');
   var modalSub = root.querySelector('[data-clv4-modal-sub]');
   var modalCodeEl = root.querySelector('[data-clv4-modal-code]');
@@ -620,7 +560,6 @@
 
   function updateModalCountdown(){
     if(!modalCdEl) return;
-
     if(!endD || getCampaignState() === 'invalid'){
       modalCdEl.textContent = 'Endet in --';
       return;
@@ -628,16 +567,65 @@
     var now = new Date();
     var diff = Math.max(0, endD.getTime() - now.getTime());
     var sec = Math.floor(diff/1000);
-
     var d = Math.floor(sec/86400); sec -= d*86400;
     var h = Math.floor(sec/3600);  sec -= h*3600;
     var m = Math.floor(sec/60);    sec -= m*60;
-
     modalCdEl.textContent = 'Endet in ' + d + 'd ' + h + 'h ' + m + 'm ' + sec + 's';
   }
 
   function openCouponModal(card){
     if(!couponModal) return;
+    if(getCampaignState() !== 'active') return;
+    var btn = card.querySelector('[data-clv4-open-coupon]');
+    if(btn && btn.classList.contains('is-disabled')) return;
+    var percent = card.getAttribute('data-clv4-percent') || '';
+    var code = card.getAttribute('data-clv4-code') || '';
+    var redirect = card.getAttribute('data-clv4-redirect') || '/';
+    if(modalSub) modalSub.textContent = percent ? ('Rabatt: ' + percent) : 'Rabatt';
+    if(modalCodeEl) modalCodeEl.textContent = code ? code : '--';
+    if(modalCta) modalCta.href = '/discount/' + encodeURIComponent(code) + '?redirect=' + encodeURIComponent(redirect);
+    updateModalCountdown();
+    couponModal.hidden = false;
+    lockScroll(true);
+  }
 
-    // ✅ 不在活动期:绝不打开
-    if(getCampaignState
+  function closeCouponModal(){
+    if(!couponModal) return;
+    couponModal.hidden = true;
+    lockScroll(false);
+  }
+
+  root.querySelectorAll('[data-clv4-open-coupon]').forEach(function(btn){
+    btn.addEventListener('click', function(e){
+      if(btn.classList.contains('is-disabled')){
+        e.preventDefault();
+        return;
+      }
+      var card = e.currentTarget.closest('[data-clv4-card]');
+      if(card) openCouponModal(card);
+    });
+  });
+
+  root.querySelectorAll('[data-clv4-close-coupon]').forEach(function(el){
+    el.addEventListener('click', closeCouponModal);
+  });
+
+  document.addEventListener('keydown', function(e){
+    if(e.key === 'Escape'){
+      if(couponModal && !couponModal.hidden) closeCouponModal();
+      if(rulesModal && !rulesModal.hidden) closeRulesModal();
+    }
+  });
+
+  if(copyBtn){
+    copyBtn.addEventListener('click', function(){
+      var text = (modalCodeEl && modalCodeEl.textContent) ? modalCodeEl.textContent.trim() : '';
+      if(!text || text === '--') return;
+      function flash(){
+        copyBtn.textContent = 'Copied';
+        setTimeout(function(){ copyBtn.textContent = 'Copy'; }, 900);
+      }
+      if(navigator.clipboard && navigator.clipboard.writeText){
+        navigator.clipboard.writeText(text).then(flash).catch(function(){});
+      }else{
+        var ta = document.createElement
