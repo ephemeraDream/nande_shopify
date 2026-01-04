@@ -166,7 +166,7 @@
         "tier_a4RTMa": {
           "type": "tier",
           "settings": {
-            "percent": "-8%",
+            "percent": "-6%",
             "total_qty": 200,
             "speed_weight": 220,
             "coupon_code": "MD555",
