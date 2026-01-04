@@ -4,7 +4,6 @@
 
 <section id="coupon-ladder-{{ sid }}" class="clv4-wrap">
   <div class="clv4-container">
-    <!-- Left -->
     <div class="clv4-left">
       {% if section.settings.kicker != blank %}
         <div class="clv4-kicker">{{ section.settings.kicker }}</div>
@@ -20,11 +19,9 @@
         </div>
       {% endif %}
 
-      <!-- Regeln: 改为弹窗按钮 -->
       <button type="button"
               class="clv4-rules"
-              data-clv4-open-rules
-              aria-haspopup="dialog">
+              data-clv4-open-rules>
         {{ section.settings.rules_text }}
       </button>
 
@@ -50,7 +47,6 @@
       </div>
     </div>
 
-    <!-- Right -->
     <div class="clv4-right">
       <div class="clv4-ladder" role="list">
         {% for block in section.blocks %}
@@ -94,23 +90,19 @@
     </div>
   </div>
 
-  <!-- Rules Modal - 新增规则弹窗 -->
-  <div class="clv4-modal clv4-rules-modal" data-clv4-rules-modal hidden>
+  <div class="clv4-modal" data-clv4-rules-modal hidden>
     <div class="clv4-backdrop" data-clv4-close-rules></div>
     <div class="clv4-panel" role="dialog" aria-modal="true" aria-label="Regeln">
       <button class="clv4-x" type="button" aria-label="Close" data-clv4-close-rules>×</button>
-
       <div class="clv4-panel-head">
-        <div class="clv4-panel-title">{{ section.settings.rules_text | replace: '>', '' | strip }}</div>
+        <div class="clv4-panel-title">{{ section.settings.rules_text }}</div>
       </div>
-
-      <div class="clv4-rules-content rte">
+      <div class="clv4-rules-modal-content rte">
         {{ section.settings.rules_content }}
       </div>
     </div>
   </div>
 
-  <!-- Coupon Modal -->
   <div class="clv4-modal" data-clv4-coupon-modal hidden>
     <div class="clv4-backdrop" data-clv4-close-coupon></div>
     <div class="clv4-panel" role="dialog" aria-modal="true" aria-label="Gutschein">
@@ -149,7 +141,6 @@
     --muted: rgba(255,255,255,.80);
     --accent: {{ section.settings.accent_color }};
     --radius: 18px;
-
     color: var(--text);
     background: var(--bg);
     padding: 44px 0;
@@ -185,6 +176,14 @@
     cursor: pointer;
   }
 
+  /* 规则弹窗内部文字样式 */
+  #coupon-ladder-{{ sid }} .clv4-rules-modal-content{
+    font-size: 14px;
+    line-height: 1.7;
+    color: rgba(255,255,255,.85);
+    margin-top: 10px;
+  }
+
   #coupon-ladder-{{ sid }} .clv4-time{
     margin-top: 14px;
     padding-top: 14px;
@@ -193,12 +192,8 @@
   #coupon-ladder-{{ sid }} .clv4-time-row{ display:flex; gap:10px; font-size: 13px; color: var(--muted); margin: 4px 0; }
   #coupon-ladder-{{ sid }} .clv4-time-label{ min-width: 44px; opacity:.95; }
 
-  #coupon-ladder-{{ sid }} .clv4-cd-boxes{
-    display:flex;
-    gap:10px;
-    flex-wrap: nowrap;
-    overflow:hidden;
-  }
+  /* countdown */
+  #coupon-ladder-{{ sid }} .clv4-cd-boxes{ display:flex; gap:10px; flex-wrap: nowrap; overflow:hidden; }
   #coupon-ladder-{{ sid }} .clv4-cd-box{
     flex:0 0 auto;
     min-width: 76px;
@@ -212,13 +207,8 @@
   #coupon-ladder-{{ sid }} .clv4-cd-box b{ display:block; font-size: 18px; letter-spacing:.5px; color:#fff; }
   #coupon-ladder-{{ sid }} .clv4-cd-box span{ font-size: 12px; color: var(--muted); }
 
-  #coupon-ladder-{{ sid }} .clv4-ladder{
-    display:flex;
-    align-items:flex-end;
-    gap: 14px;
-    width: 100%;
-  }
-
+  /* Ladder */
+  #coupon-ladder-{{ sid }} .clv4-ladder{ display:flex; align-items:flex-end; gap: 14px; width: 100%; }
   #coupon-ladder-{{ sid }} .clv4-card{
     flex: 1;
     min-width: 0;
@@ -233,39 +223,17 @@
     overflow: visible;
   }
 
-  #coupon-ladder-{{ sid }} .clv4-percent{
-    font-size: clamp(22px, 2.2vw, 44px);
-    font-weight: 900;
-    margin-bottom: 10px;
-    color:#fff;
-  }
+  #coupon-ladder-{{ sid }} .clv4-percent{ font-size: clamp(22px, 2.2vw, 44px); font-weight: 900; margin-bottom: 10px; color:#fff; }
   .clv4-level-1 .clv4-percent{ font-size: 44px !important; }
   .clv4-level-2 .clv4-percent{ font-size: 36px !important; }
   .clv4-level-3 .clv4-percent{ font-size: 30px !important; }
   .clv4-level-4 .clv4-percent{ font-size: 26px !important; }
 
-  #coupon-ladder-{{ sid }} .clv4-qty{
-    font-size: 13px;
-    color: rgba(255,255,255,.72);
-    display:flex;
-    gap:6px;
-    align-items: baseline;
-  }
+  #coupon-ladder-{{ sid }} .clv4-qty{ font-size: 13px; color: rgba(255,255,255,.72); display:flex; gap:6px; align-items: baseline; }
   #coupon-ladder-{{ sid }} .clv4-qty b{ color:#fff; font-size:14px; }
 
-  #coupon-ladder-{{ sid }} .clv4-bar{
-    height: 6px;
-    border-radius: 999px;
-    background: rgba(255,255,255,.18);
-    margin-top: auto;
-    overflow:hidden;
-  }
-  #coupon-ladder-{{ sid }} .clv4-bar-in{
-    height:100%;
-    background: var(--accent);
-    width: 0%;
-    transition: width .35s ease;
-  }
+  #coupon-ladder-{{ sid }} .clv4-bar{ height: 6px; border-radius: 999px; background: rgba(255,255,255,.18); margin-top: auto; overflow:hidden; }
+  #coupon-ladder-{{ sid }} .clv4-bar-in{ height:100%; background: var(--accent); width: 0%; transition: width .35s ease; }
 
   #coupon-ladder-{{ sid }} .clv4-btn{
     width: 100%;
@@ -280,6 +248,8 @@
     align-items:center;
     justify-content:center;
   }
+  #coupon-ladder-{{ sid }} .clv4-btn-text{ font-weight: 900; font-size: clamp(12px, 1.05vw, 16px); line-height: 1; white-space: nowrap; }
+
   #coupon-ladder-{{ sid }} .clv4-btn.is-disabled{
     background: rgba(255,255,255,.35) !important;
     color: rgba(0,0,0,.55) !important;
@@ -287,20 +257,14 @@
     pointer-events: none !important;
     opacity: .75;
   }
-  #coupon-ladder-{{ sid }} .clv4-btn-text{
-    font-weight: 900;
-    font-size: clamp(12px, 1.05vw, 16px);
-    line-height: 1;
-    white-space: nowrap;
-  }
 
+  /* Step heights */
   #coupon-ladder-{{ sid }} .clv4-level-1{ min-height: 230px; }
   #coupon-ladder-{{ sid }} .clv4-level-2{ min-height: 210px; }
   #coupon-ladder-{{ sid }} .clv4-level-3{ min-height: 195px; }
   #coupon-ladder-{{ sid }} .clv4-level-4{ min-height: 182px; }
-  #coupon-ladder-{{ sid }} .clv4-level-5{ min-height: 172px; }
-  #coupon-ladder-{{ sid }} .clv4-level-6{ min-height: 164px; }
 
+  /* Modal Base Style (复用弹窗基础样式) */
   #coupon-ladder-{{ sid }} .clv4-modal[hidden]{ display:none; }
   #coupon-ladder-{{ sid }} .clv4-modal{
     position:fixed; inset:0; z-index:9999;
@@ -319,7 +283,7 @@
     border-radius:18px;
     padding:20px;
     box-shadow: 0 26px 80px rgba(0,0,0,.55);
-    max-height: min(76vh, 680px);
+    max-height: min(85vh, 680px);
     overflow:auto;
   }
   #coupon-ladder-{{ sid }} .clv4-x{
@@ -331,53 +295,21 @@
     color:#fff; font-size:22px; line-height:34px;
     cursor:pointer;
   }
-  #coupon-ladder-{{ sid }} .clv4-panel-head{
-    padding-bottom:12px;
-    border-bottom:1px solid rgba(255,255,255,.10);
-    margin-bottom:14px;
-  }
-  #coupon-ladder-{{ sid }} .clv4-panel-title{ font-weight:900; font-size:18px; margin-top:2px; }
-  #coupon-ladder-{{ sid }} .clv4-panel-sub{ margin-top:6px; color:rgba(255,255,255,.78); font-size:13px; }
-  #coupon-ladder-{{ sid }} .clv4-modal-countdown{ margin-top:6px; font-size:13px; color:rgba(255,255,255,.75); }
+  #coupon-ladder-{{ sid }} .clv4-panel-head{ padding-bottom:12px; border-bottom:1px solid rgba(255,255,255,.10); margin-bottom:14px; }
+  #coupon-ladder-{{ sid }} .clv4-panel-title{ font-weight:900; font-size:18px; }
 
-  #coupon-ladder-{{ sid }} .clv4-rules-content{
-    color: rgba(255,255,255,.88);
-    font-size: 14px;
-    line-height: 1.7;
-  }
-
-  #coupon-ladder-{{ sid }} .clv4-codebox{
-    background: rgba(255,255,255,.05);
-    border:1px solid rgba(255,255,255,.12);
-    border-radius:14px;
-    padding:14px;
-  }
+  #coupon-ladder-{{ sid }} .clv4-codebox{ background: rgba(255,255,255,.05); border:1px solid rgba(255,255,255,.12); border-radius:14px; padding:14px; }
   #coupon-ladder-{{ sid }} .clv4-code-label{ font-size:12px; color:rgba(255,255,255,.70); margin-bottom:10px; }
   #coupon-ladder-{{ sid }} .clv4-code-row{ display:flex; align-items:center; justify-content:space-between; gap:10px; }
   #coupon-ladder-{{ sid }} .clv4-code{ font-size:16px; font-weight:900; letter-spacing:1px; color:#fff; }
-  #coupon-ladder-{{ sid }} .clv4-copy{
-    border:0; border-radius:12px;
-    padding:10px 12px;
-    background: rgba(255,255,255,.92);
-    color:#111; font-weight:900;
-    cursor:pointer; white-space:nowrap;
-  }
-  #coupon-ladder-{{ sid }} .clv4-cta{
-    display:block; margin-top:14px;
-    text-align:center;
-    border-radius:999px;
-    padding:13px 14px;
-    font-weight:900;
-    background: var(--accent);
-    color:#111; text-decoration:none;
-  }
+  #coupon-ladder-{{ sid }} .clv4-copy{ border:0; border-radius:12px; padding:10px 12px; background: rgba(255,255,255,.92); color:#111; font-weight:900; cursor:pointer; }
+  #coupon-ladder-{{ sid }} .clv4-cta{ display:block; margin-top:14px; text-align:center; border-radius:999px; padding:13px 14px; font-weight:900; background: var(--accent); color:#111; text-decoration:none; }
   #coupon-ladder-{{ sid }} .clv4-hint{ margin-top:10px; font-size:12px; color:rgba(255,255,255,.65); line-height:1.6; }
 
   @media (max-width: 900px){
-    #coupon-ladder-{{ sid }} .clv4-container{ grid-template-columns:1fr; gap:18px; align-items:start; }
+    #coupon-ladder-{{ sid }} .clv4-container{ grid-template-columns:1fr; gap:18px; }
     #coupon-ladder-{{ sid }} .clv4-ladder{ flex-direction:column; align-items:stretch; gap:12px; }
     #coupon-ladder-{{ sid }} .clv4-card{ min-height: unset !important; }
-    #coupon-ladder-{{ sid }} .clv4-cd-boxes{ flex-wrap: wrap; }
   }
 </style>
 
@@ -389,14 +321,11 @@
   var startAt = {{ section.settings.start_at | json }};
   var endAt = {{ section.settings.end_at | json }};
   var durationHours = Number({{ section.settings.duration_hours | json }}) || 48;
-
-  var fastPart = Number({{ section.settings.fast_part_percent | json }});
-  if (isNaN(fastPart)) fastPart = 70;
+  var fastPart = Number({{ section.settings.fast_part_percent | json }}) || 70;
   fastPart = Math.max(0, Math.min(100, fastPart)) / 100;
 
   function pad2(n){ return String(n).padStart(2,'0'); }
   function clamp01(x){ return Math.max(0, Math.min(1, x)); }
-
   function safeDate(s){
     if(!s) return null;
     var str = String(s).trim();
@@ -405,24 +334,18 @@
     if(!isNaN(d.getTime())) return d;
     var t = str.replace(' ', 'T');
     d = new Date(t);
-    if(!isNaN(d.getTime())) return d;
-    return null;
+    return isNaN(d.getTime()) ? null : d;
   }
-  
   function fmt(d){
     if(!d) return '--';
     return pad2(d.getDate()) + '.' + pad2(d.getMonth()+1) + '.' + d.getFullYear() + ' ' + pad2(d.getHours()) + ':' + pad2(d.getMinutes());
   }
-
   function easeOutQuad(t){ return 1 - (1 - t) * (1 - t); }
   function easeInQuad(t){ return t * t; }
 
   var startD = safeDate(startAt);
   var endD = safeDate(endAt);
-
-  if(startD && !endD){
-    endD = new Date(startD.getTime() + durationHours * 3600 * 1000);
-  }
+  if(startD && !endD) endD = new Date(startD.getTime() + durationHours * 3600 * 1000);
 
   var startTextEl = root.querySelector('[data-clv4-start-text]');
   var endTextEl = root.querySelector('[data-clv4-end-text]');
@@ -437,120 +360,46 @@
     return 'active';
   }
 
-  var ddEl = root.querySelector('[data-clv4-dd]');
-  var hhEl = root.querySelector('[data-clv4-hh]');
-  var mmEl = root.querySelector('[data-clv4-mm]');
-  var ssEl = root.querySelector('[data-clv4-ss]');
-
+  // Countdown logic
+  var ddEl = root.querySelector('[data-clv4-dd]'), hhEl = root.querySelector('[data-clv4-hh]'), mmEl = root.querySelector('[data-clv4-mm]'), ssEl = root.querySelector('[data-clv4-ss]');
   function updateCountdown(){
     if(!ddEl || !hhEl || !mmEl || !ssEl) return;
     if(!endD || getCampaignState() === 'invalid'){
       ddEl.textContent='00'; hhEl.textContent='00'; mmEl.textContent='00'; ssEl.textContent='00';
       return;
     }
-    var now = new Date();
-    var diff = Math.max(0, endD.getTime() - now.getTime());
+    var diff = Math.max(0, endD.getTime() - (new Date()).getTime());
     var sec = Math.floor(diff/1000);
     var dd = Math.floor(sec/86400); sec -= dd*86400;
-    var hh = Math.floor(sec/3600);  sec -= hh*3600;
-    var mm = Math.floor(sec/60);    sec -= mm*60;
-    ddEl.textContent = pad2(dd);
-    hhEl.textContent = pad2(hh);
-    mmEl.textContent = pad2(mm);
-    ssEl.textContent = pad2(sec);
-  }
-
-  function depletionBase(progress01){
-    if(progress01 <= 0) return 0;
-    if(progress01 >= 1) return 1;
-    if(progress01 < 0.5){
-      var t = progress01 / 0.5;
-      return fastPart * easeOutQuad(t);
-    }else{
-      var t2 = (progress01 - 0.5) / 0.5;
-      return fastPart + (1 - fastPart) * easeInQuad(t2);
-    }
-  }
-
-  function setBtnDisabled(btn, disabled){
-    if(!btn) return;
-    if(disabled){
-      btn.classList.add('is-disabled');
-      btn.setAttribute('aria-disabled', 'true');
-      btn.setAttribute('tabindex', '-1');
-    }else{
-      btn.classList.remove('is-disabled');
-      btn.removeAttribute('aria-disabled');
-      btn.removeAttribute('tabindex');
-    }
-  }
-
-  function applySimulatedQuota(card){
-    var total = Number(card.getAttribute('data-clv4-total') || 0);
-    if(total < 0) total = 0;
-    var qtyEl = card.querySelector('[data-clv4-qty]');
-    var leftEl = card.querySelector('[data-clv4-left]');
-    var barEl = card.querySelector('[data-clv4-bar]');
-    var btn = card.querySelector('[data-clv4-open-coupon]');
-    var state = getCampaignState();
-    var now = new Date();
-    if(qtyEl) qtyEl.textContent = String(total);
-    if(state === 'before'){
-      if(leftEl) leftEl.textContent = String(total);
-      if(barEl) barEl.style.width = '100%';
-      setBtnDisabled(btn, true);
-      return;
-    }
-    if(state === 'after' || state === 'invalid'){
-      if(leftEl) leftEl.textContent = '0';
-      if(barEl) barEl.style.width = '0%';
-      setBtnDisabled(btn, true);
-      return;
-    }
-    var progress = clamp01((now.getTime() - startD.getTime()) / (endD.getTime() - startD.getTime()));
-    var baseDep = depletionBase(progress);
-    var weight = Number(card.getAttribute('data-clv4-weight') || 100);
-    if(isNaN(weight)) weight = 100;
-    weight = Math.max(10, Math.min(300, weight));
-    var speedFactor = 100 / weight;
-    var dep = Math.min(1, baseDep * speedFactor);
-    var used = Math.round(total * dep);
-    var left = Math.max(0, total - used);
-    var pctLeft = (total > 0) ? (left / total * 100) : 0;
-    if(leftEl) leftEl.textContent = String(left);
-    if(barEl) barEl.style.width = Math.max(0, Math.min(100, pctLeft)) + '%';
-    setBtnDisabled(btn, left <= 0);
-  }
-
-  function updateQuotaAll(){
-    root.querySelectorAll('[data-clv4-card]').forEach(applySimulatedQuota);
+    var hh = Math.floor(sec/3600); sec -= hh*3600;
+    var mm = Math.floor(sec/60); sec -= mm*60;
+    ddEl.textContent = pad2(dd); hhEl.textContent = pad2(hh); mmEl.textContent = pad2(mm); ssEl.textContent = pad2(sec);
   }
 
   function lockScroll(on){ document.documentElement.style.overflow = on ? 'hidden' : ''; }
 
+  // ======================
+  // RULES MODAL LOGIC (新规则弹窗逻辑)
+  // ======================
   var rulesModal = root.querySelector('[data-clv4-rules-modal]');
-  var rulesOpenBtn = root.querySelector('[data-clv4-open-rules]');
+  var openRulesBtn = root.querySelector('[data-clv4-open-rules]');
   
-  function openRulesModal(){
-    if(!rulesModal) return;
-    rulesModal.hidden = false;
-    lockScroll(true);
+  if(openRulesBtn && rulesModal){
+    openRulesBtn.addEventListener('click', function(){
+      rulesModal.hidden = false;
+      lockScroll(true);
+    });
+    root.querySelectorAll('[data-clv4-close-rules]').forEach(function(el){
+      el.addEventListener('click', function(){
+        rulesModal.hidden = true;
+        lockScroll(false);
+      });
+    });
   }
 
-  function closeRulesModal(){
-    if(!rulesModal) return;
-    rulesModal.hidden = true;
-    lockScroll(false);
-  }
-
-  if(rulesOpenBtn){
-    rulesOpenBtn.addEventListener('click', openRulesModal);
-  }
-
-  root.querySelectorAll('[data-clv4-close-rules]').forEach(function(el){
-    el.addEventListener('click', closeRulesModal);
-  });
-
+  // ======================
+  // COUPON MODAL LOGIC
+  // ======================
   var couponModal = root.querySelector('[data-clv4-coupon-modal]');
   var modalSub = root.querySelector('[data-clv4-modal-sub]');
   var modalCodeEl = root.querySelector('[data-clv4-modal-code]');
@@ -559,76 +408,157 @@
   var modalCdEl = root.querySelector('[data-clv4-modal-countdown]');
 
   function updateModalCountdown(){
-    if(!modalCdEl) return;
-    if(!endD || getCampaignState() === 'invalid'){
-      modalCdEl.textContent = 'Endet in --';
-      return;
-    }
-    var now = new Date();
-    var diff = Math.max(0, endD.getTime() - now.getTime());
+    if(!modalCdEl || !endD) return;
+    var diff = Math.max(0, endD.getTime() - (new Date()).getTime());
     var sec = Math.floor(diff/1000);
     var d = Math.floor(sec/86400); sec -= d*86400;
-    var h = Math.floor(sec/3600);  sec -= h*3600;
-    var m = Math.floor(sec/60);    sec -= m*60;
+    var h = Math.floor(sec/3600); sec -= h*3600;
+    var m = Math.floor(sec/60); sec -= m*60;
     modalCdEl.textContent = 'Endet in ' + d + 'd ' + h + 'h ' + m + 'm ' + sec + 's';
   }
 
   function openCouponModal(card){
-    if(!couponModal) return;
-    if(getCampaignState() !== 'active') return;
+    if(!couponModal || getCampaignState() !== 'active') return;
     var btn = card.querySelector('[data-clv4-open-coupon]');
     if(btn && btn.classList.contains('is-disabled')) return;
+
     var percent = card.getAttribute('data-clv4-percent') || '';
     var code = card.getAttribute('data-clv4-code') || '';
     var redirect = card.getAttribute('data-clv4-redirect') || '/';
+
     if(modalSub) modalSub.textContent = percent ? ('Rabatt: ' + percent) : 'Rabatt';
-    if(modalCodeEl) modalCodeEl.textContent = code ? code : '--';
+    if(modalCodeEl) modalCodeEl.textContent = code || '--';
     if(modalCta) modalCta.href = '/discount/' + encodeURIComponent(code) + '?redirect=' + encodeURIComponent(redirect);
+
     updateModalCountdown();
     couponModal.hidden = false;
     lockScroll(true);
   }
 
-  function closeCouponModal(){
-    if(!couponModal) return;
-    couponModal.hidden = true;
-    lockScroll(false);
-  }
-
   root.querySelectorAll('[data-clv4-open-coupon]').forEach(function(btn){
     btn.addEventListener('click', function(e){
-      if(btn.classList.contains('is-disabled')){
-        e.preventDefault();
-        return;
-      }
       var card = e.currentTarget.closest('[data-clv4-card]');
       if(card) openCouponModal(card);
     });
   });
 
   root.querySelectorAll('[data-clv4-close-coupon]').forEach(function(el){
-    el.addEventListener('click', closeCouponModal);
+    el.addEventListener('click', function(){ couponModal.hidden = true; lockScroll(false); });
   });
 
+  // ESC key to close all modals
   document.addEventListener('keydown', function(e){
     if(e.key === 'Escape'){
-      if(couponModal && !couponModal.hidden) closeCouponModal();
-      if(rulesModal && !rulesModal.hidden) closeRulesModal();
+      if(couponModal) couponModal.hidden = true;
+      if(rulesModal) rulesModal.hidden = true;
+      lockScroll(false);
     }
   });
 
+  // Depletion Logic
+  function depletionBase(progress01){
+    if(progress01 <= 0) return 0; if(progress01 >= 1) return 1;
+    if(progress01 < 0.5) return fastPart * easeOutQuad(progress01 / 0.5);
+    return fastPart + (1 - fastPart) * easeInQuad((progress01 - 0.5) / 0.5);
+  }
+  function setBtnDisabled(btn, disabled){
+    if(!btn) return;
+    if(disabled){ btn.classList.add('is-disabled'); btn.setAttribute('aria-disabled', 'true'); }
+    else { btn.classList.remove('is-disabled'); btn.removeAttribute('aria-disabled'); }
+  }
+  function applySimulatedQuota(card){
+    var total = Number(card.getAttribute('data-clv4-total') || 0);
+    var qtyEl = card.querySelector('[data-clv4-qty]'), leftEl = card.querySelector('[data-clv4-left]'), barEl = card.querySelector('[data-clv4-bar]'), btn = card.querySelector('[data-clv4-open-coupon]');
+    var state = getCampaignState(), now = new Date();
+    if(qtyEl) qtyEl.textContent = String(total);
+    if(state === 'before'){
+      if(leftEl) leftEl.textContent = String(total); if(barEl) barEl.style.width = '100%'; setBtnDisabled(btn, true); return;
+    }
+    if(state === 'after' || state === 'invalid'){
+      if(leftEl) leftEl.textContent = '0'; if(barEl) barEl.style.width = '0%'; setBtnDisabled(btn, true); return;
+    }
+    var progress = clamp01((now.getTime() - startD.getTime()) / (endD.getTime() - startD.getTime()));
+    var weight = Math.max(10, Math.min(300, Number(card.getAttribute('data-clv4-weight') || 100)));
+    var dep = Math.min(1, depletionBase(progress) * (100 / weight));
+    var left = Math.max(0, total - Math.round(total * dep));
+    if(leftEl) leftEl.textContent = String(left);
+    if(barEl) barEl.style.width = ((total > 0) ? (left / total * 100) : 0) + '%';
+    setBtnDisabled(btn, left <= 0);
+  }
+
+  // Copy Logic
   if(copyBtn){
     copyBtn.addEventListener('click', function(){
       var text = (modalCodeEl && modalCodeEl.textContent) ? modalCodeEl.textContent.trim() : '';
       if(!text || text === '--') return;
-      function flash(){
-        copyBtn.textContent = 'Copied';
-        setTimeout(function(){ copyBtn.textContent = 'Copy'; }, 900);
+      function flash(){ copyBtn.textContent = 'Copied'; setTimeout(function(){ copyBtn.textContent = 'Copy'; }, 900); }
+      if(navigator.clipboard){ navigator.clipboard.writeText(text).then(flash); }
+      else {
+        var ta = document.createElement('textarea'); ta.value = text; ta.style.position = 'fixed'; ta.style.left = '-9999px';
+        document.body.appendChild(ta); ta.select(); document.execCommand('copy'); document.body.removeChild(ta); flash();
       }
-      if(navigator.clipboard && navigator.clipboard.writeText){
-        navigator.clipboard.writeText(text).then(flash).catch(function(){});
-      }else{
-        var ta = document.createElement('textarea');
-        ta.value = text;
-        ta.style.position = 'fixed';
-        ta.style
+    });
+  }
+
+  // Initial & Intervals
+  updateCountdown();
+  root.querySelectorAll('[data-clv4-card]').forEach(applySimulatedQuota);
+  setInterval(function(){
+    updateCountdown();
+    root.querySelectorAll('[data-clv4-card]').forEach(applySimulatedQuota);
+    if(couponModal && !couponModal.hidden) updateModalCountdown();
+  }, 1000);
+})();
+</script>
+
+{% schema %}
+{
+  "name": "Coupon Ladder Final V4",
+  "settings": [
+    { "type": "text", "id": "kicker", "label": "Kicker", "default": "Schnell sein – Codes sichern & sparen!" },
+    { "type": "text", "id": "title", "label": "Title", "default": "Je schneller, desto mehr Rabatt – nur für Schnellentschlossene!" },
+    { "type": "richtext", "id": "desc", "label": "Description", "default": "<p>Klicke auf „Gutschein sichern“, kopiere den Code und gehe anschließend zum Checkout.</p>" },
+    { "type": "text", "id": "rules_text", "label": "Regeln button text", "default": "Regeln >" },
+    { "type": "richtext", "id": "rules_content", "label": "Regeln content", "default": "<p>1) Gültig solange der Vorrat reicht.<br>2) Nicht kombinierbar mit anderen Aktionen.<br>3) Rabatt wird im Checkout angewendet.</p>" },
+    { "type": "text", "id": "start_at", "label": "Start time (ISO or YYYY-MM-DD HH:MM)", "default": "2026-01-11 23:00" },
+    { "type": "text", "id": "end_at", "label": "End time (optional)", "default": "-" },
+    { "type": "number", "id": "duration_hours", "label": "Duration hours (fallback)", "default": 48 },
+    { "type": "range", "id": "fast_part_percent", "label": "Fast part consumed in first half (0-100)", "min": 0, "max": 100, "step": 1, "default": 70 },
+    { "type": "text", "id": "countdown_label", "label": "Countdown label", "default": "Die Aktion endet in" },
+    { "type": "text", "id": "claim_button_text", "label": "Card button text", "default": "Gutschein sichern" },
+    { "type": "text", "id": "coupon_modal_title", "label": "Coupon modal title", "default": "Gutschein sichern" },
+    { "type": "text", "id": "coupon_modal_cta_text", "label": "Coupon modal CTA text", "default": "Jetzt shoppen (Code anwenden)" },
+    { "type": "text", "id": "coupon_modal_hint", "label": "Coupon modal hint", "default": "Hinweis: Der Rabatt wird beim Öffnen des Links automatisch angewendet." },
+    { "type": "text", "id": "code_label", "label": "Code label", "default": "Dein Rabattcode" },
+    { "type": "color", "id": "bg_color", "label": "Background", "default": "#2a0d0d" },
+    { "type": "color", "id": "card_bg", "label": "Card background", "default": "#1d6a4c" },
+    { "type": "color", "id": "accent_color", "label": "Accent color", "default": "#ff3b30" },
+    { "type": "color", "id": "text_color", "label": "Text color", "default": "#ffffff" }
+  ],
+  "blocks": [
+    {
+      "type": "tier",
+      "name": "Tier",
+      "settings": [
+        { "type": "text", "id": "percent", "label": "Percent text", "default": "-50%" },
+        { "type": "number", "id": "total_qty", "label": "Initial qty", "default": 200 },
+        { "type": "range", "id": "speed_weight", "label": "Speed weight", "min": 10, "max": 300, "step": 5, "default": 100 },
+        { "type": "text", "id": "coupon_code", "label": "Coupon code", "default": "WEIHNACHTEN" },
+        { "type": "text", "id": "redirect_url", "label": "Redirect URL", "default": "/collections/standing-desks" }
+      ]
+    }
+  ],
+  "max_blocks": 6,
+  "presets": [
+    {
+      "name": "Coupon Ladder Final V4",
+      "blocks": [
+        { "type": "tier", "settings": { "percent": "-50%", "total_qty": 8, "speed_weight": 60 } },
+        { "type": "tier", "settings": { "percent": "-30%", "total_qty": 20, "speed_weight": 100 } },
+        { "type": "tier", "settings": { "percent": "-10%", "total_qty": 100, "speed_weight": 160 } },
+        { "type": "tier", "settings": { "percent": "-8%", "total_qty": 200, "speed_weight": 220 } }
+      ]
+    }
+  ]
+}
+{% endschema %}
