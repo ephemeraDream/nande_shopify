@@ -33,19 +33,18 @@
         },
         "banner_item_ykwd4B": {
           "type": "banner_item",
-          "disabled": true,
           "settings": {
             "sub_title": "",
             "title": "",
             "text": "",
             "btn_text": "",
-            "link": "https://www.maidesite.de/pages/2025-weihnachtsaktion#Weihnachtsgeschenk",
+            "link": "shopify://pages/neujahrs-sale",
             "file_position": "bottom_right",
             "overlay_text_align": "text-center",
             "transparent_content_color": "#000000",
             "file_type": "image",
-            "file_image": "shopify://shop_images/1_49aa09ab-302c-46ab-8dce-5f5e4a5305b9.jpg",
-            "file_image_pe": "shopify://shop_images/4_b46f284a-7f33-467e-b4dd-7f97f004f7bb.jpg",
+            "file_image": "shopify://shop_images/2_51d6d7b1-cab1-4e15-9937-09141f64ddc0.jpg",
+            "file_image_pe": "shopify://shop_images/2_9536680e-8aac-4b09-bef6-99dd18d2f11d.jpg",
             "video_url": "",
             "show_countdown": false,
             "countdown": "summer-sale"
