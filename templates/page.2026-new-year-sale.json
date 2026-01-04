@@ -137,8 +137,8 @@
         "tier_HxKe3b": {
           "type": "tier",
           "settings": {
-            "percent": "-50%",
-            "total_qty": 8,
+            "percent": "-60%",
+            "total_qty": 5,
             "speed_weight": 110,
             "coupon_code": "MD555",
             "redirect_url": "/collections/standing-desks"
@@ -187,7 +187,7 @@
         "title": "Je schneller, desto mehr Rabatt",
         "desc": "<p>Klicke auf „Gutschein sichern“, kopiere den Code und gehe anschließend zum Checkout.</p>",
         "rules_text": "Regeln >",
-        "rules_content": "<p>1) Gültig solange der Vorrat reicht.<br/>2) Nicht kombinierbar mit anderen Aktionen.<br/>3) Rabatt wird im Checkout angewendet.</p>",
+        "rules_content": "<p><strong>Aktionsbedingungen</strong></p><ol><li><br/>Diese Aktion ist ein zeitlich begrenztes Angebot.<br/><br/>Nach dem Öffnen des Aktions-Pop-ups steht Ihnen ein <strong>exklusives Kaufzeitfenster von 15 Minuten</strong> zur Verfügung.<br/><br/>Der <strong>Mindestbestellwert beträgt 800 €</strong>, um an der Aktion teilnehmen zu können.<br/></li><li><br/><strong>Erste Aktionsphase:</strong><br/><br/><strong>12.01. – 13.01. (48 Stunden)</strong>.<br/><br/>Nach Ablauf dieses Zeitraums verliert die Aktion automatisch ihre Gültigkeit.<br/><br/>Die Aktionsseite sowie das Pop-up werden <strong>ab dem 05.01.</strong> vorab online gestellt.<br/></li><li><br/>Countdown-Mechanismus:<br/><br/><br/>Beim Öffnen des Aktions-Pop-ups startet ein <strong>15-minütiger Countdown</strong>;<br/><br/><br/>Wird das Pop-up geschlossen, wird der Countdown nicht weiter angezeigt;<br/><br/><br/>Nach dem Schließen des Pop-ups ändert sich der Button zu <strong>„Zum Shop“</strong>, über den die Produktseite regulär aufgerufen werden kann – jedoch ohne Countdown-Anzeige.</li></ol>",
         "start_at": "2025-12-28 23:00",
         "end_at": "-",
         "duration_hours": 48,
