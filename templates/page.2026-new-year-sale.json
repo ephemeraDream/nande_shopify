@@ -72,6 +72,18 @@
     "activity_products_tab_aUGewm": {
       "type": "activity-products-tab",
       "blocks": {
+        "tab_nngChK": {
+          "type": "tab",
+          "settings": {
+            "title": "Bestseller",
+            "product_list": [
+              "maidesite-elektrisch-hohenverstellbarer-gestell-t2-pro",
+              "maidesite-tischgestell-elektrisch-hohenverstellbar-t2-pro-plus",
+              "elektrisch-hohenverstellbarer-gestell-t1-basic",
+              "maidesite-th2-pro-plus-tischgestell-elektrisch-hohenverstellbar"
+            ]
+          }
+        },
         "tab_6qFKiy": {
           "type": "tab",
           "settings": {
@@ -120,6 +132,7 @@
         }
       },
       "block_order": [
+        "tab_nngChK",
         "tab_6qFKiy",
         "tab_bgF4yF",
         "tab_EgLUp3"
@@ -188,8 +201,8 @@
         "desc": "<p>Klicke auf „Gutschein sichern“, kopiere den Code und gehe anschließend zum Checkout.</p>",
         "rules_text": "Regeln >",
         "rules_content": "<p><strong>Aktionsbedingungen</strong></p><ol><li><br/>Diese Aktion ist ein zeitlich begrenztes Angebot.<br/><br/>Nach dem Öffnen des Aktions-Pop-ups steht Ihnen ein <strong>exklusives Kaufzeitfenster von 15 Minuten</strong> zur Verfügung.<br/><br/>Der <strong>Mindestbestellwert beträgt 800 €</strong>, um an der Aktion teilnehmen zu können.<br/></li><li><br/><strong>Erste Aktionsphase:</strong><br/><br/><strong>12.01. – 13.01. (48 Stunden)</strong>.<br/><br/>Nach Ablauf dieses Zeitraums verliert die Aktion automatisch ihre Gültigkeit.<br/><br/>Die Aktionsseite sowie das Pop-up werden <strong>ab dem 05.01.</strong> vorab online gestellt.<br/></li><li><br/>Countdown-Mechanismus:<br/><br/><br/>Beim Öffnen des Aktions-Pop-ups startet ein <strong>15-minütiger Countdown</strong>;<br/><br/><br/>Wird das Pop-up geschlossen, wird der Countdown nicht weiter angezeigt;<br/><br/><br/>Nach dem Schließen des Pop-ups ändert sich der Button zu <strong>„Zum Shop“</strong>, über den die Produktseite regulär aufgerufen werden kann – jedoch ohne Countdown-Anzeige.</li></ol>",
-        "start_at": "2025-12-28 23:00",
-        "end_at": "-",
+        "start_at": "2026-01-12 00:00",
+        "end_at": "2026-01-14 00:00",
         "duration_hours": 48,
         "fast_part_percent": 70,
         "countdown_label": "Die Aktion endet in",
