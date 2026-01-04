@@ -20,20 +20,13 @@
         </div>
       {% endif %}
 
-      <!-- Regeln: accordion -->
+      <!-- Regeln: 改为弹窗按钮 -->
       <button type="button"
               class="clv4-rules"
-              data-clv4-toggle-rules
-              aria-expanded="false"
-              aria-controls="clv4-rules-{{ sid }}">
+              data-clv4-open-rules
+              aria-haspopup="dialog">
         {{ section.settings.rules_text }}
       </button>
-
-      <div id="clv4-rules-{{ sid }}" class="clv4-rules-accordion" hidden>
-        <div class="clv4-rules-accordion-inner rte">
-          {{ section.settings.rules_content }}
-        </div>
-      </div>
 
       <div class="clv4-time">
         <div class="clv4-time-row">
@@ -101,6 +94,22 @@
     </div>
   </div>
 
+  <!-- Rules Modal - 新增规则弹窗 -->
+  <div class="clv4-modal clv4-rules-modal" data-clv4-rules-modal hidden>
+    <div class="clv4-backdrop" data-clv4-close-rules></div>
+    <div class="clv4-panel" role="dialog" aria-modal="true" aria-label="Regeln">
+      <button class="clv4-x" type="button" aria-label="Close" data-clv4-close-rules>×</button>
+
+      <div class="clv4-panel-head">
+        <div class="clv4-panel-title">{{ section.settings.rules_text | replace: '>', '' | strip }}</div>
+      </div>
+
+      <div class="clv4-rules-content rte">
+        {{ section.settings.rules_content }}
+      </div>
+    </div>
+  </div>
+
   <!-- Coupon Modal -->
   <div class="clv4-modal" data-clv4-coupon-modal hidden>
     <div class="clv4-backdrop" data-clv4-close-coupon></div>
@@ -110,7 +119,7 @@
       <div class="clv4-panel-head">
         <div class="clv4-panel-title">{{ section.settings.coupon_modal_title }}</div>
         <div class="clv4-panel-sub" data-clv4-modal-sub>Rabatt: --</div>
-        <!-- ✅ 同步总倒计时（弹框内） -->
+        <!-- ✅ 同步总倒计时(弹框内) -->
         <div class="clv4-modal-countdown" data-clv4-modal-countdown>Endet in --</div>
       </div>
 
@@ -175,19 +184,6 @@
     font-weight: 900;
     text-decoration: underline;
     cursor: pointer;
-  }
-
-  #coupon-ladder-{{ sid }} .clv4-rules-accordion{
-    margin-top: 10px;
-    padding: 12px 14px;
-    border-radius: 12px;
-    border: 1px solid rgba(255,255,255,.14);
-    background: rgba(0,0,0,.18);
-    color: rgba(255,255,255,.82);
-  }
-  #coupon-ladder-{{ sid }} .clv4-rules-accordion-inner{
-    font-size: 13px;
-    line-height: 1.7;
   }
 
   #coupon-ladder-{{ sid }} .clv4-time{
@@ -300,7 +296,7 @@
     white-space: nowrap;
   }
 
-  /* ✅ 未开始/已结束：灰色禁用、不可点击、无抓手 */
+  /* ✅ 未开始/已结束:灰色禁用、不可点击、无抓手 */
   #coupon-ladder-{{ sid }} .clv4-btn.is-disabled{
     background: rgba(255,255,255,.35) !important;
     color: rgba(0,0,0,.55) !important;
@@ -317,7 +313,7 @@
   #coupon-ladder-{{ sid }} .clv4-level-5{ min-height: 172px; }
   #coupon-ladder-{{ sid }} .clv4-level-6{ min-height: 164px; }
 
-  /* Coupon modal */
+  /* Modal 通用样式 */
   #coupon-ladder-{{ sid }} .clv4-modal[hidden]{ display:none; }
   #coupon-ladder-{{ sid }} .clv4-modal{
     position:fixed; inset:0; z-index:9999;
@@ -357,6 +353,14 @@
   #coupon-ladder-{{ sid }} .clv4-panel-sub{ margin-top:6px; color:rgba(255,255,255,.78); font-size:13px; }
   #coupon-ladder-{{ sid }} .clv4-modal-countdown{ margin-top:6px; font-size:13px; color:rgba(255,255,255,.75); }
 
+  /* Rules Modal 特定样式 */
+  #coupon-ladder-{{ sid }} .clv4-rules-content{
+    color: rgba(255,255,255,.88);
+    font-size: 14px;
+    line-height: 1.7;
+  }
+
+  /* Coupon Modal 特定样式 */
   #coupon-ladder-{{ sid }} .clv4-codebox{
     background: rgba(255,255,255,.05);
     border:1px solid rgba(255,255,255,.12);
@@ -440,7 +444,7 @@
   var startD = safeDate(startAt);
   var endD = safeDate(endAt);
 
-  // 如果没填 endAt，则用 start + durationHours
+  // 如果没填 endAt,则用 start + durationHours
   if(startD && !endD){
     endD = new Date(startD.getTime() + durationHours * 3600 * 1000);
   }
@@ -462,7 +466,7 @@
   }
 
   // ======================
-  // 倒计时（每秒）
+  // 倒计时(每秒)
   // ======================
   var ddEl = root.querySelector('[data-clv4-dd]');
   var hhEl = root.querySelector('[data-clv4-hh]');
@@ -531,10 +535,10 @@
     var state = getCampaignState();
     var now = new Date();
 
-    // 默认：先显示总量
+    // 默认:先显示总量
     if(qtyEl) qtyEl.textContent = String(total);
 
-    // ① 未开始：left=total，按钮禁用
+    // ① 未开始:left=total,按钮禁用
     if(state === 'before'){
       if(leftEl) leftEl.textContent = String(total);
       if(barEl) barEl.style.width = '100%';
@@ -542,7 +546,7 @@
       return;
     }
 
-    // ② 已结束：left=0，按钮禁用
+    // ② 已结束:left=0,按钮禁用
     if(state === 'after' || state === 'invalid'){
       if(leftEl) leftEl.textContent = '0';
       if(barEl) barEl.style.width = '0%';
@@ -550,7 +554,7 @@
       return;
     }
 
-    // ③ 进行中：计算递减库存
+    // ③ 进行中:计算递减库存
     var progress = clamp01((now.getTime() - startD.getTime()) / (endD.getTime() - startD.getTime()));
     var baseDep = depletionBase(progress); // 0..1
 
@@ -568,7 +572,7 @@
     if(leftEl) leftEl.textContent = String(left);
     if(barEl) barEl.style.width = Math.max(0, Math.min(100, pctLeft)) + '%';
 
-    // ✅ 关键：库存=0 => 按钮禁用（这次 left 已经有值了）
+    // ✅ 关键:库存=0 => 按钮禁用(这次 left 已经有值了)
     setBtnDisabled(btn, left <= 0);
   }
 
@@ -577,23 +581,36 @@
   }
 
   // ======================
-  // Regeln accordion
+  // Rules Modal - 新增规则弹窗逻辑
   // ======================
-  var rulesBtn = root.querySelector('[data-clv4-toggle-rules]');
-  var rulesPanel = root.querySelector('#clv4-rules-{{ sid }}');
-  if(rulesBtn && rulesPanel){
-    rulesBtn.addEventListener('click', function(){
-      var isOpen = rulesBtn.getAttribute('aria-expanded') === 'true';
-      rulesBtn.setAttribute('aria-expanded', isOpen ? 'false' : 'true');
-      rulesPanel.hidden = isOpen;
-    });
+  function lockScroll(on){ document.documentElement.style.overflow = on ? 'hidden' : ''; }
+
+  var rulesModal = root.querySelector('[data-clv4-rules-modal]');
+  var rulesOpenBtn = root.querySelector('[data-clv4-open-rules]');
+  
+  function openRulesModal(){
+    if(!rulesModal) return;
+    rulesModal.hidden = false;
+    lockScroll(true);
   }
+
+  function closeRulesModal(){
+    if(!rulesModal) return;
+    rulesModal.hidden = true;
+    lockScroll(false);
+  }
+
+  if(rulesOpenBtn){
+    rulesOpenBtn.addEventListener('click', openRulesModal);
+  }
+
+  root.querySelectorAll('[data-clv4-close-rules]').forEach(function(el){
+    el.addEventListener('click', closeRulesModal);
+  });
 
   // ======================
   // Coupon modal + 弹框倒计时同步
   // ======================
-  function lockScroll(on){ document.documentElement.style.overflow = on ? 'hidden' : ''; }
-
   var couponModal = root.querySelector('[data-clv4-coupon-modal]');
   var modalSub = root.querySelector('[data-clv4-modal-sub]');
   var modalCodeEl = root.querySelector('[data-clv4-modal-code]');
@@ -622,169 +639,5 @@
   function openCouponModal(card){
     if(!couponModal) return;
 
-    // ✅ 不在活动期：绝不打开
-    if(getCampaignState() !== 'active') return;
-
-    // ✅ 卡片按钮如果已禁用（卖光），也绝不打开
-    var btn = card.querySelector('[data-clv4-open-coupon]');
-    if(btn && btn.classList.contains('is-disabled')) return;
-
-    var percent = card.getAttribute('data-clv4-percent') || '';
-    var code = card.getAttribute('data-clv4-code') || '';
-    var redirect = card.getAttribute('data-clv4-redirect') || '/';
-
-    if(modalSub) modalSub.textContent = percent ? ('Rabatt: ' + percent) : 'Rabatt';
-    if(modalCodeEl) modalCodeEl.textContent = code ? code : '--';
-
-    if(modalCta) modalCta.href = '/discount/' + encodeURIComponent(code) + '?redirect=' + encodeURIComponent(redirect);
-
-    updateModalCountdown();
-
-    couponModal.hidden = false;
-    lockScroll(true);
-  }
-
-  function closeCouponModal(){
-    if(!couponModal) return;
-    couponModal.hidden = true;
-    lockScroll(false);
-  }
-
-  root.querySelectorAll('[data-clv4-open-coupon]').forEach(function(btn){
-    btn.addEventListener('click', function(e){
-      if(btn.classList.contains('is-disabled')){
-        e.preventDefault();
-        return;
-      }
-      var card = e.currentTarget.closest('[data-clv4-card]');
-      if(card) openCouponModal(card);
-    });
-  });
-
-  root.querySelectorAll('[data-clv4-close-coupon]').forEach(function(el){
-    el.addEventListener('click', closeCouponModal);
-  });
-
-  document.addEventListener('keydown', function(e){
-    if(e.key === 'Escape'){
-      if(couponModal && !couponModal.hidden) closeCouponModal();
-    }
-  });
-
-  // Copy
-  if(copyBtn){
-    copyBtn.addEventListener('click', function(){
-      var text = (modalCodeEl && modalCodeEl.textContent) ? modalCodeEl.textContent.trim() : '';
-      if(!text || text === '--') return;
-
-      function flash(){
-        copyBtn.textContent = 'Copied';
-        setTimeout(function(){ copyBtn.textContent = 'Copy'; }, 900);
-      }
-      if(navigator.clipboard && navigator.clipboard.writeText){
-        navigator.clipboard.writeText(text).then(flash).catch(function(){});
-      }else{
-        var ta = document.createElement('textarea');
-        ta.value = text;
-        ta.style.position = 'fixed';
-        ta.style.left = '-9999px';
-        document.body.appendChild(ta);
-        ta.select();
-        try{ document.execCommand('copy'); flash(); }catch(err){}
-        document.body.removeChild(ta);
-      }
-    });
-  }
-
-  // ======================
-  // 初始渲染
-  // ======================
-  updateCountdown();
-  updateQuotaAll();
-
-  // ✅ 每秒：倒计时 + 重新计算每张卡（最多6张，非常轻）
-  setInterval(function(){
-    updateCountdown();
-    updateQuotaAll();
-    if(couponModal && !couponModal.hidden) updateModalCountdown();
-  }, 1000);
-
-})();
-</script>
-
-
-{% schema %}
-{
-  "name": "Coupon Ladder Final V4",
-  "settings": [
-    { "type": "text", "id": "kicker", "label": "Kicker", "default": "Schnell sein – Codes sichern & sparen!" },
-    { "type": "text", "id": "title", "label": "Title", "default": "Je schneller, desto mehr Rabatt – nur für Schnellentschlossene!" },
-    { "type": "richtext", "id": "desc", "label": "Description", "default": "<p>Klicke auf „Gutschein sichern“, kopiere den Code und gehe anschließend zum Checkout.</p>" },
-
-    { "type": "text", "id": "rules_text", "label": "Regeln button text", "default": "Regeln >" },
-    { "type": "richtext", "id": "rules_content", "label": "Regeln content", "default": "<p>1) Gültig solange der Vorrat reicht.<br>2) Nicht kombinierbar mit anderen Aktionen.<br>3) Rabatt wird im Checkout angewendet.</p>" },
-
-    { "type": "text", "id": "start_at", "label": "Start time (ISO or YYYY-MM-DD HH:MM)", "default": "2026-01-11 23:00" },
-    { "type": "text", "id": "end_at", "label": "End time (optional; empty => start + duration_hours)", "default": "-" },
-    { "type": "number", "id": "duration_hours", "label": "Duration hours (fallback)", "default": 48 },
-
-    {
-      "type": "range",
-      "id": "fast_part_percent",
-      "label": "Fast part consumed in first half (0-100)",
-      "min": 0,
-      "max": 100,
-      "step": 1,
-      "default": 70
-    },
-
-    { "type": "text", "id": "countdown_label", "label": "Countdown label", "default": "Die Aktion endet in" },
-
-    { "type": "text", "id": "claim_button_text", "label": "Card button text", "default": "Gutschein sichern" },
-    { "type": "text", "id": "coupon_modal_title", "label": "Coupon modal title", "default": "Gutschein sichern" },
-    { "type": "text", "id": "coupon_modal_cta_text", "label": "Coupon modal CTA text", "default": "Jetzt shoppen (Code anwenden)" },
-    { "type": "text", "id": "coupon_modal_hint", "label": "Coupon modal hint", "default": "Hinweis: Der Rabatt wird beim Öffnen des Links automatisch angewendet." },
-    { "type": "text", "id": "code_label", "label": "Code label", "default": "Dein Rabattcode" },
-
-    { "type": "color", "id": "bg_color", "label": "Background", "default": "#2a0d0d" },
-    { "type": "color", "id": "card_bg", "label": "Card background", "default": "#1d6a4c" },
-    { "type": "color", "id": "accent_color", "label": "Accent color", "default": "#ff3b30" },
-    { "type": "color", "id": "text_color", "label": "Text color", "default": "#ffffff" }
-  ],
-  "blocks": [
-    {
-      "type": "tier",
-      "name": "Tier",
-      "settings": [
-        { "type": "text", "id": "percent", "label": "Percent text", "default": "-50%" },
-        { "type": "number", "id": "total_qty", "label": "Initial qty (you set)", "default": 200 },
-
-        {
-          "type": "range",
-          "id": "speed_weight",
-          "label": "Speed weight (smaller=faster, bigger=slower)",
-          "min": 10,
-          "max": 300,
-          "step": 5,
-          "default": 100
-        },
-
-        { "type": "text", "id": "coupon_code", "label": "Coupon code (per card)", "default": "WEIHNACHTEN" },
-        { "type": "text", "id": "redirect_url", "label": "Redirect URL (per card)", "default": "/collections/standing-desks" }
-      ]
-    }
-  ],
-  "max_blocks": 6,
-  "presets": [
-    {
-      "name": "Coupon Ladder Final V4",
-      "blocks": [
-        { "type": "tier", "settings": { "percent": "-50%", "total_qty": 8, "speed_weight": 60, "coupon_code": "MD555", "redirect_url": "/collections/standing-desks" } },
-        { "type": "tier", "settings": { "percent": "-30%", "total_qty": 20, "speed_weight": 100, "coupon_code": "MD555", "redirect_url": "/collections/standing-desks" } },
-        { "type": "tier", "settings": { "percent": "-10%", "total_qty": 100, "speed_weight": 160, "coupon_code": "MD555", "redirect_url": "/collections/standing-desks" } },
-        { "type": "tier", "settings": { "percent": "-8%", "total_qty": 200, "speed_weight": 220, "coupon_code": "MD555", "redirect_url": "/collections/standing-desks" } }
-      ]
-    }
-  ]
-}
-{% endschema %}
+    // ✅ 不在活动期:绝不打开
+    if(getCampaignState
