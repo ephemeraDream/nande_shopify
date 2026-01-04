@@ -628,4 +628,7 @@
       if(navigator.clipboard && navigator.clipboard.writeText){
         navigator.clipboard.writeText(text).then(flash).catch(function(){});
       }else{
-        var ta = document.createElement
+        var ta = document.createElement('textarea');
+        ta.value = text;
+        ta.style.position = 'fixed';
+        ta.style
