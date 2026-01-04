@@ -148,7 +148,7 @@
           "type": "tier",
           "settings": {
             "percent": "-30%",
-            "total_qty": 20,
+            "total_qty": 10,
             "speed_weight": 95,
             "coupon_code": "MD555",
             "redirect_url": "/collections/standing-desks"
