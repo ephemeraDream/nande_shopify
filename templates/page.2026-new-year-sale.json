@@ -17,58 +17,6 @@
         "padding_bottom": 28
       }
     },
-    "image_banner_TD4DpR": {
-      "type": "image-banner",
-      "blocks": {
-        "heading_3n76r4": {
-          "type": "heading",
-          "disabled": true,
-          "settings": {
-            "heading": "Bild-Banner",
-            "heading_size": "h1"
-          }
-        },
-        "text_DQjWKX": {
-          "type": "text",
-          "disabled": true,
-          "settings": {
-            "text": "Stelle Kunden Details zu Banner-Bildern oder Inhalt auf der Vorlage zur Verfügung.",
-            "text_style": "body"
-          }
-        },
-        "buttons_wFJBQ3": {
-          "type": "buttons",
-          "disabled": true,
-          "settings": {
-            "button_label_1": "Schaltflächenbeschriftung",
-            "button_link_1": "",
-            "button_style_secondary_1": false,
-            "button_label_2": "Schaltflächenbeschriftung",
-            "button_link_2": "",
-            "button_style_secondary_2": false
-          }
-        }
-      },
-      "block_order": [
-        "heading_3n76r4",
-        "text_DQjWKX",
-        "buttons_wFJBQ3"
-      ],
-      "name": "t:sections.image-banner.presets.name",
-      "settings": {
-        "image": "shopify://shop_images/1_77b8cc7d-3250-4929-8bc8-e0f69e890156.jpg",
-        "image_overlay_opacity": 0,
-        "image_height": "adapt",
-        "image_behavior": "none",
-        "desktop_content_position": "middle-center",
-        "desktop_content_alignment": "center",
-        "show_text_box": false,
-        "color_scheme": "",
-        "stack_images_on_mobile": false,
-        "mobile_content_alignment": "center",
-        "show_text_below": false
-      }
-    },
     "activity_products_tab_aUGewm": {
       "type": "activity-products-tab",
       "blocks": {
@@ -209,12 +157,12 @@
       "settings": {
         "specId": "",
         "style": "1",
-        "title": "<p><strong>Spend Less, Gift More This New Year</strong></p>",
-        "text": "<p>The easiest gift you'll give this year.</p>",
+        "title": "<p><strong>Dieses Jahr weniger zahlen, mehr verschenken</strong></p>",
+        "text": "<p>So einfach war Schenken noch nie</p>",
         "product_list": [
+          "gift-card",
           "100-gift-card",
           "500-gift-card",
-          "gift-card",
           "800-gift-card"
         ],
         "rule": ""
@@ -300,7 +248,6 @@
   },
   "order": [
     "main",
-    "image_banner_TD4DpR",
     "activity_products_tab_aUGewm",
     "test_coupon_ladder_CHcAzQ",
     "activity_products_normal_trrLmA",
