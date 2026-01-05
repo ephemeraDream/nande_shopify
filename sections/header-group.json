@@ -43,19 +43,19 @@
             "font_color": "#bdff00"
           }
         },
-        "img_with_text_QJDYxJ": {
-          "type": "img_with_text",
-          "settings": {
-            "text": "<p><a href=\"https://www.maidesite.de/pages/extended-warranty?view=2025-anniversary-sale\" title=\"https://www.maidesite.de/pages/extended-warranty?view=2025-anniversary-sale\">Mehr kaufen, mehr sparen</a>：40€ Rabatt ab 499€ (Code: MD40); 120€ Rabatt ab 999€ (Code: MD120); 250€ Rabatt...<a href=\"/pages/2025-weihnachtsaktion\" title=\"2025 Weihnachtsaktion\">mehr</a></p>",
-            "link": "shopify://pages/black-friday-2025",
-            "font_color": "#bdff00"
-          }
-        },
         "img_with_text_K8NMwf": {
           "type": "img_with_text",
           "settings": {
             "text": "<p><a href=\"https://www.maidesite.de/pages/neujahrs-sale\"><strong>Neujahrs-Sale</strong></a><strong> – bis zu 60% Rabatt！</strong></p>",
             "link": "shopify://pages/neujahrs-sale",
+            "font_color": "#bdff00"
+          }
+        },
+        "img_with_text_QJDYxJ": {
+          "type": "img_with_text",
+          "settings": {
+            "text": "<p><a href=\"https://www.maidesite.de/pages/extended-warranty?view=2025-anniversary-sale\" title=\"https://www.maidesite.de/pages/extended-warranty?view=2025-anniversary-sale\">Mehr kaufen, mehr sparen</a>：40€ Rabatt ab 499€ (Code: MD40); 120€ Rabatt ab 999€ (Code: MD120); 250€ Rabatt...<a href=\"/pages/2025-weihnachtsaktion\" title=\"2025 Weihnachtsaktion\">mehr</a></p>",
+            "link": "shopify://pages/black-friday-2025",
             "font_color": "#bdff00"
           }
         },
@@ -74,8 +74,8 @@
       "block_order": [
         "announcement_R3cx4w",
         "announcement-bar-0",
-        "img_with_text_QJDYxJ",
         "img_with_text_K8NMwf",
+        "img_with_text_QJDYxJ",
         "countdown_77kmfi"
       ],
       "custom_css": [],
