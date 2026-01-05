@@ -155,6 +155,7 @@
         "item_RrNzfE",
         "item_Vt9rJN"
       ],
+      "disabled": true,
       "name": "product anchor bar",
       "settings": {
         "button_text": "Jetzt kaufen",
@@ -165,6 +166,7 @@
     },
     "video_simplicity_zX8daC": {
       "type": "video-simplicity",
+      "disabled": true,
       "name": "video simplicity",
       "settings": {
         "spec_id": "Produkt2",
@@ -249,6 +251,7 @@
         "file_with_text_JJXCp8",
         "file_with_text_THJTyK"
       ],
+      "disabled": true,
       "name": "file box simplicity",
       "settings": {
         "spec_id": "Produktbeschreibung",
@@ -261,6 +264,7 @@
     },
     "img_with_text_simplicity_R8thEq": {
       "type": "img-with-text-simplicity",
+      "disabled": true,
       "custom_css": [],
       "name": "img with text simplicity",
       "settings": {
@@ -285,6 +289,7 @@
     },
     "img_with_text_simplicity_nJFALq": {
       "type": "img-with-text-simplicity",
+      "disabled": true,
       "custom_css": [
         ".img_with_text_simplicity_info {padding-left: 3rem;}"
       ],
@@ -310,6 +315,7 @@
     },
     "img_with_text_simplicity_YLCpmN": {
       "type": "img-with-text-simplicity",
+      "disabled": true,
       "custom_css": [],
       "name": "img with text simplicity",
       "settings": {
@@ -333,6 +339,7 @@
     },
     "img_with_text_simplicity_JRCJ4f": {
       "type": "img-with-text-simplicity",
+      "disabled": true,
       "custom_css": [
         ".img_with_text_simplicity_info {padding-left: 3rem;}"
       ],
@@ -389,6 +396,7 @@
         "foldtext_HWP39G",
         "foldtext_iGWkAs"
       ],
+      "disabled": true,
       "name": "img with foldtext",
       "settings": {
         "spec_id": "",
@@ -464,6 +472,7 @@
         "tab_JyxzQm",
         "tab_LmGatL"
       ],
+      "disabled": true,
       "name": "img with text tab",
       "settings": {
         "spec_id": "",
@@ -478,6 +487,7 @@
     },
     "technical_data_L3gXUm": {
       "type": "technical-data",
+      "disabled": true,
       "name": "technical data",
       "settings": {
         "spec_id": "Technische_Daten",
@@ -523,6 +533,7 @@
         "swiper_EnDd8n",
         "swiper_4kYG3r"
       ],
+      "disabled": true,
       "name": "maidesite swiper",
       "settings": {
         "spec_id": "",
@@ -568,6 +579,7 @@
         "swiper_mexwM6",
         "swiper_xWLxVC"
       ],
+      "disabled": true,
       "name": "celebrity swiper",
       "settings": {
         "title": "<p>Empfehlen Von</p>",
@@ -586,7 +598,7 @@
             "max_width": 800,
             "box_border": 4,
             "faq_border_thickness": 1,
-            "faq_border_color": "#ddd",
+            "faq_border_color": "#dddddd",
             "faq_border_style": "solid",
             "icon_color": "#333333",
             "top_margin": 20,
@@ -603,7 +615,7 @@
             "question_font_size": 16,
             "answer_color": "#666666",
             "answer_font_size": 14,
-            "hover_color": "#007BFF"
+            "hover_color": "#007bff"
           }
         }
       },
@@ -700,6 +712,7 @@
         "faq_mFDf3d",
         "faq_whBqrf"
       ],
+      "disabled": true,
       "custom_css": [
         ".faq_simple_section {background-color: #fafafa;}"
       ],
@@ -736,6 +749,7 @@
       "block_order": [
         "loox_reviews_loox_dynamic_section_VMDChy"
       ],
+      "disabled": true,
       "name": "product comment",
       "settings": {
         "spec_id": "Kundenbewertungen",
@@ -744,6 +758,7 @@
     },
     "recommended_products_yEVJQ9": {
       "type": "recommended-products",
+      "disabled": true,
       "name": "recommended products",
       "settings": {
         "spec_id": "",
@@ -790,6 +805,7 @@
       "block_order": [
         "loox_reviews_loox_snippets_widget_4QwYiN"
       ],
+      "disabled": true,
       "settings": {
         "include_margins": true
       }
