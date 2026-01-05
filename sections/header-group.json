@@ -27,6 +27,7 @@
       "blocks": {
         "announcement_R3cx4w": {
           "type": "announcement",
+          "disabled": true,
           "settings": {
             "text": "Weihnachts-Pause: Kein Versand 24.–26.12. & 1.1. | Mehr Info 👉",
             "link": "https://www.maidesite.de/blogs/news/weihnachts-und-neujahrsferien",
