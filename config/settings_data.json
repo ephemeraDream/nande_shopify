@@ -153,11 +153,6 @@
         "disabled": false,
         "settings": {}
       },
-      "16357531335331704164": {
-        "type": "shopify://apps/wheelify-spin-wheel-email-pop/blocks/wheelify/505ff42c-abce-4466-9558-7e1d3b2cfcd7",
-        "disabled": false,
-        "settings": {}
-      },
       "1513253815146976218": {
         "type": "shopify://apps/omnisend-email-marketing-sms/blocks/app-embed/44704aa2-794f-4c5d-8c8e-039c841158e9",
         "disabled": false,
@@ -241,6 +236,11 @@
       },
       "2539598332178966696": {
         "type": "shopify://apps/xcotton-post-purchase-guard/blocks/insurance/6531bb8b-340c-42d4-b5da-1734c7a2c524",
+        "disabled": false,
+        "settings": {}
+      },
+      "17368511000352060744": {
+        "type": "shopify://apps/goaffpro-affiliate-marketing/blocks/goaffpro-embedded-pixel/2f4d802b-86c2-47e4-8096-ae1aa3efbab2",
         "disabled": false,
         "settings": {}
       }
