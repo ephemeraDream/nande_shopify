@@ -173,6 +173,7 @@
       "blocks": {
         "bundle_group_9MTEMW": {
           "type": "bundle_group",
+          "disabled": true,
           "settings": {
             "kicker": "Bundle-Kauf",
             "subheading": "Bis zu 38% Rabatt",
@@ -195,7 +196,7 @@
             "hero_image": "shopify://shop_images/5_-_-_3.jpg",
             "heading": "Bundle Package",
             "side_desc": "",
-            "product_1": "t2-pro-stabiler-profi-hohenverstellbarer-schreibtisch",
+            "product_1": "t2-pro-plus-erweiterter-profi-hohenverstellbarer-schreibtisch",
             "badge_1": "",
             "product_2": "maidesite-tischplatte-160-180-cm-grosse-diy-tischplatte-fur-zuhause-und-buro",
             "badge_2": "",
@@ -208,7 +209,6 @@
         "bundle_group_9MTEMW",
         "bundle_group_PYKcNW"
       ],
-      "disabled": true,
       "name": "Multi Bundle System V2",
       "settings": {}
     },
