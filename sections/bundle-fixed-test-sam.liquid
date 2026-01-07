@@ -1,8 +1,8 @@
 {% comment %}
-  Multi-Bundle System V3 - Fixed Compare Price
+  Multi-Bundle System V4 - Simple Summation
   - Terms only on the first block.
   - Hero image fully fills container.
-  - Fixed missing strike-through (compare) prices.
+  - Calculation: Simple sum of selected product prices.
 {% endcomment %}
 
 <section id="bundle-container-{{ section.id }}" class="multi-bundle-section">
@@ -50,7 +50,12 @@
                     
                     {% if p %}
                       {% assign v = p.selected_or_first_available_variant %}
-                      <div class="bundle-card" data-bundle-item data-variant-id="{{ v.id }}" data-price="{{ v.price }}" data-compare-price="{{ v.compare_at_price | default: v.price }}">
+                      <div class="bundle-card" 
+                           data-bundle-item 
+                           data-variant-id="{{ v.id }}" 
+                           data-price="{{ v.price }}" 
+                           data-compare-price="{{ v.compare_at_price | default: v.price }}">
+                        
                         <div class="bundle-card-top">
                           {% if block.settings[badge_id] != blank %}
                             <span class="bundle-card-badge">{{ block.settings[badge_id] }}</span>
@@ -69,8 +74,7 @@
                           <h4 class="bundle-prod-title">{{ p.title }}</h4>
                           <div class="bundle-card-price">
                             <span class="price-now" data-price-now></span>
-                            {% comment %} 单个产品划线原价 {% endcomment %}
-                            <span class="price-compare" data-price-compare>{{ v.compare_at_price | money }}</span>
+                            <span class="price-compare">{{ v.compare_at_price | money }}</span>
                           </div>
                         </div>
                       </div>
@@ -84,10 +88,8 @@
                     <div class="bundle-total-box">
                       <span class="total-label">Total:</span>
                       <span class="total-now" data-total-now></span>
-                      {% comment %} 底部总价划线原价 {% endcomment %}
                       <span class="total-old" data-total-compare></span>
                     </div>
-                    <span class="save-badge" data-save-wrap hidden><span data-save-pill></span></span>
                   </div>
                   <div class="bundle-summary-right">
                     <button type="button" class="btn-add" data-bundle-add>Add All</button>
@@ -108,10 +110,9 @@
             <h3>Terms and Conditions</h3>
             <div class="bundle-modal-body">
               <ol>
-                <li>Valid for orders placed between Dec. 8th - 25th, 2025.</li>
-                <li>Buy 2 items to get 20% off, or buy 3 or more items to get 25% off.</li>
-                <li>Discounts apply to full-price items only.</li>
-                <li>Excludes Gift Cards, Plus Membership and products from Tomtoc.</li>
+                <li>Promotion valid while stocks last.</li>
+                <li>Bundle discounts are based on the listed product prices.</li>
+                <li>All products follow our standard return and warranty policy.</li>
               </ol>
             </div>
           </div>
@@ -171,7 +172,6 @@
 .total-label { font-size: 16px; font-weight: 600; }
 .total-now { font-size: 24px; font-weight: 800; color: #1a2b56; }
 .total-old { text-decoration: line-through; opacity: 0.3; font-size: 16px; }
-.save-badge { background: #d92d20; color: #fff; padding: 3px 12px; border-radius: 20px; font-size: 12px; font-weight: 700; margin-left: 10px; }
 
 .btn-add, .btn-buy { padding: 12px 25px; font-weight: 700; cursor: pointer; border: 2px solid #000; transition: 0.3s; font-size: 14px; }
 .btn-buy { background: #000; color: #fff; margin-left: 10px; }
@@ -203,35 +203,39 @@
 
   const initBundle = (el) => {
     const items = el.querySelectorAll('[data-bundle-item]');
-    const totalNow = el.querySelector('[data-total-now]');
-    const totalOld = el.querySelector('[data-total-compare]');
-    const saveWrap = el.querySelector('[data-save-wrap]');
-    const savePill = el.querySelector('[data-save-pill]');
+    const totalNowEl = el.querySelector('[data-total-now]');
+    const totalOldEl = el.querySelector('[data-total-compare]');
 
     const update = () => {
-      let rawTotal = 0, count = 0;
+      let currentTotal = 0;
+      let compareTotal = 0;
+      let hasComparePrice = false;
+
       items.forEach(item => {
         const isChecked = item.querySelector('[data-item-check]').checked;
         const price = Number(item.dataset.price);
-        if (isChecked) { rawTotal += price; count++; item.style.opacity = "1"; }
-        else { item.style.opacity = "0.4"; }
+        const comparePrice = Number(item.dataset.comparePrice);
+
+        if (isChecked) {
+          item.style.opacity = "1";
+          currentTotal += price;
+          compareTotal += comparePrice;
+          if (comparePrice > price) hasComparePrice = true;
+        } else {
+          item.style.opacity = "0.4";
+        }
         item.querySelector('[data-price-now]').textContent = formatMoney(price);
       });
 
-      // 阶梯折扣逻辑
-      let discount = count === 2 ? 0.20 : (count >= 3 ? 0.25 : 0);
-      let final = Math.round(rawTotal * (1 - discount));
-      
-      totalNow.textContent = formatMoney(final);
-      
-      if (discount > 0) {
-        totalOld.textContent = formatMoney(rawTotal);
-        totalOld.style.display = 'inline';
-        saveWrap.hidden = false;
-        savePill.textContent = `Save ${formatMoney(rawTotal - final)}`;
+      // 更新最终售价总和
+      totalNowEl.textContent = formatMoney(currentTotal);
+
+      // 如果选中的产品中有原价优惠，则显示总原价划线
+      if (hasComparePrice && compareTotal > currentTotal) {
+        totalOldEl.textContent = formatMoney(compareTotal);
+        totalOldEl.style.display = 'inline';
       } else {
-        totalOld.style.display = 'none';
-        saveWrap.hidden = true;
+        totalOldEl.style.display = 'none';
       }
     };
 
@@ -269,7 +273,7 @@
 
 {% schema %}
 {
-  "name": "Multi Bundle System V3",
+  "name": "Multi Bundle Simple Sum",
   "settings": [],
   "blocks": [
     {
@@ -278,7 +282,7 @@
       "settings": [
         { "type": "header", "content": "Bundle Info" },
         { "type": "text", "id": "kicker", "label": "Top Title", "default": "Limited Collaboration 🎄" },
-        { "type": "text", "id": "subheading", "label": "Top Description", "default": "Power and protection combined." },
+        { "type": "text", "id": "subheading", "label": "Top Description" },
         { "type": "image_picker", "id": "hero_image", "label": "Side Hero Image" },
         { "type": "text", "id": "heading", "label": "Side Heading", "default": "Bundle Package" },
         { "type": "textarea", "id": "side_desc", "label": "Side Description" },
@@ -292,6 +296,6 @@
       ]
     }
   ],
-  "presets": [{ "name": "Multi Bundle System V3" }]
+  "presets": [{ "name": "Multi Bundle Simple Sum" }]
 }
 {% endschema %}
