@@ -191,8 +191,8 @@
         "bundle_group_PYKcNW": {
           "type": "bundle_group",
           "settings": {
-            "kicker": "",
-            "subheading": "",
+            "kicker": "Bundle-Deal",
+            "subheading": "Sichern Sie sich drei Produkte zum Vorteilspreis. Nur für kurze Zeit verfügbar.",
             "hero_image": "shopify://shop_images/5_-_-_3.jpg",
             "heading": "Bundle Package",
             "side_desc": "",
