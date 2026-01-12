@@ -656,5 +656,15 @@
       "signup_form_success": "We will send you an email right before we open!",
       "password_link": "Enter using password"
     }
+  },
+  "shopify": {
+    "checkout": {
+      "general": {
+        "print_policies_link_label": "Drucken"
+      },
+      "thank_you": {
+        "print_link_label": "Drucken"
+      }
+    }
   }
 }
