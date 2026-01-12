@@ -96,7 +96,7 @@
           "settings": {
             "percent": "-30%",
             "total_qty": 10,
-            "speed_weight": 95,
+            "speed_weight": 80,
             "coupon_code": "NY30DE",
             "redirect_url": "https://www.maidesite.de/discount/NY30DE?redirect=/collections/hohenverstellbarer-schreibtisch"
           }
