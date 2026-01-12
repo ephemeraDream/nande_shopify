@@ -2,18 +2,32 @@
 
 <div class="gift-card-container" style="text-align: center; padding: 40px; font-family: sans-serif;">
   
+  <!-- 图片显示区域，添加了居中和尺寸样式 -->
   {% if section.settings.image == blank %}
-    <img class="gift-card__image" src="{{ 'gift-card/card.svg' | shopify_asset_url }}" loading="lazy" width="570" height="380" alt="Gift Card" style="max-width: 100%; height: auto; border-radius: 8px;">
+    <img 
+      class="gift-card__image" 
+      src="{{ 'gift-card/card.svg' | shopify_asset_url }}" 
+      loading="lazy" 
+      alt="Gift Card" 
+      style="max-width: 570px; width: 100%; height: auto; border-radius: 8px; display: block; margin: 0 auto;"
+    >
   {% else %}
-    <img src="{{ section.settings.image | image_url: width: 800 }}" loading="lazy" width="400" height="{{ 400 | divided_by: section.settings.image.aspect_ratio | ceil }}" alt="Gift Card">
+    <img 
+      src="{{ section.settings.image | image_url: width: 800 }}" 
+      loading="lazy" 
+      alt="Gift Card"
+      style="max-width: 570px; width: 100%; height: auto; border-radius: 8px; display: block; margin: 0 auto;"
+    >
   {% endif %}
 
+  <!-- QR 二维码区域 -->
   <div class="gift-card__qr-code" data-identifier="{{ gift_card.qr_identifier }}" style="margin: 20px auto; display: flex; justify-content: center;"></div>
 
+  <!-- 礼品卡信息区域 -->
   <div class="gift-card__info" style="margin-top: 20px;">
     <h2 style="color: #333;">{{ 'gift_cards.issued.subtext' | t }}</h2>
     
-    <!-- 关键部分：直接显示 15 位完整代码 -->
+    <!-- 完整代码显示框 -->
     <div style="background: #f4f4f4; padding: 15px; border: 2px dashed #ccc; display: inline-block; font-size: 24px; font-weight: bold; letter-spacing: 2px; color: #000; margin: 10px 0;">
       {{ gift_card.code | format_code }}
     </div>
@@ -27,6 +41,7 @@
     {%- endif -%}
   </div>
 
+  <!-- 按钮区域 -->
   <div class="gift-card__btns" style="margin-top: 30px;">
     <a class="btn" href="{{ shop.url }}" target="_blank" rel="noopener" style="display: inline-block; padding: 10px 20px; background: #000; color: #fff; text-decoration: none; border-radius: 4px; margin-right: 10px;">
       {{ 'gift_cards.issued.shop_link' | t }}
@@ -39,6 +54,7 @@
 
 <script src="{{ 'vendor/qrcode.js' | shopify_asset_url }}" defer></script>
 <script>
+  // ... (JS 代码与之前一致) ...
   document.addEventListener('DOMContentLoaded', function() {
     new QRCode( document.querySelector('.gift-card__qr-code'), {
       text: document.querySelector('.gift-card__qr-code').dataset.identifier,
