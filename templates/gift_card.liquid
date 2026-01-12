@@ -1,35 +1,49 @@
-{% if section.settings.image == blank %}
-  <img class="gift-card__image" src="{{ 'gift-card/card.svg' | shopify_asset_url }}" loading="lazy" width="570" height="{{ 570 | divided_by: 1.5 }}" alt="">
-{% else %}
-  <img src="{{ section.settings.image | image_url: width: 800 }}" loading="lazy" width="400" height="{{ 400 | divided_by: section.settings.image.aspect_ratio | ceil }}" alt="">
-{% endif %}
+{% layout 'gift_card' %}
 
-<div class="gift-card__qr-code" data-identifier="{{ gift_card.qr_identifier }}"></div>
-<div class="gift-card__info">
-  <input type="text" class="gift-card__number" value="{{ gift_card.code | format_code }}" aria-label="{{ 'gift_cards.issued.code' | t }}" readonly>
-  {%- if gift_card.pass_url -%}
-    <a href="{{ gift_card.pass_url }}">
-      <img src="{{ 'gift-card/add-to-apple-wallet.svg' | shopify_asset_url }}" loading="eager" width="120" height="40" alt="{{ 'gift_cards.issued.add_to_apple_wallet' | t }}">
+<div class="gift-card-container" style="text-align: center; padding: 40px; font-family: sans-serif;">
+  
+  {% if section.settings.image == blank %}
+    <img class="gift-card__image" src="{{ 'gift-card/card.svg' | shopify_asset_url }}" loading="lazy" width="570" height="380" alt="Gift Card" style="max-width: 100%; height: auto; border-radius: 8px;">
+  {% else %}
+    <img src="{{ section.settings.image | image_url: width: 800 }}" loading="lazy" width="400" height="{{ 400 | divided_by: section.settings.image.aspect_ratio | ceil }}" alt="Gift Card">
+  {% endif %}
+
+  <div class="gift-card__qr-code" data-identifier="{{ gift_card.qr_identifier }}" style="margin: 20px auto; display: flex; justify-content: center;"></div>
+
+  <div class="gift-card__info" style="margin-top: 20px;">
+    <h2 style="color: #333;">{{ 'gift_cards.issued.subtext' | t }}</h2>
+    
+    <!-- 关键部分：直接显示 15 位完整代码 -->
+    <div style="background: #f4f4f4; padding: 15px; border: 2px dashed #ccc; display: inline-block; font-size: 24px; font-weight: bold; letter-spacing: 2px; color: #000; margin: 10px 0;">
+      {{ gift_card.code | format_code }}
+    </div>
+
+    {%- if gift_card.pass_url -%}
+      <div style="margin-top: 15px;">
+        <a href="{{ gift_card.pass_url }}">
+          <img src="{{ 'gift-card/add-to-apple-wallet.svg' | shopify_asset_url }}" loading="eager" width="120" height="40" alt="Apple Wallet">
+        </a>
+      </div>
+    {%- endif -%}
+  </div>
+
+  <div class="gift-card__btns" style="margin-top: 30px;">
+    <a class="btn" href="{{ shop.url }}" target="_blank" rel="noopener" style="display: inline-block; padding: 10px 20px; background: #000; color: #fff; text-decoration: none; border-radius: 4px; margin-right: 10px;">
+      {{ 'gift_cards.issued.shop_link' | t }}
     </a>
-  {%- endif -%}
-</div>
-<div class="gift-card__btns">
-  <a class="btn btn--primary" href="{{ shop.url }}" target="_blank" rel="noopener">
-    {{- 'gift_cards.issued.shop_link' | t -}}
-  </a>
-  <button class="btn btn--secondary" onclick="window.print();">
-    {{- 'gift_cards.issued.print' | t -}}
-  </button>
+    <button class="btn" onclick="window.print();" style="display: inline-block; padding: 10px 20px; background: #eee; border: 1px solid #ccc; border-radius: 4px; cursor: pointer;">
+      {{ 'gift_cards.issued.print' | t }}
+    </button>
+  </div>
 </div>
 
+<script src="{{ 'vendor/qrcode.js' | shopify_asset_url }}" defer></script>
 <script>
-  const qrImageAlt = {{ 'gift_cards.issued.qr_image_alt' | t | json }};
   document.addEventListener('DOMContentLoaded', function() {
     new QRCode( document.querySelector('.gift-card__qr-code'), {
       text: document.querySelector('.gift-card__qr-code').dataset.identifier,
       width: 120,
-      height: 120,
-      imageAltText: qrImageAlt
+      height: 120
     });
   });
 </script>
