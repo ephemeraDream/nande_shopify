@@ -2,32 +2,21 @@
 
 <div class="gift-card-container" style="text-align: center; padding: 40px; font-family: sans-serif;">
   
-  <!-- 图片显示区域，添加了居中和尺寸样式 -->
+  <!-- 1. 图片区域：已设置居中和大小限制 -->
   {% if section.settings.image == blank %}
-    <img 
-      class="gift-card__image" 
-      src="{{ 'gift-card/card.svg' | shopify_asset_url }}" 
-      loading="lazy" 
-      alt="Gift Card" 
-      style="max-width: 570px; width: 100%; height: auto; border-radius: 8px; display: block; margin: 0 auto;"
-    >
+    <img src="{{ 'gift-card/card.svg' | shopify_asset_url }}" loading="lazy" alt="Gift Card" style="max-width: 570px; width: 100%; height: auto; border-radius: 8px; display: block; margin: 0 auto;">
   {% else %}
-    <img 
-      src="{{ section.settings.image | image_url: width: 800 }}" 
-      loading="lazy" 
-      alt="Gift Card"
-      style="max-width: 570px; width: 100%; height: auto; border-radius: 8px; display: block; margin: 0 auto;"
-    >
+    <img src="{{ section.settings.image | image_url: width: 800 }}" loading="lazy" alt="Gift Card" style="max-width: 570px; width: 100%; height: auto; border-radius: 8px; display: block; margin: 0 auto;">
   {% endif %}
 
-  <!-- QR 二维码区域 -->
+  <!-- 2. QR 二维码 -->
   <div class="gift-card__qr-code" data-identifier="{{ gift_card.qr_identifier }}" style="margin: 20px auto; display: flex; justify-content: center;"></div>
 
-  <!-- 礼品卡信息区域 -->
+  <!-- 3. 礼品卡代码显示区 -->
   <div class="gift-card__info" style="margin-top: 20px;">
-    <h2 style="color: #333;">{{ 'gift_cards.issued.subtext' | t }}</h2>
+    <h2 style="color: #333;">您的礼品卡代码</h2>
     
-    <!-- 完整代码显示框 -->
+    <!-- 这里会输出 15 位完整代码 -->
     <div style="background: #f4f4f4; padding: 15px; border: 2px dashed #ccc; display: inline-block; font-size: 24px; font-weight: bold; letter-spacing: 2px; color: #000; margin: 10px 0;">
       {{ gift_card.code | format_code }}
     </div>
@@ -41,25 +30,26 @@
     {%- endif -%}
   </div>
 
-  <!-- 按钮区域 -->
+  <!-- 4. 按钮区域：已修复 Translation Missing 报错 -->
   <div class="gift-card__btns" style="margin-top: 30px;">
     <a class="btn" href="{{ shop.url }}" target="_blank" rel="noopener" style="display: inline-block; padding: 10px 20px; background: #000; color: #fff; text-decoration: none; border-radius: 4px; margin-right: 10px;">
-      {{ 'gift_cards.issued.shop_link' | t }}
+      返回商店购物
     </a>
     <button class="btn" onclick="window.print();" style="display: inline-block; padding: 10px 20px; background: #eee; border: 1px solid #ccc; border-radius: 4px; cursor: pointer;">
-      {{ 'gift_cards.issued.print' | t }}
+      打印礼品卡
     </button>
   </div>
 </div>
 
 <script src="{{ 'vendor/qrcode.js' | shopify_asset_url }}" defer></script>
 <script>
-  // ... (JS 代码与之前一致) ...
   document.addEventListener('DOMContentLoaded', function() {
-    new QRCode( document.querySelector('.gift-card__qr-code'), {
-      text: document.querySelector('.gift-card__qr-code').dataset.identifier,
-      width: 120,
-      height: 120
-    });
+    if (typeof QRCode !== 'undefined') {
+      new QRCode( document.querySelector('.gift-card__qr-code'), {
+        text: document.querySelector('.gift-card__qr-code').dataset.identifier,
+        width: 120,
+        height: 120
+      });
+    }
   });
 </script>
