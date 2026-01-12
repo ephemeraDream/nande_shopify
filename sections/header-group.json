@@ -27,10 +27,9 @@
       "blocks": {
         "announcement_R3cx4w": {
           "type": "announcement",
-          "disabled": true,
           "settings": {
-            "text": "Weihnachts-Pause: Kein Versand 24.–26.12. & 1.1. | Mehr Info 👉",
-            "link": "https://www.maidesite.de/blogs/news/weihnachts-und-neujahrsferien",
+            "text": "Lieferhinweis: Aufgrund extremer Wetterbedingungen und starker Schneefälle in Teilen Europas können Bestellungen derzeit verspätet zugestellt werden.",
+            "link": "https://www.maidesite.de/blogs/news/aktuelle-meldung-lieferverzogerungen-aufgrund-extremer-wetterbedingungen-in-europa",
             "font_color": "#bdff00"
           }
         },
