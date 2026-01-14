@@ -1,13 +1,12 @@
-{%- comment -%} 加载样式表 [cite: 1] {%- endcomment -%}
 {{ 'section-subscribe-emails.css' | asset_url | stylesheet_tag }}
 
 <div class="subscribe_emails_section session-box-padding" id="subscribe-emails-{{ section.id }}">
   <div class="subscribe_emails">
     <div class="subscribe_emails_body">
-      <div class="subscribe_emails_title">{{ section.settings.title }}</div> [cite: 1]
+      <div class="subscribe_emails_title">{{ section.settings.title }}</div>
       
       {%- form 'customer', id: 'ContactFooter', class: 'footer__newsletter newsletter-form' -%}
-        <input type="hidden" name="contact[tags]" value="newsletter"> [cite: 1]
+        <input type="hidden" name="contact[tags]" value="newsletter">
         <div class="newsletter-form__field-wrapper">
           <div class="field">
             <input
@@ -29,7 +28,7 @@
               {% endif %}
               placeholder="{{ 'newsletter.label' | t }}"
               required
-            > [cite: 2, 3, 4]
+            >
             <button
               type="submit"
               class="newsletter-form__button field__button"
@@ -38,19 +37,18 @@
               aria-label="{{ 'newsletter.button_label' | t }}"
             >
               <span class="btn-text"> {{ section.settings.btn_text }}</span>
-            </button> [cite: 5, 6]
+            </button>
           </div>
 
           <div class="subscribe_emails_confirm">
-            <label class="subscribe_emails_confirm_label">
+            <label class="subscribe_emails_confirm_label" for="subscribe_confirm_checkbox">
               <input 
                 type="checkbox" 
                 class="subscribe_emails_confirm_checkbox_input" 
                 id="subscribe_confirm_checkbox"
                 required
-              > [cite: 7]
+              >
               <span class="subscribe_emails_confirm_checkbox_custom"></span>
-              {%- comment -%} 使用 richtext 渲染，支持超链接  {%- endcomment -%}
               <div class="subscribe_emails_confirm_text rte">
                 {{ section.settings.confirm_text }}
               </div>
@@ -60,18 +58,18 @@
           <div class="subscribe_emails_error_message" id="subscribe_error_message" style="display: none;">
             <span class="svg-wrapper">{{- 'icon-error.svg' | inline_asset_content -}}</span>
             <span>{{ section.settings.checkbox_error_message | default: "Please check the agreement first" }}</span>
-          </div> [cite: 8, 9, 10]
+          </div>
 
           <div class="subscribe_emails_error_message" id="email_error_message" style="display: none;">
             <span class="svg-wrapper">{{- 'icon-error.svg' | inline_asset_content -}}</span>
             <span>{{ section.settings.email_error_message | default: "Please enter your email address" }}</span>
-          </div> [cite: 11, 12]
+          </div>
 
           {%- if form.errors -%}
             <small class="newsletter-form__message form__message" id="ContactFooter-error">
               <span class="svg-wrapper">{{- 'icon-error.svg' | inline_asset_content -}}</span>
               {{- form.errors.translated_fields.email | capitalize }} {{ form.errors.messages.email -}}
-            </small> [cite: 13, 14]
+            </small>
           {%- endif -%}
         </div>
 
@@ -79,12 +77,11 @@
           <h3 class="newsletter-form__message newsletter-form__message--success form__message" id="ContactFooter-success" tabindex="-1" autofocus>
             <span class="svg-wrapper">{{- 'icon-success.svg' | inline_asset_content -}}</span>
             {{- 'newsletter.success' | t }}
-          </h3> [cite: 15, 16, 17]
+          </h3>
         {%- endif -%}
       {%- endform -%}
     </div>
 
-    {%- comment -%} 修复后的社交媒体图标列表 [cite: 18-35] {%- endcomment -%}
     <ul class="list-unstyled list-social" role="list">
       {%- if settings.social_facebook_link != blank -%}
         <li class="list-social__item">
@@ -139,10 +136,10 @@
 </div>
 
 <style>
-/* 按钮加载中状态 [cite: 36-39] */
+/* 加载动画 */
 .subscribe_emails_section .newsletter-form__button.loading {
   pointer-events: none;
-  color: transparent;
+  color: transparent !important;
 }
 .subscribe_emails_section .newsletter-form__button.loading::after {
   content: '';
@@ -162,18 +159,19 @@
   100% { transform: translate(-50%, -50%) rotate(360deg); }
 }
 
-/* 勾选框及文本排版优化 [cite: 57-61] */
+/* 勾选框区域布局 */
 .subscribe_emails_confirm_label {
-  display: flex;
-  align-items: flex-start;
+  display: flex !important;
+  align-items: flex-start !important;
   gap: 1rem;
   cursor: pointer;
   font-size: 1.4rem;
   line-height: 1.4;
+  margin-top: 1.5rem;
 }
 
 #subscribe_confirm_checkbox.subscribe_emails_confirm_checkbox_input {
-  display: none;
+  display: none !important;
 }
 
 .subscribe_emails_confirm_checkbox_custom {
@@ -185,7 +183,6 @@
   position: relative;
   flex-shrink: 0;
   margin-top: 0.2rem;
-  transition: all 0.2s ease;
 }
 
 .subscribe_emails_confirm_checkbox_input:checked + .subscribe_emails_confirm_checkbox_custom {
@@ -196,45 +193,43 @@
 .subscribe_emails_confirm_checkbox_input:checked + .subscribe_emails_confirm_checkbox_custom::after {
   content: '';
   position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
+  left: 0; top: 0; width: 100%; height: 100%;
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none'%3E%3Cpath d='M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z' fill='%23000'/%3E%3C/svg%3E");
   background-size: 10px 10px;
   background-repeat: no-repeat;
   background-position: center;
 }
 
-/* 链接样式修复 */
+/* 修复富文本导致的换行问题 */
 .subscribe_emails_confirm_text {
   flex: 1;
 }
 .subscribe_emails_confirm_text p {
-  margin: 0; /* 消除富文本默认间距，防止分行显示 */
-  display: inline;
-}
-.subscribe_emails_confirm_text a {
-  color: inherit;
-  text-decoration: underline;
-  text-underline-offset: 3px;
+  display: inline !important;
+  margin: 0 !important;
+  padding: 0 !important;
 }
 
-/* 社交图标排列修复  */
+/* 修复链接颜色和悬停效果 */
+.subscribe_emails_confirm_text a {
+  color: #bdff00; /* 建议设为亮色或品牌色 */
+  text-decoration: underline;
+  display: inline;
+}
+.subscribe_emails_confirm_text a:hover {
+  color: #fff !important; /* 悬停时变为白色，确保可见 */
+  opacity: 0.8;
+}
+
+/* 社交图标布局 */
 .list-social {
-  display: flex;
+  display: flex !important;
+  flex-direction: row !important;
   flex-wrap: wrap;
+  gap: 1.5rem;
   list-style: none;
   padding: 0;
-  margin: 1.5rem 0 0 0;
-  gap: 1.5rem;
-}
-.list-social__link {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 2.4rem;
-  height: 2.4rem;
+  margin-top: 2rem;
 }
 
 .subscribe_emails_error_message {
@@ -248,7 +243,7 @@
   background-color: #fdf2f2;
   border: 1px solid #fecaca;
   border-radius: 4px;
-} [cite: 62, 63, 64]
+}
 </style>
 
 <script>
@@ -300,10 +295,6 @@ document.addEventListener('DOMContentLoaded', function() {
   "name": "subscribe emails",
   "tag": "section",
   "class": "section",
-  "disabled_on": {
-    "groups": ["header"],
-    "templates": ["*"]
-  },
   "settings": [
     {
       "type": "richtext",
