@@ -2,187 +2,168 @@
 
 <div class="subscribe_emails_section session-box-padding" id="subscribe-emails-{{ section.id }}">
   <div class="subscribe_emails">
-    <div class="subscribe_emails_body">
-      <div class="subscribe_emails_title">{{ section.settings.title }}</div>
-      
-      {%- form 'customer', id: 'ContactFooter', class: 'footer__newsletter newsletter-form' -%}
-        <input type="hidden" name="contact[tags]" value="newsletter">
-        <div class="newsletter-form__field-wrapper">
-          <div class="field">
-            <input
-              id="NewsletterForm--{{ section.id }}"
-              type="email"
-              name="contact[email]"
-              class="field__input"
-              value="{{ form.email }}"
-              aria-required="true"
-              autocorrect="off"
-              autocapitalize="off"
-              autocomplete="email"
-              {% if form.errors %}
-                autofocus
-                aria-invalid="true"
-                aria-describedby="ContactFooter-error"
-              {% elsif form.posted_successfully? %}
-                aria-describedby="ContactFooter-success"
-              {% endif %}
-              placeholder="{{ 'newsletter.label' | t }}"
-              required
-            >
-            <button
-              type="submit"
-              class="newsletter-form__button field__button"
-              name="commit"
-              id="Subscribe"
-              aria-label="{{ 'newsletter.button_label' | t }}"
-            >
-              <span class="btn-text"> {{ section.settings.btn_text }}</span>
-            </button>
-          </div>
-
-          <div class="subscribe_emails_confirm">
-            <label class="subscribe_emails_confirm_label" for="subscribe_confirm_checkbox">
-              <input 
-                type="checkbox" 
-                class="subscribe_emails_confirm_checkbox_input" 
-                id="subscribe_confirm_checkbox"
+    {%- comment -%} 订阅主体和图标现在的父容器 {%- endcomment -%}
+    <div class="subscribe_emails_container">
+      <div class="subscribe_emails_body">
+        <div class="subscribe_emails_title">{{ section.settings.title }}</div>
+        
+        {%- form 'customer', id: 'ContactFooter', class: 'footer__newsletter newsletter-form' -%}
+          <input type="hidden" name="contact[tags]" value="newsletter">
+          <div class="newsletter-form__field-wrapper">
+            <div class="field">
+              <input
+                id="NewsletterForm--{{ section.id }}"
+                type="email"
+                name="contact[email]"
+                class="field__input"
+                value="{{ form.email }}"
+                aria-required="true"
+                autocorrect="off"
+                autocapitalize="off"
+                autocomplete="email"
+                {% if form.errors %}
+                  autofocus
+                  aria-invalid="true"
+                  aria-describedby="ContactFooter-error"
+                {% elsif form.posted_successfully? %}
+                  aria-describedby="ContactFooter-success"
+                {% endif %}
+                placeholder="{{ 'newsletter.label' | t }}"
                 required
               >
-              <span class="subscribe_emails_confirm_checkbox_custom"></span>
-              <div class="subscribe_emails_confirm_text rte">
-                {{ section.settings.confirm_text }}
-              </div>
-            </label>
-          </div>
+              <button
+                type="submit"
+                class="newsletter-form__button field__button"
+                name="commit"
+                id="Subscribe"
+                aria-label="{{ 'newsletter.button_label' | t }}"
+              >
+                <span class="btn-text"> {{ section.settings.btn_text }}</span>
+              </button>
+            </div>
 
-          <div class="subscribe_emails_error_message" id="subscribe_error_message" style="display: none;">
-            <span class="svg-wrapper">{{- 'icon-error.svg' | inline_asset_content -}}</span>
-            <span>{{ section.settings.checkbox_error_message | default: "Please check the agreement first" }}</span>
-          </div>
+            {%- comment -%} 勾选框区域：修复换行与链接颜色 {%- endcomment -%}
+            <div class="subscribe_emails_confirm">
+              <label class="subscribe_emails_confirm_label" for="subscribe_confirm_checkbox">
+                <input 
+                  type="checkbox" 
+                  class="subscribe_emails_confirm_checkbox_input" 
+                  id="subscribe_confirm_checkbox"
+                  required
+                >
+                <span class="subscribe_emails_confirm_checkbox_custom"></span>
+                <div class="subscribe_emails_confirm_text rte-inline">
+                  {{ section.settings.confirm_text }}
+                </div>
+              </label>
+            </div>
 
-          <div class="subscribe_emails_error_message" id="email_error_message" style="display: none;">
-            <span class="svg-wrapper">{{- 'icon-error.svg' | inline_asset_content -}}</span>
-            <span>{{ section.settings.email_error_message | default: "Please enter your email address" }}</span>
-          </div>
-
-          {%- if form.errors -%}
-            <small class="newsletter-form__message form__message" id="ContactFooter-error">
+            <div class="subscribe_emails_error_message" id="subscribe_error_message" style="display: none;">
               <span class="svg-wrapper">{{- 'icon-error.svg' | inline_asset_content -}}</span>
-              {{- form.errors.translated_fields.email | capitalize }} {{ form.errors.messages.email -}}
-            </small>
-          {%- endif -%}
-        </div>
+              <span>{{ section.settings.checkbox_error_message | default: "Please check the agreement first" }}</span>
+            </div>
+          </div>
+        {%- endform -%}
+      </div>
 
-        {%- if form.posted_successfully? -%}
-          <h3 class="newsletter-form__message newsletter-form__message--success form__message" id="ContactFooter-success" tabindex="-1" autofocus>
-            <span class="svg-wrapper">{{- 'icon-success.svg' | inline_asset_content -}}</span>
-            {{- 'newsletter.success' | t }}
-          </h3>
+      {%- comment -%} 社交图标：现在与 subscribe_emails_body 平级，实现平齐 {%- endcomment -%}
+      <ul class="list-unstyled list-social" role="list">
+        {%- if settings.social_facebook_link != blank -%}
+          <li class="list-social__item">
+            <a href="{{ settings.social_facebook_link }}" class="link list-social__link">
+              <span class="svg-wrapper">{{- 'icon-facebook.svg' | inline_asset_content -}}</span>
+            </a>
+          </li>
         {%- endif -%}
-      {%- endform -%}
+        {%- if settings.social_instagram_link != blank -%}
+          <li class="list-social__item">
+            <a href="{{ settings.social_instagram_link }}" class="link list-social__link">
+              <span class="svg-wrapper">{{- 'icon-instagram.svg' | inline_asset_content -}}</span>
+            </a>
+          </li>
+        {%- endif -%}
+        {%- if settings.social_youtube_link != blank -%}
+          <li class="list-social__item">
+            <a href="{{ settings.social_youtube_link }}" class="link list-social__link">
+              <span class="svg-wrapper">{{- 'icon-youtube.svg' | inline_asset_content -}}</span>
+            </a>
+          </li>
+        {%- endif -%}
+        {%- if settings.social_tiktok_link != blank -%}
+          <li class="list-social__item">
+            <a href="{{ settings.social_tiktok_link }}" class="link list-social__link">
+              <span class="svg-wrapper">{{- 'icon-tiktok.svg' | inline_asset_content -}}</span>
+            </a>
+          </li>
+        {%- endif -%}
+      </ul>
     </div>
-
-    <ul class="list-unstyled list-social" role="list">
-      {%- if settings.social_facebook_link != blank -%}
-        <li class="list-social__item">
-          <a href="{{ settings.social_facebook_link }}" class="link list-social__link">
-            <span class="svg-wrapper">{{- 'icon-facebook.svg' | inline_asset_content -}}</span>
-            <span class="visually-hidden">{{ 'general.social.links.facebook' | t }}</span>
-          </a>
-        </li>
-      {%- endif -%}
-      {%- if settings.social_instagram_link != blank -%}
-        <li class="list-social__item">
-          <a href="{{ settings.social_instagram_link }}" class="link list-social__link">
-            <span class="svg-wrapper">{{- 'icon-instagram.svg' | inline_asset_content -}}</span>
-            <span class="visually-hidden">{{ 'general.social.links.instagram' | t }}</span>
-          </a>
-        </li>
-      {%- endif -%}
-      {%- if settings.social_youtube_link != blank -%}
-        <li class="list-social__item">
-          <a href="{{ settings.social_youtube_link }}" class="link list-social__link">
-            <span class="svg-wrapper">{{- 'icon-youtube.svg' | inline_asset_content -}}</span>
-            <span class="visually-hidden">{{ 'general.social.links.youtube' | t }}</span>
-          </a>
-        </li>
-      {%- endif -%}
-      {%- if settings.social_tiktok_link != blank -%}
-        <li class="list-social__item">
-          <a href="{{ settings.social_tiktok_link }}" class="link list-social__link">
-            <span class="svg-wrapper">{{- 'icon-tiktok.svg' | inline_asset_content -}}</span>
-            <span class="visually-hidden">{{ 'general.social.links.tiktok' | t }}</span>
-          </a>
-        </li>
-      {%- endif -%}
-      {%- if settings.social_twitter_link != blank -%}
-        <li class="list-social__item">
-          <a href="{{ settings.social_twitter_link }}" class="link list-social__link">
-            <span class="svg-wrapper">{{- 'icon-twitter.svg' | inline_asset_content -}}</span>
-            <span class="visually-hidden">{{ 'general.social.links.twitter' | t }}</span>
-          </a>
-        </li>
-      {%- endif -%}
-      {%- if settings.social_pinterest_link != blank -%}
-        <li class="list-social__item">
-          <a href="{{ settings.social_pinterest_link }}" class="link list-social__link">
-            <span class="svg-wrapper">{{- 'icon-pinterest.svg' | inline_asset_content -}}</span>
-            <span class="visually-hidden">{{ 'general.social.links.pinterest' | t }}</span>
-          </a>
-        </li>
-      {%- endif -%}
-    </ul>
   </div>
 </div>
 
 <style>
-/* 加载动画 */
-.subscribe_emails_section .newsletter-form__button.loading {
-  pointer-events: none;
-  color: transparent !important;
-}
-.subscribe_emails_section .newsletter-form__button.loading::after {
-  content: '';
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 20px;
-  height: 20px;
-  border: 2px solid rgb(6, 19, 43);
-  border-top: 2px solid transparent;
-  border-radius: 50%;
-  animation: subscribe-btn-spin 1s linear infinite;
-}
-@keyframes subscribe-btn-spin {
-  0% { transform: translate(-50%, -50%) rotate(0deg); }
-  100% { transform: translate(-50%, -50%) rotate(360deg); }
+/* 核心平齐布局 */
+.subscribe_emails_container {
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: flex-start !important; /* 顶部对齐，若想完全中心对齐改用 center */
+  justify-content: space-between;
+  gap: 30px;
+  flex-wrap: wrap; /* 移动端自动换行 */
 }
 
-/* 勾选框区域布局 */
+.subscribe_emails_body {
+  flex: 1;
+  min-width: 300px;
+}
+
+/* 社交图标排列 */
+.list-social {
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: center !important;
+  gap: 15px;
+  list-style: none;
+  padding: 0;
+  margin: 0 !important; /* 移除顶部外边距以实现平齐 */
+  height: 50px; /* 匹配输入框的高度以实现视觉中心对齐 */
+}
+
+/* 修复富文本导致的换行问题 */
+.rte-inline, .rte-inline p {
+  display: inline !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.rte-inline a {
+  display: inline !important;
+  color: #bdff00 !important; 
+  text-decoration: underline !important;
+}
+
+.rte-inline a:hover {
+  color: #ffffff !important;
+  opacity: 1;
+}
+
+/* 勾选框样式 */
 .subscribe_emails_confirm_label {
   display: flex !important;
-  align-items: flex-start !important;
-  gap: 1rem;
-  cursor: pointer;
-  font-size: 1.4rem;
-  line-height: 1.4;
-  margin-top: 1.5rem;
-}
-
-#subscribe_confirm_checkbox.subscribe_emails_confirm_checkbox_input {
-  display: none !important;
+  align-items: center !important;
+  gap: 10px;
+  margin-top: 15px;
 }
 
 .subscribe_emails_confirm_checkbox_custom {
-  width: 1.4rem;
-  height: 1.4rem;
+  width: 16px;
+  height: 16px;
   border: 1px solid #ccc;
-  border-radius: 2px;
-  display: inline-block;
-  position: relative;
   flex-shrink: 0;
-  margin-top: 0.2rem;
+}
+
+#subscribe_confirm_checkbox {
+  display: none !important;
 }
 
 .subscribe_emails_confirm_checkbox_input:checked + .subscribe_emails_confirm_checkbox_custom {
@@ -190,103 +171,30 @@
   border-color: #bdff00;
 }
 
-.subscribe_emails_confirm_checkbox_input:checked + .subscribe_emails_confirm_checkbox_custom::after {
-  content: '';
-  position: absolute;
-  left: 0; top: 0; width: 100%; height: 100%;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none'%3E%3Cpath d='M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z' fill='%23000'/%3E%3C/svg%3E");
-  background-size: 10px 10px;
-  background-repeat: no-repeat;
-  background-position: center;
-}
-
-/* 修复富文本导致的换行问题 */
-.subscribe_emails_confirm_text {
-  flex: 1;
-}
-.subscribe_emails_confirm_text p {
-  display: inline !important;
-  margin: 0 !important;
-  padding: 0 !important;
-}
-
-/* 修复链接颜色和悬停效果 */
-.subscribe_emails_confirm_text a {
-  color: #bdff00; /* 建议设为亮色或品牌色 */
-  text-decoration: underline;
-  display: inline;
-}
-.subscribe_emails_confirm_text a:hover {
-  color: #fff !important; /* 悬停时变为白色，确保可见 */
-  opacity: 0.8;
-}
-
-/* 社交图标布局 */
-.list-social {
-  display: flex !important;
-  flex-direction: row !important;
-  flex-wrap: wrap;
-  gap: 1.5rem;
-  list-style: none;
-  padding: 0;
-  margin-top: 2rem;
-}
-
-.subscribe_emails_error_message {
-  display: flex;
-  align-items: center;
-  gap: 0.8rem;
-  color: #e74c3c;
-  font-size: 1.2rem;
-  margin-top: 1rem;
-  padding: 0.8rem 1.2rem;
-  background-color: #fdf2f2;
-  border: 1px solid #fecaca;
-  border-radius: 4px;
+/* 按钮 Loading 状态 */
+.subscribe_emails_section .newsletter-form__button.loading {
+  pointer-events: none;
+  color: transparent !important;
 }
 </style>
 
 <script>
 document.addEventListener('DOMContentLoaded', function() {
-  function initSubscribeEmailsLoading(root) {
-    const container = root && root.querySelector ? root : document;
+  function initSub() {
     const sectionEl = document.getElementById('subscribe-emails-{{ section.id }}');
     if (!sectionEl) return;
-    
-    const form = sectionEl.querySelector('#ContactFooter');
-    const submitBtn = sectionEl.querySelector('#Subscribe');
-    const checkbox = sectionEl.querySelector('#subscribe_confirm_checkbox');
-    const checkboxErrorMessage = sectionEl.querySelector('#subscribe_error_message');
-    const emailErrorMessage = sectionEl.querySelector('#email_error_message');
-    const emailInput = sectionEl.querySelector('#NewsletterForm--{{ section.id }}');
-    
-    if (!form || !submitBtn || !checkbox || !checkboxErrorMessage || !emailErrorMessage) return;
-    
-    if (!submitBtn.dataset.loadingBound) {
-      submitBtn.addEventListener('click', function(e) {
-        const emailValue = emailInput ? emailInput.value.trim() : '';
-        checkboxErrorMessage.style.display = 'none';
-        emailErrorMessage.style.display = 'none';
-        
-        if (!emailValue) {
+    const btn = sectionEl.querySelector('#Subscribe');
+    const box = sectionEl.querySelector('#subscribe_confirm_checkbox');
+    if (btn && box) {
+      btn.addEventListener('click', function(e) {
+        if (!box.checked) {
           e.preventDefault();
-          emailErrorMessage.style.display = 'flex';
-          return false;
+          alert('Please agree to the terms.');
         }
-        
-        if (!checkbox.checked) {
-          e.preventDefault();
-          checkboxErrorMessage.style.display = 'flex';
-          return false;
-        }
-        submitBtn.classList.add('loading');
       });
-      submitBtn.dataset.loadingBound = 'true';
     }
   }
-
-  initSubscribeEmailsLoading(document);
-  document.addEventListener('shopify:section:load', function(e){ initSubscribeEmailsLoading(e.target); });
+  initSub();
 });
 </script>
 
@@ -294,40 +202,11 @@ document.addEventListener('DOMContentLoaded', function() {
 {
   "name": "subscribe emails",
   "tag": "section",
-  "class": "section",
   "settings": [
-    {
-      "type": "richtext",
-      "id": "title",
-      "label": "title"
-    },
-    {
-      "type": "text",
-      "id": "btn_text",
-      "label": "btn text"
-    },
-    {
-      "type": "richtext",
-      "id": "confirm_text",
-      "label": "confirm text"
-    },
-    {
-      "type": "text",
-      "id": "checkbox_error_message",
-      "label": "Checkbox Error Message",
-      "default": "Please check the agreement first"
-    },
-    {
-      "type": "text",
-      "id": "email_error_message",
-      "label": "Email Error Message",
-      "default": "Please enter your email address"
-    }
+    { "type": "richtext", "id": "title", "label": "title" },
+    { "type": "text", "id": "btn_text", "label": "btn text" },
+    { "type": "richtext", "id": "confirm_text", "label": "confirm text" }
   ],
-  "presets": [
-    {
-      "name": "subscribe emails"
-    }
-  ]
+  "presets": [{ "name": "subscribe emails" }]
 }
 {% endschema %}
