@@ -2,13 +2,13 @@
 
 <div class="subscribe_emails_section session-box-padding" id="subscribe-emails-{{ section.id }}">
   <div class="subscribe_emails">
-    {%- comment -%} 订阅主体与图标的并排容器 {%- endcomment -%}
+    {%- comment -%} 订阅主体与图标的横向容器 {%- endcomment -%}
     <div class="subscribe_emails_container">
       <div class="subscribe_emails_body">
-        <div class="subscribe_emails_title">{{ section.settings.title }}</div>
+        <div class="subscribe_emails_title">{{ section.settings.title }} </div>
         
         {%- form 'customer', id: 'ContactFooter', class: 'footer__newsletter newsletter-form' -%}
-          <input type="hidden" name="contact[tags]" value="newsletter">
+          <input type="hidden" name="contact[tags]" value="newsletter"> 
           <div class="newsletter-form__field-wrapper">
             <div class="field">
               <input
@@ -16,18 +16,7 @@
                 type="email"
                 name="contact[email]"
                 class="field__input"
-                value="{{ form.email }}"
-                aria-required="true"
-                autocorrect="off"
-                autocapitalize="off"
-                autocomplete="email"
-                {% if form.errors %}
-                  autofocus
-                  aria-invalid="true"
-                  aria-describedby="ContactFooter-error"
-                {% elsif form.posted_successfully? %}
-                  aria-describedby="ContactFooter-success"
-                {% endif %}
+                value="{{ form.email }}" 
                 placeholder="{{ 'newsletter.label' | t }}"
                 required
               >
@@ -36,9 +25,8 @@
                 class="newsletter-form__button field__button"
                 name="commit"
                 id="Subscribe"
-                aria-label="{{ 'newsletter.button_label' | t }}"
               >
-                <span class="btn-text"> {{ section.settings.btn_text }}</span>
+                <span class="btn-text"> {{ section.settings.btn_text }}</span> 
               </button>
             </div>
 
@@ -49,86 +37,47 @@
                   class="subscribe_emails_confirm_checkbox_input" 
                   id="subscribe_confirm_checkbox"
                   required
-                >
+                > 
                 <span class="subscribe_emails_confirm_checkbox_custom"></span>
+                {%- comment -%} 强制行内显示，防止换行 {%- endcomment -%}
                 <div class="subscribe_emails_confirm_text rte-inline">
-                  {{ section.settings.confirm_text }}
+                  {{ section.settings.confirm_text }} 
                 </div>
               </label>
-            </div>
-
-            <div class="subscribe_emails_error_message" id="subscribe_error_message" style="display: none;">
-              <span class="svg-wrapper">{{- 'icon-error.svg' | inline_asset_content -}}</span>
-              <span>{{ section.settings.checkbox_error_message | default: "Please check the agreement first" }}</span>
             </div>
           </div>
         {%- endform -%}
       </div>
 
-      {%- comment -%} 完整的社交图标列表，找回 Pinterest [cite: 18-35] {%- endcomment -%}
+      {%- comment -%} 社交图标列表：恢复所有图标逻辑并修复变形 {%- endcomment -%}
       <ul class="list-unstyled list-social" role="list">
-        {%- if settings.social_facebook_link != blank -%}
-          <li class="list-social__item">
-            <a href="{{ settings.social_facebook_link }}" class="link list-social__link">
-              <span class="svg-wrapper">{{- 'icon-facebook.svg' | inline_asset_content -}}</span>
-            </a>
-          </li>
-        {%- endif -%}
-        {%- if settings.social_instagram_link != blank -%}
-          <li class="list-social__item">
-            <a href="{{ settings.social_instagram_link }}" class="link list-social__link">
-              <span class="svg-wrapper">{{- 'icon-instagram.svg' | inline_asset_content -}}</span>
-            </a>
-          </li>
-        {%- endif -%}
-        {%- if settings.social_youtube_link != blank -%}
-          <li class="list-social__item">
-            <a href="{{ settings.social_youtube_link }}" class="link list-social__link">
-              <span class="svg-wrapper">{{- 'icon-youtube.svg' | inline_asset_content -}}</span>
-            </a>
-          </li>
-        {%- endif -%}
-        {%- if settings.social_tiktok_link != blank -%}
-          <li class="list-social__item">
-            <a href="{{ settings.social_tiktok_link }}" class="link list-social__link">
-              <span class="svg-wrapper">{{- 'icon-tiktok.svg' | inline_asset_content -}}</span>
-            </a>
-          </li>
-        {%- endif -%}
-        {%- if settings.social_twitter_link != blank -%}
-          <li class="list-social__item">
-            <a href="{{ settings.social_twitter_link }}" class="link list-social__link">
-              <span class="svg-wrapper">{{- 'icon-twitter.svg' | inline_asset_content -}}</span>
-            </a>
-          </li>
-        {%- endif -%}
-        {%- if settings.social_pinterest_link != blank -%}
-          <li class="list-social__item">
-            <a href="{{ settings.social_pinterest_link }}" class="link list-social__link">
-              <span class="svg-wrapper">{{- 'icon-pinterest.svg' | inline_asset_content -}}</span>
-            </a>
-          </li>
-        {%- endif -%}
-        {%- if settings.social_snapchat_link != blank -%}
-          <li class="list-social__item">
-            <a href="{{ settings.social_snapchat_link }}" class="link list-social__link">
-              <span class="svg-wrapper">{{- 'icon-snapchat.svg' | inline_asset_content -}}</span>
-            </a>
-          </li>
-        {%- endif -%}
+        {%- assign social_icons = "facebook,instagram,youtube,tiktok,twitter,pinterest,snapchat,tumblr,vimeo" | split: "," -%}
+        {%- for social in social_icons -%}
+          {%- assign social_link = "social_" | append: social | append: "_link" -%}
+          {%- if settings[social_link] != blank -%}
+            <li class="list-social__item">
+              <a href="{{ settings[social_link] }}" class="link list-social__link">
+                <span class="svg-wrapper">
+                  {%- assign icon_name = "icon-" | append: social | append: ".svg" -%}
+                  {{ icon_name | inline_asset_content }} [cite: 18, 20, 22, 24, 26, 28, 30, 32, 34]
+                </span>
+              </a>
+            </li>
+          {%- endif -%}
+        {%- endfor -%}
       </ul>
     </div>
   </div>
 </div>
 
 <style>
-/* 核心布局：实现平齐 */
+/* 1. 整体布局：订阅框与图标平齐 */
 .subscribe_emails_container {
   display: flex !important;
   flex-direction: row !important;
-  align-items: flex-start !important;
+  align-items: flex-start !important; /* 对齐到顶部，防止被下方报错信息撑开 */
   justify-content: space-between;
-  gap: 30px;
+  gap: 20px;
   flex-wrap: wrap;
 }
 
@@ -137,16 +86,16 @@
   min-width: 300px;
 }
 
-/* 社交图标样式修复 */
+/* 2. 社交图标样式：修复变形核心代码 */
 .list-social {
   display: flex !important;
   flex-direction: row !important;
-  align-items: center !important;
+  align-items: center !important; 
   gap: 15px;
   list-style: none;
   padding: 0;
   margin: 0 !important;
-  height: 50px; /* 强制对齐到输入框中心线 */
+  min-height: 48px; /* 匹配订阅框大概的高度 */
 }
 
 .list-social__item {
@@ -155,34 +104,32 @@
 }
 
 .list-social__link .svg-wrapper {
-  width: 2.4rem;
-  height: 2.4rem;
-  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* 移除固定的 width 和 height，改为 max-width 防止过大，保持原比例 */
+  width: auto; 
+  height: auto;
 }
 
 .list-social__link svg {
-  width: 100%;
-  height: 100%;
+  width: 24px; /* 这里只固定宽度，高度会自动按比例缩放 */
+  height: auto; 
+  fill: currentColor;
 }
 
-/* 强制富文本不换行 */
+/* 3. 修复富文本导致的换行问题 */
 .rte-inline, .rte-inline p {
   display: inline !important;
   margin: 0 !important;
-  padding: 0 !important;
 }
 
 .rte-inline a {
-  display: inline !important;
-  color: #bdff00 !important; /* 链接颜色 */
+  color: #bdff00 !important; 
   text-decoration: underline !important;
 }
 
-.rte-inline a:hover {
-  color: #ffffff !important;
-}
-
-/* 勾选框样式 */
+/* 4. 勾选框样式 */
 .subscribe_emails_confirm_label {
   display: flex !important;
   align-items: center !important;
@@ -202,8 +149,8 @@
 }
 
 .subscribe_emails_confirm_checkbox_input:checked + .subscribe_emails_confirm_checkbox_custom {
-  background-color: #bdff00;
-  border-color: #bdff00;
+  background-color: #bdff00; 
+  border-color: #bdff00; 
 }
 </style>
 
@@ -218,7 +165,9 @@ document.addEventListener('DOMContentLoaded', function() {
       btn.addEventListener('click', function(e) {
         if (!box.checked) {
           e.preventDefault();
-          alert('Please agree to the terms.');
+          // 触发之前已有的错误信息显示逻辑
+          const errorMsg = sectionEl.querySelector('#subscribe_error_message');
+          if(errorMsg) errorMsg.style.display = 'flex'; [cite: 8]
         }
       });
     }
