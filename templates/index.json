@@ -638,6 +638,7 @@
         "swiper_GfiKcC",
         "swiper_4AhqcM"
       ],
+      "disabled": true,
       "name": "celebrity swiper",
       "settings": {
         "title": "<p>Empfehlen Von</p>",
