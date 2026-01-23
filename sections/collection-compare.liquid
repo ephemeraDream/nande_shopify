@@ -1,67 +1,65 @@
-<!-- =========================
-  Collection Title & Description
-  （你原本就有的，不动）
-========================= -->
-<div class="collection_compare_banner_contain">
+<!-- ===============================
+     Collection Title & Description
+     =============================== -->
 
-  <h2 class="collection_compare_banner_title">
-    {{ collection.title }}
-  </h2>
+<h2 class="collection_compare_banner_title">
+  {{ collection.title }}
+</h2>
 
-  <div class="text-body collection_compare_banner_text">
-    {{ collection.description }}
-  </div>
+<div class="collection_compare_banner_text">
+  {{ collection.description }}
+</div>
 
-  <!-- =========================
-    Slim Discount Module
-  ========================= -->
-  <div class="collection-coupon-slim">
+<!-- ===============================
+     Slim Discount Coupon Module
+     =============================== -->
 
-    <!-- Title -->
-    <h3 class="collection-coupon-title">
-      Buy More, Save More
-    </h3>
+<div class="collection-coupon-slim">
 
-    <!-- Coupons -->
-    <div class="collection-discount-codes">
+  <!-- Title -->
+  <h3 class="collection-coupon-title">
+    Buy More, Save More
+  </h3>
 
-      <!-- Coupon 1 -->
-      <div class="coupon-item">
-        <div class="coupon-value">40 € Off</div>
-        <div class="coupon-condition">ab 499 € Einkaufswert</div>
-        <div class="coupon-code-box">
-          <input type="text" id="coupon40" value="MD40" readonly>
-          <button onclick="copyCoupon('coupon40', this)">Copy</button>
-        </div>
+  <!-- Coupon Codes -->
+  <div class="collection-discount-codes">
+
+    <!-- Coupon 1 -->
+    <div class="coupon-item">
+      <div class="coupon-value">40 € Off</div>
+      <div class="coupon-condition">ab 499 € Einkaufswert</div>
+      <div class="coupon-code-box">
+        <input type="text" id="coupon40" value="MD40" readonly>
+        <button onclick="copyCoupon('coupon40', this)">Copy</button>
       </div>
-
-      <!-- Coupon 2 -->
-      <div class="coupon-item">
-        <div class="coupon-value">120 € Off</div>
-        <div class="coupon-condition">ab 999 € Einkaufswert</div>
-        <div class="coupon-code-box">
-          <input type="text" id="coupon120" value="MD120" readonly>
-          <button onclick="copyCoupon('coupon120', this)">Copy</button>
-        </div>
-      </div>
-
-      <!-- Coupon 3 -->
-      <div class="coupon-item">
-        <div class="coupon-value">250 € Off</div>
-        <div class="coupon-condition">ab 1999 € Einkaufswert</div>
-        <div class="coupon-code-box">
-          <input type="text" id="coupon250" value="MD250" readonly>
-          <button onclick="copyCoupon('coupon250', this)">Copy</button>
-        </div>
-      </div>
-
     </div>
+
+    <!-- Coupon 2 -->
+    <div class="coupon-item">
+      <div class="coupon-value">120 € Off</div>
+      <div class="coupon-condition">ab 999 € Einkaufswert</div>
+      <div class="coupon-code-box">
+        <input type="text" id="coupon120" value="MD120" readonly>
+        <button onclick="copyCoupon('coupon120', this)">Copy</button>
+      </div>
+    </div>
+
+    <!-- Coupon 3 -->
+    <div class="coupon-item">
+      <div class="coupon-value">250 € Off</div>
+      <div class="coupon-condition">ab 1999 € Einkaufswert</div>
+      <div class="coupon-code-box">
+        <input type="text" id="coupon250" value="MD250" readonly>
+        <button onclick="copyCoupon('coupon250', this)">Copy</button>
+      </div>
+    </div>
+
   </div>
 </div>
 
-<!-- =========================
-  Styles
-========================= -->
+<!-- ===============================
+     Styles
+     =============================== -->
 <style>
 .collection-coupon-slim {
   margin-top: 20px;
@@ -81,8 +79,8 @@
 
 .collection-discount-codes {
   display: flex;
-  justify-content: space-between;
   gap: 14px;
+  justify-content: space-between;
   flex-wrap: wrap;
 }
 
@@ -152,16 +150,15 @@
   .collection-discount-codes {
     gap: 10px;
   }
-
   .coupon-item {
     flex: 1 1 100%;
   }
 }
 </style>
 
-<!-- =========================
-  Script
-========================= -->
+<!-- ===============================
+     Script
+     =============================== -->
 <script>
 function copyCoupon(inputId, btn) {
   const input = document.getElementById(inputId);
