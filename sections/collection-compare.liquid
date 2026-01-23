@@ -1,96 +1,96 @@
 <!-- ===============================
-     Collection Title & Description
+     Collection Coupon Module
      =============================== -->
-
-<h2 class="collection_compare_banner_title">
-  {{ collection.title }}
-</h2>
-
-<div class="collection_compare_banner_text">
-  {{ collection.description }}
-</div>
-
-<!-- ===============================
-     Slim Discount Coupon Module
-     =============================== -->
-
 <div class="collection-coupon-slim">
 
-  <!-- Title -->
-  <h3 class="collection-coupon-title">
-    Buy More, Save More
-  </h3>
+  <div class="coupon-header">
+    <h3 class="coupon-title">Buy More, Save More</h3>
+    <div class="coupon-countdown">
+      Ends in <span id="coupon-timer">--:--:--</span>
+    </div>
+  </div>
 
-  <!-- Coupon Codes -->
-  <div class="collection-discount-codes">
+  <div class="coupon-list">
 
-    <!-- Coupon 1 -->
     <div class="coupon-item">
       <div class="coupon-value">40 € Off</div>
-      <div class="coupon-condition">ab 499 € Einkaufswert</div>
-      <div class="coupon-code-box">
-        <input type="text" id="coupon40" value="MD40" readonly>
-        <button onclick="copyCoupon('coupon40', this)">Copy</button>
+      <div class="coupon-desc">ab 499 € Einkaufswert</div>
+      <div class="coupon-code">
+        <input type="text" id="cp40" value="MD40" readonly>
+        <button onclick="copyCoupon('cp40', this)">Copy</button>
       </div>
     </div>
 
-    <!-- Coupon 2 -->
     <div class="coupon-item">
       <div class="coupon-value">120 € Off</div>
-      <div class="coupon-condition">ab 999 € Einkaufswert</div>
-      <div class="coupon-code-box">
-        <input type="text" id="coupon120" value="MD120" readonly>
-        <button onclick="copyCoupon('coupon120', this)">Copy</button>
+      <div class="coupon-desc">ab 999 € Einkaufswert</div>
+      <div class="coupon-code">
+        <input type="text" id="cp120" value="MD120" readonly>
+        <button onclick="copyCoupon('cp120', this)">Copy</button>
       </div>
     </div>
 
-    <!-- Coupon 3 -->
     <div class="coupon-item">
       <div class="coupon-value">250 € Off</div>
-      <div class="coupon-condition">ab 1999 € Einkaufswert</div>
-      <div class="coupon-code-box">
-        <input type="text" id="coupon250" value="MD250" readonly>
-        <button onclick="copyCoupon('coupon250', this)">Copy</button>
+      <div class="coupon-desc">ab 1999 € Einkaufswert</div>
+      <div class="coupon-code">
+        <input type="text" id="cp250" value="MD250" readonly>
+        <button onclick="copyCoupon('cp250', this)">Copy</button>
       </div>
     </div>
 
   </div>
 </div>
 
-<!-- ===============================
-     Styles
-     =============================== -->
 <style>
+/* ===== Container ===== */
 .collection-coupon-slim {
-  margin-top: 20px;
-  padding: 16px 20px;
+  margin-top: 18px;
+  padding: 16px 18px;
+  background: #fafafa;
   border: 1px solid #e5e5e5;
   border-radius: 10px;
-  background: #fafafa;
 }
 
-.collection-coupon-title {
+/* ===== Header ===== */
+.coupon-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+  gap: 10px;
+}
+
+.coupon-title {
   font-size: 18px;
   font-weight: 700;
-  margin-bottom: 14px;
-  text-align: center;
-  color: #111;
+  margin: 0;
 }
 
-.collection-discount-codes {
+.coupon-countdown {
+  font-size: 13px;
+  color: #333;
+}
+
+#coupon-timer {
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+}
+
+/* ===== Coupons ===== */
+.coupon-list {
   display: flex;
   gap: 14px;
-  justify-content: space-between;
   flex-wrap: wrap;
 }
 
 .coupon-item {
   flex: 1 1 30%;
   min-width: 180px;
+  background: #fff;
   border: 1px solid #ddd;
   border-radius: 6px;
   padding: 12px;
-  background: #ffffff;
 }
 
 .coupon-value {
@@ -99,80 +99,118 @@
   margin-bottom: 4px;
 }
 
-.coupon-condition {
+.coupon-desc {
   font-size: 12px;
   color: #666;
   margin-bottom: 10px;
 }
 
-.coupon-code-box {
+.coupon-code {
   display: flex;
-  gap: 8px;
   align-items: center;
+  gap: 8px;
   background: #000;
   padding: 6px;
   border-radius: 6px;
 }
 
-.coupon-code-box input {
-  flex: 1;
-  max-width: 100px;
+.coupon-code input {
+  max-width: 90px;
   padding: 4px 8px;
   font-size: 12px;
   border-radius: 4px;
   border: 1px solid #ccc;
 }
 
-.coupon-code-box button {
-  background-color: #bdff00;
-  color: #000;
-  border: none;
-  border-radius: 4px;
-  padding: 0 10px;
-  cursor: pointer;
+.coupon-code button {
   height: 32px;
+  padding: 0 10px;
   font-size: 11px;
   font-weight: 700;
+  cursor: pointer;
+  border-radius: 4px;
+  border: none;
+  background: #bdff00;
+  color: #000;
   transition: background-color .3s ease;
 }
 
-.coupon-code-box button:hover {
-  background-color: #a3e600;
+.coupon-code button:hover {
+  background: #a3e600;
 }
 
-.coupon-code-box button.copied {
-  background-color: #28a745;
+.coupon-code button.copied {
+  background: #28a745;
   color: #fff;
 }
 
-/* Mobile */
+/* ===== Mobile ===== */
 @media (max-width: 768px) {
-  .collection-discount-codes {
-    gap: 10px;
-  }
   .coupon-item {
     flex: 1 1 100%;
   }
 }
 </style>
 
-<!-- ===============================
-     Script
-     =============================== -->
 <script>
-function copyCoupon(inputId, btn) {
-  const input = document.getElementById(inputId);
+/* ===== Copy Code ===== */
+function copyCoupon(id, btn) {
+  const input = document.getElementById(id);
   input.select();
   input.setSelectionRange(0, 99999);
-  document.execCommand("copy");
+  document.execCommand('copy');
 
-  const originalText = btn.innerText;
-  btn.innerText = "✔ Copied";
-  btn.classList.add("copied");
+  const txt = btn.innerText;
+  btn.innerText = '✔ Copied';
+  btn.classList.add('copied');
 
   setTimeout(() => {
-    btn.innerText = originalText;
-    btn.classList.remove("copied");
+    btn.innerText = txt;
+    btn.classList.remove('copied');
   }, 2000);
 }
+
+/* ===== 3-Day Loop Countdown ===== */
+(function () {
+  const KEY = 'coupon_cycle_start';
+  const DURATION = 3 * 24 * 60 * 60 * 1000; // 3 days
+  const RESTART_DELAY = 5 * 60 * 1000;     // 5 minutes
+  const el = document.getElementById('coupon-timer');
+  if (!el) return;
+
+  let start = localStorage.getItem(KEY);
+  if (!start) {
+    start = Date.now();
+    localStorage.setItem(KEY, start);
+  }
+  start = parseInt(start, 10);
+
+  function update() {
+    const now = Date.now();
+    let remain = DURATION - (now - start);
+
+    if (remain <= 0) {
+      if (now - start >= DURATION + RESTART_DELAY) {
+        start = Date.now();
+        localStorage.setItem(KEY, start);
+        remain = DURATION;
+      } else {
+        el.textContent = '00:00:00';
+        return;
+      }
+    }
+
+    const h = Math.floor(remain / 3600000);
+    const m = Math.floor((remain % 3600000) / 60000);
+    const s = Math.floor((remain % 60000) / 1000);
+
+    el.textContent =
+      String(h).padStart(2, '0') + ':' +
+      String(m).padStart(2, '0') + ':' +
+      String(s).padStart(2, '0');
+  }
+
+  update();
+  setInterval(update, 1000);
+})();
 </script>
