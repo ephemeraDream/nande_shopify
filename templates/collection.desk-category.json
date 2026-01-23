@@ -24,15 +24,7 @@
       "type": "collection-compare",
       "custom_css": [],
       "name": "collection compare",
-      "settings": {
-        "show_banner": true,
-        "products_per_page": 23,
-        "enable_compare": true,
-        "show_layout_toggle": true,
-        "image_aspect_ratio": "1.33",
-        "enable_filtering": false,
-        "enable_sorting": true
-      }
+      "settings": {}
     },
     "compare_simple_YrUqUG": {
       "type": "compare-simple",
@@ -190,13 +182,13 @@
       "type": "apps",
       "blocks": {
         "webrex_seo_schema_faq_section_JFGYaL": {
-          "type": "shopify://apps/webrex-seo-schema/blocks/FAQSection/283875bf-bf86-4e78-831b-502ad0c4a5c2",
+          "type": "shopify://apps/webrex-ai-seo-schema/blocks/FAQSection/283875bf-bf86-4e78-831b-502ad0c4a5c2",
           "settings": {
             "section_align": "align-center",
             "max_width": 800,
             "box_border": 4,
             "faq_border_thickness": 1,
-            "faq_border_color": "#ddd",
+            "faq_border_color": "#dddddd",
             "faq_border_style": "solid",
             "icon_color": "#333333",
             "top_margin": 20,
@@ -213,7 +205,7 @@
             "question_font_size": 16,
             "answer_color": "#666666",
             "answer_font_size": 14,
-            "hover_color": "#007BFF"
+            "hover_color": "#007bff"
           }
         }
       },

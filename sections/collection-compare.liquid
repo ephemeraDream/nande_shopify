@@ -1,365 +1,264 @@
-{{ 'section-collection-compare.css' | asset_url | stylesheet_tag }}
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700;900&display=swap');
 
-{% assign product_list = collection.products %}
-<div class="collection_compare" style="--product-img-ratio: {{ section.settings.image_aspect_ratio | default: '1' }};">
-  {% if section.settings.show_banner %}
-    <div class="collection_compare_banner padding-sider">
-      {% if section.settings.image != blank %}
-        <img src="{{ section.settings.image | image_url }}" alt="{{ collection.title }}">
-      {% endif %}
-      {% if section.settings.video != blank %}
-        {{
-          section.settings.video
-          | video_tag: autoplay: true, loop: true, muted: true, playsinline: true, preload: 'auto'
-        }}
-      {% endif %}
-      <div class="collection_compare_banner_contain">
-        <h2 class="collection_compare_banner_title">{{ collection.title }}</h2>
-        <div class="text-body collection_compare_banner_text">{{ collection.description }}</div>
+/* ===========================
+   Coupon Section (Base)
+   =========================== */
+.coupon-section {
+  position: relative;
+  font-family: 'Poppins', Arial, sans-serif;
+  background: radial-gradient(circle at top, #1a2a4f 0%, #0b1020 45%, #05070d 100%);
+  color: #ffffff;
+  padding: 70px 20px;
+  text-align: center;
+  overflow: hidden;
+}
+
+/* 粒子背景 */
+.coupon-section::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image:
+    radial-gradient(2px 2px at 15% 20%, rgba(255,215,120,.8) 50%, transparent 52%),
+    radial-gradient(1.5px 1.5px at 70% 30%, rgba(255,215,120,.7) 50%, transparent 52%),
+    radial-gradient(2px 2px at 40% 80%, rgba(255,215,120,.6) 50%, transparent 52%);
+  background-size: 220px 220px;
+  animation: sparkle 18s linear infinite;
+  opacity: .25;
+  z-index: 1;
+  pointer-events: none;
+}
+
+@keyframes sparkle {
+  from { background-position: 0 0; }
+  to   { background-position: 0 220px; }
+}
+
+.coupon-section > * {
+  position: relative;
+  z-index: 2;
+}
+
+/* 标题 */
+.coupon-section h2 {
+  font-size: 44px;
+  font-weight: 900;
+  margin-bottom: 18px;
+  background: linear-gradient(180deg, #fff4c4, #d4a94f);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* 副标题 */
+.coupon-section > p {
+  font-size: 18px;
+  color: #d6d9e2;
+  margin-bottom: 32px;
+}
+
+/* CTA */
+.shop-now-btn {
+  display: inline-block;
+  background: linear-gradient(135deg, #e7c36a, #b8923c);
+  color: #000;
+  padding: 14px 36px;
+  border-radius: 8px;
+  font-weight: 700;
+  text-decoration: none;
+  margin-bottom: 55px;
+}
+
+/* 卡片容器 */
+.coupon-cards {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+/* 卡片 */
+.coupon-card {
+  background: rgba(255,255,255,0.06);
+  backdrop-filter: blur(14px);
+  border-radius: 22px;
+  padding: 42px 30px;
+  min-width: 260px;
+  min-height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+}
+
+/* 金额 */
+.coupon-card h3 {
+  font-size: 60px;
+  font-weight: 900;
+  background: linear-gradient(180deg, #fff5cc, #d4a94f);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* 文案 */
+.coupon-card p {
+  font-size: 18px;
+  color: #d0d4e0;
+}
+
+/* Footer */
+.coupon-footer {
+  border-top: 1px solid rgba(255,255,255,0.25);
+  padding-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* 按钮 */
+.copy-btn {
+  padding: 10px 18px;
+  border-radius: 6px;
+  border: 1px solid #fff;
+  background: transparent;
+  color: #fff;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.copy-btn.copied {
+  background: #ffd66b;
+  border-color: #ffd66b;
+  color: #000;
+}
+
+.copy-btn.go-to-shop {
+  background: linear-gradient(135deg, #e7c36a, #b8923c);
+  border-color: transparent;
+  color: #000;
+}
+
+/* ===========================
+   🔥 Collection Slim Mode
+   =========================== */
+.coupon-section--collection {
+  padding: 24px 16px;
+  margin-top: 20px;
+}
+
+.coupon-section--collection h2 {
+  font-size: 24px;
+  margin-bottom: 6px;
+}
+
+.coupon-section--collection > p {
+  font-size: 14px;
+  margin-bottom: 12px;
+}
+
+.coupon-section--collection .shop-now-btn {
+  padding: 8px 18px;
+  font-size: 14px;
+  margin-bottom: 18px;
+}
+
+.coupon-section--collection .coupon-cards {
+  gap: 16px;
+}
+
+.coupon-section--collection .coupon-card {
+  min-height: auto;
+  padding: 14px 18px;
+  border-radius: 12px;
+}
+
+.coupon-section--collection .coupon-card h3 {
+  font-size: 28px;
+}
+
+.coupon-section--collection .coupon-card p {
+  font-size: 13px;
+}
+
+.coupon-section--collection .coupon-footer {
+  padding-top: 10px;
+}
+
+/* 隐藏 WOW 询价卡 */
+.coupon-section--collection .coupon-card:last-child {
+  display: none;
+}
+
+/* 移动端只保留 2 档 */
+@media (max-width: 768px) {
+  .coupon-section--collection .coupon-card:nth-child(n+3) {
+    display: none;
+  }
+}
+</style>
+
+<div class="coupon-section coupon-section--collection">
+  <h2>Neujahrs-Rabatt</h2>
+  <p>Code kopieren und direkt sparen</p>
+
+  <a href="https://www.maidesite.de/collections/hohenverstellbarer-schreibtisch" class="shop-now-btn">
+    Jetzt sparen
+  </a>
+
+  <div class="coupon-cards">
+    <div class="coupon-card">
+      <div>
+        <h3>40 €</h3>
+        <p>ab 499 € Einkaufswert</p>
+      </div>
+      <div class="coupon-footer">
+        <span>MD40</span>
+        <button class="copy-btn">Kopieren</button>
       </div>
     </div>
-  {% endif %}
-  <div class="collection_compare_contain padding-sider">
-    <div class="collection_compare_contain_head">
-      {%- if section.settings.enable_filtering -%}
-        <div class="collection_compare_contain_switchfilter" data-type="open">
-          <span>{{ 'common.filter' | t }}</span>
-          {{- 'icon-filter.svg' | inline_asset_content -}}
-        </div>
-      {% endif %}
-      <div class="collection_compare_contain_head_right">
-        <div class="flex_center">
-          {%- if section.settings.enable_sorting -%}
-            <span class="collection_compare_contain_head_label">{{ 'common.sortieren_nach' | t }}</span>
-            <div class="collection_compare_contain_sort">
-              {%- assign sort_by = collection.sort_by | default: collection.default_sort_by -%}
-              {%- for option in collection.sort_options %}
-                {%- if option.value == sort_by %}
-                  {% assign sort_by_name = option.name %}
-                {%- endif %}
-              {% endfor -%}
-              <span class="collection_compare_contain_sort_label">{{ sort_by_name }}</span>
-              {{- 'icon-select-down.svg' | inline_asset_content -}}
-              <div class="collection_compare_contain_sort_select">
-                {%- for option in collection.sort_options %}
-                  <div
-                    value="{{ option.value }}"
-                    {%- if option.value == sort_by %}
-                      selected="selected"
-                    {%- endif %}
-                    class="collection_compare_contain_sort_select_item"
-                  >
-                    {{ option.name }}
-                  </div>
-                {% endfor -%}
-              </div>
-            </div>
-          {% endif %}
-        </div>
 
-        <div class="flex_center">
-          {%- if section.settings.enable_compare -%}
-            <div class="flex_center collection_compare_contain_select_switch_box">
-              <span class="collection_compare_contain_head_label">{{ 'common.vergleichen' | t }}</span>
-              <div class="collection_compare_contain_select_switch"></div>
-            </div>
-          {% endif %}
-          {%- if section.settings.show_layout_toggle -%}
-            <span class="collection_compare_contain_head_label">{{ 'common.ansicht_als' | t }}</span>
-            <div class="collection_compare_contain_showtype" data-type="list">
-              {{- 'icon-list.svg' | inline_asset_content -}}
-            </div>
-            <div class="collection_compare_contain_showtype active" data-type="grid">
-              {{- 'icon-grid.svg' | inline_asset_content -}}
-            </div>
-          {% endif %}
-        </div>
+    <div class="coupon-card">
+      <div>
+        <h3>120 €</h3>
+        <p>ab 999 € Einkaufswert</p>
+      </div>
+      <div class="coupon-footer">
+        <span>MD120</span>
+        <button class="copy-btn">Kopieren</button>
       </div>
     </div>
-    <div class="collection_compare_contain_body">
-      {%- if section.settings.enable_filtering -%}
-        <div class="collection_compare_contain_body_left facets-vertical">
-          {% render 'collection-facets', results: collection, filter_type: 'vertical' %}
-        </div>
-      {% endif %}
-      <div class="collection_compare_contain_body_right" data-id="{{ section.id }}">
-        {% paginate collection.products by section.settings.products_per_page %}
-          <div class="collection_compare_product_contain">
-            {% for product in collection.products %}
-              {% assign sale_info = product.metafields.custom.sale_info.value %}
-              {% liquid
-                assign featured_image = product.featured_image
-                assign second_image = null
 
-                if featured_image
-                  assign found = false
-                  for img in product.images
-                    if found
-                      assign second_image = img
-                      break
-                    endif
-                    if img.src == featured_image.src
-                      assign found = true
-                    endif
-                  endfor
-
-                  if second_image == null
-                    for img in product.images
-                      if img.src != featured_image.src
-                        assign second_image = img
-                        break
-                      endif
-                    endfor
-                  endif
-                else
-                  assign second_image = product.images[1]
-                endif
-              %}
-              <a
-                class="collection_compare_product"
-                data-type="{{ product.type | handleize }}"
-                href="{{ product.url }}"
-                data-id="{{ product.id }}"
-              >
-                <div class="collection_compare_product_img {% if second_image != blank %} collection_compare_product_hoverchange{% endif %}">
-                  {% if featured_image %}
-                    {{
-                      featured_image
-                      | image_url: width: featured_image.width
-                      | image_tag: alt: product.title, class: 'collection_compare_product_img_first'
-                    }}
-                  {% endif %}
-
-                  {% if second_image and second_image.src != featured_image.src %}
-                    {{
-                      second_image
-                      | image_url: width: second_image.width
-                      | image_tag: alt: product.title, class: 'collection_compare_product_img_second'
-                    }}
-                  {% endif %}
-                  {% comment %} <img src="{{ product.featured_media | image_url }}" alt="{{ product.title }}"> {% endcomment %}
-                  <div class="collection_compare_product_select">
-                    {{- 'icon-selected.svg' | inline_asset_content -}}
-                  </div>
-                  <div class="collection_compare_product_tagbox">
-                    {% if product.compare_at_price != blank and product.compare_at_price > product.price %}
-                      <div class="collection_compare_product_tag">
-                        {{ settings.discount_symbol | default: "-" }} {{ product.compare_at_price | minus: product.price | money_without_trailing_zeros }}
-                      </div>
-                    {% endif %}
-                    {% if sale_info != blank and sale_info.name != blank %}
-                      <div class="collection_compare_product_saleinfo">{{ sale_info.name }}</div>
-                    {% endif %}
-                    {% if product.metafields.custom.product_tag.value != blank %}
-                      <div class="collection_compare_product_tag">
-                        {{ product.metafields.custom.product_tag.value }}
-                      </div>
-                    {% endif %}
-                  </div>
-                </div>
-                <div class="collection_compare_product_info">
-                  <h4 class="collection_compare_product_title">{{ product.title }}</h4>
-                  {% if product.metafields.custom.core_features %}
-                    <div class="product_core_features">
-                      {{ product.metafields.custom.core_features | metafield_tag }}
-                    </div>
-                  {% endif %}
-
-                  <div>
-                    {% render 'product-rating', product: product %}
-                    <div class="collection_compare_product_price">
-                      <div>
-                        {{ product.price | money_without_trailing_zeros }}
-                      </div>
-                      {% if product.compare_at_price != blank and product.compare_at_price > product.price %}
-                        <div class="collection_compare_product_price_cap">
-                          {{ product.compare_at_price | money_without_trailing_zeros }}
-                        </div>
-                      {% endif %}
-                    </div>
-                    <div class="collection_compare_product_btn nd-btn">
-                      {{ 'common.en_savoir_plus' | t }}
-                      {{ 'icon-right-arrow.svg' | inline_asset_content }}
-                    </div>
-                  </div>
-                </div>
-                {% if sale_info != blank %}
-                  <div
-                    class="collection_compare_product_saleinfo_countdown"
-                    data-end-date="{{ sale_info.datetime | date: "%Y-%m-%dT%H:%M:%SZ" }}"
-                  >
-                    <span class="collection_compare_product_saleinfo_countdown_text">{{ 'common.ends_in' | t }}</span>
-                    <div class="collection_compare_product_saleinfo_countdown_item" data-type="day"></div>
-                    <span>:</span>
-                    <div class="collection_compare_product_saleinfo_countdown_item" data-type="hour"></div>
-                    <span>:</span>
-                    <div class="collection_compare_product_saleinfo_countdown_item" data-type="minute"></div>
-                    <span>:</span>
-                    <div class="collection_compare_product_saleinfo_countdown_item" data-type="second"></div>
-                  </div>
-                {% endif %}
-              </a>
-            {% endfor %}
-          </div>
-
-          {%- if paginate.pages > 1 -%}
-            <div
-              class="collection_compare_pagination{% unless paginate.next.is_link %} hidden{% endunless %}"
-              data-is-more-results="{{ paginate.next.is_link }}"
-            >
-              <div class="collection_compare_pagination_contain">
-                {%- liquid
-                  assign visible_results = paginate.current_page | times: paginate.page_size | at_most: paginate.items
-                  assign total_items_float = paginate.items | plus: 0.0
-                  assign pagination_percent = 100 | divided_by: total_items_float | times: visible_results | round: 1
-                -%}
-                <div class="collection_compare_pagination_contain_message">
-                  {{- 'common.position_results' | t: visible_results: visible_results, total_results: paginate.items -}}
-                </div>
-                <div
-                  class="collection_compare_pagination_contain_bar"
-                  style="--pagination-percent: {{ pagination_percent }}%;"
-                ></div>
-                <a href="{{ paginate.next.url }}" class="collection_compare_pagination_contain_btn">
-                  {{ 'common.show_more' | t }}
-                </a>
-              </div>
-            </div>
-          {% endif %}
-        {% endpaginate %}
+    <div class="coupon-card">
+      <div>
+        <h3>250 €</h3>
+        <p>ab 1999 € Einkaufswert</p>
+      </div>
+      <div class="coupon-footer">
+        <span>MD250</span>
+        <button class="copy-btn">Kopieren</button>
       </div>
     </div>
   </div>
-  {% render 'collection-compare-select' %}
 </div>
 
-<script type="application/json" id="collection_compare_data">
-  {% for currency in shop.enabled_currencies %}
-    {% if currency.iso_code == shop.currency %}
-      {%- assign currency_symbol = currency.symbol -%}
-      {% break %}
-    {% endif %}
-  {% endfor %}
-  {
-    {% for product in product_list %}
-      "{{ product.id }}": {
-        "product": {{- product | json -}},
-        "selected_or_first_available_variant": {{- product.selected_or_first_available_variant | json -}},
-        "symbol": {{ currency_symbol | json }},
-        "compare_simple": {{ product.metafields.custom.compare_simple.value.data.value | json }},
-        "options_with_values": {{ product.options_with_values | json }},
-        "url": {{ product.url | json }},
-        "product_model": {{ product.metafields.custom.product_model | json }},
-        "product_title_top": {{ product.metafields.custom.product_title_top | json }}
-      }{% unless forloop.last %},{% endunless %}
-    {% endfor %}
-  }
+<script>
+document.querySelectorAll('.coupon-section .copy-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const code = btn.previousElementSibling.innerText;
+    navigator.clipboard.writeText(code).then(() => {
+      btn.classList.add('copied');
+      btn.innerText = '✔ Kopiert';
+
+      setTimeout(() => {
+        btn.classList.remove('copied');
+        btn.classList.add('go-to-shop');
+        btn.innerText = 'Jetzt kaufen';
+        btn.onclick = () => {
+          window.location.href =
+            'https://www.maidesite.de/collections/hohenverstellbarer-schreibtisch';
+        };
+      }, 2000);
+    });
+  });
+});
 </script>
-<script src="{{ 'collection-compare.js' | asset_url }}" defer="defer"></script>
-<script src="{{ 'collection-facets.js' | asset_url }}" defer="defer"></script>
-
-{% schema %}
-{
-  "name": "collection compare",
-  "tag": "section",
-  "class": "section",
-  "disabled_on": {
-    "groups": ["header", "footer"]
-  },
-  "settings": [
-    {
-      "type": "checkbox",
-      "id": "show_banner",
-      "label": "show banner",
-      "default": true
-    },
-    {
-      "type": "image_picker",
-      "id": "image",
-      "label": "banner image"
-    },
-    {
-      "type": "video",
-      "id": "video",
-      "label": "banner video"
-    },
-    {
-      "type": "header",
-      "content": "Layout"
-    },
-    {
-      "type": "range",
-      "id": "products_per_page",
-      "min": 6,
-      "max": 36,
-      "step": 1,
-      "label": "Products per page",
-      "default": 6
-    },
-    {
-      "type": "checkbox",
-      "id": "enable_compare",
-      "label": "Enable compare",
-      "default": true
-    },
-    {
-      "type": "checkbox",
-      "id": "show_layout_toggle",
-      "label": "Show grid/list layout buttons",
-      "default": true
-    },
-    {
-      "type": "select",
-      "id": "image_aspect_ratio",
-      "label": "Product image aspect ratio",
-      "options": [
-        {
-          "value": "1",
-          "label": "1:1 (Square)"
-        },
-        {
-          "value": "1.33",
-          "label": "4:3 (Landscape)"
-        },
-        {
-          "value": "0.75",
-          "label": "3:4 (Portrait)"
-        },
-        {
-          "value": "1.5",
-          "label": "3:2 (Wide)"
-        }
-      ],
-      "default": "1"
-    },
-
-    {
-      "type": "header",
-      "content": "Filtering"
-    },
-    {
-      "type": "checkbox",
-      "id": "enable_filtering",
-      "label": "Enable filtering",
-      "info": "[Customize filters](/admin/menus)",
-      "default": true
-    },
-
-    {
-      "type": "header",
-      "content": "Sorting"
-    },
-    {
-      "type": "checkbox",
-      "id": "enable_sorting",
-      "label": "Enable sorting",
-      "default": true
-    }
-  ],
-  "presets": [
-    {
-      "name": "collection compare"
-    }
-  ]
-}
-{% endschema %}
