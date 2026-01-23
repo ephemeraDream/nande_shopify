@@ -527,6 +527,7 @@
       "blocks": {
         "swiper_9PWqTc": {
           "type": "swiper",
+          "disabled": true,
           "settings": {
             "image": "shopify://shop_images/CHIP-Logo_svg.png",
             "text": "<p>“Der T2 Pro Plus kennzeichnet sich vor allem durch seine hervorragende Zuverlässigkeit: Die Motoren laufen ruhig und stabil. Dabei ist der Tisch recht schnell, benötigt aber über eine halbe Sekunde, bis er still steht. Sein Kollisionssensor ist sehr feinfühlig und springt schon bei geringstem Widerstand an<strong>.</strong>”</p>"
@@ -548,6 +549,7 @@
         },
         "swiper_GwFmWX": {
           "type": "swiper",
+          "disabled": true,
           "settings": {
             "image": "shopify://shop_images/lQLPJw279FHv_n1QzQETsOmcD6G94ZKFBfFXAvmUVAA_275_80.png",
             "text": "<p>“der Firma Maidesite eignet sich hervorragend, um Ihrem Büro ein modernes und vor allem Komfort bringendes Update zu verpassen. Es ist ideal für Personen mit einerKörpergröße bis zu 1,90 m,mit einem leistungsstarken Motor ausgestattet und besitzt ein integriertesAnti-Kollisions-System,damit keine Unfälle passieren. In unserem persönlichen Test konnten die Tische von Maidesite überzeugen – machen Sie sich jetzt zum Vorteilspreis ein eigenes Bild.”</p>"
