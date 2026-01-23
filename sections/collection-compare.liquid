@@ -1,178 +1,365 @@
-<!-- ===============================
-     Collection Title & Description
-     =============================== -->
+{{ 'section-collection-compare.css' | asset_url | stylesheet_tag }}
 
-<h2 class="collection_compare_banner_title">
-  {{ collection.title }}
-</h2>
-
-<div class="collection_compare_banner_text">
-  {{ collection.description }}
-</div>
-
-<!-- ===============================
-     Slim Discount Coupon Module
-     =============================== -->
-
-<div class="collection-coupon-slim">
-
-  <!-- Title -->
-  <h3 class="collection-coupon-title">
-    Buy More, Save More
-  </h3>
-
-  <!-- Coupon Codes -->
-  <div class="collection-discount-codes">
-
-    <!-- Coupon 1 -->
-    <div class="coupon-item">
-      <div class="coupon-value">40 € Off</div>
-      <div class="coupon-condition">ab 499 € Einkaufswert</div>
-      <div class="coupon-code-box">
-        <input type="text" id="coupon40" value="MD40" readonly>
-        <button onclick="copyCoupon('coupon40', this)">Copy</button>
+{% assign product_list = collection.products %}
+<div class="collection_compare" style="--product-img-ratio: {{ section.settings.image_aspect_ratio | default: '1' }};">
+  {% if section.settings.show_banner %}
+    <div class="collection_compare_banner padding-sider">
+      {% if section.settings.image != blank %}
+        <img src="{{ section.settings.image | image_url }}" alt="{{ collection.title }}">
+      {% endif %}
+      {% if section.settings.video != blank %}
+        {{
+          section.settings.video
+          | video_tag: autoplay: true, loop: true, muted: true, playsinline: true, preload: 'auto'
+        }}
+      {% endif %}
+      <div class="collection_compare_banner_contain">
+        <h2 class="collection_compare_banner_title">{{ collection.title }}</h2>
+        <div class="text-body collection_compare_banner_text">{{ collection.description }}</div>
       </div>
     </div>
+  {% endif %}
+  <div class="collection_compare_contain padding-sider">
+    <div class="collection_compare_contain_head">
+      {%- if section.settings.enable_filtering -%}
+        <div class="collection_compare_contain_switchfilter" data-type="open">
+          <span>{{ 'common.filter' | t }}</span>
+          {{- 'icon-filter.svg' | inline_asset_content -}}
+        </div>
+      {% endif %}
+      <div class="collection_compare_contain_head_right">
+        <div class="flex_center">
+          {%- if section.settings.enable_sorting -%}
+            <span class="collection_compare_contain_head_label">{{ 'common.sortieren_nach' | t }}</span>
+            <div class="collection_compare_contain_sort">
+              {%- assign sort_by = collection.sort_by | default: collection.default_sort_by -%}
+              {%- for option in collection.sort_options %}
+                {%- if option.value == sort_by %}
+                  {% assign sort_by_name = option.name %}
+                {%- endif %}
+              {% endfor -%}
+              <span class="collection_compare_contain_sort_label">{{ sort_by_name }}</span>
+              {{- 'icon-select-down.svg' | inline_asset_content -}}
+              <div class="collection_compare_contain_sort_select">
+                {%- for option in collection.sort_options %}
+                  <div
+                    value="{{ option.value }}"
+                    {%- if option.value == sort_by %}
+                      selected="selected"
+                    {%- endif %}
+                    class="collection_compare_contain_sort_select_item"
+                  >
+                    {{ option.name }}
+                  </div>
+                {% endfor -%}
+              </div>
+            </div>
+          {% endif %}
+        </div>
 
-    <!-- Coupon 2 -->
-    <div class="coupon-item">
-      <div class="coupon-value">120 € Off</div>
-      <div class="coupon-condition">ab 999 € Einkaufswert</div>
-      <div class="coupon-code-box">
-        <input type="text" id="coupon120" value="MD120" readonly>
-        <button onclick="copyCoupon('coupon120', this)">Copy</button>
+        <div class="flex_center">
+          {%- if section.settings.enable_compare -%}
+            <div class="flex_center collection_compare_contain_select_switch_box">
+              <span class="collection_compare_contain_head_label">{{ 'common.vergleichen' | t }}</span>
+              <div class="collection_compare_contain_select_switch"></div>
+            </div>
+          {% endif %}
+          {%- if section.settings.show_layout_toggle -%}
+            <span class="collection_compare_contain_head_label">{{ 'common.ansicht_als' | t }}</span>
+            <div class="collection_compare_contain_showtype" data-type="list">
+              {{- 'icon-list.svg' | inline_asset_content -}}
+            </div>
+            <div class="collection_compare_contain_showtype active" data-type="grid">
+              {{- 'icon-grid.svg' | inline_asset_content -}}
+            </div>
+          {% endif %}
+        </div>
       </div>
     </div>
+    <div class="collection_compare_contain_body">
+      {%- if section.settings.enable_filtering -%}
+        <div class="collection_compare_contain_body_left facets-vertical">
+          {% render 'collection-facets', results: collection, filter_type: 'vertical' %}
+        </div>
+      {% endif %}
+      <div class="collection_compare_contain_body_right" data-id="{{ section.id }}">
+        {% paginate collection.products by section.settings.products_per_page %}
+          <div class="collection_compare_product_contain">
+            {% for product in collection.products %}
+              {% assign sale_info = product.metafields.custom.sale_info.value %}
+              {% liquid
+                assign featured_image = product.featured_image
+                assign second_image = null
 
-    <!-- Coupon 3 -->
-    <div class="coupon-item">
-      <div class="coupon-value">250 € Off</div>
-      <div class="coupon-condition">ab 1999 € Einkaufswert</div>
-      <div class="coupon-code-box">
-        <input type="text" id="coupon250" value="MD250" readonly>
-        <button onclick="copyCoupon('coupon250', this)">Copy</button>
+                if featured_image
+                  assign found = false
+                  for img in product.images
+                    if found
+                      assign second_image = img
+                      break
+                    endif
+                    if img.src == featured_image.src
+                      assign found = true
+                    endif
+                  endfor
+
+                  if second_image == null
+                    for img in product.images
+                      if img.src != featured_image.src
+                        assign second_image = img
+                        break
+                      endif
+                    endfor
+                  endif
+                else
+                  assign second_image = product.images[1]
+                endif
+              %}
+              <a
+                class="collection_compare_product"
+                data-type="{{ product.type | handleize }}"
+                href="{{ product.url }}"
+                data-id="{{ product.id }}"
+              >
+                <div class="collection_compare_product_img {% if second_image != blank %} collection_compare_product_hoverchange{% endif %}">
+                  {% if featured_image %}
+                    {{
+                      featured_image
+                      | image_url: width: featured_image.width
+                      | image_tag: alt: product.title, class: 'collection_compare_product_img_first'
+                    }}
+                  {% endif %}
+
+                  {% if second_image and second_image.src != featured_image.src %}
+                    {{
+                      second_image
+                      | image_url: width: second_image.width
+                      | image_tag: alt: product.title, class: 'collection_compare_product_img_second'
+                    }}
+                  {% endif %}
+                  {% comment %} <img src="{{ product.featured_media | image_url }}" alt="{{ product.title }}"> {% endcomment %}
+                  <div class="collection_compare_product_select">
+                    {{- 'icon-selected.svg' | inline_asset_content -}}
+                  </div>
+                  <div class="collection_compare_product_tagbox">
+                    {% if product.compare_at_price != blank and product.compare_at_price > product.price %}
+                      <div class="collection_compare_product_tag">
+                        {{ settings.discount_symbol | default: "-" }} {{ product.compare_at_price | minus: product.price | money_without_trailing_zeros }}
+                      </div>
+                    {% endif %}
+                    {% if sale_info != blank and sale_info.name != blank %}
+                      <div class="collection_compare_product_saleinfo">{{ sale_info.name }}</div>
+                    {% endif %}
+                    {% if product.metafields.custom.product_tag.value != blank %}
+                      <div class="collection_compare_product_tag">
+                        {{ product.metafields.custom.product_tag.value }}
+                      </div>
+                    {% endif %}
+                  </div>
+                </div>
+                <div class="collection_compare_product_info">
+                  <h4 class="collection_compare_product_title">{{ product.title }}</h4>
+                  {% if product.metafields.custom.core_features %}
+                    <div class="product_core_features">
+                      {{ product.metafields.custom.core_features | metafield_tag }}
+                    </div>
+                  {% endif %}
+
+                  <div>
+                    {% render 'product-rating', product: product %}
+                    <div class="collection_compare_product_price">
+                      <div>
+                        {{ product.price | money_without_trailing_zeros }}
+                      </div>
+                      {% if product.compare_at_price != blank and product.compare_at_price > product.price %}
+                        <div class="collection_compare_product_price_cap">
+                          {{ product.compare_at_price | money_without_trailing_zeros }}
+                        </div>
+                      {% endif %}
+                    </div>
+                    <div class="collection_compare_product_btn nd-btn">
+                      {{ 'common.en_savoir_plus' | t }}
+                      {{ 'icon-right-arrow.svg' | inline_asset_content }}
+                    </div>
+                  </div>
+                </div>
+                {% if sale_info != blank %}
+                  <div
+                    class="collection_compare_product_saleinfo_countdown"
+                    data-end-date="{{ sale_info.datetime | date: "%Y-%m-%dT%H:%M:%SZ" }}"
+                  >
+                    <span class="collection_compare_product_saleinfo_countdown_text">{{ 'common.ends_in' | t }}</span>
+                    <div class="collection_compare_product_saleinfo_countdown_item" data-type="day"></div>
+                    <span>:</span>
+                    <div class="collection_compare_product_saleinfo_countdown_item" data-type="hour"></div>
+                    <span>:</span>
+                    <div class="collection_compare_product_saleinfo_countdown_item" data-type="minute"></div>
+                    <span>:</span>
+                    <div class="collection_compare_product_saleinfo_countdown_item" data-type="second"></div>
+                  </div>
+                {% endif %}
+              </a>
+            {% endfor %}
+          </div>
+
+          {%- if paginate.pages > 1 -%}
+            <div
+              class="collection_compare_pagination{% unless paginate.next.is_link %} hidden{% endunless %}"
+              data-is-more-results="{{ paginate.next.is_link }}"
+            >
+              <div class="collection_compare_pagination_contain">
+                {%- liquid
+                  assign visible_results = paginate.current_page | times: paginate.page_size | at_most: paginate.items
+                  assign total_items_float = paginate.items | plus: 0.0
+                  assign pagination_percent = 100 | divided_by: total_items_float | times: visible_results | round: 1
+                -%}
+                <div class="collection_compare_pagination_contain_message">
+                  {{- 'common.position_results' | t: visible_results: visible_results, total_results: paginate.items -}}
+                </div>
+                <div
+                  class="collection_compare_pagination_contain_bar"
+                  style="--pagination-percent: {{ pagination_percent }}%;"
+                ></div>
+                <a href="{{ paginate.next.url }}" class="collection_compare_pagination_contain_btn">
+                  {{ 'common.show_more' | t }}
+                </a>
+              </div>
+            </div>
+          {% endif %}
+        {% endpaginate %}
       </div>
     </div>
-
   </div>
+  {% render 'collection-compare-select' %}
 </div>
 
-<!-- ===============================
-     Styles
-     =============================== -->
-<style>
-.collection-coupon-slim {
-  margin-top: 20px;
-  padding: 16px 20px;
-  border: 1px solid #e5e5e5;
-  border-radius: 10px;
-  background: #fafafa;
-}
-
-.collection-coupon-title {
-  font-size: 18px;
-  font-weight: 700;
-  margin-bottom: 14px;
-  text-align: center;
-  color: #111;
-}
-
-.collection-discount-codes {
-  display: flex;
-  gap: 14px;
-  justify-content: space-between;
-  flex-wrap: wrap;
-}
-
-.coupon-item {
-  flex: 1 1 30%;
-  min-width: 180px;
-  border: 1px solid #ddd;
-  border-radius: 6px;
-  padding: 12px;
-  background: #ffffff;
-}
-
-.coupon-value {
-  font-size: 15px;
-  font-weight: 700;
-  margin-bottom: 4px;
-}
-
-.coupon-condition {
-  font-size: 12px;
-  color: #666;
-  margin-bottom: 10px;
-}
-
-.coupon-code-box {
-  display: flex;
-  gap: 8px;
-  align-items: center;
-  background: #000;
-  padding: 6px;
-  border-radius: 6px;
-}
-
-.coupon-code-box input {
-  flex: 1;
-  max-width: 100px;
-  padding: 4px 8px;
-  font-size: 12px;
-  border-radius: 4px;
-  border: 1px solid #ccc;
-}
-
-.coupon-code-box button {
-  background-color: #bdff00;
-  color: #000;
-  border: none;
-  border-radius: 4px;
-  padding: 0 10px;
-  cursor: pointer;
-  height: 32px;
-  font-size: 11px;
-  font-weight: 700;
-  transition: background-color .3s ease;
-}
-
-.coupon-code-box button:hover {
-  background-color: #a3e600;
-}
-
-.coupon-code-box button.copied {
-  background-color: #28a745;
-  color: #fff;
-}
-
-/* Mobile */
-@media (max-width: 768px) {
-  .collection-discount-codes {
-    gap: 10px;
+<script type="application/json" id="collection_compare_data">
+  {% for currency in shop.enabled_currencies %}
+    {% if currency.iso_code == shop.currency %}
+      {%- assign currency_symbol = currency.symbol -%}
+      {% break %}
+    {% endif %}
+  {% endfor %}
+  {
+    {% for product in product_list %}
+      "{{ product.id }}": {
+        "product": {{- product | json -}},
+        "selected_or_first_available_variant": {{- product.selected_or_first_available_variant | json -}},
+        "symbol": {{ currency_symbol | json }},
+        "compare_simple": {{ product.metafields.custom.compare_simple.value.data.value | json }},
+        "options_with_values": {{ product.options_with_values | json }},
+        "url": {{ product.url | json }},
+        "product_model": {{ product.metafields.custom.product_model | json }},
+        "product_title_top": {{ product.metafields.custom.product_title_top | json }}
+      }{% unless forloop.last %},{% endunless %}
+    {% endfor %}
   }
-  .coupon-item {
-    flex: 1 1 100%;
-  }
-}
-</style>
-
-<!-- ===============================
-     Script
-     =============================== -->
-<script>
-function copyCoupon(inputId, btn) {
-  const input = document.getElementById(inputId);
-  input.select();
-  input.setSelectionRange(0, 99999);
-  document.execCommand("copy");
-
-  const originalText = btn.innerText;
-  btn.innerText = "✔ Copied";
-  btn.classList.add("copied");
-
-  setTimeout(() => {
-    btn.innerText = originalText;
-    btn.classList.remove("copied");
-  }, 2000);
-}
 </script>
+<script src="{{ 'collection-compare.js' | asset_url }}" defer="defer"></script>
+<script src="{{ 'collection-facets.js' | asset_url }}" defer="defer"></script>
+
+{% schema %}
+{
+  "name": "collection compare",
+  "tag": "section",
+  "class": "section",
+  "disabled_on": {
+    "groups": ["header", "footer"]
+  },
+  "settings": [
+    {
+      "type": "checkbox",
+      "id": "show_banner",
+      "label": "show banner",
+      "default": true
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "banner image"
+    },
+    {
+      "type": "video",
+      "id": "video",
+      "label": "banner video"
+    },
+    {
+      "type": "header",
+      "content": "Layout"
+    },
+    {
+      "type": "range",
+      "id": "products_per_page",
+      "min": 6,
+      "max": 36,
+      "step": 1,
+      "label": "Products per page",
+      "default": 6
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_compare",
+      "label": "Enable compare",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "show_layout_toggle",
+      "label": "Show grid/list layout buttons",
+      "default": true
+    },
+    {
+      "type": "select",
+      "id": "image_aspect_ratio",
+      "label": "Product image aspect ratio",
+      "options": [
+        {
+          "value": "1",
+          "label": "1:1 (Square)"
+        },
+        {
+          "value": "1.33",
+          "label": "4:3 (Landscape)"
+        },
+        {
+          "value": "0.75",
+          "label": "3:4 (Portrait)"
+        },
+        {
+          "value": "1.5",
+          "label": "3:2 (Wide)"
+        }
+      ],
+      "default": "1"
+    },
+
+    {
+      "type": "header",
+      "content": "Filtering"
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_filtering",
+      "label": "Enable filtering",
+      "info": "[Customize filters](/admin/menus)",
+      "default": true
+    },
+
+    {
+      "type": "header",
+      "content": "Sorting"
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_sorting",
+      "label": "Enable sorting",
+      "default": true
+    }
+  ],
+  "presets": [
+    {
+      "name": "collection compare"
+    }
+  ]
+}
+{% endschema %}
