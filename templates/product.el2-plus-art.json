@@ -707,6 +707,7 @@
         "swiper_xWLxVC",
         "swiper_g97rQ8"
       ],
+      "disabled": true,
       "name": "celebrity swiper",
       "settings": {
         "title": "<p>Empfehlen Von</p>",
