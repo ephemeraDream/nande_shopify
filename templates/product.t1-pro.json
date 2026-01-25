@@ -611,6 +611,7 @@
         "swiper_EnDd8n",
         "swiper_4kYG3r"
       ],
+      "disabled": true,
       "name": "maidesite swiper",
       "settings": {
         "spec_id": "Tests",
@@ -667,6 +668,7 @@
         "swiper_xWLxVC",
         "swiper_zXMDVR"
       ],
+      "disabled": true,
       "name": "celebrity swiper",
       "settings": {
         "title": "",
