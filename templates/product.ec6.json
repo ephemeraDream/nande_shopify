@@ -537,6 +537,7 @@
         "swiper_EnDd8n",
         "swiper_4kYG3r"
       ],
+      "disabled": true,
       "name": "maidesite swiper",
       "settings": {
         "spec_id": "",
@@ -582,6 +583,7 @@
         "swiper_mexwM6",
         "swiper_xWLxVC"
       ],
+      "disabled": true,
       "name": "celebrity swiper",
       "settings": {
         "title": "<p>Empfehlen Von</p>",
