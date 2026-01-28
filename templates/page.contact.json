@@ -461,18 +461,18 @@
             "answer": "<p>Nach dem Versand erhalten Sie eine E-Mail mit der Sendungsnummer. Falls Sie diese E-Mail nicht erhalten haben, überprüfen Sie bitte Ihren Spam-Ordner. Alternativ können Sie den Status auch auf unserer Website unter folgendem Link verfolgen:<a href=\"https://www.maidesite.de/apps/17TRACK?nums\" title=\"https://www.maidesite.de/apps/17TRACK?nums\">TRACK</a><br/></p>"
           }
         },
+        "faq_WtEK7r": {
+          "type": "faq",
+          "settings": {
+            "question": "<p>Warum habe ich nur einen Teil der Artikel aus meiner Bestellung erhalten?</p>",
+            "answer": "<p>Wenn Sie ein Set aus Tischplatte und Rahmen gekauft haben, werden diese in zwei separaten Paketen versendet, die möglicherweise nicht gleichzeitig ankommen. Falls Sie die Sendungsnummer für das andere Paket nicht erhalten haben, kontaktieren Sie uns bitte, damit wir die Lieferung für Sie nachverfolgen können.<br/></p>"
+          }
+        },
         "faq_VQVPFn": {
           "type": "faq",
           "settings": {
             "question": "<p>Das Produkt, das ich erhalten habe, funktioniert nicht richtig.</p>",
             "answer": "<p>Bitte senden Sie uns ein entsprechendes Video sowie eine detaillierte Problembeschreibung, damit wir den Fall so schnell wie möglich prüfen und Ihnen weiterhelfen können. Sie erreichen uns per E-Mail unter <a>contact@maidesite.de</a></p>"
-          }
-        },
-        "faq_bELHrX": {
-          "type": "faq",
-          "settings": {
-            "question": "<p>Ich habe vergessen, den Gutscheincode zu verwenden. Was soll ich jetzt tun?</p>",
-            "answer": "<p>Bitte stellen Sie uns den entsprechenden Gutscheincode zur Verfügung. Solange die Aktion noch nicht abgelaufen ist, können wir Ihnen den Differenzbetrag nach Erhalt des Pakets zurückerstatten.<br/></p>"
           }
         },
         "faq_6wFLFe": {
@@ -482,11 +482,11 @@
             "answer": "<p>wir bedauern sehr, dass es aufgrund der Logistiktransporte zu Beschädigungen gekommen ist. Um eine Schadensmeldung bei unserem Logistikpartner einzureichen, bitten wir Sie, uns die folgenden Fotos zur Verfügung zu stellen:<br/><br/>Fotos der äußeren Verpackung des Pakets mit der Versandnummer<br/><br/>Fotos der inneren Verpackung des Pakets<br/><br/>Fotos der beschädigten Produkte im Detail<br/><br/>Sobald wir diese Fotos erhalten haben, werden wir mit Ihnen in Absprache eine Ersatzlieferung oder Rückerstattung arrangieren, je nach den Gegebenheiten.<br/><br/></p>"
           }
         },
-        "faq_WtEK7r": {
+        "faq_bELHrX": {
           "type": "faq",
           "settings": {
-            "question": "<p>Warum habe ich nur einen Teil der Artikel aus meiner Bestellung erhalten?</p>",
-            "answer": "<p>Wenn Sie ein Set aus Tischplatte und Rahmen gekauft haben, werden diese in zwei separaten Paketen versendet, die möglicherweise nicht gleichzeitig ankommen. Falls Sie die Sendungsnummer für das andere Paket nicht erhalten haben, kontaktieren Sie uns bitte, damit wir die Lieferung für Sie nachverfolgen können.<br/></p>"
+            "question": "<p>Ich habe vergessen, den Gutscheincode zu verwenden. Was soll ich jetzt tun?</p>",
+            "answer": "<p>Bitte stellen Sie uns den entsprechenden Gutscheincode zur Verfügung. Solange die Aktion noch nicht abgelaufen ist, können wir Ihnen den Differenzbetrag nach Erhalt des Pakets zurückerstatten.<br/></p>"
           }
         },
         "faq_tByrkU": {
@@ -501,10 +501,10 @@
         "faq_E4jP4F",
         "faq_AXAcgA",
         "faq_W9Mzyn",
-        "faq_VQVPFn",
-        "faq_bELHrX",
-        "faq_6wFLFe",
         "faq_WtEK7r",
+        "faq_VQVPFn",
+        "faq_6wFLFe",
+        "faq_bELHrX",
         "faq_tByrkU"
       ],
       "custom_css": [
