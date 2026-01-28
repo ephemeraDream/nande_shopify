@@ -99,6 +99,54 @@
         "padding_bottom": 8
       }
     },
+    "image_with_text_Qwxgtd": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_eBX9kk": {
+          "type": "heading",
+          "settings": {
+            "heading": "Für Ihr Team einkaufen?",
+            "heading_size": "h1"
+          }
+        },
+        "text_EHXEXy": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Prüfen Sie unser exklusives Angebot, abgestimmt auf die ergonomischen Bedürfnisse Ihres Teams.</p>",
+            "text_style": "body"
+          }
+        },
+        "button_tNG4gR": {
+          "type": "button",
+          "settings": {
+            "button_label": "Jetzt Business-Angebot sichern",
+            "button_link": "shopify://pages/geschaftskunden-2025",
+            "button_style_secondary": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_eBX9kk",
+        "text_EHXEXy",
+        "button_tNG4gR"
+      ],
+      "name": "t:sections.image-with-text.presets.name",
+      "settings": {
+        "image": "shopify://shop_images/b2b_03.webp",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "image_behavior": "none",
+        "content_layout": "no-overlap",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "mobile_content_alignment": "left",
+        "section_color_scheme": "",
+        "color_scheme": "",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
     "img_with_text_simplicity_URDzRN": {
       "type": "img-with-text-simplicity",
       "name": "img with text simplicity",
@@ -459,6 +507,7 @@
     "collection_compare_khmbzE",
     "compare_simple_YrUqUG",
     "thanks_TcUcaC",
+    "image_with_text_Qwxgtd",
     "img_with_text_simplicity_URDzRN",
     "img_with_text_simplicity_CehiJc",
     "img_with_text_simplicity_dDeThj",
