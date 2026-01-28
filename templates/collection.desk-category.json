@@ -88,6 +88,7 @@
     },
     "thanks_TcUcaC": {
       "type": "thanks",
+      "disabled": true,
       "name": "thanks",
       "settings": {
         "title": "Für Ihr Team einkaufen?",
@@ -100,7 +101,6 @@
     },
     "img_with_text_simplicity_URDzRN": {
       "type": "img-with-text-simplicity",
-      "disabled": true,
       "name": "img with text simplicity",
       "settings": {
         "spec_id": "",
