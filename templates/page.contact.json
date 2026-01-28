@@ -500,7 +500,7 @@
           "type": "faq",
           "settings": {
             "question": "<p>Bieten Sie Rabatte für Großbestellungen Ihrer Bürotische und Bürostühle an?</p>",
-            "answer": "<p>Ja, wir bieten Rabatte für Geschäftsbestellungen entsprechend Ihren Anforderungen. Bitte klicken Sie hier, um die Anforderungen Ihres Teams für Schreibtische und ergonomische Stühle einzureichen.</p>"
+            "answer": "<p>Ja, wir bieten Rabatte für Geschäftsbestellungen entsprechend Ihren Anforderungen. Bitte klicken Sie <a href=\"/pages/geschaftskunden-2025\" title=\"Geschaftskunden 2025\">hier</a>, um die Anforderungen Ihres Teams für Schreibtische und ergonomische Stühle einzureichen.</p>"
           }
         }
       },
