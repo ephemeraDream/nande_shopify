@@ -456,7 +456,7 @@
           "type": "faq",
           "settings": {
             "question": "<p>Welche Möglichkeiten habe ich, um meine Bestellung zu bezahlen?</p>",
-            "answer": "<p>Bei Maidesite stehen Ihnen folgende Bezahlmöglichkeiten zur Verfügung:<br/>PayPal<br/>Kreditkarte (MasterCard und Visa)</p>"
+            "answer": "<p>Maidesite bietet die folgenden Zahlungsoptionen an: </p><ul><li><strong>PayPal, </strong></li><li><strong>Kreditkarte</strong> (MasterCard und Visa),</li><li><strong>BNPL</strong> (Klarna)</li><li><strong>Banküberweisung</strong>.</li></ul>"
           }
         },
         "faq_LBaBFX": {
