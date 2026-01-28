@@ -459,6 +459,13 @@
             "answer": "<p>Maidesite bietet die folgenden Zahlungsoptionen an: </p><ul><li><strong>PayPal, </strong></li><li><strong>Kreditkarte</strong> (MasterCard und Visa),</li><li><strong>BNPL</strong> (Klarna)</li><li><strong>Banküberweisung</strong>.</li></ul>"
           }
         },
+        "faq_bmMqQ9": {
+          "type": "faq",
+          "settings": {
+            "question": "<p>Bieten Sie Rabatte für Großbestellungen Ihrer höhenverstellbaren Schreibtische und ergonomischen Stühle an?</p>",
+            "answer": "<p>Ja, wir bieten Rabatte für Geschäftsbestellungen entsprechend Ihren Anforderungen. Bitte klicken Sie <a href=\"/pages/geschaftskunden-2025\" title=\"Geschaftskunden 2025\">hier</a>, um die Anforderungen Ihres Teams einzureichen.</p>"
+          }
+        },
         "faq_LBaBFX": {
           "type": "faq",
           "settings": {
@@ -483,6 +490,7 @@
       },
       "block_order": [
         "faq_GyJwEw",
+        "faq_bmMqQ9",
         "faq_LBaBFX",
         "faq_NDUBye",
         "faq_yTeJrQ"
