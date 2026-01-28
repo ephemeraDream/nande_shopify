@@ -234,7 +234,7 @@
         "title": "Fragen, Wünsche, Anliegen? Wir Haben Immer Ein Offenes Ohr!",
         "desc": "Kontaktiere uns einfach über das Kontaktformular und erhalte innerhalb 24 Stunden Rückmeldung. Unser geschulter Kundenservice und unsere internen Firmenberatern kümmern sich darum.",
         "text_content": "<p>Sie können uns auch auf folgende Weise kontaktieren, Sie erhalten innerhalb von 24 Stunden eine Rückmeldung<br/><br/><strong>Unser E-Mail</strong>: contact@maidesite.de<br/><strong>Beratung</strong>: Mo.-Fr. 9-17 Uhr</p>",
-        "btn_text": "Submit",
+        "btn_text": "Absenden",
         "success_message": "Your message has been sent successfully.",
         "error_message": "There was an error sending the form. Please check your input.",
         "show_email": true,
