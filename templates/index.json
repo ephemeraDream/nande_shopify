@@ -522,6 +522,55 @@
         "text": ""
       }
     },
+    "image_with_text_yk3GJG": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_BQPdxd": {
+          "type": "heading",
+          "settings": {
+            "heading": "Premium-Büromöbel für gesundes, effizientes Arbeiten",
+            "heading_size": "h1"
+          }
+        },
+        "text_wVJ8JQ": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Moderne Büros passen sich nahtlos an Ihre Mitarbeitenden, verschiedene Arbeitsstile und jede Situation an. Unsere erfahrenen Expertinnen, Experten und Designer planen Ihre Büroflächen für maximale Gesundheit, Produktivität und Wohlbefinden.<br/><br/>Erzählen Sie uns kurz von Ihrem Projekt – Sie erhalten in kürzester Zeit ein maßgeschneidertes Angebot mit attraktiven Rabatten für Firmen- und Großbestellungen, perfekt abgestimmt auf Ihr Team.</p>",
+            "text_style": "body"
+          }
+        },
+        "button_bdxydF": {
+          "type": "button",
+          "settings": {
+            "button_label": "Jetzt unverbindliche Beratung und Angebot anfordern",
+            "button_link": "shopify://pages/geschaftskunden-2025",
+            "button_style_secondary": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_BQPdxd",
+        "text_wVJ8JQ",
+        "button_bdxydF"
+      ],
+      "disabled": true,
+      "name": "t:sections.image-with-text.presets.name",
+      "settings": {
+        "image": "shopify://shop_images/11_8e4739e7-a576-4f79-918d-7d0a93a2d753.jpg",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "image_behavior": "none",
+        "content_layout": "no-overlap",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "mobile_content_alignment": "left",
+        "section_color_scheme": "",
+        "color_scheme": "",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
     "maidesite_swiper_PzMRtf": {
       "type": "maidesite-swiper",
       "blocks": {
@@ -719,6 +768,7 @@
     "image_comparison_JHgace",
     "bundle_simple_WFrNiX",
     "boxgrid_simple_mJENCJ",
+    "image_with_text_yk3GJG",
     "maidesite_swiper_PzMRtf",
     "celebrity_swiper_EQie6E",
     "user_feedback_teEaMB",
