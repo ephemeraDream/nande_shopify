@@ -88,7 +88,6 @@
     },
     "thanks_TcUcaC": {
       "type": "thanks",
-      "disabled": true,
       "name": "thanks",
       "settings": {
         "title": "Für Ihr Team einkaufen?",
