@@ -14,40 +14,26 @@
   }
 {%- endstyle -%}
 
-{%- style -%}
-  .section-{{ section.id }}-padding {
-    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
-    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
-  }
+/* ===== Custom overrides ===== */
 
-  @media screen and (min-width: 750px) {
-    .section-{{ section.id }}-padding {
-      padding-top: {{ section.settings.padding_top }}px;
-      padding-bottom: {{ section.settings.padding_bottom }}px;
-    }
-  }
+/* 按钮文字加粗 */
+.section-{{ section.id }}-padding .button {
+  font-weight: 700;
+}
 
-  /* ✅ 去掉文本容器的方框线和阴影 */
-  #ImageWithText--{{ section.id }} {
-    border: none !important;
-    box-shadow: none !important;
-    background: transparent !important;
-  }
+/* 去掉整个模块的边框和阴影 */
+.section-{{ section.id }}-padding .content-container,
+.section-{{ section.id }}-padding .image-with-text__media {
+  border: none !important;
+  box-shadow: none !important;
+}
 
-  /* ✅ 按钮文字加粗 */
-  #ImageWithText--{{ section.id }} .button {
-    font-weight: 700 !important;
-  }
-
-  /* ✅ 正文强制黑色 + 系统字体 */
-  #ImageWithText--{{ section.id }} .rte {
-    color: #000 !important;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont,
-                 "Segoe UI", Roboto, Helvetica, Arial, sans-serif !important;
-  }
-
-{%- endstyle -%}
-
+/* 正文字体设置：黑色 + 系统字体 + 左对齐 */
+.section-{{ section.id }}-padding .image-with-text__text {
+  color: #000 !important;
+  text-align: left !important;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif !important;
+}
 
 {%- liquid
   assign fetch_priority = 'auto'
