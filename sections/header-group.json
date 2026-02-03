@@ -149,6 +149,7 @@
         },
         "product_collection_dkDC4b": {
           "type": "product_collection",
+          "disabled": true,
           "settings": {
             "name": "Ergonomische Stühle",
             "link": "shopify://collections/ergonomischer-burostuhl",
@@ -172,18 +173,18 @@
             "info_text": ""
           }
         },
-        "single_link_nU48XR": {
-          "type": "single_link",
-          "settings": {
-            "name": "Neujahrs-Sale",
-            "link": "shopify://pages/neujahrs-sale"
-          }
-        },
         "single_link_hjwkXN": {
           "type": "single_link",
           "settings": {
             "name": "Geschäftskunden",
             "link": "shopify://pages/geschaftskunden-2025"
+          }
+        },
+        "single_link_nU48XR": {
+          "type": "single_link",
+          "settings": {
+            "name": "Neujahrs-Sale",
+            "link": "shopify://pages/neujahrs-sale"
           }
         },
         "link_list_yBG8wE": {
@@ -200,8 +201,8 @@
         "product_collection_eEzYM8",
         "product_collection_dkDC4b",
         "product_collection_RDMYxc",
-        "single_link_nU48XR",
         "single_link_hjwkXN",
+        "single_link_nU48XR",
         "link_list_yBG8wE"
       ],
       "name": "header menu",
