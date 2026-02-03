@@ -6,14 +6,6 @@
     padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
   }
 
-  @media screen and (min-width: 750px) {
-    .section-{{ section.id }}-padding {
-      padding-top: {{ section.settings.padding_top }}px;
-      padding-bottom: {{ section.settings.padding_bottom }}px;
-    }
-  }
-{%- endstyle -%}
-
 /* ===== Custom overrides ===== */
 
 /* 按钮文字加粗 */
@@ -28,12 +20,20 @@
   box-shadow: none !important;
 }
 
-/* 正文字体设置：黑色 + 系统字体 + 左对齐 */
-.section-{{ section.id }}-padding .image-with-text__text {
-  color: #000 !important;
-  text-align: left !important;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif !important;
+.section-{{ section.id }}-padding .project-text {
+  color: #000;
+  text-align: left;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
 }
+
+
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+{%- endstyle -%}
 
 {%- liquid
   assign fetch_priority = 'auto'
