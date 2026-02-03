@@ -542,7 +542,7 @@
         "button_LTzxTn": {
           "type": "button",
           "settings": {
-            "button_label": "Jetzt unverbindliche Beratung und Angebot anfordern",
+            "button_label": "Jetzt Business-Angebot sichern",
             "button_link": "shopify://pages/geschaftskunden-2025",
             "button_style_secondary": false
           }
@@ -553,7 +553,6 @@
         "text_wVJ8JQ",
         "button_LTzxTn"
       ],
-      "disabled": true,
       "name": "t:sections.image-with-text.presets.name",
       "settings": {
         "image": "shopify://shop_images/11_8e4739e7-a576-4f79-918d-7d0a93a2d753.jpg",
@@ -562,10 +561,10 @@
         "layout": "image_first",
         "image_behavior": "none",
         "content_layout": "no-overlap",
-        "desktop_content_position": "top",
-        "desktop_content_alignment": "left",
-        "mobile_content_alignment": "left",
-        "section_color_scheme": "",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "center",
+        "mobile_content_alignment": "center",
+        "section_color_scheme": "scheme-1",
         "color_scheme": "",
         "padding_top": 36,
         "padding_bottom": 36
