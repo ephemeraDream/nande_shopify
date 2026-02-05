@@ -199,8 +199,8 @@
         "file_with_text_YAeXwa": {
           "type": "file_with_text",
           "settings": {
-            "title": "<p>Extra großer Höhenbereich</p>",
-            "description": "<p>Der T2 Pro Plus bietet einen außergewöhnlich großen Höhenverstellbereich, der weit über das hinausgeht, was viele klassische Modelle ermöglichen.Diese große Spanne eröffnet mehr Freiheit bei der ergonomischen Gestaltung des Arbeitsplatzes: für kreative Workflows, wechselnde Tätigkeiten oder Setups. </p>",
+            "title": "<p>Verstärktes 4-Bein-Gestell</p>",
+            "description": "<p>Das verstärkte Vierbein-System mit vier integrierten dreieckigen Stützstrukturen sorgt für eine gleichmäßige Lastverteilung und eine deutlich höhere strukturelle Stabilität als klassische Zweibein-Gestelle – ideal für große Arbeitsflächen und hohe Belastung.</p>",
             "file_type": "image",
             "file_image": "shopify://shop_images/1_2ce14cfe-9831-4ef5-a93c-ac9737afa75d.jpg",
             "video_url": ""
@@ -209,8 +209,8 @@
         "file_with_text_pQwJHP": {
           "type": "file_with_text",
           "settings": {
-            "title": "<p>Innovative Stabilität</p>",
-            "description": "<p>•<strong>In Bewegung:</strong>Sanftes Heben & Senken ohne Wackeln – der Kartenstapel bleibt stehen.<br/>•<strong>Im Stillstand:</strong>Hohe Tragkraft, kein Schwanken bei voller Last.<br/>•<strong>Auf höchster Stufe:</strong>Auch ganz oben ruhig – ideal zum Arbeiten.</p>",
+            "title": "<p>Große L-förmige Arbeitsfläche</p>",
+            "description": "<p>Die großzügige L-Form erweitert den nutzbaren Arbeitsbereich deutlich und ermöglicht klar getrennte Funktionszonen für Bildschirmarbeit, Schreiben und Zubehör. Diese strukturierte Flächenaufteilung unterstützt ergonomische Arbeitsabläufe und verbessert die Übersicht im täglichen Einsatz.</p>",
             "file_type": "image",
             "file_image": "shopify://shop_images/2_-_L.jpg",
             "video_url": ""
@@ -219,8 +219,8 @@
         "file_with_text_mFbE3r": {
           "type": "file_with_text",
           "settings": {
-            "title": "<p>Bis zu 160 kg Tragkraft</p>",
-            "description": "<p><strong>Ideal für schwere Arbeitsplätze:</strong><br/>Die hohe Tragkraft von 160 kg bietet genügend Reserven für große Monitore, PCs, Studioequipment oder anspruchsvolle Setups – perfekt für Profis und Power-User.</p>",
+            "title": "<p>Stabil in jeder Höhe</p>",
+            "description": "<p>•<strong>In Bewegung:</strong>Sanftes Heben & Senken ohne Wackeln – der Kartenstapel bleibt stehen.<br/>•<strong>Im Stillstand:</strong>Hohe Tragkraft, kein Schwanken bei voller Last.<br/>•<strong>Auf höchster Stufe:</strong>Auch ganz oben ruhig – ideal zum Arbeiten.</p>",
             "file_type": "image",
             "file_image": "shopify://shop_images/3_cc48d8fc-5ee2-4c84-bb5d-a0b1c697d540.jpg",
             "video_url": ""
@@ -229,8 +229,8 @@
         "file_with_text_Ki6EEk": {
           "type": "file_with_text",
           "settings": {
-            "title": "<p>Smart Controller</p>",
-            "description": "<p><strong>Alles steuern – einfach, schnell, intuitiv:</strong><br/>Mit vier Memory-Positionen, zwei Ladeanschlüssen, Kindersicherung und Sit-Stand-Erinnerung steuern Sie Ihren Arbeitsplatz komfortabel und präzise – mit nur einem Fingertipp.</p>",
+            "title": "<p>Smartes Handbedienfeld</p>",
+            "description": "<p>Ergonomisch gestaltete Tasten, integrierte Speicherfunktionen und moderne Zusatzfeatures sorgen für eine komfortable und intuitive Höhensteuerung.</p>",
             "file_type": "image",
             "file_image": "shopify://shop_images/4_9bf79b99-fb52-4751-95b4-be1cc26a0343.jpg",
             "video_url": ""
@@ -239,8 +239,8 @@
         "file_with_text_QNFYKY": {
           "type": "file_with_text",
           "settings": {
-            "title": "<p>Metall-Kabelhalter</p>",
-            "description": "<p><strong>Für mehr Ordnung am Schreibtisch:</strong><br/>Der mitgelieferte Metall-Kabelhalter hilft Ihnen, Kabel sauber zu bündeln und unter der Tischplatte zu verstauen – für einen aufgeräumten und professionellen Arbeitsplatz.</p>",
+            "title": "<p>160 kg Tragkraft</p>",
+            "description": "<p>Hohe Belastbarkeit für umfangreiche Setups mit mehreren Monitoren, schweren Geräten und zusätzlichem Zubehör – ohne Kompromisse bei der Standfestigkeit.</p>",
             "file_type": "image",
             "file_image": "shopify://shop_images/5_-_160kg.jpg",
             "video_url": ""
@@ -249,8 +249,8 @@
         "file_with_text_3TibJP": {
           "type": "file_with_text",
           "settings": {
-            "title": "<p>Qualität geprüft</p>",
-            "description": "<p><strong>Über 10.000 Belastungstests:</strong><br/>Jeder Tischrahmen wird strengen Qualitäts- und Belastungstests unterzogen. Mehr als 10.000 Zyklen garantieren eine langlebige, robuste und zuverlässige Performance im täglichen Einsatz.</p>",
+            "title": "<p>Geprüfte Materialqualität</p>",
+            "description": "<p>Hochwertige Komponenten, zertifizierte Materialien und umfangreiche Dauertests gewährleisten langfristige Zuverlässigkeit im täglichen Einsatz.</p>",
             "file_type": "image",
             "file_image": "shopify://shop_images/6_942178d7-82d4-4acc-8148-8be598b8a10b.jpg",
             "video_url": ""
@@ -282,7 +282,7 @@
           "type": "foldtext",
           "settings": {
             "title": "<h3>Mehr Platz dank intelligenter Eckstruktur</h3>",
-            "description": "Die L-Form eröffnet eine großzügige Arbeitsfläche und nutzt den Raum effizienter aus. Perfekt für Multitasking, kreative Projekte oder duale Workstations.",
+            "description": "Die L-Erweiterung vergrößert die Arbeitsfläche deutlich und schafft zusätzlichen Platz für Monitore, Laptop, Dokumente und Arbeitsmaterialien. Besonders geeignet für Multi-Monitor-Arbeitsplätze und kreative Workflows.",
             "image": "shopify://shop_images/7_61650f1b-9a34-4143-b52a-149b0cf498b5.jpg"
           }
         },
@@ -290,7 +290,7 @@
           "type": "foldtext",
           "settings": {
             "title": "<h3>Flexible Montage – links oder rechts</h3>",
-            "description": "Die Erweiterungsplatte lässt sich je nach Raumsituation frei auf der linken oder rechten Seite montieren. So passt sich der Tisch Ihrem individuellen Setup optimal an.",
+            "description": "Die Erweiterungsplatte kann je nach Raumlayout und persönlicher Arbeitsweise auf der linken oder rechten Seite montiert werden. So passt sich der Tisch flexibel an unterschiedliche Nutzungsszenarien an.",
             "image": "shopify://shop_images/8_d2e3a322-7486-426c-a1e1-c5ed8b28cddf.jpg"
           }
         },
@@ -298,7 +298,7 @@
           "type": "foldtext",
           "settings": {
             "title": "<h3>Kürzere Wege, höhere Effizienz</h3>",
-            "description": "Durch das ergonomische Eckdesign werden Bewegungen minimiert – ein kurzer Dreh des Körpers genügt, und alles Wichtige liegt direkt zur Hand.",
+            "description": "Durch die erweiterte seitliche Fläche bleiben häufig genutzte Arbeitsmittel in direkter Reichweite. Das reduziert unnötige Bewegungen und unterstützt effizientere Arbeitsprozesse.",
             "image": "shopify://shop_images/9_61e8bce0-4637-4d9b-a78d-6b4d2de16b39.jpg"
           }
         }
@@ -581,10 +581,10 @@
         "tab_fiwUXL": {
           "type": "tab",
           "settings": {
-            "tabname": "Kabelloses Bluetooth-Design",
+            "tabname": "4-Bein-Struktur",
             "sub_title": "",
-            "title": "<p>Kabelloses Bluetooth-Design</p>",
-            "description": "<div style=\"text-align:left; direction:ltr;\" lang=\"de\">\n  <p>\n  Der Controller verbindet sich zuverlässig per Bluetooth mit dem Tisch – ganz ohne störende Kabel. Dank einer Reichweite von bis zu 10 Metern können Sie den Bedienknopf frei auf dem Tisch positionieren und Ihren Arbeitsplatz flexibel gestalten.<br/>\n  </p>\n</div>",
+            "title": "<p>4-Bein-Struktur für maximale Standfestigkeit</p>",
+            "description": "<div style=\"text-align:left; direction:ltr;\" lang=\"de\">\n  <p>\n  Das Vierbein-Design bietet im Vergleich zu herkömmlichen Hubtischen eine stabilere Basis und verbessert die Balance bei großen Tischplatten und hohen Lasten.<br/>\n  </p>\n</div>",
             "file_type": "image",
             "file_image": "shopify://shop_images/10_a2cd4ab0-1734-4d20-ac50-77090a19ddfa.jpg",
             "video_url": "",
@@ -595,10 +595,10 @@
         "tab_AUd88N": {
           "type": "tab",
           "settings": {
-            "tabname": "Knopfanhebung",
+            "tabname": "Extra-Verstärkungen",
             "sub_title": "",
-            "title": "<p>Knopfanhebung</p>",
-            "description": "<div style=\"text-align:left; direction:ltr;\" lang=\"de\">\n  <p>\n   Über den ergonomischen Drehknopf steuern Sie die Auf- und Abbewegung millimetergenau – schnell, leise und intuitiv.<br/>\n  </p>\n</div>",
+            "title": "<p>Zusätzliche konstruktive Verstärkungen</p>",
+            "description": "<div style=\"text-align:left; direction:ltr;\" lang=\"de\">\n  <p>\n  Verstärkte Verbindungselemente und Rahmenkomponenten erhöhen die Verwindungssteifigkeit des gesamten Systems und reduzieren seitliche Bewegungen<br/>\n  </p>\n</div>",
             "file_type": "image",
             "file_image": "shopify://shop_images/11_7b02fc97-2e5a-442f-9ce4-a8ae49550fdc.jpg",
             "video_url": "",
@@ -609,10 +609,10 @@
         "tab_JyxzQm": {
           "type": "tab",
           "settings": {
-            "tabname": "Extra-lange Akkulaufzeit",
+            "tabname": "Dickwandige Stahlprofile",
             "sub_title": "",
-            "title": "<p>Extra-lange Akkulaufzeit</p>",
-            "description": "<div style=\"text-align:left; direction:ltr;\" lang=\"de\">\n  <p>\n    Mit einer beeindruckenden Laufzeit von bis zu 45 Tagen bleibt der Controller dauerhaft einsatzbereit – ideal für den modernen, kabellosen Arbeitsplatz.<br/>\n  </p>\n</div>",
+            "title": "<p>Dickwandige Stahlprofile für reduzierte Vibrationen</p>",
+            "description": "<div style=\"text-align:left; direction:ltr;\" lang=\"de\">\n  <p>\n   Die Verwendung von dickwandigem Stahl sorgt für mehr Masse und Steifigkeit in der Struktur. Dadurch werden Mikrobewegungen und Vibrationen effektiv minimiert – auch bei voller Auszugshöhe.<br/>\n  </p>\n</div>",
             "file_type": "image",
             "file_image": "shopify://shop_images/12_566b2953-19a4-40dc-921e-ab10fdb6fd57.jpg",
             "video_url": "",
@@ -630,7 +630,7 @@
       "settings": {
         "spec_id": "",
         "description": "",
-        "title": "<p>Kabelloser Drehknopf-Controller</p>",
+        "title": "<p>Stabilität & Rahmenkonstruktion</p>",
         "show_tab_head": true,
         "loop": true,
         "autoplay_enable": true,
@@ -644,38 +644,47 @@
         "foldtext_HQhGDk": {
           "type": "foldtext",
           "settings": {
-            "title": "<h3>Versenkbare Steckdose</h3>",
-            "description": "<ul><li>Eine elegante Lift-Steckdose verschwindet bei Nichtgebrauch im Tisch und liefert Strom genau dort, wo Sie ihn brauchen.",
+            "title": "<h3>Klaviertasten-Design</h3>",
+            "description": "Die Tasten sind bewusst im Klavierstil gestaltet und bieten ein deutliches haptisches Feedback. Jede Eingabe ist präzise kontrollierbar und leicht nachvollziehbar.",
             "image": "shopify://shop_images/13_a7ea390c-602b-4c8e-909b-0a01750a5c07.jpg"
+          }
+        },
+        "foldtext_eyYKRM": {
+          "type": "foldtext",
+          "settings": {
+            "title": "<h3>18W USB-C Ladeanschluss</h3>",
+            "description": "Direkt am Bedienfeld integrierter Schnellladeanschluss für Smartphone, Kopfhörer oder andere Geräte – ohne zusätzliches Netzteil auf dem Tisch.",
+            "image": "shopify://shop_images/14_-_18w_TC.jpg"
           }
         },
         "foldtext_iGWkAs": {
           "type": "foldtext",
           "settings": {
-            "title": "<h3>Praktisches 10W-Wireless-Charging</h3>",
-            "description": "<ul><li>Schwere Das integrierte kabellose Ladefeld lädt Smartphones bequem und griffbereit – ohne zusätzliche Ladegeräte.",
+            "title": "<h3>Automatischer Ruhemodus</h3>",
+            "description": "Das Display wechselt bei Nichtnutzung in den Energiesparmodus und reduziert den Stromverbrauch im Standby-Betrieb.",
             "image": "shopify://shop_images/15_95a283bc-7bca-45a2-95d2-9afa0c72a1c9.jpg"
           }
         },
         "foldtext_HWP39G": {
           "type": "foldtext",
           "settings": {
-            "title": "<h3>Größere Arbeitsfläche</h3>",
-            "description": "<ul><li>Die erweiterte Tech-Platte schafft zusätzliche Nutzfläche und damit mehr Raum für kreative Tools, Dokumente oder Zubehör. Sie bringt spürbar mehr Freiheit in Ihr tägliches Arbeiten.</li></ul>",
+            "title": "<h3>Kindersicherung</h3>",
+            "description": "Die Sperrfunktion verhindert unbeabsichtigtes Verstellen der Tischhöhe – sinnvoll in Haushalten mit Kindern oder gemeinsam genutzten Arbeitsplätzen.",
             "image": "shopify://shop_images/16_23030db0-9d0f-4cfd-b5d7-211fd59013d1.jpg"
           }
         },
         "foldtext_qmirCr": {
           "type": "foldtext",
           "settings": {
-            "title": "",
-            "description": "",
+            "title": "<h3>3 frei speicherbare</h3>",
+            "description": "Individuelle Sitz- und Stehhöhen lassen sich abspeichern und jederzeit per Tastendruck abrufen – für schnellen Wechsel im Arbeitsalltag.",
             "image": "shopify://shop_images/17_-_3.jpg"
           }
         }
       },
       "block_order": [
         "foldtext_HQhGDk",
+        "foldtext_eyYKRM",
         "foldtext_iGWkAs",
         "foldtext_HWP39G",
         "foldtext_qmirCr"
@@ -683,7 +692,7 @@
       "name": "img with foldtext",
       "settings": {
         "spec_id": "",
-        "title": "<p>Tech-Erweiterungsmodul </p>",
+        "title": "<p>Smartes Handbedienfeld</p>",
         "image": "shopify://shop_images/featured-spaces-5.webp",
         "padding_top": 120,
         "padding_bottom": 120
@@ -695,10 +704,10 @@
         "tab_RkjGVG": {
           "type": "tab",
           "settings": {
-            "tabname": "Kabelloses Bluetooth-Design",
+            "tabname": "FSC-zertifizierte",
             "sub_title": "",
-            "title": "<p>Kabelloses Bluetooth-Design</p>",
-            "description": "<div style=\"text-align:left; direction:ltr;\" lang=\"de\">\n  <p>\n  Der Controller verbindet sich zuverlässig per Bluetooth mit dem Tisch – ganz ohne störende Kabel. Dank einer Reichweite von bis zu 10 Metern können Sie den Bedienknopf frei auf dem Tisch positionieren und Ihren Arbeitsplatz flexibel gestalten.<br/>\n  </p>\n</div>",
+            "title": "<p>FSC-zertifizierte Tischplattenmaterialien</p>",
+            "description": "<div style=\"text-align:left; direction:ltr;\" lang=\"de\">\n  <p>\n  Die verwendeten Holzwerkstoffe stammen aus verantwortungsvoll bewirtschafteten Quellen und erfüllen anerkannte Nachhaltigkeitsstandards.<br/>\n  </p>\n</div>",
             "file_type": "image",
             "file_image": "shopify://shop_images/18_10981b2a-0d57-4067-9f1c-6b47baba4458.jpg",
             "video_url": "",
@@ -709,10 +718,10 @@
         "tab_kazGN3": {
           "type": "tab",
           "settings": {
-            "tabname": "Knopfanhebung",
+            "tabname": "Metall-Antriebswelle",
             "sub_title": "",
-            "title": "<p>Knopfanhebung</p>",
-            "description": "<div style=\"text-align:left; direction:ltr;\" lang=\"de\">\n  <p>\n   Über den ergonomischen Drehknopf steuern Sie die Auf- und Abbewegung millimetergenau – schnell, leise und intuitiv.<br/>\n  </p>\n</div>",
+            "title": "<p>Metall-Antriebswelle für höhere Lebensdauer</p>",
+            "description": "<div style=\"text-align:left; direction:ltr;\" lang=\"de\">\n  <p>\nIm Antriebssystem kommt eine robuste Metallwelle zum Einsatz, die im Vergleich zu Kunststofflösungen widerstandsfähiger gegenüber Dauerbelastung ist.\n<br/>\n  </p>\n</div>",
             "file_type": "image",
             "file_image": "shopify://shop_images/19.jpg",
             "video_url": "",
@@ -723,10 +732,10 @@
         "tab_yTmGja": {
           "type": "tab",
           "settings": {
-            "tabname": "Extra-lange Akkulaufzeit",
+            "tabname": "Langzeittests mit vielen Hubzyklen",
             "sub_title": "",
-            "title": "<p>Extra-lange Akkulaufzeit</p>",
-            "description": "<div style=\"text-align:left; direction:ltr;\" lang=\"de\">\n  <p>\n    Mit einer beeindruckenden Laufzeit von bis zu 45 Tagen bleibt der Controller dauerhaft einsatzbereit – ideal für den modernen, kabellosen Arbeitsplatz.<br/>\n  </p>\n</div>",
+            "title": "<p>Langzeittests mit zehntausenden Hubzyklen</p>",
+            "description": "<div style=\"text-align:left; direction:ltr;\" lang=\"de\">\n  <p>\n    Das Hubsystem wurde in umfangreichen Belastungstests über viele Tausend Zyklen geprüft, um zuverlässige Funktion und gleichbleibende Leistung über lange Nutzungszeiträume sicherzustellen.<br/>\n  </p>\n</div>",
             "file_type": "image",
             "file_image": "shopify://shop_images/20.jpg",
             "video_url": "",
@@ -744,7 +753,7 @@
       "settings": {
         "spec_id": "",
         "description": "",
-        "title": "<p>Kabelloser Drehknopf-Controller</p>",
+        "title": "<p>Material- & Verarbeitungsqualität</p>",
         "show_tab_head": true,
         "loop": true,
         "autoplay_enable": true,
