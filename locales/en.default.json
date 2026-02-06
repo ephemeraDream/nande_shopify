@@ -195,7 +195,7 @@
       "duties_and_taxes_included": "Duties and taxes included.",
       "shipping_policy_html": "<a href=\"{{ link }}\">Shipping</a> calculated at checkout.",
       "include_taxes": "Tax included",
-      "preorder": "Pre-order",
+      "preorder": "Pre-order"
     },
     "modal": {
       "label": "Media gallery"
@@ -611,5 +611,27 @@
     "show_results": "Zeige {{ search_num }} Ergebnisse",
     "choose": "Choose",
     "cancel": "Cancel"
+  },
+  "pagefly": {
+    "products": {
+      "product": {
+        "back_to_collection": "Back to {{ title }}"
+      }
+    },
+    "article": {
+      "by_author": "by {{ author }}",
+      "back_to_blog": "Back to {{ title }}"
+    },
+    "comments": {
+      "name": "name",
+      "email": "E-mail",
+      "comments_with_count": {
+        "one": "{{ count }} comment",
+        "other": "{{ count }} comments"
+      }
+    },
+    "password_page": {
+      "signup_form_email_label": "E-mail"
+    }
   }
 }
