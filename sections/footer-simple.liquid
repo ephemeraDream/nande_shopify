@@ -123,7 +123,7 @@
         "
       >
         {%- for language in localization.available_languages -%}
-          <option value="{{ language.iso_code }}" {% if language.iso_code == localization.language.iso_code %}selected{% endif %} style="color: #000000 !important; background-color:#1b1d21 !important;">
+          <option value="{{ language.iso_code }}" {% if language.iso_code == localization.language.iso_code %}selected{% endif %} style="color: #000000 !important; background-color:rgb(31, 31, 31) !important;">
             {{ language.endonym_name | capitalize }}
           </option>
         {%- endfor -%}
