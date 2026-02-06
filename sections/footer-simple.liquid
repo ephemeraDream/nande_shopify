@@ -1,5 +1,24 @@
 {{ 'section-footer-simple.css' | asset_url | stylesheet_tag }}
 
+<div class="footer__column footer__localization isolate">
+  <localization-form>
+    {%- form 'localization', id: 'FooterLanguageForm', class: 'localization-form' -%}
+      <div class="no-js-hidden">
+        <h2 class="caption-large text-body" id="FooterLanguageLabel">Language</h2>
+        <div class="disclosure">
+          <select name="language_code" onchange="this.form.submit()" style="padding: 8px; background: transparent; color: inherit; border: 1px solid rgba(0,0,0,0.2);">
+            {%- for language in localization.available_languages -%}
+              <option value="{{ language.iso_code }}" {% if language.iso_code == localization.language.iso_code %}selected{% endif %} style="color: #000;">
+                {{ language.endonym_name | capitalize }}
+              </option>
+            {%- endfor -%}
+          </select>
+        </div>
+      </div>
+    {%- endform -%}
+  </localization-form>
+</div>
+
 <div class="footer_simple_section session-box-padding">
   <div class="footer_simple">
     <div class="footer_simple_body">
@@ -452,21 +471,3 @@ document.addEventListener('DOMContentLoaded', function() {
   ]
 }
 {% endschema %}
-<div class="footer__column footer__localization isolate">
-  <localization-form>
-    {%- form 'localization', id: 'FooterLanguageForm', class: 'localization-form' -%}
-      <div class="no-js-hidden">
-        <h2 class="caption-large text-body" id="FooterLanguageLabel">Language</h2>
-        <div class="disclosure">
-          <select name="language_code" onchange="this.form.submit()" style="padding: 8px; background: transparent; color: inherit; border: 1px solid rgba(0,0,0,0.2);">
-            {%- for language in localization.available_languages -%}
-              <option value="{{ language.iso_code }}" {% if language.iso_code == localization.language.iso_code %}selected{% endif %} style="color: #000;">
-                {{ language.endonym_name | capitalize }}
-              </option>
-            {%- endfor -%}
-          </select>
-        </div>
-      </div>
-    {%- endform -%}
-  </localization-form>
-</div>
