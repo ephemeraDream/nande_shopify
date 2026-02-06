@@ -1,56 +1,55 @@
 {{ 'section-footer-simple.css' | asset_url | stylesheet_tag }}
 
-<div class="custom-language-picker-wrapper" style="background: #000; padding: 20px 0;">
-  <div class="page-width" style="display: flex; justify-content: flex-end; align-items: center;">
-    <form action="/forms/localization" method="post" id="footer-lang-form" style="margin: 0;">
-      <input type="hidden" name="_method" value="put">
-      <input type="hidden" name="language_code" id="footer-lang-code" value="{{ localization.language.iso_code }}">
+<div class="custom-language-picker-wrapper" style="
+  position: absolute; 
+  right: 20px; 
+  bottom: 15px; 
+  z-index: 100;
+  background: transparent;
+">
+  <form action="/forms/localization" method="post" id="footer-lang-form" style="margin: 0;">
+    <input type="hidden" name="_method" value="put">
+    <input type="hidden" name="language_code" id="footer-lang-code" value="{{ localization.language.iso_code }}">
+    
+    <div style="display: flex; align-items: center; gap: 6px;">
+      <label for="footer-lang-select" style="
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+        font-size: 11px;
+        color: #ffffff;
+        opacity: 0.4;
+      ">
+        Language:
+      </label>
       
-<div class="custom-language-picker-wrapper" style="background: transparent; padding: 10px 0;">
-  <div class="page-width" style="display: flex; justify-content: flex-end; align-items: center;">
-    <form action="/forms/localization" method="post" id="footer-lang-form" style="margin: 0;">
-      <input type="hidden" name="_method" value="put">
-      <input type="hidden" name="language_code" id="footer-lang-code" value="{{ localization.language.iso_code }}">
-      
-      <div style="display: flex; align-items: center; gap: 8px;">
-        <label for="footer-lang-select" style="
-          font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-          font-size: 12px;
+      <select 
+        id="footer-lang-select" 
+        onchange="document.getElementById('footer-lang-code').value = this.value; document.getElementById('footer-lang-form').submit();"
+        style="
+          background: transparent;
+          border: 1px solid rgba(255,255,255,0.2);
+          border-radius: 2px;
+          padding: 2px 20px 2px 6px;
           color: #ffffff;
-          opacity: 0.5;
-        ">
-          Language:
-        </label>
-        
-        <select 
-          id="footer-lang-select" 
-          onchange="document.getElementById('footer-lang-code').value = this.value; document.getElementById('footer-lang-form').submit();"
-          style="
-            background: transparent;
-            border: 1px solid rgba(255,255,255,0.2);
-            border-radius: 2px;
-            padding: 2px 24px 2px 8px;
-            color: #ffffff;
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-            font-size: 12px;
-            cursor: pointer;
-            appearance: none;
-            -webkit-appearance: none;
-            background-image: url('data:image/svg+xml;utf8,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%2210%22 height=%2210%22 fill=%22white%22 opacity=%220.6%22><path d=%22M2 3l3 3 3-3%22/></svg>');
-            background-repeat: no-repeat;
-            background-position: right 6px center;
-            outline: none;
-          "
-        >
-          {%- for language in localization.available_languages -%}
-            <option value="{{ language.iso_code }}" {% if language.iso_code == localization.language.iso_code %}selected{% endif %} style="color: #000; background-color: #fff;">
-              {{ language.endonym_name | capitalize }}
-            </option>
-          {%- endfor -%}
-        </select>
-      </div>
-    </form>
-  </div>
+          font-family: inherit;
+          font-size: 11px;
+          cursor: pointer;
+          appearance: none;
+          -webkit-appearance: none;
+          background-image: url('data:image/svg+xml;utf8,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%2210%22 height=%2210%22 fill=%22white%22 opacity=%220.6%22><path d=%22M2 3l3 3 3-3%22/></svg>');
+          background-repeat: no-repeat;
+          background-position: right 4px center;
+          outline: none;
+          min-width: 80px;
+        "
+      >
+        {%- for language in localization.available_languages -%}
+          <option value="{{ language.iso_code }}" {% if language.iso_code == localization.language.iso_code %}selected{% endif %} style="color: #000; background-color: #fff;">
+            {{ language.endonym_name | capitalize }}
+          </option>
+        {%- endfor -%}
+      </select>
+    </div>
+  </form>
 </div>
 
 <div class="footer_simple_section session-box-padding">
