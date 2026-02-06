@@ -452,19 +452,18 @@ document.addEventListener('DOMContentLoaded', function() {
   ]
 }
 {% endschema %}
-{%- if section.settings.enable_language_selector -%}
+<div class="custom-language-selector">
   <localization-form>
     {%- form 'localization', id: 'FooterLanguageForm' -%}
       <div class="localization-form__select">
-        <select name="language_code">
+        <select name="language_code" onchange="this.form.submit()">
           {%- for language in localization.available_languages -%}
             <option value="{{ language.iso_code }}" {% if language.iso_code == localization.language.iso_code %}selected{% endif %}>
               {{ language.endonym_name | capitalize }}
             </option>
           {%- endfor -%}
         </select>
-        <button class="button">Update</button>
       </div>
     {%- endform -%}
   </localization-form>
-{%- endif -%}
+</div>
