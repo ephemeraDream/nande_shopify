@@ -101,33 +101,39 @@
       <input type="hidden" name="language_code" id="footer-lang-code" value="{{ localization.language.iso_code }}">
       
       <select 
-        id="footer-lang-select" 
-        onchange="document.getElementById('footer-lang-code').value = this.value; this.form.submit();"
-        style="
-          background-color: transparent !important; 
-          background: transparent !important;
-          border: 1px solid rgba(255,255,255,0.3) !important;
-          color: #ffffff !important;
-          padding: 3px 24px 3px 8px !important;
-          border-radius: 2px !important;
-          font-size: 12px !important;
-          cursor: pointer !important;
-          appearance: none !important;
-          -webkit-appearance: none !important;
-          /* 这里的白色箭头 SVG */
-          background-image: url('data:image/svg+xml;utf8,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%2210%22 height=%2210%22 fill=%22white%22><path d=%22M2 3l3 3 3-3%22/></svg>') !important;
-          background-repeat: no-repeat !important;
-          background-position: right 8px center !important;
-          outline: none !important;
-          box-shadow: none !important;
-        "
-      >
-        {%- for language in localization.available_languages -%}
-          <option value="{{ language.iso_code }}" {% if language.iso_code == localization.language.iso_code %}selected{% endif %} style="color: #000000 !important; background-color: #ffffff !important;">
-            {{ language.endonym_name | capitalize }}
-          </option>
-        {%- endfor -%}
-      </select>
+  id="footer-lang-select" 
+  onchange="document.getElementById('footer-lang-code').value = this.value; this.form.submit();"
+  style="
+    /* 核心修改：强制透明 */
+    background: transparent !important; 
+    background-color: transparent !important;
+    
+    /* 边框和文字颜色 */
+    border: 1px solid rgba(255,255,255,0.3) !important;
+    color: #ffffff !important;
+    
+    /* 基础排版 */
+    padding: 3px 24px 3px 8px !important;
+    border-radius: 2px !important;
+    font-size: 12px !important;
+    cursor: pointer !important;
+    font-family: inherit !important;
+    
+    /* 关键：去掉浏览器自带的所有外观样式 */
+    appearance: none !important;
+    -webkit-appearance: none !important;
+    -moz-appearance: none !important;
+    
+    /* 自定义白色箭头 */
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%2210%22 height=%2210%22 fill=%22white%22><path d=%22M2 3l3 3 3-3%22/></svg>') !important;
+    background-repeat: no-repeat !important;
+    background-position: right 8px center !important;
+    
+    /* 去除所有可能的阴影和轮廓 */
+    outline: none !important;
+    box-shadow: none !important;
+  "
+>
     </div>
   {%- endform -%}
   
