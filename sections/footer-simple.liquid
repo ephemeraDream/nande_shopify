@@ -1,5 +1,34 @@
 {{ 'section-footer-simple.css' | asset_url | stylesheet_tag }}
 
+<div class="manual-language-selector" style="text-align: center; padding: 20px 0; clear: both; background: rgba(0,0,0,0.05); border-top: 1px solid #ddd;">
+  <form action="/forms/localization" method="post" enctype="multipart/form-data">
+    <input type="hidden" name="_method" value="put">
+    <input type="hidden" name="language_code" id="LanguageCodeInput" value="{{ localization.language.iso_code }}">
+    
+    <label style="font-size: 14px; margin-right: 10px; color: #333;">Select Language / Sprache wählen:</label>
+    
+    <select 
+      onchange="document.getElementById('LanguageCodeInput').value = this.value; this.form.submit();"
+      style="
+        padding: 8px 12px;
+        font-size: 14px;
+        border: 1px solid #999;
+        border-radius: 4px;
+        background-color: #fff;
+        color: #333;
+        cursor: pointer;
+        display: inline-block !important;
+        visibility: visible !important;
+      "
+    >
+      {% for language in localization.available_languages %}
+        <option value="{{ language.iso_code }}" {% if language.iso_code == localization.language.iso_code %}selected{% endif %}>
+          {{ language.endonym_name | capitalize }}
+        </option>
+      {% endfor %}
+    </select>
+  </form>
+</div>
 
 <div class="footer_simple_section session-box-padding">
   <div class="footer_simple">
