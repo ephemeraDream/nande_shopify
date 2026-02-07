@@ -98,17 +98,17 @@
     </div>
 
     <div class="header_simple_icon_box">
-      <div class="header_simple_lang_switcher">
+<div class="header_simple_lang_switcher">
         {%- form 'localization', id: 'HeaderLanguageForm' -%}
           <input type="hidden" name="language_code" id="HeaderLanguageCode" value="{{ localization.language.iso_code }}">
-          {{ 'icon-localization.svg' | inline_asset_content }}
           <div style="display: flex; gap: 10px;">
             {%- for language in localization.available_languages -%}
               <a href="#" 
                  onclick="document.getElementById('HeaderLanguageCode').value = '{{ language.iso_code }}'; this.closest('form').submit(); return false;"
                  class="lang-link {% if language.iso_code == localization.language.iso_code %}active{% else %}inactive{% endif %}"
+                 style="text-transform: uppercase !important;" 
               >
-                {{ language.iso_code | uppercase }}
+                {{ language.iso_code }}
               </a>
             {%- endfor -%}
           </div>
