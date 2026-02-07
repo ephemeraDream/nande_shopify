@@ -101,6 +101,7 @@
       <div class="header_simple_lang_switcher">
         {%- form 'localization', id: 'HeaderLanguageForm' -%}
           <input type="hidden" name="language_code" id="HeaderLanguageCode" value="{{ localization.language.iso_code }}">
+          {{ 'icon-localization.svg' | inline_asset_content }}
           <div style="display: flex; gap: 10px;">
             {%- for language in localization.available_languages -%}
               <a href="#" 
