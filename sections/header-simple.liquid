@@ -4,6 +4,26 @@
   #shopify-section-{{ section.id }} {
     z-index: 1002;
   }
+  /* 确保语言切换器在手机端也能对齐 */
+  .header_simple_lang_switcher {
+    display: flex;
+    align-items: center;
+    margin-right: 15px;
+  }
+  .lang-link {
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 500;
+    transition: opacity 0.2s;
+    color: #000; /* 默认黑色，如果页首是黑底请改为 #fff */
+  }
+  .lang-link.active {
+    border-bottom: 1.5px solid currentColor;
+    opacity: 1;
+  }
+  .lang-link.inactive {
+    opacity: 0.4;
+  }
 </style>
 
 <div class="header_simple_section padding-sider">
@@ -76,7 +96,23 @@
         </form>
       </predictive-search>
     </div>
+
     <div class="header_simple_icon_box">
+      <div class="header_simple_lang_switcher">
+        {%- form 'localization', id: 'HeaderLanguageForm' -%}
+          <input type="hidden" name="language_code" id="HeaderLanguageCode" value="{{ localization.language.iso_code }}">
+          <div style="display: flex; gap: 10px;">
+            {%- for language in localization.available_languages -%}
+              <a href="#" 
+                 onclick="document.getElementById('HeaderLanguageCode').value = '{{ language.iso_code }}'; this.closest('form').submit(); return false;"
+                 class="lang-link {% if language.iso_code == localization.language.iso_code %}active{% else %}inactive{% endif %}"
+              >
+                {{ language.iso_code | uppercase }}
+              </a>
+            {%- endfor -%}
+          </div>
+        {%- endform -%}
+      </div>
       {%- if shop.customer_accounts_enabled -%}
         <a
           href="{%- if customer -%}{{ routes.account_url }}{%- else -%}{{ routes.account_login_url }}{%- endif -%}"
