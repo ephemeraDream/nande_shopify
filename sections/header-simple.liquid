@@ -6,6 +6,23 @@
   }
 </style>
 
+<div class="header-lang-picker" style="display: inline-flex; align-items: center; gap: 8px; margin: 0 10px;">
+  {%- for language in localization.available_languages -%}
+    {%- if language.iso_code == localization.language.iso_code -%}
+      <span style="font-size: 12px; font-weight: bold; color: currentColor;">{{ language.iso_code | uppercase }}</span>
+    {%- else -%}
+      <a href="#" onclick="event.preventDefault(); document.getElementById('HeaderLang-{{ language.iso_code }}').submit();"
+         style="font-size: 12px; color: currentColor; opacity: 0.5; text-decoration: none;">
+        {{ language.iso_code | uppercase }}
+      </a>
+      {%- form 'localization', id: "HeaderLang-{{ language.iso_code }}" -%}
+        <input type="hidden" name="language_code" value="{{ language.iso_code }}">
+      {%- endform -%}
+    {%- endif -%}
+    {%- unless forloop.last -%}<span style="opacity: 0.3; font-size: 10px;">/</span>{%- endunless -%}
+  {%- endfor -%}
+</div>
+
 <div class="header_simple_section padding-sider">
   <div class="header_simple">
     <a href="{{ routes.root_url }}" class="header_simple_logo">
@@ -71,23 +88,6 @@
           <div class="predictive-search predictive-search--header" tabindex="-1" data-predictive-search>
             {%- render 'loading-spinner', class: 'predictive-search__loading-state' -%}
           </div>
-
-          <div class="header-lang-picker" style="display: inline-flex; align-items: center; gap: 8px; margin: 0 10px;">
-  {%- for language in localization.available_languages -%}
-    {%- if language.iso_code == localization.language.iso_code -%}
-      <span style="font-size: 12px; font-weight: bold; color: currentColor;">{{ language.iso_code | uppercase }}</span>
-    {%- else -%}
-      <a href="#" onclick="event.preventDefault(); document.getElementById('HeaderLang-{{ language.iso_code }}').submit();"
-         style="font-size: 12px; color: currentColor; opacity: 0.5; text-decoration: none;">
-        {{ language.iso_code | uppercase }}
-      </a>
-      {%- form 'localization', id: "HeaderLang-{{ language.iso_code }}" -%}
-        <input type="hidden" name="language_code" value="{{ language.iso_code }}">
-      {%- endform -%}
-    {%- endif -%}
-    {%- unless forloop.last -%}<span style="opacity: 0.3; font-size: 10px;">/</span>{%- endunless -%}
-  {%- endfor -%}
-</div>
 
           <span class="predictive-search-status visually-hidden" role="status" aria-hidden="true"></span>
         </form>
