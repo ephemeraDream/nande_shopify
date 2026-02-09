@@ -77,6 +77,22 @@
         "text": ""
       }
     },
+    "activity_reorder_yeTQCy": {
+      "type": "activity-reorder",
+      "name": "activity reorder",
+      "settings": {
+        "specId": "",
+        "title": "<p>❤️ Valentinstag Doppel-Rabatt</p>",
+        "text": "<p>Kaufen Sie zwei Schreibtische und erhalten Sie automatisch 15 % Rabatt im Warenkorb.<br/>Kein Gutscheincode erforderlich.</p>",
+        "quota": "2",
+        "reorder_proportion": "15%",
+        "explanation": "<p>Der Rabatt wird automatisch angewendet, sobald mindestens zwei Aktionsprodukte im Warenkorb liegen.<br/></p>",
+        "right_img": "shopify://shop_images/2024.jpg",
+        "rule": "<p>• Gültig nur für Aktionsprodukte  <br/>• Automatischer Abzug im Checkout  <br/>• Nicht kombinierbar mit anderen Rabatten  <br/>• Nur im Aktionszeitraum gültig</p>",
+        "btn_two": "2 auswählen",
+        "btn_two_link": "shopify://collections/hohenverstellbarer-schreibtisch"
+      }
+    },
     "custom_liquid_xHtRYB": {
       "type": "custom-liquid",
       "name": "t:sections.custom-liquid.presets.name",
@@ -114,6 +130,7 @@
   "order": [
     "main",
     "activity_products_tab_aUGewm",
+    "activity_reorder_yeTQCy",
     "custom_liquid_xHtRYB",
     "1766979169edcc032a"
   ]
