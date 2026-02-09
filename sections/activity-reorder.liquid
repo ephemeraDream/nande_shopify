@@ -4,29 +4,39 @@
   <div class="activity_reorder">
     <h2 class="activity_reorder_title">{{ section.settings.title }}</h2>
     <div class="activity_reorder_text">{{ section.settings.text }}</div>
+
     <div class="activity_reorder_contain">
       <div class="activity_reorder_contain_left">
+
+        <!-- ✅ 活动核心规则标题（已改为自动折扣语义） -->
         <div class="activity_reorder_contain_left_title">
-          {{ 'common.be_among_the_first' | t -}}
+          Kaufen Sie mindestens
           <span class="activity_reorder_contain_left_title_num">{{ section.settings.quota }}</span>
-          {{- 'common.customers_who' | t -}}
+          Produkte –
           <span class="activity_reorder_contain_left_title_num">{{ section.settings.reorder_proportion }}</span>
-          {{- 'common.get_cashback' | t }}
+          Rabatt automatisch
         </div>
-        <div class="activity_reorder_contain_left_text">{{ section.settings.explanation }}</div>
+
+        <div class="activity_reorder_contain_left_text">
+          {{ section.settings.explanation }}
+        </div>
+
         <div class="activity_reorder_contain_left_btnline">
-          
-          <!-- 规则按钮 (Regulate Button) - 保持不变，用于弹出规则弹窗 -->
+
+          <!-- ✅ 规则按钮（保留弹窗） -->
           <div class="activity_reorder_contain_left_btn rule-trigger">
-            {{ 'common.regulate' | t }}
+            Angebotsregeln
             {{ 'icon-right-arrow.svg' | inline_asset_content }}
           </div>
 
+          <!-- ✅ 规则弹窗 -->
           <div class="common_modal">
             <div class="common_modal_contain">
               <div class="common_modal_head">
-                <span>{{ 'common.regulate' | t }}</span>
-                <div class="common_modal_close">{{- 'icon-close.svg' | inline_asset_content -}}</div>
+                <span>Angebotsregeln</span>
+                <div class="common_modal_close">
+                  {{- 'icon-close.svg' | inline_asset_content -}}
+                </div>
               </div>
               <div class="common_modal_body">
                 {{ section.settings.rule }}
@@ -34,147 +44,155 @@
             </div>
           </div>
 
-          <!-- 第二个按钮 (Gewinnerliste Button) - 修改为触发 Omnisend 弹窗 -->
+          <!-- ✅ 主CTA按钮（改为跳转选购） -->
           {% if section.settings.btn_two != blank %}
             <a 
-              class="activity_reorder_contain_left_btntwo omnisend-popup-trigger" 
-              href="#" 
-              id="omnisend-trigger-btn"
-              data-omnisend-id="6905740fb127c51a5d21d0dc"
+              class="activity_reorder_contain_left_btntwo"
+              href="{{ section.settings.btn_two_link }}"
             >
-              {{- section.settings.btn_two -}}
+              {{ section.settings.btn_two }}
             </a>
           {% endif %}
+
         </div>
       </div>
-      <img src="{{ section.settings.right_img | image_url }}" class="activity_reorder_contain_img">
+
+      {% if section.settings.right_img != blank %}
+        <img 
+          src="{{ section.settings.right_img | image_url }}" 
+          class="activity_reorder_contain_img"
+          loading="lazy"
+        >
+      {% endif %}
+
     </div>
   </div>
 </div>
 
 <script>
-  (() => {
-    // 规则弹窗逻辑 (Regulate Button Logic)
-    const rule_btn = document.querySelector('.activity_reorder_contain_left_btn.rule-trigger');
-    if (rule_btn) {
-      // 保持原有的规则弹窗逻辑不变
-      rule_btn.addEventListener('click', () => {
-        const parent = rule_btn.closest('.activity_reorder_contain_left_btnline');
-        const modal = parent.querySelector('.common_modal');
-        const originalParent = modal.parentElement;
-        const nextSibling = modal.nextElementSibling;
-        
-        // 将弹窗移动到 body
-        document.body.appendChild(modal);
-        modal.style.display = 'block';
-        document.body.style.overflowY = 'hidden';
+(() => {
 
-        const closeModal = () => {
-            modal.style.display = 'none';
-            document.body.style.overflowY = 'auto';
+  /* ========= 规则弹窗逻辑 ========= */
 
-            // 恢复弹窗到原始位置
-            if (nextSibling) {
-                originalParent.insertBefore(modal, nextSibling);
-            } else {
-                originalParent.appendChild(modal);
-            }
-        };
+  const ruleBtns = document.querySelectorAll('.activity_reorder_section .rule-trigger');
 
-        modal.querySelector('.common_modal_close').addEventListener('click', closeModal);
+  ruleBtns.forEach(rule_btn => {
 
-        modal.addEventListener('click', (e) => {
-          if (e.target === modal) closeModal();
-        });
-      });
-    }
+    rule_btn.addEventListener('click', () => {
 
-    // Omnisend 触发逻辑 (Gewinnerliste Button Logic)
-    const omnisendBtn = document.getElementById('omnisend-trigger-btn');
-    if (omnisendBtn) {
-      omnisendBtn.addEventListener('click', (e) => {
-        e.preventDefault(); // 阻止链接跳转
+      const parent = rule_btn.closest('.activity_reorder_contain_left_btnline');
+      const modal = parent.querySelector('.common_modal');
 
-        const formId = omnisendBtn.getAttribute('data-omnisend-id');
+      if (!modal) return;
 
-        if (formId) {
-          // 确保 Omnisend 队列存在
-          window.omnisend = window.omnisend || [];
-          
-          // 执行触发 Omnisend 弹窗的代码
-          window.omnisend.push(['openForm', formId]);
+      const originalParent = modal.parentElement;
+      const nextSibling = modal.nextElementSibling;
+
+      document.body.appendChild(modal);
+      modal.style.display = 'block';
+      document.body.style.overflow = 'hidden';
+
+      const closeModal = () => {
+        modal.style.display = 'none';
+        document.body.style.overflow = '';
+
+        if (nextSibling) {
+          originalParent.insertBefore(modal, nextSibling);
         } else {
-          console.error("Omnisend Form ID not found on the button.");
+          originalParent.appendChild(modal);
         }
-      });
-    }
+      };
 
-  })();
+      const closeBtn = modal.querySelector('.common_modal_close');
+      if (closeBtn) {
+        closeBtn.onclick = closeModal;
+      }
+
+      modal.onclick = (e) => {
+        if (e.target === modal) closeModal();
+      };
+
+    });
+
+  });
+
+})();
 </script>
 
 {% schema %}
 {
-  "name": "activity reorder",
+  "name": "Auto Discount Promo",
   "tag": "section",
   "class": "section",
   "disabled_on": {
     "groups": ["header", "footer"]
   },
   "settings": [
+
     {
       "type": "text",
       "id": "specId",
-      "label": "specId"
+      "label": "Section anchor ID"
     },
+
     {
       "type": "richtext",
       "id": "title",
-      "label": "title"
+      "label": "Main title"
     },
+
     {
       "type": "richtext",
       "id": "text",
-      "label": "text"
+      "label": "Intro text"
     },
+
     {
       "type": "text",
       "id": "quota",
-      "label": "quota"
+      "label": "Minimum quantity (e.g. 2)"
     },
+
     {
       "type": "text",
       "id": "reorder_proportion",
-      "label": "reorder proportion"
+      "label": "Discount (e.g. 15%)"
     },
+
     {
       "type": "richtext",
       "id": "explanation",
-      "label": "explanation"
+      "label": "Explanation text"
     },
+
     {
       "type": "image_picker",
       "id": "right_img",
-      "label": "right image"
+      "label": "Right image"
     },
+
     {
       "type": "richtext",
       "id": "rule",
-      "label": "rule"
+      "label": "Rules (modal content)"
     },
+
     {
       "type": "text",
       "id": "btn_two",
-      "label": "button two text"
+      "label": "CTA button text"
     },
+
     {
       "type": "url",
       "id": "btn_two_link",
-      "label": "button two link"
+      "label": "CTA button link"
     }
+
   ],
   "presets": [
     {
-      "name": "activity reorder"
+      "name": "Auto Discount Promo"
     }
   ]
 }
