@@ -87,13 +87,14 @@
     display: inline-block;
   }
 
-  /* 限制右侧图片最大高度，防止撑高 */
-  .activity_reorder_contain_img {
-    max-height: 250px;
-    width: auto;
-    object-fit: contain;
-    flex-shrink: 0;
-  }
+.activity_reorder_contain_img {
+  max-height: 400px;   /* 增大图片最大高度 */
+  max-width: 100%;     /* 防止超出容器宽度 */
+  width: auto;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
 
   /* 弹窗样式 - 保持原样 */
   .common_modal {
