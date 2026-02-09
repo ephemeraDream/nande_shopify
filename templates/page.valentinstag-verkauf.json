@@ -1,0 +1,260 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 28,
+        "padding_bottom": 28
+      }
+    },
+    "activity_products_tab_aUGewm": {
+      "type": "activity-products-tab",
+      "blocks": {
+        "tab_nngChK": {
+          "type": "tab",
+          "settings": {
+            "title": "Bestseller",
+            "product_list": [
+              "maidesite-elektrisch-hohenverstellbarer-gestell-t2-pro",
+              "maidesite-tischgestell-elektrisch-hohenverstellbar-t2-pro-plus",
+              "elektrisch-hohenverstellbarer-gestell-t1-basic",
+              "maidesite-t2-pro-max-tischgestell-elektrisch-hohenverstellbar"
+            ]
+          }
+        },
+        "tab_6qFKiy": {
+          "type": "tab",
+          "settings": {
+            "title": "Top Deals",
+            "product_list": [
+              "maidesite-tischgestell-elektrisch-hohenverstellbar-t2-pro-plus"
+            ]
+          }
+        },
+        "tab_bgF4yF": {
+          "type": "tab",
+          "settings": {
+            "title": "Vierbein",
+            "product_list": [
+              "maidesite-t4-pro-plus-vierbeinige-elliptische-saule-elektrisch-hohenverstellbares-gestell",
+              "maidesite-space-elektrisch-hohenverstellbares-schreibtisch"
+            ]
+          }
+        },
+        "tab_EgLUp3": {
+          "type": "tab",
+          "settings": {
+            "title": "Design & Stil",
+            "product_list": [
+              "maidesite-yoga-hohenverstellbarer-schreibtisch-mit-tischplatte",
+              "maidesite-sc2-pro-schreibtisch-hohenverstellbar-160-80-180x80-cm-unwiderstehliches-blitzangebot",
+              "maidesite-ec6-ergonomischer-burostuhl-mit-kopfstutze-ruckenlehne-und-fussstutze-unwiderstehliches-blitzangebot",
+              "maidesite-th2-pro-plus-tischgestell-elektrisch-hohenverstellbar"
+            ]
+          }
+        }
+      },
+      "block_order": [
+        "tab_nngChK",
+        "tab_6qFKiy",
+        "tab_bgF4yF",
+        "tab_EgLUp3"
+      ],
+      "name": "activity products tab",
+      "settings": {
+        "specId": "Rabatt",
+        "title": "<p>Neujahrs-Sale</p>",
+        "text": ""
+      }
+    },
+    "test_coupon_ladder_CHcAzQ": {
+      "type": "test-coupon-ladder",
+      "blocks": {
+        "tier_HxKe3b": {
+          "type": "tier",
+          "settings": {
+            "percent": "-60%",
+            "total_qty": 5,
+            "speed_weight": 30,
+            "coupon_code": "NY60DE",
+            "redirect_url": "https://www.maidesite.de/discount/NY60DE?redirect=/collections/hohenverstellbarer-schreibtisch"
+          }
+        },
+        "tier_LDW78B": {
+          "type": "tier",
+          "settings": {
+            "percent": "-30%",
+            "total_qty": 10,
+            "speed_weight": 45,
+            "coupon_code": "NY30DE",
+            "redirect_url": "https://www.maidesite.de/discount/NY30DE?redirect=/collections/hohenverstellbarer-schreibtisch"
+          }
+        },
+        "tier_meEBJp": {
+          "type": "tier",
+          "settings": {
+            "percent": "-10%",
+            "total_qty": 100,
+            "speed_weight": 160,
+            "coupon_code": "NY10DE",
+            "redirect_url": "https://www.maidesite.de/discount/NY10DE?redirect=/collections/hohenverstellbarer-schreibtisch"
+          }
+        },
+        "tier_a4RTMa": {
+          "type": "tier",
+          "settings": {
+            "percent": "-6%",
+            "total_qty": 200,
+            "speed_weight": 220,
+            "coupon_code": "NY6DE",
+            "redirect_url": "https://www.maidesite.de/discount/NY6DE?redirect=/collections/hohenverstellbarer-schreibtisch"
+          }
+        }
+      },
+      "block_order": [
+        "tier_HxKe3b",
+        "tier_LDW78B",
+        "tier_meEBJp",
+        "tier_a4RTMa"
+      ],
+      "disabled": true,
+      "name": "Coupon Ladder Final V4",
+      "settings": {
+        "kicker": "",
+        "title": "Je schneller, desto mehr Rabatt",
+        "desc": "<p>Klicke auf „Gutschein sichern“, kopiere den Code und gehe anschließend zum Checkout.</p>",
+        "rules_text": "Regeln >",
+        "rules_content": "<p><strong>Aktionsbedingungen</strong></p><ol><li><br/>Diese Aktion ist ein zeitlich begrenztes Angebot.<br/></li><li><br/>Nach dem Öffnen des Aktions-Pop-ups steht Ihnen ein exklusives Kaufzeitfenster von <strong>15 Minuten</strong> zur Verfügung.<br/></li><li><br/>Die Aktion gilt ausschließlich für Bestellungen mit einem Warenwert von <strong>maximal 800 €</strong>. Bestellungen mit einem höheren Bestellwert sind von der Aktion ausgeschlossen.<br/></li><li><br/><strong>Erste Aktionsphase:</strong> 12.01. – 13.01. (48 Stunden). Nach Ablauf dieses Zeitraums verliert die Aktion automatisch ihre Gültigkeit.<br/></li><li><br/>Die Aktionsseite sowie das Pop-up werden ab dem 05.01. vorab online gestellt.<br/></li><li><br/><strong>Countdown-Mechanismus:</strong><br/><br/>6.1 Beim Öffnen des Aktions-Pop-ups startet ein 15-minütiger Countdown.<br/><br/>6.2 Wird das Pop-up geschlossen, wird der Countdown nicht weiter angezeigt.<br/><br/>6.3 Nach dem Schließen des Pop-ups ändert sich der Button zu <strong>„Zum Shop“</strong>. Die Produktseite kann dann regulär aufgerufen werden – jedoch ohne Countdown-Anzeige und ohne Aktionspreis.</li></ol>",
+        "start_at": "2026-01-12 00:00",
+        "end_at": "2026-01-14 00:00",
+        "duration_hours": 48,
+        "fast_part_percent": 70,
+        "countdown_label": "Die Aktion endet in",
+        "claim_button_text": "Gutschein sichern",
+        "coupon_modal_title": "Gutschein sichern",
+        "coupon_modal_cta_text": "Jetzt shoppen (Code anwenden)",
+        "coupon_modal_hint": "Hinweis: Der Rabatt wird beim Öffnen des Links automatisch angewendet.",
+        "code_label": "Dein Rabattcode",
+        "bg_color": "#2a0d0d",
+        "card_bg": "#1d6a4c",
+        "accent_color": "#ff3b30",
+        "text_color": "#ffffff"
+      }
+    },
+    "activity_products_normal_trrLmA": {
+      "type": "activity-products-normal",
+      "disabled": true,
+      "name": "activity products normal",
+      "settings": {
+        "specId": "",
+        "style": "1",
+        "title": "<p><strong>Dieses Jahr weniger zahlen, mehr verschenken</strong></p>",
+        "text": "<p>So einfach war Schenken noch nie</p>",
+        "product_list": [
+          "500-gift-card-副本",
+          "100-gift-card-1",
+          "500-gift-card-1",
+          "800-gift-card-1"
+        ],
+        "rule": ""
+      }
+    },
+    "bundle_fixed_test_sam_8Hn7tH": {
+      "type": "bundle-fixed-test-sam",
+      "blocks": {
+        "bundle_group_9MTEMW": {
+          "type": "bundle_group",
+          "disabled": true,
+          "settings": {
+            "kicker": "Bundle-Kauf",
+            "subheading": "Bis zu 38% Rabatt",
+            "hero_image": "shopify://shop_images/5_-_-_2.jpg",
+            "heading": "Bundle Package",
+            "side_desc": "",
+            "product_1": "t2-pro-plus-erweiterter-profi-hohenverstellbarer-schreibtisch",
+            "badge_1": "",
+            "product_2": "maidesite-tischplatte-160-180-cm-grosse-diy-tischplatte-fur-zuhause-und-buro",
+            "badge_2": "",
+            "product_3": "maidesite-3-fach-tischsteckdose-mit-usb-c-und-a-1-8m-kabel-steckdosenleiste",
+            "badge_3": ""
+          }
+        },
+        "bundle_group_PYKcNW": {
+          "type": "bundle_group",
+          "settings": {
+            "kicker": "Bundle-Deal",
+            "subheading": "Sichern Sie sich drei Produkte zum Vorteilspreis. Nur für kurze Zeit verfügbar.",
+            "hero_image": "shopify://shop_images/5_-_-_3.jpg",
+            "heading": "Bundle-Angebot",
+            "side_desc": "",
+            "product_1": "t2-pro-plus-erweiterter-profi-hohenverstellbarer-schreibtisch",
+            "badge_1": "",
+            "product_2": "maidesite-tischplatte-160-180-cm-grosse-diy-tischplatte-fur-zuhause-und-buro",
+            "badge_2": "",
+            "product_3": "maidesite-serpentine-kabelrohr",
+            "badge_3": ""
+          }
+        }
+      },
+      "block_order": [
+        "bundle_group_9MTEMW",
+        "bundle_group_PYKcNW"
+      ],
+      "disabled": true,
+      "name": "Multi Bundle System V2",
+      "settings": {}
+    },
+    "custom_liquid_xHtRYB": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid": "<style>\n@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700;900&display=swap');\n\n/* ===========================\n   🎆 New Year Coupon Section\n   =========================== */\n.coupon-section {\n  position: relative;\n  font-family: 'Poppins', Arial, sans-serif;\n  background: radial-gradient(circle at top, #1a2a4f 0%, #0b1020 45%, #05070d 100%);\n  color: #ffffff;\n  padding: 70px 20px;\n  text-align: center;\n  overflow: hidden;\n}\n\n/* 金色粒子背景 */\n.coupon-section::before {\n  content: '';\n  position: absolute;\n  inset: 0;\n  background-image:\n    radial-gradient(2px 2px at 15% 20%, rgba(255,215,120,.8) 50%, transparent 52%),\n    radial-gradient(1.5px 1.5px at 70% 30%, rgba(255,215,120,.7) 50%, transparent 52%),\n    radial-gradient(2px 2px at 40% 80%, rgba(255,215,120,.6) 50%, transparent 52%);\n  background-size: 220px 220px;\n  animation: sparkle 18s linear infinite;\n  opacity: .35;\n  pointer-events: none;\n  z-index: 1;\n}\n\n@keyframes sparkle {\n  from { background-position: 0 0; }\n  to   { background-position: 0 220px; }\n}\n\n.coupon-section > * {\n  position: relative;\n  z-index: 2;\n}\n\n/* Typography */\n.coupon-section h2 {\n  font-size: 44px;\n  font-weight: 900;\n  margin-bottom: 18px;\n  background: linear-gradient(180deg, #fff4c4, #d4a94f);\n  -webkit-background-clip: text;\n  -webkit-text-fill-color: transparent;\n}\n\n.coupon-section > p {\n  font-size: 18px;\n  color: #d6d9e2;\n  margin-bottom: 32px;\n}\n\n/* CTA */\n.coupon-section .shop-now-btn {\n  display: inline-block;\n  background: linear-gradient(135deg, #e7c36a, #b8923c);\n  color: #000;\n  padding: 14px 36px;\n  border-radius: 8px;\n  font-weight: 700;\n  text-decoration: none;\n  transition: .3s;\n  margin-bottom: 55px;\n}\n.coupon-section .shop-now-btn:hover {\n  filter: brightness(1.1);\n}\n\n/* Cards */\n.coupon-section .coupon-cards {\n  display: flex;\n  flex-wrap: wrap;\n  justify-content: center;\n  max-width: 1400px;\n  margin: 0 auto;\n  gap: 30px;\n}\n\n.coupon-section .coupon-card {\n  background: rgba(255,255,255,0.06);\n  backdrop-filter: blur(14px);\n  border-radius: 22px;\n  padding: 42px 30px;\n  width: calc(25% - 23px);\n  min-width: 280px;\n  min-height: 300px;\n  position: relative;\n  display: flex;\n  flex-direction: column;\n  justify-content: space-between;\n  overflow: hidden;\n}\n\n/* 金色流光边框 */\n.coupon-section .coupon-card::before {\n  content: '';\n  position: absolute;\n  inset: 0;\n  border-radius: 22px;\n  padding: 2px;\n  background: linear-gradient(\n    135deg,\n    rgba(255,215,120,.8),\n    rgba(255,255,255,.4),\n    rgba(255,215,120,.8)\n  );\n  -webkit-mask:\n    linear-gradient(#fff 0 0) content-box,\n    linear-gradient(#fff 0 0);\n  -webkit-mask-composite: xor;\n  pointer-events: none;\n}\n\n.coupon-section .coupon-card::after {\n  content: '';\n  position: absolute;\n  top: -60px;\n  left: 50%;\n  width: 160%;\n  height: 140px;\n  background: radial-gradient(circle, rgba(255,215,120,.25), transparent 70%);\n  transform: translateX(-50%);\n}\n\n.coupon-section .coupon-card h3 {\n  font-size: 60px;\n  font-weight: 900;\n  background: linear-gradient(180deg, #fff5cc, #d4a94f);\n  -webkit-background-clip: text;\n  -webkit-text-fill-color: transparent;\n  margin: 0;\n}\n\n.coupon-section .coupon-card p {\n  font-size: 18px;\n  color: #d0d4e0;\n}\n\n/* Footer */\n.coupon-section .coupon-footer {\n  border-top: 1px solid rgba(255,255,255,0.25);\n  padding-top: 20px;\n  display: flex;\n  justify-content: space-between;\n  align-items: center;\n}\n.coupon-section .coupon-footer.center {\n  justify-content: center;\n}\n\n.coupon-section .coupon-code {\n  font-size: 18px;\n  font-weight: 700;\n}\n\n/* Buttons */\n.coupon-section .copy-btn {\n  padding: 10px 18px;\n  border-radius: 6px;\n  border: 1px solid #fff;\n  background: transparent;\n  color: #fff;\n  font-weight: 700;\n  cursor: pointer;\n  transition: .3s;\n}\n.coupon-section .copy-btn:hover {\n  background: #fff;\n  color: #000;\n}\n.coupon-section .copy-btn.copied {\n  background: #ffd66b;\n  border-color: #ffd66b;\n  color: #000;\n}\n.coupon-section .copy-btn.go-to-shop {\n  background: linear-gradient(135deg, #e7c36a, #b8923c);\n  border-color: transparent;\n  color: #000;\n}\n\n/* Inquiry */\n.coupon-section .inquiry-btn {\n  width: 100%;\n  padding: 14px 0;\n  border-radius: 8px;\n  background: linear-gradient(135deg, #fff, #e6e6e6);\n  font-weight: 700;\n  cursor: pointer;\n  border: none;\n}\n\n/* Modal */\n.coupon-section .modal {\n  display: none;\n  position: fixed;\n  inset: 0;\n  background: rgba(0,0,0,.7);\n  z-index: 9999;\n}\n.coupon-section .modal-content {\n  background: #111;\n  padding: 30px 40px;\n  border-radius: 12px;\n  max-width: 500px;\n  width: 90%;\n  margin: 10% auto;\n  position: relative;\n}\n.coupon-section textarea {\n  width: 100%;\n  padding: 12px;\n  background: #222;\n  color: #fff;\n  border-radius: 6px;\n  border: 1px solid #444;\n}\n.coupon-section .close-btn {\n  position: absolute;\n  top: 14px;\n  right: 16px;\n  font-size: 26px;\n  background: none;\n  border: none;\n  color: #aaa;\n  cursor: pointer;\n}\n\n@media (max-width: 1200px) {\n  .coupon-section .coupon-card { width: calc(50% - 15px); }\n}\n@media (max-width: 600px) {\n  .coupon-section .coupon-card { width: 100%; }\n}\n</style>\n\n<div class=\"coupon-section\">\n  <h2>New Year. More Savings.</h2>\n  <p>Code kopieren und direkt sparen – oder individuelles Angebot anfragen</p>\n\n  <a href=\"https://www.maidesite.de/collections/hohenverstellbarer-schreibtisch\" class=\"shop-now-btn\">\n    Jetzt einkaufen\n  </a>\n\n  <div class=\"coupon-cards\">\n\n    <div class=\"coupon-card\">\n      <div>\n        <h3>40 €</h3>\n        <p>ab 499 € Einkaufswert</p>\n      </div>\n      <div class=\"coupon-footer\">\n        <span class=\"coupon-code\">MD40</span>\n        <button class=\"copy-btn\">Kopieren</button>\n      </div>\n    </div>\n\n    <div class=\"coupon-card\">\n      <div>\n        <h3>120 €</h3>\n        <p>ab 999 € Einkaufswert</p>\n      </div>\n      <div class=\"coupon-footer\">\n        <span class=\"coupon-code\">MD120</span>\n        <button class=\"copy-btn\">Kopieren</button>\n      </div>\n    </div>\n\n    <div class=\"coupon-card\">\n      <div>\n        <h3>250 €</h3>\n        <p>ab 1999 € Einkaufswert</p>\n      </div>\n      <div class=\"coupon-footer\">\n        <span class=\"coupon-code\">MD250</span>\n        <button class=\"copy-btn\">Kopieren</button>\n      </div>\n    </div>\n\n    <div class=\"coupon-card\">\n      <div>\n        <h3>WOW</h3>\n        <p>ab 2999 € Einkaufswert</p>\n      </div>\n      <div class=\"coupon-footer center\">\n        <button class=\"inquiry-btn\">Jetzt Angebot anfragen</button>\n      </div>\n    </div>\n\n  </div>\n\n  <div class=\"modal\" id=\"contactModal\">\n    <div class=\"modal-content\">\n      <button class=\"close-btn\">×</button>\n      <h3>Individuelles Rabattangebot anfragen</h3>\n      <textarea id=\"message\" rows=\"5\" placeholder=\"Ihre Anfrage...\"></textarea>\n      <button class=\"inquiry-btn\" id=\"sendBtn\" style=\"margin-top:15px;\">Senden</button>\n    </div>\n  </div>\n</div>\n\n<script>\ndocument.addEventListener(\"DOMContentLoaded\", () => {\n\n  document.querySelectorAll('.coupon-section .copy-btn').forEach(btn => {\n    btn.addEventListener('click', () => {\n      const code = btn.previousElementSibling.innerText;\n      navigator.clipboard.writeText(code).then(() => {\n        btn.classList.add('copied');\n        btn.innerText = '✔ Kopiert';\n\n        setTimeout(() => {\n          btn.classList.remove('copied');\n          btn.classList.add('go-to-shop');\n          btn.innerText = 'Jetzt kaufen';\n          btn.onclick = () => {\n            window.location.href = \"https://www.maidesite.de/collections/hohenverstellbarer-schreibtisch\";\n          };\n        }, 2000);\n      });\n    });\n  });\n\n  const inquiryBtn = document.querySelector(\".coupon-section .inquiry-btn:not(#sendBtn)\");\n  const modal = document.getElementById(\"contactModal\");\n  const closeBtn = document.querySelector(\".coupon-section .close-btn\");\n  const sendBtn = document.getElementById(\"sendBtn\");\n\n  inquiryBtn.addEventListener(\"click\", () => {\n    modal.style.display = \"block\";\n    document.body.style.overflow = \"hidden\";\n  });\n\n  closeBtn.addEventListener(\"click\", () => {\n    modal.style.display = \"none\";\n    document.body.style.overflow = \"\";\n  });\n\n  modal.addEventListener(\"click\", e => {\n    if (e.target === modal) {\n      modal.style.display = \"none\";\n      document.body.style.overflow = \"\";\n    }\n  });\n\n  sendBtn.addEventListener(\"click\", () => {\n    const msg = document.getElementById(\"message\").value.trim();\n    if (!msg) return alert(\"Bitte geben Sie Ihre Anfrage ein.\");\n    window.location.href =\n      \"mailto:contact@maidesite.de?subject=Individuelles Rabattangebot&body=\" +\n      encodeURIComponent(msg);\n  });\n\n});\n</script>",
+        "color_scheme": "",
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "1766979169edcc032a": {
+      "type": "apps",
+      "blocks": {
+        "loox_reviews_loox_referrals_section_ahdxMC": {
+          "type": "shopify://apps/loox-reviews/blocks/loox-referrals-section/5c3b337f-fd14-4df5-b1d6-80ec13e6e28e",
+          "settings": {
+            "max_width": 1100,
+            "layout": "with-photo",
+            "photo": "shopify://shop_images/c466df9df7a57088d4dfe9ee7c97e6cb.jpg",
+            "primary_color": "",
+            "text_color": "#000000",
+            "text_field_border_color": "#c9cdd4",
+            "background": "#bdff00"
+          }
+        }
+      },
+      "block_order": [
+        "loox_reviews_loox_referrals_section_ahdxMC"
+      ],
+      "settings": {
+        "include_margins": true
+      }
+    }
+  },
+  "order": [
+    "main",
+    "activity_products_tab_aUGewm",
+    "test_coupon_ladder_CHcAzQ",
+    "activity_products_normal_trrLmA",
+    "bundle_fixed_test_sam_8Hn7tH",
+    "custom_liquid_xHtRYB",
+    "1766979169edcc032a"
+  ]
+}
