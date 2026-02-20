@@ -73,12 +73,13 @@
       "name": "activity products tab",
       "settings": {
         "specId": "Rabatt",
-        "title": "<p>Valentinstag-Verkauf</p>",
+        "title": "<p>Frühlingsaktion</p>",
         "text": ""
       }
     },
     "activity_reorder_yeTQCy": {
       "type": "activity-reorder",
+      "disabled": true,
       "name": "activity reorder",
       "settings": {
         "specId": "",
