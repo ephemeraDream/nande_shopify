@@ -287,7 +287,7 @@
             "title": "<p>Smart Controller</p>",
             "description": "<p><strong>Alles steuern – einfach, schnell, intuitiv:</strong><br/>Mit vier Memory-Positionen, 1 Ladeanschlüssen, Kindersicherung steuern Sie Ihren Arbeitsplatz komfortabel und präzise – mit nur einem Fingertipp.</p>",
             "file_type": "image",
-            "file_image": "shopify://shop_images/3_2edd8c83-a3ee-4edc-bd4f-69fc89bb6a1b.jpg",
+            "file_image": "shopify://shop_images/3_18c4fb21-3ef4-4f38-925b-776c22de6551.jpg",
             "video_url": ""
           }
         },
@@ -788,6 +788,8 @@
         "loox_reviews_loox_dynamic_section_VMDChy": {
           "type": "shopify://apps/loox-reviews/blocks/loox-dynamic-section/5c3b337f-fd14-4df5-b1d6-80ec13e6e28e",
           "settings": {
+            "reviews_to_display": "",
+            "default_tab": "automatic",
             "only_photos": false,
             "aggregated": false,
             "limit": 20,
