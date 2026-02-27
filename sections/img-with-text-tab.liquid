@@ -9,7 +9,8 @@
     {% if section.settings.show_tab_head %}
       <div class="img_with_text_tab_head">
         {% for item in section.blocks %}
-          <div class="img_with_text_tab_head_item{% if forloop.first %} active{% endif %}">
+          <div class="img_with_text_tab_head_item{% if forloop.first %} active{% endif %}" 
+               {% if localization.language.iso_code contains 'en' %}translate="yes" lang="de"{% endif %}>
             {{ item.settings.tabname }}
           </div>
         {% endfor %}
@@ -61,13 +62,24 @@
             </div>
             <div class="img_with_text_tab_contain_info">
               {% if block.settings.sub_title != blank %}
-                <div class="img_with_text_simplicity_subtitle">{{ block.settings.sub_title }}</div>
+                <div class="img_with_text_simplicity_subtitle" 
+                     {% if localization.language.iso_code contains 'en' %}translate="yes" lang="de"{% endif %}>
+                  {{ block.settings.sub_title }}
+                </div>
               {% endif %}
-              <h3 class="img_with_text_tab_contain_title">{{ block.settings.title }}</h3>
-              <div class="img_with_text_tab_contain_desc text-body">{{ block.settings.description }}</div>
+              <h3 class="img_with_text_tab_contain_title" 
+                  {% if localization.language.iso_code contains 'en' %}translate="yes" lang="de"{% endif %}>
+                {{ block.settings.title }}
+              </h3>
+              <div class="img_with_text_tab_contain_desc text-body" 
+                   {% if localization.language.iso_code contains 'en' %}translate="yes" lang="de"{% endif %}>
+                {{ block.settings.description }}
+              </div>
               {% if block.settings.btn_text != blank %}
                 <a class="nd-btn" href="{{ block.settings.link }}">
-                    {{ block.settings.btn_text }}
+                    <span {% if localization.language.iso_code contains 'en' %}translate="yes" lang="de"{% endif %}>
+                      {{ block.settings.btn_text }}
+                    </span>
                     {{ 'icon-right-arrow.svg' | inline_asset_content }}
                 </a>
               {% endif %}
@@ -110,16 +122,11 @@
       {% endif %}
       loop: {{ section.settings.loop }},
       on: {
-        init: function () {
-          // 初始化时统一高度
-          {% comment %} equalizeSlideHeights(); {% endcomment %}
-        },
         slideChange: function () {
           tabItems.forEach((el, index) => {
             el.classList.remove('active');
             if (index === this.realIndex) {
               el.classList.add('active');
-              // 滚动到激活的tab位置
               scrollToActiveTab(el);
             }
           });
@@ -135,91 +142,37 @@
   
     tabItems.forEach((item, index) => {
       item.addEventListener('click', () => {
-        // 停止自动播放
         if (img_with_text_tab_swiper.autoplay) {
           img_with_text_tab_swiper.autoplay.stop();
         }
-        
         tabItems.forEach((el) => el.classList.remove('active'));
         item.classList.add('active');
         img_with_text_tab_swiper.slideTo(index);
-        
-        // 滚动到激活的tab位置
         scrollToActiveTab(item);
       });
     });
-    
-    // 统一slide高度的函数
-    {% comment %} function equalizeSlideHeights() {
-      const slides = sectionEl.querySelectorAll('.swiper-slide');
-      if (slides.length === 0) return;
-      
-      // 重置所有slide的高度
-      slides.forEach(slide => {
-        slide.style.height = 'auto';
-      });
-      
-      // 找到最高的slide
-      let maxHeight = 0;
-      slides.forEach(slide => {
-        const height = slide.offsetHeight;
-        if (height > maxHeight) {
-          maxHeight = height;
-        }
-      });
-      
-      // 设置所有slide为相同高度
-      slides.forEach(slide => {
-        slide.style.height = maxHeight + 'px';
-      });
-    } {% endcomment %}
-    
-    // 添加滚动到激活tab的函数
+
     function scrollToActiveTab(activeItem) {
       const tabHead = sectionEl.querySelector('.img_with_text_tab_head');
       if (!tabHead) return;
-      
-      // 检查是否有横向滚动条（内容宽度超过容器宽度）
       const hasHorizontalScroll = tabHead.scrollWidth > tabHead.clientWidth;
-      if (!hasHorizontalScroll) return; // 没有滚动条就不需要滚动
-      
+      if (!hasHorizontalScroll) return;
       const tabHeadRect = tabHead.getBoundingClientRect();
       const activeItemRect = activeItem.getBoundingClientRect();
-      
-      // 计算激活tab相对于容器的位置
       const activeItemLeft = activeItemRect.left - tabHeadRect.left;
       const activeItemRight = activeItemRect.right - tabHeadRect.left;
       const containerWidth = tabHeadRect.width;
-      
       let targetScrollLeft = tabHead.scrollLeft;
-      
-      // 如果激活的tab在可视区域左边，滚动到左边对齐
       if (activeItemLeft < 0) {
         targetScrollLeft = tabHead.scrollLeft + activeItemLeft;
-      }
-      // 如果激活的tab在可视区域右边，滚动到右边对齐
-      else if (activeItemRight > containerWidth) {
+      } else if (activeItemRight > containerWidth) {
         targetScrollLeft = tabHead.scrollLeft + (activeItemRight - containerWidth);
-      }
-      // 如果激活的tab已经在可视区域内，不需要滚动
-      else {
+      } else {
         return;
       }
-      
-      // 确保滚动位置不超出边界
       targetScrollLeft = Math.max(0, Math.min(targetScrollLeft, tabHead.scrollWidth - tabHead.clientWidth));
-      
-      // 平滑滚动到目标位置
-      tabHead.scrollTo({
-        left: targetScrollLeft,
-        behavior: 'smooth'
-      });
+      tabHead.scrollTo({ left: targetScrollLeft, behavior: 'smooth' });
     }
-    
-    // 窗口大小改变时重新计算高度
-    window.addEventListener('resize', () => {
-      setTimeout(equalizeSlideHeights, 100);
-    });
   })();
 </script>
 
@@ -228,144 +181,54 @@
   "name": "img with text tab",
   "tag": "section",
   "class": "section",
-  "disabled_on": {
-    "groups": ["header", "footer"]
-  },
+  "disabled_on": { "groups": ["header", "footer"] },
   "settings": [
-    {
-      "type": "text",
-      "id": "spec_id",
-      "label": "specId"
-    },
-    {
-      "type": "richtext",
-      "id": "description",
-      "label": "description"
-    },
-    {
-      "type": "richtext",
-      "id": "title",
-      "label": "title"
-    },
-    {
-      "type": "checkbox",
-      "id": "show_tab_head",
-      "label": "Is Show Tab Head",
-      "default": true
-    },
-    {
-      "type": "checkbox",
-      "id": "loop",
-      "label": "Enable loop",
-      "default": true
-    },
-    {
-      "type": "checkbox",
-      "id": "autoplay_enable",
-      "label": "Enable autoplay",
-      "default": true
-    },
-    {
-      "type": "number",
-      "id": "autoplay_delay",
-      "label": "Autoplay delay (ms)",
-      "default": 5000
-    },
+    { "type": "text", "id": "spec_id", "label": "specId" },
+    { "type": "richtext", "id": "description", "label": "description" },
+    { "type": "richtext", "id": "title", "label": "title" },
+    { "type": "checkbox", "id": "show_tab_head", "label": "Is Show Tab Head", "default": true },
+    { "type": "checkbox", "id": "loop", "label": "Enable loop", "default": true },
+    { "type": "checkbox", "id": "autoplay_enable", "label": "Enable autoplay", "default": true },
+    { "type": "number", "id": "autoplay_delay", "label": "Autoplay delay (ms)", "default": 5000 },
     {
       "type": "select",
       "id": "layout",
       "label": "Layout",
       "options": [
-        {
-          "value": "image-left",
-          "label": "Image Left, Text Right"
-        },
-        {
-          "value": "image-right",
-          "label": "Text Left, Image Right"
-        }
+        { "value": "image-left", "label": "Image Left, Text Right" },
+        { "value": "image-right", "label": "Text Left, Image Right" }
       ],
       "default": "image-left"
-    },
+    }
   ],
   "blocks": [
     {
       "type": "tab",
       "name": "tab",
       "settings": [
-        {
-          "type": "text",
-          "id": "tabname",
-          "label": "tabname"
-        },
-        {
-          "type": "text",
-          "id": "sub_title",
-          "label": "sub_title"
-        },
-        {
-          "type": "richtext",
-          "id": "title",
-          "label": "title"
-        },
-        {
-          "type": "liquid",
-          "id": "description",
-          "label": "description"
-        },
+        { "type": "text", "id": "tabname", "label": "tabname" },
+        { "type": "text", "id": "sub_title", "label": "sub_title" },
+        { "type": "richtext", "id": "title", "label": "title" },
+        { "type": "liquid", "id": "description", "label": "description" },
         {
           "type": "radio",
           "id": "file_type",
           "label": "file type",
           "default": "image",
           "options": [
-            {
-              "value": "image",
-              "label": "image"
-            },
-            {
-              "value": "video",
-              "label": "video"
-            }
+            { "value": "image", "label": "image" },
+            { "value": "video", "label": "video" }
           ]
         },
-        {
-          "type": "image_picker",
-          "id": "file_image",
-          "label": "file image"
-        },
-        {
-          "type": "image_picker",
-          "id": "cover_image",
-          "label": "cover image"
-        },
-        {
-          "type": "text",
-          "id": "video_url",
-          "label": "video url"
-        },
-        {
-          "type": "video",
-          "id": "url_upload",
-          "label": "video upload"
-        },
-        {
-          "type": "text",
-          "id": "btn_text",
-          "label": "button text"
-        },
-        {
-          "type": "text",
-          "id": "link",
-          "label": "link"
-        },
+        { "type": "image_picker", "id": "file_image", "label": "file image" },
+        { "type": "image_picker", "id": "cover_image", "label": "cover image" },
+        { "type": "text", "id": "video_url", "label": "video url" },
+        { "type": "video", "id": "url_upload", "label": "video upload" },
+        { "type": "text", "id": "btn_text", "label": "button text" },
+        { "type": "text", "id": "link", "label": "link" }
       ]
     }
   ],
-  "presets": [
-    {
-      "name": "img with text tab"
-    }
-  ]
+  "presets": [{ "name": "img with text tab" }]
 }
 {% endschema %}
