@@ -5,17 +5,34 @@
     {% assign current_product = all_products[section.settings.select_product] %}
   {% endif %}
 {% endunless %}
+
+{% comment %} 获取元字段数据 {% endcomment %}
 {% assign technical_data = current_product.metafields.custom.technical_data.value.data.value %}
+
 <div class="technical_data_section padding-sider" id="{{ section.settings.spec_id }}">
   <div class="technical_data">
     <h2 class="technical_data_title">{{ section.settings.title }}</h2>
+    
     <div class="technical_data_head">
       {% for item in technical_data %}
         <div class="technical_data_head_item{% if forloop.first %} active{% endif %}">
-          {{ item.title }}
+          {%- comment -%} 1. 翻译 Tab 标题 (item.title) {%- endcomment -%}
+          {%- if localization.language.iso_code contains 'en' or localization.language.iso_code contains 'EN' -%}
+            {%- case item.title -%}
+              {%- when 'Allgemeine Infos' -%}General Info
+              {%- when 'Tischgestell' -%}Desk Frame
+              {%- when 'Tischplatten' -%}Tabletops
+              {%- when 'Funktionsübersicht' -%}Functions
+              {%- when 'Lieferung und Versand' -%}Shipping
+              {%- else -%}{{ item.title }}
+            {%- endcase -%}
+          {%- else -%}
+            {{ item.title }}
+          {%- endif -%}
         </div>
       {% endfor %}
     </div>
+
     <div class="technical_data_contain swiper">
       <div class="swiper-wrapper">
         {% for item in technical_data %}
@@ -23,7 +40,45 @@
             <div class="technical_data_contain_info">
               {% for list in item.list %}
                 <div class="technical_data_contain_info_item">
-                  <div class="technical_data_contain_info_item_label">{{ list.label }}</div>
+                  {%- comment -%} 2. 翻译左侧参数名 (list.label) {%- endcomment -%}
+                  <div class="technical_data_contain_info_item_label">
+                    {%- if localization.language.iso_code contains 'en' or localization.language.iso_code contains 'EN' -%}
+                      {%- assign clean_label = list.label | strip -%}
+                      {%- case clean_label -%}
+                        {%- when 'Garantie：' -%}Warranty:
+                        {%- when 'Rückgaberecht：' -%}Return Policy:
+                        {%- when 'Zertifikate：' -%}Certificates:
+                        {%- when 'Downloads：' -%}Downloads:
+                        {%- when 'Zubehör inklusive：' -%}Included:
+                        {%- when 'Zubehör optional：' -%}Optional:
+                        {%- when 'Höhenverstellbarkeit：' -%}Height Range:
+                        {%- when 'Motor：' -%}Motor:
+                        {%- when 'Stabilitätsbewertung：' -%}Stability:
+                        {%- when 'Belastbarkeit：' -%}Load Capacity:
+                        {%- when 'Geschwindigkei：' -%}Adjustment Speed:
+                        {%- when 'Geräuschemission：' -%}Noise Level:
+                        {%- when 'Material：' -%}Material:
+                        {%- when 'Farben：' -%}Colors:
+                        {%- when 'Dekorplatten：' -%}Surface Finishes:
+                        {%- when 'Maße (B x T)：' -%}Dimensions (WxD):
+                        {%- when 'Reinigung：' -%}Cleaning:
+                        {%- when 'Herkunft：' -%}Origin:
+                        {%- when 'Kollisionsschutz：' -%}Collision Protection:
+                        {%- when 'Start-Stopp-Technik：' -%}Soft Start/Stop:
+                        {%- when 'Autosleep-Funktion：' -%}Auto-Sleep:
+                        {%- when 'Sperr-/Lockfunktion：' -%}Lock Function:
+                        {%- when 'Memoryfunktion：' -%}Memory:
+                        {%- when 'Gewicht：' -%}Weight:
+                        {%- when 'Versandmaße：' -%}Shipping Dimensions:
+                        {%- when 'Lieferung：' -%}Delivery:
+                        {%- else -%}{{ list.label }}
+                      {%- endcase -%}
+                    {%- else -%}
+                      {{ list.label }}
+                    {%- endif -%}
+                  </div>
+
+                  {%- comment -%} 3. 输出右侧数值 {%- endcomment -%}
                   <div class="technical_data_contain_info_item_value">{{ list.value }}</div>
                 </div>
               {% endfor %}
@@ -41,6 +96,7 @@
 <script>
   (() => {
     const tabItems = document.querySelectorAll('.technical_data_head_item');
+    if (!tabItems.length) return;
 
     const technical_data_swiper = new Swiper('.technical_data_section .swiper', {
       slidesPerView: 1,
@@ -76,26 +132,12 @@
     "groups": ["header", "footer"]
   },
   "settings": [
-    {
-      "type": "text",
-      "id": "spec_id",
-      "label": "specId"
-    },
-    {
-      "type": "richtext",
-      "id": "title",
-      "label": "title"
-    },
-    {
-      "type": "product",
-      "id": "select_product",
-      "label": "select_product"
-    }
+    { "type": "text", "id": "spec_id", "label": "specId" },
+    { "type": "richtext", "id": "title", "label": "title" },
+    { "type": "product", "id": "select_product", "label": "select_product" }
   ],
   "presets": [
-    {
-      "name": "technical data"
-    }
+    { "name": "technical data" }
   ]
 }
 {% endschema %}
