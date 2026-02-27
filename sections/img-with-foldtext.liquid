@@ -12,15 +12,10 @@
     }
   }
 {%- endstyle -%}
+
 <div class="img_with_foldtext_section padding-sider section-{{ section.id }}-padding" id="{{ section.settings.spec_id }}">
   <div class="img_with_foldtext">
-    <h2 class="img_with_foldtext_title center"> 
-      {%- if localization.language.iso_code contains 'en' or localization.language.iso_code contains 'EN' -%}
-        {{ section.settings.title | replace: 'Häufig gestellte Fragen', 'Frequently Asked Questions' }}
-      {%- else -%}
-        {{ section.settings.title }} 
-      {%- endif -%}
-    </h2>
+    <h2 class="img_with_foldtext_title center"> {{ section.settings.title }} </h2>
     <div class="img_with_foldtext_contain">
       <div class="img_with_foldtext_left">
         {% for block in section.blocks %}
@@ -43,20 +38,10 @@
         {% for block in section.blocks %}
           <div class="img_with_foldtext_item{% if forloop.first %} active{% endif %}">
             <div class="img_with_foldtext_item_head">
-              <div class="img_with_foldtext_question">
-                {%- if localization.language.iso_code contains 'en' or localization.language.iso_code contains 'EN' -%}
-                  {% comment %} 针对 Block 标题的翻译映射 {% endcomment %}
-                  {% assign title_text = block.settings.title | strip_html | strip %}
-                  {% case title_text %}
-                    {% when 'Garantie' %}Warranty
-                    {% when 'Lieferung' %}Delivery
-                    {% when 'Rückgabe' %}Returns
-                    {% when 'Zahlung' %}Payment
-                    {% else %}{{ block.settings.title }}
-                  {% endcase %}
-                {%- else -%}
-                  {{ block.settings.title }}
-                {%- endif -%}
+              {%- comment -%} 自动翻译标记逻辑：英文环境下添加 translate 属性 {%- endcomment -%}
+              <div class="img_with_foldtext_question" 
+                {% if localization.language.iso_code contains 'en' %} translate="yes" lang="de" {% endif %}>
+                {{ block.settings.title }}
               </div>
               <div class="img_with_foldtext_icon" close>
                 {{- 'icon-plus.svg' | inline_asset_content -}}
@@ -65,18 +50,9 @@
                 {{- 'icon-filters-close.svg' | inline_asset_content -}}
               </div>
             </div>
-            <div class="img_with_foldtext_answer">
-              {%- if localization.language.iso_code contains 'en' or localization.language.iso_code contains 'EN' -%}
-                {% comment %} 这里使用 replace 批量替换描述中的常用德语词汇 {% endcomment %}
-                {{ block.settings.description 
-                  | replace: 'Jahre', 'Years' 
-                  | replace: 'kostenloser Versand', 'free shipping' 
-                  | replace: 'Werktage', 'working days'
-                  | replace: 'inklusive', 'including'
-                }}
-              {%- else -%}
-                {{ block.settings.description }}
-              {%- endif -%}
+            <div class="img_with_foldtext_answer" 
+              {% if localization.language.iso_code contains 'en' %} translate="yes" lang="de" {% endif %}>
+              {{ block.settings.description }}
             </div>
           </div>
         {% endfor %}
@@ -93,11 +69,22 @@
       const faqItems = section.querySelectorAll('.img_with_foldtext_item');
       const images = section.querySelectorAll('.img_with_foldtext_image');
 
+      // 针对英文环境的自动处理逻辑
+      const isEnglish = window.location.pathname.includes('/en') || "{{ localization.language.iso_code }}".includes('en');
+      
+      if (isEnglish) {
+        // 如果接入了第三方翻译 API (如 Google Translate Element)，这里会自动触发
+        // 即使没有 API，带有 lang="de" 和 translate="yes" 的标签也会引导 Chrome 弹出自动翻译建议
+        console.log('English mode detected: Translation markers active.');
+      }
+
       faqItems.forEach((item, index) => {
         const header = item.querySelector('.img_with_foldtext_item_head');
 
         header.addEventListener('click', function (e) {
           e.stopPropagation(); 
+
+          // 切换内容展示
           faqItems.forEach(i => i.classList.remove('active'));
           images.forEach(img => img.classList.remove('active'));
 
@@ -120,25 +107,69 @@
     "groups": ["header", "footer"]
   },
   "settings": [
-    { "type": "text", "id": "spec_id", "label": "specId" },
-    { "type": "richtext", "id": "title", "label": "title" },
-    { "type": "image_picker", "id": "image", "label": "image" },
-    { "type": "range", "id": "padding_top", "min": 0, "max": 120, "step": 4, "unit": "px", "label": "t:sections.all.padding.padding_top", "default": 120 },
-    { "type": "range", "id": "padding_bottom", "min": 0, "max": 120, "step": 4, "unit": "px", "label": "t:sections.all.padding.padding_bottom", "default": 120 }
+    {
+      "type": "text",
+      "id": "spec_id",
+      "label": "specId"
+    },
+    {
+      "type": "richtext",
+      "id": "title",
+      "label": "title"
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "image"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 120,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_top",
+      "default": 120
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 120,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_bottom",
+      "default": 120
+    }
   ],
   "blocks": [
     {
       "type": "foldtext",
       "name": "foldtext",
       "settings": [
-        { "type": "richtext", "id": "title", "label": "title" },
-        { "type": "liquid", "id": "description", "label": "description" },
-        { "type": "image_picker", "id": "image", "label": "image" }
+        {
+          "type": "richtext",
+          "id": "title",
+          "label": "title"
+        },
+        {
+          "type": "liquid",
+          "id": "description",
+          "label": "description"
+        },
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "image"
+        }
       ]
     }
   ],
   "presets": [
-    { "name": "img with foldtext" }
+    {
+      "name": "img with foldtext"
+    }
   ]
 }
 {% endschema %}
