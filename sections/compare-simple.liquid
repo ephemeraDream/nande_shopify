@@ -110,18 +110,56 @@
                       {{- 'common.en_savoir_plus' | t }}
                       {{ 'icon-right-arrow.svg' | inline_asset_content -}}
                     </a>
+                    
+                    {% comment %} --- 核心修改部分：JSON 参数翻译渲染 --- {% endcomment %}
                     {% assign compare_data = block.settings.select_product.metafields.custom.compare_simple.value %}
                     {% for item in compare_data.short_data.value %}
                       <div class="compare_simple_item_category">
-                        <div class="compare_simple_item_category_label">{{ item.category }}</div>
+                        {%- comment -%} 翻译分类标题 {%- endcomment -%}
+                        <div class="compare_simple_item_category_label">
+                          {%- if localization.language.iso_code contains 'en' or localization.language.iso_code contains 'EN' -%}
+                            {%- case item.category -%}
+                              {%- when 'Grundlegende Spezifikationen' -%}Specifications
+                              {%- when 'Maße & Aufbau' -%}Dimensions
+                              {%- when 'Bedienung & Funktionen' -%}Functions
+                              {%- when 'Design & Stil' -%}Design
+                              {%- when 'Qualität & Nutzung' -%}Quality
+                              {%- else -%}{{ item.category }}
+                            {%- endcase -%}
+                          {%- else -%}
+                            {{ item.category }}
+                          {%- endif -%}
+                        </div>
+
                         {% for value in item.list %}
                           <div class="compare_simple_item_line">
-                            <div class="compare_simple_item_line_label">{{ value.label }}</div>
+                            {%- comment -%} 翻译具体参数标签 {%- endcomment -%}
+                            <div class="compare_simple_item_line_label">
+                              {%- if localization.language.iso_code contains 'en' or localization.language.iso_code contains 'EN' -%}
+                                {%- case value.label -%}
+                                  {%- when 'Höhenverstellbereich' -%}Height Range
+                                  {%- when 'Tragfähigkeit' -%}Weight Capacity
+                                  {%- when 'Hubgeschwindigkeit' -%}Adjustment Speed
+                                  {%- when 'Geräuschpegel' -%}Noise Level
+                                  {%- when 'Motoranzahl' -%}Motors
+                                  {%- when 'Stabilität' -%}Stability
+                                  {%- when 'Gestellbreite verstellbar' -%}Frame Width
+                                  {%- when 'Tischform' -%}Tabletop Shape
+                                  {%- when 'Gestellmaterial' -%}Frame Material
+                                  {%- when 'Garantie' -%}Warranty
+                                  {%- when 'Kostenloses Zubehör' -%}Accessories
+                                  {%- else -%}{{ value.label }}
+                                {%- endcase -%}
+                              {%- else -%}
+                                {{ value.label }}
+                              {%- endif -%}
+                            </div>
                             <div class="compare_simple_item_line_value">{{ value.value }}</div>
                           </div>
                         {% endfor %}
                       </div>
                     {%- endfor %}
+                    {% comment %} --- 修改结束 --- {% endcomment %}
                   </div>
                 </div>
               {%- endfor %}
@@ -141,7 +179,6 @@
 
 <script>
   (function() {
-    // 外层swiper
     var root = document.querySelector('.compare_simple_outer_swiper');
     if (!root) return;
     var swiperEl = root.querySelector('.swiper');
@@ -155,39 +192,13 @@
         prevEl: prevEl,
       },
       breakpoints: {
-        0: {
-          slidesPerView: 1.2,
-        },
-        768: {
-          slidesPerView: 2.2,
-        },
-        1025: {
-          slidesPerView: 3.2,
-        },
-        1300: {
-          slidesPerView: {{ section.settings.slides_per_view | default: 4 }},
-        }
+        0: { slidesPerView: 1.2 },
+        768: { slidesPerView: 2.2 },
+        1025: { slidesPerView: 3.2 },
+        1300: { slidesPerView: {{ section.settings.slides_per_view | default: 4 }} }
       }
     });
 
-    /**
-    function updateArrowVisibility() {
-      if (swiper.isBeginning) {
-        prevEl.classList.add('is-hidden');
-      } else {
-        prevEl.classList.remove('is-hidden');
-      }
-      if (swiper.isEnd) {
-        nextEl.classList.add('is-hidden');
-      } else {
-        nextEl.classList.remove('is-hidden');
-      }
-    }
-    swiper.on('slideChange', updateArrowVisibility);
-    updateArrowVisibility();
-    **/
-
-    // inner-swiper start
     var itemList = document.querySelectorAll('.compare_simple_item');
     itemList.forEach(function(item) {
       var innerSwiperEl = item.querySelector('.swiper');
@@ -207,7 +218,6 @@
   })();
 </script>
 
-
 {% schema %}
 {
   "name": "compare simple",
@@ -217,77 +227,27 @@
     "groups": ["header", "footer"]
   },
   "settings": [
-    {
-      "type": "richtext",
-      "id": "title",
-      "label": "title"
-    },
-    {
-      "type": "richtext",
-      "id": "text",
-      "label": "text"
-    },
-    {
-      "type": "text",
-      "id": "link_text",
-      "label": "link text"
-    },
-    {
-      "type": "url",
-      "id": "link_url",
-      "label": "link url"
-    },
-    {
-      "type": "range",
-      "id": "padding_top",
-      "min": 0,
-      "max": 120,
-      "step": 4,
-      "unit": "px",
-      "label": "t:sections.all.padding.padding_top",
-      "default": 120
-    },
-    {
-      "type": "range",
-      "id": "padding_bottom",
-      "min": 0,
-      "max": 120,
-      "step": 4,
-      "unit": "px",
-      "label": "t:sections.all.padding.padding_bottom",
-      "default": 120
-    },
-    {
-      "type": "range",
-      "id": "slides_per_view",
-      "label": "每行显示数量",
-      "min": 3,
-      "max": 5,
-      "step": 1,
-      "default": 4
-    }
+    { "type": "richtext", "id": "title", "label": "title" },
+    { "type": "richtext", "id": "text", "label": "text" },
+    { "type": "text", "id": "link_text", "label": "link text" },
+    { "type": "url", "id": "link_url", "label": "link url" },
+    { "type": "range", "id": "padding_top", "min": 0, "max": 120, "step": 4, "unit": "px", "label": "Top Padding", "default": 120 },
+    { "type": "range", "id": "padding_bottom", "min": 0, "max": 120, "step": 4, "unit": "px", "label": "Bottom Padding", "default": 120 },
+    { "type": "range", "id": "slides_per_view", "label": "每行显示数量", "min": 3, "max": 5, "step": 1, "default": 4 }
   ],
   "blocks": [
     {
       "type": "item",
       "name": "item",
       "settings": [
-        {
-          "type": "product",
-          "id": "select_product",
-          "label": "product"
-        }
+        { "type": "product", "id": "select_product", "label": "product" }
       ]
     }
   ],
   "presets": [
     {
       "name": "compare simple",
-      "blocks": [
-        {
-          "type": "item"
-        }
-      ]
+      "blocks": [ { "type": "item" } ]
     }
   ]
 }
