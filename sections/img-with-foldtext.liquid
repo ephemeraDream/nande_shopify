@@ -4,7 +4,6 @@
     padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
     padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
   }
-
   @media screen and (min-width: 767px) {
     .section-{{ section.id }}-padding {
       padding-top: {{ section.settings.padding_top }}px;
@@ -12,6 +11,7 @@
     }
   }
 {%- endstyle -%}
+
 <div class="img_with_foldtext_section padding-sider section-{{ section.id }}-padding" id="{{ section.settings.spec_id }}">
   <div class="img_with_foldtext">
     <h2 class="img_with_foldtext_title center"> {{ section.settings.title }} </h2>
@@ -20,15 +20,8 @@
         {% for block in section.blocks %}
           {% if block.settings.image %}
             {% assign img_class = 'img_with_foldtext_image' %}
-            {% if forloop.first %}
-              {% assign img_class = img_class | append: ' active' %}
-            {% endif %}
-      
-            {{
-              block.settings.image
-              | image_url: width: block.settings.image.width
-              | image_tag: class: img_class, alt: block.settings.title
-            }}
+            {% if forloop.first %}{% assign img_class = img_class | append: ' active' %}{% endif %}
+            {{ block.settings.image | image_url: width: block.settings.image.width | image_tag: class: img_class, alt: block.settings.title }}
           {% endif %}
         {% endfor %}
       </div>
@@ -37,15 +30,23 @@
         {% for block in section.blocks %}
           <div class="img_with_foldtext_item{% if forloop.first %} active{% endif %}">
             <div class="img_with_foldtext_item_head">
-              <div class="img_with_foldtext_question">{{ block.settings.title }}</div>
-              <div class="img_with_foldtext_icon" close>
-                {{- 'icon-plus.svg' | inline_asset_content -}}
+              <div class="img_with_foldtext_question">
+                {%- if localization.language.iso_code contains 'en' -%}
+                  {{ block.settings.title | replace: 'Garantie', 'Warranty' | replace: 'Lieferung', 'Delivery' }}
+                {%- else -%}
+                  {{ block.settings.title }}
+                {%- endif -%}
               </div>
-              <div class="img_with_foldtext_icon" open>
-                {{- 'icon-filters-close.svg' | inline_asset_content -}}
-              </div>
+              <div class="img_with_foldtext_icon" close>{{- 'icon-plus.svg' | inline_asset_content -}}</div>
+              <div class="img_with_foldtext_icon" open>{{- 'icon-filters-close.svg' | inline_asset_content -}}</div>
             </div>
-            <div class="img_with_foldtext_answer">{{ block.settings.description }}</div>
+            <div class="img_with_foldtext_answer">
+              {%- if localization.language.iso_code contains 'en' -%}
+                {{ block.settings.description | replace: 'Jahre', 'Years' | replace: 'Versand', 'Shipping' | replace: 'kostenlos', 'free' }}
+              {%- else -%}
+                {{ block.settings.description }}
+              {%- endif -%}
+            </div>
           </div>
         {% endfor %}
       </div>
@@ -56,107 +57,46 @@
 <script>
   document.addEventListener('DOMContentLoaded', function () {
     const sections = document.querySelectorAll('.img_with_foldtext_section');
-
     sections.forEach(section => {
       const faqItems = section.querySelectorAll('.img_with_foldtext_item');
       const images = section.querySelectorAll('.img_with_foldtext_image');
-
       faqItems.forEach((item, index) => {
         const header = item.querySelector('.img_with_foldtext_item_head');
-
         header.addEventListener('click', function (e) {
-          {% comment %} console.log('click'); {% endcomment %}
           e.stopPropagation(); 
-
-          // 获取当前点击所在 section 下的元素（只影响当前 section）
           faqItems.forEach(i => i.classList.remove('active'));
           images.forEach(img => img.classList.remove('active'));
-
           item.classList.add('active');
-          if (images[index]) {
-            images[index].classList.add('active');
-          }
+          if (images[index]) images[index].classList.add('active');
         });
       });
     });
   });
 </script>
 
-
-
-
 {% schema %}
 {
   "name": "img with foldtext",
   "tag": "section",
   "class": "section",
-  "disabled_on": {
-    "groups": ["header", "footer"]
-  },
+  "disabled_on": { "groups": ["header", "footer"] },
   "settings": [
-    {
-      "type": "text",
-      "id": "spec_id",
-      "label": "specId"
-    },
-    {
-      "type": "richtext",
-      "id": "title",
-      "label": "title"
-    },
-    {
-      "type": "image_picker",
-      "id": "image",
-      "label": "image"
-    },
-    {
-      "type": "range",
-      "id": "padding_top",
-      "min": 0,
-      "max": 120,
-      "step": 4,
-      "unit": "px",
-      "label": "t:sections.all.padding.padding_top",
-      "default": 120
-    },
-    {
-      "type": "range",
-      "id": "padding_bottom",
-      "min": 0,
-      "max": 120,
-      "step": 4,
-      "unit": "px",
-      "label": "t:sections.all.padding.padding_bottom",
-      "default": 120
-    }
+    { "type": "text", "id": "spec_id", "label": "specId" },
+    { "type": "richtext", "id": "title", "label": "title" },
+    { "type": "range", "id": "padding_top", "min": 0, "max": 120, "step": 4, "unit": "px", "label": "Padding Top", "default": 120 },
+    { "type": "range", "id": "padding_bottom", "min": 0, "max": 120, "step": 4, "unit": "px", "label": "Padding Bottom", "default": 120 }
   ],
   "blocks": [
     {
       "type": "foldtext",
       "name": "foldtext",
       "settings": [
-        {
-          "type": "richtext",
-          "id": "title",
-          "label": "title"
-        },
-        {
-          "type": "liquid",
-          "id": "description",
-          "label": "description"
-        },
-        {
-          "type": "image_picker",
-          "id": "image",
-          "label": "image"
-        }
+        { "type": "richtext", "id": "title", "label": "title" },
+        { "type": "richtext", "id": "description", "label": "description" },
+        { "type": "image_picker", "id": "image", "label": "image" }
       ]
     }
   ],
-  "presets": [
-    {
-      "name": "img with foldtext"
-    }
-  ]
+  "presets": [{ "name": "img with foldtext" }]
 }
 {% endschema %}
