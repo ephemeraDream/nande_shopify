@@ -4,7 +4,6 @@
     padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
     padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
   }
-
   @media screen and (min-width: 767px) {
     .section-{{ section.id }}-padding {
       padding-top: {{ section.settings.padding_top }}px;
@@ -21,15 +20,8 @@
         {% for block in section.blocks %}
           {% if block.settings.image %}
             {% assign img_class = 'img_with_foldtext_image' %}
-            {% if forloop.first %}
-              {% assign img_class = img_class | append: ' active' %}
-            {% endif %}
-      
-            {{
-              block.settings.image
-              | image_url: width: block.settings.image.width
-              | image_tag: class: img_class, alt: block.settings.title
-            }}
+            {% if forloop.first %}{% assign img_class = img_class | append: ' active' %}{% endif %}
+            {{ block.settings.image | image_url: width: block.settings.image.width | image_tag: class: img_class, alt: block.settings.title }}
           {% endif %}
         {% endfor %}
       </div>
@@ -38,21 +30,22 @@
         {% for block in section.blocks %}
           <div class="img_with_foldtext_item{% if forloop.first %} active{% endif %}">
             <div class="img_with_foldtext_item_head">
-              {%- comment -%} 自动翻译标记逻辑：英文环境下添加 translate 属性 {%- endcomment -%}
-              <div class="img_with_foldtext_question" 
-                {% if localization.language.iso_code contains 'en' %} translate="yes" lang="de" {% endif %}>
-                {{ block.settings.title }}
+              <div class="img_with_foldtext_question">
+                {%- if localization.language.iso_code contains 'en' -%}
+                  {{ block.settings.title | replace: 'Garantie', 'Warranty' | replace: 'Lieferung', 'Delivery' }}
+                {%- else -%}
+                  {{ block.settings.title }}
+                {%- endif -%}
               </div>
-              <div class="img_with_foldtext_icon" close>
-                {{- 'icon-plus.svg' | inline_asset_content -}}
-              </div>
-              <div class="img_with_foldtext_icon" open>
-                {{- 'icon-filters-close.svg' | inline_asset_content -}}
-              </div>
+              <div class="img_with_foldtext_icon" close>{{- 'icon-plus.svg' | inline_asset_content -}}</div>
+              <div class="img_with_foldtext_icon" open>{{- 'icon-filters-close.svg' | inline_asset_content -}}</div>
             </div>
-            <div class="img_with_foldtext_answer" 
-              {% if localization.language.iso_code contains 'en' %} translate="yes" lang="de" {% endif %}>
-              {{ block.settings.description }}
+            <div class="img_with_foldtext_answer">
+              {%- if localization.language.iso_code contains 'en' -%}
+                {{ block.settings.description | replace: 'Jahre', 'Years' | replace: 'Versand', 'Shipping' | replace: 'kostenlos', 'free' }}
+              {%- else -%}
+                {{ block.settings.description }}
+              {%- endif -%}
             </div>
           </div>
         {% endfor %}
@@ -64,34 +57,17 @@
 <script>
   document.addEventListener('DOMContentLoaded', function () {
     const sections = document.querySelectorAll('.img_with_foldtext_section');
-
     sections.forEach(section => {
       const faqItems = section.querySelectorAll('.img_with_foldtext_item');
       const images = section.querySelectorAll('.img_with_foldtext_image');
-
-      // 针对英文环境的自动处理逻辑
-      const isEnglish = window.location.pathname.includes('/en') || "{{ localization.language.iso_code }}".includes('en');
-      
-      if (isEnglish) {
-        // 如果接入了第三方翻译 API (如 Google Translate Element)，这里会自动触发
-        // 即使没有 API，带有 lang="de" 和 translate="yes" 的标签也会引导 Chrome 弹出自动翻译建议
-        console.log('English mode detected: Translation markers active.');
-      }
-
       faqItems.forEach((item, index) => {
         const header = item.querySelector('.img_with_foldtext_item_head');
-
         header.addEventListener('click', function (e) {
           e.stopPropagation(); 
-
-          // 切换内容展示
           faqItems.forEach(i => i.classList.remove('active'));
           images.forEach(img => img.classList.remove('active'));
-
           item.classList.add('active');
-          if (images[index]) {
-            images[index].classList.add('active');
-          }
+          if (images[index]) images[index].classList.add('active');
         });
       });
     });
@@ -103,73 +79,24 @@
   "name": "img with foldtext",
   "tag": "section",
   "class": "section",
-  "disabled_on": {
-    "groups": ["header", "footer"]
-  },
+  "disabled_on": { "groups": ["header", "footer"] },
   "settings": [
-    {
-      "type": "text",
-      "id": "spec_id",
-      "label": "specId"
-    },
-    {
-      "type": "richtext",
-      "id": "title",
-      "label": "title"
-    },
-    {
-      "type": "image_picker",
-      "id": "image",
-      "label": "image"
-    },
-    {
-      "type": "range",
-      "id": "padding_top",
-      "min": 0,
-      "max": 120,
-      "step": 4,
-      "unit": "px",
-      "label": "t:sections.all.padding.padding_top",
-      "default": 120
-    },
-    {
-      "type": "range",
-      "id": "padding_bottom",
-      "min": 0,
-      "max": 120,
-      "step": 4,
-      "unit": "px",
-      "label": "t:sections.all.padding.padding_bottom",
-      "default": 120
-    }
+    { "type": "text", "id": "spec_id", "label": "specId" },
+    { "type": "richtext", "id": "title", "label": "title" },
+    { "type": "range", "id": "padding_top", "min": 0, "max": 120, "step": 4, "unit": "px", "label": "Padding Top", "default": 120 },
+    { "type": "range", "id": "padding_bottom", "min": 0, "max": 120, "step": 4, "unit": "px", "label": "Padding Bottom", "default": 120 }
   ],
   "blocks": [
     {
       "type": "foldtext",
       "name": "foldtext",
       "settings": [
-        {
-          "type": "richtext",
-          "id": "title",
-          "label": "title"
-        },
-        {
-          "type": "liquid",
-          "id": "description",
-          "label": "description"
-        },
-        {
-          "type": "image_picker",
-          "id": "image",
-          "label": "image"
-        }
+        { "type": "richtext", "id": "title", "label": "title" },
+        { "type": "richtext", "id": "description", "label": "description" },
+        { "type": "image_picker", "id": "image", "label": "image" }
       ]
     }
   ],
-  "presets": [
-    {
-      "name": "img with foldtext"
-    }
-  ]
+  "presets": [{ "name": "img with foldtext" }]
 }
 {% endschema %}
