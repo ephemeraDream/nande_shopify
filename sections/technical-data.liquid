@@ -6,17 +6,17 @@
   {% endif %}
 {% endunless %}
 
-{% comment %} 获取元字段数据 {% endcomment %}
+{% comment %} 获取元字段数据路径 {% endcomment %}
 {% assign technical_data = current_product.metafields.custom.technical_data.value.data.value %}
 
 <div class="technical_data_section padding-sider" id="{{ section.settings.spec_id }}">
   <div class="technical_data">
     <h2 class="technical_data_title">{{ section.settings.title }}</h2>
     
+    {% comment %} --- Tab 头部翻译 --- {% endcomment %}
     <div class="technical_data_head">
       {% for item in technical_data %}
         <div class="technical_data_head_item{% if forloop.first %} active{% endif %}">
-          {%- comment -%} 1. 翻译 Tab 标题 (item.title) {%- endcomment -%}
           {%- if localization.language.iso_code contains 'en' or localization.language.iso_code contains 'EN' -%}
             {%- case item.title -%}
               {%- when 'Allgemeine Infos' -%}General Info
@@ -40,7 +40,8 @@
             <div class="technical_data_contain_info">
               {% for list in item.list %}
                 <div class="technical_data_contain_info_item">
-                  {%- comment -%} 2. 翻译左侧参数名 (list.label) {%- endcomment -%}
+                  
+                  {% comment %} --- 左侧 Label 标签翻译 --- {% endcomment %}
                   <div class="technical_data_contain_info_item_label">
                     {%- if localization.language.iso_code contains 'en' or localization.language.iso_code contains 'EN' -%}
                       {%- assign clean_label = list.label | strip -%}
@@ -55,21 +56,21 @@
                         {%- when 'Motor：' -%}Motor:
                         {%- when 'Stabilitätsbewertung：' -%}Stability:
                         {%- when 'Belastbarkeit：' -%}Load Capacity:
-                        {%- when 'Geschwindigkei：' -%}Adjustment Speed:
+                        {%- when 'Geschwindigkei：' -%}Speed:
                         {%- when 'Geräuschemission：' -%}Noise Level:
                         {%- when 'Material：' -%}Material:
                         {%- when 'Farben：' -%}Colors:
-                        {%- when 'Dekorplatten：' -%}Surface Finishes:
+                        {%- when 'Dekorplatten：' -%}Desktop Finishes:
                         {%- when 'Maße (B x T)：' -%}Dimensions (WxD):
                         {%- when 'Reinigung：' -%}Cleaning:
                         {%- when 'Herkunft：' -%}Origin:
-                        {%- when 'Kollisionsschutz：' -%}Collision Protection:
+                        {%- when 'Kollisionsschutz：' -%}Anti-Collision:
                         {%- when 'Start-Stopp-Technik：' -%}Soft Start/Stop:
                         {%- when 'Autosleep-Funktion：' -%}Auto-Sleep:
                         {%- when 'Sperr-/Lockfunktion：' -%}Lock Function:
                         {%- when 'Memoryfunktion：' -%}Memory:
                         {%- when 'Gewicht：' -%}Weight:
-                        {%- when 'Versandmaße：' -%}Shipping Dimensions:
+                        {%- when 'Versandmaße：' -%}Shipping Box:
                         {%- when 'Lieferung：' -%}Delivery:
                         {%- else -%}{{ list.label }}
                       {%- endcase -%}
@@ -78,8 +79,15 @@
                     {%- endif -%}
                   </div>
 
-                  {%- comment -%} 3. 输出右侧数值 {%- endcomment -%}
-                  <div class="technical_data_contain_info_item_value">{{ list.value }}</div>
+                  {% comment %} --- 右侧 Value 数值自动替换常用德语词 --- {% endcomment %}
+                  <div class="technical_data_contain_info_item_value">
+                    {%- if localization.language.iso_code contains 'en' or localization.language.iso_code contains 'EN' -%}
+                      {{ list.value | replace: 'Jahre', 'Years' | replace: 'Tage', 'Days' | replace: 'Schwarz', 'Black' | replace: 'Weiß', 'White' | replace: 'Grau', 'Grey' | replace: 'Werktage', 'Working Days' }}
+                    {%- else -%}
+                      {{ list.value }}
+                    {%- endif -%}
+                  </div>
+
                 </div>
               {% endfor %}
             </div>
@@ -128,16 +136,12 @@
   "name": "technical data",
   "tag": "section",
   "class": "section",
-  "disabled_on": {
-    "groups": ["header", "footer"]
-  },
+  "disabled_on": { "groups": ["header", "footer"] },
   "settings": [
     { "type": "text", "id": "spec_id", "label": "specId" },
     { "type": "richtext", "id": "title", "label": "title" },
     { "type": "product", "id": "select_product", "label": "select_product" }
   ],
-  "presets": [
-    { "name": "technical data" }
-  ]
+  "presets": [ { "name": "technical data" } ]
 }
 {% endschema %}
