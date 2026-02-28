@@ -8,7 +8,7 @@
 
 <div class="img_with_foldtext_section padding-sider section-{{ section.id }}-padding" id="{{ section.settings.spec_id }}">
   <div class="img_with_foldtext">
-    <h2 class="img_with_foldtext_title center" data-auto-translate>{{ section.settings.title }}</h2>
+    <h2 class="img_with_foldtext_title center" data-trans-me> {{ section.settings.title }} </h2>
     <div class="img_with_foldtext_contain">
       <div class="img_with_foldtext_left">
         {% for block in section.blocks %}
@@ -22,11 +22,11 @@
         {% for block in section.blocks %}
           <div class="img_with_foldtext_item{% if forloop.first %} active{% endif %}">
             <div class="img_with_foldtext_item_head">
-              <div class="img_with_foldtext_question" data-auto-translate>{{ block.settings.title }}</div>
+              <div class="img_with_foldtext_question" data-trans-me>{{ block.settings.title }}</div>
               <div class="img_with_foldtext_icon" close>{{- 'icon-plus.svg' | inline_asset_content -}}</div>
               <div class="img_with_foldtext_icon" open>{{- 'icon-filters-close.svg' | inline_asset_content -}}</div>
             </div>
-            <div class="img_with_foldtext_answer" data-auto-translate>{{ block.settings.description }}</div>
+            <div class="img_with_foldtext_answer" data-trans-me>{{ block.settings.description }}</div>
           </div>
         {% endfor %}
       </div>
@@ -36,29 +36,44 @@
 
 <script>
   document.addEventListener('DOMContentLoaded', function () {
-    const isEnglish = window.location.pathname.includes('/en') || "{{ localization.language.iso_code }}".includes('en');
+    const isEn = window.location.pathname.includes('/en') || "{{ localization.language.iso_code }}".toLowerCase().includes('en');
     
-    // 自动翻译函数
-    if (isEnglish) {
-      const translateElements = document.querySelectorAll('[data-auto-translate]');
-      translateElements.forEach(el => {
-        const text = el.innerText;
-        // 使用免费翻译接口代理或提示浏览器翻译
+    if (isEn) {
+      // 这里的逻辑是：如果检测到是英文环境，直接将带有 data-trans-me 的元素进行“词库匹配”
+      // 这是目前最快、且不依赖插件的方法
+      const transMap = {
+        'Garantie': 'Warranty',
+        'Lieferung': 'Delivery',
+        'Rückgabe': 'Returns',
+        'Versand': 'Shipping',
+        'Jahre': 'Years',
+        'kostenlos': 'free',
+        'Material': 'Material'
+      };
+
+      document.querySelectorAll('[data-trans-me]').forEach(el => {
+        let content = el.innerHTML;
+        Object.keys(transMap).forEach(key => {
+          const regex = new RegExp(key, 'gi');
+          content = content.replace(regex, transMap[key]);
+        });
+        el.innerHTML = content;
+        
+        // 关键：强制提示浏览器执行自动翻译（备选方案）
         el.setAttribute('lang', 'de');
-        el.classList.add('notranslate'); // 防止重复翻译
-        // 如果想要强制静默翻译，可以在此调用 API
+        el.setAttribute('translate', 'yes');
       });
     }
 
-    // 基础切换逻辑
-    const faqItems = document.querySelectorAll('.img_with_foldtext_item');
-    const images = document.querySelectorAll('.img_with_foldtext_image');
-    faqItems.forEach((item, index) => {
+    // 交互逻辑
+    const items = document.querySelectorAll('.img_with_foldtext_item');
+    const imgs = document.querySelectorAll('.img_with_foldtext_image');
+    items.forEach((item, idx) => {
       item.querySelector('.img_with_foldtext_item_head').addEventListener('click', () => {
-        faqItems.forEach(i => i.classList.remove('active'));
-        images.forEach(img => img.classList.remove('active'));
+        items.forEach(i => i.classList.remove('active'));
+        imgs.forEach(im => im.classList.remove('active'));
         item.classList.add('active');
-        if (images[index]) images[index].classList.add('active');
+        if(imgs[idx]) imgs[idx].classList.add('active');
       });
     });
   });
@@ -70,8 +85,8 @@
   "settings": [
     { "type": "text", "id": "spec_id", "label": "specId" },
     { "type": "richtext", "id": "title", "label": "title" },
-    { "type": "range", "id": "padding_top", "min": 0, "max": 120, "step": 4, "unit": "px", "label": "Top", "default": 120 },
-    { "type": "range", "id": "padding_bottom", "min": 0, "max": 120, "step": 4, "unit": "px", "label": "Bottom", "default": 120 }
+    { "type": "range", "id": "padding_top", "min": 0, "max": 120, "step": 4, "unit": "px", "label": "Top", "default": 80 },
+    { "type": "range", "id": "padding_bottom", "min": 0, "max": 120, "step": 4, "unit": "px", "label": "Bottom", "default": 80 }
   ],
   "blocks": [
     {
