@@ -44,6 +44,7 @@
         },
         "img_with_text_K8NMwf": {
           "type": "img_with_text",
+          "disabled": true,
           "settings": {
             "text": "<p><a href=\"https://www.maidesite.de/pages/neujahrs-sale\"><strong>Neujahrs-Sale</strong></a><strong> – bis zu 60% Rabatt！</strong></p>",
             "link": "shopify://pages/neujahrs-sale",
