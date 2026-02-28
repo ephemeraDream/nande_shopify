@@ -8,7 +8,7 @@
 
 <div class="img_with_foldtext_section padding-sider section-{{ section.id }}-padding" id="{{ section.settings.spec_id }}">
   <div class="img_with_foldtext">
-    <h2 class="img_with_foldtext_title center" data-trans-me> {{ section.settings.title }} </h2>
+    <h2 class="img_with_foldtext_title center" data-translate-node>{{ section.settings.title }}</h2>
     <div class="img_with_foldtext_contain">
       <div class="img_with_foldtext_left">
         {% for block in section.blocks %}
@@ -22,11 +22,11 @@
         {% for block in section.blocks %}
           <div class="img_with_foldtext_item{% if forloop.first %} active{% endif %}">
             <div class="img_with_foldtext_item_head">
-              <div class="img_with_foldtext_question" data-trans-me>{{ block.settings.title }}</div>
+              <div class="img_with_foldtext_question" data-translate-node>{{ block.settings.title }}</div>
               <div class="img_with_foldtext_icon" close>{{- 'icon-plus.svg' | inline_asset_content -}}</div>
               <div class="img_with_foldtext_icon" open>{{- 'icon-filters-close.svg' | inline_asset_content -}}</div>
             </div>
-            <div class="img_with_foldtext_answer" data-trans-me>{{ block.settings.description }}</div>
+            <div class="img_with_foldtext_answer" data-translate-node>{{ block.settings.description }}</div>
           </div>
         {% endfor %}
       </div>
@@ -35,48 +35,51 @@
 </div>
 
 <script>
-  document.addEventListener('DOMContentLoaded', function () {
-    const isEn = window.location.pathname.includes('/en') || "{{ localization.language.iso_code }}".toLowerCase().includes('en');
+  (function() {
+    const isEnglish = window.location.pathname.includes('/en') || document.documentElement.lang.includes('en');
     
-    if (isEn) {
-      // 这里的逻辑是：如果检测到是英文环境，直接将带有 data-trans-me 的元素进行“词库匹配”
-      // 这是目前最快、且不依赖插件的方法
-      const transMap = {
-        'Garantie': 'Warranty',
-        'Lieferung': 'Delivery',
-        'Rückgabe': 'Returns',
-        'Versand': 'Shipping',
-        'Jahre': 'Years',
-        'kostenlos': 'free',
-        'Material': 'Material'
-      };
-
-      document.querySelectorAll('[data-trans-me]').forEach(el => {
-        let content = el.innerHTML;
-        Object.keys(transMap).forEach(key => {
-          const regex = new RegExp(key, 'gi');
-          content = content.replace(regex, transMap[key]);
-        });
-        el.innerHTML = content;
-        
-        // 关键：强制提示浏览器执行自动翻译（备选方案）
+    if (isEnglish) {
+      // 找到所有标记了需要翻译的节点
+      const els = document.querySelectorAll('[data-translate-node]');
+      els.forEach(el => {
         el.setAttribute('lang', 'de');
         el.setAttribute('translate', 'yes');
+        // 强行触发布局刷新，引导翻译引擎
+        el.style.visibility = 'visible';
+      });
+      
+      // 如果你希望真正全自动，可以在控制台检测到没有被翻译时，执行一个简单的词典替换
+      const dictionary = {
+        "Garantie": "Warranty",
+        "Jahre": "Years",
+        "Lieferung": "Delivery",
+        "Versand": "Shipping",
+        "kostenlos": "free"
+      };
+      
+      els.forEach(el => {
+        let html = el.innerHTML;
+        for (let key in dictionary) {
+          let reg = new RegExp(key, 'gi');
+          html = html.replace(reg, dictionary[key]);
+        }
+        el.innerHTML = html;
       });
     }
 
-    // 交互逻辑
-    const items = document.querySelectorAll('.img_with_foldtext_item');
-    const imgs = document.querySelectorAll('.img_with_foldtext_image');
+    // Swiper/Tab 逻辑保持不变
+    const section = document.querySelector('.img_with_foldtext_section');
+    const items = section.querySelectorAll('.img_with_foldtext_item');
+    const images = section.querySelectorAll('.img_with_foldtext_image');
     items.forEach((item, idx) => {
       item.querySelector('.img_with_foldtext_item_head').addEventListener('click', () => {
         items.forEach(i => i.classList.remove('active'));
-        imgs.forEach(im => im.classList.remove('active'));
+        images.forEach(img => img.classList.remove('active'));
         item.classList.add('active');
-        if(imgs[idx]) imgs[idx].classList.add('active');
+        if(images[idx]) images[idx].classList.add('active');
       });
     });
-  });
+  })();
 </script>
 
 {% schema %}
