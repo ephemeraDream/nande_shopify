@@ -478,6 +478,7 @@
       "blocks": {
         "item_rtQPr7": {
           "type": "item",
+          "disabled": true,
           "settings": {
             "select_product": "elektrisch-hohenverstellbarer-gestell-t1-basic"
           }
@@ -505,6 +506,12 @@
           "settings": {
             "select_product": "maidesite-t2-pro-max-tischgestell-elektrisch-hohenverstellbar"
           }
+        },
+        "item_bFArnY": {
+          "type": "item",
+          "settings": {
+            "select_product": "maidesite-t4-pro-plus-vierbeinige-elliptische-saule-elektrisch-hohenverstellbares-gestell"
+          }
         }
       },
       "block_order": [
@@ -512,7 +519,8 @@
         "item_Wnfjbc",
         "item_E3FYAD",
         "item_thUd64",
-        "item_TyVfMb"
+        "item_TyVfMb",
+        "item_bFArnY"
       ],
       "name": "compare simple",
       "settings": {
