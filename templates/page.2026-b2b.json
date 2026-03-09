@@ -153,16 +153,6 @@
             "video_url": ""
           }
         },
-        "file_with_text_TxJinf": {
-          "type": "file_with_text",
-          "settings": {
-            "title": "<h3>Probetisch zum vergünstigten Preis</h3>",
-            "description": "<p>Testen Sie den Schreibtisch vor dem Großeinkauf, ganz ohne Risiko.<br/><br/></p>",
-            "file_type": "image",
-            "file_image": "shopify://shop_images/large_home_office_desk_setup_base_on_Maideiste_T2_Pro_Max.jpg",
-            "video_url": ""
-          }
-        },
         "file_with_text_Gjqpnm": {
           "type": "file_with_text",
           "settings": {
@@ -170,6 +160,16 @@
             "description": "<p>Wettbewerbsfähige Preise und Top-Service für Firmenkunden: von der Beratung über die Montage bis zur umfassenden Betreuung.<br/><br/></p>",
             "file_type": "image",
             "file_image": "shopify://shop_images/pexels-fauxels-3182812.jpg",
+            "video_url": ""
+          }
+        },
+        "file_with_text_TxJinf": {
+          "type": "file_with_text",
+          "settings": {
+            "title": "<p>Risikofreier Probetisch zum Vorzugspreis</p>",
+            "description": "<p>Überzeugen Sie sich selbst: Testen Sie einen Schreibtisch ausgiebig in Ihren eigenen Räumlichkeiten vor dem Großeinkauf – ganz ohne Risiko und zu vergünstigten Konditionen.</p>",
+            "file_type": "image",
+            "file_image": "shopify://shop_images/Maidesite-standing-desk-with-160x80cm-desktop-in-office-EL2-Pro-Art.jpg",
             "video_url": ""
           }
         },
@@ -188,8 +188,8 @@
         "file_with_text_iG3PLG",
         "file_with_text_8CFXgL",
         "file_with_text_8jgGi6",
-        "file_with_text_TxJinf",
         "file_with_text_Gjqpnm",
+        "file_with_text_TxJinf",
         "file_with_text_bKiJBP"
       ],
       "name": "file box simplicity",
