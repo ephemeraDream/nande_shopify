@@ -133,23 +133,23 @@
             "video_url": ""
           }
         },
-        "file_with_text_bKiJBP": {
+        "file_with_text_8CFXgL": {
           "type": "file_with_text",
           "settings": {
-            "title": "<h3>Nachhaltige Bürolösungen für eine grüne Zukunft</h3>",
-            "description": "<p>Maidesite: Nachhaltige & effiziente Büromöbel mit FSC-Zertifizierung<br/><br/></p>",
+            "title": "<h3>Langlebigkeit und Zuverlässigkeit</h3>",
+            "description": "<p>Maidesite bietet robuste Büromöbel für hohe Ansprüche mit 5-10 Jahren Garantie.<br/><br/></p>",
             "file_type": "image",
-            "file_image": "shopify://shop_images/fsc.png",
+            "file_image": "shopify://shop_images/PCB_board_production_line.jpg",
             "video_url": ""
           }
         },
         "file_with_text_8jgGi6": {
           "type": "file_with_text",
           "settings": {
-            "title": "<h3>24-Stunden-Angebot</h3>",
-            "description": "<p>Wir senden Ihnen an Werktagen innerhalb von 24 Stunden ein offizielles Angebot per E-Mail zu.<br/><br/></p>",
+            "title": "<p>Zentrallager in Deutschland – Versand innerhalb von 24h</p>",
+            "description": "<p>Schnelle Verfügbarkeit und Planungssicherheit: Wir versenden Ihre Bestellung direkt aus unserem deutschen Lager innerhalb von 24 Stunden, um Ausfallzeiten zu minimieren.</p>",
             "file_type": "image",
-            "file_image": "shopify://shop_images/pexels-mart-production-7709278.jpg",
+            "file_image": "shopify://shop_images/buying_g_04.webp",
             "video_url": ""
           }
         },
@@ -163,16 +163,6 @@
             "video_url": ""
           }
         },
-        "file_with_text_8CFXgL": {
-          "type": "file_with_text",
-          "settings": {
-            "title": "<h3>Langlebigkeit und Zuverlässigkeit</h3>",
-            "description": "<p>Maidesite bietet robuste Büromöbel für hohe Ansprüche mit 5-10 Jahren Garantie.<br/><br/></p>",
-            "file_type": "image",
-            "file_image": "shopify://shop_images/PCB_board_production_line.jpg",
-            "video_url": ""
-          }
-        },
         "file_with_text_Gjqpnm": {
           "type": "file_with_text",
           "settings": {
@@ -182,20 +172,30 @@
             "file_image": "shopify://shop_images/pexels-fauxels-3182812.jpg",
             "video_url": ""
           }
+        },
+        "file_with_text_bKiJBP": {
+          "type": "file_with_text",
+          "settings": {
+            "title": "<h3>Nachhaltige Bürolösungen für eine grüne Zukunft</h3>",
+            "description": "<p>Maidesite: Nachhaltige & effiziente Büromöbel mit FSC-Zertifizierung<br/><br/></p>",
+            "file_type": "image",
+            "file_image": "shopify://shop_images/fsc.png",
+            "video_url": ""
+          }
         }
       },
       "block_order": [
         "file_with_text_iG3PLG",
-        "file_with_text_bKiJBP",
+        "file_with_text_8CFXgL",
         "file_with_text_8jgGi6",
         "file_with_text_TxJinf",
-        "file_with_text_8CFXgL",
-        "file_with_text_Gjqpnm"
+        "file_with_text_Gjqpnm",
+        "file_with_text_bKiJBP"
       ],
       "name": "file box simplicity",
       "settings": {
         "spec_id": "",
-        "main_title": "<h2>Darum sollten Sie sich für Maidesite entscheiden</h2>",
+        "main_title": "<p>Zuverlässiger Partner für Geschäftskunden</p>",
         "row_num": 3,
         "padding_top": 0,
         "padding_bottom": 0,
