@@ -208,10 +208,10 @@
         "item_4zTmAb": {
           "type": "item",
           "settings": {
-            "image": "shopify://shop_images/b2b_page.jpg",
-            "title": "3-10 Menschen",
-            "sub_title": "Bis zu 10% RABATT",
-            "description": "<ul><li>Kostenloser Versand,</li><li>Standard-Support</li></ul>",
+            "image": "shopify://shop_images/med-badr-chemmaoui-xtDpXi_a-YQ-unsplash.jpg",
+            "title": "Homeoffice-Ausstattung",
+            "sub_title": "Was Maidesite bietet:",
+            "description": "<ul><li>Versand innerhalb der EU direkt an Mitarbeitende</li><li>Kompakte Verpackung & einfacher Aufbau</li><li>Standardisierte Modelle für unternehmensweite Ausstattung</li><li>Mengenkonditionen für Homeoffice-Programme</li></ul><p>Unterstützt <strong>hybride</strong> <strong>Arbeitsmodelle</strong> ohne zusätzlichen Organisationsaufwand.</p>",
             "btn_text": "Jetzt angebot anfordern",
             "link": "#"
           }
@@ -219,10 +219,10 @@
         "item_fiwUXL": {
           "type": "item",
           "settings": {
-            "image": "shopify://shop_images/b2b.jpg",
-            "title": "11-30 Menschen",
-            "sub_title": "Bis zu 15% RABATT",
-            "description": "<ul><li> Immer auf Lager</li><li>Flexibler Versand</li><li> Kostenloser Versand</li><li>Zusatzliches kostenloses Zubehor</li></ul>",
+            "image": "shopify://shop_images/pexels-mike-van-schoonderwalt-1884800-5511094.jpg",
+            "title": "Einzelarbeitsplätze & Fachabteilungen",
+            "sub_title": "Was Maidesite bietet:",
+            "description": "<ul><li>Elektrische Höhenverstellung per Knopfdruck</li><li>Speicherfunktionen für mehrere Nutzer</li><li>Robuste Konstruktion für langfristige Nutzung</li><li>5 Jahre Garantie auf elektrische Komponenten</li></ul><p><br/>Besonders geeignet für<strong> IT-Teams</strong>, <strong>Verwaltung</strong> und <strong>Projektarbeitsplätze</strong>.</p>",
             "btn_text": "Jetzt angebot anfordern",
             "link": "#"
           }
@@ -230,10 +230,10 @@
         "item_AUd88N": {
           "type": "item",
           "settings": {
-            "image": "shopify://shop_images/b2b_04.webp",
-            "title": "31-50 Menschen",
-            "sub_title": "Bis zu 20% RABATT",
-            "description": "<ul><li> Mehrprodukt-Rabatte</li><li> Immer verfugbar</li><li> Flexible und kostenlose</li><li>Lieferung</li><li>Zusatzliche kostenlose Ergonomischer Stuhl</li></ul>",
+            "image": "shopify://shop_images/pexels-olly-3783716.jpg",
+            "title": "Schulen & Verwaltung",
+            "sub_title": "Was Maidesite bietet:",
+            "description": "<ul><li>Strapazierfähige Konstruktion für intensive Nutzung</li><li>Planbare Projektpreise<br/>Intuitive Bedienung ohne Schulungsaufwand</li><li>Unterstützung bei größeren Beschaffungsvorhaben</li></ul><p><br/>Geeignet für <strong>langfristige Ausstattungskonzepte</strong> im öffentlichen Bereich.</p>",
             "btn_text": "Jetzt angebot anfordern",
             "link": "#"
           }
@@ -242,9 +242,9 @@
           "type": "item",
           "settings": {
             "image": "shopify://shop_images/b2b_05.webp",
-            "title": ">50 Menschen",
-            "sub_title": "Bis zu 25%RABATT",
-            "description": "<ul><li> Mehrprodukt-Rabatte</li><li>Immer verfugbar</li><li>Flexible und kostenlose</li><li>Lieferung</li><li>Zusatzliche kostenlose Rahmen</li><li><strong>Für ein starkes Team und maximale Arbeitseffizienz.</strong></li></ul>",
+            "title": "Open-Space-Büros",
+            "sub_title": "Was Maidesite bietet:",
+            "description": "<ul><li>Stabile Tischgestelle auch bei Stehhöhe</li><li>Geräuscharme Höhenverstellung für Großraumbüros</li><li>Einheitliche Serien für ein konsistentes Bürobild</li><li>Schnelle Nachbestellung identischer Modelle</li></ul><p>Ideal für <strong>wachsende Teams</strong> und <strong>moderne Office-Konzepte</strong>.</p>",
             "btn_text": "Jetzt angebot anfordern",
             "link": "#"
           }
@@ -258,7 +258,68 @@
       ],
       "name": "img with text tab",
       "settings": {
-        "title": "Darum sollten Sie sich für Maidesite entscheiden",
+        "title": "Passend für jede Unternehmensgröße",
+        "padding_top": 120,
+        "padding_bottom": 120
+      }
+    },
+    "b2b_spezielle_rabatte_4cFxBE": {
+      "type": "b2b-spezielle-rabatte",
+      "blocks": {
+        "item_MeL6UA": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/b2b_page.jpg",
+            "title": "3-10 Menschen",
+            "sub_title": "Bis zu 10% RABATT",
+            "description": "<ul><li>Kostenloser Versand,</li><li>Standard-Support</li></ul>",
+            "btn_text": "Jetzt angebot anfordern",
+            "link": "#"
+          }
+        },
+        "item_fUgPXH": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/b2b.jpg",
+            "title": "11-30 Menschen",
+            "sub_title": "Bis zu 15% RABATT",
+            "description": "<ul><li> Immer auf Lager</li><li>Flexibler Versand</li><li> Kostenloser Versand</li><li>Zusatzliches kostenloses Zubehor</li></ul>",
+            "btn_text": "Jetzt angebot anfordern",
+            "link": "#"
+          }
+        },
+        "item_TTjgh8": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/b2b_04.webp",
+            "title": "31-50 Menschen",
+            "sub_title": "Bis zu 20% RABATT",
+            "description": "<ul><li> Mehrprodukt-Rabatte</li><li> Immer verfugbar</li><li> Flexible und kostenlose</li><li>Lieferung</li><li>Zusatzliche kostenlose Ergonomischer Stuhl</li></ul>",
+            "btn_text": "Jetzt angebot anfordern",
+            "link": "#"
+          }
+        },
+        "item_xiFgD9": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/b2b_05.webp",
+            "title": ">50 Menschen",
+            "sub_title": "Bis zu 25%RABATT",
+            "description": "<ul><li> Mehrprodukt-Rabatte</li><li>Immer verfugbar</li><li>Flexible und kostenlose</li><li>Lieferung</li><li>Zusatzliche kostenlose Rahmen</li><li><strong>Für ein starkes Team und maximale Arbeitseffizienz.</strong></li></ul>",
+            "btn_text": "Jetzt angebot anfordern",
+            "link": "#"
+          }
+        }
+      },
+      "block_order": [
+        "item_MeL6UA",
+        "item_fUgPXH",
+        "item_TTjgh8",
+        "item_xiFgD9"
+      ],
+      "name": "img with text tab",
+      "settings": {
+        "title": "Passend für jede Unternehmensgröße",
         "padding_top": 120,
         "padding_bottom": 120
       }
@@ -994,6 +1055,7 @@
     "b2b_spezielle_rabatte_kcjgjC",
     "img_with_text_box_simplicity_KeYW6M",
     "b2b_spezielle_rabatte",
+    "b2b_spezielle_rabatte_4cFxBE",
     "compare_simple_KneENq",
     "product_carousel",
     "img_with_text_box_simplicity_qrzG6W",
