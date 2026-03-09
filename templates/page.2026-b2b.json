@@ -1,0 +1,1005 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "breadcrumbs": {
+      "type": "breadcrumbs",
+      "disabled": true,
+      "custom_css": [
+        ".breadcrumb-con {top: 0;}"
+      ],
+      "settings": {
+        "custom_breadcrumb": ""
+      }
+    },
+    "contact_form_one": {
+      "type": "contact-form-one",
+      "disabled": true,
+      "name": "contact_form_one",
+      "settings": {
+        "title": "Optimieren Sie Ihr BüRo Mit Maidesite’S Ergonomischen LöSungen",
+        "image": "shopify://shop_images/b2b_01.webp",
+        "desc": "Hinterlassen Sie Ihre E-Mail, senden Sie Ihre Anfrage und erhalten Sie innerhalb von 24 Stunden eine maßgeschneiderte Beratung!",
+        "btn_text": "Absenden",
+        "mail_placeholder": "E-Mail*",
+        "company_placeholder": "Unternehmen (optional)",
+        "name_placeholder": "Name (optional)",
+        "phone_placeholder": "Telefon (optional)",
+        "message_placeholder": "Nachricht (optional)"
+      }
+    },
+    "contact_form_five_Xb3kWX": {
+      "type": "contact-form-five",
+      "blocks": {
+        "custom_field_3BE87g": {
+          "type": "custom_field",
+          "settings": {
+            "field_name": "Land der Zustellung",
+            "field_type": "text",
+            "placeholder": "Land der Zustellung",
+            "required": false,
+            "rows": 4
+          }
+        },
+        "dropdown_FjD8LM": {
+          "type": "dropdown",
+          "settings": {
+            "key": "Wie viele Produkte möchten Sie anfragen?",
+            "label": "Wie viele Produkte möchten Sie anfragen?",
+            "field_name": "Wie viele Produkte möchten Sie anfragen?",
+            "required": false
+          }
+        },
+        "group_G4PCVk": {
+          "type": "group",
+          "settings": {
+            "dropdown_key": "Wie viele Produkte möchten Sie anfragen?",
+            "label": "Bitte wählen Sie Ihre Menge aus",
+            "key": "Wie viele Produkte möchten Sie anfragen?"
+          }
+        },
+        "option_wKxy4K": {
+          "type": "option",
+          "settings": {
+            "group_key": "Wie viele Produkte möchten Sie anfragen?",
+            "label": "3-10",
+            "value": "3-10"
+          }
+        },
+        "option_Y74Hfx": {
+          "type": "option",
+          "settings": {
+            "group_key": "Wie viele Produkte möchten Sie anfragen?",
+            "label": "10-30",
+            "value": "Wie viele Produkte möchten Sie anfragen?"
+          }
+        },
+        "option_nQXDDE": {
+          "type": "option",
+          "settings": {
+            "group_key": "Wie viele Produkte möchten Sie anfragen?",
+            "label": "31-50",
+            "value": "31-50"
+          }
+        },
+        "option_mHB9md": {
+          "type": "option",
+          "settings": {
+            "group_key": "Wie viele Produkte möchten Sie anfragen?",
+            "label": "51-100",
+            "value": "51-100"
+          }
+        },
+        "option_3zABAx": {
+          "type": "option",
+          "settings": {
+            "group_key": "Wie viele Produkte möchten Sie anfragen?",
+            "label": "100+",
+            "value": "100+"
+          }
+        },
+        "dropdown_NeCQJ4": {
+          "type": "dropdown",
+          "settings": {
+            "key": "Wo haben Sie von uns gehört",
+            "label": "Wo haben Sie von uns gehört",
+            "field_name": "Wo haben Sie von uns gehört",
+            "required": false
+          }
+        },
+        "group_EWnkcE": {
+          "type": "group",
+          "settings": {
+            "dropdown_key": "Wo haben Sie von uns gehört",
+            "label": "Woher kennst du uns?",
+            "key": "Wo haben Sie von uns gehört"
+          }
+        },
+        "option_VdJrVq": {
+          "type": "option",
+          "settings": {
+            "group_key": "Wo haben Sie von uns gehört",
+            "label": "Google",
+            "value": "Google"
+          }
+        },
+        "option_NwnXYf": {
+          "type": "option",
+          "settings": {
+            "group_key": "Wo haben Sie von uns gehört",
+            "label": "Youtube",
+            "value": "Youtube"
+          }
+        },
+        "option_xhpbzw": {
+          "type": "option",
+          "settings": {
+            "group_key": "Wo haben Sie von uns gehört",
+            "label": "Facebook",
+            "value": "Facebook"
+          }
+        },
+        "option_3xMxEa": {
+          "type": "option",
+          "settings": {
+            "group_key": "Wo haben Sie von uns gehört",
+            "label": "Reddit",
+            "value": "Reddit"
+          }
+        },
+        "option_caX38E": {
+          "type": "option",
+          "settings": {
+            "group_key": "Wo haben Sie von uns gehört",
+            "label": "Amazon",
+            "value": "Amazon"
+          }
+        },
+        "option_9VXQGM": {
+          "type": "option",
+          "settings": {
+            "group_key": "Wo haben Sie von uns gehört",
+            "label": "eBay",
+            "value": "eBay"
+          }
+        },
+        "option_yUxTM6": {
+          "type": "option",
+          "settings": {
+            "group_key": "Wo haben Sie von uns gehört",
+            "label": "Online Review / Blog / Media",
+            "value": "Online Review / Blog / Media"
+          }
+        },
+        "option_DPU6HH": {
+          "type": "option",
+          "settings": {
+            "group_key": "Wo haben Sie von uns gehört",
+            "label": "Friend/Colleague",
+            "value": "Friend/Colleague"
+          }
+        },
+        "option_tFkTDx": {
+          "type": "option",
+          "settings": {
+            "group_key": "Wo haben Sie von uns gehört",
+            "label": "Influencer Recommendation",
+            "value": "Influencer Recommendation"
+          }
+        },
+        "option_zQkKrF": {
+          "type": "option",
+          "settings": {
+            "group_key": "Wo haben Sie von uns gehört",
+            "label": "Other (please specify)",
+            "value": "Other (please specify)"
+          }
+        }
+      },
+      "block_order": [
+        "custom_field_3BE87g",
+        "dropdown_FjD8LM",
+        "group_G4PCVk",
+        "option_wKxy4K",
+        "option_Y74Hfx",
+        "option_nQXDDE",
+        "option_mHB9md",
+        "option_3zABAx",
+        "dropdown_NeCQJ4",
+        "group_EWnkcE",
+        "option_VdJrVq",
+        "option_NwnXYf",
+        "option_xhpbzw",
+        "option_3xMxEa",
+        "option_caX38E",
+        "option_9VXQGM",
+        "option_yUxTM6",
+        "option_DPU6HH",
+        "option_tFkTDx",
+        "option_zQkKrF"
+      ],
+      "name": "Contact Form Five",
+      "settings": {
+        "style": "style2",
+        "title": "Optimieren Sie Ihre Büros mit Maidesite – Wir unterstützen Sie von Anfang bis Ende!",
+        "image": "shopify://shop_images/thestandingdesk-hDYBj1wZ7wE-unsplash.jpg",
+        "desc": "",
+        "text_content": "<p>Ergonomische Arbeitsplätze, die Ihre Mitarbeiter begeistern und Ihre Produktivität steigern. Erhalten Sie jetzt ein unverbindliches Angebot und profitieren Sie von unserer umfassenden Beratung und Betreuung</p><p>Sie können das gewünschte<strong> Produktmodell </strong>und die <strong>Menge</strong> eingeben, um den genauen Preis und die verfügbare Zeit zu erfahren.</p>",
+        "btn_text": "Absenden",
+        "success_message": "Your message has been sent successfully.",
+        "error_message": "There was an error sending the form. Please check your input.",
+        "show_email": true,
+        "mail_placeholder": "Email*",
+        "show_company": true,
+        "company_placeholder": "Company Name",
+        "show_name": true,
+        "name_placeholder": "Name",
+        "show_phone": true,
+        "phone_placeholder": "Telefonnummer",
+        "show_message": true,
+        "message_placeholder": "Nachricht"
+      }
+    },
+    "contact_form_two": {
+      "type": "contact-form-two",
+      "blocks": {
+        "group_01": {
+          "type": "group",
+          "settings": {
+            "label": "Wie viele Produkte möchten Sie anfragen?",
+            "key": "Wie viele Produkte möchten Sie anfragen?"
+          }
+        },
+        "group_02": {
+          "type": "group",
+          "disabled": true,
+          "settings": {
+            "label": "Produktinfo",
+            "key": "produktinfo"
+          }
+        },
+        "option_01": {
+          "type": "option",
+          "settings": {
+            "label": "3-10",
+            "value": "3-10",
+            "group_key": "Wie viele Produkte möchten Sie anfragen?"
+          }
+        },
+        "option_02": {
+          "type": "option",
+          "settings": {
+            "label": "10-30",
+            "value": "10-30",
+            "group_key": "Wie viele Produkte möchten Sie anfragen?"
+          }
+        },
+        "option_03": {
+          "type": "option",
+          "settings": {
+            "label": "31-50",
+            "value": "31-50",
+            "group_key": "Wie viele Produkte möchten Sie anfragen?"
+          }
+        },
+        "option_MmFUiC": {
+          "type": "option",
+          "settings": {
+            "label": "51-100",
+            "value": "51-100",
+            "group_key": "Wie viele Produkte möchten Sie anfragen?"
+          }
+        },
+        "option_N7abKE": {
+          "type": "option",
+          "settings": {
+            "label": "100+",
+            "value": "100+",
+            "group_key": "Wie viele Produkte möchten Sie anfragen?"
+          }
+        }
+      },
+      "block_order": [
+        "group_01",
+        "group_02",
+        "option_01",
+        "option_02",
+        "option_03",
+        "option_MmFUiC",
+        "option_N7abKE"
+      ],
+      "disabled": true,
+      "custom_css": [],
+      "name": "contact_form_two",
+      "settings": {
+        "title": "Optimieren Sie Ihre Büros mit Maidesite – Wir unterstützen Sie von Anfang bis Ende!",
+        "desc": "",
+        "text_content": "<p>Ergonomische Arbeitsplätze, die Ihre Mitarbeiter begeistern und Ihre Produktivität steigern. Erhalten Sie jetzt ein unverbindliches Angebot und profitieren Sie von unserer umfassenden Beratung und Betreuung</p><p>Sie können das gewünschte<strong> Produktmodell </strong>und die <strong>Menge</strong> eingeben, um den genauen Preis und die verfügbare Zeit zu erfahren.</p>",
+        "btn_text": "Absenden",
+        "mail_placeholder": "E-Mail*",
+        "company_placeholder": "Unternehmen",
+        "name_placeholder": "Name",
+        "phone_placeholder": "Telefon",
+        "message_placeholder": "Nachricht"
+      }
+    },
+    "img_with_text_box_simplicity_KeYW6M": {
+      "type": "img-with-text-box-simplicity",
+      "blocks": {
+        "file_with_text_iG3PLG": {
+          "type": "file_with_text",
+          "settings": {
+            "title": "<h3>Für Unternehmen gemacht:</h3>",
+            "description": "<p>Robuste Materialien, CE-zertifiziert, wartungsarm und langlebig.<br/><br/></p>",
+            "file_type": "image",
+            "file_image": "shopify://shop_images/certificate.png",
+            "video_url": ""
+          }
+        },
+        "file_with_text_bKiJBP": {
+          "type": "file_with_text",
+          "settings": {
+            "title": "<h3>Nachhaltige Bürolösungen für eine grüne Zukunft</h3>",
+            "description": "<p>Maidesite: Nachhaltige & effiziente Büromöbel mit FSC-Zertifizierung<br/><br/></p>",
+            "file_type": "image",
+            "file_image": "shopify://shop_images/fsc.png",
+            "video_url": ""
+          }
+        },
+        "file_with_text_8jgGi6": {
+          "type": "file_with_text",
+          "settings": {
+            "title": "<h3>24-Stunden-Angebot</h3>",
+            "description": "<p>Wir senden Ihnen an Werktagen innerhalb von 24 Stunden ein offizielles Angebot per E-Mail zu.<br/><br/></p>",
+            "file_type": "image",
+            "file_image": "shopify://shop_images/pexels-mart-production-7709278.jpg",
+            "video_url": ""
+          }
+        },
+        "file_with_text_TxJinf": {
+          "type": "file_with_text",
+          "settings": {
+            "title": "<h3>Probetisch zum vergünstigten Preis</h3>",
+            "description": "<p>Testen Sie den Schreibtisch vor dem Großeinkauf, ganz ohne Risiko.<br/><br/></p>",
+            "file_type": "image",
+            "file_image": "shopify://shop_images/large_home_office_desk_setup_base_on_Maideiste_T2_Pro_Max.jpg",
+            "video_url": ""
+          }
+        },
+        "file_with_text_8CFXgL": {
+          "type": "file_with_text",
+          "settings": {
+            "title": "<h3>Langlebigkeit und Zuverlässigkeit</h3>",
+            "description": "<p>Maidesite bietet robuste Büromöbel für hohe Ansprüche mit 5-10 Jahren Garantie.<br/><br/></p>",
+            "file_type": "image",
+            "file_image": "shopify://shop_images/PCB_board_production_line.jpg",
+            "video_url": ""
+          }
+        },
+        "file_with_text_Gjqpnm": {
+          "type": "file_with_text",
+          "settings": {
+            "title": "<h3>Wettbewerbsfähige Preise und umfassender Service</h3>",
+            "description": "<p>Wettbewerbsfähige Preise und Top-Service für Firmenkunden: von der Beratung über die Montage bis zur umfassenden Betreuung.<br/><br/></p>",
+            "file_type": "image",
+            "file_image": "shopify://shop_images/pexels-fauxels-3182812.jpg",
+            "video_url": ""
+          }
+        }
+      },
+      "block_order": [
+        "file_with_text_iG3PLG",
+        "file_with_text_bKiJBP",
+        "file_with_text_8jgGi6",
+        "file_with_text_TxJinf",
+        "file_with_text_8CFXgL",
+        "file_with_text_Gjqpnm"
+      ],
+      "name": "file box simplicity",
+      "settings": {
+        "spec_id": "",
+        "main_title": "<h2>Darum sollten Sie sich für Maidesite entscheiden</h2>",
+        "row_num": 3,
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "background_color": "rgba(0,0,0,0)"
+      }
+    },
+    "b2b_spezielle_rabatte": {
+      "type": "b2b-spezielle-rabatte",
+      "blocks": {
+        "item_4zTmAb": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/b2b_page.jpg",
+            "title": "3-10 Menschen",
+            "sub_title": "Bis zu 10% RABATT",
+            "description": "<ul><li>Kostenloser Versand,</li><li>Standard-Support</li></ul>",
+            "btn_text": "Jetzt angebot anfordern",
+            "link": "#"
+          }
+        },
+        "item_fiwUXL": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/b2b.jpg",
+            "title": "11-30 Menschen",
+            "sub_title": "Bis zu 15% RABATT",
+            "description": "<ul><li> Immer auf Lager</li><li>Flexibler Versand</li><li> Kostenloser Versand</li><li>Zusatzliches kostenloses Zubehor</li></ul>",
+            "btn_text": "Jetzt angebot anfordern",
+            "link": "#"
+          }
+        },
+        "item_AUd88N": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/b2b_04.webp",
+            "title": "31-50 Menschen",
+            "sub_title": "Bis zu 20% RABATT",
+            "description": "<ul><li> Mehrprodukt-Rabatte</li><li> Immer verfugbar</li><li> Flexible und kostenlose</li><li>Lieferung</li><li>Zusatzliche kostenlose Ergonomischer Stuhl</li></ul>",
+            "btn_text": "Jetzt angebot anfordern",
+            "link": "#"
+          }
+        },
+        "item_AUd88C": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/b2b_05.webp",
+            "title": ">50 Menschen",
+            "sub_title": "Bis zu 25%RABATT",
+            "description": "<ul><li> Mehrprodukt-Rabatte</li><li>Immer verfugbar</li><li>Flexible und kostenlose</li><li>Lieferung</li><li>Zusatzliche kostenlose Rahmen</li><li><strong>Für ein starkes Team und maximale Arbeitseffizienz.</strong></li></ul>",
+            "btn_text": "Jetzt angebot anfordern",
+            "link": "#"
+          }
+        }
+      },
+      "block_order": [
+        "item_4zTmAb",
+        "item_fiwUXL",
+        "item_AUd88N",
+        "item_AUd88C"
+      ],
+      "name": "img with text tab",
+      "settings": {
+        "title": "Darum sollten Sie sich für Maidesite entscheiden",
+        "padding_top": 120,
+        "padding_bottom": 120
+      }
+    },
+    "compare_simple_KneENq": {
+      "type": "compare-simple",
+      "blocks": {
+        "item_rtQPr7": {
+          "type": "item",
+          "settings": {
+            "select_product": "elektrisch-hohenverstellbarer-gestell-t1-basic"
+          }
+        },
+        "item_Wnfjbc": {
+          "type": "item",
+          "settings": {
+            "select_product": "maidesite-elektrisch-hohenverstellbarer-gestell-t2-pro"
+          }
+        },
+        "item_E3FYAD": {
+          "type": "item",
+          "settings": {
+            "select_product": "maidesite-tischgestell-elektrisch-hohenverstellbar-t2-pro-plus"
+          }
+        },
+        "item_thUd64": {
+          "type": "item",
+          "settings": {
+            "select_product": "maidesite-th2-pro-plus-tischgestell-elektrisch-hohenverstellbar"
+          }
+        },
+        "item_TyVfMb": {
+          "type": "item",
+          "settings": {
+            "select_product": "maidesite-t2-pro-max-tischgestell-elektrisch-hohenverstellbar"
+          }
+        },
+        "item_bFArnY": {
+          "type": "item",
+          "disabled": true,
+          "settings": {
+            "select_product": "maidesite-t4-pro-plus-vierbeinige-elliptische-saule-elektrisch-hohenverstellbares-gestell"
+          }
+        }
+      },
+      "block_order": [
+        "item_rtQPr7",
+        "item_Wnfjbc",
+        "item_E3FYAD",
+        "item_thUd64",
+        "item_TyVfMb",
+        "item_bFArnY"
+      ],
+      "name": "compare simple",
+      "settings": {
+        "title": "<h3>Welcher höhenverstellbare Schreibtisch passt zu Ihrem Team?</h3>",
+        "text": "",
+        "link_text": "",
+        "link_url": "",
+        "padding_top": 120,
+        "padding_bottom": 120,
+        "slides_per_view": 4
+      }
+    },
+    "product_carousel": {
+      "type": "product-carousel",
+      "blocks": {
+        "item_3yir6V": {
+          "type": "item",
+          "settings": {
+            "select_product": "maidesite-elektrisch-hohenverstellbarer-gestell-t2-pro"
+          }
+        },
+        "item_gyexDX": {
+          "type": "item",
+          "settings": {
+            "select_product": "maidesite-tischgestell-elektrisch-hohenverstellbar-t2-pro-plus"
+          }
+        },
+        "item_EEUjdz": {
+          "type": "item",
+          "settings": {
+            "select_product": "maidesite-th2-pro-plus-tischgestell-elektrisch-hohenverstellbar"
+          }
+        },
+        "item_AHnCzP": {
+          "type": "item",
+          "settings": {
+            "select_product": "maidesite-t2-pro-max-tischgestell-elektrisch-hohenverstellbar"
+          }
+        },
+        "item_z9X7dd": {
+          "type": "item",
+          "settings": {
+            "select_product": "maidesite-t4-pro-plus-vierbeinige-elliptische-saule-elektrisch-hohenverstellbares-gestell"
+          }
+        }
+      },
+      "block_order": [
+        "item_3yir6V",
+        "item_gyexDX",
+        "item_EEUjdz",
+        "item_AHnCzP",
+        "item_z9X7dd"
+      ],
+      "disabled": true,
+      "name": "product_carousel",
+      "settings": {
+        "title": "Spezielle Rabatte Bei GroßEinkäUfen"
+      }
+    },
+    "img_with_text_box_simplicity_qrzG6W": {
+      "type": "img-with-text-box-simplicity",
+      "blocks": {
+        "file_with_text_McHwGa": {
+          "type": "file_with_text",
+          "settings": {
+            "title": "<p>Maximale Produktivität und Mitarbeitergesundheit</p>",
+            "description": "<p>Maidesite bietet Ihnen höhenverstellbare Schreibtische, ergonomische Stühle und weiteres Bürozubehör, die die Effizienz Ihrer Mitarbeiter steigern und langfristig deren Gesundheit fördern.</p>",
+            "file_type": "image",
+            "file_image": "shopify://shop_images/1080p_5-33M.gif",
+            "video_url": ""
+          }
+        },
+        "file_with_text_Q8tJKk": {
+          "type": "file_with_text",
+          "settings": {
+            "title": "<p>Langlebigkeit und Zuverlässigkeit</p>",
+            "description": "<p>Profitieren Sie von unseren 5-10 Jahren Garantie auf alle Produkte. Maidesite steht für langlebige und robuste Büromöbel.die den hohen Anforderungen Ihres Unternehmens gerecht werden.</p>",
+            "file_type": "image",
+            "file_image": "shopify://shop_images/EC6_Office_Chair_with_T2_Pro_Max_adjustable_height_desk_in_the_office.jpg",
+            "video_url": "https://cdn.shopify.com/videos/c/o/v/809cdb70bec44ed0bad957db8b80cf40.mp4"
+          }
+        },
+        "file_with_text_f9yPAD": {
+          "type": "file_with_text",
+          "settings": {
+            "title": "<p>Wettbewerbsfähige Preise und umfassender Service</p>",
+            "description": "<p>Firmenkunden profitieren von wettbewerbsfähigen Preisen und Rundum-Service: Beratung vor Kauf, Montagehilfe und umfassende Betreuung bei allen Fragen.</p>",
+            "file_type": "image",
+            "file_image": "shopify://shop_images/pexels-mikhail-nilov-7682338_1.jpg",
+            "video_url": ""
+          }
+        },
+        "file_with_text_B39ehq": {
+          "type": "file_with_text",
+          "settings": {
+            "title": "<p>Lager vor Ort</p>",
+            "description": "<p>Versand in die meisten EU-Länder – auch für Ihre Niederlassungsmitarbeiter erhältlich</p>",
+            "file_type": "image",
+            "file_image": "shopify://shop_images/Maidesite-warehouse.jpg",
+            "video_url": ""
+          }
+        },
+        "file_with_text_JJXCp8": {
+          "type": "file_with_text",
+          "settings": {
+            "title": "<p>Flexibel</p>",
+            "description": "<p>Keine Mindestbestellmenge – weitere Tische nach Test möglich</p>",
+            "file_type": "image",
+            "file_image": "shopify://shop_images/portrait-asian-woman-business-owner-using-digital-tablet-checking-amount-stock-product-inventory-shelf-distribution-warehouse-factorylogistic-business-shipping-delivery-service_zRhF.jpg",
+            "video_url": ""
+          }
+        },
+        "file_with_text_THJTyK": {
+          "type": "file_with_text",
+          "settings": {
+            "title": "<p>Nachhaltige Bürolösungen für eine grüne Zukunft</p>",
+            "description": "<p>Maidesite bietet Ihnen nachhaltige Büromöbel, mit FSC-zertifizierten Tischplatten, die nicht nur die Effizienz steigern, sondern auch einen positiven Beitrag zum Umweltschutz leisten.</p>",
+            "file_type": "image",
+            "file_image": "shopify://shop_images/01af9531-9158-4ede-87be-26818b919ab6.__CR0_0_1464_600_PT0_SX1464_V1____8.jpg",
+            "video_url": ""
+          }
+        }
+      },
+      "block_order": [
+        "file_with_text_McHwGa",
+        "file_with_text_Q8tJKk",
+        "file_with_text_f9yPAD",
+        "file_with_text_B39ehq",
+        "file_with_text_JJXCp8",
+        "file_with_text_THJTyK"
+      ],
+      "disabled": true,
+      "name": "file box simplicity",
+      "settings": {
+        "spec_id": "",
+        "main_title": "<p>Sechs Gründe, sich für Maidesite zu entscheiden</p>",
+        "row_num": 3,
+        "padding_top": 120,
+        "padding_bottom": 120,
+        "background_color": "rgba(0,0,0,0)"
+      }
+    },
+    "maidesite_swiper_QhkQG8": {
+      "type": "maidesite-swiper",
+      "blocks": {
+        "swiper_bBWUrY": {
+          "type": "swiper",
+          "settings": {
+            "image": "shopify://shop_images/maidesite-logo-1.webp",
+            "text": "<p>“Ich persönlich bin sehr angetan von der guten Produktqualität, dem zusätzlichen und gut erreichbaren USB-A-Anschluss am Bedienpanel sowie dem schnellen und leisen Motor, der einen fixen Wechsel zwischen Sitz- und Stehposition ermöglicht.”</p>"
+          }
+        },
+        "swiper_BnDxkz": {
+          "type": "swiper",
+          "settings": {
+            "image": "shopify://shop_images/maidesite-logo-2.webp",
+            "text": "<p>“Ich persönlich bin sehr angetan von der guten Produktqualität, dem zusätzlichen und gut erreichbaren USB-A-Anschluss am Bedienpanel sowie dem schnellen und leisen Motor, der einen fixen Wechsel zwischen Sitz- und Stehposition ermöglicht.”</p>"
+          }
+        },
+        "swiper_EnDd8n": {
+          "type": "swiper",
+          "settings": {
+            "image": "shopify://shop_images/maidesite-logo-3.webp",
+            "text": "<p>“Ich persönlich bin sehr angetan von der guten Produktqualität, dem zusätzlichen und gut erreichbaren USB-A-Anschluss am Bedienpanel sowie dem schnellen und leisen Motor, der einen fixen Wechsel zwischen Sitz- und Stehposition ermöglicht.”</p>"
+          }
+        },
+        "swiper_4kYG3r": {
+          "type": "swiper",
+          "settings": {
+            "image": "shopify://shop_images/maidesite-logo-4.webp",
+            "text": "<p>“Ich persönlich bin sehr angetan von der guten Produktqualität, dem zusätzlichen und gut erreichbaren USB-A-Anschluss am Bedienpanel sowie dem schnellen und leisen Motor, der einen fixen Wechsel zwischen Sitz- und Stehposition ermöglicht.”</p>"
+          }
+        }
+      },
+      "block_order": [
+        "swiper_bBWUrY",
+        "swiper_BnDxkz",
+        "swiper_EnDd8n",
+        "swiper_4kYG3r"
+      ],
+      "disabled": true,
+      "custom_css": [
+        ".maidesite_swiper_section {background-color: #e2ded6;}"
+      ],
+      "name": "maidesite swiper",
+      "settings": {
+        "spec_id": "",
+        "title": "<p>Erfahrungen Unserer GeschäFtskunden Mit<br/> Maidesite</p>",
+        "text": "",
+        "show_buttons": true,
+        "loop": true,
+        "autoplay_enable": true,
+        "autoplay_delay": 3000,
+        "padding_top": 120,
+        "padding_bottom": 0
+      }
+    },
+    "img_with_text_tab_emEWU8": {
+      "type": "img-with-text-tab",
+      "blocks": {
+        "tab_fiwUXL": {
+          "type": "tab",
+          "settings": {
+            "tabname": "",
+            "sub_title": "",
+            "title": "<p>Lokale Logistik und Lagerhaltung</p>",
+            "description": "<p>Mit unseren regionalen Lagern und einem effizienten Logistiknetzwerk gewährleisten wir eine schnelle und zuverlässige Lieferung.</p>",
+            "file_type": "image",
+            "file_image": "shopify://shop_images/b2b_02.webp",
+            "video_url": "",
+            "btn_text": "Jetzt unverbindlich beraten lassen",
+            "link": "#"
+          }
+        },
+        "tab_AUd88N": {
+          "type": "tab",
+          "settings": {
+            "tabname": "",
+            "sub_title": "",
+            "title": "<p>Verantwortungsvolle & effiziente</p>",
+            "description": "<p>Ihre Bestellungen werden effizient bearbeitet und via DPD/DHL an Ihre Haustür geliefert.</p>",
+            "file_type": "image",
+            "file_image": "shopify://shop_images/Hilden_warehouse_works_1200x800_7cc91ea2-c59c-49f3-a82f-5614e864c5ae.jpg",
+            "video_url": "",
+            "btn_text": "Jetzt unverbindlich beraten lassen",
+            "link": "#"
+          }
+        }
+      },
+      "block_order": [
+        "tab_fiwUXL",
+        "tab_AUd88N"
+      ],
+      "disabled": true,
+      "custom_css": [
+        ".img_with_text_tab .img_with_text_tab_title {text-align: left; margin-bottom: 6rem;}"
+      ],
+      "name": "img with text tab",
+      "settings": {
+        "spec_id": "",
+        "description": "",
+        "title": "<p>Erstklassiger Schreibtisch & erstklassiger Service</p>",
+        "show_tab_head": false,
+        "loop": true,
+        "autoplay_enable": true,
+        "autoplay_delay": 5000,
+        "layout": "image-right"
+      }
+    },
+    "polka_dot_swiper_4yRfwn": {
+      "type": "polka-dot-swiper",
+      "blocks": {
+        "swiper_74yt3y": {
+          "type": "swiper",
+          "settings": {
+            "title": "<p>Eleganter Arbeitsbereich</p>",
+            "text": "<p>Schaffe einen funktionalen und stilvollen Arbeitsplatz mit unserem klassischen Schreibtisch</p>",
+            "btn_text": "",
+            "image": "shopify://shop_images/polka_dot_swiper-2.webp",
+            "link": ""
+          }
+        },
+        "swiper_RR3AVA": {
+          "type": "swiper",
+          "settings": {
+            "title": "<p>Eleganter Arbeitsbereich</p>",
+            "text": "<p>Schaffe einen funktionalen und stilvollen Arbeitsplatz mit </p><p>unserem klassischen Schreibtisch</p>",
+            "btn_text": "",
+            "image": "shopify://shop_images/polka_dot_swiper-1.webp",
+            "link": ""
+          }
+        },
+        "swiper_xwgRwF": {
+          "type": "swiper",
+          "settings": {
+            "title": "<p>Eleganter Arbeitsbereich</p>",
+            "text": "<p>Schaffe einen funktionalen und stilvollen Arbeitsplatz mit unserem klassischen Schreibtisch</p>",
+            "btn_text": "",
+            "image": "shopify://shop_images/polka_dot_swiper-2.webp",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "swiper_74yt3y",
+        "swiper_RR3AVA",
+        "swiper_xwgRwF"
+      ],
+      "disabled": true,
+      "custom_css": [
+        ".polka_dot_swiper {padding-bottom: 6rem;}"
+      ],
+      "name": "polka dot swiper",
+      "settings": {
+        "title": "<p>Ihr BüRo, Neu Definiert</p>",
+        "text": "",
+        "show_info": true,
+        "padding_top": 0,
+        "padding_bottom": 36
+      }
+    },
+    "marquee_images": {
+      "type": "marquee-images",
+      "blocks": {
+        "image_1": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/maidesite-logo-1.webp",
+            "title": ""
+          }
+        },
+        "image_2": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/maidesite-logo-2.webp",
+            "title": ""
+          }
+        },
+        "image_3": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/maidesite-logo-3.webp",
+            "title": ""
+          }
+        },
+        "image_4": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/maidesite-logo-4.webp",
+            "title": ""
+          }
+        },
+        "image_pmDq4E": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/logo-Dodel-2.jpg",
+            "title": ""
+          }
+        },
+        "image_a7cNqb": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/logo_SCB.png",
+            "title": ""
+          }
+        },
+        "image_kaNjK7": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/skylotec-logo.svg",
+            "title": ""
+          }
+        },
+        "image_mA9zwq": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/the_do_logo.png",
+            "title": ""
+          }
+        },
+        "image_LbBfag": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/logo_systec.png",
+            "title": ""
+          }
+        },
+        "image_tN4ycm": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/innovit-logo.png",
+            "title": ""
+          }
+        },
+        "image_nFJyA6": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/KoenigMetall-Logo-Gruppe.png",
+            "title": ""
+          }
+        },
+        "image_qDHtYN": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Raiffeisenbank_Mehring-Leiwen_eG-Logo_264x50_0b73436a-a90e-4663-b6d0-b18afae8a225.png",
+            "title": ""
+          }
+        }
+      },
+      "block_order": [
+        "image_1",
+        "image_2",
+        "image_3",
+        "image_4",
+        "image_pmDq4E",
+        "image_a7cNqb",
+        "image_kaNjK7",
+        "image_mA9zwq",
+        "image_LbBfag",
+        "image_tN4ycm",
+        "image_nFJyA6",
+        "image_qDHtYN"
+      ],
+      "disabled": true,
+      "name": "marquee_images",
+      "settings": {
+        "title": "Erfolgreiche Teams wählen Maidesite.",
+        "padding_top": 32,
+        "padding_bottom": 0
+      }
+    },
+    "faq_simple_TycRxV": {
+      "type": "faq-simple",
+      "blocks": {
+        "faq_xt6yLi": {
+          "type": "faq",
+          "settings": {
+            "question": "<p>Wie lange dauert die Lieferung?</p>",
+            "answer": "<p>2-4 Arbeitstage in Deutschland, 3-7 Arbeitstage außerhalb Deutschlands.</p>"
+          }
+        },
+        "faq_bnc3cE": {
+          "type": "faq",
+          "settings": {
+            "question": "<h4>Welche Möglichkeiten habe ich, um meine Bestellung zu bezahlen?</h4>",
+            "answer": "<p>Paypal，Stripe，Klarna(BNPL) und Banküberweisungen</p>"
+          }
+        },
+        "faq_xgcnzY": {
+          "type": "faq",
+          "settings": {
+            "question": "<p>Wie lange ist die Garantie auf Maidesite-Produkte?</p>",
+            "answer": "<p>Wir bieten auf höhenverstellbare Schreibtische und Gestelle eine Garantie von 5-10 Jahren, auf Zubehör 5 Jahre. Im Garantiefall können Sie zwischen kostenloser Reparatur, Rückerstattung oder einer angemessenen Ersatzlieferung wählen. Die Garantie deckt jedoch keine Folgeschäden ab und gilt nicht bei Verlust, natürlichem Verschleiß oder Schäden durch unsachgemäße Nutzung oder Pflege. Natürlich übernehmen wir im Garantiefall die Rücksendekosten. Ein großer Vorteil für Sie: Sie müssen nicht nachweisen, ob der Mangel bereits bei Übergabe bestand. So können Sie risikofrei kaufen!<br/><br/></p>"
+          }
+        },
+        "faq_Yyb8gN": {
+          "type": "faq",
+          "settings": {
+            "question": "<p>Kann ich nach einem Großeinkauf die Ware zurückgeben, wenn ich nicht zufrieden bin?</p>",
+            "answer": "<p>Das wird nicht funktionieren. Wenn Sie sich Sorgen um die Qualität machen, können wir Ihnen Muster zum Selbstkostenpreis verkaufen, und Sie können nach dem Testen und der Feststellung, dass es keine Probleme gibt, in großen Mengen kaufen.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "faq_xt6yLi",
+        "faq_bnc3cE",
+        "faq_xgcnzY",
+        "faq_Yyb8gN"
+      ],
+      "name": "faq simple",
+      "settings": {
+        "spec_id": "",
+        "heading": "<p>FAQ – Häufig gestellte Fragen</p>",
+        "text": "",
+        "learn_more": false,
+        "show_btn": false,
+        "more_faqs_link": "",
+        "contact_us": false,
+        "contact_us_link": "",
+        "padding_top": 120,
+        "padding_bottom": 120,
+        "background_color": "rgba(0,0,0,0)"
+      }
+    }
+  },
+  "order": [
+    "breadcrumbs",
+    "contact_form_one",
+    "contact_form_five_Xb3kWX",
+    "contact_form_two",
+    "img_with_text_box_simplicity_KeYW6M",
+    "b2b_spezielle_rabatte",
+    "compare_simple_KneENq",
+    "product_carousel",
+    "img_with_text_box_simplicity_qrzG6W",
+    "maidesite_swiper_QhkQG8",
+    "img_with_text_tab_emEWU8",
+    "polka_dot_swiper_4yRfwn",
+    "marquee_images",
+    "faq_simple_TycRxV"
+  ]
+}
