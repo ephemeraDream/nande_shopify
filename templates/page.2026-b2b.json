@@ -59,6 +59,67 @@
         "message_placeholder": "Message"
       }
     },
+    "b2b_spezielle_rabatte_kcjgjC": {
+      "type": "b2b-spezielle-rabatte",
+      "blocks": {
+        "item_hdwTFX": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/pexels-yankrukov-5793653.jpg",
+            "title": "Weniger Krankentage",
+            "sub_title": "",
+            "description": "<p>Beschwerden des Bewegungsapparates sind eine der häufigsten Ursachen für Fehlzeiten.</p><p>Bewegung am Arbeitsplatz hilft, diese zu reduzieren.</p>",
+            "btn_text": "Jetzt angebot anfordern",
+            "link": "#"
+          }
+        },
+        "item_VF8JnN": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/thestandingdesk-8nwpx23Vr-U-unsplash.jpg",
+            "title": "Mehr Wohlbefinden",
+            "sub_title": "",
+            "description": "<p>65 % der Nutzer berichten von besserem Wohlbefinden nach dem Wechsel zu Sitz-Steh-Tischen.</p>",
+            "btn_text": "Jetzt angebot anfordern",
+            "link": "#"
+          }
+        },
+        "item_LUziHx": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/pexels-mart-production-7709278.jpg",
+            "title": "Gesteigerte Produktivität",
+            "sub_title": "",
+            "description": "<p>Der Wechsel zwischen Sitzen und Stehen fördert Durchblutung und Konzentration.</p>",
+            "btn_text": "Jetzt angebot anfordern",
+            "link": "#"
+          }
+        },
+        "item_zDczDV": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/eric-prouzet-B3UFXwcVbc4-unsplash.jpg",
+            "title": "Stärkeres Employer Branding",
+            "sub_title": "",
+            "description": "<p>Moderne Arbeitsplätze zeigen:</p><p>Gesundheit und Mitarbeiterzufriedenheit werden ernst genommen.</p>",
+            "btn_text": "Jetzt angebot anfordern",
+            "link": "#"
+          }
+        }
+      },
+      "block_order": [
+        "item_hdwTFX",
+        "item_VF8JnN",
+        "item_LUziHx",
+        "item_zDczDV"
+      ],
+      "name": "img with text tab",
+      "settings": {
+        "title": "Kein Kostenfaktor – eine Investition in Mitarbeitende",
+        "padding_top": 60,
+        "padding_bottom": 60
+      }
+    },
     "img_with_text_box_simplicity_KeYW6M": {
       "type": "img-with-text-box-simplicity",
       "blocks": {
@@ -930,6 +991,7 @@
     "breadcrumbs",
     "contact_form_one",
     "contact_form_five_niKNN7",
+    "b2b_spezielle_rabatte_kcjgjC",
     "img_with_text_box_simplicity_KeYW6M",
     "b2b_spezielle_rabatte",
     "compare_simple_KneENq",
