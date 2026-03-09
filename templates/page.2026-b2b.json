@@ -35,204 +35,16 @@
         "message_placeholder": "Nachricht (optional)"
       }
     },
-    "contact_form_five_Xb3kWX": {
+    "contact_form_five_niKNN7": {
       "type": "contact-form-five",
-      "blocks": {
-        "custom_field_3BE87g": {
-          "type": "custom_field",
-          "settings": {
-            "field_name": "Land der Zustellung",
-            "field_type": "text",
-            "placeholder": "Land der Zustellung",
-            "required": false,
-            "rows": 4
-          }
-        },
-        "dropdown_FjD8LM": {
-          "type": "dropdown",
-          "settings": {
-            "key": "Wie viele Produkte möchten Sie anfragen?",
-            "label": "Wie viele Produkte möchten Sie anfragen?",
-            "field_name": "Wie viele Produkte möchten Sie anfragen?",
-            "required": false
-          }
-        },
-        "group_G4PCVk": {
-          "type": "group",
-          "settings": {
-            "dropdown_key": "Wie viele Produkte möchten Sie anfragen?",
-            "label": "Bitte wählen Sie Ihre Menge aus",
-            "key": "Wie viele Produkte möchten Sie anfragen?"
-          }
-        },
-        "option_wKxy4K": {
-          "type": "option",
-          "settings": {
-            "group_key": "Wie viele Produkte möchten Sie anfragen?",
-            "label": "3-10",
-            "value": "3-10"
-          }
-        },
-        "option_Y74Hfx": {
-          "type": "option",
-          "settings": {
-            "group_key": "Wie viele Produkte möchten Sie anfragen?",
-            "label": "10-30",
-            "value": "Wie viele Produkte möchten Sie anfragen?"
-          }
-        },
-        "option_nQXDDE": {
-          "type": "option",
-          "settings": {
-            "group_key": "Wie viele Produkte möchten Sie anfragen?",
-            "label": "31-50",
-            "value": "31-50"
-          }
-        },
-        "option_mHB9md": {
-          "type": "option",
-          "settings": {
-            "group_key": "Wie viele Produkte möchten Sie anfragen?",
-            "label": "51-100",
-            "value": "51-100"
-          }
-        },
-        "option_3zABAx": {
-          "type": "option",
-          "settings": {
-            "group_key": "Wie viele Produkte möchten Sie anfragen?",
-            "label": "100+",
-            "value": "100+"
-          }
-        },
-        "dropdown_NeCQJ4": {
-          "type": "dropdown",
-          "settings": {
-            "key": "Wo haben Sie von uns gehört",
-            "label": "Wo haben Sie von uns gehört",
-            "field_name": "Wo haben Sie von uns gehört",
-            "required": false
-          }
-        },
-        "group_EWnkcE": {
-          "type": "group",
-          "settings": {
-            "dropdown_key": "Wo haben Sie von uns gehört",
-            "label": "Woher kennst du uns?",
-            "key": "Wo haben Sie von uns gehört"
-          }
-        },
-        "option_VdJrVq": {
-          "type": "option",
-          "settings": {
-            "group_key": "Wo haben Sie von uns gehört",
-            "label": "Google",
-            "value": "Google"
-          }
-        },
-        "option_NwnXYf": {
-          "type": "option",
-          "settings": {
-            "group_key": "Wo haben Sie von uns gehört",
-            "label": "Youtube",
-            "value": "Youtube"
-          }
-        },
-        "option_xhpbzw": {
-          "type": "option",
-          "settings": {
-            "group_key": "Wo haben Sie von uns gehört",
-            "label": "Facebook",
-            "value": "Facebook"
-          }
-        },
-        "option_3xMxEa": {
-          "type": "option",
-          "settings": {
-            "group_key": "Wo haben Sie von uns gehört",
-            "label": "Reddit",
-            "value": "Reddit"
-          }
-        },
-        "option_caX38E": {
-          "type": "option",
-          "settings": {
-            "group_key": "Wo haben Sie von uns gehört",
-            "label": "Amazon",
-            "value": "Amazon"
-          }
-        },
-        "option_9VXQGM": {
-          "type": "option",
-          "settings": {
-            "group_key": "Wo haben Sie von uns gehört",
-            "label": "eBay",
-            "value": "eBay"
-          }
-        },
-        "option_yUxTM6": {
-          "type": "option",
-          "settings": {
-            "group_key": "Wo haben Sie von uns gehört",
-            "label": "Online Review / Blog / Media",
-            "value": "Online Review / Blog / Media"
-          }
-        },
-        "option_DPU6HH": {
-          "type": "option",
-          "settings": {
-            "group_key": "Wo haben Sie von uns gehört",
-            "label": "Friend/Colleague",
-            "value": "Friend/Colleague"
-          }
-        },
-        "option_tFkTDx": {
-          "type": "option",
-          "settings": {
-            "group_key": "Wo haben Sie von uns gehört",
-            "label": "Influencer Recommendation",
-            "value": "Influencer Recommendation"
-          }
-        },
-        "option_zQkKrF": {
-          "type": "option",
-          "settings": {
-            "group_key": "Wo haben Sie von uns gehört",
-            "label": "Other (please specify)",
-            "value": "Other (please specify)"
-          }
-        }
-      },
-      "block_order": [
-        "custom_field_3BE87g",
-        "dropdown_FjD8LM",
-        "group_G4PCVk",
-        "option_wKxy4K",
-        "option_Y74Hfx",
-        "option_nQXDDE",
-        "option_mHB9md",
-        "option_3zABAx",
-        "dropdown_NeCQJ4",
-        "group_EWnkcE",
-        "option_VdJrVq",
-        "option_NwnXYf",
-        "option_xhpbzw",
-        "option_3xMxEa",
-        "option_caX38E",
-        "option_9VXQGM",
-        "option_yUxTM6",
-        "option_DPU6HH",
-        "option_tFkTDx",
-        "option_zQkKrF"
-      ],
       "name": "Contact Form Five",
       "settings": {
         "style": "style2",
-        "title": "Optimieren Sie Ihre Büros mit Maidesite – Wir unterstützen Sie von Anfang bis Ende!",
+        "title": "Höhenverstellbare Schreibtische für Unternehmen",
         "image": "shopify://shop_images/thestandingdesk-hDYBj1wZ7wE-unsplash.jpg",
-        "desc": "",
-        "text_content": "<p>Ergonomische Arbeitsplätze, die Ihre Mitarbeiter begeistern und Ihre Produktivität steigern. Erhalten Sie jetzt ein unverbindliches Angebot und profitieren Sie von unserer umfassenden Beratung und Betreuung</p><p>Sie können das gewünschte<strong> Produktmodell </strong>und die <strong>Menge</strong> eingeben, um den genauen Preis und die verfügbare Zeit zu erfahren.</p>",
-        "btn_text": "Absenden",
+        "desc": "Planbare Lösungen für gesunde, produktive Arbeitsplätze – von 5 bis 200+ Arbeitsplätzen",
+        "text_content": "<ul><li>Lager in Deutschland </li><li>5 -10 Jahre Garantie </li><li>Persönlicher B2B-Ansprechpartner</li></ul>",
+        "btn_text": "Unverbindliches Angebot anfordern",
         "success_message": "Your message has been sent successfully.",
         "error_message": "There was an error sending the form. Please check your input.",
         "show_email": true,
@@ -241,93 +53,10 @@
         "company_placeholder": "Company Name",
         "show_name": true,
         "name_placeholder": "Name",
-        "show_phone": true,
-        "phone_placeholder": "Telefonnummer",
+        "show_phone": false,
+        "phone_placeholder": "Phone",
         "show_message": true,
-        "message_placeholder": "Nachricht"
-      }
-    },
-    "contact_form_two": {
-      "type": "contact-form-two",
-      "blocks": {
-        "group_01": {
-          "type": "group",
-          "settings": {
-            "label": "Wie viele Produkte möchten Sie anfragen?",
-            "key": "Wie viele Produkte möchten Sie anfragen?"
-          }
-        },
-        "group_02": {
-          "type": "group",
-          "disabled": true,
-          "settings": {
-            "label": "Produktinfo",
-            "key": "produktinfo"
-          }
-        },
-        "option_01": {
-          "type": "option",
-          "settings": {
-            "label": "3-10",
-            "value": "3-10",
-            "group_key": "Wie viele Produkte möchten Sie anfragen?"
-          }
-        },
-        "option_02": {
-          "type": "option",
-          "settings": {
-            "label": "10-30",
-            "value": "10-30",
-            "group_key": "Wie viele Produkte möchten Sie anfragen?"
-          }
-        },
-        "option_03": {
-          "type": "option",
-          "settings": {
-            "label": "31-50",
-            "value": "31-50",
-            "group_key": "Wie viele Produkte möchten Sie anfragen?"
-          }
-        },
-        "option_MmFUiC": {
-          "type": "option",
-          "settings": {
-            "label": "51-100",
-            "value": "51-100",
-            "group_key": "Wie viele Produkte möchten Sie anfragen?"
-          }
-        },
-        "option_N7abKE": {
-          "type": "option",
-          "settings": {
-            "label": "100+",
-            "value": "100+",
-            "group_key": "Wie viele Produkte möchten Sie anfragen?"
-          }
-        }
-      },
-      "block_order": [
-        "group_01",
-        "group_02",
-        "option_01",
-        "option_02",
-        "option_03",
-        "option_MmFUiC",
-        "option_N7abKE"
-      ],
-      "disabled": true,
-      "custom_css": [],
-      "name": "contact_form_two",
-      "settings": {
-        "title": "Optimieren Sie Ihre Büros mit Maidesite – Wir unterstützen Sie von Anfang bis Ende!",
-        "desc": "",
-        "text_content": "<p>Ergonomische Arbeitsplätze, die Ihre Mitarbeiter begeistern und Ihre Produktivität steigern. Erhalten Sie jetzt ein unverbindliches Angebot und profitieren Sie von unserer umfassenden Beratung und Betreuung</p><p>Sie können das gewünschte<strong> Produktmodell </strong>und die <strong>Menge</strong> eingeben, um den genauen Preis und die verfügbare Zeit zu erfahren.</p>",
-        "btn_text": "Absenden",
-        "mail_placeholder": "E-Mail*",
-        "company_placeholder": "Unternehmen",
-        "name_placeholder": "Name",
-        "phone_placeholder": "Telefon",
-        "message_placeholder": "Nachricht"
+        "message_placeholder": "Message"
       }
     },
     "img_with_text_box_simplicity_KeYW6M": {
@@ -932,6 +661,217 @@
         "padding_bottom": 0
       }
     },
+    "contact_form_five_Xb3kWX": {
+      "type": "contact-form-five",
+      "blocks": {
+        "custom_field_3BE87g": {
+          "type": "custom_field",
+          "settings": {
+            "field_name": "Land der Zustellung",
+            "field_type": "text",
+            "placeholder": "Land der Zustellung",
+            "required": false,
+            "rows": 4
+          }
+        },
+        "dropdown_FjD8LM": {
+          "type": "dropdown",
+          "settings": {
+            "key": "Wie viele Produkte möchten Sie anfragen?",
+            "label": "Wie viele Produkte möchten Sie anfragen?",
+            "field_name": "Wie viele Produkte möchten Sie anfragen?",
+            "required": false
+          }
+        },
+        "group_G4PCVk": {
+          "type": "group",
+          "settings": {
+            "dropdown_key": "Wie viele Produkte möchten Sie anfragen?",
+            "label": "Bitte wählen Sie Ihre Menge aus",
+            "key": "Wie viele Produkte möchten Sie anfragen?"
+          }
+        },
+        "option_wKxy4K": {
+          "type": "option",
+          "settings": {
+            "group_key": "Wie viele Produkte möchten Sie anfragen?",
+            "label": "3-10",
+            "value": "3-10"
+          }
+        },
+        "option_Y74Hfx": {
+          "type": "option",
+          "settings": {
+            "group_key": "Wie viele Produkte möchten Sie anfragen?",
+            "label": "10-30",
+            "value": "Wie viele Produkte möchten Sie anfragen?"
+          }
+        },
+        "option_nQXDDE": {
+          "type": "option",
+          "settings": {
+            "group_key": "Wie viele Produkte möchten Sie anfragen?",
+            "label": "31-50",
+            "value": "31-50"
+          }
+        },
+        "option_mHB9md": {
+          "type": "option",
+          "settings": {
+            "group_key": "Wie viele Produkte möchten Sie anfragen?",
+            "label": "51-100",
+            "value": "51-100"
+          }
+        },
+        "option_3zABAx": {
+          "type": "option",
+          "settings": {
+            "group_key": "Wie viele Produkte möchten Sie anfragen?",
+            "label": "100+",
+            "value": "100+"
+          }
+        },
+        "dropdown_NeCQJ4": {
+          "type": "dropdown",
+          "settings": {
+            "key": "Wo haben Sie von uns gehört",
+            "label": "Wo haben Sie von uns gehört",
+            "field_name": "Wo haben Sie von uns gehört",
+            "required": false
+          }
+        },
+        "group_EWnkcE": {
+          "type": "group",
+          "settings": {
+            "dropdown_key": "Wo haben Sie von uns gehört",
+            "label": "Woher kennst du uns?",
+            "key": "Wo haben Sie von uns gehört"
+          }
+        },
+        "option_VdJrVq": {
+          "type": "option",
+          "settings": {
+            "group_key": "Wo haben Sie von uns gehört",
+            "label": "Google",
+            "value": "Google"
+          }
+        },
+        "option_NwnXYf": {
+          "type": "option",
+          "settings": {
+            "group_key": "Wo haben Sie von uns gehört",
+            "label": "Youtube",
+            "value": "Youtube"
+          }
+        },
+        "option_xhpbzw": {
+          "type": "option",
+          "settings": {
+            "group_key": "Wo haben Sie von uns gehört",
+            "label": "Facebook",
+            "value": "Facebook"
+          }
+        },
+        "option_3xMxEa": {
+          "type": "option",
+          "settings": {
+            "group_key": "Wo haben Sie von uns gehört",
+            "label": "Reddit",
+            "value": "Reddit"
+          }
+        },
+        "option_caX38E": {
+          "type": "option",
+          "settings": {
+            "group_key": "Wo haben Sie von uns gehört",
+            "label": "Amazon",
+            "value": "Amazon"
+          }
+        },
+        "option_9VXQGM": {
+          "type": "option",
+          "settings": {
+            "group_key": "Wo haben Sie von uns gehört",
+            "label": "eBay",
+            "value": "eBay"
+          }
+        },
+        "option_yUxTM6": {
+          "type": "option",
+          "settings": {
+            "group_key": "Wo haben Sie von uns gehört",
+            "label": "Online Review / Blog / Media",
+            "value": "Online Review / Blog / Media"
+          }
+        },
+        "option_DPU6HH": {
+          "type": "option",
+          "settings": {
+            "group_key": "Wo haben Sie von uns gehört",
+            "label": "Friend/Colleague",
+            "value": "Friend/Colleague"
+          }
+        },
+        "option_tFkTDx": {
+          "type": "option",
+          "settings": {
+            "group_key": "Wo haben Sie von uns gehört",
+            "label": "Influencer Recommendation",
+            "value": "Influencer Recommendation"
+          }
+        },
+        "option_zQkKrF": {
+          "type": "option",
+          "settings": {
+            "group_key": "Wo haben Sie von uns gehört",
+            "label": "Other (please specify)",
+            "value": "Other (please specify)"
+          }
+        }
+      },
+      "block_order": [
+        "custom_field_3BE87g",
+        "dropdown_FjD8LM",
+        "group_G4PCVk",
+        "option_wKxy4K",
+        "option_Y74Hfx",
+        "option_nQXDDE",
+        "option_mHB9md",
+        "option_3zABAx",
+        "dropdown_NeCQJ4",
+        "group_EWnkcE",
+        "option_VdJrVq",
+        "option_NwnXYf",
+        "option_xhpbzw",
+        "option_3xMxEa",
+        "option_caX38E",
+        "option_9VXQGM",
+        "option_yUxTM6",
+        "option_DPU6HH",
+        "option_tFkTDx",
+        "option_zQkKrF"
+      ],
+      "name": "Contact Form Five",
+      "settings": {
+        "style": "style2",
+        "title": "Optimieren Sie Ihre Büros mit Maidesite – Wir unterstützen Sie von Anfang bis Ende!",
+        "desc": "",
+        "text_content": "<p>Ergonomische Arbeitsplätze, die Ihre Mitarbeiter begeistern und Ihre Produktivität steigern. Erhalten Sie jetzt ein unverbindliches Angebot und profitieren Sie von unserer umfassenden Beratung und Betreuung</p><p>Sie können das gewünschte<strong> Produktmodell </strong>und die <strong>Menge</strong> eingeben, um den genauen Preis und die verfügbare Zeit zu erfahren.</p>",
+        "btn_text": "Absenden",
+        "success_message": "Your message has been sent successfully.",
+        "error_message": "There was an error sending the form. Please check your input.",
+        "show_email": true,
+        "mail_placeholder": "Email*",
+        "show_company": true,
+        "company_placeholder": "Company Name",
+        "show_name": true,
+        "name_placeholder": "Name",
+        "show_phone": true,
+        "phone_placeholder": "Telefonnummer",
+        "show_message": true,
+        "message_placeholder": "Nachricht"
+      }
+    },
     "faq_simple_TycRxV": {
       "type": "faq-simple",
       "blocks": {
@@ -989,8 +929,7 @@
   "order": [
     "breadcrumbs",
     "contact_form_one",
-    "contact_form_five_Xb3kWX",
-    "contact_form_two",
+    "contact_form_five_niKNN7",
     "img_with_text_box_simplicity_KeYW6M",
     "b2b_spezielle_rabatte",
     "compare_simple_KneENq",
@@ -1000,6 +939,7 @@
     "img_with_text_tab_emEWU8",
     "polka_dot_swiper_4yRfwn",
     "marquee_images",
+    "contact_form_five_Xb3kWX",
     "faq_simple_TycRxV"
   ]
 }
