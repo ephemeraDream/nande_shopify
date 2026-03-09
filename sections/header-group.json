@@ -27,6 +27,7 @@
       "blocks": {
         "announcement_R3cx4w": {
           "type": "announcement",
+          "disabled": true,
           "settings": {
             "text": "Lieferhinweis: Aufgrund extremer Wetterbedingungen und starker Schneefälle in Teilen Europas können Bestellungen derzeit verspätet zugestellt werden.",
             "link": "https://www.maidesite.de/blogs/news/aktuelle-meldung-lieferverzogerungen-aufgrund-extremer-wetterbedingungen-in-europa",
