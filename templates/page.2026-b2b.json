@@ -332,8 +332,8 @@
       "name": "img with text tab",
       "settings": {
         "title": "So arbeiten Unternehmen typischerweise mit uns zusammen",
-        "padding_top": 120,
-        "padding_bottom": 120
+        "padding_top": 60,
+        "padding_bottom": 60
       }
     },
     "compare_simple_KneENq": {
@@ -383,9 +383,73 @@
         "text": "<ul><li>T2 Pro Max – Maximale Stabilität, ideal für große Tischplatten</li><li>T2 Pro Plus – Bestseller für große Projekte</li><li>EL2 Plus Art – Premium-Design mit eleganter Optik</li><li>T2 Pro– Preisgünstige Wahl mit außergewöhnlicher Leistung</li></ul>",
         "link_text": "",
         "link_url": "",
-        "padding_top": 120,
-        "padding_bottom": 120,
+        "padding_top": 60,
+        "padding_bottom": 60,
         "slides_per_view": 4
+      }
+    },
+    "multicolumn_HyyLiV": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_3zpw9B": {
+          "type": "column",
+          "settings": {
+            "title": "5–19 Arbeitsplätze",
+            "text": "<p><strong>8% RABATT</strong><br/></p><ul><li>Flexibler Versand</li><li>Kostenlose Lieferung</li></ul>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_dXXjEB": {
+          "type": "column",
+          "settings": {
+            "title": "20–49 Arbeitsplätze",
+            "text": "<p><strong>12% RABATT</strong></p><ul><li>Flexibler Versand</li><li>Kostenlose Lieferung</li></ul>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_Mhkyb7": {
+          "type": "column",
+          "settings": {
+            "title": "50-99 Arbeitsplätze",
+            "text": "<p><strong>15% RABATT</strong></p><p></p><ul><li>Rabatte für mehrere Produkte</li><li>Flexible und kostenlose Lieferung</li><li>Zusätzliches kostenloses Zubehör</li></ul>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_XLKt4n": {
+          "type": "column",
+          "settings": {
+            "title": "Spalte",
+            "text": "<p>Kombiniere Text mit einem Bild, um den Fokus auf dein Produkt, deine Kollektion oder deinen Blog-Beitrag zu richten. Du kannst außerdem weitere Details über die Verfügbarkeit oder den Stil und sogar eine Bewertung hinzufügen.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_3zpw9B",
+        "column_dXXjEB",
+        "column_Mhkyb7",
+        "column_XLKt4n"
+      ],
+      "name": "t:sections.multicolumn.presets.name",
+      "settings": {
+        "title": "Faire Konditionen für Geschäftskunden",
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "button_label": "Schaltflächenbeschriftung",
+        "button_link": "",
+        "columns_desktop": 4,
+        "column_alignment": "left",
+        "background_style": "primary",
+        "color_scheme": "",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
       }
     },
     "product_carousel": {
@@ -1061,6 +1125,7 @@
     "b2b_spezielle_rabatte",
     "b2b_spezielle_rabatte_4cFxBE",
     "compare_simple_KneENq",
+    "multicolumn_HyyLiV",
     "product_carousel",
     "img_with_text_box_simplicity_qrzG6W",
     "maidesite_swiper_QhkQG8",
