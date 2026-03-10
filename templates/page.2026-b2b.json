@@ -440,7 +440,7 @@
         "heading_size": "h1",
         "image_width": "full",
         "image_ratio": "adapt",
-        "button_label": "Schaltflächenbeschriftung",
+        "button_label": "",
         "button_link": "",
         "columns_desktop": 4,
         "column_alignment": "left",
@@ -448,8 +448,39 @@
         "color_scheme": "",
         "columns_mobile": "1",
         "swipe_on_mobile": false,
-        "padding_top": 36,
-        "padding_bottom": 36
+        "padding_top": 16,
+        "padding_bottom": 16
+      }
+    },
+    "rich_text_Y973DF": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_9EVDgn": {
+          "type": "heading",
+          "settings": {
+            "heading": "",
+            "heading_size": "h1"
+          }
+        },
+        "text_fX4Qxj": {
+          "type": "text",
+          "settings": {
+            "text": "<ul><li>8%–15 % Mengenrabatt für mehrere Arbeitsplätze</li><li>Bis zu 20 % Projektpreise für größere AufträgeIndividuelle Kalkulation je nach Bedarf</li><li>Transparent kalkuliert – ohne versteckte Kosten.</li></ul>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_9EVDgn",
+        "text_fX4Qxj"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
       }
     },
     "product_carousel": {
@@ -1126,6 +1157,7 @@
     "b2b_spezielle_rabatte_4cFxBE",
     "compare_simple_KneENq",
     "multicolumn_HyyLiV",
+    "rich_text_Y973DF",
     "product_carousel",
     "img_with_text_box_simplicity_qrzG6W",
     "maidesite_swiper_QhkQG8",
