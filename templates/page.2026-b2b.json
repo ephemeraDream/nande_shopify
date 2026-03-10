@@ -380,7 +380,7 @@
       "name": "compare simple",
       "settings": {
         "title": "<p>Unsere beliebtesten B2B-Modelle</p>",
-        "text": "",
+        "text": "<ul><li>T2 Pro Max – Maximale Stabilität, ideal für große Tischplatten</li><li>T2 Pro Plus – Bestseller für große Projekte</li><li>EL2 Plus Art – Premium-Design mit eleganter Optik</li><li>T2 Pro– Preisgünstige Wahl mit außergewöhnlicher Leistung</li></ul>",
         "link_text": "",
         "link_url": "",
         "padding_top": 120,
