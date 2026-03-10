@@ -628,23 +628,14 @@
         "text_cpLKh4": {
           "type": "text",
           "settings": {
-            "text": "<ul><li>🛡 Unverbindliche Angebotsanfrage. Anfrage ohne Kaufverpflichtung .Individuelle Beratung statt Standardangebot. Anpassungen jederzeit möglich.Sie entscheiden erst, wenn alle Fragen geklärt sind.</li><li>🔄 Testen vor größerer BestellungOptionaler Testschreibtisch oder PilotprojektPraxistest im eigenen ArbeitsalltagEntscheidung erst nach interner Rückmeldung.Sicherheit durch echte Erfahrung statt Annahmen.</li><li>🚚 Planbare LieferungLieferung abgestimmt auf Ihren ZeitplanTeil- oder Etappenlieferungen möglichEU-weite Logistik.Besonders geeignet bei Umzügen oder Büroprojekten.</li><li>🔧 Langfristige Nutzung & Service5 Jahre Garantie auf elektrische KomponentenErsatzteile langfristig verfügbarUnterstützung auch nach Projektabschluss. Investitionssicherheit über viele Jahre.</li></ul>",
+            "text": "<ul><li>🛡 <strong>Unverbindliche Angebotsanfrage: </strong>Anfrage ohne Kaufverpflichtung. Individuelle Beratung statt Standardangebot.  Anpassungen jederzeit möglich. Sie entscheiden erst, wenn alle Fragen geklärt sind.</li><li>🔄 Testen vor größerer BestellungOptionaler Testschreibtisch oder PilotprojektPraxistest im eigenen ArbeitsalltagEntscheidung erst nach interner Rückmeldung.Sicherheit durch echte Erfahrung statt Annahmen.</li><li>🚚 Planbare LieferungLieferung abgestimmt auf Ihren ZeitplanTeil- oder Etappenlieferungen möglichEU-weite Logistik.Besonders geeignet bei Umzügen oder Büroprojekten.</li><li>🔧 Langfristige Nutzung & Service5 Jahre Garantie auf elektrische KomponentenErsatzteile langfristig verfügbarUnterstützung auch nach Projektabschluss. Investitionssicherheit über viele Jahre.</li></ul>",
             "text_style": "body"
-          }
-        },
-        "button_wAJiAK": {
-          "type": "button",
-          "settings": {
-            "button_label": "Schaltflächenbeschriftung",
-            "button_link": "",
-            "button_style_secondary": false
           }
         }
       },
       "block_order": [
         "heading_ceYfGe",
-        "text_cpLKh4",
-        "button_wAJiAK"
+        "text_cpLKh4"
       ],
       "name": "t:sections.image-with-text.presets.name",
       "settings": {
