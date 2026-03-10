@@ -339,16 +339,10 @@
     "compare_simple_KneENq": {
       "type": "compare-simple",
       "blocks": {
-        "item_rtQPr7": {
+        "item_TyVfMb": {
           "type": "item",
           "settings": {
-            "select_product": "elektrisch-hohenverstellbarer-gestell-t1-basic"
-          }
-        },
-        "item_Wnfjbc": {
-          "type": "item",
-          "settings": {
-            "select_product": "maidesite-elektrisch-hohenverstellbarer-gestell-t2-pro"
+            "select_product": "maidesite-t2-pro-max-tischgestell-elektrisch-hohenverstellbar"
           }
         },
         "item_E3FYAD": {
@@ -363,26 +357,24 @@
             "select_product": "maidesite-th2-pro-plus-tischgestell-elektrisch-hohenverstellbar"
           }
         },
-        "item_TyVfMb": {
+        "item_Wnfjbc": {
           "type": "item",
           "settings": {
-            "select_product": "maidesite-t2-pro-max-tischgestell-elektrisch-hohenverstellbar"
+            "select_product": "maidesite-elektrisch-hohenverstellbarer-gestell-t2-pro"
           }
         },
         "item_bFArnY": {
           "type": "item",
-          "disabled": true,
           "settings": {
             "select_product": "maidesite-t4-pro-plus-vierbeinige-elliptische-saule-elektrisch-hohenverstellbares-gestell"
           }
         }
       },
       "block_order": [
-        "item_rtQPr7",
-        "item_Wnfjbc",
+        "item_TyVfMb",
         "item_E3FYAD",
         "item_thUd64",
-        "item_TyVfMb",
+        "item_Wnfjbc",
         "item_bFArnY"
       ],
       "name": "compare simple",
