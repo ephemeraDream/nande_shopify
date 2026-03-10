@@ -549,8 +549,8 @@
         "content_alignment": "center",
         "color_scheme": "",
         "full_width": true,
-        "padding_top": 40,
-        "padding_bottom": 52
+        "padding_top": 20,
+        "padding_bottom": 12
       }
     },
     "collapsible_content_FtNGRX": {
@@ -559,9 +559,9 @@
         "collapsible_row_4KbWdd": {
           "type": "collapsible_row",
           "settings": {
-            "heading": "Einklappbare Reihe",
-            "icon": "check_mark",
-            "row_content": "",
+            "heading": "🧾Argumente für Geschäftsleitung & Finance",
+            "icon": "none",
+            "row_content": "<ul><li>Langfristige Investition statt kurzfristiger Kosten</li><li>Reduzierung krankheitsbedingter Ausfälle</li><li>Nachhaltige Nutzung über viele Jahre</li><li>Planbare Gesamtinvestition</li></ul><p>Unsere Angebote sind übersichtlich aufgebaut und erleichtern die Budgetfreigabe.</p>",
             "page": ""
           }
         },
@@ -602,7 +602,7 @@
       "name": "t:sections.collapsible_content.presets.name",
       "settings": {
         "caption": "",
-        "heading": "Einfach intern begründen und abstimmen",
+        "heading": "",
         "heading_size": "h1",
         "heading_alignment": "center",
         "layout": "none",
@@ -611,7 +611,7 @@
         "open_first_collapsible_row": false,
         "image_ratio": "adapt",
         "desktop_layout": "image_second",
-        "padding_top": 36,
+        "padding_top": 16,
         "padding_bottom": 36
       }
     },
