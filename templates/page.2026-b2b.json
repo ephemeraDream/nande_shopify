@@ -483,6 +483,45 @@
         "padding_bottom": 52
       }
     },
+    "image_with_text_3TMn6B": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_JDKiV4": {
+          "type": "heading",
+          "settings": {
+            "heading": "So einfach funktioniert die Bestellung",
+            "heading_size": "h1"
+          }
+        },
+        "text_tBcdnd": {
+          "type": "text",
+          "settings": {
+            "text": "<p>1️⃣ <strong>Beratung:</strong> Wir besprechen Ihre Grundrissplanung und Oberflächenwünsche.</p><p>2️⃣ <strong>Angebotserstellung:</strong> Sie erhalten ein detailliertes Angebot inklusive Mehrwertsteuer.</p><p>3️⃣<strong>Terminplanung:</strong> Wir koordinieren einen Lieferzeitraum, der zu Ihren Bürozeiten passt.</p><p>4️⃣ <strong>Lieferung:</strong> Unser Logistikteam versendet Ihre Bestellung für eine zügige Ankunft in der EU.</p>",
+            "text_style": "body"
+          }
+        }
+      },
+      "block_order": [
+        "heading_JDKiV4",
+        "text_tBcdnd"
+      ],
+      "name": "t:sections.image-with-text.presets.name",
+      "settings": {
+        "image": "shopify://shop_images/B2B-flow-2.jpg",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "image_behavior": "none",
+        "content_layout": "no-overlap",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "mobile_content_alignment": "left",
+        "section_color_scheme": "",
+        "color_scheme": "",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
     "product_carousel": {
       "type": "product-carousel",
       "blocks": {
@@ -1158,6 +1197,7 @@
     "compare_simple_KneENq",
     "multicolumn_HyyLiV",
     "rich_text_Y973DF",
+    "image_with_text_3TMn6B",
     "product_carousel",
     "img_with_text_box_simplicity_qrzG6W",
     "maidesite_swiper_QhkQG8",
