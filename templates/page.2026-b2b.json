@@ -266,13 +266,24 @@
     "b2b_spezielle_rabatte_4cFxBE": {
       "type": "b2b-spezielle-rabatte",
       "blocks": {
+        "item_n4cwxK": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/Maidesite-T4-Pro-Plus-Business-Buro.jpg",
+            "title": "Jede Anfrage ist unterschiedlich",
+            "sub_title": "",
+            "description": "<p>Zur Orientierung zeigen wir typische Projektgrößen und wie die Zusammenarbeit in der Praxis abläuft. </p>",
+            "btn_text": "",
+            "link": ""
+          }
+        },
         "item_MeL6UA": {
           "type": "item",
           "settings": {
             "image": "shopify://shop_images/b2b_page.jpg",
-            "title": "3-10 Menschen",
-            "sub_title": "Bis zu 10% RABATT",
-            "description": "<ul><li>Kostenloser Versand,</li><li>Standard-Support</li></ul>",
+            "title": "Team oder Abteilung",
+            "sub_title": "5–19 Arbeitsplätze - 8% RABATT",
+            "description": "<ul><li>Persönliche Produktempfehlung passend zum Einsatz</li><li>Mengenkonditionen bereits ab kleinen Stückzahlen</li><li>Optionaler Testschreibtisch</li><li>Schnelle Lieferung aus Deutschland-Lager</li></ul>",
             "btn_text": "Jetzt angebot anfordern",
             "link": "#"
           }
@@ -312,6 +323,7 @@
         }
       },
       "block_order": [
+        "item_n4cwxK",
         "item_MeL6UA",
         "item_fUgPXH",
         "item_TTjgh8",
