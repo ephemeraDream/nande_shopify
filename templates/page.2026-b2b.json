@@ -586,8 +586,8 @@
         "collapsible_row_jaQEHU": {
           "type": "collapsible_row",
           "settings": {
-            "heading": "Einklappbare Reihe",
-            "icon": "check_mark",
+            "heading": "🗎Unterlagen für Ihre interne Abstimmung",
+            "icon": "none",
             "row_content": "",
             "page": ""
           }
