@@ -568,9 +568,9 @@
         "collapsible_row_wiyaNy": {
           "type": "collapsible_row",
           "settings": {
-            "heading": "Einklappbare Reihe",
-            "icon": "check_mark",
-            "row_content": "",
+            "heading": "👩‍💼 Argumente für HR & Mitarbeiterzufriedenheit",
+            "icon": "none",
+            "row_content": "<ul><li>Förderung von Gesundheit und Bewegung im Arbeitsalltag</li><li>Modernes Arbeitsumfeld steigert Arbeitgeberattraktivität</li><li>Unterstützung hybrider Arbeitsmodelle</li><li>Positives Signal an bestehende und neue Mitarbeitende</li></ul>",
             "page": ""
           }
         },
