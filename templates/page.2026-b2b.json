@@ -303,9 +303,9 @@
           "type": "item",
           "settings": {
             "image": "shopify://shop_images/b2b_04.webp",
-            "title": "31-50 Menschen",
-            "sub_title": "Bis zu 20% RABATT",
-            "description": "<ul><li> Mehrprodukt-Rabatte</li><li> Immer verfugbar</li><li> Flexible und kostenlose</li><li>Lieferung</li><li>Zusatzliche kostenlose Ergonomischer Stuhl</li></ul>",
+            "title": "Standortstandardisierung",
+            "sub_title": "50-99 Menschen - 15% RABATT",
+            "description": "<p><strong>Was Maidesite bietet:</strong></p><ul><li>Individuelle Projektbetreuung</li><li>Staffel- oder Etappenlieferung möglich</li><li>Einheitliche technische Standards</li></ul><p>Besonders geeignet für <strong>strukturierte</strong> <strong>Mittelstandsunternehmen</strong>.</p>",
             "btn_text": "Jetzt angebot anfordern",
             "link": "#"
           }
