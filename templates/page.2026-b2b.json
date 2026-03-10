@@ -577,9 +577,9 @@
         "collapsible_row_btRG8U": {
           "type": "collapsible_row",
           "settings": {
-            "heading": "Einklappbare Reihe",
-            "icon": "check_mark",
-            "row_content": "",
+            "heading": "🛠 Argumente für Einkauf & Organisation",
+            "icon": "none",
+            "row_content": "<ul><li>Einheitliche Produkte für einfache Nachbestellung</li><li>Klare Lieferplanung</li><li>EU-weite Logistik</li><li>Langfristige Ersatzteilverfügbarkeit</li></ul>",
             "page": ""
           }
         },
