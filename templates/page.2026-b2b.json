@@ -1246,9 +1246,9 @@
       "name": "Contact Form Five",
       "settings": {
         "style": "style2",
-        "title": "Optimieren Sie Ihre Büros mit Maidesite – Wir unterstützen Sie von Anfang bis Ende!",
-        "desc": "",
-        "text_content": "<p>Ergonomische Arbeitsplätze, die Ihre Mitarbeiter begeistern und Ihre Produktivität steigern. Erhalten Sie jetzt ein unverbindliches Angebot und profitieren Sie von unserer umfassenden Beratung und Betreuung</p><p>Sie können das gewünschte<strong> Produktmodell </strong>und die <strong>Menge</strong> eingeben, um den genauen Preis und die verfügbare Zeit zu erfahren.</p>",
+        "title": "Bereit, Ihren Arbeitsplatz aufzuwerten?",
+        "desc": "Schließen Sie sich hunderten deutschen Unternehmen an, die zu einer gesünderen Arbeitsweise wechseln.",
+        "text_content": "<p>Ergonomische Arbeitsplätze, die Ihr Team begeistern und die Produktivität steigern.<br/>Fordern Sie noch heute ein unverbindliches Angebot an und profitieren Sie von unserer umfassenden Beratung und Betreuung.<br/>Geben Sie bitte gewünschte Produktmodelle und Mengen ein, um präzise Preis- und Verfügbarkeitsinformationen zu erhalten.</p>",
         "btn_text": "Absenden",
         "success_message": "Your message has been sent successfully.",
         "error_message": "There was an error sending the form. Please check your input.",
