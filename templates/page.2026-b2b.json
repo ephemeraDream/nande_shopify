@@ -615,6 +615,54 @@
         "padding_bottom": 36
       }
     },
+    "image_with_text_6UNkBQ": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_ceYfGe": {
+          "type": "heading",
+          "settings": {
+            "heading": "Ihre Entscheidung bleibt flexibel und planbar",
+            "heading_size": "h1"
+          }
+        },
+        "text_cpLKh4": {
+          "type": "text",
+          "settings": {
+            "text": "<ul><li>🛡 Unverbindliche Angebotsanfrage. Anfrage ohne Kaufverpflichtung .Individuelle Beratung statt Standardangebot. Anpassungen jederzeit möglich.Sie entscheiden erst, wenn alle Fragen geklärt sind.</li><li>🔄 Testen vor größerer BestellungOptionaler Testschreibtisch oder PilotprojektPraxistest im eigenen ArbeitsalltagEntscheidung erst nach interner Rückmeldung.Sicherheit durch echte Erfahrung statt Annahmen.</li><li>🚚 Planbare LieferungLieferung abgestimmt auf Ihren ZeitplanTeil- oder Etappenlieferungen möglichEU-weite Logistik.Besonders geeignet bei Umzügen oder Büroprojekten.</li><li>🔧 Langfristige Nutzung & Service5 Jahre Garantie auf elektrische KomponentenErsatzteile langfristig verfügbarUnterstützung auch nach Projektabschluss. Investitionssicherheit über viele Jahre.</li></ul>",
+            "text_style": "body"
+          }
+        },
+        "button_wAJiAK": {
+          "type": "button",
+          "settings": {
+            "button_label": "Schaltflächenbeschriftung",
+            "button_link": "",
+            "button_style_secondary": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_ceYfGe",
+        "text_cpLKh4",
+        "button_wAJiAK"
+      ],
+      "name": "t:sections.image-with-text.presets.name",
+      "settings": {
+        "image": "shopify://shop_images/thestandingdesk-MRxUCF1CYsI-unsplash_c87a3d65-de54-43b4-a876-5ae92cb5c9e2.jpg",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "text_first",
+        "image_behavior": "none",
+        "content_layout": "no-overlap",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "mobile_content_alignment": "left",
+        "section_color_scheme": "",
+        "color_scheme": "",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
     "product_carousel": {
       "type": "product-carousel",
       "blocks": {
@@ -1293,6 +1341,7 @@
     "image_with_text_3TMn6B",
     "rich_text_bhtDmL",
     "collapsible_content_FtNGRX",
+    "image_with_text_6UNkBQ",
     "product_carousel",
     "img_with_text_box_simplicity_qrzG6W",
     "maidesite_swiper_QhkQG8",
