@@ -283,7 +283,7 @@
             "image": "shopify://shop_images/b2b_page.jpg",
             "title": "Team oder Abteilung",
             "sub_title": "5–19 Arbeitsplätze - 8% RABATT",
-            "description": "<ul><li>Persönliche Produktempfehlung passend zum Einsatz</li><li>Mengenkonditionen bereits ab kleinen Stückzahlen</li><li>Optionaler Testschreibtisch</li><li>Schnelle Lieferung aus Deutschland-Lager</li></ul>",
+            "description": "<p><strong>Was Maidesite bietet</strong>:</p><ul><li>Persönliche Produktempfehlung passend zum Einsatz</li><li>Mengenkonditionen bereits ab kleinen Stückzahlen</li><li>Optionaler Testschreibtisch</li><li>Schnelle Lieferung aus Deutschland-Lager</li></ul><p>Ideal für <strong>Startups</strong>, <strong>Agenturen</strong> oder <strong>wachsende Teams</strong>.</p>",
             "btn_text": "Jetzt angebot anfordern",
             "link": "#"
           }
@@ -292,9 +292,9 @@
           "type": "item",
           "settings": {
             "image": "shopify://shop_images/b2b.jpg",
-            "title": "11-30 Menschen",
-            "sub_title": "Bis zu 15% RABATT",
-            "description": "<ul><li> Immer auf Lager</li><li>Flexibler Versand</li><li> Kostenloser Versand</li><li>Zusatzliches kostenloses Zubehor</li></ul>",
+            "title": "Büroerweiterung oder Modernisierung",
+            "sub_title": "20–49 Arbeitsplätze - 12% RABATT",
+            "description": "<p><strong>Was Maidesite bietet:</strong></p><ul><li>Projektpreise für mittlere Bestellmengen</li><li>Einheitliche Modellserien für konsistente Ausstattung</li><li>Lieferplanung abgestimmt auf Umbau oder Umzug</li><li>Nachbestellbarkeit identischer Modelle</li></ul><p><strong>Häufige</strong> <strong>Projektgröße</strong> im deutschen Mittelstand.</p>",
             "btn_text": "Jetzt angebot anfordern",
             "link": "#"
           }
