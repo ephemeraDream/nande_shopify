@@ -641,20 +641,20 @@
     "img_with_foldtext_RcBrkw": {
       "type": "img-with-foldtext",
       "blocks": {
-        "foldtext_HQhGDk": {
-          "type": "foldtext",
-          "settings": {
-            "title": "<h3>Klaviertasten-Design</h3>",
-            "description": "Die Tasten sind bewusst im Klavierstil gestaltet und bieten ein deutliches haptisches Feedback. Jede Eingabe ist präzise kontrollierbar und leicht nachvollziehbar.",
-            "image": "shopify://shop_images/13_a7ea390c-602b-4c8e-909b-0a01750a5c07.jpg"
-          }
-        },
         "foldtext_eyYKRM": {
           "type": "foldtext",
           "settings": {
             "title": "<h3>18W USB-C Ladeanschluss</h3>",
             "description": "Direkt am Bedienfeld integrierter Schnellladeanschluss für Smartphone, Kopfhörer oder andere Geräte – ohne zusätzliches Netzteil auf dem Tisch.",
             "image": "shopify://shop_images/14_-_18w_TC.jpg"
+          }
+        },
+        "foldtext_HQhGDk": {
+          "type": "foldtext",
+          "settings": {
+            "title": "<h3>Klaviertasten-Design</h3>",
+            "description": "Die Tasten sind bewusst im Klavierstil gestaltet und bieten ein deutliches haptisches Feedback. Jede Eingabe ist präzise kontrollierbar und leicht nachvollziehbar.",
+            "image": "shopify://shop_images/13_a7ea390c-602b-4c8e-909b-0a01750a5c07.jpg"
           }
         },
         "foldtext_iGWkAs": {
@@ -683,8 +683,8 @@
         }
       },
       "block_order": [
-        "foldtext_HQhGDk",
         "foldtext_eyYKRM",
+        "foldtext_HQhGDk",
         "foldtext_iGWkAs",
         "foldtext_HWP39G",
         "foldtext_qmirCr"
