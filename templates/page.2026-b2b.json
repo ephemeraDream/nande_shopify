@@ -515,11 +515,11 @@
         "content_layout": "overlap",
         "desktop_content_position": "middle",
         "desktop_content_alignment": "left",
-        "mobile_content_alignment": "left",
+        "mobile_content_alignment": "center",
         "section_color_scheme": "",
         "color_scheme": "",
         "padding_top": 36,
-        "padding_bottom": 36
+        "padding_bottom": 16
       }
     },
     "rich_text_bhtDmL": {
@@ -651,7 +651,7 @@
         "section_color_scheme": "",
         "color_scheme": "",
         "padding_top": 36,
-        "padding_bottom": 16
+        "padding_bottom": 8
       }
     },
     "product_carousel": {
