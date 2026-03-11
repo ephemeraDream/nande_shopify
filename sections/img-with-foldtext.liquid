@@ -1,54 +1,128 @@
 {{ 'section-img-with-foldtext.css' | asset_url | stylesheet_tag }}
+
 {%- style -%}
-  .section-{{ section.id }}-padding {
-    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
-    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
-  }
+.section-{{ section.id }}-padding {
+  padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+  padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+}
 {%- endstyle -%}
 
-<div class="img_with_foldtext_section padding-sider section-{{ section.id }}-padding" id="{{ section.settings.spec_id }}">
+<div class="img_with_foldtext_section padding-sider section-{{ section.id }}-padding" data-section-id="{{ section.id }}" id="{{ section.settings.spec_id }}">
+
   <div class="img_with_foldtext">
-    <h2 class="img_with_foldtext_title center" data-translate-node>{{ section.settings.title }}</h2>
+
+    <h2 class="img_with_foldtext_title center" data-translate-node>
+      {{ section.settings.title }}
+    </h2>
+
     <div class="img_with_foldtext_contain">
+
+      <!-- 左侧图片 -->
       <div class="img_with_foldtext_left">
         {% for block in section.blocks %}
           {% if block.settings.image %}
-            {% assign img_class = 'img_with_foldtext_image' %}{% if forloop.first %}{% assign img_class = img_class | append: ' active' %}{% endif %}
-            {{ block.settings.image | image_url: width: 800 | image_tag: class: img_class, alt: block.settings.title }}
+            {% assign img_class = 'img_with_foldtext_image' %}
+            {% if forloop.first %}
+              {% assign img_class = img_class | append: ' active' %}
+            {% endif %}
+
+            {{ block.settings.image
+              | image_url: width: 800
+              | image_tag:
+              class: img_class,
+              alt: block.settings.title
+            }}
           {% endif %}
         {% endfor %}
       </div>
+
+      <!-- 右侧折叠 -->
       <div class="img_with_foldtext_contain_right">
+
         {% for block in section.blocks %}
-          <div class="img_with_foldtext_item{% if forloop.first %} active{% endif %}">
-            <div class="img_with_foldtext_item_head">
-              <div class="img_with_foldtext_question" data-translate-node>{{ block.settings.title }}</div>
-              <div class="img_with_foldtext_icon" close>{{- 'icon-plus.svg' | inline_asset_content -}}</div>
-              <div class="img_with_foldtext_icon" open>{{- 'icon-filters-close.svg' | inline_asset_content -}}</div>
+
+        <div class="img_with_foldtext_item{% if forloop.first %} active{% endif %}">
+
+          <div class="img_with_foldtext_item_head">
+
+            <div class="img_with_foldtext_question" data-translate-node>
+              {{ block.settings.title }}
             </div>
-            <div class="img_with_foldtext_answer" data-translate-node>{{ block.settings.description }}</div>
+
+            <div class="img_with_foldtext_icon" close>
+              {{ 'icon-plus.svg' | inline_asset_content }}
+            </div>
+
+            <div class="img_with_foldtext_icon" open>
+              {{ 'icon-filters-close.svg' | inline_asset_content }}
+            </div>
+
           </div>
+
+          <div class="img_with_foldtext_answer" data-translate-node>
+            {{ block.settings.description }}
+          </div>
+
+        </div>
+
         {% endfor %}
+
       </div>
+
     </div>
+
   </div>
+
 </div>
 
+
 <script>
-  (function() {
-    const isEnglish = window.location.pathname.includes('/en') || document.documentElement.lang.includes('en');
-    
+(function () {
+
+  function initImgFoldSection(section) {
+
+    if (!section) return;
+
+    const items = section.querySelectorAll('.img_with_foldtext_item');
+    const images = section.querySelectorAll('.img_with_foldtext_image');
+
+    items.forEach((item, idx) => {
+
+      const head = item.querySelector('.img_with_foldtext_item_head');
+      if (!head) return;
+
+      head.addEventListener('click', () => {
+
+        items.forEach(i => i.classList.remove('active'));
+        images.forEach(img => img.classList.remove('active'));
+
+        item.classList.add('active');
+
+        if (images[idx]) {
+          images[idx].classList.add('active');
+        }
+
+      });
+
+    });
+
+
+    /* 自动翻译逻辑 */
+
+    const isEnglish =
+      window.location.pathname.includes('/en') ||
+      document.documentElement.lang.includes('en');
+
     if (isEnglish) {
-      // 找到所有标记了需要翻译的节点
-      const els = document.querySelectorAll('[data-translate-node]');
+
+      const els = section.querySelectorAll('[data-translate-node]');
+
       els.forEach(el => {
         el.setAttribute('lang', 'de');
         el.setAttribute('translate', 'yes');
-        // 强行触发布局刷新，引导翻译引擎
         el.style.visibility = 'visible';
       });
-      
-      // 如果你希望真正全自动，可以在控制台检测到没有被翻译时，执行一个简单的词典替换
+
       const dictionary = {
         "Garantie": "Warranty",
         "Jahre": "Years",
@@ -56,49 +130,119 @@
         "Versand": "Shipping",
         "kostenlos": "free"
       };
-      
+
       els.forEach(el => {
+
         let html = el.innerHTML;
+
         for (let key in dictionary) {
+
           let reg = new RegExp(key, 'gi');
+
           html = html.replace(reg, dictionary[key]);
+
         }
+
         el.innerHTML = html;
+
       });
+
     }
 
-    // Swiper/Tab 逻辑保持不变
-    const section = document.querySelector('.img_with_foldtext_section');
-    const items = section.querySelectorAll('.img_with_foldtext_item');
-    const images = section.querySelectorAll('.img_with_foldtext_image');
-    items.forEach((item, idx) => {
-      item.querySelector('.img_with_foldtext_item_head').addEventListener('click', () => {
-        items.forEach(i => i.classList.remove('active'));
-        images.forEach(img => img.classList.remove('active'));
-        item.classList.add('active');
-        if(images[idx]) images[idx].classList.add('active');
-      });
+  }
+
+
+  function initAllSections() {
+
+    const sections = document.querySelectorAll('.img_with_foldtext_section');
+
+    sections.forEach(section => {
+      initImgFoldSection(section);
     });
-  })();
+
+  }
+
+
+  document.addEventListener('DOMContentLoaded', initAllSections);
+
+
+  document.addEventListener('shopify:section:load', function(e) {
+
+    const section = e.target.querySelector('.img_with_foldtext_section');
+
+    initImgFoldSection(section);
+
+  });
+
+})();
 </script>
+
 
 {% schema %}
 {
   "name": "img with foldtext",
   "settings": [
-    { "type": "text", "id": "spec_id", "label": "specId" },
-    { "type": "richtext", "id": "title", "label": "title" },
-    { "type": "range", "id": "padding_top", "min": 0, "max": 120, "step": 4, "unit": "px", "label": "Top", "default": 80 },
-    { "type": "range", "id": "padding_bottom", "min": 0, "max": 120, "step": 4, "unit": "px", "label": "Bottom", "default": 80 }
+    {
+      "type": "text",
+      "id": "spec_id",
+      "label": "specId"
+    },
+    {
+      "type": "richtext",
+      "id": "title",
+      "label": "title"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 120,
+      "step": 4,
+      "unit": "px",
+      "label": "Top",
+      "default": 80
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 120,
+      "step": 4,
+      "unit": "px",
+      "label": "Bottom",
+      "default": 80
+    }
   ],
   "blocks": [
     {
       "type": "foldtext",
       "name": "foldtext",
       "settings": [
-        { "type": "richtext", "id": "title", "label": "title" },
-        { "type": "liquid", "id": "description", "label": "description" },
-        { "type": "image_picker", "id": "image", "label": "image" }
+        {
+          "type": "richtext",
+          "id": "title",
+          "label": "title"
+        },
+        {
+          "type": "liquid",
+          "id": "description",
+          "label": "description"
+        },
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "image"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Image with Fold Text",
+      "blocks": [
+        { "type": "foldtext" },
+        { "type": "foldtext" },
+        { "type": "foldtext" }
       ]
     }
   ]
