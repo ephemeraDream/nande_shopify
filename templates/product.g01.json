@@ -1046,6 +1046,7 @@
     },
     "recommended_products_yEVJQ9": {
       "type": "recommended-products",
+      "disabled": true,
       "name": "recommended products",
       "settings": {
         "spec_id": "",
