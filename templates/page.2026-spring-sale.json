@@ -79,6 +79,7 @@
     },
     "activity_products_normal_VdAH6n": {
       "type": "activity-products-normal",
+      "disabled": true,
       "name": "activity products normal",
       "settings": {
         "specId": "",
