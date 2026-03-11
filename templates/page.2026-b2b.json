@@ -50,13 +50,13 @@
         "show_email": true,
         "mail_placeholder": "Email*",
         "show_company": true,
-        "company_placeholder": "Company Name",
+        "company_placeholder": "Firmenname",
         "show_name": true,
         "name_placeholder": "Name",
         "show_phone": false,
         "phone_placeholder": "Phone",
         "show_message": true,
-        "message_placeholder": "Message"
+        "message_placeholder": "Nachricht"
       }
     },
     "b2b_spezielle_rabatte_kcjgjC": {
@@ -1255,7 +1255,7 @@
         "show_email": true,
         "mail_placeholder": "Email*",
         "show_company": true,
-        "company_placeholder": "Company Name",
+        "company_placeholder": "Firmenname",
         "show_name": true,
         "name_placeholder": "Name",
         "show_phone": true,
