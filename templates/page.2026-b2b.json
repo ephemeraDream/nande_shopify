@@ -259,8 +259,8 @@
       "name": "img with text tab",
       "settings": {
         "title": "Passend für jede Unternehmensgröße",
-        "padding_top": 120,
-        "padding_bottom": 120
+        "padding_top": 60,
+        "padding_bottom": 60
       }
     },
     "b2b_spezielle_rabatte_4cFxBE": {
