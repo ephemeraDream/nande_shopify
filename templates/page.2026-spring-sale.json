@@ -129,7 +129,7 @@
         "text_jAtwCj": {
           "type": "text",
           "settings": {
-            "text": "Neu",
+            "text": "<strong>Neuheit: Unser klassischer 4-Fuß-Tisch ist da!</strong>",
             "text_style": "body"
           }
         },
@@ -183,7 +183,7 @@
         "color_scheme": "",
         "secondary_background": false,
         "media_size": "small",
-        "constrain_to_viewport": true,
+        "constrain_to_viewport": false,
         "media_fit": "contain",
         "media_position": "left",
         "image_zoom": "lightbox",
