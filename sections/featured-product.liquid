@@ -1,12 +1,57 @@
+<section id="FeaturedProduct-{{ section.id }}" class="featured-product">
+
+<div class="page-width">
+
+<div class="product-layout">
+
+<div class="product-media">
+{{ product.featured_image | image_url: width: 900 | image_tag }}
+</div>
+
+<div class="product-info">
+
+<h1 class="product-title">
+{{ product.title }}
+</h1>
+
+<div class="product-price">
+{{ product.price | money }}
+</div>
+
+<form method="post" action="/cart/add">
+
+{% if product.variants.size > 1 %}
+<select name="id" class="variant-select">
+{% for variant in product.variants %}
+<option value="{{ variant.id }}">
+{{ variant.title }}
+</option>
+{% endfor %}
+</select>
+{% else %}
+<input type="hidden" name="id" value="{{ product.variants.first.id }}">
+{% endif %}
+
+<input type="number" name="quantity" value="1" min="1" class="qty-input">
+
+<button type="submit" class="add-to-cart">
+Add to cart
+</button>
+
+</form>
+
+
 <div class="spring-offer-bar">
 
 <span class="spring-offer-text">
-🌸 Spring Offer
+Spring Sale
 </span>
 
 <div class="spring-offer-code">
 
-<span id="springCode">SPRING15</span>
+<span id="springCode">
+SPRING15
+</span>
 
 <button class="spring-copy-btn" onclick="copySpringCode()">
 Copy
@@ -16,7 +61,55 @@ Copy
 
 </div>
 
+</div>
+
+</div>
+
+</div>
+
 <style>
+
+.product-layout{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:40px;
+align-items:start;
+}
+
+.product-title{
+font-size:28px;
+margin-bottom:10px;
+}
+
+.product-price{
+font-size:20px;
+margin-bottom:20px;
+}
+
+.variant-select{
+width:100%;
+padding:10px;
+margin-bottom:10px;
+}
+
+.qty-input{
+width:80px;
+padding:8px;
+margin-bottom:12px;
+}
+
+.add-to-cart{
+background:#111;
+color:#fff;
+border:none;
+padding:12px 20px;
+cursor:pointer;
+width:100%;
+}
+
+.add-to-cart:hover{
+background:#333;
+}
 
 .spring-offer-bar{
 display:flex;
@@ -30,20 +123,10 @@ background:#fafafa;
 font-size:13px;
 }
 
-.spring-offer-text{
-font-weight:500;
-color:#444;
-}
-
 .spring-offer-code{
 display:flex;
 align-items:center;
 gap:8px;
-}
-
-#springCode{
-font-weight:600;
-letter-spacing:1px;
 }
 
 .spring-copy-btn{
@@ -83,3 +166,12 @@ btn.innerText="Copy";
 }
 
 </script>
+
+{% schema %}
+{
+"name": "Featured product",
+"settings": []
+}
+{% endschema %}
+
+</section>
