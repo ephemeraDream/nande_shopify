@@ -1,0 +1,162 @@
+<section class="promo-product">
+
+<div class="page-width">
+
+{% assign product = all_products[section.settings.product] %}
+
+<div class="promo-layout">
+
+<div class="promo-image">
+{% if product %}
+{{ product.featured_image | image_url: width: 900 | image_tag }}
+{% endif %}
+</div>
+
+<div class="promo-info">
+
+{% if product %}
+
+<h2 class="promo-title">
+{{ product.title }}
+</h2>
+
+<div class="promo-price">
+{{ product.price | money }}
+</div>
+
+<form method="post" action="/cart/add">
+
+<input type="hidden" name="id" value="{{ product.selected_or_first_available_variant.id }}">
+
+<button type="submit" class="promo-cart">
+Add to cart
+</button>
+
+</form>
+
+{% endif %}
+
+<div class="spring-offer">
+
+<span>Spring Sale</span>
+
+<div class="spring-code">
+
+<span id="springCode">
+SPRING15
+</span>
+
+<button onclick="copySpringCode()" class="spring-copy">
+Copy
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+
+<style>
+
+.promo-layout{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:40px;
+align-items:center;
+}
+
+.promo-title{
+font-size:28px;
+margin-bottom:10px;
+}
+
+.promo-price{
+font-size:20px;
+margin-bottom:20px;
+}
+
+.promo-cart{
+background:#111;
+color:#fff;
+border:none;
+padding:12px 20px;
+cursor:pointer;
+}
+
+.spring-offer{
+display:flex;
+justify-content:space-between;
+align-items:center;
+margin-top:14px;
+padding:10px 14px;
+border:1px solid #e6e6e6;
+border-radius:6px;
+background:#fafafa;
+font-size:13px;
+}
+
+.spring-code{
+display:flex;
+gap:8px;
+align-items:center;
+}
+
+.spring-copy{
+border:1px solid #111;
+background:#111;
+color:#fff;
+font-size:12px;
+padding:4px 10px;
+cursor:pointer;
+}
+
+</style>
+
+
+<script>
+
+function copySpringCode(){
+
+var code=document.getElementById("springCode").innerText;
+
+navigator.clipboard.writeText(code);
+
+var btn=document.querySelector(".spring-copy");
+
+btn.innerText="Copied";
+
+setTimeout(function(){
+
+btn.innerText="Copy";
+
+},2000);
+
+}
+
+</script>
+
+
+{% schema %}
+{
+"name": "Promo Product",
+"settings": [
+{
+"type": "product",
+"id": "product",
+"label": "Select product"
+}
+],
+"presets": [
+{
+"name": "Promo Product"
+}
+]
+}
+{% endschema %}
+
+</section>
