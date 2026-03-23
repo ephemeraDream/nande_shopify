@@ -26,7 +26,7 @@
       "name": "collection compare",
       "settings": {
         "show_banner": true,
-        "products_per_page": 6,
+        "products_per_page": 9,
         "enable_compare": true,
         "show_layout_toggle": true,
         "image_aspect_ratio": "1",
