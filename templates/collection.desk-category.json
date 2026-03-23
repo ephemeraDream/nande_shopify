@@ -391,7 +391,7 @@
         "more_faqs_link": "",
         "contact_us": false,
         "contact_us_link": "",
-        "padding_top": 120,
+        "padding_top": 60,
         "padding_bottom": 60,
         "background_color": "rgba(0,0,0,0)"
       }
