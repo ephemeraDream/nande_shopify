@@ -348,8 +348,8 @@
         "foldtext_HWP39G": {
           "type": "foldtext",
           "settings": {
-            "title": "<h3>Verstärkte Säulen</h3>",
-            "description": "<ul><li>Die Standbeine verfügen über eine erhöhte Wandstärke und besonders robuste Stahlprofile.\nMehr Material = mehr Stabilität, bessere Lastverteilung und eine langlebige Gesamtstruktur.</li></ul>",
+            "title": "<p>Verstärkte Säulen für maximale Lasten</p>",
+            "description": "<ul><li>Unsere Standbeine setzen Maßstäbe: Mit einer erhöhten Wandstärke und besonders robusten Stahlprofilen folgt der T2 Pro dem Prinzip: Mehr Material bedeutet mehr Stabilität. Das Ergebnis ist eine optimierte Lastverteilung und eine extrem langlebige Gesamtstruktur, die niemals nachgibt.</li></ul>",
             "image": "shopify://shop_images/A_-_8.jpg"
           }
         },
