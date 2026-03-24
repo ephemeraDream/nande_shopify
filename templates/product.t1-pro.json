@@ -509,8 +509,8 @@
           "settings": {
             "tabname": "18W USB-C Ports",
             "sub_title": "",
-            "title": "<p><strong>18W USB-C Ports </strong></p>",
-            "description": "<div class=\"controller-features\">\n  <ul>\n    <li>Smartphones, Tablets oder Kopfhörer jederzeit griffbereit laden.\nDie Ports versorgen deine Geräte zuverlässig, ohne zusätzliches Ladegerät auf dem Tisch.</li>\n  </ul>\n</div>\n\n<style>\n  /* 让这个模块内的 li 左对齐，不影响其他地方 */\n  .controller-features ul li {\n    text-align: left !important;\n    list-style-position: inside;\n  }\n</style>",
+            "title": "<p>18W USB-C Ladeanschluss</p>",
+            "description": "<div class=\"controller-features\">\n  <ul>\n    <li><br>Smartphones, Tablets oder Kopfhörer jederzeit griffbereit laden:</br> Der integrierte Port versorgt Ihre Geräte zuverlässig mit Strom – ganz ohne zusätzliches Ladegerät auf dem Tisch. So bleibt Ihre Arbeitsfläche frei von unnötigem Kabelsalat.</li>\n  </ul>\n</div>\n\n<style>\n  /* 让这个模块内的 li 左对齐，不影响其他地方 */\n  .controller-features ul li {\n    text-align: left !important;\n    list-style-position: inside;\n  }\n</style>",
             "file_type": "image",
             "file_image": "shopify://shop_images/12_6f948669-8d83-4f28-bcea-edad5bceb9b4.jpg",
             "video_url": "",
