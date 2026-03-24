@@ -356,8 +356,8 @@
         "foldtext_iGWkAs": {
           "type": "foldtext",
           "settings": {
-            "title": "<p>Minimale Toleranzen</p>",
-            "description": "<ul><li>Der Abstand zwischen Innen- und Außensäule wurde deutlich reduziert.\nDie enge Passform verringert seitliches Spiel während der Höhenverstellung und sorgt für eine ruhigere, angenehm solide Bewegung..</li></ul>",
+            "title": "<p>Minimale Toleranzen – Maximale Laufruhe</p>",
+            "description": "<ul><li>Präzision bis ins Detail: Der Abstand zwischen Innen- und Außensäule wurde auf ein Minimum reduziert. Diese ultra-enge Passform eliminiert seitliches Spiel während der Höhenverstellung und sorgt für eine außergewöhnlich ruhige, solide und wackelfreie Bewegung – in jeder Position.</li></ul>",
             "image": "shopify://shop_images/A_-_9.jpg"
           }
         }
