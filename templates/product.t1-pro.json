@@ -265,7 +265,7 @@
           "type": "file_with_text",
           "settings": {
             "title": "<p>Solide und stabil</p>",
-            "description": "<p>•<strong>In Bewegung:</strong>Sanftes Heben & Senken ohne Wackeln – der Kartenstapel bleibt stehen.<br/>•<strong>Im Stillstand:</strong>Hohe Tragkraft, kein Schwanken bei voller Last.<br/>•<strong>Auf höchster Stufe:</strong>Auch ganz oben ruhig – ideal zum Arbeiten.</p>",
+            "description": "<ul><li><strong>In Bewegung:</strong> Sanftes Heben und Senken ohne Wackeln – selbst ein Kartenstapel bleibt sicher stehen.</li><li><strong>Im Stillstand:</strong> Hohe Tragkraft und maximale Standfestigkeit, kein Schwanken unter Last.</li><li><strong>Auf höchster Stufe:</strong> Auch in der maximalen Arbeitshöhe absolut ruhig – ideal für fokussiertes Arbeiten.</li></ul>",
             "file_type": "image",
             "file_image": "shopify://shop_images/2_56026fb1-66f6-4892-bb52-ace7eeecd8d8.jpg",
             "video_url": ""
@@ -274,8 +274,8 @@
         "file_with_text_f9yPAD": {
           "type": "file_with_text",
           "settings": {
-            "title": "<p>Bürotisch belastbar bis 100 kg</p>",
-            "description": "<p><strong>Ideal für schwere Arbeitsplätze:</strong>Die hohe Tragkraft von 100 kg bietet genügend Reserven für große Monitore, PCs, Studioequipment oder anspruchsvolle Setups – perfekt für Profis und Power-User.</p>",
+            "title": "<p>Belastbar bis 100 kg</p>",
+            "description": "<p>Ideal für anspruchsvolle Arbeitsplätze: Die hohe Tragkraft von <strong>100 kg</strong> bietet reichlich Reserven für große Monitore, PCs, Studio-Equipment oder komplexe Setups</p>",
             "file_type": "image",
             "file_image": "shopify://shop_images/4_-_100KG.jpg",
             "video_url": ""
