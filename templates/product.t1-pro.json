@@ -281,13 +281,13 @@
             "video_url": ""
           }
         },
-        "file_with_text_B39ehq": {
+        "file_with_text_THJTyK": {
           "type": "file_with_text",
           "settings": {
-            "title": "<p>Smart Controller</p>",
-            "description": "<p><strong>Alles steuern – einfach, schnell, intuitiv:</strong><br/>Mit vier Memory-Positionen, 1 Ladeanschlüssen, Kindersicherung steuern Sie Ihren Arbeitsplatz komfortabel und präzise – mit nur einem Fingertipp.</p>",
+            "title": "<p>Qualität geprüft</p>",
+            "description": "<p><strong>Über 10.000 Belastungstests:</strong>Jeder Tischrahmen wird strengen Qualitäts- und Belastungstests unterzogen. Mehr als 10.000 Zyklen garantieren eine langlebige, robuste und zuverlässige Performance im täglichen Einsatz.</p>",
             "file_type": "image",
-            "file_image": "shopify://shop_images/3_18c4fb21-3ef4-4f38-925b-776c22de6551.jpg",
+            "file_image": "shopify://shop_images/5_9ec8c6d8-efcf-41d0-8d8a-080e4a0bdf31.jpg",
             "video_url": ""
           }
         },
@@ -311,13 +311,13 @@
             "video_url": ""
           }
         },
-        "file_with_text_THJTyK": {
+        "file_with_text_B39ehq": {
           "type": "file_with_text",
           "settings": {
-            "title": "<p>Qualität geprüft</p>",
-            "description": "<p><strong>Über 10.000 Belastungstests:</strong>Jeder Tischrahmen wird strengen Qualitäts- und Belastungstests unterzogen. Mehr als 10.000 Zyklen garantieren eine langlebige, robuste und zuverlässige Performance im täglichen Einsatz.</p>",
+            "title": "<p>Smart Controller</p>",
+            "description": "<p><strong>Alles steuern – einfach, schnell, intuitiv:</strong><br/>Mit vier Memory-Positionen, 1 Ladeanschlüssen, Kindersicherung steuern Sie Ihren Arbeitsplatz komfortabel und präzise – mit nur einem Fingertipp.</p>",
             "file_type": "image",
-            "file_image": "shopify://shop_images/5_9ec8c6d8-efcf-41d0-8d8a-080e4a0bdf31.jpg",
+            "file_image": "shopify://shop_images/3_18c4fb21-3ef4-4f38-925b-776c22de6551.jpg",
             "video_url": ""
           }
         }
@@ -325,10 +325,10 @@
       "block_order": [
         "file_with_text_McHwGa",
         "file_with_text_f9yPAD",
-        "file_with_text_B39ehq",
+        "file_with_text_THJTyK",
         "file_with_text_JJXCp8",
         "file_with_text_Q8tJKk",
-        "file_with_text_THJTyK"
+        "file_with_text_B39ehq"
       ],
       "name": "file box simplicity",
       "settings": {
