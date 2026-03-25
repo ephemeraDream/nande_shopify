@@ -498,8 +498,8 @@
           "settings": {
             "tabname": "4 Speicherhöhen",
             "sub_title": "",
-            "title": "<p>4 Speicherhöhen</p>",
-            "description": "<div class=\"controller-features\">\n  <ul>\n    <li>Merke dir vier Lieblingshöhen – für Sitzen, Stehen oder gemeinsame Nutzung.\n    Ein Knopfdruck genügt und der Tisch fährt präzise in die gespeicherte Position.</li>\n  </ul>\n</div>\n\n<style>\n  /* 让这个模块内的 li 左对齐，不影响其他地方 */\n  .controller-features ul li {\n    text-align: left !important;\n    list-style-position: inside;\n  }\n</style>",
+            "title": "<p>Ergonomie auf Knopfdruck: 4 Memory-Positionen</p>",
+            "description": "<div class=\"controller-features\">\n  <ul><b>Finden Sie Ihre perfekte Haltung in Sekunden.</b>Speichern Sie bis zu vier individuelle Höhen für das Arbeiten im Sitzen, Stehen oder für verschiedene Familienmitglieder ab.\n    <li>Ihr Vorteil: Kein mühsames Justieren mehr. Ein kurzer Fingertipp genügt, und der T2 Pro fährt präzise in Ihre gespeicherte Idealposition – für einen nahtlosen Workflow ohne Unterbrechungen.</li>\n  </ul>\n</div>\n\n<style>\n  /* 让这个模块内的 li 左对齐，不影响其他地方 */\n  .controller-features ul li {\n    text-align: left !important;\n    list-style-position: inside;\n  }\n</style>",
             "file_type": "image",
             "file_image": "shopify://shop_images/A_-_10.jpg",
             "video_url": "",
