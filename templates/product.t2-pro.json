@@ -482,10 +482,10 @@
         "tab_LmGatL": {
           "type": "tab",
           "settings": {
-            "tabname": "2× 18W-Ports (USB-A & USB-C)",
+            "tabname": "USB-A & USB-C Ports",
             "sub_title": "",
-            "title": "<p>Zwei 18W integrierte Ladeanschlüsse</p>",
-            "description": "<div class=\"controller-features\">\n  <ul>\n    <li>Smartphones, Tablets oder Kopfhörer jederzeit griffbereit laden.\nDie beiden Ports versorgen deine Geräte zuverlässig, ohne zusätzliches Ladegerät auf dem Tisch.</li>\n  </ul>\n</div>\n\n<style>\n  /* 让这个模块内的 li 左对齐，不影响其他地方 */\n  .controller-features ul li {\n    text-align: left !important;\n    list-style-position: inside;\n  }\n</style>",
+            "title": "<p>Volle Akkus, freier Kopf: Zwei integrierte Ladeanschlüsse</p>",
+            "description": "<div class=\"controller-features\">\n  <ul>\n    <li>Vergessen Sie das Suchen nach Netzteilen. Mit den zwei integrierten 18W-Anschlüssen laden Sie Smartphone und Tablet <b>direkt an Ihrem Arbeitsplatz</b>. Ihr Vorteil: Eine aufgeräumte Arbeitsfläche ohne Kabelsalat, damit Sie sich voll und ganz auf Ihre Projekte konzentrieren können.</li>\n  </ul>\n</div>\n\n<style>\n  /* 让这个模块内的 li 左对齐，不影响其他地方 */\n  .controller-features ul li {\n    text-align: left !important;\n    list-style-position: inside;\n  }\n</style>",
             "file_type": "image",
             "file_image": "shopify://shop_images/A_-_11.jpg",
             "video_url": "",
@@ -498,7 +498,7 @@
           "settings": {
             "tabname": "4 Speicherhöhen",
             "sub_title": "",
-            "title": "<p><br/>4 Speicherhöhen<br/><br/></p>",
+            "title": "<p>4 Speicherhöhen</p>",
             "description": "<div class=\"controller-features\">\n  <ul>\n    <li>Merke dir vier Lieblingshöhen – für Sitzen, Stehen oder gemeinsame Nutzung.\n    Ein Knopfdruck genügt und der Tisch fährt präzise in die gespeicherte Position.</li>\n  </ul>\n</div>\n\n<style>\n  /* 让这个模块内的 li 左对齐，不影响其他地方 */\n  .controller-features ul li {\n    text-align: left !important;\n    list-style-position: inside;\n  }\n</style>",
             "file_type": "image",
             "file_image": "shopify://shop_images/A_-_10.jpg",
@@ -546,7 +546,7 @@
       "settings": {
         "spec_id": "",
         "description": "",
-        "title": "<p>Sicher und smart gesteuert</p>",
+        "title": "<p>Ihr Cockpit für mehr Fokus und Wohlbefinden</p>",
         "show_tab_head": true,
         "loop": true,
         "autoplay_enable": true,
