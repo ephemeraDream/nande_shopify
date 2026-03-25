@@ -479,15 +479,15 @@
     "img_with_text_tab_emEWU8": {
       "type": "img-with-text-tab",
       "blocks": {
-        "tab_LmGatL": {
+        "tab_AUd88N": {
           "type": "tab",
           "settings": {
-            "tabname": "USB-A & USB-C Ports",
+            "tabname": "Erinnerung zum Aufstehen",
             "sub_title": "",
-            "title": "<p>Volle Akkus, freier Kopf: Zwei integrierte Ladeanschlüsse</p>",
-            "description": "<div class=\"controller-features\">\n  <ul>\n    <li>Vergessen Sie das Suchen nach Netzteilen. Mit den zwei integrierten 18W-Anschlüssen laden Sie Smartphone und Tablet <b>direkt an Ihrem Arbeitsplatz</b>. Ihr Vorteil: Eine aufgeräumte Arbeitsfläche ohne Kabelsalat, damit Sie sich voll und ganz auf Ihre Projekte konzentrieren können.</li>\n  </ul>\n</div>\n\n<style>\n  /* 让这个模块内的 li 左对齐，不影响其他地方 */\n  .controller-features ul li {\n    text-align: left !important;\n    list-style-position: inside;\n  }\n</style>",
+            "title": "<p>Ihr persönlicher Gesundheits-Coach: Die Aufsteh-Erinnerung</p>",
+            "description": "<div class=\"controller-features\">\n  <ul>\n<p><b>Bleiben Sie den ganzen Tag aktiv und energiegeladen.</b></p>Das integrierte Reminder-System erinnert Sie in regelmäßigen Abständen sanft daran, die Position zu wechseln.\n    <li>Das integrierte Reminder-System erinnert regelmasig daran, aufzustehen und die Sitzposition zu wechseln. So fordern Sie ein gesunderes Arbeiten im Stehen und beugen langfristigen Ruckenproblemen oder Verspannungen vor.</li>\n  </ul>\n</div>\n\n<style>\n  /* 让这个模块内的 li 左对齐，不影响其他地方 */\n  .controller-features ul li {\n    text-align: left !important;\n    list-style-position: inside;\n  }\n</style>",
             "file_type": "image",
-            "file_image": "shopify://shop_images/A_-_11.jpg",
+            "file_image": "shopify://shop_images/A_-_12.jpg",
             "video_url": "",
             "btn_text": "",
             "link": ""
@@ -507,20 +507,6 @@
             "link": ""
           }
         },
-        "tab_AUd88N": {
-          "type": "tab",
-          "settings": {
-            "tabname": "Erinnerung zum Aufstehen",
-            "sub_title": "",
-            "title": "<p>Erinnerung zum Aufstehen</p>",
-            "description": "<div class=\"controller-features\">\n  <ul>\n    <li>Das integrierte Reminder-System erinnert regelmasig daran, aufzustehen und die Sitzposition zu wechseln. So fordern Sie ein gesunderes Arbeiten im Stehen und beugen langfristigen Ruckenproblemen oder Verspannungen vor.</li>\n  </ul>\n</div>\n\n<style>\n  /* 让这个模块内的 li 左对齐，不影响其他地方 */\n  .controller-features ul li {\n    text-align: left !important;\n    list-style-position: inside;\n  }\n</style>",
-            "file_type": "image",
-            "file_image": "shopify://shop_images/A_-_12.jpg",
-            "video_url": "",
-            "btn_text": "",
-            "link": ""
-          }
-        },
         "tab_JyxzQm": {
           "type": "tab",
           "settings": {
@@ -534,13 +520,27 @@
             "btn_text": "",
             "link": ""
           }
+        },
+        "tab_LmGatL": {
+          "type": "tab",
+          "settings": {
+            "tabname": "USB-A & USB-C Ports",
+            "sub_title": "",
+            "title": "<p>Volle Akkus, freier Kopf: Zwei integrierte Ladeanschlüsse</p>",
+            "description": "<div class=\"controller-features\">\n  <ul>\n    <li>Vergessen Sie das Suchen nach Netzteilen. Mit den zwei integrierten 18W-Anschlüssen laden Sie Smartphone und Tablet <b>direkt an Ihrem Arbeitsplatz</b>. Ihr Vorteil: Eine aufgeräumte Arbeitsfläche ohne Kabelsalat, damit Sie sich voll und ganz auf Ihre Projekte konzentrieren können.</li>\n  </ul>\n</div>\n\n<style>\n  /* 让这个模块内的 li 左对齐，不影响其他地方 */\n  .controller-features ul li {\n    text-align: left !important;\n    list-style-position: inside;\n  }\n</style>",
+            "file_type": "image",
+            "file_image": "shopify://shop_images/A_-_11.jpg",
+            "video_url": "",
+            "btn_text": "",
+            "link": ""
+          }
         }
       },
       "block_order": [
-        "tab_LmGatL",
-        "tab_fiwUXL",
         "tab_AUd88N",
-        "tab_JyxzQm"
+        "tab_fiwUXL",
+        "tab_JyxzQm",
+        "tab_LmGatL"
       ],
       "name": "img with text tab",
       "settings": {
