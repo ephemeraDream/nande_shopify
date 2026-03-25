@@ -325,8 +325,8 @@
         "foldtext_HQhGDk": {
           "type": "foldtext",
           "settings": {
-            "title": "<h3>Pyramidenförmige-Säulenstruktur</h3>",
-            "description": "<ul><li>Diese Konstruktion sorgt für eine deutlich größere Auflagefläche und verteilt die Kräfte optimal nach unten und außen. So bleibt der Tisch selbst in der höchsten Position außergewöhnlich stabil und verhindert effektiv Wackeln oder Kippen.</li></ul>",
+            "title": "<p>Pyramidenförmige Säulenstruktur</p>",
+            "description": "<ul><B>Standfestigkeit neu definiert</B>\n<p>Die innovative, nach unten breiter werdende Säulenstruktur sorgt für eine deutlich vergrößerte Auflagefläche und eine optimale Kraftverteilung.</P><li>Die physikalischen Gesetze der Pyramide garantieren, dass der Tisch selbst in der maximalen Arbeitshöhe außergewöhnlich stabil bleibt. Ein Wackeln oder Kippen wird durch den tiefen Schwerpunkt effektiv verhindert.</li></ul>",
             "image": "shopify://shop_images/7_0884c4c1-439e-4537-ba56-f6578da62adc.jpg"
           }
         },
@@ -364,7 +364,7 @@
       "name": "img with foldtext",
       "settings": {
         "spec_id": "",
-        "title": "<p>So garantieren wir maximale Stabilität</p>",
+        "title": "<p>Maximale Stabilität: Ingenieurskunst bis ins Detail</p>",
         "padding_top": 60,
         "padding_bottom": 60
       }
