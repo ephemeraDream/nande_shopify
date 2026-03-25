@@ -246,6 +246,16 @@
             "url_upload": "shopify://files/videos/稳定性 - 0818 - Grey C 灰底.mp4"
           }
         },
+        "file_with_text_THJTyK": {
+          "type": "file_with_text",
+          "settings": {
+            "title": "<p>Dual-Motor-System</p>",
+            "description": "<p>Dank der leistungsstarken Motoren lässt sich die Tischplatte schnell und fließend an Ihre ideale Sitz- oder Stehhöhe anpassen, ohne zu wackeln oder zu stocken. Perfekt für den täglichen Einsatz im Homeoffice oder Büro, wo Komfort und Verlässlichkeit zählen.</p>",
+            "file_type": "image",
+            "file_image": "shopify://shop_images/6_960f161b-2c2f-4579-a4a4-97220d38f728.jpg",
+            "video_url": ""
+          }
+        },
         "file_with_text_f9yPAD": {
           "type": "file_with_text",
           "settings": {
@@ -289,85 +299,15 @@
             "video_url": "",
             "url_upload": "shopify://files/videos/组装 - 0821 - Grey C 灰底.mp4"
           }
-        },
-        "file_with_text_THJTyK": {
-          "type": "file_with_text",
-          "settings": {
-            "title": "<p>Dual-Motor-System</p>",
-            "description": "<p>Dank der leistungsstarken Motoren lässt sich die Tischplatte schnell und fließend an Ihre ideale Sitz- oder Stehhöhe anpassen, ohne zu wackeln oder zu stocken. Perfekt für den täglichen Einsatz im Homeoffice oder Büro, wo Komfort und Verlässlichkeit zählen.</p>",
-            "file_type": "image",
-            "file_image": "shopify://shop_images/6_960f161b-2c2f-4579-a4a4-97220d38f728.jpg",
-            "video_url": ""
-          }
-        },
-        "file_with_text_PnqAPd": {
-          "type": "file_with_text",
-          "disabled": true,
-          "settings": {
-            "title": "<p>Einfache Bedienfreude</p>",
-            "description": "<p>Klaviertasten und eine intuitive grafische Oberfläche machen die Einrichtung zum Kinderspiel.</p>",
-            "file_type": "video",
-            "file_image": "shopify://shop_images/T2-Pro-Max-black-control-panel-with-Maid-OS_9ae8a8ff-e2b8-48aa-bd7c-3e6c54d59f49.jpg",
-            "video_url": ""
-          }
-        },
-        "file_with_text_G8PtXG": {
-          "type": "file_with_text",
-          "disabled": true,
-          "settings": {
-            "title": "<p>Einfache Bedienfreude</p>",
-            "description": "<p>Klaviertasten und eine intuitive grafische Oberfläche machen die Einrichtung zum Kinderspiel.</p>",
-            "file_type": "video",
-            "file_image": "shopify://shop_images/T2-Pro-Max-black-control-panel-with-Maid-OS_9ae8a8ff-e2b8-48aa-bd7c-3e6c54d59f49.jpg",
-            "video_url": ""
-          }
-        },
-        "file_with_text_wLQtgA": {
-          "type": "file_with_text",
-          "disabled": true,
-          "settings": {
-            "title": "<p>Einfache Bedienfreude</p>",
-            "description": "<p>Klaviertasten und eine intuitive grafische Oberfläche machen die Einrichtung zum Kinderspiel.</p>",
-            "file_type": "video",
-            "file_image": "shopify://shop_images/T2-Pro-Max-black-control-panel-with-Maid-OS_9ae8a8ff-e2b8-48aa-bd7c-3e6c54d59f49.jpg",
-            "video_url": ""
-          }
-        },
-        "file_with_text_nGfFNW": {
-          "type": "file_with_text",
-          "disabled": true,
-          "settings": {
-            "title": "<p>Einfache Bedienfreude</p>",
-            "description": "<p>Klaviertasten und eine intuitive grafische Oberfläche machen die Einrichtung zum Kinderspiel.</p>",
-            "file_type": "video",
-            "file_image": "shopify://shop_images/T2-Pro-Max-black-control-panel-with-Maid-OS_9ae8a8ff-e2b8-48aa-bd7c-3e6c54d59f49.jpg",
-            "video_url": ""
-          }
-        },
-        "file_with_text_NhMLJD": {
-          "type": "file_with_text",
-          "disabled": true,
-          "settings": {
-            "title": "<p>Einfache Bedienfreude</p>",
-            "description": "<p>Klaviertasten und eine intuitive grafische Oberfläche machen die Einrichtung zum Kinderspiel.</p>",
-            "file_type": "video",
-            "file_image": "shopify://shop_images/T2-Pro-Max-black-control-panel-with-Maid-OS_9ae8a8ff-e2b8-48aa-bd7c-3e6c54d59f49.jpg",
-            "video_url": ""
-          }
         }
       },
       "block_order": [
         "file_with_text_JJXCp8",
+        "file_with_text_THJTyK",
         "file_with_text_f9yPAD",
         "file_with_text_Q8tJKk",
         "file_with_text_McHwGa",
-        "file_with_text_ykc3D8",
-        "file_with_text_THJTyK",
-        "file_with_text_PnqAPd",
-        "file_with_text_G8PtXG",
-        "file_with_text_wLQtgA",
-        "file_with_text_nGfFNW",
-        "file_with_text_NhMLJD"
+        "file_with_text_ykc3D8"
       ],
       "name": "file box simplicity",
       "settings": {
