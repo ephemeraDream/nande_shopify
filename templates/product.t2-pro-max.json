@@ -527,7 +527,7 @@
         "spec_id": "",
         "description": "",
         "title": "<p>Piano-Style Controller</p>",
-        "show_tab_head": true,
+        "show_tab_head": false,
         "loop": true,
         "autoplay_enable": true,
         "autoplay_delay": 5000,
