@@ -312,7 +312,7 @@
       "name": "file box simplicity",
       "settings": {
         "spec_id": "Produktinfo",
-        "main_title": "<p>Warum T2 Pro Max wählen?</p>",
+        "main_title": "<p>Warum der Maidesite T2 Pro Max die ultimative Wahl ist</p>",
         "row_num": 3,
         "padding_top": 32,
         "padding_bottom": 32,
@@ -366,7 +366,7 @@
         "spec_id": "",
         "title": "<p>So garantieren wir maximale Stabilität</p>",
         "padding_top": 60,
-        "padding_bottom": 120
+        "padding_bottom": 60
       }
     },
     "img_with_text_simplicity_R8thEq": {
