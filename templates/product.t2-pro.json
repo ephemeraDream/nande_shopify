@@ -485,7 +485,7 @@
             "tabname": "Erinnerung zum Aufstehen",
             "sub_title": "",
             "title": "<p>Ihr persönlicher Gesundheits-Coach: Die Aufsteh-Erinnerung</p>",
-            "description": "<div class=\"controller-features\">\n  <ul>\n<p><b>Bleiben Sie den ganzen Tag aktiv und energiegeladen.</b></p>Das integrierte Reminder-System erinnert Sie in regelmäßigen Abständen sanft daran, die Position zu wechseln.\n    <li>Das integrierte Reminder-System erinnert regelmasig daran, aufzustehen und die Sitzposition zu wechseln. So fordern Sie ein gesunderes Arbeiten im Stehen und beugen langfristigen Ruckenproblemen oder Verspannungen vor.</li>\n  </ul>\n</div>\n\n<style>\n  /* 让这个模块内的 li 左对齐，不影响其他地方 */\n  .controller-features ul li {\n    text-align: left !important;\n    list-style-position: inside;\n  }\n</style>",
+            "description": "<div class=\"controller-features\">\n  <ul>\n<b>Bleiben Sie den ganzen Tag aktiv und energiegeladen.</b>Das integrierte Reminder-System erinnert Sie in regelmäßigen Abständen sanft daran, die Position zu wechseln.\n    <li>Das integrierte Reminder-System erinnert regelmasig daran, aufzustehen und die Sitzposition zu wechseln. So fordern Sie ein gesunderes Arbeiten im Stehen und beugen langfristigen Ruckenproblemen oder Verspannungen vor.</li>\n  </ul>\n</div>\n\n<style>\n  /* 让这个模块内的 li 左对齐，不影响其他地方 */\n  .controller-features ul li {\n    text-align: left !important;\n    list-style-position: inside;\n  }\n</style>",
             "file_type": "image",
             "file_image": "shopify://shop_images/A_-_12.jpg",
             "video_url": "",
