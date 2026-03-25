@@ -349,7 +349,7 @@
         "foldtext_HQhGDk": {
           "type": "foldtext",
           "settings": {
-            "title": "<p>Mikro-Dreiecksstruktur: Inspiriert vom \"Blauen Wunder\"</p>",
+            "title": "<p>Mikro-Dreiecksstruktur</p>",
             "description": "<p>Die Hubsäulen nutzen eine innovative Mikro-Dreiecksstruktur – eine Bauweise, die von der berühmten Loschwitzer Brücke in Dresden inspiriert wurde.</p>\nDiese Architektur sorgt für eine überlegene Verformungssteifigkeit. Sie verleiht dem Tisch eine spürbare Standfestigkeit, die selbst bei intensiven Arbeitsphasen im Stehen absolut sicher bleibt.",
             "image": "shopify://shop_images/A_-_7_d99421e4-a6de-4b0e-9e7f-d79b08ba376a.jpg"
           }
@@ -358,15 +358,15 @@
           "type": "foldtext",
           "settings": {
             "title": "<h3>Verstärkte Säulen</h3>",
-            "description": "<ul><li>Die Standbeine verfügen über eine erhöhte Wandstärke und besonders robuste Stahlprofile.\nMehr Material = mehr Stabilität, bessere Lastverteilung und eine langlebige Gesamtstruktur.</li></ul>",
+            "description": "<ul><li><p>Wir setzen auf Substanz: Unsere Standbeine verfügen über eine erhöhte Wandstärke und besonders robuste Stahlprofile.</p>Das Prinzip „Mehr Material = mehr Stabilität“ garantiert eine optimale Lastverteilung. Die verstärkte Struktur sorgt dafür, dass Ihr T2 Pro Plus auch nach Jahren täglicher Nutzung so stabil steht wie am ersten Tag.</li></ul>",
             "image": "shopify://shop_images/A_-_8_16c5c9c8-6974-4c27-a403-3ebf4fd63bea.jpg"
           }
         },
         "foldtext_pxGTDz": {
           "type": "foldtext",
           "settings": {
-            "title": "<h3>Verstärkte Standfüße</h3>",
-            "description": "<ul><li>Die extra dick konstruierten Standfüße verbessern die Bodenauflage deutlich und erhöhen die Stabilität spürbar – auch bei voller Belastung.",
+            "title": "<h3>Massive Standfüße</h3>",
+            "description": "<p>Die extra dick konstruierten Standfüße optimieren die Bodenauflage und bilden die Basis für ein wackelfreies Arbeiten.</p>\nDurch den tieferen Schwerpunkt und die vergrößerte Kontaktfläche zum Boden wird die Stabilität spürbar erhöht – selbst wenn der Tisch mit der maximalen Traglast von 160 kg voll beladen ist.",
             "image": "shopify://shop_images/A_-_14.jpg"
           }
         },
