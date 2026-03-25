@@ -19,7 +19,7 @@
             "title": "",
             "text": "",
             "btn_text": "",
-            "link": "shopify://pages/2026-fruhlingsaktion",
+            "link": "shopify://pages/saisonabschluss-sale",
             "file_position": "top_center",
             "overlay_text_align": "text-end",
             "transparent_content_color": "#ffffff",
@@ -53,6 +53,7 @@
         },
         "banner_item_t4GakG": {
           "type": "banner_item",
+          "disabled": true,
           "settings": {
             "sub_title": "",
             "title": "",
