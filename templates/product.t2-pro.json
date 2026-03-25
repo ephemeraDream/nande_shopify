@@ -512,8 +512,8 @@
           "settings": {
             "tabname": "Kindersicherung",
             "sub_title": "",
-            "title": "<p>Kindersicherung</p>",
-            "description": "<div class=\"controller-features\">\n  <ul>\n    <li>Schützt vor unbeabsichtigtem Verstellen.\nMit der Kindersicherung bleibt die Tischhöhe sicher fixiert – ideal für Haushalte mit Kindern oder Haustieren.</li>\n  </ul>\n</div>\n\n<style>\n  /* 让这个模块内的 li 左对齐，不影响其他地方 */\n  .controller-features ul li {\n    text-align: left !important;\n    list-style-position: inside;\n  }\n</style>",
+            "title": "<p>Absolute Sorgenfreiheit: Die integrierte Kindersicherung</p>",
+            "description": "<div class=\"controller-features\">\n  <ul><b>Sicherheit für Ihr Equipment und Ihre Liebsten.</b>Die aktivierbare Kindersicherung fixiert die gewählte Tischhöhe und verhindert ein unbeabsichtigtes Verstellen.\n    <li><b>Ihr Vorteil:</b> Ob spielende Kinder oder neugierige Haustiere – Ihre Einstellungen und Ihre Technik bleiben geschützt. Genießen Sie die Gewissheit eines absolut sicheren Home-Office-Bereichs.</li>\n  </ul>\n</div>\n\n<style>\n  /* 让这个模块内的 li 左对齐，不影响其他地方 */\n  .controller-features ul li {\n    text-align: left !important;\n    list-style-position: inside;\n  }\n</style>",
             "file_type": "image",
             "file_image": "shopify://shop_images/A_-_13.jpg",
             "video_url": "",
@@ -526,8 +526,8 @@
           "settings": {
             "tabname": "USB-A & USB-C Ports",
             "sub_title": "",
-            "title": "<p>Volle Akkus, freier Kopf: Zwei integrierte Ladeanschlüsse</p>",
-            "description": "<div class=\"controller-features\">\n  <ul>\n    <li>Vergessen Sie das Suchen nach Netzteilen. Mit den zwei integrierten 18W-Anschlüssen laden Sie Smartphone und Tablet <b>direkt an Ihrem Arbeitsplatz</b>. Ihr Vorteil: Eine aufgeräumte Arbeitsfläche ohne Kabelsalat, damit Sie sich voll und ganz auf Ihre Projekte konzentrieren können.</li>\n  </ul>\n</div>\n\n<style>\n  /* 让这个模块内的 li 左对齐，不影响其他地方 */\n  .controller-features ul li {\n    text-align: left !important;\n    list-style-position: inside;\n  }\n</style>",
+            "title": "<p>Ein aufgeräumter Fokus: Zwei integrierte 18W Ladeanschlüsse</p>",
+            "description": "<div class=\"controller-features\">\n  <ul><b>Volle Akkus ohne Kabelsalat.</b> Laden Sie Ihr Smartphone und Tablet direkt über die zwei leistungsstarken USB-Ports im Bedienfeld.\n    <li><b>Ihr Vorteil:</b> Sie benötigen keine zusätzlichen Netzteile oder Mehrfachstecker auf dem Tisch. Erleben Sie die Freiheit einer „Clean Desk“-Umgebung, die Ihnen hilft, sich voll auf das Wesentliche zu konzentrieren.</li>\n  </ul>\n</div>\n\n<style>\n  /* 让这个模块内的 li 左对齐，不影响其他地方 */\n  .controller-features ul li {\n    text-align: left !important;\n    list-style-position: inside;\n  }\n</style>",
             "file_type": "image",
             "file_image": "shopify://shop_images/A_-_11.jpg",
             "video_url": "",
