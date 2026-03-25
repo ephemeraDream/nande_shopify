@@ -608,8 +608,8 @@
           "settings": {
             "tabname": "Kindersicherung",
             "sub_title": "",
-            "title": "<p><strong>Kindersicherung</strong></p>",
-            "description": "<div class=\"controller-features\">\n  <ul>\n    <li>Schützt vor unbeabsichtigtem Verstellen.\nMit der Kindersicherung bleibt die Tischhöhe sicher fixiert – ideal für Haushalte mit Kindern oder Haustieren.</li>\n  </ul>\n</div>\n\n<style>\n  /* 让这个模块内的 li 左对齐，不影响其他地方 */\n  .controller-features ul li {\n    text-align: left !important;\n    list-style-position: inside;\n  }\n</style>",
+            "title": "<p>Absolute Sorgenfreiheit: Die integrierte Kindersicherung</p>",
+            "description": "<div class=\"controller-features\">\n  <ul><b>Sicherheit für Ihr Equipment und Ihre Liebsten.</b> Die aktivierbare Kindersicherung fixiert die gewählte Tischhöhe und verhindert ein unbeabsichtigtes Verstellen.\n    <li>Ob spielende Kinder oder neugierige Haustiere – Ihre Einstellungen und Ihre Technik bleiben geschützt. Genießen Sie die Gewissheit eines absolut sicheren Home-Office-Bereichs.</li>\n  </ul>\n</div>\n\n<style>\n  /* 让这个模块内的 li 左对齐，不影响其他地方 */\n  .controller-features ul li {\n    text-align: left !important;\n    list-style-position: inside;\n  }\n</style>",
             "file_type": "image",
             "file_image": "shopify://shop_images/A_-_13_620d36ea-1dcf-493d-95c4-a35761bc47c2.jpg",
             "video_url": "",
