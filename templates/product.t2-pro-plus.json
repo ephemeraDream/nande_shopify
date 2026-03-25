@@ -349,8 +349,8 @@
         "foldtext_HQhGDk": {
           "type": "foldtext",
           "settings": {
-            "title": "<p>Mikro-Dreiecksstruktur</p>",
-            "description": "<p>Die Säulen verfügen über eine feine Mikrodreiecksstruktur – inspiriert von der berühmten Loschwitzer Brücke („Blaues Wunder“) in Dresden.\nDiese Bauweise sorgt für eine höhere Verformungssteifigkeit und verleiht dem Tisch spürbar mehr Stabilität im täglichen Einsatz.",
+            "title": "<p>Mikro-Dreiecksstruktur: Inspiriert vom \"Blauen Wunder\"</p>",
+            "description": "<p>Die Hubsäulen nutzen eine innovative Mikro-Dreiecksstruktur – eine Bauweise, die von der berühmten Loschwitzer Brücke in Dresden inspiriert wurde.</p>\nDiese Architektur sorgt für eine überlegene Verformungssteifigkeit. Sie verleiht dem Tisch eine spürbare Standfestigkeit, die selbst bei intensiven Arbeitsphasen im Stehen absolut sicher bleibt.",
             "image": "shopify://shop_images/A_-_7_d99421e4-a6de-4b0e-9e7f-d79b08ba376a.jpg"
           }
         },
@@ -388,9 +388,9 @@
       "name": "img with foldtext",
       "settings": {
         "spec_id": "",
-        "title": "<p>Ingenieursstärke trifft auf maximale Stabilität</p>",
-        "padding_top": 120,
-        "padding_bottom": 120
+        "title": "<p>Ingenieurskunst für maximale Stabilität</p>",
+        "padding_top": 20,
+        "padding_bottom": 60
       }
     },
     "img_with_text_simplicity_R8thEq": {
