@@ -769,8 +769,8 @@
         "more_faqs_link": "shopify://pages/maidesite-faq",
         "contact_us": false,
         "contact_us_link": "",
-        "padding_top": 120,
-        "padding_bottom": 120,
+        "padding_top": 60,
+        "padding_bottom": 60,
         "background_color": "rgba(0,0,0,0)"
       }
     },
@@ -807,16 +807,14 @@
         "spec_id": "",
         "title": "<p>Das GefäLlt Dir Vielleicht Auch</p>",
         "product_list": [
+          "maidesite-tischplatte-120-140-160-cm-diy-schreibtischplatte",
+          "maidesite-serpentine-kabelrohr",
           "maidesite-3-fach-tischsteckdose-mit-usb-c-und-a-1-8m-kabel-steckdosenleiste",
-          "maidesite-ergonomischer-stuhl-mit-kopfstutze-und-ruckenlehne",
-          "maidesite-ec5-ergonomischer-burostuhl-mit-ruckenlehne",
-          "maidesite-ec6-ergonomischer-burostuhl-mit-kopfstutze-ruckenlehne-und-fussstutze",
-          "maidesite-th2-pro-plus-tischgestell-elektrisch-hohenverstellbar",
-          "maidesite-el2-pro-art-tischgestell-elektrisch-hohenverstellbar"
+          "maidesite-th2-pro-plus-tischgestell-elektrisch-hohenverstellbar"
         ],
         "number": 3,
-        "padding_top": 120,
-        "padding_bottom": 120
+        "padding_top": 60,
+        "padding_bottom": 60
       }
     }
   },
