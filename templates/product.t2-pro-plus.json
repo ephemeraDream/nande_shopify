@@ -264,16 +264,6 @@
     "img_with_text_box_simplicity_qrzG6W": {
       "type": "img-with-text-box-simplicity",
       "blocks": {
-        "file_with_text_Q8tJKk": {
-          "type": "file_with_text",
-          "settings": {
-            "title": "<p>Extra großer Höhenbereich</p>",
-            "description": "<p>Der T2 Pro Plus bietet einen außergewöhnlich großen Höhenverstellbereich, der weit über das hinausgeht, was viele klassische Modelle ermöglichen.Diese große Spanne eröffnet mehr Freiheit bei der ergonomischen Gestaltung des Arbeitsplatzes: für kreative Workflows, wechselnde Tätigkeiten oder Setups. </p>",
-            "file_type": "image",
-            "file_image": "shopify://shop_images/A_-_15.jpg",
-            "video_url": ""
-          }
-        },
         "file_with_text_JJXCp8": {
           "type": "file_with_text",
           "settings": {
@@ -284,6 +274,16 @@
             "video_url": ""
           }
         },
+        "file_with_text_Q8tJKk": {
+          "type": "file_with_text",
+          "settings": {
+            "title": "<p>Extra großer Höhenbereich</p>",
+            "description": "<p>Der T2 Pro Plus bietet einen außergewöhnlich großen Höhenverstellbereich, der weit über das hinausgeht, was viele klassische Modelle ermöglichen.Diese große Spanne eröffnet mehr Freiheit bei der ergonomischen Gestaltung des Arbeitsplatzes: für kreative Workflows, wechselnde Tätigkeiten oder Setups. </p>",
+            "file_type": "image",
+            "file_image": "shopify://shop_images/A_-_15.jpg",
+            "video_url": ""
+          }
+        },
         "file_with_text_McHwGa": {
           "type": "file_with_text",
           "settings": {
@@ -291,6 +291,16 @@
             "description": "<p><strong>Ideal für schwere Arbeitsplätze:</strong><br/>Die hohe Tragkraft von 160 kg bietet genügend Reserven für große Monitore, PCs, Studioequipment oder anspruchsvolle Setups – perfekt für Profis und Power-User.</p>",
             "file_type": "image",
             "file_image": "shopify://shop_images/A_-_2_554e72a6-f64c-47b5-9c4b-9283be8492d3.jpg",
+            "video_url": ""
+          }
+        },
+        "file_with_text_THJTyK": {
+          "type": "file_with_text",
+          "settings": {
+            "title": "<p>Qualität geprüft</p>",
+            "description": "<p><strong>Über 10.000 Belastungstests:</strong><br/>Jeder Tischrahmen wird strengen Qualitäts- und Belastungstests unterzogen. Mehr als 10.000 Zyklen garantieren eine langlebige, robuste und zuverlässige Performance im täglichen Einsatz.</p>",
+            "file_type": "image",
+            "file_image": "shopify://shop_images/A_-_5_6d43702d-3f0c-4ead-9d40-c7b07fa69d43.jpg",
             "video_url": ""
           }
         },
@@ -313,33 +323,23 @@
             "file_image": "shopify://shop_images/A_-_6_162c7af4-2767-4e14-bd29-a908bd52a60a.jpg",
             "video_url": ""
           }
-        },
-        "file_with_text_THJTyK": {
-          "type": "file_with_text",
-          "settings": {
-            "title": "<p>Qualität geprüft</p>",
-            "description": "<p><strong>Über 10.000 Belastungstests:</strong><br/>Jeder Tischrahmen wird strengen Qualitäts- und Belastungstests unterzogen. Mehr als 10.000 Zyklen garantieren eine langlebige, robuste und zuverlässige Performance im täglichen Einsatz.</p>",
-            "file_type": "image",
-            "file_image": "shopify://shop_images/A_-_5_6d43702d-3f0c-4ead-9d40-c7b07fa69d43.jpg",
-            "video_url": ""
-          }
         }
       },
       "block_order": [
-        "file_with_text_Q8tJKk",
         "file_with_text_JJXCp8",
+        "file_with_text_Q8tJKk",
         "file_with_text_McHwGa",
+        "file_with_text_THJTyK",
         "file_with_text_f9yPAD",
-        "file_with_text_B39ehq",
-        "file_with_text_THJTyK"
+        "file_with_text_B39ehq"
       ],
       "name": "file box simplicity",
       "settings": {
         "spec_id": "Produkt",
-        "main_title": "<p>Warum T2 Pro Plus wählen?</p>",
+        "main_title": "<p>Warum den höhenverstellbaren Schreibtisch T2 Pro Plus?</p>",
         "row_num": 3,
-        "padding_top": 100,
-        "padding_bottom": 120,
+        "padding_top": 40,
+        "padding_bottom": 60,
         "background_color": "rgba(0,0,0,0)"
       }
     },
