@@ -189,8 +189,8 @@
         "item_Vt9rJN": {
           "type": "item",
           "settings": {
-            "title": "Tests",
-            "anchor_name": "Tests"
+            "title": "FAQ",
+            "anchor_name": "FAQ"
           }
         },
         "item_DECJU4": {
@@ -870,7 +870,7 @@
       ],
       "name": "faq simple",
       "settings": {
-        "spec_id": "",
+        "spec_id": "FAQ",
         "heading": "<p>FAQ</p>",
         "text": "<h3>Schreibtisch Höhenverstellbar T2 Pro Max Technical</h3>",
         "learn_more": false,
