@@ -267,8 +267,8 @@
         "file_with_text_JJXCp8": {
           "type": "file_with_text",
           "settings": {
-            "title": "<p>Innovative Stabilität</p>",
-            "description": "<p>•<strong>In Bewegung:</strong>Sanftes Heben & Senken ohne Wackeln – der Kartenstapel bleibt stehen.<br/>•<strong>Im Stillstand:</strong>Hohe Tragkraft, kein Schwanken bei voller Last.<br/>•<strong>Auf höchster Stufe:</strong>Auch ganz oben ruhig – ideal zum Arbeiten.</p>",
+            "title": "<p>Maximale Stabilität auf jedem Level</p>",
+            "description": "<p>Erleben Sie einen Schreibtisch, der niemals aus der Ruhe bringt – egal in welcher Höhe.</p><ul><li><strong>In Bewegung:</strong> Sanftes Heben und Senken ohne Ruckeln – selbst ein Kartenstapel bleibt sicher stehen.</li><li><strong>Im Stillstand:</strong> Dank massiver Konstruktion kein Schwanken, auch bei voller Belastung.</li><li><strong>Auf höchster Stufe:</strong> Absolute Standfestigkeit für fokussiertes Arbeiten ohne störende Vibrationen.</li></ul>",
             "file_type": "image",
             "file_image": "shopify://shop_images/A_-_1_21e207db-008d-4213-a786-ced32551c980.jpg",
             "video_url": ""
@@ -277,8 +277,8 @@
         "file_with_text_Q8tJKk": {
           "type": "file_with_text",
           "settings": {
-            "title": "<p>Extra großer Höhenbereich</p>",
-            "description": "<p>Der T2 Pro Plus bietet einen außergewöhnlich großen Höhenverstellbereich, der weit über das hinausgeht, was viele klassische Modelle ermöglichen.Diese große Spanne eröffnet mehr Freiheit bei der ergonomischen Gestaltung des Arbeitsplatzes: für kreative Workflows, wechselnde Tätigkeiten oder Setups. </p>",
+            "title": "<p>Flexibilität ohne Grenzen: Extra großer Höhenbereich (62–127 cm)</p>",
+            "description": "<p>Der T2 Pro Plus passt sich Ihnen an, nicht umgekehrt. Mit einem außergewöhnlich weiten Verstellbereich bietet er perfekte Ergonomie für jede Körpergröße.</p><ul><li><strong>Ihr Vorteil:</strong> Ob entspanntes Sitzen für kleinere Personen oder ergonomisches Stehen für Große – Sie finden immer Ihre ideale Position. Diese Flexibilität schont Ihren Rücken und fördert einen dynamischen Arbeitstag.</li></ul>",
             "file_type": "image",
             "file_image": "shopify://shop_images/A_-_15.jpg",
             "video_url": ""
@@ -287,8 +287,8 @@
         "file_with_text_McHwGa": {
           "type": "file_with_text",
           "settings": {
-            "title": "<p>Bis zu 160 kg Tragkraft</p>",
-            "description": "<p><strong>Ideal für schwere Arbeitsplätze:</strong><br/>Die hohe Tragkraft von 160 kg bietet genügend Reserven für große Monitore, PCs, Studioequipment oder anspruchsvolle Setups – perfekt für Profis und Power-User.</p>",
+            "title": "<p>Kraftpaket mit 160 kg Tragkraft</p>",
+            "description": "<p>Konzipiert für Schwerlast-Setups und maximale Ambitionen.</p><ul><li><strong>Ihr Vorteil:</strong> Die enorme Tragkraft von <strong>160 kg</strong> bietet massive Reserven für mehrere Monitore, schwere Gaming-PCs oder Studio-Equipment. Sie müssen sich nie wieder Gedanken über das Gewicht Ihrer Ausrüstung machen – der T2 Pro Plus trägt es mühelos.</li></ul>",
             "file_type": "image",
             "file_image": "shopify://shop_images/A_-_2_554e72a6-f64c-47b5-9c4b-9283be8492d3.jpg",
             "video_url": ""
@@ -336,7 +336,7 @@
       "name": "file box simplicity",
       "settings": {
         "spec_id": "Produkt",
-        "main_title": "<p>Warum den höhenverstellbaren Schreibtisch T2 Pro Plus?</p>",
+        "main_title": "<p>Warum der Maidesite T2 Pro Plus die bessere Wahl für Ihren Arbeitsplatz ist?</p>",
         "row_num": 3,
         "padding_top": 40,
         "padding_bottom": 60,
