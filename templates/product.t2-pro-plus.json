@@ -575,15 +575,15 @@
     "img_with_text_tab_PKWtaQ": {
       "type": "img-with-text-tab",
       "blocks": {
-        "tab_AEzAba": {
+        "tab_fhRGXd": {
           "type": "tab",
           "settings": {
-            "tabname": "2× 18W-Ports (USB-A & USB-C)",
+            "tabname": "Erinnerung zum Aufstehen",
             "sub_title": "",
-            "title": "<p><strong>2× 18W-Ports (USB-A & USB-C)</strong></p>",
-            "description": "<div class=\"controller-features\">\n  <ul>\n    <li>Smartphones, Tablets oder Kopfhörer jederzeit griffbereit laden.\nDie beiden Ports versorgen deine Geräte zuverlässig, ohne zusätzliches Ladegerät auf dem Tisch.</li>\n  </ul>\n</div>\n\n<style>\n  /* 让这个模块内的 li 左对齐，不影响其他地方 */\n  .controller-features ul li {\n    text-align: left !important;\n    list-style-position: inside;\n  }\n</style>",
+            "title": "<p>Ihr persönlicher Gesundheits-Coach: Die Aufsteh-Erinnerung</p>",
+            "description": "<div class=\"controller-features\">\n  <ul><b>Bleiben Sie den ganzen Tag aktiv und energiegeladen.</b>Das integrierte Reminder-System erinnert Sie in regelmäßigen Abständen sanft daran, die Position zu wechseln.\n    <li>Sie fördern aktiv die Durchblutung und beugen Verspannungen sowie Rückenschmerzen effektiv vor. So verwandeln Sie Ihren Arbeitsplatz in eine dynamische Gesundheitszone.</li>\n  </ul>\n</div>\n\n<style>\n  /* 让这个模块内的 li 左对齐，不影响其他地方 */\n  .controller-features ul li {\n    text-align: left !important;\n    list-style-position: inside;\n  }\n</style>",
             "file_type": "image",
-            "file_image": "shopify://shop_images/A_-_11_e8e4e9aa-a289-47d9-9dd8-e83318c2b0f4.jpg",
+            "file_image": "shopify://shop_images/A_-_12_a124c050-627c-426b-92bd-a7416dd3e974.jpg",
             "video_url": "",
             "btn_text": "",
             "link": ""
@@ -603,20 +603,6 @@
             "link": ""
           }
         },
-        "tab_fhRGXd": {
-          "type": "tab",
-          "settings": {
-            "tabname": "Erinnerung zum Aufstehen",
-            "sub_title": "",
-            "title": "<p><strong>Erinnerung zum Aufstehen</strong></p>",
-            "description": "<div class=\"controller-features\">\n  <ul>\n    <li>Das integrierte Reminder-System erinnert regelmasig daran, aufzustehen und die Sitzposition zu wechseln. So fordern Sie ein gesunderes Arbeiten im Stehen und beugen langfristigen Ruckenproblemen oder Verspannungen vor.</li>\n  </ul>\n</div>\n\n<style>\n  /* 让这个模块内的 li 左对齐，不影响其他地方 */\n  .controller-features ul li {\n    text-align: left !important;\n    list-style-position: inside;\n  }\n</style>",
-            "file_type": "image",
-            "file_image": "shopify://shop_images/A_-_12_a124c050-627c-426b-92bd-a7416dd3e974.jpg",
-            "video_url": "",
-            "btn_text": "",
-            "link": ""
-          }
-        },
         "tab_kgTXzP": {
           "type": "tab",
           "settings": {
@@ -630,13 +616,27 @@
             "btn_text": "",
             "link": ""
           }
+        },
+        "tab_AEzAba": {
+          "type": "tab",
+          "settings": {
+            "tabname": "2× 18W-Ports (USB-A & USB-C)",
+            "sub_title": "",
+            "title": "<p><strong>2× 18W-Ports (USB-A & USB-C)</strong></p>",
+            "description": "<div class=\"controller-features\">\n  <ul>\n    <li>Smartphones, Tablets oder Kopfhörer jederzeit griffbereit laden.\nDie beiden Ports versorgen deine Geräte zuverlässig, ohne zusätzliches Ladegerät auf dem Tisch.</li>\n  </ul>\n</div>\n\n<style>\n  /* 让这个模块内的 li 左对齐，不影响其他地方 */\n  .controller-features ul li {\n    text-align: left !important;\n    list-style-position: inside;\n  }\n</style>",
+            "file_type": "image",
+            "file_image": "shopify://shop_images/A_-_11_e8e4e9aa-a289-47d9-9dd8-e83318c2b0f4.jpg",
+            "video_url": "",
+            "btn_text": "",
+            "link": ""
+          }
         }
       },
       "block_order": [
-        "tab_AEzAba",
-        "tab_znDLdq",
         "tab_fhRGXd",
-        "tab_kgTXzP"
+        "tab_znDLdq",
+        "tab_kgTXzP",
+        "tab_AEzAba"
       ],
       "name": "img with text tab",
       "settings": {
