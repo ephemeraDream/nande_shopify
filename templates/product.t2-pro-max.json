@@ -325,7 +325,7 @@
         "foldtext_HQhGDk": {
           "type": "foldtext",
           "settings": {
-            "title": "<p>Pyramidenförmige Säulenstruktur</p>",
+            "title": "<h3>Pyramidenförmige Säulenstruktur</h3>",
             "description": "<ul><B>Standfestigkeit neu definiert</B>\n<p>Die innovative, nach unten breiter werdende Säulenstruktur sorgt für eine deutlich vergrößerte Auflagefläche und eine optimale Kraftverteilung.</P><li>Die physikalischen Gesetze der Pyramide garantieren, dass der Tisch selbst in der maximalen Arbeitshöhe außergewöhnlich stabil bleibt. Ein Wackeln oder Kippen wird durch den tiefen Schwerpunkt effektiv verhindert.</li></ul>",
             "image": "shopify://shop_images/7_0884c4c1-439e-4537-ba56-f6578da62adc.jpg"
           }
@@ -333,8 +333,8 @@
         "foldtext_pKmxm4": {
           "type": "foldtext",
           "settings": {
-            "title": "<h3>Verstärkte Säulen</h3>",
-            "description": "<ul><li>Die Standbeine verfügen über eine erhöhte Wandstärke und besonders robuste Stahlprofile.\nMehr Material = mehr Stabilität, bessere Lastverteilung und eine langlebige Gesamtstruktur.</li></ul>",
+            "title": "<h3>Verstärkte Hubsäulen</h3>",
+            "description": "<ul><b>Substanz für höchste Ansprüche</b>\n<p>Wir machen keine Kompromisse beim Material: Unsere Standbeine verfügen über eine erhöhte Wandstärke und besonders robuste Stahlprofile.</p><li>Mehr Material bedeutet direkt mehr Stabilität. Diese Bauweise sorgt für eine überlegene Lastverteilung und eine verformungssteife Gesamtstruktur, die auch nach Jahren intensiver Nutzung nicht an Festigkeit verliert.</li></ul>",
             "image": "shopify://shop_images/A_-_8_cdc39cc7-1fb2-4ce0-b336-8ab245f02d8b.jpg"
           }
         },
