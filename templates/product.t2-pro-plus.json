@@ -620,10 +620,10 @@
         "tab_AEzAba": {
           "type": "tab",
           "settings": {
-            "tabname": "2× 18W-Ports (USB-A & USB-C)",
+            "tabname": "USB-A & USB-C Ports",
             "sub_title": "",
-            "title": "<p><strong>2× 18W-Ports (USB-A & USB-C)</strong></p>",
-            "description": "<div class=\"controller-features\">\n  <ul>\n    <li>Smartphones, Tablets oder Kopfhörer jederzeit griffbereit laden.\nDie beiden Ports versorgen deine Geräte zuverlässig, ohne zusätzliches Ladegerät auf dem Tisch.</li>\n  </ul>\n</div>\n\n<style>\n  /* 让这个模块内的 li 左对齐，不影响其他地方 */\n  .controller-features ul li {\n    text-align: left !important;\n    list-style-position: inside;\n  }\n</style>",
+            "title": "<p>Ein aufgeräumter Fokus: Zwei integrierte Ladeanschlüsse</p>",
+            "description": "<div class=\"controller-features\">\n  <ul><b>Volle Akkus ohne Kabelsalat.</b> Laden Sie Ihr Smartphone und Tablet direkt über die zwei leistungsstarken USB-Ports im Bedienfeld.\n    <li>Sie benötigen keine zusätzlichen Netzteile oder Mehrfachstecker auf dem Tisch. Erleben Sie die Freiheit einer \"Clean Desk\"-Umgebung, die Ihnen hilft, sich voll auf das Wesentliche zu konzentrieren.</li>\n  </ul>\n</div>\n\n<style>\n  /* 让这个模块内的 li 左对齐，不影响其他地方 */\n  .controller-features ul li {\n    text-align: left !important;\n    list-style-position: inside;\n  }\n</style>",
             "file_type": "image",
             "file_image": "shopify://shop_images/A_-_11_e8e4e9aa-a289-47d9-9dd8-e83318c2b0f4.jpg",
             "video_url": "",
