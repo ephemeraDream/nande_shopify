@@ -505,10 +505,10 @@
         "tab_LmGatL": {
           "type": "tab",
           "settings": {
-            "tabname": "Eigenes UI-System",
+            "tabname": "Eigenentwickeltes UI-System",
             "sub_title": "",
-            "title": "<p>Eigenes UI-System</p>",
-            "description": "<div style=\"text-align:left; direction:ltr;\" lang=\"de\">\n  <p>\n   Das speziell entwickelte Bedienfeld sorgt für eine einfache, schnelle und präzise Steuerung der Tischhöhe und macht die Nutzung unseres elektrischen Schreibtisches besonders angenehm.<br/>\n</div>",
+            "title": "<p>Eigenentwickeltes UI-System</p>",
+            "description": "<div style=\"text-align:left; direction:ltr;\" lang=\"de\">\n<b>Präzision bis ins kleinste Detail: </b>\n  <p>Das speziell für den T2 Pro Max entwickelte Betriebssystem garantiert eine blitzschnelle und millimetergenaue Steuerung der Tischhöhe.</p>\n<p>Die Steuerung reagiert ohne Verzögerung und macht die tägliche Nutzung Ihres elektrischen Schreibtisches besonders komfortabel und effizient.</p>\n</div>",
             "file_type": "image",
             "file_image": "shopify://shop_images/15_-_UI.jpg",
             "video_url": "",
