@@ -363,8 +363,8 @@
         "foldtext_UUEbi9": {
           "type": "foldtext",
           "settings": {
-            "title": "<h3>Kleinere Spalten</h3>",
-            "description": "<ul><li>Durch deutlich kleinere Spalten zwischen Innen- und Außensäulen wird das seitliche Spiel bei der Höhenverstellung effektiv minimiert.\nDie präzise Führung sorgt dafür, dass der Tisch selbst in hoher Position stabil bleibt und nicht wackelt – besonders wichtig bei Monitorarmen oder dynamischer Nutzung.</li><li></li></ul>",
+            "title": "<h3>Minimale Toleranzen</h3>",
+            "description": "<ul><li><b><h4>Präzision ohne Spielraum</h4></b><p>Durch extrem geringe Spaltmaße zwischen den ovalen Innen- und Außensäulen haben wir das seitliche Spiel auf ein technisches Minimum reduziert.</p>Die präzise Führung der Säulen eliminiert jegliches Wackeln während und nach der Höhenverstellung. Dies ist besonders wichtig, wenn Sie schwere Monitorarme oder mehrere Bildschirme nutzen – alles bleibt exakt an seinem Platz, ohne störende Schwingungen.\n</li></ul>",
             "image": "shopify://shop_images/11_73ebcafd-3363-4b68-be77-ae2c4476111d.jpg"
           }
         }
