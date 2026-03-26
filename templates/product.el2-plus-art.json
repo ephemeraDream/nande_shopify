@@ -339,7 +339,7 @@
         "foldtext_exzygz": {
           "type": "foldtext",
           "settings": {
-            "title": "<p>Pyramidenförmige Säulenstruktur: </p>",
+            "title": "<p>Pyramidenförmige Säulenstruktur</p>",
             "description": "<ul><li><b><h4>Standfestigkeit neu definiert</h4></b><p>Die innovative, nach unten breiter werdende Konstruktion der ovalen Hubsäulen sorgt für eine deutlich vergrößerte Auflagefläche und eine optimale Kraftverteilung.</p>Die physikalischen Gesetze der Pyramide garantieren, dass der Tisch selbst in der maximalen Arbeitshöhe außergewöhnlich stabil bleibt. Ein Wackeln oder Kippen wird durch den tiefen Schwerpunkt effektiv verhindert.</li></ul>",
             "image": "shopify://shop_images/9_93804768-95d7-492a-ba3b-02a3bbcf7f8b.jpg"
           }
@@ -347,8 +347,8 @@
         "foldtext_7BhWHC": {
           "type": "foldtext",
           "settings": {
-            "title": "<h3>Verstärkte Säulen</h3>",
-            "description": "<ul><li>Die Standbeine verfügen über eine erhöhte Wandstärke und besonders robuste Stahlprofile.\nMehr Material = mehr Stabilität, bessere Lastverteilung und eine langlebige Gesamtstruktur.</li></ul>",
+            "title": "<p>Verstärkte Hubsäulen</p>",
+            "description": "<ul><li><h4> <b>Substanz trifft Ästhetik</b></h4><p>Wir machen keine Kompromisse beim Material: Unsere ovalen Standbeine verfügen über eine erhöhte Wandstärke und besonders robuste Stahlprofile.</p>\nMehr Material bedeutet direkt mehr Stabilität. Diese Bauweise sorgt für eine überlegene Lastverteilung und eine verformungssteife Gesamtstruktur, die auch bei intensiver Nutzung im Home-Office oder Büro niemals an Festigkeit verliert.</li></ul>",
             "image": "shopify://shop_images/10_d677aa77-1448-49fe-8013-e96c84ecebe3.jpg"
           }
         },
