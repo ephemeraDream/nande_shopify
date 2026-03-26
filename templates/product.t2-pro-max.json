@@ -474,6 +474,20 @@
     "img_with_text_tab_emEWU8": {
       "type": "img-with-text-tab",
       "blocks": {
+        "tab_LmGatL": {
+          "type": "tab",
+          "settings": {
+            "tabname": "Eigenentwickeltes UI-System",
+            "sub_title": "",
+            "title": "<p>Eigenentwickeltes UI-System</p>",
+            "description": "<div style=\"text-align:left; direction:ltr;\" lang=\"de\">\n<b>Präzision bis ins kleinste Detail: </b>\n  <p>Das speziell für den T2 Pro Max entwickelte Betriebssystem garantiert eine blitzschnelle und millimetergenaue Steuerung der Tischhöhe.</p>\n<p>Die Steuerung reagiert ohne Verzögerung und macht die tägliche Nutzung Ihres elektrischen Schreibtisches besonders komfortabel und effizient.</p>\n</div>",
+            "file_type": "image",
+            "file_image": "shopify://shop_images/15_-_UI.jpg",
+            "video_url": "",
+            "btn_text": "",
+            "link": ""
+          }
+        },
         "tab_AUd88N": {
           "type": "tab",
           "settings": {
@@ -501,26 +515,12 @@
             "btn_text": "",
             "link": ""
           }
-        },
-        "tab_LmGatL": {
-          "type": "tab",
-          "settings": {
-            "tabname": "Eigenentwickeltes UI-System",
-            "sub_title": "",
-            "title": "<p>Eigenentwickeltes UI-System</p>",
-            "description": "<div style=\"text-align:left; direction:ltr;\" lang=\"de\">\n<b>Präzision bis ins kleinste Detail: </b>\n  <p>Das speziell für den T2 Pro Max entwickelte Betriebssystem garantiert eine blitzschnelle und millimetergenaue Steuerung der Tischhöhe.</p>\n<p>Die Steuerung reagiert ohne Verzögerung und macht die tägliche Nutzung Ihres elektrischen Schreibtisches besonders komfortabel und effizient.</p>\n</div>",
-            "file_type": "image",
-            "file_image": "shopify://shop_images/15_-_UI.jpg",
-            "video_url": "",
-            "btn_text": "",
-            "link": ""
-          }
         }
       },
       "block_order": [
+        "tab_LmGatL",
         "tab_AUd88N",
-        "tab_JyxzQm",
-        "tab_LmGatL"
+        "tab_JyxzQm"
       ],
       "name": "img with text tab",
       "settings": {
