@@ -574,7 +574,7 @@
             "tabname": "USB-A & USB-C Ports",
             "sub_title": "",
             "title": "<p>Ein aufgeräumter Fokus: Zwei integrierte Ladeanschlüsse</p>",
-            "description": "<div class=\"controller-features\">\n  <ul><b>Volle Akkus ohne Kabelsalat.</b>Laden Sie Ihr Smartphone und Tablet direkt über die zwei leistungsstarken USB-Ports im Bedienfeld.\n    <li>Sie benötigen keine zusätzlichen Netzteile oder Mehrfachstecker auf dem Tisch. Erleben Sie die Freiheit einer „Clean Desk“-Umgebung, die Ihnen hilft, sich voll auf das Wesentliche zu konzentrieren.</li>\n  </ul>\n</div>\n\n<style>\n  /* 让这个模块内的 li 左对齐，不影响其他地方 */\n  .controller-features ul li {\n    text-align: left !important;\n    list-style-position: inside;\n  }\n</style>",
+            "description": "<div class=\"controller-features\">\n  <ul><b>Volle Akkus ohne Kabelsalat.</b><p>Laden Sie Ihr Smartphone und Tablet direkt über die zwei leistungsstarken USB-Ports im Bedienfeld.</p>\n    <li>Sie benötigen keine zusätzlichen Netzteile oder Mehrfachstecker auf dem Tisch. Erleben Sie die Freiheit einer „Clean Desk“-Umgebung, die Ihnen hilft, sich voll auf das Wesentliche zu konzentrieren.</li>\n  </ul>\n</div>\n\n<style>\n  /* 让这个模块内的 li 左对齐，不影响其他地方 */\n  .controller-features ul li {\n    text-align: left !important;\n    list-style-position: inside;\n  }\n</style>",
             "file_type": "image",
             "file_image": "shopify://shop_images/14_-_2_519c2a89-f4a4-4faf-bc34-47dc3738944d.jpg",
             "video_url": "",
