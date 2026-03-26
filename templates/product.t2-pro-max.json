@@ -477,10 +477,10 @@
         "tab_AUd88N": {
           "type": "tab",
           "settings": {
-            "tabname": "Klavier-Look",
+            "tabname": "Exklusives Piano-Style-Bedienfeld",
             "sub_title": "",
-            "title": "<p>Klavier-Look</p>",
-            "description": "<div style=\"text-align:left; direction:ltr;\" lang=\"de\">\n  <p>\n    Das Bedienfeld überzeugt durch sein hochwertiges Klavier-Design, das eine angenehme Haptik und einfache Bedienung kombiniert – für ein besonderes Nutzererlebnis.<br/>\n  </p>\n</div>",
+            "title": "<p>Exklusives Piano-Style-Bedienfeld</p>",
+            "description": "<div style=\"text-align:left; direction:ltr;\" lang=\"de\">\n<b>Ästhetik trifft auf Ergonomie:</b>  \n<p>Das Design im eleganten Klavier-Look ist nicht nur ein optisches Highlight an Ihrem Arbeitsplatz, sondern bietet auch eine herausragende Haptik. Die reaktionsschnellen Tasten machen jede Höhenverstellung zu einem haptischen Erlebnis.\n  </p>\n<p>Eine intuitive Bedienung, die sich so hochwertig anfühlt, wie sie aussieht.</p>\n</div>",
             "file_type": "image",
             "file_image": "shopify://shop_images/13_ce6a0fba-acc0-44bb-8b70-3fa3a3eb9dd2.jpg",
             "video_url": "",
@@ -491,10 +491,10 @@
         "tab_JyxzQm": {
           "type": "tab",
           "settings": {
-            "tabname": "RGB-Tasten",
+            "tabname": "Individuelle RGB-Beleuchtung",
             "sub_title": "",
-            "title": "<p>RGB-Tasten</p>",
-            "description": "<div style=\"text-align:left; direction:ltr;\" lang=\"de\">\n  <p>\n   Die Tasten sind mit RGB-Beleuchtung ausgestattet und bieten 8 verschiedene Farben zur Auswahl. So können Sie die Beleuchtung ganz einfach per Knopfdruck an Ihre Vorlieben anpassen – ohne komplizierte Einstellungen.<br/>\n  </p>\n</div>",
+            "title": "<p>Individuelle RGB-Beleuchtung</p>",
+            "description": "<div style=\"text-align:left; direction:ltr;\" lang=\"de\">\n<b>Setzen Sie farbliche Akzente: </b>\n  <p>Die Tasten sind mit einer modernen RGB-Beleuchtung ausgestattet. Wählen Sie aus 8 verschiedenen Farben genau den Ton aus, der zu Ihrem Setup oder Ihrer aktuellen Stimmung passt.\n  </p>\n<p>Die Anpassung erfolgt ganz unkompliziert per Tastendruck – ohne Menüs oder komplexe Einstellungen. So wird Ihr Schreibtisch zum Spiegelbild Ihres persönlichen Stils.</p>\n</div>",
             "file_type": "image",
             "file_image": "shopify://shop_images/14.jpg",
             "video_url": "",
@@ -526,7 +526,7 @@
       "settings": {
         "spec_id": "",
         "description": "",
-        "title": "<p>Piano-Style Controller</p>",
+        "title": "<p>Intelligente Steuerung im Premium-Design</p>",
         "show_tab_head": false,
         "loop": true,
         "autoplay_enable": true,
