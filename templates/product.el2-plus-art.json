@@ -333,6 +333,56 @@
         "background_color": "rgba(0,0,0,0)"
       }
     },
+    "img_with_foldtext_LzqrtY": {
+      "type": "img-with-foldtext",
+      "blocks": {
+        "foldtext_exzygz": {
+          "type": "foldtext",
+          "settings": {
+            "title": "<p>Pyramidenförmige Säulenstruktur: Standfestigkeit neu definiert</p>",
+            "description": "<ul><li>Diese Konstruktion sorgt für eine deutlich größere Auflagefläche und verteilt die Kräfte optimal nach unten und außen. So bleibt der Tisch selbst in der höchsten Position außergewöhnlich stabil und verhindert effektiv Wackeln oder Kippen.</li></ul>",
+            "image": "shopify://shop_images/9_93804768-95d7-492a-ba3b-02a3bbcf7f8b.jpg"
+          }
+        },
+        "foldtext_7BhWHC": {
+          "type": "foldtext",
+          "settings": {
+            "title": "<h3>Verstärkte Säulen</h3>",
+            "description": "<ul><li>Die Standbeine verfügen über eine erhöhte Wandstärke und besonders robuste Stahlprofile.\nMehr Material = mehr Stabilität, bessere Lastverteilung und eine langlebige Gesamtstruktur.</li></ul>",
+            "image": "shopify://shop_images/10_d677aa77-1448-49fe-8013-e96c84ecebe3.jpg"
+          }
+        },
+        "foldtext_Gq6xTh": {
+          "type": "foldtext",
+          "settings": {
+            "title": "<h3>Verstärkte Fußkonstruktion</h3>",
+            "description": "<ul><li>Die 20 mm starken Standfüße bestehen aus massivem Metall und erhöhen die Gesamtsteifigkeit des Tischgestells spürbar.\nDank der hohen Materialstärke werden Bewegungsenergie und Vibrationen wesentlich besser aufgenommen und abgeleitet – so bleibt der Tisch auch bei Belastung ruhig und stabil.</li><li></li></ul>",
+            "image": "shopify://shop_images/12_d3316a85-7078-43ae-99ba-26c17838ba33.jpg"
+          }
+        },
+        "foldtext_UUEbi9": {
+          "type": "foldtext",
+          "settings": {
+            "title": "<h3>Kleinere Spalten</h3>",
+            "description": "<ul><li>Durch deutlich kleinere Spalten zwischen Innen- und Außensäulen wird das seitliche Spiel bei der Höhenverstellung effektiv minimiert.\nDie präzise Führung sorgt dafür, dass der Tisch selbst in hoher Position stabil bleibt und nicht wackelt – besonders wichtig bei Monitorarmen oder dynamischer Nutzung.</li><li></li></ul>",
+            "image": "shopify://shop_images/11_73ebcafd-3363-4b68-be77-ae2c4476111d.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "foldtext_exzygz",
+        "foldtext_7BhWHC",
+        "foldtext_Gq6xTh",
+        "foldtext_UUEbi9"
+      ],
+      "name": "img with foldtext",
+      "settings": {
+        "spec_id": "",
+        "title": "<p>Ingenieurskunst für maximale Stabilität</p>",
+        "padding_top": 60,
+        "padding_bottom": 60
+      }
+    },
     "img_with_foldtext_RcBrkw": {
       "type": "img-with-foldtext",
       "blocks": {
@@ -393,7 +443,7 @@
         "video_aspect_ratio": "4/3",
         "btn_text": "",
         "link_url": "",
-        "padding_top": 32,
+        "padding_top": 60,
         "padding_bottom": 32,
         "background_color": "#e2ded6"
       }
@@ -471,56 +521,6 @@
         "padding_top": 60,
         "padding_bottom": 120,
         "background_color": "#e2ded6"
-      }
-    },
-    "img_with_foldtext_LzqrtY": {
-      "type": "img-with-foldtext",
-      "blocks": {
-        "foldtext_exzygz": {
-          "type": "foldtext",
-          "settings": {
-            "title": "<h3>Pyramidenförmige-Säulenstruktur</h3>",
-            "description": "<ul><li>Diese Konstruktion sorgt für eine deutlich größere Auflagefläche und verteilt die Kräfte optimal nach unten und außen. So bleibt der Tisch selbst in der höchsten Position außergewöhnlich stabil und verhindert effektiv Wackeln oder Kippen.</li></ul>",
-            "image": "shopify://shop_images/9_93804768-95d7-492a-ba3b-02a3bbcf7f8b.jpg"
-          }
-        },
-        "foldtext_7BhWHC": {
-          "type": "foldtext",
-          "settings": {
-            "title": "<h3>Verstärkte Säulen</h3>",
-            "description": "<ul><li>Die Standbeine verfügen über eine erhöhte Wandstärke und besonders robuste Stahlprofile.\nMehr Material = mehr Stabilität, bessere Lastverteilung und eine langlebige Gesamtstruktur.</li></ul>",
-            "image": "shopify://shop_images/10_d677aa77-1448-49fe-8013-e96c84ecebe3.jpg"
-          }
-        },
-        "foldtext_Gq6xTh": {
-          "type": "foldtext",
-          "settings": {
-            "title": "<h3>Verstärkte Fußkonstruktion</h3>",
-            "description": "<ul><li>Die 20 mm starken Standfüße bestehen aus massivem Metall und erhöhen die Gesamtsteifigkeit des Tischgestells spürbar.\nDank der hohen Materialstärke werden Bewegungsenergie und Vibrationen wesentlich besser aufgenommen und abgeleitet – so bleibt der Tisch auch bei Belastung ruhig und stabil.</li><li></li></ul>",
-            "image": "shopify://shop_images/12_d3316a85-7078-43ae-99ba-26c17838ba33.jpg"
-          }
-        },
-        "foldtext_UUEbi9": {
-          "type": "foldtext",
-          "settings": {
-            "title": "<h3>Kleinere Spalten</h3>",
-            "description": "<ul><li>Durch deutlich kleinere Spalten zwischen Innen- und Außensäulen wird das seitliche Spiel bei der Höhenverstellung effektiv minimiert.\nDie präzise Führung sorgt dafür, dass der Tisch selbst in hoher Position stabil bleibt und nicht wackelt – besonders wichtig bei Monitorarmen oder dynamischer Nutzung.</li><li></li></ul>",
-            "image": "shopify://shop_images/11_73ebcafd-3363-4b68-be77-ae2c4476111d.jpg"
-          }
-        }
-      },
-      "block_order": [
-        "foldtext_exzygz",
-        "foldtext_7BhWHC",
-        "foldtext_Gq6xTh",
-        "foldtext_UUEbi9"
-      ],
-      "name": "img with foldtext",
-      "settings": {
-        "spec_id": "",
-        "title": "<p>So garantieren wir maximale Stabilität</p>",
-        "padding_top": 120,
-        "padding_bottom": 120
       }
     },
     "img_with_text_tab_emEWU8": {
@@ -873,12 +873,12 @@
     "video_wPHLA8",
     "video_simplicity_K7YLnT",
     "img_with_text_box_simplicity_qrzG6W",
+    "img_with_foldtext_LzqrtY",
     "img_with_foldtext_RcBrkw",
     "img_with_text_simplicity_R8thEq",
     "img_with_text_simplicity_nJFALq",
     "img_with_text_simplicity_YLCpmN",
     "img_with_text_simplicity_JRCJ4f",
-    "img_with_foldtext_LzqrtY",
     "img_with_text_tab_emEWU8",
     "technical_data_L3gXUm",
     "maidesite_swiper_QhkQG8",
