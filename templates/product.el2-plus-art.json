@@ -526,26 +526,12 @@
     "img_with_text_tab_emEWU8": {
       "type": "img-with-text-tab",
       "blocks": {
-        "tab_fiwUXL": {
-          "type": "tab",
-          "settings": {
-            "tabname": "2× 18W-Ports (USB-A & USB-C)",
-            "sub_title": "",
-            "title": "<p><strong>2× 18W-Ports (USB-A & USB-C)</strong></p>",
-            "description": "<div class=\"controller-features\">\n  <ul>\n    <li>Smartphones, Tablets oder Kopfhörer jederzeit griffbereit laden.\nDie beiden Ports versorgen deine Geräte zuverlässig, ohne zusätzliches Ladegerät auf dem Tisch.</li>\n  </ul>\n</div>\n\n<style>\n  /* 让这个模块内的 li 左对齐，不影响其他地方 */\n  .controller-features ul li {\n    text-align: left !important;\n    list-style-position: inside;\n  }\n</style>",
-            "file_type": "image",
-            "file_image": "shopify://shop_images/14_-_2_519c2a89-f4a4-4faf-bc34-47dc3738944d.jpg",
-            "video_url": "",
-            "btn_text": "",
-            "link": ""
-          }
-        },
         "tab_AUd88N": {
           "type": "tab",
           "settings": {
             "tabname": "Erinnerung zum Aufstehen",
             "sub_title": "",
-            "title": "<p><strong>Erinnerung zum Aufstehen</strong></p>",
+            "title": "<p>Ihr persönlicher Gesundheits-Coach: Die Aufsteh-Erinnerung</p>",
             "description": "<div class=\"controller-features\">\n  <ul>\n    <li>Das integrierte Reminder-System erinnert regelmasig daran, aufzustehen und die Sitzposition zu wechseln. So fordern Sie ein gesunderes Arbeiten im Stehen und beugen langfristigen Ruckenproblemen oder Verspannungen vor.</li>\n  </ul>\n</div>\n\n<style>\n  /* 让这个模块内的 li 左对齐，不影响其他地方 */\n  .controller-features ul li {\n    text-align: left !important;\n    list-style-position: inside;\n  }\n</style>",
             "file_type": "image",
             "file_image": "shopify://shop_images/15_4aae9167-537a-4ecc-898d-0fcedfdb2e75.jpg",
@@ -581,13 +567,27 @@
             "btn_text": "",
             "link": ""
           }
+        },
+        "tab_fiwUXL": {
+          "type": "tab",
+          "settings": {
+            "tabname": "2× 18W-Ports (USB-A & USB-C)",
+            "sub_title": "",
+            "title": "<p><strong> USB-A & USB-C Ports</strong></p>",
+            "description": "<div class=\"controller-features\">\n  <ul>\n    <li>Smartphones, Tablets oder Kopfhörer jederzeit griffbereit laden.\nDie beiden Ports versorgen deine Geräte zuverlässig, ohne zusätzliches Ladegerät auf dem Tisch.</li>\n  </ul>\n</div>\n\n<style>\n  /* 让这个模块内的 li 左对齐，不影响其他地方 */\n  .controller-features ul li {\n    text-align: left !important;\n    list-style-position: inside;\n  }\n</style>",
+            "file_type": "image",
+            "file_image": "shopify://shop_images/14_-_2_519c2a89-f4a4-4faf-bc34-47dc3738944d.jpg",
+            "video_url": "",
+            "btn_text": "",
+            "link": ""
+          }
         }
       },
       "block_order": [
-        "tab_fiwUXL",
         "tab_AUd88N",
         "tab_JyxzQm",
-        "tab_LmGatL"
+        "tab_LmGatL",
+        "tab_fiwUXL"
       ],
       "name": "img with text tab",
       "settings": {
