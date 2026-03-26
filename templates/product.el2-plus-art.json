@@ -298,7 +298,7 @@
           "type": "file_with_text",
           "settings": {
             "title": "<p>Smart Controller: Ihr digitaler Gesundheits-Assistent</p>",
-            "description": "<p>Steuern Sie Ihren Arbeitsplatz präzise und intuitiv mit nur einem Fingertipp.</p><p>Mit vier Memory-Positionen, zwei integrierten Ladeanschlüssen und einer <strong>Sitz-Steh-Erinnerung</strong> unterstützt Sie der Controller aktiv dabei, gesund zu bleiben. Finden Sie in Sekunden Ihre ergonomische Idealposition.</p>",
+            "description": "<p>Steuern Sie Ihren Arbeitsplatz präzise und intuitiv mit nur einem Fingertipp.</p><ul><li>Mit vier Memory-Positionen, zwei integrierten Ladeanschlüssen und einer <strong>Sitz-Steh-Erinnerung</strong> unterstützt Sie der Controller aktiv dabei, gesund zu bleiben. Finden Sie in Sekunden Ihre ergonomische Idealposition.</li></ul>",
             "file_type": "image",
             "file_image": "shopify://shop_images/3_04b4753b-386b-41ce-bd6d-53ade224bcf9.jpg",
             "video_url": ""
@@ -308,7 +308,7 @@
           "type": "file_with_text",
           "settings": {
             "title": "<p>Metall-Kabelmanagement: Für einen aufgeräumten Fokus</p>",
-            "description": "<p>Ein professioneller Arbeitsplatz erfordert Ordnung. Die robuste Metall-Kabelwanne ist bereits im Lieferumfang enthalten.</p><p>Bündeln und verstauen Sie alle Kabel unsichtbar unter der Tischplatte. So genießen Sie einen sauberen \"Clean Desk Look\", der Ihnen hilft, konzentriert und strukturiert zu arbeiten.</p>",
+            "description": "<p>Ein professioneller Arbeitsplatz erfordert Ordnung. Die robuste Metall-Kabelwanne ist bereits im Lieferumfang enthalten.</p><ul><li>Bündeln und verstauen Sie alle Kabel unsichtbar unter der Tischplatte. So genießen Sie einen sauberen \"Clean Desk Look\", der Ihnen hilft, konzentriert und strukturiert zu arbeiten.</li></ul>",
             "file_type": "image",
             "file_image": "shopify://shop_images/6_ca4b48d4-ab75-4842-bd0b-8498c1bf6749.jpg",
             "video_url": ""
@@ -381,11 +381,11 @@
       "name": "img with text simplicity",
       "settings": {
         "spec_id": "",
-        "header_title": "<p>Elegantes Design</p>",
+        "header_title": "<p>Elegantes Design trifft auf überlegene Statik</p>",
         "header_content": "",
         "title": "",
         "sub_title": "<h4>Elegantes Ovalprofil für mehr Stabilität und bessere Laufruhe</h4>",
-        "description": "Die Säulen mit Ovalprofil bestehen aus präzise verarbeitetem, hochwertigem Stahl und bieten eine deutlich höhere Steifigkeit als herkömmliche rechteckige Profile.\nDas Ergebnis: weniger Wackeln, ruhigerer Hub und ein eleganter, weich geformter Look.",
+        "description": "Unsere ovalen Hubsäulen setzen neue Maßstäbe in Design und Funktionalität. Gefertigt aus präzise verarbeitetem Qualitätsstahl, bietet das abgerundete Profil eine <b>höhere Verformungssteifigkeit</b> als viele herkömmliche Rechteck-Konstruktionen.\n\n<p>Das Ergebnis ist eine spürbar höhere Stabilität und ein flüsterleiser, ruhiger Hub. Die sanften Konturen verleihen Ihrem Arbeitsplatz eine moderne, hochwertige Ästhetik, die technische Überlegenheit mit wohnlichem Design vereint – für ein wackelfreies Arbeiten auf höchstem Niveau.</p>",
         "file_position": "left",
         "file_type": "image",
         "file_image": "shopify://shop_images/7_8dc6186a-8dc3-4297-b3c5-4eba378550b5.jpg",
@@ -393,8 +393,8 @@
         "video_aspect_ratio": "4/3",
         "btn_text": "",
         "link_url": "",
-        "padding_top": 120,
-        "padding_bottom": 0,
+        "padding_top": 32,
+        "padding_bottom": 32,
         "background_color": "#e2ded6"
       }
     },
