@@ -202,7 +202,7 @@
             "title": "<p>Verstärktes 4-Bein-Gestell</p>",
             "description": "<p>Das verstärkte Vierbein-System mit vier integrierten dreieckigen Stützstrukturen sorgt für eine gleichmäßige Lastverteilung und eine deutlich höhere strukturelle Stabilität als klassische Zweibein-Gestelle – ideal für große Arbeitsflächen und hohe Belastung.</p>",
             "file_type": "image",
-            "file_image": "shopify://shop_images/1_2ce14cfe-9831-4ef5-a93c-ac9737afa75d.jpg",
+            "file_image": "shopify://shop_images/1_8ae7c74d-337e-4b80-b4af-65ea947595a3.jpg",
             "video_url": ""
           }
         },
@@ -212,7 +212,7 @@
             "title": "<p>Große L-förmige Arbeitsfläche</p>",
             "description": "<p>Die großzügige L-Form erweitert den nutzbaren Arbeitsbereich deutlich und ermöglicht klar getrennte Funktionszonen für Bildschirmarbeit, Schreiben und Zubehör. Diese strukturierte Flächenaufteilung unterstützt ergonomische Arbeitsabläufe und verbessert die Übersicht im täglichen Einsatz.</p>",
             "file_type": "image",
-            "file_image": "shopify://shop_images/2_-_L.jpg",
+            "file_image": "shopify://shop_images/2_97308139-9619-49b4-a212-c6c837f4ddd0.jpg",
             "video_url": ""
           }
         },
@@ -222,7 +222,7 @@
             "title": "<p>Stabil in jeder Höhe</p>",
             "description": "<p>Die Kombination aus Rahmenverstärkung und massiver Materialstärke reduziert Schwingungen spürbar – für ruhiges, konzentriertes Arbeiten auch im ausgefahrenen Zustand. Selbst bei hoher Belastung und großen Tischplatten bleibt die Arbeitsfläche stabil und kontrolliert.</p>",
             "file_type": "image",
-            "file_image": "shopify://shop_images/3_cc48d8fc-5ee2-4c84-bb5d-a0b1c697d540.jpg",
+            "file_image": "shopify://shop_images/3_403a8ead-aee7-4d6f-bad1-cbbb1bb20557.jpg",
             "video_url": ""
           }
         },
@@ -231,9 +231,10 @@
           "settings": {
             "title": "<p>Smartes Handbedienfeld</p>",
             "description": "<p>Ergonomisch gestaltete Tasten, integrierte Speicherfunktionen und moderne Zusatzfeatures sorgen für eine komfortable und intuitive Höhensteuerung.</p>",
-            "file_type": "image",
-            "file_image": "shopify://shop_images/4_9bf79b99-fb52-4751-95b4-be1cc26a0343.jpg",
-            "video_url": ""
+            "file_type": "video",
+            "file_image": "shopify://shop_images/5_e6abbec5-9444-44b0-81ad-417055a5eb1f.jpg",
+            "video_url": "",
+            "url_upload": "shopify://files/videos/4 - 配色克制 视频.mp4"
           }
         },
         "file_with_text_QNFYKY": {
@@ -242,7 +243,7 @@
             "title": "<p>160 kg Tragkraft</p>",
             "description": "<p>Hohe Belastbarkeit für umfangreiche Setups mit mehreren Monitoren, schweren Geräten und zusätzlichem Zubehör – ohne Kompromisse bei der Standfestigkeit.</p>",
             "file_type": "image",
-            "file_image": "shopify://shop_images/5_-_160kg.jpg",
+            "file_image": "shopify://shop_images/5_e6abbec5-9444-44b0-81ad-417055a5eb1f.jpg",
             "video_url": ""
           }
         },
@@ -252,7 +253,7 @@
             "title": "<p>Geprüfte Materialqualität</p>",
             "description": "<p>Hochwertige Komponenten, zertifizierte Materialien und umfangreiche Dauertests gewährleisten langfristige Zuverlässigkeit im täglichen Einsatz.</p>",
             "file_type": "image",
-            "file_image": "shopify://shop_images/6_942178d7-82d4-4acc-8148-8be598b8a10b.jpg",
+            "file_image": "shopify://shop_images/6_456e138c-b9a7-4750-baea-562f3d141384.jpg",
             "video_url": ""
           }
         }
@@ -268,7 +269,7 @@
       "name": "file box simplicity",
       "settings": {
         "spec_id": "Produkt",
-        "main_title": "<p>Warum G01 wählen?</p>",
+        "main_title": "<p>Warum G02 wählen?</p>",
         "row_num": 3,
         "padding_top": 100,
         "padding_bottom": 120,
