@@ -253,8 +253,8 @@
         "video_aspect_ratio": "4/3",
         "btn_text": "",
         "link_url": "",
-        "padding_top": 120,
-        "padding_bottom": 0,
+        "padding_top": 60,
+        "padding_bottom": 60,
         "background_color": "#e2ded6"
       }
     },
@@ -264,16 +264,16 @@
         "foldtext_9Y9iUM": {
           "type": "foldtext",
           "settings": {
-            "title": "<h3>Mehr Platz dank intelligenter Eckstruktur</h3>",
-            "description": "Die L-Form eröffnet eine großzügige Arbeitsfläche und nutzt den Raum effizienter aus. Perfekt für Multitasking, kreative Projekte oder duale Workstations.",
+            "title": "<p>Maximale Arbeitsfläche durch Eckstruktur</p>",
+            "description": "Nutzen Sie Ihren Raum effizienter. Die großzügige L-Form bietet massiven Platz für Multi-Monitor-Setups, kreative Projekte und konzentriertes Multitasking.",
             "image": "shopify://shop_images/2_2c4b0111-7442-450e-a0b1-40e0c826ce6f.jpg"
           }
         },
         "foldtext_BJmYDi": {
           "type": "foldtext",
           "settings": {
-            "title": "<h3>Flexible Montage – links oder rechts</h3>",
-            "description": "Die Erweiterungsplatte lässt sich je nach Raumsituation frei auf der linken oder rechten Seite montieren. So passt sich der Tisch Ihrem individuellen Setup optimal an.",
+            "title": "<p>Ergonomie durch kurze Wege</p>",
+            "description": "Alles im Griff: Dank des intelligenten Eckdesigns minimieren Sie unnötige Bewegungen. Ein kurzer Dreh genügt, um Ihr gesamtes Equipment direkt in Reichweite zu haben.",
             "image": "shopify://shop_images/3_ae3e50dd-41b2-476b-8e98-a8e6f8125faa.jpg"
           }
         },
@@ -294,9 +294,9 @@
       "name": "img with foldtext",
       "settings": {
         "spec_id": "",
-        "title": "<p>L-förmige Erweiterungsplatte</p>",
-        "padding_top": 120,
-        "padding_bottom": 120
+        "title": "<p>L-förmige Platte: Mehr Platz für Ihre Produktivität</p>",
+        "padding_top": 60,
+        "padding_bottom": 60
       }
     },
     "img_with_text_simplicity_4kKfAr": {
