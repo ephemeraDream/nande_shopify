@@ -196,26 +196,6 @@
     "img_with_text_box_simplicity_AkxGWH": {
       "type": "img-with-text-box-simplicity",
       "blocks": {
-        "file_with_text_YAeXwa": {
-          "type": "file_with_text",
-          "settings": {
-            "title": "<p>Verstärktes 4-Bein-Gestell</p>",
-            "description": "<p>Das verstärkte Vierbein-System mit vier integrierten dreieckigen Stützstrukturen sorgt für eine gleichmäßige Lastverteilung und eine deutlich höhere strukturelle Stabilität als klassische Zweibein-Gestelle – ideal für große Arbeitsflächen und hohe Belastung.</p>",
-            "file_type": "image",
-            "file_image": "shopify://shop_images/1_2ce14cfe-9831-4ef5-a93c-ac9737afa75d.jpg",
-            "video_url": ""
-          }
-        },
-        "file_with_text_pQwJHP": {
-          "type": "file_with_text",
-          "settings": {
-            "title": "<p>Große L-förmige Arbeitsfläche</p>",
-            "description": "<p>Die großzügige L-Form erweitert den nutzbaren Arbeitsbereich deutlich und ermöglicht klar getrennte Funktionszonen für Bildschirmarbeit, Schreiben und Zubehör. Diese strukturierte Flächenaufteilung unterstützt ergonomische Arbeitsabläufe und verbessert die Übersicht im täglichen Einsatz.</p>",
-            "file_type": "image",
-            "file_image": "shopify://shop_images/2_-_L.jpg",
-            "video_url": ""
-          }
-        },
         "file_with_text_mFbE3r": {
           "type": "file_with_text",
           "settings": {
@@ -226,13 +206,23 @@
             "video_url": ""
           }
         },
-        "file_with_text_Ki6EEk": {
+        "file_with_text_YAeXwa": {
           "type": "file_with_text",
           "settings": {
-            "title": "<p>Smartes Handbedienfeld</p>",
-            "description": "<p>Ergonomisch gestaltete Tasten, integrierte Speicherfunktionen und moderne Zusatzfeatures sorgen für eine komfortable und intuitive Höhensteuerung.</p>",
+            "title": "<p>Verstärktes 4-Bein-Gestell</p>",
+            "description": "<p>Das verstärkte Vierbein-System mit vier integrierten dreieckigen Stützstrukturen sorgt für eine gleichmäßige Lastverteilung und eine deutlich höhere strukturelle Stabilität als klassische Zweibein-Gestelle – ideal für große Arbeitsflächen und hohe Belastung.</p>",
             "file_type": "image",
-            "file_image": "shopify://shop_images/4_9bf79b99-fb52-4751-95b4-be1cc26a0343.jpg",
+            "file_image": "shopify://shop_images/1_2ce14cfe-9831-4ef5-a93c-ac9737afa75d.jpg",
+            "video_url": ""
+          }
+        },
+        "file_with_text_3TibJP": {
+          "type": "file_with_text",
+          "settings": {
+            "title": "<p>Geprüfte Materialqualität</p>",
+            "description": "<p>Hochwertige Komponenten, zertifizierte Materialien und umfangreiche Dauertests gewährleisten langfristige Zuverlässigkeit im täglichen Einsatz.</p>",
+            "file_type": "image",
+            "file_image": "shopify://shop_images/6_942178d7-82d4-4acc-8148-8be598b8a10b.jpg",
             "video_url": ""
           }
         },
@@ -246,24 +236,34 @@
             "video_url": ""
           }
         },
-        "file_with_text_3TibJP": {
+        "file_with_text_pQwJHP": {
           "type": "file_with_text",
           "settings": {
-            "title": "<p>Geprüfte Materialqualität</p>",
-            "description": "<p>Hochwertige Komponenten, zertifizierte Materialien und umfangreiche Dauertests gewährleisten langfristige Zuverlässigkeit im täglichen Einsatz.</p>",
+            "title": "<p>Große L-förmige Arbeitsfläche</p>",
+            "description": "<p>Die großzügige L-Form erweitert den nutzbaren Arbeitsbereich deutlich und ermöglicht klar getrennte Funktionszonen für Bildschirmarbeit, Schreiben und Zubehör. Diese strukturierte Flächenaufteilung unterstützt ergonomische Arbeitsabläufe und verbessert die Übersicht im täglichen Einsatz.</p>",
             "file_type": "image",
-            "file_image": "shopify://shop_images/6_942178d7-82d4-4acc-8148-8be598b8a10b.jpg",
+            "file_image": "shopify://shop_images/2_-_L.jpg",
+            "video_url": ""
+          }
+        },
+        "file_with_text_Ki6EEk": {
+          "type": "file_with_text",
+          "settings": {
+            "title": "<p>Smartes Handbedienfeld</p>",
+            "description": "<p>Ergonomisch gestaltete Tasten, integrierte Speicherfunktionen und moderne Zusatzfeatures sorgen für eine komfortable und intuitive Höhensteuerung.</p>",
+            "file_type": "image",
+            "file_image": "shopify://shop_images/4_9bf79b99-fb52-4751-95b4-be1cc26a0343.jpg",
             "video_url": ""
           }
         }
       },
       "block_order": [
-        "file_with_text_YAeXwa",
-        "file_with_text_pQwJHP",
         "file_with_text_mFbE3r",
-        "file_with_text_Ki6EEk",
+        "file_with_text_YAeXwa",
+        "file_with_text_3TibJP",
         "file_with_text_QNFYKY",
-        "file_with_text_3TibJP"
+        "file_with_text_pQwJHP",
+        "file_with_text_Ki6EEk"
       ],
       "name": "file box simplicity",
       "settings": {
