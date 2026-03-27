@@ -235,6 +235,29 @@
         "autoplay_speed": 5
       }
     },
+    "img_with_text_simplicity_R8thEq": {
+      "type": "img-with-text-simplicity",
+      "custom_css": [],
+      "name": "img with text simplicity",
+      "settings": {
+        "spec_id": "",
+        "header_title": "<p>4-Konstruktion — Entwickelt für maximale Stabilität</p>",
+        "header_content": "",
+        "title": "<h3>Stabiler als herkömmliche Drei-Bein-L-Tische</h3>",
+        "sub_title": "",
+        "description": "<ul><li>Die robuste Vierbein-Struktur sorgt für deutlich weniger Wackeln und höhere Gesamtsteifigkeit. Ideal für große Tischplatten, L-Form-Setups und produktive Workflows.",
+        "file_position": "right",
+        "file_type": "image",
+        "file_image": "shopify://shop_images/5_971484f2-f467-46a8-bd5e-adf1d337b0ff.jpg",
+        "video_url": "",
+        "video_aspect_ratio": "4/3",
+        "btn_text": "",
+        "link_url": "",
+        "padding_top": 120,
+        "padding_bottom": 0,
+        "background_color": "#e2ded6"
+      }
+    },
     "img_with_foldtext_cCLPBE": {
       "type": "img-with-foldtext",
       "blocks": {
@@ -466,29 +489,6 @@
         "padding_top": 100,
         "padding_bottom": 120,
         "background_color": "rgba(0,0,0,0)"
-      }
-    },
-    "img_with_text_simplicity_R8thEq": {
-      "type": "img-with-text-simplicity",
-      "custom_css": [],
-      "name": "img with text simplicity",
-      "settings": {
-        "spec_id": "",
-        "header_title": "<p>4-Konstruktion — Entwickelt für maximale Stabilität</p>",
-        "header_content": "",
-        "title": "<h3>Stabiler als herkömmliche Drei-Bein-L-Tische</h3>",
-        "sub_title": "",
-        "description": "<ul><li>Die robuste Vierbein-Struktur sorgt für deutlich weniger Wackeln und höhere Gesamtsteifigkeit. Ideal für große Tischplatten, L-Form-Setups und produktive Workflows.",
-        "file_position": "right",
-        "file_type": "image",
-        "file_image": "shopify://shop_images/5_971484f2-f467-46a8-bd5e-adf1d337b0ff.jpg",
-        "video_url": "",
-        "video_aspect_ratio": "4/3",
-        "btn_text": "",
-        "link_url": "",
-        "padding_top": 120,
-        "padding_bottom": 0,
-        "background_color": "#e2ded6"
       }
     },
     "img_with_text_simplicity_nJFALq": {
@@ -990,13 +990,13 @@
     "product_anchor_bar_atcVF4",
     "video_wPHLA8",
     "banner_6K9jqA",
+    "img_with_text_simplicity_R8thEq",
     "img_with_foldtext_cCLPBE",
     "img_with_text_simplicity_4kKfAr",
     "img_with_text_simplicity_eE7PqF",
     "img_with_text_simplicity_iiPLAi",
     "accordion_gallery_9yfNeM",
     "img_with_text_box_simplicity_qrzG6W",
-    "img_with_text_simplicity_R8thEq",
     "img_with_text_simplicity_nJFALq",
     "img_with_text_simplicity_YLCpmN",
     "img_with_text_simplicity_JRCJ4f",

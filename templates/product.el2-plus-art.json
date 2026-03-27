@@ -278,7 +278,7 @@
           "type": "file_with_text",
           "settings": {
             "title": "<p>Geprüfte Langlebigkeit: Über 10.000 Belastungstests</p>",
-            "description": "<p>Qualität, die über Jahre hinweg überzeugt. Jeder Rahmen wird strengsten industriellen Tests unterzogen.</p><ul><li>Mehr als <strong>10.000 Testzyklen</strong> garantieren eine robuste und zuverlässige Performance im täglichen Einsatz. Dies macht den EL2 Plus Art zu einer nachhaltigen Investition in Ihre langfristige Produktivität.</li></ul>",
+            "description": "<p>Qualität, die über Jahre hinweg überzeugt. Jeder Rahmen wird strengsten industriellen Tests unterzogen.</p><p>Mehr als <strong>10.000 Testzyklen</strong> garantieren eine robuste und zuverlässige Performance im täglichen Einsatz. Dies macht den EL2 Plus Art zu einer nachhaltigen Investition in Ihre langfristige Produktivität.</p>",
             "file_type": "image",
             "file_image": "shopify://shop_images/5_87cadca2-c73c-4e87-b87b-ca357dbabf3c.jpg",
             "video_url": ""
@@ -288,7 +288,7 @@
           "type": "file_with_text",
           "settings": {
             "title": "<p>Exklusives Ovaldesign: Ästhetik in ihrer schönsten Form</p>",
-            "description": "<p>Das durchgängige Ovaldesign – von den Standfüßen bis zu den Säulen – setzt neue Maßstäbe in der modernen Arbeitswelt.</p><ul><li>Die sanften Konturen wirken weniger technisch als gewöhnliche eckige Gestelle. Diese harmonische Formensprache verleiht Ihrem Raum eine hochwertige Möbelästhetik, die sich perfekt in moderne Wohn- und Bürokonzepte einfügt.</li></ul>",
+            "description": "<p>Das durchgängige Ovaldesign – von den Standfüßen bis zu den Säulen – setzt neue Maßstäbe in der modernen Arbeitswelt.<br/><br/>Die sanften Konturen wirken weniger technisch als gewöhnliche eckige Gestelle. Diese harmonische Formensprache verleiht Ihrem Raum eine hochwertige Möbelästhetik, die sich perfekt in moderne Wohn- und Bürokonzepte einfügt.</p>",
             "file_type": "image",
             "file_image": "shopify://shop_images/1_199dc946-5ffe-434f-817b-83b1cbf52bb0.jpg",
             "video_url": ""
@@ -298,7 +298,7 @@
           "type": "file_with_text",
           "settings": {
             "title": "<p>Smart Controller: Ihr digitaler Gesundheits-Assistent</p>",
-            "description": "<p>Steuern Sie Ihren Arbeitsplatz präzise und intuitiv mit nur einem Fingertipp.</p><ul><li>Mit vier Memory-Positionen, zwei integrierten Ladeanschlüssen und einer <strong>Sitz-Steh-Erinnerung</strong> unterstützt Sie der Controller aktiv dabei, gesund zu bleiben. Finden Sie in Sekunden Ihre ergonomische Idealposition.</li></ul>",
+            "description": "<p>Steuern Sie Ihren Arbeitsplatz präzise und intuitiv mit nur einem Fingertipp.<br/><br/>Mit vier Memory-Positionen, zwei integrierten Ladeanschlüssen und einer <strong>Sitz-Steh-Erinnerung</strong> unterstützt Sie der Controller aktiv dabei, gesund zu bleiben. Finden Sie in Sekunden Ihre ergonomische Idealposition.</p>",
             "file_type": "image",
             "file_image": "shopify://shop_images/3_04b4753b-386b-41ce-bd6d-53ade224bcf9.jpg",
             "video_url": ""
@@ -308,7 +308,7 @@
           "type": "file_with_text",
           "settings": {
             "title": "<p>Metall-Kabelmanagement: Für einen aufgeräumten Fokus</p>",
-            "description": "<p>Ein professioneller Arbeitsplatz erfordert Ordnung. Die robuste Metall-Kabelwanne ist bereits im Lieferumfang enthalten.</p><ul><li>Bündeln und verstauen Sie alle Kabel unsichtbar unter der Tischplatte. So genießen Sie einen sauberen \"Clean Desk Look\", der Ihnen hilft, konzentriert und strukturiert zu arbeiten.</li></ul>",
+            "description": "<p>Ein professioneller Arbeitsplatz erfordert Ordnung. Die robuste Metall-Kabelwanne ist bereits im Lieferumfang enthalten.</p><p>Bündeln und verstauen Sie alle Kabel unsichtbar unter der Tischplatte. So genießen Sie einen sauberen „Clean Desk Look“, der Ihnen hilft, konzentriert und strukturiert zu arbeiten.</p>",
             "file_type": "image",
             "file_image": "shopify://shop_images/6_ca4b48d4-ab75-4842-bd0b-8498c1bf6749.jpg",
             "video_url": ""
@@ -331,56 +331,6 @@
         "padding_top": 32,
         "padding_bottom": 60,
         "background_color": "rgba(0,0,0,0)"
-      }
-    },
-    "img_with_foldtext_LzqrtY": {
-      "type": "img-with-foldtext",
-      "blocks": {
-        "foldtext_exzygz": {
-          "type": "foldtext",
-          "settings": {
-            "title": "<h3>Pyramidenförmige Säulenstruktur</h3>",
-            "description": "<ul><li><b><h4>Standfestigkeit neu definiert</h4></b><p>Die innovative, nach unten breiter werdende Konstruktion der ovalen Hubsäulen sorgt für eine deutlich vergrößerte Auflagefläche und eine optimale Kraftverteilung.</p>Die physikalischen Gesetze der Pyramide garantieren, dass der Tisch selbst in der maximalen Arbeitshöhe außergewöhnlich stabil bleibt. Ein Wackeln oder Kippen wird durch den tiefen Schwerpunkt effektiv verhindert.</li></ul>",
-            "image": "shopify://shop_images/9_93804768-95d7-492a-ba3b-02a3bbcf7f8b.jpg"
-          }
-        },
-        "foldtext_7BhWHC": {
-          "type": "foldtext",
-          "settings": {
-            "title": "<h3>Verstärkte Hubsäulen</h3>",
-            "description": "<ul><li><h4> <b>Substanz trifft Ästhetik</b></h4><p>Wir machen keine Kompromisse beim Material: Unsere ovalen Standbeine verfügen über eine erhöhte Wandstärke und besonders robuste Stahlprofile.</p>\nMehr Material bedeutet direkt mehr Stabilität. Diese Bauweise sorgt für eine überlegene Lastverteilung und eine verformungssteife Gesamtstruktur, die auch bei intensiver Nutzung im Home-Office oder Büro niemals an Festigkeit verliert.</li></ul>",
-            "image": "shopify://shop_images/10_d677aa77-1448-49fe-8013-e96c84ecebe3.jpg"
-          }
-        },
-        "foldtext_Gq6xTh": {
-          "type": "foldtext",
-          "settings": {
-            "title": "<h3>Massive 20-mm-Fußkonstruktion</h3>",
-            "description": "<ul><li><h4><b>Das solide Fundament</b></h4><p>Die Standfüße des EL2 Plus Art bestehen aus 20 mm massivem Metall und bilden das Herzstück der Gesamtsteifigkeit.</p>\n\nDank der hohen Materialstärke werden Bewegungsenergie und Vibrationen (z. B. beim Tippen oder bei schnellen Bewegungen) sofort absorbiert und abgeleitet. Der Tisch ruht spürbar fest auf dem Boden – für ein ruhiges und fokussiertes Arbeitserlebnis.</li><li></li></ul>",
-            "image": "shopify://shop_images/12_d3316a85-7078-43ae-99ba-26c17838ba33.jpg"
-          }
-        },
-        "foldtext_UUEbi9": {
-          "type": "foldtext",
-          "settings": {
-            "title": "<h3>Minimale Toleranzen</h3>",
-            "description": "<ul><li><b><h4>Präzision ohne Spielraum</h4></b><p>Durch extrem geringe Spaltmaße zwischen den ovalen Innen- und Außensäulen haben wir das seitliche Spiel auf ein technisches Minimum reduziert.</p>Die präzise Führung der Säulen eliminiert jegliches Wackeln während und nach der Höhenverstellung. Dies ist besonders wichtig, wenn Sie schwere Monitorarme oder mehrere Bildschirme nutzen – alles bleibt exakt an seinem Platz, ohne störende Schwingungen.\n</li></ul>",
-            "image": "shopify://shop_images/11_73ebcafd-3363-4b68-be77-ae2c4476111d.jpg"
-          }
-        }
-      },
-      "block_order": [
-        "foldtext_exzygz",
-        "foldtext_7BhWHC",
-        "foldtext_Gq6xTh",
-        "foldtext_UUEbi9"
-      ],
-      "name": "img with foldtext",
-      "settings": {
-        "spec_id": "",
-        "title": "<p>Ingenieurskunst für maximale Stabilität</p>",
-        "padding_top": 60,
-        "padding_bottom": 60
       }
     },
     "img_with_foldtext_RcBrkw": {
@@ -431,11 +381,11 @@
       "name": "img with text simplicity",
       "settings": {
         "spec_id": "",
-        "header_title": "<p>Elegantes Design trifft auf überlegene Statik</p>",
+        "header_title": "<p>Elegantes Design</p>",
         "header_content": "",
-        "title": "<h4>Elegantes Ovalprofil für mehr Stabilität und bessere Laufruhe</h4>",
-        "sub_title": "",
-        "description": "Unsere ovalen Hubsäulen setzen neue Maßstäbe in Design und Funktionalität. Gefertigt aus präzise verarbeitetem Qualitätsstahl, bietet das abgerundete Profil eine <b>höhere Verformungssteifigkeit</b> als viele herkömmliche Rechteck-Konstruktionen.\n\n<p>Das Ergebnis ist eine spürbar höhere Stabilität und ein flüsterleiser, ruhiger Hub. Die sanften Konturen verleihen Ihrem Arbeitsplatz eine moderne, hochwertige Ästhetik, die technische Überlegenheit mit wohnlichem Design vereint – für ein wackelfreies Arbeiten auf höchstem Niveau.</p>",
+        "title": "",
+        "sub_title": "<h4>Elegantes Ovalprofil für mehr Stabilität und bessere Laufruhe</h4>",
+        "description": "Die Säulen mit Ovalprofil bestehen aus präzise verarbeitetem, hochwertigem Stahl und bieten eine deutlich höhere Steifigkeit als herkömmliche rechteckige Profile.\nDas Ergebnis: weniger Wackeln, ruhigerer Hub und ein eleganter, weich geformter Look.",
         "file_position": "left",
         "file_type": "image",
         "file_image": "shopify://shop_images/7_8dc6186a-8dc3-4297-b3c5-4eba378550b5.jpg",
@@ -443,8 +393,8 @@
         "video_aspect_ratio": "4/3",
         "btn_text": "",
         "link_url": "",
-        "padding_top": 60,
-        "padding_bottom": 32,
+        "padding_top": 120,
+        "padding_bottom": 0,
         "background_color": "#e2ded6"
       }
     },
@@ -458,9 +408,9 @@
         "spec_id": "",
         "header_title": "",
         "header_content": "",
-        "title": "<h4>Elegante Ovalfüße: Standfest, laufruhig, wohnlich</h4>",
-        "sub_title": "",
-        "description": "<p>Die großzügig dimensionierten, ovalen Standfüße bilden das solide Fundament für eine außergewöhnliche Standfestigkeit.</p> Durch ihre optimierte Gewichtsverteilung werden Vibrationen effektiv minimiert – für ein flüsterleises Arbeitserlebnis. Dank der sanften, fließenden Formensprache fügt sich das Gestell harmonisch in moderne Wohn- und Arbeitswelten ein und setzt einen stilvollen Akzent fernab von rein technischen Büromöbeln.",
+        "title": "",
+        "sub_title": "<h4>Elegante Ovalfüße – stabil, leise, möbelgerecht</h4>",
+        "description": "Die breit ausgeformten, ovalen Bodenfüße sorgen für eine außergewöhnlich stabile Standfläche.\nSie verbessern die Gewichtsverteilung, reduzieren Vibrationen und fügen sich durch ihre sanfte Formensprache harmonisch in moderne Wohn- und Arbeitsräume ein.",
         "file_position": "right",
         "file_type": "image",
         "file_image": "shopify://shop_images/8_69a29eb6-269c-4d40-aae4-628670823e72.jpg",
@@ -523,16 +473,80 @@
         "background_color": "#e2ded6"
       }
     },
+    "img_with_foldtext_LzqrtY": {
+      "type": "img-with-foldtext",
+      "blocks": {
+        "foldtext_exzygz": {
+          "type": "foldtext",
+          "settings": {
+            "title": "<h3>Pyramidenförmige-Säulenstruktur</h3>",
+            "description": "<ul><li>Diese Konstruktion sorgt für eine deutlich größere Auflagefläche und verteilt die Kräfte optimal nach unten und außen. So bleibt der Tisch selbst in der höchsten Position außergewöhnlich stabil und verhindert effektiv Wackeln oder Kippen.</li></ul>",
+            "image": "shopify://shop_images/9_93804768-95d7-492a-ba3b-02a3bbcf7f8b.jpg"
+          }
+        },
+        "foldtext_7BhWHC": {
+          "type": "foldtext",
+          "settings": {
+            "title": "<h3>Verstärkte Säulen</h3>",
+            "description": "<ul><li>Die Standbeine verfügen über eine erhöhte Wandstärke und besonders robuste Stahlprofile.\nMehr Material = mehr Stabilität, bessere Lastverteilung und eine langlebige Gesamtstruktur.</li></ul>",
+            "image": "shopify://shop_images/10_d677aa77-1448-49fe-8013-e96c84ecebe3.jpg"
+          }
+        },
+        "foldtext_Gq6xTh": {
+          "type": "foldtext",
+          "settings": {
+            "title": "<h3>Verstärkte Fußkonstruktion</h3>",
+            "description": "<ul><li>Die 20 mm starken Standfüße bestehen aus massivem Metall und erhöhen die Gesamtsteifigkeit des Tischgestells spürbar.\nDank der hohen Materialstärke werden Bewegungsenergie und Vibrationen wesentlich besser aufgenommen und abgeleitet – so bleibt der Tisch auch bei Belastung ruhig und stabil.</li><li></li></ul>",
+            "image": "shopify://shop_images/12_d3316a85-7078-43ae-99ba-26c17838ba33.jpg"
+          }
+        },
+        "foldtext_UUEbi9": {
+          "type": "foldtext",
+          "settings": {
+            "title": "<h3>Kleinere Spalten</h3>",
+            "description": "<ul><li>Durch deutlich kleinere Spalten zwischen Innen- und Außensäulen wird das seitliche Spiel bei der Höhenverstellung effektiv minimiert.\nDie präzise Führung sorgt dafür, dass der Tisch selbst in hoher Position stabil bleibt und nicht wackelt – besonders wichtig bei Monitorarmen oder dynamischer Nutzung.</li><li></li></ul>",
+            "image": "shopify://shop_images/11_73ebcafd-3363-4b68-be77-ae2c4476111d.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "foldtext_exzygz",
+        "foldtext_7BhWHC",
+        "foldtext_Gq6xTh",
+        "foldtext_UUEbi9"
+      ],
+      "name": "img with foldtext",
+      "settings": {
+        "spec_id": "",
+        "title": "<p>So garantieren wir maximale Stabilität</p>",
+        "padding_top": 120,
+        "padding_bottom": 120
+      }
+    },
     "img_with_text_tab_emEWU8": {
       "type": "img-with-text-tab",
       "blocks": {
+        "tab_fiwUXL": {
+          "type": "tab",
+          "settings": {
+            "tabname": "2× 18W-Ports (USB-A & USB-C)",
+            "sub_title": "",
+            "title": "<p><strong>2× 18W-Ports (USB-A & USB-C)</strong></p>",
+            "description": "<div class=\"controller-features\">\n  <ul>\n    <li>Smartphones, Tablets oder Kopfhörer jederzeit griffbereit laden.\nDie beiden Ports versorgen deine Geräte zuverlässig, ohne zusätzliches Ladegerät auf dem Tisch.</li>\n  </ul>\n</div>\n\n<style>\n  /* 让这个模块内的 li 左对齐，不影响其他地方 */\n  .controller-features ul li {\n    text-align: left !important;\n    list-style-position: inside;\n  }\n</style>",
+            "file_type": "image",
+            "file_image": "shopify://shop_images/14_-_2_519c2a89-f4a4-4faf-bc34-47dc3738944d.jpg",
+            "video_url": "",
+            "btn_text": "",
+            "link": ""
+          }
+        },
         "tab_AUd88N": {
           "type": "tab",
           "settings": {
             "tabname": "Erinnerung zum Aufstehen",
             "sub_title": "",
-            "title": "<p>Ihr persönlicher Gesundheits-Coach: Die Aufsteh-Erinnerung</p>",
-            "description": "<div class=\"controller-features\">\n  <ul><b>Bleiben Sie den ganzen Tag aktiv und energiegeladen.</b> Das integrierte Reminder-System erinnert Sie in regelmäßigen Abständen sanft daran, die Position zu wechseln.\n    <li>Sie fördern aktiv die Durchblutung und beugen Verspannungen sowie Rückenschmerzen effektiv vor. So verwandeln Sie Ihren Arbeitsplatz in eine dynamische Gesundheitszone.</li>\n  </ul>\n</div>\n\n<style>\n  /* 让这个模块内的 li 左对齐，不影响其他地方 */\n  .controller-features ul li {\n    text-align: left !important;\n    list-style-position: inside;\n  }\n</style>",
+            "title": "<p><strong>Erinnerung zum Aufstehen</strong></p>",
+            "description": "<div class=\"controller-features\">\n  <ul>\n    <li>Das integrierte Reminder-System erinnert regelmasig daran, aufzustehen und die Sitzposition zu wechseln. So fordern Sie ein gesunderes Arbeiten im Stehen und beugen langfristigen Ruckenproblemen oder Verspannungen vor.</li>\n  </ul>\n</div>\n\n<style>\n  /* 让这个模块内的 li 左对齐，不影响其他地方 */\n  .controller-features ul li {\n    text-align: left !important;\n    list-style-position: inside;\n  }\n</style>",
             "file_type": "image",
             "file_image": "shopify://shop_images/15_4aae9167-537a-4ecc-898d-0fcedfdb2e75.jpg",
             "video_url": "",
@@ -545,8 +559,8 @@
           "settings": {
             "tabname": "4 Speicherhöhen",
             "sub_title": "",
-            "title": "<p>Ergonomie auf Knopfdruck: 4 Memory-Positionen</p>",
-            "description": "<div class=\"controller-features\">\n  <ul><b>Finden Sie Ihre perfekte Haltung in Sekunden.</b>Speichern Sie bis zu vier individuelle Höhen für das Arbeiten im Sitzen, Stehen oder für verschiedene Familienmitglieder ab.\n    <li>Kein mühsames Justieren mehr. Ein kurzer Fingertipp genügt, und der T2 Pro fährt präzise in Ihre gespeicherte Idealposition – für einen nahtlosen Workflow ohne Unterbrechungen.</li>\n  </ul>\n</div>\n\n<style>\n  /* 让这个模块内的 li 左对齐，不影响其他地方 */\n  .controller-features ul li {\n    text-align: left !important;\n    list-style-position: inside;\n  }\n</style>",
+            "title": "<p><strong>4 Speicherhöhen</strong></p>",
+            "description": "<div class=\"controller-features\">\n  <ul>\n    <li>Merke dir vier Lieblingshöhen – für Sitzen, Stehen oder gemeinsame Nutzung.\n    Ein Knopfdruck genügt und der Tisch fährt präzise in die gespeicherte Position.</li>\n  </ul>\n</div>\n\n<style>\n  /* 让这个模块内的 li 左对齐，不影响其他地方 */\n  .controller-features ul li {\n    text-align: left !important;\n    list-style-position: inside;\n  }\n</style>",
             "file_type": "image",
             "file_image": "shopify://shop_images/13_-_4.jpg",
             "video_url": "",
@@ -559,24 +573,10 @@
           "settings": {
             "tabname": "Kindersicherung",
             "sub_title": "",
-            "title": "<p>Absolute Sorgenfreiheit: Die integrierte Kindersicherung</p>",
-            "description": "<div class=\"controller-features\">\n  <ul><b>Sicherheit für Ihr Equipment und Ihre Liebsten.</b>Die aktivierbare Kindersicherung fixiert die gewählte Tischhöhe und verhindert ein unbeabsichtigtes Verstellen.\n    <li>Ob spielende Kinder oder neugierige Haustiere – Ihre Einstellungen und Ihre Technik bleiben geschützt. Genießen Sie die Gewissheit eines absolut sicheren Home-Office-Bereichs.</li>\n  </ul>\n</div>\n\n<style>\n  /* 让这个模块内的 li 左对齐，不影响其他地方 */\n  .controller-features ul li {\n    text-align: left !important;\n    list-style-position: inside;\n  }\n</style>",
+            "title": "<p><strong>Kindersicherung</strong></p>",
+            "description": "<div class=\"controller-features\">\n  <ul>\n    <li>Schützt vor unbeabsichtigtem Verstellen.\nMit der Kindersicherung bleibt die Tischhöhe sicher fixiert – ideal für Haushalte mit Kindern oder Haustieren.</li>\n  </ul>\n</div>\n\n<style>\n  /* 让这个模块内的 li 左对齐，不影响其他地方 */\n  .controller-features ul li {\n    text-align: left !important;\n    list-style-position: inside;\n  }\n</style>",
             "file_type": "image",
             "file_image": "shopify://shop_images/16_06880a5e-19ab-4d9a-add2-fb2c1994c63c.jpg",
-            "video_url": "",
-            "btn_text": "",
-            "link": ""
-          }
-        },
-        "tab_fiwUXL": {
-          "type": "tab",
-          "settings": {
-            "tabname": "USB-A & USB-C Ports",
-            "sub_title": "",
-            "title": "<p>Ein aufgeräumter Fokus: Zwei integrierte Ladeanschlüsse</p>",
-            "description": "<div class=\"controller-features\">\n  <ul><b>Volle Akkus ohne Kabelsalat.</b><p>Laden Sie Ihr Smartphone und Tablet direkt über die zwei leistungsstarken USB-Ports im Bedienfeld.</p>\n    <li>Sie benötigen keine zusätzlichen Netzteile oder Mehrfachstecker auf dem Tisch. Erleben Sie die Freiheit einer „Clean Desk“-Umgebung, die Ihnen hilft, sich voll auf das Wesentliche zu konzentrieren.</li>\n  </ul>\n</div>\n\n<style>\n  /* 让这个模块内的 li 左对齐，不影响其他地方 */\n  .controller-features ul li {\n    text-align: left !important;\n    list-style-position: inside;\n  }\n</style>",
-            "file_type": "image",
-            "file_image": "shopify://shop_images/14_-_2_519c2a89-f4a4-4faf-bc34-47dc3738944d.jpg",
             "video_url": "",
             "btn_text": "",
             "link": ""
@@ -584,10 +584,10 @@
         }
       },
       "block_order": [
+        "tab_fiwUXL",
         "tab_AUd88N",
         "tab_JyxzQm",
-        "tab_LmGatL",
-        "tab_fiwUXL"
+        "tab_LmGatL"
       ],
       "name": "img with text tab",
       "settings": {
@@ -873,12 +873,12 @@
     "video_wPHLA8",
     "video_simplicity_K7YLnT",
     "img_with_text_box_simplicity_qrzG6W",
-    "img_with_foldtext_LzqrtY",
     "img_with_foldtext_RcBrkw",
     "img_with_text_simplicity_R8thEq",
     "img_with_text_simplicity_nJFALq",
     "img_with_text_simplicity_YLCpmN",
     "img_with_text_simplicity_JRCJ4f",
+    "img_with_foldtext_LzqrtY",
     "img_with_text_tab_emEWU8",
     "technical_data_L3gXUm",
     "maidesite_swiper_QhkQG8",
