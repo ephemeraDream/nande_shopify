@@ -1052,13 +1052,12 @@
         "title": "<p>Das GefäLlt Dir Vielleicht Auch</p>",
         "product_list": [
           "maidesite-3-fach-tischsteckdose-mit-usb-c-und-a-1-8m-kabel-steckdosenleiste",
-          "maidesite-ergonomischer-stuhl-mit-kopfstutze-und-ruckenlehne",
-          "maidesite-el2-pro-art-tischgestell-elektrisch-hohenverstellbar",
-          "maidesite-serpentine-kabelrohr"
+          "maidesite-serpentine-kabelrohr",
+          "maidesite-t4-pro-plus-vierbeinige-elliptische-saule-elektrisch-hohenverstellbares-gestell"
         ],
         "number": 3,
-        "padding_top": 120,
-        "padding_bottom": 120
+        "padding_top": 60,
+        "padding_bottom": 60
       }
     }
   },
