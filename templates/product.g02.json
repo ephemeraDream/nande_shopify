@@ -284,7 +284,7 @@
           "settings": {
             "title": "<h3>Mehr Platz dank intelligenter Eckstruktur</h3>",
             "description": "Die L-Erweiterung vergrößert die Arbeitsfläche deutlich und schafft zusätzlichen Platz für Monitore, Laptop, Dokumente und Arbeitsmaterialien. Besonders geeignet für Multi-Monitor-Arbeitsplätze und kreative Workflows.",
-            "image": "shopify://shop_images/7_61650f1b-9a34-4143-b52a-149b0cf498b5.jpg"
+            "image": "shopify://shop_images/7_fe18ea67-0de3-4d1e-a1ad-c5bf7b81294c.jpg"
           }
         },
         "foldtext_BJmYDi": {
@@ -292,7 +292,7 @@
           "settings": {
             "title": "<h3>Flexible Montage – links oder rechts</h3>",
             "description": "Die Erweiterungsplatte kann je nach Raumlayout und persönlicher Arbeitsweise auf der linken oder rechten Seite montiert werden. So passt sich der Tisch flexibel an unterschiedliche Nutzungsszenarien an.",
-            "image": "shopify://shop_images/8_d2e3a322-7486-426c-a1e1-c5ed8b28cddf.jpg"
+            "image": "shopify://shop_images/8_3029d5fb-0f1a-44e6-9018-a342f6df9681.jpg"
           }
         },
         "foldtext_aQFerM": {
@@ -300,14 +300,22 @@
           "settings": {
             "title": "<h3>Kürzere Wege, höhere Effizienz</h3>",
             "description": "Durch die erweiterte seitliche Fläche bleiben häufig genutzte Arbeitsmittel in direkter Reichweite. Das reduziert unnötige Bewegungen und unterstützt effizientere Arbeitsprozesse.",
-            "image": "shopify://shop_images/9_61e8bce0-4637-4d9b-a78d-6b4d2de16b39.jpg"
+            "image": "shopify://shop_images/9_65370800-8973-4b24-9838-df93771ee10c.jpg"
+          }
+        },
+        "foldtext_JBQyE8": {
+          "type": "foldtext",
+          "settings": {
+            "title": "",
+            "description": ""
           }
         }
       },
       "block_order": [
         "foldtext_9Y9iUM",
         "foldtext_BJmYDi",
-        "foldtext_aQFerM"
+        "foldtext_aQFerM",
+        "foldtext_JBQyE8"
       ],
       "name": "img with foldtext",
       "settings": {
@@ -587,7 +595,7 @@
             "title": "<p>4-Bein-Struktur für maximale Standfestigkeit</p>",
             "description": "<div style=\"text-align:left; direction:ltr;\" lang=\"de\">\n  <p>\n  Das Vierbein-Design bietet im Vergleich zu herkömmlichen Hubtischen eine stabilere Basis und verbessert die Balance bei großen Tischplatten und hohen Lasten.<br/>\n  </p>\n</div>",
             "file_type": "image",
-            "file_image": "shopify://shop_images/10_a2cd4ab0-1734-4d20-ac50-77090a19ddfa.jpg",
+            "file_image": "shopify://shop_images/2_97308139-9619-49b4-a212-c6c837f4ddd0.jpg",
             "video_url": "",
             "btn_text": "",
             "link": ""
@@ -601,7 +609,7 @@
             "title": "<p>Zusätzliche konstruktive Verstärkungen</p>",
             "description": "<div style=\"text-align:left; direction:ltr;\" lang=\"de\">\n  <p>\n  Verstärkte Verbindungselemente und Rahmenkomponenten erhöhen die Verwindungssteifigkeit des gesamten Systems und reduzieren seitliche Bewegungen<br/>\n  </p>\n</div>",
             "file_type": "image",
-            "file_image": "shopify://shop_images/11_7b02fc97-2e5a-442f-9ce4-a8ae49550fdc.jpg",
+            "file_image": "shopify://shop_images/12_229d8fb8-683d-468b-a0d7-18170a20d5b2.jpg",
             "video_url": "",
             "btn_text": "",
             "link": ""
@@ -615,7 +623,21 @@
             "title": "<p>Dickwandige Stahlprofile für reduzierte Vibrationen</p>",
             "description": "<div style=\"text-align:left; direction:ltr;\" lang=\"de\">\n  <p>\n   Die Verwendung von dickwandigem Stahl sorgt für mehr Masse und Steifigkeit in der Struktur. Dadurch werden Mikrobewegungen und Vibrationen effektiv minimiert – auch bei voller Auszugshöhe.<br/>\n  </p>\n</div>",
             "file_type": "image",
-            "file_image": "shopify://shop_images/12_566b2953-19a4-40dc-921e-ab10fdb6fd57.jpg",
+            "file_image": "shopify://shop_images/13_55bce079-f3c3-48d8-af89-bc126abd0839.jpg",
+            "video_url": "",
+            "btn_text": "",
+            "link": ""
+          }
+        },
+        "tab_qJcwGX": {
+          "type": "tab",
+          "settings": {
+            "tabname": "",
+            "sub_title": "",
+            "title": "",
+            "description": "",
+            "file_type": "image",
+            "file_image": "shopify://shop_images/14_e49c58f4-d8bc-45cc-bdfe-ce6228bfa09b.jpg",
             "video_url": "",
             "btn_text": "",
             "link": ""
@@ -625,7 +647,8 @@
       "block_order": [
         "tab_fiwUXL",
         "tab_AUd88N",
-        "tab_JyxzQm"
+        "tab_JyxzQm",
+        "tab_qJcwGX"
       ],
       "name": "img with text tab",
       "settings": {
@@ -647,7 +670,7 @@
           "settings": {
             "title": "<h3>18W USB-C Ladeanschluss</h3>",
             "description": "Direkt am Bedienfeld integrierter Schnellladeanschluss für Smartphone, Kopfhörer oder andere Geräte – ohne zusätzliches Netzteil auf dem Tisch.",
-            "image": "shopify://shop_images/14_-_18w_TC.jpg"
+            "image": "shopify://shop_images/15_e009bd41-f7e8-4c76-9547-b45195c32a31.jpg"
           }
         },
         "foldtext_HQhGDk": {
@@ -655,7 +678,7 @@
           "settings": {
             "title": "<h3>Klaviertasten-Design</h3>",
             "description": "Die Tasten sind bewusst im Klavierstil gestaltet und bieten ein deutliches haptisches Feedback. Jede Eingabe ist präzise kontrollierbar und leicht nachvollziehbar.",
-            "image": "shopify://shop_images/13_a7ea390c-602b-4c8e-909b-0a01750a5c07.jpg"
+            "image": "shopify://shop_images/3_403a8ead-aee7-4d6f-bad1-cbbb1bb20557.jpg"
           }
         },
         "foldtext_iGWkAs": {
@@ -663,7 +686,7 @@
           "settings": {
             "title": "<h3>Automatischer Ruhemodus</h3>",
             "description": "Das Display wechselt bei Nichtnutzung in den Energiesparmodus und reduziert den Stromverbrauch im Standby-Betrieb.",
-            "image": "shopify://shop_images/15_95a283bc-7bca-45a2-95d2-9afa0c72a1c9.jpg"
+            "image": "shopify://shop_images/22_b9d7d195-10a5-4ae0-92a9-5d096f404fb7.jpg"
           }
         },
         "foldtext_HWP39G": {
@@ -671,7 +694,7 @@
           "settings": {
             "title": "<h3>Kindersicherung</h3>",
             "description": "Die Sperrfunktion verhindert unbeabsichtigtes Verstellen der Tischhöhe – sinnvoll in Haushalten mit Kindern oder gemeinsam genutzten Arbeitsplätzen.",
-            "image": "shopify://shop_images/16_23030db0-9d0f-4cfd-b5d7-211fd59013d1.jpg"
+            "image": "shopify://shop_images/18_447a1179-ba0a-4176-ba69-baa12694da39.jpg"
           }
         },
         "foldtext_qmirCr": {
@@ -709,7 +732,7 @@
             "title": "<p>FSC-zertifizierte Tischplattenmaterialien</p>",
             "description": "<div style=\"text-align:left; direction:ltr;\" lang=\"de\">\n  <p>\n  Die verwendeten Holzwerkstoffe stammen aus verantwortungsvoll bewirtschafteten Quellen und erfüllen anerkannte Nachhaltigkeitsstandards.<br/>\n  </p>\n</div>",
             "file_type": "image",
-            "file_image": "shopify://shop_images/18_10981b2a-0d57-4067-9f1c-6b47baba4458.jpg",
+            "file_image": "shopify://shop_images/19_f178c4da-fd01-4432-bee4-f39d6e3d2a06.jpg",
             "video_url": "",
             "btn_text": "",
             "link": ""
@@ -723,7 +746,7 @@
             "title": "<p>Metall-Antriebswelle für höhere Lebensdauer</p>",
             "description": "<div style=\"text-align:left; direction:ltr;\" lang=\"de\">\n  <p>\nIm Antriebssystem kommt eine robuste Metallwelle zum Einsatz, die im Vergleich zu Kunststofflösungen widerstandsfähiger gegenüber Dauerbelastung ist.\n<br/>\n  </p>\n</div>",
             "file_type": "image",
-            "file_image": "shopify://shop_images/19.jpg",
+            "file_image": "shopify://shop_images/20_5f130525-c8cf-47c6-ba0c-7c2a1be10c07.jpg",
             "video_url": "",
             "btn_text": "",
             "link": ""
@@ -737,7 +760,7 @@
             "title": "<p>Langzeittests mit zehntausenden Hubzyklen</p>",
             "description": "<div style=\"text-align:left; direction:ltr;\" lang=\"de\">\n  <p>\n    Das Hubsystem wurde in umfangreichen Belastungstests über viele Tausend Zyklen geprüft, um zuverlässige Funktion und gleichbleibende Leistung über lange Nutzungszeiträume sicherzustellen.<br/>\n  </p>\n</div>",
             "file_type": "image",
-            "file_image": "shopify://shop_images/20.jpg",
+            "file_image": "shopify://shop_images/21_-_18w.jpg",
             "video_url": "",
             "btn_text": "",
             "link": ""

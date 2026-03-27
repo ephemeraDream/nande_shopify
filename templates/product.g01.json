@@ -283,10 +283,24 @@
           "settings": {
             "tabname": "4-Bein-System",
             "sub_title": "",
-            "title": "<p>4-Bein-System für maximale Standfestigkeit</p>",
-            "description": "<div style=\"text-align:left; direction:ltr;\" lang=\"de\">\n  <p>\n  Das Vierbein-Design bietet im Vergleich zu herkömmlichen Hubtischen eine stabilere Basis und verbessert die Balance bei großen Tischplatten und hohen Lasten.<br/>\n  </p>\n</div>",
+            "title": "<p>Überlegenes 4-Bein-System</p>",
+            "description": "<div style=\"text-align:left; direction:ltr;\" lang=\"de\">\n  <p>\n Das vollwertige Vierbein-Design bietet im Vergleich zu herkömmlichen Hubtischen eine drastisch stabilere Basis.\n  </p>\n<li>Eine perfekt austarierte Balance, die speziell für große Tischplatten und hohe Lasten entwickelt wurde. Wo Zweibein-Tische an ihre Grenzen stoßen, bleibt der Canvas unerschütterlich.</li>\n</div>",
             "file_type": "image",
             "file_image": "shopify://shop_images/10_a2cd4ab0-1734-4d20-ac50-77090a19ddfa.jpg",
+            "video_url": "",
+            "btn_text": "",
+            "link": ""
+          }
+        },
+        "tab_JyxzQm": {
+          "type": "tab",
+          "settings": {
+            "tabname": "Dickwandige Stahlprofile",
+            "sub_title": "",
+            "title": "<p>Dickwandige Stahlprofile gegen Vibrationen</p>",
+            "description": "<div style=\"text-align:left; direction:ltr;\" lang=\"de\">\n  <p>\n   Wir setzen auf Masse statt Kompromisse. Die Verwendung von <b>extra dickwandigem Qualitätsstahl</b> erhöht die Eigensteifigkeit der gesamten Struktur massiv.\n  </p>\n<p>Mikrobewegungen und störende Vibrationen beim Tippen werden effektiv eliminiert – selbst bei maximaler Auszugshöhe genießen Sie eine vollkommen ruhige Arbeitsfläche.</p>\n</div>",
+            "file_type": "image",
+            "file_image": "shopify://shop_images/12_566b2953-19a4-40dc-921e-ab10fdb6fd57.jpg",
             "video_url": "",
             "btn_text": "",
             "link": ""
@@ -305,32 +319,18 @@
             "btn_text": "",
             "link": ""
           }
-        },
-        "tab_JyxzQm": {
-          "type": "tab",
-          "settings": {
-            "tabname": "Dickwandige Stahlprofile",
-            "sub_title": "",
-            "title": "<p>Dickwandige Stahlprofile für reduzierte Vibrationen</p>",
-            "description": "<div style=\"text-align:left; direction:ltr;\" lang=\"de\">\n  <p>\n   Die Verwendung von dickwandigem Stahl sorgt für mehr Masse und Steifigkeit in der Struktur. Dadurch werden Mikrobewegungen und Vibrationen effektiv minimiert – auch bei voller Auszugshöhe.<br/>\n  </p>\n</div>",
-            "file_type": "image",
-            "file_image": "shopify://shop_images/12_566b2953-19a4-40dc-921e-ab10fdb6fd57.jpg",
-            "video_url": "",
-            "btn_text": "",
-            "link": ""
-          }
         }
       },
       "block_order": [
         "tab_fiwUXL",
-        "tab_AUd88N",
-        "tab_JyxzQm"
+        "tab_JyxzQm",
+        "tab_AUd88N"
       ],
       "name": "img with text tab",
       "settings": {
         "spec_id": "",
         "description": "",
-        "title": "<p>Stabilität & Rahmenkonstruktion</p>",
+        "title": "<p>Maximale Standfestigkeit durch 4-Säulen-Technik</p>",
         "show_tab_head": true,
         "loop": true,
         "autoplay_enable": true,
