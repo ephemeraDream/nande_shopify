@@ -311,8 +311,8 @@
           "settings": {
             "tabname": "Extra-Verstärkungen",
             "sub_title": "",
-            "title": "<p>Zusätzliche konstruktive Verstärkungen</p>",
-            "description": "<div style=\"text-align:left; direction:ltr;\" lang=\"de\">\n  <p>\n  Verstärkte Verbindungselemente und Rahmenkomponenten erhöhen die Verwindungssteifigkeit des gesamten Systems und reduzieren seitliche Bewegungen<br/>\n  </p>\n</div>",
+            "title": "<p>Maximale Verwindungssteifigkeit</p>",
+            "description": "<div style=\"text-align:left; direction:ltr;\" lang=\"de\">\n  <p>\n  Zusätzliche konstruktive Verstärkungen an den Verbindungselementen und Rahmenkomponenten machen das System extrem robust.\n  </p>\n<p>Seitliche Bewegungen (das typische „Wackeln“) werden konsequent minimiert. Die verstärkte Rahmenarchitektur sorgt für ein sicheres Gefühl bei jedem Höhenwechsel, egal wie viel Equipment Sie nutzen.</p>\n</div>",
             "file_type": "image",
             "file_image": "shopify://shop_images/11_7b02fc97-2e5a-442f-9ce4-a8ae49550fdc.jpg",
             "video_url": "",
