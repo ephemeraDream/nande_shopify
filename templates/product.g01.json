@@ -199,8 +199,8 @@
         "file_with_text_mFbE3r": {
           "type": "file_with_text",
           "settings": {
-            "title": "<p>Stabil in jeder Höhe</p>",
-            "description": "<p>Die Kombination aus Rahmenverstärkung und massiver Materialstärke reduziert Schwingungen spürbar – für ruhiges, konzentriertes Arbeiten auch im ausgefahrenen Zustand. Selbst bei hoher Belastung und großen Tischplatten bleibt die Arbeitsfläche stabil und kontrolliert.</p>",
+            "title": "<p>Absolute Stabilität in jeder Arbeitshöhe</p>",
+            "description": "<p>Vergessen Sie wackelnde Monitore beim Tippen. Die Kombination aus massiver Materialstärke und Rahmenverstärkung reduziert Schwingungen auf ein Minimum.<br/><br/>Auch im voll ausgefahrenen Zustand genießen Sie eine unerschütterliche Arbeitsfläche. Konzentriertes Arbeiten bleibt so auch bei großen Tischplatten und hoher Belastung garantiert.</p>",
             "file_type": "image",
             "file_image": "shopify://shop_images/3_cc48d8fc-5ee2-4c84-bb5d-a0b1c697d540.jpg",
             "video_url": ""
@@ -268,7 +268,7 @@
       "name": "file box simplicity",
       "settings": {
         "spec_id": "Produkt",
-        "main_title": "<p>Warum Canvas wählen?</p>",
+        "main_title": "<p>Warum der Maidesite Canvas die richtige Wahl ist?</p>",
         "row_num": 3,
         "padding_top": 60,
         "padding_bottom": 60,
