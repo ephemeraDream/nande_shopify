@@ -338,6 +338,69 @@
         "layout": "image-left"
       }
     },
+    "img_with_text_tab_ibCa64": {
+      "type": "img-with-text-tab",
+      "blocks": {
+        "tab_RkjGVG": {
+          "type": "tab",
+          "settings": {
+            "tabname": "FSC-zertifizierte",
+            "sub_title": "",
+            "title": "<p>FSC-zertifizierte Tischplattenmaterialien</p>",
+            "description": "<div style=\"text-align:left; direction:ltr;\" lang=\"de\">\n  <p>\n  Die verwendeten Holzwerkstoffe stammen aus verantwortungsvoll bewirtschafteten Quellen und erfüllen anerkannte Nachhaltigkeitsstandards.<br/>\n  </p>\n</div>",
+            "file_type": "image",
+            "file_image": "shopify://shop_images/18_10981b2a-0d57-4067-9f1c-6b47baba4458.jpg",
+            "video_url": "",
+            "btn_text": "",
+            "link": ""
+          }
+        },
+        "tab_kazGN3": {
+          "type": "tab",
+          "settings": {
+            "tabname": "Metall-Antriebswelle",
+            "sub_title": "",
+            "title": "<p>Metall-Antriebswelle für höhere Lebensdauer</p>",
+            "description": "<div style=\"text-align:left; direction:ltr;\" lang=\"de\">\n  <p>\nIm Antriebssystem kommt eine robuste Metallwelle zum Einsatz, die im Vergleich zu Kunststofflösungen widerstandsfähiger gegenüber Dauerbelastung ist.\n<br/>\n  </p>\n</div>",
+            "file_type": "image",
+            "file_image": "shopify://shop_images/19.jpg",
+            "video_url": "",
+            "btn_text": "",
+            "link": ""
+          }
+        },
+        "tab_yTmGja": {
+          "type": "tab",
+          "settings": {
+            "tabname": "Langzeittests mit vielen Hubzyklen",
+            "sub_title": "",
+            "title": "<p>Langzeittests mit zehntausenden Hubzyklen</p>",
+            "description": "<div style=\"text-align:left; direction:ltr;\" lang=\"de\">\n  <p>\n    Das Hubsystem wurde in umfangreichen Belastungstests über viele Tausend Zyklen geprüft, um zuverlässige Funktion und gleichbleibende Leistung über lange Nutzungszeiträume sicherzustellen.<br/>\n  </p>\n</div>",
+            "file_type": "image",
+            "file_image": "shopify://shop_images/20.jpg",
+            "video_url": "",
+            "btn_text": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "tab_RkjGVG",
+        "tab_kazGN3",
+        "tab_yTmGja"
+      ],
+      "name": "img with text tab",
+      "settings": {
+        "spec_id": "",
+        "description": "",
+        "title": "<p>Material- & Verarbeitungsqualität</p>",
+        "show_tab_head": true,
+        "loop": true,
+        "autoplay_enable": true,
+        "autoplay_delay": 5000,
+        "layout": "image-right"
+      }
+    },
     "img_with_foldtext_cCLPBE": {
       "type": "img-with-foldtext",
       "blocks": {
@@ -695,69 +758,6 @@
         "title": "<p>Smartes Handbedienfeld</p>",
         "padding_top": 60,
         "padding_bottom": 60
-      }
-    },
-    "img_with_text_tab_ibCa64": {
-      "type": "img-with-text-tab",
-      "blocks": {
-        "tab_RkjGVG": {
-          "type": "tab",
-          "settings": {
-            "tabname": "FSC-zertifizierte",
-            "sub_title": "",
-            "title": "<p>FSC-zertifizierte Tischplattenmaterialien</p>",
-            "description": "<div style=\"text-align:left; direction:ltr;\" lang=\"de\">\n  <p>\n  Die verwendeten Holzwerkstoffe stammen aus verantwortungsvoll bewirtschafteten Quellen und erfüllen anerkannte Nachhaltigkeitsstandards.<br/>\n  </p>\n</div>",
-            "file_type": "image",
-            "file_image": "shopify://shop_images/18_10981b2a-0d57-4067-9f1c-6b47baba4458.jpg",
-            "video_url": "",
-            "btn_text": "",
-            "link": ""
-          }
-        },
-        "tab_kazGN3": {
-          "type": "tab",
-          "settings": {
-            "tabname": "Metall-Antriebswelle",
-            "sub_title": "",
-            "title": "<p>Metall-Antriebswelle für höhere Lebensdauer</p>",
-            "description": "<div style=\"text-align:left; direction:ltr;\" lang=\"de\">\n  <p>\nIm Antriebssystem kommt eine robuste Metallwelle zum Einsatz, die im Vergleich zu Kunststofflösungen widerstandsfähiger gegenüber Dauerbelastung ist.\n<br/>\n  </p>\n</div>",
-            "file_type": "image",
-            "file_image": "shopify://shop_images/19.jpg",
-            "video_url": "",
-            "btn_text": "",
-            "link": ""
-          }
-        },
-        "tab_yTmGja": {
-          "type": "tab",
-          "settings": {
-            "tabname": "Langzeittests mit vielen Hubzyklen",
-            "sub_title": "",
-            "title": "<p>Langzeittests mit zehntausenden Hubzyklen</p>",
-            "description": "<div style=\"text-align:left; direction:ltr;\" lang=\"de\">\n  <p>\n    Das Hubsystem wurde in umfangreichen Belastungstests über viele Tausend Zyklen geprüft, um zuverlässige Funktion und gleichbleibende Leistung über lange Nutzungszeiträume sicherzustellen.<br/>\n  </p>\n</div>",
-            "file_type": "image",
-            "file_image": "shopify://shop_images/20.jpg",
-            "video_url": "",
-            "btn_text": "",
-            "link": ""
-          }
-        }
-      },
-      "block_order": [
-        "tab_RkjGVG",
-        "tab_kazGN3",
-        "tab_yTmGja"
-      ],
-      "name": "img with text tab",
-      "settings": {
-        "spec_id": "",
-        "description": "",
-        "title": "<p>Material- & Verarbeitungsqualität</p>",
-        "show_tab_head": true,
-        "loop": true,
-        "autoplay_enable": true,
-        "autoplay_delay": 5000,
-        "layout": "image-left"
       }
     },
     "img_with_foldtext_LzqrtY": {
