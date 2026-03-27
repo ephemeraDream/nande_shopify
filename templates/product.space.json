@@ -648,16 +648,16 @@
         "foldtext_HQhGDk": {
           "type": "foldtext",
           "settings": {
-            "title": "<h3>Versenkbare Steckdose</h3>",
-            "description": "<ul><li>Eine elegante Lift-Steckdose verschwindet bei Nichtgebrauch im Tisch und liefert Strom genau dort, wo Sie ihn brauchen.",
+            "title": "<h3>Versenkbare Lift-Steckdose</h3>",
+            "description": "<p>Volle Power, nur wenn Sie sie brauchen. Die elegante Steckdoseneinheit verschwindet bei Nichtgebrauch bündig in der Tischplatte.</p>\n\n<p>Strom direkt an der Oberfläche für Laptop oder Zubehör – ohne Kabelsalat über die Tischkante.</p>",
             "image": "shopify://shop_images/10_68365d79-09c4-42ca-bb09-4cd17f260d9f.jpg"
           }
         },
         "foldtext_iGWkAs": {
           "type": "foldtext",
           "settings": {
-            "title": "<h3>Praktisches 10W-Wireless-Charging</h3>",
-            "description": "<ul><li>Schwere Das integrierte kabellose Ladefeld lädt Smartphones bequem und griffbereit – ohne zusätzliche Ladegeräte.",
+            "title": "<h3>Integriertes Wireless Charging</h3>",
+            "description": "Laden Sie Ihr Smartphone bequem und kabellos direkt auf dem Schreibtisch. Das integrierte Ladefeld sorgt für volle Akkus, ohne zusätzliche Ladegeräte.\n\n<p>Ihr Smartphone ist immer griffbereit und lädt diskret im Hintergrund.</p>",
             "image": "shopify://shop_images/11_ee79bd21-c1a9-4fbe-9d4c-511abade286d.jpg"
           }
         },
@@ -675,12 +675,13 @@
         "foldtext_iGWkAs",
         "foldtext_HWP39G"
       ],
+      "custom_css": [],
       "name": "img with foldtext",
       "settings": {
         "spec_id": "",
-        "title": "<p>Tech-Erweiterungsmodul </p>",
-        "padding_top": 120,
-        "padding_bottom": 120
+        "title": "<p>Das Tech-Erweiterungsmodul: Ihr smartes Upgrade</p>",
+        "padding_top": 60,
+        "padding_bottom": 60
       }
     },
     "img_with_foldtext_LzqrtY": {
