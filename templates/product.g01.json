@@ -275,6 +275,69 @@
         "background_color": "rgba(0,0,0,0)"
       }
     },
+    "img_with_text_tab_emEWU8": {
+      "type": "img-with-text-tab",
+      "blocks": {
+        "tab_fiwUXL": {
+          "type": "tab",
+          "settings": {
+            "tabname": "4-Bein-Struktur",
+            "sub_title": "",
+            "title": "<p>4-Bein-Struktur für maximale Standfestigkeit</p>",
+            "description": "<div style=\"text-align:left; direction:ltr;\" lang=\"de\">\n  <p>\n  Das Vierbein-Design bietet im Vergleich zu herkömmlichen Hubtischen eine stabilere Basis und verbessert die Balance bei großen Tischplatten und hohen Lasten.<br/>\n  </p>\n</div>",
+            "file_type": "image",
+            "file_image": "shopify://shop_images/10_a2cd4ab0-1734-4d20-ac50-77090a19ddfa.jpg",
+            "video_url": "",
+            "btn_text": "",
+            "link": ""
+          }
+        },
+        "tab_AUd88N": {
+          "type": "tab",
+          "settings": {
+            "tabname": "Extra-Verstärkungen",
+            "sub_title": "",
+            "title": "<p>Zusätzliche konstruktive Verstärkungen</p>",
+            "description": "<div style=\"text-align:left; direction:ltr;\" lang=\"de\">\n  <p>\n  Verstärkte Verbindungselemente und Rahmenkomponenten erhöhen die Verwindungssteifigkeit des gesamten Systems und reduzieren seitliche Bewegungen<br/>\n  </p>\n</div>",
+            "file_type": "image",
+            "file_image": "shopify://shop_images/11_7b02fc97-2e5a-442f-9ce4-a8ae49550fdc.jpg",
+            "video_url": "",
+            "btn_text": "",
+            "link": ""
+          }
+        },
+        "tab_JyxzQm": {
+          "type": "tab",
+          "settings": {
+            "tabname": "Dickwandige Stahlprofile",
+            "sub_title": "",
+            "title": "<p>Dickwandige Stahlprofile für reduzierte Vibrationen</p>",
+            "description": "<div style=\"text-align:left; direction:ltr;\" lang=\"de\">\n  <p>\n   Die Verwendung von dickwandigem Stahl sorgt für mehr Masse und Steifigkeit in der Struktur. Dadurch werden Mikrobewegungen und Vibrationen effektiv minimiert – auch bei voller Auszugshöhe.<br/>\n  </p>\n</div>",
+            "file_type": "image",
+            "file_image": "shopify://shop_images/12_566b2953-19a4-40dc-921e-ab10fdb6fd57.jpg",
+            "video_url": "",
+            "btn_text": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "tab_fiwUXL",
+        "tab_AUd88N",
+        "tab_JyxzQm"
+      ],
+      "name": "img with text tab",
+      "settings": {
+        "spec_id": "",
+        "description": "",
+        "title": "<p>Stabilität & Rahmenkonstruktion</p>",
+        "show_tab_head": true,
+        "loop": true,
+        "autoplay_enable": true,
+        "autoplay_delay": 5000,
+        "layout": "image-left"
+      }
+    },
     "img_with_foldtext_cCLPBE": {
       "type": "img-with-foldtext",
       "blocks": {
@@ -573,69 +636,6 @@
         "color_scheme": "",
         "padding_top": 40,
         "padding_bottom": 52
-      }
-    },
-    "img_with_text_tab_emEWU8": {
-      "type": "img-with-text-tab",
-      "blocks": {
-        "tab_fiwUXL": {
-          "type": "tab",
-          "settings": {
-            "tabname": "4-Bein-Struktur",
-            "sub_title": "",
-            "title": "<p>4-Bein-Struktur für maximale Standfestigkeit</p>",
-            "description": "<div style=\"text-align:left; direction:ltr;\" lang=\"de\">\n  <p>\n  Das Vierbein-Design bietet im Vergleich zu herkömmlichen Hubtischen eine stabilere Basis und verbessert die Balance bei großen Tischplatten und hohen Lasten.<br/>\n  </p>\n</div>",
-            "file_type": "image",
-            "file_image": "shopify://shop_images/10_a2cd4ab0-1734-4d20-ac50-77090a19ddfa.jpg",
-            "video_url": "",
-            "btn_text": "",
-            "link": ""
-          }
-        },
-        "tab_AUd88N": {
-          "type": "tab",
-          "settings": {
-            "tabname": "Extra-Verstärkungen",
-            "sub_title": "",
-            "title": "<p>Zusätzliche konstruktive Verstärkungen</p>",
-            "description": "<div style=\"text-align:left; direction:ltr;\" lang=\"de\">\n  <p>\n  Verstärkte Verbindungselemente und Rahmenkomponenten erhöhen die Verwindungssteifigkeit des gesamten Systems und reduzieren seitliche Bewegungen<br/>\n  </p>\n</div>",
-            "file_type": "image",
-            "file_image": "shopify://shop_images/11_7b02fc97-2e5a-442f-9ce4-a8ae49550fdc.jpg",
-            "video_url": "",
-            "btn_text": "",
-            "link": ""
-          }
-        },
-        "tab_JyxzQm": {
-          "type": "tab",
-          "settings": {
-            "tabname": "Dickwandige Stahlprofile",
-            "sub_title": "",
-            "title": "<p>Dickwandige Stahlprofile für reduzierte Vibrationen</p>",
-            "description": "<div style=\"text-align:left; direction:ltr;\" lang=\"de\">\n  <p>\n   Die Verwendung von dickwandigem Stahl sorgt für mehr Masse und Steifigkeit in der Struktur. Dadurch werden Mikrobewegungen und Vibrationen effektiv minimiert – auch bei voller Auszugshöhe.<br/>\n  </p>\n</div>",
-            "file_type": "image",
-            "file_image": "shopify://shop_images/12_566b2953-19a4-40dc-921e-ab10fdb6fd57.jpg",
-            "video_url": "",
-            "btn_text": "",
-            "link": ""
-          }
-        }
-      },
-      "block_order": [
-        "tab_fiwUXL",
-        "tab_AUd88N",
-        "tab_JyxzQm"
-      ],
-      "name": "img with text tab",
-      "settings": {
-        "spec_id": "",
-        "description": "",
-        "title": "<p>Stabilität & Rahmenkonstruktion</p>",
-        "show_tab_head": true,
-        "loop": true,
-        "autoplay_enable": true,
-        "autoplay_delay": 5000,
-        "layout": "image-left"
       }
     },
     "img_with_foldtext_RcBrkw": {
@@ -1067,6 +1067,8 @@
     "product_anchor_bar_atcVF4",
     "video_wPHLA8",
     "img_with_text_box_simplicity_AkxGWH",
+    "img_with_text_tab_emEWU8",
+    "img_with_text_tab_ibCa64",
     "img_with_foldtext_cCLPBE",
     "img_with_text_simplicity_iiPLAi",
     "accordion_gallery_9yfNeM",
@@ -1076,9 +1078,7 @@
     "img_with_text_simplicity_YLCpmN",
     "img_with_text_simplicity_JRCJ4f",
     "custom_liquid_TB8BBm",
-    "img_with_text_tab_emEWU8",
     "img_with_foldtext_RcBrkw",
-    "img_with_text_tab_ibCa64",
     "img_with_foldtext_LzqrtY",
     "technical_data_L3gXUm",
     "maidesite_swiper_QhkQG8",
