@@ -298,8 +298,8 @@
         "foldtext_aQFerM": {
           "type": "foldtext",
           "settings": {
-            "title": "<h3>Selbstbewusste Silhouette</h3>",
-            "description": "Selbst ohne Umgebung wirkt der Tisch als eigenständiges Designobjekt. Klare Linien und markante Konturen erzeugen eine zeitlose Präsenz.",
+            "title": "<h3>Struktur als Blickfang</h3>",
+            "description": "Die tragenden Elemente werden bewusst zum Gestaltungselement. Beine und Rahmen sind nicht nur funktional, sondern tragen aktiv zur visuellen Identität des Tisches bei.",
             "image": "shopify://shop_images/9_65370800-8973-4b24-9838-df93771ee10c.jpg"
           }
         },
@@ -594,7 +594,7 @@
             "tabname": "Natürliche Anpassung",
             "sub_title": "",
             "title": "<p>Natürliche Anpassung</p>",
-            "description": "<div style=\"text-align:left; direction:ltr;\" lang=\"de\">\n  <p>\n  Stauraum ist von Anfang an Teil der Tischstruktur. Jede Ablagefläche ist funktional in das Design integriert, ohne den Tisch optisch zu belasten.<br/>\n  </p>\n</div>",
+            "description": "<div style=\"text-align:left; direction:ltr;\" lang=\"de\">\n  <p>\n  Die Höhenverstellung folgt intuitiv der Körperhaltung. Jede Bewegung unterstützt eine ergonomische Anpassung, sodass Sitzen und Stehen fließend ineinander übergehen.<br/>\n  </p>\n</div>",
             "file_type": "image",
             "file_image": "shopify://shop_images/2_97308139-9619-49b4-a212-c6c837f4ddd0.jpg",
             "video_url": "",
@@ -605,10 +605,10 @@
         "tab_AUd88N": {
           "type": "tab",
           "settings": {
-            "tabname": "Vertikale Ordnung",
+            "tabname": "Flexibler Rhythmus",
             "sub_title": "",
-            "title": "<p>Vertikale Ordnung</p>",
-            "description": "<div style=\"text-align:left; direction:ltr;\" lang=\"de\">\n  <p>\n Die Organisation erfolgt nach oben, nicht nach vorne. So bleibt die Arbeitsfläche frei und wird nicht durch ausladende Ablagen eingeschränkt.<br/>\n  </p>\n</div>",
+            "title": "<p>Flexibler Rhythmus<br/><br/></p>",
+            "description": "<div style=\"text-align:left; direction:ltr;\" lang=\"de\">\n  <p>\nFür gelegentliche Positionswechsel entwickelt, erlaubt der Tisch spontane Anpassungen im Tagesablauf, ohne dass eine aufwändige Bedienung notwendig ist.<br/>\n  </p>\n</div>",
             "file_type": "image",
             "file_image": "shopify://shop_images/12_229d8fb8-683d-468b-a0d7-18170a20d5b2.jpg",
             "video_url": "",
@@ -619,10 +619,10 @@
         "tab_JyxzQm": {
           "type": "tab",
           "settings": {
-            "tabname": "Für häufig genutzte Dinge",
+            "tabname": "Sanft und unauffällig",
             "sub_title": "",
-            "title": "<p>Für häufig genutzte Dinge</p>",
-            "description": "<div style=\"text-align:left; direction:ltr;\" lang=\"de\">\n  <p>\n  Der Tisch bietet gezielt Platz für die wichtigsten, regelmäßig genutzten Arbeitsutensilien, sodass alles griffbereit bleibt.<br/>\n  </p>\n</div>",
+            "title": "<p>Sanft und unauffällig</p>",
+            "description": "<div style=\"text-align:left; direction:ltr;\" lang=\"de\">\n  <p>\nDie Bewegung erfolgt leise und gleichmäßig. Sie bleibt bewusst im Hintergrund und stört die Konzentration nicht, während sie ergonomisch unterstützt.<br/>\n  </p>\n</div>",
             "file_type": "image",
             "file_image": "shopify://shop_images/13_55bce079-f3c3-48d8-af89-bc126abd0839.jpg",
             "video_url": "",
@@ -633,10 +633,10 @@
         "tab_qJcwGX": {
           "type": "tab",
           "settings": {
-            "tabname": "",
+            "tabname": "Intuitive Steuerung",
             "sub_title": "",
-            "title": "",
-            "description": "",
+            "title": "<p>Intuitive Steuerung</p>",
+            "description": "<div style=\"text-align:left; direction:ltr;\" lang=\"de\">\n  <p>\nLeichtes Handling und ein durchdachtes Speicher- und Steuerungssystem machen die Bedienung mühelos. Nutzer können schnell und präzise ihre bevorzugten Positionen einstellen.<br/>\n  </p>\n</div>",
             "file_type": "image",
             "file_image": "shopify://shop_images/14_e49c58f4-d8bc-45cc-bdfe-ce6228bfa09b.jpg",
             "video_url": "",
@@ -669,41 +669,33 @@
         "foldtext_eyYKRM": {
           "type": "foldtext",
           "settings": {
-            "title": "<h3>18W USB-C Ladeanschluss</h3>",
-            "description": "Direkt am Bedienfeld integrierter Schnellladeanschluss für Smartphone, Kopfhörer oder andere Geräte – ohne zusätzliches Netzteil auf dem Tisch.",
+            "title": "<p>Designbasierte Aufbewahrung</p>",
+            "description": "Stauraum ist von Anfang an Teil der Tischstruktur. Jede Ablagefläche ist funktional in das Design integriert, ohne den Tisch optisch zu belasten.",
             "image": "shopify://shop_images/15_e009bd41-f7e8-4c76-9547-b45195c32a31.jpg"
           }
         },
         "foldtext_HQhGDk": {
           "type": "foldtext",
           "settings": {
-            "title": "<h3>Klaviertasten-Design</h3>",
-            "description": "Die Tasten sind bewusst im Klavierstil gestaltet und bieten ein deutliches haptisches Feedback. Jede Eingabe ist präzise kontrollierbar und leicht nachvollziehbar.",
+            "title": "<h3>Vertikale Ordnung</h3>",
+            "description": "Die Organisation erfolgt nach oben, nicht nach vorne. So bleibt die Arbeitsfläche frei und wird nicht durch ausladende Ablagen eingeschränkt.",
             "image": "shopify://shop_images/3_403a8ead-aee7-4d6f-bad1-cbbb1bb20557.jpg"
           }
         },
         "foldtext_iGWkAs": {
           "type": "foldtext",
           "settings": {
-            "title": "<h3>Automatischer Ruhemodus</h3>",
-            "description": "Das Display wechselt bei Nichtnutzung in den Energiesparmodus und reduziert den Stromverbrauch im Standby-Betrieb.",
+            "title": "<h3>Für häufig genutzte Dinge</h3>",
+            "description": "Der Tisch bietet gezielt Platz für die wichtigsten, regelmäßig genutzten Arbeitsutensilien, sodass alles griffbereit bleibt.",
             "image": "shopify://shop_images/22_b9d7d195-10a5-4ae0-92a9-5d096f404fb7.jpg"
           }
         },
         "foldtext_HWP39G": {
           "type": "foldtext",
           "settings": {
-            "title": "<h3>Kindersicherung</h3>",
-            "description": "Die Sperrfunktion verhindert unbeabsichtigtes Verstellen der Tischhöhe – sinnvoll in Haushalten mit Kindern oder gemeinsam genutzten Arbeitsplätzen.",
+            "title": "<h3>Leichtes, aufgeräumtes Erscheinungsbild</h3>",
+            "description": "Die klare Struktur sorgt für eine visuell ruhige und luftige Arbeitsfläche, die den Raum optisch nicht überfrachtet und den Fokus auf das Wesentliche lenkt.",
             "image": "shopify://shop_images/18_447a1179-ba0a-4176-ba69-baa12694da39.jpg"
-          }
-        },
-        "foldtext_qmirCr": {
-          "type": "foldtext",
-          "settings": {
-            "title": "<h3>3 frei speicherbare</h3>",
-            "description": "Individuelle Sitz- und Stehhöhen lassen sich abspeichern und jederzeit per Tastendruck abrufen – für schnellen Wechsel im Arbeitsalltag.",
-            "image": "shopify://shop_images/17_-_3.jpg"
           }
         }
       },
@@ -711,13 +703,12 @@
         "foldtext_eyYKRM",
         "foldtext_HQhGDk",
         "foldtext_iGWkAs",
-        "foldtext_HWP39G",
-        "foldtext_qmirCr"
+        "foldtext_HWP39G"
       ],
       "name": "img with foldtext",
       "settings": {
         "spec_id": "",
-        "title": "<p>Smartes Handbedienfeld</p>",
+        "title": "<p>Integrierte Desktop-Organisation</p>",
         "padding_top": 120,
         "padding_bottom": 120
       }
@@ -778,6 +769,85 @@
         "spec_id": "",
         "description": "",
         "title": "<p>Material- & Verarbeitungsqualität</p>",
+        "show_tab_head": true,
+        "loop": true,
+        "autoplay_enable": true,
+        "autoplay_delay": 5000,
+        "layout": "image-left"
+      }
+    },
+    "img_with_text_tab_TDYWdq": {
+      "type": "img-with-text-tab",
+      "blocks": {
+        "tab_tKHQcg": {
+          "type": "tab",
+          "disabled": true,
+          "settings": {
+            "tabname": "Erinnerung zum Aufstehen",
+            "sub_title": "",
+            "title": "<p>Ihr persönlicher Gesundheits-Coach: Die Aufsteh-Erinnerung</p>",
+            "description": "<div class=\"controller-features\">\n  <ul><b>Bleiben Sie den ganzen Tag aktiv und energiegeladen.</b>Das integrierte Reminder-System erinnert Sie in regelmäßigen Abständen sanft daran, die Position zu wechseln.\n    <li>Sie fördern aktiv die Durchblutung und beugen Verspannungen sowie Rückenschmerzen effektiv vor. So verwandeln Sie Ihren Arbeitsplatz in eine dynamische Gesundheitszone.</li>\n  </ul>\n</div>\n\n<style>\n  /* 让这个模块内的 li 左对齐，不影响其他地方 */\n  .controller-features ul li {\n    text-align: left !important;\n    list-style-position: inside;\n  }\n</style>",
+            "file_type": "image",
+            "file_image": "shopify://shop_images/A_-_12_a124c050-627c-426b-92bd-a7416dd3e974.jpg",
+            "video_url": "",
+            "btn_text": "",
+            "link": ""
+          }
+        },
+        "tab_EdmDVG": {
+          "type": "tab",
+          "settings": {
+            "tabname": "4 Speicherhöhen",
+            "sub_title": "",
+            "title": "<p>Ergonomie auf Knopfdruck: 4 Memory-Positionen</p>",
+            "description": "<div class=\"controller-features\">\n  <ul><b>Finden Sie Ihre perfekte Haltung in Sekunden.</b> Speichern Sie bis zu vier individuelle Höhen für das Arbeiten im Sitzen, Stehen oder für verschiedene Familienmitglieder ab.\n    <li>Kein mühsames Justieren mehr. Ein kurzer Fingertipp genügt, und der T2 Pro Plus fährt präzise in Ihre gespeicherte Idealposition – für einen nahtlosen Workflow ohne Unterbrechungen.</li>\n  </ul>\n</div>\n\n<style>\n  /* 让这个模块内的 li 左对齐，不影响其他地方 */\n  .controller-features ul li {\n    text-align: left !important;\n    list-style-position: inside;\n  }\n</style>",
+            "file_type": "image",
+            "file_image": "shopify://shop_images/19_f178c4da-fd01-4432-bee4-f39d6e3d2a06.jpg",
+            "video_url": "",
+            "btn_text": "",
+            "link": ""
+          }
+        },
+        "tab_hrcj8d": {
+          "type": "tab",
+          "settings": {
+            "tabname": "Kindersicherung",
+            "sub_title": "",
+            "title": "<p>Absolute Sorgenfreiheit: Die integrierte Kindersicherung</p>",
+            "description": "<div class=\"controller-features\">\n  <ul><b>Sicherheit für Ihr Equipment und Ihre Liebsten.</b> Die aktivierbare Kindersicherung fixiert die gewählte Tischhöhe und verhindert ein unbeabsichtigtes Verstellen.\n    <li>Ob spielende Kinder oder neugierige Haustiere – Ihre Einstellungen und Ihre Technik bleiben geschützt. Genießen Sie die Gewissheit eines absolut sicheren Home-Office-Bereichs.</li>\n  </ul>\n</div>\n\n<style>\n  /* 让这个模块内的 li 左对齐，不影响其他地方 */\n  .controller-features ul li {\n    text-align: left !important;\n    list-style-position: inside;\n  }\n</style>",
+            "file_type": "image",
+            "file_image": "shopify://shop_images/20_5f130525-c8cf-47c6-ba0c-7c2a1be10c07.jpg",
+            "video_url": "",
+            "btn_text": "",
+            "link": ""
+          }
+        },
+        "tab_ifbPmd": {
+          "type": "tab",
+          "settings": {
+            "tabname": "USB-A & USB-C Ports",
+            "sub_title": "",
+            "title": "<p>Ein aufgeräumter Fokus: Zwei integrierte Ladeanschlüsse</p>",
+            "description": "<div class=\"controller-features\">\n  <ul><b>Volle Akkus ohne Kabelsalat.</b> Laden Sie Ihr Smartphone und Tablet direkt über die zwei leistungsstarken USB-Ports im Bedienfeld.\n    <li>Sie benötigen keine zusätzlichen Netzteile oder Mehrfachstecker auf dem Tisch. Erleben Sie die Freiheit einer \"Clean Desk\"-Umgebung, die Ihnen hilft, sich voll auf das Wesentliche zu konzentrieren.</li>\n  </ul>\n</div>\n\n<style>\n  /* 让这个模块内的 li 左对齐，不影响其他地方 */\n  .controller-features ul li {\n    text-align: left !important;\n    list-style-position: inside;\n  }\n</style>",
+            "file_type": "image",
+            "file_image": "shopify://shop_images/21_-_18w.jpg",
+            "video_url": "",
+            "btn_text": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "tab_tKHQcg",
+        "tab_EdmDVG",
+        "tab_hrcj8d",
+        "tab_ifbPmd"
+      ],
+      "name": "img with text tab",
+      "settings": {
+        "spec_id": "",
+        "description": "",
+        "title": "<p>Sicher und smart gesteuert</p>",
         "show_tab_head": true,
         "loop": true,
         "autoplay_enable": true,
@@ -1105,6 +1175,7 @@
     "img_with_text_tab_emEWU8",
     "img_with_foldtext_RcBrkw",
     "img_with_text_tab_ibCa64",
+    "img_with_text_tab_TDYWdq",
     "img_with_foldtext_LzqrtY",
     "technical_data_L3gXUm",
     "maidesite_swiper_QhkQG8",
