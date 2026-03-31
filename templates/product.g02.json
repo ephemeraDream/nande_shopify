@@ -282,32 +282,32 @@
         "foldtext_9Y9iUM": {
           "type": "foldtext",
           "settings": {
-            "title": "<h3>Natürliche Anpassung</h3>",
-            "description": "Die Höhenverstellung folgt intuitiv der Körperhaltung. Jede Bewegung unterstützt eine ergonomische Anpassung, sodass Sitzen und Stehen fließend ineinander übergehen.",
+            "title": "<h3>Dynamischer Winkel</h3>",
+            "description": "Die geneigte Beinkonstruktion erzeugt eine elegante Dynamik und definiert die Silhouette des Tisches. Jeder Winkel ist präzise abgestimmt, um sowohl Stabilität als auch ästhetische Wirkung zu garantieren.",
             "image": "shopify://shop_images/7_fe18ea67-0de3-4d1e-a1ad-c5bf7b81294c.jpg"
           }
         },
         "foldtext_BJmYDi": {
           "type": "foldtext",
           "settings": {
-            "title": "<h3>Flexibler Rhythmus</h3>",
-            "description": "Für gelegentliche Positionswechsel entwickelt, erlaubt der Tisch spontane Anpassungen im Tagesablauf, ohne dass eine aufwändige Bedienung notwendig ist.",
+            "title": "<h3>Harmonische Proportionen</h3>",
+            "description": "Das Verhältnis von Tischplatte und Beinen ist sorgfältig konzipiert, sodass der Tisch robust wirkt, ohne optisch schwer zu erscheinen. Proportionen und Balance unterstützen eine angenehme Raumerfahrung.",
             "image": "shopify://shop_images/8_3029d5fb-0f1a-44e6-9018-a342f6df9681.jpg"
           }
         },
         "foldtext_aQFerM": {
           "type": "foldtext",
           "settings": {
-            "title": "<h3>Sanft und unauffällig</h3>",
-            "description": "Die Bewegung erfolgt leise und gleichmäßig. Sie bleibt bewusst im Hintergrund und stört die Konzentration nicht, während sie ergonomisch unterstützt.",
+            "title": "<h3>Selbstbewusste Silhouette</h3>",
+            "description": "Selbst ohne Umgebung wirkt der Tisch als eigenständiges Designobjekt. Klare Linien und markante Konturen erzeugen eine zeitlose Präsenz.",
             "image": "shopify://shop_images/9_65370800-8973-4b24-9838-df93771ee10c.jpg"
           }
         },
         "foldtext_JBQyE8": {
           "type": "foldtext",
           "settings": {
-            "title": "<h3>Intuitive Steuerung</h3>",
-            "description": "Leichtes Handling und ein durchdachtes Speicher- und Steuerungssystem machen die Bedienung mühelos. Nutzer können schnell und präzise ihre bevorzugten Positionen einstellen.",
+            "title": "<p>Selbstbewusste Silhouette</p>",
+            "description": "Selbst ohne Umgebung wirkt der Tisch als eigenständiges Designobjekt. Klare Linien und markante Konturen erzeugen eine zeitlose Präsenz.",
             "image": "shopify://shop_images/10_9c072d77-43bb-4ec2-846c-2084a01315e1.jpg"
           }
         }
@@ -591,10 +591,10 @@
         "tab_fiwUXL": {
           "type": "tab",
           "settings": {
-            "tabname": "4-Bein-Struktur",
+            "tabname": "Natürliche Anpassung",
             "sub_title": "",
-            "title": "<p>4-Bein-Struktur für maximale Standfestigkeit</p>",
-            "description": "<div style=\"text-align:left; direction:ltr;\" lang=\"de\">\n  <p>\n  Das Vierbein-Design bietet im Vergleich zu herkömmlichen Hubtischen eine stabilere Basis und verbessert die Balance bei großen Tischplatten und hohen Lasten.<br/>\n  </p>\n</div>",
+            "title": "<p>Natürliche Anpassung</p>",
+            "description": "<div style=\"text-align:left; direction:ltr;\" lang=\"de\">\n  <p>\n  Stauraum ist von Anfang an Teil der Tischstruktur. Jede Ablagefläche ist funktional in das Design integriert, ohne den Tisch optisch zu belasten.<br/>\n  </p>\n</div>",
             "file_type": "image",
             "file_image": "shopify://shop_images/2_97308139-9619-49b4-a212-c6c837f4ddd0.jpg",
             "video_url": "",
@@ -605,10 +605,10 @@
         "tab_AUd88N": {
           "type": "tab",
           "settings": {
-            "tabname": "Extra-Verstärkungen",
+            "tabname": "Vertikale Ordnung",
             "sub_title": "",
-            "title": "<p>Zusätzliche konstruktive Verstärkungen</p>",
-            "description": "<div style=\"text-align:left; direction:ltr;\" lang=\"de\">\n  <p>\n  Verstärkte Verbindungselemente und Rahmenkomponenten erhöhen die Verwindungssteifigkeit des gesamten Systems und reduzieren seitliche Bewegungen<br/>\n  </p>\n</div>",
+            "title": "<p>Vertikale Ordnung</p>",
+            "description": "<div style=\"text-align:left; direction:ltr;\" lang=\"de\">\n  <p>\n Die Organisation erfolgt nach oben, nicht nach vorne. So bleibt die Arbeitsfläche frei und wird nicht durch ausladende Ablagen eingeschränkt.<br/>\n  </p>\n</div>",
             "file_type": "image",
             "file_image": "shopify://shop_images/12_229d8fb8-683d-468b-a0d7-18170a20d5b2.jpg",
             "video_url": "",
@@ -619,10 +619,10 @@
         "tab_JyxzQm": {
           "type": "tab",
           "settings": {
-            "tabname": "Dickwandige Stahlprofile",
+            "tabname": "Für häufig genutzte Dinge",
             "sub_title": "",
-            "title": "<p>Dickwandige Stahlprofile für reduzierte Vibrationen</p>",
-            "description": "<div style=\"text-align:left; direction:ltr;\" lang=\"de\">\n  <p>\n   Die Verwendung von dickwandigem Stahl sorgt für mehr Masse und Steifigkeit in der Struktur. Dadurch werden Mikrobewegungen und Vibrationen effektiv minimiert – auch bei voller Auszugshöhe.<br/>\n  </p>\n</div>",
+            "title": "<p>Für häufig genutzte Dinge</p>",
+            "description": "<div style=\"text-align:left; direction:ltr;\" lang=\"de\">\n  <p>\n  Der Tisch bietet gezielt Platz für die wichtigsten, regelmäßig genutzten Arbeitsutensilien, sodass alles griffbereit bleibt.<br/>\n  </p>\n</div>",
             "file_type": "image",
             "file_image": "shopify://shop_images/13_55bce079-f3c3-48d8-af89-bc126abd0839.jpg",
             "video_url": "",
@@ -655,7 +655,7 @@
       "settings": {
         "spec_id": "",
         "description": "",
-        "title": "<p>Stabilität & Rahmenkonstruktion</p>",
+        "title": "<p>Leichte Arbeitsdynamik</p>",
         "show_tab_head": true,
         "loop": true,
         "autoplay_enable": true,
