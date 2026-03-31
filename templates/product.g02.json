@@ -282,32 +282,33 @@
         "foldtext_9Y9iUM": {
           "type": "foldtext",
           "settings": {
-            "title": "<h3>Mehr Platz dank intelligenter Eckstruktur</h3>",
-            "description": "Die L-Erweiterung vergrößert die Arbeitsfläche deutlich und schafft zusätzlichen Platz für Monitore, Laptop, Dokumente und Arbeitsmaterialien. Besonders geeignet für Multi-Monitor-Arbeitsplätze und kreative Workflows.",
+            "title": "<h3>Natürliche Anpassung</h3>",
+            "description": "Die Höhenverstellung folgt intuitiv der Körperhaltung. Jede Bewegung unterstützt eine ergonomische Anpassung, sodass Sitzen und Stehen fließend ineinander übergehen.",
             "image": "shopify://shop_images/7_fe18ea67-0de3-4d1e-a1ad-c5bf7b81294c.jpg"
           }
         },
         "foldtext_BJmYDi": {
           "type": "foldtext",
           "settings": {
-            "title": "<h3>Flexible Montage – links oder rechts</h3>",
-            "description": "Die Erweiterungsplatte kann je nach Raumlayout und persönlicher Arbeitsweise auf der linken oder rechten Seite montiert werden. So passt sich der Tisch flexibel an unterschiedliche Nutzungsszenarien an.",
+            "title": "<h3>Flexibler Rhythmus</h3>",
+            "description": "Für gelegentliche Positionswechsel entwickelt, erlaubt der Tisch spontane Anpassungen im Tagesablauf, ohne dass eine aufwändige Bedienung notwendig ist.",
             "image": "shopify://shop_images/8_3029d5fb-0f1a-44e6-9018-a342f6df9681.jpg"
           }
         },
         "foldtext_aQFerM": {
           "type": "foldtext",
           "settings": {
-            "title": "<h3>Kürzere Wege, höhere Effizienz</h3>",
-            "description": "Durch die erweiterte seitliche Fläche bleiben häufig genutzte Arbeitsmittel in direkter Reichweite. Das reduziert unnötige Bewegungen und unterstützt effizientere Arbeitsprozesse.",
+            "title": "<h3>Sanft und unauffällig</h3>",
+            "description": "Die Bewegung erfolgt leise und gleichmäßig. Sie bleibt bewusst im Hintergrund und stört die Konzentration nicht, während sie ergonomisch unterstützt.",
             "image": "shopify://shop_images/9_65370800-8973-4b24-9838-df93771ee10c.jpg"
           }
         },
         "foldtext_JBQyE8": {
           "type": "foldtext",
           "settings": {
-            "title": "",
-            "description": ""
+            "title": "<h3>Intuitive Steuerung</h3>",
+            "description": "Leichtes Handling und ein durchdachtes Speicher- und Steuerungssystem machen die Bedienung mühelos. Nutzer können schnell und präzise ihre bevorzugten Positionen einstellen.",
+            "image": "shopify://shop_images/10_9c072d77-43bb-4ec2-846c-2084a01315e1.jpg"
           }
         }
       },
@@ -320,7 +321,7 @@
       "name": "img with foldtext",
       "settings": {
         "spec_id": "",
-        "title": "<p>L-förmige Erweiterungsplatte</p>",
+        "title": "<p>Möbelinspiriertes Schrägbein-Design</p>",
         "padding_top": 120,
         "padding_bottom": 120
       }
