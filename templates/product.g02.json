@@ -800,7 +800,7 @@
             "tabname": "4 Speicherhöhen",
             "sub_title": "",
             "title": "<p>Ergonomie auf Knopfdruck: 4 Memory-Positionen</p>",
-            "description": "<div class=\"controller-features\">\n  <ul><b>Finden Sie Ihre perfekte Haltung in Sekunden.</b> Speichern Sie bis zu vier individuelle Höhen für das Arbeiten im Sitzen, Stehen oder für verschiedene Familienmitglieder ab.\n    <li>Kein mühsames Justieren mehr. Ein kurzer Fingertipp genügt, und der T2 Pro Plus fährt präzise in Ihre gespeicherte Idealposition – für einen nahtlosen Workflow ohne Unterbrechungen.</li>\n  </ul>\n</div>\n\n<style>\n  /* 让这个模块内的 li 左对齐，不影响其他地方 */\n  .controller-features ul li {\n    text-align: left !important;\n    list-style-position: inside;\n  }\n</style>",
+            "description": "<div class=\"controller-features\">\n  <ul><b>Finden Sie Ihre perfekte Haltung in Sekunden.</b> Speichern Sie bis zu vier individuelle Höhen für das Arbeiten im Sitzen, Stehen oder für verschiedene Familienmitglieder ab.\n    <li>Kein mühsames Justieren mehr. Ein kurzer Fingertipp genügt, und der G02 fährt präzise in Ihre gespeicherte Idealposition – für einen nahtlosen Workflow ohne Unterbrechungen.</li>\n  </ul>\n</div>\n\n<style>\n  /* 让这个模块内的 li 左对齐，不影响其他地方 */\n  .controller-features ul li {\n    text-align: left !important;\n    list-style-position: inside;\n  }\n</style>",
             "file_type": "image",
             "file_image": "shopify://shop_images/19_f178c4da-fd01-4432-bee4-f39d6e3d2a06.jpg",
             "video_url": "",
@@ -1141,6 +1141,7 @@
     },
     "recommended_products_yEVJQ9": {
       "type": "recommended-products",
+      "disabled": true,
       "name": "recommended products",
       "settings": {
         "spec_id": "",
