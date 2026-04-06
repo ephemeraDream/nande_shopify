@@ -279,20 +279,20 @@
     "img_with_foldtext_cCLPBE": {
       "type": "img-with-foldtext",
       "blocks": {
+        "foldtext_JBQyE8": {
+          "type": "foldtext",
+          "settings": {
+            "title": "<p>Selbstbewusste Silhouette</p>",
+            "description": "Selbst ohne Umgebung wirkt der Tisch als eigenständiges Designobjekt. Klare Linien und markante Konturen erzeugen eine zeitlose Präsenz.",
+            "image": "shopify://shop_images/10_9c072d77-43bb-4ec2-846c-2084a01315e1.jpg"
+          }
+        },
         "foldtext_9Y9iUM": {
           "type": "foldtext",
           "settings": {
             "title": "<h3>Dynamischer Winkel</h3>",
             "description": "Die geneigte Beinkonstruktion erzeugt eine elegante Dynamik und definiert die Silhouette des Tisches. Jeder Winkel ist präzise abgestimmt, um sowohl Stabilität als auch ästhetische Wirkung zu garantieren.",
             "image": "shopify://shop_images/7_fe18ea67-0de3-4d1e-a1ad-c5bf7b81294c.jpg"
-          }
-        },
-        "foldtext_BJmYDi": {
-          "type": "foldtext",
-          "settings": {
-            "title": "<h3>Harmonische Proportionen</h3>",
-            "description": "Das Verhältnis von Tischplatte und Beinen ist sorgfältig konzipiert, sodass der Tisch robust wirkt, ohne optisch schwer zu erscheinen. Proportionen und Balance unterstützen eine angenehme Raumerfahrung.",
-            "image": "shopify://shop_images/8_3029d5fb-0f1a-44e6-9018-a342f6df9681.jpg"
           }
         },
         "foldtext_aQFerM": {
@@ -303,20 +303,20 @@
             "image": "shopify://shop_images/9_65370800-8973-4b24-9838-df93771ee10c.jpg"
           }
         },
-        "foldtext_JBQyE8": {
+        "foldtext_BJmYDi": {
           "type": "foldtext",
           "settings": {
-            "title": "<p>Selbstbewusste Silhouette</p>",
-            "description": "Selbst ohne Umgebung wirkt der Tisch als eigenständiges Designobjekt. Klare Linien und markante Konturen erzeugen eine zeitlose Präsenz.",
-            "image": "shopify://shop_images/10_9c072d77-43bb-4ec2-846c-2084a01315e1.jpg"
+            "title": "<h3>Harmonische Proportionen</h3>",
+            "description": "Das Verhältnis von Tischplatte und Beinen ist sorgfältig konzipiert, sodass der Tisch robust wirkt, ohne optisch schwer zu erscheinen. Proportionen und Balance unterstützen eine angenehme Raumerfahrung.",
+            "image": "shopify://shop_images/8_3029d5fb-0f1a-44e6-9018-a342f6df9681.jpg"
           }
         }
       },
       "block_order": [
+        "foldtext_JBQyE8",
         "foldtext_9Y9iUM",
-        "foldtext_BJmYDi",
         "foldtext_aQFerM",
-        "foldtext_JBQyE8"
+        "foldtext_BJmYDi"
       ],
       "name": "img with foldtext",
       "settings": {
