@@ -133,6 +133,7 @@
         },
         "banner_item_4c4kPY": {
           "type": "banner_item",
+          "disabled": true,
           "settings": {
             "sub_title": "",
             "title": "",
