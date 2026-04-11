@@ -266,7 +266,7 @@
       ],
       "name": "file box simplicity",
       "settings": {
-        "spec_id": "Produkt",
+        "spec_id": "Produktbeschreibung",
         "main_title": "<p>Warum der Maidesite Canvas die richtige Wahl ist?</p>",
         "row_num": 3,
         "padding_top": 60,
@@ -1036,7 +1036,6 @@
       "block_order": [
         "loox_reviews_loox_dynamic_section_VMDChy"
       ],
-      "disabled": true,
       "name": "product comment",
       "settings": {
         "spec_id": "Kundenbewertungen",
