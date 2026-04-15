@@ -337,12 +337,20 @@
     "img_with_foldtext_RcBrkw": {
       "type": "img-with-foldtext",
       "blocks": {
+        "foldtext_RwCezn": {
+          "type": "foldtext",
+          "settings": {
+            "title": "<p>Geprüfte Langlebigkeit </p>",
+            "description": "<b>20.000 Zyklen</b>\n<p>Verlässlichkeit ohne Kompromisse. Das T2-Gestell wurde in über 20.000 Belastungstests auf Herz und Nieren geprüft. Das garantiert dir eine einwandfreie Funktion über viele Jahre hinweg – selbst bei intensiver täglicher Nutzung im Home-Office.</p>",
+            "image": "shopify://shop_images/T2_height_adjustable_desk_with_20000_cycles_loading_tests.jpg"
+          }
+        },
         "foldtext_HQhGDk": {
           "type": "foldtext",
           "settings": {
-            "title": "<p>Mikro-Dreiecksstruktur</p>",
-            "description": "<ul><li>Die Hubsäulen verfügen über eine innovative Mikro-Dreiecksstruktur – inspiriert von der berühmten Loschwitzer Brücke („Blaues Wunder“) in Dresden. Diese Bauweise garantiert eine überlegene Verformungssteifigkeit und verleiht dem Tisch eine spürbar höhere Stabilität, die selbst höchsten Anforderungen im täglichen Einsatz standhält.</li></ul>",
-            "image": "shopify://shop_images/A_-_7.jpg"
+            "title": "<p>Zertifizierte Sicherheit & Standards</p>",
+            "description": "<ul><li>Qualität, der du vertrauen kannst. Mit der <b>CE-Kennzeichnung</b> erfüllt das T2 höchste europäische Sicherheitsstandards. Zudem setzen wir auf <b>FSC-zertifizierte</b> Materialien, um eine umweltgerechte und nachhaltige Herkunft deines Schreibtisches zu garantieren.</li></ul>",
+            "image": "shopify://shop_images/14_ba095c4a-7fca-496b-a4da-a18016d706be.jpg"
           }
         },
         "foldtext_HWP39G": {
@@ -363,6 +371,7 @@
         }
       },
       "block_order": [
+        "foldtext_RwCezn",
         "foldtext_HQhGDk",
         "foldtext_HWP39G",
         "foldtext_iGWkAs"
@@ -370,7 +379,7 @@
       "name": "img with foldtext",
       "settings": {
         "spec_id": "",
-        "title": "<p>Stabilität auf neuem Niveau</p>",
+        "title": "<p>Qualität und Nachhaltigkeit: Gebaut für Generationen</p>",
         "padding_top": 60,
         "padding_bottom": 60
       }
