@@ -524,7 +524,7 @@
             "title": "<p>Präzision durch engste Toleranzen</p>",
             "description": "<div class=\"controller-features\">\n  <ul>\n  Ein stabiler Schreibtisch ist die Grundvoraussetzung für konzentriertes Arbeiten.   <li>Durch minimierte Fertigungstoleranzen in den Teleskopsäulen wird das gefürchtete „Schwingen“ des Gestells effektiv unterbunden. </li>\n<li>Selbst bei maximaler Höhenauslastung bleibt dein Setup absolut starr, sodass du dich voll und ganz auf deine Aufgaben konzentrieren kannst.</li>\n  </ul>\n</div>\n\n<style>\n  /* 让这个模块内的 li 左对齐，不影响其他地方 */\n  .controller-features ul li {\n    text-align: left !important;\n    list-style-position: inside;\n  }\n</style>",
             "file_type": "image",
-            "file_image": "shopify://shop_images/A_-_12.jpg",
+            "file_image": "shopify://shop_images/0.3mm_Tight_Tolerances_slip_part_of_T2.jpg",
             "video_url": "",
             "btn_text": "",
             "link": ""
@@ -538,7 +538,7 @@
             "title": "<p>Optimierte Gewichtsverteilung und Bodenhaftung</p>",
             "description": "<div class=\"controller-features\">\n  <ul>\n    <li>Die extrabreiten und massiv gefertigten Standfüße sorgen für eine ideale Lastenverteilung. In Kombination mit den fein justierbaren Nivelliergleitern gleicht das T2-Gestell Bodenunebenheiten perfekt aus. </li>\n<p>Dies garantiert eine sichere und rutschfeste Bodenhaftung auf jedem Untergrund – von Teppich bis Parkett.</p>\n  </ul>\n</div>\n\n<style>\n  /* 让这个模块内的 li 左对齐，不影响其他地方 */\n  .controller-features ul li {\n    text-align: left !important;\n    list-style-position: inside;\n  }\n</style>",
             "file_type": "image",
-            "file_image": "shopify://shop_images/A_-_10.jpg",
+            "file_image": "shopify://shop_images/solidly_constructed_desk_feet_for_T2_height_adjustable_desk_frame.jpg",
             "video_url": "",
             "btn_text": "",
             "link": ""
