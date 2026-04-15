@@ -551,7 +551,48 @@
         "loop": true,
         "autoplay_enable": true,
         "autoplay_delay": 5000,
-        "layout": "image-left"
+        "layout": "image-right"
+      }
+    },
+    "img_with_foldtext_kkK6XL": {
+      "type": "img-with-foldtext",
+      "blocks": {
+        "foldtext_zKDbpY": {
+          "type": "foldtext",
+          "settings": {
+            "title": "<p>Mikro-Dreiecksstruktur</p>",
+            "description": "<ul><li>Die Hubsäulen verfügen über eine innovative Mikro-Dreiecksstruktur – inspiriert von der berühmten Loschwitzer Brücke („Blaues Wunder“) in Dresden. Diese Bauweise garantiert eine überlegene Verformungssteifigkeit und verleiht dem Tisch eine spürbar höhere Stabilität, die selbst höchsten Anforderungen im täglichen Einsatz standhält.</li></ul>",
+            "image": "shopify://shop_images/A_-_7.jpg"
+          }
+        },
+        "foldtext_P3cahP": {
+          "type": "foldtext",
+          "settings": {
+            "title": "<p>Verstärkte Säulen</p>",
+            "description": "<ul><li>Unsere Standbeine setzen Maßstäbe: Mit einer erhöhten Wandstärke und besonders robusten Stahlprofilen folgt der T2 Pro dem Prinzip: Mehr Material bedeutet mehr Stabilität. Das Ergebnis ist eine optimierte Lastverteilung und eine extrem langlebige Gesamtstruktur, die niemals nachgibt.</li></ul>",
+            "image": "shopify://shop_images/A_-_8.jpg"
+          }
+        },
+        "foldtext_KCn3Gi": {
+          "type": "foldtext",
+          "settings": {
+            "title": "<p>Minimale Toleranzen</p>",
+            "description": "<ul><li>Präzision bis ins Detail: Der Abstand zwischen Innen- und Außensäule wurde auf ein Minimum reduziert. Diese ultra-enge Passform eliminiert seitliches Spiel während der Höhenverstellung und sorgt für eine außergewöhnlich ruhige, solide und wackelfreie Bewegung – in jeder Position.</li></ul>",
+            "image": "shopify://shop_images/A_-_9.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "foldtext_zKDbpY",
+        "foldtext_P3cahP",
+        "foldtext_KCn3Gi"
+      ],
+      "name": "img with foldtext",
+      "settings": {
+        "spec_id": "",
+        "title": "<p>Stabilität auf neuem Niveau</p>",
+        "padding_top": 60,
+        "padding_bottom": 60
       }
     },
     "technical_data_L3gXUm": {
@@ -832,6 +873,7 @@
     "img_with_text_simplicity_YLCpmN",
     "img_with_text_simplicity_JRCJ4f",
     "img_with_text_tab_emEWU8",
+    "img_with_foldtext_kkK6XL",
     "technical_data_L3gXUm",
     "maidesite_swiper_QhkQG8",
     "celebrity_swiper_aGymw9",
