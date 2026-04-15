@@ -348,7 +348,7 @@
         "foldtext_HQhGDk": {
           "type": "foldtext",
           "settings": {
-            "title": "<p>Zertifizierte Sicherheit & Standards</p>",
+            "title": "<p>Zertifizierte Sicherheit</p>",
             "description": "<ul><li>Qualität, der du vertrauen kannst. Mit der <b>CE-Kennzeichnung</b> erfüllt das T2 höchste europäische Sicherheitsstandards. Zudem setzen wir auf <b>FSC-zertifizierte</b> Materialien, um eine umweltgerechte und nachhaltige Herkunft deines Schreibtisches zu garantieren.</li></ul>",
             "image": "shopify://shop_images/14_ba095c4a-7fca-496b-a4da-a18016d706be.jpg"
           }
@@ -356,17 +356,17 @@
         "foldtext_HWP39G": {
           "type": "foldtext",
           "settings": {
-            "title": "<p>Verstärkte Säulen</p>",
-            "description": "<ul><li>Unsere Standbeine setzen Maßstäbe: Mit einer erhöhten Wandstärke und besonders robusten Stahlprofilen folgt der T2 Pro dem Prinzip: Mehr Material bedeutet mehr Stabilität. Das Ergebnis ist eine optimierte Lastverteilung und eine extrem langlebige Gesamtstruktur, die niemals nachgibt.</li></ul>",
+            "title": "<p>Industriestahl</p>",
+            "description": "<ul><li>Der Rahmen aus hochwertigem, kaltgewalztem Stahl bietet eine massive Struktur, die weit über den marktüblichen Standard hinausgeht. Diese Materialwahl sorgt nicht nur für Standfestigkeit, sondern macht das Gestell zu einer langfristigen, wertstabilen Investition.</li></ul>",
             "image": "shopify://shop_images/A_-_8.jpg"
           }
         },
         "foldtext_iGWkAs": {
           "type": "foldtext",
           "settings": {
-            "title": "<p>Minimale Toleranzen</p>",
+            "title": "<p>Nachhaltigkeit durch Beständigkeit</p>",
             "description": "<ul><li>Präzision bis ins Detail: Der Abstand zwischen Innen- und Außensäule wurde auf ein Minimum reduziert. Diese ultra-enge Passform eliminiert seitliches Spiel während der Höhenverstellung und sorgt für eine außergewöhnlich ruhige, solide und wackelfreie Bewegung – in jeder Position.</li></ul>",
-            "image": "shopify://shop_images/A_-_9.jpg"
+            "image": "shopify://shop_images/t2_electric_height-adjustable_desk_with_FSC_certificated_tabletop.jpg"
           }
         }
       },
