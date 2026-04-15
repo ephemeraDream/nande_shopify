@@ -758,7 +758,7 @@
         "faq_WtEK7r": {
           "type": "faq",
           "settings": {
-            "question": "<p>Was muss ich tun, wenn \"E01, E09, E12, ASR/RST \" angezeigt wird?</p>",
+            "question": "<p>Was muss ich tun, wenn \"E01, E05, E13, ASR/RST \" angezeigt wird?</p>",
             "answer": "<p>Halten Sie die Abwärtstaste gedrückt, um den Tisch auf die niedrigste Stufe abzusenken, lassen Sie sie dann los, halten Sie die Abwärtstaste 5 Sekunden lang gedrückt, die Handsteuerung zeigt RST an, halten Sie dann die Abwärtstaste 5 Sekunden lang gedrückt, die Handsteuerung zeigt die Nummer an, und die Rückstellung ist abgeschlossen. Sie können uns auch per E-Mail kontaktieren: contact@maidesite.de</p>"
           }
         },
