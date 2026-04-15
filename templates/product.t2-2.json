@@ -768,30 +768,6 @@
             "question": "<p>Was muss ich tun, wenn \"HOT\" angezeigt wird?</p>",
             "answer": "<p>Das liegt daran, dass die Temperatur des Netzteils zu hoch ist oder es zu oft betrieben wird. Bitte trennen Sie das Netzteil für 20 Minuten vom Stromnetz und schließen Sie es dann wieder an. Sie können uns auch per E-Mail kontaktieren: contact@maidesite.de</p>"
           }
-        },
-        "faq_abheWf": {
-          "type": "faq",
-          "disabled": true,
-          "settings": {
-            "question": "<p>Welche Moglichkeiten habe ich, um meine Bestellung zu bezahlen?</p>",
-            "answer": "<p>Maidesite bietet durch seine produkten von höhenverstellbaren Schreibtischen, die Funktionsintegration, Szenenvielfalt und Personalisierung bieten, Ihnen die Möglichkeit, einfach zwischen verschiedenen Heimat-Aktivitätsmodi zu wechseln, die eine Desktop-Assistenten erfordern. <br/><br/>Dies ermöglicht Anhängern des modernen intelligenten Heimlebens, sich noch bequemer und müheloser in ihre vielfältigen Lebensstile einzuleben.<br/></p>"
-          }
-        },
-        "faq_mFDf3d": {
-          "type": "faq",
-          "disabled": true,
-          "settings": {
-            "question": "<p>Welche Moglichkeiten habe ich, um meine Bestellung zu bezahlen?</p>",
-            "answer": "<p>Maidesite bietet durch seine produkten von höhenverstellbaren Schreibtischen, die Funktionsintegration, Szenenvielfalt und Personalisierung bieten, Ihnen die Möglichkeit, einfach zwischen verschiedenen Heimat-Aktivitätsmodi zu wechseln, die eine Desktop-Assistenten erfordern. <br/><br/>Dies ermöglicht Anhängern des modernen intelligenten Heimlebens, sich noch bequemer und müheloser in ihre vielfältigen Lebensstile einzuleben.<br/></p>"
-          }
-        },
-        "faq_whBqrf": {
-          "type": "faq",
-          "disabled": true,
-          "settings": {
-            "question": "<p>Welche Moglichkeiten habe ich, um meine Bestellung zu bezahlen?</p>",
-            "answer": "<p>Maidesite bietet durch seine produkten von höhenverstellbaren Schreibtischen, die Funktionsintegration, Szenenvielfalt und Personalisierung bieten, Ihnen die Möglichkeit, einfach zwischen verschiedenen Heimat-Aktivitätsmodi zu wechseln, die eine Desktop-Assistenten erfordern. <br/><br/>Dies ermöglicht Anhängern des modernen intelligenten Heimlebens, sich noch bequemer und müheloser in ihre vielfältigen Lebensstile einzuleben.<br/></p>"
-          }
         }
       },
       "block_order": [
@@ -801,10 +777,7 @@
         "faq_VQVPFn",
         "faq_bELHrX",
         "faq_WtEK7r",
-        "faq_EXWGc6",
-        "faq_abheWf",
-        "faq_mFDf3d",
-        "faq_whBqrf"
+        "faq_EXWGc6"
       ],
       "custom_css": [
         ".faq_simple_section {background-color: #fafafa;}"
