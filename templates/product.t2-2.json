@@ -516,20 +516,6 @@
             "link": ""
           }
         },
-        "tab_fiwUXL": {
-          "type": "tab",
-          "settings": {
-            "tabname": "4 Speicherhöhen",
-            "sub_title": "",
-            "title": "<p>Ergonomie auf Knopfdruck: 4 Memory-Positionen</p>",
-            "description": "<div class=\"controller-features\">\n  <ul><b>Finden Sie Ihre perfekte Haltung in Sekunden.</b>Speichern Sie bis zu vier individuelle Höhen für das Arbeiten im Sitzen, Stehen oder für verschiedene Familienmitglieder ab.\n    <li>Ihr Vorteil: Kein mühsames Justieren mehr. Ein kurzer Fingertipp genügt, und der T2 Pro fährt präzise in Ihre gespeicherte Idealposition – für einen nahtlosen Workflow ohne Unterbrechungen.</li>\n  </ul>\n</div>\n\n<style>\n  /* 让这个模块内的 li 左对齐，不影响其他地方 */\n  .controller-features ul li {\n    text-align: left !important;\n    list-style-position: inside;\n  }\n</style>",
-            "file_type": "image",
-            "file_image": "shopify://shop_images/A_-_10.jpg",
-            "video_url": "",
-            "btn_text": "",
-            "link": ""
-          }
-        },
         "tab_AUd88N": {
           "type": "tab",
           "settings": {
@@ -543,13 +529,27 @@
             "btn_text": "",
             "link": ""
           }
+        },
+        "tab_fiwUXL": {
+          "type": "tab",
+          "settings": {
+            "tabname": "Bodenhaftung",
+            "sub_title": "",
+            "title": "<p>Optimierte Gewichtsverteilung und Bodenhaftung</p>",
+            "description": "<div class=\"controller-features\">\n  <ul>\n    <li>Die extrabreiten und massiv gefertigten Standfüße sorgen für eine ideale Lastenverteilung. In Kombination mit den fein justierbaren Nivelliergleitern gleicht das T2-Gestell Bodenunebenheiten perfekt aus. </li>\n<p>Dies garantiert eine sichere und rutschfeste Bodenhaftung auf jedem Untergrund – von Teppich bis Parkett.</p>\n  </ul>\n</div>\n\n<style>\n  /* 让这个模块内的 li 左对齐，不影响其他地方 */\n  .controller-features ul li {\n    text-align: left !important;\n    list-style-position: inside;\n  }\n</style>",
+            "file_type": "image",
+            "file_image": "shopify://shop_images/A_-_10.jpg",
+            "video_url": "",
+            "btn_text": "",
+            "link": ""
+          }
         }
       },
       "block_order": [
         "tab_LmGatL",
         "tab_JyxzQm",
-        "tab_fiwUXL",
-        "tab_AUd88N"
+        "tab_AUd88N",
+        "tab_fiwUXL"
       ],
       "name": "img with text tab",
       "settings": {
