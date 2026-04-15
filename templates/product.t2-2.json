@@ -258,10 +258,30 @@
         "file_with_text_THJTyK": {
           "type": "file_with_text",
           "settings": {
-            "title": "<p>Schwerlast-Stabilität: Massiv & Vibrationsfrei</p>",
-            "description": "<ul><li><strong>In Bewegung:</strong> Hochleistungs-Motoren ermöglichen sanftes Heben und Senken – selbst voll beladen bleibt ein Kartenstapel unberührt.</li><li><strong>Im Stillstand:</strong> Dank verstärkter Stahlprofile gibt es kein Schwanken, egal wie intensiv Sie tippen oder arbeiten.</li><li><strong>Auf höchster Stufe:</strong> Während Standard-Tische oben oft instabil werden, bietet der T2 Pro durch seine massive Konstruktion <strong>maximale Standfestigkeit in jeder Höhe</strong>.</li></ul>",
+            "title": "<p>Maximale Stabilität für Fokus und Präzision</p>",
+            "description": "<p>Ein wackelfreier Arbeitsplatz ist für deutsche Nutzer das A und O. Die robuste Konstruktion des T2 garantiert absolute Standfestigkeit, selbst auf maximaler Höhe, damit deine Monitore bei jeder Bewegung stabil und sicher stehen.</p>",
             "file_type": "image",
-            "file_image": "shopify://shop_images/A_-_1.jpg",
+            "file_image": "shopify://shop_images/Der_hohenverstellbare_Schreibtisch_T2_bietet_hohe_Stabilitat_fur_konzentriertes_Arbeiten.jpg",
+            "video_url": ""
+          }
+        },
+        "file_with_text_B39ehq": {
+          "type": "file_with_text",
+          "settings": {
+            "title": "<p>Frische Farben für dein individuelles Setup</p>",
+            "description": "<p>Junge Ästheten lieben Personalisierung. Mit den brandneuen Farbvarianten des Rahmens passt sich das T2-Gestell perfekt deinem modernen Einrichtungsstil an und wird zum stylischen Herzstück deines Gaming- oder Home-Office-Bereichs.</p>",
+            "file_type": "image",
+            "file_image": "shopify://shop_images/Maidesite_T2_height-adjustable_desk_in_5_colors.jpg",
+            "video_url": ""
+          }
+        },
+        "file_with_text_Q8tJKk": {
+          "type": "file_with_text",
+          "settings": {
+            "title": "<p>Kraftvolles Dual-Motor-System</p>",
+            "description": "<p>Effizienz trifft auf Laufruhe. Dank der zwei leistungsstarken Motoren fährt der Tisch extrem schnell und flüsterleise hoch oder runter, sodass du deine Konzentration nicht verlierst und Mitbewohner im selben Raum niemals störst.</p>",
+            "file_type": "image",
+            "file_image": "shopify://shop_images/Maidesite_T2_electric_standing_desk_with_two_powerful_motors.jpg",
             "video_url": ""
           }
         },
@@ -285,16 +305,6 @@
             "video_url": ""
           }
         },
-        "file_with_text_Q8tJKk": {
-          "type": "file_with_text",
-          "settings": {
-            "title": "<p>Smart Pro Controller mit Gesundheits-Assistent</p>",
-            "description": "<p>Mehr als nur Steuerung: Der T2 Pro Controller verfügt über <strong>zwei integrierte Ladeanschlüsse</strong> für Ihre Geräte und eine exklusive <strong>Sitz-Steh-Erinnerung</strong>. Er hilft Ihnen aktiv dabei, gesund zu bleiben, indem er Sie sanft an den Positionswechsel erinnert – präzise steuerbar mit nur einem Fingertipp.</p>",
-            "file_type": "image",
-            "file_image": "shopify://shop_images/A_-_3.jpg",
-            "video_url": ""
-          }
-        },
         "file_with_text_f9yPAD": {
           "type": "file_with_text",
           "settings": {
@@ -304,25 +314,15 @@
             "file_image": "shopify://shop_images/A_-_6.jpg",
             "video_url": ""
           }
-        },
-        "file_with_text_B39ehq": {
-          "type": "file_with_text",
-          "settings": {
-            "title": "<p>Maximale Flexibilität: Der größte Verstellbereich</p>",
-            "description": "<p>Der T2 Pro passt sich Ihnen an, nicht umgekehrt. Mit einem extrem breiten Längenverstellbereich von <strong>1000 bis 1800 mm</strong> ist er mit fast jeder Tischplattengröße kompatibel. Ob kompaktes Home-Office oder riesige Konferenzplatte – dieses Gestell wächst mit Ihren Anforderungen.</p>",
-            "file_type": "image",
-            "file_image": "shopify://shop_images/A_-_4.jpg",
-            "video_url": ""
-          }
         }
       },
       "block_order": [
         "file_with_text_THJTyK",
+        "file_with_text_B39ehq",
+        "file_with_text_Q8tJKk",
         "file_with_text_McHwGa",
         "file_with_text_JJXCp8",
-        "file_with_text_Q8tJKk",
-        "file_with_text_f9yPAD",
-        "file_with_text_B39ehq"
+        "file_with_text_f9yPAD"
       ],
       "name": "file box simplicity",
       "settings": {
