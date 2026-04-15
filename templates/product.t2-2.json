@@ -508,7 +508,7 @@
             "tabname": "Verstärkte Säulen",
             "sub_title": "",
             "title": "<p>Verstärkte Säulenstruktur aus Kaltwalzstahl</p>",
-            "description": "<div class=\"controller-features\">\n  <ul>\n    <li><b>Ihr Vorteil:</b> Ob spielende Kinder oder neugierige Haustiere – Ihre Einstellungen und Ihre Technik bleiben geschützt. Genießen Sie die Gewissheit eines absolut sicheren Home-Office-Bereichs.</li>\n  </ul>\n</div>\n\n<style>\n  /* 让这个模块内的 li 左对齐，不影响其他地方 */\n  .controller-features ul li {\n    text-align: left !important;\n    list-style-position: inside;\n  }\n</style>",
+            "description": "<div class=\"controller-features\">\n  <ul>\n    <li>Die Basis der Standfestigkeit bildet unsere robuste Konstruktion aus hochwertigem, kaltgewalztem Stahl.</li>\n<li>Dank der erhöhten Wandstärke der Säulen bietet das T2-Gestell eine außergewöhnliche Verwindungssteifigkeit.</li>\n<b>Das Ergebnis:</b> Ein massiver Stand, der auch bei schnellen Tippbewegungen oder dem Einsatz mehrerer Monitore nicht nachgibt.\n  </ul>\n</div>\n\n<style>\n  /* 让这个模块内的 li 左对齐，不影响其他地方 */\n  .controller-features ul li {\n    text-align: left !important;\n    list-style-position: inside;\n  }\n</style>",
             "file_type": "image",
             "file_image": "shopify://shop_images/Reinforced_Column_Structure_from_Cold-Rolled_Steel.jpg",
             "video_url": "",
