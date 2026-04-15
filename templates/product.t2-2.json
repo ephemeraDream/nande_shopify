@@ -337,20 +337,20 @@
     "img_with_foldtext_RcBrkw": {
       "type": "img-with-foldtext",
       "blocks": {
-        "foldtext_RwCezn": {
-          "type": "foldtext",
-          "settings": {
-            "title": "<p>Geprüfte Langlebigkeit </p>",
-            "description": "<b>20.000 Zyklen</b>\n<p>Verlässlichkeit ohne Kompromisse. Das T2-Gestell wurde in über 20.000 Belastungstests auf Herz und Nieren geprüft. Das garantiert dir eine einwandfreie Funktion über viele Jahre hinweg – selbst bei intensiver täglicher Nutzung im Home-Office.</p>",
-            "image": "shopify://shop_images/T2_height_adjustable_desk_with_20000_cycles_loading_tests.jpg"
-          }
-        },
         "foldtext_HQhGDk": {
           "type": "foldtext",
           "settings": {
             "title": "<p>Zertifizierte Sicherheit</p>",
             "description": "<ul><li>Qualität, der du vertrauen kannst. Mit der <b>CE-Kennzeichnung</b> erfüllt das T2 höchste europäische Sicherheitsstandards. Zudem setzen wir auf <b>FSC-zertifizierte</b> Materialien, um eine umweltgerechte und nachhaltige Herkunft deines Schreibtisches zu garantieren.</li></ul>",
             "image": "shopify://shop_images/14_ba095c4a-7fca-496b-a4da-a18016d706be.jpg"
+          }
+        },
+        "foldtext_RwCezn": {
+          "type": "foldtext",
+          "settings": {
+            "title": "<p>Geprüfte Langlebigkeit </p>",
+            "description": "<b>20.000 Zyklen</b>\n<p>Verlässlichkeit ohne Kompromisse. Das T2-Gestell wurde in über 20.000 Belastungstests auf Herz und Nieren geprüft. Das garantiert dir eine einwandfreie Funktion über viele Jahre hinweg – selbst bei intensiver täglicher Nutzung im Home-Office.</p>",
+            "image": "shopify://shop_images/T2_height_adjustable_desk_with_20000_cycles_loading_tests.jpg"
           }
         },
         "foldtext_HWP39G": {
@@ -371,8 +371,8 @@
         }
       },
       "block_order": [
-        "foldtext_RwCezn",
         "foldtext_HQhGDk",
+        "foldtext_RwCezn",
         "foldtext_HWP39G",
         "foldtext_iGWkAs"
       ],
@@ -488,15 +488,29 @@
     "img_with_text_tab_emEWU8": {
       "type": "img-with-text-tab",
       "blocks": {
-        "tab_AUd88N": {
+        "tab_LmGatL": {
           "type": "tab",
           "settings": {
-            "tabname": "Erinnerung zum Aufstehen",
+            "tabname": "Wackelfreiheit",
             "sub_title": "",
-            "title": "<p>Ihr persönlicher Gesundheits-Coach: Die Aufsteh-Erinnerung</p>",
-            "description": "<div class=\"controller-features\">\n  <ul>\n<b>Bleiben Sie den ganzen Tag aktiv und energiegeladen.</b>Das integrierte Reminder-System erinnert Sie in regelmäßigen Abständen sanft daran, die Position zu wechseln.\n    <li>Das integrierte Reminder-System erinnert regelmasig daran, aufzustehen und die Sitzposition zu wechseln. So fordern Sie ein gesunderes Arbeiten im Stehen und beugen langfristigen Ruckenproblemen oder Verspannungen vor.</li>\n  </ul>\n</div>\n\n<style>\n  /* 让这个模块内的 li 左对齐，不影响其他地方 */\n  .controller-features ul li {\n    text-align: left !important;\n    list-style-position: inside;\n  }\n</style>",
+            "title": "<p>Wackelfreiheit auf jedem Level</p>",
+            "description": "<div class=\"controller-features\">\n  <ul><b>Volle Akkus ohne Kabelsalat.</b> Laden Sie Ihr Smartphone und Tablet direkt über die zwei leistungsstarken USB-Ports im Bedienfeld.\n    <li><b>Ihr Vorteil:</b> Sie benötigen keine zusätzlichen Netzteile oder Mehrfachstecker auf dem Tisch. Erleben Sie die Freiheit einer „Clean Desk“-Umgebung, die Ihnen hilft, sich voll auf das Wesentliche zu konzentrieren.</li>\n  </ul>\n</div>\n\n<style>\n  /* 让这个模块内的 li 左对齐，不影响其他地方 */\n  .controller-features ul li {\n    text-align: left !important;\n    list-style-position: inside;\n  }\n</style>",
             "file_type": "image",
-            "file_image": "shopify://shop_images/A_-_12.jpg",
+            "file_image": "shopify://shop_images/T2_height-adjustable_desk_for_office.jpg",
+            "video_url": "",
+            "btn_text": "",
+            "link": ""
+          }
+        },
+        "tab_JyxzQm": {
+          "type": "tab",
+          "settings": {
+            "tabname": "Verstärkte Säulen",
+            "sub_title": "",
+            "title": "<p>Verstärkte Säulenstruktur aus Kaltwalzstahl</p>",
+            "description": "<div class=\"controller-features\">\n  <ul>\n    <li><b>Ihr Vorteil:</b> Ob spielende Kinder oder neugierige Haustiere – Ihre Einstellungen und Ihre Technik bleiben geschützt. Genießen Sie die Gewissheit eines absolut sicheren Home-Office-Bereichs.</li>\n  </ul>\n</div>\n\n<style>\n  /* 让这个模块内的 li 左对齐，不影响其他地方 */\n  .controller-features ul li {\n    text-align: left !important;\n    list-style-position: inside;\n  }\n</style>",
+            "file_type": "image",
+            "file_image": "shopify://shop_images/Reinforced_Column_Structure_from_Cold-Rolled_Steel.jpg",
             "video_url": "",
             "btn_text": "",
             "link": ""
@@ -516,29 +530,15 @@
             "link": ""
           }
         },
-        "tab_JyxzQm": {
+        "tab_AUd88N": {
           "type": "tab",
           "settings": {
-            "tabname": "Kindersicherung",
+            "tabname": "Präzision",
             "sub_title": "",
-            "title": "<p>Absolute Sorgenfreiheit: Die integrierte Kindersicherung</p>",
-            "description": "<div class=\"controller-features\">\n  <ul><b>Sicherheit für Ihr Equipment und Ihre Liebsten.</b>Die aktivierbare Kindersicherung fixiert die gewählte Tischhöhe und verhindert ein unbeabsichtigtes Verstellen.\n    <li><b>Ihr Vorteil:</b> Ob spielende Kinder oder neugierige Haustiere – Ihre Einstellungen und Ihre Technik bleiben geschützt. Genießen Sie die Gewissheit eines absolut sicheren Home-Office-Bereichs.</li>\n  </ul>\n</div>\n\n<style>\n  /* 让这个模块内的 li 左对齐，不影响其他地方 */\n  .controller-features ul li {\n    text-align: left !important;\n    list-style-position: inside;\n  }\n</style>",
+            "title": "<p>Präzision durch engste Toleranzen</p>",
+            "description": "<div class=\"controller-features\">\n  <ul>\n  Ein stabiler Schreibtisch ist die Grundvoraussetzung für konzentriertes Arbeiten.   <li>Durch minimierte Fertigungstoleranzen in den Teleskopsäulen wird das gefürchtete „Schwingen“ des Gestells effektiv unterbunden. </li>\n<li>Selbst bei maximaler Höhenauslastung bleibt dein Setup absolut starr, sodass du dich voll und ganz auf deine Aufgaben konzentrieren kannst.</li>\n  </ul>\n</div>\n\n<style>\n  /* 让这个模块内的 li 左对齐，不影响其他地方 */\n  .controller-features ul li {\n    text-align: left !important;\n    list-style-position: inside;\n  }\n</style>",
             "file_type": "image",
-            "file_image": "shopify://shop_images/A_-_13.jpg",
-            "video_url": "",
-            "btn_text": "",
-            "link": ""
-          }
-        },
-        "tab_LmGatL": {
-          "type": "tab",
-          "settings": {
-            "tabname": "USB-A & USB-C Ports",
-            "sub_title": "",
-            "title": "<p>Ein aufgeräumter Fokus: Zwei integrierte Ladeanschlüsse</p>",
-            "description": "<div class=\"controller-features\">\n  <ul><b>Volle Akkus ohne Kabelsalat.</b> Laden Sie Ihr Smartphone und Tablet direkt über die zwei leistungsstarken USB-Ports im Bedienfeld.\n    <li><b>Ihr Vorteil:</b> Sie benötigen keine zusätzlichen Netzteile oder Mehrfachstecker auf dem Tisch. Erleben Sie die Freiheit einer „Clean Desk“-Umgebung, die Ihnen hilft, sich voll auf das Wesentliche zu konzentrieren.</li>\n  </ul>\n</div>\n\n<style>\n  /* 让这个模块内的 li 左对齐，不影响其他地方 */\n  .controller-features ul li {\n    text-align: left !important;\n    list-style-position: inside;\n  }\n</style>",
-            "file_type": "image",
-            "file_image": "shopify://shop_images/A_-_11.jpg",
+            "file_image": "shopify://shop_images/A_-_12.jpg",
             "video_url": "",
             "btn_text": "",
             "link": ""
@@ -546,16 +546,16 @@
         }
       },
       "block_order": [
-        "tab_AUd88N",
-        "tab_fiwUXL",
+        "tab_LmGatL",
         "tab_JyxzQm",
-        "tab_LmGatL"
+        "tab_fiwUXL",
+        "tab_AUd88N"
       ],
       "name": "img with text tab",
       "settings": {
         "spec_id": "",
         "description": "",
-        "title": "<p>Ihr Cockpit für mehr Fokus und Wohlbefinden</p>",
+        "title": "<p>Maximale Stabilität für kompromisslosen Fokus</p>",
         "show_tab_head": true,
         "loop": true,
         "autoplay_enable": true,
