@@ -285,6 +285,26 @@
             "video_url": ""
           }
         },
+        "file_with_text_JJXCp8": {
+          "type": "file_with_text",
+          "settings": {
+            "title": "<p>Intelligente Steuerung mit Memory-Funktion</p>",
+            "description": "<p>Das intuitive Handbedienteil macht die Ergonomie zum Kinderspiel. Speichere deine bevorzugten Sitz- und Stehhöhen einfach ab, um per Knopfdruck präzise zwischen den Positionen zu wechseln – smart, schnell und absolut alltagstauglich.</p>",
+            "file_type": "image",
+            "file_image": "shopify://shop_images/T2_height-adjustable_desk_with_smart_control_panel.jpg",
+            "video_url": ""
+          }
+        },
+        "file_with_text_f9yPAD": {
+          "type": "file_with_text",
+          "settings": {
+            "title": "<p>Überlegene Langlebigkeit durch 20.000 Tests</p>",
+            "description": "<p>Nachhaltigkeit und Qualität sind \"typisch deutsch\". Mit über 20.000 bestandenen Belastungszyklen ist das T2-Gestell auf jahrelange, intensive Nutzung ausgelegt und bietet dir eine Zuverlässigkeit, die weit über den Standard hinausgeht.</p>",
+            "file_type": "image",
+            "file_image": "shopify://shop_images/T2_height_adjustable_desk_with_20000_cycles_loading_tests.jpg",
+            "video_url": ""
+          }
+        },
         "file_with_text_McHwGa": {
           "type": "file_with_text",
           "settings": {
@@ -294,35 +314,15 @@
             "file_image": "shopify://shop_images/A_-_2.jpg",
             "video_url": ""
           }
-        },
-        "file_with_text_JJXCp8": {
-          "type": "file_with_text",
-          "settings": {
-            "title": "<p>Industrielle Präzision: Über 10.000 Belastungstests</p>",
-            "description": "<p>Qualität, die ein Leben lang hält. Jeder T2 Pro Rahmen wird extremen Belastungen unterzogen. Über 10.000 Testzyklen garantieren, dass Mechanik und Elektronik auch nach Jahren im täglichen Dauereinsatz so präzise und leise funktionieren wie am ersten Tag.</p>",
-            "file_type": "image",
-            "file_image": "shopify://shop_images/A_-_5.jpg",
-            "video_url": ""
-          }
-        },
-        "file_with_text_f9yPAD": {
-          "type": "file_with_text",
-          "settings": {
-            "title": "<p>Premium-Kabelmanagement aus Metall</p>",
-            "description": "<p>Ein aufgeräumter Arbeitsplatz steigert die Fokuszeit. Die im Lieferumfang enthaltene, robuste Metall-Kabelwanne bündelt selbst komplexe Kabelstränge unsichtbar unter der Tischplatte. Das Ergebnis: Ein cleaner, hochprofessioneller Look ohne Kabelsalat.</p>",
-            "file_type": "image",
-            "file_image": "shopify://shop_images/A_-_6.jpg",
-            "video_url": ""
-          }
         }
       },
       "block_order": [
         "file_with_text_THJTyK",
         "file_with_text_B39ehq",
         "file_with_text_Q8tJKk",
-        "file_with_text_McHwGa",
         "file_with_text_JJXCp8",
-        "file_with_text_f9yPAD"
+        "file_with_text_f9yPAD",
+        "file_with_text_McHwGa"
       ],
       "name": "file box simplicity",
       "settings": {
