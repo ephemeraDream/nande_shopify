@@ -12,6 +12,25 @@
     "banner_8A7fgF": {
       "type": "banner",
       "blocks": {
+        "banner_item_e7J8AA": {
+          "type": "banner_item",
+          "settings": {
+            "sub_title": "",
+            "title": "",
+            "text": "",
+            "btn_text": "",
+            "link": "shopify://pages/saisonabschluss-sale",
+            "file_position": "top_center",
+            "overlay_text_align": "text-end",
+            "transparent_content_color": "#ffffff",
+            "file_type": "image",
+            "file_image": "shopify://shop_images/8d62567f3976a249cabee9308f1d71fa_15596641-6c31-408d-a8ec-4bb4980ea9a3.jpg",
+            "file_image_pe": "shopify://shop_images/1_8c41e98e-c441-4013-9d33-678b6790ba43.jpg",
+            "video_url": "",
+            "show_countdown": false,
+            "countdown": ""
+          }
+        },
         "banner_item_t4GakG": {
           "type": "banner_item",
           "settings": {
@@ -26,26 +45,6 @@
             "file_type": "image",
             "file_image": "shopify://shop_images/G02.jpg",
             "file_image_pe": "shopify://shop_images/G02_e877c93f-936f-4382-9d1b-802a0c91e614.jpg",
-            "video_url": "",
-            "show_countdown": false,
-            "countdown": ""
-          }
-        },
-        "banner_item_e7J8AA": {
-          "type": "banner_item",
-          "disabled": true,
-          "settings": {
-            "sub_title": "",
-            "title": "",
-            "text": "",
-            "btn_text": "",
-            "link": "shopify://pages/saisonabschluss-sale",
-            "file_position": "top_center",
-            "overlay_text_align": "text-end",
-            "transparent_content_color": "#ffffff",
-            "file_type": "image",
-            "file_image": "shopify://shop_images/1_1a265301-5fcb-41eb-8fb3-d15a84fabed2.jpg",
-            "file_image_pe": "shopify://shop_images/1_5d3a4ee8-eb71-4960-a155-7c1469bc06d4.jpg",
             "video_url": "",
             "show_countdown": false,
             "countdown": ""
@@ -193,8 +192,8 @@
         }
       },
       "block_order": [
-        "banner_item_t4GakG",
         "banner_item_e7J8AA",
+        "banner_item_t4GakG",
         "banner_item_NCLJWQ",
         "banner_item_ykwd4B",
         "banner_item_gBm9dP",
