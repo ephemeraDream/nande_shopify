@@ -759,7 +759,7 @@
           "type": "faq",
           "settings": {
             "question": "<p>Was muss ich tun, wenn \"E01, E05, E13, ASR/RST \" angezeigt wird?</p>",
-            "answer": "<p>Halten Sie die Abwärtstaste gedrückt, um den Tisch auf die niedrigste Stufe abzusenken, lassen Sie sie dann los, halten Sie die Abwärtstaste 5 Sekunden lang gedrückt, die Handsteuerung zeigt RST an, halten Sie dann die Abwärtstaste 5 Sekunden lang gedrückt, die Handsteuerung zeigt die Nummer an, und die Rückstellung ist abgeschlossen. Sie können uns auch per E-Mail kontaktieren: contact@maidesite.de</p>"
+            "answer": "<p>ASR/RST: Ihr Schreibtisch muss zurückgesetzt werden.<br/>Halten Sie die Abwärts-Taste gedrückt, um den Tisch in die unterste Position abzusenken, und lassen Sie sie dann los; halten Sie die Abwärts-Taste 5 Sekunden lang gedrückt – auf dem Handbediengerät wird „RST“ angezeigt – und halten Sie dann die Abwärts-Taste erneut 5 Sekunden lang gedrückt; auf dem Handbediengerät wird die Nummer angezeigt, und der Reset ist abgeschlossen.<br/>Informationen zu anderen Codes finden Sie in der Bedienungsanleitung. Sollte diese nicht verfügbar sein, können Sie uns per E-Mail kontaktieren: contact@ma</p>"
           }
         },
         "faq_EXWGc6": {
