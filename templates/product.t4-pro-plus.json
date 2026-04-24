@@ -26,6 +26,16 @@
           "type": "title",
           "settings": {}
         },
+        "klarna_on_site_messaging_app_block_JH6nhp": {
+          "type": "shopify://apps/klarna-on-site-messaging/blocks/app-block/b95936a9-74b6-4a95-8103-6a1b6459c25e",
+          "settings": {
+            "data_key": "credit-promotion-badge",
+            "theme": "default",
+            "topPadding": "0",
+            "bottomPadding": "0",
+            "messagePrefix": ""
+          }
+        },
         "loox_reviews_loox_rating_qF3bkU": {
           "type": "shopify://apps/loox-reviews/blocks/loox-rating/5c3b337f-fd14-4df5-b1d6-80ec13e6e28e",
           "settings": {
@@ -44,16 +54,6 @@
         "price_tNqmPe": {
           "type": "price",
           "settings": {}
-        },
-        "klarna_on_site_messaging_app_block_JH6nhp": {
-          "type": "shopify://apps/klarna-on-site-messaging/blocks/app-block/b95936a9-74b6-4a95-8103-6a1b6459c25e",
-          "settings": {
-            "data_key": "credit-promotion-badge",
-            "theme": "default",
-            "topPadding": "0",
-            "bottomPadding": "0",
-            "messagePrefix": ""
-          }
         },
         "key_feature_Nyt7Wq": {
           "type": "key_feature",
@@ -109,9 +109,9 @@
       },
       "block_order": [
         "title_tcECrc",
+        "klarna_on_site_messaging_app_block_JH6nhp",
         "loox_reviews_loox_rating_qF3bkU",
         "price_tNqmPe",
-        "klarna_on_site_messaging_app_block_JH6nhp",
         "key_feature_Nyt7Wq",
         "options_E6H6qX",
         "wholesale_modal_CBqFgt",
