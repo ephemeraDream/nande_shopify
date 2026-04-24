@@ -53,6 +53,16 @@
           "type": "options",
           "settings": {}
         },
+        "klarna_on_site_messaging_app_block_JH6nhp": {
+          "type": "shopify://apps/klarna-on-site-messaging/blocks/app-block/b95936a9-74b6-4a95-8103-6a1b6459c25e",
+          "settings": {
+            "data_key": "credit-promotion-badge",
+            "theme": "default",
+            "topPadding": "0",
+            "bottomPadding": "0",
+            "messagePrefix": ""
+          }
+        },
         "wholesale_modal_CBqFgt": {
           "type": "wholesale_modal",
           "settings": {
@@ -63,16 +73,6 @@
             "modal_tip": "<p>Durch das Absenden des Formulars speichern wir die von Ihnen eingegebenen Daten, um Ihre Anfrage zu bearbeiten. In keinem Fall werden diese Daten weitergegeben. Weitere Informationen finden Sie in unserer Datenschutzerklärung.</p>",
             "success_message": "Your message has been sent successfully.",
             "error_message": "There was an error sending the form. Please check your input."
-          }
-        },
-        "klarna_on_site_messaging_app_block_JH6nhp": {
-          "type": "shopify://apps/klarna-on-site-messaging/blocks/app-block/b95936a9-74b6-4a95-8103-6a1b6459c25e",
-          "settings": {
-            "data_key": "top-strip-promotion-badge",
-            "theme": "default",
-            "topPadding": "0",
-            "bottomPadding": "0",
-            "messagePrefix": ""
           }
         },
         "modal_KiCBrG": {
@@ -113,8 +113,8 @@
         "price_UXihGh",
         "key_feature_fXYJEY",
         "options_imFXM7",
-        "wholesale_modal_CBqFgt",
         "klarna_on_site_messaging_app_block_JH6nhp",
+        "wholesale_modal_CBqFgt",
         "modal_KiCBrG",
         "modal_TaRbWz",
         "modal_EB43X9",
