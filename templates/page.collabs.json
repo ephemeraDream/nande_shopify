@@ -9,23 +9,83 @@
  */
 {
   "sections": {
+    "rich_text_3rhXUd": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_PdWUMd": {
+          "type": "heading",
+          "settings": {
+            "heading": "What you will get?",
+            "heading_size": "h1"
+          }
+        },
+        "text_wt7eK7": {
+          "type": "text",
+          "settings": {
+            "text": "<ul><li>10%-20% comission by order amount</li><li>Free Height-Adjustable Desk Testing Sample</li><li>Paid Campaign</li></ul>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_PdWUMd",
+        "text_wt7eK7"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "recommended_products_rixxDa": {
+      "type": "recommended-products",
+      "name": "recommended products",
+      "settings": {
+        "spec_id": "",
+        "title": "<p>Height-Adjustable Desk Available for Apply</p>",
+        "product_list": [
+          "maidesite-arborlift-elektrisch-hohenverstellbarer-schreibtisch-120x60-140x70cm",
+          "maidesite-canvas-l-formiger-hohenverstellbarer-schreibtisch-mit-4-beinen",
+          "maidesite-t2-pro-max-tischgestell-elektrisch-hohenverstellbar"
+        ],
+        "number": 3,
+        "padding_top": 60,
+        "padding_bottom": 60
+      }
+    },
     "collabs": {
       "type": "apps",
       "blocks": {
         "ad2f724c-1d1a-401b-a51b-46545622248b": {
           "type": "shopify://apps/collabs/blocks/application-page/54758706-9f25-4fa9-a553-64720a4c998b",
           "settings": {
-            "heading": "Join the Maidesite community"
+            "heading": "Join the Maidesite community",
+            "show_square_logo": true,
+            "show_partnership_info": true,
+            "button_text": "Apply now",
+            "number_of_images": "4",
+            "logo_position": "above",
+            "corner_style": "square",
+            "button_background_color": "#000000",
+            "button_label_color": "#ffffff",
+            "link_color": "#2c6ecb"
           }
         }
       },
       "block_order": [
         "ad2f724c-1d1a-401b-a51b-46545622248b"
       ],
-      "settings": {}
+      "settings": {
+        "include_margins": true
+      }
     }
   },
   "order": [
+    "rich_text_3rhXUd",
+    "recommended_products_rixxDa",
     "collabs"
   ]
 }
