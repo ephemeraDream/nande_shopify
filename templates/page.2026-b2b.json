@@ -76,7 +76,7 @@
         "item_VF8JnN": {
           "type": "item",
           "settings": {
-            "image": "shopify://shop_images/thestandingdesk-8nwpx23Vr-U-unsplash.jpg",
+            "image": "shopify://shop_images/A_young_lady_working_at_Maidesite_standing_desk.jpg",
             "title": "Mehr Wohlbefinden",
             "sub_title": "",
             "description": "<p>65 % der Nutzer berichten von besserem Wohlbefinden nach dem Wechsel zu Sitz-Steh-Tischen.</p>",
@@ -87,7 +87,7 @@
         "item_LUziHx": {
           "type": "item",
           "settings": {
-            "image": "shopify://shop_images/vitaly-gariev-LLQGyw2my7k-unsplash.jpg",
+            "image": "shopify://shop_images/F92A1152-1.jpg",
             "title": "Gesteigerte Produktivität",
             "sub_title": "",
             "description": "<p>Der Wechsel zwischen Sitzen und Stehen fördert Durchblutung und Konzentration.</p>",
@@ -639,8 +639,8 @@
       ],
       "name": "t:sections.image-with-text.presets.name",
       "settings": {
-        "image": "shopify://shop_images/thestandingdesk-MRxUCF1CYsI-unsplash_c87a3d65-de54-43b4-a876-5ae92cb5c9e2.jpg",
-        "height": "adapt",
+        "image": "shopify://shop_images/Young_Lady_Working_at_Maidesite_electric_standing_desk.jpg",
+        "height": "medium",
         "desktop_image_width": "medium",
         "layout": "text_first",
         "image_behavior": "none",
