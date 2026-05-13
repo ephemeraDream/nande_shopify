@@ -205,17 +205,6 @@
     "b2b_spezielle_rabatte": {
       "type": "b2b-spezielle-rabatte",
       "blocks": {
-        "item_4zTmAb": {
-          "type": "item",
-          "settings": {
-            "image": "shopify://shop_images/med-badr-chemmaoui-xtDpXi_a-YQ-unsplash.jpg",
-            "title": "Homeoffice-Ausstattung",
-            "sub_title": "Was Maidesite bietet:",
-            "description": "<ul><li>Versand innerhalb der EU direkt an Mitarbeitende</li><li>Kompakte Verpackung & einfacher Aufbau</li><li>Standardisierte Modelle für unternehmensweite Ausstattung</li><li>Mengenkonditionen für Homeoffice-Programme</li></ul><p>Unterstützt <strong>hybride</strong> <strong>Arbeitsmodelle</strong> ohne zusätzlichen Organisationsaufwand.</p>",
-            "btn_text": "Jetzt angebot anfordern",
-            "link": "#"
-          }
-        },
         "item_fiwUXL": {
           "type": "item",
           "settings": {
@@ -223,6 +212,17 @@
             "title": "Einzelarbeitsplätze & Fachabteilungen",
             "sub_title": "Was Maidesite bietet:",
             "description": "<ul><li>Elektrische Höhenverstellung per Knopfdruck</li><li>Speicherfunktionen für mehrere Nutzer</li><li>Robuste Konstruktion für langfristige Nutzung</li><li>5 Jahre Garantie auf elektrische Komponenten</li></ul><p><br/>Besonders geeignet für<strong> IT-Teams</strong>, <strong>Verwaltung</strong> und <strong>Projektarbeitsplätze</strong>.</p>",
+            "btn_text": "Jetzt angebot anfordern",
+            "link": "#"
+          }
+        },
+        "item_4zTmAb": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/med-badr-chemmaoui-xtDpXi_a-YQ-unsplash.jpg",
+            "title": "Homeoffice-Ausstattung",
+            "sub_title": "Was Maidesite bietet:",
+            "description": "<ul><li>Versand innerhalb der EU direkt an Mitarbeitende</li><li>Kompakte Verpackung & einfacher Aufbau</li><li>Standardisierte Modelle für unternehmensweite Ausstattung</li><li>Mengenkonditionen für Homeoffice-Programme</li></ul><p>Unterstützt <strong>hybride</strong> <strong>Arbeitsmodelle</strong> ohne zusätzlichen Organisationsaufwand.</p>",
             "btn_text": "Jetzt angebot anfordern",
             "link": "#"
           }
@@ -251,8 +251,8 @@
         }
       },
       "block_order": [
-        "item_4zTmAb",
         "item_fiwUXL",
+        "item_4zTmAb",
         "item_AUd88N",
         "item_AUd88C"
       ],
