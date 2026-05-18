@@ -45,6 +45,12 @@
           "type": "price",
           "settings": {}
         },
+        "custom_liquid_chFCPt": {
+          "type": "custom-liquid",
+          "settings": {
+            "custom_liquid": "<p>✅ 5 Jahre Garantie</p>\n<p>✅ Kostenloser Versand in DE<p>\n<p>✅ 60 Tage Rückgabe<p>\n<p>✅ Über 300.000 zufriedene Nutzer<p>\n<p>✅ CE & FSC geprüft<p>"
+          }
+        },
         "custom_liquid_igcBGb": {
           "type": "custom-liquid",
           "disabled": true,
@@ -140,6 +146,7 @@
         "title_D6QHLy",
         "loox_reviews_loox_rating_x74bUJ",
         "price_teACLj",
+        "custom_liquid_chFCPt",
         "custom_liquid_igcBGb",
         "custom_liquid_KFQEUm",
         "key_feature_nPigJc",
