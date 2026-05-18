@@ -98,7 +98,7 @@
             "title": "",
             "text": "",
             "btn_text": "",
-            "link": "shopify://products/elektrisch-hohenverstellbarer-gestell-t1-basic",
+            "link": "shopify://products/elektrisch-hohenverstellbarer-gestell-t1-pro",
             "file_position": "middle_left",
             "overlay_text_align": "text-start",
             "transparent_content_color": "#ffffff",
@@ -370,7 +370,7 @@
         "item_hrmkBQ": {
           "type": "item",
           "settings": {
-            "select_product": "elektrisch-hohenverstellbarer-gestell-t1-basic"
+            "select_product": "elektrisch-hohenverstellbarer-gestell-t1-pro"
           }
         },
         "item_6kCRQ4": {

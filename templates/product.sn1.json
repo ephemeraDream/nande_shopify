@@ -432,7 +432,6 @@
       "settings": {
         "spec_id": "",
         "title": "<p>Title Title</p>",
-        "image": "shopify://shop_images/featured-spaces-5.webp",
         "padding_top": 120,
         "padding_bottom": 120
       }
@@ -522,7 +521,7 @@
       "settings": {
         "spec_id": "Technische_Daten",
         "title": "<p>Technische Daten Des HöHenverstellbaren </p><p>Schreibtisches-SN1</p>",
-        "select_product": "elektrisch-hohenverstellbarer-gestell-t1-basic"
+        "select_product": "elektrisch-hohenverstellbarer-gestell-t1-pro"
       }
     },
     "maidesite_swiper_QhkQG8": {
