@@ -54,7 +54,7 @@
         "text_78gmMA": {
           "type": "text",
           "settings": {
-            "text": "<p>Langes Sitzen kann zu:</p><ul><li>Rücken- & Nackenschmerzen<br/></li><li>Müdigkeit im Arbeitsalltag<br/></li><li>schlechter Haltung<br/></li><li>weniger Konzentration<br/></li></ul><p>führen.</p><p>Viele Homeoffice-Arbeitsplätze sind nicht ergonomisch — und genau das spürt man jeden Tag.</p>",
+            "text": "<p>Langes Sitzen kann zu:</p><ul><li><strong>Rücken- & Nackenschmerzen<br/></strong></li><li><strong>Müdigkeit im Arbeitsalltag<br/></strong></li><li><strong>schlechter Haltung<br/></strong></li><li><strong>weniger Konzentration</strong><br/></li></ul><p>führen.</p><p>Viele Homeoffice-Arbeitsplätze sind nicht ergonomisch — und genau das spürt man jeden Tag.</p>",
             "text_style": "body"
           }
         }
