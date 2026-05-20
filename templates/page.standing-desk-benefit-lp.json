@@ -26,10 +26,17 @@
             "heading": "<strong>Zu viele Stunden Sitzen?</strong>",
             "heading_size": "h1"
           }
+        },
+        "text_hEKKLz": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Ihr Schreibtisch könnte der Grund für Rücken- und Nackenschmerzen sein.</p>"
+          }
         }
       },
       "block_order": [
-        "heading_xxQYAE"
+        "heading_xxQYAE",
+        "text_hEKKLz"
       ],
       "name": "t:sections.rich-text.presets.name",
       "settings": {
@@ -69,6 +76,45 @@
         "height": "adapt",
         "desktop_image_width": "medium",
         "layout": "image_first",
+        "image_behavior": "none",
+        "content_layout": "no-overlap",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "mobile_content_alignment": "left",
+        "section_color_scheme": "",
+        "color_scheme": "",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "image_with_text_6NLEA4": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_gr6kr8": {
+          "type": "heading",
+          "settings": {
+            "heading": "Arbeiten im Sitzen UND Stehen — per Knopfdruck",
+            "heading_size": "h1"
+          }
+        },
+        "text_XJHqHd": {
+          "type": "text",
+          "settings": {
+            "text": "<h2>Vorteile:</h2><p>✓ Ergonomischer arbeiten<br/><br/>✓ Mehr Bewegung im Alltag<br/><br/>✓ Elektrische Höhenverstellung<br/><br/>✓ Modernes Design für Homeoffice & Büro<br/><br/>✓ Leiser & stabiler Betrieb</p>",
+            "text_style": "body"
+          }
+        }
+      },
+      "block_order": [
+        "heading_gr6kr8",
+        "text_XJHqHd"
+      ],
+      "name": "t:sections.image-with-text.presets.name",
+      "settings": {
+        "image": "shopify://shop_images/T2_Pro_max_height_adjustable_desk_and_EC6_ergonomic_chair_for_home_office.jpg",
+        "height": "large",
+        "desktop_image_width": "medium",
+        "layout": "text_first",
         "image_behavior": "none",
         "content_layout": "no-overlap",
         "desktop_content_position": "top",
@@ -133,45 +179,6 @@
         "color_scheme": "",
         "columns_mobile": "1",
         "swipe_on_mobile": false,
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
-    "image_with_text_6NLEA4": {
-      "type": "image-with-text",
-      "blocks": {
-        "heading_gr6kr8": {
-          "type": "heading",
-          "settings": {
-            "heading": "Arbeiten im Sitzen UND Stehen — per Knopfdruck",
-            "heading_size": "h1"
-          }
-        },
-        "text_XJHqHd": {
-          "type": "text",
-          "settings": {
-            "text": "<h2>Vorteile:</h2><p>✓ Ergonomischer arbeiten<br/><br/>✓ Mehr Bewegung im Alltag<br/><br/>✓ Elektrische Höhenverstellung<br/><br/>✓ Modernes Design für Homeoffice & Büro<br/><br/>✓ Leiser & stabiler Betrieb</p>",
-            "text_style": "body"
-          }
-        }
-      },
-      "block_order": [
-        "heading_gr6kr8",
-        "text_XJHqHd"
-      ],
-      "name": "t:sections.image-with-text.presets.name",
-      "settings": {
-        "image": "shopify://shop_images/T2_Pro_max_height_adjustable_desk_and_EC6_ergonomic_chair_for_home_office.jpg",
-        "height": "large",
-        "desktop_image_width": "medium",
-        "layout": "text_first",
-        "image_behavior": "none",
-        "content_layout": "no-overlap",
-        "desktop_content_position": "top",
-        "desktop_content_alignment": "left",
-        "mobile_content_alignment": "left",
-        "section_color_scheme": "",
-        "color_scheme": "",
         "padding_top": 36,
         "padding_bottom": 36
       }
@@ -269,8 +276,8 @@
     "main",
     "rich_text_BTQznU",
     "image_with_text_dR3J7y",
-    "multicolumn_hYApix",
     "image_with_text_6NLEA4",
+    "multicolumn_hYApix",
     "rich_text_h6XjzV",
     "177926211214e3f4de",
     "rich_text_UdDrUq"
