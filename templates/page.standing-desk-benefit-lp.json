@@ -11,13 +11,236 @@
   "sections": {
     "main": {
       "type": "main-page",
+      "disabled": true,
       "settings": {
         "padding_top": 56,
         "padding_bottom": 56
       }
+    },
+    "rich_text_BTQznU": {
+      "type": "rich-text",
+      "blocks": {
+        "caption_z8aaVD": {
+          "type": "caption",
+          "settings": {
+            "caption": "Ihr Schreibtisch könnte der Grund für Rücken- und Nackenschmerzen sein",
+            "text_style": "subtitle",
+            "text_size": "large"
+          }
+        },
+        "heading_xxQYAE": {
+          "type": "heading",
+          "settings": {
+            "heading": "<strong>Zu viele Stunden Sitzen?</strong>",
+            "heading_size": "h1"
+          }
+        },
+        "text_fGYzYA": {
+          "type": "text",
+          "settings": {
+            "text": "<ul><li><strong>Mehr Bewegung im Arbeitsalltag.</strong></li><li><strong>Mehr Komfort im Homeoffice.</strong></li><li><strong>Ein elektrisch höhenverstellbarer  Schreibtisch macht den Unterschied.</strong></li></ul>"
+          }
+        },
+        "button_CMF4n4": {
+          "type": "button",
+          "settings": {
+            "button_label": "Jetzt Modelle entdecken",
+            "button_link": "shopify://collections/hohenverstellbarer-schreibtisch",
+            "button_style_secondary": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "caption_z8aaVD",
+        "heading_xxQYAE",
+        "text_fGYzYA",
+        "button_CMF4n4"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "multicolumn_hYApix": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_aBphE3": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/A_young_lady_working_at_Maidesite_standing_desk_4d3fd12d-25b4-428b-9a8a-8e9908d2ea53.jpg",
+            "title": "Spalte",
+            "text": "<p>Kombiniere Text mit einem Bild, um den Fokus auf dein Produkt, deine Kollektion oder deinen Blog-Beitrag zu richten. Du kannst außerdem weitere Details über die Verfügbarkeit oder den Stil und sogar eine Bewertung hinzufügen.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_BMCfPC": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/F92A1152-1.jpg",
+            "title": "Spalte",
+            "text": "<p>Kombiniere Text mit einem Bild, um den Fokus auf dein Produkt, deine Kollektion oder deinen Blog-Beitrag zu richten. Du kannst außerdem weitere Details über die Verfügbarkeit oder den Stil und sogar eine Bewertung hinzufügen.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_je4AUj": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/adjustable-height-desk-Yoga.jpg",
+            "title": "Spalte",
+            "text": "<p>Kombiniere Text mit einem Bild, um den Fokus auf dein Produkt, deine Kollektion oder deinen Blog-Beitrag zu richten. Du kannst außerdem weitere Details über die Verfügbarkeit oder den Stil und sogar eine Bewertung hinzufügen.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_aBphE3",
+        "column_BMCfPC",
+        "column_je4AUj"
+      ],
+      "name": "t:sections.multicolumn.presets.name",
+      "settings": {
+        "title": "Mit mehreren Spalten",
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "button_label": "Schaltflächenbeschriftung",
+        "button_link": "",
+        "columns_desktop": 3,
+        "column_alignment": "center",
+        "background_style": "primary",
+        "color_scheme": "",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "image_with_text_dR3J7y": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_R6rLyy": {
+          "type": "heading",
+          "settings": {
+            "heading": "Ihr Körper merkt jede Stunde Sitzen",
+            "heading_size": "h1"
+          }
+        },
+        "text_78gmMA": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Langes Sitzen kann zu:</p><ul><li>Rücken- & Nackenschmerzen<br/></li><li>Müdigkeit im Arbeitsalltag<br/></li><li>schlechter Haltung<br/></li><li>weniger Konzentration<br/></li></ul><p>führen.</p><p>Viele Homeoffice-Arbeitsplätze sind nicht ergonomisch — und genau das spürt man jeden Tag.</p>",
+            "text_style": "body"
+          }
+        }
+      },
+      "block_order": [
+        "heading_R6rLyy",
+        "text_78gmMA"
+      ],
+      "name": "t:sections.image-with-text.presets.name",
+      "settings": {
+        "image": "shopify://shop_images/back-pain-6949392_1920.jpg",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "image_behavior": "none",
+        "content_layout": "no-overlap",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "mobile_content_alignment": "left",
+        "section_color_scheme": "",
+        "color_scheme": "",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "image_with_text_6NLEA4": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_gr6kr8": {
+          "type": "heading",
+          "settings": {
+            "heading": "Arbeiten im Sitzen UND Stehen — per Knopfdruck",
+            "heading_size": "h1"
+          }
+        },
+        "text_XJHqHd": {
+          "type": "text",
+          "settings": {
+            "text": "<h2>Benefits</h2><p>✓ Ergonomischer arbeiten<br/><br/>✓ Mehr Bewegung im Alltag<br/><br/>✓ Elektrische Höhenverstellung<br/><br/>✓ Modernes Design für Homeoffice & Büro<br/><br/>✓ Leiser & stabiler Betrieb</p>",
+            "text_style": "body"
+          }
+        }
+      },
+      "block_order": [
+        "heading_gr6kr8",
+        "text_XJHqHd"
+      ],
+      "name": "t:sections.image-with-text.presets.name",
+      "settings": {
+        "image": "shopify://shop_images/T2_Pro_max_height_adjustable_desk_and_EC6_ergonomic_chair_for_home_office.jpg",
+        "height": "large",
+        "desktop_image_width": "medium",
+        "layout": "text_first",
+        "image_behavior": "none",
+        "content_layout": "no-overlap",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "mobile_content_alignment": "left",
+        "section_color_scheme": "",
+        "color_scheme": "",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "177926211214e3f4de": {
+      "type": "apps",
+      "blocks": {
+        "loox_reviews_loox_gallery_carousel_section_Y8iNep": {
+          "type": "shopify://apps/loox-reviews/blocks/loox-gallery-carousel-section/5c3b337f-fd14-4df5-b1d6-80ec13e6e28e",
+          "settings": {
+            "maxWidth": 1500,
+            "borderRadius": 60,
+            "itemsPerView": 5,
+            "mobileItemsPerView": 1,
+            "imageRatio": "1",
+            "reviewerNameColor": "#ffffff",
+            "starsColor": "#ffffff",
+            "arrows_backgroundColor": "#FFFFFF",
+            "arrows_iconColor": "#9A9A9A",
+            "shadow": "none",
+            "border_active": false,
+            "border_width": 2,
+            "border_color": "#000000",
+            "productIds": ""
+          }
+        }
+      },
+      "block_order": [
+        "loox_reviews_loox_gallery_carousel_section_Y8iNep"
+      ],
+      "settings": {
+        "include_margins": true
+      }
     }
   },
   "order": [
-    "main"
+    "main",
+    "rich_text_BTQznU",
+    "multicolumn_hYApix",
+    "image_with_text_dR3J7y",
+    "image_with_text_6NLEA4",
+    "177926211214e3f4de"
   ]
 }
