@@ -26,17 +26,10 @@
             "heading": "<strong>Zu viele Stunden Sitzen?</strong>",
             "heading_size": "h1"
           }
-        },
-        "text_fGYzYA": {
-          "type": "text",
-          "settings": {
-            "text": "<h4>Ihr Schreibtisch könnte der Grund für Rücken- und Nackenschmerzen sein</h4>"
-          }
         }
       },
       "block_order": [
-        "heading_xxQYAE",
-        "text_fGYzYA"
+        "heading_xxQYAE"
       ],
       "name": "t:sections.rich-text.presets.name",
       "settings": {
