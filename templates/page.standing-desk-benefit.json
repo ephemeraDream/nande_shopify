@@ -30,7 +30,7 @@
             "link": "",
             "file_position": "top_right",
             "overlay_text_align": "text-center",
-            "transparent_content_color": "#bdff00",
+            "transparent_content_color": "#8ebe09",
             "file_type": "image",
             "file_image": "shopify://shop_images/thestandingdesk-JoHD6SSI_Ig-unsplash.jpg",
             "video_url": "",
@@ -83,7 +83,6 @@
       "disabled": true,
       "name": "t:sections.image-with-text.presets.name",
       "settings": {
-        "image": "shopify://shop_images/ai-generated-8927202_1920.png",
         "height": "adapt",
         "desktop_image_width": "medium",
         "layout": "image_first",
