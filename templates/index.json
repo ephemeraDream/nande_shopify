@@ -58,7 +58,7 @@
             "title": "<p>Maidesite T4 Pro Plus</p>",
             "text": "<p>Hohe Stabilität und Ladeleistung</p>",
             "btn_text": "Jetzt bestellen",
-            "link": "shopify://products/maidesite-t4-pro-plus-schreibtisch-4",
+            "link": "shopify://products/maidesite-t4-pro-plus-schreibtisch-4-beine",
             "file_position": "bottom_right",
             "overlay_text_align": "text-start",
             "transparent_content_color": "#121212",
@@ -240,7 +240,7 @@
             "text": "<p>Standfest bei jeder Bewegung – keine Wackler, kein Nachgeben.</p>",
             "btn_text": "Mehr erfahren",
             "image": "shopify://shop_images/1_cd0b56ec-7a84-4288-a78a-b9008d49df22.jpg",
-            "link": "shopify://products/maidesite-t4-pro-plus-schreibtisch-4"
+            "link": "shopify://products/maidesite-t4-pro-plus-schreibtisch-4-beine"
           }
         },
         "swiper_RR3AVA": {
@@ -266,7 +266,7 @@
           "type": "product_dot",
           "settings": {
             "swiper_id": "2",
-            "select_product": "maidesite-t4-pro-plus-schreibtisch-4",
+            "select_product": "maidesite-t4-pro-plus-schreibtisch-4-beine",
             "product_X": 40,
             "product_Y": 42
           }
@@ -430,7 +430,7 @@
         "text": "<p>Tische, Stühle & Zubehör – alles in einem Schritt auswählen</p>",
         "product_list": [
           "maidesite-t2-pro-max-tischgestell-elektrisch-hohenverstellbar",
-          "maidesite-t4-pro-plus-schreibtisch-4",
+          "maidesite-t4-pro-plus-schreibtisch-4-beine",
           "maidesite-serpentine-kabelrohr"
         ],
         "product_link_text": "Zum Set",
