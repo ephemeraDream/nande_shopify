@@ -20,14 +20,6 @@
     "rich_text_BTQznU": {
       "type": "rich-text",
       "blocks": {
-        "caption_z8aaVD": {
-          "type": "caption",
-          "settings": {
-            "caption": "Ihr Schreibtisch könnte der Grund für Rücken- und Nackenschmerzen sein",
-            "text_style": "subtitle",
-            "text_size": "large"
-          }
-        },
         "heading_xxQYAE": {
           "type": "heading",
           "settings": {
@@ -38,26 +30,13 @@
         "text_fGYzYA": {
           "type": "text",
           "settings": {
-            "text": "<ul><li><strong>Mehr Bewegung im Arbeitsalltag.</strong></li><li><strong>Mehr Komfort im Homeoffice.</strong></li><li><strong>Ein elektrisch höhenverstellbarer  Schreibtisch macht den Unterschied.</strong></li></ul>"
-          }
-        },
-        "button_CMF4n4": {
-          "type": "button",
-          "settings": {
-            "button_label": "Jetzt Modelle entdecken",
-            "button_link": "shopify://collections/hohenverstellbarer-schreibtisch",
-            "button_style_secondary": false,
-            "button_label_2": "",
-            "button_link_2": "",
-            "button_style_secondary_2": false
+            "text": "<h4>Ihr Schreibtisch könnte der Grund für Rücken- und Nackenschmerzen sein</h4>"
           }
         }
       },
       "block_order": [
-        "caption_z8aaVD",
         "heading_xxQYAE",
-        "text_fGYzYA",
-        "button_CMF4n4"
+        "text_fGYzYA"
       ],
       "name": "t:sections.rich-text.presets.name",
       "settings": {
@@ -67,63 +46,6 @@
         "full_width": true,
         "padding_top": 40,
         "padding_bottom": 52
-      }
-    },
-    "multicolumn_hYApix": {
-      "type": "multicolumn",
-      "blocks": {
-        "column_aBphE3": {
-          "type": "column",
-          "settings": {
-            "image": "shopify://shop_images/A_young_lady_working_at_Maidesite_standing_desk_4d3fd12d-25b4-428b-9a8a-8e9908d2ea53.jpg",
-            "title": "Spalte",
-            "text": "<p>Kombiniere Text mit einem Bild, um den Fokus auf dein Produkt, deine Kollektion oder deinen Blog-Beitrag zu richten. Du kannst außerdem weitere Details über die Verfügbarkeit oder den Stil und sogar eine Bewertung hinzufügen.</p>",
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "column_BMCfPC": {
-          "type": "column",
-          "settings": {
-            "image": "shopify://shop_images/F92A1152-1.jpg",
-            "title": "Spalte",
-            "text": "<p>Kombiniere Text mit einem Bild, um den Fokus auf dein Produkt, deine Kollektion oder deinen Blog-Beitrag zu richten. Du kannst außerdem weitere Details über die Verfügbarkeit oder den Stil und sogar eine Bewertung hinzufügen.</p>",
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "column_je4AUj": {
-          "type": "column",
-          "settings": {
-            "image": "shopify://shop_images/adjustable-height-desk-Yoga.jpg",
-            "title": "Spalte",
-            "text": "<p>Kombiniere Text mit einem Bild, um den Fokus auf dein Produkt, deine Kollektion oder deinen Blog-Beitrag zu richten. Du kannst außerdem weitere Details über die Verfügbarkeit oder den Stil und sogar eine Bewertung hinzufügen.</p>",
-            "link_label": "",
-            "link": ""
-          }
-        }
-      },
-      "block_order": [
-        "column_aBphE3",
-        "column_BMCfPC",
-        "column_je4AUj"
-      ],
-      "name": "t:sections.multicolumn.presets.name",
-      "settings": {
-        "title": "Mit mehreren Spalten",
-        "heading_size": "h1",
-        "image_width": "full",
-        "image_ratio": "adapt",
-        "button_label": "",
-        "button_link": "",
-        "columns_desktop": 3,
-        "column_alignment": "center",
-        "background_style": "primary",
-        "color_scheme": "",
-        "columns_mobile": "1",
-        "swipe_on_mobile": false,
-        "padding_top": 36,
-        "padding_bottom": 36
       }
     },
     "image_with_text_dR3J7y": {
@@ -161,6 +83,63 @@
         "mobile_content_alignment": "left",
         "section_color_scheme": "",
         "color_scheme": "",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "multicolumn_hYApix": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_BMCfPC": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/F92A1152-1.jpg",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_aBphE3": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/A_young_lady_working_at_Maidesite_standing_desk_4d3fd12d-25b4-428b-9a8a-8e9908d2ea53.jpg",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_je4AUj": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/adjustable-height-desk-Yoga.jpg",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_BMCfPC",
+        "column_aBphE3",
+        "column_je4AUj"
+      ],
+      "name": "t:sections.multicolumn.presets.name",
+      "settings": {
+        "title": "",
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "button_label": "",
+        "button_link": "",
+        "columns_desktop": 3,
+        "column_alignment": "center",
+        "background_style": "primary",
+        "color_scheme": "",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
         "padding_top": 36,
         "padding_bottom": 36
       }
@@ -247,8 +226,8 @@
             "imageRatio": "1",
             "reviewerNameColor": "#ffffff",
             "starsColor": "#ffffff",
-            "arrows_backgroundColor": "#FFFFFF",
-            "arrows_iconColor": "#9A9A9A",
+            "arrows_backgroundColor": "#ffffff",
+            "arrows_iconColor": "#9a9a9a",
             "shadow": "none",
             "border_active": false,
             "border_width": 2,
@@ -296,8 +275,8 @@
   "order": [
     "main",
     "rich_text_BTQznU",
-    "multicolumn_hYApix",
     "image_with_text_dR3J7y",
+    "multicolumn_hYApix",
     "image_with_text_6NLEA4",
     "rich_text_h6XjzV",
     "177926211214e3f4de",
