@@ -146,7 +146,7 @@
             "title": "Bis zu 19% Rabatt",
             "product_list": [
               "maidesite-th2-pro-plus-tischgestell-elektrisch-hohenverstellbar",
-              "maidesite-elektrisch-hohenverstellbarer-gestell-t2-pro"
+              "maidesite-t2-pro-schreibtisch"
             ]
           }
         },
@@ -214,15 +214,6 @@
     },
     "1756630419fbe27307": {
       "type": "apps",
-      "blocks": {
-        "wheelify_spin_wheel_email_pop_wheelify_app_section_yFCWeq": {
-          "type": "shopify://apps/wheelify-spin-wheel-email-pop/blocks/wheelify-app-section/505ff42c-abce-4466-9558-7e1d3b2cfcd7",
-          "settings": {}
-        }
-      },
-      "block_order": [
-        "wheelify_spin_wheel_email_pop_wheelify_app_section_yFCWeq"
-      ],
       "disabled": true,
       "settings": {
         "include_margins": true
