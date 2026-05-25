@@ -74,7 +74,7 @@
         "product_block_2": {
           "type": "product_item",
           "settings": {
-            "select_product": "maidesite-th2-pro-plus-tischgestell-elektrisch-hohenverstellbar",
+            "select_product": "maidesite-el2-plus-hohenverstellbarer",
             "product_X": 79,
             "product_Y": 63
           }
@@ -108,7 +108,7 @@
         "product_block_2": {
           "type": "product_item",
           "settings": {
-            "select_product": "maidesite-th2-pro-plus-tischgestell-elektrisch-hohenverstellbar",
+            "select_product": "maidesite-el2-plus-hohenverstellbarer",
             "product_X": 79,
             "product_Y": 63
           }
@@ -143,7 +143,7 @@
           "type": "product_item",
           "disabled": true,
           "settings": {
-            "select_product": "maidesite-th2-pro-plus-tischgestell-elektrisch-hohenverstellbar",
+            "select_product": "maidesite-el2-plus-hohenverstellbarer",
             "product_X": 79,
             "product_Y": 63
           }
@@ -177,7 +177,7 @@
         "product_block_2": {
           "type": "product_item",
           "settings": {
-            "select_product": "maidesite-th2-pro-plus-tischgestell-elektrisch-hohenverstellbar",
+            "select_product": "maidesite-el2-plus-hohenverstellbarer",
             "product_X": 79,
             "product_Y": 63
           }
