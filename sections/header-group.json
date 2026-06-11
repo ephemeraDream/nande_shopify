@@ -175,7 +175,7 @@
           "type": "single_link",
           "settings": {
             "name": "Deal",
-            "link": "shopify://pages/pfingsten"
+            "link": "shopify://pages/deal"
           }
         },
         "link_list_yBG8wE": {
