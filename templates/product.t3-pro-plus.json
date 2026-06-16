@@ -237,7 +237,7 @@
         "file_with_text_McHwGa": {
           "type": "file_with_text",
           "settings": {
-            "title": "<p><strong>Intelligent wie ein Tablet, präzise wie eine deutsche Uhr</strong></p>",
+            "title": "<p>Intelligent wie ein Tablet, präzise wie eine deutsche Uhr</p>",
             "description": "<p>Mit einem einzigen Wisch können Sie 4 Höhenprofile speichern, die Einstellung für längeres Sitzen anpassen und vieles mehr</p>",
             "file_type": "image",
             "file_image": "shopify://shop_images/5_266a4de6-602f-473c-96e4-89adab6a4b68.jpg",
@@ -260,9 +260,8 @@
             "title": "<p>Großer Kabelkanal</p>",
             "description": "<p>Organisiert Steckdosenleisten und Kabel mühelos.</p>",
             "file_type": "image",
-            "file_image": "shopify://shop_images/6_8b94026b-eb39-4799-8c04-906d86601721.jpg",
-            "video_url": "",
-            "url_upload": "shopify://files/videos/稳定性 - 0818 - Grey C 灰底.mp4"
+            "file_image": "shopify://shop_images/19_db296e2d-215a-4063-8ec2-b1615378f949.jpg",
+            "video_url": ""
           }
         },
         "file_with_text_PnqAPd": {
