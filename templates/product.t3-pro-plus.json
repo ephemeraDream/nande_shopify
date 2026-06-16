@@ -207,18 +207,17 @@
         "file_with_text_JJXCp8": {
           "type": "file_with_text",
           "settings": {
-            "title": "<p>Schlichte Balance</p>",
-            "description": "<p>Stabil und ruhig – ein Design, das Kraft und Eleganz vereint</p>",
+            "title": "<p><strong>Stabilität, die man spürt</strong></p>",
+            "description": "<p><strong>3 Motoren, 3 Beine, eine Revolution.</strong></p>",
             "file_type": "image",
-            "file_image": "shopify://shop_images/1_0fa188d4-4270-49a1-b48a-7c999eff38f2.jpg",
-            "video_url": "",
-            "url_upload": "shopify://files/videos/圆腿颜值.mp4"
+            "file_image": "shopify://shop_images/7_-_3.jpg",
+            "video_url": ""
           }
         },
         "file_with_text_qwTi99": {
           "type": "file_with_text",
           "settings": {
-            "title": "<p>Nur ein Gestell für alle Fälle</p>",
+            "title": "<p><strong>Nur ein Gestell für alle Fälle</strong></p>",
             "description": "<p>Egal ob Homeoffice-Nische, kreative Joint-Venture-Ecke oder Gaming-Bunker</p>",
             "file_type": "image",
             "file_image": "shopify://shop_images/2_-_90-180_ec2912d1-009e-4f34-bba6-bc6fee53a7b0.jpg",
@@ -228,11 +227,11 @@
         "file_with_text_f9yPAD": {
           "type": "file_with_text",
           "settings": {
-            "title": "<p>Extra starke Tragkraft 240 kg</p>",
-            "description": "<p>Trägt bis zu 240 kg – auch mit mehreren Bildschirmen, Rechnern und schwerem Zubehör bleibt der Tisch stabil.<br/><br/><br/></p>",
+            "title": "<p>Extra starke Tragkraft 300 kg</p>",
+            "description": "<p>Trägt bis zu 300 kg – auch mit mehreren Bildschirmen, Rechnern und schwerem Zubehör bleibt der Tisch stabil.</p>",
             "file_type": "video",
-            "video_url": "",
-            "url_upload": "shopify://files/videos/承重.mp4"
+            "file_image": "shopify://shop_images/1_cad2a8f8-fe7f-498a-b20a-05c1c25c200c.jpg",
+            "video_url": ""
           }
         },
         "file_with_text_McHwGa": {
