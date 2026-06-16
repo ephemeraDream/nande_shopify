@@ -215,15 +215,14 @@
             "url_upload": "shopify://files/videos/圆腿颜值.mp4"
           }
         },
-        "file_with_text_Q8tJKk": {
+        "file_with_text_qwTi99": {
           "type": "file_with_text",
           "settings": {
-            "title": "<p>Maximale Stabilität</p>",
-            "description": "<p>Kein Wackeln – absolut stabil in allen Höhenlagen, auch beim schnellen Höhenwechsel.</p>",
+            "title": "<p>Nur ein Gestell für alle Fälle</p>",
+            "description": "<p>Egal ob Homeoffice-Nische, kreative Joint-Venture-Ecke oder Gaming-Bunker</p>",
             "file_type": "image",
-            "file_image": "shopify://shop_images/2_-_1200x800_e53aa359-eb2d-4bb1-b149-5cc4fde00971.jpg",
-            "video_url": "",
-            "url_upload": "shopify://files/videos/稳定性.mp4"
+            "file_image": "shopify://shop_images/2_-_90-180_ec2912d1-009e-4f34-bba6-bc6fee53a7b0.jpg",
+            "video_url": ""
           }
         },
         "file_with_text_f9yPAD": {
@@ -327,7 +326,7 @@
       },
       "block_order": [
         "file_with_text_JJXCp8",
-        "file_with_text_Q8tJKk",
+        "file_with_text_qwTi99",
         "file_with_text_f9yPAD",
         "file_with_text_McHwGa",
         "file_with_text_ykc3D8",
