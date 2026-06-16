@@ -131,7 +131,7 @@
         "text_jAtwCj": {
           "type": "text",
           "settings": {
-            "text": "<strong>Neuheit: </strong>Möbelinspiriertes Schrägbein-Design",
+            "text": "Der Preis-Leistungs-Sieger unter den Doppelmotor-Gestellen",
             "text_style": "body"
           }
         },
@@ -182,7 +182,7 @@
       ],
       "name": "t:sections.featured-product.presets.name",
       "settings": {
-        "product": "maidesite-arborlift-elektrisch-hohenverstellbarer-schreibtisch-120x60-140x70cm",
+        "product": "t2-elektrisch-hohenverstellbarer-schreibtisch-mit-zwei-motoren",
         "color_scheme": "",
         "secondary_background": false,
         "media_size": "small",
