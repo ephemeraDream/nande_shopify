@@ -286,6 +286,14 @@
     "img_with_foldtext_RcBrkw": {
       "type": "img-with-foldtext",
       "blocks": {
+        "foldtext_iGWkAs": {
+          "type": "foldtext",
+          "settings": {
+            "title": "<p><strong>Verstärkte Seitenplatten</strong></p>",
+            "description": "Egal ob Sie später eine L-förmige, eine gerade oder eine große Eckschreibtisch-Konfiguration wünschen – das T3 ProMax wächst mit Ihren Anforderungen mit. Sie sparen sich den Kauf eines zweiten Gestells beim nächsten Umzug oder bei der Büro-Neuplanung.",
+            "image": "shopify://shop_images/2_-_90-180_ec2912d1-009e-4f34-bba6-bc6fee53a7b0.jpg"
+          }
+        },
         "foldtext_HQhGDk": {
           "type": "foldtext",
           "settings": {
@@ -297,33 +305,16 @@
         "foldtext_HWP39G": {
           "type": "foldtext",
           "settings": {
-            "title": "<p><strong>Vier Querstreben</strong></p>",
-            "description": "Die quer verlaufenden Verstrebungen erhöhen die Widerstandskraft der Tischplatte gegen Durchbiegen um beeindruckende 56 %. Selbst bei voller Ausstattung mit schweren Geräten sorgt dieses zusätzliche Stützsystem dafür, dass die Platte ihre Form behält und Belastungen gleichmäßig verteilt werden.",
-            "image": "shopify://shop_images/11_4b55f6ad-356b-48b6-81a2-73cef6d7031c.jpg"
-          }
-        },
-        "foldtext_iGWkAs": {
-          "type": "foldtext",
-          "settings": {
-            "title": "<p><strong>Verstärkte Seitenplatten</strong></p>",
-            "description": "Verstärkte Seitenplatten: Die breiteren und dickeren Seitenplatten schaffen mehr Auflagefläche für die Tischplatte und tragen erheblich zur Gesamtkonstruktion bei. Sie stabilisieren den Tisch seitlich und verhindern jegliches Wackeln oder Verziehen, selbst unter intensiver Nutzung.",
-            "image": "shopify://shop_images/12_12fb55d9-c25c-45e8-bffe-8d63cd41b27a.jpg"
-          }
-        },
-        "foldtext_yeFeyr": {
-          "type": "foldtext",
-          "settings": {
-            "title": "<p><strong>Verdickte Standrohre</strong></p>",
-            "description": "Die Standrohre aus Kaltstahl wurden um 40 % verstärkt und bieten so maximale Festigkeit und Langlebigkeit. Sie garantieren eine gleichmäßige Lastverteilung und halten selbst extremen Belastungen stand, sodass der Tisch auch nach jahrelangem Gebrauch sicher und stabil bleibt.",
-            "image": "shopify://shop_images/13.jpg"
+            "title": "<p>Teleskop-Querstange für kleine und große Tischplatten</p>",
+            "description": "Der einseitig teleskopierbare Querträger erlaubt eine Anpassung der Breite von 110 bis 160 cm. So passen sowohl kompakte Homeoffice-Lösungen als auch großzügige Arbeitsinseln unter dieses Gestell.",
+            "image": "shopify://shop_images/11_-_110-180_360cm.jpg"
           }
         }
       },
       "block_order": [
-        "foldtext_HQhGDk",
-        "foldtext_HWP39G",
         "foldtext_iGWkAs",
-        "foldtext_yeFeyr"
+        "foldtext_HQhGDk",
+        "foldtext_HWP39G"
       ],
       "name": "img with foldtext",
       "settings": {
@@ -544,30 +535,6 @@
     "tabs_topic_bGPHaj": {
       "type": "tabs-topic",
       "blocks": {
-        "tab_D7d8qp": {
-          "type": "tab",
-          "settings": {
-            "tab_title": "Schreibtisch"
-          }
-        },
-        "tab_RVm6tw": {
-          "type": "tab",
-          "settings": {
-            "tab_title": "Konferenztisch"
-          }
-        },
-        "tab_FqHjEf": {
-          "type": "tab",
-          "settings": {
-            "tab_title": "Esstisch"
-          }
-        },
-        "tab_U9hiCw": {
-          "type": "tab",
-          "settings": {
-            "tab_title": "Arbeitstisch"
-          }
-        },
         "slide_Dd8RDL": {
           "type": "slide",
           "settings": {
@@ -614,10 +581,6 @@
         }
       },
       "block_order": [
-        "tab_D7d8qp",
-        "tab_RVm6tw",
-        "tab_FqHjEf",
-        "tab_U9hiCw",
         "slide_Dd8RDL",
         "slide_6GMWFp",
         "slide_UNAbXB",
@@ -957,13 +920,12 @@
         "product_list": [
           "maidesite-space-elektrisch-hohenverstellbares-schreibtisch",
           "maidesite-canvas-l-formiger-hohenverstellbarer-schreibtisch-mit-4-beinen",
-          "maidesite-arborlift-elektrisch-hohenverstellbarer-schreibtisch-120x60-140x70cm",
           "maidesite-el2-plus-hohenverstellbarer",
           "maidesite-3-fach-tischsteckdose-mit-usb-c-und-a-1-8m-kabel-steckdosenleiste"
         ],
         "number": 3,
-        "padding_top": 120,
-        "padding_bottom": 120
+        "padding_top": 60,
+        "padding_bottom": 60
       }
     }
   },
