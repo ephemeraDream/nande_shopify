@@ -377,7 +377,7 @@
             "title": "<p>Drei völlig unabhängig arbeitende Motoren</p>",
             "description": "<div style=\"text-align:left; direction:ltr;\" lang=\"de\">\n  <p>\n  <br>Drei völlig unabhängig arbeitende Motoren verteilen die Last gleichmäßig auf drei Beine. </br>\nWährend einfache Zweibeinständer bei hoher Belastung oft wackeln, bleibt Ihr Schreibtisch absolut fest und stabil.\n  </p>\n</div>",
             "file_type": "image",
-            "file_image": "shopify://shop_images/4_a0364e91-25f0-4a9b-9992-4277a05e0844.jpg",
+            "file_image": "shopify://shop_images/7_-_3.jpg",
             "video_url": "",
             "btn_text": "",
             "link": ""
@@ -422,7 +422,7 @@
           "type": "foldtext",
           "settings": {
             "title": "<p>3 leistungsstarke Motoren</p>",
-            "description": "<ul><li>Die drei Motoren erreichen auch bei voller Last eine konstante Geschwindigkeit von 40 mm/s. Das ist schneller als viele Zweimotoren-Systeme, die bei Belastung deutlich langsamer werden.</li></ul>",
+            "description": "<ul><li>Die drei Motoren erreichen auch bei voller Last eine konstante Geschwindigkeit von 35 mm/s. Das ist schneller als viele Zweimotoren-Systeme, die bei Belastung deutlich langsamer werden.</li></ul>",
             "image": "shopify://shop_images/7_-_3.jpg"
           }
         },
@@ -430,16 +430,16 @@
           "type": "foldtext",
           "settings": {
             "title": "<h3>Strenge 100%-Prüfung vor der Auslieferung</h3>",
-            "description": "<ul><li>Jedes Schreibtisch, das Sie erhalten, unterzieht sich einer strengen 100%-Prüfung, um sicherzustellen, dass es fehlerfrei ist.</li></ul>",
-            "image": "shopify://shop_images/Maidesite-height-adjustable-desk-QC_2b3a06af-91ec-4430-8a7b-80f2d06cbaec.jpg"
+            "description": "<ul><li>JDer Betrieb ist mit unter 50 dB extrem leise – das entspricht etwa Flüsterlautstärke und liegt unter der typischen Büro-Umgebungsgeräusche von 50 dB. Sie stören weder Ihre Kollegen noch Ihre Familie.</li></ul>",
+            "image": "shopify://shop_images/4_a0364e91-25f0-4a9b-9992-4277a05e0844.jpg"
           }
         },
         "foldtext_UUEbi9": {
           "type": "foldtext",
           "settings": {
-            "title": "<h3>Zertifizierungen für Zuverlässigkeit</h3>",
-            "description": "<ul><li>Mit Zertifizierungen wie CE, UKCA und FSC garantieren wir, dass unsere justierbaren Schreibtische von Maidesite funktional sind und den meisten Bürotischstandards entsprechen.</li></ul>",
-            "image": "shopify://shop_images/Maidesite-Certificates_9894511a-6bd6-4cca-b9d3-c0e331ea58ce.jpg"
+            "title": "<p>4 speicherbaren Höhenprofilen </p>",
+            "description": "<ul><li>Mit 4 speicherbaren Höhenprofilen wechseln Sie per Tastendruck zwischen Ihrer Sitz- und Stehposition. Kein mühsames Austarieren mehr – die Position wird präzise auf ±2 mm genau angefahren.</li></ul>",
+            "image": "shopify://shop_images/22_c34e0eb5-9db4-4f34-86db-a2c67f7f8b85.jpg"
           }
         }
       },
@@ -452,8 +452,8 @@
       "settings": {
         "spec_id": "",
         "title": "<p>Präzise & leise – für ungestörtes Arbeiten</p>",
-        "padding_top": 120,
-        "padding_bottom": 120
+        "padding_top": 60,
+        "padding_bottom": 60
       }
     },
     "img_with_text_tab_Wra4W3": {
