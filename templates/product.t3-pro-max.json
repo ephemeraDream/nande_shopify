@@ -439,7 +439,7 @@
           "settings": {
             "title": "<p>4 speicherbaren Höhenprofilen </p>",
             "description": "<ul><li>Mit 4 speicherbaren Höhenprofilen wechseln Sie per Tastendruck zwischen Ihrer Sitz- und Stehposition. Kein mühsames Austarieren mehr – die Position wird präzise auf ±2 mm genau angefahren.</li></ul>",
-            "image": "shopify://shop_images/22_c34e0eb5-9db4-4f34-86db-a2c67f7f8b85.jpg"
+            "image": "shopify://shop_images/17_-_4.jpg"
           }
         }
       },
@@ -462,12 +462,12 @@
         "tab_EkiTWd": {
           "type": "tab",
           "settings": {
-            "tabname": "RGB-Beleuchtung",
+            "tabname": "Touchscreen zeigt",
             "sub_title": "",
-            "title": "",
-            "description": "<p class=\"left-text\">\n    Mit aktivierter RGB-Beleuchtung genießen Sie ein beeindruckendes Ambiente. \n    Die farbigen Lichtstreifen schaffen eine angenehme Atmosphäre, \n    die den Arbeitsplatz optisch aufwertet und das Arbeiten oder Zocken noch intensiver macht.\n</p>\n\n<style>\n.left-text {\n    text-align: left;\n    margin: 0;\n    padding: 0;\n}\n</style>",
+            "title": "<p>Alles auf einen Blick – keine verwirrenden Taster mehr</p>",
+            "description": "<p class=\"left-text\">\n   <br>Sie sparen Zeit und Nerven. Schluss mit dem Rätselraten, welcher Knopf wofür ist. Unser hochauflösender Touchscreen zeigt Ihnen klar und übersichtlich alle Funktionen an – genau wie Sie es von Ihrem Smartphone oder Tablet gewohnt sind. </br>\nSie sehen sofort, welche Höhe eingestellt ist, ob die Kindersicherung aktiviert ist und wann Ihre nächste Steh-Pause ansteht.\n</p>\n\n<style>\n.left-text {\n    text-align: left;\n    margin: 0;\n    padding: 0;\n}\n</style>",
             "file_type": "image",
-            "file_image": "shopify://shop_images/15_-_RGB.jpg",
+            "file_image": "shopify://shop_images/22_c34e0eb5-9db4-4f34-86db-a2c67f7f8b85.jpg",
             "video_url": "",
             "btn_text": "",
             "link": ""
@@ -525,8 +525,8 @@
       "name": "img with text tab",
       "settings": {
         "spec_id": "",
-        "description": "",
-        "title": "<p>Multifunktionaler Handcontroller</p>",
+        "description": "<p>Intelligent wie ein Tablet, präzise wie eine deutsche Uhr.</p>",
+        "title": "<p>Intelligentes Touch-Interface</p>",
         "show_tab_head": true,
         "loop": true,
         "autoplay_enable": true,
