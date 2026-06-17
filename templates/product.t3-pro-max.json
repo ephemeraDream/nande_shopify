@@ -324,80 +324,6 @@
         "padding_bottom": 60
       }
     },
-    "img_with_text_simplicity_R8thEq": {
-      "type": "img-with-text-simplicity",
-      "disabled": true,
-      "custom_css": [],
-      "name": "img with text simplicity",
-      "settings": {
-        "spec_id": "",
-        "header_title": "<p>Extrem stabiler höhenverstellbarer Schreibtisch</p>",
-        "header_content": "",
-        "title": "<h3>Stabileres Design</h3>",
-        "sub_title": "",
-        "description": "<ul><li>Dreiecksunterstützungsstruktur ist extrem stabil im Vergleich zu anderen Schreibtischdesigns.</li><li>Dank verstärktem Querträger, Seitenstreben und Füßen bietet der Rahmen extra Stabilität.</li></ul>",
-        "file_position": "right",
-        "file_type": "image",
-        "file_image": "shopify://shop_images/T2-Pro-Max-is-ultra-solid.jpg",
-        "video_url": "",
-        "video_aspect_ratio": "4/3",
-        "btn_text": "",
-        "link_url": "",
-        "padding_top": 120,
-        "padding_bottom": 0,
-        "background_color": "#e2ded6"
-      }
-    },
-    "img_with_text_simplicity_YLCpmN": {
-      "type": "img-with-text-simplicity",
-      "disabled": true,
-      "custom_css": [],
-      "name": "img with text simplicity",
-      "settings": {
-        "spec_id": "",
-        "header_title": "",
-        "header_content": "",
-        "title": "",
-        "sub_title": "<h3>Stabilere Säule</h3>",
-        "description": "<ul><li>Neben den strukturellen Verbesserungen trägt auch die präzise Verarbeitung und Konstruktion zur Stabilität bei.</li><li>Der Spalt zwischen den Säulen beträgt weniger als 0,03 mm. Die dreiteiligen Säulen gleiten nahtlos ineinander, wodurch jegliches Wackeln verhindert wird.</li></ul>",
-        "file_position": "left",
-        "file_type": "image",
-        "file_image": "shopify://shop_images/T2-Pro-Max-is-super-stable-with-precise-gasket.jpg",
-        "video_url": "",
-        "video_aspect_ratio": "4/3",
-        "btn_text": "",
-        "link_url": "",
-        "padding_top": 60,
-        "padding_bottom": 120,
-        "background_color": "#e2ded6"
-      }
-    },
-    "img_with_text_simplicity_nJFALq": {
-      "type": "img-with-text-simplicity",
-      "disabled": true,
-      "custom_css": [
-        ".img_with_text_simplicity_info {padding-left: 3rem;}"
-      ],
-      "name": "img with text simplicity",
-      "settings": {
-        "spec_id": "",
-        "header_title": "",
-        "header_content": "",
-        "title": "<h3>Stärkere Füße</h3>",
-        "sub_title": "<p>verstärkter</p>",
-        "description": "<section id=\"e7q-right-1\">\n  <style>\n    #e7q-right-1{--brand:#6f5645;--text:#1a1a1a;--muted:#3a3a3a}\n    #e7q-right-1 *{box-sizing:border-box}\n    #e7q-right-1 p{margin:0}\n    #e7q-right-1 .desc{color:var(--text);font-size:16px;line-height:1.6;margin-bottom:24px}\n    #e7q-right-1 .desc strong{font-weight:700}\n    #e7q-right-1 .grid{display:grid;grid-template-columns:1fr 1fr;column-gap:56px;row-gap:36px}\n    #e7q-right-1 .item{display:flex;flex-direction:column;align-items:flex-start}\n    #e7q-right-1 .icon{width:36px;height:36px;margin-bottom:10px;flex:0 0 36px;color:#222}\n    #e7q-right-1 .kicker{font-size:13px;line-height:1.2;font-weight:700;color:var(--muted);margin-bottom:6px}\n    #e7q-right-1 .headline{color:var(--brand);font-weight:800;font-size:clamp(18px,3.2vw,24px);line-height:1.25;letter-spacing:-0.2px}\n    @media (max-width: 767px){\n      #e7q-right-1 .grid{grid-template-columns:1fr 1fr;column-gap:24px;row-gap:28px}\n      #e7q-right-1 .icon{width:32px;height:32px;margin-bottom:8px}\n      #e7q-right-1 .kicker{font-size:12px}\n    }\n  </style>\n\n  <p class=\"desc\">\n    Der E7Q ist für höchste Stabilität konzipiertverstärkter\n    <strong>Rahmenkonstruktion, größerem Säulenüberlappungsbereich und dickeren Stahlrohren</strong>\n  \n  </p>\n\n  <div class=\"grid\">\n    <!-- 1 -->\n    <div class=\"item\">\n      <!-- 桌子/四腿 -->\n      <svg class=\"icon\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\">\n        <rect x=\"3\" y=\"5\" width=\"18\" height=\"2\"></rect>\n        <line x1=\"6\" y1=\"7\" x2=\"6\" y2=\"19\"></line>\n        <line x1=\"18\" y1=\"7\" x2=\"18\" y2=\"19\"></line>\n        <line x1=\"12\" y1=\"7\" x2=\"12\" y2=\"19\"></line>\n      </svg>\n      <p class=\"kicker\">Mehr Stabilität</p>\n      <p class=\"headline\">mit vier Beinen</p>\n    </div>\n\n    <!-- 2 -->\n    <div class=\"item\">\n      <!-- 立柱带标尺 -->\n      <svg class=\"icon\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\">\n        <rect x=\"9\" y=\"3\" width=\"6\" height=\"18\" rx=\"1.5\"></rect>\n        <path d=\"M5 5h2M5 8h2M5 11h2M5 14h2M5 17h2\"></path>\n        <path d=\"M17 5h2M17 8h2M17 11h2M17 14h2M17 17h2\"></path>\n      </svg>\n      <p class=\"kicker\">Verstärkte Struktur</p>\n      <p class=\"headline\">+50mm Säulenüberlappung<br>der Beine</p>\n    </div>\n\n    <!-- 3 -->\n    <div class=\"item\">\n      <!-- 砝码/重量 -->\n      <svg class=\"icon\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\">\n        <path d=\"M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2\"></path>\n        <path d=\"M5 9h14l-2 10H7L5 9Z\"></path>\n        <path d=\"M10 13h4\"></path>\n      </svg>\n      <p class=\"kicker\">Echte Substanz</p>\n      <p class=\"headline\">75&nbsp;% schwerer</p>\n    </div>\n\n    <!-- 4 -->\n    <div class=\"item\">\n      <!-- 加厚立柱（双竖+中间斜纹） -->\n      <svg class=\"icon\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\">\n        <line x1=\"6\" y1=\"3\" x2=\"6\" y2=\"21\"></line>\n        <line x1=\"18\" y1=\"3\" x2=\"18\" y2=\"21\"></line>\n        <path d=\"M10 7l4 3-4 3 4 3\"></path>\n      </svg>\n      <p class=\"kicker\">Dickere Wände der Bein-Säulen</p>\n      <p class=\"headline\">25&nbsp;% Zunahme</p>\n    </div>\n  </div>\n</section>",
-        "file_position": "left",
-        "file_type": "image",
-        "file_image": "shopify://shop_images/222.jpg",
-        "video_url": "",
-        "video_aspect_ratio": "4/3",
-        "btn_text": "",
-        "link_url": "",
-        "padding_top": 60,
-        "padding_bottom": 0,
-        "background_color": "#e2ded6"
-      }
-    },
     "img_with_text_simplicity_JRCJ4f": {
       "type": "img-with-text-simplicity",
       "disabled": true,
@@ -477,7 +403,6 @@
         "tab_JyxzQm",
         "tab_LmGatL"
       ],
-      "disabled": true,
       "name": "img with text tab",
       "settings": {
         "spec_id": "",
@@ -523,73 +448,12 @@
         "foldtext_7BhWHC",
         "foldtext_UUEbi9"
       ],
-      "disabled": true,
       "name": "img with foldtext",
       "settings": {
         "spec_id": "",
         "title": "<p>Maidesite-Schreibtisch stabiler und zuverlässiger</p>",
         "padding_top": 120,
         "padding_bottom": 120
-      }
-    },
-    "tabs_topic_bGPHaj": {
-      "type": "tabs-topic",
-      "blocks": {
-        "slide_Dd8RDL": {
-          "type": "slide",
-          "settings": {
-            "belong_tab": "0",
-            "image": "shopify://shop_images/14_-_1.jpg",
-            "title": "",
-            "text": "",
-            "btn_text": "",
-            "link": ""
-          }
-        },
-        "slide_6GMWFp": {
-          "type": "slide",
-          "settings": {
-            "belong_tab": "1",
-            "image": "shopify://shop_images/14_-_3.jpg",
-            "title": "",
-            "text": "",
-            "btn_text": "",
-            "link": ""
-          }
-        },
-        "slide_UNAbXB": {
-          "type": "slide",
-          "settings": {
-            "belong_tab": "2",
-            "image": "shopify://shop_images/14_-_2.jpg",
-            "title": "",
-            "text": "",
-            "btn_text": "",
-            "link": ""
-          }
-        },
-        "slide_m9pXk4": {
-          "type": "slide",
-          "settings": {
-            "belong_tab": "3",
-            "image": "shopify://shop_images/14_-_4.jpg",
-            "title": "",
-            "text": "",
-            "btn_text": "",
-            "link": ""
-          }
-        }
-      },
-      "block_order": [
-        "slide_Dd8RDL",
-        "slide_6GMWFp",
-        "slide_UNAbXB",
-        "slide_m9pXk4"
-      ],
-      "name": "Tabs Topic (default)",
-      "settings": {
-        "title": "Flexibel für größere Platten und verschiedene Szenarien.",
-        "spec_id": ""
       }
     },
     "img_with_text_tab_Wra4W3": {
@@ -675,7 +539,7 @@
       "name": "technical data",
       "settings": {
         "spec_id": "Technische-Daten",
-        "title": "<p>Technische Daten Des HöHenverstellbaren </p><p>Schreibtisches-T4 Pro Plus</p>",
+        "title": "<p>Technische Daten Des HöHenverstellbaren </p><p>Schreibtisches-T3 Pro Max</p>",
         "select_product": "maidesite-t4-pro-plus-hohenverstellbarer-schreibtisch-4-beine"
       }
     },
@@ -936,13 +800,9 @@
     "video_wPHLA8",
     "img_with_text_box_simplicity_qrzG6W",
     "img_with_foldtext_RcBrkw",
-    "img_with_text_simplicity_R8thEq",
-    "img_with_text_simplicity_YLCpmN",
-    "img_with_text_simplicity_nJFALq",
     "img_with_text_simplicity_JRCJ4f",
     "img_with_text_tab_emEWU8",
     "img_with_foldtext_LzqrtY",
-    "tabs_topic_bGPHaj",
     "img_with_text_tab_Wra4W3",
     "technical_data_L3gXUm",
     "maidesite_swiper_QhkQG8",
