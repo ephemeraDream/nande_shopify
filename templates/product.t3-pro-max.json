@@ -263,61 +263,6 @@
             "file_image": "shopify://shop_images/10_4518fcbd-0016-4005-a3af-163bb7d4b1fd.jpg",
             "video_url": ""
           }
-        },
-        "file_with_text_PnqAPd": {
-          "type": "file_with_text",
-          "disabled": true,
-          "settings": {
-            "title": "<p>Einfache Bedienfreude</p>",
-            "description": "<p>Klaviertasten und eine intuitive grafische Oberfläche machen die Einrichtung zum Kinderspiel.</p>",
-            "file_type": "video",
-            "file_image": "shopify://shop_images/T2-Pro-Max-black-control-panel-with-Maid-OS_9ae8a8ff-e2b8-48aa-bd7c-3e6c54d59f49.jpg",
-            "video_url": ""
-          }
-        },
-        "file_with_text_G8PtXG": {
-          "type": "file_with_text",
-          "disabled": true,
-          "settings": {
-            "title": "<p>Einfache Bedienfreude</p>",
-            "description": "<p>Klaviertasten und eine intuitive grafische Oberfläche machen die Einrichtung zum Kinderspiel.</p>",
-            "file_type": "video",
-            "file_image": "shopify://shop_images/T2-Pro-Max-black-control-panel-with-Maid-OS_9ae8a8ff-e2b8-48aa-bd7c-3e6c54d59f49.jpg",
-            "video_url": ""
-          }
-        },
-        "file_with_text_wLQtgA": {
-          "type": "file_with_text",
-          "disabled": true,
-          "settings": {
-            "title": "<p>Einfache Bedienfreude</p>",
-            "description": "<p>Klaviertasten und eine intuitive grafische Oberfläche machen die Einrichtung zum Kinderspiel.</p>",
-            "file_type": "video",
-            "file_image": "shopify://shop_images/T2-Pro-Max-black-control-panel-with-Maid-OS_9ae8a8ff-e2b8-48aa-bd7c-3e6c54d59f49.jpg",
-            "video_url": ""
-          }
-        },
-        "file_with_text_nGfFNW": {
-          "type": "file_with_text",
-          "disabled": true,
-          "settings": {
-            "title": "<p>Einfache Bedienfreude</p>",
-            "description": "<p>Klaviertasten und eine intuitive grafische Oberfläche machen die Einrichtung zum Kinderspiel.</p>",
-            "file_type": "video",
-            "file_image": "shopify://shop_images/T2-Pro-Max-black-control-panel-with-Maid-OS_9ae8a8ff-e2b8-48aa-bd7c-3e6c54d59f49.jpg",
-            "video_url": ""
-          }
-        },
-        "file_with_text_NhMLJD": {
-          "type": "file_with_text",
-          "disabled": true,
-          "settings": {
-            "title": "<p>Einfache Bedienfreude</p>",
-            "description": "<p>Klaviertasten und eine intuitive grafische Oberfläche machen die Einrichtung zum Kinderspiel.</p>",
-            "file_type": "video",
-            "file_image": "shopify://shop_images/T2-Pro-Max-black-control-panel-with-Maid-OS_9ae8a8ff-e2b8-48aa-bd7c-3e6c54d59f49.jpg",
-            "video_url": ""
-          }
         }
       },
       "block_order": [
@@ -326,12 +271,7 @@
         "file_with_text_f9yPAD",
         "file_with_text_THJTyK",
         "file_with_text_McHwGa",
-        "file_with_text_ykc3D8",
-        "file_with_text_PnqAPd",
-        "file_with_text_G8PtXG",
-        "file_with_text_wLQtgA",
-        "file_with_text_nGfFNW",
-        "file_with_text_NhMLJD"
+        "file_with_text_ykc3D8"
       ],
       "name": "file box simplicity",
       "settings": {
@@ -349,9 +289,9 @@
         "foldtext_HQhGDk": {
           "type": "foldtext",
           "settings": {
-            "title": "<p><strong>Vier stabile Tischbeine</strong></p>",
-            "description": "Die vier massiven Tischbeine bieten von Natur aus eine außergewöhnliche Stabilität, die selbst bei starker Belastung, mehreren Bildschirmen, schweren Rechnern oder Zubehör für sicheren Stand sorgt. Sie bilden das stabile Fundament, auf dem der gesamte Tisch zuverlässig ruht.",
-            "image": "shopify://shop_images/10.jpg"
+            "title": "<p>Verstellbaren Winkelmechanismus </p>",
+            "description": "Das Gestell passt sich mit seinem verstellbaren Winkelmechanismus flexibel an jede Raumsituation an: enge Zimmerecke, große freie Fläche oder ungewöhnliche Raumgeometrien. Ein Gestell für alle Fälle",
+            "image": "shopify://shop_images/10_-_90-180.jpg"
           }
         },
         "foldtext_HWP39G": {
@@ -388,9 +328,9 @@
       "name": "img with foldtext",
       "settings": {
         "spec_id": "",
-        "title": "<p>Was sorgt für die hervorragende Stabilität?</p>",
+        "title": "<p>Flexibel wie kein anderes Gestell – für jede Raumsituation</p>",
         "padding_top": 60,
-        "padding_bottom": 120
+        "padding_bottom": 60
       }
     },
     "img_with_text_simplicity_R8thEq": {
