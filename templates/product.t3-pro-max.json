@@ -358,12 +358,12 @@
         "tab_AUd88N": {
           "type": "tab",
           "settings": {
-            "tabname": "Sitzende Erinnerung",
+            "tabname": "Drei Motoren",
             "sub_title": "",
-            "title": "<p>Fortschrittliche Technologie</p>",
-            "description": "<div style=\"text-align:left; direction:ltr;\" lang=\"de\">\n  <p>\n    Perfekt für zwei Familienmitglieder, um ihre individuelle Körpergröße anzupassen oder um zwei neue Höheneinstellungen\n    für vielfältigere Körperhaltungen zu ermöglichen.<br/>\n    Der Standard-USB-Ladeanschluss lädt deine digitalen Geräte zuverlässig auf, <br/>\n    genau dann, wenn du es brauchst.\n  </p>\n</div>",
+            "title": "<p>Drei völlig unabhängig arbeitende Motoren</p>",
+            "description": "<div style=\"text-align:left; direction:ltr;\" lang=\"de\">\n  <p>\n  <br>Drei völlig unabhängig arbeitende Motoren verteilen die Last gleichmäßig auf drei Beine. </br>\nWährend einfache Zweibeinständer bei hoher Belastung oft wackeln, bleibt Ihr Schreibtisch absolut fest und stabil.\n  </p>\n</div>",
             "file_type": "image",
-            "file_image": "shopify://shop_images/006.jpg",
+            "file_image": "shopify://shop_images/7_-_3.jpg",
             "video_url": "",
             "btn_text": "",
             "link": ""
@@ -374,10 +374,10 @@
           "settings": {
             "tabname": "Sitzende Erinnerung",
             "sub_title": "",
-            "title": "<p>Fortschrittliche Technologie</p>",
-            "description": "<div style=\"text-align:left; direction:ltr;\" lang=\"de\">\n  <p>\n    Perfekt für zwei Familienmitglieder, um ihre individuelle Körpergröße anzupassen oder um zwei neue Höheneinstellungen <br/>\n    für vielfältigere Körperhaltungen zu ermöglichen.<br/>\n    Der Standard-USB-Ladeanschluss lädt deine digitalen Geräte zuverlässig auf, <br/>\n    genau dann, wenn du es brauchst.\n  </p>\n</div>",
+            "title": "<p>dreipunktige Abstützung</p>",
+            "description": "<div style=\"text-align:left; direction:ltr;\" lang=\"de\">\n  <p>\n   Die dreipunktige Abstützung reduziert die seitliche Beweglichkeit bei Belastung um über 50 % im Vergleich zu Zweimotor-Systemen. <br/>\n   Selbst bei einer seitlichen Belastung von 100 N in der höchsten Position bleibt die Bewegung unter 10 mm.<br/>\n  </p>\n</div>",
             "file_type": "image",
-            "file_image": "shopify://shop_images/006.jpg",
+            "file_image": "shopify://shop_images/8_87f982ea-3d25-450b-b5ad-c4630bba8062.jpg",
             "video_url": "",
             "btn_text": "",
             "link": ""
@@ -389,9 +389,9 @@
             "tabname": "Sitzende Erinnerung",
             "sub_title": "",
             "title": "<p>Fortschrittliche Technologie</p>",
-            "description": "<div style=\"text-align:left; direction:ltr;\" lang=\"de\">\n  <p>\n    Perfekt für zwei Familienmitglieder, um ihre individuelle Körpergröße anzupassen oder um zwei neue Höheneinstellungen\n    für vielfältigere Körperhaltungen zu ermöglichen.<br/>\n    Der Standard-USB-Ladeanschluss lädt deine digitalen Geräte zuverlässig auf, <br/>\n    genau dann, wenn du es brauchst.\n  </p>\n</div>",
+            "description": "<div style=\"text-align:left; direction:ltr;\" lang=\"de\">\n  <p>\n    Das Gestell trägt satte 300 kg Gesamtlast – das sind zwei erwachsene Personen oder ein voll bestückter Arbeitsplatz mit mehreren Monitoren, Drucker und schwerem Zubehör.<br/>\n  </p>\n</div>",
             "file_type": "image",
-            "file_image": "shopify://shop_images/006.jpg",
+            "file_image": "shopify://shop_images/1_cad2a8f8-fe7f-498a-b20a-05c1c25c200c.jpg",
             "video_url": "",
             "btn_text": "",
             "link": ""
@@ -407,12 +407,12 @@
       "settings": {
         "spec_id": "",
         "description": "",
-        "title": "<p>CE/FSC-zertifizierter </p>",
+        "title": "<p>Maximale Stabilität durch 3-Motor-Technologie</p>",
         "show_tab_head": true,
         "loop": true,
         "autoplay_enable": true,
         "autoplay_delay": 5000,
-        "layout": "image-left"
+        "layout": "image-right"
       }
     },
     "img_with_foldtext_LzqrtY": {
