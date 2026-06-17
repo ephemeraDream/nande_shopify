@@ -204,16 +204,6 @@
     "img_with_text_box_simplicity_qrzG6W": {
       "type": "img-with-text-box-simplicity",
       "blocks": {
-        "file_with_text_JJXCp8": {
-          "type": "file_with_text",
-          "settings": {
-            "title": "<p><strong>Stabilität, die man spürt</strong></p>",
-            "description": "<p><strong>3 Motoren, 3 Beine, eine Revolution.</strong></p>",
-            "file_type": "image",
-            "file_image": "shopify://shop_images/7_-_3.jpg",
-            "video_url": ""
-          }
-        },
         "file_with_text_qwTi99": {
           "type": "file_with_text",
           "settings": {
@@ -221,6 +211,16 @@
             "description": "<p>Egal ob Homeoffice-Nische, kreative Joint-Venture-Ecke oder Gaming-Bunker</p>",
             "file_type": "image",
             "file_image": "shopify://shop_images/2_-_90-180_ec2912d1-009e-4f34-bba6-bc6fee53a7b0.jpg",
+            "video_url": ""
+          }
+        },
+        "file_with_text_JJXCp8": {
+          "type": "file_with_text",
+          "settings": {
+            "title": "<p><strong>Stabilität, die man spürt</strong></p>",
+            "description": "<p><strong>3 Motoren, 3 Beine, eine Revolution.</strong></p>",
+            "file_type": "image",
+            "file_image": "shopify://shop_images/7_-_3.jpg",
             "video_url": ""
           }
         },
@@ -321,8 +321,8 @@
         }
       },
       "block_order": [
-        "file_with_text_JJXCp8",
         "file_with_text_qwTi99",
+        "file_with_text_JJXCp8",
         "file_with_text_f9yPAD",
         "file_with_text_THJTyK",
         "file_with_text_McHwGa",
