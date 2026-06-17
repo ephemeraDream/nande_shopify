@@ -355,6 +355,20 @@
     "img_with_text_tab_emEWU8": {
       "type": "img-with-text-tab",
       "blocks": {
+        "tab_LmGatL": {
+          "type": "tab",
+          "settings": {
+            "tabname": "Tragkraft: max. 300 kg",
+            "sub_title": "",
+            "title": "<p>Tragkraft: max. 300 kg</p>",
+            "description": "<div style=\"text-align:left; direction:ltr;\" lang=\"de\">\n  <p>\n    Das Gestell trägt satte 300 kg Gesamtlast – das sind zwei erwachsene Personen oder ein voll bestückter Arbeitsplatz mit mehreren Monitoren, Drucker und schwerem Zubehör.<br/>\n  </p>\n</div>",
+            "file_type": "image",
+            "file_image": "shopify://shop_images/1_cad2a8f8-fe7f-498a-b20a-05c1c25c200c.jpg",
+            "video_url": "",
+            "btn_text": "",
+            "link": ""
+          }
+        },
         "tab_AUd88N": {
           "type": "tab",
           "settings": {
@@ -363,7 +377,7 @@
             "title": "<p>Drei völlig unabhängig arbeitende Motoren</p>",
             "description": "<div style=\"text-align:left; direction:ltr;\" lang=\"de\">\n  <p>\n  <br>Drei völlig unabhängig arbeitende Motoren verteilen die Last gleichmäßig auf drei Beine. </br>\nWährend einfache Zweibeinständer bei hoher Belastung oft wackeln, bleibt Ihr Schreibtisch absolut fest und stabil.\n  </p>\n</div>",
             "file_type": "image",
-            "file_image": "shopify://shop_images/7_-_3.jpg",
+            "file_image": "shopify://shop_images/4_a0364e91-25f0-4a9b-9992-4277a05e0844.jpg",
             "video_url": "",
             "btn_text": "",
             "link": ""
@@ -382,26 +396,12 @@
             "btn_text": "",
             "link": ""
           }
-        },
-        "tab_LmGatL": {
-          "type": "tab",
-          "settings": {
-            "tabname": "Tragkraft: max. 300 kg",
-            "sub_title": "",
-            "title": "<p>Tragkraft: max. 300 kg</p>",
-            "description": "<div style=\"text-align:left; direction:ltr;\" lang=\"de\">\n  <p>\n    Das Gestell trägt satte 300 kg Gesamtlast – das sind zwei erwachsene Personen oder ein voll bestückter Arbeitsplatz mit mehreren Monitoren, Drucker und schwerem Zubehör.<br/>\n  </p>\n</div>",
-            "file_type": "image",
-            "file_image": "shopify://shop_images/1_cad2a8f8-fe7f-498a-b20a-05c1c25c200c.jpg",
-            "video_url": "",
-            "btn_text": "",
-            "link": ""
-          }
         }
       },
       "block_order": [
+        "tab_LmGatL",
         "tab_AUd88N",
-        "tab_JyxzQm",
-        "tab_LmGatL"
+        "tab_JyxzQm"
       ],
       "name": "img with text tab",
       "settings": {
@@ -421,9 +421,9 @@
         "foldtext_exzygz": {
           "type": "foldtext",
           "settings": {
-            "title": "<h3>Hochwertiges Material und erstklassige Fertigung</h3>",
-            "description": "<ul><li>Unser Schreibtisch wird aus Premium-Industriematerialien von Unternehmen der Fortune 500 hergestellt und in vollautomatisierten Produktionsprozessen gefertigt, um eine oberste Qualität zu gewährleisten.</li></ul>",
-            "image": "shopify://shop_images/Maidesite-height-adjustable-desk-high-quality-materials_85cee93e-590b-48ed-bdb9-b92f7f51dedd.jpg"
+            "title": "<p>3 leistungsstarke Motoren</p>",
+            "description": "<ul><li>Die drei Motoren erreichen auch bei voller Last eine konstante Geschwindigkeit von 40 mm/s. Das ist schneller als viele Zweimotoren-Systeme, die bei Belastung deutlich langsamer werden.</li></ul>",
+            "image": "shopify://shop_images/7_-_3.jpg"
           }
         },
         "foldtext_7BhWHC": {
@@ -451,7 +451,7 @@
       "name": "img with foldtext",
       "settings": {
         "spec_id": "",
-        "title": "<p>Maidesite-Schreibtisch stabiler und zuverlässiger</p>",
+        "title": "<p>Präzise & leise – für ungestörtes Arbeiten</p>",
         "padding_top": 120,
         "padding_bottom": 120
       }
