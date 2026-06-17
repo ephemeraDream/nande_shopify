@@ -473,15 +473,29 @@
             "link": ""
           }
         },
+        "tab_QnJXkK": {
+          "type": "tab",
+          "settings": {
+            "tabname": "Anti-Kollisionsschutz",
+            "sub_title": "",
+            "title": "<p>Intelligenter Schutz vor Zusammenstößen</p>",
+            "description": "<p class=\"left-text\">\n    Ihr Tisch spürt, was unter ihm ist. Stellen Sie die Empfindlichkeit der Hinderniserkennung in 3 Stufen ein – je nachdem, ob Sie in einer engen Raumecke arbeiten oder viel freie Fläche haben. <br>Wenn der Tisch beim Absenken auf ein Hindernis stößt, stoppt er sofort und fährt leicht zurück.<br> So schützen Sie nicht nur Ihre Möbel, sondern auch Kinder und Haustiere zuverlässig vor Quetschungen.\n</p>\n\n<style>\n.left-text {\n    text-align: left;\n    margin: 0;\n    padding: 0;\n}\n</style>",
+            "file_type": "image",
+            "file_image": "shopify://shop_images/8_27d7f598-19e8-46ab-80b3-2964fe7410aa.jpg",
+            "video_url": "",
+            "btn_text": "",
+            "link": ""
+          }
+        },
         "tab_FGBd79": {
           "type": "tab",
           "settings": {
             "tabname": "Erinnerung zum Aufstehen",
             "sub_title": "",
-            "title": "",
-            "description": "<p class=\"left-text\">\n    Das integrierte Reminder-System erinnert regelmäßig daran, aufzustehen und die Sitzposition zu wechseln. \n    So fördern Sie ein gesünderes Arbeiten im Stehen und beugen langfristigen Rückenproblemen oder Verspannungen vor.\n</p>\n\n<style>\n.left-text {\n    text-align: left;\n    margin: 0;\n    padding: 0;\n}\n</style>",
+            "title": "<p>Erinnerung bei längerem Sitzen</p>",
+            "description": "<p class=\"left-text\">\n    Stellen Sie individuelle Erinnerungen ein, damit Sie regelmäßig die Position wechseln – ganz ohne lästige externe Apps.\n</p>\n\n<style>\n.left-text {\n    text-align: left;\n    margin: 0;\n    padding: 0;\n}\n</style>",
             "file_type": "image",
-            "file_image": "shopify://shop_images/17.jpg",
+            "file_image": "shopify://shop_images/17_-_4.jpg",
             "video_url": "",
             "btn_text": "",
             "link": ""
@@ -490,26 +504,12 @@
         "tab_hmFgnY": {
           "type": "tab",
           "settings": {
-            "tabname": "10 W USB-C-Ladeanschluss",
+            "tabname": "Fehlererkennung",
             "sub_title": "",
-            "title": "",
-            "description": "<p class=\"left-text\">\n    Bietet besonders schnelle Ladegeschwindigkeiten für Smartphones, Tablets oder andere USB-C-Geräte. \n    Damit können Sie mehrere Geräte gleichzeitig effizient laden, ohne zusätzliche Ladegeräte zu benötigen.\n</p>\n\n<style>\n.left-text {\n    text-align: left;\n    margin: 0;\n    padding: 0;\n}\n</style>",
+            "title": "<p>Fehlererkennung in Echtzeit</p>",
+            "description": "<p class=\"left-text\">\n   Sie werden nie im Dunkeln gelassen. Sollte es jemals zu einer Störung kommen, zeigt Ihnen der Controller klar und verständlich an, was das Problem ist. Kein Rätselraten, kein sinnloses Herumprobieren – Sie wissen genau, ob Sie selbst Hand anlegen können oder ob der Support gefragt ist. Das spart Zeit, Frust und vermeidet unnötige Service-Anrufe.\n</p>\n\n<style>\n.left-text {\n    text-align: left;\n    margin: 0;\n    padding: 0;\n}\n</style>",
             "file_type": "image",
-            "file_image": "shopify://shop_images/18.jpg",
-            "video_url": "",
-            "btn_text": "",
-            "link": ""
-          }
-        },
-        "tab_QnJXkK": {
-          "type": "tab",
-          "settings": {
-            "tabname": "Kindersicherung",
-            "sub_title": "",
-            "title": "",
-            "description": "<p class=\"left-text\">\n    Verhindert unbeabsichtigtes Betätigen der Tasten und schützt Kinder zuverlässig vor möglichen Verletzungen,\n    sodass der Tisch auch in Haushalten mit kleinen Kindern sicher genutzt werden kann.\n</p>\n\n<style>\n.left-text {\n    text-align: left;\n    margin: 0;\n    padding: 0;\n}\n</style>",
-            "file_type": "image",
-            "file_image": "shopify://shop_images/16_b29f66f5-cd56-434c-ad7d-b350ea17f97b.jpg",
+            "file_image": "shopify://shop_images/9_4ebfe87d-d7b7-4b19-9e59-84df88f56953.jpg",
             "video_url": "",
             "btn_text": "",
             "link": ""
@@ -518,9 +518,9 @@
       },
       "block_order": [
         "tab_EkiTWd",
+        "tab_QnJXkK",
         "tab_FGBd79",
-        "tab_hmFgnY",
-        "tab_QnJXkK"
+        "tab_hmFgnY"
       ],
       "name": "img with text tab",
       "settings": {
@@ -531,7 +531,7 @@
         "loop": true,
         "autoplay_enable": true,
         "autoplay_delay": 5000,
-        "layout": "image-left"
+        "layout": "image-right"
       }
     },
     "technical_data_L3gXUm": {
