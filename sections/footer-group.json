@@ -15,7 +15,7 @@
       "type": "subscribe-emails",
       "name": "subscribe emails",
       "settings": {
-        "title": "<p>ERHALTEN SIE 5% RABATT</p>",
+        "title": "<p>ERHALTEN SIE 8% RABATT</p>",
         "btn_text": "Abonnieren",
         "confirm_text": "<p>Mit Ihrer Anmeldung stimmen Sie den Nutzungsbedingungen und der <a href=\"https://www.maidesite.de/pages/datenschutzerklarung\" target=\"_blank\">Datenschutzrichtlinie </a>von Maidesite zu.</p>",
         "checkbox_error_message": "Bitte gib die gültige E-Mail-Adresse ein!",
