@@ -53,6 +53,55 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
     {{ content_for_header }}
 
+    {{ content_for_header }}
+
+<!-- ===== Maidesite Schema (HK) ===== -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "@id": "https://www.maidesite.de/#organization",
+  "name": "Maidesite",
+  "legalName": "Hong Kong Maidesite Technology Co., Limited",
+  "url": "{{ shop.url }}",
+  "logo": "{{ shop.brand.logo | image_url }}",
+  "description": "{{ shop.description | escape }}",
+  "address": {
+    "@type": "PostalAddress",
+    "addressCountry": "HK"
+  },
+  "areaServed": [
+    { "@type": "Country", "name": "DE" },
+    { "@type": "Country", "name": "GB" }
+  ],
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "contactType": "customer service",
+    "email": "info@maidesite.de"
+  },
+  "sameAs": [
+    "https://www.youtube.com/@maidesite",
+    "https://www.instagram.com/maidesite"
+  ]
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "@id": "{{ shop.url }}/#website",
+  "url": "{{ shop.url }}",
+  "name": "{{ shop.name }}",
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": "{{ shop.url }}/search?q={search_term_string}",
+    "query-input": "required name=search_term_string"
+  }
+}
+</script>
+
+
     {%- liquid
       assign body_font_bold = settings.type_body_font | font_modify: 'weight', 'bold'
       assign body_font_italic = settings.type_body_font | font_modify: 'style', 'italic'
