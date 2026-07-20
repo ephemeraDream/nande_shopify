@@ -27,12 +27,22 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       <link rel="preconnect" href="https://fonts.shopifycdn.com" crossorigin>
     {%- endunless -%}
 
-    <title>
-      {{ page_title }}
-      {%- if current_tags %} &ndash; tagged "{{ current_tags | join: ', ' }}"{% endif -%}
-      {%- if current_page != 1 %} &ndash; Page {{ current_page }}{% endif -%}
-      {%- unless page_title contains shop.name %} &ndash; {{ shop.name }}{% endunless -%}
-    </title>
+<title>
+  {%- if template == 'index' -%}
+    {%- if shop.domain contains 'maidesite.de' -%}
+      Maidesite – Höhenverstellbare Schreibtische & Büromöbel
+    {%- elsif shop.domain contains 'maidesite.co.uk' -%}
+      Maidesite UK – Electric Standing Desks & Office Furniture
+    {%- else -%}
+      {{ page_title }}{%- unless page_title contains shop.name %} – {{ shop.name }}{% endunless -%}
+    {%- endif -%}
+  {%- else -%}
+    {{ page_title }}
+    {%- if current_tags %} &ndash; tagged "{{ current_tags | join: ', ' }}"{% endif -%}
+    {%- if current_page != 1 %} &ndash; Page {{ current_page }}{% endif -%}
+    {%- unless page_title contains shop.name %} &ndash; {{ shop.name }}{% endunless -%}
+  {%- endif -%}
+</title>
 
     {% if page_description %}
       <meta name="description" content="{{ page_description | escape }}">
