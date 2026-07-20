@@ -258,6 +258,11 @@
         "type": "shopify://apps/attribuly/blocks/app-embed/cf8e8f22-4c4c-4d92-a8ed-8b49c1c9a9f7",
         "disabled": false,
         "settings": {}
+      },
+      "5456663824318048812": {
+        "type": "shopify://apps/geoly-ai-traffic-booster/blocks/seoai_embed/a4dfdbf0-691d-4a3f-b92f-176c12dbcf6f",
+        "disabled": false,
+        "settings": {}
       }
     },
     "color_schemes": {
