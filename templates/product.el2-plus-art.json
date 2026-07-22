@@ -251,88 +251,6 @@
         "background_color": "#f2f1ed"
       }
     },
-    "img_with_text_box_simplicity_qrzG6W": {
-      "type": "img-with-text-box-simplicity",
-      "blocks": {
-        "file_with_text_Q8tJKk": {
-          "type": "file_with_text",
-          "settings": {
-            "title": "<p>Innovative Stabilität: Standfestigkeit ohne Kompromisse</p>",
-            "description": "<p>Ein Design-Tisch, der hält, was er verspricht. Der EL2 Plus Art bietet maximale Laufruhe – in jeder Situation.</p><ul><li><strong>In Bewegung:</strong> Sanftes Heben und Senken ohne Ruckeln – selbst ein Kartenstapel bleibt sicher stehen.</li><li><strong>Im Stillstand:</strong> Dank massiver Bauweise kein Schwanken, selbst bei voller Belastung.</li><li><strong>Auf höchster Stufe:</strong> Auch in der maximalen Stehposition absolut ruhig – ideal für fokussiertes Arbeiten ohne Vibrationen.</li></ul>",
-            "file_type": "image",
-            "file_image": "shopify://shop_images/2_08dd95b7-b7fc-4b7d-a7c4-0370213dfb93.jpg",
-            "video_url": ""
-          }
-        },
-        "file_with_text_f9yPAD": {
-          "type": "file_with_text",
-          "settings": {
-            "title": "<p>Gigantische 180 kg Tragkraft: Kraftvoll & Sicher</p>",
-            "description": "<p>Konzipiert für High-End-Workstations und schwerstes Equipment.<br/><br/><br/>Mit einer Traglast von <strong>180 kg</strong> bietet dieser Tisch massive Reserven für mehrere Monitore, Desktop-PCs und Studio-Zubehör. Erleben Sie volle Stabilität ohne Durchbiegen oder Schwanken – die sicherste Basis für Ihre anspruchsvolle Arbeitsumgebung.</p>",
-            "file_type": "image",
-            "file_image": "shopify://shop_images/4_3a652d88-94e6-42be-b6e6-449c16f385e8.jpg",
-            "video_url": ""
-          }
-        },
-        "file_with_text_THJTyK": {
-          "type": "file_with_text",
-          "settings": {
-            "title": "<p>Geprüfte Langlebigkeit: Über 10.000 Belastungstests</p>",
-            "description": "<p>Qualität, die über Jahre hinweg überzeugt. Jeder Rahmen wird strengsten industriellen Tests unterzogen.</p><p>Mehr als <strong>10.000 Testzyklen</strong> garantieren eine robuste und zuverlässige Performance im täglichen Einsatz. Dies macht den EL2 Plus Art zu einer nachhaltigen Investition in Ihre langfristige Produktivität.</p>",
-            "file_type": "image",
-            "file_image": "shopify://shop_images/5_87cadca2-c73c-4e87-b87b-ca357dbabf3c.jpg",
-            "video_url": ""
-          }
-        },
-        "file_with_text_JJXCp8": {
-          "type": "file_with_text",
-          "settings": {
-            "title": "<p>Exklusives Ovaldesign: Ästhetik in ihrer schönsten Form</p>",
-            "description": "<p>Das durchgängige Ovaldesign – von den Standfüßen bis zu den Säulen – setzt neue Maßstäbe in der modernen Arbeitswelt.<br/><br/>Die sanften Konturen wirken weniger technisch als gewöhnliche eckige Gestelle. Diese harmonische Formensprache verleiht Ihrem Raum eine hochwertige Möbelästhetik, die sich perfekt in moderne Wohn- und Bürokonzepte einfügt.</p>",
-            "file_type": "image",
-            "file_image": "shopify://shop_images/1_199dc946-5ffe-434f-817b-83b1cbf52bb0.jpg",
-            "video_url": ""
-          }
-        },
-        "file_with_text_B39ehq": {
-          "type": "file_with_text",
-          "settings": {
-            "title": "<p>Smart Controller: Ihr digitaler Gesundheits-Assistent</p>",
-            "description": "<p>Steuern Sie Ihren Arbeitsplatz präzise und intuitiv mit nur einem Fingertipp.<br/><br/>Mit vier Memory-Positionen, zwei integrierten Ladeanschlüssen und einer <strong>Sitz-Steh-Erinnerung</strong> unterstützt Sie der Controller aktiv dabei, gesund zu bleiben. Finden Sie in Sekunden Ihre ergonomische Idealposition.</p>",
-            "file_type": "image",
-            "file_image": "shopify://shop_images/3_04b4753b-386b-41ce-bd6d-53ade224bcf9.jpg",
-            "video_url": ""
-          }
-        },
-        "file_with_text_McHwGa": {
-          "type": "file_with_text",
-          "settings": {
-            "title": "<p>Metall-Kabelmanagement: Für einen aufgeräumten Fokus</p>",
-            "description": "<p>Ein professioneller Arbeitsplatz erfordert Ordnung. Die robuste Metall-Kabelwanne ist bereits im Lieferumfang enthalten.</p><p>Bündeln und verstauen Sie alle Kabel unsichtbar unter der Tischplatte. So genießen Sie einen sauberen „Clean Desk Look“, der Ihnen hilft, konzentriert und strukturiert zu arbeiten.</p>",
-            "file_type": "image",
-            "file_image": "shopify://shop_images/6_ca4b48d4-ab75-4842-bd0b-8498c1bf6749.jpg",
-            "video_url": ""
-          }
-        }
-      },
-      "block_order": [
-        "file_with_text_Q8tJKk",
-        "file_with_text_f9yPAD",
-        "file_with_text_THJTyK",
-        "file_with_text_JJXCp8",
-        "file_with_text_B39ehq",
-        "file_with_text_McHwGa"
-      ],
-      "name": "file box simplicity",
-      "settings": {
-        "spec_id": "",
-        "main_title": "<p>Warum der Maidesite EL2 Plus Art die perfekte Wahl ist？</p>",
-        "row_num": 3,
-        "padding_top": 32,
-        "padding_bottom": 60,
-        "background_color": "rgba(0,0,0,0)"
-      }
-    },
     "img_with_foldtext_RcBrkw": {
       "type": "img-with-foldtext",
       "blocks": {
@@ -599,6 +517,88 @@
         "autoplay_enable": true,
         "autoplay_delay": 5000,
         "layout": "image-left"
+      }
+    },
+    "img_with_text_box_simplicity_qrzG6W": {
+      "type": "img-with-text-box-simplicity",
+      "blocks": {
+        "file_with_text_Q8tJKk": {
+          "type": "file_with_text",
+          "settings": {
+            "title": "<p>Innovative Stabilität: Standfestigkeit ohne Kompromisse</p>",
+            "description": "<p>Ein Design-Tisch, der hält, was er verspricht. Der EL2 Plus Art bietet maximale Laufruhe – in jeder Situation.</p><ul><li><strong>In Bewegung:</strong> Sanftes Heben und Senken ohne Ruckeln – selbst ein Kartenstapel bleibt sicher stehen.</li><li><strong>Im Stillstand:</strong> Dank massiver Bauweise kein Schwanken, selbst bei voller Belastung.</li><li><strong>Auf höchster Stufe:</strong> Auch in der maximalen Stehposition absolut ruhig – ideal für fokussiertes Arbeiten ohne Vibrationen.</li></ul>",
+            "file_type": "image",
+            "file_image": "shopify://shop_images/2_08dd95b7-b7fc-4b7d-a7c4-0370213dfb93.jpg",
+            "video_url": ""
+          }
+        },
+        "file_with_text_f9yPAD": {
+          "type": "file_with_text",
+          "settings": {
+            "title": "<p>Gigantische 180 kg Tragkraft: Kraftvoll & Sicher</p>",
+            "description": "<p>Konzipiert für High-End-Workstations und schwerstes Equipment.<br/><br/><br/>Mit einer Traglast von <strong>180 kg</strong> bietet dieser Tisch massive Reserven für mehrere Monitore, Desktop-PCs und Studio-Zubehör. Erleben Sie volle Stabilität ohne Durchbiegen oder Schwanken – die sicherste Basis für Ihre anspruchsvolle Arbeitsumgebung.</p>",
+            "file_type": "image",
+            "file_image": "shopify://shop_images/4_3a652d88-94e6-42be-b6e6-449c16f385e8.jpg",
+            "video_url": ""
+          }
+        },
+        "file_with_text_THJTyK": {
+          "type": "file_with_text",
+          "settings": {
+            "title": "<p>Geprüfte Langlebigkeit: Über 10.000 Belastungstests</p>",
+            "description": "<p>Qualität, die über Jahre hinweg überzeugt. Jeder Rahmen wird strengsten industriellen Tests unterzogen.</p><p>Mehr als <strong>10.000 Testzyklen</strong> garantieren eine robuste und zuverlässige Performance im täglichen Einsatz. Dies macht den EL2 Plus Art zu einer nachhaltigen Investition in Ihre langfristige Produktivität.</p>",
+            "file_type": "image",
+            "file_image": "shopify://shop_images/5_87cadca2-c73c-4e87-b87b-ca357dbabf3c.jpg",
+            "video_url": ""
+          }
+        },
+        "file_with_text_JJXCp8": {
+          "type": "file_with_text",
+          "settings": {
+            "title": "<p>Exklusives Ovaldesign: Ästhetik in ihrer schönsten Form</p>",
+            "description": "<p>Das durchgängige Ovaldesign – von den Standfüßen bis zu den Säulen – setzt neue Maßstäbe in der modernen Arbeitswelt.<br/><br/>Die sanften Konturen wirken weniger technisch als gewöhnliche eckige Gestelle. Diese harmonische Formensprache verleiht Ihrem Raum eine hochwertige Möbelästhetik, die sich perfekt in moderne Wohn- und Bürokonzepte einfügt.</p>",
+            "file_type": "image",
+            "file_image": "shopify://shop_images/1_199dc946-5ffe-434f-817b-83b1cbf52bb0.jpg",
+            "video_url": ""
+          }
+        },
+        "file_with_text_B39ehq": {
+          "type": "file_with_text",
+          "settings": {
+            "title": "<p>Smart Controller: Ihr digitaler Gesundheits-Assistent</p>",
+            "description": "<p>Steuern Sie Ihren Arbeitsplatz präzise und intuitiv mit nur einem Fingertipp.<br/><br/>Mit vier Memory-Positionen, zwei integrierten Ladeanschlüssen und einer <strong>Sitz-Steh-Erinnerung</strong> unterstützt Sie der Controller aktiv dabei, gesund zu bleiben. Finden Sie in Sekunden Ihre ergonomische Idealposition.</p>",
+            "file_type": "image",
+            "file_image": "shopify://shop_images/3_04b4753b-386b-41ce-bd6d-53ade224bcf9.jpg",
+            "video_url": ""
+          }
+        },
+        "file_with_text_McHwGa": {
+          "type": "file_with_text",
+          "settings": {
+            "title": "<p>Metall-Kabelmanagement: Für einen aufgeräumten Fokus</p>",
+            "description": "<p>Ein professioneller Arbeitsplatz erfordert Ordnung. Die robuste Metall-Kabelwanne ist bereits im Lieferumfang enthalten.</p><p>Bündeln und verstauen Sie alle Kabel unsichtbar unter der Tischplatte. So genießen Sie einen sauberen „Clean Desk Look“, der Ihnen hilft, konzentriert und strukturiert zu arbeiten.</p>",
+            "file_type": "image",
+            "file_image": "shopify://shop_images/6_ca4b48d4-ab75-4842-bd0b-8498c1bf6749.jpg",
+            "video_url": ""
+          }
+        }
+      },
+      "block_order": [
+        "file_with_text_Q8tJKk",
+        "file_with_text_f9yPAD",
+        "file_with_text_THJTyK",
+        "file_with_text_JJXCp8",
+        "file_with_text_B39ehq",
+        "file_with_text_McHwGa"
+      ],
+      "name": "file box simplicity",
+      "settings": {
+        "spec_id": "",
+        "main_title": "<p>Warum der Maidesite EL2 Plus Art die perfekte Wahl ist？</p>",
+        "row_num": 3,
+        "padding_top": 32,
+        "padding_bottom": 60,
+        "background_color": "rgba(0,0,0,0)"
       }
     },
     "technical_data_L3gXUm": {
@@ -872,7 +872,6 @@
     "custom_liquid_XbQtBY",
     "video_wPHLA8",
     "video_simplicity_K7YLnT",
-    "img_with_text_box_simplicity_qrzG6W",
     "img_with_foldtext_RcBrkw",
     "img_with_text_simplicity_R8thEq",
     "img_with_text_simplicity_nJFALq",
@@ -880,6 +879,7 @@
     "img_with_text_simplicity_JRCJ4f",
     "img_with_foldtext_LzqrtY",
     "img_with_text_tab_emEWU8",
+    "img_with_text_box_simplicity_qrzG6W",
     "technical_data_L3gXUm",
     "maidesite_swiper_QhkQG8",
     "celebrity_swiper_aGymw9",
