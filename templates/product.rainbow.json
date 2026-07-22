@@ -129,6 +129,52 @@
         "product_specs": ""
       }
     },
+    "product_anchor_bar_DaMmCT": {
+      "type": "product-anchor-bar",
+      "blocks": {
+        "item_tfEGck": {
+          "type": "item",
+          "settings": {
+            "title": "Produkt",
+            "anchor_name": "Produkt"
+          }
+        },
+        "item_LLcqAq": {
+          "type": "item",
+          "settings": {
+            "title": "Produktbeschreibung",
+            "anchor_name": "Produktbeschreibung"
+          }
+        },
+        "item_EHKERp": {
+          "type": "item",
+          "settings": {
+            "title": "Technik & Maße",
+            "anchor_name": "Technische_Daten"
+          }
+        },
+        "item_bKYXnq": {
+          "type": "item",
+          "settings": {
+            "title": "Kundenbewertungen",
+            "anchor_name": "Kundenbewertungen"
+          }
+        }
+      },
+      "block_order": [
+        "item_tfEGck",
+        "item_LLcqAq",
+        "item_EHKERp",
+        "item_bKYXnq"
+      ],
+      "name": "product anchor bar",
+      "settings": {
+        "button_text": "Jetzt kaufen",
+        "button_url": "",
+        "button_target_blank": false,
+        "show_icon": true
+      }
+    },
     "rich_text_aWhbCN": {
       "type": "rich-text",
       "blocks": {
@@ -1127,6 +1173,7 @@
   "order": [
     "breadcrumbs",
     "product_info_NXNt6g",
+    "product_anchor_bar_DaMmCT",
     "rich_text_aWhbCN",
     "img_with_text_box_simplicity_AkxGWH",
     "img_with_foldtext_cCLPBE",
