@@ -178,12 +178,6 @@
     "rich_text_aWhbCN": {
       "type": "rich-text",
       "blocks": {
-        "text_XtW3Jk": {
-          "type": "text",
-          "settings": {
-            "text": ""
-          }
-        },
         "heading_VNRw8q": {
           "type": "heading",
           "settings": {
@@ -193,9 +187,9 @@
         }
       },
       "block_order": [
-        "text_XtW3Jk",
         "heading_VNRw8q"
       ],
+      "disabled": true,
       "name": "t:sections.rich-text.presets.name",
       "settings": {
         "desktop_content_position": "center",
