@@ -202,21 +202,11 @@
     "img_with_text_box_simplicity_AkxGWH": {
       "type": "img-with-text-box-simplicity",
       "blocks": {
-        "file_with_text_YAeXwa": {
-          "type": "file_with_text",
-          "settings": {
-            "title": "<p>RGB-Lichtleiste im Tischblatt</p>",
-            "description": "<ul><li>4 Beleuchtungsmodi: Statisch, Fließend, Musikgesteuert, Benutzerdefiniert</li><li>Spezielle BanLanX-App zur Fernsteuerung und Zeitplanung</li><li>Controller im Klaviertasten-Design mit integriertem RGB-Display mit Hintergrundbeleuchtung</li></ul>",
-            "file_type": "image",
-            "file_image": "shopify://shop_images/1_8ae7c74d-337e-4b80-b4af-65ea947595a3.jpg",
-            "video_url": ""
-          }
-        },
         "file_with_text_pQwJHP": {
           "type": "file_with_text",
           "settings": {
-            "title": "<p>Sanfte Höhenverstellung für den Alltag</p>",
-            "description": "<p>Die Bewegung des Tisches folgt einer natürlichen Logik: Beim Verstellen passt sich die Tischposition intuitiv an die Körperhaltung an und unterstützt fließende Übergänge zwischen Sitzen und Stehen. Der leise, gleichmäßige Ablauf bleibt dabei bewusst im Hintergrund und ist auf eine Nutzung ausgelegt, die nicht permanent, sondern situativ und mühelos erfolgt. Eine einfache Bedienstruktur sorgt zusätzlich für eine unmittelbare, unkomplizierte Interaktion.</p>",
+            "title": "<p>Flüsterleise & kraftvolle Höhenverstellung</p>",
+            "description": "<p>Der Wechsel zwischen Sitzen und Stehen erfolgt mühelos, flüssig und mit einer Laufruhe von unter 48 dB – selbst unter voller Belastung. Die hochwertige Mechanik arbeitet absolut zuverlässig im Hintergrund, unterstützt Ihre Körperhaltung und stört weder den Arbeitsfluss noch die Wohnruhe.</p>",
             "file_type": "image",
             "file_image": "shopify://shop_images/2_15eeffd5-1bd9-4916-a448-1e7820514513.jpg",
             "video_url": ""
@@ -225,8 +215,8 @@
         "file_with_text_mFbE3r": {
           "type": "file_with_text",
           "settings": {
-            "title": "<p>Integriertes Ordnungssystem</p>",
-            "description": "<p>Stauraum ist kein Zusatz, sondern Teil des Designs. Die Organisation erfolgt bewusst in die Höhe statt in die Tiefe und schafft so eine klare, ruhige Arbeitsfläche ohne visuelle Überladung. Entwickelt für die Dinge des täglichen Gebrauchs, unterstützt das System eine reduzierte, strukturierte Umgebung, in der Funktionalität und Leichtigkeit in Balance bleiben.</p>",
+            "title": "<p>Ihr intelligentes Gesundheitsmanagement</p>",
+            "description": "<p>Beugen Sie aktiv Rückenschmerzen vor! Detaillierte tägliche und wöchentliche Stehzeitanalysen sowie vierstufige Sitzerinnerungen mit Vibrationsalarm motivieren Sie zu mehr Bewegung. Zwei Höhenspeicher, einstellbare Limits, eine Kindersicherung und die individuelle Empfindlichkeitsanpassung machen den Rainbow zu Ihrem ergonomischen Rundum-sorglos-Partner.</p>",
             "file_type": "image",
             "file_image": "shopify://shop_images/3_403a8ead-aee7-4d6f-bad1-cbbb1bb20557.jpg",
             "video_url": ""
@@ -235,12 +225,22 @@
         "file_with_text_Ki6EEk": {
           "type": "file_with_text",
           "settings": {
-            "title": "<p>Zurückhaltende Farbwelt</p>",
-            "description": "<p>Die Farbgestaltung folgt einem bewusst reduzierten Ansatz. Dezente, fein abgestimmte Töne ermöglichen eine harmonische Integration in unterschiedliche Wohn- und Arbeitsumgebungen. Statt sich in den Vordergrund zu drängen, unterstützt das Design die Atmosphäre des Raumes und schafft eine ruhige, zeitlose Präsenz.</p>",
+            "title": "<p>Branchenpremiere: Innovatives Lochblech-Kabelmanagement</p>",
+            "description": "<p>Verabschieden Sie sich vom lästigen Kabelchaos. Das erstmals bei einem höhenverstellbaren Schreibtisch integrierte Lochblech sorgt für aufgeräumte Ordnung bei gleichzeitig perfekter Zugänglichkeit. Es ist zudem kompatibel mit handelsüblichen Lochblech-Accessoires und bietet Ihnen unzählige DIY-Möglichkeiten für eine individuell angepasste Arbeitsumgebung.</p>",
             "file_type": "video",
             "file_image": "shopify://shop_images/5_e6abbec5-9444-44b0-81ad-417055a5eb1f.jpg",
             "video_url": "",
             "url_upload": "shopify://files/videos/4 - 配色克制 视频.mp4"
+          }
+        },
+        "file_with_text_YAeXwa": {
+          "type": "file_with_text",
+          "settings": {
+            "title": "<p>RGB-Lichtleiste im Tischblatt</p>",
+            "description": "<ul><li>4 Beleuchtungsmodi: Statisch, Fließend, Musikgesteuert, Benutzerdefiniert</li><li>Spezielle BanLanX-App zur Fernsteuerung und Zeitplanung</li><li>Controller im Klaviertasten-Design mit integriertem RGB-Display mit Hintergrundbeleuchtung</li></ul>",
+            "file_type": "image",
+            "file_image": "shopify://shop_images/1_8ae7c74d-337e-4b80-b4af-65ea947595a3.jpg",
+            "video_url": ""
           }
         },
         "file_with_text_QNFYKY": {
@@ -265,10 +265,10 @@
         }
       },
       "block_order": [
-        "file_with_text_YAeXwa",
         "file_with_text_pQwJHP",
         "file_with_text_mFbE3r",
         "file_with_text_Ki6EEk",
+        "file_with_text_YAeXwa",
         "file_with_text_QNFYKY",
         "file_with_text_3TibJP"
       ],
