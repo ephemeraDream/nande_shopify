@@ -178,6 +178,12 @@
     "rich_text_aWhbCN": {
       "type": "rich-text",
       "blocks": {
+        "text_JWh4Hi": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Der smarte Schreibtisch, der Ihren Arbeitsplatz beleuchtet, Kabel ordentlich hält und Ihre Gesundheit im Blick behält</p>"
+          }
+        },
         "heading_VNRw8q": {
           "type": "heading",
           "settings": {
@@ -187,6 +193,7 @@
         }
       },
       "block_order": [
+        "text_JWh4Hi",
         "heading_VNRw8q"
       ],
       "disabled": true,
