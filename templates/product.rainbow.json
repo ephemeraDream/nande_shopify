@@ -181,13 +181,14 @@
         "text_JWh4Hi": {
           "type": "text",
           "settings": {
-            "text": "<p>Der smarte Schreibtisch, der Ihren Arbeitsplatz beleuchtet, Kabel ordentlich hält und Ihre Gesundheit im Blick behält</p>"
+            "text": "<h4><strong>Der smarte Schreibtisch, der Ihren Arbeitsplatz beleuchtet, Kabel ordentlich hält und Ihre Gesundheit im Blick behält</strong></h4>"
           }
         }
       },
       "block_order": [
         "text_JWh4Hi"
       ],
+      "disabled": true,
       "name": "t:sections.rich-text.presets.name",
       "settings": {
         "desktop_content_position": "center",
@@ -201,15 +202,6 @@
     "img_with_text_box_simplicity_AkxGWH": {
       "type": "img-with-text-box-simplicity",
       "blocks": {
-        "file_with_text_XwdxJ9": {
-          "type": "file_with_text",
-          "settings": {
-            "title": "",
-            "description": "",
-            "file_type": "image",
-            "video_url": ""
-          }
-        },
         "file_with_text_YAeXwa": {
           "type": "file_with_text",
           "settings": {
@@ -273,7 +265,6 @@
         }
       },
       "block_order": [
-        "file_with_text_XwdxJ9",
         "file_with_text_YAeXwa",
         "file_with_text_pQwJHP",
         "file_with_text_mFbE3r",
@@ -284,7 +275,7 @@
       "name": "file box simplicity",
       "settings": {
         "spec_id": "Produkt",
-        "main_title": "",
+        "main_title": "<p>Der smarte Schreibtisch, der Ihren Arbeitsplatz beleuchtet, Kabel ordentlich hält und Ihre Gesundheit im Blick behält</p>",
         "row_num": 3,
         "padding_top": 60,
         "padding_bottom": 60,
