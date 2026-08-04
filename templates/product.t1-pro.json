@@ -281,13 +281,13 @@
             "video_url": ""
           }
         },
-        "file_with_text_THJTyK": {
+        "file_with_text_Q8tJKk": {
           "type": "file_with_text",
           "settings": {
-            "title": "<p>Geprüfte Qualität</p>",
-            "description": "<p><strong>Über 10.000 Belastungstests:</strong> Jeder Tischrahmen wird strengen Qualitätskontrollen unterzogen. Mehr als 10.000 Testzyklen garantieren eine langlebige, robuste und zuverlässige Performance im täglichen Dauereinsatz.</p>",
+            "title": "<p>Großer Verstellbereich</p>",
+            "description": "<p>Maximale Flexibilität: Der breite Längenverstellbereich von <strong>960 bis 1600 mm</strong> macht das Gestell besonders vielseitig. Es passt sich verschiedensten Tischplattengrößen an und integriert sich perfekt in jede Arbeits- oder Wohnumgebung.</p>",
             "file_type": "image",
-            "file_image": "shopify://shop_images/5_9ec8c6d8-efcf-41d0-8d8a-080e4a0bdf31.jpg",
+            "file_image": "shopify://shop_images/T1_Pro_tabletop_from_100-160cm.jpg",
             "video_url": ""
           }
         },
@@ -301,13 +301,13 @@
             "video_url": ""
           }
         },
-        "file_with_text_Q8tJKk": {
+        "file_with_text_THJTyK": {
           "type": "file_with_text",
           "settings": {
-            "title": "<p>Großer Verstellbereich</p>",
-            "description": "<p>Maximale Flexibilität: Der breite Längenverstellbereich von <strong>960 bis 1600 mm</strong> macht das Gestell besonders vielseitig. Es passt sich verschiedensten Tischplattengrößen an und integriert sich perfekt in jede Arbeits- oder Wohnumgebung.</p>",
+            "title": "<p>Geprüfte Qualität</p>",
+            "description": "<p><strong>Über 10.000 Belastungstests:</strong> Jeder Tischrahmen wird strengen Qualitätskontrollen unterzogen. Mehr als 10.000 Testzyklen garantieren eine langlebige, robuste und zuverlässige Performance im täglichen Dauereinsatz.</p>",
             "file_type": "image",
-            "file_image": "shopify://shop_images/T1_Pro_tabletop_from_100-160cm.jpg",
+            "file_image": "shopify://shop_images/5_9ec8c6d8-efcf-41d0-8d8a-080e4a0bdf31.jpg",
             "video_url": ""
           }
         },
@@ -325,9 +325,9 @@
       "block_order": [
         "file_with_text_McHwGa",
         "file_with_text_f9yPAD",
-        "file_with_text_THJTyK",
-        "file_with_text_JJXCp8",
         "file_with_text_Q8tJKk",
+        "file_with_text_JJXCp8",
+        "file_with_text_THJTyK",
         "file_with_text_B39ehq"
       ],
       "name": "file box simplicity",
