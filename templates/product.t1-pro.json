@@ -710,6 +710,7 @@
         },
         "faq_WtEK7r": {
           "type": "faq",
+          "disabled": true,
           "settings": {
             "question": "<p>Was ist der Unterschied zwischen T1 Pro und SN1?</p>",
             "answer": "<p>T1 Pro ist ein separater gestell, während SN1 ein Bausatz ist. Außerdem kann der gestell des T1 Pro von 96 cm auf 160 cm erweitert werden, während die Größe des SN1-Rahmens fest ist und nicht verändert werden kann.</p>"
