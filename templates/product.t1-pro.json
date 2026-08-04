@@ -708,14 +708,6 @@
             "answer": "<p>Natürlich können Sie das. Wir haben verstellbare Füße unter den Tischbeinen angebracht, um kleinere Unebenheiten im Boden auszugleichen.</p>"
           }
         },
-        "faq_WtEK7r": {
-          "type": "faq",
-          "disabled": true,
-          "settings": {
-            "question": "<p>Was ist der Unterschied zwischen T1 Pro und SN1?</p>",
-            "answer": "<p>T1 Pro ist ein separater gestell, während SN1 ein Bausatz ist. Außerdem kann der gestell des T1 Pro von 96 cm auf 160 cm erweitert werden, während die Größe des SN1-Rahmens fest ist und nicht verändert werden kann.</p>"
-          }
-        },
         "faq_EXWGc6": {
           "type": "faq",
           "settings": {
@@ -737,6 +729,14 @@
             "answer": "<p>Das liegt daran, dass die Temperatur des Netzteils zu hoch ist oder es zu oft betrieben wird. Bitte trennen Sie das Netzteil für 20 Minuten vom Stromnetz und schließen Sie es dann wieder an. Sie können uns auch per E-Mail kontaktieren: contact@maidesite.de</p>"
           }
         },
+        "faq_WtEK7r": {
+          "type": "faq",
+          "disabled": true,
+          "settings": {
+            "question": "<p>Was ist der Unterschied zwischen T1 Pro und SN1?</p>",
+            "answer": "<p>T1 Pro ist ein separater gestell, während SN1 ein Bausatz ist. Außerdem kann der gestell des T1 Pro von 96 cm auf 160 cm erweitert werden, während die Größe des SN1-Rahmens fest ist und nicht verändert werden kann.</p>"
+          }
+        },
         "faq_whBqrf": {
           "type": "faq",
           "disabled": true,
@@ -751,10 +751,10 @@
         "faq_AXAcgA",
         "faq_W9Mzyn",
         "faq_VQVPFn",
-        "faq_WtEK7r",
         "faq_EXWGc6",
         "faq_abheWf",
         "faq_mFDf3d",
+        "faq_WtEK7r",
         "faq_whBqrf"
       ],
       "custom_css": [
