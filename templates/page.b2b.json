@@ -419,8 +419,8 @@
           "type": "item",
           "settings": {
             "image": "shopify://shop_images/b2b_page.jpg",
-            "title": "3-10 Menschen",
-            "sub_title": "Bis zu 10% RABATT",
+            "title": "5-19 Menschen",
+            "sub_title": "Bis zu 8% RABATT",
             "description": "<ul><li>Kostenloser Versand,</li><li>Standard-Support</li></ul>",
             "btn_text": "Jetzt angebot anfordern",
             "link": "#"
@@ -430,8 +430,8 @@
           "type": "item",
           "settings": {
             "image": "shopify://shop_images/b2b.jpg",
-            "title": "11-30 Menschen",
-            "sub_title": "Bis zu 15% RABATT",
+            "title": "20-49 Menschen",
+            "sub_title": "Bis zu 12% RABATT",
             "description": "<ul><li> Immer auf Lager</li><li>Flexibler Versand</li><li> Kostenloser Versand</li><li>Zusatzliches kostenloses Zubehor</li></ul>",
             "btn_text": "Jetzt angebot anfordern",
             "link": "#"
@@ -441,9 +441,9 @@
           "type": "item",
           "settings": {
             "image": "shopify://shop_images/b2b_04.webp",
-            "title": "31-50 Menschen",
-            "sub_title": "Bis zu 20% RABATT",
-            "description": "<ul><li> Mehrprodukt-Rabatte</li><li> Immer verfugbar</li><li> Flexible und kostenlose</li><li>Lieferung</li><li>Zusatzliche kostenlose Ergonomischer Stuhl</li></ul>",
+            "title": "50-99 Menschen",
+            "sub_title": "Bis zu 15% RABATT",
+            "description": "<ul><li> Mehrprodukt-Rabatte</li><li> Immer verfugbar</li><li> Flexible und kostenlose</li><li>Lieferung</li></ul>",
             "btn_text": "Jetzt angebot anfordern",
             "link": "#"
           }
@@ -452,9 +452,9 @@
           "type": "item",
           "settings": {
             "image": "shopify://shop_images/b2b_05.webp",
-            "title": ">50 Menschen",
-            "sub_title": "Bis zu 25%RABATT",
-            "description": "<ul><li> Mehrprodukt-Rabatte</li><li>Immer verfugbar</li><li>Flexible und kostenlose</li><li>Lieferung</li><li>Zusatzliche kostenlose Rahmen</li><li><strong>Für ein starkes Team und maximale Arbeitseffizienz.</strong></li></ul>",
+            "title": ">100 Menschen",
+            "sub_title": "Bis zu 20%RABATT",
+            "description": "<ul><li>Mehrprodukt-Rabatte</li><li>Immer verfugbar</li><li>Flexible und kostenlose</li><li>Lieferung</li><li>Zusatzliche kostenlose Rahmen</li><li><strong>Für ein starkes Team und maximale Arbeitseffizienz.</strong></li></ul>",
             "btn_text": "Jetzt angebot anfordern",
             "link": "#"
           }
@@ -479,7 +479,7 @@
         "item_rtQPr7": {
           "type": "item",
           "settings": {
-            "select_product": "elektrisch-hohenverstellbarer-gestell-t1-pro"
+            "select_product": "t2-elektrisch-hohenverstellbarer-schreibtisch-mit-zwei-motoren"
           }
         },
         "item_Wnfjbc": {
@@ -508,7 +508,6 @@
         },
         "item_bFArnY": {
           "type": "item",
-          "disabled": true,
           "settings": {
             "select_product": "maidesite-t4-pro-plus-hohenverstellbarer-schreibtisch-4-beine"
           }
