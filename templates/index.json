@@ -12,8 +12,27 @@
     "banner_8A7fgF": {
       "type": "banner",
       "blocks": {
+        "banner_item_QaRfNd": {
+          "type": "banner_item",
+          "settings": {
+            "sub_title": "",
+            "title": "<p><strong>Harmonie in Form und Bewegung.</strong></p>",
+            "text": "<p><strong>Der neue ArborLift. Wo durchdachte Architektur auf intuitive Ergonomie trifft. Entworfen, um Ihrem Arbeitsraum visuelle Klarheit und Ihrem Körper natürliche Dynamik zu verleihen.</strong></p>",
+            "btn_text": "Den ArborLift erleben ",
+            "link": "shopify://products/maidesite-arborlift-elektrisch-hohenverstellbarer-schreibtisch-120x60-140x70cm",
+            "file_position": "middle_left",
+            "overlay_text_align": "text-start",
+            "transparent_content_color": "#ffffff",
+            "file_type": "video",
+            "video_url": "",
+            "url_upload": "shopify://files/videos/Maidesite_Banner_8s_UltraLite.mp4",
+            "show_countdown": false,
+            "countdown": ""
+          }
+        },
         "banner_item_e7J8AA": {
           "type": "banner_item",
+          "disabled": true,
           "settings": {
             "sub_title": "",
             "title": "",
@@ -53,6 +72,7 @@
         },
         "banner_item_NCLJWQ": {
           "type": "banner_item",
+          "disabled": true,
           "settings": {
             "sub_title": "<p>Neuerscheinung</p>",
             "title": "<p>Maidesite T4 Pro Plus</p>",
@@ -193,6 +213,7 @@
         }
       },
       "block_order": [
+        "banner_item_QaRfNd",
         "banner_item_e7J8AA",
         "banner_item_t4GakG",
         "banner_item_NCLJWQ",
