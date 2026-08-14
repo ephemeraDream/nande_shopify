@@ -54,6 +54,24 @@
                                   </a>
                                 </div>
                               {%- endfor %}
+                            {%- when 'Farbe Gestel' -%}
+                              {% assign index = 'option' | append: forloop.index %}
+                              {% for value in option.values %}
+                                {% assign first_variant = block.settings.select_product.variants
+                                  | where: index, value
+                                  | first
+                                %}
+                                <div class="swiper-slide">
+                                  <a href="{{ block.settings.select_product.url }}">
+                                    <img
+                                      src="{{ first_variant.featured_image | image_url }}"
+                                      alt="{{ value.variant.title }}"
+                                      width="{{ first_variant.featured_image.width }}"
+                                      height="{{ first_variant.featured_image.height }}"
+                                    >
+                                  </a>
+                                </div>
+                              {%- endfor %}
                           {%- endcase -%}
                         {%- endfor %}
                       </div>
@@ -110,21 +128,29 @@
                       {{- 'common.en_savoir_plus' | t }}
                       {{ 'icon-right-arrow.svg' | inline_asset_content -}}
                     </a>
-                    
+
                     {% comment %} --- 核心修改部分：JSON 参数翻译渲染 --- {% endcomment %}
                     {% assign compare_data = block.settings.select_product.metafields.custom.compare_simple.value %}
                     {% for item in compare_data.short_data.value %}
                       <div class="compare_simple_item_category">
                         {%- comment -%} 翻译分类标题 {%- endcomment -%}
                         <div class="compare_simple_item_category_label">
-                          {%- if localization.language.iso_code contains 'en' or localization.language.iso_code contains 'EN' -%}
+                          {%- if localization.language.iso_code contains 'en'
+                            or localization.language.iso_code contains 'EN'
+                          -%}
                             {%- case item.category -%}
-                              {%- when 'Grundlegende Spezifikationen' -%}Specifications
-                              {%- when 'Maße & Aufbau' -%}Dimensions
-                              {%- when 'Bedienung & Funktionen' -%}Functions
-                              {%- when 'Design & Stil' -%}Design
-                              {%- when 'Qualität & Nutzung' -%}Quality
-                              {%- else -%}{{ item.category }}
+                              {%- when 'Grundlegende Spezifikationen' -%}
+                                Specifications
+                              {%- when 'Maße & Aufbau' -%}
+                                Dimensions
+                              {%- when 'Bedienung & Funktionen' -%}
+                                Functions
+                              {%- when 'Design & Stil' -%}
+                                Design
+                              {%- when 'Qualität & Nutzung' -%}
+                                Quality
+                              {%- else -%}
+                                {{ item.category }}
                             {%- endcase -%}
                           {%- else -%}
                             {{ item.category }}
@@ -135,20 +161,34 @@
                           <div class="compare_simple_item_line">
                             {%- comment -%} 翻译具体参数标签 {%- endcomment -%}
                             <div class="compare_simple_item_line_label">
-                              {%- if localization.language.iso_code contains 'en' or localization.language.iso_code contains 'EN' -%}
+                              {%- if localization.language.iso_code contains 'en'
+                                or localization.language.iso_code contains 'EN'
+                              -%}
                                 {%- case value.label -%}
-                                  {%- when 'Höhenverstellbereich' -%}Height Range
-                                  {%- when 'Tragfähigkeit' -%}Weight Capacity
-                                  {%- when 'Hubgeschwindigkeit' -%}Adjustment Speed
-                                  {%- when 'Geräuschpegel' -%}Noise Level
-                                  {%- when 'Motoranzahl' -%}Motors
-                                  {%- when 'Stabilität' -%}Stability
-                                  {%- when 'Gestellbreite verstellbar' -%}Frame Width
-                                  {%- when 'Tischform' -%}Tabletop Shape
-                                  {%- when 'Gestellmaterial' -%}Frame Material
-                                  {%- when 'Garantie' -%}Warranty
-                                  {%- when 'Kostenloses Zubehör' -%}Accessories
-                                  {%- else -%}{{ value.label }}
+                                  {%- when 'Höhenverstellbereich' -%}
+                                    Height Range
+                                  {%- when 'Tragfähigkeit' -%}
+                                    Weight Capacity
+                                  {%- when 'Hubgeschwindigkeit' -%}
+                                    Adjustment Speed
+                                  {%- when 'Geräuschpegel' -%}
+                                    Noise Level
+                                  {%- when 'Motoranzahl' -%}
+                                    Motors
+                                  {%- when 'Stabilität' -%}
+                                    Stability
+                                  {%- when 'Gestellbreite verstellbar' -%}
+                                    Frame Width
+                                  {%- when 'Tischform' -%}
+                                    Tabletop Shape
+                                  {%- when 'Gestellmaterial' -%}
+                                    Frame Material
+                                  {%- when 'Garantie' -%}
+                                    Warranty
+                                  {%- when 'Kostenloses Zubehör' -%}
+                                    Accessories
+                                  {%- else -%}
+                                    {{ value.label }}
                                 {%- endcase -%}
                               {%- else -%}
                                 {{ value.label }}
@@ -231,23 +271,39 @@
     { "type": "richtext", "id": "text", "label": "text" },
     { "type": "text", "id": "link_text", "label": "link text" },
     { "type": "url", "id": "link_url", "label": "link url" },
-    { "type": "range", "id": "padding_top", "min": 0, "max": 120, "step": 4, "unit": "px", "label": "Top Padding", "default": 120 },
-    { "type": "range", "id": "padding_bottom", "min": 0, "max": 120, "step": 4, "unit": "px", "label": "Bottom Padding", "default": 120 },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 120,
+      "step": 4,
+      "unit": "px",
+      "label": "Top Padding",
+      "default": 120
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 120,
+      "step": 4,
+      "unit": "px",
+      "label": "Bottom Padding",
+      "default": 120
+    },
     { "type": "range", "id": "slides_per_view", "label": "每行显示数量", "min": 3, "max": 5, "step": 1, "default": 4 }
   ],
   "blocks": [
     {
       "type": "item",
       "name": "item",
-      "settings": [
-        { "type": "product", "id": "select_product", "label": "product" }
-      ]
+      "settings": [{ "type": "product", "id": "select_product", "label": "product" }]
     }
   ],
   "presets": [
     {
       "name": "compare simple",
-      "blocks": [ { "type": "item" } ]
+      "blocks": [{ "type": "item" }]
     }
   ]
 }
