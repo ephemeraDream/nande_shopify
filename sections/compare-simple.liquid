@@ -134,7 +134,7 @@
                     {% for item in compare_data.short_data.value %}
                       <div class="compare_simple_item_category">
                         {%- comment -%} 翻译分类标题 {%- endcomment -%}
-                        <div class="compare_simple_item_category_label">
+                        <div class="compare_simple_item_category_label" data-sd="{{ item.category }}">
                           {%- if localization.language.iso_code contains 'en'
                             or localization.language.iso_code contains 'EN'
                           -%}
