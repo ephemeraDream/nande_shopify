@@ -496,6 +496,7 @@
         },
         "item_thUd64": {
           "type": "item",
+          "disabled": true,
           "settings": {
             "select_product": "maidesite-el2-plus-hohenverstellbarer"
           }
