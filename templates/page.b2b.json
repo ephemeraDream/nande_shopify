@@ -130,6 +130,16 @@
             "video_url": ""
           }
         },
+        "file_with_text_Gjqpnm": {
+          "type": "file_with_text",
+          "settings": {
+            "title": "<h3>Wettbewerbsfähige Preise und umfassender Service</h3>",
+            "description": "<p>Wettbewerbsfähige Preise und Top-Service für Firmenkunden: von der Beratung über die Montage bis zur umfassenden Betreuung.<br/><br/></p>",
+            "file_type": "image",
+            "file_image": "shopify://shop_images/pexels-fauxels-3182812.jpg",
+            "video_url": ""
+          }
+        },
         "file_with_text_bKiJBP": {
           "type": "file_with_text",
           "settings": {
@@ -172,25 +182,15 @@
             "file_image": "shopify://shop_images/PCB_board_production_line.jpg",
             "video_url": ""
           }
-        },
-        "file_with_text_Gjqpnm": {
-          "type": "file_with_text",
-          "settings": {
-            "title": "<h3>Wettbewerbsfähige Preise und umfassender Service</h3>",
-            "description": "<p>Wettbewerbsfähige Preise und Top-Service für Firmenkunden: von der Beratung über die Montage bis zur umfassenden Betreuung.<br/><br/></p>",
-            "file_type": "image",
-            "file_image": "shopify://shop_images/pexels-fauxels-3182812.jpg",
-            "video_url": ""
-          }
         }
       },
       "block_order": [
         "file_with_text_iG3PLG",
+        "file_with_text_Gjqpnm",
         "file_with_text_bKiJBP",
         "file_with_text_8jgGi6",
         "file_with_text_TxJinf",
-        "file_with_text_8CFXgL",
-        "file_with_text_Gjqpnm"
+        "file_with_text_8CFXgL"
       ],
       "name": "file box simplicity",
       "settings": {
