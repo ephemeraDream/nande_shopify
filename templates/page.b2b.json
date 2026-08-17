@@ -230,7 +230,7 @@
         "item_AUd88N": {
           "type": "item",
           "settings": {
-            "image": "shopify://shop_images/b2b_04.webp",
+            "image": "shopify://shop_images/alex-kotliarskyi-QBpZGqEMsKg-unsplash_2.jpg",
             "title": "50-99 Menschen",
             "sub_title": "Bis zu 15% RABATT",
             "description": "<ul><li> Mehrprodukt-Rabatte</li><li> Immer verfugbar</li><li> Flexible und kostenlose</li><li>Lieferung</li></ul>",
@@ -240,6 +240,7 @@
         },
         "item_AUd88C": {
           "type": "item",
+          "disabled": true,
           "settings": {
             "image": "shopify://shop_images/b2b_05.webp",
             "title": ">100 Menschen",
