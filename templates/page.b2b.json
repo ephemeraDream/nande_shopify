@@ -117,6 +117,68 @@
         "message_placeholder": "Nachricht"
       }
     },
+    "b2b_spezielle_rabatte": {
+      "type": "b2b-spezielle-rabatte",
+      "blocks": {
+        "item_4zTmAb": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/b2b_page.jpg",
+            "title": "5-19 Menschen",
+            "sub_title": "Bis zu 8% RABATT",
+            "description": "<ul><li>Kostenloser Versand,</li><li>Standard-Support</li></ul>",
+            "btn_text": "Jetzt angebot anfordern",
+            "link": "#"
+          }
+        },
+        "item_fiwUXL": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/b2b.jpg",
+            "title": "20-49 Menschen",
+            "sub_title": "Bis zu 12% RABATT",
+            "description": "<ul><li> Immer auf Lager</li><li>Flexibler Versand</li><li> Kostenloser Versand</li><li>Zusatzliches kostenloses Zubehor</li></ul>",
+            "btn_text": "Jetzt angebot anfordern",
+            "link": "#"
+          }
+        },
+        "item_AUd88N": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/alex-kotliarskyi-QBpZGqEMsKg-unsplash_2.jpg",
+            "title": "50-99 Menschen",
+            "sub_title": "Bis zu 15% RABATT",
+            "description": "<ul><li> Mehrprodukt-Rabatte</li><li> Immer verfugbar</li><li> Flexible und kostenlose</li><li>Lieferung</li></ul>",
+            "btn_text": "Jetzt angebot anfordern",
+            "link": "#"
+          }
+        },
+        "item_AUd88C": {
+          "type": "item",
+          "disabled": true,
+          "settings": {
+            "image": "shopify://shop_images/b2b_05.webp",
+            "title": ">100 Menschen",
+            "sub_title": "Bis zu 20%RABATT",
+            "description": "<ul><li>Mehrprodukt-Rabatte</li><li>Immer verfugbar</li><li>Flexible und kostenlose</li><li>Lieferung</li><li>Zusatzliche kostenlose Rahmen</li><li><strong>Für ein starkes Team und maximale Arbeitseffizienz.</strong></li></ul>",
+            "btn_text": "Jetzt angebot anfordern",
+            "link": "#"
+          }
+        }
+      },
+      "block_order": [
+        "item_4zTmAb",
+        "item_fiwUXL",
+        "item_AUd88N",
+        "item_AUd88C"
+      ],
+      "name": "img with text tab",
+      "settings": {
+        "title": "Darum sollten Sie sich für Maidesite entscheiden",
+        "padding_top": 60,
+        "padding_bottom": 60
+      }
+    },
     "img_with_text_box_simplicity_KeYW6M": {
       "type": "img-with-text-box-simplicity",
       "blocks": {
@@ -200,68 +262,6 @@
         "padding_top": 0,
         "padding_bottom": 0,
         "background_color": "rgba(0,0,0,0)"
-      }
-    },
-    "b2b_spezielle_rabatte": {
-      "type": "b2b-spezielle-rabatte",
-      "blocks": {
-        "item_4zTmAb": {
-          "type": "item",
-          "settings": {
-            "image": "shopify://shop_images/b2b_page.jpg",
-            "title": "5-19 Menschen",
-            "sub_title": "Bis zu 8% RABATT",
-            "description": "<ul><li>Kostenloser Versand,</li><li>Standard-Support</li></ul>",
-            "btn_text": "Jetzt angebot anfordern",
-            "link": "#"
-          }
-        },
-        "item_fiwUXL": {
-          "type": "item",
-          "settings": {
-            "image": "shopify://shop_images/b2b.jpg",
-            "title": "20-49 Menschen",
-            "sub_title": "Bis zu 12% RABATT",
-            "description": "<ul><li> Immer auf Lager</li><li>Flexibler Versand</li><li> Kostenloser Versand</li><li>Zusatzliches kostenloses Zubehor</li></ul>",
-            "btn_text": "Jetzt angebot anfordern",
-            "link": "#"
-          }
-        },
-        "item_AUd88N": {
-          "type": "item",
-          "settings": {
-            "image": "shopify://shop_images/alex-kotliarskyi-QBpZGqEMsKg-unsplash_2.jpg",
-            "title": "50-99 Menschen",
-            "sub_title": "Bis zu 15% RABATT",
-            "description": "<ul><li> Mehrprodukt-Rabatte</li><li> Immer verfugbar</li><li> Flexible und kostenlose</li><li>Lieferung</li></ul>",
-            "btn_text": "Jetzt angebot anfordern",
-            "link": "#"
-          }
-        },
-        "item_AUd88C": {
-          "type": "item",
-          "disabled": true,
-          "settings": {
-            "image": "shopify://shop_images/b2b_05.webp",
-            "title": ">100 Menschen",
-            "sub_title": "Bis zu 20%RABATT",
-            "description": "<ul><li>Mehrprodukt-Rabatte</li><li>Immer verfugbar</li><li>Flexible und kostenlose</li><li>Lieferung</li><li>Zusatzliche kostenlose Rahmen</li><li><strong>Für ein starkes Team und maximale Arbeitseffizienz.</strong></li></ul>",
-            "btn_text": "Jetzt angebot anfordern",
-            "link": "#"
-          }
-        }
-      },
-      "block_order": [
-        "item_4zTmAb",
-        "item_fiwUXL",
-        "item_AUd88N",
-        "item_AUd88C"
-      ],
-      "name": "img with text tab",
-      "settings": {
-        "title": "Darum sollten Sie sich für Maidesite entscheiden",
-        "padding_top": 60,
-        "padding_bottom": 60
       }
     },
     "compare_simple_KneENq": {
@@ -993,8 +993,8 @@
     "breadcrumbs",
     "contact_form_one",
     "contact_form_two",
-    "img_with_text_box_simplicity_KeYW6M",
     "b2b_spezielle_rabatte",
+    "img_with_text_box_simplicity_KeYW6M",
     "compare_simple_KneENq",
     "product_carousel",
     "img_with_text_box_simplicity_qrzG6W",
