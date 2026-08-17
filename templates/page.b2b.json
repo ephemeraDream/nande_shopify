@@ -259,8 +259,8 @@
       "name": "img with text tab",
       "settings": {
         "title": "Darum sollten Sie sich für Maidesite entscheiden",
-        "padding_top": 120,
-        "padding_bottom": 120
+        "padding_top": 60,
+        "padding_bottom": 60
       }
     },
     "compare_simple_KneENq": {
