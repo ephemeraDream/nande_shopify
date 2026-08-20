@@ -187,11 +187,6 @@
         "disabled": false,
         "settings": {}
       },
-      "13768625480086291342": {
-        "type": "shopify://apps/forms/blocks/forms/8744a304-fcb1-4347-b211-bb6b4759a76a",
-        "disabled": false,
-        "settings": {}
-      },
       "1602673961235493340": {
         "type": "shopify://apps/impact-com/blocks/consent_mode/adac1a7f-d17f-4936-8a12-45628cdd8add",
         "disabled": false,
@@ -213,11 +208,6 @@
           "utm_term": true,
           "ref": true
         }
-      },
-      "6174493523689735930": {
-        "type": "shopify://apps/webrex-seo-schema/blocks/webrexSeoEmbed/283875bf-bf86-4e78-831b-502ad0c4a5c2",
-        "disabled": false,
-        "settings": {}
       },
       "2200952712151285029": {
         "type": "shopify://apps/microsoft-clarity/blocks/brandAgents_js/31c3d126-8116-4b4a-8ba1-baeda7c4aeea",
@@ -261,6 +251,11 @@
       },
       "5456663824318048812": {
         "type": "shopify://apps/geoly-ai-traffic-booster/blocks/seoai_embed/a4dfdbf0-691d-4a3f-b92f-176c12dbcf6f",
+        "disabled": false,
+        "settings": {}
+      },
+      "9259287601446025245": {
+        "type": "shopify://apps/gocertify/blocks/script-injector/db5e2393-7255-4f50-ada1-7de16398f487",
         "disabled": false,
         "settings": {}
       }
