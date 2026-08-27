@@ -202,12 +202,33 @@
     "img_with_text_box_simplicity_AkxGWH": {
       "type": "img-with-text-box-simplicity",
       "blocks": {
+        "file_with_text_YAeXwa": {
+          "type": "file_with_text",
+          "settings": {
+            "title": "<p>Stimmungsvolle RGB-Lichtleiste mit smarter App-Steuerung</p>",
+            "description": "<p>Erleben Sie vier dynamische Beleuchtungsmodi (Statisch, Fließend, Musik-reaktiv und Individuell) direkt im Tischblatt integriert. Über die dedizierte BanLanX-App lässt sich die Lichtfarbe und -intensität bequem steuern und sogar zeitgesteuert planen – für das perfekte Arbeitsambiente, egal ob konzentriertes Büro oder entspanntes Gaming.</p>",
+            "file_type": "image",
+            "file_image": "shopify://shop_images/rainbow-desk-black-is-sound-reactive.jpg",
+            "video_url": ""
+          }
+        },
+        "file_with_text_QNFYKY": {
+          "type": "file_with_text",
+          "settings": {
+            "title": "<p>Elegantes Piano-Key-Bedienteil mit integriertem RGB-Display</p>",
+            "description": "<p>Das hochwertige Bedienpanel im exklusiven Piano-Key-Design vereint Ästhetik mit smarter Funktionalität. Das integrierte RGB-Backlight-Display sorgt für eine intuitive Navigation durch alle Einstellungen (wie Geschwindigkeitsmodi oder Empfindlichkeitsstufen) und wertet den Schreibtisch optisch deutlich auf – fernab von klobigen Standardtasten.</p>",
+            "file_type": "image",
+            "file_image": "shopify://shop_images/rainbow-desk-black-with-light-strip.jpg",
+            "video_url": ""
+          }
+        },
         "file_with_text_pQwJHP": {
           "type": "file_with_text",
           "settings": {
             "title": "<p>Ihr intelligentes Gesundheitsmanagement</p>",
             "description": "<p>Beugen Sie aktiv Rückenschmerzen vor! Detaillierte tägliche und wöchentliche Stehzeitanalysen sowie vierstufige Sitzerinnerungen mit Vibrationsalarm motivieren Sie zu mehr Bewegung. </p>",
             "file_type": "image",
+            "file_image": "shopify://shop_images/Canvas-desk-white-with-sit-stand-analysis.jpg",
             "video_url": ""
           }
         },
@@ -231,26 +252,6 @@
             "video_url": ""
           }
         },
-        "file_with_text_YAeXwa": {
-          "type": "file_with_text",
-          "settings": {
-            "title": "<p>Stimmungsvolle RGB-Lichtleiste mit smarter App-Steuerung</p>",
-            "description": "<p>Erleben Sie vier dynamische Beleuchtungsmodi (Statisch, Fließend, Musik-reaktiv und Individuell) direkt im Tischblatt integriert. Über die dedizierte BanLanX-App lässt sich die Lichtfarbe und -intensität bequem steuern und sogar zeitgesteuert planen – für das perfekte Arbeitsambiente, egal ob konzentriertes Büro oder entspanntes Gaming.</p>",
-            "file_type": "image",
-            "file_image": "shopify://shop_images/rainbow-desk-black-is-sound-reactive.jpg",
-            "video_url": ""
-          }
-        },
-        "file_with_text_QNFYKY": {
-          "type": "file_with_text",
-          "settings": {
-            "title": "<p>Elegantes Piano-Key-Bedienteil mit integriertem RGB-Display</p>",
-            "description": "<p>Das hochwertige Bedienpanel im exklusiven Piano-Key-Design vereint Ästhetik mit smarter Funktionalität. Das integrierte RGB-Backlight-Display sorgt für eine intuitive Navigation durch alle Einstellungen (wie Geschwindigkeitsmodi oder Empfindlichkeitsstufen) und wertet den Schreibtisch optisch deutlich auf – fernab von klobigen Standardtasten.</p>",
-            "file_type": "image",
-            "file_image": "shopify://shop_images/rainbow-desk-black-with-light-strip.jpg",
-            "video_url": ""
-          }
-        },
         "file_with_text_3TibJP": {
           "type": "file_with_text",
           "settings": {
@@ -263,11 +264,11 @@
         }
       },
       "block_order": [
+        "file_with_text_YAeXwa",
+        "file_with_text_QNFYKY",
         "file_with_text_pQwJHP",
         "file_with_text_mFbE3r",
         "file_with_text_Ki6EEk",
-        "file_with_text_YAeXwa",
-        "file_with_text_QNFYKY",
         "file_with_text_3TibJP"
       ],
       "name": "file box simplicity",
@@ -322,6 +323,7 @@
         "foldtext_aQFerM",
         "foldtext_BJmYDi"
       ],
+      "disabled": true,
       "name": "img with foldtext",
       "settings": {
         "spec_id": "",
@@ -655,6 +657,7 @@
         "tab_JyxzQm",
         "tab_qJcwGX"
       ],
+      "disabled": true,
       "name": "img with text tab",
       "settings": {
         "spec_id": "",
@@ -709,6 +712,7 @@
         "foldtext_iGWkAs",
         "foldtext_HWP39G"
       ],
+      "disabled": true,
       "name": "img with foldtext",
       "settings": {
         "spec_id": "",
@@ -768,6 +772,7 @@
         "tab_kazGN3",
         "tab_yTmGja"
       ],
+      "disabled": true,
       "name": "img with text tab",
       "settings": {
         "spec_id": "",
@@ -847,6 +852,7 @@
         "tab_hrcj8d",
         "tab_ifbPmd"
       ],
+      "disabled": true,
       "name": "img with text tab",
       "settings": {
         "spec_id": "",
