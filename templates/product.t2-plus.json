@@ -542,6 +542,7 @@
         "tab_AUd88N",
         "tab_fiwUXL"
       ],
+      "disabled": true,
       "name": "img with text tab",
       "settings": {
         "spec_id": "",
@@ -587,6 +588,7 @@
         "foldtext_P3cahP",
         "foldtext_KCn3Gi"
       ],
+      "disabled": true,
       "name": "img with foldtext",
       "settings": {
         "spec_id": "",
@@ -600,7 +602,7 @@
       "name": "technical data",
       "settings": {
         "spec_id": "Technische_Daten",
-        "title": "<p>Technische Daten Des HöHenverstellbaren </p><p>Schreibtisches-T2</p>",
+        "title": "<p>Technische Daten Des HöHenverstellbaren </p><p>Schreibtisches-T2 Plus</p>",
         "select_product": "t2-elektrisch-hohenverstellbarer-schreibtisch-mit-zwei-motoren"
       }
     },
