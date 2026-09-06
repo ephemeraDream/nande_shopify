@@ -331,7 +331,7 @@
           "type": "foldtext",
           "settings": {
             "title": "<p>Zertifizierte Sicherheit</p>",
-            "description": "<ul><li>Qualität, der du vertrauen kannst. Mit der <b>CE-Kennzeichnung</b> erfüllt das T2 höchste europäische Sicherheitsstandards. Zudem setzen wir auf <b>FSC-zertifizierte</b> Materialien, um eine umweltgerechte und nachhaltige Herkunft deines Schreibtisches zu garantieren.</li></ul>",
+            "description": "<ul><li>Qualität, der du vertrauen kannst. Mit der <b>CE-Kennzeichnung</b> erfüllt das T2 Plus höchste europäische Sicherheitsstandards. Zudem setzen wir auf <b>FSC-zertifizierte</b> Materialien, um eine umweltgerechte und nachhaltige Herkunft deines Schreibtisches zu garantieren.</li></ul>",
             "image": "shopify://shop_images/14_ba095c4a-7fca-496b-a4da-a18016d706be.jpg"
           }
         },
@@ -353,6 +353,7 @@
         },
         "foldtext_iGWkAs": {
           "type": "foldtext",
+          "disabled": true,
           "settings": {
             "title": "<p>Nachhaltigkeit durch Beständigkeit</p>",
             "description": "<ul><li>Präzision bis ins Detail: Der Abstand zwischen Innen- und Außensäule wurde auf ein Minimum reduziert. Diese ultra-enge Passform eliminiert seitliches Spiel während der Höhenverstellung und sorgt für eine außergewöhnlich ruhige, solide und wackelfreie Bewegung – in jeder Position.</li></ul>",
