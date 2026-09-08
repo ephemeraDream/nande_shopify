@@ -248,20 +248,20 @@
         "file_with_text_THJTyK": {
           "type": "file_with_text",
           "settings": {
-            "title": "<p>Maximale ergonomische</p>",
-            "description": "<p>Der Höhenverstellbereich von 66–130 cm,so können Sie die Arbeitshöhe millimetergenau an Ihre Körpergröße und Ihre Sitz-/Stehgewohnheiten anpassen – für rückenschonendes, dynamisches Arbeiten in jeder Lebenslage.</p>",
+            "title": "<p>Stabiles 4-Bein-System</p>",
+            "description": "<p>Massive Bauweise, minimale Vibration, volle Stabilität auch bei maximaler Höhe und schwerer Belastung.</p>",
             "file_type": "image",
-            "file_image": "shopify://shop_images/Maidesite_T2_Plus_desk_is_height-adjustable_from_66-130cm.jpg",
+            "file_image": "shopify://shop_images/Der_hohenverstellbare_Schreibtisch_T2_bietet_hohe_Stabilitat_fur_konzentriertes_Arbeiten.jpg",
             "video_url": ""
           }
         },
-        "file_with_text_McHwGa": {
+        "file_with_text_B39ehq": {
           "type": "file_with_text",
           "settings": {
-            "title": "<p>Beeindruckende 125 kg Tragkraft</p>",
-            "description": "<p>Egal wie schwer dein Setup ist – von mehreren Monitoren bis hin zu massiven PC-Gehäusen. Die enorme Belastbarkeit von 125 kg bietet dir volle Flexibilität bei der Gestaltung deines Schreibtisches, ohne Kompromisse bei der Sicherheit.</p>",
+            "title": "<p>Frische Farben für dein individuelles Setup</p>",
+            "description": "<p>Junge Ästheten lieben Personalisierung. Mit den brandneuen Farbvarianten des Rahmens passt sich das T2-Gestell perfekt deinem modernen Einrichtungsstil an und wird zum stylischen Herzstück deines Gaming- oder Home-Office-Bereichs.</p>",
             "file_type": "image",
-            "file_image": "shopify://shop_images/Maidesite_T2_Plus_height-adjustable_desk_with_125kg_loading_capacity.jpg",
+            "file_image": "shopify://shop_images/Maidesite_T2_height-adjustable_desk_in_5_colors.jpg",
             "video_url": ""
           }
         },
@@ -271,17 +271,7 @@
             "title": "<p>Kraftvolles Dual-Motor-System</p>",
             "description": "<p>Effizienz trifft auf Laufruhe. Dank der zwei leistungsstarken Motoren fährt der Tisch extrem schnell und flüsterleise hoch oder runter, sodass du deine Konzentration nicht verlierst und Mitbewohner im selben Raum niemals störst.</p>",
             "file_type": "image",
-            "file_image": "shopify://shop_images/Maidesite_T2_Plus_height-adjustable_desk_have_two_motors_to_moves_at_25mm_s.jpg",
-            "video_url": ""
-          }
-        },
-        "file_with_text_B39ehq": {
-          "type": "file_with_text",
-          "settings": {
-            "title": "<p>Flexibilität: Großer Verstellbereich für Ihre Räumlichkeiten</p>",
-            "description": "<p>Der T2 Plus passt sich Ihnen an, nicht umgekehrt. Mit einem großen Längenverstellbereich von 100 bis 160 cm ist er mit fast jeder Tischplatte von 110 bis 180 cm kompatibel. Ob kompaktes Homeoffice oder riesiger Konferenztisch – dieses Gestell wächst mit Ihren Anforderungen mit.<br/></p>",
-            "file_type": "image",
-            "file_image": "shopify://shop_images/Maidesite_T2_Plus_height-adjustable_desk_supports_120-180cm_x_50-85cm_tabletop.jpg",
+            "file_image": "shopify://shop_images/Maidesite_T2_electric_standing_desk_with_two_powerful_motors.jpg",
             "video_url": ""
           }
         },
@@ -291,28 +281,38 @@
             "title": "<p>Intelligente Steuerung mit Memory-Funktion</p>",
             "description": "<p>Das intuitive Handbedienteil macht die Ergonomie zum Kinderspiel. Speichere deine bevorzugten Sitz- und Stehhöhen einfach ab, um per Knopfdruck präzise zwischen den Positionen zu wechseln – smart, schnell und absolut alltagstauglich.</p>",
             "file_type": "image",
-            "file_image": "shopify://shop_images/T2_Plus_height-adjustable_desk_comes_with_multi-function_control_panel.jpg",
+            "file_image": "shopify://shop_images/T2_height-adjustable_desk_with_smart_control_panel.jpg",
             "video_url": ""
           }
         },
         "file_with_text_f9yPAD": {
           "type": "file_with_text",
           "settings": {
-            "title": "<p>Überlegene Langlebigkeit durch 10.000 Tests</p>",
-            "description": "<p>Nachhaltigkeit und Qualität sind \"typisch deutsch\". Mit über 10.000 bestandenen Belastungszyklen ist das T2 Plus -Gestell auf jahrelange, intensive Nutzung ausgelegt und bietet dir eine Zuverlässigkeit, die weit über den Standard hinausgeht.</p>",
+            "title": "<p>Überlegene Langlebigkeit durch 20.000 Tests</p>",
+            "description": "<p>Nachhaltigkeit und Qualität sind \"typisch deutsch\". Mit über 20.000 bestandenen Belastungszyklen ist das T2-Gestell auf jahrelange, intensive Nutzung ausgelegt und bietet dir eine Zuverlässigkeit, die weit über den Standard hinausgeht.</p>",
             "file_type": "image",
             "file_image": "shopify://shop_images/T2_height_adjustable_desk_with_20000_cycles_loading_tests.jpg",
+            "video_url": ""
+          }
+        },
+        "file_with_text_McHwGa": {
+          "type": "file_with_text",
+          "settings": {
+            "title": "<p>Beeindruckende 125 kg Tragkraft</p>",
+            "description": "<p>Egal wie schwer dein Setup ist – von mehreren Monitoren bis hin zu massiven PC-Gehäusen. Die enorme Belastbarkeit von 125 kg bietet dir volle Flexibilität bei der Gestaltung deines Schreibtisches, ohne Kompromisse bei der Sicherheit.</p>",
+            "file_type": "image",
+            "file_image": "shopify://shop_images/Maidesite_T2_electric_height-adjustable_desk_with_125kg_max_loading_capacity.jpg",
             "video_url": ""
           }
         }
       },
       "block_order": [
         "file_with_text_THJTyK",
-        "file_with_text_McHwGa",
-        "file_with_text_Q8tJKk",
         "file_with_text_B39ehq",
+        "file_with_text_Q8tJKk",
         "file_with_text_JJXCp8",
-        "file_with_text_f9yPAD"
+        "file_with_text_f9yPAD",
+        "file_with_text_McHwGa"
       ],
       "name": "file box simplicity",
       "settings": {
@@ -331,7 +331,7 @@
           "type": "foldtext",
           "settings": {
             "title": "<p>Zertifizierte Sicherheit</p>",
-            "description": "<ul><li>Qualität, der du vertrauen kannst. Mit der <b>CE-Kennzeichnung</b> erfüllt das T2 Plus höchste europäische Sicherheitsstandards. Zudem setzen wir auf <b>FSC-zertifizierte</b> Materialien, um eine umweltgerechte und nachhaltige Herkunft deines Schreibtisches zu garantieren.</li></ul>",
+            "description": "<ul><li>Qualität, der du vertrauen kannst. Mit der <b>CE-Kennzeichnung</b> erfüllt das T2 höchste europäische Sicherheitsstandards. Zudem setzen wir auf <b>FSC-zertifizierte</b> Materialien, um eine umweltgerechte und nachhaltige Herkunft deines Schreibtisches zu garantieren.</li></ul>",
             "image": "shopify://shop_images/14_ba095c4a-7fca-496b-a4da-a18016d706be.jpg"
           }
         },
@@ -339,7 +339,7 @@
           "type": "foldtext",
           "settings": {
             "title": "<p>Geprüfte Langlebigkeit </p>",
-            "description": "<b>10.000 Zyklen</b>\n<p>Verlässlichkeit ohne Kompromisse. Das T2 Plus-Gestell wurde in über 10.000 Belastungstests auf Herz und Nieren geprüft. Das garantiert dir eine einwandfreie Funktion über viele Jahre hinweg – selbst bei intensiver täglicher Nutzung im Home-Office.</p>",
+            "description": "<b>20.000 Zyklen</b>\n<p>Verlässlichkeit ohne Kompromisse. Das T2-Gestell wurde in über 20.000 Belastungstests auf Herz und Nieren geprüft. Das garantiert dir eine einwandfreie Funktion über viele Jahre hinweg – selbst bei intensiver täglicher Nutzung im Home-Office.</p>",
             "image": "shopify://shop_images/T2_height_adjustable_desk_with_20000_cycles_loading_tests.jpg"
           }
         },
@@ -353,7 +353,6 @@
         },
         "foldtext_iGWkAs": {
           "type": "foldtext",
-          "disabled": true,
           "settings": {
             "title": "<p>Nachhaltigkeit durch Beständigkeit</p>",
             "description": "<ul><li>Präzision bis ins Detail: Der Abstand zwischen Innen- und Außensäule wurde auf ein Minimum reduziert. Diese ultra-enge Passform eliminiert seitliches Spiel während der Höhenverstellung und sorgt für eine außergewöhnlich ruhige, solide und wackelfreie Bewegung – in jeder Position.</li></ul>",
@@ -542,7 +541,6 @@
         "tab_AUd88N",
         "tab_fiwUXL"
       ],
-      "disabled": true,
       "name": "img with text tab",
       "settings": {
         "spec_id": "",
@@ -588,7 +586,6 @@
         "foldtext_P3cahP",
         "foldtext_KCn3Gi"
       ],
-      "disabled": true,
       "name": "img with foldtext",
       "settings": {
         "spec_id": "",
@@ -602,7 +599,7 @@
       "name": "technical data",
       "settings": {
         "spec_id": "Technische_Daten",
-        "title": "<p>Technische Daten Des HöHenverstellbaren </p><p>Schreibtisches-T2 Plus</p>",
+        "title": "<p>Technische Daten Des HöHenverstellbaren </p><p>Schreibtisches-T2</p>",
         "select_product": "maidesite-t2-plus-elektrisch-hohenverstellbarer-schreibtisch"
       }
     },
@@ -724,28 +721,28 @@
           "type": "faq",
           "settings": {
             "question": "<h4>Für welche Höhe ist dieser Rahmen geeignet?</h4>",
-            "answer": "<p>Der Rahmen ist für Personen mit einer Körpergröße von 1.45-2.0 m geeignet.</p>"
+            "answer": "<p>Der Rahmen ist für Personen mit einer Körpergröße von 1.5-1.8m geeignet.</p>"
           }
         },
         "faq_AXAcgA": {
           "type": "faq",
           "settings": {
             "question": "<h4>Welche Größe hat die Platte, die in den Rahmen passt?</h4>",
-            "answer": "<p>Das Produkt ist für Platten von 100-180cm x 50-85cm geeignet.</p>"
+            "answer": "<p>Das Produkt ist für Platten von 100-200cm x 50-85cm geeignet.</p>"
           }
         },
         "faq_VQVPFn": {
           "type": "faq",
           "settings": {
-            "question": "<p>Kann ich den T2 Plus Schreibtisch verwenden, wenn mein Boden nicht eben ist?</p>",
+            "question": "<p>Kann ich den T2 Schreibtisch verwenden, wenn mein Boden nicht eben ist?</p>",
             "answer": "<p>Natürlich können Sie das. Wir haben unter den Beinen des Rahmens verstellbare Füße angebracht, um kleinere Unebenheiten im Boden auszugleichen.</p>"
           }
         },
         "faq_bELHrX": {
           "type": "faq",
           "settings": {
-            "question": "<p>Was ist der Unterschied zwischen dem T2 Plus und dem T2 Pro Plus?</p>",
-            "answer": "<p>Der T2 Plus verfügt über eine Tragkraft von 125 kg und eine Verfahrgeschwindigkeit von 25 mm/s, was für die meisten Anwender völlig ausreicht.<br/><br/>Der T2 Pro Plus bietet eine Tragkraft von 160 kg und eine Verfahrgeschwindigkeit von 40 mm/s.<br/><br/>Der T2 Plus  ist ein erschwingliches Premium-Modell, während der T2 Pro Plus ein professionelles Kraftpaket für anspruchsvolle Anwendungen im Unternehmens- und Geschäftsbereich ist.</p>"
+            "question": "<p>Was ist der Unterschied zwischen dem T2 und dem T2 Pro?</p>",
+            "answer": "<p>Der T2 verfügt über eine Tragkraft von 125 kg und eine Verfahrgeschwindigkeit von 25 mm/s, was für die meisten Anwender völlig ausreicht.<br/><br/>Der T2 Pro bietet eine Tragkraft von 160 kg und eine Verfahrgeschwindigkeit von 35 mm/s.<br/><br/>Der T2 ist ein erschwingliches Premium-Modell, während der T2 Pro ein professionelles Kraftpaket für anspruchsvolle Anwendungen im Unternehmens- und Geschäftsbereich ist.</p>"
           }
         },
         "faq_WtEK7r": {
