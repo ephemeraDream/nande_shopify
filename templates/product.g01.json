@@ -205,6 +205,26 @@
             "video_url": ""
           }
         },
+        "file_with_text_pQwJHP": {
+          "type": "file_with_text",
+          "settings": {
+            "title": "<p>L‑Form für mehr Fläche</p>",
+            "description": "<p>Getrennte Zonen, alles griffbereit, ergonomisch und übersichtlich.</p>",
+            "file_type": "image",
+            "file_image": "shopify://shop_images/2_-_L.jpg",
+            "video_url": ""
+          }
+        },
+        "file_with_text_QNFYKY": {
+          "type": "file_with_text",
+          "settings": {
+            "title": "<p>Massive 160 kg Tragkraft</p>",
+            "description": "<p>Kraftreserven für Profis: Das Gestell trägt mühelos umfangreiche Setups mit mehreren Monitoren, schweren Rechnern und diversem Zubehör.<br/><br/>Volle Belastbarkeit ohne Kompromisse bei der Standfestigkeit. Die kraftvollen Motoren heben Ihr Equipment sicher und gleichmäßig in die gewünschte Position.</p>",
+            "file_type": "image",
+            "file_image": "shopify://shop_images/5_-_160kg.jpg",
+            "video_url": ""
+          }
+        },
         "file_with_text_YAeXwa": {
           "type": "file_with_text",
           "settings": {
@@ -225,26 +245,6 @@
             "video_url": ""
           }
         },
-        "file_with_text_QNFYKY": {
-          "type": "file_with_text",
-          "settings": {
-            "title": "<p>Massive 160 kg Tragkraft</p>",
-            "description": "<p>Kraftreserven für Profis: Das Gestell trägt mühelos umfangreiche Setups mit mehreren Monitoren, schweren Rechnern und diversem Zubehör.<br/><br/>Volle Belastbarkeit ohne Kompromisse bei der Standfestigkeit. Die kraftvollen Motoren heben Ihr Equipment sicher und gleichmäßig in die gewünschte Position.</p>",
-            "file_type": "image",
-            "file_image": "shopify://shop_images/5_-_160kg.jpg",
-            "video_url": ""
-          }
-        },
-        "file_with_text_pQwJHP": {
-          "type": "file_with_text",
-          "settings": {
-            "title": "<p>Maximale Fläche durch L-Form-Design</p>",
-            "description": "<p>Nutzen Sie Ihren Raum effizienter. Die großzügige L-Form erweitert Ihren Aktionsradius und ermöglicht klar getrennte Zonen für Fokusarbeit, Hardware und Ablage.<br/><br/>Strukturierte Arbeitsabläufe und mehr Übersicht. Das ergonomische Eckdesign sorgt dafür, dass alles Wichtige mit nur einem Handgriff erreichbar ist.</p>",
-            "file_type": "image",
-            "file_image": "shopify://shop_images/2_-_L.jpg",
-            "video_url": ""
-          }
-        },
         "file_with_text_Ki6EEk": {
           "type": "file_with_text",
           "settings": {
@@ -258,10 +258,10 @@
       },
       "block_order": [
         "file_with_text_mFbE3r",
+        "file_with_text_pQwJHP",
+        "file_with_text_QNFYKY",
         "file_with_text_YAeXwa",
         "file_with_text_3TibJP",
-        "file_with_text_QNFYKY",
-        "file_with_text_pQwJHP",
         "file_with_text_Ki6EEk"
       ],
       "name": "file box simplicity",
