@@ -225,23 +225,23 @@
             "video_url": ""
           }
         },
-        "file_with_text_YAeXwa": {
-          "type": "file_with_text",
-          "settings": {
-            "title": "<p>Verstärktes 4-Bein-Gestell</p>",
-            "description": "<p>Der Canvas setzt Maßstäbe in seiner Klasse. Das verstärkte Vierbein-Gestell mit <strong>vier integrierten Dreiecks-Stützstrukturen</strong> bietet eine deutlich höhere strukturelle Integrität als herkömmliche Zweibein-Tische.</p><p><br/>Eine perfekt symmetrische Lastverteilung. Dies macht den Canvas zur idealen Basis für große Setups, die eine stabile und verwindungssteife Unterstützung benötigen.</p>",
-            "file_type": "image",
-            "file_image": "shopify://shop_images/1_2ce14cfe-9831-4ef5-a93c-ac9737afa75d.jpg",
-            "video_url": ""
-          }
-        },
         "file_with_text_3TibJP": {
           "type": "file_with_text",
           "settings": {
-            "title": "<p>Geprüfte Zuverlässigkeit & Materialqualität</p>",
-            "description": "<p>Ein Schreibtisch ist eine Investition in Ihre Gesundheit. Deshalb setzen wir auf zertifizierte Materialien und hochwertige Komponenten, die harten Dauertests unterzogen wurden.<br/></p><p>Langfristige Funktionssicherheit im täglichen Einsatz. Wir garantieren eine robuste Mechanik, auf die Sie sich über Jahre hinweg verlassen können.</p>",
+            "title": "<p>Geprüfte Qualität & Langlebigkeit</p>",
+            "description": "<p>Zertifizierte Materialien, hochwertige Komponenten, harte Dauertests. Robuste Mechanik für jahrelange, verlässliche Funktionssicherheit im täglichen Einsatz.</p>",
             "file_type": "image",
             "file_image": "shopify://shop_images/6_942178d7-82d4-4acc-8148-8be598b8a10b.jpg",
+            "video_url": ""
+          }
+        },
+        "file_with_text_YAeXwa": {
+          "type": "file_with_text",
+          "settings": {
+            "title": "<p>Geprüfte Langlebigkeit</p>",
+            "description": "<p>10.000+ Tests – Streng geprüft für jahrelange Zuverlässigkeit im Arbeitsalltag.</p>",
+            "file_type": "image",
+            "file_image": "shopify://shop_images/7_5051695d-4312-4013-8ce8-43df13211686.jpg",
             "video_url": ""
           }
         },
@@ -260,8 +260,8 @@
         "file_with_text_mFbE3r",
         "file_with_text_pQwJHP",
         "file_with_text_QNFYKY",
-        "file_with_text_YAeXwa",
         "file_with_text_3TibJP",
+        "file_with_text_YAeXwa",
         "file_with_text_Ki6EEk"
       ],
       "name": "file box simplicity",
