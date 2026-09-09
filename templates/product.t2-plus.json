@@ -255,6 +255,16 @@
             "video_url": ""
           }
         },
+        "file_with_text_Q8tJKk": {
+          "type": "file_with_text",
+          "settings": {
+            "title": "<p>Kraftvolles Dual-Motor-System</p>",
+            "description": "<p>Effizienz trifft auf Laufruhe. Dank der zwei leistungsstarken Motoren fährt der Tisch extrem schnell und flüsterleise hoch oder runter, sodass du deine Konzentration nicht verlierst und Mitbewohner im selben Raum niemals störst.</p>",
+            "file_type": "image",
+            "file_image": "shopify://shop_images/Maidesite_T2_Plus_height-adjustable_desk_have_two_motors_to_moves_at_25mm_s.jpg",
+            "video_url": ""
+          }
+        },
         "file_with_text_B39ehq": {
           "type": "file_with_text",
           "settings": {
@@ -265,21 +275,11 @@
             "video_url": ""
           }
         },
-        "file_with_text_Q8tJKk": {
-          "type": "file_with_text",
-          "settings": {
-            "title": "<p>Kraftvolles Dual-Motor-System</p>",
-            "description": "<p>Effizienz trifft auf Laufruhe. Dank der zwei leistungsstarken Motoren fährt der Tisch extrem schnell und flüsterleise hoch oder runter, sodass du deine Konzentration nicht verlierst und Mitbewohner im selben Raum niemals störst.</p>",
-            "file_type": "image",
-            "file_image": "shopify://shop_images/Maidesite_T2_electric_standing_desk_with_two_powerful_motors.jpg",
-            "video_url": ""
-          }
-        },
         "file_with_text_JJXCp8": {
           "type": "file_with_text",
           "settings": {
-            "title": "<p>Intelligente Steuerung mit Memory-Funktion</p>",
-            "description": "<p>Das intuitive Handbedienteil macht die Ergonomie zum Kinderspiel. Speichere deine bevorzugten Sitz- und Stehhöhen einfach ab, um per Knopfdruck präzise zwischen den Positionen zu wechseln – smart, schnell und absolut alltagstauglich.</p>",
+            "title": "<p>Multifunktionale Handsteuerung</p>",
+            "description": "<p>Mit 4 Höhenvoreinstellungen, Endanschlägen, Kindersicherung, Erinnerung bei längerem Sitzen und 1-mm-Verstellung – ideal für das Homeoffice und gemeinsam genutzte Arbeitsbereich</p>",
             "file_type": "image",
             "file_image": "shopify://shop_images/T2_height-adjustable_desk_with_smart_control_panel.jpg",
             "video_url": ""
@@ -308,8 +308,8 @@
       },
       "block_order": [
         "file_with_text_THJTyK",
-        "file_with_text_B39ehq",
         "file_with_text_Q8tJKk",
+        "file_with_text_B39ehq",
         "file_with_text_JJXCp8",
         "file_with_text_f9yPAD",
         "file_with_text_McHwGa"
