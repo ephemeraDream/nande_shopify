@@ -285,16 +285,6 @@
             "video_url": ""
           }
         },
-        "file_with_text_f9yPAD": {
-          "type": "file_with_text",
-          "settings": {
-            "title": "<p>Langlebigkeit, getestet</p>",
-            "description": "<p>Mit über 20.000 bestandenen Belastungszyklen ist das T2 Plus-Gestell auf jahrelange, intensive Nutzung ausgelegt – Zuverlässigkeit weit über dem Standard.</p>",
-            "file_type": "image",
-            "file_image": "shopify://shop_images/T2_height_adjustable_desk_with_20000_cycles_loading_tests.jpg",
-            "video_url": ""
-          }
-        },
         "file_with_text_McHwGa": {
           "type": "file_with_text",
           "settings": {
@@ -304,6 +294,16 @@
             "file_image": "shopify://shop_images/Maidesite_T2_electric_height-adjustable_desk_with_125kg_max_loading_capacity.jpg",
             "video_url": ""
           }
+        },
+        "file_with_text_f9yPAD": {
+          "type": "file_with_text",
+          "settings": {
+            "title": "<p>Langlebigkeit, getestet</p>",
+            "description": "<p>Mit über 20.000 bestandenen Belastungszyklen ist das T2 Plus-Gestell auf jahrelange, intensive Nutzung ausgelegt – Zuverlässigkeit weit über dem Standard.</p>",
+            "file_type": "image",
+            "file_image": "shopify://shop_images/T2_height_adjustable_desk_with_20000_cycles_loading_tests.jpg",
+            "video_url": ""
+          }
         }
       },
       "block_order": [
@@ -311,8 +311,8 @@
         "file_with_text_Q8tJKk",
         "file_with_text_JJXCp8",
         "file_with_text_B39ehq",
-        "file_with_text_f9yPAD",
-        "file_with_text_McHwGa"
+        "file_with_text_McHwGa",
+        "file_with_text_f9yPAD"
       ],
       "name": "file box simplicity",
       "settings": {
