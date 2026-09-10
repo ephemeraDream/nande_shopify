@@ -68,11 +68,12 @@
         "img_with_text_QJDYxJ",
         "countdown_77kmfi"
       ],
+      "disabled": true,
       "custom_css": [],
       "settings": {
         "auto_rotate": true,
         "change_slides_speed": 6,
-        "color_scheme": "scheme-4",
+        "color_scheme": "scheme-1",
         "show_line_separator": true,
         "show_social": false,
         "enable_country_selector": false,
