@@ -178,12 +178,6 @@
     "rich_text_aWhbCN": {
       "type": "rich-text",
       "blocks": {
-        "text_Jz6Vag": {
-          "type": "text",
-          "settings": {
-            "text": "<p>Warum Rainbow wählen?</p>"
-          }
-        },
         "text_JWh4Hi": {
           "type": "text",
           "settings": {
@@ -192,7 +186,6 @@
         }
       },
       "block_order": [
-        "text_Jz6Vag",
         "text_JWh4Hi"
       ],
       "disabled": true,
@@ -281,7 +274,7 @@
       "name": "file box simplicity",
       "settings": {
         "spec_id": "Produkt",
-        "main_title": "<p>Der smarte Schreibtisch, der Ihren Arbeitsplatz beleuchtet, Kabel ordentlich hält und Ihre Gesundheit im Blick behält</p>",
+        "main_title": "<p>Warum Rainbow wählen?  <br/>RGB-Ambientebeleuchtung </p><p>Intelligentes Gesundheitsmanagement  Kabelmanagement Durch Perforierte Paneele<br/></p>",
         "row_num": 3,
         "padding_top": 60,
         "padding_bottom": 60,
