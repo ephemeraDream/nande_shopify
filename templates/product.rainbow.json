@@ -235,7 +235,7 @@
         "file_with_text_mFbE3r": {
           "type": "file_with_text",
           "settings": {
-            "title": "<p>Piano-Tasten-Bedienfeld<br/></p>",
+            "title": "<p>Piano-Tasten-Bedienfeld</p><p><br/></p>",
             "description": "<p>RGB-Display · Klar und intuitiv · Minimalistisch & technisch</p>",
             "file_type": "image",
             "file_image": "shopify://shop_images/5f18cef12e9ef5494de46fd77bc7805d.webp",
