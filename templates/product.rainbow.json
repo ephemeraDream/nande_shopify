@@ -274,7 +274,7 @@
       "name": "file box simplicity",
       "settings": {
         "spec_id": "Produkt",
-        "main_title": "<p>Warum Rainbow wählen?  <br/>RGB-Ambientebeleuchtung </p>",
+        "main_title": "<p>Warum Rainbow wählen?  </p>",
         "row_num": 3,
         "padding_top": 60,
         "padding_bottom": 60,
@@ -1159,7 +1159,8 @@
           "maidesite-canvas-l-formiger-hohenverstellbarer-schreibtisch-mit-4-beinen",
           "maidesite-el2-plus-hohenverstellbarer",
           "maidesite-serpentine-kabelrohr",
-          "maidesite-3-fach-tischsteckdose-mit-usb-c-und-a-1-8m-kabel-steckdosenleiste"
+          "maidesite-3-fach-tischsteckdose-mit-usb-c-und-a-1-8m-kabel-steckdosenleiste",
+          "maidesite-arborlift-elektrisch-hohenverstellbarer-schreibtisch-120x60-140x70cm"
         ],
         "number": 3,
         "padding_top": 120,
