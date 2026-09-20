@@ -201,7 +201,7 @@
             "title": "<p>Stabile 4-Bein-Konstruktion<br/></p>",
             "description": "<p>Verstärkter Stahl · 4-Bein-Unterstützung · Stabil auch bei hoher Belastung</p>",
             "file_type": "image",
-            "file_image": "shopify://shop_images/9f3aea9c8868a56e80fbfd3d762387a4.png",
+            "file_image": "shopify://shop_images/IMG_5409.jpg",
             "video_url": ""
           }
         },
@@ -225,16 +225,6 @@
             "video_url": ""
           }
         },
-        "file_with_text_3TibJP": {
-          "type": "file_with_text",
-          "settings": {
-            "title": "<p>Geprüfte Qualität & Langlebigkeit</p>",
-            "description": "<p>Zertifizierte Materialien, hochwertige Komponenten, harte Dauertests. Robuste Mechanik für jahrelange, verlässliche Funktionssicherheit im täglichen Einsatz.</p>",
-            "file_type": "image",
-            "file_image": "shopify://shop_images/6_942178d7-82d4-4acc-8148-8be598b8a10b.jpg",
-            "video_url": ""
-          }
-        },
         "file_with_text_YAeXwa": {
           "type": "file_with_text",
           "settings": {
@@ -242,6 +232,16 @@
             "description": "<p>Schnelleres Heben und Senken · Leiser Betrieb · Sicheres Starten und Stoppen</p>",
             "file_type": "image",
             "file_image": "shopify://shop_images/6536a6cd6f07a17abfddbf5fc1bf95fa.png",
+            "video_url": ""
+          }
+        },
+        "file_with_text_3TibJP": {
+          "type": "file_with_text",
+          "settings": {
+            "title": "<p>Geprüfte Qualität & Langlebigkeit</p>",
+            "description": "<p>Zertifizierte Materialien, hochwertige Komponenten, harte Dauertests. Robuste Mechanik für jahrelange, verlässliche Funktionssicherheit im täglichen Einsatz.</p>",
+            "file_type": "image",
+            "file_image": "shopify://shop_images/6_942178d7-82d4-4acc-8148-8be598b8a10b.jpg",
             "video_url": ""
           }
         },
@@ -260,8 +260,8 @@
         "file_with_text_mFbE3r",
         "file_with_text_pQwJHP",
         "file_with_text_QNFYKY",
-        "file_with_text_3TibJP",
         "file_with_text_YAeXwa",
+        "file_with_text_3TibJP",
         "file_with_text_Ki6EEk"
       ],
       "name": "file box simplicity",
