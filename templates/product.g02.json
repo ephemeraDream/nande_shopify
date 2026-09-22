@@ -354,6 +354,56 @@
         "layout": "image-left"
       }
     },
+    "img_with_foldtext_RcBrkw": {
+      "type": "img-with-foldtext",
+      "blocks": {
+        "foldtext_eyYKRM": {
+          "type": "foldtext",
+          "settings": {
+            "title": "<p>Designbasierte Aufbewahrung</p>",
+            "description": "Stauraum ist von Anfang an Teil der Tischstruktur. Jede Ablagefläche ist funktional in das Design integriert, ohne den Tisch optisch zu belasten.",
+            "image": "shopify://shop_images/15_e009bd41-f7e8-4c76-9547-b45195c32a31.jpg"
+          }
+        },
+        "foldtext_HQhGDk": {
+          "type": "foldtext",
+          "settings": {
+            "title": "<h3>Vertikale Ordnung</h3>",
+            "description": "Die Organisation erfolgt nach oben, nicht nach vorne. So bleibt die Arbeitsfläche frei und wird nicht durch ausladende Ablagen eingeschränkt.",
+            "image": "shopify://shop_images/3_403a8ead-aee7-4d6f-bad1-cbbb1bb20557.jpg"
+          }
+        },
+        "foldtext_iGWkAs": {
+          "type": "foldtext",
+          "settings": {
+            "title": "<h3>Für häufig genutzte Dinge</h3>",
+            "description": "Der Tisch bietet gezielt Platz für die wichtigsten, regelmäßig genutzten Arbeitsutensilien, sodass alles griffbereit bleibt.",
+            "image": "shopify://shop_images/22_b9d7d195-10a5-4ae0-92a9-5d096f404fb7.jpg"
+          }
+        },
+        "foldtext_HWP39G": {
+          "type": "foldtext",
+          "settings": {
+            "title": "<h3>Leichtes, aufgeräumtes Erscheinungsbild</h3>",
+            "description": "Die klare Struktur sorgt für eine visuell ruhige und luftige Arbeitsfläche, die den Raum optisch nicht überfrachtet und den Fokus auf das Wesentliche lenkt.",
+            "image": "shopify://shop_images/18_447a1179-ba0a-4176-ba69-baa12694da39.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "foldtext_eyYKRM",
+        "foldtext_HQhGDk",
+        "foldtext_iGWkAs",
+        "foldtext_HWP39G"
+      ],
+      "name": "img with foldtext",
+      "settings": {
+        "spec_id": "",
+        "title": "<p>Integrierte Desktop-Organisation</p>",
+        "padding_top": 120,
+        "padding_bottom": 120
+      }
+    },
     "img_with_foldtext_cCLPBE": {
       "type": "img-with-foldtext",
       "blocks": {
@@ -663,56 +713,6 @@
         "padding_bottom": 52
       }
     },
-    "img_with_foldtext_RcBrkw": {
-      "type": "img-with-foldtext",
-      "blocks": {
-        "foldtext_eyYKRM": {
-          "type": "foldtext",
-          "settings": {
-            "title": "<p>Designbasierte Aufbewahrung</p>",
-            "description": "Stauraum ist von Anfang an Teil der Tischstruktur. Jede Ablagefläche ist funktional in das Design integriert, ohne den Tisch optisch zu belasten.",
-            "image": "shopify://shop_images/15_e009bd41-f7e8-4c76-9547-b45195c32a31.jpg"
-          }
-        },
-        "foldtext_HQhGDk": {
-          "type": "foldtext",
-          "settings": {
-            "title": "<h3>Vertikale Ordnung</h3>",
-            "description": "Die Organisation erfolgt nach oben, nicht nach vorne. So bleibt die Arbeitsfläche frei und wird nicht durch ausladende Ablagen eingeschränkt.",
-            "image": "shopify://shop_images/3_403a8ead-aee7-4d6f-bad1-cbbb1bb20557.jpg"
-          }
-        },
-        "foldtext_iGWkAs": {
-          "type": "foldtext",
-          "settings": {
-            "title": "<h3>Für häufig genutzte Dinge</h3>",
-            "description": "Der Tisch bietet gezielt Platz für die wichtigsten, regelmäßig genutzten Arbeitsutensilien, sodass alles griffbereit bleibt.",
-            "image": "shopify://shop_images/22_b9d7d195-10a5-4ae0-92a9-5d096f404fb7.jpg"
-          }
-        },
-        "foldtext_HWP39G": {
-          "type": "foldtext",
-          "settings": {
-            "title": "<h3>Leichtes, aufgeräumtes Erscheinungsbild</h3>",
-            "description": "Die klare Struktur sorgt für eine visuell ruhige und luftige Arbeitsfläche, die den Raum optisch nicht überfrachtet und den Fokus auf das Wesentliche lenkt.",
-            "image": "shopify://shop_images/18_447a1179-ba0a-4176-ba69-baa12694da39.jpg"
-          }
-        }
-      },
-      "block_order": [
-        "foldtext_eyYKRM",
-        "foldtext_HQhGDk",
-        "foldtext_iGWkAs",
-        "foldtext_HWP39G"
-      ],
-      "name": "img with foldtext",
-      "settings": {
-        "spec_id": "",
-        "title": "<p>Integrierte Desktop-Organisation</p>",
-        "padding_top": 120,
-        "padding_bottom": 120
-      }
-    },
     "img_with_text_tab_ibCa64": {
       "type": "img-with-text-tab",
       "blocks": {
@@ -764,6 +764,7 @@
         "tab_kazGN3",
         "tab_yTmGja"
       ],
+      "disabled": true,
       "name": "img with text tab",
       "settings": {
         "spec_id": "",
