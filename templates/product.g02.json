@@ -275,6 +275,85 @@
         "background_color": "rgba(0,0,0,0)"
       }
     },
+    "img_with_text_tab_emEWU8": {
+      "type": "img-with-text-tab",
+      "blocks": {
+        "tab_fiwUXL": {
+          "type": "tab",
+          "disabled": true,
+          "settings": {
+            "tabname": "Natürliche Anpassung",
+            "sub_title": "",
+            "title": "<p>Natürliche Anpassung</p>",
+            "description": "<div style=\"text-align:left; direction:ltr;\" lang=\"de\">\n  <p>\n  Die Höhenverstellung folgt intuitiv der Körperhaltung. Jede Bewegung unterstützt eine ergonomische Anpassung, sodass Sitzen und Stehen fließend ineinander übergehen.<br/>\n  </p>\n</div>",
+            "file_type": "image",
+            "file_image": "shopify://shop_images/2_97308139-9619-49b4-a212-c6c837f4ddd0.jpg",
+            "video_url": "",
+            "btn_text": "",
+            "link": ""
+          }
+        },
+        "tab_AUd88N": {
+          "type": "tab",
+          "settings": {
+            "tabname": "Flexibler Rhythmus",
+            "sub_title": "",
+            "title": "<p>Flexibler Rhythmus<br/><br/></p>",
+            "description": "<div style=\"text-align:left; direction:ltr;\" lang=\"de\">\n  <p>\nFür gelegentliche Positionswechsel entwickelt, erlaubt der Tisch spontane Anpassungen im Tagesablauf, ohne dass eine aufwändige Bedienung notwendig ist.<br/>\n  </p>\n</div>",
+            "file_type": "image",
+            "file_image": "shopify://shop_images/12_229d8fb8-683d-468b-a0d7-18170a20d5b2.jpg",
+            "video_url": "",
+            "btn_text": "",
+            "link": ""
+          }
+        },
+        "tab_JyxzQm": {
+          "type": "tab",
+          "settings": {
+            "tabname": "Sanft und unauffällig",
+            "sub_title": "",
+            "title": "<p>Sanft und unauffällig</p>",
+            "description": "<div style=\"text-align:left; direction:ltr;\" lang=\"de\">\n  <p>\nDie Bewegung erfolgt leise und gleichmäßig. Sie bleibt bewusst im Hintergrund und stört die Konzentration nicht, während sie ergonomisch unterstützt.<br/>\n  </p>\n</div>",
+            "file_type": "image",
+            "file_image": "shopify://shop_images/13_55bce079-f3c3-48d8-af89-bc126abd0839.jpg",
+            "video_url": "",
+            "btn_text": "",
+            "link": ""
+          }
+        },
+        "tab_qJcwGX": {
+          "type": "tab",
+          "settings": {
+            "tabname": "Intuitive Steuerung",
+            "sub_title": "",
+            "title": "<p>Intuitive Steuerung</p>",
+            "description": "<div style=\"text-align:left; direction:ltr;\" lang=\"de\">\n  <p>\nLeichtes Handling und ein durchdachtes Speicher- und Steuerungssystem machen die Bedienung mühelos. Nutzer können schnell und präzise ihre bevorzugten Positionen einstellen.<br/>\n  </p>\n</div>",
+            "file_type": "image",
+            "file_image": "shopify://shop_images/14_e49c58f4-d8bc-45cc-bdfe-ce6228bfa09b.jpg",
+            "video_url": "",
+            "btn_text": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "tab_fiwUXL",
+        "tab_AUd88N",
+        "tab_JyxzQm",
+        "tab_qJcwGX"
+      ],
+      "name": "img with text tab",
+      "settings": {
+        "spec_id": "",
+        "description": "",
+        "title": "<p>Leichte Arbeitsdynamik</p>",
+        "show_tab_head": true,
+        "loop": true,
+        "autoplay_enable": true,
+        "autoplay_delay": 5000,
+        "layout": "image-left"
+      }
+    },
     "img_with_foldtext_cCLPBE": {
       "type": "img-with-foldtext",
       "blocks": {
@@ -582,84 +661,6 @@
         "color_scheme": "",
         "padding_top": 40,
         "padding_bottom": 52
-      }
-    },
-    "img_with_text_tab_emEWU8": {
-      "type": "img-with-text-tab",
-      "blocks": {
-        "tab_fiwUXL": {
-          "type": "tab",
-          "settings": {
-            "tabname": "Natürliche Anpassung",
-            "sub_title": "",
-            "title": "<p>Natürliche Anpassung</p>",
-            "description": "<div style=\"text-align:left; direction:ltr;\" lang=\"de\">\n  <p>\n  Die Höhenverstellung folgt intuitiv der Körperhaltung. Jede Bewegung unterstützt eine ergonomische Anpassung, sodass Sitzen und Stehen fließend ineinander übergehen.<br/>\n  </p>\n</div>",
-            "file_type": "image",
-            "file_image": "shopify://shop_images/2_97308139-9619-49b4-a212-c6c837f4ddd0.jpg",
-            "video_url": "",
-            "btn_text": "",
-            "link": ""
-          }
-        },
-        "tab_AUd88N": {
-          "type": "tab",
-          "settings": {
-            "tabname": "Flexibler Rhythmus",
-            "sub_title": "",
-            "title": "<p>Flexibler Rhythmus<br/><br/></p>",
-            "description": "<div style=\"text-align:left; direction:ltr;\" lang=\"de\">\n  <p>\nFür gelegentliche Positionswechsel entwickelt, erlaubt der Tisch spontane Anpassungen im Tagesablauf, ohne dass eine aufwändige Bedienung notwendig ist.<br/>\n  </p>\n</div>",
-            "file_type": "image",
-            "file_image": "shopify://shop_images/12_229d8fb8-683d-468b-a0d7-18170a20d5b2.jpg",
-            "video_url": "",
-            "btn_text": "",
-            "link": ""
-          }
-        },
-        "tab_JyxzQm": {
-          "type": "tab",
-          "settings": {
-            "tabname": "Sanft und unauffällig",
-            "sub_title": "",
-            "title": "<p>Sanft und unauffällig</p>",
-            "description": "<div style=\"text-align:left; direction:ltr;\" lang=\"de\">\n  <p>\nDie Bewegung erfolgt leise und gleichmäßig. Sie bleibt bewusst im Hintergrund und stört die Konzentration nicht, während sie ergonomisch unterstützt.<br/>\n  </p>\n</div>",
-            "file_type": "image",
-            "file_image": "shopify://shop_images/13_55bce079-f3c3-48d8-af89-bc126abd0839.jpg",
-            "video_url": "",
-            "btn_text": "",
-            "link": ""
-          }
-        },
-        "tab_qJcwGX": {
-          "type": "tab",
-          "settings": {
-            "tabname": "Intuitive Steuerung",
-            "sub_title": "",
-            "title": "<p>Intuitive Steuerung</p>",
-            "description": "<div style=\"text-align:left; direction:ltr;\" lang=\"de\">\n  <p>\nLeichtes Handling und ein durchdachtes Speicher- und Steuerungssystem machen die Bedienung mühelos. Nutzer können schnell und präzise ihre bevorzugten Positionen einstellen.<br/>\n  </p>\n</div>",
-            "file_type": "image",
-            "file_image": "shopify://shop_images/14_e49c58f4-d8bc-45cc-bdfe-ce6228bfa09b.jpg",
-            "video_url": "",
-            "btn_text": "",
-            "link": ""
-          }
-        }
-      },
-      "block_order": [
-        "tab_fiwUXL",
-        "tab_AUd88N",
-        "tab_JyxzQm",
-        "tab_qJcwGX"
-      ],
-      "name": "img with text tab",
-      "settings": {
-        "spec_id": "",
-        "description": "",
-        "title": "<p>Leichte Arbeitsdynamik</p>",
-        "show_tab_head": true,
-        "loop": true,
-        "autoplay_enable": true,
-        "autoplay_delay": 5000,
-        "layout": "image-left"
       }
     },
     "img_with_foldtext_RcBrkw": {
@@ -1162,6 +1163,8 @@
     "product_anchor_bar_atcVF4",
     "video_wPHLA8",
     "img_with_text_box_simplicity_AkxGWH",
+    "img_with_text_tab_emEWU8",
+    "img_with_foldtext_RcBrkw",
     "img_with_foldtext_cCLPBE",
     "img_with_text_simplicity_iiPLAi",
     "accordion_gallery_9yfNeM",
@@ -1171,8 +1174,6 @@
     "img_with_text_simplicity_YLCpmN",
     "img_with_text_simplicity_JRCJ4f",
     "custom_liquid_TB8BBm",
-    "img_with_text_tab_emEWU8",
-    "img_with_foldtext_RcBrkw",
     "img_with_text_tab_ibCa64",
     "img_with_text_tab_TDYWdq",
     "img_with_foldtext_LzqrtY",
