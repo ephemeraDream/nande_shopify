@@ -278,8 +278,8 @@
         "spec_id": "Produktinfo",
         "main_title": "<p><strong>Stabilität</strong> & <strong>Passen Sie den Winkel an – für maximale Freiheit</strong></p>",
         "row_num": 3,
-        "padding_top": 60,
-        "padding_bottom": 60,
+        "padding_top": 28,
+        "padding_bottom": 40,
         "background_color": "rgba(0,0,0,0)"
       }
     },
@@ -320,8 +320,8 @@
       "settings": {
         "spec_id": "",
         "title": "<p>Flexibel wie kein anderes Gestell – für jede Raumsituation</p>",
-        "padding_top": 60,
-        "padding_bottom": 60
+        "padding_top": 16,
+        "padding_bottom": 24
       }
     },
     "img_with_text_simplicity_JRCJ4f": {
@@ -452,8 +452,8 @@
       "settings": {
         "spec_id": "",
         "title": "<p>Präzise & leise – für ungestörtes Arbeiten</p>",
-        "padding_top": 60,
-        "padding_bottom": 60
+        "padding_top": 20,
+        "padding_bottom": 28
       }
     },
     "img_with_text_tab_Wra4W3": {
