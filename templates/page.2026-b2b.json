@@ -339,6 +339,12 @@
     "compare_simple_KneENq": {
       "type": "compare-simple",
       "blocks": {
+        "item_bFArnY": {
+          "type": "item",
+          "settings": {
+            "select_product": "maidesite-t4-pro-plus-hohenverstellbarer-schreibtisch-4-beine"
+          }
+        },
         "item_TyVfMb": {
           "type": "item",
           "settings": {
@@ -351,31 +357,25 @@
             "select_product": "maidesite-tischgestell-elektrisch-hohenverstellbar-t2-pro-plus"
           }
         },
-        "item_thUd64": {
-          "type": "item",
-          "settings": {
-            "select_product": "maidesite-el2-plus-hohenverstellbarer"
-          }
-        },
         "item_Wnfjbc": {
           "type": "item",
           "settings": {
             "select_product": "maidesite-t2-pro-schreibtisch"
           }
         },
-        "item_bFArnY": {
+        "item_thUd64": {
           "type": "item",
           "settings": {
-            "select_product": "maidesite-t4-pro-plus-hohenverstellbarer-schreibtisch-4-beine"
+            "select_product": "maidesite-el2-plus-hohenverstellbarer"
           }
         }
       },
       "block_order": [
+        "item_bFArnY",
         "item_TyVfMb",
         "item_E3FYAD",
-        "item_thUd64",
         "item_Wnfjbc",
-        "item_bFArnY"
+        "item_thUd64"
       ],
       "name": "compare simple",
       "settings": {
