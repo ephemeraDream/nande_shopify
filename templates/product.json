@@ -53,6 +53,13 @@
           "type": "options",
           "settings": {}
         },
+        "gocertify_product_placement_tyKFTV": {
+          "type": "shopify://apps/gocertify/blocks/product-placement/db5e2393-7255-4f50-ada1-7de16398f487",
+          "settings": {
+            "mode": "placement",
+            "placement_token": "p-d92707fb"
+          }
+        },
         "wholesale_modal_CBqFgt": {
           "type": "wholesale_modal",
           "settings": {
@@ -103,6 +110,7 @@
         "price_w7Fktm",
         "key_feature_7xGtPt",
         "options_dTJUkX",
+        "gocertify_product_placement_tyKFTV",
         "wholesale_modal_CBqFgt",
         "modal_KiCBrG",
         "modal_TaRbWz",
@@ -587,38 +595,6 @@
     },
     "1764139624b86cf7ce": {
       "type": "apps",
-      "blocks": {
-        "webrex_seo_schema_faq_section_im83c8": {
-          "type": "shopify://apps/webrex-ai-seo-schema/blocks/FAQSection/283875bf-bf86-4e78-831b-502ad0c4a5c2",
-          "settings": {
-            "section_align": "align-center",
-            "max_width": 800,
-            "box_border": 4,
-            "faq_border_thickness": 1,
-            "faq_border_color": "#dddddd",
-            "faq_border_style": "solid",
-            "icon_color": "#333333",
-            "top_margin": 20,
-            "bottom_margin": 20,
-            "top_padding": 20,
-            "bottom_padding": 20,
-            "left_padding": 20,
-            "right_padding": 20,
-            "heading_title": "Frequently asked questions",
-            "heading_align": "center",
-            "heading_font_size": 20,
-            "heading_color": "#333333",
-            "question_color": "#333333",
-            "question_font_size": 16,
-            "answer_color": "#666666",
-            "answer_font_size": 14,
-            "hover_color": "#007bff"
-          }
-        }
-      },
-      "block_order": [
-        "webrex_seo_schema_faq_section_im83c8"
-      ],
       "settings": {
         "include_margins": true
       }
