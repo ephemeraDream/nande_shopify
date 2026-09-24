@@ -177,11 +177,6 @@
           "position": "below"
         }
       },
-      "pagefly-page-builder": {
-        "type": "shopify://apps/pagefly-page-builder/blocks/app-embed/83e179f7-59a0-4589-8c66-c0dddf959200",
-        "disabled": false,
-        "settings": {}
-      },
       "14327677521557774844": {
         "type": "shopify://apps/simprosys-google-shopping-feed/blocks/core_settings_block/1f0b859e-9fa6-4007-97e8-4513aff5ff3b",
         "disabled": false,
@@ -219,11 +214,6 @@
         "disabled": false,
         "settings": {}
       },
-      "21474836472147483647": {
-        "type": "shopify://apps/ecomposer-landing-page-builder/blocks/app-embed/a0fc26e1-7741-4773-8b27-39389b4fb4a0",
-        "disabled": false,
-        "settings": {}
-      },
       "2539598332178966696": {
         "type": "shopify://apps/xcotton-post-purchase-guard/blocks/insurance/6531bb8b-340c-42d4-b5da-1734c7a2c524",
         "disabled": false,
@@ -258,6 +248,16 @@
         "type": "shopify://apps/gocertify/blocks/script-injector/db5e2393-7255-4f50-ada1-7de16398f487",
         "disabled": false,
         "settings": {}
+      },
+      "pagefly-page-builder": {
+        "type": "shopify://apps/pagefly-ai-page-builder/blocks/app-embed/83e179f7-59a0-4589-8c66-c0dddf959200",
+        "disabled": true,
+        "settings": {}
+      },
+      "21474836472147483647": {
+        "type": "shopify://apps/ecomposer-builder/blocks/app-embed/a0fc26e1-7741-4773-8b27-39389b4fb4a0",
+        "disabled": true,
+        "settings": {}
       }
     },
     "color_schemes": {
@@ -266,7 +266,7 @@
           "background": "#f2f1ed",
           "background_gradient": "",
           "text": "#121212",
-          "button": "#36644C",
+          "button": "#36644c",
           "button_label": "#121212",
           "secondary_button_label": "#121212",
           "shadow": "#121212"
