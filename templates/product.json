@@ -55,6 +55,7 @@
         },
         "gocertify_product_placement_tyKFTV": {
           "type": "shopify://apps/gocertify/blocks/product-placement/db5e2393-7255-4f50-ada1-7de16398f487",
+          "disabled": true,
           "settings": {
             "mode": "placement",
             "placement_token": "p-d92707fb"
