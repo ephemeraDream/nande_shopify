@@ -45,6 +45,21 @@
           "type": "price",
           "settings": {}
         },
+        "key_feature_7xGtPt": {
+          "type": "key_feature",
+          "settings": {}
+        },
+        "options_dTJUkX": {
+          "type": "options",
+          "settings": {}
+        },
+        "gocertify_product_placement_tyKFTV": {
+          "type": "shopify://apps/gocertify/blocks/product-placement/db5e2393-7255-4f50-ada1-7de16398f487",
+          "settings": {
+            "mode": "placement",
+            "placement_token": "p-d92707fb"
+          }
+        },
         "klarna_on_site_messaging_app_block_pid6Mn": {
           "type": "shopify://apps/klarna-on-site-messaging/blocks/app-block/b95936a9-74b6-4a95-8103-6a1b6459c25e",
           "settings": {
@@ -54,14 +69,6 @@
             "bottomPadding": "0",
             "messagePrefix": ""
           }
-        },
-        "key_feature_7xGtPt": {
-          "type": "key_feature",
-          "settings": {}
-        },
-        "options_dTJUkX": {
-          "type": "options",
-          "settings": {}
         },
         "wholesale_modal_CBqFgt": {
           "type": "wholesale_modal",
@@ -99,13 +106,6 @@
             "content": "<p>Maidesite Elektrisch Höhenverstellbarer Gestell XX  und höhenverstellbare gestelle haben 10 Jahre Garantie.<br/><br/></p>"
           }
         },
-        "gocertify_product_placement_tyKFTV": {
-          "type": "shopify://apps/gocertify/blocks/product-placement/db5e2393-7255-4f50-ada1-7de16398f487",
-          "settings": {
-            "mode": "placement",
-            "placement_token": "p-d92707fb"
-          }
-        },
         "payment_methods_mnXJ7D": {
           "type": "payment_methods",
           "settings": {
@@ -118,14 +118,14 @@
         "title_6Lc8DB",
         "loox_reviews_loox_rating_qF3bkU",
         "price_w7Fktm",
-        "klarna_on_site_messaging_app_block_pid6Mn",
         "key_feature_7xGtPt",
         "options_dTJUkX",
+        "gocertify_product_placement_tyKFTV",
+        "klarna_on_site_messaging_app_block_pid6Mn",
         "wholesale_modal_CBqFgt",
         "modal_KiCBrG",
         "modal_TaRbWz",
         "modal_EB43X9",
-        "gocertify_product_placement_tyKFTV",
         "payment_methods_mnXJ7D"
       ],
       "name": "product info",
