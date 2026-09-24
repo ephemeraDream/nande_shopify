@@ -114,6 +114,17 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 }
 </script>
 
+<script>
+  (function() {
+    var el = document.createElement("script");
+    el.setAttribute("src", "https://assets.gocertify.me/assets/gocertify.js");
+    el.setAttribute("data-brand", "maidesite-de");
+    el.setAttribute("defer", "true");
+    document.head.appendChild(el);
+  })();
+</script>
+
+
     {%- liquid
       assign body_font_bold = settings.type_body_font | font_modify: 'weight', 'bold'
       assign body_font_italic = settings.type_body_font | font_modify: 'style', 'italic'
@@ -435,6 +446,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     {{ 'swiper-bundle.min.css' | asset_url | stylesheet_tag }}
     <script src="{{ 'swiper-bundle.min.js' | asset_url }}"></script>
     <script src="//code.tidio.co/0dsiqfbh8rere8cg3foc5szhrleoyfvg.js" async></script>
+
+
 
   </head>
 
