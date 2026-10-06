@@ -14,7 +14,6 @@
       "blocks": {
         "banner_item_e7J8AA": {
           "type": "banner_item",
-          "disabled": true,
           "settings": {
             "sub_title": "",
             "title": "",
@@ -25,8 +24,8 @@
             "overlay_text_align": "text-end",
             "transparent_content_color": "#ffffff",
             "file_type": "image",
-            "file_image": "shopify://shop_images/c5c616e3e01e4f6edcf42ea2880fcc64.jpg",
-            "file_image_pe": "shopify://shop_images/3_803f9895-8520-46c1-97a2-88936efd54a9.jpg",
+            "file_image": "shopify://shop_images/Autumn-Promotion-Maidesite-height-adjustable-desk-germany-PC.jpg",
+            "file_image_pe": "shopify://shop_images/Autumn-Promotion-Maidesite-height-adjustable-desk-germany-smartphone.jpg",
             "video_url": "",
             "mobile_video_url": "",
             "show_countdown": false,
@@ -35,6 +34,7 @@
         },
         "banner_item_QaRfNd": {
           "type": "banner_item",
+          "disabled": true,
           "settings": {
             "sub_title": "",
             "title": "<p><strong>Harmonie in Form und Bewegung.</strong></p>",
