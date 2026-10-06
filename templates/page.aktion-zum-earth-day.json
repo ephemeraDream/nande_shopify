@@ -13,8 +13,8 @@
       "type": "main-page",
       "disabled": true,
       "settings": {
-        "padding_top": 28,
-        "padding_bottom": 28
+        "padding_top": 4,
+        "padding_bottom": 4
       }
     },
     "activity_products_tab_aUGewm": {
@@ -27,8 +27,8 @@
             "product_list": [
               "maidesite-t2-pro-schreibtisch",
               "maidesite-tischgestell-elektrisch-hohenverstellbar-t2-pro-plus",
-              "elektrisch-hohenverstellbarer-gestell-t1-pro",
-              "maidesite-t2-pro-max-tischgestell-elektrisch-hohenverstellbar"
+              "maidesite-t2-pro-max-tischgestell-elektrisch-hohenverstellbar",
+              "t2-elektrisch-hohenverstellbarer-schreibtisch-mit-zwei-motoren"
             ]
           }
         },
@@ -76,7 +76,7 @@
       "name": "activity products tab",
       "settings": {
         "specId": "Rabatt",
-        "title": "<p>Jubiläums-Sale</p>",
+        "title": "<p>Big-Deal-Tage</p>",
         "text": ""
       }
     },
