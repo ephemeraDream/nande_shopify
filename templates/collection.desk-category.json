@@ -67,16 +67,16 @@
             "select_product": "maidesite-tischgestell-elektrisch-hohenverstellbar-t2-pro-plus"
           }
         },
-        "item_EEUjdz": {
-          "type": "item",
-          "settings": {
-            "select_product": "maidesite-t2-pro-max-tischgestell-elektrisch-hohenverstellbar"
-          }
-        },
         "item_z9X7dd": {
           "type": "item",
           "settings": {
             "select_product": "maidesite-el2-plus-hohenverstellbarer"
+          }
+        },
+        "item_EEUjdz": {
+          "type": "item",
+          "settings": {
+            "select_product": "maidesite-t2-pro-max-tischgestell-elektrisch-hohenverstellbar"
           }
         },
         "item_mTnMqF": {
@@ -98,8 +98,8 @@
         "item_7rnzRe",
         "item_gyexDX",
         "item_AHnCzP",
-        "item_EEUjdz",
         "item_z9X7dd",
+        "item_EEUjdz",
         "item_mTnMqF",
         "item_twgrkb"
       ],
