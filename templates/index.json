@@ -312,8 +312,15 @@
       "blocks": {
         "item_hrmkBQ": {
           "type": "item",
+          "disabled": true,
           "settings": {
             "select_product": "elektrisch-hohenverstellbarer-gestell-t1-pro"
+          }
+        },
+        "item_DGprzT": {
+          "type": "item",
+          "settings": {
+            "select_product": "t2-elektrisch-hohenverstellbarer-schreibtisch-mit-zwei-motoren"
           }
         },
         "item_6kCRQ4": {
@@ -333,13 +340,21 @@
           "settings": {
             "select_product": "maidesite-t2-pro-max-tischgestell-elektrisch-hohenverstellbar"
           }
+        },
+        "item_jqNdeR": {
+          "type": "item",
+          "settings": {
+            "select_product": "maidesite-t4-pro-plus-hohenverstellbarer-schreibtisch-4-beine"
+          }
         }
       },
       "block_order": [
         "item_hrmkBQ",
+        "item_DGprzT",
         "item_6kCRQ4",
         "item_mgqRNf",
-        "item_wtnaqX"
+        "item_wtnaqX",
+        "item_jqNdeR"
       ],
       "custom_css": [
         ".compare_simple .compare_simple_item_title {font-size: 3rem;}",
@@ -347,13 +362,13 @@
       ],
       "name": "compare simple",
       "settings": {
-        "title": "<p>Finde Deinen </p><p>Passenden Schreibtisch</p>",
+        "title": "<p>Finde Deinen&nbsp;</p><p>Passenden Schreibtisch</p>",
         "text": "",
         "link_text": "Mehr erfahren",
         "link_url": "shopify://pages/compare-products",
         "padding_top": 120,
         "padding_bottom": 120,
-        "slides_per_view": 4
+        "slides_per_view": 5
       }
     },
     "image_comparison_JHgace": {
