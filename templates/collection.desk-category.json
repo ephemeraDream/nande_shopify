@@ -49,16 +49,16 @@
             "select_product": "t2-elektrisch-hohenverstellbarer-schreibtisch-mit-zwei-motoren"
           }
         },
-        "item_gyexDX": {
-          "type": "item",
-          "settings": {
-            "select_product": "maidesite-t2-pro-schreibtisch"
-          }
-        },
         "item_7rnzRe": {
           "type": "item",
           "settings": {
             "select_product": "maidesite-t2-plus-hohenverstellbarer-schreibtisch"
+          }
+        },
+        "item_gyexDX": {
+          "type": "item",
+          "settings": {
+            "select_product": "maidesite-t2-pro-schreibtisch"
           }
         },
         "item_AHnCzP": {
@@ -83,8 +83,8 @@
       "block_order": [
         "item_3yir6V",
         "item_TM7pNN",
-        "item_gyexDX",
         "item_7rnzRe",
+        "item_gyexDX",
         "item_AHnCzP",
         "item_EEUjdz",
         "item_z9X7dd"
