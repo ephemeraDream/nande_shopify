@@ -43,10 +43,22 @@
             "select_product": "elektrisch-hohenverstellbarer-gestell-t1-pro"
           }
         },
+        "item_TM7pNN": {
+          "type": "item",
+          "settings": {
+            "select_product": "t2-elektrisch-hohenverstellbarer-schreibtisch-mit-zwei-motoren"
+          }
+        },
         "item_gyexDX": {
           "type": "item",
           "settings": {
             "select_product": "maidesite-t2-pro-schreibtisch"
+          }
+        },
+        "item_7rnzRe": {
+          "type": "item",
+          "settings": {
+            "select_product": "maidesite-t2-plus-hohenverstellbarer-schreibtisch"
           }
         },
         "item_AHnCzP": {
@@ -70,15 +82,17 @@
       },
       "block_order": [
         "item_3yir6V",
+        "item_TM7pNN",
         "item_gyexDX",
+        "item_7rnzRe",
         "item_AHnCzP",
         "item_EEUjdz",
         "item_z9X7dd"
       ],
       "name": "compare simple",
       "settings": {
-        "title": "<p>Finde Deinen Passenden HöHenverstellbar </p><p>Schreibtisch</p>",
-        "text": "<p>Maidesite bietet anpassbare höhenverstellbare </p><p>Schreibtische für Deine Bedürfnisse.</p>",
+        "title": "<p>Finde Deinen Passenden HöHenverstellbar&nbsp;</p><p>Schreibtisch</p>",
+        "text": "<p>Maidesite bietet anpassbare höhenverstellbare&nbsp;</p><p>Schreibtische für Deine Bedürfnisse.</p>",
         "link_text": "Mehr erfahren",
         "link_url": "",
         "padding_top": 28,
@@ -249,38 +263,6 @@
     },
     "17641400578e25a6c6": {
       "type": "apps",
-      "blocks": {
-        "webrex_seo_schema_faq_section_JFGYaL": {
-          "type": "shopify://apps/webrex-ai-seo-schema/blocks/FAQSection/283875bf-bf86-4e78-831b-502ad0c4a5c2",
-          "settings": {
-            "section_align": "align-center",
-            "max_width": 800,
-            "box_border": 4,
-            "faq_border_thickness": 1,
-            "faq_border_color": "#dddddd",
-            "faq_border_style": "solid",
-            "icon_color": "#333333",
-            "top_margin": 20,
-            "bottom_margin": 20,
-            "top_padding": 20,
-            "bottom_padding": 20,
-            "left_padding": 20,
-            "right_padding": 20,
-            "heading_title": "Frequently asked questions",
-            "heading_align": "center",
-            "heading_font_size": 20,
-            "heading_color": "#333333",
-            "question_color": "#333333",
-            "question_font_size": 16,
-            "answer_color": "#666666",
-            "answer_font_size": 14,
-            "hover_color": "#007bff"
-          }
-        }
-      },
-      "block_order": [
-        "webrex_seo_schema_faq_section_JFGYaL"
-      ],
       "settings": {
         "include_margins": true
       }
