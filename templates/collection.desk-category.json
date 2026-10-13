@@ -78,6 +78,18 @@
           "settings": {
             "select_product": "maidesite-el2-plus-hohenverstellbarer"
           }
+        },
+        "item_mTnMqF": {
+          "type": "item",
+          "settings": {
+            "select_product": "t3-pro-max-3-motor-eck-schreibtischgestell"
+          }
+        },
+        "item_twgrkb": {
+          "type": "item",
+          "settings": {
+            "select_product": "maidesite-t4-pro-plus-hohenverstellbarer-schreibtisch-4-beine"
+          }
         }
       },
       "block_order": [
@@ -87,7 +99,9 @@
         "item_gyexDX",
         "item_AHnCzP",
         "item_EEUjdz",
-        "item_z9X7dd"
+        "item_z9X7dd",
+        "item_mTnMqF",
+        "item_twgrkb"
       ],
       "name": "compare simple",
       "settings": {
