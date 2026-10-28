@@ -26,6 +26,7 @@
             "transparent_content_color": "#ffffff",
             "file_type": "image",
             "file_image": "shopify://shop_images/T2.jpg",
+            "file_image_pe": "shopify://shop_images/T2_height-adjustable_desk_banner_for_smartphone.png",
             "video_url": "",
             "mobile_video_url": "",
             "show_countdown": false,
