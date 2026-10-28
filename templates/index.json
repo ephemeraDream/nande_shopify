@@ -12,9 +12,28 @@
     "banner_8A7fgF": {
       "type": "banner",
       "blocks": {
+        "banner_item_WW7LdG": {
+          "type": "banner_item",
+          "settings": {
+            "sub_title": "",
+            "title": "",
+            "text": "",
+            "btn_text": "",
+            "link": "shopify://products/maidesite-canvas-l-formiger-hohenverstellbarer-schreibtisch-mit-4-beinen",
+            "file_position": "middle_left",
+            "overlay_text_align": "text-start",
+            "transparent_content_color": "#ffffff",
+            "file_type": "image",
+            "file_image": "shopify://shop_images/Canvas_desk_banner_for_PC.jpg",
+            "file_image_pe": "shopify://shop_images/Canvas_desk_banner_for_smartphone.png",
+            "video_url": "",
+            "mobile_video_url": "",
+            "show_countdown": false,
+            "countdown": ""
+          }
+        },
         "banner_item_Hwgxqf": {
           "type": "banner_item",
-          "disabled": true,
           "settings": {
             "sub_title": "",
             "title": "",
@@ -160,6 +179,7 @@
         }
       },
       "block_order": [
+        "banner_item_WW7LdG",
         "banner_item_Hwgxqf",
         "banner_item_NCLJWQ",
         "banner_item_e7J8AA",
