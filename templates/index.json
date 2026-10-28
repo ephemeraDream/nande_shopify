@@ -12,6 +12,26 @@
     "banner_8A7fgF": {
       "type": "banner",
       "blocks": {
+        "banner_item_Hwgxqf": {
+          "type": "banner_item",
+          "disabled": true,
+          "settings": {
+            "sub_title": "",
+            "title": "",
+            "text": "",
+            "btn_text": "",
+            "link": "shopify://products/t2-elektrisch-hohenverstellbarer-schreibtisch-mit-zwei-motoren",
+            "file_position": "middle_left",
+            "overlay_text_align": "text-start",
+            "transparent_content_color": "#ffffff",
+            "file_type": "image",
+            "file_image": "shopify://shop_images/T2.jpg",
+            "video_url": "",
+            "mobile_video_url": "",
+            "show_countdown": false,
+            "countdown": ""
+          }
+        },
         "banner_item_NCLJWQ": {
           "type": "banner_item",
           "settings": {
@@ -20,9 +40,9 @@
             "text": "<p>Hohe Stabilität und Ladeleistung</p>",
             "btn_text": "Jetzt bestellen",
             "link": "shopify://products/maidesite-t4-pro-plus-hohenverstellbarer-schreibtisch-4-beine",
-            "file_position": "bottom_right",
+            "file_position": "top_left",
             "overlay_text_align": "text-start",
-            "transparent_content_color": "#121212",
+            "transparent_content_color": "#030303",
             "file_type": "image",
             "file_image": "shopify://shop_images/Banner_ddecc0e9-8cb1-4ebe-a57b-a1e69186e9f2.jpg",
             "file_image_pe": "shopify://shop_images/2_d8a3d88f-f301-4124-8486-5ccab2876e0b.jpg",
@@ -139,6 +159,7 @@
         }
       },
       "block_order": [
+        "banner_item_Hwgxqf",
         "banner_item_NCLJWQ",
         "banner_item_e7J8AA",
         "banner_item_QaRfNd",
