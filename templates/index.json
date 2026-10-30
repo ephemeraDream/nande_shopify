@@ -12,6 +12,47 @@
     "banner_8A7fgF": {
       "type": "banner",
       "blocks": {
+        "banner_item_n8pcj8": {
+          "type": "banner_item",
+          "disabled": true,
+          "settings": {
+            "sub_title": "",
+            "title": "",
+            "text": "",
+            "btn_text": "",
+            "link": "",
+            "file_position": "middle_left",
+            "overlay_text_align": "text-start",
+            "transparent_content_color": "#ffffff",
+            "file_type": "image",
+            "file_image": "shopify://shop_images/G02-1.jpg",
+            "file_image_pe": "shopify://shop_images/G02-2.jpg",
+            "video_url": "",
+            "mobile_video_url": "",
+            "show_countdown": false,
+            "countdown": ""
+          }
+        },
+        "banner_item_DNEMTA": {
+          "type": "banner_item",
+          "settings": {
+            "sub_title": "",
+            "title": "",
+            "text": "",
+            "btn_text": "",
+            "link": "",
+            "file_position": "middle_left",
+            "overlay_text_align": "text-start",
+            "transparent_content_color": "#ffffff",
+            "file_type": "image",
+            "file_image": "shopify://shop_images/G01-1.jpg",
+            "file_image_pe": "shopify://shop_images/G01-2.jpg",
+            "video_url": "",
+            "mobile_video_url": "",
+            "show_countdown": false,
+            "countdown": ""
+          }
+        },
         "banner_item_Hwgxqf": {
           "type": "banner_item",
           "settings": {
@@ -26,46 +67,6 @@
             "file_type": "image",
             "file_image": "shopify://shop_images/T2.jpg",
             "file_image_pe": "shopify://shop_images/T2_height-adjustable_desk_banner_for_smartphone.png",
-            "video_url": "",
-            "mobile_video_url": "",
-            "show_countdown": false,
-            "countdown": ""
-          }
-        },
-        "banner_item_WW7LdG": {
-          "type": "banner_item",
-          "settings": {
-            "sub_title": "",
-            "title": "",
-            "text": "",
-            "btn_text": "",
-            "link": "shopify://products/maidesite-canvas-l-formiger-hohenverstellbarer-schreibtisch-mit-4-beinen",
-            "file_position": "middle_left",
-            "overlay_text_align": "text-start",
-            "transparent_content_color": "#ffffff",
-            "file_type": "image",
-            "file_image": "shopify://shop_images/Canvas_desk_banner_for_PC.jpg",
-            "file_image_pe": "shopify://shop_images/Canvas_desk_banner_for_smartphone.png",
-            "video_url": "",
-            "mobile_video_url": "",
-            "show_countdown": false,
-            "countdown": ""
-          }
-        },
-        "banner_item_9HzLij": {
-          "type": "banner_item",
-          "settings": {
-            "sub_title": "",
-            "title": "",
-            "text": "",
-            "btn_text": "",
-            "link": "shopify://products/maidesite-arborlift-elektrisch-hohenverstellbarer-schreibtisch-120x60-140x70cm",
-            "file_position": "middle_left",
-            "overlay_text_align": "text-start",
-            "transparent_content_color": "#ffffff",
-            "file_type": "image",
-            "file_image": "shopify://shop_images/Arborlift_desk_banner_for_PC.jpg",
-            "file_image_pe": "shopify://shop_images/Arborlift_desk_banner_for_smartphone.png",
             "video_url": "",
             "mobile_video_url": "",
             "show_countdown": false,
@@ -200,9 +201,9 @@
         }
       },
       "block_order": [
+        "banner_item_n8pcj8",
+        "banner_item_DNEMTA",
         "banner_item_Hwgxqf",
-        "banner_item_WW7LdG",
-        "banner_item_9HzLij",
         "banner_item_NCLJWQ",
         "banner_item_e7J8AA",
         "banner_item_QaRfNd",
