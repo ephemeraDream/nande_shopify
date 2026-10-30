@@ -14,7 +14,6 @@
       "blocks": {
         "banner_item_n8pcj8": {
           "type": "banner_item",
-          "disabled": true,
           "settings": {
             "sub_title": "",
             "title": "",
@@ -55,6 +54,7 @@
         },
         "banner_item_Hwgxqf": {
           "type": "banner_item",
+          "disabled": true,
           "settings": {
             "sub_title": "",
             "title": "",
