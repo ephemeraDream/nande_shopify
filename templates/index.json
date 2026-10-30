@@ -225,7 +225,7 @@
         "transition": "slide-fade",
         "autoplay": true,
         "slider_pause": true,
-        "autoplay_speed": 10
+        "autoplay_speed": 5
       }
     },
     "polka_dot_swiper_4yRfwn": {
