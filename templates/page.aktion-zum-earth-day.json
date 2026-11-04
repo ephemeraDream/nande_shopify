@@ -76,8 +76,8 @@
       ],
       "name": "activity products tab",
       "settings": {
-        "specId": "Black Friday Early Bird",
-        "title": "<p>Herbst-Sale</p>",
+        "specId": "Rabatt",
+        "title": "<p>Black Friday Early Bird</p>",
         "text": ""
       }
     },
