@@ -12,8 +12,29 @@
     "banner_8A7fgF": {
       "type": "banner",
       "blocks": {
+        "banner_item_YeGdVw": {
+          "type": "banner_item",
+          "settings": {
+            "sub_title": "",
+            "title": "",
+            "text": "",
+            "btn_text": "",
+            "link": "shopify://collections/hohenverstellbarer-schreibtisch-der-premium-serie",
+            "file_position": "middle_left",
+            "overlay_text_align": "text-start",
+            "transparent_content_color": "#ffffff",
+            "file_type": "image",
+            "file_image": "shopify://shop_images/9dae82ebbe392bd45abc1926b5d031af.jpg",
+            "file_image_pe": "shopify://shop_images/1_6e188aa0-447a-4180-9a3a-746aeda1b0c3.jpg",
+            "video_url": "",
+            "mobile_video_url": "",
+            "show_countdown": false,
+            "countdown": ""
+          }
+        },
         "banner_item_Hwgxqf": {
           "type": "banner_item",
+          "disabled": true,
           "settings": {
             "sub_title": "",
             "title": "",
@@ -219,6 +240,7 @@
         }
       },
       "block_order": [
+        "banner_item_YeGdVw",
         "banner_item_Hwgxqf",
         "banner_item_n8pcj8",
         "banner_item_DNEMTA",
